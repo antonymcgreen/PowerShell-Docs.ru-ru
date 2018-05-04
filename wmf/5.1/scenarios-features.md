@@ -4,33 +4,35 @@ author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,установка
 title: Новые сценарии и возможности в WMF 5.1
-ms.openlocfilehash: f0e50fc87208d6ee9edba9c660b9243621f02bb4
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 8edea99731df44349c8bcff113a8163ba5401ccd
+ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="new-scenarios-and-features-in-wmf-51"></a>Новые сценарии и возможности в WMF 5.1 #
+# <a name="new-scenarios-and-features-in-wmf-51"></a>Новые сценарии и возможности в WMF 5.1
 
 > Примечание. Эта информация является предварительной и может быть изменена.
 
-## <a name="powershell-editions"></a>Выпуски PowerShell ##
+## <a name="powershell-editions"></a>Выпуски PowerShell
+
 Начиная с версии 5.1, среда PowerShell доступна в разных выпусках, обладающих различными наборами функций и совместимостью с платформами.
 
 - **Выпуск Desktop Edition:** построен на основе .NET Framework и обеспечивает совместимость со скриптами и модулями, которые предназначены для версий PowerShell, выполняющихся в полноценных выпусках Windows, таких как Server Core и Windows Desktop.
 - **Выпуск Core Edition:** построен на основе .NET Core и обеспечивает совместимость со скриптами и модулями, которые предназначены для версий PowerShell, выполняющихся в выпусках Windows с ограниченными возможностями, таких как Nano Server и Windows IoT.
 
 **Дополнительные сведения об использовании выпусков PowerShell**
-- [Определение запущенного выпуска PowerShell]()
-- [Объявление совместимости модуля с определенными версиями PowerShell]()
-- [Фильтрация результатов командлета Get-Module по CompatiblePSEditions]()
-- [Запрет на выполнение сценариев в несовместимых выпусках PowerShell]()
+
+- [Определение запущенного выпуска PowerShell с использованием $PSVersionTable](/powershell/module/microsoft.powershell.core/about/about_automatic_variables)
+- [Фильтрация результатов командлета Get-Module по CompatiblePSEditions с помощью параметра PSEdition](/powershell/module/microsoft.powershell.core/get-module)
+- [Запрет на выполнение сценариев в несовместимых выпусках PowerShell](/powershell/gallery/psget/script/scriptwithpseditionsupport)
+- [Объявление совместимости модуля с определенными версиями PowerShell](/powershell/gallery/psget/module/modulewithpseditionsupport)
 
 ## <a name="catalog-cmdlets"></a>Командлеты для работы с каталогами
 
-Мы добавили два новых командлета для создания и проверки файлов каталога Windows в модуль [Microsoft.Powershell.Security](https://technet.microsoft.com/library/hh847877.aspx).
+Мы добавили два новых командлета для создания и проверки файлов каталога Windows в модуль [Microsoft.Powershell.Security](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security).
 
-###<a name="new-filecatalog"></a>New-FileCatalog
+### <a name="new-filecatalog"></a>New-FileCatalog
 --------------------------------
 
 Командлет New-FileCatalog создает файл каталога Windows для набора файлов и папок.
@@ -41,6 +43,7 @@ ms.lasthandoff: 04/09/2018
 ```powershell
 New-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-CatalogVersion <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
 Поддерживаются каталоги версий 1 и 2.
 В версии 1 для создания хэшей файлов используется алгоритм хэширования SHA1, в версии 2 — SHA256.
 Каталог версии 2 не поддерживается в *Windows Server 2008 R2* и *Windows 7*.
@@ -56,8 +59,7 @@ New-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-CatalogVersio
 
 Для проверки целостности файла каталога (Pester.cat в приведенном выше примере) его нужно подписать с помощью командлета [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).
 
-
-###<a name="test-filecatalog"></a>Test-FileCatalog
+### <a name="test-filecatalog"></a>Test-FileCatalog
 --------------------------------
 
 Командлет Test-FileCatalog проверяет каталог, представляющий набор папок.
@@ -74,8 +76,8 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 Командлет также отображает состояние подписи каталога в свойстве *Signature*. Подпись также можно определить, вызвав командлет [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) и указав файл каталога.
 Также можно исключить любые файлы из проверки, указав их в параметре *-FilesToSkip*.
 
+## <a name="module-analysis-cache"></a>Кэш анализа модуля
 
-## <a name="module-analysis-cache"></a>Кэш анализа модуля ##
 Начиная с версии WMF 5.1 среда PowerShell предоставляет средства управления файлом, в котором кэшируются сведения о модуле, например экспортируемые им команды.
 
 По умолчанию этот кэш хранится в файле `${env:LOCALAPPDATA}\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
@@ -106,23 +108,22 @@ $env:PSDisableModuleAnalysisCacheCleanup = 1
 
 Новое значение этой переменной среды вступает в силу немедленно в текущем процессе.
 
-##<a name="specifying-module-version"></a>Указание версии модуля
+## <a name="specifying-module-version"></a>Указание версии модуля
 
 В WMF 5.1 `using module` работает так же, как другие связанные с модулями конструкции в PowerShell.
 Ранее не было возможности указать определенную версию модуля; при наличии нескольких версий возникала ошибка.
 
-
 В WMF 5.1:
 
-* Вы можете использовать [конструктор ModuleSpecification (Hashtable)](https://msdn.microsoft.com/library/jj136290).
+- Вы можете использовать [конструктор ModuleSpecification (Hashtable)](https://msdn.microsoft.com/library/jj136290).
 Она имеет тот же формат, что и `Get-Module -FullyQualifiedName`.
 
 **Пример:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
-* Если имеется несколько версий модуля, в PowerShell используется **та же логика разрешения**, что и в `Import-Module`, и ошибка не выводится. Это поведение аналогично поведению `Import-Module` и `Import-DscResource`.
+- Если имеется несколько версий модуля, в PowerShell используется **та же логика разрешения**, что и в `Import-Module`, и ошибка не выводится. Это поведение аналогично поведению `Import-Module` и `Import-DscResource`.
 
+## <a name="improvements-to-pester"></a>Усовершенствования Pester
 
-##<a name="improvements-to-pester"></a>Усовершенствования Pester
 В WMF 5.1 версия Pester, распространяемая с PowerShell, была обновлена с 3.3.5 до 3.4.0. Также в репозиторий было добавлено изменение https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, которое улучшает работу Pester с Nano Server.
 
 Чтобы просмотреть изменения в версиях с 3.3.5 по 3.4.0, откройте файл ChangeLog.md: https://github.com/pester/Pester/blob/master/CHANGELOG.md

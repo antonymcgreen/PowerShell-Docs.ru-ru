@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,конфигурация,установка
 title: Конфигурации DSC
-ms.openlocfilehash: 8b44fd9a715c217ee198ea343cdffbfab1193625
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: ffeb953048c0a65352618d2ab141ee10ead4c663
+ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dsc-configurations"></a>Конфигурации DSC
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Конфигурации DSC — это сценарии PowerShell, определяющие особый тип функции.
 Для определения конфигурации используйте ключевое слово PowerShell **Configuration**.
@@ -72,7 +72,7 @@ MyDscConfiguration -ComputerName $ComputerName
 ## <a name="compiling-the-configuration"></a>Компиляция конфигурации
 
 Прежде чем активировать конфигурацию, необходимо скомпилировать ее в MOF-документ.
-Для этого нужно вызвать конфигурацию так же, как функцию PowerShell.
+Для этого нужно вызвать конфигурацию так же, как вы взывали функцию PowerShell.
 Последняя строка примера, содержащего только имя конфигурации, вызывает конфигурацию.
 
 >**Примечание**. Для вызова конфигурация функция должна находиться в глобальной области видимости (как и любая другая функция PowerShell).

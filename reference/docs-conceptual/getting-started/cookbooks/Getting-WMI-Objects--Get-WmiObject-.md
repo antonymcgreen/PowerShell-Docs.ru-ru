@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Получение объектов WMI (Get-WmiObject)
 ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
-ms.openlocfilehash: 67922426ae3f13ef5f4c70bc70bb3ce1594d3d05
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 279e656b4affd27450be71015a5d6bd21af9f7ad
+ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="getting-wmi-objects-get-wmiobject"></a>Получение объектов WMI (Get-WmiObject)
 
@@ -120,7 +120,7 @@ TotalVirtualMemorySize TotalVisibleMemory FreePhysicalMemory FreeVirtualMemory F
 ```
 
 > [!NOTE]
-> В именах свойств в командлете **Format-Table** допускаются подстановочные знаки, поэтому последний элемент конвейера может быть сокращен до **Format-Table-Property Total*,Free*.
+> В именах свойств в командлете **Format-Table** допускаются подстановочные знаки, поэтому последний элемент конвейера может быть сокращен до `Format-Table -Property Total,Free`
 
 Сведения о памяти можно представить в более понятном виде, отформатировав список с помощью следующей команды:
 

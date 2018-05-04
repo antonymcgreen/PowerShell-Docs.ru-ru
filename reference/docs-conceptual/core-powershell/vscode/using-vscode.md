@@ -8,7 +8,8 @@
 Перед запуском убедитесь, что PowerShell установлен в системе.
 Сведения о современных рабочих нагрузках для Windows, macOS и Linux см. в следующих разделах:
 
-- [Установка PowerShell Core в macOS и Linux][install-pscore-linux]
+- [Установка PowerShell Core в Linux][install-pscore-linux]
+- [Установка PowerShell Core в macOS][install-pscore-macos]
 - [Установка PowerShell Core в Windows][install-pscore-windows]
 
 Сведения о традиционных рабочих нагрузках Windows PowerShell см. в разделе [Установка Windows PowerShell][install-winps].
@@ -171,7 +172,8 @@
 - [Отладка сценария PowerShell в Visual Studio Code. Часть 2][debugging-part2]
 
 [ise]: ../ise-guide.md
-[install-pscore-linux]:  ../../setup/Installing-PowerShell-Core-on-macOS-and-Linux.md
+[install-pscore-linux]:  ../../setup/Installing-PowerShell-Core-on-Linux.md
+[install-pscore-macos]:  ../../setup/Installing-PowerShell-Core-on-macOS.md
 [install-pscore-windows]: ../../setup/Installing-PowerShell-Core-on-Windows.md
 [install-winps]: ../../setup/Installing-Windows-PowerShell.md
 [ps-extension]:https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
