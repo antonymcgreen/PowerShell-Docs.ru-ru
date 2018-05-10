@@ -242,8 +242,8 @@ GitCommitId                    v6.0.0-alpha.17
 1. Команда sudo не работает во входящем удаленном сеансе на компьютер Linux.
 
 [PowerShell Core для Windows]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/windows.md#msi
-[Win32 OpenSSH]: https://github.com/PowerShell/Win32-OpenSSH
-[установка]: https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH
+[Win32 OpenSSH]: https://github.com/PowerShell/Win32-OpenSSH/releases
+[установке]: https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH
 [PowerShell для Linux]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#ubuntu-1404
 [Ubuntu SSH]: https://help.ubuntu.com/lts/serverguide/openssh-server.html
 [PowerShell для MacOS]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/macos.md#macos-1012
