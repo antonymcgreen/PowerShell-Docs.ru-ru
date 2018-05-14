@@ -3,15 +3,15 @@ ms.date: 10/31/2017
 ms.topic: conceptual
 keywords: dsc,powershell,конфигурация,установка
 title: Защита MOF-файла
-ms.openlocfilehash: 80ef37ef1bdcb0a8b0ad343b4eab99f1bc66e116
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 00a33a5d628921bcd04aa904a1aa8ee4345af48f
+ms.sourcegitcommit: 4a841ebda3339ae2477e0f5f5be8c01740221232
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-the-mof-file"></a>Защита MOF-файла
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 DSC управляет конфигурацией узлов сервера, используя сведения из MOF-файла, после чего локальный диспетчер конфигураций (LCM) применяет требуемое конечное состояние.
 Так как этот файл содержит сведения о конфигурации, его защита очень важна.
@@ -137,7 +137,7 @@ Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cer
  1. Сертификат создается на **узле разработки**.
  2. Сертификат, включая закрытый ключ, экспортируется на **узле разработки**.
  3. Закрытый ключ удаляется с **узла разработки**, однако сертификат открытого ключа сохраняется в хранилище **my**.
- 4. сертификат открытого ключа импортируется в корневое хранилище сертификатов на **целевом узле разработки**.
+ 4. Сертификат закрытого ключа импортируется в хранилище сертификатов My(Personal) на **целевом узле**.
    - Его необходимо добавить в корневое хранилище, чтобы **целевой узел** считал его надежным.
 
 #### <a name="on-the-authoring-node-create-and-export-the-certificate"></a>На узле разработки: создание и экспорт сертификата
