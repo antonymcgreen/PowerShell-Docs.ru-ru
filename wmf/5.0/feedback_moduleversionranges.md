@@ -1,18 +1,16 @@
 ---
 ms.date: 06/12/2017
-author: JKeithB
-ms.topic: reference
 keywords: wmf,powershell,установка
-ms.openlocfilehash: 89e908969641afd9ad9541dcfedcc8eb6315d07c
-ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
-ms.translationtype: MT
+ms.openlocfilehash: f491e30859cbe6cbaa58f94389382ff231c52956
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="modules-support-for-declaring-version-ranges-1-etc"></a>Поддержка модулей для объявления диапазонов версий (1.* и т. д.)
-В сочетании с **-MinimumVersion** **-MaximumVersion** дает пользователю возможность получения и импорта модуля в пределах определенного диапазона. Параметр также поддерживает **.** \*. В следующем примере показано, как это работает:
+В сочетании с **-MinimumVersion** **-MaximumVersion** дает пользователю возможность получения и импорта модуля в пределах определенного диапазона. Параметр также поддерживает **.**\*. В следующем примере показано, как это работает:
 
-Теперь можно объединить **- MinimumVersion** и **- MaximumVersion** для импорта модуля в пределах определенного диапазона:
+Теперь вы можете сочетать **-MinimumVersion** и **-MaximumVersion**, чтобы импортировать модуль из определенного диапазона:
 
 ```powershell
 PS C:\> Import-Module psreadline -Verbose -MinimumVersion 1.0 -MaximumVersion 1.2.*

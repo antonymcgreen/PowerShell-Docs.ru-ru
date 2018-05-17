@@ -1,16 +1,16 @@
 ---
 description: Сведения о журнале версий расширения Desired State Configuration (DSC) в Azure.
-ms.date: 03/14/2018
+ms.date: 05/09/2018
 ms.topic: conceptual
 keywords: dsc, powershell, azure, расширение
 title: Журнал версий расширения Azure DSC
 author: DCtheGeek
 ms.author: dacoulte
-ms.openlocfilehash: a183137dde302811874bd5466c35bccebca5d128
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 59c014b4b169a589561f57c1ee2a5e861137aee5
+ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Журнал версий расширения Desired State Configuration Azure
 
@@ -20,10 +20,10 @@ ms.lasthandoff: 04/09/2018
 
 ## <a name="latest-versions"></a>Последние версии
 
-### <a name="version-275"></a>Версия 2.75
+### <a name="version-276"></a>Версия 2.76
 
 - **Дата выпуска:**
-  - 5 марта 2018 г.
+  - 9 мая 2018 г.
 - **Поддержка ОС:**
   - Windows Server 2016
   - Windows Server 2012 R2
@@ -38,6 +38,42 @@ ms.lasthandoff: 04/09/2018
   - WMF 4.0
 - **Среда:**
   - Azure
+- **Примечания**. В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
+- **Новые возможности:**
+  - Улучшения в метаданных расширения для подсостояния и другие незначительные исправления ошибок.
+
+### <a name="version-219"></a>Версия 2.19
+
+- **Дата выпуска:**
+  - 3 июня 2016 г.
+- **Поддержка ОС:**
+  - Windows Server 2016 Technical Preview
+  - Windows Server 2012 R2
+  - Windows Server 2012
+  - Windows Server 2008 R2 с пакетом обновления 1 (SP1)
+- **Поддержка WMF:**
+  - WMF 5.0 RTM
+  - Обновление WMF 4.0
+  - WMF 4.0
+- **Среда:**
+  - Azure
+  - Azure для Китая
+  - Azure для государственных организаций
+- **Примечания**. В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
+- **Новые возможности:**
+  - Теперь расширение DSC доступно в Azure для Китая. Эта версия в основном содержит исправления для запуска расширения в Azure для Китая.
+
+## <a name="supported-versions"></a>Поддерживаемые версии
+
+> [!WARNING]
+> В версиях с 2.4 по 2.13 используется общедоступная предварительная версия WMF 5.0, срок действия сертификатов подписи которой истек в августе 2016 г.  Дополнительные сведения об этой проблеме см. в [этой записи блога](https://blogs.msdn.microsoft.com/powershell/2016/05/24/azure-dsc-extension-versions-2-4-up-to-2-13-will-retire-in-august/).
+
+### <a name="version-275"></a>Версия 2.75
+
+- **Дата выпуска**: 5 марта 2018 г.
+- **Поддержка ОС**: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Client 7, 8.1, 10, Nano Server
+- **Поддержка WMF**: WMF 5.1, WMF 5.0 RTM, обновление WMF 4.0, WMF 4.0
+- **Среда**: Azure
 - **Примечания**. В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
   - После недавнего перехода GitHub на TLS 1.2 виртуальную машину невозможно присоединить к DSC в службе автоматизации Azure с помощью шаблонов DIY Resource Manager, доступных в Azure Marketplace, или использовать расширение DSC для получения конфигураций, размещенных на сайте GitHub. При развертывании расширения появится ошибка следующего вида:
@@ -68,32 +104,6 @@ ms.lasthandoff: 04/09/2018
     ```
 
   - TLS 1.2 принудительно используется в новой версии расширения. Если при развертывании расширения в шаблоне Resource Manager использовалось значение AutoUpgradeMinorVersion = true, расширение автоматически обновится до версии 2.75. Чтобы выполнить обновление вручную, укажите `TypeHandlerVersion = 2.75` в шаблоне Resource Manager.
-
-### <a name="version-219"></a>Версия 2.19
-
-- **Дата выпуска:**
-  - 3 июня 2016 г.
-- **Поддержка ОС:**
-  - Windows Server 2016 Technical Preview
-  - Windows Server 2012 R2
-  - Windows Server 2012
-  - Windows Server 2008 R2 с пакетом обновления 1 (SP1)
-- **Поддержка WMF:**
-  - WMF 5.0 RTM
-  - Обновление WMF 4.0
-  - WMF 4.0
-- **Среда:**
-  - Azure
-  - Azure для Китая
-  - Azure для государственных организаций
-- **Примечания**. В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
-- **Новые возможности:**
-  - Теперь расширение DSC доступно в Azure для Китая. Эта версия в основном содержит исправления для запуска расширения в Azure для Китая.
-
-## <a name="supported-versions"></a>Поддерживаемые версии
-
-> [!WARNING]
-> В версиях с 2.4 по 2.13 используется общедоступная предварительная версия WMF 5.0, срок действия сертификатов подписи которой истек в августе 2016 г.  Дополнительные сведения об этой проблеме см. в [этой записи блога](https://blogs.msdn.microsoft.com/powershell/2016/05/24/azure-dsc-extension-versions-2-4-up-to-2-13-will-retire-in-august/).
 
 ### <a name="version-270---272"></a>Версии с 2.70 по 2.72
 
