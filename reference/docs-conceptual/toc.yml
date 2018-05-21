@@ -9,9 +9,9 @@
           items:
             - name: Установка PowerShell Core в Windows
               href: setup/Installing-PowerShell-Core-on-Windows.md
-            - name: Installing PowerShell Core в Linux
+            - name: Установка PowerShell Core в Linux
               href: setup/Installing-PowerShell-Core-on-Linux.md
-            - name: Installing PowerShell Core в macOS
+            - name: Установка PowerShell Core в macOS
               href: setup/Installing-PowerShell-Core-on-macOS.md
             - name: PowerShell Core для ARM
               href: setup/PowerShell-Core-on-ARM.md
@@ -154,14 +154,20 @@
     - name: Новые возможности
       href: ''
       items:
-        - name: Новые возможности PowerShell
-          href: whats-new/what-s-new-with-powershell.md
-        - name: Новые возможности Windows PowerShell 5.0
-          href: whats-new/what-s-new-in-windows-powershell-50.md
-        - name: Новые возможности интегрированной среды сценариев PowerShell версии 5.0
-          href: whats-new/what-s-new-in-the-powershell-50-ise.md
         - name: Новые возможности PowerShell Core 6.0
           href: whats-new/what-s-new-in-powershell-core-60.md
+          items:
+            - name: "Критические изменения в PowerShell Core\_6.0"
+              href: whats-new/breaking-changes-ps6.md
+            - name: "Известные проблемы в PowerShell Core\_6.0"
+              href: whats-new/known-issues-ps6.md
+        - name: "Новые возможности PowerShell\_5.0"
+          href: whats-new/what-s-new-with-powershell.md
+          items:
+            - name: Новые возможности Windows PowerShell 5.0
+              href: whats-new/what-s-new-in-windows-powershell-50.md
+            - name: Новые возможности интегрированной среды сценариев PowerShell версии 5.0
+              href: whats-new/what-s-new-in-the-powershell-50-ise.md
     - name: Жизненный цикл поддержки PowerShell Core
       href: PowerShell-Core-Support.md
     - name: Дополнительные сведения
