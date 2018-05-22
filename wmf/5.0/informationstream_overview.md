@@ -1,17 +1,15 @@
 ---
 ms.date: 06/12/2017
-author: JKeithB
-ms.topic: reference
 keywords: wmf,powershell,установка
-ms.openlocfilehash: 41a676939cb45e780b572b8e718ae315d641d4f8
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 6dadbe9c41ed0a61839ef94fe0a950fe501941ee
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="information-stream"></a><span data-ttu-id="6bb7b-102">Поток информации</span><span class="sxs-lookup"><span data-stu-id="6bb7b-102">Information Stream</span></span>
+# <a name="information-stream"></a><span data-ttu-id="2edfd-102">Поток информации</span><span class="sxs-lookup"><span data-stu-id="2edfd-102">Information Stream</span></span>
 
-<span data-ttu-id="6bb7b-103">Теперь для передачи структурированных данных между сценарием и его узлом можно использовать новый поток структурированной информации.</span><span class="sxs-lookup"><span data-stu-id="6bb7b-103">A new structured Information stream can now be used to transmit structured data between a script and its host.</span></span> <span data-ttu-id="6bb7b-104">Командлет **Write-Host** также был изменен для передачи выходных данных в поток информации, где их можно собрать или отключить.</span><span class="sxs-lookup"><span data-stu-id="6bb7b-104">**Write-Host** has also been updated to emit its output to the Information stream where you can now capture or silence it.</span></span> <span data-ttu-id="6bb7b-105">Новый командлет **Write-Information** (вместе с соответствующим API WriteInformation), используемый с общими параметрами **-InformationVariable** и **-InformationAction**, обладает повышенной гибкостью и расширенными возможностями.</span><span class="sxs-lookup"><span data-stu-id="6bb7b-105">The new **Write-Information** cmdlet (along with a corresponding WriteInformation API) used with **-InformationVariable** and **-InformationAction** common parameters enables more flexibility and capability.</span></span>
+<span data-ttu-id="2edfd-103">Теперь для передачи структурированных данных между сценарием и его узлом можно использовать новый поток структурированной информации.</span><span class="sxs-lookup"><span data-stu-id="2edfd-103">A new structured Information stream can now be used to transmit structured data between a script and its host.</span></span> <span data-ttu-id="2edfd-104">Командлет **Write-Host** также был изменен для передачи выходных данных в поток информации, где их можно собрать или отключить.</span><span class="sxs-lookup"><span data-stu-id="2edfd-104">**Write-Host** has also been updated to emit its output to the Information stream where you can now capture or silence it.</span></span> <span data-ttu-id="2edfd-105">Новый командлет **Write-Information** (вместе с соответствующим API WriteInformation), используемый с общими параметрами **-InformationVariable** и **-InformationAction**, обладает повышенной гибкостью и расширенными возможностями.</span><span class="sxs-lookup"><span data-stu-id="2edfd-105">The new **Write-Information** cmdlet (along with a corresponding WriteInformation API) used with **-InformationVariable** and **-InformationAction** common parameters enables more flexibility and capability.</span></span>
 
 ```powershell
 PS C:\Users\demo> ## Here's a typical PowerShell script

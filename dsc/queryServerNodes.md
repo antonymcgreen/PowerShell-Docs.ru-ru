@@ -1,15 +1,14 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
 keywords: dsc,powershell,конфигурация,установка
 title: Функция DSC для запроса сведений об узле с опрашивающего сервера.
-ms.openlocfilehash: 5c10eefe9ded4fe6339c4e6252cc189bcd793978
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 069fc79a79fbd5f75bcce27f7f0bd95af0d7b1ad
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="dsc-function-to-query-node-information-from-pull-server"></a><span data-ttu-id="f6f48-103">Функция DSC для запроса сведений об узле с опрашивающего сервера.</span><span class="sxs-lookup"><span data-stu-id="f6f48-103">DSC function to query node information from pull server.</span></span>
+# <a name="dsc-function-to-query-node-information-from-pull-server"></a><span data-ttu-id="cb320-103">Функция DSC для запроса сведений об узле с опрашивающего сервера.</span><span class="sxs-lookup"><span data-stu-id="cb320-103">DSC function to query node information from pull server.</span></span>
 
 ```powershell
 function QueryNodeInformation
@@ -38,9 +37,9 @@ Param (
 }
 ```
 
-<span data-ttu-id="f6f48-104">Замените параметр `Uri` на универсальный код ресурса (URI) опрашивающего сервера.</span><span class="sxs-lookup"><span data-stu-id="f6f48-104">Replace the `Uri` parameter with the URI for your pull server.</span></span> <span data-ttu-id="f6f48-105">Если вы хотите получать сведения об узле в формате XML, задайте для `ContentType` значение `application/xml`.</span><span class="sxs-lookup"><span data-stu-id="f6f48-105">If you want the node information in XML format, set `ContentType` to `application/xml`.</span></span>
+<span data-ttu-id="cb320-104">Замените параметр `Uri` на универсальный код ресурса (URI) опрашивающего сервера.</span><span class="sxs-lookup"><span data-stu-id="cb320-104">Replace the `Uri` parameter with the URI for your pull server.</span></span> <span data-ttu-id="cb320-105">Если вы хотите получать сведения об узле в формате XML, задайте для `ContentType` значение `application/xml`.</span><span class="sxs-lookup"><span data-stu-id="cb320-105">If you want the node information in XML format, set `ContentType` to `application/xml`.</span></span>
 
-<span data-ttu-id="f6f48-106">Чтобы извлечь сведения об узле из параметра `$json`, сделайте следующее:</span><span class="sxs-lookup"><span data-stu-id="f6f48-106">To retrieve the node information from the `$json` parameter, use the following:</span></span>
+<span data-ttu-id="cb320-106">Чтобы извлечь сведения об узле из параметра `$json`, сделайте следующее:</span><span class="sxs-lookup"><span data-stu-id="cb320-106">To retrieve the node information from the `$json` parameter, use the following:</span></span>
 
 ```powershell
 $json = QueryNodeInformation –Uri http://localhost:7070/PSDSCComplianceServer.svc/Status
