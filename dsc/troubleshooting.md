@@ -1,17 +1,16 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
 keywords: dsc,powershell,конфигурация,установка
 title: Устранение неполадок в DSC
-ms.openlocfilehash: 6bb639febc3f413e909c3e61559059adb5c96389
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c08f91b514aae438578fa278228fe5ec879a4012
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="troubleshooting-dsc"></a>Устранение неполадок в DSC
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 В этом разделе описываются способы устранения неполадок в DSC.
 

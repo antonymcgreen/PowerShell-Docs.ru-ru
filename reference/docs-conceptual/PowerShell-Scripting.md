@@ -2,11 +2,11 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Создание сценариев PowerShell
-ms.openlocfilehash: 3304ecc3129b710a003725715803a03b68f79b45
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 7de5a3f3149d8d464b34101d94a5f9430d9b0f23
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -25,18 +25,18 @@ Windows PowerShell помогает улучшить среду командно
 ### <a name="discoverability"></a>Возможность обнаружения
 Windows PowerShell упрощает обнаружение своих возможностей. Например, чтобы получить список командлетов для просмотра и изменения служб Windows, введите следующее:
 
-```
+```powershell
 Get-Command *-Service
 ```
 
 Узнав, какой командлет выполняет задачу, можно получить дополнительные сведения о нем с помощью командлета Get-Help. Например, для отображения справки по командлету Get-Service введите:
 
-```
+```powershell
 Get-Help Get-Service
 ```
 Большинство командлетов выводят объекты, которые могут быть обработаны и преобразованы в текст для просмотра. Чтобы полностью понять выходные данные этого командлета, передайте их в командлет Get-Member. Например, следующая команда отображает сведения об элементах выходных данных объекта с помощью командлета Get-Service.
 
-```
+```powershell
 Get-Service | Get-Member
 ```
 
