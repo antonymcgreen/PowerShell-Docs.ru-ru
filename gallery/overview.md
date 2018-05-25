@@ -1,14 +1,4 @@
----
-ms.date: 06/12/2017
-contributor: JKeithB
-ms.topic: conceptual
-keywords: коллекции,powershell,командлет,psgallery,psget
-title: Коллекция PowerShell
-ms.openlocfilehash: cffb2f0182ffe9072f9fbbc7f4cdfcf28de276db
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ and --- ms.date:  06/12/2017 contributor:  JKeithB keywords:  gallery,powershell,cmdlet,psgallery,psget title:  Коллекция PowerShell
 ---
 # <a name="the-powershell-gallery"></a>Коллекция PowerShell
 
@@ -28,9 +18,9 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
-Для модуля **PowerShellGet** требуется **PowerShell 3.0 или более поздней версии**.
+Для модуля **PowerShellGet** требуется **Windows PowerShell версии 3.0 или более поздней** либо **PowerShell Core версии 6.0 или более поздней**.
 
-Таким образом, для **PowerShellGet** требуется одна из следующих операционных систем:
+Подходящая версия **Windows PowerShell** доступна для следующих операционных систем:
 
 - Windows 10
 - Windows 8.1 Профессиональная
@@ -41,6 +31,10 @@ ms.lasthandoff: 05/10/2018
 - Windows Server 2008 R2 с пакетом обновления 1 (SP1)
 
 Для **PowerShellGet** также требуется .NET Framework 4.5 или более поздней версии. Установить .NET Framework 4.5 или более поздней версии можно [отсюда](https://msdn.microsoft.com/library/5a4x27ek.aspx).
+
+**PowerShell Core** поддерживает множество операционных систем. Полный список можно найти в [этой статье](https://blogs.msdn.microsoft.com/powershell/2018/01/10/powershell-core-6-0-generally-available-ga-and-supported/).
+
+Много модулей, размещенных в коллекции, поддерживают различные ОС и имеют дополнительные требования. Дополнительные сведения см. в документации по модулям.
 
 ## <a name="got-a-question-have-feedback"></a>Возник вопрос? Хотите поделиться мнением?
 

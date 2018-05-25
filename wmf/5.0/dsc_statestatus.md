@@ -1,11 +1,11 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,установка
-ms.openlocfilehash: 272843efb68c42105af6eb88ad6a95b581da47ae
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 7b4e4dbeaf9c3c48e7b2dfc74435dfa2cd9c7ea7
+ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Единое и согласованное представление состояний
 
@@ -19,9 +19,9 @@ ms.lasthandoff: 05/16/2018
 5.  Общее состояние, возвращаемое командлетом Get-DscConfigurationStatus, представляет собой супермножество состояния для всех ресурсов.
 6.  Состояние PendingReboot является супермножеством состояния PendingConfiguration.
 
-В следующей таблице приведены итоговые свойства состояния в несколько типичных сценариях:
+В следующей таблице приведены итоговые свойства состояния в несколько типичных сценариях.
 
-| **Сценарий**                    | **LCMState\***       | **Состояние** | **Запрошена перезагрузка**  | **ResourcesInDesiredState**  | **ResourcesNotInDesiredState** |
+| Сценарий                    | LCMState       | Состояние | Запрошена перезагрузка  | ResourcesInDesiredState  | ResourcesNotInDesiredState |
 |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
 | S**^**                          | Idle                 | Успех    | $false        | S                            | $null                          |
 | F**^**                          | PendingConfiguration | Отказ    | $false        | $null                        | F                              |
@@ -46,11 +46,13 @@ $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
 
 $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
 ```
+
 ## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Улучшения в командлете Get-DscConfigurationStatus
 
 В этом выпуске в командлет Get-DscConfigurationStatus было внесено несколько улучшений. Ранее свойство StartDate объектов, возвращаемое командлетом StartDate, имело тип String. Теперь оно имеет тип Datetime, что упрощает сложный выбор и фильтрацию благодаря встроенным свойствам объекта Datetime.
+
 ```powershell
-(Get-DscConfigurationStatus).StartDate | fl \*
+(Get-DscConfigurationStatus).StartDate | fl *
 DateTime : Friday, November 13, 2015 1:39:44 PM
 Date : 11/13/2015 12:00:00 AM
 Day : 13
@@ -68,14 +70,16 @@ Year : 2015
 ```
 
 Ниже приведен пример, который возвращает все записи операций DSC, созданные в тот же день недели, что и сегодня.
+
 ```powershell
-(Get-DscConfigurationStatus –All) | where { $\_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
+(Get-DscConfigurationStatus –All) | where { $_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
 ```
 
 Записи операций, которые не вносят изменения в конфигурацию узла (т. е. представлены операциями только для чтения), исключаются. Таким образом, операции Test-DscConfiguration и Get-DscConfiguration больше не имитируются в возвращаемых объектах из командлета Get-DscConfigurationStatus.
 В выходные данные командлета Get-DscConfigurationStatus добавляются записи для операции настройки метаконфигурации.
 
 Ниже приведен пример результата, возвращаемого из командлета DscConfigurationStatus –All.
+
 ```powershell
 All configuration operations:
 
@@ -89,12 +93,15 @@ Success 11/13/2015 11:20:44 AM LocalConfigurationManager False
 ```
 
 ## <a name="enhancement-in-get-dsclocalconfigurationmanager-cmdlet"></a>Улучшения в командлете Get-DscLocalConfigurationManager
+
 В объект, возвращаемый из командлета Get-DscLocalConfigurationManager, добавлено новое поле LCMStateDetail. Оно заполняется в том случае, когда LCMState имеет значение Busy. Извлечь его можно с помощью следующего командлета:
+
 ```powershell
 (Get-DscLocalConfigurationManager).LCMStateDetail
 ```
 
 Ниже приведен пример выходных данных для постоянного мониторинга конфигурации, которая требует двух перезагрузок на удаленном узле.
+
 ```powershell
 Start a configuration that requires two reboots
 

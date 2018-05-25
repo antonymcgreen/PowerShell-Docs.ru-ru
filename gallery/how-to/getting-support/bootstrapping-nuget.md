@@ -1,6 +1,13 @@
-
 ---
-ms.date :  06/12/2017 contributor:  manikb ms.topic:  reference keywords:  gallery,powershell,cmdlet,psget title:  Bootstrapping NuGet
+ms.date: 06/12/2017
+contributor: manikb
+keywords: коллекция,powershell,командлет,psget
+title: Начальная загрузка поставщика NuGet
+ms.openlocfilehash: f707e23737361ee7f82a16150402c9e719ee0ae1
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Начальная загрузка поставщика NuGet и NuGet.exe
 
