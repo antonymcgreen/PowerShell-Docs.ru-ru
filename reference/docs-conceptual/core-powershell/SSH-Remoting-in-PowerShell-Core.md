@@ -131,7 +131,7 @@ SSH должен быть установлен на всех компьютер�
     - Добавьте запись подсистемы PowerShell:
 
     ```
-    Subsystem powershell /usr/local/bin/powershell -sshs -NoLogo -NoProfile
+    Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
     ```
 
     - При необходимости включите проверку подлинности на основе ключа:
