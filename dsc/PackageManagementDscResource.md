@@ -1,18 +1,22 @@
 ---
-ms.date: 06/12/2017
+ms.date: 06/20/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс PackageManagement DSC
-ms.openlocfilehash: f850c389214fe5adf139c3bd01fb60addc5ec238
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 3d52934b130d59acee4d7f8a92da2c743c1eb305
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753793"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Ресурс PackageManagement DSC
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
 
 Ресурс **PackageManagement** в службе настройки требуемого состояния Windows PowerShell (DSC) предоставляет механизм установки пакетов управления пакетами на целевом узле или их удаления. Для этого ресурса требуется модуль **PackageManagement**, доступный из http://PowerShellGallery.com.
+
+> [!IMPORTANT]
+> Указанные ниже сведения о свойствах относятся к модулю **PackageManagement** версии 1.1.7.0 и новее.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -20,31 +24,35 @@ ms.lasthandoff: 05/16/2018
 PackageManagement [string] #ResourceName
 {
     Name = [string]
-    [ Source = [string] ]
-    [ Ensure = [string] { Absent | Present }  ]
-    [ RequiredVersion = [string] ]
-    [ MinimumVersion = [string] ]
-    [ MaximumVersion = [string] ]
-    [ SourceCredential = [PSCredential] ]
-    [ ProviderName = [string] ]
-    [ AdditionalParameters = [Microsoft.Management.Infrastructure.CimInstance[]] ]
+    [AdditionalParameters = [HashTable]]
+    [DependsOn = [string[]]]
+    [Ensure = [string]{ Absent | Present }]
+    [MaximumVersion = [string]]
+    [MinimumVersion = [string]]
+    [ProviderName = [string]]
+    [PsDscRunAsCredential = [PSCredential]]
+    [RequiredVersion = [string]]
+    [Source = [string]]
+    [SourceCredential = [PSCredential]]
 }
 ```
 
 ## <a name="properties"></a>Свойства
+
 |  Свойство  |  Описание   |
 |---|---|
 | Name| Указывает имя устанавливаемого или удаляемого пакета.|
-| Источник| Указывает имя источника пакета, в котором его можно найти. Это может быть URI или источник, зарегистрированный с помощью ресурса DSC Register-PackageSource или PackageManagementSource. MSFT_PackageManagementSource ресурса DSC может также зарегистрировать источник пакета.|
+| AdditionalParameters| Предоставляет определенную хэш-таблицу параметров, которые передаются в аргумент `Get-Package -AdditionalArguments`. Например, для поставщика NuGet можно передать дополнительные параметры, такие как DestinationPath.|
 | Ensure| Определяет, следует ли установить или удалить пакет.|
-| RequiredVersion| Указывает точную версию пакета, который вы хотите установить. Если вы не укажете этот параметр, ресурс DSC установит новейшую версию пакета, соответствующую максимальной версии, указанной в параметре MaximumVersion.|
-| MinimumVersion| Указывает минимальную версию пакета, которую вы хотите установить. Если вы не добавите этот параметр, ресурс DSC установит новейшую версию пакета, соответствующую максимальной версии, указанной в параметре MaximumVersion.|
-| MaximumVersion| Указывает максимальную версию пакета, которую вы хотите установить. Если вы не укажете этот параметр, ресурс DSC установит новейшую версию пакета.|
+| MaximumVersion|Указывает максимальную версию пакета, которую требуется найти. Если этот параметр не указан, ресурс находит новейшую версию пакета.|
+| MinimumVersion|Указывает минимальную версию пакета, которую требуется найти. Если этот параметр не указан, ресурс находит новейшую доступную версию пакета, номер которой не превышает тот, что указан в параметре _MaximumVersion_.|
+| ProviderName| Указывает имя поставщика пакетов, на который распространяется область поиска пакетов. Чтобы получить имена поставщиков пакетов, выполните командлет `Get-PackageProvider`.|
+| RequiredVersion| Указывает точную версию пакета, который требуется установить. Если этот параметр не указан, ресурс DSC устанавливает новейшую версию пакета, номер которой не превышает тот, что указан в параметре _MaximumVersion_.|
+| Source| Указывает имя источника пакета, в котором его можно найти. Это может быть универсальный код ресурса (URI) или источник, зарегистрированный с помощью командлета `Register-PackageSource` или ресурса DSC PackageManagementSource.|
 | SourceCredential | Указывает учетную запись пользователя с правами для установки пакета для заданного поставщика или источника пакетов.|
-| ProviderName| Указывает имя поставщика пакетов, на который распространяется область поиска пакетов. Чтобы получить имена поставщика, запустите командлет Get-PackageProvider.|
-| AdditionalParameters| Специальные параметры поставщика, которые передаются как хэш-таблица. Например, для поставщика NuGet можно передать дополнительные параметры, такие как DestinationPath.|
 
 ## <a name="additional-parameters"></a>Дополнительные параметры
+
 В следующей таблице перечислены параметры свойства AdditionalParameters.
 |  Параметр  | Описание   |
 |---|---|
@@ -63,7 +71,7 @@ Configuration PackageTest
         Ensure      = "Present"
         Name        = "MyNuget"
         ProviderName= "Nuget"
-        SourceUri   = "http://nuget.org/api/v2/"
+        SourceLocation   = "http://nuget.org/api/v2/"
         InstallationPolicy ="Trusted"
     }
 
@@ -72,7 +80,7 @@ Configuration PackageTest
         Ensure      = "Present"
         Name        = "psgallery"
         ProviderName= "PowerShellGet"
-        SourceUri   = "https://www.powershellgallery.com/api/v2/"
+        SourceLocation   = "https://www.powershellgallery.com/api/v2/"
         InstallationPolicy ="Trusted"
     }
 
