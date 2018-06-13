@@ -2,11 +2,12 @@
 ms.date: 08/09/2017
 keywords: powershell, cmdlet, командлет, download, скачать, install, установить, setup, установка, windows 10, windows 8.1, windows 8.0, windows 7
 title: Установка Windows PowerShell
-ms.openlocfilehash: 320b271ce49768f8865c79c5c72749befe306fa4
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 89f0f689ebfcd34dd4c8ec3824ec8ab4bddc34d9
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483004"
 ---
 # <a name="installing-windows-powershell"></a>Установка Windows PowerShell
 Windows PowerShell установлен по умолчанию в каждой ОС Windows, начиная с Windows 7 с пакетом обновления 1 (SP1) и Windows Server 2008 R2 с пакетом обновления 1 (SP1).
@@ -81,9 +82,9 @@ Windows 7 с пакетом обновления 1 (SP1)<br/>Windows Server 2008
 
 ## <a name="need-azure-powershell"></a>Необходимость Azure PowerShell
 
-Если вы ищете **Azure PowerShell**, можно начать с раздела [Общие сведения об Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure).
+Если вы ищете **Azure PowerShell**, можно начать с раздела [Общие сведения об Azure PowerShell](https://docs.microsoft.com/powershell/azure).
 
-Либо вам нужен раздел [Установка и настройка Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps)
+Либо вам нужен раздел [Установка и настройка Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps)
 
 ## <a name="see-also"></a>См. также
 

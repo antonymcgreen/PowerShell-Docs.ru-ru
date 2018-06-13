@@ -3,11 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Написание и запуск сценариев в интегрированной среде сценариев Windows PowerShell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: 4b8a9c0c3a710f3b3b9b6077c3c84e174a141db2
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 4d7c5352ef1dac6f63a50433676068f83a920db5
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483123"
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Написание и запуск сценариев в интегрированной среде сценариев Windows PowerShell
 
@@ -130,7 +131,7 @@ ms.lasthandoff: 04/09/2018
 
 ### <a name="to-save-a-script-in-ascii-encoding"></a>Сохранение сценария в кодировке ASCII
 
-По умолчанию интегрированная среда сценариев Windows PowerShell сохраняет новые файлы сценариев (PS1), файлы данных сценариев (PSD1) и файлы модулей сценариев (PSM1) в кодировке Юникод (BigEndianUnicode). Чтобы сохранить сценарий в другой кодировке, например ASCII (ANSI), используйте методы **Сохранить** или **Сохранить как** объекта [$psISE.CurrentFile](https://technet.microsoft.com/en-us/library/bc3300e4-9c17-4f00-a621-c8867126e3b3#CurrentFile).
+По умолчанию интегрированная среда сценариев Windows PowerShell сохраняет новые файлы сценариев (PS1), файлы данных сценариев (PSD1) и файлы модулей сценариев (PSM1) в кодировке Юникод (BigEndianUnicode). Чтобы сохранить сценарий в другой кодировке, например ASCII (ANSI), используйте методы **Сохранить** или **Сохранить как** объекта [$psISE.CurrentFile](https://technet.microsoft.com/library/bc3300e4-9c17-4f00-a621-c8867126e3b3#CurrentFile).
 
 Следующая команда сохраняет новый сценарий в кодировке ASCII и с именем MyScript.ps1:
 

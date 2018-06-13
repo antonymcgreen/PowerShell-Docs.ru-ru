@@ -74,7 +74,7 @@ SSH должен быть установлен на всех компьютер�
 
 ## <a name="setup-on-linux-ubuntu-1404-machine"></a>Установка на компьютере с Linux (Ubuntu 14.04)
 
-1. Установите последнюю сборку [PowerShell для Linux] из GitHub.
+1. Установите последнюю сборку [PowerShell Core для Windows] из GitHub.
 1. При необходимости установите [Ubuntu SSH].
 
     ```bash
@@ -109,7 +109,7 @@ SSH должен быть установлен на всех компьютер�
 
 ## <a name="setup-on-macos-machine"></a>Установка на компьютере с MacOS
 
-1. Установите последнюю сборку [PowerShell для MacOS].
+1. Установите последнюю сборку [PowerShell Core для MacOS].
     - Убедитесь, что удаленное взаимодействие SSH включено, выполните следующие действия:
       - Откройте `System Preferences`.
       - Щелкните `Sharing`.
@@ -241,9 +241,9 @@ GitCommitId                    v6.0.0-alpha.17
 
 1. Команда sudo не работает во входящем удаленном сеансе на компьютер Linux.
 
-[PowerShell Core для Windows]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/windows.md#msi
+[PowerShell Core для Windows]: ../setup/installing-powershell-core-on-windows.md#msi
+[PowerShell Core для Windows]: ../setup/installing-powershell-core-on-linux.md#ubuntu-1404
+[PowerShell Core для MacOS]: ../setup/installing-powershell-core-on-macos.md
 [Win32 OpenSSH]: https://github.com/PowerShell/Win32-OpenSSH/releases
 [установке]: https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH
-[PowerShell для Linux]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#ubuntu-1404
 [Ubuntu SSH]: https://help.ubuntu.com/lts/serverguide/openssh-server.html
-[PowerShell для MacOS]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/macos.md#macos-1012

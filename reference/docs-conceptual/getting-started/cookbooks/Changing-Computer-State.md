@@ -3,11 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Изменение состояния компьютера
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: 3d3983c6d9e9b11db62bd71805da51be83331fdb
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c659ad54325b0f7305f882e1cb9607062abad6a4
+ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251523"
 ---
 # <a name="changing-computer-state"></a>Изменение состояния компьютера
 
@@ -49,16 +50,16 @@ shutdown.exe -l
 
 Завершение работы и перезапуск компьютеров обычно относятся к схожим типам задач. Средства, завершающие работу компьютера, обычно также перезапускают его и наоборот. Существует два варианта непосредственной перезагрузки компьютера из Windows PowerShell. Используйте Tsshutdn.exe или Shutdown.exe с соответствующими аргументами. Подробные сведения об использовании можно получить, запустив **tsshutdn.exe /?** или **shutdown.exe /?**.
 
-Для завершения работы и перезапуска можно также использовать **Win32_OperatingSystem** прямо из Windows PowerShell.
+Операции завершения работы и перезапуска можно также выполнять непосредственно из Windows PowerShell.
 
-Чтобы завершить работу компьютера, используйте метод Win32Shutdown с флагом **1**.
+Чтобы завершить работу компьютера, используйте команду restart-computer.
 
 ```powershell
-(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(1)
+stop-computer
 ```
 
-Чтобы перезапустить операционную систему, используйте метод Win32Shutdown с флагом **2**.
+Чтобы перезапустить операционную систему, используйте команду restart-computer.
 
 ```powershell
-(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)
+restart-computer
 ```

@@ -2,11 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,командлет
 title: Правила авторизации и средства безопасности Windows PowerShell Web Access
-ms.openlocfilehash: 0e765ae90661a054ca9bae71d0f6d449cccb185d
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 1b4d4339efda78a5cb719921a9cb06881d119930
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483140"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Правила авторизации и средства безопасности Windows PowerShell Web Access
 
@@ -112,7 +113,7 @@ Windows PowerShell Web Access в Windows Server 2012 R2 и Windows Server 201
 Правила авторизации можно использовать, чтобы разрешить доступ пользователей к конкретным конфигурациям сеанса.
 Можно создать _ограниченные пространства выполнения_ или конфигурации сеансов для Windows PowerShell Web Access и разрешить конкретным пользователям подключаться только к определенным конфигурациям сеанса при входе в Windows PowerShell Web Access.
 Можно использовать списки управления доступом, чтобы определить, какие пользователи имеют доступ к конкретным конечным точкам, и далее ограничить доступ к конечной точке с помощью правил авторизации, описанных в данном разделе.
-Дополнительные сведения об ограничении доступа к пространствам выполнения см. в статье, посвященной [созданию ограниченных пространств выполнения](https://msdn.microsoft.com/en-us/library/dn614668).
+Дополнительные сведения об ограничении доступа к пространствам выполнения см. в статье, посвященной [созданию ограниченных пространств выполнения](https://msdn.microsoft.com/library/dn614668).
 
 ### <a name="configuring-authorization-rules"></a>Настройка правил авторизации
 
@@ -122,7 +123,7 @@ Windows PowerShell Web Access в Windows Server 2012 R2 и Windows Server 201
 
 Если вы планируете использовать настраиваемые конфигурации сеансов, чтобы разрешить определенным пользователям работать только в ограниченных пространствах выполнения в Windows PowerShell Web Access, создайте эти конфигурации, прежде чем добавить правила авторизации, которые на них ссылаются.
 Командлеты Windows PowerShell Web Access нельзя использовать для создания настраиваемых конфигураций сеансов.
-Дополнительные сведения о создании настраиваемых конфигураций сеансов см. в разделе [about_Session_Configuration_Files](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
+Дополнительные сведения о создании настраиваемых конфигураций сеансов см. в разделе [about_Session_Configuration_Files](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
 
 Командлеты Windows PowerShell Web Access поддерживают единственный подстановочный знак — звездочку (\*).
 Подстановочные знаки в строковых значениях не поддерживаются; используйте одну звездочку для свойства (пользователи, компьютеры или конфигурации сеанса).
@@ -142,7 +143,7 @@ Windows PowerShell Web Access в Windows Server 2012 R2 и Windows Server 201
 2. **Необязательный шаг** для ограничения пользовательского доступа путем использования конфигураций сеансов:
 
     убедитесь, что конфигурации сеансов, которые требуется использовать в правилах, уже существуют.
-В противном случае выполните инструкции по созданию конфигураций сеансов, приведенные в статье [about_Session_Configuration_Files](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
+В противном случае выполните инструкции по созданию конфигураций сеансов, приведенные в статье [about_Session_Configuration_Files](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
 
 3. Это правило авторизации разрешает конкретному пользователю доступ к одному сетевому компьютеру, к которому обычно требуется доступ, с доступом к конкретной конфигурации сеанса, область которого соответствует потребностям пользовательских сценариев и командлетов. Введите следующую команду и нажмите клавишу **ВВОД**.
 
@@ -253,6 +254,6 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal -computerName srv1.con
 
 ## <a name="see-also"></a>См. также
 
-- [Установка и использование Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
+- [Установка и использование Windows PowerShell Web Access](https://technet.microsoft.com/library/hh831611(v=ws.11).aspx)
 - [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
 - [Командлеты Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md)
