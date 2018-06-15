@@ -1,7 +1,7 @@
 - name: PowerShell
   tocHref: /powershell/
-  topicHref: /powershell/index
+  topicHref: /powershell
   items:
-    - name: Настройка требуемого состояния (DSC)
+    - name: Настройка требуемого состояния
       tocHref: /powershell/dsc/
       topicHref: /powershell/dsc/index
