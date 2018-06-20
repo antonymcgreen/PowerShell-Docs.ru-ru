@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951330"
 ---
 # <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell
 

@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953588"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Новые возможности в интегрированной среде сценариев Windows PowerShell
 В этой статье описаны новые и обновленные функции, представленные в разных версиях интегрированной среды сценариев Windows PowerShell.

@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218218"
 ---
 # <a name="format-hex"></a>Format-Hex
 **Format-Hex** позволяет просматривать текст или двоичные данные в шестнадцатеричном формате. См. раздел [Format-Hex](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/format-hex).
