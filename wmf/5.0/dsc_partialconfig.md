@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189403"
 ---
 # <a name="configure-node-with-multiple-configuration-fragments-partial-configurations"></a><span data-ttu-id="43c97-102">Настройка узла с помощью нескольких фрагментов конфигурации (неполные конфигурации)</span><span class="sxs-lookup"><span data-stu-id="43c97-102">Configure Node with multiple configuration fragments (partial configurations)</span></span>
 

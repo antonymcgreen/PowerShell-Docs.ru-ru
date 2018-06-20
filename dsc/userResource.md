@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189658"
 ---
 #<a name="dsc-user-resource"></a><span data-ttu-id="44d0a-103">Ресурс User в DSC</span><span class="sxs-lookup"><span data-stu-id="44d0a-103">DSC User Resource#</span></span>
 

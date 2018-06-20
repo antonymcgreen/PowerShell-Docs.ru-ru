@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949270"
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a><span data-ttu-id="857b3-103">Приложение 2. Создание настраиваемого ярлыка PowerShell</span><span class="sxs-lookup"><span data-stu-id="857b3-103">Appendix 2 - Creating a Custom PowerShell Shortcut</span></span>
 

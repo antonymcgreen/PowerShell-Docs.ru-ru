@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34187545"
 ---
 # <a name="unlisting-items"></a><span data-ttu-id="649fa-103">Исключение элементов</span><span class="sxs-lookup"><span data-stu-id="649fa-103">Unlisting items</span></span>
 

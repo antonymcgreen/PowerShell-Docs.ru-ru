@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189573"
 ---
 # <a name="extract-and-parse-structured-objects-out-of-string"></a><span data-ttu-id="01133-102">Извлечение и анализ структурированных объектов вне строки</span><span class="sxs-lookup"><span data-stu-id="01133-102">Extract and Parse Structured Objects out of String</span></span>
 <span data-ttu-id="01133-103">Здесь также расширена функциональность командлета ConvertFrom-String:</span><span class="sxs-lookup"><span data-stu-id="01133-103">This also introduces some additional functionality for the ConvertFrom-String cmdlet:</span></span>

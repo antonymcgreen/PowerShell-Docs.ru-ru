@@ -8,6 +8,7 @@ ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31201025"
 ---
 # <a name="working-with-files-and-folders"></a><span data-ttu-id="de139-103">Работа с файлами и папками</span><span class="sxs-lookup"><span data-stu-id="de139-103">Working with Files and Folders</span></span>
 

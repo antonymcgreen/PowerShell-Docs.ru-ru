@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189675"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a><span data-ttu-id="b295b-103">Настройка опрашивающего SMB-сервера DSC</span><span class="sxs-lookup"><span data-stu-id="b295b-103">Setting up a DSC SMB pull server</span></span>
 

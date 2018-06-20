@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952500"
 ---
 # <a name="managing-processes-with-process-cmdlets"></a><span data-ttu-id="5def0-103">Управление процессами с помощью командлетов Process</span><span class="sxs-lookup"><span data-stu-id="5def0-103">Managing Processes with Process Cmdlets</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189964"
 ---
 # <a name="resource-authoring-checklist"></a><span data-ttu-id="bcf4a-103">Контрольный список для создания ресурсов</span><span class="sxs-lookup"><span data-stu-id="bcf4a-103">Resource authoring checklist</span></span>
 <span data-ttu-id="bcf4a-104">Это список рекомендаций, которых нужно придерживаться при создании нового ресурса DSC.</span><span class="sxs-lookup"><span data-stu-id="bcf4a-104">This checklist is a list of best practices when authoring a new DSC Resource.</span></span>

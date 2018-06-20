@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949491"
 ---
 # <a name="getting-started-with-windows-powershell"></a><span data-ttu-id="388de-103">Начало работы с Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="388de-103">Getting Started with Windows PowerShell</span></span>
 <span data-ttu-id="388de-104">Windows PowerShell — это оболочка командной строки Windows, предназначенная специально для системных администраторов.</span><span class="sxs-lookup"><span data-stu-id="388de-104">Windows PowerShell is a Windows command-line shell designed especially for system administrators.</span></span> <span data-ttu-id="388de-105">Windows PowerShell содержит интерактивное приглашение и среду сценариев, которые можно использовать отдельно или вместе.</span><span class="sxs-lookup"><span data-stu-id="388de-105">Windows PowerShell includes an interactive prompt and a scripting environment that can be used independently or in combination.</span></span>

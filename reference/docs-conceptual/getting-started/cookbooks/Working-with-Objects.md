@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949661"
 ---
 # <a name="working-with-objects"></a><span data-ttu-id="9fa8a-103">Работа с объектами</span><span class="sxs-lookup"><span data-stu-id="9fa8a-103">Working with Objects</span></span>
 

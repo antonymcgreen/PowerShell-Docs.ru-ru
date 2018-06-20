@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34188097"
 ---
 # <a name="setting-up-a-pull-client-using-configuration-names"></a><span data-ttu-id="10e71-103">Настройка опрашивающего клиента с помощью имен конфигураций</span><span class="sxs-lookup"><span data-stu-id="10e71-103">Setting up a pull client using configuration names</span></span>
 

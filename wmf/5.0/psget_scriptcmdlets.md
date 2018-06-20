@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189556"
 ---
 # <a name="powershellget-cmdlets-for-script-management"></a><span data-ttu-id="b636f-102">Командлеты PowerShellGet для управления сценариями</span><span class="sxs-lookup"><span data-stu-id="b636f-102">PowerShellGet Cmdlets for Script Management</span></span>
 

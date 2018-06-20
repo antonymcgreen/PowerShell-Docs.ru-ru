@@ -6,6 +6,7 @@ ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34482919"
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a><span data-ttu-id="12200-102">Единое и согласованное представление состояний</span><span class="sxs-lookup"><span data-stu-id="12200-102">Unified and Consistent State and Status Representation</span></span>
 

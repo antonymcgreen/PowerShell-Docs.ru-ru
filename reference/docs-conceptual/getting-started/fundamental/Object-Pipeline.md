@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30948216"
 ---
 # <a name="object-pipeline"></a><span data-ttu-id="9d55f-103">Конвейер объектов</span><span class="sxs-lookup"><span data-stu-id="9d55f-103">Object Pipeline</span></span>
 <span data-ttu-id="9d55f-104">Конвейеры представляют собой последовательность соединенных сегментов канала.</span><span class="sxs-lookup"><span data-stu-id="9d55f-104">Pipelines act like a series of connected segments of pipe.</span></span> <span data-ttu-id="9d55f-105">Элементы, перемещающиеся по конвейеру, проходят через каждый сегмент.</span><span class="sxs-lookup"><span data-stu-id="9d55f-105">Items moving along the pipeline pass through each segment.</span></span> <span data-ttu-id="9d55f-106">Для создания конвейера в Windows PowerShell команды соединяются друг с другом с помощью оператора канала "|".</span><span class="sxs-lookup"><span data-stu-id="9d55f-106">To create a pipeline in Windows PowerShell, you connect commands together with the pipe operator "|".</span></span> <span data-ttu-id="9d55f-107">Результат каждой команды используется в качестве входных данных для следующей.</span><span class="sxs-lookup"><span data-stu-id="9d55f-107">The output of each command is used as input to the next command.</span></span>

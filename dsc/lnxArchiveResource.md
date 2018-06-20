@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34188672"
 ---
 # <a name="dsc-for-linux-nxarchive-resource"></a><span data-ttu-id="c984a-103">Ресурс nxArchive в DSC для Linux</span><span class="sxs-lookup"><span data-stu-id="c984a-103">DSC for Linux nxArchive Resource</span></span>
 

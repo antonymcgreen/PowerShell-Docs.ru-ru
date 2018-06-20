@@ -8,6 +8,7 @@ ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34048363"
 ---
 # <a name="requiring-license-acceptance-for-scripts"></a><span data-ttu-id="b1004-103">Запрос на принятие условий лицензии для сценариев</span><span class="sxs-lookup"><span data-stu-id="b1004-103">Requiring license acceptance for scripts</span></span>
 
