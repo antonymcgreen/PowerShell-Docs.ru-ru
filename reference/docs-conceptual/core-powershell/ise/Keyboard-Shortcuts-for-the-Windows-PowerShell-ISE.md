@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953826"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a><span data-ttu-id="4ab76-103">Сочетания клавиш для интегрированной среды сценариев Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="4ab76-103">Keyboard Shortcuts for the Windows PowerShell ISE</span></span>
 

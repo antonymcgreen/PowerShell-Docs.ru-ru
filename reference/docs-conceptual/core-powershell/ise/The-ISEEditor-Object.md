@@ -7,6 +7,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952619"
 ---
 # <a name="the-iseeditor-object"></a><span data-ttu-id="2a121-103">Объект ISEEditor</span><span class="sxs-lookup"><span data-stu-id="2a121-103">The ISEEditor Object</span></span>
 

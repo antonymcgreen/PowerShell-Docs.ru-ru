@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34221959"
 ---
 # <a name="packagemanagement-cmdlets"></a><span data-ttu-id="cd6e5-102">Командлеты PackageManagement</span><span class="sxs-lookup"><span data-stu-id="cd6e5-102">PackageManagement Cmdlets</span></span>
 <span data-ttu-id="cd6e5-103">Это основная составляющая PackageManagement, отвечающая за поддержку обнаружения, установки и инвентаризации программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="cd6e5-103">This is the core of PackageManagement to support software discovery, installation, and inventory (SDII).</span></span> <span data-ttu-id="cd6e5-104">Попробуйте использовать для выполнения этих операций следующие командлеты:</span><span class="sxs-lookup"><span data-stu-id="cd6e5-104">Try out the cmdlets for these operations:</span></span>

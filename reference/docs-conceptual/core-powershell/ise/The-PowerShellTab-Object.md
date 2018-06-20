@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952517"
 ---
 # <a name="the-powershelltab-object"></a><span data-ttu-id="7cf73-103">Объект PowerShellTab</span><span class="sxs-lookup"><span data-stu-id="7cf73-103">The PowerShellTab Object</span></span>
 
@@ -43,7 +44,7 @@ $psISE.PowerShellTabs[1].Invoke({dir})
 
 <span data-ttu-id="7cf73-119">**Script** — System.Management.Automation.ScriptBlock или строка. Блок сценария для запуска.</span><span class="sxs-lookup"><span data-stu-id="7cf73-119">**Script** - System.Management.Automation.ScriptBlock or String The script block to run.</span></span>
 
-<span data-ttu-id="7cf73-120">**\[useNewScope\]** — необязательный логический параметр; значение по умолчанию — **$true**. Если задано значение **$true**, создается новая область для выполнения команды.</span><span class="sxs-lookup"><span data-stu-id="7cf73-120">**\[useNewScope\]** -  Optional Boolean that defaults to **$true** If set to **$true**, then a new scope is created within which to run the command.</span></span> <span data-ttu-id="7cf73-121">Параметр не изменяет среду выполнения вкладки PowerShell, которая указана командой.</span><span class="sxs-lookup"><span data-stu-id="7cf73-121">It does not modify the runtime environment of the PowerShell tab that is specified by the command.</span></span>
+<span data-ttu-id="7cf73-120">**\[useNewScope\]**  — необязательный логический параметр; значение по умолчанию — **$true**. Если задано значение **$true**, создается новая область для выполнения команды.</span><span class="sxs-lookup"><span data-stu-id="7cf73-120">**\[useNewScope\]** -  Optional Boolean that defaults to **$true** If set to **$true**, then a new scope is created within which to run the command.</span></span> <span data-ttu-id="7cf73-121">Параметр не изменяет среду выполнения вкладки PowerShell, которая указана командой.</span><span class="sxs-lookup"><span data-stu-id="7cf73-121">It does not modify the runtime environment of the PowerShell tab that is specified by the command.</span></span>
 
 <span data-ttu-id="7cf73-122">**\[millisecondsTimeout\]** — необязательный, целое число. Значение по умолчанию — **500**.</span><span class="sxs-lookup"><span data-stu-id="7cf73-122">**\[millisecondsTimeout\]** -  Optional integer that defaults to **500**.</span></span>
 <span data-ttu-id="7cf73-123">Если команда не завершается в течение указанного времени, то создается исключение **TimeoutException** с сообщением "Время ожидания операции истекло".</span><span class="sxs-lookup"><span data-stu-id="7cf73-123">If the command does not finish within the specified time, then the command generates a **TimeoutException** with the message "The operation has timed out."</span></span>

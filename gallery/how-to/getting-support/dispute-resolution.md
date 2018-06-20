@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34221839"
 ---
 # <a name="dispute-resolution"></a><span data-ttu-id="d85b1-103">Разрешение спорных вопросов</span><span class="sxs-lookup"><span data-stu-id="d85b1-103">Dispute resolution</span></span>
 

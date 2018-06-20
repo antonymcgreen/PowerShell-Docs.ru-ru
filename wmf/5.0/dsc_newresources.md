@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225578"
 ---
 # <a name="new-built-in-dsc-resources"></a><span data-ttu-id="346b2-102">Новые встроенные ресурсы DSC</span><span class="sxs-lookup"><span data-stu-id="346b2-102">New built-in DSC resources</span></span>
 

@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953129"
 ---
 # <a name="starting-windows-powershell"></a><span data-ttu-id="d0b48-103">Запуск Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="d0b48-103">Starting Windows PowerShell</span></span>
 <span data-ttu-id="d0b48-104">PowerShell — это библиотека DLL обработчика скриптов, которая внедрена в несколько узлов.</span><span class="sxs-lookup"><span data-stu-id="d0b48-104">PowerShell is a scripting engine dll which is embedded into multiple hosts.</span></span>  <span data-ttu-id="d0b48-105">Самый распространенный запускаемый узел — интерактивная командная строка (PowerShell.exe) и интерактивная среда скриптов (PowerShell_ISE.exe).</span><span class="sxs-lookup"><span data-stu-id="d0b48-105">The most common host you will start are the interactive command line PowerShell.exe and the Interactive Scripting Environment PowerShell_ISE.exe.</span></span>

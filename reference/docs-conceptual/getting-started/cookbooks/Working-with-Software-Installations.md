@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952823"
 ---
 # <a name="working-with-software-installations"></a><span data-ttu-id="cd9f0-103">Работа с программами установки программного обеспечения</span><span class="sxs-lookup"><span data-stu-id="cd9f0-103">Working with Software Installations</span></span>
 

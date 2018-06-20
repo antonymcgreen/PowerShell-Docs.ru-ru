@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225510"
 ---
 # <a name="contacting-item-owners"></a><span data-ttu-id="a5dd8-103">Обращение к владельцам элементов</span><span class="sxs-lookup"><span data-stu-id="a5dd8-103">Contacting item owners</span></span>
 

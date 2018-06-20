@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951092"
 ---
 # <a name="understanding-important-windows-powershell-concepts"></a><span data-ttu-id="a706a-103">Основные сведения о важных концепциях Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="a706a-103">Understanding Important Windows PowerShell Concepts</span></span>
 <span data-ttu-id="a706a-104">Структура Windows PowerShell вобрала в себя концепции из многих различных сред.</span><span class="sxs-lookup"><span data-stu-id="a706a-104">The Windows PowerShell design integrates concepts from many different environments.</span></span> <span data-ttu-id="a706a-105">Некоторые из них знакомы пользователям с опытом работы в конкретных оболочках или средах программирования, но очень немногие знают их все.</span><span class="sxs-lookup"><span data-stu-id="a706a-105">Several of them are familiar to people with experience in specific shells or programming environments, but very few people will know about all of them.</span></span> <span data-ttu-id="a706a-106">Обзор некоторых из этих концепций поможет лучше разобраться в работе оболочки.</span><span class="sxs-lookup"><span data-stu-id="a706a-106">Looking at some of these concepts provides a useful overview of the shell.</span></span>

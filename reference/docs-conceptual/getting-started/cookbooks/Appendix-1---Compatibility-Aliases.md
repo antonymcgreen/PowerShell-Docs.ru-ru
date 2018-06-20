@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954642"
 ---
 # <a name="appendix-1---compatibility-aliases"></a><span data-ttu-id="4fd5f-103">Приложение 1. Псевдонимы совместимости</span><span class="sxs-lookup"><span data-stu-id="4fd5f-103">Appendix 1 - Compatibility Aliases</span></span>
 

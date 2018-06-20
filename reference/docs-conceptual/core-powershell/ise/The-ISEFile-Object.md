@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951398"
 ---
 # <a name="the-isefile-object"></a><span data-ttu-id="94a61-103">Объект ISEFile</span><span class="sxs-lookup"><span data-stu-id="94a61-103">The ISEFile Object</span></span>
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 04/09/2018
 
 <span data-ttu-id="94a61-111">Сохраняет файл на диске.</span><span class="sxs-lookup"><span data-stu-id="94a61-111">Saves the file to disk.</span></span>
 
-<span data-ttu-id="94a61-112">**\[saveEncoding\]** — необязательный параметр кодировки символов [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла.</span><span class="sxs-lookup"><span data-stu-id="94a61-112">**\[saveEncoding\]** - optional [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) An optional character encoding parameter to be used for the saved file.</span></span> <span data-ttu-id="94a61-113">Значение по умолчанию — **UTF8**.</span><span class="sxs-lookup"><span data-stu-id="94a61-113">The default value is **UTF8**.</span></span>
+<span data-ttu-id="94a61-112">**\[saveEncoding\]**  — необязательный параметр кодировки символов [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла.</span><span class="sxs-lookup"><span data-stu-id="94a61-112">**\[saveEncoding\]** - optional [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) An optional character encoding parameter to be used for the saved file.</span></span> <span data-ttu-id="94a61-113">Значение по умолчанию — **UTF8**.</span><span class="sxs-lookup"><span data-stu-id="94a61-113">The default value is **UTF8**.</span></span>
 
 ### <a name="exceptions"></a><span data-ttu-id="94a61-114">Исключения</span><span class="sxs-lookup"><span data-stu-id="94a61-114">Exceptions</span></span>
 
@@ -47,7 +48,7 @@ $myfile.Encoding
 
 <span data-ttu-id="94a61-119">**filename** — строка. Имя, используемое для сохранения файла.</span><span class="sxs-lookup"><span data-stu-id="94a61-119">**filename** - String The name to be used to save the file.</span></span>
 
-<span data-ttu-id="94a61-120">**\[saveEncoding\]** — необязательный параметр кодировки символов [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла.</span><span class="sxs-lookup"><span data-stu-id="94a61-120">**\[saveEncoding\]** - optional [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) An optional character encoding parameter to be used for the saved file.</span></span> <span data-ttu-id="94a61-121">Значение по умолчанию — **UTF8**.</span><span class="sxs-lookup"><span data-stu-id="94a61-121">The default value is **UTF8**.</span></span>
+<span data-ttu-id="94a61-120">**\[saveEncoding\]**  — необязательный параметр кодировки символов [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла.</span><span class="sxs-lookup"><span data-stu-id="94a61-120">**\[saveEncoding\]** - optional [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) An optional character encoding parameter to be used for the saved file.</span></span> <span data-ttu-id="94a61-121">Значение по умолчанию — **UTF8**.</span><span class="sxs-lookup"><span data-stu-id="94a61-121">The default value is **UTF8**.</span></span>
 
 ### <a name="exceptions"></a><span data-ttu-id="94a61-122">Исключения</span><span class="sxs-lookup"><span data-stu-id="94a61-122">Exceptions</span></span>
 

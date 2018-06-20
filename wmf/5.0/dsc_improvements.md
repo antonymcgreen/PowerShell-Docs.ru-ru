@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218082"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc"></a><span data-ttu-id="bbd52-102">Усовершенствования в настройке требуемого состояния (DSC)</span><span class="sxs-lookup"><span data-stu-id="bbd52-102">Improvements in Desired State Configuration (DSC)</span></span>
 

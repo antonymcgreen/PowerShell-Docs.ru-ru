@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953061"
 ---
 # <a name="the-iseaddontoolcollection-object"></a><span data-ttu-id="c1546-103">Объект ISEAddOnToolCollection</span><span class="sxs-lookup"><span data-stu-id="c1546-103">The ISEAddOnToolCollection Object</span></span>
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/09/2018
 
 <span data-ttu-id="c1546-113">**ControlType** — тип. Определяет добавляемый элемент управления.</span><span class="sxs-lookup"><span data-stu-id="c1546-113">**ControlType** -Type Specifies the control that is added.</span></span>
 
-<span data-ttu-id="c1546-114">**\[IsVisible\]** — необязательный логический параметр. Если задано значение **$true**, надстройка сразу же отображается в связанной области инструментов.</span><span class="sxs-lookup"><span data-stu-id="c1546-114">**\[IsVisible\]** - optional Boolean If set to **$true**, the add-on tool is immediately visible in the associated tool pane.</span></span>
+<span data-ttu-id="c1546-114">**\[IsVisible\]**  — необязательный логический параметр. Если задано значение **$true**, надстройка сразу же отображается в связанной области инструментов.</span><span class="sxs-lookup"><span data-stu-id="c1546-114">**\[IsVisible\]** - optional Boolean If set to **$true**, the add-on tool is immediately visible in the associated tool pane.</span></span>
 
 ```powershell
 # Load a DLL with an add-on and then add it to the ISE

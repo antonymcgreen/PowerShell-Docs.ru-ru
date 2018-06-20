@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954132"
 ---
 # <a name="performing-networking-tasks"></a><span data-ttu-id="3f8e4-103">Выполнение задач по работе с сетями</span><span class="sxs-lookup"><span data-stu-id="3f8e4-103">Performing Networking Tasks</span></span>
 

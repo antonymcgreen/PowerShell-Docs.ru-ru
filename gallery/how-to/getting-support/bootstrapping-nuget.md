@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34221805"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a><span data-ttu-id="8846b-103">Начальная загрузка поставщика NuGet и NuGet.exe</span><span class="sxs-lookup"><span data-stu-id="8846b-103">Bootstrap the NuGet provider and NuGet.exe</span></span>
 

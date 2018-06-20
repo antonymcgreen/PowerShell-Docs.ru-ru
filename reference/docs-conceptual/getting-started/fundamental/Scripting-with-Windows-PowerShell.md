@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949406"
 ---
 # <a name="scripting-with-windows-powershell"></a><span data-ttu-id="a1e9e-103">Работа со сценариями в Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="a1e9e-103">Scripting with Windows PowerShell</span></span>
 
