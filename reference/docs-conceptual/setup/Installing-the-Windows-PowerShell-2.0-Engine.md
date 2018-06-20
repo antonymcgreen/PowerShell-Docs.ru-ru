@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952347"
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Установка подсистемы Windows PowerShell 2.0
 В этом разделе описывается установка модуля Windows PowerShell 2.0.

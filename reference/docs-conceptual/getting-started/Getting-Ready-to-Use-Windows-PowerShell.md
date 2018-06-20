@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30950973"
 ---
 # <a name="getting-ready-to-use-windows-powershell"></a>Подготовка к использованию Windows PowerShell
 После установки и запуска Windows PowerShell рассмотрите следующие варианты настройки. Эти задачи можно выполнить в любое время.

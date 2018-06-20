@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953061"
 ---
 # <a name="the-iseaddontoolcollection-object"></a>Объект ISEAddOnToolCollection
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/09/2018
 
 **ControlType** — тип. Определяет добавляемый элемент управления.
 
-**\[IsVisible\]** — необязательный логический параметр. Если задано значение **$true**, надстройка сразу же отображается в связанной области инструментов.
+**\[IsVisible\]**  — необязательный логический параметр. Если задано значение **$true**, надстройка сразу же отображается в связанной области инструментов.
 
 ```powershell
 # Load a DLL with an add-on and then add it to the ISE

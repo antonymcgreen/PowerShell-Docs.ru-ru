@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953129"
 ---
 # <a name="starting-windows-powershell"></a>Запуск Windows PowerShell
 PowerShell — это библиотека DLL обработчика скриптов, которая внедрена в несколько узлов.  Самый распространенный запускаемый узел — интерактивная командная строка (PowerShell.exe) и интерактивная среда скриптов (PowerShell_ISE.exe).

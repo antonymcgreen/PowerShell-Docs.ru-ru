@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951398"
 ---
 # <a name="the-isefile-object"></a>Объект ISEFile
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 04/09/2018
 
 Сохраняет файл на диске.
 
-**\[saveEncoding\]** — необязательный параметр кодировки символов [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла. Значение по умолчанию — **UTF8**.
+**\[saveEncoding\]**  — необязательный параметр кодировки символов [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла. Значение по умолчанию — **UTF8**.
 
 ### <a name="exceptions"></a>Исключения
 
@@ -47,7 +48,7 @@ $myfile.Encoding
 
 **filename** — строка. Имя, используемое для сохранения файла.
 
-**\[saveEncoding\]** — необязательный параметр кодировки символов [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла. Значение по умолчанию — **UTF8**.
+**\[saveEncoding\]**  — необязательный параметр кодировки символов [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла. Значение по умолчанию — **UTF8**.
 
 ### <a name="exceptions"></a>Исключения
 

@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225697"
 ---
 # <a name="modules-support-for-declaring-version-ranges-1-etc"></a>Поддержка модулей для объявления диапазонов версий (1.* и т. д.)
 В сочетании с **-MinimumVersion** **-MaximumVersion** дает пользователю возможность получения и импорта модуля в пределах определенного диапазона. Параметр также поддерживает **.**\*. В следующем примере показано, как это работает:

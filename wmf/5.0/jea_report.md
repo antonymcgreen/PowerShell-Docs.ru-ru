@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218728"
 ---
 # <a name="reporting-on-jea"></a>Отчеты о JEA
 Чтобы отправить отчета о состоянии конфигурации JEA, можно использовать следующее.

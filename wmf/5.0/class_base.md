@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34219911"
 ---
 # <a name="declare-base-class"></a>Объявление базового класса
 Класс можно объявить Windows PowerShell в качестве базового типа для другого класса Windows PowerShell.
