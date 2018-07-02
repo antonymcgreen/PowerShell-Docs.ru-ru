@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Новые сценарии и возможности в WMF 5.1
-ms.openlocfilehash: 77b439e61c5802f8ddbc4a0f39923cc8c0c36fe9
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b00069aad7422f86d1462a62a6c4bc8a91e46705
+ms.sourcegitcommit: 50b66cada6943784b8d3c103cebc3c1e3e286a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190321"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090369"
 ---
 # <a name="new-scenarios-and-features-in-wmf-51"></a>Новые сценарии и возможности в WMF 5.1
 
@@ -25,12 +25,12 @@ ms.locfileid: "34190321"
 
 - [Определение запущенного выпуска PowerShell с использованием $PSVersionTable](/powershell/module/microsoft.powershell.core/about/about_automatic_variables)
 - [Фильтрация результатов командлета Get-Module по CompatiblePSEditions с помощью параметра PSEdition](/powershell/module/microsoft.powershell.core/get-module)
-- [Запрет на выполнение сценариев в несовместимых выпусках PowerShell](/powershell/gallery/psget/script/scriptwithpseditionsupport)
-- [Объявление совместимости модуля с определенными версиями PowerShell](/powershell/gallery/psget/module/modulewithpseditionsupport)
+- [Запрет на выполнение сценариев в несовместимых выпусках PowerShell](/powershell/gallery/concepts/script-psedition-support)
+- [Объявление совместимости модуля с определенными версиями PowerShell](/powershell/gallery/concepts/module-psedition-support)
 
 ## <a name="catalog-cmdlets"></a>Командлеты для работы с каталогами
 
-Мы добавили два новых командлета для создания и проверки файлов каталога Windows в модуль [Microsoft.Powershell.Security](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security).
+Мы добавили два новых командлета для создания и проверки файлов каталога Windows в модуль [Microsoft.Powershell.Security](/powershell/module/microsoft.powershell.security).
 
 ### <a name="new-filecatalog"></a>New-FileCatalog
 --------------------------------
@@ -57,7 +57,7 @@ New-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-CatalogVersio
 
 ![](../images/CatalogFile2.jpg)
 
-Для проверки целостности файла каталога (Pester.cat в приведенном выше примере) его нужно подписать с помощью командлета [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).
+Для проверки целостности файла каталога (Pester.cat в приведенном выше примере) его нужно подписать с помощью командлета [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature).
 
 ### <a name="test-filecatalog"></a>Test-FileCatalog
 --------------------------------
@@ -73,7 +73,7 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 Этот командлет сравнивает все хэши файлов и их относительные пути в *каталоге* с хэшами и относительными путями на *диске*.
 При обнаружении любого несоответствия между хэшами файлов и путями он возвращает состояние *ValidationFailed*.
 Все эти данные можно получить с помощью параметра *-Detailed*.
-Командлет также отображает состояние подписи каталога в свойстве *Signature*. Подпись также можно определить, вызвав командлет [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) и указав файл каталога.
+Командлет также отображает состояние подписи каталога в свойстве *Signature*. Подпись также можно определить, вызвав командлет [Get-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Get-AuthenticodeSignature) и указав файл каталога.
 Также можно исключить любые файлы из проверки, указав их в параметре *-FilesToSkip*.
 
 ## <a name="module-analysis-cache"></a>Кэш анализа модуля
@@ -115,7 +115,7 @@ $env:PSDisableModuleAnalysisCacheCleanup = 1
 
 В WMF 5.1:
 
-- Вы можете использовать [конструктор ModuleSpecification (Hashtable)](https://msdn.microsoft.com/library/jj136290).
+- Вы можете использовать [конструктор ModuleSpecification (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor?view=powershellsdk-1.1.0#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
 Она имеет тот же формат, что и `Get-Module -FullyQualifiedName`.
 
 **Пример:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
