@@ -1,14 +1,14 @@
 ---
 description: Сведения о журнале версий расширения Desired State Configuration (DSC) в Azure.
-ms.date: 05/09/2018
+ms.date: 06/21/2018
 keywords: dsc, powershell, azure, расширение
 title: Журнал версий расширения Azure DSC
-ms.openlocfilehash: 81dfcf81bd8f8685a0c8c81cd07bc5447e1abf94
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 25248288291b9bf8efe6ce1eef203a552cd17736
+ms.sourcegitcommit: 68093cc12a7a22c53d11ce7d33c18622921a0dd1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189947"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36940333"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Журнал версий расширения Desired State Configuration Azure
 
@@ -16,12 +16,12 @@ ms.locfileid: "34189947"
 
 В этой статье содержатся сведения о каждой версии расширения виртуальной машины Azure DSC, поддерживаемых средах, а также приводятся комментарии и примечания о новых функциях или изменениях.
 
-## <a name="latest-versions"></a>Последние версии
+## <a name="latest-version"></a>Последняя версия
 
 ### <a name="version-276"></a>Версия 2.76
 
 - **Дата выпуска:**
-  - 9 мая 2018 г.
+  - 9 мая 2018 г. (Azure) | 21 июня 2018 г. (Azure для Китая, Azure для государственных организаций)
 - **Поддержка ОС:**
   - Windows Server 2016
   - Windows Server 2012 R2
@@ -36,30 +36,11 @@ ms.locfileid: "34189947"
   - WMF 4.0
 - **Среда:**
   - Azure
+  - Azure для Китая
+  - Azure для государственных организаций
 - **Примечания**. В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
   - Улучшения в метаданных расширения для подсостояния и другие незначительные исправления ошибок.
-
-### <a name="version-219"></a>Версия 2.19
-
-- **Дата выпуска:**
-  - 3 июня 2016 г.
-- **Поддержка ОС:**
-  - Windows Server 2016 Technical Preview
-  - Windows Server 2012 R2
-  - Windows Server 2012
-  - Windows Server 2008 R2 с пакетом обновления 1 (SP1)
-- **Поддержка WMF:**
-  - WMF 5.0 RTM
-  - Обновление WMF 4.0
-  - WMF 4.0
-- **Среда:**
-  - Azure
-  - Azure для Китая
-  - Azure для государственных организаций
-- **Примечания**. В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
-- **Новые возможности:**
-  - Теперь расширение DSC доступно в Azure для Китая. Эта версия в основном содержит исправления для запуска расширения в Azure для Китая.
 
 ## <a name="supported-versions"></a>Поддерживаемые версии
 

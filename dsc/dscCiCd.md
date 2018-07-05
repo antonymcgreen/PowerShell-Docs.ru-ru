@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Создание конвейера непрерывной интеграции и непрерывного развертывания с помощью DSC
-ms.openlocfilehash: ce0f2ed79f5f96a1c38e0beaf32529aba7538963
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: faeef5022cbd984cab0620b69db19de8b84cca0e
+ms.sourcegitcommit: 68093cc12a7a22c53d11ce7d33c18622921a0dd1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190559"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36940350"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Создание конвейера непрерывной интеграции и непрерывного развертывания с помощью DSC
 
@@ -36,6 +36,7 @@ ms.locfileid: "34190559"
 Это компьютер, на котором вы будете выполнять всю работу по настройке и запуску примера.
 
 Это должен быть компьютер Windows, на котором установлены следующие компоненты:
+
 - [Git](https://git-scm.com/).
 - локальный репозиторий git, клонированный из https://github.com/PowerShell/Demo_CI
 - Текстовый редактор, такой как [Visual Studio Code](https://code.visualstudio.com/).
@@ -73,21 +74,22 @@ ms.locfileid: "34190559"
 1. На клиентском компьютере перейдите к серверу TFS в веб-браузере.
 1. На сервере TFS [создайте командный проект](https://www.visualstudio.com/en-us/docs/setup-admin/create-team-project) с именем Demo_CI.
 
-    Убедитесь, что для **управления версиями** задано значение **Git**.
+   Убедитесь, что для **управления версиями** задано значение **Git**.
 1. На клиентском компьютере сделайте удаленным репозиторий, созданный в TFS, с помощью следующей команды:
 
-    `git remote add tfs <YourTFSRepoURL>`
+   `git remote add tfs <YourTFSRepoURL>`
 
-    Где `<YourTFSRepoURL>` — это URL-адрес клона репозитория TFS, созданного на предыдущем шаге.
+   Где `<YourTFSRepoURL>` — это URL-адрес клона репозитория TFS, созданного на предыдущем шаге.
 
-    Если вы не знаете, где можно найти этот URL-адрес, см. в статье [Clone an existing Git repo](https://www.visualstudio.com/en-us/docs/git/tutorial/clone) (Клонирование имеющегося репозитория Git).
+   Если вы не знаете, где можно найти этот URL-адрес, см. в статье [Clone an existing Git repo](https://www.visualstudio.com/en-us/docs/git/tutorial/clone) (Клонирование имеющегося репозитория Git).
 1. Отправьте код из локального репозитория в репозиторий TFS с помощью следующей команды:
 
-    `git push tfs --all`
+   `git push tfs --all`
 1. Репозиторий TFS будет заполнен кодом из Demo_CI.
 
->**Примечание.** В этом примере используется код ветви `ci-cd-example` из репозитория Git.
->Задайте эту ветвь как ветвь по умолчанию в проекте TFS и для создаваемых триггеров непрерывной интеграции и развертывания.
+> [!NOTE]
+> В этом примере используется код ветви `ci-cd-example` репозитория Git.
+> Задайте эту ветвь как ветвь по умолчанию в проекте TFS и для создаваемых триггеров непрерывной интеграции и развертывания.
 
 ## <a name="understanding-the-code"></a>Общие сведения о коде
 
@@ -154,6 +156,8 @@ Node $AllNodes.Where{$_.Role -eq 'DNSServer'}.NodeName
 ```
 
 Она находит все узлы, определенные как имеющие роль `DNSServer` в [данных конфигурации](configData.md), которые создаются с помощью скрипта `DevEnv.ps1`.
+
+Дополнительные сведения о методе `Where` в см. в разделе [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md).
 
 При выполнении непрерывной интеграции важно использовать данные конфигурации для определения узлов, так как сведения об узле, скорее всего, изменятся между средами. Использование данных конфигурации позволит вам легко вносить изменения в сведения об узле без изменения кода конфигурации.
 
@@ -348,12 +352,12 @@ Invoke-PSake $PSScriptRoot\InfraDNS\$fileName.ps1
 
 1. Добавьте следующие строки в раздел **Содержание**:
 
-    ```
-    initiate.ps1
-    **\deploy.ps1
-    **\Acceptance\**
-    **\Integration\**
-    ```
+   ```
+   initiate.ps1
+   **\deploy.ps1
+   **\Acceptance\**
+   **\Integration\**
+   ```
 
 1. Задайте для параметра **TargetFolder** значение `$(Build.ArtifactStagingDirectory)\`.
 
