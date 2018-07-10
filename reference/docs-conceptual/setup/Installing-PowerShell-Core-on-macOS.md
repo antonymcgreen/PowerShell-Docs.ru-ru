@@ -36,8 +36,7 @@ brew cask upgrade powershell
 ```
 
 > [!NOTE]
-> Команду, указанную выше, можно вызвать на узле PowerShell (pwsh), но для этого необходимо завершить его обновление. Что в свою очередь будет сделано, когда вы выйдете из PowerShell и перезапустите его.
-> Обновите значения, которые отображаются в $PSVersionTable.
+> Приведенные выше команды можно вызвать с узла PowerShell (pwsh), но затем потребуется выйти из оболочки PowerShell и перезапустить ее, чтобы завершить обновление и обновить значения в таблице $PSVersionTable.
 
 [brew]: http://brew.sh/
 [cask]: https://caskroom.github.io/
@@ -98,7 +97,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 ## <a name="paths"></a>Пути
 
-* `$PSHOME` имеет значение `/opt/microsoft/powershell/6.0.0/`.
+* `$PSHOME` имеет значение `/usr/local/microsoft/powershell/6.0.2/`.
 * Профили пользователей будут считаны из `~/.config/powershell/profile.ps1`.
 * Профили по умолчанию будут считаны из `$PSHOME/profile.ps1`.
 * Модули пользователей будут считаны из `~/.local/share/powershell/Modules`.
@@ -112,7 +111,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 PowerShell отвечает требованиям [спецификации каталога размещения файлов, связанных со средой настольной графической среды (X-сервера), стандартизированного XDG (X Desktop Group)][xdg-bds] в macOS.
 
 Так как macOS является развитием BSD, необходимо использовать префикс `/usr/local` вместо `/opt`.
-Таким образом, `$PSHOME` имеет значение `/usr/local/microsoft/powershell/6.0.0/`, а символьная ссылка размещается в `/usr/local/bin/pwsh`.
+Таким образом, `$PSHOME` имеет значение `/usr/local/microsoft/powershell/6.0.2/`, а символьная ссылка размещается в `/usr/local/bin/pwsh`.
 
 [выпусков]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
