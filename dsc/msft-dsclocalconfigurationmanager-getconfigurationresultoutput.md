@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод GetConfigurationResultOutput класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 73d10a8b44e5056e3fce1598518630a84aff6ceb
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: ea572a4a66befd4e4b8d83e2957632b1b5ed7d93
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34186812"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893949"
 ---
 # <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод GetConfigurationResultOutput класса MSFT_DSCLocalConfigurationManager
 
 Получает выходные данные агента конфигурации, относящиеся к определенному заданию.
 
-<a name="syntax"></a>Синтаксис
-------
+## <a name="syntax"></a>Синтаксис
 
 ```mof
 uint32 GetConfigurationResultOutput(
@@ -24,8 +23,7 @@ uint32 GetConfigurationResultOutput(
 );
 ```
 
-<a name="parameters"></a>Параметры
-----------
+## <a name="parameters"></a>Параметры
 
 *jobId* \[in\] Идентификатор задания, для которого необходимо получить выходные данные.
 
@@ -34,7 +32,6 @@ uint32 GetConfigurationResultOutput(
 *output* \[out\] Выходные данные для указанного задания.
 
 ## <a name="return-value"></a>Возвращаемое значение
-------------
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
@@ -43,13 +40,11 @@ uint32 GetConfigurationResultOutput(
 Это статический метод.
 
 ## <a name="requirements"></a>Требования
-------------
->**MOF-файл:** DscCore.mof
 
->**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF-файл:** DscCore.mof
 
+**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также:
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

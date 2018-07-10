@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод SendMetaConfigurationApply класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 46acd86ac52b7b6b39f06fc65af2498b4f5348ed
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b372a6c0ab9d4561dcf67026275e7d3ca6aa2584
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218847"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892963"
 ---
 # <a name="sendmetaconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод SendMetaConfigurationApply класса MSFT_DSCLocalConfigurationManager
 
 Задает параметры локального диспетчера конфигураций, которые используются для управления агентом конфигурации.
 
-<a name="syntax"></a>Синтаксис
-------
+## <a name="syntax"></a>Синтаксис
 
 ```mof
 uint32 SendMetaConfigurationApply(
@@ -23,15 +22,13 @@ uint32 SendMetaConfigurationApply(
 );
 ```
 
-<a name="parameters"></a>Параметры
-----------
+## <a name="parameters"></a>Параметры
 
 *ConfigurationData* \[in\] Данные среды для конфигурации.
 
 *force* \[in\] **true** для принудительной остановки конфигурации.
 
 ## <a name="return-value"></a>Возвращаемое значение
-------------
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
@@ -40,13 +37,11 @@ uint32 SendMetaConfigurationApply(
 Это статический метод.
 
 ## <a name="requirements"></a>Требования
-------------
->**MOF-файл:** DscCore.mof
 
->**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF-файл:** DscCore.mof
 
+**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также:
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

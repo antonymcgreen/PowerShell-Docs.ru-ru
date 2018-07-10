@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод ResourceSet класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 0c9c1d33117067d76d61036d5839f0b676eb4a97
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 2712b7ff0a19e643c1f343d436c084f8970c9dd4
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219622"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892106"
 ---
 # <a name="resourceset-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод ResourceSet класса MSFT_DSCLocalConfigurationManager
 
 Напрямую вызывает метод **Set** ресурса DSC.
 
-<a name="syntax"></a>Синтаксис
-------
+## <a name="syntax"></a>Синтаксис
 
 ```mof
 uint32 ResourceSet(
@@ -25,19 +24,17 @@ uint32 ResourceSet(
 );
 ```
 
-<a name="parameters"></a>Параметры
-----------
+## <a name="parameters"></a>Параметры
 
 *ResourceType* \[in\] Имя вызываемого ресурса.
 
 *ModuleName* \[in\] Имя модуля, содержащего вызываемый ресурс.
 
-*resourceProperty* \[in\] Указывает имя свойства ресурса и его значение в хэш-таблице как ключ и значение соответственно. Используйте командлет [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) для обнаружения свойств ресурсов и их типов.
+*resourceProperty* \[in\] Указывает имя свойства ресурса и его значение в хэш-таблице как ключ и значение соответственно. Используйте командлет [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) для обнаружения свойств ресурсов и их типов.
 
 *RebootRequired* \[out\] В выходных данных это свойство имеет значение **true**, если целевой узел необходимо перезагрузить.
 
 ## <a name="return-value"></a>Возвращаемое значение
-------------
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
@@ -46,13 +43,11 @@ uint32 ResourceSet(
 Это статический метод.
 
 ## <a name="requirements"></a>Требования
-------------
->**MOF-файл:** DscCore.mof
 
->**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF-файл:** DscCore.mof
 
+**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также:
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

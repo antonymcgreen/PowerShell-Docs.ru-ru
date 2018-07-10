@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод PerformRequiredConfigurationChecks класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: c3fdaa23875815b1cf5cbf0b6e21c633e00664aa
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b92eefb7fbea6d96afa31f6b802ba10fe20d4103
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34186700"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893235"
 ---
 # <a name="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод PerformRequiredConfigurationChecks класса MSFT_DSCLocalConfigurationManager
 
 Запускает проверку согласованности с помощью планировщика заданий.
 
-<a name="syntax"></a>Синтаксис
-------
+## <a name="syntax"></a>Синтаксис
 
 ```mof
 uint32 PerformRequiredConfigurationChecks(
@@ -22,8 +21,7 @@ uint32 PerformRequiredConfigurationChecks(
 );
 ```
 
-<a name="parameters"></a>Параметры
-----------
+## <a name="parameters"></a>Параметры
 
 *Flags* \[in\] Битовая маска, определяющая тип выполняемой проверки согласованности. Допустимы следующие значения, которые можно объединить с помощью битовой операции **OR**:
 
@@ -35,7 +33,6 @@ uint32 PerformRequiredConfigurationChecks(
 |**8** | Состояние отправки на сервер отчетов. |
 
 ## <a name="return-value"></a>Возвращаемое значение
-------------
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
@@ -44,13 +41,11 @@ uint32 PerformRequiredConfigurationChecks(
 Это статический метод.
 
 ## <a name="requirements"></a>Требования
-------------
->**MOF-файл:** DscCore.mof
 
->**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF-файл:** DscCore.mof
 
+**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также:
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

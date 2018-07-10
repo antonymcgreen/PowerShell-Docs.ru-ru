@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод ApplyConfiguration класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: ef8488246b2c8614452d32009e45535f0ff2e184
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 559ff1793a18e28dad2f176bdb20eb53bc08630d
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222145"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892622"
 ---
 # <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод ApplyConfiguration класса MSFT_DSCLocalConfigurationManager
 
@@ -15,9 +15,7 @@ ms.locfileid: "34222145"
 
 Если нет ожидающих конфигураций, этот метод повторно применяет текущую конфигурацию.
 
-
 ## <a name="syntax"></a>Синтаксис
-------
 
 ```mof
 uint32 ApplyConfiguration(
@@ -26,12 +24,10 @@ uint32 ApplyConfiguration(
 ```
 
 ## <a name="parameters"></a>Параметры
-----------
 
 *force* \[in\] Если параметр имеет значение **true**, текущая конфигурация применяется повторно даже при наличии конфигурации в состоянии ожидания.
 
 ## <a name="return-value"></a>Возвращаемое значение
-------------
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
@@ -40,13 +36,11 @@ uint32 ApplyConfiguration(
 Это статический метод.
 
 ## <a name="requirements"></a>Требования
-------------
->**MOF-файл:** DscCore.mof
 
->**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF-файл:** DscCore.mof
 
+**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также:
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

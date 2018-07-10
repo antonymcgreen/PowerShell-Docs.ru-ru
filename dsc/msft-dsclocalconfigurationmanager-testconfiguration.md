@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод TestConfiguration класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 2df04d317bd5e7a5c2a713d92be57c5c9a9f5e8c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: d746832b01310f43a7aae33dd0fa70c0928bb3e0
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219017"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893932"
 ---
 # <a name="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод TestConfiguration класса MSFT_DSCLocalConfigurationManager
 
 Отправляет документ конфигурации на управляемый узел и проверяет соответствие текущей конфигурации документу.
 
-<a name="syntax"></a>Синтаксис
-------
+## <a name="syntax"></a>Синтаксис
 
 ```mof
 uint32 TestConfiguration(
@@ -25,8 +24,7 @@ uint32 TestConfiguration(
 );
 ```
 
-<a name="parameters"></a>Параметры
-----------
+## <a name="parameters"></a>Параметры
 
 *configurationData* \[in\] Данные среды для конфигурации.
 
@@ -37,7 +35,6 @@ uint32 TestConfiguration(
 *ResourcesNotInDesiredState* \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceNotInDesiredState**, указывающий ресурсы, которые не находятся в нужном состоянии.
 
 ## <a name="return-value"></a>Возвращаемое значение
-------------
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
@@ -46,13 +43,11 @@ uint32 TestConfiguration(
 Это статический метод.
 
 ## <a name="requirements"></a>Требования
-------------
->**MOF-файл:** DscCore.mof
 
->**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF-файл:** DscCore.mof
 
+**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также:
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

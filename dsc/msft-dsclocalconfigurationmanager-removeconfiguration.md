@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод RemoveConfiguration класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: c68d17d38336dec08e078366ea5f2071fcf7c5a8
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 03555cc73da1272bdebebc3d93b26aaf8fabc18e
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189743"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892690"
 ---
 # <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод RemoveConfiguration класса MSFT_DSCLocalConfigurationManager
 
 Удаляет файлы конфигурации.
 
-<a name="syntax"></a>Синтаксис
-------
+## <a name="syntax"></a>Синтаксис
 
 ```mof
 uint32 RemoveConfiguration(
@@ -23,8 +22,7 @@ uint32 RemoveConfiguration(
 );
 ```
 
-<a name="parameters"></a>Параметры
-----------
+## <a name="parameters"></a>Параметры
 
 *Stage* \[in\] Указывает, какой документ конфигурации необходимо удалить. Допустимы следующие значения:
 
@@ -37,7 +35,6 @@ uint32 RemoveConfiguration(
 *Force* \[in\] **true** для принудительного удаления конфигурации.
 
 ## <a name="return-value"></a>Возвращаемое значение
-------------
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
@@ -46,13 +43,11 @@ uint32 RemoveConfiguration(
 Это статический метод.
 
 ## <a name="requirements"></a>Требования
-------------
->**MOF-файл:** DscCore.mof
 
->**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF-файл:** DscCore.mof
 
+**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также:
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
