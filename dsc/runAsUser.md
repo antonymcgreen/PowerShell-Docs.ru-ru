@@ -2,31 +2,31 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Запуск DSC с учетными данными пользователя
-ms.openlocfilehash: b2992ad562dea375aba980611312c7b96a23189c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 4a6c3d8b561cd0a27be07a68f1b577f7bf764254
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189709"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893915"
 ---
-# <a name="running-dsc-with-user-credentials"></a><span data-ttu-id="a86b0-103">Запуск DSC с учетными данными пользователя</span><span class="sxs-lookup"><span data-stu-id="a86b0-103">Running DSC with user credentials</span></span>
+# <a name="running-dsc-with-user-credentials"></a><span data-ttu-id="b39db-103">Запуск DSC с учетными данными пользователя</span><span class="sxs-lookup"><span data-stu-id="b39db-103">Running DSC with user credentials</span></span>
 
-> <span data-ttu-id="a86b0-104">Область применения: Windows PowerShell 5.0, Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="a86b0-104">Applies To: Windows PowerShell 5.0, Windows PowerShell 5.1</span></span>
+> <span data-ttu-id="b39db-104">Область применения: Windows PowerShell 5.0, Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="b39db-104">Applies To: Windows PowerShell 5.0, Windows PowerShell 5.1</span></span>
 
-<span data-ttu-id="a86b0-105">Ресурс DSC можно запускать с определенным набором учетных данных. Для этого используется автоматическое свойство **PsDscRunAsCredential** в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="a86b0-105">You can run a DSC resource under a specified set of credentials by using the automatic **PsDscRunAsCredential** property in the configuration.</span></span>
-<span data-ttu-id="a86b0-106">По умолчанию DSC запускает каждый ресурс в качестве системной учетной записи.</span><span class="sxs-lookup"><span data-stu-id="a86b0-106">By default, DSC runs each resource as the system account.</span></span>
-<span data-ttu-id="a86b0-107">Иногда бывает необходим запуск с учетной записью обычного пользователя, например, при установке MSI-пакетов в контексте определенного пользователя, при установке разделов реестра пользователя, доступе к конкретному локальному каталогу пользователя или сетевой папке.</span><span class="sxs-lookup"><span data-stu-id="a86b0-107">There are times when running as a user is necessary, such as installing MSI packages in a specific user context, setting a user's registry keys, accessing a user's specific local directory, or accessing a network share.</span></span>
+<span data-ttu-id="b39db-105">Ресурс DSC можно запускать с определенным набором учетных данных. Для этого используется автоматическое свойство **PsDscRunAsCredential** в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="b39db-105">You can run a DSC resource under a specified set of credentials by using the automatic **PsDscRunAsCredential** property in the configuration.</span></span>
+<span data-ttu-id="b39db-106">По умолчанию DSC запускает каждый ресурс в качестве системной учетной записи.</span><span class="sxs-lookup"><span data-stu-id="b39db-106">By default, DSC runs each resource as the system account.</span></span>
+<span data-ttu-id="b39db-107">Иногда бывает необходим запуск с учетной записью обычного пользователя, например, при установке MSI-пакетов в контексте определенного пользователя, при установке разделов реестра пользователя, доступе к конкретному локальному каталогу пользователя или сетевой папке.</span><span class="sxs-lookup"><span data-stu-id="b39db-107">There are times when running as a user is necessary, such as installing MSI packages in a specific user context, setting a user's registry keys, accessing a user's specific local directory, or accessing a network share.</span></span>
 
-<span data-ttu-id="a86b0-108">У каждого ресурса есть свойство **PsDscRunAsCredential**, которому можно назначить учетные данные любого пользователя (объект [PSCredential](https://msdn.microsoft.com/library/ms572524(v=VS.85).aspx)).</span><span class="sxs-lookup"><span data-stu-id="a86b0-108">Every DSC resource has a **PsDscRunAsCredential** property that can be set to any user credentials (a [PSCredential](https://msdn.microsoft.com/library/ms572524(v=VS.85).aspx) object).</span></span>
-<span data-ttu-id="a86b0-109">Учетные данные можно жестко задать в качестве значения свойства конфигурации или установить в качестве значения [Get-Credential](https://technet.microsoft.com/library/hh849815.aspx). В этом случае пользователю будет предложено ввести учетные данные при компиляции конфигурации (дополнительные сведения о компиляции конфигураций см. в разделе [Конфигурации](configurations.md)).</span><span class="sxs-lookup"><span data-stu-id="a86b0-109">The credential can be hard-coded as the value of the property in the configuration, or you can set the value to [Get-Credential](https://technet.microsoft.com/library/hh849815.aspx), which will prompt the user for a credential when the configuration is compiled (for information about compiling configurations, see [Configurations](configurations.md).</span></span>
+<span data-ttu-id="b39db-108">У каждого ресурса есть свойство **PsDscRunAsCredential**, которому можно назначить учетные данные любого пользователя (объект [PSCredential](/dotnet/api/system.management.automation.pscredential)).</span><span class="sxs-lookup"><span data-stu-id="b39db-108">Every DSC resource has a **PsDscRunAsCredential** property that can be set to any user credentials (a [PSCredential](/dotnet/api/system.management.automation.pscredential) object).</span></span>
+<span data-ttu-id="b39db-109">Учетные данные можно жестко задать в качестве значения свойства конфигурации или установить в качестве значения [Get-Credential](/powershell/module/Microsoft.PowerShell.Security/Get-Credential). В этом случае пользователю будет предложено ввести учетные данные при компиляции конфигурации (дополнительные сведения о компиляции конфигураций см. в разделе [Конфигурации](configurations.md)).</span><span class="sxs-lookup"><span data-stu-id="b39db-109">The credential can be hard-coded as the value of the property in the configuration, or you can set the value to [Get-Credential](/powershell/module/Microsoft.PowerShell.Security/Get-Credential), which will prompt the user for a credential when the configuration is compiled (for information about compiling configurations, see [Configurations](configurations.md).</span></span>
 
-><span data-ttu-id="a86b0-110">**Примечание**. В PowerShell 5.0 использование свойства **PsDscRunAsCredential** в конфигурациях, вызывающих составные ресурсы, не поддерживалось.</span><span class="sxs-lookup"><span data-stu-id="a86b0-110">**Note:** In PowerShell 5.0, using the **PsDscRunAsCredential** property in configurations calling composite resources was not supported.</span></span>
-><span data-ttu-id="a86b0-111">В PowerShell 5.1 свойство **PsDscRunAsCredential** поддерживается в конфигурациях, вызывающих составные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="a86b0-111">In PowerShell 5.1, the **PsDscRunAsCredential** property is supported in configurations calling composite resources.</span></span>
+> [!NOTE] 
+> <span data-ttu-id="b39db-110">В PowerShell 5.0 использование свойства **PsDscRunAsCredential** в конфигурациях, вызывающих составные ресурсы, не поддерживалось.</span><span class="sxs-lookup"><span data-stu-id="b39db-110">In PowerShell 5.0, using the **PsDscRunAsCredential** property in configurations calling composite resources was not supported.</span></span>
+> <span data-ttu-id="b39db-111">В PowerShell 5.1 свойство **PsDscRunAsCredential** поддерживается в конфигурациях, вызывающих составные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="b39db-111">In PowerShell 5.1, the **PsDscRunAsCredential** property is supported in configurations calling composite resources.</span></span>
+> <span data-ttu-id="b39db-112">Свойство **PsDscRunAsCredential** недоступно в PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="b39db-112">The **PsDscRunAsCredential** property is not available in PowerShell 4.0.</span></span>
 
-><span data-ttu-id="a86b0-112">**Примечание**. Свойство **PsDscRunAsCredential** недоступно в PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="a86b0-112">**Note:** The **PsDscRunAsCredential** property is not available in PowerShell 4.0.</span></span>
-
-<span data-ttu-id="a86b0-113">В следующем примере **Get-Credential** используется для запроса учетных данных пользователя.</span><span class="sxs-lookup"><span data-stu-id="a86b0-113">In the following example, **Get-Credential** is used to prompt the user for credentials.</span></span>
-<span data-ttu-id="a86b0-114">Ресурс [Registry](registryResource.md) используется для изменения раздела реестра, указывающего цвет фона для окна командной строки Windows.</span><span class="sxs-lookup"><span data-stu-id="a86b0-114">The [Registry](registryResource.md) resource is used to change the registry key that specifies the background color for the Windows command prompt window.</span></span>
+<span data-ttu-id="b39db-113">В следующем примере `Get-Credential` используется для запроса учетных данных пользователя.</span><span class="sxs-lookup"><span data-stu-id="b39db-113">In the following example, `Get-Credential` is used to prompt the user for credentials.</span></span>
+<span data-ttu-id="b39db-114">Ресурс [Registry](registryResource.md) используется для изменения раздела реестра, указывающего цвет фона для окна командной строки Windows.</span><span class="sxs-lookup"><span data-stu-id="b39db-114">The [Registry](registryResource.md) resource is used to change the registry key that specifies the background color for the Windows command prompt window.</span></span>
 
 ```powershell
 Configuration ChangeCmdBackGroundColor
@@ -62,5 +62,7 @@ $configData = @{
 
 ChangeCmdBackGroundColor -ConfigurationData $configData
 ```
-><span data-ttu-id="a86b0-115">**Примечание**. В этом примере предполагается, что у вас есть действительный сертификат в `C:\publicKeys\targetNode.cer` и что отображаемое значение представляет собой отпечаток этого сертификата.</span><span class="sxs-lookup"><span data-stu-id="a86b0-115">**Note:** This example assumes that you have a valid certificate at `C:\publicKeys\targetNode.cer`, and that the thumbprint of that certificate is the value shown.</span></span>
-><span data-ttu-id="a86b0-116">Сведения о шифровании учетных данных в MOF-файлах конфигурации DSC см. в разделе [Защита MOF-файла](secureMOF.md).</span><span class="sxs-lookup"><span data-stu-id="a86b0-116">For information about encrypting credentials in DSC configuration MOF files, see [Securing the MOF file](secureMOF.md).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="b39db-115">В этом примере предполагается, что у вас есть действительный сертификат в `C:\publicKeys\targetNode.cer` и что отображаемое значение представляет собой отпечаток этого сертификата.</span><span class="sxs-lookup"><span data-stu-id="b39db-115">This example assumes that you have a valid certificate at `C:\publicKeys\targetNode.cer`, and that the thumbprint of that certificate is the value shown.</span></span>
+> <span data-ttu-id="b39db-116">Сведения о шифровании учетных данных в MOF-файлах конфигурации DSC см. в разделе [Защита MOF-файла](secureMOF.md).</span><span class="sxs-lookup"><span data-stu-id="b39db-116">For information about encrypting credentials in DSC configuration MOF files, see [Securing the MOF file](secureMOF.md).</span></span>

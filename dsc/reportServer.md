@@ -2,31 +2,31 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование сервера отчетов DSC
-ms.openlocfilehash: 143e0bdd9b637cee87a676ed327fe6ff3a7fd719
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: bcd414e9cc6d3b321676aaab6bbc3ca1b02e80aa
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188553"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893143"
 ---
-# <a name="using-a-dsc-report-server"></a><span data-ttu-id="c8625-103">Использование сервера отчетов DSC</span><span class="sxs-lookup"><span data-stu-id="c8625-103">Using a DSC report server</span></span>
+# <a name="using-a-dsc-report-server"></a><span data-ttu-id="c2ef2-103">Использование сервера отчетов DSC</span><span class="sxs-lookup"><span data-stu-id="c2ef2-103">Using a DSC report server</span></span>
 
-> <span data-ttu-id="c8625-104">Область применения: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="c8625-104">Applies To: Windows PowerShell 5.0</span></span>
+<span data-ttu-id="c2ef2-104">Область применения: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="c2ef2-104">Applies To: Windows PowerShell 5.0</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="c8625-105">Опрашивающий сервер (компонент Windows *служба DSC*) — поддерживаемый компонент Windows Server, но реализация новых функций и возможностей для него не планируется.</span><span class="sxs-lookup"><span data-stu-id="c8625-105">The Pull Server (Windows Feature *DSC-Service*) is a supported component of Windows Server however there are no plans to offer new features or capabilities.</span></span> <span data-ttu-id="c8625-106">Рекомендуется начать перенос управляемых клиентов на [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (включает возможности опрашивающего сервера в Windows Server) или на одно из решений сообщества, указанных [в следующем списке](pullserver.md#community-solutions-for-pull-service).</span><span class="sxs-lookup"><span data-stu-id="c8625-106">It is recommended to begin transitioning managed clients to [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (includes features beyond Pull Server on Windows Server) or one of the community solutions listed [here](pullserver.md#community-solutions-for-pull-service).</span></span>
+> <span data-ttu-id="c2ef2-105">Опрашивающий сервер (компонент Windows *служба DSC*) — поддерживаемый компонент Windows Server, но реализация новых функций и возможностей для него не планируется.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-105">The Pull Server (Windows Feature *DSC-Service*) is a supported component of Windows Server however there are no plans to offer new features or capabilities.</span></span> <span data-ttu-id="c2ef2-106">Рекомендуется начать перенос управляемых клиентов на [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (включает возможности опрашивающего сервера в Windows Server) или на одно из решений сообщества, указанных [в следующем списке](pullserver.md#community-solutions-for-pull-service).</span><span class="sxs-lookup"><span data-stu-id="c2ef2-106">It is recommended to begin transitioning managed clients to [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (includes features beyond Pull Server on Windows Server) or one of the community solutions listed [here](pullserver.md#community-solutions-for-pull-service).</span></span>
+>
+> <span data-ttu-id="c2ef2-107">**Примечание**. Сервер отчетов, описанный в этой статье, недоступен в PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-107">**Note** The report server described in this topic is not available in PowerShell 4.0.</span></span>
 
-><span data-ttu-id="c8625-107">**Примечание**. Сервер отчетов, описанный в этой статье, недоступен в PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="c8625-107">**Note:** The report server described in this topic is not available in PowerShell 4.0.</span></span>
+<span data-ttu-id="c2ef2-108">В локальном диспетчере конфигураций (LCM) узла можно настроить отправку отчетов о состоянии конфигурации на опрашивающий сервер, которые затем можно запросить для извлечения содержащихся в них данных.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-108">The Local Configuration Manager (LCM) of a node can be configured to send reports about its configuration status to a pull server, which can then be queried to retrieve that data.</span></span> <span data-ttu-id="c2ef2-109">Каждый раз при проверке и применении конфигурации узел отправляет отчет на сервер отчетов.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-109">Each time the node checks and applies a configuration, it sends a report to the report server.</span></span> <span data-ttu-id="c2ef2-110">Эти отчеты хранятся в базе данных на сервере, и их можно извлечь, вызвав веб-службу отчетов.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-110">These reports are stored in a database on the server, and can be retrieved by calling the reporting web service.</span></span> <span data-ttu-id="c2ef2-111">Каждый отчет содержит сведения, например перечень примененных конфигураций и данные о том, успешно ли они были выполнены, использованные ресурсы, любые произошедшие ошибки, а также время начала и окончания.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-111">Each report contains information such as what configurations were applied and whether they succeeded, the resources used, any errors that were thrown, and start and finish times.</span></span>
 
-<span data-ttu-id="c8625-108">В локальном диспетчере конфигураций (LCM) узла можно настроить отправку отчетов о состоянии конфигурации на опрашивающий сервер, которые затем можно запросить для извлечения содержащихся в них данных.</span><span class="sxs-lookup"><span data-stu-id="c8625-108">The Local Configuration Manager (LCM) of a node can be configured to send reports about its configuration status to a pull server, which can then be queried to retrieve that data.</span></span> <span data-ttu-id="c8625-109">Каждый раз при проверке и применении конфигурации узел отправляет отчет на сервер отчетов.</span><span class="sxs-lookup"><span data-stu-id="c8625-109">Each time the node checks and applies a configuration, it sends a report to the report server.</span></span> <span data-ttu-id="c8625-110">Эти отчеты хранятся в базе данных на сервере, и их можно извлечь, вызвав веб-службу отчетов.</span><span class="sxs-lookup"><span data-stu-id="c8625-110">These reports are stored in a database on the server, and can be retrieved by calling the reporting web service.</span></span> <span data-ttu-id="c8625-111">Каждый отчет содержит сведения, например перечень примененных конфигураций и данные о том, успешно ли они были выполнены, использованные ресурсы, любые произошедшие ошибки, а также время начала и окончания.</span><span class="sxs-lookup"><span data-stu-id="c8625-111">Each report contains information such as what configurations were applied and whether they succeeded, the resources used, any errors that were thrown, and start and finish times.</span></span>
+## <a name="configuring-a-node-to-send-reports"></a><span data-ttu-id="c2ef2-112">Настройка узла для отправки отчетов</span><span class="sxs-lookup"><span data-stu-id="c2ef2-112">Configuring a node to send reports</span></span>
 
-## <a name="configuring-a-node-to-send-reports"></a><span data-ttu-id="c8625-112">Настройка узла для отправки отчетов</span><span class="sxs-lookup"><span data-stu-id="c8625-112">Configuring a node to send reports</span></span>
+<span data-ttu-id="c2ef2-113">Запросить на узле отправку отчетов на сервер можно с помощью блока **ReportServerWeb** в конфигурации LCM узла (сведения о настройке LCM см. в разделе [Настройка локального диспетчера конфигураций](metaConfig.md)).</span><span class="sxs-lookup"><span data-stu-id="c2ef2-113">You tell a node to send reports to a server by using a **ReportServerWeb** block in the node's LCM configuration (for information about configuring the LCM, see [Configuring the Local Configuration Manager](metaConfig.md)).</span></span> <span data-ttu-id="c2ef2-114">Сервер, на который узел отправляет отчеты, необходимо настроить как опрашивающий веб-сервер (отправлять отчеты в общий ресурс SMB невозможно).</span><span class="sxs-lookup"><span data-stu-id="c2ef2-114">The server to which the node sends reports must be set up as a web pull server (you cannot send reports to an SMB share).</span></span> <span data-ttu-id="c2ef2-115">Сведения о настройке опрашивающего сервера см. в разделе [Настройка опрашивающего веб-сервера DSC](pullServer.md).</span><span class="sxs-lookup"><span data-stu-id="c2ef2-115">For information about setting up a pull server, see [Setting up a DSC web pull server](pullServer.md).</span></span> <span data-ttu-id="c2ef2-116">Сервер отчетов может быть той же службой, в которой узел извлекает конфигурации и получает ресурсы, или другой службой.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-116">The report server can be the same service from which the node pulls configurations and gets resources, or it can be a different service.</span></span>
 
-<span data-ttu-id="c8625-113">Запросить на узле отправку отчетов на сервер можно с помощью блока **ReportServerWeb** в конфигурации LCM узла (сведения о настройке LCM см. в разделе [Настройка локального диспетчера конфигураций](metaConfig.md)).</span><span class="sxs-lookup"><span data-stu-id="c8625-113">You tell a node to send reports to a server by using a **ReportServerWeb** block in the node's LCM configuration (for information about configuring the LCM, see [Configuring the Local Configuration Manager](metaConfig.md)).</span></span> <span data-ttu-id="c8625-114">Сервер, на который узел отправляет отчеты, необходимо настроить как опрашивающий веб-сервер (отправлять отчеты в общий ресурс SMB невозможно).</span><span class="sxs-lookup"><span data-stu-id="c8625-114">The server to which the node sends reports must be set up as a web pull server (you cannot send reports to an SMB share).</span></span> <span data-ttu-id="c8625-115">Сведения о настройке опрашивающего сервера см. в разделе [Настройка опрашивающего веб-сервера DSC](pullServer.md).</span><span class="sxs-lookup"><span data-stu-id="c8625-115">For information about setting up a pull server, see [Setting up a DSC web pull server](pullServer.md).</span></span> <span data-ttu-id="c8625-116">Сервер отчетов может быть той же службой, в которой узел извлекает конфигурации и получает ресурсы, или другой службой.</span><span class="sxs-lookup"><span data-stu-id="c8625-116">The report server can be the same service from which the node pulls configurations and gets resources, or it can be a different service.</span></span>
+<span data-ttu-id="c2ef2-117">В блоке **ReportServerWeb** укажите URL-адрес опрашивающей службы и ключ регистрации, известный серверу.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-117">In the **ReportServerWeb** block, you specify the URL of the pull service and a registration key that is known to the server.</span></span>
 
-<span data-ttu-id="c8625-117">В блоке **ReportServerWeb** укажите URL-адрес опрашивающей службы и ключ регистрации, известный серверу.</span><span class="sxs-lookup"><span data-stu-id="c8625-117">In the **ReportServerWeb** block, you specify the URL of the pull service and a registration key that is known to the server.</span></span>
-
-<span data-ttu-id="c8625-118">Следующая конфигурация настраивает на узле извлечение конфигураций из службы и отправку отчетов в службу на другом сервере.</span><span class="sxs-lookup"><span data-stu-id="c8625-118">The following configuration configures a node to pull configurations from one service, and send reports to a service on a different server.</span></span>
+<span data-ttu-id="c2ef2-118">Следующая конфигурация настраивает на узле извлечение конфигураций из службы и отправку отчетов в службу на другом сервере.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-118">The following configuration configures a node to pull configurations from one service, and send reports to a service on a different server.</span></span>
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -56,10 +56,11 @@ configuration ReportClientConfig
         }
     }
 }
+
 ReportClientConfig
 ```
 
-<span data-ttu-id="c8625-119">Следующая конфигурация настраивает узел для использования одного и того же сервера для конфигурации, ресурсов и отчетов.</span><span class="sxs-lookup"><span data-stu-id="c8625-119">The following configuration configures a node to use a single server for configurations, resources, and reporting.</span></span>
+<span data-ttu-id="c2ef2-119">Следующая конфигурация настраивает узел для использования одного и того же сервера для конфигурации, ресурсов и отчетов.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-119">The following configuration configures a node to use a single server for configurations, resources, and reporting.</span></span>
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -91,20 +92,26 @@ configuration PullClientConfig
 PullClientConfig
 ```
 
-><span data-ttu-id="c8625-120">**Примечание**. При настройке опрашивающего сервера можно указать любое имя веб-службы, но свойство **ServerURL** должно соответствовать имени службы.</span><span class="sxs-lookup"><span data-stu-id="c8625-120">**Note:** You can name the web service whatever you want when you set up a pull server, but the **ServerURL** property must match the service name.</span></span>
+> [!NOTE]
+> <span data-ttu-id="c2ef2-120">При настройке опрашивающего сервера можно указать любое имя веб-службы, но свойство **ServerURL** должно соответствовать имени службы.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-120">You can name the web service whatever you want when you set up a pull server, but the **ServerURL** property must match the service name.</span></span>
 
-## <a name="getting-report-data"></a><span data-ttu-id="c8625-121">Получение данных из отчетов</span><span class="sxs-lookup"><span data-stu-id="c8625-121">Getting report data</span></span>
+## <a name="getting-report-data"></a><span data-ttu-id="c2ef2-121">Получение данных из отчетов</span><span class="sxs-lookup"><span data-stu-id="c2ef2-121">Getting report data</span></span>
 
-<span data-ttu-id="c8625-122">Отчеты, отправляемые на опрашивающий сервер, добавляются в базу данных на сервере.</span><span class="sxs-lookup"><span data-stu-id="c8625-122">Reports sent to the pull server are entered into a database on the server.</span></span> <span data-ttu-id="c8625-123">Отчеты доступны путем вызовов веб-службы.</span><span class="sxs-lookup"><span data-stu-id="c8625-123">The reports are available through calls to the web service.</span></span> <span data-ttu-id="c8625-124">Чтобы извлечь отчеты с указанного узла, отправьте HTTP-запрос в веб-службу отчетов в следующем формате: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` где `MyNodeAgentId` — это AgentId узла, с которого вы хотите получать отчеты.</span><span class="sxs-lookup"><span data-stu-id="c8625-124">To retrieve reports for a specific node, send an HTTP request to the report web service in the following form: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` where `MyNodeAgentId` is the AgentId of the node for which you want to get reports.</span></span> <span data-ttu-id="c8625-125">Вы можете получить AgentID узла, вызвав [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) на этом узле.</span><span class="sxs-lookup"><span data-stu-id="c8625-125">You can get the AgentID for a node by calling [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) on that node.</span></span>
+<span data-ttu-id="c2ef2-122">Отчеты, отправляемые на опрашивающий сервер, добавляются в базу данных на сервере.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-122">Reports sent to the pull server are entered into a database on the server.</span></span> <span data-ttu-id="c2ef2-123">Отчеты доступны путем вызовов веб-службы.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-123">The reports are available through calls to the web service.</span></span> <span data-ttu-id="c2ef2-124">Чтобы извлечь отчеты с указанного узла, отправьте HTTP-запрос в веб-службу отчетов в следующем формате: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports` где `MyNodeAgentId` — это AgentId узла, с которого вы хотите получать отчеты.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-124">To retrieve reports for a specific node, send an HTTP request to the report web service in the following form: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports` where `MyNodeAgentId` is the AgentId of the node for which you want to get reports.</span></span> <span data-ttu-id="c2ef2-125">Вы можете получить AgentID узла, вызвав [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) на этом узле.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-125">You can get the AgentID for a node by calling [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) on that node.</span></span>
 
-<span data-ttu-id="c8625-126">Отчеты возвращаются в виде массива объектов JSON.</span><span class="sxs-lookup"><span data-stu-id="c8625-126">The reports are returned as an array of JSON objects.</span></span>
+<span data-ttu-id="c2ef2-126">Отчеты возвращаются в виде массива объектов JSON.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-126">The reports are returned as an array of JSON objects.</span></span>
 
-<span data-ttu-id="c8625-127">Следующий сценарий возвращает отчеты для узла, на котором он выполняется:</span><span class="sxs-lookup"><span data-stu-id="c8625-127">The following script returns the reports for the node on which it is run:</span></span>
+<span data-ttu-id="c2ef2-127">Следующий сценарий возвращает отчеты для узла, на котором он выполняется:</span><span class="sxs-lookup"><span data-stu-id="c2ef2-127">The following script returns the reports for the node on which it is run:</span></span>
 
 ```powershell
 function GetReport
 {
-    param($AgentId = "$((glcm).AgentId)", $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc")
+    param
+    (
+        $AgentId = "$((glcm).AgentId)", 
+        $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc"
+    )
+
     $requestUri = "$serviceURL/Nodes(AgentId= '$AgentId')/Reports"
     $request = Invoke-WebRequest -Uri $requestUri  -ContentType "application/json;odata=minimalmetadata;streaming=true;charset=utf-8" `
                -UseBasicParsing -Headers @{Accept = "application/json";ProtocolVersion = "2.0"} `
@@ -114,15 +121,16 @@ function GetReport
 }
 ```
 
-## <a name="viewing-report-data"></a><span data-ttu-id="c8625-128">Просмотр данных из отчетов</span><span class="sxs-lookup"><span data-stu-id="c8625-128">Viewing report data</span></span>
+## <a name="viewing-report-data"></a><span data-ttu-id="c2ef2-128">Просмотр данных из отчетов</span><span class="sxs-lookup"><span data-stu-id="c2ef2-128">Viewing report data</span></span>
 
-<span data-ttu-id="c8625-129">Если задать для переменной результат функции **GetReport**, можно просмотреть отдельные поля в элементе возвращаемого массива:</span><span class="sxs-lookup"><span data-stu-id="c8625-129">If you set a variable to the result of the **GetReport** function, you can view the individual fields in an element of the array that is returned:</span></span>
+<span data-ttu-id="c2ef2-129">Если задать для переменной результат функции **GetReport**, можно просмотреть отдельные поля в элементе возвращаемого массива:</span><span class="sxs-lookup"><span data-stu-id="c2ef2-129">If you set a variable to the result of the **GetReport** function, you can view the individual fields in an element of the array that is returned:</span></span>
 
 ```powershell
 $reports = GetReport
 $reports[1]
+```
 
-
+```output
 JobId                : 019dfbe5-f99f-11e5-80c6-001dd8b8065c
 OperationType        : Consistency
 RefreshMode          : Pull
@@ -156,19 +164,21 @@ StatusData           : {{"StartDate":"2016-04-03T06:21:43.7220000-07:00","IPV6Ad
 AdditionalData       : {}
 ```
 
-<span data-ttu-id="c8625-130">По умолчанию отчеты сортируются по **JobID**.</span><span class="sxs-lookup"><span data-stu-id="c8625-130">By default, the reports are sorted by **JobID**.</span></span> <span data-ttu-id="c8625-131">Чтобы получить последний отчет, отчеты можно отсортировать по убыванию значения свойства **StartTime**, а затем возвратить первый элемент массива:</span><span class="sxs-lookup"><span data-stu-id="c8625-131">To get the most recent report, you can sort the reports by descending **StartTime** property, and then get the first element of the array:</span></span>
+<span data-ttu-id="c2ef2-130">По умолчанию отчеты сортируются по **JobID**.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-130">By default, the reports are sorted by **JobID**.</span></span> <span data-ttu-id="c2ef2-131">Чтобы получить последний отчет, отчеты можно отсортировать по убыванию значения свойства **StartTime**, а затем возвратить первый элемент массива:</span><span class="sxs-lookup"><span data-stu-id="c2ef2-131">To get the most recent report, you can sort the reports by descending **StartTime** property, and then get the first element of the array:</span></span>
 
 ```powershell
 $reportsByStartTime = $reports | Sort-Object {$_."StartTime" -as [DateTime] } -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
-<span data-ttu-id="c8625-132">Обратите внимание, что свойство **StatusData** является объектом с несколькими свойствами.</span><span class="sxs-lookup"><span data-stu-id="c8625-132">Notice that the **StatusData** property is an object with a number of properties.</span></span> <span data-ttu-id="c8625-133">Именно здесь находится значительная часть данных отчетов.</span><span class="sxs-lookup"><span data-stu-id="c8625-133">This is where much of the reporting data is.</span></span> <span data-ttu-id="c8625-134">Давайте рассмотрим отдельные поля свойства **StatusData** для последнего отчета.</span><span class="sxs-lookup"><span data-stu-id="c8625-134">Let's look at the individual fields of the **StatusData** property for the most recent report:</span></span>
+<span data-ttu-id="c2ef2-132">Обратите внимание, что свойство **StatusData** является объектом с несколькими свойствами.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-132">Notice that the **StatusData** property is an object with a number of properties.</span></span> <span data-ttu-id="c2ef2-133">Именно здесь находится значительная часть данных отчетов.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-133">This is where much of the reporting data is.</span></span> <span data-ttu-id="c2ef2-134">Давайте рассмотрим отдельные поля свойства **StatusData** для последнего отчета.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-134">Let's look at the individual fields of the **StatusData** property for the most recent report:</span></span>
 
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
 $statusData
+```
 
+```output
 StartDate                  : 2016-04-04T11:21:41.2990000-07:00
 IPV6Addresses              : {2001:4898:d8:f2f2:852b:b255:b071:283b, fe80::852b:b255:b071:283b%12, ::2000:0:0:0, ::1...}
 DurationInSeconds          : 25
@@ -201,11 +211,13 @@ Locale                     : en-US
 Mode                       : Pull
 ```
 
-<span data-ttu-id="c8625-135">Помимо прочего видно, что последняя конфигурация вызывала два ресурса и один из них был в нужном состоянии, а другой — нет.</span><span class="sxs-lookup"><span data-stu-id="c8625-135">Among other things, this shows that the most recent configuration called two resources, and that one of them was in the desired state, and one of them was not.</span></span> <span data-ttu-id="c8625-136">Вы можете получить более понятные выходные данные только для свойства **ResourcesNotInDesiredState**.</span><span class="sxs-lookup"><span data-stu-id="c8625-136">You can get a more readable output of just the **ResourcesNotInDesiredState** property:</span></span>
+<span data-ttu-id="c2ef2-135">Помимо прочего видно, что последняя конфигурация вызывала два ресурса и один из них был в нужном состоянии, а другой — нет.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-135">Among other things, this shows that the most recent configuration called two resources, and that one of them was in the desired state, and one of them was not.</span></span> <span data-ttu-id="c2ef2-136">Вы можете получить более понятные выходные данные только для свойства **ResourcesNotInDesiredState**.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-136">You can get a more readable output of just the **ResourcesNotInDesiredState** property:</span></span>
 
 ```powershell
 $statusData.ResourcesInDesiredState
+```
 
+```output
 SourceInfo        : C:\ReportTest\Sample_xFirewall_AddFirewallRule.ps1::16::9::Archive
 ModuleName        : PSDesiredStateConfiguration
 DurationInSeconds : 2.672
@@ -219,9 +231,12 @@ ConfigurationName : Sample_ArchiveFirewall
 InDesiredState    : True
 ```
 
-<span data-ttu-id="c8625-137">Обратите внимание, что эти примеры призваны дать представление о том, что вы можете сделать с данными из отчетов.</span><span class="sxs-lookup"><span data-stu-id="c8625-137">Note that these examples are meant to give you an idea of what you can do with report data.</span></span> <span data-ttu-id="c8625-138">Общие сведения о работе с JSON в PowerShell см. в разделе [Работа с JSON и PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span><span class="sxs-lookup"><span data-stu-id="c8625-138">For an introduction on working with JSON in PowerShell, see [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span></span>
+<span data-ttu-id="c2ef2-137">Обратите внимание, что эти примеры призваны дать представление о том, что вы можете сделать с данными из отчетов.</span><span class="sxs-lookup"><span data-stu-id="c2ef2-137">Note that these examples are meant to give you an idea of what you can do with report data.</span></span> <span data-ttu-id="c2ef2-138">Общие сведения о работе с JSON в PowerShell см. в разделе [Работа с JSON и PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span><span class="sxs-lookup"><span data-stu-id="c2ef2-138">For an introduction on working with JSON in PowerShell, see [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c8625-139">См. также</span><span class="sxs-lookup"><span data-stu-id="c8625-139">See Also</span></span>
-- [<span data-ttu-id="c8625-140">Настройка локального диспетчера конфигураций</span><span class="sxs-lookup"><span data-stu-id="c8625-140">Configuring the Local Configuration Manager</span></span>](metaConfig.md)
-- [<span data-ttu-id="c8625-141">Настройка опрашивающего веб-сервера DSC</span><span class="sxs-lookup"><span data-stu-id="c8625-141">Setting up a DSC web pull server</span></span>](pullServer.md)
-- [<span data-ttu-id="c8625-142">Настройка опрашивающего клиента с помощью имени конфигурации</span><span class="sxs-lookup"><span data-stu-id="c8625-142">Setting up a pull client using configuration names</span></span>](pullClientConfigNames.md)
+## <a name="see-also"></a><span data-ttu-id="c2ef2-139">См. также</span><span class="sxs-lookup"><span data-stu-id="c2ef2-139">See Also</span></span>
+
+[<span data-ttu-id="c2ef2-140">Настройка локального диспетчера конфигураций</span><span class="sxs-lookup"><span data-stu-id="c2ef2-140">Configuring the Local Configuration Manager</span></span>](metaConfig.md)
+
+[<span data-ttu-id="c2ef2-141">Настройка опрашивающего веб-сервера DSC</span><span class="sxs-lookup"><span data-stu-id="c2ef2-141">Setting up a DSC web pull server</span></span>](pullServer.md)
+
+[<span data-ttu-id="c2ef2-142">Настройка опрашивающего клиента с помощью имени конфигурации</span><span class="sxs-lookup"><span data-stu-id="c2ef2-142">Setting up a pull client using configuration names</span></span>](pullClientConfigNames.md)
