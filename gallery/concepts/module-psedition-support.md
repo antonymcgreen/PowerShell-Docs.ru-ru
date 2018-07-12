@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Модули с совместимыми выпусками PowerShell
-ms.openlocfilehash: fbbfda2f913d54c3e69c0724fea4d977923279c1
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 653cfa82be9d0150da8d8765c96e35be99497262
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189522"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892327"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Модули с совместимыми выпусками PowerShell
 
@@ -21,7 +21,9 @@ ms.locfileid: "34189522"
 
 ```powershell
 $PSVersionTable
+```
 
+```output
 Name                           Value
 ----                           -----
 PSVersion                      5.1.14300.1000
@@ -36,41 +38,54 @@ SerializationVersion           1.1.0.1
 
 ## <a name="module-authors-can-declare-their-modules-to-be-compatible-with-one-or-more-powershell-editions-using-the-compatiblepseditions-module-manifest-key-this-key-is-only-supported-on-powershell-51-or-later"></a>Авторы модулей могут объявить свои модули совместимыми с одним выпуском PowerShell (или несколькими) с помощью ключа манифеста модуля CompatiblePSEditions. Этот ключ поддерживается только в PowerShell 5.1 или более поздней версии.
 
-*ПРИМЕЧАНИЕ.* После указания манифеста модуля с помощью ключа CompatiblePSEditions манифест невозможно импортировать в более ранние выпуски PowerShell.
+> [!NOTE]
+> После указания манифеста модуля с помощью ключа CompatiblePSEditions манифест невозможно импортировать в более ранние выпуски PowerShell.
 
 ```powershell
 New-ModuleManifest -Path .\TestModuleWithEdition.psd1 -CompatiblePSEditions Desktop,Core -PowerShellVersion 5.1
 $ModuleInfo = Test-ModuleManifest -Path .\TestModuleWithEdition.psd1
 $ModuleInfo.CompatiblePSEditions
+```
+
+```output
 Desktop
 Core
+```
 
+```powershell
 $ModuleInfo | Get-Member CompatiblePSEditions
+```
 
+```output
    TypeName: System.Management.Automation.PSModuleInfo
 
 Name                 MemberType Definition
 ----                 ---------- ----------
 CompatiblePSEditions Property   System.Collections.Generic.IEnumerable[string] CompatiblePSEditions {get;}
-
 ```
 
 При получении списка доступных модулей его можно отфильтровать по выпуску PowerShell.
 
 ```powershell
 Get-Module -ListAvailable -PSEdition Desktop
+```
 
+```output
     Directory: C:\Program Files\WindowsPowerShell\Modules
 
 
 ModuleType Version    Name                                ExportedCommands
 ---------- -------    ----                                ----------------
 Manifest   1.0        ModuleWithPSEditions
+```
 
+```powershell
 Get-Module -ListAvailable -PSEdition Core | % CompatiblePSEditions
+```
+
+```output
 Desktop
 Core
-
 ```
 
 ## <a name="module-authors-can-publish-a-single-module-targeting-to-either-or-both-powershell-editions-desktop-and-core"></a>Авторы модулей могут опубликовать один модуль, предназначенный для одного или обоих выпусков PowerShell (Desktop и Core).
@@ -162,8 +177,8 @@ $PSModule.OnRemove = {
 В PS 5.1 или более поздней версии в файле манифеста модуля разрешается использовать глобальную переменную $PSEdition.
 С помощью этой переменной автор модуля может указать условные значения в файле манифеста модуля. Переменная $PSEdition может указываться в ограниченном языковом режиме или в разделе Data.
 
-*ПРИМЕЧАНИЕ.* Манифест модуля невозможно импортировать в более ранние версии PowerShell после указания манифеста с помощью ключа CompatiblePSEditions или после использования в манифесте переменной $PSEdition.
-
+> [!NOTE]
+> Манифест модуля невозможно импортировать в более ранние версии PowerShell после указания манифеста с помощью ключа CompatiblePSEditions или после использования в манифесте переменной $PSEdition.
 
 #### <a name="sample-module-manifest-file-with-compatiblepseditions-key"></a>Пример файла манифеста модуля с ключом CompatiblePSEditions
 
@@ -203,9 +218,10 @@ else # Desktop
 #### <a name="module-contents"></a>Содержимое модуля
 
 ```powershell
+dir -Recurse
+```
 
-PS C:\Users\manikb\Documents\WindowsPowerShell\Modules\ModuleWithEditions> dir -Recurse
-
+```output
     Directory: C:\Users\manikb\Documents\WindowsPowerShell\Modules\ModuleWithEditions
 
 Mode                LastWriteTime         Length Name
@@ -245,9 +261,10 @@ Find-Module -Tag PSEdition_Core
 
 ```
 
-
 ## <a name="more-details"></a>Дополнительные подробности
 
-- [Сценарии с PSEditions](script-psedition-support.md)
-- [Поддержка PSEditions в коллекции PowerShell](../how-to/finding-items/searching-by-psedition.md)
-- [Обновление манифеста модуля] (/powershell/module/powershellget/update-modulemanifest)
+[Сценарии с PSEditions](script-psedition-support.md)
+
+[Поддержка PSEditions в коллекции PowerShell](../how-to/finding-items/searching-by-psedition.md)
+
+[Обновление манифеста модулей](/powershell/module/powershellget/update-modulemanifest)

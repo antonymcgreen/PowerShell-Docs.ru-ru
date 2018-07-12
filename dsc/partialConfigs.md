@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Частичные конфигурации службы настройки требуемого состояния PowerShell
-ms.openlocfilehash: e6d80b065ad9e68517d2952b7643e4c611d82a0f
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 1f5ec5bd5055ccc3d83a60712aebe635f2548828
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189981"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893007"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Частичные конфигурации службы настройки требуемого состояния PowerShell
 
->Область применения: Windows PowerShell 5.0 и более поздних версий.
+> Область применения: Windows PowerShell 5.0 и более поздних версий.
 
 В PowerShell 5.0 служба настройки требуемого состояния (DSC) разрешает доставлять конфигурации фрагментами и из нескольких источников. Локальный диспетчер конфигураций (LCM) на целевом узле объединяет фрагменты перед тем, как применить их в качестве единой конфигурации. Эта возможность позволяет разделять конфигурацию между командами или отдельными пользователями.
 Например, если несколько команд разработчиков совместно работают над службой, возможно, каждая из них хочет создать конфигурацию для управления своей частью службы. Каждую из этих конфигураций можно извлекать с разных опрашивающих серверов и добавлять на разных этапах разработки. Частичные конфигурации позволяют разным пользователям или командам контролировать различные аспекты настройки узлов без координации изменений в едином документе конфигурации. Например, одна команда может отвечать за развертывание виртуальной машины и операционной системы, тогда как другая — развертывать другие приложения и службы в этой виртуальной машине. С частичными конфигурациями каждая команда может создать собственную конфигурацию без излишних сложностей.
@@ -19,10 +19,12 @@ ms.locfileid: "34189981"
 Вы можете использовать частичные конфигурации в режиме принудительной отправки, в режиме запроса или в сочетании.
 
 ## <a name="partial-configurations-in-push-mode"></a>Частичные конфигурации в режиме принудительной отправки
-Чтобы использовать частичные конфигурации в режиме принудительной отправки, настройте LCM на целевом узле для получения частичных конфигураций. Каждая частичная конфигурация должна принудительно отправляться на целевой узел с использованием командлета Publish-DSCConfiguration. Затем целевой узел добавляет частичную конфигурацию в единую. Применить конфигурацию можно, вызвав командлет [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx).
+
+Чтобы использовать частичные конфигурации в режиме принудительной отправки, настройте LCM на целевом узле для получения частичных конфигураций. Каждая частичная конфигурация должна принудительно отправляться на целевой узел с использованием командлета `Publish-DSCConfiguration`. Затем целевой узел добавляет частичную конфигурацию в единую. Применить конфигурацию можно, вызвав командлет [Start-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Start-DscConfiguration).
 
 ### <a name="configuring-the-lcm-for-push-mode-partial-configurations"></a>Настройка LCM для частичных конфигураций в режиме принудительной отправки
-Чтобы настроить LCM для частичных конфигураций в режиме принудительной отправки, создайте конфигурацию **DSCLocalConfigurationManager** с одним блоком **PartialConfiguration** для каждой частичной конфигурации. Дополнительные сведения о настройке LCM см. в разделе [Настройка локального диспетчера конфигураций в Windows](https://technet.microsoft.com/library/mt421188.aspx).
+
+Чтобы настроить LCM для частичных конфигураций в режиме принудительной отправки, создайте конфигурацию **DSCLocalConfigurationManager** с одним блоком **PartialConfiguration** для каждой частичной конфигурации. Дополнительные сведения о настройке LCM см. в разделе [Настройка локального диспетчера конфигураций в Windows](/powershell/dsc/metaConfig).
 В следующем примере показана конфигурация LCM, в которой ожидаются две частичные конфигурации: та, которая развертывает ОС, и та, которая развертывает и настраивает SharePoint.
 
 ```powershell
@@ -32,7 +34,7 @@ configuration PartialConfigDemo
     Node localhost
     {
 
-           PartialConfiguration ServiceAccountConfig
+        PartialConfiguration ServiceAccountConfig
         {
             Description = 'Configuration to add the SharePoint service account to the Administrators group.'
             RefreshMode = 'Push'
@@ -44,42 +46,40 @@ configuration PartialConfigDemo
         }
     }
 }
+
 PartialConfigDemo
 ```
 
 **RefreshMode** для каждой частичной конфигурации имеет значение Push. Имена блоков **PartialConfiguration** (в этом случае ServiceAccountConfig и SharePointConfig) должны точно совпадать с именами конфигураций, отправляемых на целевой узел.
 
->**Примечание.** Название каждого блока **PartialConfiguration** должно совпадать с фактическим названием конфигурации (которое указано в скрипте настройки), а не с именем MOF-файла, которое должно быть названием целевого узла или `localhost`.
+> [!Note]
+> Название каждого блока **PartialConfiguration** должно совпадать с фактическим названием конфигурации (которое указано в сценарии конфигурации), а не с именем MOF-файла, которое должно быть названием целевого узла или `localhost`.
 
 ### <a name="publishing-and-starting-push-mode-partial-configurations"></a>Публикация и запуск частичных конфигураций в режиме принудительной отправки
 
-Затем вызовите [Publish-DSCConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) для каждой конфигурации, передав папки с документами конфигурации, в качестве параметров **Path**. `Publish-DSCConfiguration` помещает конфигурацию MOF-файлов на целевые узлы. После публикации обеих конфигураций вы можете вызвать `Start-DSCConfiguration –UseExisting` на целевом узле.
+Затем вызовите [Publish-DSCConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration) для каждой конфигурации, передав папки с документами конфигурации, в качестве параметров **Path**. `Publish-DSCConfiguration` помещает конфигурацию MOF-файлов на целевые узлы. После публикации обеих конфигураций вы можете вызвать `Start-DSCConfiguration –UseExisting` на целевом узле.
 
 Например, если вы скомпилировали следующую конфигурацию документов MOF на узле разработки:
 
 ```powershell
-PS C:\PartialConfigTest> Get-ChildItem -Recurse
+Get-ChildItem -Recurse
+```
 
-
+```output
     Directory: C:\PartialConfigTest
-
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
 d-----        8/11/2016   1:55 PM                ServiceAccountConfig
 d-----       11/17/2016   4:14 PM                SharePointConfig
 
-
     Directory: C:\PartialConfigTest\ServiceAccountConfig
-
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
 -a----        8/11/2016   2:02 PM           2034 TestVM.mof
 
-
     Directory: C:\DscTests\SharePointConfig
-
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
@@ -89,16 +89,19 @@ Mode                LastWriteTime         Length Name
 Публикация и запуск конфигураций выполняются следующим образом:
 
 ```powershell
-PS C:\PartialConfigTest> Publish-DscConfiguration .\ServiceAccountConfig -ComputerName 'TestVM'
-PS C:\PartialConfigTest> Publish-DscConfiguration .\SharePointConfig -ComputerName 'TestVM'
-PS C:\PartialConfigTest> Start-DscConfiguration -UseExisting -ComputerName 'TestVM'
+Publish-DscConfiguration .\ServiceAccountConfig -ComputerName 'TestVM'
+Publish-DscConfiguration .\SharePointConfig -ComputerName 'TestVM'
+Start-DscConfiguration -UseExisting -ComputerName 'TestVM'
+```
 
+```output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 17     Job17           Configuratio... Running       True            TestVM            Start-DscConfiguration...
 ```
 
->**Примечание**. Пользователь, запускающий командлет [Publish-DSCConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration), должен иметь права администратора на целевом узле.
+> [!Note]
+> Пользователь, запускающий командлет [Publish-DSCConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration), должен иметь права администратора на целевом узле.
 
 ## <a name="partial-configurations-in-pull-mode"></a>Частичные конфигурации в режиме запросов
 
@@ -145,7 +148,6 @@ Configuration PartialConfigDemoConfigNames
             ConfigurationSource             = @("[ConfigurationRepositoryWeb]CONTOSO-PullSrv")
             DependsOn                       = '[PartialConfiguration]ServiceAccountConfig'
         }
-
 }
 ```
 
@@ -190,7 +192,7 @@ PartialConfigDemo
 
 Вы можете извлечь частичные конфигурации более чем из одного опрашивающего сервера — потребуется только определить каждый опрашивающий сервер, а затем сослаться на соответствующий опрашивающий сервер в каждом блоке **PartialConfiguration**.
 
-После создания метаконфигурации необходимо запустить ее для создания документа конфигурации (MOF-файла), а затем вызвать [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621(v=wps.630).aspx) для настройки LCM.
+После создания метаконфигурации необходимо запустить ее для создания документа конфигурации (MOF-файла), а затем вызвать [Set-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) для настройки LCM.
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationnames"></a>Именование и размещение документов конфигурации на опрашивающем сервере (ConfigurationNames)
 
@@ -199,13 +201,12 @@ PartialConfigDemo
 #### <a name="naming-configuration-documents-on-the-pull-server-in-powershell-51"></a>Именование документов конфигурации на опрашивающем сервере в PowerShell 5.1
 
 Если вы запрашиваете только одну частичную конфигурацию на отдельном опрашивающем сервере, документ конфигурации может иметь любое имя.
-Если вы запрашиваете с опрашивающего сервера несколько частичных конфигураций, документ конфигурации можно назвать `<ConfigurationName>.mof`, где _ConfigurationName_ — имя частичной конфигурации, или `<ConfigurationName>.<NodeName>.mof`, где _ConfigurationName_ — имя частичной конфигурации, а _NodeName_ — имя целевого узла.
+Если вы запрашиваете с опрашивающего сервера несколько частичных конфигураций, документ конфигурации можно назвать `<ConfigurationName>.mof`, где *ConfigurationName* — имя частичной конфигурации, или `<ConfigurationName>.<NodeName>.mof`, где *ConfigurationName* — имя частичной конфигурации, а *NodeName* — имя целевого узла.
 Это позволяет запрашивать конфигурации с опрашивающего сервера DSC службы автоматизации Azure.
-
 
 #### <a name="naming-configuration-documents-on-the-pull-server-in-powershell-50"></a>Именование документов конфигурации на опрашивающем сервере в PowerShell 5.0
 
-Документы конфигурации должны быть именованы следующим образом: `ConfigurationName.mof`, где _ConfigurationName_ — имя частичной конфигурации. Например, документы конфигурации следует назвать следующим образом.
+Документы конфигурации должны быть именованы следующим образом: `ConfigurationName.mof`, где *ConfigurationName* — имя частичной конфигурации. Например, документы конфигурации следует назвать следующим образом.
 
 ```
 ServiceAccountConfig.mof
@@ -216,7 +217,7 @@ SharePointConfig.mof.checksum
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationid"></a>Именование и размещение документов конфигурации на опрашивающем сервере (ConfigurationID)
 
-Документы частичной конфигурации необходимо разместить в папке, указанной как **ConfigurationPath**, в файле `web.config` для опрашивающего сервера (обычно `C:\Program Files\WindowsPowerShell\DscService\Configuration`). Документы конфигурации необходимо именовать следующим образом: _ConfigurationName_. _ConfigurationID_`.mof`, где _ConfigurationName_ будет именем частичной конфигурации, а _ConfigurationID_ — идентификатором конфигурации, заданным в LCM на целевом узле. Например, документы конфигурации следует назвать следующим образом.
+Документы частичной конфигурации необходимо разместить в папке, указанной как **ConfigurationPath**, в файле `web.config` для опрашивающего сервера (обычно `C:\Program Files\WindowsPowerShell\DscService\Configuration`). Документы конфигурации необходимо именовать следующим образом: *ConfigurationName*. *ConfigurationID8`.mof`, где *ConfigurationName* будет именем частичной конфигурации, а *ConfigurationID* — идентификатором конфигурации, заданным в LCM на целевом узле. Например, документы конфигурации следует назвать следующим образом.
 
 ```
 ServiceAccountConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
@@ -225,11 +226,9 @@ SharePointConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
 SharePointConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof.checksum
 ```
 
-
 ### <a name="running-partial-configurations-from-a-pull-server"></a>Запуск частичных конфигураций с опрашивающего сервера
 
-После настройки LCM на целевом узле, а также создания и именования документов на опрашивающем сервере целевой узел запросит частичные конфигурации, объединит их и будет применять результирующую конфигурацию с регулярными интервалами, указанными свойством **RefreshFrequencyMins** в LCM. Если вы хотите принудительно применить обновление, можно вызвать командлет [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541.aspx) для извлечения конфигураций, а затем `Start-DSCConfiguration –UseExisting` для их применения.
-
+После настройки LCM на целевом узле, а также создания и именования документов на опрашивающем сервере целевой узел запросит частичные конфигурации, объединит их и будет применять результирующую конфигурацию с регулярными интервалами, указанными свойством **RefreshFrequencyMins** в LCM. Если вы хотите принудительно применить обновление, можно вызвать командлет [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration) для извлечения конфигураций, а затем `Start-DSCConfiguration –UseExisting` для их применения.
 
 ## <a name="partial-configurations-in-mixed-push-and-pull-modes"></a>Частичные конфигурации в смешанных режимах принудительной отправки и запросов
 
@@ -315,7 +314,7 @@ PartialConfigDemo
 
 Обратите внимание, что режим **RefreshMode**, указанный в блоке "Параметры", — это "Режим запросов", а режим **RefreshMode** для частичной конфигурации `SharePointConfig` — "Режим принудительной отправки".
 
-MOF-файлы конфигурации следует именовать и располагать в соответствии с их режимами обновления. Вызовите **Publish-DSCConfiguration**, чтобы опубликовать частичную конфигурацию `SharePointConfig`, и дождитесь извлечения конфигурации `ServiceAccountConfig` из опрашивающего сервера или выполните принудительное обновление, вызвав [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541(v=wps.630).aspx).
+MOF-файлы конфигурации следует именовать и располагать в соответствии с их режимами обновления. Вызовите `Publish-DSCConfiguration`, чтобы опубликовать частичную конфигурацию `SharePointConfig`, и дождитесь извлечения конфигурации `ServiceAccountConfig` из опрашивающего сервера или выполните принудительное обновление, вызвав [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration).
 
 ## <a name="example-serviceaccountconfig-partial-configuration"></a>Пример частичной конфигурации ServiceAccountConfig
 
@@ -354,7 +353,9 @@ Configuration ServiceAccountConfig
 ServiceAccountConfig
 
 ```
+
 ## <a name="example-sharepointconfig-partial-configuration"></a>Пример частичной конфигурации SharePointConfig
+
 ```powershell
 Configuration SharePointConfig
 {
@@ -378,9 +379,9 @@ Configuration SharePointConfig
 }
 SharePointConfig
 ```
-##<a name="see-also"></a>См. также
 
-**Основные понятия**
-[Опрашивающие серверы настройки требуемого состояния Windows PowerShell](pullServer.md)
+## <a name="see-also"></a>См. также
 
-[Настройка локального диспетчера конфигураций Windows](https://technet.microsoft.com/library/mt421188.aspx)
+[Опрашивающие серверы службы настройки требуемого состояния Windows PowerShell](pullServer.md)
+
+[Настройка локального диспетчера конфигураций Windows](/powershell/dsc/metaConfig)

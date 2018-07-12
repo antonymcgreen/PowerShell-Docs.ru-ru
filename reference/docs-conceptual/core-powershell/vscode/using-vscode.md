@@ -22,19 +22,19 @@
 
 - **macOS**: следуйте инструкциям по установке на странице [Запуск VS Code в macOS](https://code.visualstudio.com/docs/setup/mac).
 
-> [!IMPORTANT]
-> В macOS нужно установить OpenSSL для правильной работы расширения PowerShell.
-> Для этого проще всего установить [Homebrew](http://brew.sh/), а затем запустить `brew install openssl`.
-> Теперь Visual Studio Code может загрузить расширение PowerShell правильно.
+  > [!IMPORTANT]
+  > В macOS нужно установить OpenSSL для правильной работы расширения PowerShell.
+  > Для этого проще всего установить [Homebrew](http://brew.sh/), а затем запустить `brew install openssl`.
+  > Теперь Visual Studio Code может загрузить расширение PowerShell правильно.
 
 - **Windows**: следуйте инструкциям по установке на странице [Запуск VS Code в Windows](https://code.visualstudio.com/docs/setup/windows).
 
 ### <a name="2-installing-powershell-extension"></a>2. Установка расширения PowerShell
 
 - Запустите Visual Studio Code следующим образом:
-    - **Windows**: введите `code` в сеансе PowerShell.
-    - **Linux**: введите `code` в терминале.
-    - **macOS**: введите `code` в терминале.
+  - **Windows**: введите `code` в сеансе PowerShell.
+  - **Linux**: введите `code` в терминале.
+  - **macOS**: введите `code` в терминале.
 
 - Запустите **Quick Open**, нажав клавиши **CTRL+P** (**CMD+P** на Mac).
 - В Quick Open введите `ext install powershell` и нажмите клавишу **ВВОД**.
@@ -58,10 +58,10 @@
 Если вы хотите использовать с Visual Studio Code определенную установку PowerShell, нужно добавить в файл параметров пользователя новую переменную.
 
 1. Щелкните **Файл -> Параметры -> Параметры**
-1. Отображаются две панели редактора.
+2. Отображаются две панели редактора.
    На панели справа (`settings.json`) вставьте параметр в разделе соответствующей операционной системы между двумя фигурными скобками (`{` и `}`) и замените *<version>* на установленную версию PowerShell:
 
-  ```json
+   ```json
     // On Windows:
     "powershell.powerShellExePath": "c:/Program Files/PowerShell/<version>/pwsh.exe"
 
@@ -70,9 +70,10 @@
 
     // On macOS:
     "powershell.powerShellExePath": "/usr/local/microsoft/powershell/<version>/pwsh"
-  ```
-1. Замените параметр на путь к требуемому исполняемому файлу PowerShell.
-1. Сохраните файл параметров и перезапустите Visual Studio Code.
+   ```
+
+3. Замените параметр на путь к требуемому исполняемому файлу PowerShell.
+4. Сохраните файл параметров и перезапустите Visual Studio Code.
 
 #### <a name="configuration-settings-for-visual-studio-code"></a>Параметры конфигурации для Visual Studio Code
 
@@ -112,19 +113,19 @@
 - Запуск интерактивного сеанса в отладчике
 - Подключение отладчика к хост-процессу PowerShell
 
-Выполните следующие действия, чтобы создать файл конфигурации отладки:
+  Выполните следующие действия, чтобы создать файл конфигурации отладки:
 
-1. Откройте представление **Отладка**, нажав клавиши **CTRL+SHIFT+D** (**CMD+SHIFT+D** на Mac).
-1. Щелкните значок с шестеренкой **Настройка** на панели инструментов.
-1. Visual Studio Code предлагает вам **выбрать среду**.
-   Выберите **PowerShell**.
+  1. Откройте представление **Отладка**, нажав клавиши **CTRL+SHIFT+D** (**CMD+SHIFT+D** на Mac).
+  2. Щелкните значок с шестеренкой **Настройка** на панели инструментов.
+  3. Visual Studio Code предлагает вам **выбрать среду**.
+  Выберите **PowerShell**.
 
-   При этом Visual Studio Code создает каталог и файл ".vscode\launch.json" в корневой папке рабочей области.
-   Именно там хранится ваша конфигурация отладки. Если ваши файлы хранятся в репозитории Git, скорее всего, вы захотите зафиксировать файл launch.json.
-   Файла launch.json содержит следующее:
+  При этом Visual Studio Code создает каталог и файл ".vscode\launch.json" в корневой папке рабочей области.
+  Именно там хранится ваша конфигурация отладки. Если ваши файлы хранятся в репозитории Git, скорее всего, вы захотите зафиксировать файл launch.json.
+  Файла launch.json содержит следующее:
 
-```json
-{
+  ```json
+  {
     "version": "0.2.0",
     "configurations": [
         {
@@ -149,19 +150,21 @@
             "cwd": "${workspaceRoot}"
         }
     ]
-}
-```
+  }
+  ```
 
-Это представляет типичные сценарии отладки.
-Однако при открытии этого файла в редакторе отображается кнопка **Добавить конфигурацию...**.
-Можете нажать ее, чтобы добавить дополнительные конфигурации отладки PowerShell. Одной из полезных конфигураций является **PowerShell: Launch Script**.
-С помощью этой конфигурации можно указать определенный файл с дополнительными аргументами, которые нужно запускать при каждом нажатии клавиши F5 независимо от того, какой именно файл активен в редакторе.
+  Это представляет типичные сценарии отладки.
+  Однако при открытии этого файла в редакторе отображается кнопка **Добавить конфигурацию...**.
+  Можете нажать ее, чтобы добавить дополнительные конфигурации отладки PowerShell. Одной из полезных конфигураций является **PowerShell: Launch Script**.
+  С помощью этой конфигурации можно указать определенный файл с дополнительными аргументами, которые нужно запускать при каждом нажатии клавиши F5 независимо от того, какой именно файл активен в редакторе.
 
-После задания конфигурации отладки можно указать конфигурацию, используемую во время сеанса отладки, выбрав ее в раскрывающемся списке конфигураций отладки на панели инструментов представления **Отладка**.
+  После задания конфигурации отладки можно указать конфигурацию, используемую во время сеанса отладки, выбрав ее в раскрывающемся списке конфигураций отладки на панели инструментов представления **Отладка**.
 
-Существует несколько блогов, которые могут оказаться полезными при начале работы с расширением PowerShell для Visual Studio Code:
+  Существует несколько блогов, которые могут оказаться полезными при начале работы с расширением PowerShell для Visual Studio Code:
 
-- Visual Studio Code: [расширение PowerShell][ps-extension]
+Visual Studio Code:
+
+- [Расширение PowerShell][ps-extension]
 - [Написание и отладка в сценариев PowerShell в Visual Studio Code][debug]
 - [Руководство по отладке Visual Studio Code][vscode-guide]
 - [Отладка PowerShell в Visual Studio Code][ps-vscode]
@@ -176,15 +179,15 @@
 [install-pscore-macos]:  ../../setup/Installing-PowerShell-Core-on-macOS.md
 [install-pscore-windows]: ../../setup/Installing-PowerShell-Core-on-Windows.md
 [install-winps]: ../../setup/Installing-Windows-PowerShell.md
-[ps-extension]:https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
-[debug]:https://blogs.msdn.microsoft.com/powershell/2015/11/16/announcing-powershell-language-support-for-visual-studio-code-and-more/
-[vscode-guide]:https://johnpapa.net/debugging-with-visual-studio-code/
-[ps-vscode]:https://github.com/PowerShell/vscode-powershell/tree/master/examples
-[getting-started]:https://blogs.technet.microsoft.com/heyscriptingguy/2016/12/05/get-started-with-powershell-development-in-visual-studio-code/
-[editing-part1]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/11/visual-studio-code-editing-features-for-powershell-development-part-1/
-[editing-part2]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/12/visual-studio-code-editing-features-for-powershell-development-part-2/
-[debugging-part1]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/06/debugging-powershell-script-in-visual-studio-code-part-1/
-[debugging-part2]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/13/debugging-powershell-script-in-visual-studio-code-part-2/
+[ps-extension]: https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
+[debug]: https://blogs.msdn.microsoft.com/powershell/2015/11/16/announcing-powershell-language-support-for-visual-studio-code-and-more/
+[vscode-guide]: https://johnpapa.net/debugging-with-visual-studio-code/
+[ps-vscode]: https://github.com/PowerShell/vscode-powershell/tree/master/examples
+[getting-started]: https://blogs.technet.microsoft.com/heyscriptingguy/2016/12/05/get-started-with-powershell-development-in-visual-studio-code/
+[editing-part1]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/11/visual-studio-code-editing-features-for-powershell-development-part-1/
+[editing-part2]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/12/visual-studio-code-editing-features-for-powershell-development-part-2/
+[debugging-part1]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/06/debugging-powershell-script-in-visual-studio-code-part-1/
+[debugging-part2]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/13/debugging-powershell-script-in-visual-studio-code-part-2/
 
 ## <a name="powershell-extension-for-visual-studio-code"></a>Расширение PowerShell для Visual Studio Code
 

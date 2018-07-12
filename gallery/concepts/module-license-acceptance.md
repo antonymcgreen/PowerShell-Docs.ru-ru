@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Модули, для использования которых требуется принять условия лицензии
-ms.openlocfilehash: fe197ea271e18580a221ad4d5245b685bd81775b
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
+ms.openlocfilehash: 93f92f6e83bcf18a40c3d89eb39a154e16ca5063
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34048651"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893116"
 ---
 # <a name="modules-requiring-license-acceptance"></a>Модули, для использования которых требуется принять условия лицензии
 
@@ -35,29 +35,26 @@ ms.locfileid: "34048651"
     - **Update-Module:** модуль будет обновлен.
   - Если условия лицензионного соглашения отклоняются:
     - Операция будет отменена.
-- Все командлеты проверяют метаданные (requireLicenseAcceptance и версию формата), которые свидетельствуют о том, что требуется принять условия лицензионного соглашения.
-  - Если версия формата клиента ниже 2.0, операция завершится ошибкой. Поступит запрос на обновление клиента.
-  - Если модуль опубликован с версией формата ниже 2.0, флаг requireLicenseAcceptance будет игнорироваться.
+    - Все командлеты проверяют метаданные (requireLicenseAcceptance и версию формата), которые свидетельствуют о том, что требуется принять условия лицензионного соглашения.
+    - Если версия формата клиента ниже 2.0, операция завершится ошибкой. Поступит запрос на обновление клиента.
+    - Если модуль опубликован с версией формата ниже 2.0, флаг requireLicenseAcceptance будет игнорироваться.
 
+## <a name="module-dependencies"></a>Зависимости модулей
 
- ## <a name="module-dependencies"></a>Зависимости модулей
 - Если при установке, сохранении или обновлении зависимого модуля (или модуля, от которого зависят другие функции) требуется принять условия лицензионного соглашения, примите их (процедура описана выше).
 - Если версия модуля уже указана в локальном каталоге как установленная в системе, пропустите процедуру проверки лицензии.
 - Если при установке, сохранении или обновлении зависимого модуля требуется принять условия лицензионного соглашения, но они не принимаются, операция завершится ошибкой. Будут выполняться стандартные процессы, сопровождающие ошибку установки, сохранения или обновления элемента.
 
- ## <a name="impact-on--force"></a>Влияние на параметр -Force
+## <a name="impact-on--force"></a>Влияние на параметр -Force
 
-Указание -Force НЕ является достаточным для принятия условий лицензионного соглашения. Для разрешения на установку требуется указать -AcceptLicense. Если указан параметр -Force, RequiredLicenseAcceptance имеет значение True, а параметр -AcceptLicense НЕ указан, операция завершится ошибкой.
+Указание `–Force` НЕ является достаточным для принятия условий лицензионного соглашения. Для разрешения на установку требуется указать `–AcceptLicense`. Если указан параметр `–Force`, RequiredLicenseAcceptance имеет значение True, а параметр `–AcceptLicense` НЕ указан, операция завершится ошибкой.
 
 ## <a name="examples"></a>ПРИМЕРЫ
 
 ### <a name="example-1-update-module-manifest-to-require-license-acceptance"></a>Пример 1. Обновление манифеста модуля для запроса на принятие условий лицензионного соглашения
 
-```PowerShell
-PS> Update-ModuleManifest -Path C:\modulemanifest.psd1 -RequireLicenseAcceptance
-
-PrivateData = @{
-
+```powershell
+Update-ModuleManifest -Path C:\modulemanifest.psd1 -RequireLicenseAcceptance -PrivateData @{
     PSData = @{
         # Flag to indicate whether the module requires explicit user acceptance
         RequireLicenseAcceptance = $true
@@ -70,9 +67,11 @@ PrivateData = @{
 
 ### <a name="example-2-install-module-requiring-license-acceptance"></a>Пример 2. Установка модуля, для использования которого требуется принять условия лицензионного соглашения
 
-```PowerShell
-PS> Install-Module -Name ModuleRequireLicenseAcceptance
+```powershell
+Install-Module -Name ModuleRequireLicenseAcceptance
+```
 
+```output
 License Acceptance
 
 License 2.0
@@ -85,23 +84,25 @@ copies of the Software.
 
 Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
-
 ```
 
 Эта команда предназначена для отображения лицензии в файле license.txt и запроса на принятие условий лицензионного соглашения.
 
 ### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>Пример 3. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, при помощи -AcceptLicense
 
-```PowerShell
-PS> Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
+```powershell
+Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
 ```
 
 Модуль устанавливается без запросов на принятие условий лицензионного соглашения.
 
 ### <a name="example-4-install-module-requiring-license-acceptance-with--force"></a>Пример 4. Установка модуля, для использования которого требуется принять условия лицензионного соглашения при помощи -Force
 
-```PowerShell
-PS> Install-Module -Name ModuleRequireLicenseAcceptance -Force
+```powershell
+Install-Module -Name ModuleRequireLicenseAcceptance -Force
+```
+
+```output
 PackageManagement\Install-Package : License Acceptance is required for module 'ModuleRequireLicenseAcceptance'. Please specify '-AcceptLicense' to perform this operation.
 At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.1.3.3\PSModule.psm1:1837 char:21
 + ...          $null = PackageManagement\Install-Package @PSBoundParameters
@@ -116,9 +117,11 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.1.3.3\PSModule.psm
 
 Модуль ModuleWithDependency зависит от модуля ModuleRequireLicenseAcceptance. Пользователю предлагается принять условия лицензионного соглашения.
 
-```PowerShell
-PS> Install-Module -Name ModuleWithDependency
+```powershell
+Install-Module -Name ModuleWithDependency
+```
 
+```output
 License Acceptance
 MIT License 2.0
 Copyright (c) 2016 PowerShell Team
@@ -136,24 +139,27 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 Модуль ModuleWithDependency зависит от модуля ModuleRequireLicenseAcceptance. Пользователю не предлагается принять условия лицензии, так как указан параметр -AcceptLicense.
 
-```PowerShell
-PS>  Install-Module -Name ModuleWithDependency -AcceptLicense
+```powershell
+Install-Module -Name ModuleWithDependency -AcceptLicense
 ```
 
 ### <a name="example-7-install-module-requiring-license-acceptance-on-a-client-older-than-psgetformatversion-20"></a>Пример 7. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, в клиенте с версией ниже, чем PSGetFormatVersion 2.0
 
-```PowerShell
-PS C:\windows\system32> Install-Module -Name ModuleRequireLicenseAcceptance
+```powershell
+Install-Module -Name ModuleRequireLicenseAcceptance
+```
 
+```output
 WARNING: The specified module 'ModuleRequireLicenseAcceptance' with PowerShellGetFormatVersion '2.0' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'ModuleRequireLicenseAcceptance'.
-
 ```
 
 ### <a name="example-8-save-module-requiring-license-acceptance"></a>Пример 8. Сохранение модуля, для использования которого требуется принять условия лицензионного соглашения
 
-```PowerShell
-PS> Save-Module -Name ModuleRequireLicenseAcceptance -Path C:\Saved
+```powershell
+Save-Module -Name ModuleRequireLicenseAcceptance -Path C:\Saved
+```
 
+```output
 License Acceptance
 
 License 2.0
@@ -172,17 +178,19 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 ### <a name="example-9-save-module-requiring-license-acceptance-with--acceptlicense"></a>Пример 9. Сохранение модуля, для использования которого требуется принять условия лицензионного соглашения, при помощи -AcceptLicense
 
-```PowerShell
-PS> Save-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense -Path C:\Saved
+```powershell
+Save-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense -Path C:\Saved
 ```
 
 Модуль сохраняется без запроса на принятие условий лицензионного соглашения.
 
 ### <a name="example-10-update-module-requiring-license-acceptance"></a>Пример 10. Обновление модуля, для использования которого требуется принять условия лицензионного соглашения
 
-```PowerShell
-PS> Update-Module -Name ModuleRequireLicenseAcceptance
+```powershell
+Update-Module -Name ModuleRequireLicenseAcceptance
+```
 
+```output
 License Acceptance
 
 License 2.0
@@ -201,16 +209,16 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 ### <a name="example-11-update-module-requiring-license-acceptance-with--acceptlicense"></a>Пример 11. Обновление модуля, для использования которого требуется принять условия лицензионного соглашения, при помощи -AcceptLicense
 
-```PowerShell
-PS> Update-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
+```powershell
+Update-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
 ```
 
 Модуль обновляется без запроса на принятие условий лицензионного соглашения.
 
 ## <a name="more-details"></a>Дополнительные подробности
 
-### <a name="require-license-acceptance-for-scriptsscript-license-acceptancemd"></a>[Запрос на принятие условий лицензии для скриптов](./script-license-acceptance.md)
+[Запрос на принятие условий лицензии для скриптов](./script-license-acceptance.md)
 
-### <a name="require-license-acceptance-support-on-powershellgalleryhow-toworking-with-itemsitems-that-require-license-acceptancemd"></a>[Поддержка запроса на принятие условий лицензионного соглашения в коллекции PowerShell](../how-to/working-with-items/items-that-require-license-acceptance.md)
+[Поддержка запроса на принятие условий лицензионного соглашения в коллекции PowerShell](../how-to/working-with-items/items-that-require-license-acceptance.md)
 
-### <a name="require-license-acceptance-on-deploy-to-azure-automationhow-toworking-with-itemsdeploy-to-azure-automationmd"></a>[Запрос на принятие условий лицензии при развертывании в службе автоматизации Azure](../how-to/working-with-items/deploy-to-azure-automation.md)
+[Запрос на принятие условий лицензии при развертывании в службе автоматизации Azure](../how-to/working-with-items/deploy-to-azure-automation.md)

@@ -4,12 +4,12 @@ keywords: powershell,командлет
 ms.date: 12/12/2016
 title: Add-PswaAuthorizationRule
 schema: 2.0.0
-ms.openlocfilehash: b8020f8b034ab24d79a96da3908e9b63bf017cd9
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a5e55611ac59ff5bfecee59ba2b7d7669d08f840
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190389"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893745"
 ---
 # <a name="add-pswaauthorizationrule"></a>Add-PswaAuthorizationRule
 
@@ -20,21 +20,25 @@ ms.locfileid: "34190389"
 ## <a name="syntax"></a>Синтаксис
 
 ### <a name="usergroupnamecomputergroupname"></a>UserGroupNameComputerGroupName
+
 ```
 Add-PswaAuthorizationRule -ComputerGroupName <String> -ConfigurationName <String> -UserGroupName <String[]> [-Credential <PSCredential> ] [-Force] [-RuleName <String> ] [ <CommonParameters>]
 ```
 
 ### <a name="usergroupnamecomputername"></a>UserGroupNameComputerName
+
 ```
 Add-PswaAuthorizationRule -ComputerName <String> -ConfigurationName <String> -UserGroupName <String[]> [-Credential <PSCredential> ] [-Force] [-RuleName <String> ] [ <CommonParameters>]
 ```
 
 ### <a name="usernamecomputergroupname"></a>UserNameComputerGroupName
+
 ```
 Add-PswaAuthorizationRule [-UserName] <String[]> -ComputerGroupName <String> -ConfigurationName <String> [-Credential <PSCredential> ] [-Force] [-RuleName <String> ] [ <CommonParameters>]
 ```
 
 ### <a name="usernamecomputername"></a>UserNameComputerName
+
 ```
 Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-ConfigurationName] <String> [-Credential <PSCredential> ] [-Force] [-RuleName <String> ] [ <CommonParameters>]
 ```
@@ -56,7 +60,7 @@ Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-Conf
 
 ## <a name="parameters"></a>Параметры
 
-### <a name="-computergroupnameltstringgt"></a>-ComputerGroupName&lt;строка&gt;
+### <a name="-computergroupname-string"></a>-ComputerGroupName \<String\>
 
 Указывает имя группы компьютеров в доменных службах Active Directory (AD DS) или локальных группах, к которым это правило предоставляет доступ.
 
@@ -69,7 +73,7 @@ Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-Conf
 | Принимать входные данные конвейера?               | True (ByPropertyName)                |
 | Принимать подстановочные знаки?          | false                                |
 
-### <a name="-computernameltstringgt"></a>-ComputerName&lt;строка&gt;
+### <a name="-computername-string"></a>-ComputerName \<строка\>
 
 Указывает имя компьютера, к которому это правило предоставляет доступ.
 
@@ -82,7 +86,7 @@ Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-Conf
 | Принимать входные данные конвейера?               | True (ByPropertyName)                |
 | Принимать подстановочные знаки?          | false                                |
 
-### <a name="-configurationnameltstringgt"></a>-ConfigurationName&lt;строка&gt;
+### <a name="-configurationname-string"></a>-ConfigurationName \<строка\>
 
 Указывает имя конфигурации сеанса Windows PowerShell (также известной как пространство выполнения), к которой это правило предоставляет доступ.
 
@@ -95,7 +99,7 @@ Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-Conf
 | Принимать входные данные конвейера?               | True (ByPropertyName)                |
 | Принимать подстановочные знаки?          | false                                |
 
-### <a name="-credentialltpscredentialgt"></a>-Credential&lt;PSCredential&gt;
+### <a name="-credential--pscredential"></a>-Credential \<PSCredential\>
 
 Указывает объект **PSCredential** для учетной записи пользователя, который предполагается использовать для изменения правил авторизации Windows PowerShell Web Access. Если этот параметр не добавлен, командлет будет использовать учетную запись текущего пользователя. Чтобы получить объект **PSCredential**, который требуется для удаленного добавления правил авторизации, запустите командлет [Get-Credential](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.security/Get-Credential).
 
@@ -122,7 +126,7 @@ Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-Conf
 | Принимать входные данные конвейера?               | false                                |
 | Принимать подстановочные знаки?          | false                                |
 
-### <a name="-rulenameltstringgt"></a>-RuleName&lt;строка&gt;
+### <a name="-rulename-string"></a>-RuleName \<String\>
 
 Задает понятное имя для этого правила.
 
@@ -135,7 +139,7 @@ Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-Conf
 | Принимать входные данные конвейера?               | True (ByPropertyName)                |
 | Принимать подстановочные знаки?          | false                                |
 
-### <a name="-usergroupnameltstringgt"></a>-UserGroupName&lt;строка\[\]&gt;
+### <a name="-usergroupname-string"></a>-UserGroupName \<String\[\]\>
 
 Указывает имя одной или нескольких групп пользователей в AD DS или локальных группах, к которым это правило предоставляет доступ.
 
@@ -148,7 +152,7 @@ Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-Conf
 | Принимать входные данные конвейера?               | True (ByPropertyName)                |
 | Принимать подстановочные знаки?          | false                                |
 
-### <a name="-usernameltstringgt"></a>-UserName&lt;строка\[\]&gt;
+### <a name="-username-string"></a>-UserName \<String\[\]\>
 
 Указывает одного или нескольких пользователей, к которым это правило предоставляет доступ. Имя пользователя может быть локальной учетной записью пользователя на компьютере шлюза или пользователем в доменных службах Active Directory.
 Формат: `domain\user` или `computer\user`.
@@ -162,7 +166,7 @@ Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-Conf
 | Принимать входные данные конвейера?               | True (ByValue, ByPropertyName)       |
 | Принимать подстановочные знаки?          | false                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
+###  <a name="commonparameters"></a>\<CommonParameters\>
 
 Данный командлет поддерживает общие параметры -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable.
 Дополнительные сведения см. в разделе [about_CommonParameters](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_commonparameters).
@@ -196,7 +200,7 @@ Add-PswaAuthorizationRule -ComputerName srv2.contoso.com -UserGroupName contoso\
 
 ### <a name="example-2"></a>ПРИМЕР 2
 
-В этом примере предоставляется доступ к конфигурации сеанса Windows PowerShell по умолчанию, `Microsoft.PowerShell` на сервере *srv2* для пользователей с именем contoso\\user1, contoso\\user2 и contoso\\user3. Этот командлет создает три правила (по одному на каждого человека).
+В этом примере предоставляется доступ к конфигурации сеанса Windows PowerShell по умолчанию, `Microsoft.PowerShell` на сервере *srv2* для пользователей с именем `contoso\user1`, `contoso\user2` и `contoso\user3`. Этот командлет создает три правила (по одному на каждого человека).
 
 ```PowerShell
 Add-PswaAuthorizationRule –UserName contoso\user1, contoso\user2, contoso\user3 –ComputerName srv2.contoso.com -ConfigurationName Microsoft.PowerShell
@@ -206,7 +210,7 @@ Add-PswaAuthorizationRule –UserName contoso\user1, contoso\user2, contoso\user
 
 В этом примере показано, как вводить значения имен пользователей через конвейер.
 
-```
+```powershell
 "contoso\user1","contoso\user2" | Add-pswaAuthorizationRule –ComputerName srv2.contoso.com –ConfigurationName Microsoft.PowerShell
 ```
 
@@ -225,11 +229,11 @@ $o | Add-PswaAuthorizationRule -UserName contoso\user1 -ConfigurationName Micros
 
 ### <a name="example-5"></a>ПРИМЕР 5
 
-В этом примере добавляется правило, которое предоставляет локальному пользователю с именем *PswaServer\\ChrisLocal* доступ к серверу с именем *srv1.contoso.com*.
+В этом примере добавляется правило, которое предоставляет локальному пользователю с именем `PswaServer\ChrisLocal` доступ к серверу с именем **srv1.contoso.com**.
 
 В этом примере показана ситуация, в которой шлюз находится в рабочей группе, а целевой компьютер входит в домен. Правило авторизации применяется к локальным пользователям на сервере шлюза. На странице входа Windows PowerShell Web Access для успешного прохождения проверки подлинности пользователь должен предоставить второй набор учетных данных в области **Дополнительные параметры подключения**. Сервер шлюза использует этот дополнительный набор учетных данных для проверки подлинности пользователя на конечном компьютере (сервере *srv1.contoso.com*).
 
-````
+````powershell
 Add-PswaAuthorizationRule –UserName PswaServer\ChrisLocal –ComputerName srv1.contoso.com –ConfigurationName Microsoft.PowerShell
 ````
 
@@ -245,10 +249,16 @@ Add-PswaAuthorizationRule –UserName * -ComputerName * -ConfigurationName *
 
 ## <a name="see-also"></a>См. также
 
-- [Get-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592891(v=wps.630).aspx)
-- [Remove-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592893(v=wps.630).aspx)
-- [Test-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592892(v=wps.630).aspx)
-- [Install-PswaWebApplication](https://technet.microsoft.com/en-us/library/jj592894(v=wps.630).aspx)
-- [Add-Member](http://go.microsoft.com/fwlink/p/?LinkId=113280)
-- [New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
-- [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592891(v=wps.630).aspx)
+
+[Remove-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592893(v=wps.630).aspx)
+
+[Test-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592892(v=wps.630).aspx)
+
+[Install-PswaWebApplication](https://technet.microsoft.com/en-us/library/jj592894(v=wps.630).aspx)
+
+[Add-Member](http://go.microsoft.com/fwlink/p/?LinkId=113280)
+
+[New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
+
+[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)

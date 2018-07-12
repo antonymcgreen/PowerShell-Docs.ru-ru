@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Удаление элементов
-ms.openlocfilehash: 3f67f78d63e5cf797d00ce43f95fb3b4f62d6f7c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 454cd404437bf1c31b9a1b81cd9dd0ac81e6b0f6
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218235"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893099"
 ---
 # <a name="deleting-items"></a>Удаление элементов
 
@@ -20,4 +20,4 @@ ms.locfileid: "34218235"
 
 Если возникнет исключительная ситуация и нужно будет удалить какой-либо элемент, это можно сделать вручную через рабочую группу, ответственную за коллекцию PowerShell.
 Например, уважительной причиной для удаления элемента может стать нарушение авторских прав или если он включает потенциально вредоносное содержимое.
-Нужно отправить запрос поддержки через [Коллекция PowerShell] (http://www.PowerShellGallery.com) в этом случае.
+Нужно отправить запрос поддержки через [коллекцию PowerShell](http://www.PowerShellGallery.com) в этом случае.

@@ -1,59 +1,61 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,установка
-ms.openlocfilehash: 7b4e4dbeaf9c3c48e7b2dfc74435dfa2cd9c7ea7
-ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
+ms.openlocfilehash: 0e8d0cb1e4afa7bc791d45bfb0b981654cb09ed5
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34482919"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892575"
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Единое и согласованное представление состояний
 
-В этот выпуск внесен ряд усовершенствований для служб автоматизации, отвечающих за состояние LCM и DSC. Сюда входят единые и согласованные представления состояния, управляемое свойство datetime объектов состояния, возвращаемых командлетом Get-DscConfigurationStatus, и свойство расширенных сведений о состоянии LCM, возвращаемое командлетом Get-DscLocalConfigurationManager.
+В этот выпуск внесен ряд усовершенствований для служб автоматизации, отвечающих за состояние LCM и DSC. Сюда входят единые и согласованные представления состояния, управляемое свойство datetime объектов состояния, возвращаемых командлетом `Get-DscConfigurationStatus`, и свойство расширенных сведений о состоянии LCM, возвращаемое командлетом `Get-DscLocalConfigurationManager`.
 
 Это представление состояния LCM и DSC пересмотрено и унифицировано согласно следующим правилам:
-1.  Необработанный ресурс не влияет на состояние LCM и DSC.
-2.  LCM останавливает обработку дальнейших ресурсов, встретив ресурс, который требует перезагрузку.
-3.  Ресурс, требующий перезагрузку, не находится в нужном состоянии до ее фактического выполнения.
-4.  После обнаружения ресурса, завершающегося сбоем, LCM продолжает обрабатывать дальнейшие ресурсы, если только они не зависят от ресурса со сбоем.
-5.  Общее состояние, возвращаемое командлетом Get-DscConfigurationStatus, представляет собой супермножество состояния для всех ресурсов.
-6.  Состояние PendingReboot является супермножеством состояния PendingConfiguration.
 
-В следующей таблице приведены итоговые свойства состояния в несколько типичных сценариях.
+1. Необработанный ресурс не влияет на состояние LCM и DSC.
+2. LCM останавливает обработку дальнейших ресурсов, встретив ресурс, который требует перезагрузку.
+3. Ресурс, требующий перезагрузку, не находится в нужном состоянии до ее фактического выполнения.
+4. После обнаружения ресурса, завершающегося сбоем, LCM продолжает обрабатывать дальнейшие ресурсы, если только они не зависят от ресурса со сбоем.
+5. Общее состояние, возвращаемое командлетом `Get-DscConfigurationStatus`, представляет собой супермножество состояния для всех ресурсов.
+6. Состояние PendingReboot является супермножеством состояния PendingConfiguration.
 
-| Сценарий                    | LCMState       | Состояние | Запрошена перезагрузка  | ResourcesInDesiredState  | ResourcesNotInDesiredState |
-|---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
-| S**^**                          | Idle                 | Успех    | $false        | S                            | $null                          |
-| F**^**                          | PendingConfiguration | Отказ    | $false        | $null                        | F                              |
-| S,F                             | PendingConfiguration | Отказ    | $false        | S                            | F                              |
-| F,S                             | PendingConfiguration | Отказ    | $false        | S                            | F                              |
-| S<sub>1</sub>, F, S<sub>2</sub> | PendingConfiguration | Отказ    | $false        | S<sub>1</sub>, S<sub>2</sub> | F                              |
-| F<sub>1</sub>, S, F<sub>2</sub> | PendingConfiguration | Отказ    | $false        | S                            | F<sub>1</sub>, F<sub>2</sub>   |
-| S, r                            | PendingReboot        | Успех    | $true         | S                            | r                              |
-| F, r                            | PendingReboot        | Отказ    | $true         | $null                        | F, r                           |
-| r, S                            | PendingReboot        | Успех    | $true         | $null                        | r                              |
-| r, F                            | PendingReboot        | Успех    | $true         | $null                        | r                              |
+   В следующей таблице приведены итоговые свойства состояния в несколько типичных сценариях.
 
-^ S<sub>i</sub>: ряд ресурсов, которые успешно применены F<sub>i</sub>: ряд ресурсов, которые применены неудачно r: ресурс, который требует перезагрузки.\*
+   | Сценарий                    | LCMState       | Состояние | Запрошена перезагрузка  | ResourcesInDesiredState  | ResourcesNotInDesiredState |
+   |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
+   | S**^**                          | Idle                 | Успех    | $false        | S                            | $null                          |
+   | F**^**                          | PendingConfiguration | Отказ    | $false        | $null                        | F                              |
+   | S,F                             | PendingConfiguration | Отказ    | $false        | S                            | F                              |
+   | F,S                             | PendingConfiguration | Отказ    | $false        | S                            | F                              |
+   | S<sub>1</sub>, F, S<sub>2</sub> | PendingConfiguration | Отказ    | $false        | S<sub>1</sub>, S<sub>2</sub> | F                              |
+   | F<sub>1</sub>, S, F<sub>2</sub> | PendingConfiguration | Отказ    | $false        | S                            | F<sub>1</sub>, F<sub>2</sub>   |
+   | S, r                            | PendingReboot        | Успех    | $true         | S                            | r                              |
+   | F, r                            | PendingReboot        | Отказ    | $true         | $null                        | F, r                           |
+   | r, S                            | PendingReboot        | Успех    | $true         | $null                        | r                              |
+   | r, F                            | PendingReboot        | Успех    | $true         | $null                        | r                              |
 
-```powershell
-$LCMState = (Get-DscLocalConfigurationManager).LCMState
-$Status = (Get-DscConfigurationStatus).Status
+   ^
+   S<sub>i</sub>: ряд ресурсов, которые успешно применены F<sub>i</sub>: ряд ресурсов, которые применены неудачно r: ресурс, который требует перезагрузки \*
 
-$RebootRequested = (Get-DscConfigurationStatus).RebootRequested
+   ```powershell
+   $LCMState = (Get-DscLocalConfigurationManager).LCMState
+   $Status = (Get-DscConfigurationStatus).Status
 
-$ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
+   $RebootRequested = (Get-DscConfigurationStatus).RebootRequested
 
-$ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
-```
+   $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
+
+   $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
+   ```
 
 ## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Улучшения в командлете Get-DscConfigurationStatus
 
-В этом выпуске в командлет Get-DscConfigurationStatus было внесено несколько улучшений. Ранее свойство StartDate объектов, возвращаемое командлетом StartDate, имело тип String. Теперь оно имеет тип Datetime, что упрощает сложный выбор и фильтрацию благодаря встроенным свойствам объекта Datetime.
+В этом выпуске в командлет `Get-DscConfigurationStatus` было внесено несколько улучшений. Ранее свойство StartDate объектов, возвращаемое командлетом StartDate, имело тип String. Теперь оно имеет тип Datetime, что упрощает сложный выбор и фильтрацию благодаря встроенным свойствам объекта Datetime.
 
 ```powershell
-(Get-DscConfigurationStatus).StartDate | fl *
+(Get-DscConfigurationStatus).StartDate | Format-List *
 DateTime : Friday, November 13, 2015 1:39:44 PM
 Date : 11/13/2015 12:00:00 AM
 Day : 13
@@ -73,15 +75,15 @@ Year : 2015
 Ниже приведен пример, который возвращает все записи операций DSC, созданные в тот же день недели, что и сегодня.
 
 ```powershell
-(Get-DscConfigurationStatus –All) | where { $_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
+(Get-DscConfigurationStatus –All) | Where-Object { $_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
 ```
 
-Записи операций, которые не вносят изменения в конфигурацию узла (т. е. представлены операциями только для чтения), исключаются. Таким образом, операции Test-DscConfiguration и Get-DscConfiguration больше не имитируются в возвращаемых объектах из командлета Get-DscConfigurationStatus.
-В выходные данные командлета Get-DscConfigurationStatus добавляются записи для операции настройки метаконфигурации.
+Записи операций, которые не вносят изменения в конфигурацию узла (т. е. представлены операциями только для чтения), исключаются. Таким образом, операции `Test-DscConfiguration` и `Get-DscConfiguration` больше не имитируются в возвращаемых объектах из командлета `Get-DscConfigurationStatus`.
+В выходные данные командлета `Get-DscConfigurationStatus`добавляются записи для операции настройки метаконфигурации.
 
-Ниже приведен пример результата, возвращаемого из командлета DscConfigurationStatus –All.
+Ниже приведен пример результата, возвращаемого из командлета `Get-DscConfigurationStatus` со значение "–All".
 
-```powershell
+```output
 All configuration operations:
 
 Status StartDate Type RebootRequested
@@ -95,7 +97,7 @@ Success 11/13/2015 11:20:44 AM LocalConfigurationManager False
 
 ## <a name="enhancement-in-get-dsclocalconfigurationmanager-cmdlet"></a>Улучшения в командлете Get-DscLocalConfigurationManager
 
-В объект, возвращаемый из командлета Get-DscLocalConfigurationManager, добавлено новое поле LCMStateDetail. Оно заполняется в том случае, когда LCMState имеет значение Busy. Извлечь его можно с помощью следующего командлета:
+В объект, возвращаемый из командлета `Get-DscLocalConfigurationManager`, добавлено новое поле LCMStateDetail. Оно заполняется в том случае, когда LCMState имеет значение Busy. Извлечь его можно с помощью следующего командлета:
 
 ```powershell
 (Get-DscLocalConfigurationManager).LCMStateDetail
@@ -103,7 +105,7 @@ Success 11/13/2015 11:20:44 AM LocalConfigurationManager False
 
 Ниже приведен пример выходных данных для постоянного мониторинга конфигурации, которая требует двух перезагрузок на удаленном узле.
 
-```powershell
+```output
 Start a configuration that requires two reboots
 
 Monitor LCM State:

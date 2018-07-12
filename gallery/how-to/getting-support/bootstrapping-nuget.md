@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Начальная загрузка поставщика NuGet
-ms.openlocfilehash: f707e23737361ee7f82a16150402c9e719ee0ae1
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a935b6862f3912a4b419ca00b4d4dd5aab9c20fc
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34221805"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892707"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Начальная загрузка поставщика NuGet и NuGet.exe
 
@@ -19,13 +19,16 @@ PowerShellGet содержит логику обработки совместн�
 В любом случае должно появиться только одно сообщение запроса.
 Если компьютер не подключен к Интернету, пользователь или администратор должен скопировать на него доверенный экземпляр поставщика NuGet и/или файл NuGet.exe.
 
->**Примечание.** Начиная с версии 6, поставщик NuGet содержится в установке PowerShell. [http://github.com/powershell/powershell](http://github.com/powershell/powershell)
+> [!NOTE]
+> Начиная с версии 6, поставщик NuGet содержится в установке PowerShell. [http://github.com/powershell/powershell](http://github.com/powershell/powershell)
 
 ## <a name="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected"></a>Устранение ошибки, при которой поставщик NuGet не устанавливается на автономный компьютер
 
 ```powershell
-PS> Find-Module -Repository PSGallery -Verbose -Name Contoso
+Find-Module -Repository PSGallery -Verbose -Name Contoso
+```
 
+```output
 NuGet provider is required to continue
 PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
 'C:\Users\manikb\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to install and import the NuGet provider
@@ -37,9 +40,13 @@ At line:1 char:1
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidOperation: (:) [Find-Module], InvalidOperationException
    + FullyQualifiedErrorId : CouldNotInstallNuGetProvider,Find-Module
+```
 
-PS> Find-Module -Repository PSGallery -Verbose -Name Contoso
+```powershell
+Find-Module -Repository PSGallery -Verbose -Name Contoso
+```
 
+```output
 NuGet provider is required to continue
 PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
 'C:\Users\manikb\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to install and import the NuGet provider
@@ -55,8 +62,10 @@ Version    Name                                Type       Repository           D
 ## <a name="resolving-error-when-the-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a>Устранение ошибки, при которой во время операции публикации на автономном компьютере доступен поставщик NuGet, но недоступен NuGet.exe
 
 ```powershell
-PS> Publish-Module -Name Contoso -Repository PSGallery -Verbose
+Publish-Module -Name Contoso -Repository PSGallery -Verbose
+```
 
+```output
 NuGet.exe is required to continue
 PowerShellGet requires NuGet.exe to publish an item to the NuGet-based repositories. NuGet.exe must be available under one of the paths specified in PATH environment variable value. Do you want PowerShellGet to install NuGet.exe now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): N
@@ -67,8 +76,13 @@ At line:1 char:1
     + CategoryInfo          : InvalidOperation: (:) [Publish-Module], InvalidOperationException
     + FullyQualifiedErrorId : CouldNotInstallNuGetExe,Publish-Module
 
-PS> Publish-Module -Name Contoso -Repository PSGallery -Verbose
+```
 
+```powershell
+Publish-Module -Name Contoso -Repository PSGallery -Verbose
+```
+
+```output
 NuGet.exe is required to continue
 PowerShellGet requires NuGet.exe to publish an item to the NuGet-based repositories. NuGet.exe must be available under one of the paths specified in PATH environment variable value. Do you want PowerShellGet to install NuGet.exe now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -79,8 +93,10 @@ VERBOSE: Successfully published module 'Contoso' to the module publish location 
 ## <a name="resolving-error-when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a>Устранение ошибки, при которой во время операции публикации на автономном компьютере недоступны поставщик NuGet и NuGet.exe
 
 ```powershell
-PS> Publish-Module -Name Contoso -Repository PSGallery -Verbose
+Publish-Module -Name Contoso -Repository PSGallery -Verbose
+```
 
+```output
 NuGet.exe and NuGet provider are required to continue
 PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with the NuGet-based repositories. Do you want PowerShellGet to install both NuGet.exe and NuGet provider now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): N
@@ -92,8 +108,13 @@ At line:1 char:1
     + CategoryInfo          : InvalidOperation: (:) [Publish-Module], InvalidOperationException
     + FullyQualifiedErrorId : CouldNotInstallNuGetBinaries,Publish-Module
 
-PS> Publish-Module -Name Contoso -Repository PSGallery -Verbose
+```
 
+```powershell
+Publish-Module -Name Contoso -Repository PSGallery -Verbose
+```
+
+```output
 NuGet.exe and NuGet provider are required to continue
 PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with the NuGet-based repositories. Do you want PowerShellGet to install both NuGet.exe and NuGet provider now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -116,48 +137,50 @@ C:\Program Files\PackageManagement\ProviderAssemblies\
 
 Структура папок или файлов поставщика NuGet будет следующей (возможно, с другим номером версии):
 
-NuGet<br>
---2.8.5.208<br>
----Microsoft.PackageManagement.NuGetProvider.dll
+```
+NuGet
+--2.8.5.208
+----Microsoft.PackageManagement.NuGetProvider.dll
+```
 
 Скопируйте эти папки и файл с помощью доверенного процесса на автономные компьютеры.
 
 ## <a name="manually-bootstrapping-nugetexe-to-support-publish-operations-on-a-machine-that-is-not-connected-to-the-internet"></a>Ручной режим начальной загрузки поставщика NuGet на автономном компьютере для поддержки операций публикации
 
-Если компьютер будет использоваться для публикации модулей или скриптов в частной коллекции с помощью командлетов *Publish-Module* или *Publish-Script*, помимо выполнения начальной загрузки поставщика NuGet вручную потребуется двоичный исполняемый файл NuGet.exe.
+Если компьютер будет использоваться для публикации модулей или скриптов в частной коллекции с помощью командлетов `Publish-Module` или `Publish-Script`, помимо выполнения начальной загрузки поставщика NuGet вручную потребуется двоичный исполняемый файл NuGet.exe.
+
 Наиболее распространенный случай использования такого сценария — это когда частная коллекция доступна для поддержки изолированной среды.
 Существует два варианта получения файла NuGet.exe.
 
 Первый вариант — выполнить начальную загрузку на компьютере, подключенном к Интернету, и скопировать файлы на автономные компьютеры с помощью доверенного процесса.
 После начальной загрузки подключенного к Интернету компьютера двоичный файл NuGet.exe будет находиться в одной из двух папок:
 
-При выполнении командлетов *Publish-Module* или *Publish-Script* с повышенным уровнем разрешений (от имени администратора):
+При выполнении командлетов `Publish-Module` или `Publish-Script` с повышенным уровнем разрешений (от имени администратора):
 
-```
+```powershell
 $env:ProgramData\Microsoft\Windows\PowerShell\PowerShellGet
 ```
 
 Если командлеты выполнялись от имени пользователя без разрешения более высокого уровня:
 
-```
+```powershell
 $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
 ```
 
-Второй вариант — загрузить NuGet.exe с веб-сайта NuGet.Org: [https://dist.nuget.org/index.html](https://dist.nuget.org/index.html)<br>
-При выборе версии для рабочих компьютеров убедитесь, что это версия позднее 2.8.5.208, и определите версию с пометкой "рекомендуется".
+Второй вариант — загрузить NuGet.exe с веб-сайта NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) При выборе версии для рабочих компьютеров убедитесь, что это версия позднее 2.8.5.208, и определите версию с пометкой "рекомендуется".
 Обязательно разблокируйте файл, если он был скачан с помощью браузера.
-Это можно сделать с помощью командлета *Unblock-File*.
+Это можно сделать с помощью командлета `Unblock-File`.
 
-В любом случае можно скопировать файл NuGet.exe в любое расположение в *$env:path*, но стандартные расположения следующие:
+В любом случае можно скопировать файл NuGet.exe в любое расположение в `$env:path`, но стандартные расположения следующие:
 
-Чтобы сделать доступным исполняемый файл, чтобы все пользователи могли использовать командлеты *Publish-Module* и *Publish-Script*, используйте следующее:
+Чтобы сделать исполняемый файл доступным для предоставления всем пользователям возможности применять командлеты `Publish-Module` и `Publish-Script`, используйте следующее:
 
-```
+```powershell
 $env:ProgramData\Microsoft\Windows\PowerShell\PowerShellGet
 ```
 
 Чтобы сделать доступным исполняемый файл только для конкретных пользователей, скопируйте его в расположение профиля только нужного пользователя:
 
-```
+```powershell
 $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
 ```
