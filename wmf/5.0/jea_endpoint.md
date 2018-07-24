@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,установка
-ms.openlocfilehash: 66db78cfb136f22cad9078d7113dad085ee667a5
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: e4910e95a417da61661aaddd98b2dc7da9f98a3d
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188434"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093724"
 ---
 # <a name="creating-and-connecting-to-a-jea-endpoint"></a>Создание конечной точки JEA и подключение к ней
 Чтобы создать конечную точку JEA, необходимо создать и зарегистрировать специально настроенный файл конфигурации сеанса PowerShell. Для этого можно воспользоваться командлетом **New-PSSessionConfigurationFile**.
@@ -128,8 +128,8 @@ Copyright = '(c) 2015 Administrator. All rights reserved.'
 # AssembliesToLoad = 'System.Web', 'System.OtherAssembly, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
 
 }
-
 ```
+
 Для использования в конфигурации сеанса JEA возможности роли следует сохранить как допустимый модуль PowerShell в каталоге RoleCapabilities. При необходимости модуль может иметь несколько файлов возможностей роли.
 
 Чтобы приступить к настройке того, какие командлеты, функции, псевдонимы и сценарии доступны пользователю при подключении к сеансу JEA, добавьте в файл возможности роли свои правила, следуя закомментированному шаблону. Более подробные сведения о настройке возможностей роли см. в полном [руководстве по работе](http://aka.ms/JEA).
@@ -141,9 +141,11 @@ Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfi
 ```
 
 ## <a name="connect-to-a-jea-endpoint"></a>Подключение к конечной точке JEA
+
 Подключение к конечной точке JEA осуществляется аналогично подключению к любой конечной точке PowerShell.  Необходимо просто назначить конечной точке JEA имя в качестве параметра ConfigurationName для **New-PSSession**, **Invoke-Command** или **Enter-PSSession**.
 
 ```powershell
 Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
+
 После подключения к сеансу JEA вы сможете выполнять только те команды, которые входят в число разрешенных для доступных вам возможностей роли. При попытке запустить любую другую команду возникает ошибка.

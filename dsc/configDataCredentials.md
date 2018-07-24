@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Параметры учетных данных в данных конфигурации
-ms.openlocfilehash: 2c6685f3b6992537d1652f172cf926b85dd634c6
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 12bb8d8ce5fc4685e583e74d411b098320ac4fd4
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190049"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093683"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Параметры учетных данных в данных конфигурации
 >Область применения: Windows PowerShell 5.0
@@ -273,8 +273,6 @@ DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 > `NodeName` не может равняться звездочке. Обязательно укажите имя конкретного узла.
 
 **Корпорация Майкрософт не рекомендует использовать пароли в виде простого текста из-за серьезной угрозы безопасности.**
-
-Исключением является использование службы Azure Automation DSC, так как она всегда хранит данные (передаваемые, неактивные внутри службы и неактивные на узле) в зашифрованном виде.
 
 ## <a name="domain-credentials"></a>Доменные учетные данные
 

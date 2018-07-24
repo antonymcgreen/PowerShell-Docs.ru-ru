@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Сценарии с совместимыми выпусками PowerShell
-ms.openlocfilehash: 27b50be4e99b6c6b8fa089d1d4a436a27eeb17c9
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 386e65295641fb6932c13047246742531aeaec64
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219255"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093666"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>Сценарии с совместимыми выпусками PowerShell
 
@@ -56,13 +56,11 @@ At line:1 char:1
 Сценарии без тегов PSEdition_Desktop и PSEditon_Core прекрасно работают в выпусках PowerShell Desktop.
 
 ```powershell
-
 # Find scripts supported on PowerShell Desktop edition
 Find-Script -Tag PSEditon_Desktop
 
 # Find scripts supported on PowerShell Core editions
 Find-Script -Tag PSEditon_Core
-
 ```
 
 ## <a name="more-details"></a>Дополнительные подробности

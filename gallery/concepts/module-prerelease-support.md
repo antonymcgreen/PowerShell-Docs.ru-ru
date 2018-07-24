@@ -3,12 +3,12 @@ ms.date: 09/26/2017
 contributor: keithb
 keywords: коллекция,powershell,командлет,psget
 title: Предварительные версии модулей
-ms.openlocfilehash: 2a4fcd40353450e5ba03910984c5a05772a93d0d
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 371aae7eed4afe341755133c5ee2d356cd5876e0
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189845"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093785"
 ---
 # <a name="prerelease-module-versions"></a>Предварительные версии модулей
 
@@ -108,7 +108,6 @@ C:\windows\system32> Get-InstalledModule TestPackage
 Version         Name                                Repository           Description
 -------         ----                                ----------           -----------
 1.9.0-alpha     TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-
 ```
 
 Не поддерживается одновременная установка модулей, версии которых отличаются только значением предварительной версии. При использовании PowerShellGet разные версии одного модуля могут быть установлены одновременно. Каждая из них помещается в папку с именем, использующим значение ModuleVersion. ModuleVersion используется для имени папки без добавления строки предварительной версии. Если пользователь установит модуль MyModule версии 2.5.0-alpha, этот модуль будет помещен в папку MyModule\2.5.0. Если пользователь затем установит версию 2.5.0-beta, то она __перезапишет__ содержимое папки MyModule\2.5.0. Одним из преимуществ такого подхода является то, что нет необходимости удалять предварительную версию после установки версии, готовой к использованию. Пример ниже иллюстрирует работу этого правила.
