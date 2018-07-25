@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Устранение неполадок в DSC
-ms.openlocfilehash: c08f91b514aae438578fa278228fe5ec879a4012
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 1e8bfdf3540e65e3be94bf6a9b04e7d3b14ff044
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190015"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094074"
 ---
 # <a name="troubleshooting-dsc"></a>Устранение неполадок в DSC
 
@@ -24,10 +24,10 @@ ms.locfileid: "34190015"
 Командлет [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) получает сведения о состоянии конфигурации с целевого узла.
 Возвращается расширенный объект, который содержит высокоуровневые сведения о том, было ли выполнение конфигурации успешным. Можно детализировать объект для получения сведений о запуске конфигурации, например следующие.
 
-* Все ресурсы, для которых возник сбой
-* Любые ресурсы, запросившие перезагрузку
-* Параметры метаконфигурации во время выполнения конфигурации
-* Прочее
+- Все ресурсы, для которых возник сбой
+- Любые ресурсы, запросившие перезагрузку
+- Параметры метаконфигурации во время выполнения конфигурации
+- Прочее
 
 Следующий набор параметров возвращает сведения о состоянии для последнего выполнения конфигурации:
 
@@ -118,8 +118,8 @@ Consistency engine was run successfully.
 
 События DSC записываются в определенной структуре, что позволяет пользователю собрать все события из одного задания DSC. Эта структура выглядит следующим образом:
 
-**Идентификатор задания: <Guid>**
-**<Event Message>**
+**ИД задания: \<GUID\>**
+**\<Сообщение события\>**
 
 ## <a name="gathering-events-from-a-single-dsc-operation"></a>Сбор событий для отдельной операции DSC
 
@@ -281,7 +281,6 @@ ComputerName   SequenceId TimeCreated           Result   JobID                  
 SRV1   1          6/23/2016 9:37:52 AM  Failure  9701aadf-395e-11e6-9165-00155d390509  {@{Message=; TimeC...
 SRV1   2          6/23/2016 9:36:54 AM  Failure  7e8e2d6e-395c-11e6-9165-00155d390509  {@{Message=; TimeC...
 SRV1   3          6/23/2016 9:36:54 AM  Success  af72c6aa-3960-11e6-9165-00155d390509  {@{Message=Operati...
-
 ```
 
 С помощью параметра `Newest` можно также указать, что вам требуются только результаты по самой последней операции:
@@ -618,10 +617,13 @@ onlyProperty                            PSComputerName
 ## <a name="see-also"></a>См. также
 
 ### <a name="reference"></a>Ссылка
-* [Ресурс Log в DSC](logResource.md)
+
+- [Ресурс Log в DSC](logResource.md)
 
 ### <a name="concepts"></a>Концепции
-* [Создание пользовательских ресурсов DSC Windows PowerShell](authoringResource.md)
+
+- [Создание пользовательских ресурсов DSC Windows PowerShell](authoringResource.md)
 
 ### <a name="other-resources"></a>Прочие ресурсы
-* [Конфигурация требуемого состояния Windows PowerShell (DSC)](https://technet.microsoft.com/library/dn521624(v=wps.630).aspx)
+
+- [Конфигурация требуемого состояния Windows PowerShell (DSC)](https://technet.microsoft.com/library/dn521624(v=wps.630).aspx)
