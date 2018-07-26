@@ -1,0 +1,10 @@
+- name: PowerShell
+  tocHref: /powershell/
+  topicHref: /powershell
+  items:
+    - name: Создание сценариев
+      tocHref: /powershell/scripting/
+      topicHref: /powershell/scripting/index
+    - name: Создание сценариев
+      tocHref: /powershell/module/
+      topicHref: /powershell/scripting/index
