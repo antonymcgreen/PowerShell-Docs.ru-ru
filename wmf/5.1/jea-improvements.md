@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,установка
 contributor: ryanpu
 title: Улучшения Just Enough Administration (JEA)
-ms.openlocfilehash: 79271e77a539764e7a18842efd919413cdc8ab9f
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: a9a8a0fd2b726ded33aa07c205292efd7148f3f0
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892725"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093625"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Улучшения Just Enough Administration (JEA)
 
@@ -50,7 +50,7 @@ Copy-Item -Path User:\SampleFile.txt -Destination . -FromSession $jeasession
 
 В некоторых случаях для выполнения задачи пользователем в сеансе JEA может потребоваться доступ к ресурсам за пределами локального компьютера.
 Если в сеансе JEA настроено использование виртуальной учетной записи, любые попытки подключиться к таким ресурсам будут отображаться как полученные из удостоверения локального компьютера, а не из виртуальной учетной записи или от подключенного пользователя.
-В TP5 включена поддержка работы JEA в контексте [групповой управляемой учетной записи службы](https://technet.microsoft.com/en-us/library/jj128431(v=ws.11\).aspx), что значительно облегчает доступ к сетевым ресурсам с использованием идентификатора домена.
+В TP5 включена поддержка работы JEA в контексте [групповой управляемой учетной записи службы](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431\(v=ws.11\)), что значительно облегчает доступ к сетевым ресурсам с использованием идентификатора домена.
 
 Чтобы настроить работу сеанса JEA в учетной записи gMSA, используйте следующий новый ключ в PSSC-файле:
 

@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Значения манифеста элементов, связанные с пользовательским интерфейсом коллекции PowerShell
-ms.openlocfilehash: fd5e48f8cc36795742ae597fc7715f7377605b6f
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 00350d3558e2bfa487fb116304956ffa7291ee05
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893483"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093979"
 ---
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Значения манифеста элементов, связанные с пользовательским интерфейсом коллекции PowerShell
 
@@ -84,65 +84,67 @@ ms.locfileid: "37893483"
 В некоторых случаях рядом с тегами приводятся похожие, но, возможно, менее идеальные варианты.
 Рекомендуем использовать предпочтительный тег. Он будет сопровождаться меньшим уровнем несогласованности и даст лучше результаты поиска для пользователей.
 
-| **Предпочтительный тег** | **Альтернативные варианты и примечания** |
+| Предпочтительный тег | Альтернативные варианты и примечания |
 | --- | --- |
-| **Azure** |  |
-| **DSC** | Тег DesiredStateConfiguration менее предпочтителен из-за большой длины. |
-| **ResourceManager** | Тег ARM используется для описания группы процессоров. Его не следует применять для Azure Resource Manager. | **DSCResourceKit** |  |
-| **SQL** |  |
-| **AWS** |  |
-| **DSCResource** |  |
-| **Automation** |  |
-| **REST** |  |
-| **ActiveDirectory** | Сейчас тег AD не используется самостоятельно.  |
-| **SQLServer** |  |
-| **DBA** |  |
-| **Безопасность** | Тег Defense не такой точный. |
-| **Database** | Тег Databases (во множественном числе) менее предпочтителен. |
-| **DevOps** |  |
-| **Windows** |  |
-| **Build** |  |
-| **Deployment** | Тег Deploy используется немного реже. |
-| **Cloud** |  |
-| **GIT** |  |
-| **Test** | Тег Testing менее предпочтителен. |
-| **VersionControl** | Тег Version менее точный, хотя используется чаще.  |
-| **Logging** | Если речь идет о действии, предпочтительнее использовать Logging. |
-| **Log** | Если речь идет об объекте, предпочтительнее использовать Log. |
-| **Backup** |  |
-| **IaaS** |  |
-| **Linux** |  |
-| **IIS** |  |
-| **AzureAutomation** |  |
-| **Storage** |  |
-| **GitHub** |  |
-| **Json** |  |
-| **Exchange** |  |
-| **Network** | Тег Networking является аналогом, но используется реже. |
-| **SharePoint** |  |
-| **Reporting** | Для действия используется Reporting, для объекта — Report. |
-| **Report** | Тег Report используется, если речь идет об объекте. |
-| **WinRM** |  |
-| **Monitoring** |  |
-| **VSTS** |  |
-| **Excel** |  |
-| **Google** |  |
-| **Color** |  |
-| **DNS** |  |
-| **Office365** | Предпочтительнее использовать полное слово Office. O365 используется реже, несмотря на то что этот тег короче. | **Gitlab** |  |
-| **Pester** |  |
-| **AzureAD** |  |
-| **HTML** |  |
-| **Hyper-V** | HyperV реже используется в качестве тега. |
-| **Configuration** |  |
-| **ChatOps** |  |
-| **PackageManagement** |  |
-| **WMI** |  |
-| **Firewall** |  |
-| **Docker** |  |
-| **Appveyor** |  |
-| **AzureRm** | Используется в основном для модулей AzureRM. |
-| **Zip** |  |
-| **MSI** |  |
-| **Mac** |  |
-| **PoshBot** |  |
+| Azure |  |
+| DSC | Тег DesiredStateConfiguration менее предпочтителен из-за большой длины. |
+| ResourceManager | Тег ARM используется для описания группы процессоров. Его не следует применять для Azure Resource Manager. |
+| DSCResourceKit |  |
+| SQL |  |
+| AWS |  |
+| DSCResource |  |
+| Автоматизация |  |
+| REST |  |
+| ActiveDirectory | Сейчас тег AD не используется самостоятельно.  |
+| SQLServer |  |
+| DBA |  |
+| Безопасность | Тег Defense не такой точный. |
+| База данных | Тег Databases (во множественном числе) менее предпочтителен. |
+| DevOps |  |
+| Windows |  |
+| Build |  |
+| Развертывание | Тег Deploy используется немного реже. |
+| Облако |  |
+| GIT |  |
+| Тест | Тег Testing менее предпочтителен. |
+| VersionControl | Тег Version менее точный, хотя используется чаще.  |
+| Ведение журнала | Если речь идет о действии, предпочтительнее использовать Logging. |
+| Журнал | Если речь идет об объекте, предпочтительнее использовать Log. |
+| Резервное копирование |  |
+| IaaS |  |
+| Linux |  |
+| IIS |  |
+| AzureAutomation |  |
+| Хранение |  |
+| GitHub |  |
+| Json |  |
+| Exchange |  |
+| Сеть | Тег Networking является аналогом, но используется реже. |
+| SharePoint |  |
+| Формирование отчетов | Для действия используется Reporting, для объекта — Report. |
+| Отчет | Тег Report используется, если речь идет об объекте. |
+| WinRM |  |
+| Мониторинг |  |
+| VSTS |  |
+| Excel, |  |
+| Google |  |
+| Color |  |
+| Служба доменных имен (DNS) |  |
+| Office365 | Предпочтительнее использовать полное слово Office. O365 используется реже, несмотря на то что этот тег короче. |
+| Gitlab |  |
+| Pester |  |
+| AzureAD |  |
+| HTML |  |
+| Hyper-V | HyperV реже используется в качестве тега. |
+| Конфигурация |  |
+| ChatOps |  |
+| PackageManagement |  |
+| Инструментарий WMI |  |
+| Брандмауэр |  |
+| Docker |  |
+| Appveyor |  |
+| AzureRm | Используется в основном для модулей AzureRM. |
+| Zip |  |
+| MSI |  |
+| Mac |  |
+| PoshBot |  |

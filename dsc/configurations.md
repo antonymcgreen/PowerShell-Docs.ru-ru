@@ -2,36 +2,34 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Конфигурации DSC
-ms.openlocfilehash: d98bf0e85c12103d9b1eeded155bab1af364bd4c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 171068acb51f44e31c81e63f6640222ef71bee38
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188451"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093700"
 ---
 # <a name="dsc-configurations"></a>Конфигурации DSC
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Конфигурации DSC — это сценарии PowerShell, определяющие особый тип функции.
 Для определения конфигурации используйте ключевое слово PowerShell **Configuration**.
 
 ```powershell
 Configuration MyDscConfiguration {
-
     Node "TEST-PC1" {
         WindowsFeature MyFeatureInstance {
-            Ensure = "Present"
-            Name =  "RSAT"
+            Ensure = 'Present'
+            Name = 'RSAT'
         }
         WindowsFeature My2ndFeatureInstance {
-            Ensure = "Present"
-            Name = "Bitlocker"
+            Ensure = 'Present'
+            Name = 'Bitlocker'
         }
     }
 }
 MyDscConfiguration
-
 ```
 
 Сохраните сценарий как PS1-файл.
@@ -48,23 +46,21 @@ MyDscConfiguration
 
 ```powershell
 Configuration MyDscConfiguration {
-
     param(
-        [string[]]$ComputerName="localhost"
+        [string[]]$ComputerName='localhost'
     )
     Node $ComputerName {
         WindowsFeature MyFeatureInstance {
-            Ensure = "Present"
-            Name =  "RSAT"
+            Ensure = 'Present'
+            Name = 'RSAT'
         }
         WindowsFeature My2ndFeatureInstance {
-            Ensure = "Present"
-            Name = "Bitlocker"
+            Ensure = 'Present'
+            Name = 'Bitlocker'
         }
     }
 }
 MyDscConfiguration -ComputerName $ComputerName
-
 ```
 
 В этом примере вы указываете имя узла, передавая его как параметр **ComputerName** при компиляции конфигурации. По умолчанию используется имя localhost.
@@ -76,19 +72,21 @@ MyDscConfiguration -ComputerName $ComputerName
 
 Последняя строка примера, содержащего только имя конфигурации, вызывает конфигурацию.
 
->**Примечание**. Для вызова конфигурация функция должна находиться в глобальной области видимости (как и любая другая функция PowerShell).
->Для этого нужно либо использовать вызов сценария с точкой, либо выполнить сценарий конфигурации, нажав клавишу F5 или кнопку **Выполнить сценарий** в интегрированной среде сценариев.
->Чтобы использовать вызов сценария с точкой, выполните команду `. .\myConfig.ps1`, где `myConfig.ps1` — это имя файла сценария, который содержит конфигурацию.
+> [!NOTE]
+> Для вызова конфигурации функция должна находиться в глобальной области видимости (как и любая другая функция PowerShell).
+> Для этого нужно либо использовать вызов сценария с точкой, либо выполнить сценарий конфигурации, нажав клавишу F5 или кнопку **Выполнить сценарий** в интегрированной среде сценариев.
+> Чтобы использовать вызов сценария с точкой, выполните команду `. .\myConfig.ps1`, где `myConfig.ps1` — это имя файла сценария, который содержит конфигурацию.
 
 При вызове конфигурации она выполняет следующие действия:
 
 - разрешает все переменные;
 - создает папку в текущем каталоге с тем же именем, что и у конфигурации;
 - создает файл с именем _имя_узла_.mof в новой папке, где _имя_узла_ — это имя целевого узла конфигурации.
-    Если узлов несколько, MOF-файл создается для каждого из них.
+  Если узлов несколько, MOF-файл создается для каждого из них.
 
->**Примечание**. MOF-файл содержит все сведения о конфигурации целевого узла. Поэтому его необходимо хранить в безопасном месте.
->Дополнительные сведения см. в статье [Защита MOF-файла](secureMOF.md).
+> [!NOTE]
+> MOF-файл содержит все сведения о конфигурации целевого узла. Поэтому его необходимо хранить в безопасном месте.
+> Дополнительные сведения см. в статье [Защита MOF-файла](secureMOF.md).
 
 При компиляции первой приведенной конфигурации создается следующая структура папок:
 
@@ -128,19 +126,18 @@ Mode                LastWriteTime         Length Name
 Configuration DependsOnExample {
     Node Test-PC1 {
         Group GroupExample {
-            Ensure = "Present"
-            GroupName = "TestGroup"
+            Ensure = 'Present'
+            GroupName = 'TestGroup'
         }
 
         User UserExample {
-            Ensure = "Present"
-            UserName = "TestUser"
-            FullName = "TestUser"
-            DependsOn = "[Group]GroupExample"
+            Ensure = 'Present'
+            UserName = 'TestUser'
+            FullName = 'TestUser'
+            DependsOn = '[Group]GroupExample'
         }
     }
 }
-
 ```
 
 ## <a name="using-new-resources-in-your-configuration"></a>Использование новых ресурсов в конфигурации
@@ -152,10 +149,12 @@ Configuration DependsOnExample {
 После добавления в `$env:PSModulePath` и правильного распознавания командлетом [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) эти модули нужно будет загрузить в конфигурацию.
 **Import-DscResource** — это динамическое ключевое слово, распознаваемое только в блоке **Configuration** (т. е. оно не является командлетом).
 **Import-DscResource** поддерживает два параметра:
+
 - Параметр **ModuleName** — рекомендуемый способ применения **Import-DscResource**. Он принимает имя модуля, содержащего ресурсы для импорта (а также массив строк с именами модулей).
 - Параметр **Name** — имя импортируемого ресурса. Это не то понятное имя, которое возвращается командлетом [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx), а имя класса, используемое при определении схемы ресурса (возвращается как параметр **ResourceType** командлетом [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx)).
 
 ## <a name="see-also"></a>См. также
-* [Общие сведения о службе настройки требуемого состояния Windows PowerShell](overview.md)
-* [Ресурсы DSC](resources.md)
-* [Настройка локального диспетчера конфигураций](metaConfig.md)
+
+- [Общие сведения о службе настройки требуемого состояния Windows PowerShell](overview.md)
+- [Ресурсы DSC](resources.md)
+- [Настройка локального диспетчера конфигураций](metaConfig.md)
