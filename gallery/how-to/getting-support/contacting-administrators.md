@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Обращение к администраторам коллекции
-ms.openlocfilehash: c919848e93a1f061ac0bf7dec8ef568e41212ef7
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 71c8aa15ac0c6ec57e7e1bfe3cb20cac7e2c6b29
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093828"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268659"
 ---
 # <a name="contact-gallery-administrators"></a>Обращение к администраторам коллекции
 
@@ -24,6 +24,6 @@ ms.locfileid: "39093828"
 
 ## <a name="how-to-contact-gallery-administrators"></a>Как связаться с администраторами коллекции
 
-1. Напишите нам по электронной почте: <cgadmin@microsoft.com>.
+1. Напишите нам по электронной почте: cgadmin@microsoft.com.
 2. Если вы хотите сообщить о злоупотреблении, связанном с конкретным элементом, щелкните ссылку "Сообщить о нарушении" на панели слева.
 3. Остальные общие вопросы, связанные с коллекцией, отправляйте через форму на веб-сайте [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).
