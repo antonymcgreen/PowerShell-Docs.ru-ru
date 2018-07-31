@@ -3,26 +3,22 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Начальная загрузка поставщика NuGet
-ms.openlocfilehash: 2d321097fda201c0d8f843b2194a161eceabe4e1
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: e82fe7bec2e6b7a321fb173cdf9a54c5a97d5f18
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094023"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267853"
 ---
-# <a name="bootstrap-the-nuget-provider-and-nugetexe"></a><span data-ttu-id="f0ae2-103">Начальная загрузка поставщика NuGet и NuGet.exe</span><span class="sxs-lookup"><span data-stu-id="f0ae2-103">Bootstrap the NuGet provider and NuGet.exe</span></span>
+# <a name="bootstrap-the-nuget-provider-and-nugetexe"></a><span data-ttu-id="6c26c-103">Начальная загрузка поставщика NuGet и NuGet.exe</span><span class="sxs-lookup"><span data-stu-id="6c26c-103">Bootstrap the NuGet provider and NuGet.exe</span></span>
 
-<span data-ttu-id="f0ae2-104">Файл NuGet.exe включен в последний поставщик NuGet.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-104">NuGet.exe is not included in the latest NuGet provider.</span></span>
-<span data-ttu-id="f0ae2-105">Для операций публикации модулей или скриптов PowerShellGet требуется двоичный исполняемый файл NuGet.exe.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-105">For publish operations of either a module or script, PowerShellGet requires the binary executable NuGet.exe.</span></span>
-<span data-ttu-id="f0ae2-106">Для всех других операций, включая *поиск*, *установку*, *сохранение* и *удаление*, требуется только поставщик NuGet.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-106">Only the NuGet provider is required for all other operations, including *find*, *install*, *save*, and *uninstall*.</span></span>
-<span data-ttu-id="f0ae2-107">PowerShellGet содержит логику обработки совместной начальной загрузки поставщика NuGet и NuGet.exe или начальной загрузки только поставщика NuGet.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-107">PowerShellGet includes logic to handle either a combined bootstrap of the NuGet provider and NuGet.exe, or bootstrap of only the NuGet provider.</span></span>
-<span data-ttu-id="f0ae2-108">В любом случае должно появиться только одно сообщение запроса.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-108">In either case, only a single prompt message should occur.</span></span>
-<span data-ttu-id="f0ae2-109">Если компьютер не подключен к Интернету, пользователь или администратор должен скопировать на него доверенный экземпляр поставщика NuGet и/или файл NuGet.exe.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-109">If the machine is not connected to the Internet, the user or an administrator must copy a trusted instance of the NuGet provider and/or the NuGet.exe file to the disconnected machine.</span></span>
+<span data-ttu-id="6c26c-104">Файл NuGet.exe включен в последний поставщик NuGet.</span><span class="sxs-lookup"><span data-stu-id="6c26c-104">NuGet.exe is not included in the latest NuGet provider.</span></span> <span data-ttu-id="6c26c-105">Для операций публикации модулей или скриптов PowerShellGet требуется двоичный исполняемый файл NuGet.exe.</span><span class="sxs-lookup"><span data-stu-id="6c26c-105">For publish operations of either a module or script, PowerShellGet requires the binary executable NuGet.exe.</span></span> <span data-ttu-id="6c26c-106">Для всех других операций, включая *поиск*, *установку*, *сохранение* и *удаление*, требуется только поставщик NuGet.</span><span class="sxs-lookup"><span data-stu-id="6c26c-106">Only the NuGet provider is required for all other operations, including *find*, *install*, *save*, and *uninstall*.</span></span>
+<span data-ttu-id="6c26c-107">PowerShellGet содержит логику обработки совместной начальной загрузки поставщика NuGet и NuGet.exe или начальной загрузки только поставщика NuGet.</span><span class="sxs-lookup"><span data-stu-id="6c26c-107">PowerShellGet includes logic to handle either a combined bootstrap of the NuGet provider and NuGet.exe, or bootstrap of only the NuGet provider.</span></span> <span data-ttu-id="6c26c-108">В любом случае должно появиться только одно сообщение запроса.</span><span class="sxs-lookup"><span data-stu-id="6c26c-108">In either case, only a single prompt message should occur.</span></span> <span data-ttu-id="6c26c-109">Если компьютер не подключен к Интернету, пользователь или администратор должен скопировать на него доверенный экземпляр поставщика NuGet и/или файл NuGet.exe.</span><span class="sxs-lookup"><span data-stu-id="6c26c-109">If the machine is not connected to the Internet, the user or an administrator must copy a trusted instance of the NuGet provider and/or the NuGet.exe file to the disconnected machine.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f0ae2-110">Начиная с версии 6, поставщик NuGet содержится в установке PowerShell.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-110">Starting with version 6, the NuGet provider is included in the installation of PowerShell.</span></span> [http://github.com/powershell/powershell](http://github.com/powershell/powershell)
+> <span data-ttu-id="6c26c-110">Начиная с версии 6, поставщик NuGet содержится в установке PowerShell.</span><span class="sxs-lookup"><span data-stu-id="6c26c-110">Starting with version 6, the NuGet provider is included in the installation of PowerShell.</span></span>
 
-## <a name="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected"></a><span data-ttu-id="f0ae2-111">Устранение ошибки, при которой поставщик NuGet не устанавливается на автономный компьютер</span><span class="sxs-lookup"><span data-stu-id="f0ae2-111">Resolving error when the NuGet provider has not been installed on a machine that is Internet connected</span></span>
+## <a name="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected"></a><span data-ttu-id="6c26c-111">Устранение ошибки, при которой поставщик NuGet не устанавливается на автономный компьютер</span><span class="sxs-lookup"><span data-stu-id="6c26c-111">Resolving error when the NuGet provider has not been installed on a machine that is Internet connected</span></span>
 
 ```powershell
 Find-Module -Repository PSGallery -Verbose -Name Contoso
@@ -59,7 +55,7 @@ Version    Name                                Type       Repository           D
 2.5        Contoso                             Module     PSGallery        Contoso module
 ```
 
-## <a name="resolving-error-when-the-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a><span data-ttu-id="f0ae2-112">Устранение ошибки, при которой во время операции публикации на автономном компьютере доступен поставщик NuGet, но недоступен NuGet.exe</span><span class="sxs-lookup"><span data-stu-id="f0ae2-112">Resolving error when the NuGet provider is available and NuGet.exe is not available during the publish operation on a machine that is Internet connected</span></span>
+## <a name="resolving-error-when-the-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a><span data-ttu-id="6c26c-112">Устранение ошибки, при которой во время операции публикации на автономном компьютере доступен поставщик NuGet, но недоступен NuGet.exe</span><span class="sxs-lookup"><span data-stu-id="6c26c-112">Resolving error when the NuGet provider is available and NuGet.exe is not available during the publish operation on a machine that is Internet connected</span></span>
 
 ```powershell
 Publish-Module -Name Contoso -Repository PSGallery -Verbose
@@ -89,7 +85,7 @@ VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
-## <a name="resolving-error-when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a><span data-ttu-id="f0ae2-113">Устранение ошибки, при которой во время операции публикации на автономном компьютере недоступны поставщик NuGet и NuGet.exe</span><span class="sxs-lookup"><span data-stu-id="f0ae2-113">Resolving error when both NuGet provider and NuGet.exe are not available during the publish operation on a machine that is Internet connected</span></span>
+## <a name="resolving-error-when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a><span data-ttu-id="6c26c-113">Устранение ошибки, при которой во время операции публикации на автономном компьютере недоступны поставщик NuGet и NuGet.exe</span><span class="sxs-lookup"><span data-stu-id="6c26c-113">Resolving error when both NuGet provider and NuGet.exe are not available during the publish operation on a machine that is Internet connected</span></span>
 
 ```powershell
 Publish-Module -Name Contoso -Repository PSGallery -Verbose
@@ -121,19 +117,15 @@ VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
-## <a name="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet"></a><span data-ttu-id="f0ae2-114">Ручной режим начальной загрузки поставщика NuGet на автономный компьютер</span><span class="sxs-lookup"><span data-stu-id="f0ae2-114">Manually bootstrapping the NuGet provider on a machine that is not connected to the Internet</span></span>
+## <a name="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet"></a><span data-ttu-id="6c26c-114">Ручной режим начальной загрузки поставщика NuGet на автономный компьютер</span><span class="sxs-lookup"><span data-stu-id="6c26c-114">Manually bootstrapping the NuGet provider on a machine that is not connected to the Internet</span></span>
 
-<span data-ttu-id="f0ae2-115">В указанных выше случаях предполагается, что компьютер подключен к Интернету и может скачать файлы из общедоступного расположения.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-115">The processes demonstrated above assume the machine is connected to the Internet and can download files from a public location.</span></span>
-<span data-ttu-id="f0ae2-116">Если это невозможно, единственным вариантом является начальная загрузка на компьютере с помощью процессов, приведенных выше, и ручное копирование поставщика на изолированный узел с помощью автономного доверенного процесса.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-116">If that is not possible, the only option is to bootstrap a machine using the processes given above, and manually copy the provider to the isolated node through an offline trusted process.</span></span>
-<span data-ttu-id="f0ae2-117">Наиболее распространенный случай использования такого сценария — это когда частная коллекция доступна для поддержки изолированной среды.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-117">The most common use case for this scenario is when a private gallery is available to support an isolated environment.</span></span>
+<span data-ttu-id="6c26c-115">В указанных выше случаях предполагается, что компьютер подключен к Интернету и может скачать файлы из общедоступного расположения.</span><span class="sxs-lookup"><span data-stu-id="6c26c-115">The processes demonstrated above assume the machine is connected to the Internet and can download files from a public location.</span></span> <span data-ttu-id="6c26c-116">Если это невозможно, единственным вариантом является начальная загрузка на компьютере с помощью процессов, приведенных выше, и ручное копирование поставщика на изолированный узел с помощью автономного доверенного процесса.</span><span class="sxs-lookup"><span data-stu-id="6c26c-116">If that is not possible, the only option is to bootstrap a machine using the processes given above, and manually copy the provider to the isolated node through an offline trusted process.</span></span> <span data-ttu-id="6c26c-117">Наиболее распространенный случай использования такого сценария — это когда частная коллекция доступна для поддержки изолированной среды.</span><span class="sxs-lookup"><span data-stu-id="6c26c-117">The most common use case for this scenario is when a private gallery is available to support an isolated environment.</span></span>
 
-<span data-ttu-id="f0ae2-118">После выполнения перечисленных выше процедур для начальной загрузки компьютера, подключенного к Интернету, вы увидите файлы поставщика в расположении:</span><span class="sxs-lookup"><span data-stu-id="f0ae2-118">After following the process above to bootstrap an Internet connected machine, you will find provider files in the location:</span></span>
+<span data-ttu-id="6c26c-118">После выполнения перечисленных выше процедур для начальной загрузки компьютера, подключенного к Интернету, вы увидите файлы поставщика в расположении:</span><span class="sxs-lookup"><span data-stu-id="6c26c-118">After following the process above to bootstrap an Internet connected machine, you will find provider files in the location:</span></span>
 
-```
-C:\Program Files\PackageManagement\ProviderAssemblies\
-```
+`C:\Program Files\PackageManagement\ProviderAssemblies\`
 
-<span data-ttu-id="f0ae2-119">Структура папок или файлов поставщика NuGet будет следующей (возможно, с другим номером версии):</span><span class="sxs-lookup"><span data-stu-id="f0ae2-119">The folder/file structure of the NuGet provider will be (possibly with a different version number):</span></span>
+<span data-ttu-id="6c26c-119">Структура папок или файлов поставщика NuGet будет следующей (возможно, с другим номером версии):</span><span class="sxs-lookup"><span data-stu-id="6c26c-119">The folder/file structure of the NuGet provider will be (possibly with a different version number):</span></span>
 
 ```
 NuGet
@@ -141,43 +133,39 @@ NuGet
 ----Microsoft.PackageManagement.NuGetProvider.dll
 ```
 
-<span data-ttu-id="f0ae2-120">Скопируйте эти папки и файл с помощью доверенного процесса на автономные компьютеры.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-120">Copy these folders and file using a trusted process to the offline machines.</span></span>
+<span data-ttu-id="6c26c-120">Скопируйте эти папки и файл с помощью доверенного процесса на автономные компьютеры.</span><span class="sxs-lookup"><span data-stu-id="6c26c-120">Copy these folders and file using a trusted process to the offline machines.</span></span>
 
-## <a name="manually-bootstrapping-nugetexe-to-support-publish-operations-on-a-machine-that-is-not-connected-to-the-internet"></a><span data-ttu-id="f0ae2-121">Ручной режим начальной загрузки поставщика NuGet на автономном компьютере для поддержки операций публикации</span><span class="sxs-lookup"><span data-stu-id="f0ae2-121">Manually bootstrapping NuGet.exe to support publish operations on a machine that is not connected to the Internet</span></span>
+## <a name="manually-bootstrapping-nugetexe-to-support-publish-operations-on-a-machine-that-is-not-connected-to-the-internet"></a><span data-ttu-id="6c26c-121">Ручной режим начальной загрузки поставщика NuGet на автономном компьютере для поддержки операций публикации</span><span class="sxs-lookup"><span data-stu-id="6c26c-121">Manually bootstrapping NuGet.exe to support publish operations on a machine that is not connected to the Internet</span></span>
 
-<span data-ttu-id="f0ae2-122">Если компьютер будет использоваться для публикации модулей или скриптов в частной коллекции с помощью командлетов `Publish-Module` или `Publish-Script`, помимо выполнения начальной загрузки поставщика NuGet вручную потребуется двоичный исполняемый файл NuGet.exe.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-122">In addition to the process to manually bootstrap the NuGet provider, if the machine will be used to publish modules or scripts to a private gallery using the `Publish-Module` or `Publish-Script` cmdlets, the NuGet.exe binary executable file will be required.</span></span>
+<span data-ttu-id="6c26c-122">Если компьютер будет использоваться для публикации модулей или скриптов в частной коллекции с помощью командлетов `Publish-Module` или `Publish-Script`, помимо выполнения начальной загрузки поставщика NuGet вручную потребуется двоичный исполняемый файл NuGet.exe.</span><span class="sxs-lookup"><span data-stu-id="6c26c-122">In addition to the process to manually bootstrap the NuGet provider, if the machine will be used to publish modules or scripts to a private gallery using the `Publish-Module` or `Publish-Script` cmdlets, the NuGet.exe binary executable file will be required.</span></span>
 
-<span data-ttu-id="f0ae2-123">Наиболее распространенный случай использования такого сценария — это когда частная коллекция доступна для поддержки изолированной среды.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-123">The most common use case for this scenario is when a private gallery is available to support an isolated environment.</span></span>
-<span data-ttu-id="f0ae2-124">Существует два варианта получения файла NuGet.exe.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-124">There are two options to obtain the NuGet.exe file.</span></span>
+<span data-ttu-id="6c26c-123">Наиболее распространенный случай использования такого сценария — это когда частная коллекция доступна для поддержки изолированной среды.</span><span class="sxs-lookup"><span data-stu-id="6c26c-123">The most common use case for this scenario is when a private gallery is available to support an isolated environment.</span></span> <span data-ttu-id="6c26c-124">Существует два варианта получения файла NuGet.exe.</span><span class="sxs-lookup"><span data-stu-id="6c26c-124">There are two options to obtain the NuGet.exe file.</span></span>
 
-<span data-ttu-id="f0ae2-125">Первый вариант — выполнить начальную загрузку на компьютере, подключенном к Интернету, и скопировать файлы на автономные компьютеры с помощью доверенного процесса.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-125">One option is to bootstrap a machine that is Internet connected and copy the files to the offline machines using a trusted process.</span></span>
-<span data-ttu-id="f0ae2-126">После начальной загрузки подключенного к Интернету компьютера двоичный файл NuGet.exe будет находиться в одной из двух папок:</span><span class="sxs-lookup"><span data-stu-id="f0ae2-126">After bootstrapping the Internet connected machine, the NuGet.exe binary will be located in one of two folders:</span></span>
+<span data-ttu-id="6c26c-125">Первый вариант — выполнить начальную загрузку на компьютере, подключенном к Интернету, и скопировать файлы на автономные компьютеры с помощью доверенного процесса.</span><span class="sxs-lookup"><span data-stu-id="6c26c-125">One option is to bootstrap a machine that is Internet connected and copy the files to the offline machines using a trusted process.</span></span> <span data-ttu-id="6c26c-126">После начальной загрузки подключенного к Интернету компьютера двоичный файл NuGet.exe будет находиться в одной из двух папок:</span><span class="sxs-lookup"><span data-stu-id="6c26c-126">After bootstrapping the Internet connected machine, the NuGet.exe binary will be located in one of two folders:</span></span>
 
-<span data-ttu-id="f0ae2-127">При выполнении командлетов `Publish-Module` или `Publish-Script` с повышенным уровнем разрешений (от имени администратора):</span><span class="sxs-lookup"><span data-stu-id="f0ae2-127">If the `Publish-Module` or `Publish-Script` cmdlets were executed with elevated permissions (As an Administrator):</span></span>
+<span data-ttu-id="6c26c-127">При выполнении командлетов `Publish-Module` или `Publish-Script` с повышенным уровнем разрешений (от имени администратора):</span><span class="sxs-lookup"><span data-stu-id="6c26c-127">If the `Publish-Module` or `Publish-Script` cmdlets were executed with elevated permissions (As an Administrator):</span></span>
 
 ```powershell
 $env:ProgramData\Microsoft\Windows\PowerShell\PowerShellGet
 ```
 
-<span data-ttu-id="f0ae2-128">Если командлеты выполнялись от имени пользователя без разрешения более высокого уровня:</span><span class="sxs-lookup"><span data-stu-id="f0ae2-128">If the cmdlets were executed as a user without elevated permissions:</span></span>
+<span data-ttu-id="6c26c-128">Если командлеты выполнялись от имени пользователя без разрешения более высокого уровня:</span><span class="sxs-lookup"><span data-stu-id="6c26c-128">If the cmdlets were executed as a user without elevated permissions:</span></span>
 
 ```powershell
 $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
 ```
 
-<span data-ttu-id="f0ae2-129">Второй вариант — загрузить NuGet.exe с веб-сайта NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) При выборе версии для рабочих компьютеров убедитесь, что это версия позднее 2.8.5.208, и определите версию с пометкой "рекомендуется".</span><span class="sxs-lookup"><span data-stu-id="f0ae2-129">A second option is to download NuGet.exe from the NuGet.Org website: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) When selecting a NugGet version for production machines, make sure it is later than 2.8.5.208, and identify the version that has been labeled "recommended".</span></span>
-<span data-ttu-id="f0ae2-130">Обязательно разблокируйте файл, если он был скачан с помощью браузера.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-130">Remember to unblock the file if it was downloaded using a browser.</span></span>
-<span data-ttu-id="f0ae2-131">Это можно сделать с помощью командлета `Unblock-File`.</span><span class="sxs-lookup"><span data-stu-id="f0ae2-131">This can be performed by using the `Unblock-File` cmdlet.</span></span>
+<span data-ttu-id="6c26c-129">Второй вариант — загрузить NuGet.exe с веб-сайта NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) При выборе версии для рабочих компьютеров убедитесь, что это версия позднее 2.8.5.208, и определите версию с пометкой "рекомендуется".</span><span class="sxs-lookup"><span data-stu-id="6c26c-129">A second option is to download NuGet.exe from the NuGet.Org website: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) When selecting a NugGet version for production machines, make sure it is later than 2.8.5.208, and identify the version that has been labeled "recommended".</span></span> <span data-ttu-id="6c26c-130">Обязательно разблокируйте файл, если он был скачан с помощью браузера.</span><span class="sxs-lookup"><span data-stu-id="6c26c-130">Remember to unblock the file if it was downloaded using a browser.</span></span> <span data-ttu-id="6c26c-131">Это можно сделать с помощью командлета `Unblock-File`.</span><span class="sxs-lookup"><span data-stu-id="6c26c-131">This can be performed by using the `Unblock-File` cmdlet.</span></span>
 
-<span data-ttu-id="f0ae2-132">В любом случае можно скопировать файл NuGet.exe в любое расположение в `$env:path`, но стандартные расположения следующие:</span><span class="sxs-lookup"><span data-stu-id="f0ae2-132">In either case, the NuGet.exe file can be copied to any location in `$env:path`, but the standard locations are:</span></span>
+<span data-ttu-id="6c26c-132">В любом случае можно скопировать файл NuGet.exe в любое расположение в `$env:path`, но стандартные расположения следующие:</span><span class="sxs-lookup"><span data-stu-id="6c26c-132">In either case, the NuGet.exe file can be copied to any location in `$env:path`, but the standard locations are:</span></span>
 
-<span data-ttu-id="f0ae2-133">Чтобы сделать исполняемый файл доступным для предоставления всем пользователям возможности применять командлеты `Publish-Module` и `Publish-Script`, используйте следующее:</span><span class="sxs-lookup"><span data-stu-id="f0ae2-133">To make the executable available so that all users can use `Publish-Module` and `Publish-Script` cmdlets:</span></span>
+<span data-ttu-id="6c26c-133">Чтобы сделать исполняемый файл доступным для предоставления всем пользователям возможности применять командлеты `Publish-Module` и `Publish-Script`, используйте следующее:</span><span class="sxs-lookup"><span data-stu-id="6c26c-133">To make the executable available so that all users can use `Publish-Module` and `Publish-Script` cmdlets:</span></span>
 
 ```powershell
 $env:ProgramData\Microsoft\Windows\PowerShell\PowerShellGet
 ```
 
-<span data-ttu-id="f0ae2-134">Чтобы сделать доступным исполняемый файл только для конкретных пользователей, скопируйте его в расположение профиля только нужного пользователя:</span><span class="sxs-lookup"><span data-stu-id="f0ae2-134">To make the executable available to only a specific user, copy to the location within only that user's profile:</span></span>
+<span data-ttu-id="6c26c-134">Чтобы сделать доступным исполняемый файл только для конкретных пользователей, скопируйте его в расположение профиля только нужного пользователя:</span><span class="sxs-lookup"><span data-stu-id="6c26c-134">To make the executable available to only a specific user, copy to the location within only that user's profile:</span></span>
 
 ```powershell
 $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\

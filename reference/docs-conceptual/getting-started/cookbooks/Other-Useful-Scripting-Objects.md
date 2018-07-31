@@ -3,22 +3,22 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Другие полезные объекты для сценариев
 ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
-ms.openlocfilehash: 58acfd05ff1ae1d9aa5f3a3576b8fb320ba4abbd
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 04e94f858b568928b3910dd0ee85a912a6afc264
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093911"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268506"
 ---
-# <a name="other-useful-scripting-objects"></a><span data-ttu-id="063fa-103">Другие полезные объекты для сценариев</span><span class="sxs-lookup"><span data-stu-id="063fa-103">Other Useful Scripting Objects</span></span>
+# <a name="other-useful-scripting-objects"></a><span data-ttu-id="d30d0-103">Другие полезные объекты для сценариев</span><span class="sxs-lookup"><span data-stu-id="d30d0-103">Other Useful Scripting Objects</span></span>
 
-<span data-ttu-id="063fa-104">Следующие объекты предоставляют дополнительные возможности создания сценариев в интегрированной среде сценариев Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="063fa-104">The following objects provide additional scripting functionality in Windows PowerShell ISE.</span></span> <span data-ttu-id="063fa-105">Они не являются частью иерархии **$psISE**.</span><span class="sxs-lookup"><span data-stu-id="063fa-105">They are not part of the **$psISE** hierarchy.</span></span>
+<span data-ttu-id="d30d0-104">Следующие объекты предоставляют дополнительные возможности создания сценариев в интегрированной среде сценариев Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d30d0-104">The following objects provide additional scripting functionality in Windows PowerShell ISE.</span></span> <span data-ttu-id="d30d0-105">Они не являются частью иерархии **$psISE**.</span><span class="sxs-lookup"><span data-stu-id="d30d0-105">They are not part of the **$psISE** hierarchy.</span></span>
 
-## <a name="useful-scripting-objects"></a><span data-ttu-id="063fa-106">Полезные объекты для сценариев</span><span class="sxs-lookup"><span data-stu-id="063fa-106">Useful Scripting objects</span></span>
+## <a name="useful-scripting-objects"></a><span data-ttu-id="d30d0-106">Полезные объекты для сценариев</span><span class="sxs-lookup"><span data-stu-id="d30d0-106">Useful Scripting objects</span></span>
 
-### <a name="psunsupportedconsoleapplications"></a><span data-ttu-id="063fa-107">$psUnsupportedConsoleApplications</span><span class="sxs-lookup"><span data-stu-id="063fa-107">$psUnsupportedConsoleApplications</span></span>
+### <a name="psunsupportedconsoleapplications"></a><span data-ttu-id="d30d0-107">$psUnsupportedConsoleApplications</span><span class="sxs-lookup"><span data-stu-id="d30d0-107">$psUnsupportedConsoleApplications</span></span>
 
-<span data-ttu-id="063fa-108">Существуют некоторые ограничения, применяемые к взаимодействию интегрированной среды сценариев Windows PowerShell с консольными приложениями.</span><span class="sxs-lookup"><span data-stu-id="063fa-108">There are some limitations on how Windows PowerShell ISE interacts with console applications.</span></span> <span data-ttu-id="063fa-109">Команда или сценарий автоматизации, требующие участия пользователя, могут не работать так, как при запуске из консоли Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="063fa-109">A command or an automation script that requires user intervention might not work the way it works from the Windows PowerShell console.</span></span> <span data-ttu-id="063fa-110">Может потребоваться заблокировать запуск этих команд или сценариев в области команд интегрированной среды сценариев Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="063fa-110">You might want to block these commands or scripts from running in the Windows PowerShell ISE Command pane.</span></span> <span data-ttu-id="063fa-111">Объект **$PsUnsupportedConsoleApplications** хранит список таких команд.</span><span class="sxs-lookup"><span data-stu-id="063fa-111">The **$psUnsupportedConsoleApplications** object keeps a list of such commands.</span></span> <span data-ttu-id="063fa-112">При попытке выполнить команды, указанные в этом списке, вы получите сообщение о том, что они не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="063fa-112">If you try to run the commands in this list, you get a message that they are not supported.</span></span> <span data-ttu-id="063fa-113">Следующий сценарий добавляет запись в этот список.</span><span class="sxs-lookup"><span data-stu-id="063fa-113">The following script adds an entry to the list.</span></span>
+<span data-ttu-id="d30d0-108">Существуют некоторые ограничения, применяемые к взаимодействию интегрированной среды сценариев Windows PowerShell с консольными приложениями.</span><span class="sxs-lookup"><span data-stu-id="d30d0-108">There are some limitations on how Windows PowerShell ISE interacts with console applications.</span></span> <span data-ttu-id="d30d0-109">Команда или сценарий автоматизации, требующие участия пользователя, могут не работать так, как при запуске из консоли Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d30d0-109">A command or an automation script that requires user intervention might not work the way it works from the Windows PowerShell console.</span></span> <span data-ttu-id="d30d0-110">Может потребоваться заблокировать запуск этих команд или сценариев в области команд интегрированной среды сценариев Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d30d0-110">You might want to block these commands or scripts from running in the Windows PowerShell ISE Command pane.</span></span> <span data-ttu-id="d30d0-111">Объект **$PsUnsupportedConsoleApplications** хранит список таких команд.</span><span class="sxs-lookup"><span data-stu-id="d30d0-111">The **$psUnsupportedConsoleApplications** object keeps a list of such commands.</span></span> <span data-ttu-id="d30d0-112">При попытке выполнить команды, указанные в этом списке, вы получите сообщение о том, что они не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="d30d0-112">If you try to run the commands in this list, you get a message that they are not supported.</span></span> <span data-ttu-id="d30d0-113">Следующий сценарий добавляет запись в этот список.</span><span class="sxs-lookup"><span data-stu-id="d30d0-113">The following script adds an entry to the list.</span></span>
 
 ```powershell
 # List the unsupported commands
@@ -31,9 +31,9 @@ $psUnsupportedConsoleApplications.Add('Mycommand')
 $psUnsupportedConsoleApplications
 ```
 
-### <a name="pslocalhelp"></a><span data-ttu-id="063fa-114">$psLocalHelp</span><span class="sxs-lookup"><span data-stu-id="063fa-114">$psLocalHelp</span></span>
+### <a name="pslocalhelp"></a><span data-ttu-id="d30d0-114">$psLocalHelp</span><span class="sxs-lookup"><span data-stu-id="d30d0-114">$psLocalHelp</span></span>
 
-<span data-ttu-id="063fa-115">Это объект словаря, который поддерживает сопоставление с учетом контекста разделов справки и связанных ссылок в локальном скомпилированном файле справки HTML.</span><span class="sxs-lookup"><span data-stu-id="063fa-115">This is a dictionary object that maintains a context-sensitive mapping between Help topics and their associated links in the local compiled HTML Help file.</span></span> <span data-ttu-id="063fa-116">Он используется для поиска локальной справки для определенного раздела.</span><span class="sxs-lookup"><span data-stu-id="063fa-116">It is used to locate the local Help for a particular topic.</span></span> <span data-ttu-id="063fa-117">Разделы в этом списке можно добавлять и удалять.</span><span class="sxs-lookup"><span data-stu-id="063fa-117">You can add or delete topics from this list.</span></span> <span data-ttu-id="063fa-118">В следующем примере кода показаны некоторые примеры пар "ключ —значение", которые содержатся в объекте `$psLocalHelp`.</span><span class="sxs-lookup"><span data-stu-id="063fa-118">The following code example shows some example key-value pairs that are contained in `$psLocalHelp`.</span></span>
+<span data-ttu-id="d30d0-115">Это объект словаря, который поддерживает сопоставление с учетом контекста разделов справки и связанных ссылок в локальном скомпилированном файле справки HTML.</span><span class="sxs-lookup"><span data-stu-id="d30d0-115">This is a dictionary object that maintains a context-sensitive mapping between Help topics and their associated links in the local compiled HTML Help file.</span></span> <span data-ttu-id="d30d0-116">Он используется для поиска локальной справки для определенного раздела.</span><span class="sxs-lookup"><span data-stu-id="d30d0-116">It is used to locate the local Help for a particular topic.</span></span> <span data-ttu-id="d30d0-117">Разделы в этом списке можно добавлять и удалять.</span><span class="sxs-lookup"><span data-stu-id="d30d0-117">You can add or delete topics from this list.</span></span> <span data-ttu-id="d30d0-118">В следующем примере кода показаны некоторые примеры пар "ключ —значение", которые содержатся в объекте `$psLocalHelp`.</span><span class="sxs-lookup"><span data-stu-id="d30d0-118">The following code example shows some example key-value pairs that are contained in `$psLocalHelp`.</span></span>
 
 ```powershell
 # See the local help map
@@ -48,15 +48,15 @@ Key   : Add-Content
 Value : WindowsPowerShellHelp.chm::/html/0c836a1b-f389-4e9a-9325-0f415686d194.htm
 ```
 
-<span data-ttu-id="063fa-119">Следующий сценарий добавляет запись в этот список.</span><span class="sxs-lookup"><span data-stu-id="063fa-119">The following script adds an entry to the list.</span></span>
+<span data-ttu-id="d30d0-119">Следующий сценарий добавляет запись в этот список.</span><span class="sxs-lookup"><span data-stu-id="d30d0-119">The following script adds an entry to the list.</span></span>
 
 ```powershell
 $psLocalHelp.Add("get-myNoun", "c:\MyFolder\MyHelpChm.chm::/html/0198854a-1298-57ae-aa0c-87b5e5a84712.htm")
 ```
 
-### <a name="psonlinehelp"></a><span data-ttu-id="063fa-120">$psOnlineHelp</span><span class="sxs-lookup"><span data-stu-id="063fa-120">$psOnlineHelp</span></span>
+### <a name="psonlinehelp"></a><span data-ttu-id="d30d0-120">$psOnlineHelp</span><span class="sxs-lookup"><span data-stu-id="d30d0-120">$psOnlineHelp</span></span>
 
-<span data-ttu-id="063fa-121">Это объект словаря, который поддерживает сопоставление с учетом контекста заголовков разделов справки и связанных внешних URL-адресов.</span><span class="sxs-lookup"><span data-stu-id="063fa-121">This is a dictionary object that maintains a context-sensitive mapping between topic titles of Help topics and their associated external URLs.</span></span> <span data-ttu-id="063fa-122">Он используется для поиска справки для определенного раздела в Интернете.</span><span class="sxs-lookup"><span data-stu-id="063fa-122">It is used to locate the Help for a particular topic on the web.</span></span> <span data-ttu-id="063fa-123">Разделы в этом списке можно добавлять и удалять.</span><span class="sxs-lookup"><span data-stu-id="063fa-123">You can add or delete topics from this list.</span></span>
+<span data-ttu-id="d30d0-121">Это объект словаря, который поддерживает сопоставление с учетом контекста заголовков разделов справки и связанных внешних URL-адресов.</span><span class="sxs-lookup"><span data-stu-id="d30d0-121">This is a dictionary object that maintains a context-sensitive mapping between topic titles of Help topics and their associated external URLs.</span></span> <span data-ttu-id="d30d0-122">Он используется для поиска справки для определенного раздела в Интернете.</span><span class="sxs-lookup"><span data-stu-id="d30d0-122">It is used to locate the Help for a particular topic on the web.</span></span> <span data-ttu-id="d30d0-123">Разделы в этом списке можно добавлять и удалять.</span><span class="sxs-lookup"><span data-stu-id="d30d0-123">You can add or delete topics from this list.</span></span>
 
 ```powershell
 $psOnlineHelp | Format-List
@@ -70,12 +70,12 @@ Key   : Add-Content
 Value : http://go.microsoft.com/fwlink/p/?LinkID=113278
 ```
 
-<span data-ttu-id="063fa-124">Следующий сценарий добавляет запись в этот список.</span><span class="sxs-lookup"><span data-stu-id="063fa-124">The following script adds an entry to the list.</span></span>
+<span data-ttu-id="d30d0-124">Следующий сценарий добавляет запись в этот список.</span><span class="sxs-lookup"><span data-stu-id="d30d0-124">The following script adds an entry to the list.</span></span>
 
 ```powershell
 $psOnlineHelp.Add("get-myNoun", "http://www.mydomain.com/MyNoun.html")
 ```
 
-## <a name="see-also"></a><span data-ttu-id="063fa-125">См. также</span><span class="sxs-lookup"><span data-stu-id="063fa-125">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d30d0-125">См. также</span><span class="sxs-lookup"><span data-stu-id="d30d0-125">See Also</span></span>
 
-[<span data-ttu-id="063fa-126">Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="063fa-126">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](../../core-powershell/ise/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+[<span data-ttu-id="d30d0-126">Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="d30d0-126">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](../../core-powershell/ise/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
