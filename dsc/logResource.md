@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс Log в DSC
-ms.openlocfilehash: fade94efd8133ae0172737e4bb1aed89fc0f97d9
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 50fd6cd31ba426108830fcf124a767318060a95d
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093482"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268438"
 ---
 # <a name="dsc-log-resource"></a>Ресурс Log в DSC
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+_Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 Ресурс __Log__ в DSC Windows PowerShell предоставляет механизм записи сообщений в журнал событий Microsoft-Windows-Desired State Configuration/Analytic.
 
@@ -26,14 +26,14 @@ Log [string] #ResourceName
 ```
 
 > [!NOTE]
-> По умолчанию включены только операционные журналы DSC. Чтобы журнал аналитики стал доступным или видимым, его необходимо включить. См. дополнительные сведения о [расположении журналов событий DSC](https://msdn.microsoft.com/en-us/powershell/dsc/troubleshooting#where-are-dsc-event-logs).
+> По умолчанию включены только операционные журналы DSC. Чтобы журнал аналитики стал доступным или видимым, его необходимо включить. См. дополнительные сведения о [расположении журналов событий DSC](troubleshooting.md#where-are-dsc-event-logs).
 
 ## <a name="properties"></a>Свойства
 
-|  Свойство  |  Описание   |
-|---|---|
+| Свойство | Описание |
+| --- | --- |
 | Сообщение| Указывает сообщение для записи в журнал событий Microsoft-Windows-Desired State Configuration/Analytic.|
-| DependsOn | Указывает, что перед записью этого сообщения в журнал необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — __ResourceName__, а его тип — __ResourceType__, то синтаксис использования этого свойства таков: `DependsOn = '[ResourceType]ResourceName'`.|
+| DependsOn | Указывает, что перед записью этого сообщения в журнал необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — **ResourceName**, а его тип — **ResourceType**, то синтаксис использования этого свойства таков: `DependsOn = '[ResourceType]ResourceName'`.|
 
 ## <a name="example"></a>Пример
 

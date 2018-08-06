@@ -1,6 +1,6 @@
 # <a name="installing-powershell-core-on-linux"></a>Установка PowerShell Core в Linux
 
-Поддерживает [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 17.10][u17], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.2][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] и [Arch Linux][arch].
+Поддерживает [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 17.10][u17], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.3][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] и [Arch Linux][arch].
 
 Для дистрибутивов Linux без официальной поддержки попробуйте использовать [PowerShell AppImage][lai].
 Можно также попытаться развернуть двоичные файлы PowerShell напрямую с помощью [архива`tar.gz`][tar] Linux, но при этом нужно отдельно настроить необходимые зависимости с учетом операционной системы.
@@ -11,11 +11,12 @@
 [u14]: #ubuntu-1404
 [u16]: #ubuntu-1604
 [u17]: #ubuntu-1710
+[u18]: #ubuntu-1804
 [deb8]: #debian-8
 [deb9]: #debian-9
 [cos]: #centos-7
 [rhel7]: #red-hat-enterprise-linux-rhel-7
-[opensuse]: #opensuse-422
+[opensuse]: #opensuse-423
 [fedora]: #fedora
 [arch]: #arch-linux
 [lai]: #linux-appimage
@@ -29,7 +30,7 @@
 
 Ниже приведена таблица команд для установки пакетов стабильной и предварительной версий с помощью различных диспетчеров пакетов.
 
-|Распространение|Команда стабильной версии | Команда предварительной версии |
+|Дистрибутивы|Команда стабильной версии | Команда предварительной версии |
 |---------------|---------------|-----------------|
 | Ubuntu, Debian |`sudo apt-get install -y powershell`| `sudo apt-get install -y powershell-preview`|
 | CentOS, RedHat |`sudo yum install -y powershell` | `sudo yum install -y powershell-preview`|
@@ -205,7 +206,7 @@ sudo apt-get update
 sudo apt-get install -y powershell-preview
 
 # Start PowerShell
-pwsh
+pwsh-preview
 ```
 
 Зарегистрировав репозиторий Майкрософт в качестве суперпользователя, в дальнейшем вам потребуется лишь использовать `sudo apt-get upgrade powershell` для его обновления.
@@ -225,7 +226,7 @@ sudo apt-get install -f
 > Команда `dpkg -i` завершается ошибкой при наличии несопоставленных зависимостей.
 > Следующая команда, `apt-get install -f`, разрешает эти ошибки и завершает настройку пакета PowerShell.
 
-### <a name="uninstallation---ubuntu-1710"></a>Удаление — Ubuntu 17.10
+### <a name="uninstallation---ubuntu-1804"></a>Удаление — Ubuntu 18.04
 
 ```sh
 sudo apt-get remove powershell
@@ -416,7 +417,7 @@ sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.0
 sudo yum remove powershell
 ```
 
-## <a name="opensuse-422"></a>OpenSUSE 42.2
+## <a name="opensuse-423"></a>OpenSUSE 42.3
 
 В процессе установки PowerShell Core `zypper` может выдать предупреждение о следующей ошибке:
 
@@ -434,7 +435,7 @@ zypper search --file-list --match-exact '/usr/lib64/libcurl.so.4'
 
 Далее, при установке пакета PowerShell, выберите решение `break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies`.
 
-### <a name="installation-via-package-repository-preferred---opensuse-422"></a>Установка с помощью репозитория пакетов (рекомендуется) — OpenSUSE 42.2
+### <a name="installation-via-package-repository-preferred---opensuse-423"></a>Установка с помощью репозитория пакетов (рекомендуется) — OpenSUSE 42.3
 
 Для упрощения установки (и обновления) PowerShell Core для Linux публикуются в официальных репозиториях Майкрософт.
 
@@ -442,8 +443,8 @@ zypper search --file-list --match-exact '/usr/lib64/libcurl.so.4'
 # Register the Microsoft signature key
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-# Add the Microsoft Product feed
-curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/zypp/repos.d/microsoft.repo
+# Add the Microsoft Repository
+zypper ar https://packages.microsoft.com/rhel/7/prod/
 
 # Update the list of products
 sudo zypper update
@@ -455,7 +456,7 @@ sudo zypper install powershell
 pwsh
 ```
 
-### <a name="installation-via-direct-download---opensuse-422"></a>Установка с помощью прямого скачивания — OpenSUSE 42.2
+### <a name="installation-via-direct-download---opensuse-423"></a>Установка с помощью прямого скачивания — OpenSUSE 42.3
 
 Скачайте пакет RPM `powershell-6.0.2-1.rhel.7.x86_64.rpm` со страницы [выпусков][] на компьютер с OpenSUSE.
 
@@ -471,7 +472,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo zypper install https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/powershell-6.0.2-1.rhel.7.x86_64.rpm
 ```
 
-### <a name="uninstallation---opensuse-422"></a>Удаление — OpenSUSE 42.2
+### <a name="uninstallation---opensuse-423"></a>Удаление — OpenSUSE 42.3
 
 ```sh
 sudo zypper remove powershell
@@ -566,7 +567,7 @@ chmod a+x powershell-6.0.1-x86_64.AppImage
 
 [AppImage][] позволяет запустить PowerShell, не устанавливая его.
 Это переносимое приложение, которое объединяет PowerShell и его зависимости (включая системные зависимости .NET Core) в единый пакет.
-Данный пакет представляет собой отдельный двоичный файл, работающий независимо от пользовательского дистрибутива Linux.
+Этот пакет — отдельный двоичный файл, работающий независимо от пользовательского дистрибутива Linux.
 
 [appimage]: http://appimage.org/
 
@@ -676,7 +677,7 @@ PowerShell создает переносимые двоичные файлы д�
 | Ubuntu 18.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu60 |
 | Debian 8 (Jessie)  | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52 |
 | Debian 9 (Stretch) | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.2, libicu57 |
-| CentOS 7 <br> Oracle Linux 7 <br> RHEL 7 <br> OpenSUSE 42.2 | libunwind, libcurl, openssl-libs, libicu |
+| CentOS 7 <br> Oracle Linux 7 <br> RHEL 7 <br> OpenSUSE 42.3 | libunwind, libcurl, openssl-libs, libicu |
 | Fedora 27 <br> Fedora 28 | libunwind, libcurl, openssl-libs, libicu, compat-openssl10 |
 
 Чтобы развернуть двоичные файлы PowerShell в дистрибутивах Linux, для которых официальная поддержка не предусмотрена, необходимо специально установить необходимые пакеты, чтобы удовлетворить всем требованиям по зависимостям для целевой ОС.

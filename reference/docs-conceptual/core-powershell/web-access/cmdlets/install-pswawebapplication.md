@@ -3,18 +3,18 @@ ms.topic: reference
 keywords: powershell,командлет
 ms.date: 12/12/2016
 title: Install-PswaWebApplication
-ms.openlocfilehash: 68455d9490f7d5c33c1a928ac262a76a78ad7128
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 29e074b75eeb387640831229c63142e6dd5e991a
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189607"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268305"
 ---
 # <a name="install-pswawebapplication"></a>Install-PswaWebApplication
 
 ## <a name="synopsis"></a>КРАТКИЙ ОБЗОР
 
-Настраивает веб-приложение Windows PowerShell® Web Access в IIS.
+Настраивает веб-приложение Windows PowerShell Web Access в службах IIS.
 
 ## <a name="syntax"></a>СИНТАКСИС
 
@@ -25,7 +25,8 @@ Install-PswaWebApplication [[-WebApplicationName] <String> ] [-UseTestCertificat
 
 ## <a name="description"></a>ОПИСАНИЕ
 
-Командлет **Install-PswaWebApplication** настраивает веб-приложение Windows PowerShell Web Access. Этот командлет устанавливает веб-приложение, связывает его с веб-сайтом и при необходимости создает тестовый сертификат SSL с помощью параметра **useTestCertificate**. Для обеспечения безопасности веб-администраторам не следует использовать тестовый сертификат для рабочей среды.
+Командлет **Install-PswaWebApplication** настраивает веб-приложение Windows PowerShell Web Access.
+Этот командлет устанавливает веб-приложение, связывает его с веб-сайтом и при необходимости создает тестовый сертификат SSL с помощью параметра **useTestCertificate**. Для обеспечения безопасности веб-администраторам не следует использовать тестовый сертификат для рабочей среды.
 
 ## <a name="parameters"></a>ПАРАМЕТРЫ
 
@@ -42,7 +43,7 @@ Install-PswaWebApplication [[-WebApplicationName] <String> ] [-UseTestCertificat
 | Принимать входные данные конвейера?               | false                                |
 | Принимать подстановочные знаки?          | false                                |
 
-### <a name="-webapplicationnameltstringgt"></a>-WebApplicationName&lt;строка&gt;
+### <a name="-webapplicationname"></a>-WebApplicationName
 
 Указывает имя веб-приложения. Отображается как последняя часть URL-адреса Windows PowerShell Web Access.
 
@@ -55,7 +56,7 @@ Install-PswaWebApplication [[-WebApplicationName] <String> ] [-UseTestCertificat
 | Принимать входные данные конвейера?               | false                                |
 | Принимать подстановочные знаки?          | false                                |
 
-### <a name="-websitenameltstringgt"></a>-WebSiteName&lt;строка&gt;
+### <a name="-websitename"></a>-WebSiteName
 
 Задает имя веб-сайта веб-сервера (IIS) для установки этого веб-приложения Windows PowerShell Web Access.
 
@@ -95,8 +96,7 @@ Install-PswaWebApplication [[-WebApplicationName] <String> ] [-UseTestCertificat
 
 ### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
 
-Данный командлет поддерживает общие параметры -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable.
-Дополнительные сведения см. в разделе [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
+Данный командлет поддерживает общие параметры -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable. Дополнительные сведения см. в разделе [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## <a name="inputs"></a>ВХОДНЫЕ ДАННЫЕ
 

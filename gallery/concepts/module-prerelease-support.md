@@ -3,12 +3,12 @@ ms.date: 09/26/2017
 contributor: keithb
 keywords: коллекция,powershell,командлет,psget
 title: Предварительные версии модулей
-ms.openlocfilehash: 371aae7eed4afe341755133c5ee2d356cd5876e0
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 9c3ddb623fbcb7f4b3453dd70cdc56a8dc2e9f6a
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093785"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268625"
 ---
 # <a name="prerelease-module-versions"></a>Предварительные версии модулей
 
@@ -17,8 +17,8 @@ ms.locfileid: "39093785"
 На высоком уровне возможности для предварительных версий модулей включают следующее.
 
 - Добавление строки предварительной версии в раздел PSData манифеста модуля определяет версию модуля как предварительную. При публикации модуля в коллекции PowerShell эти данные извлекаются из манифеста и используются для определения элементов с предварительными версиями.
-- Для получения предварительных версий необходимо добавить флаг -AllowPrerelease к следующим командам PowerShellGet: Find-Module, Install-Module, Update-Module и Save-Module. Если этот флаг не поставлен, предварительные версии не отображаются.
-- Версии модулей, отображаемые Find-Module и Get-InstalledModule, а также в коллекции PowerShell, будут отображаться как одна строка с добавлением строки предварительной версии, например: 2.5.0-alpha.
+- Для получения элементов предварительной версии необходимо добавить флаг `-AllowPrerelease` в команды PowerShellGet `Find-Module`, `Install-Module`, `Update-Module` и `Save-Module`. Если этот флаг не поставлен, предварительные версии не отображаются.
+- Версии модулей, отображаемые в `Find-Module`,`Get-InstalledModule` и коллекции PowerShell, будут отображаться как одна строка с добавлением строки предварительной версии, например: 2.5.0-alpha.
 
 Ниже приведено подробное описание этих возможностей.
 
@@ -52,10 +52,10 @@ ms.locfileid: "39093785"
 - Строку предварительной версии можно указать, только если версия в поле ModuleVersion состоит из трех сегментов в виде <основная_версия>.<дополнительная_версия>.<сборка>. Это соответствует соглашению о версиях SemVer 1.0.0.
 - Разделителем между номером сборки и строкой предварительной версии является дефис. Дефис может включен в строку предварительной версии только как первый символ.
 - Строка предварительной версии может содержать только буквенно-цифровые символы ASCII [0-9A-Za-z-]. Рекомендуем начинать эту строку с буквы, так как в таком случае проще отличать предварительные версии при просмотре списка элементов.
-- В настоящий момент поддерживается только SemVer версии 1.0.0. Строка предварительной версии __не должна__ содержать ни точек, ни символов + [.+], которые допустимы в SemVer 2.0.
+- В настоящий момент поддерживается только SemVer версии 1.0.0. Строка предварительной версии **не должна** содержать ни точек, ни символов + [.+], которые допустимы в SemVer 2.0.
 - Пример поддерживаемых строк предварительной версии: -alpha, -alpha1, -BETA, -update20171020
 
-__Влияние предварительных версий на порядок сортировки и установочные папки__
+### <a name="prerelease-versioning-impact-on-sort-order-and-installation-folders"></a>Влияние предварительных версий на порядок сортировки и установочные папки
 
 При использовании предварительных версий изменяется порядок сортировки, что имеет значение при публикации сценариев в коллекции PowerShell и при установке модулей с помощью команд PowerShellGet. Если строка предварительной версии задана для двух модулей, то сортировка производится по части строки, следующей после дефиса. Таким образом версия 2.5.0-alpha меньше, чем 2.5.0-beta, а последняя меньше, чем 2.5.0-gamma. Если два модуля обладают одинаковым значением ModuleVersion и только у одного из них есть строка предварительной версии, то готовым к использованию модулем будет считаться модуль без этой строки и при сортировке он будет указываться, как имеющий более высокую версию по отношению к предварительной (включающей строку предварительной версии). Например: при сравнении версий 2.5.0 и 2.5.0-beta, будет считаться, что версия 2.5.0 имеет больший номер.
 
@@ -72,69 +72,82 @@ __Влияние предварительных версий на порядок
 
 ## <a name="examples"></a>Примеры
 
+Предположим, что коллекция PowerShell включает модуль TestPackage версий 1.8.0 и 1.9.0-alpha. Если `-AllowPrerelease` не указать, будет возвращена только версия 1.8.0.
+
 ```powershell
-# Assume the PowerShell Gallery has TestPackage module versions 1.8.0 and 1.9.0-alpha.
-# If -AllowPrerelease is not specified, only version 1.8.0 will be returned.
-C:\windows\system32> find-module TestPackage
+find-module TestPackage
+```
 
-Version        Name                                Repository           Description
--------        ----                                ----------           -----------
-1.8.0          TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
+```output
+Version        Name           Repository  Description
+-------        ----           ----------  -----------
+1.8.0          TestPackage    PSGallery   Package used to validate changes to the PowerShe...
+```
 
-C:\windows\system32> find-module TestPackage -AllowPrerelease
+```powershell
+find-module TestPackage -AllowPrerelease
+```
 
-Version        Name                                Repository           Description
--------        ----                                ----------           -----------
-1.9.0-alpha    TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
+```output
+Version        Name           Repository  Description
+-------        ----           ----------  -----------
+1.9.0-alpha    TestPackage    PSGallery   Package used to validate changes to the PowerShe...
+```
 
-# To install a prerelease, always specify -AllowPrerelease. Specifying a prerelease version string is not sufficient.
+Чтобы установить предварительный выпуск, всегда указывайте - AllowPrerelease. Просто указать строку предварительной версии будет недостаточно.
 
-C:\windows\system32> Install-module TestPackage -RequiredVersion 1.9.0-alpha
+```powershell
+Install-module TestPackage -RequiredVersion 1.9.0-alpha
+```
+
+```output
 PackageManagement\Find-Package : No match was found for the specified search criteria and module name 'TestPackage'.
 Try Get-PSRepository to see all available registered module repositories.
 At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PSModule.psm1:1455 char:3
 +         PackageManagement\Find-Package @PSBoundParameters | Microsoft ...
 +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (Microsoft.Power...ets.FindPackage:FindPackage) [Find-Package], Exceptio
-   n
+    + CategoryInfo          : ObjectNotFound: (Microsoft.Power...ets.FindPackage:FindPackage) [Find-Package], Exception
     + FullyQualifiedErrorId : NoMatchFoundForCriteria,Microsoft.PowerShell.PackageManagement.Cmdlets.FindPackage
-
-# The previous command failed because -AllowPrerelease was not specified.
-# Adding -AllowPrerelease will result in success.
-
-C:\windows\system32> Install-module TestPackage -RequiredVersion 1.9.0-alpha -AllowPrerelease
-C:\windows\system32> Get-InstalledModule TestPackage
-
-Version         Name                                Repository           Description
--------         ----                                ----------           -----------
-1.9.0-alpha     TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
 ```
 
-Не поддерживается одновременная установка модулей, версии которых отличаются только значением предварительной версии. При использовании PowerShellGet разные версии одного модуля могут быть установлены одновременно. Каждая из них помещается в папку с именем, использующим значение ModuleVersion. ModuleVersion используется для имени папки без добавления строки предварительной версии. Если пользователь установит модуль MyModule версии 2.5.0-alpha, этот модуль будет помещен в папку MyModule\2.5.0. Если пользователь затем установит версию 2.5.0-beta, то она __перезапишет__ содержимое папки MyModule\2.5.0. Одним из преимуществ такого подхода является то, что нет необходимости удалять предварительную версию после установки версии, готовой к использованию. Пример ниже иллюстрирует работу этого правила.
+Предыдущую команду выполнить не удалось, так как не указано - AllowPrerelease. Добавьте `-AllowPrerelease`.
+
+```powershell
+Install-module TestPackage -RequiredVersion 1.9.0-alpha -AllowPrerelease
+Get-InstalledModule TestPackage
+```
+
+```output
+Version         Name          Repository  Description
+-------         ----          ----------  -----------
+1.9.0-alpha     TestPackage   PSGallery   Package used to validate changes to the PowerShe...
+```
+
+Не поддерживается одновременная установка модулей, версии которых отличаются только значением предварительной версии. При использовании PowerShellGet разные версии одного модуля могут быть установлены одновременно. Каждая из них помещается в папку с именем, использующим значение ModuleVersion. ModuleVersion используется для имени папки без добавления строки предварительной версии. Если пользователь установит модуль MyModule версии 2.5.0-alpha, этот модуль будет помещен в папку `MyModule\2.5.0`. Если пользователь затем установит версию 2.5.0-beta, содержимое папки `MyModule\2.5.0` будет **перезаписано**. Одним из преимуществ такого подхода является то, что нет необходимости удалять предварительную версию после установки версии, готовой к использованию. Пример ниже иллюстрирует работу этого правила.
 
 ``` powershell
 C:\windows\system32> Get-InstalledModule TestPackage -AllVersions
 
-Version         Name                                Repository           Description
--------         ----                                ----------           -----------
-1.9.0-alpha     TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.8.0           TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.1.3.2         TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
+Version         Name           Repository  Description
+-------         ----           ----------  -----------
+1.9.0-alpha     TestPackage    PSGallery   Package used to validate changes to the PowerShe...
+1.8.0           TestPackage    PSGallery   Package used to validate changes to the PowerShe...
+1.1.3.2         TestPackage    PSGallery   Package used to validate changes to the PowerShe...
 
 C:\windows\system32> find-module TestPackage -AllowPrerelease
 
-Version        Name                                Repository           Description
--------        ----                                ----------           -----------
-1.9.0-beta     TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
+Version        Name            Repository  Description
+-------        ----            ----------  -----------
+1.9.0-beta     TestPackage     PSGallery   Package used to validate changes to the PowerShe...
 
 C:\windows\system32> Update-Module TestPackage -AllowPrerelease
 C:\windows\system32> Get-InstalledModule TestPackage -AllVersions
 
-Version         Name                                Repository           Description
--------         ----                                ----------           -----------
-1.9.0-beta      TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.8.0           TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.1.3.2         TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
+Version         Name           Repository  Description
+-------         ----           ----------  -----------
+1.9.0-beta      TestPackage    PSGallery   Package used to validate changes to the PowerShe...
+1.8.0           TestPackage    PSGallery   Package used to validate changes to the PowerShe...
+1.1.3.2         TestPackage    PSGallery   Package used to validate changes to the PowerShe...
 
 ```
 
@@ -144,14 +157,15 @@ Version         Name                                Repository           Descrip
 ``` powershell
 C:\windows\system32> Get-InstalledModule TestPackage -AllVersions
 
-Version         Name                                Repository           Description
--------         ----                                ----------           -----------
-2.0.0-alpha1    TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.9.0-beta      TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.8.0           TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.1.3.2         TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
+Version         Name           Repository  Description
+-------         ----           ----------  -----------
+2.0.0-alpha1    TestPackage    PSGallery   Package used to validate changes to the PowerShe...
+1.9.0-beta      TestPackage    PSGallery   Package used to validate changes to the PowerShe...
+1.8.0           TestPackage    PSGallery   Package used to validate changes to the PowerShe...
+1.1.3.2         TestPackage    PSGallery   Package used to validate changes to the PowerShe...
 
 C:\windows\system32> Uninstall-Module TestPackage -RequiredVersion 1.9.0-beta
+
 Uninstall-Module : The '-AllowPrerelease' parameter must be specified when using the Prerelease string in
 MinimumVersion, MaximumVersion, or RequiredVersion.
 At line:1 char:1
@@ -160,26 +174,22 @@ At line:1 char:1
     + CategoryInfo          : InvalidArgument: (:) [Uninstall-Module], ArgumentException
     + FullyQualifiedErrorId : AllowPrereleaseRequiredToUsePrereleaseStringInVersion,Uninnstall-Module
 
-
-
 C:\windows\system32> Uninstall-Module TestPackage -RequiredVersion 1.9.0-beta -AllowPrerelease
 C:\windows\system32> Get-InstalledModule TestPackage -AllVersions
 
-Version         Name                                Repository           Description
--------         ----                                ----------           -----------
-2.0.0-alpha1    TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.8.0           TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.1.3.2         TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
+Version         Name          Repository   Description
+-------         ----          ----------   -----------
+2.0.0-alpha1    TestPackage   PSGallery    Package used to validate changes to the PowerShe...
+1.8.0           TestPackage   PSGallery    Package used to validate changes to the PowerShe...
+1.1.3.2         TestPackage   PSGallery    Package used to validate changes to the PowerShe...
 
 C:\windows\system32> Uninstall-Module TestPackage
 C:\windows\system32> Get-InstalledModule TestPackage -AllVersions
 
-Version         Name                                Repository           Description
--------         ----                                ----------           -----------
-1.8.0           TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-1.1.3.2         TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-
-
+Version         Name          Repository   Description
+-------         ----          ----------   -----------
+1.8.0           TestPackage   PSGallery    Package used to validate changes to the PowerShe...
+1.1.3.2         TestPackage   PSGallery    Package used to validate changes to the PowerShe...
 ```
 
 ## <a name="more-details"></a>Дополнительные подробности
@@ -190,4 +200,4 @@ Version         Name                                Repository           Descrip
 - [Save-Module](/powershell/module/powershellget/save-module)
 - [Update-Module](/powershell/module/powershellget/Update-Module)
 - [Get-InstalledModule](/powershell/module/powershellget/get-installedmodule)
-- [Uninstall-Module](/powershell/gallery/psget/module/psget_uninstall-module)
+- [Uninstall-Module](/powershell/module/powershellget/uninstall-module)

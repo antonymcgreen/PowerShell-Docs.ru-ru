@@ -3,22 +3,22 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Управление службами
 ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
-ms.openlocfilehash: e2388f5d73a320a69faae0772c8403a7d77f8b52
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 81fd8802215da80ce22fa3fd4750b1df6efe8206
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094176"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268081"
 ---
 # <a name="managing-services"></a>Управление службами
 
-Существует восемь основных командлетов Service, предназначенных для широкого спектра задач обслуживания. Мы рассмотрим только вывод списка служб и изменение состояния их выполнения, но вы можете получить весь список командлетов Service с помощью **Get-Help \*-Service**, а сведения о каждом из них можно просмотреть с помощью **Get-Help \<имя_командлета\>**, например: **Get-Help New-Service**.
+Существует восемь основных командлетов Service, предназначенных для широкого спектра задач обслуживания. Мы рассмотрим только вывод списка служб и изменение состояния их выполнения, но вы можете получить весь список командлетов Service с помощью `Get-Help \*-Service`, а сведения о каждом из них можно просмотреть с помощью командлета`Get-Help <Cmdlet-Name>`, например`Get-Help New-Service`.
 
 ## <a name="getting-services"></a>Получение служб
 
-Получить службы на локальном или удаленном компьютере можно с помощью командлета **Get-Service**. Как и в случае с **Get-Process**, использование команды **Get-Service** без параметров возвращает все службы. Можно фильтровать по имени, даже используя звездочку как подстановочный знак:
+Получить службы на локальном или удаленном компьютере можно с помощью командлета `Get-Service`. Как и в случае с `Get-Process`, использование команды `Get-Service` без параметров возвращает все службы. Можно фильтровать по имени, даже используя звездочку как подстановочный знак:
 
-```
+```powershell
 PS> Get-Service -Name se*
 
 Status   Name               DisplayName
@@ -30,7 +30,7 @@ Stopped  ServiceLayer       ServiceLayer
 
 Так как реальное имя службы не всегда очевидно, может потребоваться найти службы по отображаемому имени. Это можно сделать с использованием определенного имени, подстановочных знаков или списка отображаемых имен:
 
-```
+```powershell
 PS> Get-Service -DisplayName se*
 
 Status   Name               DisplayName
@@ -63,7 +63,7 @@ Get-Service -ComputerName Server01
 
 Приведенная ниже команда получает службы, необходимые службе LanmanWorkstation.
 
-```
+```powershell
 PS> Get-Service -Name LanmanWorkstation -RequiredServices
 
 Status   Name               DisplayName
@@ -76,7 +76,7 @@ Running  NSI                Network Store Interface Service
 
 Приведенная ниже команда получает службы, которым требуется служба LanmanWorkstation.
 
-```
+```powershell
 PS> Get-Service -Name LanmanWorkstation -DependentServices
 
 Status   Name               DisplayName
@@ -94,6 +94,7 @@ Get-Service -Name * | Where-Object {$_.RequiredServices -or $_.DependentServices
 ```
 
 ## <a name="stopping-starting-suspending-and-restarting-services"></a>Остановка, запуск, приостановка и перезапуск служб
+
 Все командлеты Service имеют схожую общую форму. Службы можно указать по общему имени или отображаемому имени, они также принимают списки и подстановочные знаки в качестве значений. Для остановки очереди печати принтера используйте:
 
 ```powershell
@@ -112,9 +113,9 @@ Start-Service -Name spooler
 Suspend-Service -Name spooler
 ```
 
-Командлет **Restart-Service** работает так же, как другие командлеты Service, но для него будет приведено несколько более сложных примеров. В самом простом случае указывается имя службы:
+Командлет `Restart-Service` работает так же, как другие командлеты Service, но для него будет приведено несколько более сложных примеров. В самом простом случае указывается имя службы:
 
-```
+```powershell
 PS> Restart-Service -Name spooler
 
 WARNING: Waiting for service 'Print Spooler (Spooler)' to finish starting...
@@ -126,7 +127,7 @@ PS>
 
 Если требуется перезапустить несколько служб, можно получить список служб, отфильтровать его и выполнить перезапуск:
 
-```
+```powershell
 PS> Get-Service | Where-Object -FilterScript {$_.CanStop} | Restart-Service
 
 WARNING: Waiting for service 'Computer Browser (Browser)' to finish stopping...
@@ -147,9 +148,10 @@ Invoke-Command -ComputerName Server01 {Restart-Service Spooler}
 
 ## <a name="setting-service-properties"></a>Задание свойств служб
 
-Командлет Set-Service изменяет свойства службы на локальном или удаленном компьютере. Так как состояние службы является свойством, этот командлет можно использовать для запуска, остановки и приостановки службы. Командлет Set-Service также имеет параметр StartupType, позволяющий изменять тип запуска службы.
+Командлет `Set-Service` изменяет свойства службы на локальном или удаленном компьютере. Так как состояние службы является свойством, этот командлет можно использовать для запуска, остановки и приостановки службы.
+Командлет Set-Service также имеет параметр StartupType, позволяющий изменять тип запуска службы.
 
-Чтобы использовать командлет Set-Service в Windows Vista и более поздних версиях Windows, откройте среду Windows PowerShell, используя параметр "Запуск от имени администратора".
+Чтобы использовать командлет `Set-Service` в Windows Vista и более поздних версиях Windows, откройте среду Windows PowerShell, используя параметр "Запуск от имени администратора".
 
 Дополнительные сведения см. в статье [Set-Service [m2]](https://technet.microsoft.com/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3).
 

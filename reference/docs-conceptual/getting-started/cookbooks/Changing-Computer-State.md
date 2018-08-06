@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Изменение состояния компьютера
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: c659ad54325b0f7305f882e1cb9607062abad6a4
-ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
+ms.openlocfilehash: 4b5b4adb349dd8036117c364ed2ebb1ffaf8c88f
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251523"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267891"
 ---
 # <a name="changing-computer-state"></a>Изменение состояния компьютера
 
@@ -52,7 +52,7 @@ shutdown.exe -l
 
 Операции завершения работы и перезапуска можно также выполнять непосредственно из Windows PowerShell.
 
-Чтобы завершить работу компьютера, используйте команду restart-computer.
+Чтобы завершить работу компьютера, используйте команду stop-computer.
 
 ```powershell
 stop-computer

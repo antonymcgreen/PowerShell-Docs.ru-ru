@@ -3,12 +3,12 @@ ms.date: 10/17/2017
 contributor: keithb
 keywords: коллекция,powershell,командлет,psget
 title: Предварительные версии сценариев
-ms.openlocfilehash: 7d4cec9d2b4ee5ad0b19ad5d9c68bb68747abd57
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 14ae1968e5ee73260b6eae05b11185069d047e93
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093854"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268472"
 ---
 # <a name="prerelease-versions-of-scripts"></a>Предварительные версии сценариев
 
@@ -45,12 +45,12 @@ ms.locfileid: "39093854"
 - Суффикс предварительной версии можно указать, только если версия состоит из трех сегментов в виде <основная_версия>.<дополнительная_версия>.<сборка>.
   Это соответствует соглашению о версиях SemVer 1.0.0.
 - Суффикс предварительной версии — это строка, которая начинается с дефиса и может содержать буквенно-цифровые символы ASCII [0-9A-Za-z-].
-- В настоящий момент поддерживается только SemVer версии 1.0.0, поэтому суффикс предварительной версии __не должен__ содержать ни точек, ни символов + [.+], которые допустимы в SemVer 2.0.
+- В настоящий момент поддерживается только SemVer версии 1.0.0, поэтому суффикс предварительной версии **не должен** содержать ни точек, ни символов + [.+], которые допустимы в SemVer 2.0.
 - Пример допустимых строк PrereleaseString: -alpha, -alpha1, -BETA, -update20171020
 
-__Влияние предварительных версий на порядок сортировки и установочные папки__
+### <a name="prerelease-versioning-impact-on-sort-order-and-installation-folders"></a>Влияние предварительных версий на порядок сортировки и установочные папки
 
-При использовании предварительных версий изменяется порядок сортировки, что имеет значение при публикации сценариев в коллекции PowerShell и при установке сценариев с помощью команд PowerShellGet. Если существует две версии сценария с одним номером, то сортировка производится по части строки, следующей после дефиса. Таким образом версия 2.5.0-alpha меньше, чем 2.5.0-beta, а последняя меньше, чем 2.5.0-gamma. Если два сценария имеют одинаковый номер версии и только у одного из них есть строка PrereleaseString, то готовым к использованию будет считаться сценарий __без__ суффикса предварительной версии и при сортировке он будет указываться, как имеющий более высокую версию по отношению к предварительной. Например: при сравнении версий 2.5.0 и 2.5.0-beta, будет считаться, что версия 2.5.0 имеет больший номер.
+При использовании предварительных версий изменяется порядок сортировки, что имеет значение при публикации сценариев в коллекции PowerShell и при установке сценариев с помощью команд PowerShellGet. Если существует две версии сценария с одним номером, то сортировка производится по части строки, следующей после дефиса. Таким образом версия 2.5.0-alpha меньше, чем 2.5.0-beta, а последняя меньше, чем 2.5.0-gamma. Если два сценария имеют одинаковый номер версии и только у одного из них есть строка PrereleaseString, то готовым к использованию будет считаться сценарий **без** суффикса предварительной версии и при сортировке он будет указываться, как имеющий более высокую версию по отношению к предварительной. Например: при сравнении версий 2.5.0 и 2.5.0-beta, будет считаться, что версия 2.5.0 имеет больший номер.
 
 По умолчанию при публикации в коллекцию PowerShell новый сценарий обязательно должен иметь более высокую версию, чем все сценарии, опубликованные ранее. Издатель может обновить версию 2.5.0-alpha версией 2.5.0-beta или 2.5.0 (без суффикса предварительной версии).
 
@@ -61,7 +61,7 @@ __Влияние предварительных версий на порядок
 Единственным исключением является команда Get-InstalledScript и в некоторых случаях команда Uninstall-Script.
 
 - Команда Get-InstalledScript всегда автоматически отображает информацию о предварительных версиях в строке версии при ее наличии.
-- Если __номер версии не указан__, то по умолчанию команда Uninstall-Script удалит самую последнюю версию сценария. Такое поведение команды осталось неизменным. Если в параметре -RequiredVersion указана предварительная версия, то необходимо будет также указать флаг -AllowPrerelease.
+- Если **номер версии не указан**, то по умолчанию команда Uninstall-Script удалит самую последнюю версию сценария. Такое поведение команды осталось неизменным. Если предварительная версия указана с помощью `-RequiredVersion`, необходимо также указать `-AllowPrerelease`.
 
 ## <a name="examples"></a>Примеры
 
@@ -83,13 +83,13 @@ Version        Name                                Repository           Descript
 # To install a prerelease, you must specify -AllowPrerelease. Specifying a prerelease version string is not sufficient.
 
 C:\windows\system32> Install-Script TestPackage -RequiredVersion 1.9.0-alpha
+
 PackageManagement\Find-Package : No match was found for the specified search criteria and script name 'TestPackage'.
 Try Get-PSRepository to see all available registered script repositories.
 At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PSModule.psm1:1455 char:3
 +         PackageManagement\Find-Package @PSBoundParameters | Microsoft ...
 +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (Microsoft.Power...ets.FindPackage:FindPackage) [Find-Package], Exceptio
-   n
+    + CategoryInfo          : ObjectNotFound: (Microsoft.Power...ets.FindPackage:FindPackage)[Find-Package], Exception
     + FullyQualifiedErrorId : NoMatchFoundForCriteria,Microsoft.PowerShell.PackageManagement.Cmdlets.FindPackage
 
 # The previous command failed because -AllowPrerelease was not specified.

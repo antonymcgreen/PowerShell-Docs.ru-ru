@@ -2,27 +2,26 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Устранение неполадок в DSC
-ms.openlocfilehash: 1e8bfdf3540e65e3be94bf6a9b04e7d3b14ff044
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 93a2f3728968882f78d4c050238d226b71c11ca5
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094074"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268200"
 ---
 # <a name="troubleshooting-dsc"></a>Устранение неполадок в DSC
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+_Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 В этом разделе описываются способы устранения неполадок в DSC.
 
 ## <a name="winrm-dependency"></a>Зависимость от WinRM
 
-Служба настройки требуемого состояния (DSC) Windows PowerShell зависит от WinRM. По умолчанию WinRM не включен в Windows Server 2008 R2 и Windows 7. Чтобы включить WinRM, выполните команду ```Set-WSManQuickConfig``` в сеансе Windows PowerShell с повышенными привилегиями.
+Служба настройки требуемого состояния (DSC) Windows PowerShell зависит от WinRM. По умолчанию WinRM не включен в Windows Server 2008 R2 и Windows 7. Чтобы включить WinRM, выполните команду `Set-WSManQuickConfig` в сеансе Windows PowerShell с повышенными привилегиями.
 
 ## <a name="using-get-dscconfigurationstatus"></a>Использование Get-DscConfigurationStatus
 
-Командлет [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) получает сведения о состоянии конфигурации с целевого узла.
-Возвращается расширенный объект, который содержит высокоуровневые сведения о том, было ли выполнение конфигурации успешным. Можно детализировать объект для получения сведений о запуске конфигурации, например следующие.
+Командлет [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) получает сведения о состоянии конфигурации с целевого узла. Возвращается расширенный объект, который содержит высокоуровневые сведения о том, было ли выполнение конфигурации успешным. Можно детализировать объект для получения сведений о запуске конфигурации, например следующие.
 
 - Все ресурсы, для которых возник сбой
 - Любые ресурсы, запросившие перезагрузку
@@ -31,20 +30,20 @@ ms.locfileid: "39094074"
 
 Следующий набор параметров возвращает сведения о состоянии для последнего выполнения конфигурации:
 
-```powershell
-Get-DscConfigurationStatus  [-CimSession <CimSession[]>]
-                            [-ThrottleLimit <int>]
-                            [-AsJob]
-                            [<CommonParameters>]
+```
+Get-DscConfigurationStatus [-CimSession <CimSession[]>]
+                           [-ThrottleLimit <int>]
+                           [-AsJob]
+                           [<CommonParameters>]
 ```
 Следующий набор параметров возвращает сведения о состоянии для всех предыдущих выполнений конфигурации:
 
-```powershell
-Get-DscConfigurationStatus  -All
-                            [-CimSession <CimSession[]>]
-                            [-ThrottleLimit <int>]
-                            [-AsJob]
-                            [<CommonParameters>]
+```
+Get-DscConfigurationStatus -All
+                           [-CimSession <CimSession[]>]
+                           [-ThrottleLimit <int>]
+                           [-AsJob]
+                           [<CommonParameters>]
 ```
 
 ## <a name="example"></a>Пример
@@ -54,35 +53,36 @@ PS C:\> $Status = Get-DscConfigurationStatus
 
 PS C:\> $Status
 
-Status      StartDate               Type            Mode    RebootRequested     NumberOfResources
-------      ---------               ----            ----    ---------------     -----------------
-Failure     11/24/2015  3:44:56     Consistency     Push    True                36
+Status         StartDate                Type            Mode    RebootRequested        NumberOfResources
+------        ---------                ----            ----    ---------------        -----------------
+Failure        11/24/2015  3:44:56     Consistency        Push    True                36
 
 PS C:\> $Status.ResourcesNotInDesiredState
 
-ConfigurationName       :   MyService
-DependsOn               :
-ModuleName              :   PSDesiredStateConfiguration
-ModuleVersion           :   1.1
-PsDscRunAsCredential    :
-ResourceID              :   [File]ServiceDll
-SourceInfo              :   c:\git\CustomerService\Configs\MyCustomService.ps1::5::34::File
-DurationInSeconds       :   0.19
-Error                   :   SourcePath must be accessible for current configuration. The related file/directory is:
-                            \\Server93\Shared\contosoApp.dll. The related ResourceID is [File]ServiceDll
-FinalState              :
-InDesiredState          :   False
-InitialState            :
-InstanceName            :   ServiceDll
-RebootRequested         :   False
-ReosurceName            :   File
-StartDate               :   11/24/2015  3:44:56
-PSComputerName          :
+ConfigurationName     :    MyService
+DependsOn             :
+ModuleName            :    PSDesiredStateConfiguration
+ModuleVersion         :    1.1
+PsDscRunAsCredential  :
+ResourceID            :    [File]ServiceDll
+SourceInfo            :    c:\git\CustomerService\Configs\MyCustomService.ps1::5::34::File
+DurationInSeconds     :    0.19
+Error                 :    SourcePath must be accessible for current configuration. The related file/directory is:
+                           \\Server93\Shared\contosoApp.dll. The related ResourceID is [File]ServiceDll
+FinalState            :
+InDesiredState        :    False
+InitialState          :
+InstanceName          :    ServiceDll
+RebootRequested       :    False
+ReosurceName          :    File
+StartDate             :    11/24/2015  3:44:56
+PSComputerName        :
 ```
 
-## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Мой сценарий не запускается: диагностика ошибок в сценариях с помощью журналов DSC
+## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Мой скрипт не запускается: диагностика ошибок в скриптах с помощью журналов DSC
 
-Как и все программное обеспечение Windows, DSC записывает ошибки и события в [журналы](https://msdn.microsoft.com/library/windows/desktop/aa363632.aspx) , которые можно просмотреть в [средстве просмотра событий](http://windows.microsoft.com/windows/what-information-event-logs-event-viewer). Анализ этих журналов может помочь в выявлении причины сбоя конкретной операции и избежать его в будущем. Написание сценариев настройки может быть непростой задачей. Чтобы упростить отслеживание ошибок, используйте ресурс журнала DSC, чтобы ход конфигурации отражался в аналитическом журнале событий DSC.
+Как и все программное обеспечение Windows, DSC записывает ошибки и события в [журналы](https://msdn.microsoft.com/library/windows/desktop/aa363632.aspx) , которые можно просмотреть в [средстве просмотра событий](http://windows.microsoft.com/windows/what-information-event-logs-event-viewer).
+Анализ этих журналов может помочь в выявлении причины сбоя конкретной операции и избежать его в будущем. Написание сценариев настройки может быть непростой задачей. Чтобы упростить отслеживание ошибок, используйте ресурс журнала DSC, чтобы ход конфигурации отражался в аналитическом журнале событий DSC.
 
 ## <a name="where-are-dsc-event-logs"></a>Где находятся журналы событий DSC?
 
@@ -92,16 +92,19 @@ PSComputerName          :
 
 ```
 PS C:\> Get-WinEvent -LogName "Microsoft-Windows-Dsc/Operational"
+
    ProviderName: Microsoft-Windows-DSC
+
 TimeCreated                     Id LevelDisplayName Message
 -----------                     -- ---------------- -------
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-Как показано выше, основное имя журнала DSC — **Microsoft->Windows->DSC** (другие имена журналов в Windows для краткости здесь не показаны). Основное имя журнала добавляется к имени канала для получения полного имени журнала. DSC производит запись преимущественно в журналы трех типов: [операционные, аналитические и отладочные](https://technet.microsoft.com/library/cc722404.aspx). Так как аналитический и отладочный журналы по умолчанию отключены, их следует включить в средстве просмотра событий. Чтобы сделать это, откройте средство просмотра событий, введя "Show-EventLog" в Windows PowerShell или нажав кнопку **Пуск** и выбрав пункты **Панель управления**, **Администрирование** и **Средство просмотра событий**. В средстве просмотра событий в меню **Представление** выберите команду **Показать аналитический и отладочный журналы**. Имя журнала для аналитического канала — **Microsoft-Windows-Dsc/Analytic**, для отладочного канала — **Microsoft-Windows-Dsc/Debug**. Кроме того, для включения журналов можно воспользоваться средством [wevtutil](https://technet.microsoft.com/library/cc732848.aspx), как показано в следующем примере.
+Как показано выше, основное имя журнала DSC — **Microsoft->Windows->DSC** (другие имена журналов в Windows для краткости здесь не показаны). Основное имя журнала добавляется к имени канала для получения полного имени журнала. DSC производит запись преимущественно в журналы трех типов: [операционные, аналитические и отладочные](https://technet.microsoft.com/library/cc722404.aspx). Так как аналитический и отладочный журналы по умолчанию отключены, их следует включить в средстве просмотра событий. Чтобы сделать это, откройте средство просмотра событий, введя "Show-EventLog" в Windows PowerShell или нажав кнопку **Пуск** и выбрав пункты **Панель управления**, **Администрирование** и **Средство просмотра событий**.
+В средстве просмотра событий в меню **Представление** выберите команду **Показать аналитический и отладочный журналы**. Имя журнала для аналитического канала — **Microsoft-Windows-Dsc/Analytic**, для отладочного канала — **Microsoft-Windows-Dsc/Debug**. Кроме того, для включения журналов можно воспользоваться средством [wevtutil](https://technet.microsoft.com/library/cc732848.aspx), как показано в следующем примере.
 
 ```powershell
-wevtutil.exe set-log “Microsoft-Windows-Dsc/Analytic” /q:true /e:true
+wevtutil.exe set-log "Microsoft-Windows-Dsc/Analytic" /q:true /e:true
 ```
 
 ## <a name="what-do-dsc-logs-contain"></a>Что содержат журналы DSC?
@@ -118,20 +121,22 @@ Consistency engine was run successfully.
 
 События DSC записываются в определенной структуре, что позволяет пользователю собрать все события из одного задания DSC. Эта структура выглядит следующим образом:
 
-**ИД задания: \<GUID\>**
-**\<Сообщение события\>**
+```
+Job ID : <Guid>
+<Event Message>
+```
 
 ## <a name="gathering-events-from-a-single-dsc-operation"></a>Сбор событий для отдельной операции DSC
 
-Журналы событий DSC содержат события, созданные при выполнении различных операций DSC. Однако обычно вас интересуют сведения только для одной конкретной операции. Все журналы DSC можно группировать по свойству ID задания, которое является уникальным для каждой операции DSC. Идентификатор задания отображается в виде первого значения свойства во всех событиях DSC. Далее описывается процесс сбора всех событий в структуре сгруппированного массива.
+Журналы событий DSC содержат события, созданные при выполнении различных операций DSC. Но обычно пользователей интересуют сведения только об одной конкретной операции. Все журналы DSC можно группировать по свойству ID задания, которое является уникальным для каждой операции DSC. Идентификатор задания отображается в виде первого значения свойства во всех событиях DSC. Далее описывается процесс сбора всех событий в структуре сгруппированного массива.
 
 ```powershell
 <##########################################################################
  Step 1 : Enable analytic and debug DSC channels (Operational channel is enabled by default)
 ###########################################################################>
 
-wevtutil.exe set-log “Microsoft-Windows-Dsc/Analytic” /q:true /e:true
-wevtutil.exe set-log “Microsoft-Windows-Dsc/Debug” /q:True /e:true
+wevtutil.exe set-log "Microsoft-Windows-Dsc/Analytic" /q:true /e:true
+wevtutil.exe set-log "Microsoft-Windows-Dsc/Debug" /q:True /e:true
 
 <##########################################################################
  Step 2 : Perform the required DSC operation (Below is an example, you could run any DSC operation instead)
@@ -163,8 +168,11 @@ Count Name                      Group
 ----- ----                      -----
    48 {1A776B6A-5BAC-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
    40 {E557E999-5BA8-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
+
 PS C:\> $SeparateDscOperations[0].Group
+
    ProviderName: Microsoft-Windows-DSC
+
 TimeCreated                     Id LevelDisplayName Message
 -----------                     -- ---------------- -------
 12/2/2013 3:47:29 PM          4115 Information      Job {1A776B6A-5BAC-11E3-BF41-00155D553612} : ...
@@ -192,6 +200,7 @@ TimeCreated                     Id LevelDisplayName Message
 
 ```
 PS C:\> $SeparateDscOperations | Where-Object {$_.Group.LevelDisplayName -contains "Error"}
+
 Count Name                      Group
 ----- ----                      -----
    38 {5BCA8BE7-5BB6-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
@@ -204,6 +213,7 @@ Count Name                      Group
 ```powershell
 PS C:\> $DateLatest = (Get-Date).AddMinutes(-30)
 PS C:\> $SeparateDscOperations | Where-Object {$_.Group.TimeCreated -gt $DateLatest}
+
 Count Name                      Group
 ----- ----                      -----
     1 {6CEC5B09-5BB0-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord}
@@ -211,9 +221,10 @@ Count Name                      Group
 
 ### <a name="3-messages-from-the-latest-operation"></a>3. Сообщения последней операции
 
-Последняя операция хранится по первому индексу в группе массива `$SeparateDscOperations`. При запросе сообщений группы для индекса 0 возвращаются всех сообщения для последней операции:
+Последняя операция хранится по первому индексу в группе массива `$SeparateDscOperations`.
+При запросе сообщений группы для индекса 0 возвращаются все сообщения для последней операции:
 
-```powershelll
+```powershell
 PS C:\> $SeparateDscOperations[0].Group.Message
 Job {5BCA8BE7-5BB6-11E3-BF41-00155D553612} :
 Running consistency engine.
@@ -239,6 +250,7 @@ Displaying messages from built-in DSC resources:
 PS C:\> $myFailedEvent = ($SeparateDscOperations[0].Group | Where-Object {$_.LevelDisplayName -eq "Error"})
 
 PS C:\> $myFailedEvent.Message
+
 Job {5BCA8BE7-5BB6-11E3-BF41-00155D553612} :
 DSC Engine Error :
  Error Message Current configuration does not exist. Execute Start-DscConfiguration command with -Path pa
@@ -265,13 +277,11 @@ TimeCreated                     Id LevelDisplayName Message
 
 ## <a name="using-xdscdiagnostics-to-analyze-dsc-logs"></a>Анализ журналов DSC с помощью xDscDiagnostics
 
-**xDscDiagnostics** представляет собой модуль PowerShell, состоящий из нескольких простых функций, которые могут помочь в анализе сбоев DSC на вашем компьютере. Эти функции помогают идентифицировать все локальные события для последних операций DSC или событий DSC на удаленных компьютерах (с действительными учетными данными). В данном случае термин "операция DSC" используется для определения одного уникального выполнения DSC от начала до конца. Например, `Test-DscConfiguration` будет отдельной операцией DSC. Аналогично все остальные командлеты в DSC (такие как `Get-DscConfiguration`, `Start-DscConfiguration` и т. д.) можно определить как отдельные операции DSC. Эти функции описаны в разделе [xDscDiagnostics](https://github.com/PowerShell/xDscDiagnostics).
-Чтобы получить справку, выполните команду `Get-Help <cmdlet name>`.
+**xDscDiagnostics** представляет собой модуль PowerShell, состоящий из нескольких простых функций, которые могут помочь в анализе сбоев DSC на вашем компьютере. Эти функции помогают идентифицировать все локальные события для последних операций DSC или событий DSC на удаленных компьютерах (с действительными учетными данными). В данном случае термин "операция DSC" используется для определения одного уникального выполнения DSC от начала до конца. Например, `Test-DscConfiguration` будет отдельной операцией DSC. Аналогично все остальные командлеты в DSC (такие как `Get-DscConfiguration`, `Start-DscConfiguration` и т. д.) можно определить как отдельные операции DSC. Эти функции описаны в разделе [xDscDiagnostics](https://github.com/PowerShell/xDscDiagnostics). Чтобы получить справку, выполните команду `Get-Help <cmdlet name>`.
 
 ### <a name="getting-details-of-dsc-operations"></a>Получение сведений об операциях DSC
 
-Функция `Get-xDscOperation` позволяет найти результаты операций DSC, выполняемых на одном или нескольких компьютерах, и возвращает объект, содержащий коллекцию событий, созданных при выполнении каждой операции DSC.
-Например, в следующем выводе были запущены три команды. Первая была выполнена успешно, две остальные — неудачно. Эти результаты сводятся в выводе `Get-xDscOperation`.
+Функция `Get-xDscOperation` позволяет найти результаты операций DSC, выполняемых на одном или нескольких компьютерах, и возвращает объект, содержащий коллекцию событий, созданных при выполнении каждой операции DSC. Например, в следующем выводе были запущены три команды. Первая была выполнена успешно, две остальные — неудачно. Эти результаты сводятся в выводе `Get-xDscOperation`.
 
 ```powershell
 PS C:\DiagnosticsTest> Get-xDscOperation
@@ -300,7 +310,8 @@ SRV1   5          6/23/2016 4:36:51 PM  Success                                 
 
 Командлет `Trace-xDscOperation` возвращает объект, содержащий коллекцию событий, их типы и выводимые сообщения, созданные при выполнении определенной операции DSC. Как правило, при обнаружении сбоя в любых операциях с помощью `Get-xDscOperation` необходимо выполнить трассировку этой операции, чтобы узнать, какое из событий вызвало сбой.
 
-Используйте параметр `SequenceID` для получения событий по конкретной операции на определенном компьютере. Например, если указать `SequenceID` из 9, `Trace-xDscOperaion` получит трассировку для операции DSC, девятой по счету от последней операции:
+Используйте параметр `SequenceID`, чтобы получить события для конкретной операции на определенном компьютере.
+Например, если указать `SequenceID` из 9, `Trace-xDscOperaion` получит трассировку для операции DSC, девятой по счету от последней операции:
 
 ```powershell
 PS C:\DiagnosticsTest> Trace-xDscOperation -SequenceID 9
@@ -367,7 +378,7 @@ PS C:\DiagnosticsTest> $Trace.Event
 
 Она отобразит те же результаты, что и командлет `Get-WinEvent`, как показано в выходных данных ниже:
 
-```powershell
+```output
    ProviderName: Microsoft-Windows-DSC
 
 TimeCreated                     Id LevelDisplayName Message
@@ -410,6 +421,7 @@ TimeCreated                     Id LevelDisplayName Message
 ```powershell
 New-NetFirewallRule -Name "Service RemoteAdmin" -DisplayName "Remote" -Action Allow
 ```
+
 Теперь можно указать этот компьютер при вызове `Trace-xDscOperation`:
 
 ```powershell
@@ -451,7 +463,8 @@ SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32
 
 ## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>Мои ресурсы не обновляются: как сбросить кэш
 
-Для повышения эффективности подсистема DSC кэширует ресурсы, которые реализованы в виде модулей PowerShell. Однако это может вызвать проблемы при одновременной разработке и тестировании ресурса, так как DSC будет загружать кэшированную версию до тех пор, пока процесс не будет перезапущен. Единственный способ принудительной загрузки новой версии в DSC — явным образом завершить процесс подсистемы DSC.
+Для повышения эффективности подсистема DSC кэширует ресурсы, которые реализованы в виде модулей PowerShell.
+Однако это может вызвать проблемы при одновременной разработке и тестировании ресурса, так как DSC будет загружать кэшированную версию до тех пор, пока процесс не будет перезапущен. Единственный способ принудительной загрузки новой версии в DSC — явным образом завершить процесс подсистемы DSC.
 
 Аналогично при запуске `Start-DscConfiguration` после добавления и изменения пользовательских ресурсов эти изменения могут вступить в силу только после перезагрузки компьютера. Это вызвано тем, что DSC выполняется в хост-процессе поставщика WMI (WmiPrvSE). Обычно существует несколько экземпляров WmiPrvSE, которые выполняются одновременно. После перезагрузки хост-процесс перезапускается и кэш очищается.
 
@@ -477,12 +490,13 @@ Get-Process -Id $dscProcessID | Stop-Process
 
 Можно настроить локальный диспетчер конфигурации DSC, так чтобы он всегда очищал кэш с помощью `DebugMode` при перезапуске хост-процесса. При установке значения **TRUE** ядро всегда перегружает ресурс PowerShell DSC. После завершения записи ресурса можно снова установить свойство равным **FALSE**, и подсистема вернется к кэшированию модулей.
 
-Ниже приведена демонстрация автоматического обновления кэша с помощью `DebugMode`. Во-первых, давайте взглянем на конфигурацию по умолчанию:
+Ниже приведена демонстрация автоматического обновления кэша с помощью `DebugMode`. Во-первых, просмотрите конфигурацию по умолчанию:
 
-```
+```powershell
 PS C:\> Get-DscLocalConfigurationManager
+```
 
-
+```output
 AllowModuleOverwrite           : False
 CertificateID                  :
 ConfigurationID                :
@@ -550,7 +564,7 @@ Configuration ConfigTestDebugMode
 ConfigTestDebugMode
 ```
 
-Вы увидите, что файл: **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** содержит **1**.
+Вы увидите, содержимое файла: `$env:SystemDrive\OutputFromTestProviderDebugMode.txt` — **1**.
 
 Теперь обновите код поставщика с помощью следующего сценария:
 
@@ -587,7 +601,7 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-Этот сценарий создает случайное число и соответствующим образом обновляет код поставщика. Если `DebugMode` установлено равным false, содержимое файла **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** не изменяется.
+Этот сценарий создает случайное число и соответствующим образом обновляет код поставщика. Если для `DebugMode` установлено значение false, содержимое файла **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** не изменяется.
 
 Теперь установите `DebugMode` равным **TRUE** в сценарии настройки:
 

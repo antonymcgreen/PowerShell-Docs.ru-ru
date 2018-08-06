@@ -2,12 +2,12 @@
 ms.date: 06/20/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс PackageManagement DSC
-ms.openlocfilehash: 281aee13eb005f00b23c97870eaefaa332d9c232
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 18cbbfe0715c82dcfdf4a5fb6ee36ee814e43d3b
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892507"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268098"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Ресурс PackageManagement DSC
 
@@ -39,8 +39,8 @@ PackageManagement [string] #ResourceName
 
 ## <a name="properties"></a>Свойства
 
-|  Свойство  |  Описание   |
-|---|---|
+| Свойство | Описание |
+| --- | --- |
 | Name| Указывает имя устанавливаемого или удаляемого пакета.|
 | AdditionalParameters| Предоставляет определенную хэш-таблицу параметров, которые передаются в аргумент `Get-Package -AdditionalArguments`. Например, для поставщика NuGet можно передать дополнительные параметры, такие как DestinationPath.|
 | Ensure| Определяет, следует ли установить или удалить пакет.|
@@ -54,10 +54,11 @@ PackageManagement [string] #ResourceName
 ## <a name="additional-parameters"></a>Дополнительные параметры
 
 В следующей таблице перечислены параметры свойства AdditionalParameters.
-|  Параметр  | Описание   |
-|---|---|
+
+| Параметр | Описание |
+| --- | --- |
 | DestinationPath| Используется поставщиками, такими как встроенный поставщик NuGet. Указывает расположение файла, в котором вы хотите установить пакет.|
-| InstallationPolicy| Используется поставщиками, такими как встроенный поставщик NuGet. Определяет, доверяете ли вы источнику пакета. Одно из двух значений: "Untrusted", "Trusted".|
+| InstallationPolicy| Используется поставщиками, такими как встроенный поставщик NuGet. Определяет, доверяете ли вы источнику пакета. `Untrusted` или `Trusted`.|
 
 ## <a name="example"></a>Пример
 

@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,установка
-ms.openlocfilehash: b279d388754c5ee42215f21317f7b3d8089b7608
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: bed1186c10082bbdac7249503bf623678f13fccd
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093887"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267945"
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Единое и согласованное представление состояний
 
@@ -15,40 +15,41 @@ ms.locfileid: "39093887"
 Это представление состояния LCM и DSC пересмотрено и унифицировано согласно следующим правилам:
 
 1. Необработанный ресурс не влияет на состояние LCM и DSC.
-1. LCM останавливает обработку дальнейших ресурсов, встретив ресурс, который требует перезагрузку.
-1. Ресурс, требующий перезагрузку, не находится в нужном состоянии до ее фактического выполнения.
-1. После обнаружения ресурса, завершающегося сбоем, LCM продолжает обрабатывать дальнейшие ресурсы, если только они не зависят от ресурса со сбоем.
-1. Общее состояние, возвращаемое командлетом `Get-DscConfigurationStatus`, представляет собой супермножество состояния для всех ресурсов.
-1. Состояние PendingReboot является супермножеством состояния PendingConfiguration.
+2. LCM останавливает обработку дальнейших ресурсов, встретив ресурс, который требует перезагрузку.
+3. Ресурс, требующий перезагрузку, не находится в нужном состоянии до ее фактического выполнения.
+4. После обнаружения ресурса, завершающегося сбоем, LCM продолжает обрабатывать дальнейшие ресурсы, если только они не зависят от ресурса со сбоем.
+5. Общее состояние, возвращаемое командлетом `Get-DscConfigurationStatus`, представляет собой супермножество состояния для всех ресурсов.
+6. Состояние PendingReboot является супермножеством состояния PendingConfiguration.
 
-   В следующей таблице приведены итоговые свойства состояния в несколько типичных сценариях.
+В следующей таблице приведены итоговые свойства состояния в несколько типичных сценариях.
 
-   | Сценарий                    | LCMState       | Состояние | Запрошена перезагрузка  | ResourcesInDesiredState  | ResourcesNotInDesiredState |
-   |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
-   | S**^**                          | Idle                 | Успех    | $false        | S                            | $null                          |
-   | F**^**                          | PendingConfiguration | Отказ    | $false        | $null                        | F                              |
-   | S,F                             | PendingConfiguration | Отказ    | $false        | S                            | F                              |
-   | F,S                             | PendingConfiguration | Отказ    | $false        | S                            | F                              |
-   | S<sub>1</sub>, F, S<sub>2</sub> | PendingConfiguration | Отказ    | $false        | S<sub>1</sub>, S<sub>2</sub> | F                              |
-   | F<sub>1</sub>, S, F<sub>2</sub> | PendingConfiguration | Отказ    | $false        | S                            | F<sub>1</sub>, F<sub>2</sub>   |
-   | S, r                            | PendingReboot        | Успех    | $true         | S                            | r                              |
-   | F, r                            | PendingReboot        | Отказ    | $true         | $null                        | F, r                           |
-   | r, S                            | PendingReboot        | Успех    | $true         | $null                        | r                              |
-   | r, F                            | PendingReboot        | Успех    | $true         | $null                        | r                              |
+| Сценарий                        | LCMState             | Состояние     | Запрошена перезагрузка | ResourcesInDesiredState   | ResourcesNotInDesiredState |
+|---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
+| S**^**                          | Idle                 | Успех    | $false        | S                            | $null                          |
+| F**^**                          | PendingConfiguration | Отказ    | $false        | $null                        | F                              |
+| S,F                             | PendingConfiguration | Отказ    | $false        | S                            | F                              |
+| F,S                             | PendingConfiguration | Отказ    | $false        | S                            | F                              |
+| S<sub>1</sub>, F, S<sub>2</sub> | PendingConfiguration | Отказ    | $false        | S<sub>1</sub>, S<sub>2</sub> | F                              |
+| F<sub>1</sub>, S, F<sub>2</sub> | PendingConfiguration | Отказ    | $false        | S                            | F<sub>1</sub>, F<sub>2</sub>   |
+| S, r                            | PendingReboot        | Успех    | $true         | S                            | r                              |
+| F, r                            | PendingReboot        | Отказ    | $true         | $null                        | F, r                           |
+| r, S                            | PendingReboot        | Успех    | $true         | $null                        | r                              |
+| r, F                            | PendingReboot        | Успех    | $true         | $null                        | r                              |
 
-   ^
-   S<sub>i</sub>: ряд ресурсов, которые успешно применены F<sub>i</sub>: ряд ресурсов, которые применены неудачно r: ресурс, который требует перезагрузки \*
+- S<sub>i</sub>: ряд ресурсов, которые успешно применены.
+- F<sub>i</sub>: ряд ресурсов, которые применены с ошибкой.
+- r: ресурс, который требует перезагрузку.
 
-   ```powershell
-   $LCMState = (Get-DscLocalConfigurationManager).LCMState
-   $Status = (Get-DscConfigurationStatus).Status
+```powershell
+$LCMState = (Get-DscLocalConfigurationManager).LCMState
+$Status = (Get-DscConfigurationStatus).Status
 
-   $RebootRequested = (Get-DscConfigurationStatus).RebootRequested
+$RebootRequested = (Get-DscConfigurationStatus).RebootRequested
 
-   $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
+$ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
 
-   $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
-   ```
+$ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
+```
 
 ## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Улучшения в командлете Get-DscConfigurationStatus
 
@@ -56,32 +57,32 @@ ms.locfileid: "39093887"
 
 ```powershell
 (Get-DscConfigurationStatus).StartDate | Format-List *
-DateTime : Friday, November 13, 2015 1:39:44 PM
-Date : 11/13/2015 12:00:00 AM
-Day : 13
-DayOfWeek : Friday
-DayOfYear : 317
-Hour : 13
-Kind : Local
+
+DateTime    : Friday, November 13, 2015 1:39:44 PM
+Date        : 11/13/2015 12:00:00 AM
+Day         : 13
+DayOfWeek   : Friday
+DayOfYear   : 317
+Hour        : 13
+Kind        : Local
 Millisecond : 886
-Minute : 39
-Month : 11
-Second : 44
-Ticks : 635830187848860000
-TimeOfDay : 13:39:44.8860000
-Year : 2015
+Minute      : 39
+Month       : 11
+Second      : 44
+Ticks       : 635830187848860000
+TimeOfDay   : 13:39:44.8860000
+Year        : 2015
 ```
 
-Ниже приведен пример, который возвращает все записи операций DSC, созданные в тот же день недели, что и сегодня.
+Пример ниже возвращает все записи операций DSC, созданные в тот же день недели, что и сегодня.
 
 ```powershell
 (Get-DscConfigurationStatus –All) | Where-Object { $_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
 ```
 
-Записи операций, которые не вносят изменения в конфигурацию узла (т. е. представлены операциями только для чтения), исключаются. Таким образом, операции `Test-DscConfiguration` и `Get-DscConfiguration` больше не имитируются в возвращаемых объектах из командлета `Get-DscConfigurationStatus`.
-В выходные данные командлета `Get-DscConfigurationStatus`добавляются записи для операции настройки метаконфигурации.
+Записи операций, которые не вносят изменения в конфигурацию узла (т. е. представлены операциями только для чтения), исключаются. Таким образом, операции `Test-DscConfiguration` и `Get-DscConfiguration` больше не имитируются в возвращаемых объектах из командлета `Get-DscConfigurationStatus`. В выходные данные командлета `Get-DscConfigurationStatus`добавляются записи для операции настройки метаконфигурации.
 
-Ниже приведен пример результата, возвращаемого из командлета `Get-DscConfigurationStatus` со значение "–All".
+Ниже — пример результата, возвращаемого командлетом `Get-DscConfigurationStatus –All`.
 
 ```output
 All configuration operations:

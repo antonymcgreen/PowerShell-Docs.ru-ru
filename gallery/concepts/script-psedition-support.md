@@ -3,18 +3,19 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Сценарии с совместимыми выпусками PowerShell
-ms.openlocfilehash: 386e65295641fb6932c13047246742531aeaec64
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 0ab655ff1c5dd0f48ec41a16ad394251b6c70748
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093666"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267819"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>Сценарии с совместимыми выпусками PowerShell
 
 Начиная с версии 5.1 доступны различные выпуски среды PowerShell, что означает различные наборы возможностей и совместимость с разными платформами.
 
 - **Выпуск Desktop Edition:** построен на основе .NET Framework и обеспечивает совместимость со скриптами и модулями, которые предназначены для версий PowerShell, выполняющихся в полноценных выпусках Windows, таких как Server Core и Windows Desktop.
+
 - **Выпуск Core Edition:** построен на основе .NET Core и обеспечивает совместимость со скриптами и модулями, которые предназначены для версий PowerShell, выполняющихся в выпусках Windows с ограниченными возможностями, таких как Nano Server и Windows IoT.
 
 Запущенный выпуск PowerShell отображается в свойстве PSEdition параметра $PSVersionTable.
@@ -34,7 +35,7 @@ PSRemotingProtocolVersion      2.3
 SerializationVersion           1.1.0.1
 ```
 
-Авторы сценариев могут запретить их выполнение, если сценарии не выполняются в совместимой версии PowerShell, с помощью параметра PSEdition инструкции #requires.
+Авторы скриптов могут запретить их выполнение, если они не выполняются в совместимой версии PowerShell, с помощью параметра PSEdition инструкции `#requires`.
 
 ```powershell
 Set-Content C:\script.ps1 -Value "#requires -PSEdition Core
