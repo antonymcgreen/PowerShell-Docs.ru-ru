@@ -2,7 +2,7 @@
 
 ## <a name="msi"></a>MSI
 
-Чтобы установить PowerShell на клиент Windows или сервер Windows Server (поддерживаются Windows 7 с пакетом обновления 1 (SP1), Server 2008 R2 и более поздние версии), скачайте пакет MSI с нашей страницы [выпусков][] GitHub.
+Чтобы установить PowerShell на клиенте Windows или в Windows Server (работает в Windows 7 с пакетом обновления 1 (SP1), Server 2008 R2 и более поздних версий), скачайте пакет MSI из с нашей страницы [выпусков][] GitHub.
 
 MSI-файл выглядит примерно так: `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
@@ -127,7 +127,7 @@ PowerShell Core поддерживает протокол удаленного �
 Дополнительная информация:
 
 - [Удаленное взаимодействие через SSH в PowerShell Core][ssh-remoting]
-- [Удаленное взаимодействие с WSMan в PowerShell Core][wsman-remoting]
+- [Удаленное взаимодействие через WSMan в PowerShell Core][wsman-remoting]
 
 ## <a name="artifact-installation-instructions"></a>Указания по установке артефакта
 
@@ -140,4 +140,9 @@ PowerShell Core поддерживает протокол удаленного �
 3. Извлеките содержимое ZIP-файла в каталог `bin`.
 4. `./bin/pwsh.exe`
 
-<!-- [download-center]: TODO --> [releases]: https://github.com/PowerShell/PowerShell/releases [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md [wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+<!-- [download-center]: TODO -->
+
+[выпусков]: https://github.com/PowerShell/PowerShell/releases
+[ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
+[wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md
+[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
