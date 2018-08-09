@@ -1,3 +1,14 @@
+---
+title: Новые возможности PowerShell Core 6.0
+description: Новые возможности и изменения в PowerShell Core 6.0
+ms.date: 08/06/2018
+ms.openlocfilehash: f0cddad223528cd0f2b4f392faeb6e08e1050c51
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587250"
+---
 # <a name="whats-new-in-powershell-core-60"></a>Новые возможности PowerShell Core 6.0
 
 [Core PowerShell 6.0][github] — это новый выпуск PowerShell, который является кроссплатформенным (Windows, macOS и Linux), обладает открытым исходным кодом и предназначен для разнородных сред и гибридного облака.
