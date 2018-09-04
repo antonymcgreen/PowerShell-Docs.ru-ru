@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,командлет
 title: Правила авторизации и средства безопасности Windows PowerShell Web Access
-ms.openlocfilehash: 07b85a3c7bced58b9ee8db401f0339ba6011bc96
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: e9bed3900263a51b1b8236a3c3430154a5d11886
+ms.sourcegitcommit: 31a221d982305c7f999b1afeb15e3629e9620de8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268353"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43133121"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Правила авторизации и средства безопасности Windows PowerShell Web Access
 
@@ -144,7 +144,7 @@ Windows PowerShell Web Access в Windows Server 2012 R2 и Windows Server 201
    ```
    Get-PswaAuthorizationRule `
       -RuleName <rule-name> | Remove-PswaAuthorizationRule
-  ```
+   ```
 
 > [!NOTE]
 > При попытке удалить указанное правило авторизации запрос на подтверждение удаления не выводится. Правило удаляется при нажатии клавиши **ВВОД**. Убедитесь, что действительно необходимо удалить правило авторизации, перед выполнением командлета `Remove-PswaAuthorizationRule`.
