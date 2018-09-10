@@ -1,45 +1,42 @@
 ---
-ms.date: 06/05/2017
+ms.date: 08/14/2018
 keywords: powershell,командлет
 title: Выполнение удаленных команд
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: d21d1def1e25895f65b3578bf2892d56f14cc150
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: 2001b5509acde6ec4259bb1442944958a67aa66f
+ms.sourcegitcommit: 56b9be8503a5a1342c0b85b36f5ba6f57c281b63
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482885"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "43133129"
 ---
 # <a name="running-remote-commands"></a>Выполнение удаленных команд
 
-Вы можете запускать команды на одном или сотнях компьютеров одной командой Windows PowerShell. Windows PowerShell поддерживает удаленное вычисление с помощью разных технологий, включая WMI, RPC и WS-Management.
+Одна команда Windows PowerShell позволяет запускать команды на одном или сотнях компьютеров. Windows PowerShell поддерживает удаленное вычисление с помощью разных технологий, включая WMI, RPC и WS-Management.
 
-## <a name="remoting-in-powershell-core"></a>Удаленное взаимодействие в PowerShell Core
+PowerShell Core поддерживает инструментарий WMI, WS-Management и удаленное взаимодействие через SSH. RPC больше не поддерживается.
 
-PowerShell Core, более новый выпуск PowerShell для Windows, macOS и Linux, поддерживает инструментарий WMI, WS-Management и удаленное взаимодействие SSH.
-(RPC больше не поддерживается.)
+Дополнительные сведения об удаленном взаимодействии в PowerShell Core см. в следующих статьях:
 
-Дополнительные сведения о настройке см. в указанных ниже разделах:
+- [Удаленное взаимодействие через SSH в PowerShell Core][ssh-remoting]
+- [Удаленное взаимодействие через WSMan в PowerShell Core][wsman-remoting]
 
-* [Удаленное взаимодействие через SSH в PowerShell Core][ssh-remoting]
-* [Удаленное взаимодействие через WSMan в PowerShell Core][wsman-remoting]
+## <a name="windows-powershell-remoting-without-configuration"></a>Удаленное взаимодействие с Windows PowerShell без настройки
 
-## <a name="remoting-without-configuration"></a>Удаленное взаимодействие без настройки
-
-Многие командлеты Windows PowerShell имеют параметр ComputerName, который позволяет собирать данные и изменять параметры одного или нескольких удаленных компьютеров. Они используют различные способы связи, многие из которых работают во всех операционных системах Windows, которые Windows PowerShell поддерживает без необходимости какой-либо настройки.
+Многие командлеты Windows PowerShell имеют параметр ComputerName, который позволяет собирать данные и изменять параметры одного или нескольких удаленных компьютеров. Эти командлеты используют разные протоколы связи и работают во всех операционных системах Windows без специальной настройки.
 
 В эти командлеты входят следующие:
 
-* [Restart-Computer](https://go.microsoft.com/fwlink/?LinkId=821625)
-* [Test-Connection](https://go.microsoft.com/fwlink/?LinkId=821646)
-* [Clear-EventLog](https://go.microsoft.com/fwlink/?LinkId=821568)
-* [Get-EventLog](https://go.microsoft.com/fwlink/?LinkId=821585)
-* [Get-HotFix](https://go.microsoft.com/fwlink/?LinkId=821586)
-* [Get-Process](https://go.microsoft.com/fwlink/?linkid=821590)
-* [Get-Service](https://go.microsoft.com/fwlink/?LinkId=821593)
-* [Set-Service](https://go.microsoft.com/fwlink/?LinkId=821633)
-* [Get-WinEvent](https://go.microsoft.com/fwlink/?linkid=821529)
-* [Get-WmiObject](https://go.microsoft.com/fwlink/?LinkId=821595)
+- [Restart-Computer](/powershell/module/microsoft.powershell.management/restart-computer)
+- [Test-Connection](/powershell/module/microsoft.powershell.management/test-connection)
+- [Clear-EventLog](/powershell/module/microsoft.powershell.management/clear-eventlog)
+- [Get-EventLog](/powershell/module/microsoft.powershell.management/get-eventlog)
+- [Get-HotFix](/powershell/module/microsoft.powershell.management/get-hotfix)
+- [Get-Process](/powershell/module/microsoft.powershell.management/get-process)
+- [Get-Service](/powershell/module/microsoft.powershell.management/get-service)
+- [Set-Service](/powershell/module/microsoft.powershell.management/set-service)
+- [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/get-winevent)
+- [Get-WmiObject](/powershell/module/microsoft.powershell.management/get-wmiobject)
 
 Обычно командлеты, которые поддерживают удаленное взаимодействие без специальной настройки, имеют параметр ComputerName, но не имеют параметра Session. Чтобы найти эти командлеты в сеансе, введите:
 
@@ -49,22 +46,24 @@ Get-Command | where { $_.parameters.keys -contains "ComputerName" -and $_.parame
 
 ## <a name="windows-powershell-remoting"></a>Служба удаленного взаимодействия Windows PowerShell
 
-Служба удаленного взаимодействия Windows PowerShell, использующая протокол WS-Management, позволяет запустить любую команду Windows PowerShell на одном или нескольких удаленных компьютерах. С ее помощью можно устанавливать постоянные подключения, запускать интерактивные сеансы 1:1 и сценарии на нескольких компьютерах.
+Благодаря использованию протокола WS-Management служба удаленного взаимодействия Windows PowerShell позволяет запустить любую команду Windows PowerShell на одном или нескольких удаленных компьютерах. Вы можете устанавливать постоянные подключения, запускать интерактивные сеансы и выполнять скрипты на удаленных компьютерах.
 
-Чтобы использовать службу удаленного взаимодействия Windows PowerShell, удаленный компьютер должен быть настроен для удаленного управления. Дополнительные сведения, в том числе инструкции, см. в разделе [about_Remote_Requirements](https://technet.microsoft.com/library/dd315349.aspx).
+Чтобы использовать службу удаленного взаимодействия Windows PowerShell, удаленный компьютер должен быть настроен для удаленного управления.
+Дополнительные сведения, в том числе инструкции, см. в разделе [about_Remote_Requirements](/powershell/module/microsoft.powershell.core/about/about_remote_requirements).
 
-После настройки службы удаленного взаимодействия Windows PowerShell вам станут доступны многие стратегии удаленного взаимодействия. В остальной части этого документа перечислены только некоторые из них. Дополнительные сведения см. в разделах [about_Remote](https://technet.microsoft.com/library/dd347744.aspx) и [about_Remote_FAQ](https://technet.microsoft.com/library/dd347744.aspx).
+После настройки службы удаленного взаимодействия Windows PowerShell вы получите доступ ко многим стратегиям удаленного взаимодействия.
+В этой статье перечислены только некоторые из них. См. дополнительные сведения об [удаленном взаимодействии](/powershell/module/microsoft.powershell.core/about/about_remote).
 
 ### <a name="start-an-interactive-session"></a>Запуск интерактивного сеанса
 
-Чтобы запустить интерактивный сеанс с одним удаленным компьютером, используйте командлет [Enter-PSSession](https://go.microsoft.com/fwlink/?LinkId=821477).
+Чтобы запустить интерактивный сеанс с одним удаленным компьютером, используйте командлет [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession).
 Например, чтобы запустить интерактивный сеанс с удаленным компьютером Server01, введите:
 
 ```powershell
 Enter-PSSession Server01
 ```
 
-В командной строке отобразится имя компьютера, к которому вы подключены. В дальнейшем все команды, введенные в командной строке, будут запускаться на удаленном компьютере, а результаты отобразятся на локальном компьютере.
+В командной строке отобразится имя удаленного компьютера. Все команды, введенные в командной строке, запускаются на удаленном компьютере, а результаты отображаются на локальном компьютере.
 
 Чтобы завершить интерактивный сеанс, введите:
 
@@ -72,12 +71,14 @@ Enter-PSSession Server01
 Exit-PSSession
 ```
 
-Дополнительные сведения о командлетах Enter-PSSession и Exit-PSSession см. в статьях [Enter-PSSession](https://go.microsoft.com/fwlink/?LinkId=821477) и [Exit-PSSession](https://go.microsoft.com/fwlink/?LinkID=821478).
+См. дополнительные сведения о командлетах Enter-PSSession и Exit-PSSession:
+
+- [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession)
+- [Exit-PSSession](/powershell/module/microsoft.powershell.core/exit-pssession)
 
 ### <a name="run-a-remote-command"></a>Выполнение удаленной команды
 
-Чтобы выполнить любую команду на одном или нескольких удаленных компьютеров, используйте командлет [Invoke-Command](https://go.microsoft.com/fwlink/?LinkId=821493).
-Например, чтобы выполнить команду [Get-UICulture](https://go.microsoft.com/fwlink/?LinkId=821806) на удаленных компьютерах Server01 и Server02, введите:
+Чтобы выполнить команду на одном или нескольких компьютерах, используйте командлет [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command). Например, чтобы выполнить команду [Get-UICulture](/powershell/module/microsoft.powershell.utility/get-uiculture) на удаленных компьютерах Server01 и Server02, введите:
 
 ```powershell
 Invoke-Command -ComputerName Server01, Server02 -ScriptBlock {Get-UICulture}
@@ -92,39 +93,33 @@ LCID    Name     DisplayName               PSComputerName
 1033    en-US    English (United States)   server02.corp.fabrikam.com
 ```
 
-Дополнительные сведения о командлете Invoke-Command см. в статье [Invoke-Command](https://go.microsoft.com/fwlink/?LinkId=821493).
-
 ### <a name="run-a-script"></a>Запуск сценария
 
-Чтобы запустить сценарий на одном или нескольких удаленных компьютерах, используйте параметр FilePath командлета Invoke-Command. Сценарий должен быть включен или доступен для локального компьютера. Результаты будут возвращены на локальный компьютер.
+Чтобы запустить скрипт на одном или нескольких удаленных компьютерах, используйте параметр FilePath командлета `Invoke-Command`. Сценарий должен быть включен или доступен для локального компьютера. Результаты будут возвращены на локальный компьютер.
 
-Например, следующая команда выполняет сценарий DiskCollect.ps1 на удаленных компьютерах Server01 и Server02.
+Например, следующая команда выполняет скрипт DiskCollect.ps1 на удаленных компьютерах Server01 и Server02.
 
 ```powershell
 Invoke-Command -ComputerName Server01, Server02 -FilePath c:\Scripts\DiskCollect.ps1
 ```
 
-Дополнительные сведения о командлете Invoke-Command см. в статье [Invoke-Command](https://go.microsoft.com/fwlink/?LinkId=821493).
-
 ### <a name="establish-a-persistent-connection"></a>Установка постоянного подключения
 
-Чтобы выполнить ряд связанных команд с общими данными, создайте сеанс на удаленном компьютере, а затем используйте командлет Invoke-Command для выполнения команд в созданном сеансе. Чтобы создать удаленный сеанс, используйте командлет New-PSSession.
-
-Например, следующая команда создает удаленный сеанс на компьютере Server01 и другой удаленный сеанс на компьютере Server02. Она сохраняет объекты сеанса в переменной $s.
+Используйте командлет `New-PSSession` для создания постоянного сеанса на удаленном компьютере. В следующем примере создаются удаленные сеансы на удаленных компьютерах Server01 и Server02. Объекты сеанса хранятся в переменной `$s`.
 
 ```powershell
 $s = New-PSSession -ComputerName Server01, Server02
 ```
 
-После установки сеансов в них можно выполнить любую команду. Так как сеансы являются постоянными, вы можете собирать данные в одной команде и использовать их в последующей.
+После установки сеансов в них можно выполнить любую команду. Так как сеансы являются постоянными, вы можете собирать данные из одной команды и использовать их в другой.
 
-Например, следующая команда выполняет команду Get-Hotfix в сеансах в переменной $s и сохраняет результаты в переменной $h. Переменная $h создается в каждом сеансе в $s, но она не существует в локальном сеансе.
+Например, следующая команда выполняет команду Get-Hotfix в сеансах в переменной $s и сохраняет результаты в переменной $h. Переменная $h создается в каждом сеансе в переменной $s, но она не существует в локальном сеансе.
 
 ```powershell
 Invoke-Command -Session $s {$h = Get-HotFix}
 ```
 
-Теперь данные в переменной $h можно использовать в последующих командах, таких как следующая. Результаты отобразятся на локальном компьютере.
+Теперь вы можете использовать данные в переменной `$h` с другими командами в том же сеансе. Результаты отобразятся на локальном компьютере. Например:
 
 ```powershell
 Invoke-Command -Session $s {$h | where {$_.InstalledBy -ne "NTAUTHORITY\SYSTEM"}}
@@ -134,8 +129,9 @@ Invoke-Command -Session $s {$h | where {$_.InstalledBy -ne "NTAUTHORITY\SYSTEM"}
 
 Это и есть служба удаленного взаимодействия Windows PowerShell. Используя командлеты, установленные с Windows PowerShell, можно установить и настроить удаленные сеансы с локальных и удаленных компьютеров, создать настраиваемые и ограниченные сеансы, разрешить пользователям импортировать команды из удаленного сеанса, которые могут неявно выполняться в удаленном сеансе, настроить безопасность удаленного сеанса и многое другое.
 
-Для упрощения настройки в PowerShell включен поставщик WSMan. Диск WSMAN:, созданный поставщиком, позволяет перемещаться по иерархии параметров конфигурации на локальном и удаленном компьютерах.
-Дополнительные сведения о поставщике WSMan см. в разделах [WSMan Provider](https://technet.microsoft.com/library/dd819476.aspx) и [about_WS-Management_Cmdlets](https://technet.microsoft.com/library/dd819481.aspx) или введите команду Get-Help wsman в консоли Windows PowerShell.
+Windows PowerShell включает поставщик WSMan. Поставщик создает диск `WSMAN:`, который позволяет перемещаться по иерархии параметров конфигурации на локальном и удаленном компьютерах.
+
+См. дополнительные сведения о [поставщике WSMan](https://technet.microsoft.com/library/dd819476.aspx) и [командлетах WS-Management](/powershell/module/microsoft.powershell.core/about/about_ws-management_cmdlets) или введите команду `Get-Help wsman` в консоли Windows PowerShell.
 
 Дополнительная информация:
 
@@ -153,7 +149,7 @@ Invoke-Command -Session $s {$h | where {$_.InstalledBy -ne "NTAUTHORITY\SYSTEM"}
 - [about_Remote_Troubleshooting](https://technet.microsoft.com/library/2f890148-8578-49ed-85ea-79a489dd6317)
 - [about_PSSessions](https://technet.microsoft.com/library/7a9b4e0e-fa1b-47b0-92f6-6e2995d70acb)
 - [about_WS-Management_Cmdlets](https://technet.microsoft.com/library/6ed3370a-ea10-45a5-9493-696aeace27ed)
-- [Invoke-Command](https://go.microsoft.com/fwlink/?LinkId=821493)
+- [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command)
 - [Import-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
 - [New-PSSession](https://go.microsoft.com/fwlink/?LinkId=821498)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
