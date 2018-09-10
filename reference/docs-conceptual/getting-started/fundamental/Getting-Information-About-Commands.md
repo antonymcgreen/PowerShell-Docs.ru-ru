@@ -1,37 +1,43 @@
 ---
-ms.date: 06/05/2017
+ms.date: 08/27/2018
 keywords: powershell,командлет
-title: Получение сведений о командах
+title: Получение информации о командах
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
-ms.openlocfilehash: c51579fe2cdf4f2a0d3248d1aaf3f1f9cac83868
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: 7af83e3a0e776d96e580b442430357b4ea063a72
+ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482732"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353176"
 ---
-# <a name="getting-information-about-commands"></a><span data-ttu-id="06040-103">Получение сведений о командах</span><span class="sxs-lookup"><span data-stu-id="06040-103">Getting Information About Commands</span></span>
-<span data-ttu-id="06040-104">Командлет `Get-Command` Windows PowerShell возвращает все команды, доступные в текущем сеансе.</span><span class="sxs-lookup"><span data-stu-id="06040-104">The Windows PowerShell `Get-Command` cmdlet gets all commands that are available in your current session.</span></span> <span data-ttu-id="06040-105">При вводе `Get-Command` в командной строке PowerShell появятся выходные данные, аналогичные следующим:</span><span class="sxs-lookup"><span data-stu-id="06040-105">When you type `Get-Command` at a PowerShell prompt, you will see output similar to the following:</span></span>
+# <a name="getting-information-about-commands"></a><span data-ttu-id="14cbf-103">Получение информации о командах</span><span class="sxs-lookup"><span data-stu-id="14cbf-103">Getting information about commands</span></span>
 
-```
-PS> Get-Command
-CommandType     Name                            Definition
------------     ----                            ----------
-Cmdlet          Add-Content                     Add-Content [-Path] <String[...
-Cmdlet          Add-History                     Add-History [[-InputObject] ...
-Cmdlet          Add-Member                      Add-Member [-MemberType] <PS...
+<span data-ttu-id="14cbf-104">В выходных данных командлета `Get-Command` в PowerShell отображаются команды, доступные в текущем сеансе.</span><span class="sxs-lookup"><span data-stu-id="14cbf-104">The PowerShell `Get-Command` displays commands that are available in your current session.</span></span>
+<span data-ttu-id="14cbf-105">При запуске командлета `Get-Command` можно увидеть примерно следующие выходные данные:</span><span class="sxs-lookup"><span data-stu-id="14cbf-105">When you run the `Get-Command` cmdlet, you see something similar to the following output:</span></span>
+
+```output
+CommandType     Name                    Version    Source
+-----------     ----                    -------    ------
+Cmdlet          Add-Computer            3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Add-Content             3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Add-History             3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Add-JobTrigger          1.1.0.0    PSScheduledJob
+Cmdlet          Add-LocalGroupMember    1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Add-Member              3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Add-PSSnapin            3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Add-Type                3.1.0.0    Microsoft.PowerShell.Utility
 ...
 ```
 
-<span data-ttu-id="06040-106">Эти выходные данные выглядят так же, как и выходные данные справки Cmd.exe: сводная таблица внутренних команд.</span><span class="sxs-lookup"><span data-stu-id="06040-106">This output looks a lot like the Help output of Cmd.exe: a tabular summary of internal commands.</span></span> <span data-ttu-id="06040-107">Во фрагменте выходных данных команды **Get-Command**, показанном выше, все команды имеют CommandType командлета.</span><span class="sxs-lookup"><span data-stu-id="06040-107">In the excerpt of the **Get-Command** command output shown above, every command shown has a CommandType of Cmdlet.</span></span> <span data-ttu-id="06040-108">Командлет является встроенным типом команды Windows PowerShell — типом, который примерно соответствует командам **dir** и **cd** Cmd.exe и встроенным командам в оболочках UNIX, например BASH.</span><span class="sxs-lookup"><span data-stu-id="06040-108">A cmdlet is Windows PowerShell's intrinsic command type - a type that corresponds roughly to the **dir** and **cd** commands of Cmd.exe and to built-ins in UNIX shells such as BASH.</span></span>
+<span data-ttu-id="14cbf-106">Эти выходные данные выглядят почти так же, как и выходные данные справки **cmd.exe**: сводная таблица внутренних команд.</span><span class="sxs-lookup"><span data-stu-id="14cbf-106">This output looks a lot like the Help output of **cmd.exe**: a tabular summary of internal commands.</span></span> <span data-ttu-id="14cbf-107">Во фрагменте выходных данных команды `Get-Command`, показанном выше, все команды имеют тип командлета.</span><span class="sxs-lookup"><span data-stu-id="14cbf-107">In the excerpt of the `Get-Command` command output shown above, every command shown has a CommandType of Cmdlet.</span></span> <span data-ttu-id="14cbf-108">Командлет является встроенным типом команды PowerShell.</span><span class="sxs-lookup"><span data-stu-id="14cbf-108">A cmdlet is PowerShell's intrinsic command type.</span></span> <span data-ttu-id="14cbf-109">Этот тип примерно соответствует таким командам, как `dir` и `cd` в **cmd.exe**, и встроенным командам в оболочках Unix, например Bash.</span><span class="sxs-lookup"><span data-stu-id="14cbf-109">This type corresponds roughly to commands like `dir` and `cd` in **cmd.exe** or the built-in commands of Unix shells like bash.</span></span>
 
-<span data-ttu-id="06040-109">В выходных данных команды `Get-Command` все определения заканчиваются многоточием (...), указывая, что PowerShell не может отображать все содержимое в доступном пространстве.</span><span class="sxs-lookup"><span data-stu-id="06040-109">In the output of the `Get-Command` command, all the definitions end with ellipses (...) to indicate that PowerShell cannot display all the content in the available space.</span></span> <span data-ttu-id="06040-110">При отображении выходных данных через Windows PowerShell служба форматирует их как текст, а затем упорядочивает таким образом, чтобы данные полностью помещались в окне.</span><span class="sxs-lookup"><span data-stu-id="06040-110">When Windows PowerShell displays output, it formats the output as text and then arranges it to make the data fit cleanly into the window.</span></span> <span data-ttu-id="06040-111">Об этом речь пойдет далее в разделе о модулях форматирования.</span><span class="sxs-lookup"><span data-stu-id="06040-111">We will talk about this later in the section on formatters.</span></span>
+<span data-ttu-id="14cbf-110">Командлет `Get-Command` содержит параметр **Syntax**, который возвращает синтаксис каждого командлета.</span><span class="sxs-lookup"><span data-stu-id="14cbf-110">The `Get-Command` cmdlet has a **Syntax** parameter that returns syntax of each cmdlet.</span></span> <span data-ttu-id="14cbf-111">В следующем примере показано, как получить синтаксис командлета `Get-Help`:</span><span class="sxs-lookup"><span data-stu-id="14cbf-111">The following example shows how to get the syntax of the `Get-Help` cmdlet:</span></span>
 
-<span data-ttu-id="06040-112">Командлет `Get-Command` содержит параметр **Syntax**, который возвращает синтаксис каждого командлета.</span><span class="sxs-lookup"><span data-stu-id="06040-112">The `Get-Command` cmdlet has a **Syntax** parameter that gets the syntax of each cmdlet.</span></span> <span data-ttu-id="06040-113">Чтобы получить синтаксис командлета Get-Help, используйте следующую команду:</span><span class="sxs-lookup"><span data-stu-id="06040-113">To get the syntax of the Get-Help cmdlet, use the following command:</span></span>
-
-```
+```powershell
 Get-Command Get-Help -Syntax
+```
 
+```output
 Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component <String[]>] [-Functionality <String[]>]
  [-Role <String[]>] [-Full] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 
@@ -45,35 +51,44 @@ Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component 
  [-Role <String[]>] [-Parameter <String>] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 ```
 
-### <a name="displaying-available-command-types"></a><span data-ttu-id="06040-114">Отображение доступных типов команд</span><span class="sxs-lookup"><span data-stu-id="06040-114">Displaying Available Command Types</span></span>
-<span data-ttu-id="06040-115">Команда **Get-Command** не перечисляет все команды, доступные в Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="06040-115">The **Get-Command** command does not list every command that is available in Windows PowerShell.</span></span> <span data-ttu-id="06040-116">Вместо этого команда **Get-Command** перечисляет только командлеты в текущем сеансе.</span><span class="sxs-lookup"><span data-stu-id="06040-116">Instead, the **Get-Command** command lists only the cmdlets in the current session.</span></span> <span data-ttu-id="06040-117">Windows PowerShell фактически поддерживает несколько других типов команд.</span><span class="sxs-lookup"><span data-stu-id="06040-117">Windows PowerShell actually supports several other types of commands.</span></span> <span data-ttu-id="06040-118">Псевдонимы, функции и скрипты также являются командами Windows PowerShell, хотя они не описываются подробно в руководстве пользователя Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="06040-118">Aliases, functions, and scripts are also Windows PowerShell commands, although they are not discussed in detail in the Windows PowerShell User's Guide.</span></span> <span data-ttu-id="06040-119">Внешние файлы, исполняемые или содержащие обработчик зарегистрированных типов файлов, также классифицируются как команды.</span><span class="sxs-lookup"><span data-stu-id="06040-119">External files that are executable, or have a registered file type handler, are also classified as commands.</span></span>
+## <a name="displaying-available-command-by-type"></a><span data-ttu-id="14cbf-112">Отображение доступных команд по типам</span><span class="sxs-lookup"><span data-stu-id="14cbf-112">Displaying available command by type</span></span>
 
-<span data-ttu-id="06040-120">Чтобы получить все команды в сеансе, введите следующую команду:</span><span class="sxs-lookup"><span data-stu-id="06040-120">To get all commands in the session, type:</span></span>
+<span data-ttu-id="14cbf-113">Команда `Get-Command` перечисляет только командлеты в текущем сеансе.</span><span class="sxs-lookup"><span data-stu-id="14cbf-113">The `Get-Command` command lists only the cmdlets in the current session.</span></span> <span data-ttu-id="14cbf-114">PowerShell фактически поддерживает несколько других типов команд.</span><span class="sxs-lookup"><span data-stu-id="14cbf-114">PowerShell actually supports several other types of commands:</span></span>
+
+- <span data-ttu-id="14cbf-115">Псевдонимы</span><span class="sxs-lookup"><span data-stu-id="14cbf-115">Aliases</span></span>
+- <span data-ttu-id="14cbf-116">Функции</span><span class="sxs-lookup"><span data-stu-id="14cbf-116">Functions</span></span>
+- <span data-ttu-id="14cbf-117">Сценарии</span><span class="sxs-lookup"><span data-stu-id="14cbf-117">Scripts</span></span>
+
+<span data-ttu-id="14cbf-118">Внешние исполняемые файлы или файлы, содержащие обработчик зарегистрированных типов файлов, также классифицируются как команды.</span><span class="sxs-lookup"><span data-stu-id="14cbf-118">External executable files, or files that have a registered file type handler, are also classified as commands.</span></span>
+
+<span data-ttu-id="14cbf-119">Чтобы получить все команды в сеансе, введите следующую команду:</span><span class="sxs-lookup"><span data-stu-id="14cbf-119">To get all commands in the session, type:</span></span>
 
 ```powershell
 Get-Command *
 ```
 
-<span data-ttu-id="06040-121">Так как этот список включает внешние файлы в пути поиска, они могут содержать тысячи элементов.</span><span class="sxs-lookup"><span data-stu-id="06040-121">Because this list includes external files in your search path, it may contain thousands of items.</span></span> <span data-ttu-id="06040-122">Полезнее рассмотреть сокращенный набор команд.</span><span class="sxs-lookup"><span data-stu-id="06040-122">It is more useful to look at a reduced set of commands.</span></span>
-
-<span data-ttu-id="06040-123">Чтобы получить собственные команды других типов, используйте параметр **CommandType** командлета `Get-Command`.</span><span class="sxs-lookup"><span data-stu-id="06040-123">To get native commands of other types, use the **CommandType** parameter of the `Get-Command` cmdlet.</span></span>
+<span data-ttu-id="14cbf-120">Этот список включает внешние команды в пути поиска, поэтому они могут содержать тысячи элементов.</span><span class="sxs-lookup"><span data-stu-id="14cbf-120">This list includes external commands in your search path so it can contain thousands of items.</span></span>
+<span data-ttu-id="14cbf-121">Полезнее рассмотреть сокращенный набор команд.</span><span class="sxs-lookup"><span data-stu-id="14cbf-121">It is more useful to look at a reduced set of commands.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="06040-124">Звездочка (\*) используется для сопоставления подстановочных знаков в аргументах командной строки Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="06040-124">The asterisk (\*) is used for wildcard matching in Windows PowerShell command arguments.</span></span> <span data-ttu-id="06040-125">Знак "\*" означает "сопоставление одного или нескольких символов".</span><span class="sxs-lookup"><span data-stu-id="06040-125">The \* means "match one or more of any characters".</span></span> <span data-ttu-id="06040-126">Чтобы найти все команды, которые начинаются с буквы "a", введите `Get-Command a*`.</span><span class="sxs-lookup"><span data-stu-id="06040-126">You can type `Get-Command a*` to find all commands that begin with the letter "a".</span></span> <span data-ttu-id="06040-127">В отличие от сопоставления подстановочных знаков в Cmd.exe, подстановочный знак Windows PowerShell будет также сопоставлять точку.</span><span class="sxs-lookup"><span data-stu-id="06040-127">Unlike wildcard matching in Cmd.exe, Windows PowerShell's wildcard will also match a period.</span></span>
+> <span data-ttu-id="14cbf-122">Звездочка (\*) используется для сопоставления подстановочных знаков в аргументах командной строки PowerShell.</span><span class="sxs-lookup"><span data-stu-id="14cbf-122">The asterisk (\*) is used for wildcard matching in PowerShell command arguments.</span></span> <span data-ttu-id="14cbf-123">Знак "\*" означает "сопоставление одного или нескольких символов".</span><span class="sxs-lookup"><span data-stu-id="14cbf-123">The \* means "match one or more of any characters".</span></span> <span data-ttu-id="14cbf-124">Чтобы найти все команды, которые начинаются с буквы "a", введите `Get-Command a*`.</span><span class="sxs-lookup"><span data-stu-id="14cbf-124">You can type `Get-Command a*` to find all commands that begin with the letter "a".</span></span> <span data-ttu-id="14cbf-125">В отличие от сопоставления подстановочных знаков в **cmd.exe** подстановочный знак PowerShell будет также сопоставлять точку.</span><span class="sxs-lookup"><span data-stu-id="14cbf-125">Unlike wildcard matching in **cmd.exe**, PowerShell's wildcard will also match a period.</span></span>
 
-<span data-ttu-id="06040-128">Чтобы получить псевдонимы команд, которые являются назначенными псевдонимами команд, введите:</span><span class="sxs-lookup"><span data-stu-id="06040-128">To get command aliases, which are the assigned nicknames of commands, type:</span></span>
+<span data-ttu-id="14cbf-126">Используйте параметр **CommandType** командлета `Get-Command`, чтобы получить собственные команды других типов.</span><span class="sxs-lookup"><span data-stu-id="14cbf-126">Use the **CommandType** parameter of `Get-Command` to get native commands of other types.</span></span>
+<span data-ttu-id="14cbf-127">.</span><span class="sxs-lookup"><span data-stu-id="14cbf-127">cmdlet.</span></span>
+
+<span data-ttu-id="14cbf-128">Чтобы получить псевдонимы команд, которые являются назначенными псевдонимами команд, введите:</span><span class="sxs-lookup"><span data-stu-id="14cbf-128">To get command aliases, which are the assigned nicknames of commands, type:</span></span>
 
 ```powershell
 Get-Command -CommandType Alias
 ```
 
-<span data-ttu-id="06040-129">Чтобы получить функции текущего сеанса, введите:</span><span class="sxs-lookup"><span data-stu-id="06040-129">To get the functions in the current session, type:</span></span>
+<span data-ttu-id="14cbf-129">Чтобы получить функции текущего сеанса, введите:</span><span class="sxs-lookup"><span data-stu-id="14cbf-129">To get the functions in the current session, type:</span></span>
 
 ```powershell
 Get-Command -CommandType Function
 ```
 
-<span data-ttu-id="06040-130">Чтобы отобразить скрипты в пути поиска Windows PowerShell, введите:</span><span class="sxs-lookup"><span data-stu-id="06040-130">To display scripts in Windows PowerShell's search path, type:</span></span>
+<span data-ttu-id="14cbf-130">Чтобы отобразить скрипты в пути поиска PowerShell, введите следующее:</span><span class="sxs-lookup"><span data-stu-id="14cbf-130">To display scripts in PowerShell's search path, type:</span></span>
 
 ```powershell
 Get-Command -CommandType Script
