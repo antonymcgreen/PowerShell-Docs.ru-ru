@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 description: Руководства для издателей
 title: Руководства и рекомендации для публикации коллекции PowerShell
-ms.openlocfilehash: 3aca76f8904c7eb64e5c96ae4f0f26014e0d2609
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 11207a312f916506f855c0e6e292752f72fc04c1
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190338"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45523041"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Руководства и рекомендации для публикации коллекции PowerShell
 
@@ -172,12 +172,12 @@ PowerShell поддерживает проверку подписи кода, и
 - подписание модулей каталога.
 
 Подписание файлов PowerShell — это известный подход, гарантирующий, что выполняемый код создан с помощью надежного источника и не изменялся.
-Сведения о том, как подписать файлы скрипта PowerShell, рассматриваются в [этой статье](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_signing).
+Сведения о том, как подписать файлы скрипта PowerShell, рассматриваются в [этой статье](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_signing).
 В целом подпись можно добавить в любой PS1-файл, который проверяет PowerShell во время загрузки скрипта.
-Действия PowerShell можно ограничить с помощью командлетов [политики выполнения](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies), чтобы обеспечить использование подписанных скриптов.
+Действия PowerShell можно ограничить с помощью командлетов [политики выполнения](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies), чтобы обеспечить использование подписанных скриптов.
 
 Функция подписания модулей каталога была добавлена в PowerShell версии 5.1.
-Сведения о подписании модулей см. в статье [Командлеты для работы с каталогами](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/catalog-cmdlets).
+Сведения о подписании модулей см. в статье [Командлеты для работы с каталогами](https://msdn.microsoft.com/powershell/wmf/5.1/catalog-cmdlets).
 Для подписания каталога создается файл каталога, содержащий значение хэша для каждого файла модуля, после чего подписывается файл.
 Командлеты PowerShellGet, такие как Publish-Module, Install-Module, Save-Module и Update-Module, проверят достоверность подписи, а затем подтвердят, что значение хэша каждого элемента соответствует значениям в каталоге.
 Если в системе установлена предыдущая версия модуля, в командлете Install-Module будет показано, что заверитель подписи для новой версии совпадает с заверителем для установленной ранее.

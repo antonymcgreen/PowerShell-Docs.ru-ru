@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,безопасность
 title: Возможности ролей JEA
-ms.openlocfilehash: 0531baa284e66a42a162329ea20ecfdca6d0b526
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: bd0a995adc60e50049ff99d6b23e7c2aeb745a18
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190542"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522948"
 ---
 # <a name="jea-role-capabilities"></a>Возможности ролей JEA
 
@@ -181,9 +181,9 @@ FunctionDefinitions = @{
 
 По умолчанию Select-Object является ограниченным командлетом во всех сеансах JEA, который не позволяет выбрать произвольные свойства для объектов.
 Чтобы использовать Select-Object без ограничений в функциях, требуется явно запросить полную реализацию, указав полное имя модуля.
-Любой ограниченный командлет в сеансе JEA будет демонстрировать одинаковое поведение при вызове из функции в соответствии с [приоритетом команд](https://msdn.microsoft.com/en-us/powershell/reference/3.0/microsoft.powershell.core/about/about_command_precedence) PowerShell.
+Любой ограниченный командлет в сеансе JEA будет демонстрировать одинаковое поведение при вызове из функции в соответствии с [приоритетом команд](https://msdn.microsoft.com/powershell/reference/3.0/microsoft.powershell.core/about/about_command_precedence) PowerShell.
 
-При наличии множества настраиваемых функций может быть проще поместить их в [модуль сценария PowerShell](https://msdn.microsoft.com/en-us/library/dd878340(v=vs.85).aspx).
+При наличии множества настраиваемых функций может быть проще поместить их в [модуль сценария PowerShell](https://msdn.microsoft.com/library/dd878340(v=vs.85).aspx).
 Затем можно сделать эти функции видимыми в сеансе JEA с помощью поля "VisibleFunctions", как и в случае со встроенными и сторонними модулями.
 
 ## <a name="place-role-capabilities-in-a-module"></a>Помещение возможностей ролей в модуль
@@ -207,7 +207,7 @@ New-Item -ItemType Directory $rcFolder
 Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 ```
 
-В разделе [Основные сведения о модуле PowerShell](https://msdn.microsoft.com/en-us/library/dd878324.aspx) приведены дополнительные сведения о модулях PowerShell, манифестах модуля и переменной среды PSModulePath.
+В разделе [Основные сведения о модуле PowerShell](https://msdn.microsoft.com/library/dd878324.aspx) приведены дополнительные сведения о модулях PowerShell, манифестах модуля и переменной среды PSModulePath.
 
 ## <a name="updating-role-capabilities"></a>Изменение возможностей ролей
 

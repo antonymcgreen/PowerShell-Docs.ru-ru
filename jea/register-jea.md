@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,безопасность
 title: Регистрация конфигураций JEA
-ms.openlocfilehash: cda899b20378b0183a3d88ecfd593aaf7356e967
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 2c4a8f64c966903a6eb8fcabe4cd25ae7f98b2c4
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188519"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522860"
 ---
 # <a name="registering-jea-configurations"></a>Регистрация конфигураций JEA
 
@@ -57,7 +57,7 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 
 ## <a name="multi-machine-configuration-with-dsc"></a>Конфигурация для нескольких компьютеров с помощью DSC
 
-Если JEA развертывается на нескольких компьютерах, самая простая модель развертывания заключается в использовании ресурса [настройки требуемого состояния](https://msdn.microsoft.com/en-us/powershell/dsc/overview) JEA, позволяющего быстро и согласованно развернуть JEA на каждом компьютере.
+Если JEA развертывается на нескольких компьютерах, самая простая модель развертывания заключается в использовании ресурса [настройки требуемого состояния](https://msdn.microsoft.com/powershell/dsc/overview) JEA, позволяющего быстро и согласованно развернуть JEA на каждом компьютере.
 
 Чтобы развернуть JEA с помощью DSC, следует убедиться в выполнении следующих условий:
 - Создана одна или несколько возможностей ролей, которые были добавлены в допустимый модуль PowerShell.
@@ -110,7 +110,7 @@ Configuration JEAMaintenance
 }
 ```
 
-Затем эту конфигурацию можно применить в системе, [напрямую вызвав локальный диспетчер конфигураций](https://msdn.microsoft.com/en-us/powershell/dsc/metaconfig) или обновив [конфигурацию опрашивающего сервера](https://msdn.microsoft.com/en-us/powershell/dsc/pullserver).
+Затем эту конфигурацию можно применить в системе, [напрямую вызвав локальный диспетчер конфигураций](https://msdn.microsoft.com/powershell/dsc/metaconfig) или обновив [конфигурацию опрашивающего сервера](https://msdn.microsoft.com/powershell/dsc/pullserver).
 
 Ресурс DSC также позволяет заменить конечную точку удаленного взаимодействия по умолчанию Microsoft.PowerShell.
 В этом случае ресурс автоматически регистрирует резервную конечную точку без ограничений с именем "Microsoft.PowerShell.Restricted", имеющую ACL WinRM по умолчанию (который предоставляет членам групп "Локальные администраторы" и "Пользователи удаленного управления" доступ к ней).
