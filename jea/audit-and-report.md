@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,безопасность
 title: Аудит и отчеты для JEA
-ms.openlocfilehash: e68206cd6fe94c51507f42ae2c3e6702f6fd4e0f
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 2388c735840d8d3683aa8bc9869b9fb0371e5902
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188858"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851226"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>Аудит и отчеты для JEA
 
@@ -149,5 +149,4 @@ InputObject в Out-Default представляет собой объект Powe
 
 ## <a name="see-also"></a>См. также:
 
-- [Аудит действий пользователей в сеансе JEA](audit-and-report.md)
 - [Запись блога *PowerShell ♥ the Blue Team* по безопасности](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
