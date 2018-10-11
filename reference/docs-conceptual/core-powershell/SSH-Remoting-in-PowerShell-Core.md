@@ -2,12 +2,12 @@
 title: Удаленное взаимодействие с PowerShell через SSH
 description: Удаленное взаимодействие в PowerShell Core с помощью SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: 1de034d667aa9a377e5460e7eb474402c690cb42
-ms.sourcegitcommit: 56b9be8503a5a1342c0b85b36f5ba6f57c281b63
+ms.openlocfilehash: 451a55a588381cc9bec265895b2bfad6b6f6e73c
+ms.sourcegitcommit: a652b12a0b87cdd0c8eb76381ae015467dd7b8cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "43133113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46134286"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Удаленное взаимодействие с PowerShell через SSH
 
@@ -167,6 +167,14 @@ ms.locfileid: "43133113"
    sudo launchctl stop com.openssh.sshd
    sudo launchctl start com.openssh.sshd
    ```
+
+## <a name="authentication"></a>Проверка подлинности
+
+При удаленном взаимодействии с PowerShell через SSH используется обмен данными для проверки подлинности между клиентом SSH и службой SSH. Схемы проверки подлинности в его рамках не реализуются.
+Это означает, что любые настроенные схемы проверки подлинности, включая многофакторную проверку подлинности, обрабатываются протоколом SSH независимо от PowerShell.
+Например, в службе SSH можно настроить обязательное применение проверки подлинности на основе открытых ключей, а также разовых паролей для усиления безопасности.
+Настройка многофакторной проверки подлинности выходит за рамки настоящего документа.
+Сведения о том, как правильно настроить многофакторную проверку подлинности и проверить ее работу вне PowerShell, прежде чем пытаться использовать ее для удаленного взаимодействия с PowerShell, см. в документации по SSH.
 
 ## <a name="powershell-remoting-example"></a>Пример удаленного взаимодействия PowerShell
 

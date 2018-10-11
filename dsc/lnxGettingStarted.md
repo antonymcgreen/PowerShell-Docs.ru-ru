@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Начало работы с настройкой требуемого состояния (DSC) для Linux
-ms.openlocfilehash: d5a4a17fbcffbbbd6df3dd902dbd104769b7d17e
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: d436fc3b451efb8a12dfdc44909824934b5fcbe4
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893602"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45523040"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Начало работы с настройкой требуемого состояния (DSC) для Linux
 
@@ -75,7 +75,7 @@ DSC для Linux можно скачать [здесь](https://github.com/Micro
 
 1. Импортируйте модуль nx. Модуль nx для Windows PowerShell содержит схему для встроенных ресурсов DSC в Linux, поэтому он должен быть установлен на локальном компьютере и импортирован в конфигурацию.
 
-   - Чтобы установить модуль nx, скопируйте каталог модуля nx в `$env:USERPROFILE\Documents\WindowsPowerShell\Modules\` или в `$PSHOME\Modules`. Модуль nx включается в пакет установки DSC для Linux (MSI). Чтобы импортировать модуль nx в конфигурацию, выполните команду `Import-DSCResource`:
+   - Чтобы установить модуль nx, скопируйте каталог модуля nx в `$env:USERPROFILE\Documents\WindowsPowerShell\Modules\` или в `$PSHOME\Modules`. Модуль nx включается в пакет установки DSC для Linux. Чтобы импортировать модуль nx в конфигурацию, выполните команду `Import-DSCResource`:
 
    ```powershell
    Configuration ExampleConfiguration{

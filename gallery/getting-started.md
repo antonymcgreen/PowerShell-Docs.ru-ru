@@ -3,16 +3,20 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Приступая к работе с коллекцией PowerShell
-ms.openlocfilehash: 83974698152e75efac66ea725a9c220486676d6f
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 39998df1a2bf9363dd008dc96a802157c8d691d7
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190168"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45523063"
 ---
 # <a name="get-started-with-the-powershell-gallery"></a>Приступая к работе с коллекцией PowerShell
 
-Для скачивания элементов из коллекции PowerShell требуется модуль [PowerShellGet](/powershell/module/powershellget). Модуль PowerShellGet можно найти в перечисленных ниже источниках. Входить в систему для скачивания элементов из коллекции PowerShell необязательно.
+Правильным способом установки элементов из коллекции PowerShel является использование командлетов в модуле [PowerShellGet](/powershell/module/powershellget). Входить в систему для скачивания элементов из коллекции PowerShell необязательно.
+
+> [!NOTE]
+> Можно скачать пакет непосредственно из коллекции PowerShell, но делать это не рекомендуется. Дополнительные сведения см. в статье [Скачивание пакета вручную](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/how-to/working-with-items/manual-download.md).  
+
 
 ## <a name="discovering-items-from-the-powershell-gallery"></a>Обнаружение элементов в коллекции PowerShell
 
@@ -40,7 +44,8 @@ ms.locfileid: "34190168"
 
 Если вы нашли элемент, который по вашему мнению опубликован с нарушениями, щелкните **Сообщить о нарушении** на странице этого элемента.
 
-При использовании командлетов [Find-Module][] или [Find-Script][] эти данные можно доступны в возвращенном объекте PSGetModuleInfo. Например, при выполнении `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member` возвращаются сведения о модуле PSReadLine, содержащемся в коллекции.
+При использовании командлетов [Find-Module][] или [Find-Script][] эти данные можно доступны в возвращенном объекте PSGetModuleInfo. Например, при выполнении `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member`
+возвращаются сведения о модуле PSReadLine, содержащемся в коллекции.
 
 ## <a name="downloading-items-from-the-powershell-gallery"></a>Скачивание элементов из коллекции PowerShell
 
