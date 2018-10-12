@@ -2,12 +2,12 @@
 title: Удаленное взаимодействие с PowerShell через SSH
 description: Удаленное взаимодействие в PowerShell Core с помощью SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: 451a55a588381cc9bec265895b2bfad6b6f6e73c
-ms.sourcegitcommit: a652b12a0b87cdd0c8eb76381ae015467dd7b8cd
+ms.openlocfilehash: 84c3896fe28847beb03e930f933bb4a9dfad397f
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134286"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851243"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Удаленное взаимодействие с PowerShell через SSH
 
@@ -35,7 +35,7 @@ ms.locfileid: "46134286"
 
 ## <a name="set-up-on-windows-machine"></a>Установка на компьютере Windows
 
-1. Установите последнюю версию [PowerShell Core для Windows].
+1. Установите последнюю версию [PowerShell Core для Windows](../setup/installing-powershell-core-on-windows.md#msi).
 
    - Чтобы узнать о наличии поддержки удаленного взаимодействия SSH, просмотрите набор параметров для `New-PSSession`.
 
@@ -47,7 +47,7 @@ ms.locfileid: "46134286"
    New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
    ```
 
-2. Установите последнюю версию сборки [Win32 OpenSSH] из GitHub, используя [инструкции по установке].
+2. Установите последнюю версию сборки [Win32 OpenSSH](https://github.com/PowerShell/Win32-OpenSSH/releases) из GitHub, используя [инструкции по установке](https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH).
 3. Измените файл sshd_config в том расположении, куда вы установили Win32 OpenSSH.
 
    - Включите проверку подлинности с помощью пароля:
@@ -91,8 +91,8 @@ ms.locfileid: "46134286"
 
 ## <a name="set-up-on-linux-ubuntu-1404-machine"></a>Установка на компьютере Linux (Ubuntu 14.04)
 
-1. Установите последнюю сборку [PowerShell Core для Linux] из GitHub.
-2. При необходимости установите [Ubuntu SSH].
+1. Установите последнюю сборку [PowerShell Core для Linux](../setup/installing-powershell-core-on-linux.md#ubuntu-1404) из GitHub.
+2. При необходимости установите [Ubuntu SSH](https://help.ubuntu.com/lts/serverguide/openssh-server.html).
 
    ```bash
    sudo apt install openssh-client
@@ -127,7 +127,7 @@ ms.locfileid: "46134286"
 
 ## <a name="set-up-on-macos-machine"></a>Установка на компьютере MacOS
 
-1. Установите последнюю сборку [PowerShell Core для MacOS].
+1. Установите последнюю сборку [PowerShell Core для MacOS](../setup/installing-powershell-core-on-macos.md).
 
    - Убедитесь, что удаленное взаимодействие SSH включено, выполните следующие действия:
      - Откройте `System Preferences`.
@@ -316,7 +316,5 @@ GitCommitId                    v6.0.0-alpha.17
 [PowerShell Core для MacOS](../setup/installing-powershell-core-on-macos.md)
 
 [Win32 OpenSSH](https://github.com/PowerShell/Win32-OpenSSH/releases)
-
-[установка](https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH)
 
 [Ubuntu SSH](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
