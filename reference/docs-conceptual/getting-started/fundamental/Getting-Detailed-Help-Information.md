@@ -3,12 +3,12 @@ ms.date: 08/27/2018
 keywords: powershell,командлет
 title: Получение подробной справки
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
-ms.openlocfilehash: 88f0357b935a7c75df07d667e3f2f2d0e493f89d
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: d2578604ec7c01c0b2734bd180e1babaca58b153
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134040"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851278"
 ---
 # <a name="getting-detailed-help-information"></a>Получение подробной справки
 
@@ -149,7 +149,7 @@ Get-Help c:\ps-test\TestScript.ps1
 Чтобы отобразить интернет-версию статьи справки используйте параметр **Online** командлета `Get-Help`. Все статьи справки, содержащиеся в PowerShell, в том числе статьи справки о поставщиках и концепциях (About), можно найти в онлайн-документации по [PowerShell](/powershell/scripting/powershell-scripting).
 
 > [!NOTE]
-> Параметр **Online** нельзя использовать для отображения статей справки о концепциях (about_*) и поставщиках.
+> Параметр **Online** нельзя использовать для отображения статей справки о концепциях (about_\*) и поставщиках.
 > Статьи справки об отдельных командлетах, функциях и скриптах могут не иметь интернет-версий.
 
 Например, чтобы открыть интернет-версию статьи справки о командлете `Get-ChildItem`, введите следующее:
