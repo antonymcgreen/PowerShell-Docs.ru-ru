@@ -2,16 +2,16 @@
 ms.date: 08/27/2018
 keywords: powershell,командлет
 title: Создание сценариев PowerShell
-ms.openlocfilehash: 754805148dc815a12c5c77e4894fb598c6927f7e
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: 8a152ab338d42f861b7ff38de44d68db14262abb
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43133999"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851192"
 ---
 # <a name="powershell"></a>PowerShell
 
-PowerShell — это оболочка командной строки с поддержкой задач и язык скриптов на основе .NET Framework.
+PowerShell — это оболочка командной строки с поддержкой задач и язык скриптов на основе .NET.
 PowerShell позволяет системным администраторам и опытным пользователям быстро автоматизировать задачи для управления операционными системами (Linux, macOS и Windows) и процессами.
 
 Команды PowerShell позволяют управлять компьютерами из командной строки. При использовании поставщиков PowerShell доступ к хранилищам данных, таким как реестр и хранилище сертификатов, становится таким же простым, как и доступ к файловой системе. PowerShell включает многофункциональное средство синтаксического анализа выражений и полностью разработанный язык скриптов.
