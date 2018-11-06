@@ -3,25 +3,25 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Установка PowerShellGet
-ms.openlocfilehash: c385f7fbf6b688a11face9c3ebf4e6475a7b4c33
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 5c51cb1c7ea2538cc5f8503ce6c5d80edda70e15
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893966"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002229"
 ---
 # <a name="installing-powershellget"></a>Установка PowerShellGet
 
 ## <a name="powershellget-is-an-in-box-module-in-the-following-releases"></a>Модуль PowerShellGet входит в комплект поставки в следующих выпусках:
 
-- [Windows 10](https://www.microsoft.com/en-us/windows) или более поздняя версия;
+- [Windows 10](https://www.microsoft.com/windows) или более поздняя версия;
 - [Windows Server 2016](/windows-server/windows-server) или более поздняя версия;
-- [Windows Management Framework (WMF) 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) или более поздняя версия;
+- [Windows Management Framework (WMF) 5.0](https://www.microsoft.com/download/details.aspx?id=50395) или более поздняя версия;
 - [PowerShell 6](https://github.com/PowerShell/PowerShell/releases).
 
 ## <a name="get-powershellget-module-for-powershell-versions-30-and-40"></a>Получение модуля PowerShellGet для PowerShell версии 3.0 и 4.0
 
-- [PackageManagement MSI](https://www.microsoft.com/en-us/download/details.aspx?id=51451)
+- [PackageManagement MSI](https://www.microsoft.com/download/details.aspx?id=51451)
 
 ## <a name="get-the-latest-version-from-powershell-gallery"></a>Получение последней версии из коллекции PowerShell
 
@@ -48,7 +48,7 @@ ms.locfileid: "37893966"
   Exit
   ```
 
-### <a name="for-systems-running-powershell-3-or-powershell-4-that-have-installed-the-packagemanagement-msihttpswwwmicrosoftcomen-usdownloaddetailsaspxid51451"></a>Для систем под управлением PowerShell 3 или PowerShell 4, на которых установлено [PackageManagement MSI](https://www.microsoft.com/en-us/download/details.aspx?id=51451)
+### <a name="for-systems-running-powershell-3-or-powershell-4-that-have-installed-the-packagemanagement-msihttpswwwmicrosoftcomdownloaddetailsaspxid51451"></a>Для систем под управлением PowerShell 3 или PowerShell 4, на которых установлено [PackageManagement MSI](https://www.microsoft.com/download/details.aspx?id=51451)
 
 - Используйте командлеты PowerShellGet ниже из сеанса PowerShell с повышенными привилегиями, чтобы сохранить модули в локальный каталог.
 
