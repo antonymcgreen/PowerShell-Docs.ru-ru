@@ -2,20 +2,20 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Запись поддержки конфигураций DSC
-ms.openlocfilehash: 316fd69ab1eae66ebe141b2575a05b502fc261ea
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a4b5e688744b9a4519ce06d920ad8f11efeb99ad
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222669"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225698"
 ---
-# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="52c62-103">Запись поддержки конфигураций DSC</span><span class="sxs-lookup"><span data-stu-id="52c62-103">Writing help for DSC configurations</span></span>
+# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="0a213-103">Запись поддержки конфигураций DSC</span><span class="sxs-lookup"><span data-stu-id="0a213-103">Writing help for DSC configurations</span></span>
 
-><span data-ttu-id="52c62-104">Область применения: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="52c62-104">Applies To: Windows Windows PowerShell 5.0</span></span>
+><span data-ttu-id="0a213-104">Область применения: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="0a213-104">Applies To: Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="52c62-105">Вы можете использовать справку на основе комментариев в конфигурациях DSC.</span><span class="sxs-lookup"><span data-stu-id="52c62-105">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="52c62-106">Пользователи могут получить доступ к справке, вызвав функцию конфигурации с `-?` или с помощью командлета [Get-Help](https://technet.microsoft.com/library/hh849696.aspx).</span><span class="sxs-lookup"><span data-stu-id="52c62-106">Users can access the help by calling the configuration function with `-?`, or by using the [Get-Help](https://technet.microsoft.com/library/hh849696.aspx) cmdlet.</span></span> <span data-ttu-id="52c62-107">Дополнительные сведения о справке на основе комментариев PowerShell см. в разделе [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).</span><span class="sxs-lookup"><span data-stu-id="52c62-107">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).</span></span>
+<span data-ttu-id="0a213-105">Вы можете использовать справку на основе комментариев в конфигурациях DSC.</span><span class="sxs-lookup"><span data-stu-id="0a213-105">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="0a213-106">Пользователи могут получить доступ к справке, вызвав функцию конфигурации с `-?` или с помощью командлета [Get-Help](https://technet.microsoft.com/library/hh849696.aspx).</span><span class="sxs-lookup"><span data-stu-id="0a213-106">Users can access the help by calling the configuration function with `-?`, or by using the [Get-Help](https://technet.microsoft.com/library/hh849696.aspx) cmdlet.</span></span> <span data-ttu-id="0a213-107">Дополнительные сведения о справке на основе комментариев PowerShell см. в разделе [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).</span><span class="sxs-lookup"><span data-stu-id="0a213-107">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).</span></span>
 
-<span data-ttu-id="52c62-108">В следующем примере показан сценарий, который содержит конфигурацию и справку на основе комментариев для этой конфигурации:</span><span class="sxs-lookup"><span data-stu-id="52c62-108">The following example shows a script that contains a configuration and comment-based help for it:</span></span>
+<span data-ttu-id="0a213-108">В следующем примере показан сценарий, который содержит конфигурацию и справку на основе комментариев для этой конфигурации:</span><span class="sxs-lookup"><span data-stu-id="0a213-108">The following example shows a script that contains a configuration and comment-based help for it:</span></span>
 
 ```powershell
 <#
@@ -50,18 +50,18 @@ This example will be labeled "EXAMPLE 2" when help is displayed to the user.
 
 configuration HelpSample1
 {
-    param([string]$ComputerName,[string]$FilePath)
-    File f
-    {
+    param([string]$ComputerName,[string]$FilePath)
+    File f
+    {
         Contents="Hello World"
-        DestinationPath = "c:\Destination.txt"
-    }
+        DestinationPath = "c:\Destination.txt"
+    }
 }
 ```
 
-## <a name="viewing-configuration-help"></a><span data-ttu-id="52c62-109">Просмотр справки по конфигурации</span><span class="sxs-lookup"><span data-stu-id="52c62-109">Viewing configuration help</span></span>
+## <a name="viewing-configuration-help"></a><span data-ttu-id="0a213-109">Просмотр справки по конфигурации</span><span class="sxs-lookup"><span data-stu-id="0a213-109">Viewing configuration help</span></span>
 
-<span data-ttu-id="52c62-110">Для просмотра справки по конфигурации используйте командлет **Get-Help** с именем функции или введите имя функции и `-?`.</span><span class="sxs-lookup"><span data-stu-id="52c62-110">To view the help for a configuration, use the **Get-Help** cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="52c62-111">Ниже приведены выходные данные предыдущей функции при передаче в **Get-Help**.</span><span class="sxs-lookup"><span data-stu-id="52c62-111">The following is the output of the previous function when passed to **Get-Help**:</span></span>
+<span data-ttu-id="0a213-110">Для просмотра справки по конфигурации используйте командлет **Get-Help** с именем функции или введите имя функции и `-?`.</span><span class="sxs-lookup"><span data-stu-id="0a213-110">To view the help for a configuration, use the **Get-Help** cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="0a213-111">Ниже приведены выходные данные предыдущей функции при передаче в **Get-Help**.</span><span class="sxs-lookup"><span data-stu-id="0a213-111">The following is the output of the previous function when passed to **Get-Help**:</span></span>
 
 ```powershell
 PS C:\> Get-Help HelpSample1
@@ -90,5 +90,5 @@ REMARKS
     For technical information, type: "get-help HelpSample1 -full".
 ```
 
-## <a name="see-also"></a><span data-ttu-id="52c62-112">См. также</span><span class="sxs-lookup"><span data-stu-id="52c62-112">See Also</span></span>
-* [<span data-ttu-id="52c62-113">Конфигурации DSC</span><span class="sxs-lookup"><span data-stu-id="52c62-113">DSC Configurations</span></span>](configurations.md)
+## <a name="see-also"></a><span data-ttu-id="0a213-112">См. также</span><span class="sxs-lookup"><span data-stu-id="0a213-112">See Also</span></span>
+* [<span data-ttu-id="0a213-113">Конфигурации DSC</span><span class="sxs-lookup"><span data-stu-id="0a213-113">DSC Configurations</span></span>](configurations.md)
