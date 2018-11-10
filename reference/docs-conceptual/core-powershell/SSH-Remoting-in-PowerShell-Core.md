@@ -2,12 +2,12 @@
 title: Удаленное взаимодействие с PowerShell через SSH
 description: Удаленное взаимодействие в PowerShell Core с помощью SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: 84c3896fe28847beb03e930f933bb4a9dfad397f
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
+ms.openlocfilehash: 842e67e96661bca8be54aab33cbc11aa23dbd1c0
+ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851243"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49451071"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Удаленное взаимодействие с PowerShell через SSH
 
@@ -15,7 +15,7 @@ ms.locfileid: "48851243"
 
 Функция удаленного взаимодействия PowerShell обычно использует WinRM для согласования соединения и передачи данных. Теперь протокол SSH доступен на платформах Linux и Windows, что позволяет осуществлять многоплатформенное удаленное взаимодействие с PowerShell.
 
-Служба удаленного управления Windows обеспечивает надежную модель поддержки удаленных сеансов PowerShell. Эта реализация удаленного взаимодействия по протоколу SSH сейчас не поддерживает настройку удаленных конечных точек и функцию JEA (Just Enough Administration).
+Служба удаленного управления Windows обеспечивает надежную модель поддержки удаленных сеансов PowerShell. Удаленное взаимодействие по протоколу SSH сейчас не поддерживает настройку удаленных конечных точек и функцию JEA (Just Enough Administration).
 
 Удаленное взаимодействие по SSH позволяет осуществлять базовое удаленное взаимодействие между компьютерами Windows и Linux в рамках сеансов PowerShell. Функция удаленного взаимодействия по SSH создает хост-процесс PowerShell на целевом компьютере в качестве подсистемы SSH.
 Со временем для поддержки настройки удаленных конечных точек и функции JEA мы реализуем общую модель размещения, похожую на службе удаленного управления Windows.
@@ -48,7 +48,7 @@ ms.locfileid: "48851243"
    ```
 
 2. Установите последнюю версию сборки [Win32 OpenSSH](https://github.com/PowerShell/Win32-OpenSSH/releases) из GitHub, используя [инструкции по установке](https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH).
-3. Измените файл sshd_config в том расположении, куда вы установили Win32 OpenSSH.
+3. Измените файл sshd_config в расположении `%ProgramData%\ssh`.
 
    - Включите проверку подлинности с помощью пароля:
 
@@ -57,7 +57,7 @@ ms.locfileid: "48851243"
      ```
 
      ```
-     Subsystem    powershell c:/program files/powershell/6.0.4/pwsh.exe -sshs -NoLogo -NoProfile
+     Subsystem    powershell c:/program files/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
      ```
 
      > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "48851243"
      Одно из решений — создать символьную ссылку на папку установки Powershell, которая не содержит пробелы:
 
      ```powershell
-     mklink /D c:\pwsh "C:\Program Files\PowerShell\6.0.4"
+     mklink /D c:\pwsh "C:\Program Files\PowerShell\6"
      ```
 
      а затем ввести ее в подсистеме:

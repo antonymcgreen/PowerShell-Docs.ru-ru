@@ -1,13 +1,13 @@
 ---
 title: Установка PowerShell Core в macOS
 description: Сведения об установке PowerShell Core в macOS
-ms.date: 08/06/2018
-ms.openlocfilehash: 042c933dfa83f3ab52e315036e4f817145116d00
-ms.sourcegitcommit: aa41249f153bbc6e11667ade60c878980c15abc6
+ms.date: 11/02/2018
+ms.openlocfilehash: 162e841bf71d708e9db84ea1bb2dbef13924783b
+ms.sourcegitcommit: f4247d3f91d06ec392c4cd66921ce7d0456a2bd9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45611493"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50998509"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Установка PowerShell Core в macOS
 
@@ -15,10 +15,14 @@ PowerShell Core поддерживает macOS версии 10.12 и более 
 Все пакеты доступны на нашей странице [выпусков][] GitHub.
 После установки пакета запустите `pwsh` из терминала.
 
-## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1012-or-higher"></a>Установка последнего стабильного выпуска с помощью Homebrew в macOS 10.12 или более поздней версии
+## <a name="about-brew"></a>Сведения о Brew
 
 [Homebrew][brew] является предпочтительным диспетчером пакетов для macOS.
 Если команда `brew` не найдена, нужно установить Homebrew по [соответствующим инструкциям][brew].
+
+## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1012-or-higher"></a>Установка последнего стабильного выпуска с помощью Homebrew в macOS 10.12 или более поздней версии
+
+См. дополнительные сведения о [Brew](#about-brew).
 
 Теперь можно установить PowerShell:
 
@@ -40,15 +44,13 @@ brew cask upgrade powershell
 ```
 
 > [!NOTE]
-> Команду, указанную выше, можно вызвать на узле PowerShell (pwsh), но для этого необходимо завершить его обновление. Что в свою очередь будет сделано, когда вы выйдете из PowerShell и перезапустите его.
-> Обновите значения, которые отображаются в $PSVersionTable.
+> Приведенные выше команды можно вызвать с узла PowerShell (pwsh), но затем потребуется выйти из оболочки PowerShell и перезапустить ее, чтобы завершить обновление и обновить значения в таблице $PSVersionTable.
 
 [brew]: http://brew.sh/
 
 ## <a name="installation-of-latest-preview-release-via-homebrew-on-macos-1012-or-higher"></a>Установка последнего предварительного выпуска с помощью Homebrew в macOS 10.12 или более поздней версии
 
-[Homebrew][brew] является предпочтительным диспетчером пакетов для macOS.
-Если команда `brew` не найдена, нужно установить Homebrew по [соответствующим инструкциям][brew].
+См. дополнительные сведения о [Brew](#about-brew).
 
 После установки Homebrew установка PowerShell не вызывает проблем.
 Сначала установите [cask-версии][cask-versions], что позволит устанавливать альтернативные версии cask-пакетов.
@@ -91,6 +93,8 @@ brew cask upgrade powershell-preview
 sudo installer -pkg powershell-6.1.0-osx-x64.pkg -target /
 ```
 
+Установите [OpenSSL](#install-openssl), так как это требуется для удаленного взаимодействия PowerShell и операций CIM.
+
 ## <a name="binary-archives"></a>Архивы двоичных файлов
 
 Для поддержки расширенных сценариев развертывания на платформе macOS доступны архивы `tar.gz` двоичных файлов PowerShell.
@@ -112,6 +116,41 @@ sudo chmod +x /usr/local/microsoft/powershell/6.1.0/pwsh
 
 # Create the symbolic link that points to pwsh
 sudo ln -s /usr/local/microsoft/powershell/6.1.0/pwsh /usr/local/bin/pwsh
+```
+
+Установите [OpenSSL](#install-openssl), так как это требуется для удаленного взаимодействия PowerShell и операций CIM.
+
+## <a name="installing-dependencies"></a>Установка зависимостей
+
+### <a name="install-xcode-command-line-tools"></a>Установка средств командной строки XCode
+
+```shell
+xcode-select -install
+```
+
+### <a name="install-openssl"></a>Установка OpenSSL
+
+OpenSSL требуется для удаленного взаимодействия PowerShell и операций CIM.  Установка возможна с помощью MacPorts или Brew.
+
+#### <a name="install-openssl-via-brew"></a>Установка OpenSSL с помощью Brew
+
+См. дополнительные сведения о [Brew](#about-brew).
+
+Запустите `brew install openssl`, чтобы установить OpenSSL.
+
+#### <a name="install-openssl-via-macports"></a>Установка OpenSSL с помощью MacPorts
+
+1. Установите [средство командной строки XCode](#install-xcode-command-line-tools).
+1. Установите MacPorts.
+   Инструкции см. в [руководстве по установке](https://guide.macports.org/chunked/installing.macports.html).
+1. Обновите MacPorts, запустив `sudo port selfupdate`.
+1. Обновите пакеты MacPorts, запустив `sudo port upgrade outdated`.
+1. Установите OpenSSL, запустив `sudo port instal openssl`.
+1. Создайте ссылку на библиотеки, чтобы их можно было использовать в PowerShell.
+
+```shell
+sudo mkdir -p /usr/local/opt/openssl
+sudo ln -s /opt/local/lib /usr/local/opt/openssl/lib
 ```
 
 ## <a name="uninstalling-powershell-core"></a>Удаление PowerShell Core

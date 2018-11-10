@@ -2,12 +2,12 @@
 title: Использование Visual Studio Code для разработки в PowerShell
 description: Использование Visual Studio Code для разработки в PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 8fbaba826624199d06fe4fdc785998e0135d7fe7
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: 9c06ce72c39d08e75fcb7e5cf9d5f92ae5dd8ed9
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134106"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225800"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Использование Visual Studio Code для разработки в PowerShell
 
@@ -124,12 +124,11 @@ ms.locfileid: "43134106"
 - Запуск интерактивного сеанса в отладчике
 - Подключение отладчика к хост-процессу PowerShell
 
-  Выполните следующие действия, чтобы создать файл конфигурации отладки:
+Выполните следующие действия, чтобы создать файл конфигурации отладки:
 
   1. Откройте представление **Отладка**, нажав клавиши **CTRL+SHIFT+D** (**CMD+SHIFT+D** на Mac).
   2. Щелкните значок с шестеренкой **Настройка** на панели инструментов.
-  3. Visual Studio Code предлагает вам **выбрать среду**.
-  Выберите **PowerShell**.
+  3. Visual Studio Code предлагает вам **выбрать среду**. Выберите **PowerShell**.
 
   При этом Visual Studio Code создает каталог и файл ".vscode\launch.json" в корневой папке рабочей области.
   Именно там хранится ваша конфигурация отладки. Если ваши файлы хранятся в репозитории Git, скорее всего, вы захотите зафиксировать файл launch.json.
@@ -171,9 +170,7 @@ ms.locfileid: "43134106"
 
   После задания конфигурации отладки можно указать конфигурацию, используемую во время сеанса отладки, выбрав ее в раскрывающемся списке конфигураций отладки на панели инструментов представления **Отладка**.
 
-  Существует несколько блогов, которые могут оказаться полезными при начале работы с расширением PowerShell для Visual Studio Code:
-
-Visual Studio Code:
+Существует несколько блогов, которые могут оказаться полезными при начале работы с расширением PowerShell для Visual Studio Code:
 
 - [Расширение PowerShell][ps-extension]
 - [Написание и отладка в сценариев PowerShell в Visual Studio Code][debug]
