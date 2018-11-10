@@ -1,0 +1,65 @@
+---
+ms.date: 09/11/2018
+contributor: JKeithB
+keywords: gallery,powershell,psgallery
+title: Скачивание пакета вручную
+ms.openlocfilehash: 0952aa4ec474850af5219fb2e0e9ee3e954b0f9a
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50003892"
+---
+# <a name="manual-package-download"></a><span data-ttu-id="a0303-103">Скачивание пакета вручную</span><span class="sxs-lookup"><span data-stu-id="a0303-103">Manual Package Download</span></span>
+
+<span data-ttu-id="a0303-104">В коллекции Powershell поддерживается прямое скачивание пакета с веб-сайта без использования командлетов PowerShellGet.</span><span class="sxs-lookup"><span data-stu-id="a0303-104">The Powershell Gallery supports downloading a package from the website directly, without using the PowerShellGet cmdlets.</span></span> <span data-ttu-id="a0303-105">Пакет скачивается в виде файла пакета NuGet (NUPKG-файла), который можно легко скопировать во внутренний репозиторий.</span><span class="sxs-lookup"><span data-stu-id="a0303-105">The package will be downloaded as a NuGet package (.nupkg) file, which can then be easily copied to an internal repository.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="a0303-106">Скачивание пакета вручную **не** является заменой использования командлета Install-Module.</span><span class="sxs-lookup"><span data-stu-id="a0303-106">Manual package download is **not** intended as a replacement for the Install-Module cmdlet.</span></span>
+> <span data-ttu-id="a0303-107">При скачивании пакета не происходит установка модуля или сценария.</span><span class="sxs-lookup"><span data-stu-id="a0303-107">Downloading the package does not install the module or script.</span></span> <span data-ttu-id="a0303-108">В скачанном пакете NuGet отсутствуют зависимости.</span><span class="sxs-lookup"><span data-stu-id="a0303-108">Dependencies are not included in the NuGet package downloaded.</span></span> <span data-ttu-id="a0303-109">Следующие инструкции приводятся только в информационных целях.</span><span class="sxs-lookup"><span data-stu-id="a0303-109">The following instructions are provided for reference purposes only.</span></span>
+
+## <a name="using-manual-download-to-acquire-a-package"></a><span data-ttu-id="a0303-110">Получение пакета с помощью скачивания вручную</span><span class="sxs-lookup"><span data-stu-id="a0303-110">Using manual download to acquire a package</span></span>
+
+<span data-ttu-id="a0303-111">На каждой странице находится ссылка для скачивания вручную, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="a0303-111">Each page has a link for Manual Download, as shown here:</span></span>
+
+![Скачивание вручную](../../Images/packagedisplaypagewithpseditions.png)
+
+<span data-ttu-id="a0303-113">Чтобы скачать пакет вручную, щелкните ссылку **Скачать необработанный NUPKG-файл**.</span><span class="sxs-lookup"><span data-stu-id="a0303-113">To download manually, click on **Download the raw nupkg file**.</span></span> <span data-ttu-id="a0303-114">Копия пакета копируется в папку загрузки с именем `<name>.<version>.nupkg`.</span><span class="sxs-lookup"><span data-stu-id="a0303-114">A copy of the package copied to the download folder for your browser with the name `<name>.<version>.nupkg`.</span></span>
+
+<span data-ttu-id="a0303-115">Пакет NuGet — это ZIP-архив с дополнительными файлами, содержащими сведения о содержимом пакета.</span><span class="sxs-lookup"><span data-stu-id="a0303-115">A NuGet package is a ZIP archive with extra files containing information about the contents of the package.</span></span> <span data-ttu-id="a0303-116">Некоторые браузеры, например Internet Explorer, автоматически заменяют расширение `.nupkg` на `.zip`.</span><span class="sxs-lookup"><span data-stu-id="a0303-116">Some browsers, like Internet Explorer, automatically replace the `.nupkg` file extension with `.zip`.</span></span> <span data-ttu-id="a0303-117">Чтобы развернуть пакет, при необходимости переименуйте файл `.nupkg` в `.zip`, затем извлеките его содержимое в локальную папку.</span><span class="sxs-lookup"><span data-stu-id="a0303-117">To expand the package, rename the `.nupkg` file to `.zip`, if needed, then extract the contents to a local folder.</span></span>
+
+<span data-ttu-id="a0303-118">Файл пакета NuGet содержит следующие характерные для NuGet элементы, которые не являются частью исходного упакованного кода:</span><span class="sxs-lookup"><span data-stu-id="a0303-118">A NuGet package file includes the following NuGet-specific elements that aren't part of the original packaged code:</span></span>
+
+- <span data-ttu-id="a0303-119">Папка `_rels` содержит файл `.rels` со списком зависимостей.</span><span class="sxs-lookup"><span data-stu-id="a0303-119">A folder named `_rels` - contains a `.rels` file that lists the dependencies</span></span>
+- <span data-ttu-id="a0303-120">Папка `package` содержит характерные для NuGet данные.</span><span class="sxs-lookup"><span data-stu-id="a0303-120">A folder named `package` - contains the NuGet-specific data</span></span>
+- <span data-ttu-id="a0303-121">Файл `[Content_Types].xml` описывает работу расширений, например PowerShellGet, с помощью NuGet.</span><span class="sxs-lookup"><span data-stu-id="a0303-121">A file named `[Content_Types].xml` - describes how extensions like PowerShellGet work with NuGet</span></span>
+- <span data-ttu-id="a0303-122">Файл `<name>.nuspec` содержит основной объем метаданных.</span><span class="sxs-lookup"><span data-stu-id="a0303-122">A file named `<name>.nuspec` - contains the bulk of the metadata</span></span>
+
+## <a name="installing-powershell-modules-from-a-nuget-package"></a><span data-ttu-id="a0303-123">Установка модулей PowerShell из пакета NuGet</span><span class="sxs-lookup"><span data-stu-id="a0303-123">Installing PowerShell Modules from a NuGet package</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="a0303-124">Результат выполнения этих инструкций **отличается** от результата запуска командлета `Install-Module`.</span><span class="sxs-lookup"><span data-stu-id="a0303-124">These instructions **DO NOT** give the same result as running `Install-Module`.</span></span> <span data-ttu-id="a0303-125">Эти инструкции отвечают минимальным требованиям.</span><span class="sxs-lookup"><span data-stu-id="a0303-125">These instructions fulfill the minimum requirements.</span></span> <span data-ttu-id="a0303-126">Они не предназначены для использования в качестве замены `Install-Module`.</span><span class="sxs-lookup"><span data-stu-id="a0303-126">They are not intended to be a replacement for `Install-Module`.</span></span> <span data-ttu-id="a0303-127">Некоторые шаги, выполняемые командлетом `Install-Module`, не указаны.</span><span class="sxs-lookup"><span data-stu-id="a0303-127">Some steps performed by `Install-Module` are not included.</span></span>
+
+<span data-ttu-id="a0303-128">Проще всего удалить характерные для NuGet элементы из папки.</span><span class="sxs-lookup"><span data-stu-id="a0303-128">The easiest approach is to remove the NuGet-specific elements from the folder.</span></span> <span data-ttu-id="a0303-129">При этом код PowerShell, созданный автором пакета, остается без изменений.</span><span class="sxs-lookup"><span data-stu-id="a0303-129">This leaves the PowerShell code created by the package author.</span></span> <span data-ttu-id="a0303-130">Нужно выполнить следующие действия.</span><span class="sxs-lookup"><span data-stu-id="a0303-130">The steps are:</span></span>
+
+1. <span data-ttu-id="a0303-131">Извлечь содержимое пакета NuGet в локальную папку.</span><span class="sxs-lookup"><span data-stu-id="a0303-131">Extract the contents of the NuGet package to a local folder.</span></span>
+2. <span data-ttu-id="a0303-132">Удалить характерные для NuGet элементы из папки.</span><span class="sxs-lookup"><span data-stu-id="a0303-132">Delete the NuGet-specific elements from the folder.</span></span>
+3. <span data-ttu-id="a0303-133">Переименовать папку.</span><span class="sxs-lookup"><span data-stu-id="a0303-133">Rename the folder.</span></span> <span data-ttu-id="a0303-134">По умолчанию используется имя папки `<name>.<version>`.</span><span class="sxs-lookup"><span data-stu-id="a0303-134">The default folder name is usually `<name>.<version>`.</span></span> <span data-ttu-id="a0303-135">Номер версии может содержать -prerelease, если модуль помечен как предварительная версия.</span><span class="sxs-lookup"><span data-stu-id="a0303-135">The version can include "-prerelease" if the module is tagged as a prerelease version.</span></span> <span data-ttu-id="a0303-136">Задать для папки имя модуля.</span><span class="sxs-lookup"><span data-stu-id="a0303-136">Rename the folder to just the module name.</span></span> <span data-ttu-id="a0303-137">Например, azurerm.storage.5.0.4-preview становится azurerm.storage.</span><span class="sxs-lookup"><span data-stu-id="a0303-137">For example, "azurerm.storage.5.0.4-preview" becomes "azurerm.storage".</span></span>
+4. <span data-ttu-id="a0303-138">Скопировать папку в PSModulePath.</span><span class="sxs-lookup"><span data-stu-id="a0303-138">Copy the folder to your PSModulePath.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="a0303-139">Скачивание вручную не включает зависимости, необходимые для модуля.</span><span class="sxs-lookup"><span data-stu-id="a0303-139">The manual download does not include any dependencies required by the module.</span></span> <span data-ttu-id="a0303-140">Если у пакета есть зависимости, они должны быть установлены в системе для правильной работы этого модуля.</span><span class="sxs-lookup"><span data-stu-id="a0303-140">If the package has dependencies, they must be installed on the system for this module to work correctly.</span></span> <span data-ttu-id="a0303-141">В коллекции PowerShell отображаются все зависимости, необходимые для пакета.</span><span class="sxs-lookup"><span data-stu-id="a0303-141">The PowerShell Gallery shows all dependencies required by the package.</span></span>
+
+## <a name="installing-powershell-scripts-from-a-nuget-package"></a><span data-ttu-id="a0303-142">Установка сценариев PowerShell из пакета NuGet</span><span class="sxs-lookup"><span data-stu-id="a0303-142">Installing PowerShell Scripts from a NuGet package</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="a0303-143">Результат выполнения этих инструкций **отличается** от результата запуска командлета `Install-Script`.</span><span class="sxs-lookup"><span data-stu-id="a0303-143">These instructions **DO NOT** give the same result as running `Install-Script`.</span></span> <span data-ttu-id="a0303-144">Эти инструкции отвечают минимальным требованиям.</span><span class="sxs-lookup"><span data-stu-id="a0303-144">These instructions fulfill the minimum requirements.</span></span> <span data-ttu-id="a0303-145">Они не предназначены для использования в качестве замены `Install-Script`.</span><span class="sxs-lookup"><span data-stu-id="a0303-145">They are not intended to be a replacement for `Install-Script`.</span></span>
+
+<span data-ttu-id="a0303-146">Самым простым способом является извлечение пакета NuGet и использование сценария напрямую.</span><span class="sxs-lookup"><span data-stu-id="a0303-146">The easiest approach is to extract the NuGet package, then use the script directly.</span></span> <span data-ttu-id="a0303-147">Нужно выполнить следующие действия.</span><span class="sxs-lookup"><span data-stu-id="a0303-147">The steps are:</span></span>
+
+1. <span data-ttu-id="a0303-148">Извлечь содержимое пакета NuGet в локальную папку.</span><span class="sxs-lookup"><span data-stu-id="a0303-148">Extract the contents of the NuGet package.</span></span>
+2. <span data-ttu-id="a0303-149">Файл `.PS1` в папке можно использовать прямо из этого расположения.</span><span class="sxs-lookup"><span data-stu-id="a0303-149">The `.PS1` file in the folder can be used directly from this location.</span></span>
+3. <span data-ttu-id="a0303-150">Можно удалить характерные для NuGet элементы в папке.</span><span class="sxs-lookup"><span data-stu-id="a0303-150">You may delete the NuGet-specific elements in the folder.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="a0303-151">Скачивание вручную не включает зависимости, необходимые для модуля.</span><span class="sxs-lookup"><span data-stu-id="a0303-151">The manual download does not include any dependencies required by the module.</span></span> <span data-ttu-id="a0303-152">Если у пакета есть зависимости, они должны быть установлены в системе для правильной работы этого модуля.</span><span class="sxs-lookup"><span data-stu-id="a0303-152">If the package has dependencies, they must be installed on the system for this module to work correctly.</span></span> <span data-ttu-id="a0303-153">В коллекции PowerShell отображаются все зависимости, необходимые для пакета.</span><span class="sxs-lookup"><span data-stu-id="a0303-153">The PowerShell Gallery shows all dependencies required by the package.</span></span>
