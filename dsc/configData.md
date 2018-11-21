@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование данных конфигурации
-ms.openlocfilehash: 9b0b213e2d71bfdb473fd98f8080de5c874c70e2
-ms.sourcegitcommit: 68093cc12a7a22c53d11ce7d33c18622921a0dd1
-ms.translationtype: HT
+ms.openlocfilehash: f2d25b9ced805fb4c91378ebfe840104eb6ce52a
+ms.sourcegitcommit: 91786b03704fbd2d185f674df0bc67faddfb6288
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940384"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51619183"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Использование данных конфигурации в DSC
 
@@ -185,12 +185,13 @@ MyDscConfiguration -ConfigurationData .\MyData.psd1
 
 ## <a name="using-configurationdata-variables-in-a-configuration"></a>Использование переменных ConfigurationData в конфигурации
 
-DSC предоставляет три специальные переменные, которые могут использоваться в сценарии конфигурации: **$AllNodes**, **$Node** и **$ConfigurationData**.
+DSC предоставляет следующие специальные переменные, которые могут использоваться в сценарии настройки:
 
 - **$AllNodes** относится ко всей коллекции узлов, определенных в **ConfigurationData**. Коллекцию **AllNodes** можно отфильтровать с помощью **.Where()** и **.ForEach()**.
+- **ConfigurationData** ссылается на всю хэш-таблицу, которая передается в качестве параметра при компиляции конфигурации.
+- **MyTypeName** содержит [конфигурации](configurations.md) переменная используется в имени. Например, в конфигурации `MyDscConfiguration`, `$MyTypeName` будет иметь значение `MyDscConfiguration`.
 - После фильтрации коллекции с помощью **.Where()** или **.ForEach()** элемент **Node** будет указывать на конкретную запись в **AllNodes**.
   - Дополнительные сведения об этих методах в см. в разделе [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md).
-- **ConfigurationData** ссылается на всю хэш-таблицу, которая передается в качестве параметра при компиляции конфигурации.
 
 ## <a name="using-non-node-data"></a>Использование данных, отличных от данных узла
 
