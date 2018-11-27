@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Запуск подсистемы Windows PowerShell 2.0
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
-ms.openlocfilehash: 618745ff4865dd046acf46487e87c3ca0e324f95
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
-ms.translationtype: HT
+ms.openlocfilehash: b600c1f5ea122df9bd53132ccc8edbbc6fa1e9f6
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482970"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320794"
 ---
 # <a name="starting-the-windows-powershell-20-engine"></a>Запуск подсистемы Windows PowerShell 2.0
 
@@ -22,7 +22,7 @@ Windows PowerShell 4.0 и Windows PowerShell 3.0 предназначены д
 
 Перед запуском подсистемы Windows PowerShell 2.0 включите подсистему Windows PowerShell 2.0 и Microsoft .NET Framework 3.5 с пакетом обновления 1. Инструкции см. в статье [Установка Windows PowerShell](Installing-Windows-PowerShell.md).
 
-Системы, где установлена [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) или Windows PowerShell 3.0, имеют все необходимые компоненты. Никакая дополнительная настройка не требуется. Дополнительные сведения об установке [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) или Windows PowerShell 3.0 см. в статье [Установка Windows PowerShell](Installing-Windows-PowerShell.md).
+Системы, где установлена Windows Management Framework 4.0 или Windows PowerShell 3.0, имеют все необходимые компоненты. Никакая дополнительная настройка не требуется. Дополнительные сведения об установке [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881) или Windows PowerShell 3.0 см. в статье [Установка Windows PowerShell](Installing-Windows-PowerShell.md).
 
 ## <a name="how-to-start-the-windows-powershell-20-engine"></a>Запуск подсистемы Windows PowerShell 2.0
 

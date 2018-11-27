@@ -3,16 +3,16 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
-ms.openlocfilehash: e17fee4cf0cc8ac7aa0bb36acde3b452919312d0
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: 1abae849ce599b586357fd2a8db46c608932bd4e
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953826"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320811"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
 
-Используйте следующие сочетания клавиш для выполнения действий в интегрированной среде скриптов Windows PowerShell®. Интегрированная среда сценариев Windows PowerShell доступна в серверных и клиентских операционных системах Windows, но ее можно установить и в некоторых старых операционных системах Windows в составе [скачиваемого пакета Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881).
+Используйте следующие сочетания клавиш для выполнения действий в интегрированной среде скриптов Windows PowerShell®. Интегрированная среда сценариев Windows PowerShell доступна в серверных и клиентских операционных системах Windows, но ее можно установить и в некоторых старых операционных системах Windows в составе [скачиваемого пакета Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881).
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Сочетания клавиш для редактирования текста
 
@@ -120,4 +120,4 @@ ms.locfileid: "30953826"
 
 ## <a name="see-also"></a>См. также
 
-- [PowerShell Magazine: The Complete List of Windows PowerShell ISE Keyboard Shortcuts](http://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/) (Журнал PowerShell: полный список сочетаний клавиш для интегрированной среды сценариев Windows PowerShell)
+- [PowerShell Magazine: The Complete List of Windows PowerShell ISE Keyboard Shortcuts](https://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/) (Журнал PowerShell: полный список сочетаний клавиш для интегрированной среды сценариев Windows PowerShell)

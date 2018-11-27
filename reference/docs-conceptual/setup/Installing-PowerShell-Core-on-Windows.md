@@ -2,12 +2,12 @@
 title: Установка PowerShell Core в Windows
 description: Сведения об установке PowerShell Core в Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: 2b21908c38796117308f2ac1219db00ff9086408
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
-ms.translationtype: HT
+ms.openlocfilehash: ba159a69df7e117e90e21dd26228b61146260475
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850985"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320897"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Установка PowerShell Core в Windows
 
@@ -99,7 +99,7 @@ Nano Server является "виртуальной" ОС. Двоичные ф�
 1. С помощью любой служебной программы ZIP распакуйте пакет в каталог, находящийся внутри подключенного образа Nano Server.
 2. Отключите образ и загрузите его.
 3. Подключитесь к входящему экземпляру Windows PowerShell.
-4. Следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра](#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
+4. Следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра](../core-powershell/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
 
 ### <a name="online-deployment-of-powershell-core"></a>Автономное PowerShell Core в сети
 

@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,командлет
 title: Правила авторизации и средства безопасности Windows PowerShell Web Access
-ms.openlocfilehash: e9bed3900263a51b1b8236a3c3430154a5d11886
-ms.sourcegitcommit: 31a221d982305c7f999b1afeb15e3629e9620de8
-ms.translationtype: HT
+ms.openlocfilehash: 95c61d3a0431cda9dee738d1c9f5ec843c1209f3
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43133121"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321089"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Правила авторизации и средства безопасности Windows PowerShell Web Access
 
@@ -20,19 +20,19 @@ Windows PowerShell Web Access в Windows Server 2012 R2 и Windows Server 201
 ## <a name="configuring-authorization-rules-and-site-security"></a>Настройка правил авторизации и безопасности сайта
 
 После установки Windows PowerShell Web Access и настройки шлюза пользователи могут открывать страницу входа в браузере, но они не могут выполнить вход, пока администратор Windows PowerShell Web Access не предоставит им доступ в явном виде. Управление доступом в Windows PowerShell Web Access осуществляется с помощью набора командлетов Windows PowerShell, описанных в следующей таблице. Нет соответствующего графического пользовательского интерфейса для добавления правил авторизации или управления ими.
-См. раздел [Командлеты Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md).
+См. раздел [Командлеты Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps).
 
 Администратор может определить `{0-n}` правил проверки подлинности для Windows PowerShell Web Access или не определять их. Безопасность по умолчанию является ограничивающей, а не разрешающей. Отсутствие правил проверки подлинности означает, что ни один пользователь не имеет доступа к чему-либо.
 
-Командлеты [Add-PswaAuthorizationRule](cmdlets/add-pswaauthorizationrule.md) и [Test-PswaAuthorizationRule](cmdlets/test-pswaauthorizationrule.md) в Windows Server 2012 R2 включают параметр Credential, который позволяет вам добавлять правила авторизации Windows PowerShell Web Access и тестировать их с удаленного компьютера или в активном сеансе Windows PowerShell Web Access. Как и при работе с другими командлетами Windows PowerShell, которые имеют параметр Credential, вы можете указать объект PSCredential в качестве значения этого параметра. Чтобы создать объект PSCredential, содержащий учетные данные, которые требуется передать на удаленный компьютер, выполните командлет [Get-Credential](/powershell/module/microsoft.powershell.security/Get-Credential).
+Командлеты [Add-PswaAuthorizationRule](/powershell/module/powershellwebaccess/add-pswaauthorizationrule?view=winserver2012r2-ps) и [Test-PswaAuthorizationRule](/powershell/module/powershellwebaccess/test-pswaauthorizationrule?view=winserver2012r2-ps) в Windows Server 2012 R2 включают параметр Credential, который позволяет вам добавлять правила авторизации Windows PowerShell Web Access и тестировать их с удаленного компьютера или в активном сеансе Windows PowerShell Web Access. Как и при работе с другими командлетами Windows PowerShell, которые имеют параметр Credential, вы можете указать объект PSCredential в качестве значения этого параметра. Чтобы создать объект PSCredential, содержащий учетные данные, которые требуется передать на удаленный компьютер, выполните командлет [Get-Credential](/powershell/module/microsoft.powershell.security/Get-Credential).
 
-Правила проверки подлинности Windows PowerShell Web Access — это правила белого списка. Каждое правило является определением разрешенных подключений между пользователями, целевыми компьютерами и конкретными [конфигурациями сеансов](/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) Windows PowerShell (которые также называют конечными точками или _пространствами выполнения_) на указанных конечных компьютерах.
-Понятие **пространств выполнения** рассматривается в статье, посвященной [началу использования пространств выполнения PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/).
+Правила проверки подлинности Windows PowerShell Web Access — это правила белого списка. Каждое правило является определением разрешенных подключений между пользователями, целевыми компьютерами и конкретными [конфигурациями сеансов](/powershell/module/microsoft.powershell.core/about/about_session_configurations?view=powershell-5.1) Windows PowerShell (которые также называют конечными точками или _пространствами выполнения_) на указанных конечных компьютерах.
+Понятие **пространств выполнения** рассматривается в статье, посвященной [началу использования пространств выполнения PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/)
 
 > [!IMPORTANT]
 > Для получения доступа пользователю требуется, чтобы удовлетворялось хотя бы одно правило. Если пользователю предоставлен доступ с веб-консоли к одному компьютеру либо с полными языковыми правами, либо доступ только к командлетам удаленного управления Windows PowerShell, пользователь может войти (или перескочить) на другие компьютеры, подключенные к первому целевому компьютеру. Самым безопасным способом настройки Windows PowerShell Web Access является предоставление пользователям доступа только к ограниченным конфигурациям сеансов, в которых им разрешается выполнять только конкретные задачи, требующие удаленного выполнения.
 
-Командлеты, упоминаемые в разделе [Командлеты Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md), позволяют создать набор правил доступа, которые используются для авторизации пользователя, подключающегося к шлюзу Windows PowerShell Web Access. Правила отличаются от списков управления доступом на целевом компьютере и обеспечивают дополнительный уровень безопасности при доступе через Интернет. Дополнительные сведения о безопасности приводятся в следующем разделе.
+Командлеты, упоминаемые в разделе [Командлеты Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps), позволяют создать набор правил доступа, которые используются для авторизации пользователя, подключающегося к шлюзу Windows PowerShell Web Access. Правила отличаются от списков управления доступом на целевом компьютере и обеспечивают дополнительный уровень безопасности при доступе через Интернет. Дополнительные сведения о безопасности приводятся в следующем разделе.
 
 Если пользователи не могут пройти какой-либо из предшествующих уровней безопасности, они получают универсальное сообщение "отказ в доступе" в окнах своих браузеров. Хотя подробные сведения о безопасности записываются в журнал на сервере шлюза, конечным пользователям не предоставляется информация о том, сколько уровней безопасности они прошли или на каком уровне был получен отказ на вход или авторизацию.
 
@@ -182,7 +182,7 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal `
 
    > [!NOTE]
    > Если шлюз и конечные компьютеры находятся в разных рабочих группах или доменах, то должно быть установлено отношение доверия между двумя компьютерами рабочей группы, между двумя доменами или между рабочей группой и доменом. Это отношение нельзя настроить при помощи командлетов правил авторизации Windows PowerShell Web Access. Правила авторизации не определяют отношение доверия между компьютерами. Они только разрешают пользователям подключаться к определенным конечным компьютерам и конфигурациям сеансов. Дополнительные сведения о настройке отношения доверия между разными доменами см. в статье о [создании отношений доверия между доменами и лесами](https://technet.microsoft.com/library/cc794775.aspx).
-   > Дополнительные сведения о добавлении компьютеров рабочей группы в список надежных узлов см. в статье об [удаленном управлении при помощи диспетчера сервера](https://technet.microsoft.com/library/dd759202.aspx).
+   > Дополнительные сведения о добавлении компьютеров рабочей группы в список надежных узлов см. в разделе [Удаленное управление при помощи диспетчера сервера](https://technet.microsoft.com/library/dd759202.aspx).
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Использование одного набора правил авторизации для нескольких сайтов
 
@@ -229,4 +229,4 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal `
 
 [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
 
-[Командлеты Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md)
+[Командлеты Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps)
