@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Списки с множественным выбором
 ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
-ms.openlocfilehash: 81708fd5d7204fb7d136e9d8e808303f4d3f4c30
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: a762145dc197ec7e1424b2fbdcef5e7380d13803
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30954897"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320981"
 ---
 # <a name="multiple-selection-list-boxes"></a>Списки с множественным выбором
 
@@ -128,7 +128,7 @@ $label.Text = 'Please make a selection from the list below:'
 $form.Controls.Add($label)
 ```
 
-Добавьте элемент управления (в данном случае список), который позволит пользователям указать сведения, описанные в тексте метки. Помимо текстового поля существует много других элементов управления, которые можно применить. Их описание см. в статье [Пространство имен System.Windows.Forms](http://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) на сайте MSDN.
+Добавьте элемент управления (в данном случае список), который позволит пользователям указать сведения, описанные в тексте метки. Помимо текстового поля существует много других элементов управления, которые можно применить. Их описание см. в статье [Пространство имен System.Windows.Forms](https://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) на сайте MSDN.
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.Listbox
@@ -183,6 +183,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>См. также
 
-- [Блог Hey Scripting Guy: Why don’t these PowerShell GUI examples work? (Почему эти примеры скриптов PowerShell GUI не работают)](http://go.microsoft.com/fwlink/?LinkId=506644)
+- [Блог Hey Scripting Guy: Why don’t these PowerShell GUI examples work? (Почему эти примеры скриптов PowerShell GUI не работают)](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates (WinFormsExampleUpdates от Дэйва Уайята)](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week: Multi-Select List Boxes – And More! (Совет недели по Windows PowerShell: списки с множественным выбором и многое другое)](http://technet.microsoft.com/library/ff730950.aspx)
+- [Windows PowerShell Tip of the Week: Multi-Select List Boxes – And More! (Совет недели по Windows PowerShell: списки с множественным выбором и многое другое)](https://technet.microsoft.com/library/ff730950.aspx)

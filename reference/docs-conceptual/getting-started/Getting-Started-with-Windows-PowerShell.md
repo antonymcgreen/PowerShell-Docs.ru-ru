@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Начало работы с Windows PowerShell
 ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
-ms.openlocfilehash: d8f1a416c1618040311ec0ea3b98b28aa432bcf1
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: 8a158427d319e43ec011898fe4e1826d48d5b951
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30949491"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320845"
 ---
 # <a name="getting-started-with-windows-powershell"></a>Начало работы с Windows PowerShell
 Windows PowerShell — это оболочка командной строки Windows, предназначенная специально для системных администраторов. Windows PowerShell содержит интерактивное приглашение и среду сценариев, которые можно использовать отдельно или вместе.
@@ -28,5 +28,3 @@ Windows PowerShell — это оболочка командной строки W
 - [Установка Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
 
 - [Запуск Windows PowerShell](../setup/Starting-Windows-PowerShell.md)
-
-- [Подготовка к использованию Windows PowerShell](Getting-Ready-to-Use-Windows-PowerShell.md)

@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: WinRMSecurity
-ms.openlocfilehash: 43e77067e301cdf1b792cb0d24b72ee0abb3349a
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
-ms.translationtype: HT
+ms.openlocfilehash: 59717e4806857e6760de523335bbee6028da8e84
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482953"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320556"
 ---
 # <a name="powershell-remoting-security-considerations"></a>Вопросы обеспечения безопасности удаленного взаимодействия PowerShell
 
@@ -15,7 +15,7 @@ ms.locfileid: "34482953"
 
 ## <a name="what-is-powershell-remoting"></a>Что такое удаленное взаимодействие PowerShell?
 
-Функция удаленного взаимодействия PowerShell использует службу [удаленного управления Windows (WinRM)](https://msdn.microsoft.com/library/windows/desktop/aa384426.aspx), которая является реализацией протокола [веб-служб для управления (WS-Management)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), чтобы дать пользователям возможность использовать команды PowerShell на удаленных компьютерах. Дополнительные сведения об использовании удаленного взаимодействия PowerShell можно найти в статье [Выполнение удаленных команд](https://technet.microsoft.com/library/dd819505.aspx).
+Функция удаленного взаимодействия PowerShell использует службу [удаленного управления Windows (WinRM)](https://msdn.microsoft.com/library/windows/desktop/aa384426.aspx), которая является реализацией протокола [веб-служб для управления (WS-Management)](https://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), чтобы дать пользователям возможность использовать команды PowerShell на удаленных компьютерах. Дополнительные сведения об использовании удаленного взаимодействия PowerShell можно найти в статье [Выполнение удаленных команд](https://technet.microsoft.com/library/dd819505.aspx).
 
 Удаленное взаимодействие PowerShell отличается от выполнения командлета с параметром **ComputerName** для запуска на удаленном компьютере, когда в качестве базового протокола используется удаленный вызов процедур (RPC).
 

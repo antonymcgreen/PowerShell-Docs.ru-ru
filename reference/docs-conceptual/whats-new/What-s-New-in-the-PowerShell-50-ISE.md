@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Новые возможности интегрированной среды сценариев PowerShell версии 5.0
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 35b825cfa6ea720d0af3537c5d1b16c5ececb701
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: f05e3f3f95c8ceec6e843b8a1c79e6f092e1b87b
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953588"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320590"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Новые возможности в интегрированной среде сценариев Windows PowerShell
 В этой статье описаны новые и обновленные функции, представленные в разных версиях интегрированной среды сценариев Windows PowerShell.
@@ -63,7 +63,7 @@ IntelliSense — это средство для автоматического 
 ### <a name="add-on-tools"></a>Дополнительные средства
 **Добавлено в PowerShell 3.0**
 
-Интегрированная среда сценариев Windows PowerShell теперь поддерживает дополнительные компоненты — элементы управления Windows Presentation Foundation (WPF), которые добавляются с помощью объектной модели. Дополнительные компоненты могут отображаться в вертикальной или горизонтальной области внутри консоли. Если область содержит несколько дополнительных средств, они отображаются на вкладках. Можно также добавлять и удалять дополнительные средства сторонних производителей. Дополнительные сведения об импорте и экспорте дополнительных компонентов см. в статье [Операции интегрированной среды сценариев Windows PowerShell](http://technet.microsoft.com/library/cc732148.aspx).
+Интегрированная среда сценариев Windows PowerShell теперь поддерживает дополнительные компоненты — элементы управления Windows Presentation Foundation (WPF), которые добавляются с помощью объектной модели. Дополнительные компоненты могут отображаться в вертикальной или горизонтальной области внутри консоли. Если область содержит несколько дополнительных средств, они отображаются на вкладках. Можно также добавлять и удалять дополнительные средства сторонних производителей. Дополнительные сведения об импорте и экспорте дополнительных компонентов см. в статье [Операции интегрированной среды сценариев Windows PowerShell](https://technet.microsoft.com/library/cc732148.aspx).
 
 **Какой эффект дает это изменение?**
 
@@ -224,5 +224,5 @@ IntelliSense — это средство для автоматического 
 Дополнительные сведения об интегрированной среде сценариев в Windows PowerShell см. по следующим ссылкам.
 
 - [Обзор интегрированной среды сценариев Windows PowerShell](../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
-- [Интегрированная среда сценариев на вики-сайте TechNet](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
-- [Центр сценариев](http://technet.microsoft.com/scriptcenter/default)
+- [Интегрированная среда сценариев на вики-сайте TechNet](https://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
+- [Центр сценариев](https://technet.microsoft.com/scriptcenter/default)

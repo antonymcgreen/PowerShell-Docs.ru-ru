@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Выбор элементов из списка
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
-ms.openlocfilehash: 6ff6bff8f6ce4e9236d7877c4cca24a10932cbe0
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: e3d52839409a2fd58fbdc924a2b92d96fbecee53
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30951687"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320828"
 ---
 # <a name="selecting-items-from-a-list-box"></a>Выбор элементов из списка
 
@@ -130,7 +130,7 @@ $label.Text = 'Please select a computer:'
 $form.Controls.Add($label)
 ```
 
-Добавьте элемент управления (в данном случае список), который позволит пользователям указать сведения, описанные в тексте метки. Помимо списка существует много других элементов управления, которые можно применить. Их описание см. в статье [Пространство имен System.Windows.Forms](http://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) на сайте MSDN.
+Добавьте элемент управления (в данном случае список), который позволит пользователям указать сведения, описанные в тексте метки. Помимо списка существует много других элементов управления, которые можно применить. Их описание см. в статье [Пространство имен System.Windows.Forms](https://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) на сайте MSDN.
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.ListBox
@@ -172,13 +172,13 @@ $result = $form.ShowDialog()
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 {
-    $x = $listBox.SelectedItem
-    $x
+    $x = $listBox.SelectedItem
+    $x
 }
 ```
 
 ## <a name="see-also"></a>См. также
 
-- [Блог Hey Scripting Guy: Why don’t these PowerShell GUI examples work? (Почему эти примеры скриптов PowerShell GUI не работают)](http://go.microsoft.com/fwlink/?LinkId=506644)
+- [Блог Hey Scripting Guy: Why don’t these PowerShell GUI examples work? (Почему эти примеры скриптов PowerShell GUI не работают)](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates (WinFormsExampleUpdates от Дэйва Уайята)](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week: Selecting Items from a List Box](http://technet.microsoft.com/library/ff730949.aspx) (Совет недели для Windows PowerShell: выбор элементов в списке)
+- [Windows PowerShell Tip of the Week: Selecting Items from a List Box](https://technet.microsoft.com/library/ff730949.aspx) (Совет недели для Windows PowerShell: выбор элементов в списке)

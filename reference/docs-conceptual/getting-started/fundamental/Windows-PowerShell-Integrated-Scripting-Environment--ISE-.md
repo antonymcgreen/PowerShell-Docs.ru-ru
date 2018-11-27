@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Интегрированная среда сценариев Windows PowerShell (ISE)
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: d116ec107c2d07e9fd55ee974008b3636b4ab049
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: a5fcc8c813349d0b85cc3af29047424fe787d168
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30952075"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320522"
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Интегрированная среда сценариев (ISE) Windows PowerShell
 
@@ -62,7 +62,7 @@ ms.locfileid: "30952075"
 
 ## <a name="requirements-for-running-the-windows-powershell-ise"></a>Требования для работы с интегрированной средой сценариев Windows PowerShell
 
-Интегрированная среда сценариев доступна на любом компьютере Windows, где можно запустить Windows PowerShell 2.0 или более поздней версии. Каждая версия Windows и Windows Server содержит какую-то из версий Windows PowerShell и интегрированную среду сценариев, но обновить их до актуальных версий можно, установив Windows Management Framework (WMF). Дополнительные сведения см. в документации по [WMF](/powershell/wmf/readme).
+Интегрированная среда сценариев доступна на любом компьютере Windows, где можно запустить Windows PowerShell 2.0 или более поздней версии. Каждая версия Windows и Windows Server содержит какую-то из версий Windows PowerShell и интегрированную среду сценариев, но обновить их до актуальных версий можно, установив Windows Management Framework (WMF). Дополнительные сведения см. в документации по [WMF](/powershell/wmf).
 
 > [!NOTE]
 > Поскольку интегрированной среде сценариев Windows PowerShell требуется графический пользовательский интерфейс, ее нельзя запустить в Windows Server, где установлены только основные серверные компоненты.

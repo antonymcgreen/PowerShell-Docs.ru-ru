@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Выполнение второго прыжка при удаленном взаимодействии PowerShell
-ms.openlocfilehash: 1d24473178bc50321a81ebf1115a20f17078844f
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
-ms.translationtype: HT
+ms.openlocfilehash: 06ca43e3e0524d89ec6f66f6553c4c75072beaf3
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34483021"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320709"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Выполнение второго прыжка при удаленном взаимодействии PowerShell
 
@@ -24,7 +24,7 @@ ms.locfileid: "34483021"
 
 Для проверки подлинности можно использовать [протокол CredSSP](https://msdn.microsoft.com/library/windows/desktop/bb931352.aspx). Протокол CredSSP кэширует учетные данные на удаленном сервере (_ServerB_), что делает их уязвимыми для атак, направленных на кражу учетных данных. Если безопасность удаленного компьютера нарушена, злоумышленник получает доступ к учетным данным пользователя. Протокол CredSSP по умолчанию отключен на компьютерах клиента и сервера. Включать протокол CredSSP следует только в самых надежных средах. Например, при подключении администратора домена к контроллеру домена, так как контроллер домена является высоконадежным.
 
-Дополнительные сведения о вопросах безопасности при использовании протокола CredSSP для удаленного взаимодействия PowerShell см. в статье [Accidental Sabotage: Beware of CredSSP](http://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp) (Непреднамеренный саботаж: берегитесь CredSSP).
+Дополнительные сведения о вопросах безопасности при использовании протокола CredSSP для удаленного взаимодействия PowerShell см. в статье [Accidental Sabotage: Beware of CredSSP](https://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp) (Непреднамеренный саботаж: берегитесь CredSSP).
 
 Дополнительные сведения об атаках, направленных на хищение учетных данных, см. в техническом документе [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft](https://www.microsoft.com/en-us/download/details.aspx?id=36036).
 
@@ -210,9 +210,9 @@ Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
 ### <a name="information-on-resource-based-kerberos-constrained-delegation"></a>Информация об ограниченном делегировании Kerberos на основе ресурсов
 
 - [Новые возможности проверки подлинности Kerberos](https://technet.microsoft.com/library/hh831747.aspx)
-- [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 1](http://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1)
-- [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 2](http://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2)
-- [Основные сведения об ограниченном делегировании Kerberos для развертывания прокси приложения Azure Active Directory со встроенной проверкой подлинности Windows](http://aka.ms/kcdpaper)
+- [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 1](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1)
+- [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 2](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2)
+- [Основные сведения об ограниченном делегировании Kerberos для развертывания прокси приложения Azure Active Directory со встроенной проверкой подлинности Windows](https://aka.ms/kcdpaper)
 - [[MS-ADA2]. Атрибуты M2.210 схемы Active Directory msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx)
 - [[MS-SFU]. Расширения протокола Kerberos: S4U и протокола ограниченного делегирования 1.3.2 S4U2proxy](https://msdn.microsoft.com/library/cc246079.aspx)
 - [Ограниченное делегирование Kerberos на основе ресурсов](https://blog.kloud.com.au/2013/07/11/kerberos-constrained-delegation/)

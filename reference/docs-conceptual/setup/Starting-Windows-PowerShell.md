@@ -3,17 +3,17 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Запуск Windows PowerShell
 ms.assetid: 59b649a2-c90c-4cf4-bf95-a740c59148e7
-ms.openlocfilehash: b56ddc2f577225646729b99f3a2abcb8cc60d307
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: 9184e8b0e508610e7f4775f1032f3a69c93bb8c1
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953129"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320539"
 ---
 # <a name="starting-windows-powershell"></a>Запуск Windows PowerShell
 PowerShell — это библиотека DLL обработчика скриптов, которая внедрена в несколько узлов.  Самый распространенный запускаемый узел — интерактивная командная строка (PowerShell.exe) и интерактивная среда скриптов (PowerShell_ISE.exe).
 
-Информацию о запуске Windows PowerShell® в Windows Server® 2012 R2, Windows® 8.1, Windows Server 2012 и Windows 8 см. в статье [Общие задачи управления и навигации](http://technet.microsoft.com/library/hh831491.aspx).
+Информацию о запуске Windows PowerShell® в Windows Server® 2012 R2, Windows® 8.1, Windows Server 2012 и Windows 8 см. в статье [Общие задачи управления и навигации](https://technet.microsoft.com/library/hh831491.aspx).
 
 ## <a name="how-to-start-windows-powershell-on-earlier-versions-of-windows"></a>Запуск Windows PowerShell в более ранних версиях Windows
 
@@ -106,7 +106,7 @@ ISE
 #### <a name="in-windows-81"></a>Windows® 8.1
 
 - На экране **Пуск** щелкните **Windows PowerShell (x86)**. Щелкните плитку **Windows PowerShell x86**.
-- Если вы используете [средства удаленного администрирования сервера](http://go.microsoft.com/fwlink/?LinkID=304145) для Windows 8.1, можно также открыть Windows PowerShell x86 из меню **Сервис** диспетчера сервера.
+- Если вы используете [средства удаленного администрирования сервера](https://go.microsoft.com/fwlink/?LinkID=304145) для Windows 8.1, можно также открыть Windows PowerShell x86 из меню **Сервис** диспетчера сервера.
   Выберите **Windows PowerShell (x86)**.
 - На рабочем столе переместите курсор в правый верхний угол, щелкните элемент **Поиск**, введите **PowerShell x86** и выберите **Windows PowerShell (x86)**.
 - В командной строке введите следующее: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
@@ -114,6 +114,6 @@ ISE
 #### <a name="in-windows-8"></a>Windows® 8
 
 - На экране **Пуск** переместите курсор в правый верхний угол, щелкните **Параметры**, **Плитки**, а затем переместите ползунок **Показать средства администрирования** в значение "Да". Введите **PowerShell** и выберите **Windows PowerShell (x86)**.
-- Если вы используете [средства удаленного администрирования сервера](http://www.microsoft.com/download/details.aspx?id=28972) для Windows 8, можно также открыть Windows PowerShell x86 из меню **Сервис** диспетчера сервера. Выберите **Windows PowerShell (x86)**.
+- Если вы используете [средства удаленного администрирования сервера](https://www.microsoft.com/download/details.aspx?id=28972) для Windows 8, можно также открыть Windows PowerShell x86 из меню **Сервис** диспетчера сервера. Выберите **Windows PowerShell (x86)**.
 - На экране **Пуск** или рабочем столе введите **PowerShell (x86)** и выберите **Windows PowerShell (x86)**.
 - В командной строке введите следующее: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`

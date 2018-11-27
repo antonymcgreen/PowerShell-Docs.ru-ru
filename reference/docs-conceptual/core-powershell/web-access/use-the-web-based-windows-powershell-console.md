@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Использование веб-консоли Windows PowerShell
-ms.openlocfilehash: 5d29a6f97fddf4b329fcc7097cf7d40d47d22cca
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
-ms.translationtype: HT
+ms.openlocfilehash: 2bb9c6ef486ef32012a15f9890997cf2fa6a3a0b
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34483157"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320658"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Использование веб-консоли Windows PowerShell
 
@@ -169,7 +169,7 @@ ALT+F7 | Очистка списка журнала команд
 
     Вы можете столкнуться с ограничением двойного прыжка (или подключения ко второму компьютеру из первого подключения) при попытке создания нового сеанса с помощью Windows PowerShell Web Access или работы в нем. Windows PowerShell Web Access использует удаленное пространство выполнения, и на данный момент **PowerShell.exe** не поддерживает установление удаленного подключения ко второму компьютеру из удаленного пространства выполнения. При попытке подключиться ко второму удаленному компьютеру из существующего подключения, например, с помощью командлета **Enter-PSSession**, возможно возникновение различных ошибок типа "Не удается получить сетевые ресурсы".
 
-    Чтобы избежать ошибок двойного подключения, администратор должен настроить в сетевой среде организации проверку подлинности CredSSP. Дополнительные сведения о настройке проверки подлинности CredSSP см. в разделе [CredSSP для двойного удаленного подключения](http://blogs.msdn.com/b/powershell/archive/2008/06/05/credssp-for-second-hop-remoting-part-i-domain-account.aspx) веб-сайта Майкрософт. Кроме того, можно также явно указать учетные данные для администрирования второго удаленного компьютера; неявное указание учетных данных для двойного подключения вряд ли позволит выполнить второе подключение.
+    Чтобы избежать ошибок двойного подключения, администратор должен настроить в сетевой среде организации проверку подлинности CredSSP. Дополнительные сведения о настройке проверки подлинности CredSSP см. в разделе [CredSSP для двойного удаленного подключения](https://blogs.msdn.com/b/powershell/archive/2008/06/05/credssp-for-second-hop-remoting-part-i-domain-account.aspx) веб-сайта Майкрософт. Кроме того, можно также явно указать учетные данные для администрирования второго удаленного компьютера; неявное указание учетных данных для двойного подключения вряд ли позволит выполнить второе подключение.
 
 - Удаленное взаимодействие
 
@@ -224,12 +224,12 @@ ALT+F7 | Очистка списка журнала команд
 
         Таким же способом изменяется высота окна консоли.
 
-        Дополнительные примеры по настройке внешнего вида консоли доступны в [блоге группы Windows PowerShell](http://blogs.msdn.com/b/powershell/).
+        Дополнительные примеры по настройке внешнего вида консоли доступны в [блоге группы Windows PowerShell](https://blogs.msdn.com/b/powershell/).
 
 ## <a name="see-also"></a>См. также
 
 - [Справочник по командлетам Windows PowerShell](https://technet.microsoft.com/library/ee407531(ws.10).aspx)
 - [Windows PowerShell на веб-сайте Microsoft TechNet](https://technet.microsoft.com/library/bb978526.aspx)
-- [Репозиторий центра сценариев TechNet](http://gallery.technet.microsoft.com/scriptcenter)
+- [Репозиторий центра сценариев TechNet](https://gallery.technet.microsoft.com/scriptcenter)
 - [Центр сценариев — Эй, сценарист!](https://technet.microsoft.com/scriptcenter)
-- [Блог команды разработчиков Windows PowerShell](http://blogs.msdn.com/b/powershell/)
+- [Блог команды разработчиков Windows PowerShell](https://blogs.msdn.com/b/powershell/)
