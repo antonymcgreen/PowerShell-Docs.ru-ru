@@ -3,22 +3,23 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Синтаксис поиска по коллекции
-ms.openlocfilehash: 9aadb6771c85845cc3fa05cb56f0194b060d1c1b
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.openlocfilehash: aabcaa1f1b5b641ab5033c9ba2e358477c84a23b
+ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003895"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52742862"
 ---
 # <a name="gallery-search-syntax"></a>Синтаксис поиска по коллекции
 
-Коллекция PowerShell содержит текстовое окно поиска, где можно использовать слова, фразы и выражения с ключевыми словами, чтобы сузить результаты поиска.
+Можно найти в коллекции PowerShell с помощью [веб-сайте коллекции PowerShell](https://www.powershellgallery.com/).
+Веб-сайт коллекции PowerShell содержит текстовое окно где слова, фразы и выражения можно использовать для сужения результатов поиска.
 
 ## <a name="search-by-keywords"></a>Поиск по ключевым словам
 
     dsc azure sql
 
-Поисковая система пытается показать соответствующие документы, содержащие все три ключевые слова.
+Поиск пытается найти соответствующие документы, содержащие все три ключевые слова и вернуть соответствующие документы.
 
 ## <a name="search-using-phrases-and-keywords"></a>Поиск с использованием ключевых слов и фраз
 
@@ -37,10 +38,9 @@ ms.locfileid: "50003895"
 
 ## <a name="examples"></a>Примеры
 
-    ID:"PSReadline"
-    id:"AzureRM.Profile"
-
-— поиск пакетов с текстом PSReadline или AzureRM.Profile в поле ID;
+    ID:PSReadline
+    
+Находит все пакеты с Идентификатором, содержащая «PSReadline».
 
     Id:"AzureRM.Profile"
 
@@ -50,40 +50,35 @@ ms.locfileid: "50003895"
 
     Id:"azure"
 
-вы получите такие результаты, как AzureRM.Profile и Azure.Storage;
+Это обеспечивает результаты, содержащие AzureRM.Profile "и «Azure.Storage более поздней».
 
-можно также выполнить поиск с несколькими ключевыми словами в одном поле; вы также можете сочетать разные поля.
+можно также выполнить поиск с несколькими ключевыми словами в одном поле; 
 
     id:azure tags:intellisense
-    id:azure id:storage
 
-Можно выполнять поиск следующих фраз.
+И может выполнять поиск фраз с использованием двойных кавычек:
 
     id:"azure.storage"
 
-
 Чтобы найти все пакеты с тегом DSC:
 
-    Tags:"DSC"
+    Tags:DSC
 
 Чтобы найти все пакеты с указанной функцией:
 
-    Functions:"Update-AzureRM"
+    Functions:Get-TreeSize
 
 Чтобы найти все пакеты с указанным командлетом:
 
-    Cmdlets:"Get-AzureRmEnvironment"
+    Cmdlets:Get-AzureRmEnvironment
 
 Чтобы найти все пакеты с указанным именем ресурса DSC:
 
-    DscResources:"xArchive"
+    DscResources:xArchive
 
 Чтобы найти все пакеты с указанной версией PowerShellVersion:
 
-    PowerShellVersion:"5.0"
-    PowerShellVersion:"3.0"
-    PowerShellVersion:"2.0"
-
+    PowerShellVersion:2.0
 
 Наконец, если вы используете поле, которое не поддерживается, например commands, мы просто проигнорируем его и выполним поиск по всем полям. Поэтому следующий запрос
 
