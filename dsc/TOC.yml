@@ -1,232 +1,215 @@
 items:
 - name: Обзор
-  href: overview.md
   items:
+  - name: Обзор платформы Desired State Configuration для разработчиков
+    href: overview/overview.md
   - name: Обзор платформы Desired State Configuration для руководителей
-    href: decisionMaker.md
+    href: overview/decisionMaker.md
   - name: Обзор платформы Desired State Configuration для инженеров
-    href: DscForEngineers.md
-  - name: Краткое руководство по DSC
-    href: quickStart.md
+    href: overview/DscForEngineers.md
+  - name: Общие сведения о роли DSC в конвейере CI/CD
+    href: overview/authoringAdvanced.md
+- name: Начало работы
+  items:
+  - name: Начало работы с DSC в Linux
+    href: getting-started/lnxGettingStarted.md
+  - name: Начало работы с DSC в Nano
+    href: getting-started/nanoDSC.md
+  - name: Начало работы с DSC в службе автоматизации Azure
+    href: getting-started/azureDSC.md
+  - name: Начало работы с DSC в решении "Виртуальные машины Azure"
+    href: getting-started/azureDSCexthistory.md
+- name: Краткие руководства
+  items:
+  - name: Создание веб-сайта с использованием DSC
+    href: quickstarts/website-quickStart.md
 - name: Конфигурации
-  href: configurations.md
   items:
-  - name: Применение конфигураций
-    href: enactingConfigurations.md
-  - name: Разделение данных конфигурации и данных среды
-    href: separatingEnvData.md
-  - name: Использование ресурсов с несколькими версиями
-    href: sxsResource.md
-  - name: Запуск DSC с учетными данными пользователя
-    href: runAsUser.md
-  - name: Указание межузловых зависимостей
-    href: crossNodeDependencies.md
-  - name: Данные конфигурации
-    href: configData.md
+  - name: Концепции
     items:
-    - name: Параметры учетных данных в данных конфигурации
-      href: configDataCredentials.md
-  - name: Вложение конфигураций
-    href: compositeConfigs.md
-  - name: Защита MOF-файла конфигурации
-    href: secureMOF.md
-  - name: Частичные конфигурации
-    href: partialConfigs.md
-  - name: Запись поддержки конфигураций DSC
-    href: configHelp.md
-  - name: Настройка виртуальной машины при начальной загрузке с помощью DSC
-    href: bootstrapDsc.md
+    - name: Что такое конфигурация?
+      href: configurations/configurations.md
+  - name: Практические руководства
     items:
-    - name: Раздел реестра DSCAutomationHostEnabled
-      href: DSCAutomationHostEnabled.md
-- name: Ресурсы
-  href: resources.md
-  items:
-  - name: Встроенные ресурсы
-    href: builtInResource.md
-    items:
-    - name: Ресурс Archive
-      href: archiveResource.md
-    - name: Ресурс Environment
-      href: environmentResource.md
-    - name: Ресурс File
-      href: fileResource.md
-    - name: Ресурс Group
-      href: groupResource.md
-    - name: Ресурс GroupSet
-      href: groupSetResource.md
-    - name: Ресурс Log
-      href: logResource.md
-    - name: Ресурс Package
-      href: packageResource.md
-    - name: Ресурс ProcessSet
-      href: processSetResource.md
-    - name: Ресурс Registry
-      href: registryResource.md
-    - name: Ресурс Script
-      href: scriptResource.md
-    - name: Ресурс Service
-      href: serviceResource.md
-    - name: Ресурс ServiceSet
-      href: serviceSetResource.md
-    - name: Ресурс пользователя
-      href: userResource.md
-    - name: Ресурс WaitForAll
-      href: waitForAllResource.md
-    - name: Ресурс WaitForAny
-      href: waitForAnyResource.md
-    - name: Ресурс WaitForSome
-      href: waitForSomeResource.md
-    - name: Ресурс WindowsFeature
-      href: windowsfeatureResource.md
-    - name: Ресурс WindowsFeatureSet
-      href: windowsFeatureSetResource.md
-    - name: Ресурс WindowsOptionalFeature
-      href: windowsOptionalFeatureResource.md
-    - name: Ресурс WindowsOptionalFeatureSet
-      href: windowsOptionalFeatureSetResource.md
-    - name: Ресурс WindowsPackageCab
-      href: windowsPackageCabResource.md
-    - name: Ресурс WindowsProcess
-      href: windowsProcessResource.md
-  - name: Создание пользовательских ресурсов
-    href: authoringResource.md
-    items:
-    - name: Настраиваемые ресурсы на основе MOF-файла
-      href: authoringResourceMOF.md
+    - name: Создание, компиляция и применение конфигурации
+      href: configurations/write-compile-apply-configuration.md
+    - name: Работа с ресурсами в конфигурациях
       items:
-      - name: Ресурс на основе MOF-файла в C#
-        href: authoringResourceMofCS.md
-    - name: Настраиваемые ресурсы на основе классов
-      href: authoringResourceClass.md
-    - name: Составные ресурсы
-      href: authoringResourceComposite.md
-    - name: Расширенная разработка DSC для композиции и совместной работы
-      href: authoringAdvanced.md
-    - name: Запись ресурса DSC с одним экземпляром (рекомендуется)
-      href: singleInstance.md
+      - name: Использование Import-DSCResource
+        href: configurations/import-dscresource.md
+      - name: Установка дополнительных ресурсов DSC
+        href: configurations/install-additional-dsc-resources.md
+      - name: Импорт определенной версии установленного ресурса
+        href: configurations/sxsResource.md
+      - name: Использование учетных данных с ресурсами DSC
+        href: configurations/runAsUser.md
+    - name: Создание динамических конфигураций
+      items:
+      - name: Добавление параметров в конфигурацию
+        href: configurations/add-parameters-to-a-configuration.md
+      - name: Условные операторы и циклы в конфигурациях
+        href: configurations/flow-control-in-configurations.md
+      - name: Создание справки по конфигурациям DSC
+        href: configurations/configHelp.md
+      - name: Вложение конфигураций
+        href: configurations/compositeconfigs.md
+    - name: Данные конфигурации
+      items:
+      - name: Разделение данных конфигурации из конфигураций
+        href: configurations/configData.md
+      - name: Разделение данных конфигурации и данных среды (psd1)
+        href: configurations/separatingEnvData.md
+      - name: Параметры учетных данных в данных конфигурации
+        href: configurations/configDataCredentials.md
+    - name: Зависимости в конфигурациях
+      items:
+      - name: Использование зависимостей ресурсов с DependsOn
+        href: configurations/resource-depends-on.md
+      - name: Межузловые зависимости
+        href: configurations/crossNodeDependencies.md
+- name: Ресурсы
+  items:
+  - name: Концепции
+    items:
+    - name: Общие сведения о ресурсах
+      href: resources/resources.md
+    - name: Получение, тестирования и настройка
+      href: resources/get-test-set.md
+    - name: Настраиваемые ресурсы
+      href: resources/authoringresource.md
+    - name: Создание ресурса DSC с одним экземпляром (рекомендуется)
+      href: resources/singleInstance.md
     - name: Контрольный список для создания ресурсов
-      href: resourceAuthoringChecklist.md
+      href: resources/resourceAuthoringChecklist.md
+  - name: Практические руководства
+    items:
+    - name: Создание ресурсов на основе MOF в PowerShell
+      href: resources/authoringResourceMOF.md
+    - name: Создание ресурсов на основе классов в PowerShell
+      href: resources/authoringResourceClass.md
+    - name: Создание составных ресурсов в PowerShell
+      href: resources/authoringResourceComposite.md
+    - name: Создание ресурсов на основе MOF на C#
+      href: resources/authoringResourceMofCS.md
+    - name: Использование конструктора ресурсов
+      href: resources/authoringResourceMofDesigner.md
+- name: Управление узлами
+  items:
+  - name: Практические руководства
+    items:
+    - name: Применение, получение и тестирование конфигураций на узле
+      href: managing-nodes/apply-get-test.md
+    - name: Настройка локального экземпляра Configuration Manager (версия 5)
+      href: managing-nodes/metaConfig.md
+    - name: Настройка локального экземпляра Configuration Manager (версия 4)
+      href: managing-nodes/metaConfig4.md
+    - name: Прямой вызов методов ресурсов DSC
+      href: managing-nodes/directCallResource.md
+- name: Сервер — получатель данных
+  items:
+  - name: Концепции
+    items:
+    - name: Модель опрашивания и запрашивания
+      href: pull-server/enactingConfigurations.md
+  - name: Практические руководства
+    items:
+    - name: Настройка опрашиваемого сервера
+      items:
+      - name: Настройка опрашиваемого SMB-сервера DSC
+        href: pull-server/pullServerSMB.md
+      - name: Настройка опрашиваемого HTTP-сервера DSC
+        href: pull-server/pullServer.md
+    - name: Регистрация узла на опрашиваемом сервере
+      href: pull-server/pullClient.md
+      items:
+      - name: Настройка опрашиваемого клиента с помощью имен конфигурации (версия 5)
+        href: pull-server/pullClientConfigNames.md
+      - name: Настройка опрашиваемого клиента с помощью идентификаторов конфигурации (версия 5)
+        href: pull-server/pullClientConfigID.md
+      - name: Настройка опрашиваемого клиента с помощью идентификаторов конфигурации (версия 4)
+        href: pull-server/pullClientConfigID4.md
+      - name: Частичные конфигурации
+        href: pull-server/partialconfigs.md
+    - name: Развертывание конфигураций на опрашиваемом сервере
+      items:
+      - name: Публикация конфигураций на опрашиваемом сервере (версия 4 и 5)
+        href: pull-server/publishConfigs.md
+      - name: Упаковка и передача ресурсов на опрашиваемый сервер (версия 4)
+        href: pull-server/package-upload-resources.md
+      - name: Обновление узлов на опрашиваемом сервере
+        href: pull-server/update-nodes-manually.md
+      - name: Использование сервера отчетов DSC
+        href: pull-server/reportServer.md
+    - name: Защита опрашиваемого сервера
+      items:
+      - name: Безопасность опрашиваемого сервера
+        href: pull-server/secureServer.md
+      - name: Защита MOF-файлов с помощью сертификатов
+        href: pull-server/secureMOF.md
+- name: Руководства
+  items:
+  - name: Создание конвейера CI/CD с помощью DSC, Pester и Visual Studio Team Services
+    href: tutorials/dscCiCd.md
+  - name: Настройка виртуальной машины при начальной загрузке с помощью DSC
+    href: tutorials/bootstrapDsc.md
+  - name: Настройка раздела реестра DSCAutomationHostEnabled
+    href: tutorials/DSCAutomationHostEnabled.md
+- name: Диагностика
+  items:
+  - name: Известные проблемы
+    href: troubleshooting/troubleshooting.md
   - name: Отладка ресурсов DSC
-    href: debugResource.md
-  - name: Прямой вызов методов ресурсов DSC
-    href: directCallResource.md
-- name: Локальный диспетчер конфигураций
-  items:
-  - name: Настройка локального диспетчера конфигураций (LCM)
-    href: metaConfig.md
-  - name: Настройка LCM в PowerShell 4.0
-    href: metaConfig4.md
-- name: Модель опроса DSC
-  items:
-  - name: Опрашивающая служба DSC
-    href: pullServer.md
-  - name: Настройка опрашивающего SMB-сервера DSC
-    href: pullServerSMB.md
-  - name: Настройка опрашивающего клиента
-    href: pullClient.md
-    items:
-    - name: Настройка опрашивающего клиента с помощью имен конфигураций
-      href: pullClientConfigNames.md
-    - name: Настройка опрашивающего клиента с помощью идентификатора конфигурации
-      href: pullClientConfigID.md
-  - name: Использование сервера отчетов DSC
-    href: reportServer.md
-  - name: Рекомендации по опрашивающим серверам
-    href: secureServer.md
-- name: Примеры DSC
-  href: dscExamples.md
-  items:
-  - name: Создание конвейера непрерывной интеграции и непрерывного развертывания с помощью DSC, Pester и Visual Studio Team Services
-    href: dscCiCd.md
-  - name: Разделение данных конфигурации и данных среды
-    href: separatingEnvData.md
-- name: Устранение неполадок в DSC
-  href: troubleshooting.md
-- name: Использование DSC на сервере Nano Server
-  href: nanoDsc.md
-- name: DSC в Linux
-  items:
-  - name: Начало работы с DSC в Linux
-    href: lnxGettingStarted.md
-  - name: Встроенные ресурсы для Linux
-    href: lnxBuiltInResources.md
-    items:
-    - name: Ресурс nxArchive
-      href: lnxArchiveResource.md
-    - name: Ресурс nxEnvironment
-      href: lnxEnvironmentResource.md
-    - name: Ресурс nxFile
-      href: lnxFileResource.md
-    - name: Ресурс nxFileLine
-      href: lnxFileLineResource.md
-    - name: Ресурс nxGroup
-      href: lnxGroupResource.md
-    - name: Ресурс nxPackage
-      href: lnxPackageResource.md
-    - name: Ресурс nxScript
-      href: lnxScriptResource.md
-    - name: Ресурс nxService
-      href: lnxServiceResource.md
-    - name: Ресурс nxSshAuthorizedKeys
-      href: lnxSshAuthorizedKeysResource.md
-    - name: Ресурс nxUser
-      href: lnxUserResource.md
-- name: Использование DSC в Microsoft Azure
-  href: azureDsc.md
-  items:
-  - name: История выпусков расширения DSC
-    href: azureDscexthistory.md
-- name: Справочник по MOF-файлам DSC
+    href: troubleshooting/debugResource.md
+- name: Ссылка
   items:
   - name: Класс MSFT_DSCLocalConfigurationManager
-    href: msft-dsclocalconfigurationmanager.md
+    href: reference/msft-dsclocalconfigurationmanager.md
     items:
     - name: Метод ApplyConfiguration класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-applyconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-applyconfiguration.md
     - name: Метод DisableDebugConfiguration класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
     - name: Метод EnableDebugConfiguration класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
     - name: Метод GetConfiguration класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-getconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-getconfiguration.md
     - name: Метод GetConfigurationResultOutput класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
+      href: reference/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
     - name: Метод GetConfigurationStatus класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-getconfigurationstatus.md
+      href: reference/msft-dsclocalconfigurationmanager-getconfigurationstatus.md
     - name: Метод GetMetaConfiguration класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-getmetaconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-getmetaconfiguration.md
     - name: Метод PerformRequiredConfigurationChecks класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
+      href: reference/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
     - name: Метод RemoveConfiguration класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-removeconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-removeconfiguration.md
     - name: Метод ResourceGet класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-resourceget.md
+      href: reference/msft-dsclocalconfigurationmanager-resourceget.md
     - name: Метод ResourceSet класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-resourceset.md
+      href: reference/msft-dsclocalconfigurationmanager-resourceset.md
     - name: Метод ResourceTest класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-resourcetest.md
+      href: reference/msft-dsclocalconfigurationmanager-resourcetest.md
     - name: Метод RollBack класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-rollback.md
+      href: reference/msft-dsclocalconfigurationmanager-rollback.md
     - name: Метод SendConfiguration класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-sendconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-sendconfiguration.md
     - name: Метод SendConfigurationApply класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-sendconfigurationapply.md
+      href: reference/msft-dsclocalconfigurationmanager-sendconfigurationapply.md
     - name: Метод SendConfigurationApplyAsync класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
+      href: reference/msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
     - name: Метод SendMetaConfigurationApply класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
+      href: reference/msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
     - name: Метод StopConfiguration класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-stopconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-stopconfiguration.md
     - name: Метод TestConfiguration класса MSFT_DSCLocalConfigurationManager
-      href: msft-dsclocalconfigurationmanager-testconfiguration.md
-- name: Дополнительные ресурсы
+      href: reference/msft-dsclocalconfigurationmanager-testconfiguration.md
+- name: Дополнительные материалы
   items:
   - name: Технические документы
-    href: whitepapers.md
-ms.openlocfilehash: d8c8af17c36b543dccda07172a04f253e533abe1
-ms.sourcegitcommit: aa41249f153bbc6e11667ade60c878980c15abc6
+    href: further-reading/whitepapers.md
+ms.openlocfilehash: 454267feeae7a9ec108f910a510cd40848744a51
+ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45611511"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53400100"
