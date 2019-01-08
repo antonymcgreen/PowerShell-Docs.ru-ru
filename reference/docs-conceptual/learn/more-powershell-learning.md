@@ -1,0 +1,41 @@
+---
+ms.date: 06/05/2017
+keywords: powershell,командлет
+title: Другие статьи о PowerShell
+ms.openlocfilehash: 5e81801df99a55a358d1d1405bdc79f882aae92f
+ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.translationtype: MTE95
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012557"
+---
+# <a name="more-powershell-learning"></a><span data-ttu-id="862c9-103">Другие статьи о PowerShell</span><span class="sxs-lookup"><span data-stu-id="862c9-103">More PowerShell learning</span></span>
+
+<span data-ttu-id="862c9-104">Другие источники для изучения PowerShell</span><span class="sxs-lookup"><span data-stu-id="862c9-104">Other sources to learn PowerShell</span></span>
+
+## <a name="resources-for-windows-powershell-users"></a><span data-ttu-id="862c9-105">Ресурсы для пользователей Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="862c9-105">Resources for Windows PowerShell users</span></span>
+
+<span data-ttu-id="862c9-106">Помимо справки, доступной в командной строке, пользователи, желающие использовать Windows PowerShell, могут найти дополнительную информацию в следующих источниках.</span><span class="sxs-lookup"><span data-stu-id="862c9-106">In addition to the Help available at the command line, the following resources provide more information for users who want to run Windows PowerShell.</span></span>
+
+- <span data-ttu-id="862c9-107">[Блог команды разработчиков Windows PowerShell](https://blogs.msdn.microsoft.com/powershell/).</span><span class="sxs-lookup"><span data-stu-id="862c9-107">[Windows PowerShell Team Blog](https://blogs.msdn.microsoft.com/powershell/).</span></span> <span data-ttu-id="862c9-108">Лучший ресурс, позволяющий учиться непосредственно у рабочей группы по Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="862c9-108">The best resource for learning directly from the Windows PowerShell product team.</span></span>
+- <span data-ttu-id="862c9-109">В блоге [Hey, Scripting Guy! ](https://blogs.technet.microsoft.com/heyscriptingguy/) каждые 7 дней публикуется новый контент, и он заслуженно и на постоянной основе входит в пятерку лучших блогов Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="862c9-109">[The Hey, Scripting Guy! Blog](https://blogs.technet.microsoft.com/heyscriptingguy/) publishes new content seven days a week, and is consistently ranked in the top five of all Microsoft blogs.</span></span> <span data-ttu-id="862c9-110">Статьи основаны на сценариях и написаны приятным и живым языком.</span><span class="sxs-lookup"><span data-stu-id="862c9-110">The articles are scenario-driven, and written in an engaging and lively manner.</span></span>
+- <span data-ttu-id="862c9-111">[Страница изучения PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/04/weekend-scripter-the-best-ways-to-learn-powershell/) — дом Windows PowerShell в Центре скриптов TechNet.</span><span class="sxs-lookup"><span data-stu-id="862c9-111">[The Learn PowerShell page](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/04/weekend-scripter-the-best-ways-to-learn-powershell/) is the Windows PowerShell hub on the TechNet Script Center.</span></span> <span data-ttu-id="862c9-112">На этой странице размещен ряд видео для начинающих от Эда Уилсона (Ed Wilson), специалиста по сценариям Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="862c9-112">This page hosts a series of beginner video sessions conducted by the Microsoft Scripting Guy Ed Wilson.</span></span> <span data-ttu-id="862c9-113">Здесь также находятся тесты по Windows PowerShell, ссылки на контент от сообщества и многое другое.</span><span class="sxs-lookup"><span data-stu-id="862c9-113">It also contains Windows PowerShell quizzes, links to community content, and more.</span></span>
+- <span data-ttu-id="862c9-114">Возникли вопросы по использованию Windows PowerShell?</span><span class="sxs-lookup"><span data-stu-id="862c9-114">Have questions about using Windows PowerShell?</span></span> <span data-ttu-id="862c9-115">Объединяйтесь с сотнями других людей с похожими интересами на [форуме PowerShell в TechNet](https://social.technet.microsoft.com/Forums/home?forum=winserverpowershell).</span><span class="sxs-lookup"><span data-stu-id="862c9-115">Connect with hundreds of other people who have similar interests on the [TechNet PowerShell forum](https://social.technet.microsoft.com/Forums/home?forum=winserverpowershell).</span></span>
+
+## <a name="video-training"></a><span data-ttu-id="862c9-116">Видео</span><span class="sxs-lookup"><span data-stu-id="862c9-116">Video Training</span></span>
+
+### <a name="microsoft-virtual-academy"></a><span data-ttu-id="862c9-117">Виртуальная академия Майкрософт</span><span class="sxs-lookup"><span data-stu-id="862c9-117">Microsoft Virtual Academy</span></span>
+
+- [<span data-ttu-id="862c9-118">Быстрое начало работы с PowerShell 3.0</span><span class="sxs-lookup"><span data-stu-id="862c9-118">Getting Started with PowerShell 3.0 Jump Start</span></span>](https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-30-jump-start-8276)
+- [<span data-ttu-id="862c9-119">Быстрое начало работы с расширенными возможностями средств и сценариев PowerShell 3.0</span><span class="sxs-lookup"><span data-stu-id="862c9-119">Advanced Tools & Scripting with PowerShell 3.0 Jump Start</span></span>](https://mva.microsoft.com/en-US/training-courses/advanced-tools-scripting-with-powershell-30-jump-start-8277)
+
+### <a name="channel-9-videos"></a><span data-ttu-id="862c9-120">Видео Channel 9</span><span class="sxs-lookup"><span data-stu-id="862c9-120">Channel 9 videos</span></span>
+
+<span data-ttu-id="862c9-121">Channel 9 — наши видео платформа публикации.</span><span class="sxs-lookup"><span data-stu-id="862c9-121">Channel 9 is our video publishing platform.</span></span> <span data-ttu-id="862c9-122">Доступны сотни видео о PowerShell.</span><span class="sxs-lookup"><span data-stu-id="862c9-122">There are hundreds of videos about PowerShell available.</span></span> <span data-ttu-id="862c9-123">[Поиск для «PowerShell»](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) доступных видео.</span><span class="sxs-lookup"><span data-stu-id="862c9-123">[Search for "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) to see what videos are available.</span></span>
+
+## <a name="resources-for-windows-powershell-developers"></a><span data-ttu-id="862c9-124">Ресурсы для разработчиков Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="862c9-124">Resources for Windows PowerShell Developers</span></span>
+
+<span data-ttu-id="862c9-125">Следующие ресурсы помогут разработчикам создавать собственные модули, функции, командлеты, поставщики, а также приложения, содержащие в себе Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="862c9-125">The following resources provide resources to help developers create their own Windows PowerShell modules, functions, cmdlets, providers, and hosting applications.</span></span>
+
+- <span data-ttu-id="862c9-126">[Пакет SDK для Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkID=89595).</span><span class="sxs-lookup"><span data-stu-id="862c9-126">[Windows PowerShell SDK](https://go.microsoft.com/fwlink/p/?LinkID=89595).</span></span> <span data-ttu-id="862c9-127">Предоставляет справочные сведения.</span><span class="sxs-lookup"><span data-stu-id="862c9-127">Provides reference content.</span></span>
+- <span data-ttu-id="862c9-128">[Руководство программиста по Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkID=89596).</span><span class="sxs-lookup"><span data-stu-id="862c9-128">[Windows PowerShell Programmer's Guide](https://go.microsoft.com/fwlink/p/?LinkID=89596).</span></span> <span data-ttu-id="862c9-129">Предоставляет учебники.</span><span class="sxs-lookup"><span data-stu-id="862c9-129">Provides tutorials.</span></span> <span data-ttu-id="862c9-130">Также информирует об основополагающих концепциях Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="862c9-130">Also contains information about fundamental Windows PowerShell concepts.</span></span>
