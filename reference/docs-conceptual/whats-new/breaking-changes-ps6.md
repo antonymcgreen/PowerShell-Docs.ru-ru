@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
-ms.openlocfilehash: 60ce7a1676403bb08b57bf852ba725acde86a30c
-ms.sourcegitcommit: 2d9cf1ccb9a653db7726a408ebcb65530dcb1522
-ms.translationtype: HT
+ms.openlocfilehash: d477a9b27e8d5df6653ee40f8b606879b60a80c7
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34309630"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655452"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Критические изменения в PowerShell Core 6.0
 
@@ -271,3 +271,4 @@ ms.locfileid: "34309630"
 - Параметры `System.Net.ServicePointManager` больше не обрабатываются.
 - В настоящее время в macOS нет проверки подлинности на основе сертификатов.
 - Использование `-Credential` в URI `http://` завершится ошибкой. Используйте URI `https://` или передайте параметр `-AllowUnencryptedAuthentication`, чтобы подавить ошибку.
+- `-MaximumRedirection` Теперь создает неустранимую ошибку при попытки перенаправления к превышению указанного вместо возвращения результатов последней перенаправления.
