@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,безопасность
 title: Конфигурации сеансов JEA
-ms.openlocfilehash: bdf3659357045203d90e8083613e51cce657da1a
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
-ms.translationtype: HT
+ms.openlocfilehash: 1b598522d43b2c1a26a739a67cee5181b21a7c32
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522968"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655469"
 ---
 # <a name="jea-session-configurations"></a>Конфигурации сеансов JEA
 
-> Область применения: Windows PowerShell 5.0
+> Применяется к: Windows PowerShell 5.0
 
 Конечная точка JEA регистрируется в системе путем создания и регистрации файла конфигурации сеанса PowerShell особым образом.
 Конфигурации сеансов определяют, *кто* может использовать конечную точку JEA и к каким ролям он будет иметь доступ.
@@ -80,6 +80,8 @@ RunAsVirtualAccount = $true
 RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
+> [!NOTE]
+> Виртуальные учетные записи временно предоставляются вход качестве службы в политике безопасности на локальном сервере.  Если один из VirtualAccountGroups указан уже предоставлено это право в политике, отдельных виртуальная учетная запись будет больше не добавляются и удаляются из политики.  Это может быть полезно в сценариях, таких как контроллеры домена, где тесно аудит изменения политики безопасности контроллера домена.  Эта возможность доступна только в Windows Server 2016 с ноября 2018 года или более поздней версии свертки и 2019 Windows Server с января 2019 или более поздней версии накопительного пакета.
 
 #### <a name="group-managed-service-account"></a>Групповая управляемая учетная запись службы
 

@@ -1,0 +1,50 @@
+---
+ms.date: 06/12/2017
+keywords: dsc,powershell,конфигурация,установка
+title: Метод SendConfigurationApplyAsync класса MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: b028079cf826719967858f50e357b441ba8f9d79
+ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.translationtype: MTE95
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54047675"
+---
+# <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод SendConfigurationApplyAsync класса MSFT_DSCLocalConfigurationManager
+
+Асинхронно отправляет документ конфигурации на управляемый узел и использует агент конфигурации для применения конфигурации.
+
+## <a name="syntax"></a>Синтаксис
+
+```mof
+uint32 SendConfigurationApplyAsync(
+  [in] uint8   ConfigurationData[],
+  [in] boolean force,
+  [in] string  jobId
+);
+```
+
+## <a name="parameters"></a>Параметры
+
+*ConfigurationData* \[in\] Данные среды для конфигурации.
+
+*force* \[in\] **true** для принудительной остановки конфигурации.
+
+*jobId* \[in\] Идентификатор задания, для которого отправляется конфигурация.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
+
+## <a name="remarks"></a>Замечания
+
+Это статический метод.
+
+## <a name="requirements"></a>Требования
+
+MOF** DscCore.mof
+
+-Namespace Root\Microsoft\Windows\DesiredStateConfiguration
+
+## <a name="see-also"></a>См. также:
+
+[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Модули с совместимыми выпусками PowerShell
-ms.openlocfilehash: 0a95b47b506fbdddbb98b455a1d10d0f08ce402b
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.openlocfilehash: bda924393d37ea1596fbf0d813c10cbdea33c218
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002690"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655333"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Модули с совместимыми выпусками PowerShell
 
 Начиная с версии 5.1 доступны различные выпуски среды PowerShell, что означает различные наборы возможностей и совместимость с разными платформами.
 
-- **Выпуск Desktop Edition:** построен на основе .NET Framework и обеспечивает совместимость со скриптами и модулями, которые предназначены для версий PowerShell, выполняющихся в полноценных выпусках Windows, таких как Server Core и Windows Desktop.
-- **Выпуск Core Edition:** построен на основе .NET Core и обеспечивает совместимость со скриптами и модулями, которые предназначены для версий PowerShell, выполняющихся в выпусках Windows с ограниченными возможностями, таких как Nano Server и Windows IoT.
+- Desktop Edition На платформе .NET Framework и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в полноценных выпусках Windows, такие как ядро сервера и Windows Desktop.
+- **Выпуск Core:** Опирается на .NET Core и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в сокращенных выпусках Windows, таких как Nano Server и Windows IoT.
 
 Запущенный выпуск PowerShell отображается в свойстве PSEdition параметра `$PSVersionTable`.
 
@@ -174,7 +174,7 @@ $PSModule.OnRemove = {
 }
 ```
 
-### <a name="option-2-use-psedition-variable-in-the-psd1-file-to-load-the-proper-dlls-and-nestedrequired-modules"></a>Вариант 2. Использование переменной $PSEdition в PSD1-файле для загрузки надлежащих библиотек DLL и вложенных или необходимых модулей
+### <a name="option-2-use-psedition-variable-in-the-psd1-file-to-load-the-proper-dlls-and-nestedrequired-modules"></a>Вариант 2. Использование переменной $PSEdition в psd1-файл для загрузки надлежащих библиотек DLL и вложенных или необходимых модулей
 
 В PS 5.1 или более поздней версии в файле манифеста модуля разрешается использовать глобальную переменную $PSEdition. С помощью этой переменной автор модуля может указать условные значения в файле манифеста модуля. Переменная $PSEdition может указываться в ограниченном языковом режиме или в разделе Data.
 
@@ -260,6 +260,6 @@ Find-Module -Tag PSEdition_Core
 
 [Сценарии с PSEditions](script-psedition-support.md)
 
-[Поддержка PSEditions в коллекции PowerShell](../how-to/finding-packages/searching-by-psedition.md)
+[Поддержка PSEditions в коллекции PowerShell](../how-to/finding-packages/searching-by-compatibility.md)
 
 [Обновление манифеста модулей](/powershell/module/powershellget/update-modulemanifest)
