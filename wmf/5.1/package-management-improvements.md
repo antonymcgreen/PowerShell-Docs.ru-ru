@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,установка
 contributor: jianyunt, quoctruong
 title: Усовершенствования в управлении пакетами в WMF 5.1
-ms.openlocfilehash: 1ebd574bd98a056de634ac688244813c1947618e
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: adcddcc94022f4961f3dd23c2cd56f2a8720049b
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187465"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682564"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>Усовершенствования в управлении пакетами в WMF 5.1#
 
@@ -30,7 +30,7 @@ ms.locfileid: "34187465"
 
 Но если на компьютере установлена старая версия поставщика NuGet, она иногда может загружаться первой в сеанс PowerShell (и в PackageManagement возникает состояние гонки). Но модуль PowerShellGet требует, чтобы работала последняя версия поставщика NuGet, поэтому он еще раз запрашивает начальную загрузку поставщика NuGet у модуля PackageManagement. Это приводит к выводу нескольких запросов на начальную загрузку поставщика NuGet.
 
-**Решение**. В WMF 5.1 модуль PackageManagement теперь загружает последнюю версию поставщика NuGet во избежание вывода нескольких запросов на начальную загрузку поставщика NuGet.
+**Решение**. В WMF 5.1 модуль PackageManagement загружает последнюю версию поставщика NuGet во избежание вывода нескольких запросов на начальную загрузку поставщика NuGet.
 
 Также имеется обходной путь: вы можете вручную удалить старую версию поставщика NuGet (NuGet-Anycpu.exe), если она существует, из папок $env:ProgramFiles\PackageManagement\ProviderAssemblies и $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies
 
@@ -41,7 +41,7 @@ ms.locfileid: "34187465"
 
 **Ситуация**. В WMF 5.0 модуль PackageManagement не поддерживался на компьютерах с доступом только к интрасети (но не к Интернету).
 
-**Решение**. Чтобы обеспечить использование PackageManagement на компьютерах в интрасети, в WMF 5.1 можно выполнить указанные ниже действия.
+**Решение**. В WMF 5.1 необходимо выполнить следующие действия, чтобы обеспечить использование PackageManagement на компьютерах интрасети:
 
 1. Скачайте поставщик NuGet с другого компьютера, имеющего подключение к Интернету, выполнив команду `Install-PackageProvider -Name NuGet`.
 
