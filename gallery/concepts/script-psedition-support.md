@@ -4,19 +4,19 @@ contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Сценарии с совместимыми выпусками PowerShell
 ms.openlocfilehash: e364879f611429a8583e550fb7704431e456fbb1
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655282"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681417"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>Сценарии с совместимыми выпусками PowerShell
 
 Начиная с версии 5.1 доступны различные выпуски среды PowerShell, что означает различные наборы возможностей и совместимость с разными платформами.
 
-- Desktop Edition На платформе .NET Framework и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в полноценных выпусках Windows, такие как ядро сервера и Windows Desktop.
+- **Выпуск Desktop Edition:** построен на основе .NET Framework и обеспечивает совместимость со скриптами и модулями, которые предназначены для версий PowerShell, выполняющихся в полноценных выпусках Windows, таких как Server Core и Windows Desktop.
 
-- **Выпуск Core:** Опирается на .NET Core и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в сокращенных выпусках Windows, таких как Nano Server и Windows IoT.
+- **Выпуск Core Edition:** построен на основе .NET Core и обеспечивает совместимость со скриптами и модулями, которые предназначены для версий PowerShell, выполняющихся в выпусках Windows с ограниченными возможностями, таких как Nano Server и Windows IoT.
 
 Запущенный выпуск PowerShell отображается в свойстве PSEdition параметра $PSVersionTable.
 

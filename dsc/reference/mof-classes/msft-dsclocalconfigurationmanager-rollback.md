@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод RollBack класса MSFT_DSCLocalConfigurationManager
 ms.openlocfilehash: 4956900ecd2c9cb7f2e2b5bcab94616f9f5d5565
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047732"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682807"
 ---
 # <a name="rollback-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод RollBack класса MSFT_DSCLocalConfigurationManager
 
@@ -35,9 +35,9 @@ uint32 RollBack(
 
 ## <a name="requirements"></a>Требования
 
-MOF** DscCore.mof
+**MOF-файл:** DscCore.mof
 
--Namespace Root\Microsoft\Windows\DesiredStateConfiguration
+**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также:
 

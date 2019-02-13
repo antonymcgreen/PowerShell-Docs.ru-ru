@@ -3,30 +3,30 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование конструктора ресурсов
 ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402544"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681434"
 ---
 # <a name="using-the-resource-designer-tool"></a>Использование конструктора ресурсов
 
-> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Конструктор ресурсов — это набор командлетов, предоставляемых модулем **xDscResourceDesigner** и упрощающих создание ресурсов настройки требуемого состояния (DSC) Windows PowerShell. Командлеты в этом ресурсе помогают создать MOF-схему, модуль сценария и структуру папок для нового ресурса. Дополнительные сведения о ресурсах DSC см. в статье [Встроенные ресурсы настройки требуемого состояния (DSC) Windows PowerShell](authoringResource.md).
 В этом разделе мы создадим ресурс DSC, управляющий пользователями Active Directory.
 Для установки модуля **xDscResourceDesigner** используйте командлет [Install-Module](/powershell/module/PowershellGet/Install-Module).
 
->**Примечание**. **Install-Module** включается в **PowerShellGet** модуль, который включается в PowerShell 5.0. Вы можете скачать модуль **PowerShellGet**для PowerShell 3.0 и 4.0 в разделе [Предварительная версия модулей PackageManagement PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+>**Примечание**. **Install-Module** включен в модуль **PowerShellGet**, содержащийся в PowerShell 5.0. Вы можете скачать модуль **PowerShellGet**для PowerShell 3.0 и 4.0 в разделе [Предварительная версия модулей PackageManagement PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 
 ## <a name="creating-resource-properties"></a>Создание свойств ресурсов
 В первую очередь необходимо решить, какие свойства будут представлены в ресурсе. В этом примере мы определим пользователя Active Directory со следующими свойствами.
 
 Имя параметра Описание
-* .**имя**пользователя Свойство ключа, однозначно идентифицирующее пользователя.
-* Ensure Определяет, учетной записи пользователя должно присутствовать или отсутствовать. Этот параметр имеет только два возможных значения.
-* **DomainCredential**: Пароль домена для пользователя.
-* Пароль Желаемый пароль для пользователя, позволяющий конфигурации при необходимости измените пароль пользователя.
+* **UserName**: основное свойство, которое служит уникальным идентификатором пользователя.
+* **Ensure**: указывает, должна ли учетная запись пользователя присутствовать (Present) или отсутствовать (Absent). Этот параметр имеет только два возможных значения.
+* **DomainCredential**: доменный пароль для пользователя.
+* **Password**: пароль для пользователя, позволяющий конфигурации при необходимости изменить пароль пользователя.
 
 Для создания свойств используется командлет **New-xDscResourceProperty**. Описанные выше свойства создаются следующими командами PowerShell.
 
