@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery,psget
 title: Работа с локального PSRepositories
 ms.openlocfilehash: 94824ea584c097838b24c6f2cd02407b6147a781
-ms.sourcegitcommit: 91786b03704fbd2d185f674df0bc67faddfb6288
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51619221"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682674"
 ---
 # <a name="working-with-local-powershellget-repositories"></a>Работа с локальными хранилищами PowerShellGet
 
@@ -25,7 +25,7 @@ ms.locfileid: "51619221"
 
 Существует два способа для создания локального PSRepository: NuGet server или файловый ресурс. Каждый тип имеет преимущества и недостатки:
 
-Сервер NuGet
+NuGet Server
 
 | Преимущества| Недостатки |
 | --- | --- |
@@ -188,4 +188,4 @@ Publish-Module -Path 'F:\OfflinePowerShellGet' -Repository LocalPsRepo -NuGetApi
 <!-- external links -->
 [OfflinePowerShellGetDeploy]: https://www.powershellgallery.com/packages/OfflinePowerShellGetDeploy/0.1.1
 [Nuget.Server]: /nuget/hosting-packages/nuget-server
-[NuGet.exe]: /nuget/tools/nuget-exe-cli-reference
+[nuget.exe]: /nuget/tools/nuget-exe-cli-reference

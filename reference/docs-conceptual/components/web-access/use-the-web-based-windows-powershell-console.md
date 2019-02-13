@@ -3,17 +3,17 @@ ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Использование веб-консоли Windows PowerShell
 ms.openlocfilehash: 2bb9c6ef486ef32012a15f9890997cf2fa6a3a0b
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403096"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681314"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Использование веб-консоли Windows PowerShell
 
-Обновлено: 24 июня 2013 г.
+Обновлено: 24 июня 2013 г.
 
-Область применения. Windows Server 2012 R2, Windows Server 2012
+Область применения: Windows Server 2012 R2, Windows Server 2012
 
 Windows PowerShell Web Access предоставляет пользователям возможность войти на защищенный веб-сайт, чтобы использовать сеансы, командлеты и сценарии Windows PowerShell для управления удаленным компьютером.
 

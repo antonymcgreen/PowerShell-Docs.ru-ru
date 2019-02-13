@@ -3,11 +3,11 @@ title: Репликация функций интегрированной сре
 description: Репликация функций интегрированной среды скриптов в Visual Studio Code
 ms.date: 08/06/2018
 ms.openlocfilehash: 983da850c13d72bcdc7b2d33970c6e9e06b3d869
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012489"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681947"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Репликация функций интегрированной среды скриптов в Visual Studio Code
 
@@ -21,7 +21,7 @@ ms.locfileid: "54012489"
 | ----------------                      | -----------                  | --------------                              |
 | Прерывания и прерывания отладчика          | <kbd>CTRL</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
 | Выполнить текущий текст/выделенной строки | <kbd>F8</kbd>                | <kbd>F8</kbd>                               |
-| Список доступных фрагментов               | <kbd>CTRL</kbd>+<kbd>J</kbd> | <kbd>CTRL</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> |
+| Список доступных фрагментов               | <kbd>CTRL</kbd>+<kbd>J</kbd> | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> |
 
 ### <a name="custom-key-bindings"></a>Пользовательские привязки ключа
 
