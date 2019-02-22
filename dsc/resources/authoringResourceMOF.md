@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Написание пользовательских ресурсов DSC с использованием MOF
-ms.openlocfilehash: 2dcdeb49b50e23bc8b9d87293ebb8d8ec5e7b57d
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 5917e20769e750042a9855649ff5bec36ad14eb4
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402240"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682084"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Написание пользовательских ресурсов DSC с использованием MOF
 
@@ -290,3 +290,16 @@ if (PsDscContext.RunAsUser) {
     Write-Verbose "User: $PsDscContext.RunAsUser";
 }
 ```
+
+## <a name="rebooting-the-node"></a>Перезагрузка узла
+
+Если действия, предпринятые в вашей `Set-TargetResource` функции требуют перезагрузки, можно использовать глобальный флаг сообщить LCM перепускать узел. Перезагрузки возникает непосредственно после `Set-TargetResource` результат выполнения функции.
+
+Внутри вашей `Set-TargetResource` функции, добавьте следующую строку кода.
+
+```powershell
+# Include this line if the resource requires a system reboot.
+$global:DSCMachineStatus = 1
+```
+
+Чтобы LCM будет перезапустить узел **RebootNodeIfNeeded** флаг необходимо задать `$true`. **ActionAfterReboot** параметр также должно быть присвоено **ContinueConfiguration**, который используется по умолчанию. Дополнительные сведения о настройке LCM см. в разделе [Настройка локального диспетчера конфигураций](../managing-nodes/metaConfig.md), или [Настройка локального диспетчера конфигураций (версия 4)](../managing-nodes/metaConfig4.md).
