@@ -1,0 +1,39 @@
+---
+title: Том, какое имя CAB-файл обновляемой справки | Документация Майкрософт
+ms.custom: ''
+ms.date: 09/12/2016
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: de302da0-c17a-4d31-a8ef-14a626738993
+caps.latest.revision: 7
+ms.openlocfilehash: 23303489372cfe7e036fdea842ae75f7e47503c8
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "56861290"
+---
+# <a name="how-to-name-an-updatable-help-cab-file"></a>Как назвать CAB-файл обновляемой справки
+
+В этом разделе описывается формат обязательное имя CAB-файл обновляемой справки (. Файлы CAB-файла).
+
+## <a name="how-to-name-an-updatable-help-cab-file"></a>Как назвать CAB-файл обновляемой справки
+
+Обновляемые CAB-файл (. Файл CAB) должен иметь имя в следующем формате.
+
+`<ModuleName>_<ModuleGUID>_<UICulture>_HelpContent.cab`
+
+Далее приведены элементы с именем.
+
+ModuleName значение из **имя** свойство **ModuleInfo** объекта, [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) командлетом.
+Значение **имя** свойство **ModuleInfo** объекта, [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) командлетом.
+
+ModuleGUID значение из **GUID** ключа в манифесте модуля.
+
+Культура пользовательского интерфейса UICulture файлы справки в CAB-файл. Это значение должно соответствовать значение одного из **UICulture** элементов в XML-файл HelpInfo для модуля.
+
+Например если имя модуля «TestModule», идентификатор GUID модуля 9cabb9ad-f2ac-4914-a46b-bfc1bebf07f9 и язык и региональные параметры пользовательского интерфейса — «en US», имя CAB-файл будет иметь:
+
+`TestModule_9cabb9ad-f2ac-4914-a46b-bfc1bebf07f9_en-US_HelpContent.cab`

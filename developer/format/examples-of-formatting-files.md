@@ -1,0 +1,30 @@
+---
+title: Примеры файлов форматирования | Документация Майкрософт
+ms.custom: ''
+ms.date: 09/13/2016
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: b141a560-0422-4f76-bbcf-f4a62254c6a3
+caps.latest.revision: 4
+ms.openlocfilehash: 7ca1b2a71dedddfbe3ac7e905c789c7e59e2d9ec
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "56859560"
+---
+# <a name="examples-of-formatting-files"></a>Примеры файлов форматирования
+
+Этот раздел содержит примеры файлов форматирования.
+
+## <a name="in-this-section"></a>Содержание
+
+[Широкое представление (Basic)](./wide-view-basic.md) в этом примере показано, как реализовать базовый широкое представление, отображающий [System.Serviceprocess.Servicecontroller? Displayproperty = Fullname](/dotnet/api/System.ServiceProcess.ServiceController) объектов, возвращенных `Get-Service` командлета.
+
+[Широкое представление (GroupBy)](./wide-view-groupby.md) в этом примере показано, как реализовать широкое представление, отображаются группы [System.Serviceprocess.Servicecontroller? Displayproperty = Fullname](/dotnet/api/System.ServiceProcess.ServiceController) объектов, возвращенных `Get-Service` командлета.
+
+## <a name="see-also"></a>См. также
+
+[Запись файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)
