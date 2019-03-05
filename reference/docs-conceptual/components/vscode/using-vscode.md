@@ -2,12 +2,12 @@
 title: Использование Visual Studio Code для разработки в PowerShell
 description: Использование Visual Studio Code для разработки в PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 3101fa57896996a696385801303333e4a6406d20
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 1e9b9d811a39656327af2810bd6dc8aaf3fde3a4
+ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
 ms.translationtype: MTE95
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402251"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251393"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Использование Visual Studio Code для разработки в PowerShell
 
@@ -64,6 +64,24 @@ ms.locfileid: "53402251"
 Чтобы закрыть файл, щелкните "x" рядом с его именем.
 Чтобы завершить работу Visual Studio Code, выберите **Файл -> Выйти**.
 
+### <a name="installing-the-powershell-extension-on-restricted-systems"></a>Установка расширения PowerShell в системах с ограниченным доступом
+
+В некоторых системах настраиваются способом, который требует все подписи кода для проверки и поэтому требует служб редактора PowerShell вручную утвердить для запуска в системе.
+Возможной причиной является обновление групповой политики, которое изменяет политику выполнения, если вы установили модуль PowerShell, но доступны для сообщение об ошибке:
+
+```
+Language server startup failed.
+```
+
+Чтобы утвердить вручную служб редактора PowerShell и, следовательно, расширения PowerShell для VSCode откройте PowerShell prompt и выполните команду:
+
+```powershell
+Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellEditorServices\PowerShellEditorServices.psd1
+```
+
+Появится «Вы хотите запускать программное обеспечение из ненадежного издателя?»
+Тип `R` для запуска файла. Затем откройте Visual Studio Code и проверьте, что расширения PowerShell работает правильно. Если у вас по-прежнему есть проблемы Приступая к работе, сообщите нам об этом [GitHub](https://github.com/PowerShell/vscode-powershell/issues).
+
 #### <a name="using-a-specific-installed-version-of-powershell"></a>Использование определенной установленной версии PowerShell
 
 Если вы хотите использовать с Visual Studio Code определенную установку PowerShell, нужно добавить в файл параметров пользователя новую переменную.
@@ -98,17 +116,28 @@ ms.locfileid: "53402251"
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": true,
     "omnisharp.projectLoadTimeout": 120,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "files.encoding": "utf8bom",
+    "files.autoGuessEncoding": true
 }
 ```
+
+Если вы не хотите эти параметры влияют на все типы файлов, VSCode также позволяет конфигурации каждого языка. Создание особого параметра языка, поместив параметры `[<language-name>]` поля. Например:
+
+```json
+"[powershell]": {
+    "files.encoding": "utf8bom",
+    "files.autoGuessEncoding": true
+}
+```
+
+Дополнительные сведения о файле кодирование в VS Code, см. в разделе [основные сведения о кодировку файла](understanding-file-encoding.md).
 
 ## <a name="debugging-with-visual-studio-code"></a>Отладка с помощью Visual Studio Code
 
 ### <a name="no-workspace-debugging"></a>Отладка без рабочей области
 
-Начиная с Visual Studio Code версии 1.9, вы можете отлаживать сценарии PowerShell, не открывая папку со сценарием PowerShell.
-Просто откройте файл сценария PowerShell с помощью команды **Файл -> Открыть файл...** , установите точку останова на строке (нажав клавишу F9) и нажмите клавишу F5 для запуска отладки.
-Отображается панель действий отладки, позволяющая прервать работу отладчика, возобновить отладку, выполнить ее пошагово или остановить.
+Начиная с Visual Studio Code версии 1.9, вы можете отлаживать сценарии PowerShell, не открывая папку со сценарием PowerShell. Откройте файл скрипта PowerShell с **файл -> открыть файл...** , установите точку останова на строке (нажав клавишу F9) и нажмите клавишу F5, чтобы начать отладку. Отображается панель действий отладки, позволяющая прервать работу отладчика, возобновить отладку, выполнить ее пошагово или остановить.
 
 ### <a name="workspace-debugging"></a>Отладка с рабочей областью
 
@@ -165,7 +194,7 @@ ms.locfileid: "53402251"
 
   Это представляет типичные сценарии отладки.
   Однако при открытии этого файла в редакторе отображается кнопка **Добавить конфигурацию...**.
-  Можете нажать ее, чтобы добавить дополнительные конфигурации отладки PowerShell. Является одной из полезных конфигураций, чтобы добавить **PowerShell: Запустите сценарий**.
+  Можете нажать ее, чтобы добавить дополнительные конфигурации отладки PowerShell. Одной из полезных конфигураций является **PowerShell: Launch Script**.
   С помощью этой конфигурации можно указать определенный файл с дополнительными аргументами, которые нужно запускать при каждом нажатии клавиши F5 независимо от того, какой именно файл активен в редакторе.
 
   После задания конфигурации отладки можно указать конфигурацию, используемую во время сеанса отладки, выбрав ее в раскрывающемся списке конфигураций отладки на панели инструментов представления **Отладка**.
