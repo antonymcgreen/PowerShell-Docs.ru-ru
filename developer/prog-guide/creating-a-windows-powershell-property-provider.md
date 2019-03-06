@@ -11,19 +11,18 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], property provider
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
-ms.openlocfilehash: ade8fbd38e4f4a675e825b0d8850af0379c9d211
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 4ed15dabffa933dee9becf2f839887eb9108775d
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858900"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430015"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Создание поставщика свойств Windows PowerShell
 
 В этом разделе описывается, как создать поставщик, который позволяет пользователю управлять свойств элементов в хранилище данных. Как следствие этот тип поставщиков называется поставщика свойства Windows PowerShell. Например поставщик реестра предоставляемые значения раздела реестра Windows PowerShell обрабатывает как свойства элемента ключа реестра. Необходимо добавить этот тип поставщиков [System.Management.Automation.Provider.Ipropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) интерфейс для реализации класса .NET.
 
 > [!NOTE]
-> Windows PowerShell предоставляет файл шаблона, который можно использовать для разработки поставщика Windows PowerShell. Файл TemplateProvider.cs можно найти в Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Windows PowerShell предоставляет файл шаблона, который можно использовать для разработки поставщика Windows PowerShell. Файл TemplateProvider.cs можно найти в Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Скачанный шаблон доступен в  **\<примеры PowerShell >** каталога. Следует создать копию этого файла и используйте ее для создания нового поставщика Windows PowerShell, удаляя любые функции, которые не требуется.
@@ -150,7 +149,6 @@ ms.locfileid: "56858900"
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
 См. в разделе [регистрация командлетов, поставщиков и размещения приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
-См. в разделе [регистрация командлетов, поставщиков и размещения приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="see-also"></a>См. также
 
@@ -159,9 +157,5 @@ ms.locfileid: "56858900"
 [Поставщик разработки Your Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
 [Расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
-[Расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
-[Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)

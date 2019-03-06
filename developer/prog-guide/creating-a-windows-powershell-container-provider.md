@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 8c111f8f2943043e4ad2a6a8677db4afe1b3cdab
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: e0d83a742eae2bcde2e691860a5f2b3e5862d2de
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863170"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430048"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Создание поставщика контейнеров Windows PowerShell
 
@@ -25,7 +25,6 @@ ms.locfileid: "56863170"
 Поставщики, которые могут работать в хранилищах многоуровневыми данными, называются контейнера поставщиков Windows PowerShell. Однако имейте в виду, что поставщик контейнеров Windows PowerShell может использоваться только в том случае, если имеется один контейнер (не вложенные контейнеры) с элементами в его. Если имеются вложенные контейнеры, необходимо реализовать поставщик навигации Windows PowerShell. Дополнительные сведения о реализации поставщик навигации Windows PowerShell см. в разделе [Создание поставщика Windows PowerShell навигации](./creating-a-windows-powershell-navigation-provider.md).
 
 > [!NOTE]
-> Вы можете скачать C# исходный файл (AccessDBSampleProvider04.cs) для данного поставщика, с помощью Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Вы можете скачать C# исходный файл (AccessDBSampleProvider04.cs) для данного поставщика, с помощью Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Скачанный исходные файлы доступны в  **\<примеры PowerShell >** каталога.
@@ -418,7 +417,6 @@ protected override bool HasChildItems( string path )
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
 См. в разделе [регистрация командлетов, поставщиков и размещения приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
-См. в разделе [регистрация командлетов, поставщиков и размещения приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Проверка поставщика в Windows PowerShell
 
@@ -537,8 +535,6 @@ protected override bool HasChildItems( string path )
 [Реализация поставщика элементов Windows PowerShell](./creating-a-windows-powershell-item-provider.md)
 
 [Реализация поставщика навигации Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)
-
-[Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 

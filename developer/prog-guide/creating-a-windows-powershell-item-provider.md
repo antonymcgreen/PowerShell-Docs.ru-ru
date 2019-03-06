@@ -11,19 +11,18 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: 30b4dbcd281f712bba8d8e3540d2282d527388e4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: be1446dbd2b244f4752e55c8137433edee8427b0
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862070"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429998"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Создание поставщика элементов Windows PowerShell
 
 В этом разделе описывается создание поставщика Windows PowerShell, который может обрабатывать данные в хранилище данных. В этом разделе элементы данных в хранилище, рассматриваются как «элементы» данных хранения. Как следствие поставщик, который может обрабатывать данные в хранилище называется как поставщик элементов Windows PowerShell.
 
 > [!NOTE]
-> Вы можете скачать C# исходный файл (AccessDBSampleProvider03.cs) для данного поставщика, с помощью Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Вы можете скачать C# исходный файл (AccessDBSampleProvider03.cs) для данного поставщика, с помощью Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Скачанный исходные файлы доступны в  **\<примеры PowerShell >** каталога.
@@ -88,7 +87,6 @@ ms.locfileid: "56862070"
 
 ## <a name="checking-for-path-validity"></a>Проверка допустимости пути
 
-При поиске элемента данных, среда выполнения Windows PowerShell предоставляет путь Windows PowerShell поставщику, как определено в разделе «Основные понятия PSPath» [как Windows PowerShell работает](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58). Поставщик Windows PowerShell элемента необходимо проверить действительность синтаксические и семантические любого пути, передаваемый ему по реализации [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) метод. Этот метод возвращает `true` Если путь является допустимым, и `false` в противном случае. Быть виду, что реализация этого метода не нужно проверять наличие элемента в пути, но только что путь является синтаксически и семантически правильный.
 При поиске элемента данных, среда выполнения Windows PowerShell предоставляет путь Windows PowerShell поставщику, как определено в разделе «Основные понятия PSPath» [как Windows PowerShell работает](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58). Поставщик Windows PowerShell элемента необходимо проверить действительность синтаксические и семантические любого пути, передаваемый ему по реализации [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) метод. Этот метод возвращает `true` Если путь является допустимым, и `false` в противном случае. Быть виду, что реализация этого метода не нужно проверять наличие элемента в пути, но только что путь является синтаксически и семантически правильный.
 
 Вот реализация [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) метода для данного поставщика. Обратите внимание на то, что эта реализация вызывает вспомогательный метод NormalizePath, чтобы преобразовать все разделители в пути универсального кода.
@@ -266,11 +264,9 @@ ms.locfileid: "56862070"
 ## <a name="defining-object-types-and-formatting"></a>Определение типов объектов и форматирование
 
 При написании поставщика, может потребоваться добавление членов в существующие объекты или определение новых объектов. После завершения создания файла типов, Windows PowerShell можно использовать для идентификации членов объекта и файла форматирования, определяющий способ отображения объекта. Дополнительные сведения о см. в разделе [расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
-При написании поставщика, может потребоваться добавление членов в существующие объекты или определение новых объектов. После завершения создания файла типов, Windows PowerShell можно использовать для идентификации членов объекта и файла форматирования, определяющий способ отображения объекта. Дополнительные сведения о см. в разделе [расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
-См. в разделе [регистрация командлетов, поставщиков и размещения приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 См. в разделе [регистрация командлетов, поставщиков и размещения приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Проверка поставщика в Windows PowerShell
@@ -289,16 +285,10 @@ ms.locfileid: "56862070"
 
 [Расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
-[Как работает Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
-
 [Как работает Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 
 [Создание поставщика Windows PowerShell для контейнеров](./creating-a-windows-powershell-container-provider.md)
 
 [Создание поставщика диска Windows PowerShell](./creating-a-windows-powershell-drive-provider.md)
-
-[Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
