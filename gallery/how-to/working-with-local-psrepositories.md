@@ -123,7 +123,7 @@ Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey
 
 - Укажите имя пакета
 - Укажите «NuGet» в качестве поставщика
-- Укажите расположение PSGallery в качестве источника)https://www.powershellgallery.com/api/v2)
+- Укажите расположение PSGallery в качестве источника) [https://www.powershellgallery.com/api/v2](https://www.powershellgallery.com/api/v2))
 - Укажите путь к локального репозитория
 
 Пример:
