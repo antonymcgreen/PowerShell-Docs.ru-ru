@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
-ms.openlocfilehash: 5e35d2fdfa4c6bd70c1b69ca1f357ee8d8ebcdc4
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 1bccbfab55f4ba4476678b130bd9db91eed7df80
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429981"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795323"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Создание поставщика содержимого Windows PowerShell
 
@@ -53,7 +53,7 @@ ms.locfileid: "57429981"
 
 - [Пример кода](#Code-Sample)
 
-- [Определение типов объектов и форматирование]()
+- [Определение типов объектов и форматирование](#defining-object-types-and-formatting)
 
 - [Создание поставщика Windows PowerShell](#Building-the-Windows-PowerShell-Provider)
 

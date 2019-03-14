@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
 caps.latest.revision: 13
-ms.openlocfilehash: 31ee7222c35e82ee58d6d56f710792dbc5cb24d7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0d4addc0a064873701ae15c204dbd335f3374ab7
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858630"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795629"
 ---
 # <a name="windows-powershell-provider-overview"></a>Общие сведения о поставщиках Windows PowerShell
 
-Поставщик Windows PowerShell позволяет любое хранилище данных, должен быть предоставлен как в файловой системе, как если бы он был подключенного диска. Например, встроенный поставщик реестра позволяет переходить в реестр, как перешла бы `c` диске компьютера. Можно также переопределить поставщик `Item` командлеты (например, `Get-Item`, `Set-Item`т. д.) таким образом, данные в хранилище данных, которые могут рассматриваться как файлы и каталоги, обрабатываются при навигации по файловой системе. Дополнительные сведения о поставщиках и дисков и встроенные поставщики в Windows PowerShell см. в разделе [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers).
 Поставщик Windows PowerShell позволяет любое хранилище данных, должен быть предоставлен как в файловой системе, как если бы он был подключенного диска. Например, встроенный поставщик реестра позволяет переходить в реестр, как перешла бы `c` диске компьютера. Можно также переопределить поставщик `Item` командлеты (например, `Get-Item`, `Set-Item`т. д.) таким образом, данные в хранилище данных, которые могут рассматриваться как файлы и каталоги, обрабатываются при навигации по файловой системе. Дополнительные сведения о поставщиках и дисков и встроенные поставщики в Windows PowerShell см. в разделе [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers).
 
 ## <a name="providers-and-drives"></a>Поставщики и дисков

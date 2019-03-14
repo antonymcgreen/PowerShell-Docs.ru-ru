@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f33ff3e9-213c-44aa-92ab-09450e65c676
 caps.latest.revision: 11
-ms.openlocfilehash: dcab755f565cd176c85ef6b9c719bceae10301b4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: be31d03b02394cb1694909cf7b65bbc2a29f6976
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854530"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795442"
 ---
 # <a name="extending-properties-for-objects"></a>Расширение свойств для объектов
 
@@ -101,7 +101,6 @@ ms.locfileid: "56854530"
 
 ## <a name="property-sets"></a>Наборы свойств
 
-Набор свойств определяется группа расширенные свойства, которые можно ссылаться по имени набора. Например `Property` параметр [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) командлета можно указать значение для отображения конкретного свойства. Если указан набор свойств, отображаются только те свойства, которые принадлежат к набору.
 Набор свойств определяется группа расширенные свойства, которые можно ссылаться по имени набора. Например `Property` параметр [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) командлета можно указать значение для отображения конкретного свойства. Если указан набор свойств, отображаются только те свойства, которые принадлежат к набору.
 
 Нет никаких ограничений на количество наборов свойств, которые могут быть определены для объекта. Тем не менее наборов свойств, используемый для определения свойств отображения по умолчанию объекта должно быть указано в наборе элементов PSStandardMembers. В файле Types.ps1xml типы имена набора свойств по умолчанию включают DefaultDisplayProperty DefaultDisplayPropertySet и DefaultKeyPropertySet. Все наборы дополнительные свойства, добавленные в набор элементов PSStandardMembers игнорируются.

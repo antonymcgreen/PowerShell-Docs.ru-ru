@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 93a00463-af58-41c8-b088-450909fa1d05
 caps.latest.revision: 6
-ms.openlocfilehash: 4929a5b1c9f73bb12b6df975e03fc529db3565ef
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d69e8a734aa96ff9b7911815fb43b81103548b59
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863320"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794354"
 ---
 # <a name="how-to-set-helpinfo-xml-version-numbers"></a>Как задать номера версий XML-файла HelpInfo
 
@@ -21,7 +21,6 @@ ms.locfileid: "56863320"
 
 ## <a name="how-to-set-helpinfo-xml-version-numbers"></a>Как задать номера версий XML-файла HelpInfo
 
-Номера версий в XML-файл HelpInfo критически важны для работы обновляемую справку. [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) и [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) командлеты загрузить новые файлы справки, только в том случае, если номер версии для языка и региональных параметров пользовательского интерфейса в удаленном файле HelpInfo XML больше, чем номер версии для этого языка и региональных параметров пользовательского интерфейса в локальный HelpInfo XML или нет локального файла HelpInfo XML.
 Номера версий в XML-файл HelpInfo критически важны для работы обновляемую справку. [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) и [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) командлеты загрузить новые файлы справки, только в том случае, если номер версии для языка и региональных параметров пользовательского интерфейса в удаленном файле HelpInfo XML больше, чем номер версии для этого языка и региональных параметров пользовательского интерфейса в локальный HelpInfo XML или нет локального файла HelpInfo XML.
 
 В файле HelpInfo XML используется номер версии 4 частей, который определен в **System.Version** класс Microsoft .NET Framework. Формат `N1.N2.N3.N4`. Авторы модулей могут использовать любую версию нумерации, который разрешен в **System.Version** класса. Обновляемая Справка требует только то, что номер версии увеличивать языка и региональных параметров пользовательского интерфейса при отправке новой версии CAB-файл для этой культуры пользовательского интерфейса в расположение, которое определяется **HelpContentURI** в файле HelpInfo XML.

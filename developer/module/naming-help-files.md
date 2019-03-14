@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf54eac7-88c6-4108-a5f6-2f0906d1662b
 caps.latest.revision: 5
-ms.openlocfilehash: 06281a1260dbdc120867fce89e6d5c8dd0754b87
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f65a90023df88fceafae1d1875ddf46b9088e2b8
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856670"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795357"
 ---
 # <a name="naming-help-files"></a>Указание имен для файлов справки
 
-В этом разделе объясняется, как имя файла справки на основе XML, чтобы [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) командлета можно найти его. Требования к имени зависят от типа команды.
 В этом разделе объясняется, как имя файла справки на основе XML, чтобы [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) командлета можно найти его. Требования к имени зависят от типа команды.
 
 ## <a name="cmdlet-help-files"></a>Файлы справки по командлетам
@@ -30,7 +29,6 @@ ms.locfileid: "56856670"
 
 Формат имени сборки является обязательным, даже в том случае, если сборка является вложенного модуля.
 
-Например [Get-WinEvent; PSITPro5_Diagnostic; ](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent) командлет определен в сборке Microsoft.PowerShell.Diagnostics.dll. `Get-Help` Командлет ищет раздел справки для `Get-WinEvent` командлет только в файле Microsoft.PowerShell.Diagnostics.dll help.xml в каталоге модуля.
 Например [Get-WinEvent; PSITPro5_Diagnostic; ](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent) командлет определен в сборке Microsoft.PowerShell.Diagnostics.dll. `Get-Help` Командлет ищет раздел справки для `Get-WinEvent` командлет только в файле Microsoft.PowerShell.Diagnostics.dll help.xml в каталоге модуля.
 
 ## <a name="provider-help-files"></a>Файлы справки поставщика
@@ -47,7 +45,6 @@ ms.locfileid: "56856670"
 
 ## <a name="function-help-files"></a>Файлы справки для функции
 
-Функции можно задокументировать с помощью [справки на основе комментариев](/powershell/module/microsoft.powershell.core/about/about_comment_based_help) или в XML-файл справки. Когда функция описана в XML-файл, функция должна иметь `.ExternalHelp` комментарий ключевое слово, которое связывает функцию с XML-файле. В противном случае `Get-Help` командлету не удается найти файл справки.
 Функции можно задокументировать с помощью [справки на основе комментариев](/powershell/module/microsoft.powershell.core/about/about_comment_based_help) или в XML-файл справки. Когда функция описана в XML-файл, функция должна иметь `.ExternalHelp` комментарий ключевое слово, которое связывает функцию с XML-файле. В противном случае `Get-Help` командлету не удается найти файл справки.
 
 Не существует технических требований к имени файла справки функции. Тем не менее мы рекомендуем для именования файла справки для модуля сценария, в котором определена функция. Например следующая функция определяется в файле MyModule.psm1.

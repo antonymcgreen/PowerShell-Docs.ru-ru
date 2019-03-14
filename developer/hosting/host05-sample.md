@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a49e3c4-6a1b-404c-aefc-134e5ce3d108
 caps.latest.revision: 11
-ms.openlocfilehash: 3d9edb9d2af8ab15764d97256f49f674255e7ee7
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.openlocfilehash: 63bcdc6b273b47f8eb743928d2eaa5ef91470df5
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863800"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794422"
 ---
 # <a name="host05-sample"></a>Пример Host05
 
-В этом примере показано, как сборку интерактивного консольного ведущего приложения, читает команды из командной строки, выполняет команды и затем отображает результаты на консоль. Это ведущее приложение также поддерживает вызовы удаленных компьютеров с помощью командлетов [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) и [Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession).
 В этом примере показано, как сборку интерактивного консольного ведущего приложения, читает команды из командной строки, выполняет команды и затем отображает результаты на консоль. Это ведущее приложение также поддерживает вызовы удаленных компьютеров с помощью командлетов [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) и [Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession).
 
 ## <a name="requirements"></a>Требования
@@ -44,7 +43,6 @@ ms.locfileid: "56863800"
 
 - Реализуйте [System.Management.Automation.Host.Ihostuisupportsmultiplechoiceselection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) интерфейс.
 
-- Реализуйте [System.Management.Automation.Host.Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) интерфейс для поддержки удаленного интерактивного взаимодействия с помощью [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) и [ Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) командлетов.
 - Реализуйте [System.Management.Automation.Host.Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) интерфейс для поддержки удаленного интерактивного взаимодействия с помощью [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) и [ Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) командлетов.
 
 ## <a name="example"></a>Пример

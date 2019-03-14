@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
 caps.latest.revision: 6
-ms.openlocfilehash: 08c64d4094d8ba6c551b454887331666f0694f11
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 86a0e8b7e8967280daa57faf5c323efcd3b1368b
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860630"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794201"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>Загрузка и экспорт данных форматирования
 
@@ -24,16 +24,13 @@ ms.locfileid: "56860630"
 Файлы форматирования могут быть загружены в текущий сеанс, используя следующие методы:
 
 - Файл форматирования можно импортировать в текущий сеанс из командной строки. Используйте [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) командлет, как описано в следующей процедуре.
-- Файл форматирования можно импортировать в текущий сеанс из командной строки. Используйте [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) командлет, как описано в следующей процедуре.
 
-- Можно создать манифест модуля, который ссылается на файл форматирования. Модули позволяют вам форматирование файлы для распространения пакета. Используйте [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) командлет, чтобы создать манифест и [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) командлет, чтобы загрузить модуль в текущий сеанс. Дополнительные сведения о модулях см. в разделе [написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 - Можно создать манифест модуля, который ссылается на файл форматирования. Модули позволяют вам форматирование файлы для распространения пакета. Используйте [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) командлет, чтобы создать манифест и [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) командлет, чтобы загрузить модуль в текущий сеанс. Дополнительные сведения о модулях см. в разделе [написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
 - Можно создать оснастки, ссылающийся на файле форматирования. Используйте [System.Management.Automation.Pssnapin.Formats](/dotnet/api/System.Management.Automation.PSSnapIn.Formats) для ссылки на файлы форматирования. Это настоятельно рекомендуется использовать модули в командлетах пакета и связанное форматирование и типы файлов для распространения. Дополнительные сведения о модулях см. в разделе [написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
 - При вызове команды программными средствами, можно добавить запись в файле форматирования к состоянию исходного сеанса пространство выполнения, где выполняются команды. Дополнительные сведения о типе .NET, используемый для добавления файла форматирования см. в разделе [System.Management.Automation.Runspaces.Sessionstateformatentry? Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateFormatEntry) класса.
 
-Когда загружается файл форматирования, он добавляется в во внутренний список, что Windows PowerShell использует, чтобы определить, какое представление для отображения объектов в командной строке. Можно добавить в начало файла форматирования в начале списка, или его можно добавить в конец списка. Когда файл форматирования добавляется в этот список важно знать при загрузке файл форматирования, который определяет представление для объекта, который был определен, например если требуется изменить, как объект, который возвращается с помощью командлета Windows PowerShell core представляет собой существующее представление  отображается. Если вы загружаете файл форматирования, который определяет представление только для объекта, можно использовать любой из описанных выше способов.  Если вы загружаете файл форматирования, который определяет другое представление для объекта, необходимо использовать [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) командлета и добавить в начало файла в начало списка.
 Когда загружается файл форматирования, он добавляется в во внутренний список, что Windows PowerShell использует, чтобы определить, какое представление для отображения объектов в командной строке. Можно добавить в начало файла форматирования в начале списка, или его можно добавить в конец списка. Когда файл форматирования добавляется в этот список важно знать при загрузке файл форматирования, который определяет представление для объекта, который был определен, например если требуется изменить, как объект, который возвращается с помощью командлета Windows PowerShell core представляет собой существующее представление  отображается. Если вы загружаете файл форматирования, который определяет представление только для объекта, можно использовать любой из описанных выше способов.  Если вы загружаете файл форматирования, который определяет другое представление для объекта, необходимо использовать [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) командлета и добавить в начало файла в начало списка.
 
 ## <a name="storing-your-formatting-file"></a>Сохранение файла форматирования
@@ -44,7 +41,6 @@ ms.locfileid: "56860630"
 
 1. Store форматирования файла на диск.
 
-2. Запустите [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) командлет, используя один из следующих команд.
 2. Запустите [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) командлет, используя один из следующих команд.
 
    Чтобы добавить форматирование файла в начало списка используйте следующую команду. Используйте следующую команду, чтобы изменить способ отображения объекта.
@@ -59,7 +55,6 @@ ms.locfileid: "56860630"
    Update-FormatData -AppendPath PathToFormattingFile
    ```
 
-   После добавления в файл с помощью [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) командлет, вам не удается удалить файл из списка при открытом сеансе. Необходимо закрыть сеанса, чтобы удалить файл форматирования из списка.
    После добавления в файл с помощью [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) командлет, вам не удается удалить файл из списка при открытом сеансе. Необходимо закрыть сеанса, чтобы удалить файл форматирования из списка.
 
 ## <a name="exporting-format-data"></a>Экспорт данных в формате

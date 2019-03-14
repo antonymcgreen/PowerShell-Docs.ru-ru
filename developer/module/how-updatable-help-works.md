@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7674636e-a0f2-4587-bfc5-dd3e6ce5489e
 caps.latest.revision: 6
-ms.openlocfilehash: 8874cc18416937c4d3cb30d801f2714410304c8c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 5b6ae54ee6c843996c875189b6ee553be5e4f614
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860880"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794388"
 ---
 # <a name="how-updatable-help-works"></a>Как работает обновляемая справка
 
@@ -21,7 +21,6 @@ ms.locfileid: "56860880"
 
 ## <a name="the-update-help-process"></a>Процесс Update-Help
 
-В следующем списке описываются действия [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) командлет, когда пользователь запускает команду, чтобы обновить файлы справки для модуля на определенный язык и региональные параметры пользовательского интерфейса.
 В следующем списке описываются действия [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) командлет, когда пользователь запускает команду, чтобы обновить файлы справки для модуля на определенный язык и региональные параметры пользовательского интерфейса.
 
 1. `Update-Help` Получает удаленный файл HelpInfo XML из местоположения, указанного по значению **HelpInfoURI** ключа в манифесте модуля и проверяет файл на соответствие схеме. (Чтобы просмотреть схему, см. в разделе [HelpInfo XML-схемы](./helpinfo-xml-schema.md).) Затем `Update-Help` выполняет поиск локального XML-файл HelpInfo для модуля в каталоге модуля на компьютере пользователя.
@@ -36,7 +35,6 @@ ms.locfileid: "56860880"
 
 ## <a name="the-save-help-process"></a>Процесс Save-Help
 
-В следующем списке описываются действия [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) и [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) командлеты, когда пользователь запускает команды, чтобы обновить файлы справки в общей папке, а затем использовать их, чтобы обновить файлы справки на на компьютере.
 В следующем списке описываются действия [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) и [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) командлеты, когда пользователь запускает команды, чтобы обновить файлы справки в общей папке, а затем использовать их, чтобы обновить файлы справки на на компьютере.
 
 `Save-Help` Командлет выполняет следующие действия в ответ на команду, чтобы сохранить файлы справки для модуля в файловом ресурсе, который задается параметром **DestinationPath** параметра.
