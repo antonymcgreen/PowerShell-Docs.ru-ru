@@ -117,7 +117,7 @@ PowerShell использует [System.Management.Automation.VerbsCommon](/dotn
 |[Шаг](/dotnet/api/System.Management.Automation.VerbsCommon.Step) (st)|Переходит к следующей точке или ресурсов в последовательности.||
 |[Коммутатор](/dotnet/api/System.Management.Automation.VerbsCommon.Switch) (sw)|Указывает действие, которое переключается между двумя ресурсами, например, для переключения между двумя расположениями, обязанности или состояния.||
 |[Отменить](/dotnet/api/System.Management.Automation.VerbsCommon.Undo) (un)|Задает ресурс в предыдущее состояние.||
-|[Разблокировать](/dotnet/api/System.Management.Automation.VerbsCommon.Unlock) (Великобритания)|Освобождает ресурс, который был заблокирован. Эта команда используется в паре с `Lock`.|Для этого действия не используйте команды, такие как выпуск "," Unrestrict "или" незащищенный.|
+|[Разблокировать](/dotnet/api/System.Management.Automation.VerbsCommon.Unlock) (Соединенное Королевство)|Освобождает ресурс, который был заблокирован. Эта команда используется в паре с `Lock`.|Для этого действия не используйте команды, такие как выпуск "," Unrestrict "или" незащищенный.|
 |[Контрольные значения](/dotnet/api/System.Management.Automation.VerbsCommon.Watch) (wc)|Постоянно проверяет или мониторы ресурса для изменения.||
 
 ## <a name="communications-verbs"></a>Связь команд
