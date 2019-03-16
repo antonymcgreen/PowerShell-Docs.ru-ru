@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
 caps.latest.revision: 6
-ms.openlocfilehash: 86a0e8b7e8967280daa57faf5c323efcd3b1368b
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 5c5168ffd74c15066b914ad1b39d9ead947c5e7f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794201"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054192"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>Загрузка и экспорт данных форматирования
 
@@ -27,7 +27,7 @@ ms.locfileid: "57794201"
 
 - Можно создать манифест модуля, который ссылается на файл форматирования. Модули позволяют вам форматирование файлы для распространения пакета. Используйте [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) командлет, чтобы создать манифест и [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) командлет, чтобы загрузить модуль в текущий сеанс. Дополнительные сведения о модулях см. в разделе [написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
-- Можно создать оснастки, ссылающийся на файле форматирования. Используйте [System.Management.Automation.Pssnapin.Formats](/dotnet/api/System.Management.Automation.PSSnapIn.Formats) для ссылки на файлы форматирования. Это настоятельно рекомендуется использовать модули в командлетах пакета и связанное форматирование и типы файлов для распространения. Дополнительные сведения о модулях см. в разделе [написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
+- Можно создать оснастки, ссылающийся на файле форматирования. Используйте [System.Management.Automation.PSSnapIn.Formats](/dotnet/api/System.Management.Automation.PSSnapIn.Formats) для ссылки на файлы форматирования. Это настоятельно рекомендуется использовать модули в командлетах пакета и связанное форматирование и типы файлов для распространения. Дополнительные сведения о модулях см. в разделе [написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
 - При вызове команды программными средствами, можно добавить запись в файле форматирования к состоянию исходного сеанса пространство выполнения, где выполняются команды. Дополнительные сведения о типе .NET, используемый для добавления файла форматирования см. в разделе [System.Management.Automation.Runspaces.Sessionstateformatentry? Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateFormatEntry) класса.
 

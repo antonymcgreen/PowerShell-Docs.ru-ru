@@ -10,12 +10,12 @@ applies_to:
 - Windows PowerShell 3.0
 ms.assetid: 3f7388a9-9fa8-42bc-b294-538c9a01e30a
 caps.latest.revision: 12
-ms.openlocfilehash: 4e962890fa1d5c282a02a89f0ae2e263844c635e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f2dfb9642ba2dde38124142b659b425bbbb00f37
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856970"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057609"
 ---
 # <a name="updatable-help-overview"></a>Общие сведения об обновляемой справке
 
@@ -31,7 +31,9 @@ ms.locfileid: "56856970"
 
 Обновляемая Справка включает следующие функции.
 
-- [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) командлет, который определяет, имеют ли пользователи последние справки файлы модуля и, если это не так, загружает последние файлы справки из Интернета, распаковывает и устанавливает их в подкаталогах правильный модуль на на компьютере. Пользователи могут использовать [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) командлет, чтобы просмотреть разделы справки вновь созданной немедленно. Они не нужно перезапускать Windows PowerShell.
+- [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) командлет, который определяет, имеют ли пользователи последние справки файлы модуля и, если это не так, загружает последние файлы справки из Интернета, распаковывает и устанавливает их в подкаталогах правильный модуль на на компьютере.
+  Пользователи могут использовать [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) командлет, чтобы просмотреть разделы справки вновь созданной немедленно.
+  Они не нужно перезапускать PowerShell.
 
 - [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) командлет, который загружает последние справки файлы из Интернета и сохраняет их в каталог в файловой системе. Пользователи могут использовать `Update-Help` командлет, чтобы получить файлы справки из каталог файловой системы и распаковать и установить их в подкаталогах модуля на компьютере пользователя. `Save-Help` Командлет предназначен для пользователей с ограниченной или нет доступа к Интернету, а также для предприятий, которые предпочитают, чтобы ограничить доступ к Интернету.
 

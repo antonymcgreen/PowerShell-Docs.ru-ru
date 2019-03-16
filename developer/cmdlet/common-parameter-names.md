@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0db9f54c-4014-4450-9e81-c9f5fe562a0e
 caps.latest.revision: 12
-ms.openlocfilehash: a421d151ac3fdbb763668dd6fbf775f5b91a833f
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
+ms.openlocfilehash: c65deeda6b2ef1b52de55035dc606259a7f2d232
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56863650"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059666"
 ---
 # <a name="common-parameter-names"></a>Общие имена параметров
 
@@ -30,7 +30,7 @@ ms.locfileid: "56863650"
 
 Тип данных: SwitchParameter
 
-Этот параметр указывает ли отладка на уровне программист сообщения, которые могут отображаться в командной строке. Эти сообщения предназначены для устранения неполадок операцию командлета и создаются путем вызова [System.Management.Automation.Cmdlet.Writedebug*](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) метод. Отладочные сообщения не обязательно должны быть локализованы.
+Этот параметр указывает ли отладка на уровне программист сообщения, которые могут отображаться в командной строке. Эти сообщения предназначены для устранения неполадок операцию командлета и создаются путем вызова [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) метод. Отладочные сообщения не обязательно должны быть локализованы.
 
 ### <a name="erroraction-alias-ea"></a>ErrorAction (псевдоним: ea)
 
@@ -60,7 +60,7 @@ ms.locfileid: "56863650"
 
 Тип данных: SwitchParameter
 
-Этот параметр указывает, является ли этот командлет записывает пояснительный сообщений, которые могут отображаться в командной строке. Эти сообщения предназначены для получения дополнительной справки для пользователя и создаются путем вызова [System.Management.Automation.Cmdlet.Writeverbose*](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) метод.
+Этот параметр указывает, является ли этот командлет записывает пояснительный сообщений, которые могут отображаться в командной строке. Эти сообщения предназначены для получения дополнительной справки для пользователя и создаются путем вызова [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) метод.
 
 ### <a name="warningaction-alias-wa"></a>WarningAction (псевдоним: wa)
 

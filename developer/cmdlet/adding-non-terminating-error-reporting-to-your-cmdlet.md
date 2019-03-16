@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
 caps.latest.revision: 8
-ms.openlocfilehash: 2f3bb481722363557c93ebbc5e6df62baeff2555
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: e0550dacc33f45f45ba105ca5cb4d2e5b5d675fb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862010"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056062"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Добавление сообщения о непрерывающей ошибке в командлет
 
-Командлеты можно сообщить устранимые ошибки путем вызова [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метода и продолжить работу на текущий входной объект или на Дополнительные Входящие конвейер объектов. В этом разделе объясняется, как создать командлет, который сообщает устранимые ошибки из его методов обработки ввода.
+Командлеты можно сообщить устранимые ошибки путем вызова [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метода и продолжить работу на текущий входной объект или на Дополнительные Входящие конвейер объектов. В этом разделе объясняется, как создать командлет, который сообщает устранимые ошибки из его методов обработки ввода.
 
-Устранимые ошибки (а также прерывающие ошибки), командлет необходимо передать [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) объект, определяющий ошибку. Каждая ошибка запись идентифицируется по уникальной строки, называемой «идентификатор ошибка». Кроме идентификатора категории каждой ошибки определяется константы, определенные в [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) перечисления. Пользователь может просмотреть ошибки, на основе их категории, установив `$ErrorView` переменной «CategoryView».
+Устранимые ошибки (а также прерывающие ошибки), командлет необходимо передать [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объект, определяющий ошибку. Каждая ошибка запись идентифицируется по уникальной строки, называемой «идентификатор ошибка». Кроме идентификатора категории каждой ошибки определяется константы, определенные в [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) перечисления. Пользователь может просмотреть ошибки, на основе их категории, установив `$ErrorView` переменной «CategoryView».
 
 Дополнительные сведения о записи об ошибках, см. в разделе [записи об ошибках Windows PowerShell](./windows-powershell-error-records.md).
 
@@ -101,11 +101,11 @@ End Property
 > [!NOTE]
 > Командлет для независимой обработки каждой записи.
 
-Этот командлет Get-Proc переопределяет [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод для обработки `Name` параметр для входных данных, предоставленных пользователю или сценарий. Этот метод будет получения процессов для каждого имени запрошенного процесса и всех процессов, если имя не указано. Сведения о это переопределение приведены в [Создание свой первый командлет](./creating-a-cmdlet-without-parameters.md).
+Этот командлет Get-Proc переопределяет [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод для обработки `Name` параметр для входных данных, предоставленных пользователю или сценарий. Этот метод будет получения процессов для каждого имени запрошенного процесса и всех процессов, если имя не указано. Сведения о это переопределение приведены в [Создание свой первый командлет](./creating-a-cmdlet-without-parameters.md).
 
 #### <a name="things-to-remember-when-reporting-errors"></a>О чем следует помнить при сообщении об ошибках
 
-[System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта, что командлет передает при записи ошибки требует исключение по своей сути. Следуйте рекомендациям .NET, при определении исключение для использования. По сути Если ошибка является семантически так же, как существующие исключения, этот командлет следует использовать, или являются производными от этого исключения. В противном случае он должен быть производным новое исключение, либо иерархия исключений непосредственно из [System.Exception](/dotnet/api/System.Exception) класса.
+[System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта, что командлет передает при записи ошибки требует исключение по своей сути. Следуйте рекомендациям .NET, при определении исключение для использования. По сути Если ошибка является семантически так же, как существующие исключения, этот командлет следует использовать, или являются производными от этого исключения. В противном случае он должен быть производным новое исключение, либо иерархия исключений непосредственно из [System.Exception](/dotnet/api/System.Exception) класса.
 
 При создании ошибки идентификаторы (через свойство FullyQualifiedErrorId класса ErrorRecord) Имейте в виду следующее.
 
@@ -135,7 +135,7 @@ End Property
 
 ## <a name="reporting-nonterminating-errors"></a>Устранимые ошибки
 
-Один из методов обработки ввода, может сообщать устранимые ошибки в поток вывода с помощью [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод. Ниже приведен пример кода из этого демонстрируется вызов командлета Get-Proc [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) из в переопределенной [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод. В этом случае вызов выполняется, если командлет не удается найти процесс для идентификатора указанного процесса.
+Один из методов обработки ввода, может сообщать устранимые ошибки в поток вывода с помощью [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод. Ниже приведен пример кода из этого демонстрируется вызов командлета Get-Proc [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) из в переопределенной [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод. В этом случае вызов выполняется, если командлет не удается найти процесс для идентификатора указанного процесса.
 
 ```csharp
 protected override void ProcessRecord()

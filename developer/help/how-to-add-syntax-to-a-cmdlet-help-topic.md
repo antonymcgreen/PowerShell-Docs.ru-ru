@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
-ms.openlocfilehash: 947d0c0188df5bba3a9fb617fe5abf0b3b28eb51
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2e9dbc9ff8f9507f2008cd6e114ba6fec36b10bf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858000"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054617"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Как добавить синтаксис в раздел справки для командлета
 
@@ -112,7 +112,7 @@ ms.locfileid: "56858000"
 
    Использование вместо типов до тех пор, пока их значение становится ясно, такие как «string» для System.String и «int» для System.Int32.
 
-   Список всех значений перечисления, такие как тип параметра - в предыдущем примере, который может быть присвоено «базовый» или «расширенный».
+   Список всех значений перечисления, таких как параметр - тип в предыдущий пример, в котором можно установить значение «базовый» или «расширенный».
 
    Переключение параметров, таких как - список в предыдущем примере, не имеют значений.
 

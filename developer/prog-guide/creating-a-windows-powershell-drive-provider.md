@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drives [PowerShell Programmer's Guide]
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
-ms.openlocfilehash: d1546ab0b0e6b5502f35c92c01ce148211c53db2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 174d3a6860790295e1b73f32d9c1bad46b653917
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855800"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055656"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Создание поставщика дисков Windows PowerShell
 
@@ -61,7 +61,7 @@ ms.locfileid: "56855800"
 
 Всеми поставщиками Windows PowerShell, считаются без отслеживания состояния, что означает, что ваш поставщик диска необходимо создать все сведения о состоянии, который необходим средой выполнения Windows PowerShell, при вызове поставщика.
 
-Для этого поставщика диска сведения о состоянии включает соединение с базой данных, который хранится как часть сведений о диске. Ниже приведен код, который показывает, каким образом эти сведения хранятся в [: System.Management.Automation.Psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) , описывающий диска:
+Для этого поставщика диска сведения о состоянии включает соединение с базой данных, который хранится как часть сведений о диске. Ниже приведен код, который показывает, каким образом эти сведения хранятся в [: System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) , описывающий диска:
 
 [!code-csharp[AccessDBProviderSample02.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L130-L151 "AccessDBProviderSample02.cs")]
 
@@ -73,15 +73,15 @@ ms.locfileid: "56855800"
 
 Переопределение этого метода следует сделайте следующее:
 
-- Убедитесь, что [System.Management.Automation.Psdriveinfo.Root*](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) элемент существует и в хранилище данных можно установить соединение.
+- Убедитесь, что [System.Management.Automation.PSDriveinfo.Root*](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) элемент существует и в хранилище данных можно установить соединение.
 
 - Создание диска и заполнить элемент подключения поддержки `New-PSDrive` командлета.
 
-- Проверка [: System.Management.Automation.Psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) объекта для предложенных диска.
+- Проверка [: System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) объекта для предложенных диска.
 
-- Изменить [: System.Management.Automation.Psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) объект, описывающий на диск с обязательным производительности или надежности сведения или установить дополнительные данные для вызывающих объектов, с помощью диска.
+- Изменить [: System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) объект, описывающий на диск с обязательным производительности или надежности сведения или установить дополнительные данные для вызывающих объектов, с помощью диска.
 
-- Обработка ошибок с помощью [System.Management.Automation.Provider.Cmdletprovider.Writeerror*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) метод, а затем возвратить `null`.
+- Обработка ошибок с помощью [System.Management.Automation.Provider.Cmdletprovider.WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) метод, а затем возвратить `null`.
 
   Этот метод возвращает либо сведениями о диске, переданный к методу или его версию поставщика.
 

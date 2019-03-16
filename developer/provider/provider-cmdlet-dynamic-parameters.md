@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f1069f7-8fa8-4622-9e2c-af29b0b961c2
 caps.latest.revision: 6
-ms.openlocfilehash: 803fe4ae24a4f8022639c5b6d6298100859177ce
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: a50de014988336c473c565b506a73de1c864d7e0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858360"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058238"
 ---
 # <a name="provider-cmdlet-dynamic-parameters"></a>Динамические параметры командлета поставщика
 
@@ -73,7 +73,7 @@ internal sealed class CertificateProviderDynamicParameters
 
 `Copy-Item` командлет можно определить динамических параметров, которые активируются `Path`, `Destination`, и `Recurse` параметры `Copy-Item` командлета путем реализации [ System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) метод.
 
-Командлет Get-ChildItems можно определить динамических параметров, которые активируются `Path` и `Recures` параметры `Get-ChildItem` командлета путем реализации [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) и [System.Management.Automation.Provider.Containercmdletprovider.Getchildnamesdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) методы.
+Командлет Get-ChildItems можно определить динамических параметров, которые активируются `Path` и `Recurse` параметры `Get-ChildItem` командлета путем реализации [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) и [System.Management.Automation.Provider.Containercmdletprovider.Getchildnamesdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) методы.
 
 `Get-Content` командлет можно определить динамических параметров, которые активируются `Path` параметр `Get-Content` командлета путем реализации [ System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreaderdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) метод.
 
@@ -89,7 +89,7 @@ internal sealed class CertificateProviderDynamicParameters
 
 `New-ItemProperty` командлет можно определить динамических параметров, которые активируются `Path`, `Name`, `PropertyType`, и `Value` параметры `New-ItemProperty` командлета путем реализации [ System.Management.Automation.Provider.Idynamicpropertycmdletprovider.Newpropertydynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) метод.
 
-`New-PSDrive` командлет можно определить динамических параметров, которые активируются [: System.Management.Automation.Psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) объект, возвращаемый `New-PSDrive` командлета путем реализации [ System.Management.Automation.Provider.Drivecmdletprovider.Newdrivedynamicparameters*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) метод.
+`New-PSDrive` командлет можно определить динамических параметров, которые активируются [: System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) объект, возвращаемый `New-PSDrive` командлета путем реализации [ System.Management.Automation.Provider.Drivecmdletprovider.Newdrivedynamicparameters*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) метод.
 
 `Remove-Item` Можно определить динамических параметров, которые активируются `Path` и `Recurse` параметры `Remove-Item` командлета путем реализации [ System.Management.Automation.Provider.Containercmdletprovider.Removeitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) метод.
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d68a8f3-fba0-44c5-97b9-9fc191d269a5
 caps.latest.revision: 13
-ms.openlocfilehash: c11e50913d2654b786e0e8cfeaf41454999bf75e
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 0906d0d37c66b8c1538a0b2e9e0f1ff2fba12ac0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794983"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057728"
 ---
 # <a name="strongly-encouraged-development-guidelines"></a>Настоятельные рекомендации по разработке
 
@@ -101,7 +101,7 @@ ms.locfileid: "57794983"
 
 #### <a name="parameters-that-take-true-and-false"></a>Параметры, которые принимают значение True и False
 
-Если параметр принимает только `true` и `false`, определите параметр как тип [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter). Параметр-переключатель, считается `true` когда он указан в команде. Если параметр не включен в команду, Windows PowerShell считает, что значение параметра быть `false`. Не следует определять логических параметров.
+Если параметр принимает только `true` и `false`, определите параметр как тип [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter). Параметр-переключатель, считается `true` когда он указан в команде. Если параметр не включен в команду, Windows PowerShell считает, что значение параметра быть `false`. Не следует определять логических параметров.
 
 Если требуется различать три значения параметра: $true, $false и «unspecified», затем определить параметр типа Nullable\<bool >.  Потребность в сторонней, «unspecified» обычно появляется, когда командлета можно изменить логическое свойство объекта. В данном случае «unspecified» означает, чтобы не изменить текущее значение свойства.
 
@@ -111,7 +111,7 @@ ms.locfileid: "57794983"
 
 #### <a name="support-the-passthru-parameter"></a>Поддерживает параметр PassThru
 
-По умолчанию многие командлеты, вносят изменения в систему, такие как [Stop-Process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) командлета, выступать в роли «приемники» для объектов и не возвращать результат. Необходимо реализовать эти командлет `PassThru` параметр Force вызывает командлет для возвращения объекта. Когда `PassThru` параметр указан, командлет возвращает объект с помощью вызова [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод. Например следующая команда останавливает процесс Calc и передает результирующий процесс в конвейер.
+По умолчанию многие командлеты, вносят изменения в систему, такие как [Stop-Process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) командлета, выступать в роли «приемники» для объектов и не возвращать результат. Необходимо реализовать эти командлет `PassThru` параметр Force вызывает командлет для возвращения объекта. Когда `PassThru` параметр указан, командлет возвращает объект с помощью вызова [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод. Например следующая команда останавливает процесс Calc и передает результирующий процесс в конвейер.
 
 ```powershell
 Stop-Process calc -passthru
@@ -135,21 +135,21 @@ Stop-Process calc -passthru
 
 #### <a name="support-the-writewarning-writeverbose-and-writedebug-methods"></a>Поддерживает WriteWarning WriteVerbose методов и метод WriteDebug
 
-Необходимо вызвать командлет [System.Management.Automation.Cmdlet.Writewarning*](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) метод, когда командлет собирается выполнить операцию, которую может иметь непредвиденные результаты. Например командлет необходимо вызвать этот метод, если командлет является перезаписать файл, доступный только для чтения.
+Необходимо вызвать командлет [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) метод, когда командлет собирается выполнить операцию, которую может иметь непредвиденные результаты. Например командлет необходимо вызвать этот метод, если командлет является перезаписать файл, доступный только для чтения.
 
-Необходимо вызвать командлет [System.Management.Automation.Cmdlet.Writeverbose*](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) метод, когда пользователь необходимы некоторые подробные данные о действиях командлета. Например командлет необходимо вызвать эту информацию, если автор командлет полагает, что существуют сценарии, которые могут потребовать Дополнительные сведения о действиях командлета.
+Необходимо вызвать командлет [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) метод, когда пользователь необходимы некоторые подробные данные о действиях командлета. Например командлет необходимо вызвать эту информацию, если автор командлет полагает, что существуют сценарии, которые могут потребовать Дополнительные сведения о действиях командлета.
 
-Необходимо вызвать командлет [System.Management.Automation.Cmdlet.Writedebug*](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) метод при инженеру службы поддержки разработчиков или продукта, необходимо понимать, что повреждены и операции командлет. Это необязательно для командлета для вызова [System.Management.Automation.Cmdlet.Writedebug*](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) метод в тот же код, который вызывает [System.Management.Automation.Cmdlet.Writeverbose*](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) метод поскольку `Debug` параметр представляется обоим наборам данных.
+Необходимо вызвать командлет [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) метод при инженеру службы поддержки разработчиков или продукта, необходимо понимать, что повреждены и операции командлет. Это необязательно для командлета для вызова [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) метод в тот же код, который вызывает [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) метод так как `Debug` параметр представляется обоим наборам данных.
 
 #### <a name="support-writeprogress-for-operations-that-take-a-long-time"></a>Поддержка WriteProgress операций, которые занимают много времени
 
-Командлет операций, которые принимают много времени и, не могут работать в фоновом режиме должен поддерживать о ходе выполнения периодических вызовов [System.Management.Automation.Cmdlet.Writeprogress*](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) метод.
+Командлет операций, которые принимают много времени и, не могут работать в фоновом режиме должен поддерживать о ходе выполнения периодических вызовов [System.Management.Automation.Cmdlet.WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) метод.
 
 #### <a name="use-the-host-interfaces"></a>Используйте интерфейсы узла
 
-В некоторых случаях командлет должны взаимодействовать непосредственно с пользователем, а не с помощью различных записи, или следует методов, поддерживаемых [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) класса. В этом случае командлет должен быть производным от [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) и использовать [System.Management.Automation.Pscmdlet.Host*](/dotnet/api/System.Management.Automation.PSCmdlet.Host) свойство. Это свойство поддерживает разные уровни типа связи, включая типы PromptForChoice, приглашения и WriteLine/ReadLine. На самом определенный уровень также предоставляет способы для чтения и записи отдельные ключи и иметь дело с буферами.
+В некоторых случаях командлет должны взаимодействовать непосредственно с пользователем, а не с помощью различных записи, или следует методов, поддерживаемых [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) класса. В этом случае командлет должен быть производным от [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) и использовать [System.Management.Automation.PSCmdlet.Host*](/dotnet/api/System.Management.Automation.PSCmdlet.Host) свойство. Это свойство поддерживает разные уровни типа связи, включая типы PromptForChoice, приглашения и WriteLine/ReadLine. На самом определенный уровень также предоставляет способы для чтения и записи отдельные ключи и иметь дело с буферами.
 
-Если командлет специально разработан для создания графического интерфейса (GUI), его нужно не пропустить узла с помощью [System.Management.Automation.Pscmdlet.Host*](/dotnet/api/System.Management.Automation.PSCmdlet.Host) свойство. Например, командлет, который предназначен для создания графического пользовательского интерфейса [Out-GridView](/powershell/module/Microsoft.PowerShell.Utility/Out-GridView) командлета.
+Если командлет специально разработан для создания графического интерфейса (GUI), его нужно не пропустить узла с помощью [System.Management.Automation.PSCmdlet.Host*](/dotnet/api/System.Management.Automation.PSCmdlet.Host) свойство. Например, командлет, который предназначен для создания графического пользовательского интерфейса [Out-GridView](/powershell/module/Microsoft.PowerShell.Utility/Out-GridView) командлета.
 
 > [!NOTE]
 > Не следует использовать командлеты [System.Console](/dotnet/api/System.Console) API.
@@ -174,15 +174,15 @@ Stop-Process calc -passthru
 
 Если есть командлет считывает или записывает данные в файл, командлет должен принимать входные данные путь Windows PowerShell и командлет следует использовать [System.Management.Automation.Sessionstate.Path](/dotnet/api/System.Management.Automation.SessionState.Path) свойства Windows Пути PowerShell в путях, распознаваемых в файловой системе. Определенные механизмы включают в себя следующие методы:
 
-- [System.Management.Automation.Pscmdlet.Getresolvedproviderpathfrompspath](/dotnet/api/System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath)
+- [System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath)
 
-- [System.Management.Automation.Pscmdlet.Getunresolvedproviderpathfrompspath](/dotnet/api/System.Management.Automation.PSCmdlet.GetUnresolvedProviderPathFromPSPath)
+- [System.Management.Automation.PSCmdlet.GetUnresolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PSCmdlet.GetUnresolvedProviderPathFromPSPath)
 
-- [System.Management.Automation.Pathintrinsics.Getresolvedproviderpathfrompspath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromPSPath)
+- [System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromPSPath)
 
-- [System.Management.Automation.Pathintrinsics.Getunresolvedproviderpathfrompspath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath)
+- [System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath)
 
-Если командлет считывает или записывает данные только является набор строк, а не файлом, этот командлет следует использовать сведения о содержимом поставщика (`Content` член) для чтения и записи. Эти сведения будут получены из [System.Management.Automation.Provider.Cmdletprovider.Invokeprovider*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) свойство. Эти механизмы позволяют другие хранилища данных для участия в режиме чтения и записи данных.
+Если командлет считывает или записывает данные только является набор строк, а не файлом, этот командлет следует использовать сведения о содержимом поставщика (`Content` член) для чтения и записи. Эти сведения будут получены из [System.Management.Automation.Provider.CmdletProvider.InvokeProvider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) свойство. Эти механизмы позволяют другие хранилища данных для участия в режиме чтения и записи данных.
 
 #### <a name="support-wildcard-characters"></a>Поддерживает символы-шаблоны
 
@@ -206,11 +206,11 @@ Stop-Process calc -passthru
 
 Ранее существовавших объекты .NET Framework, возвращаемые командлетами часто отсутствуют некоторые важные или удобный члены, необходимые разработчику скриптов или пользователем. Эти отсутствующие элементы могут быть особенно важно для отображения, а также для создания имен соответствующему члену, таким образом, объект можно правильно передать в конвейер. Создание пользовательского файла Types.ps1xml для документирования эти обязательные члены. При создании этого файла, мы рекомендуем следующее соглашение об именовании: *< Your_Product_Name >*. Types.ps1xml.
 
-Например, можно добавить `Mode` свойство скрипта [System.IO.Fileinfo](/dotnet/api/System.IO.FileInfo) для более четкого отображения атрибутов файла. Кроме того, можно добавить `Count` свойства псевдонима к [System.Array](/dotnet/api/System.Array) типа разрешенного согласованное использование этого имени свойства (вместо `Length`).
+Например, можно добавить `Mode` свойство скрипта [System.IO.FileInfo](/dotnet/api/System.IO.FileInfo) для более четкого отображения атрибутов файла. Кроме того, можно добавить `Count` свойства псевдонима к [System.Array](/dotnet/api/System.Array) типа разрешенного согласованное использование этого имени свойства (вместо `Length`).
 
 ##### <a name="implement-the-icomparable-interface"></a>Реализовать интерфейс IComparable
 
-Реализуйте [System.Icomparable](/dotnet/api/System.IComparable) интерфейс для всех объектов выходных данных. Это позволяет легко передавать в различные командлеты, сортировки и анализа объектов выходных данных.
+Реализуйте [System.IComparable](/dotnet/api/System.IComparable) интерфейс для всех объектов выходных данных. Это позволяет легко передавать в различные командлеты, сортировки и анализа объектов выходных данных.
 
 ##### <a name="update-display-information"></a>Обновить отображаемые сведения
 
@@ -230,11 +230,11 @@ Stop-Process calc -passthru
 
 #### <a name="support-the-processrecord-method"></a>Поддерживает метод ProcessRecord
 
-Чтобы принять все записи из предыдущего командлета в конвейере, необходимо реализовать командлета [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод. Windows PowerShell этот метод вызывается несколько раз, один раз для каждой записи, которая отправляется в командлет.
+Чтобы принять все записи из предыдущего командлета в конвейере, необходимо реализовать командлета [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод. Windows PowerShell этот метод вызывается несколько раз, один раз для каждой записи, которая отправляется в командлет.
 
 ### <a name="write-single-records-to-the-pipeline-sc03"></a>Одной записи в конвейер (SC03)
 
-Если командлет возвращает объекты, командлет должен записывать объекты сразу же, как они создаются. Командлет не должен содержать их для буферизации их в объединенный массив. Командлеты, которые получают объекты в качестве входных данных будет возможность обработки, отображения, или обрабатывать и отображать выходных объектов без задержки. Командлет, который создает выходные данные объекты по одному должен вызывать [System.Management.Automation.Cmdlet.Writeobject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод. Командлет, который создает выходные объекты в пакетах (например, поскольку нижележащим интерфейсом API возвращает массив объектов выходных данных) должны вызывать [System.Managemet.Automation.Cmdlet.Writeobject](/dotnet/api/System.Managemet.Automation.Cmdlet.WriteObject) метод с ее второй параметр Чтобы `true`.
+Если командлет возвращает объекты, командлет должен записывать объекты сразу же, как они создаются. Командлет не должен содержать их для буферизации их в объединенный массив. Командлеты, которые получают объекты в качестве входных данных будет возможность обработки, отображения, или обрабатывать и отображать выходных объектов без задержки. Командлет, который создает выходные данные объекты по одному должен вызывать [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод. Командлет, который создает выходные объекты в пакетах (например, поскольку нижележащим интерфейсом API возвращает массив объектов выходных данных) должны вызывать [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод с ее второй параметр Чтобы `true`.
 
 ### <a name="make-cmdlets-case-insensitive-and-case-preserving-sc04"></a>Сделать командлеты без учета регистра и меняющее регистр (SC04)
 

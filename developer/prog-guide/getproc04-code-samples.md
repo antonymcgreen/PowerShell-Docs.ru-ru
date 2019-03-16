@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c00afd46-758a-4aec-b865-2c9d8f6a17ad
 caps.latest.revision: 5
-ms.openlocfilehash: b9b42c818981090496f7b14a1cb8bdec14a5d5bb
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 67081528ebe14fbb082091c1b9500de82069b48f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429726"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054651"
 ---
 # <a name="getproc04-code-samples"></a>Примеры кода GetProc04
 
-Ниже приведены примеры кода для командлета GetProc04 образца. Это `Get-Process` командлетов, которые описаны в [Добавление устранимые отчеты об ошибках Your командлету](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md). Это `Get-Process` вызывает командлет [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод всякий раз, когда возникает исключение недопустимой операции при получении сведений о процессе.
+Ниже приведены примеры кода для командлета GetProc04 образца. Это `Get-Process` командлетов, которые описаны в [Добавление устранимые отчеты об ошибках Your командлету](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md). Это `Get-Process` вызывает командлет [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод всякий раз, когда возникает исключение недопустимой операции при получении сведений о процессе.
 
 > [!NOTE]
 > Вы можете скачать C# исходный файл (getprov04.cs) для этого командлета Get-Proc, с помощью Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).

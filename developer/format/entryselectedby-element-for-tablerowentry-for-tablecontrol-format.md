@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49623fcf-1238-4d20-a7ce-238d47d9d565
 caps.latest.revision: 15
-ms.openlocfilehash: e18564c10898c73128e0a4bc7d077e7c7ffb1c22
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 9302bfed0324773cb98d698acdcf608f34ee19c1
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862330"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058765"
 ---
 # <a name="entryselectedby-element-for-tablerowentry--for-tablecontrol-format"></a>Элемент EntrySelectedBy для элемента TableRowEntry для элемента TableControl (формат)
 
@@ -51,7 +51,7 @@ ms.locfileid: "56862330"
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент TableRowEntry для TableControl (формат)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)|Определяет данные, которые отображаются в строке таблицы.|
+|[Элемент TableRowEntry для TableControl (формат)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Определяет данные, которые отображаются в строке таблицы.|
 
 ## <a name="remarks"></a>Замечания
 
@@ -89,7 +89,7 @@ ms.locfileid: "56862330"
 
 [Элемент SelectionSetName для EntrySelectedBy для TableControl (формат)](./selectionsetname-element-for-entryselectedby-for-tablecontrol-format.md)
 
-[Элемент TableRowEntry для TableControl (формат)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)
+[Элемент TableRowEntry для TableControl (формат)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
 [TypeName-элемент для EntrySelectedBy для TableControl (формат)](./typename-element-for-entryselectedby-for-tablecontrol-format.md)
 

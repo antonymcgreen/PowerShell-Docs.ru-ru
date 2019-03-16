@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3d09eaa-924f-4e2b-adfb-14bb729090dd
 caps.latest.revision: 8
-ms.openlocfilehash: d0fb81ee1ca1f80e216c021e1bd64771b8de4dc3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ad7f9737c646dd5cea5abb14b828236e40feac5a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860120"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057048"
 ---
 # <a name="provider-cmdlet-parameters"></a>Параметры командлета поставщика
 
@@ -29,9 +29,9 @@ ms.locfileid: "56860120"
 
 `Clear-ItemProperty` командлет, можно определить как поставщик будет использовать значения, передаваемые `Path` и `Name` параметры `Clear-ItemProperty` командлета путем реализации [ System.Management.Automation.Provider.Ipropertycmdletprovider.Clearproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) метод.
 
-`Copy-Item` командлет, можно определить как поставщик будет использовать значения, передаваемые `Path`, `Destination`, и `Recurse` параметры `Copy-Item` командлета путем реализации [ System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод.
+`Copy-Item` командлет, можно определить как поставщик будет использовать значения, передаваемые `Path`, `Destination`, и `Recurse` параметры `Copy-Item` командлета путем реализации [ System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод.
 
-Командлет Get-ChildItems, вы можете определить, как поставщик будет использовать значения, передаваемые `Path` и `Recures` параметры `Get-ChildItem` командлета путем реализации [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) и [System.Management.Automation.Provider.Containercmdletprovider.Getchildnames*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) методы.
+Командлет Get-ChildItems, вы можете определить, как поставщик будет использовать значения, передаваемые `Path` и `Recurse` параметры `Get-ChildItem` командлета путем реализации [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) и [System.Management.Automation.Provider.Containercmdletprovider.Getchildnames*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) методы.
 
 `Get-Content` командлет, можно определить как поставщик будет использовать значения, передаваемые `Path` параметр `Get-Content` командлета путем реализации [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreader*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) метод.
 
@@ -45,7 +45,7 @@ ms.locfileid: "56860120"
 
 `New-Item` командлет, можно определить как поставщик будет использовать значения, передаваемые `Path`, `ItemType`, и `Value` параметры `New-Item` командлета путем реализации [ System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метод.
 
-`New-ItemProperty` командлет, можно определить как поставщик будет использовать значения, передаваемые `Path`, `Name`, `PropertyType`, и `Value` параметры `New-ItemProperty` командлета путем реализации [ Microsoft.Powershell.Commands.Registryprovider.Newproperty*](/dotnet/api/Microsoft.PowerShell.Commands.RegistryProvider.NewProperty) метод.
+`New-ItemProperty` командлет, можно определить как поставщик будет использовать значения, передаваемые `Path`, `Name`, `PropertyType`, и `Value` параметры `New-ItemProperty` командлета путем реализации [ Microsoft.PowerShell.Commands.Registryprovider.Newproperty*](/dotnet/api/Microsoft.PowerShell.Commands.RegistryProvider.NewProperty) метод.
 
 `Remove-Item` Вы можете определить, как поставщик будет использовать значения, передаваемые `Path` и `Recurse` параметры `Remove-Item` командлета путем реализации [System.Management.Automation.Provider.Containercmdletprovider.Removeitem* ](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) метод.
 

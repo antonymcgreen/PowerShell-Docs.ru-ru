@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e67298ee-a773-4402-8afb-d97ad0e030e5
 caps.latest.revision: 4
-ms.openlocfilehash: a9204ca7b28fc5792ef9bd18f6b0b24964de7386
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c7e20ff0f36e8cab2d414ff2e5924b3359ad9c60
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859550"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057252"
 ---
 # <a name="public-resource-schema"></a>Общедоступная схема ресурсов
 
@@ -21,7 +21,7 @@ OData для управления применяет MOF для определе
 
 ## <a name="defining-a-resource"></a>Определение ресурса
 
-Каждый ресурс соответствует объект, возвращаемый командлетом Windows PowerShell. В файле MOF ресурсов publc определить ресурс путем объявления класса. Класс состоит из свойств, которые соответствуют свойствам объекта. Например, в следующем примере [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) класс, представленный ниже MOF-ФАЙЛ.
+Каждый ресурс соответствует объект, возвращаемый командлетом Windows PowerShell. В ресурс общедоступного MOF-файл можно определить ресурс, объявление класса. Класс состоит из свойств, которые соответствуют свойствам объекта. Например, в следующем примере [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) класс, представленный ниже MOF-ФАЙЛ.
 
 ```csharp
 class PswsTest_Process
@@ -55,7 +55,7 @@ class PswsTest_ProcessModule
 };
 ```
 
-Чтобы объявить свойство как сложный тип сущности, он объявляется как `string` тип с `EmbeddedInstance` квалификатор, включая имя сложного типа. Следующий пример hshows объявление свойства из `PswsTest_ProcessModule` тип, объявленный в предыдущем примере.
+Чтобы объявить свойство как сложный тип сущности, он объявляется как `string` тип с `EmbeddedInstance` квалификатор, включая имя сложного типа. В следующем примере показано объявление свойства `PswsTest_ProcessModule` тип, объявленный в предыдущем примере.
 
 ```csharp
 [Required, EmbeddedInstance("PswsTest_ProcessModule")] String Modules[];
@@ -63,7 +63,7 @@ class PswsTest_ProcessModule
 
 ### <a name="associating-entities"></a>Связывание сущностей
 
-Можно связать две сущности с помощью ассоциации и AssocationClass квалификаторы. Дополнительные сведения см. в разделе [связывание сущностей OData управления](./associating-management-odata-entities.md).
+Можно связать две сущности с помощью ассоциации и AssociationClass квалификаторы. Дополнительные сведения см. в разделе [связывание сущностей OData управления](./associating-management-odata-entities.md).
 
 ### <a name="derived-types"></a>Производные типы
 
@@ -72,17 +72,16 @@ class PswsTest_ProcessModule
 ```csharp
 Class Product {
 
-[Key] String ProductName;
+    [Key] String ProductName;
 
 };
 
 Class DairyProduct : Product {
 
-Uint16 PercentFat;
+    Uint16 PercentFat;
 };
 Class POPProduct : Product {
 
-Boolean IsCarbonated;
+    Boolean IsCarbonated;
 };
-
 ```

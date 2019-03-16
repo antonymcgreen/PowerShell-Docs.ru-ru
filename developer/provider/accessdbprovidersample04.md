@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ee3a7e56-7331-4f71-9ecb-7a59b8021c68
 caps.latest.revision: 10
-ms.openlocfilehash: fd013384a4b588bcdb397d7771425fe5c031c48f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d9109e8d5b69a25ad52b90bcaff9628b01067211
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856700"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057626"
 ---
 # <a name="accessdbprovidersample04"></a>AccessDBProviderSample04
 
@@ -30,7 +30,7 @@ ms.locfileid: "56856700"
 
 - Определение класса поставщика, который является производным от [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) класса.
 
-- Перезапись [System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод, чтобы изменить поведение `Copy-Item` командлет, который позволяет пользователю копировать элементы из одного расположения в другое. (В этом примере показано, как добавлять динамические параметры для `Copy-Item` командлет.)
+- Перезапись [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод, чтобы изменить поведение `Copy-Item` командлет, который позволяет пользователю копировать элементы из одного расположения в другое. (В этом примере показано, как добавлять динамические параметры для `Copy-Item` командлет.)
 
 - Перезапись [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод, чтобы изменить поведение командлет Get-ChildItems, который позволяет пользователю получить дочерние элементы родительского элемента . (В этом примере показано, как добавлять динамические параметры в командлет Get-ChildItems.)
 

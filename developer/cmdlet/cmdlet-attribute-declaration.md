@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Cmdlet attribute
 ms.assetid: 1d323332-f773-4c0e-8a69-2aada765afb2
 caps.latest.revision: 12
-ms.openlocfilehash: 2bc03aaade1f18d48f65ecf5f9ee437ffaf07f92
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 6887467ad5ccafe6edf8f03f531b4750133aa9e9
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863430"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058034"
 ---
 # <a name="cmdlet-attribute-declaration"></a>Объявление атрибута командлета
 
@@ -36,9 +36,9 @@ ms.locfileid: "56863430"
 
 `NounName` ([System.String](/dotnet/api/System.String)) требуется. Означает существительные командлета. Это существительное указывает ресурс, который обрабатывает командлет. Дополнительные сведения о существительные командлета, см. в разделе [объявление командлет](./cmdlet-class-declaration.md) и [строго настоятельные рекомендации по разработке](./strongly-encouraged-development-guidelines.md).
 
-`SupportsShouldProcess` ([System.Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True` Указывает, что командлет поддерживает вызовы [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод, который предоставляет возможность запрашивать пользователя, прежде чем будет выполнено действие, которое изменений в системе командлет. `False`, значение по умолчанию, указывает, что командлет не поддерживает вызовы [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. Дополнительные сведения о запросах подтверждения, см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
+`SupportsShouldProcess` ([System.Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True` Указывает, что командлет поддерживает вызовы [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод, который предоставляет возможность запрашивать пользователя, прежде чем будет выполнено действие, которое изменений в системе командлет. `False`, значение по умолчанию, указывает, что командлет не поддерживает вызовы [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. Дополнительные сведения о запросах подтверждения, см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
 
-`ConfirmImpact` ([System.Management.Automation.Confirmimpact](/dotnet/api/System.Management.Automation.ConfirmImpact)) необязательный именованный параметр. Указывает, когда действие командлета следует подтвердить с помощью вызова [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) будет вызываться только при значении ConfirmImpact командлета (по умолчанию — Medium) равным или больше, чем значение `$ConfirmPreference` переменной. Этот параметр должен быть указан только тогда, когда `SupportsShouldProcess` указан параметр.
+`ConfirmImpact` ([System.Management.Automation.Confirmimpact](/dotnet/api/System.Management.Automation.ConfirmImpact)) необязательный именованный параметр. Указывает, когда действие командлета следует подтвердить с помощью вызова [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) будет вызываться только при значении ConfirmImpact командлета (по умолчанию — Medium) равным или больше, чем значение `$ConfirmPreference` переменной. Этот параметр должен быть указан только тогда, когда `SupportsShouldProcess` указан параметр.
 
 `DefaultParameterSetName` ([System.String](/dotnet/api/System.String)) необязательный именованный параметр. Указывает, что для параметра по умолчанию установлено, что среда выполнения Windows PowerShell пытается использовать, когда не удается определить, какой набор параметров следует использовать. Обратите внимание на то, что такой ситуации можно избежать путем внесения параметр unique командлета каждого параметра задать обязательный параметр.
 
@@ -54,9 +54,9 @@ ms.locfileid: "56863430"
 
 **VerbName NounName**
 
-- Все командлеты, изменяющих ресурсы за пределы Windows PowerShell должна включать `SupportsShouldProcess` ключевое слово при объявлении атрибута командлет, который позволяет командлету вызвать [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод прежде, чем командлет выполняет его действие. Если [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызов возвращает `false`, действие не должно приниматься. Дополнительные сведения о запросах подтверждения при [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызывать, см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
+- Все командлеты, изменяющих ресурсы за пределы Windows PowerShell должна включать `SupportsShouldProcess` ключевое слово при объявлении атрибута командлет, который позволяет командлету вызвать [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод прежде, чем командлет выполняет его действие. Если [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызов возвращает `false`, действие не должно приниматься. Дополнительные сведения о запросах подтверждения при [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызывать, см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
 
-`Confirm` И `WhatIf` параметры командлета, доступны только для командлетов, которые поддерживают [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызовов.
+`Confirm` И `WhatIf` параметры командлета, доступны только для командлетов, которые поддерживают [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызовов.
 
 ## <a name="example"></a>Пример
 

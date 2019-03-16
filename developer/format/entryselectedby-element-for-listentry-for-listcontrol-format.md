@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0f7a74e9-764d-46ce-ab8e-8b9314ce1659
 caps.latest.revision: 12
-ms.openlocfilehash: 723619e67612b859d0acbab37eecd82141adf923
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 442565d25f60ae8e04501f3f9ffba35d486fbc8a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854950"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054949"
 ---
 # <a name="entryselectedby-element-for-listentry-for-listcontrol-format"></a>Элемент EntrySelectedBy для элемента ListEntry для элемента ListControl (формат)
 
@@ -44,7 +44,7 @@ ms.locfileid: "56854950"
 |Элемент|Описание|
 |-------------|-----------------|
 |[Элемент SelectionCondition для EntrySelectedBy для ListControl (формат)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Определяет условие, которое должен существовать для данного определения представления списка для использования.|
-|[Элемент SelectionSetName для EnrtySelectedBy для ListControl (формат)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Задает набор типов .NET, которые используют это определение представления списка.|
+|[Элемент SelectionSetName для EntrySelectedBy для ListControl (формат)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Задает набор типов .NET, которые используют это определение представления списка.|
 |[TypeName-элемент для EntrySelectedBy для ListControl (формат)](./typename-element-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает тип .NET, который использует это определение представления списка.|
 
 ### <a name="parent-elements"></a>Родительские элементы
@@ -79,7 +79,7 @@ ms.locfileid: "56854950"
 
 [Элемент SelectionCondition для EntrySelectedBy для ListControl (формат)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
 
-[Элемент SelectionSetName для EnrtySelectedBy для ListControl (формат)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[Элемент SelectionSetName для EntrySelectedBy для ListControl (формат)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
 [TypeName-элемент для EntrySelectedBy для ListControl (формат)](./typename-element-for-entryselectedby-for-listcontrol-format.md)
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: 75a45e539b45b50714951f2b992d9ecf69de4664
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c380b28570c955de6f41152fd617f5c1b0f9e4bd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860650"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054702"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Создание командлета без параметров
 
@@ -70,7 +70,7 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-Обратите внимание, что перед определением класса [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) атрибут, с помощью синтаксиса `[Cmdlet(verb, noun, ...)]`, используемое для идентификации этого класса, как командлет. Это единственный обязательный атрибут для всех командлетов, и он позволяет среде выполнения Windows PowerShell для корректного вызова. Можно задать атрибут ключевые слова для дальнейшего объявления класса, при необходимости. Имейте в виду, что объявление атрибута для нашего примера GetProcCommand класса объявляются только имя существительное и команда имена для командлета Get-Proc.
+Обратите внимание, что перед определением класса [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) атрибут, с помощью синтаксиса `[Cmdlet(verb, noun, ...)]`, используемое для идентификации этого класса, как командлет. Это единственный обязательный атрибут для всех командлетов, и он позволяет среде выполнения Windows PowerShell для корректного вызова. Можно задать атрибут ключевые слова для дальнейшего объявления класса, при необходимости. Имейте в виду, что объявление атрибута для нашего примера GetProcCommand класса объявляются только имя существительное и команда имена для командлета Get-Proc.
 
 > [!NOTE]
 > Для всех классов атрибутов Windows PowerShell ключевые слова, которые можно задать соответствуют свойствам класса атрибута.
@@ -78,27 +78,27 @@ Public Class GetProcCommand
 При присвоении имени класса командлета, рекомендуется в соответствии с именем командлета в имени класса. Чтобы сделать это, используйте форму «VerbNounCommand» и замените глагол и существительное, используемый в имени командлета «Глагол» и «Существительное». Как показано в предыдущем определение класса, командлет Get-Proc примере определяется класс с именем GetProcCommand, который является производным от [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) базового класса.
 
 > [!IMPORTANT]
-> Если вы хотите определить командлет, который напрямую обращается к среде выполнения Windows PowerShell, класс .NET должен быть производным от [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) базового класса. Дополнительные сведения об этом классе см. в разделе [Создание командлета, определяет параметр наборов](./adding-parameter-sets-to-a-cmdlet.md).
+> Если вы хотите определить командлет, который напрямую обращается к среде выполнения Windows PowerShell, класс .NET должен быть производным от [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) базового класса. Дополнительные сведения об этом классе см. в разделе [Создание командлета, определяет параметр наборов](./adding-parameter-sets-to-a-cmdlet.md).
 
 > [!NOTE]
 > Класс для командлета должны быть помечены как открытые. Классы, которые не помечены как открытые по умолчанию к внутренним и не будет найдена средой выполнения Windows PowerShell.
 
-Windows PowerShell использует [Microsoft.Powershell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) пространство имен для классов его командлет. Рекомендуется поместить командлет классы в пространстве имен команд API пространства имен, например, xxx.PS.Commands.
+Windows PowerShell использует [Microsoft.PowerShell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) пространство имен для классов его командлет. Рекомендуется поместить командлет классы в пространстве имен команд API пространства имен, например, xxx.PS.Commands.
 
 ## <a name="overriding-an-input-processing-method"></a>Переопределив метод обработки входных данных
 
 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) класс предоставляет три метода основной обработки ввода, по крайней мере один из которых необходимо переопределить командлета. Дополнительные сведения об обработке записей с помощью Windows PowerShell см. в разделе [как Windows PowerShell работает](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
 
-Для всех типов входных данных среда выполнения Windows PowerShell вызывает [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , чтобы включить обработку. Если в командлете необходимо выполнить предварительную обработку или установки, его можно сделать путем переопределения этого метода.
+Для всех типов входных данных среда выполнения Windows PowerShell вызывает [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , чтобы включить обработку. Если в командлете необходимо выполнить предварительную обработку или установки, его можно сделать путем переопределения этого метода.
 
 > [!NOTE]
 > Windows PowerShell используется термин «запись» для описания набора значений параметров, при выполнении командлета указано.
 
-Если командлет принимает входные данные конвейера, необходимо переопределить [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод и при необходимости [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)метод. Например, командлет может переопределить оба метода, если он собирает все входные данные с помощью [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) и затем обрабатывает входные данные как единое целое, а не одного элемента за раз, как `Sort-Object` командлет не.
+Если командлет принимает входные данные конвейера, необходимо переопределить [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод и при необходимости [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)метод. Например, командлет может переопределить оба метода, если он собирает все входные данные с помощью [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) и затем обрабатывает входные данные как единое целое, а не одного элемента за раз, как `Sort-Object` командлет не.
 
-Если командлет не принимает входные данные конвейера, следует переопределить [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод. Имейте в виду, что этот метод часто используется вместо [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) когда командлет не может работать с одного элемента за раз, как в случае для сортировки командлета.
+Если командлет не принимает входные данные конвейера, следует переопределить [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод. Имейте в виду, что этот метод часто используется вместо [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) когда командлет не может работать с одного элемента за раз, как в случае для сортировки командлета.
 
-Так как этот пример командлета Get-Proc должен получить входные данные конвейера, он переопределяет [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метода и использует реализации по умолчанию для [ System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) и [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) переопределения извлекает процессы и записывает их в командной строке с помощью [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод.
+Так как этот пример командлета Get-Proc должен получить входные данные конвейера, он переопределяет [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метода и использует реализации по умолчанию для [ System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) и [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) переопределения извлекает процессы и записывает их в командной строке с помощью [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод.
 
 ```csharp
 protected override void ProcessRecord()
@@ -136,14 +136,14 @@ End Sub 'ProcessRecord
 
 - Метод обработки входных данных можно также вводить данные из объекта выходных данных вышестоящего командлета в конвейере. Дополнительные сведения см. в разделе [Создание командлету входные данные конвейера процесс](./adding-parameters-that-process-pipeline-input.md). Имейте в виду, что командлета можно получать входные данные на основе сочетания командной строки и конвейера источников.
 
-- Командлет подчиненных могут не возвращать в течение длительного времени или вообще не. По этой причине метод командлета обработки входных данных не следует удерживать блокировки во время вызовов [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject), особенно блокировок, для которых область расширяется за пределы экземпляра командлет.
+- Командлет подчиненных могут не возвращать в течение длительного времени или вообще не. По этой причине метод командлета обработки входных данных не следует удерживать блокировки во время вызовов [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject), особенно блокировок, для которых область расширяется за пределы экземпляра командлет.
 
 > [!IMPORTANT]
 > Никогда не должен вызывать командлеты [System.Console.Writeline*](/dotnet/api/System.Console.WriteLine) или его эквивалент.
 
-- Командлет может быть объектные переменные для очистки после завершения обработки (например, в том случае, если он открывает дескриптор файла в [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод и сохраняет дескриптор откройте для использования, [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)). Важно помнить, что среда выполнения Windows PowerShell не всегда вызывает [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод, который следует выполнить очистку объекта.
+- Командлет может быть объектные переменные для очистки после завершения обработки (например, в том случае, если он открывает дескриптор файла в [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод и сохраняет дескриптор откройте для использования, [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)). Важно помнить, что среда выполнения Windows PowerShell не всегда вызывает [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод, который следует выполнить очистку объекта.
 
-Например [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) не может вызываться, если командлет отменяется в середине или если завершающей в любой части командлета возникает ошибка. Таким образом, следует реализовать полный командлет, который требует очистки объектов [System.Idisposable](/dotnet/api/System.IDisposable) шаблону, в том числе метод завершения, таким образом, чтобы среда выполнения может вызвать оба [ System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) и [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) в конце обработки.
+Например [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) не может вызываться, если командлет отменяется в середине или если завершающей в любой части командлета возникает ошибка. Таким образом, следует реализовать полный командлет, который требует очистки объектов [System.IDisposable](/dotnet/api/System.IDisposable) шаблону, в том числе метод завершения, таким образом, чтобы среда выполнения может вызвать оба [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) и [System.IDisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) в конце обработки.
 
 ## <a name="code-sample"></a>Пример кода
 

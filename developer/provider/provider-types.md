@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e523a8e1-42e4-4633-887f-fb74b3464561
 caps.latest.revision: 12
-ms.openlocfilehash: 25b604621c90f1aa88bc1eea365e47db66e98c3d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 37689571eb1650e5991af2e7002cd037ae99dd68
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858410"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057966"
 ---
 # <a name="provider-types"></a>Типы поставщиков
 
@@ -65,7 +65,7 @@ ms.locfileid: "56858410"
 
 [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) класс определяет следующие методы для реализации определенного поставщика командлетов. В большинстве случаев для поддержки командлету поставщика необходимо перезаписать метод, который вызывается обработчиком Windows PowerShell для вызова командлета, такие как `CopyItem` метод `Copy-Item` командлет и при необходимости можно перезаписать второго метода, например `CopyItemDynamicParameters`, для добавления динамических параметров в командлет.
 
-- [System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) и [System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) методы определяют, как используемый поставщик поддерживает `Copy-Item` командлетом поставщика. Этот командлет позволяет пользователю скопировать элемент из одного расположения в другое.
+- [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) и [System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) методы определяют, как используемый поставщик поддерживает `Copy-Item` командлетом поставщика. Этот командлет позволяет пользователю скопировать элемент из одного расположения в другое.
 
 - [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) и [System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) методы определяют, как используемый поставщик поддерживает `Get-ChildItem` командлетом поставщика. Этот командлет позволяет получить дочерние элементы родительского элемента.
 

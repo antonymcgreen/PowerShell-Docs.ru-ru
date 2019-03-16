@@ -14,12 +14,12 @@ helpviewer_keywords:
 - error records [PowerShell], non-terminating
 ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
 caps.latest.revision: 8
-ms.openlocfilehash: 7b54fc220a66a47c25b3e8cba644882d31713cb7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 45f5934314a2871ceb921c7a66b9dfb658d0bd99
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857690"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057949"
 ---
 # <a name="cmdlet-error-reporting"></a>Отчеты об ошибках командлета
 
@@ -43,7 +43,7 @@ ms.locfileid: "56857690"
 
 ## <a name="reporting-nonterminating-errors"></a>Устранимые ошибки
 
-Создание отчетов по устранимые ошибки всегда должна выполняться в рамках реализации командлета [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метода [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод, или [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод. Эти типы ошибок выводятся путем вызова [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метода, который в свою очередь отправляет запись об ошибке в поток ошибок.
+Создание отчетов по устранимые ошибки всегда должна выполняться в рамках реализации командлета [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метода [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод, или [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод. Эти типы ошибок выводятся путем вызова [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метода, который в свою очередь отправляет запись об ошибке в поток ошибок.
 
 ## <a name="reporting-terminating-errors"></a>Reporting прерывающие ошибки
 
@@ -53,7 +53,7 @@ ms.locfileid: "56857690"
 
 ## <a name="error-records"></a>Записи об ошибках
 
-Windows PowerShell описываются устранимые ошибки помощи [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) объектов. Каждый [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) объект предоставляет сведения о категории ошибок, необязательный целевой объект и сведения об ошибке.
+Windows PowerShell описываются устранимые ошибки помощи [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объектов. Каждый [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объект предоставляет сведения о категории ошибок, необязательный целевой объект и сведения об ошибке.
 
 ### <a name="error-identifiers"></a>Ошибка идентификаторы
 
@@ -61,7 +61,7 @@ Windows PowerShell описываются устранимые ошибки по
 
 Следующие рекомендации необходимо соблюдать при указании идентификаторов ошибки.
 
-- Назначает идентификаторы отличные, высокоспециализированные, ошибка на разных путей кода. Каждый путь кода, который вызывает [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) или [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) должен иметь свой собственный идентификатор ошибки.
+- Назначает идентификаторы отличные, высокоспециализированные, ошибка на разных путей кода. Каждый путь кода, который вызывает [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) или [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) должен иметь свой собственный идентификатор ошибки.
 
 - Ошибка идентификаторы должны быть уникальными для типов исключений среды CLR для и устранимые ошибки.
 

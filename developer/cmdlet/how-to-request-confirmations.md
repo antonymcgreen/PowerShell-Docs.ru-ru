@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f24f77d5-e224-4b62-b128-535e045d333e
 caps.latest.revision: 9
-ms.openlocfilehash: 8cfbcacf93733667ffba63a252c86518c0919b57
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 19e96b612a8778d82cdbafb528a7ffeb01f15f99
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863410"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058833"
 ---
 # <a name="how-to-request-confirmations"></a>Как запросить подтверждение
 
-В этом примере показан способ вызова [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) методы для запроса подтверждения из пользователь, прежде чем произойдет.
+В этом примере показан способ вызова [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) методы для запроса подтверждения из пользователь, прежде чем произойдет.
 
 > [!IMPORTANT]
 > Дополнительные сведения о том, как Windows PowerShell обрабатывает эти запросы, см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
@@ -43,13 +43,13 @@ ms.locfileid: "56863410"
     private bool force;
     ```
 
-3. Добавить `if` инструкцию, которая использует возвращаемое значение [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод на предмет [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) вызывается метод.
+3. Добавить `if` инструкцию, которая использует возвращаемое значение [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод на предмет [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) вызывается метод.
 
-4. Добавьте второй `if` инструкцию, которая использует возвращаемое значение [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод и значения `Force` параметр, чтобы определить, следует ли операции выполнить.
+4. Добавьте второй `if` инструкцию, которая использует возвращаемое значение [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод и значения `Force` параметр, чтобы определить, следует ли операции выполнить.
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) методы вызываются из переопределение [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод. Тем не менее эти методы можно вызывать другие методы обработки входных данных.
+В следующем примере кода [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) методы вызываются из в рамках переопределения из [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод. Тем не менее эти методы можно вызывать другие методы обработки входных данных.
 
 ```csharp
 protected override void ProcessRecord()

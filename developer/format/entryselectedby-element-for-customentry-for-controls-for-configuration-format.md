@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30abae8f-c7f7-479d-ad85-19e07ddef204
 caps.latest.revision: 10
-ms.openlocfilehash: e930e4422afd203feda6a389655ff8a355e3bec0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 81eca4f66f0057074612f2d60482b45adc36357b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858670"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059224"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-configuration-format"></a>Элемент EntrySelectedBy для элемента CustomEntry для элемента Controls для элемента Configuration (формат)
 
@@ -65,6 +65,6 @@ ms.locfileid: "56858670"
 
 [Элемент CustomEntry для пользовательский элемент управления для элементов управления для конфигурации (формат)](./customentry-element-for-customcontrol-for-controls-for-configuration-format.md)
 
-[TypeName-элемент для EntrySelectdBy для элементов управления для конфигурации (формат)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
+[TypeName-элемент для EntrySelectedBy для элементов управления для конфигурации (формат)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
 [Запись файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

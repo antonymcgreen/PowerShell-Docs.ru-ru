@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6fed2f68-ce6d-4a8f-bf21-f94f27a155c2
 caps.latest.revision: 9
-ms.openlocfilehash: 39c0814faf72cdb4b24730acb2ae429a2f465b32
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 936728d64f30a08fb9e2fa9ccef103683594aa3e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863130"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056266"
 ---
 # <a name="examples-of-cmdlet-code"></a>Примеры кода командлетов
 
@@ -38,7 +38,7 @@ ms.locfileid: "56863130"
 
 [Как переопределить методы обработки ввода](./how-to-override-input-processing-methods.md) в следующих примерах используется для переопределения методов BeginProcessing, ProcessRecord и EndProcessing базовую структуру.
 
-[Как обращений в службу поддержки ShouldProcess](./how-to-request-confirmations.md) в этом примере показано, как [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)методы должны вызываться из командлета.
+[Как обращений в службу поддержки ShouldProcess](./how-to-request-confirmations.md) в этом примере показано, как [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) методы должны вызываться из командлета.
 
 [Как для поддержки транзакций](./how-to-support-transactions.md) в этом примере показано, как указать, что командлет поддерживает транзакции и как реализовать действие, выполняемое при использовании с командлетом в рамках транзакции.
 

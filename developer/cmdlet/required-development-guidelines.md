@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 41d2b308-a36a-496f-8542-666b6a21eedc
 caps.latest.revision: 19
-ms.openlocfilehash: a4b228be91bba27670b26fe21e765ae942afe968
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3f6bcd2e4ef4d9c404b3a5deeaa9f25d3fa42ec1
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860720"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056521"
 ---
 # <a name="required-development-guidelines"></a>Обязательные требования к разработке
 
@@ -107,7 +107,7 @@ ms.locfileid: "56860720"
 |%|Знак процента|
 |+|Знак "плюс"|
 |=|Знак равенства|
-|~|tilda|
+|~|Тильда|
 
 ### <a name="parameters-names-that-cannot-be-used-rd03"></a>Имена параметров, которые нельзя использовать (RD03)
 
@@ -122,9 +122,9 @@ Windows PowerShell предоставляет общий набор параме
 > [!NOTE]
 > Если атрибут командлета командлет класса указывает, что командлет поддерживает вызовы [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод и командлет не может обеспечить вызов [ System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод, пользователь может изменять система неожиданно.
 
-Используйте [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метода для каких-либо изменений системы. Пользовательские настройки и `Whatif` элемент управления параметром [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. Напротив [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) вызов выполняет дополнительную проверку для потенциально опасных изменений. Этот метод не может контролировать все пользовательские настройки или `Whatif` параметра. Если в командлете вызывает [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод, он должен иметь `Force` параметр, который обходит вызовы к этим двум методам, после чего, с операцией. Это важно, так как она допускает командлета для использования в запуске неинтерактивных сценариев и узлов.
+Используйте [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метода для каких-либо изменений системы. Пользовательские настройки и `WhatIf` элемент управления параметром [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. Напротив [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) вызов выполняет дополнительную проверку для потенциально опасных изменений. Этот метод не может контролировать все пользовательские настройки или `WhatIf` параметра. Если в командлете вызывает [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод, он должен иметь `Force` параметр, который обходит вызовы к этим двум методам, после чего, с операцией. Это важно, так как она допускает командлета для использования в запуске неинтерактивных сценариев и узлов.
 
-Если командлеты поддерживает эти вызовы, пользователь может определить, ли действие фактически должно быть выполнено. Например [Stop-Process](/powershell/module/microsoft.powershell.management/stop-process) вызывает командлет [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод до остановки набор критических процессов, включая систему, Winlogon, и Spoolsrv процессов.
+Если командлеты поддерживает эти вызовы, пользователь может определить, ли действие фактически должно быть выполнено. Например [Stop-Process](/powershell/module/microsoft.powershell.management/stop-process) вызывает командлет [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод до остановки набор критических процессов, включая систему, Winlogon, и Spoolsv процессов.
 
 Дополнительные сведения о поддержке этих методов см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
 
@@ -212,7 +212,7 @@ Windows PowerShell использует объекты, которые запи�
 
 ## <a name="see-also"></a>См. также
 
-[Рекомендации по настоятельно рекомендуется и разработка](./strongly-encouraged-development-guidelines.md)
+[Рекомендации по разработке настоятельно рекомендуется](./strongly-encouraged-development-guidelines.md)
 
 [Рекомендации по разработке рекомендаций](./advisory-development-guidelines.md)
 

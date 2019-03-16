@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d10b68ca-256c-4c58-b503-73f7777b39ae
 caps.latest.revision: 15
-ms.openlocfilehash: d93750f919c1075f173dc9ac70324cc003e36879
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 88de19be02de4933f892e02093403a82ccdd5788
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862190"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055739"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>Элемент TableRowEntries для элемента TableControl (формат)
 
@@ -41,7 +41,7 @@ ms.locfileid: "56862190"
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент TableRowEntry для TableRowEntries для TableControl (формат)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)|Обязательный элемент.<br /><br /> Определяет данные, которые отображаются в строке таблицы.|
+|[Элемент TableRowEntry для TableRowEntries для TableControl (формат)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Обязательный элемент.<br /><br /> Определяет данные, которые отображаются в строке таблицы.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -84,6 +84,6 @@ ms.locfileid: "56862190"
 
 [TableControl-элемент (формат)](./tablecontrol-element-format.md)
 
-[Элемент TableRowEntry (формат)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)
+[Элемент TableRowEntry (формат)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
 [Запись файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

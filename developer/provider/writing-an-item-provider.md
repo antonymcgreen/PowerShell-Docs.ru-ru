@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 606c880c-6cf1-4ea6-8730-dbf137bfabff
 caps.latest.revision: 5
-ms.openlocfilehash: e3289e9336b863b5e0998a2beb29353c82a31f79
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 9285a2f0e673de8b86084157423512bdeeda109d
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856710"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058201"
 ---
 # <a name="writing-an-item-provider"></a>Написание поставщика элемента
 
@@ -46,7 +46,7 @@ ms.locfileid: "56856710"
 
 ### <a name="implementing-getitem"></a>Реализация GetItem
 
-[System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) вызывается модулем PowerShell в том случае, когда пользователь вызывает [Microsoft.Powershell.Commands.Get-Item](/dotnet/api/Microsoft.PowerShell.Commands.Get-Item) командлет на вашей Поставщик. Метод возвращает элемент по указанному пути. В примере базы данных Access метод проверяет, является ли элемент на самом диске, таблицы в базе данных или строки в базе данных. Метод отправляет элемент подсистемы PowerShell путем вызова [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) метод.
+[System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) вызывается модулем PowerShell в том случае, когда пользователь вызывает [Microsoft.PowerShell.Commands.Get-Item](/dotnet/api/Microsoft.PowerShell.Commands.Get-Item) командлет на вашей Поставщик. Метод возвращает элемент по указанному пути. В примере базы данных Access метод проверяет, является ли элемент на самом диске, таблицы в базе данных или строки в базе данных. Метод отправляет элемент подсистемы PowerShell путем вызова [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) метод.
 
 ```csharp
 protected override void GetItem(string path)
@@ -85,7 +85,7 @@ protected override void GetItem(string path)
 
 ### <a name="implementing-setitem"></a>Реализация SetItem
 
-[System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) вызывается подсистемой PowerShell вызывается метод, когда пользователь вызывает [Microsoft.Powershell.Commands.Set-Item](/dotnet/api/Microsoft.PowerShell.Commands.Set-Item) командлета . Он задает значение элемента по указанному пути.
+[System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) вызывается подсистемой PowerShell вызывается метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.Set-Item](/dotnet/api/Microsoft.PowerShell.Commands.Set-Item) командлета . Он задает значение элемента по указанному пути.
 
 В примере базы данных Access, имеет смысл только в том случае, если этот элемент является строкой, поэтому метод вызывает исключение, задайте значение элемента [NotSupportedException](http://msdn.microsoft.com/library/system.notsupportedexception\(v=vs.110\).aspx) когда элемент не является строкой.
 
@@ -145,7 +145,7 @@ protected override void SetItem(string path, object values)
 
 ### <a name="implementing-itemexists"></a>Реализация ItemExists
 
-[System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) метод вызывается подсистемой PowerShell, когда пользователь вызывает [Microsoft.Powershell.Commands.Test-Path](/dotnet/api/Microsoft.PowerShell.Commands.Test-Path) командлета. Этот метод определяет, имеется ли элемент по указанному пути. Если элемент существует, метод передает его в модуль PowerShell, вызвав [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject).
+[System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) метод вызывается подсистемой PowerShell, когда пользователь вызывает [Microsoft.PowerShell.Commands.Test-Path](/dotnet/api/Microsoft.PowerShell.Commands.Test-Path) командлета. Этот метод определяет, имеется ли элемент по указанному пути. Если элемент существует, метод передает его в модуль PowerShell, вызвав [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject).
 
 ```csharp
 protected override bool ItemExists(string path)

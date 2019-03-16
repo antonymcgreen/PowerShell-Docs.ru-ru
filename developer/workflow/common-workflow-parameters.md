@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5891467-8e13-484d-b7af-32e6bffab35d
 caps.latest.revision: 4
-ms.openlocfilehash: 2aca4483e500432ef9f52804e85678d2268aa4cd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: b2e8f272a82ee03de306fd8eac45e109142f6284
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856140"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054804"
 ---
 # <a name="common-workflow-parameters"></a>Общие параметры рабочего процесса
 
@@ -26,7 +26,7 @@ ms.locfileid: "56856140"
 |Name|Тип|Описание|Можно указать конечным пользователем во время выполнения?|Можно указать автором рабочего процесса во время разработки?|Можно указать автором рабочего процесса при создании экземпляра?|
 |----------|----------|-----------------|-----------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------|
 |PSComputerName|String[]|Список имен компьютеров, для которого будет производиться запуск задания.|Да|Да|Да|
-|PSCredential|[System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential)|Учетные данные проверки подлинности, используемые для входа в систему на компьютерах, указанных в параметре PSComputerName. Этот параметр допустим только в том случае, если указан PSComputerName.|Да|Да|Да|
+|PSCredential|[System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|Учетные данные проверки подлинности, используемые для входа в систему на компьютерах, указанных в параметре PSComputerName. Этот параметр допустим только в том случае, если указан PSComputerName.|Да|Да|Да|
 |PSPort|UInt32|Порт, используемый для выполнения рабочего процесса.|Да|Да|Да|
 |PSUseSSL|Логический|Используйте протокол Secure Sockets Layer (SSL) для безопасного подключения к удаленному компьютеру для запуска рабочего процесса.|Да|Да|Да|
 |PSConfigurationName|Строка|Конфигурация сеанса, используемая для запуска рабочего процесса.|Да|Да|Да|

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f7bf81e-4f95-4150-afc3-c0872b24d026
 caps.latest.revision: 7
-ms.openlocfilehash: c156b2d6a7e7d3fcbd1679d2d61c94f31be0f76a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3205286fbbc823d21e29a328b3ba9c4c1459d9ff
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854730"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056963"
 ---
 # <a name="runspace07-sample"></a>Пример Runspace07
 
@@ -35,11 +35,11 @@ ms.locfileid: "56854730"
 
 - Синхронное выполнение командлетов.
 
-- Извлечение свойств из [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) объектов, возвращаемых командой.
+- Извлечение свойств из [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) объектов, возвращаемых командой.
 
 ## <a name="example"></a>Пример
 
-В этом примере создается пространство выполнения, используемые [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) выполнения объекта [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) командлетов.
+В этом примере создается пространство выполнения, используемые [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) выполнения объекта [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) командлетов.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

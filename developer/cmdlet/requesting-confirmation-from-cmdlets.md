@@ -14,18 +14,18 @@ helpviewer_keywords:
 - ConfirmPreference [PowerShell Programmer's Guide], described
 ms.assetid: 37d6e87f-57b7-40bd-b645-392cf0b6e88e
 caps.latest.revision: 13
-ms.openlocfilehash: ec441831f5e3231a44c9875d1b6d2bf6280a6965
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0c0517ef7fbd5ae6434773a2dfe276f3a8c35f39
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853400"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057411"
 ---
 # <a name="requesting-confirmation-from-cmdlets"></a>Запрос на подтверждение от командлетов
 
 Командлеты следует запрашивать подтверждение, когда они будут внесены изменения в системе за пределами среды Windows PowerShell. Например если командлет является добавление учетной записи пользователя или остановить процесс, командлет должна требовать подтверждения от пользователя перед началом. Напротив Если командлет является изменением переменной Windows PowerShell, командлет не требует подтверждения.
 
-Чтобы сделать запрос на подтверждение, необходимо указать командлет, он поддерживает запросы на подтверждение, что он должен вызвать [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [ System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) (необязательно) методы, чтобы отобразить сообщение с подтверждением запроса.
+Чтобы сделать запрос на подтверждение, необходимо указать командлет, он поддерживает запросы на подтверждение, что он должен вызвать [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) (необязательно) методы, чтобы отобразить сообщение с подтверждением запроса.
 
 ## <a name="supporting-confirmation-requests"></a>Поддержка запросов подтверждения
 
@@ -40,17 +40,17 @@ ms.locfileid: "56853400"
 
 ## <a name="calling-the-confirmation-request-methods"></a>Вызов методов запроса подтверждения
 
-В коде командлета, вызов [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод перед выполнением операции, изменений в системе. Создать командлет, поэтому, если вызов возвращает значение `false`, эта операция не выполнена, и командлет обрабатывает следующей операции.
+В коде командлета, вызов [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод перед выполнением операции, изменений в системе. Создать командлет, поэтому, если вызов возвращает значение `false`, эта операция не выполнена, и командлет обрабатывает следующей операции.
 
 ## <a name="calling-the-shouldcontinue-method"></a>Вызов метода ShouldContinue
 
-Большинство командлетов запросить подтверждение только с помощью [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. Однако в некоторых случаях могут потребовать дополнительного подтверждения. В этих случаях дополнить [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызывать с помощью вызова [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод. Это позволяет командлета или поставщика, чтобы более точно управлять областью **Да для всех** ответ на запрос на подтверждение.
+Большинство командлетов запросить подтверждение только с помощью [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. Однако в некоторых случаях могут потребовать дополнительного подтверждения. В этих случаях дополнить [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызывать с помощью вызова [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод. Это позволяет командлета или поставщика, чтобы более точно управлять областью **Да для всех** ответ на запрос на подтверждение.
 
-Если командлет вызывает [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод, командлет должен также содержать `Force` параметр-переключатель. Если пользователь указывает `Force` когда пользователь вызывает командлет, командлет должен по-прежнему вызывать [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess), но его нужно пропустить вызов [ System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
+Если командлет вызывает [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод, командлет должен также содержать `Force` параметр-переключатель. Если пользователь указывает `Force` когда пользователь вызывает командлет, командлет должен по-прежнему вызывать [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess), но его нужно пропустить вызов [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
 
-[System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) приведет к возникновению исключения при вызове из Неинтерактивный режим среды где пользователь не смогут получить уведомления. Добавление `Force` параметр гарантирует, что при вызове в среде с неинтерактивной по-прежнему может выполняться команда.
+[System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) приведет к возникновению исключения при вызове из Неинтерактивный режим среды где пользователь не смогут получить уведомления. Добавление `Force` параметр гарантирует, что при вызове в среде с неинтерактивной по-прежнему может выполняться команда.
 
-В следующем примере показан вызов [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
+В следующем примере показан вызов [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
 
 ```csharp
 if (ShouldProcess (...) )
@@ -62,9 +62,9 @@ if (ShouldProcess (...) )
 }
 ```
 
-Поведение [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызов может изменяться в зависимости от среды, в котором вызывается командлет. С помощью предыдущего руководства помогут убедиться, что командлет работает согласованно с другими командлетами, независимо от того, хост-среды.
+Поведение [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызов может изменяться в зависимости от среды, в котором вызывается командлет. С помощью предыдущего руководства помогут убедиться, что командлет работает согласованно с другими командлетами, независимо от того, хост-среды.
 
-Пример вызова [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод, см. в разделе [как запросить подтверждения](./how-to-request-confirmations.md).
+Пример вызова [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод, см. в разделе [как запросить подтверждения](./how-to-request-confirmations.md).
 
 ## <a name="specify-the-impact-level"></a>Укажите уровень влияния
 
@@ -74,13 +74,13 @@ if (ShouldProcess (...) )
 
 ## <a name="calling-non-confirmation-methods"></a>Вызов методов без подтверждения
 
-Если командлет или поставщика необходимо отправить сообщение, но не запросит подтверждение, оно может вызвать следующие три метода. Избегайте использования [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод для отправки сообщений из этих типов, так как [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) обычные выходные данные с обычной выходные данные командлета или поставщика услуг, что затрудняет написание скрипта.
+Если командлет или поставщика необходимо отправить сообщение, но не запросит подтверждение, оно может вызвать следующие три метода. Избегайте использования [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод для отправки сообщений из этих типов, так как [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) обычные выходные данные с обычной выходные данные командлета или поставщика услуг, что затрудняет написание скрипта.
 
-- Чтобы предупредить пользователя и продолжить операцию, можно вызвать командлет или поставщика [System.Management.Automation.Cmdlet.Writewarning*](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) метод.
+- Чтобы предупредить пользователя и продолжить операцию, можно вызвать командлет или поставщика [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) метод.
 
-- Для предоставления дополнительных сведений, пользователя можно получить с помощью `Verbose` параметр, командлет или поставщика можно вызвать [System.Management.Automation.Cmdlet.Writeverbose*](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) метод.
+- Для предоставления дополнительных сведений, пользователя можно получить с помощью `Verbose` параметр, командлет или поставщика можно вызвать [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) метод.
 
-- Для предоставления сведений о отладки на уровне, для других разработчиков или технической поддержки, можно вызвать командлет или поставщика [System.Management.Automation.Cmdlet.Writedebug*](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) метод. Пользователь может получить эти сведения с помощью `Debug` параметра.
+- Для предоставления сведений о отладки на уровне, для других разработчиков или технической поддержки, можно вызвать командлет или поставщика [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) метод. Пользователь может получить эти сведения с помощью `Debug` параметра.
 
 Командлеты и поставщики первый вызов следующих методов запросит подтверждение, перед тем как пытаться выполнить операцию, которая изменяет системе за пределами Windows PowerShell:
 

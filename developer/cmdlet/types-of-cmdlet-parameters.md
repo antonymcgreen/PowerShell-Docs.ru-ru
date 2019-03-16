@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6602730d-3892-4656-80c7-7bca2d14337f
 caps.latest.revision: 14
-ms.openlocfilehash: 59921a92661482b8d518b82f490c9879643543bb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f5781c0c03aca41d01a44598a9a8c00d6d21d2fd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859870"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059581"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Типы параметров командлета
 
@@ -91,13 +91,13 @@ private string userName;
 
 ## <a name="switch-parameters"></a>Параметры-переключатели
 
-Windows PowerShell предоставляет [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) автоматически присваивается тип, который можно задать параметр, значение которого `false` Если этот параметр не указан, получением командлетом вызывается. По возможности используйте параметры-переключатели вместо логических параметров.
+Windows PowerShell предоставляет [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) автоматически присваивается тип, который можно задать параметр, значение которого `false` Если этот параметр не указан, получением командлетом вызывается. По возможности используйте параметры-переключатели вместо логических параметров.
 
 Рассмотрим следующий пример. По умолчанию несколько командлетов Windows PowerShell не передавайте выходного объекта по конвейеру. Тем не менее, эти командлеты имеют `PassThru` параметр, который переопределяет поведение по умолчанию. Если `PassThru` параметр указан в том случае, когда вызываются эти командлеты, командлет возвращает объект выходные данные в конвейер.
 
-Если необходим параметр иметь значение по умолчанию `true` когда этот параметр не указан в вызове, рассмотрите возможность обращения смысле параметра. Для примера, вместо задания атрибут параметра в значение типа Boolean из `true`, свойство объявляется как [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) введите и выберите значение по умолчанию параметра `false`.
+Если необходим параметр иметь значение по умолчанию `true` когда этот параметр не указан в вызове, рассмотрите возможность обращения смысле параметра. Для примера, вместо задания атрибут параметра в значение типа Boolean из `true`, свойство объявляется как [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) введите и выберите значение по умолчанию параметра `false`.
 
-Чтобы определить параметр-переключатель, свойство объявляется как [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) тип, как показано в следующем примере.
+Чтобы определить параметр-переключатель, свойство объявляется как [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) тип, как показано в следующем примере.
 
 ```csharp
 [Parameter(Position = 1)]

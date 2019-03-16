@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d43684ce-7c3d-4d14-8dbd-061c111ee805
 caps.latest.revision: 12
-ms.openlocfilehash: faa9ba78397e713400f6072df9915f20d966bb37
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d05437aaa9652e7f81d0854d1a746acffe145699
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859450"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056912"
 ---
 # <a name="tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format"></a>Элемент TableColumnItems для элемента TableRowEntry для элемента TableControl (формат)
 
@@ -47,7 +47,7 @@ TableColumnItems>
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент TableRowEntry для TableRowEntries для TableControl (формат)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)|Определяет данные, которые отображаются в строке таблицы.|
+|[Элемент TableRowEntry для TableRowEntries для TableControl (формат)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Определяет данные, которые отображаются в строке таблицы.|
 
 ## <a name="remarks"></a>Замечания
 
@@ -80,6 +80,6 @@ TableColumnItems>
 
 [Элемент TableColumnItem (формат)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)
 
-[Элемент TableRowEntry (формат)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)
+[Элемент TableRowEntry (формат)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
 [Запись файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

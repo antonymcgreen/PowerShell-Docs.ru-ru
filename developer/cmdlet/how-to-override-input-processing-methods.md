@@ -8,28 +8,28 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a1ad921-5816-4937-acf1-ed4760fae740
 caps.latest.revision: 8
-ms.openlocfilehash: eff40a01b60985788ae0e21156fec7ec4e27fcf1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: cfee55576518cf9ce38501192872ce94054f5213
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855920"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056402"
 ---
 # <a name="how-to-override-input-processing-methods"></a>Как переопределить методы обработки входных данных
 
 Эти примеры показывают, как перезаписать методы в командлет обработки ввода. Эти методы используются для выполнения следующих операций:
 
-- [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод используется для выполнения одноразового запуска операций, которые являются допустимыми для всех объектов, обработанных с помощью командлета. Среда выполнения Windows PowerShell, этот метод вызывается только один раз.
+- [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод используется для выполнения одноразового запуска операций, которые являются допустимыми для всех объектов, обработанных с помощью командлета. Среда выполнения Windows PowerShell, этот метод вызывается только один раз.
 
-- [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод используется для обработки объектов, переданных в командлет. Среда выполнения Windows PowerShell этот метод вызывается для каждого объекта, переданного в командлет.
+- [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод используется для обработки объектов, переданных в командлет. Среда выполнения Windows PowerShell этот метод вызывается для каждого объекта, переданного в командлет.
 
-- [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод используется для выполнения операций обработки одноразовый post. Среда выполнения Windows PowerShell, этот метод вызывается только один раз.
+- [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод используется для выполнения операций обработки одноразовый post. Среда выполнения Windows PowerShell, этот метод вызывается только один раз.
 
 ## <a name="to-override-the-beginprocessing-method"></a>Чтобы переопределить метод BeginProcessing
 
-- Объявите защищенных переопределение метода [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод.
+- Объявите защищенных переопределение метода [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод.
 
-Следующий класс печатает пример сообщения. Чтобы использовать этот класс, изменить глагол и существительное в атрибуте командлета, измените имя класса в соответствии с новой глагол и существительное и затем добавление функциональных возможностей, требуемых для переопределение метода [System.Management.Automation.Cmdlet.Beginprocessing ](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод.
+Следующий класс печатает пример сообщения. Чтобы использовать этот класс, изменить глагол и существительное в атрибуте командлета, измените имя класса в соответствии с новой глагол и существительное и затем добавление функциональных возможностей, требуемых для переопределение метода [System.Management.Automation.Cmdlet.BeginProcessing ](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод.
 
 ```csharp
 [Cmdlet(VerbsDiagnostic.Test, "BeginProcessingClass")]
@@ -50,9 +50,9 @@ public class TestBeginProcessingClassTemplate : Cmdlet
 
 ## <a name="to-override-the-processrecord-method"></a>Чтобы переопределить метод ProcessRecord
 
-- Объявите защищенных переопределение метода [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод.
+- Объявите защищенных переопределение метода [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод.
 
-Следующий класс печатает пример сообщения. Чтобы использовать этот класс, изменить глагол и существительное в атрибуте командлета, измените имя класса в соответствии с новой глагол и существительное и затем добавление функциональных возможностей, требуемых для переопределение метода [System.Management.Automation.Cmdlet.Processrecord* ](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод.
+Следующий класс печатает пример сообщения. Чтобы использовать этот класс, изменить глагол и существительное в атрибуте командлета, измените имя класса в соответствии с новой глагол и существительное и затем добавление функциональных возможностей, требуемых для переопределение метода [System.Management.Automation.Cmdlet.ProcessRecord ](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод.
 
 ```csharp
 [Cmdlet(VerbsDiagnostic.Test, "ProcessRecordClass")]
@@ -74,9 +74,9 @@ public class TestProcessRecordClassTemplate : Cmdlet
 
 ## <a name="to-override-the-endprocessing-method"></a>Чтобы переопределить метод EndProcessing
 
-- Объявите защищенных переопределение метода [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод.
+- Объявите защищенных переопределение метода [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод.
 
-Следующий класс печатает образец. Чтобы использовать этот класс, изменить глагол и существительное в атрибуте командлета, измените имя класса в соответствии с новой глагол и существительное и затем добавление функциональных возможностей, требуемых для переопределение метода [System.Management.Automation.Cmdlet.Endprocessing* ](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод.
+Следующий класс печатает образец. Чтобы использовать этот класс, изменить глагол и существительное в атрибуте командлета, измените имя класса в соответствии с новой глагол и существительное и затем добавление функциональных возможностей, требуемых для переопределение метода [System.Management.Automation.Cmdlet.EndProcessing ](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод.
 
 ```csharp
 [Cmdlet(VerbsDiagnostic.Test, "EndProcessingClass")]
@@ -97,10 +97,10 @@ public class TestEndProcessingClassTemplate : Cmdlet
 
 ## <a name="see-also"></a>См. также
 
-[System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)
+[System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)
 
-[System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)
+[System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)
 
-[System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)
+[System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

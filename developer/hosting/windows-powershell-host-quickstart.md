@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
 caps.latest.revision: 9
-ms.openlocfilehash: 2c6a4bca03ee7f62371cbc296f854464167e5a62
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: cc014487a680747ad59437052f79d4576154a1cb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857400"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059683"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Краткое руководство по узлам Windows PowerShell
 
@@ -112,7 +112,7 @@ ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 
 ### <a name="creating-an-initialsessionstate-object"></a>Создание объекта InitialSessionState
 
-Чтобы создать пользовательские пространства выполнения, необходимо сначала создать [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объекта. В следующем примере мы используем [System.Management.Automation.Runspaces.RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) для создания ruspace после создания по умолчанию [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объекта.
+Чтобы создать пользовательские пространства выполнения, необходимо сначала создать [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объекта. В следующем примере мы используем [System.Management.Automation.Runspaces.RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) создать пространство выполнения после создания по умолчанию [System.Management.Automation.Runspaces.InitialSessionState ](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объекта.
 
 ```csharp
 InitialSessionState iss = InitialSessionState.CreateDefault();
@@ -126,7 +126,7 @@ ps.Invoke();
 
 ### <a name="constraining-the-runspace"></a>Ограничение пространства выполнения
 
-В предыдущем примере мы создали по умолчанию [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объект, который загружает все встроенные ядра Windows PowerShell. Мы также мог бы вызвать [System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) метод для создания объекта InitialSessionState, который будет загружать только команды в Mirosoft.PowerShell.Core Оснастка. Чтобы создать более ограниченное пространство выполнения, необходимо создать пустой [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) путем вызова метода [ System.Management.Automation.Runspaces.InitialSessionState.Create*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) метод и чтобы InitialSessionState команд.
+В предыдущем примере мы создали по умолчанию [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объект, который загружает все встроенные ядра Windows PowerShell. Мы также мог бы вызвать [System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) метод для создания объекта InitialSessionState, который будет загружать только команды в Microsoft.PowerShell.Core Оснастка. Чтобы создать более ограниченное пространство выполнения, необходимо создать пустой [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) путем вызова метода [ System.Management.Automation.Runspaces.InitialSessionState.Create*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) метод и чтобы InitialSessionState команд.
 
 Использование пространства имен, который загружает только те команды, указываемые обеспечивает значительно улучшенную производительность.
 

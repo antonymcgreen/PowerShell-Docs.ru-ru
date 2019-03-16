@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
-ms.openlocfilehash: 97a2d3587f8f69edc92150474e94a620ff9a2f71
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 871a74a084da3c7ec36767b7195461e0e7290cb9
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854550"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056572"
 ---
 # <a name="advisory-development-guidelines"></a>Советы по разработке
 
@@ -61,7 +61,7 @@ ms.locfileid: "56854550"
 
 ### <a name="handle-credentials-through-windows-powershell-ad03"></a>Обработка учетных данных с помощью Windows PowerShell (AD03)
 
-Командлет необходимо определить `Credential` параметр для представления учетных данных. Этот параметр должен иметь тип [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) и должны быть определены с помощью атрибута объявления учетных данных. Эта поддержка автоматически запрашивает пользователя для имени пользователя, пароля или обоих, при полной учетных данных не предоставляется напрямую. Дополнительные сведения об атрибуте учетных данных см. в разделе [объявление атрибута учетных данных](./credential-attribute-declaration.md).
+Командлет необходимо определить `Credential` параметр для представления учетных данных. Этот параметр должен иметь тип [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential) и должны быть определены с помощью атрибута объявления учетных данных. Эта поддержка автоматически запрашивает пользователя для имени пользователя, пароля или обоих, при полной учетных данных не предоставляется напрямую. Дополнительные сведения об атрибуте учетных данных см. в разделе [объявление атрибута учетных данных](./credential-attribute-declaration.md).
 
 ### <a name="support-encoding-parameters-ad04"></a>Поддерживает параметры кодирования (AD04)
 
@@ -89,17 +89,17 @@ ms.locfileid: "56854550"
 
 ### <a name="if-no-pipeline-input-override-the-beginprocessing-method-ac02"></a>Если отсутствуют входные данные конвейера переопределить метод BeginProcessing (AC02)
 
-Если командлет не принимает входные данные из конвейера, обработки, следует реализовать [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод. Использование этого метода позволяет Windows PowerShell для сохранения порядка между командлетами. Первый командлет в конвейере всегда возвращает ее объектов прежде, чем остальные командлеты в конвейере будет возможность запустить их обработки.
+Если командлет не принимает входные данные из конвейера, обработки, следует реализовать [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод. Использование этого метода позволяет Windows PowerShell для сохранения порядка между командлетами. Первый командлет в конвейере всегда возвращает ее объектов прежде, чем остальные командлеты в конвейере будет возможность запустить их обработки.
 
 ### <a name="to-handle-stop-requests-override-the-stopprocessing-method-ac03"></a>Чтобы обрабатывать запросы остановки Переопределите метод StopProcessing (AC03)
 
-Переопределить [System.Management.Automation.Cmdlet.Stopprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) метод таким образом, чтобы командлет может обрабатывать сигнал остановки. Некоторые командлеты занять много времени для завершения их работы, и они позволяют передавать между вызовами в среду выполнения Windows PowerShell, например когда командлет блокирует поток в вызовы RPC долго выполняющейся длительное время. Сюда входят командлеты, которые упрощают вызовы [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод, чтобы [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод и другие отзывы механизмы, которые может занять много времени для завершения. В этих случаях пользователю может потребоваться отправить сигнал об остановке этих командлетов.
+Переопределить [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) метод таким образом, чтобы командлет может обрабатывать сигнал остановки. Некоторые командлеты занять много времени для завершения их работы, и они позволяют передавать между вызовами в среду выполнения Windows PowerShell, например когда командлет блокирует поток в вызовы RPC долго выполняющейся длительное время. Сюда входят командлеты, которые упрощают вызовы [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод, чтобы [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод и другие отзывы механизмы, которые может занять много времени для завершения. В этих случаях пользователю может потребоваться отправить сигнал об остановке этих командлетов.
 
 ### <a name="implement-the-idisposable-interface-ac04"></a>Реализовать интерфейс IDisposable (AC04)
 
-Если в командлете содержит объекты, не удаляются (написанного в конвейер) [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод, командлет может потребоваться удаление дополнительных объектов. Например, если командлет открывает дескриптор файла, в его [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод и сохраняет открыть дескриптор для использования [System.Management.Automation.Cmdlet.Processrecord ](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод, этот дескриптор должен быть закрыт по завершении обработки.
+Если в командлете содержит объекты, не удаляются (написанного в конвейер) [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод, командлет может потребоваться удаление дополнительных объектов. Например, если командлет открывает дескриптор файла, в его [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод и сохраняет открыть дескриптор для использования [System.Management.Automation.Cmdlet.ProcessRecord ](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод, этот дескриптор должен быть закрыт по завершении обработки.
 
-Среда выполнения Windows PowerShell не всегда вызывает [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод. Например [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод не может быть вызван, если командлет отменяется середине операции, или если завершающей в любой части командлета возникает ошибка. Таким образом, класс .NET Framework для командлета, требующий очистки объектов следует реализовать полный [System.Idisposable](/dotnet/api/System.IDisposable) интерфейс шаблону, в том числе метод завершения, таким образом, чтобы среда выполнения Windows PowerShell можно вызвать оба [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) и [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) методы в конце обработки.
+Среда выполнения Windows PowerShell не всегда вызывает [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод. Например [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод не может быть вызван, если командлет отменяется середине операции, или если завершающей в любой части командлета возникает ошибка. Таким образом, класс .NET Framework для командлета, требующий очистки объектов следует реализовать полный [System.IDisposable](/dotnet/api/System.IDisposable) интерфейс шаблону, в том числе метод завершения, таким образом, чтобы среда выполнения Windows PowerShell можно вызвать оба [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) и [System.IDisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) методы в конце обработки.
 
 ### <a name="use-serialization-friendly-parameter-types-ac05"></a>Типы параметров пригодным к сериализации (AC05)
 
@@ -117,7 +117,7 @@ ms.locfileid: "56854550"
 
 - PSPrimitiveDictionary
 
-- SwitchParmeter
+- SwitchParameter
 
 - PSListModifier
 

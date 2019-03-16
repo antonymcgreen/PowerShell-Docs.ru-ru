@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
-ms.openlocfilehash: 67e041756974dcd84e15cdb4edaf91be45122e28
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: eaa927ec90df6053843f5c942357fed4c7dee966
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859210"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059496"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Как написать манифест модуля PowerShell
 
@@ -77,7 +77,7 @@ ms.locfileid: "56859210"
 |PowerShellVersion<br /><br /> Тип: строка|' '|Минимальная версия подсистемы Windows PowerShell, необходимых этим модулем. Текущий допустимые значения: 1.0, 2.0, 3.0, 4.0 и 5.0.<br /><br /> Пример: `PowerShellVersion = '5.0'`|
 |PowerShellHostName<br /><br /> Тип: строка|' '|Указывает имя узла Windows PowerShell, который необходим в модуле. Это имя предоставляется Windows PowerShell. Чтобы найти имя основной программы, в программе, введите: `$host.name` .<br /><br /> Пример: `PowerShellHostName = 'Windows PowerShell ISE Host'`|
 |PowerShellHostVersion<br /><br /> Тип: строка|' '|Минимальная версия узла Windows PowerShell, необходимых этим модулем.<br /><br /> Пример: `PowerShellHostVersion = '2.0'`|
-|DotNetFrameworkVersion<br /><br /> Тип: строка|' '|Минимальная версия Microsoft .NET Framework требуется этим модулем.<br /><br /> Пример: `DotNetFrameorkVersion = '3.5'`|
+|DotNetFrameworkVersion<br /><br /> Тип: строка|' '|Минимальная версия Microsoft .NET Framework требуется этим модулем.<br /><br /> Пример: `DotNetFrameworkVersion = '3.5'`|
 |CLRVersion<br /><br /> Тип: строка|' '|Минимальная версия общеязыковой среды выполнения (CLR), необходимых этим модулем.<br /><br /> Пример: `CLRVersion = '3.5'`|
 |ProcessorArchitecture<br /><br /> Тип: строка|' '|Архитектура процессора (нет, X86, Amd64) требуется этим модулем. Допустимые значения: x86, AMD64, IA64 и None (неизвестен или не задан).<br /><br /> Пример: `ProcessorArchitecture = 'x86'`|
 |RequiredModules<br /><br /> Тип: [строка []]|@()|Модули, которые должны быть импортированы в глобальной среде, прежде чем импортировать этот модуль. Он загрузит каких-либо модулей, если они уже были загружены в списке. (Например, некоторые модули могут уже быть загружен модуль.). Это также можно указать определенную версию для загрузки с помощью `RequiredVersion` вместо `ModuleVersion`. При использовании `ModuleVersion` он будет загрузить новейшую версию пакета с как минимум указанной версии.<br /><br /> Пример: `RequiredModules = @(@{ModuleName="myDependentModule", ModuleVersion="2.0",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> Пример: `RequiredModules = @(@{ModuleName="myDependentModule", RequiredVersion="1.5",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|

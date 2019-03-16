@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 65d04c526ef7aa112da82adb924c0789731f3850
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 98cac43698b3f537ee318cd2570b2174631665a7
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853470"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055433"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Создание рабочего процесса с помощью действий Windows PowerShell
 
@@ -33,9 +33,9 @@ ms.locfileid: "56853470"
 
 2. Создайте аргумент с именем `ComputerName` с типом аргумента `String[]`. Этот аргумент представляет имена компьютеров для проверки и join.
 
-3. Создайте аргумент с именем `DomainCred` типа [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential). Этот аргумент представляет учетные данные учетной записи домена, имеющее полномочия на присоединение компьютера к домену.
+3. Создайте аргумент с именем `DomainCred` типа [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Этот аргумент представляет учетные данные учетной записи домена, имеющее полномочия на присоединение компьютера к домену.
 
-4. Создайте аргумент с именем `MachineCred` типа [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential). Этот аргумент представляет учетные данные администратора на компьютерах, для проверки и join.
+4. Создайте аргумент с именем `MachineCred` типа [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Этот аргумент представляет учетные данные администратора на компьютерах, для проверки и join.
 
 5. Добавить **ParallelForEach** действия внутри **последовательности** действия. Введите `comp` и `ComputerName` в текстовые поля, чтобы цикл выполняет итерацию по элементам `ComputerName` массива.
 

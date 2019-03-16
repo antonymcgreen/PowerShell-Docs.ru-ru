@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7649d5d0-2b56-49b5-a670-dde46caca343
 caps.latest.revision: 11
-ms.openlocfilehash: ec75945c5517c02fa001f0a38573c045ffcdbfd3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 633204f3b181316761746ea2679910216fb74657
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857490"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058970"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
 
@@ -44,7 +44,7 @@ ms.locfileid: "56857490"
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент PropertyName для SelectionCondition для EmtrySelectedBy для ListEntry (формат)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Задает свойство .NET, которое активирует условие.|
+|[Элемент PropertyName для SelectionCondition для EntrySelectedBy для ListEntry (формат)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Задает свойство .NET, которое активирует условие.|
 |[Элемент ScriptBlock для SelectionCondition для EntrySelectedBy для ListEntry (формат)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает сценарий, который активирует условие.|
 |[Элемент SelectionSetName для SelectionCondition для EntrySelectedBy для ListEntry (формат)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Необязательный элемент.<br /><br /> Указывает набор типов .NET, которые активируют условие.|
 |[TypeName-элемент для SelectionCondition для EntrySelectedBy для ListEntry (формат)](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает тип .NET, который активирует условие.|
@@ -75,7 +75,7 @@ lWhen при определении условию выбора, применя�
 
 [Элемент ListEntry (формат)](./listentry-element-for-listcontrol-format.md)
 
-[Элемент SelectionSetName для EnrtySelectedBy для ListEntry (формат)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[Элемент SelectionSetName для EntrySelectedBy для ListEntry (формат)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
 [TypeName-элемент для EntrySelectedBy для ListEntry (формат)](http://msdn.microsoft.com/en-us/fcd4daa6-f3fd-43f7-a468-03c582d34533)
 

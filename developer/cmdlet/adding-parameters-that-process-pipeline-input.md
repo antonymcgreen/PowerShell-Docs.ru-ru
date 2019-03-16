@@ -8,15 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell Programmer's Guide], pipeline input
-- parameters [PowerShell Programer's Guide], pipeline input
+- parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: c790d20a792bcdb4a34485e53375560e129433a8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bd52dc8aee7975d0899083a5c2f595b17690dc33
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854540"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054770"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Добавление параметров для обработки входных данных конвейера
 
@@ -93,7 +93,7 @@ End Property
 
 Если командлет должен обрабатывать входные данные конвейера, ему необходимо переопределить соответствующие методы обработки ввода. Методы базовую обработку ввода, использованные в [Создание свой первый командлет](./creating-a-cmdlet-without-parameters.md).
 
-Этот командлет Get-Proc переопределяет [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод для обработки `Name` входные параметры, предоставляемые пользователем или сценарий. Этот метод будет получения процессов для каждого имени запрошенного процесса и всех процессов, если имя не указано. Обратите внимание, что в [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), вызов [System.Management.Automation.Cmdlet.Writeobject%28System.Object%2Csystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) — механизм выходные данные для отправки выходных объектов в конвейере. Второй параметр этой вызов `enumerateCollection`, имеет значение `true` сообщить среде выполнения Windows PowerShell для перечисления массива объектов процессов и один процесс записи за раз в командную строку.
+Этот командлет Get-Proc переопределяет [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод для обработки `Name` входные параметры, предоставляемые пользователем или сценарий. Этот метод будет получения процессов для каждого имени запрошенного процесса и всех процессов, если имя не указано. Обратите внимание, что в [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), вызов [System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) выходные данные механизм для отправки выходных данных объекты в конвейер. Второй параметр этой вызов `enumerateCollection`, имеет значение `true` сообщить среде выполнения Windows PowerShell для перечисления массива объектов процессов и один процесс записи за раз в командную строку.
 
 ```csharp
 protected override void ProcessRecord()

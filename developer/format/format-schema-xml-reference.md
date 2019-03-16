@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ac6f7aaa-d0cc-4c7b-a341-85e736174579
 caps.latest.revision: 21
-ms.openlocfilehash: 4dfe27a5105d82fa18e35f965f92fad16d390a2a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 437b3d6bb62fdd3a74f3392ec71df360c01a1974
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857790"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056657"
 ---
 # <a name="format-schema-xml-reference"></a>Ссылка на схему формата XML
 
@@ -81,7 +81,7 @@ ms.locfileid: "56857790"
 
 [Элемент DefaultSettings (формат)](./defaultsettings-element-format.md) задает общие параметры, которые применяются ко всем представлениям форматирования файла. Общие параметры включают отображение ошибок, переноса текста в таблицах, определение развернуты как коллекции и многое другое.
 
-[Элемент DisplayError (Frmat)](./displayerror-element-format.md) указывает, что строка #ERR отображаются при возникновении ошибки, отображение фрагмента данных.
+[Элемент DisplayError (формат)](./displayerror-element-format.md) указывает, что строка #ERR отображаются при возникновении ошибки, отображение фрагмента данных.
 
 [Элемент EntrySelectedBy для CustomEntry для элементов управления для конфигурации (формат)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md) определяет типы .NET, использующих определение общего элемента управления или условие, которое должен существовать для данного элемента управления для использования. Этот элемент используется при определении общего элемента управления, который может использоваться все представления в файле форматирования.
 
@@ -235,7 +235,7 @@ ms.locfileid: "56857790"
 
 [Элемент PropertyName для SelectionCondition для GroupBy (формат)](./propertyname-element-for-selectioncondition-for-groupby-format.md) свойство .NET, которое активирует условие. Если этому свойству присвоено присутствует или когда оно оценивается как `true`условие выполняется, и используется определение. Этот элемент используется при определении того, как отображается группу объектов.
 
-[Элемент PropertyName для SelectionCondition для EmtrySelectedBy для ListEntry (формат)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) свойство .NET, которое активирует условие. Если этому свойству присвоено присутствует или когда оно оценивается как `true`условие выполняется, и используется элемент списка.
+[Элемент PropertyName для SelectionCondition для EntrySelectedBy для ListEntry (формат)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) свойство .NET, которое активирует условие. Если этому свойству присвоено присутствует или когда оно оценивается как `true`условие выполняется, и используется элемент списка.
 
 [Элемент PropertyName для SelectionCondition для EntrySelectedBy для TableRowEntry (формат)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md) свойство .NET, которое активирует условие. Если этому свойству присвоено присутствует или когда оно оценивается как `true`условие выполняется, и записи в таблице используется.
 
@@ -363,7 +363,7 @@ ms.locfileid: "56857790"
 
 [Элемент TableRowEntries (формат)](./tablerowentries-element-for-tablecontrol-format.md) определяет строки таблицы.
 
-[Элемент TableRowEntry (формат)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md) определяет данные, которые отображаются в строке таблицы.
+[Элемент TableRowEntry (формат)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md) определяет данные, которые отображаются в строке таблицы.
 
 [Текстовый элемент для CustomItem для элементов управления для конфигурации (формат)](./text-element-for-customitem-for-controls-for-configuration-format.md) указывает текст, который добавляется к данным, который отображается элементом управления, например метки, квадратные скобки для заключения в них данных и пробелов для отступа данные. Этот элемент используется при определении общего элемента управления, который может использоваться все представления в файле форматирования.
 
@@ -427,7 +427,7 @@ ms.locfileid: "56857790"
 
 [Ширина элемента (формат)](./width-element-for-tablecolumnheader-for-tablecontrol-format.md) определяет ширину (в символах) столбца.
 
-[Wrap элемент (формат)](./wrap-element-for-tablerowentry-for-tablecontrl-format.md) указывает, что текст, который превышает ширину столбца отображается на следующей строке.
+[Wrap элемент (формат)](./wrap-element-for-tablerowentry-for-tablecontrol-format.md) указывает, что текст, который превышает ширину столбца отображается на следующей строке.
 
 [Элемент WrapTables (формат)](./wraptables-element-format.md) указывает, что данные в ячейке таблицы перемещается на следующую строку, если длина превышает ширину столбца данных.
 

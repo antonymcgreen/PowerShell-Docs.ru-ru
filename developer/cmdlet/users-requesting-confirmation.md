@@ -8,22 +8,22 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6f337498-c534-40ed-968a-09d4d9ca3849
 caps.latest.revision: 8
-ms.openlocfilehash: e4abbb14b31406b845d9b6af6b6372338fb0d926
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ed9ff9fc1668a89e1ac0ceac8f0800a15b349226
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856240"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059564"
 ---
 # <a name="users-requesting-confirmation"></a>Запрос на подтверждение от пользователей
 
 При указании параметра `true` для `SupportsShouldProcess` параметра в объявлении атрибута командлет, пользователи могут указать `Confirm` параметр в командной строке.
 
-В среде по умолчанию, пользователи могут указать `Confirm` параметр или `"-Confirm:$true` таким образом, запрашивается подтверждение при [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызывается метод. Это позволяет обойти [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) запросов подтверждения, даже для операций с высоким уровнем влияния.
+В среде по умолчанию, пользователи могут указать `Confirm` параметр или `"-Confirm:$true` таким образом, запрашивается подтверждение при [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызывается метод. Это позволяет обойти [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) запросов подтверждения, даже для операций с высоким уровнем влияния.
 
-Если `Confirm` не указан, [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызов запрашивает подтверждение, если `$ConfirmPreference` привилегированной переменной равно или больше, чем `ConfirmImpact` параметр командлет или поставщика. Значение по умолчанию `$ConfirmPreference` — высокий. Таким образом в среде по умолчанию, только командлеты и поставщики, укажите действие качественные запросит подтверждение.
+Если `Confirm` не указан, [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызов запрашивает подтверждение, если `$ConfirmPreference` привилегированной переменной равно или больше, чем `ConfirmImpact` параметр командлет или поставщика. Значение по умолчанию `$ConfirmPreference` — высокий. Таким образом в среде по умолчанию, только командлеты и поставщики, укажите действие качественные запросит подтверждение.
 
-Если `Confirm` имеет значение false или если `"-Confirm:$false` указано, [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызов запрашивает подтверждение от пользователя и `$ConfirmPreference` переменной оболочки учитывается.
+Если `Confirm` имеет значение false или если `"-Confirm:$false` указано, [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызов запрашивает подтверждение от пользователя и `$ConfirmPreference` переменной оболочки учитывается.
 
 ## <a name="remarks"></a>Замечания
 

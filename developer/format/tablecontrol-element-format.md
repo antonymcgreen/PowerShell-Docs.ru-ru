@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1550b068-dfbc-4ae0-9aa1-72c9a680ec59
 caps.latest.revision: 15
-ms.openlocfilehash: dd48e82452e83f93e2e005c9db53bbc51d8b2eb4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3942c008e026b0b99db3c77af4a0152b50fffc4e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858920"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054583"
 ---
 # <a name="tablecontrol-element-format"></a>Элемент TableControl (формат)
 
@@ -48,7 +48,7 @@ TableControl-элемент элемента (формат) элемент ViewD
 |[AutoSize-элемент для TableControl (формат)](./autosize-element-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Указывает ли размер столбца и количество столбцов изменить в зависимости от объема данных.|
 |[Элемент HideTableHeaders для TableControl (формат)](./hidetableheaders-element-format.md)|Необязательный элемент.<br /><br /> Указывает, отображается ли заголовок таблицы.|
 |[Элемент TableHeaders для TableControl (формат)](./tableheaders-element-format.md)|Обязательный элемент.<br /><br /> Определяет, метки, значения ширины и выравнивания данных для столбцов представления таблицы.|
-|[Элемент TableRowEntries для TableCotrol (формат)](./tablerowentries-element-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Предоставляет определения представления таблицы.|
+|[Элемент TableRowEntries для TableControl (формат)](./tablerowentries-element-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Предоставляет определения представления таблицы.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 

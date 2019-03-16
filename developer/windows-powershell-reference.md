@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell SDK
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
-ms.openlocfilehash: dfda6cb68b089a30a156760345420ee80d1d3ae9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 86595ebaac32318a4e3b9a3c4b295c73fb2e1c75
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862110"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055501"
 ---
 # <a name="windows-powershell-reference"></a>Справочник по Windows PowerShell
 
@@ -47,10 +47,10 @@ Windows PowerShell Software Development Kit (SDK) записывается дл�
 
 [System.Management.Automation.Provider](/dotnet/api/System.Management.Automation.Provider) это пространство имен содержит классы, перечисления и интерфейсы, необходимые для реализации поставщика Windows PowerShell. В частности [System.Management.Automation.Provider.Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) класс является базовым классом, из какой всех Windows PowerShell должен быть производным классы поставщика.
 
-[Microsoft.Powershell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) это пространство имен содержит классы для командлеты и поставщики, реализованные в Windows PowerShell. Аналогичным образом, рекомендуется создать *YourName*. Пространство имен команд для командлетов, которые реализовать.
+[Microsoft.PowerShell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) это пространство имен содержит классы для командлеты и поставщики, реализованные в Windows PowerShell. Аналогичным образом, рекомендуется создать *YourName*. Пространство имен команд для командлетов, которые реализовать.
 
 [System.Management.Automation.Host](/dotnet/api/System.Management.Automation.Host) это пространство имен содержит классы, перечисления и интерфейсы, командлет будет использовать для определения взаимодействия между пользователем и Windows PowerShell.
 
-[System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) это пространство имен содержит базовые классы, используемые другими классами пространства имен. Например [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) класс является базовым классом для [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) класса.
+[System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) это пространство имен содержит базовые классы, используемые другими классами пространства имен. Например [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) класс является базовым классом для [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) класса.
 
 [System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) это пространство имен содержит классы, перечисления и интерфейсы, используемые для создания пространства выполнения Windows PowerShell. В данном контексте пространства выполнения Windows PowerShell является контекст, в котором один или несколько конвейеров Windows PowerShell вызвать командлеты. То есть командлеты работают в контексте пространства выполнения Windows PowerShell. Дополнительные сведения о aboutWindows пространства выполнения PowerShell, см. в разделе [пространства выполнения Windows PowerShell](http://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9).

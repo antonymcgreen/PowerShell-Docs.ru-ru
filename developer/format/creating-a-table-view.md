@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
 caps.latest.revision: 23
-ms.openlocfilehash: 832527ea4b042812c39934cd7e124201c6dc2ea4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861500"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057371"
 ---
 # <a name="creating-a-table-view"></a>Создание представления таблицы
 
@@ -95,7 +95,7 @@ Running  Appinfo            Application Information
 
 2. [TableColumnHeader](./tablecolumnheader-element-format.md) элемент определяет, что отображается в верхней части столбца таблицы. Эти элементы указываются в том порядке, что отображаются заголовки.
 
-   Неограниченное количество этих элементом, который можно использовать, но число [TableColumnHeader](./tablecolumnheader-element-format.md) элементов в представлении таблицы должно быть равно количество [TableRowEntry](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md) элементы, которые можно использовать.
+   Неограниченное количество этих элементом, который можно использовать, но число [TableColumnHeader](./tablecolumnheader-element-format.md) элементов в представлении таблицы должно быть равно количество [TableRowEntry](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md) элементы, которые можно использовать.
 
 3. [Метка](./label-element-for-tablecolumnheader-for-tablecontrol-format.md) элемент указывает текст, который будет отображаться. Этот элемент является необязательным.
 
@@ -136,7 +136,7 @@ Running  Appinfo            Application Information
 
 - [EntrySelectedBy](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md) элемент определяет объекты, которые отображаются по специфическим определением. Этот элемент является необязательным и требуется только в том случае, при определении нескольких [TableRowEntry](./listentry-element-for-listcontrol-format.md) элементы, отображающие разные объекты.
 
-- [Wrap](./wrap-element-for-tablerowentry-for-tablecontrl-format.md) элемент указывает, что текст, который превышает ширину столбца отображается на следующей строке. По умолчанию текст, не уместившийся по ширине столбца, усекается.
+- [Wrap](./wrap-element-for-tablerowentry-for-tablecontrol-format.md) элемент указывает, что текст, который превышает ширину столбца отображается на следующей строке. По умолчанию текст, не уместившийся по ширине столбца, усекается.
 
 - [TableColumnItems](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md) элемент определяет свойства или скрипты, значения которых отображаются в строке.
 

@@ -8,23 +8,23 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a65b964-5bc6-4ade-a66b-b6afa7351ce7
 caps.latest.revision: 9
-ms.openlocfilehash: d77e4daf25bfcd5e76c184f6dbdb619368627bfa
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 32ebf2531237bfd1042310ccc4155193a58401fd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857230"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058782"
 ---
 # <a name="interpreting-errorrecord-objects"></a>Интерпретация объектов ErrorRecord
 
-В большинстве случаев [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) представляет устранимую ошибку, созданные команды или сценария. Завершение ошибки можно также указать дополнительные сведения в ErrorRecord через [System.Management.Automation.Icontainserrorrecord](/dotnet/api/System.Management.Automation.IContainsErrorRecord) интерфейс.
+В большинстве случаев [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) представляет устранимую ошибку, созданные команды или сценария. Завершение ошибки можно также указать дополнительные сведения в ErrorRecord через [System.Management.Automation.Icontainserrorrecord](/dotnet/api/System.Management.Automation.IContainsErrorRecord) интерфейс.
 
-Если вы хотите написать обработчик ошибок в скрипте или узла для обработки определенных ошибок, возникающих во время выполнения команды или сценария, необходимо интерпретировать [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) объектом, чтобы определить ли он Представляет класс ошибки, необходимо обработать.
+Если вы хотите написать обработчик ошибок в скрипте или узла для обработки определенных ошибок, возникающих во время выполнения команды или сценария, необходимо интерпретировать [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объектом, чтобы определить ли он Представляет класс ошибки, необходимо обработать.
 
 Когда командлет встречает точки в конце или устранимую ошибку, оно должно создавать записи об ошибке, которое описывает условие ошибки. Ведущее приложение необходимо изучить эти записи об ошибках и выполните действие позволит устранить ошибки. Ведущее приложение также необходимо изучить записи об ошибках для устранимые ошибки, которые не удалось обработать запись, но смогли продолжить, и она должна изучить записи об ошибках для неустранимых ошибок, вызвавшего конвейер остановить.
 
 > [!NOTE]
-> Для прерывающие ошибки вызывает командлет [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) метод. Устранимые ошибки вызывает командлет [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод.
+> Для прерывающие ошибки вызывает командлет [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) метод. Устранимые ошибки вызывает командлет [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод.
 
 ## <a name="error-record-design"></a>Ошибка записи разработки
 
@@ -44,13 +44,13 @@ ms.locfileid: "56857230"
 
 ### <a name="the-error-category"></a>Категория ошибки
 
-Категория ошибки записи об ошибке является одним из предопределенных констант, предоставляемые [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) перечисления. Эти сведения можно получить через [System.Management.Automation.Errorrecord.Categoryinfo*](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo) свойство [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта.
+Категория ошибки записи об ошибке является одним из предопределенных констант, предоставляемые [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) перечисления. Эти сведения можно получить через [System.Management.Automation.ErrorRecord.CategoryInfo](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo) свойство [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта.
 
 Командлет можно указать категории CloseError, OpenError, InvalidType, ошибка чтения и WriteError и другие категории ошибок. Ведущее приложение может использовать категорию ошибки для записи группы ошибок.
 
 ### <a name="the-exception"></a>Исключение
 
-Исключение, включенных в запись об ошибке предоставляется с помощью командлета и может осуществляться через [System.Management.Automation.Errorrecord.Exception*](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) свойство [ System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта.
+Исключение, включенных в запись об ошибке предоставляется с помощью командлета и может осуществляться через [System.Management.Automation.ErrorRecord.Exception*](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) свойство [ System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта.
 
 Ведущие приложения могут использовать `is` ключевое слово, чтобы определить, что исключение определенного класса или производного класса. Лучше Branch на тип исключения, как показано в следующем примере.
 
@@ -70,23 +70,23 @@ FQID предназначен для проверяться в виде одно
 
 ### <a name="other-information"></a>Другие сведения
 
-[System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) объект также может предоставлять сведения, описывающие среду, в которой произошла ошибка. Эта информация включает сведения об ошибке, сведения о вызове и целевой объект, который обрабатывался во время возникновения ошибки. Несмотря на то, что эти сведения могут пригодиться ведущему приложению, он обычно не используется для идентификации ошибки. Эти сведения можно получить через следующие свойства:
+[System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объект также может предоставлять сведения, описывающие среду, в которой произошла ошибка. Эта информация включает сведения об ошибке, сведения о вызове и целевой объект, который обрабатывался во время возникновения ошибки. Несмотря на то, что эти сведения могут пригодиться ведущему приложению, он обычно не используется для идентификации ошибки. Эти сведения можно получить через следующие свойства:
 
-[System.Management.Automation.Errorrecord.Errordetails*](/dotnet/api/System.Management.Automation.ErrorRecord.ErrorDetails)
+[System.Management.Automation.ErrorRecord.ErrorDetails](/dotnet/api/System.Management.Automation.ErrorRecord.ErrorDetails)
 
-[System.Management.Automation.Errorrecord.Invocationinfo*](/dotnet/api/System.Management.Automation.ErrorRecord.InvocationInfo)
+[System.Management.Automation.ErrorRecord.InvocationInfo](/dotnet/api/System.Management.Automation.ErrorRecord.InvocationInfo)
 
-[System.Management.Automation.Errorrecord.Targetobject*](/dotnet/api/System.Management.Automation.ErrorRecord.TargetObject)
+[System.Management.Automation.ErrorRecord.TargetObject](/dotnet/api/System.Management.Automation.ErrorRecord.TargetObject)
 
 ## <a name="see-also"></a>См. также
 
-[System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord)
+[System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)
 
 [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory)
 
 [System.Management.Automation.Errorcategoryinfo](/dotnet/api/System.Management.Automation.ErrorCategoryInfo)
 
-[System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
+[System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 
 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 
