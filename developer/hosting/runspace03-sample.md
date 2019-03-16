@@ -8,40 +8,40 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 31df99d7-6954-4fdc-b6f5-06ecba094f43
 caps.latest.revision: 8
-ms.openlocfilehash: fe513a47908fc3020895fcb26f1840faad76210a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 39495f7813aecf5d0210866fc11f94557fdb0cd9
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857300"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059003"
 ---
-# <a name="runspace03-sample"></a><span data-ttu-id="51b91-102">Пример Runspace03</span><span class="sxs-lookup"><span data-stu-id="51b91-102">Runspace03 Sample</span></span>
+# <a name="runspace03-sample"></a><span data-ttu-id="a6280-102">Пример Runspace03</span><span class="sxs-lookup"><span data-stu-id="a6280-102">Runspace03 Sample</span></span>
 
-<span data-ttu-id="51b91-103">В этом примере показано, как использовать [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) класса для синхронного запуска скрипта и как обрабатывать устранимые ошибки.</span><span class="sxs-lookup"><span data-stu-id="51b91-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run a script synchronously, and how to handle non-terminating errors.</span></span> <span data-ttu-id="51b91-104">Скрипт получает список имен процессов, а затем извлекает эти процессы.</span><span class="sxs-lookup"><span data-stu-id="51b91-104">The script receives a list of process names and then retrieves those processes.</span></span> <span data-ttu-id="51b91-105">Результаты выполнения скрипта, включая вызванные им устранимые ошибки, отображаются в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="51b91-105">The results of the script, including any non-terminating errors that were generated when running the script, are displayed in a console window.</span></span>
+<span data-ttu-id="a6280-103">В этом примере показано, как использовать [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) класса для синхронного запуска скрипта и как обрабатывать устранимые ошибки.</span><span class="sxs-lookup"><span data-stu-id="a6280-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run a script synchronously, and how to handle non-terminating errors.</span></span> <span data-ttu-id="a6280-104">Скрипт получает список имен процессов, а затем извлекает эти процессы.</span><span class="sxs-lookup"><span data-stu-id="a6280-104">The script receives a list of process names and then retrieves those processes.</span></span> <span data-ttu-id="a6280-105">Результаты выполнения скрипта, включая вызванные им устранимые ошибки, отображаются в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="a6280-105">The results of the script, including any non-terminating errors that were generated when running the script, are displayed in a console window.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="51b91-106">Требования</span><span class="sxs-lookup"><span data-stu-id="51b91-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a6280-106">Требования</span><span class="sxs-lookup"><span data-stu-id="a6280-106">Requirements</span></span>
 
-<span data-ttu-id="51b91-107">В этом примере требуется Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="51b91-107">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="a6280-107">В этом примере требуется Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="a6280-107">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="51b91-108">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="51b91-108">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="a6280-108">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="a6280-108">Demonstrates</span></span>
 
-<span data-ttu-id="51b91-109">В этом примере демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="51b91-109">This sample demonstrates the following.</span></span>
+<span data-ttu-id="a6280-109">В этом примере демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="a6280-109">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="51b91-110">Создание [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) объект для выполнения скрипта.</span><span class="sxs-lookup"><span data-stu-id="51b91-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run a script.</span></span>
+- <span data-ttu-id="a6280-110">Создание [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) объект для выполнения скрипта.</span><span class="sxs-lookup"><span data-stu-id="a6280-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run a script.</span></span>
 
-- <span data-ttu-id="51b91-111">Добавление скрипта в конвейер объекта [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) объекта.</span><span class="sxs-lookup"><span data-stu-id="51b91-111">Adding a script to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="a6280-111">Добавление скрипта в конвейер объекта [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) объекта.</span><span class="sxs-lookup"><span data-stu-id="a6280-111">Adding a script to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="51b91-112">Передача входных объектов в скрипт из вызывающей программе.</span><span class="sxs-lookup"><span data-stu-id="51b91-112">Passing input objects to the script from the calling program.</span></span>
+- <span data-ttu-id="a6280-112">Передача входных объектов в скрипт из вызывающей программе.</span><span class="sxs-lookup"><span data-stu-id="a6280-112">Passing input objects to the script from the calling program.</span></span>
 
-- <span data-ttu-id="51b91-113">Синхронное выполнение скрипта.</span><span class="sxs-lookup"><span data-stu-id="51b91-113">Running the script synchronously.</span></span>
+- <span data-ttu-id="a6280-113">Синхронное выполнение скрипта.</span><span class="sxs-lookup"><span data-stu-id="a6280-113">Running the script synchronously.</span></span>
 
-- <span data-ttu-id="51b91-114">С помощью [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) объектов для извлечения и отображения свойства из объектов, возвращаемых сценарием.</span><span class="sxs-lookup"><span data-stu-id="51b91-114">Using [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) objects to extract and display properties from the objects returned by the script.</span></span>
+- <span data-ttu-id="a6280-114">С помощью [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) объектов для извлечения и отображения свойства из объектов, возвращаемых сценарием.</span><span class="sxs-lookup"><span data-stu-id="a6280-114">Using [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects to extract and display properties from the objects returned by the script.</span></span>
 
-- <span data-ttu-id="51b91-115">Извлечение и отображение записи об ошибках, которые были созданы при выполнении сценарий.</span><span class="sxs-lookup"><span data-stu-id="51b91-115">Retrieving and displaying error records that were generated when the script was run.</span></span>
+- <span data-ttu-id="a6280-115">Извлечение и отображение записи об ошибках, которые были созданы при выполнении сценарий.</span><span class="sxs-lookup"><span data-stu-id="a6280-115">Retrieving and displaying error records that were generated when the script was run.</span></span>
 
-## <a name="example"></a><span data-ttu-id="51b91-116">Пример</span><span class="sxs-lookup"><span data-stu-id="51b91-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a6280-116">Пример</span><span class="sxs-lookup"><span data-stu-id="a6280-116">Example</span></span>
 
-<span data-ttu-id="51b91-117">В этом примере синхронно запускает сценарий, в пространстве выполнения по умолчанию, предоставляемые Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="51b91-117">This sample runs a script synchronously in the default runspace provided by Windows PowerShell.</span></span> <span data-ttu-id="51b91-118">В окне консоли отображаются выходные данные сценария и любые устранимые ошибки, которые были созданы.</span><span class="sxs-lookup"><span data-stu-id="51b91-118">The output of the script and any non-terminating errors that were generated are displayed in a console window.</span></span>
+<span data-ttu-id="a6280-117">В этом примере синхронно запускает сценарий, в пространстве выполнения по умолчанию, предоставляемые Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="a6280-117">This sample runs a script synchronously in the default runspace provided by Windows PowerShell.</span></span> <span data-ttu-id="a6280-118">В окне консоли отображаются выходные данные сценария и любые устранимые ошибки, которые были созданы.</span><span class="sxs-lookup"><span data-stu-id="a6280-118">The output of the script and any non-terminating errors that were generated are displayed in a console window.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -128,6 +128,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="51b91-119">См. также</span><span class="sxs-lookup"><span data-stu-id="51b91-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6280-119">См. также</span><span class="sxs-lookup"><span data-stu-id="a6280-119">See Also</span></span>
 
-[<span data-ttu-id="51b91-120">Создание приложения Windows PowerShell узла</span><span class="sxs-lookup"><span data-stu-id="51b91-120">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="a6280-120">Создание приложения Windows PowerShell узла</span><span class="sxs-lookup"><span data-stu-id="a6280-120">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
