@@ -1,22 +1,20 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,установка
-ms.openlocfilehash: 01d4989711c22db20431876c52740afb350caad0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 1153738fdf6f926d5d819bbf91450408dcb17f71
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219554"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794504"
 ---
 # <a name="generate-powershell-cmdlets-based-on-odata-endpoint"></a>Создание командлетов PowerShell на основе конечной точки OData
-<a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint"></a>Создание командлетов Windows PowerShell на основе конечной точки OData
---------------------------------------------------------------
+
+## <a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint"></a>Создание командлетов Windows PowerShell на основе конечной точки OData
 
 Командлет **Export-ODataEndpointProxy** создает набор командлетов Windows PowerShell в зависимости от функциональности, предоставляемой заданной конечной точкой OData.
 
 В следующем примере показано, как использовать этот новый командлет:
-
-\# Базовый вариант использования Export-ODataEndpointProxy
 
 ```powershell
 Export-ODataEndpointProxy -Uri 'http://services.odata.org/v3/(S(snyobsk1hhutkb2yulwldgf1))/odata/odata.svc' -OutputModule C:\Users\user\Generated.psd1
@@ -50,8 +48,8 @@ ipmo 'C:\Users\user\Generated.psd1'
 -   Сопоставления
 -   Передача потоков
 
-<a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint-with-odatautils"></a>Создание командлетов Windows PowerShell на основе конечной точки OData с помощью ODataUtils
-------------------------------------------------------------------------------
+## <a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint-with-odatautils"></a>Создание командлетов Windows PowerShell на основе конечной точки OData с помощью ODataUtils
+
 Модуль ODataUtils позволяет создавать командлеты Windows PowerShell на базе конечных точек REST, которые поддерживают OData. В модуль Microsoft.PowerShell.ODataUtils Windows PowerShell внесены следующие дополнительные усовершенствования:
 -   Передача дополнительных сведений с серверной конечной точки на сторону клиента
 -   Поддержки разбивки на страницы на стороне клиента
@@ -59,6 +57,7 @@ ipmo 'C:\Users\user\Generated.psd1'
 -   Поддержка заголовков веб-запросов
 
 Командлеты прокси-сервера, созданные с помощью командлета Export-ODataEndPointProxy, предоставляют дополнительные сведения (которая не упоминается в $metadata, используемом во время создания прокси на стороне клиента) с серверной конечной точки OData в потоке информации (новая функция Windows PowerShell 5.0). Ниже приведен пример того, как получить эту информацию.
+
 ```powershell
 Import-Module Microsoft.PowerShell.ODataUtils -Force
 $generatedProxyModuleDir = Join-Path -Path $env:SystemDrive -ChildPath 'ODataDemoProxy'
@@ -81,6 +80,7 @@ $additionalInfo['odata.count']
 ```
 
 Записи со стороны сервера можно получить в пакетах, используя поддержку разбивки на страницы на стороне клиента. Это удобно, когда требуется получить большой объем данных с сервера по сети.
+
 ```powershell
 $skipCount = 0
 $batchSize = 3
@@ -94,6 +94,7 @@ $skipCount += $batchSize
 ```
 
 Созданные командлеты прокси-сервера поддерживают параметр –Select, который можно использовать в качестве фильтра, чтобы получить только свойства записей, необходимые клиенту. Это уменьшает объем передаваемых по сети данных, поскольку фильтрация выполняется на стороне сервера.
+
 ```powershell
 # In the below example only the Name property of the
 # Product record is retrieved from the server side.
@@ -101,6 +102,7 @@ Get-Product -Top 2 -AllowUnsecureConnection -AllowAdditionalData -Select Name
 ```
 
 Командлет Export-ODataEndpointProxy и созданные им командлеты прокси-сервера теперь поддерживают параметр Headers (предоставление значений в виде хэш-таблицы), который можно использовать для передачи любых дополнительных сведений, ожидаемых серверной конечной точкой OData. В следующем примере можно передать ключ Subscription через параметр Headers для служб, которые ожидают этот ключ для проверки подлинности.
+
 ```powershell
 # As an example, in the below command 'XXXX' is the authentication used by the
 # Export-ODataEndpointProxy cmdlet to interact with the server-side

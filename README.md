@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6e36e6599e36218ce2a925dceda7aa0ee6811057
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "58142229"
+---
 # <a name="microsoft-open-source-code-of-conduct"></a>Правила поведения: использование открытого исходного кода Майкрософт
 
 Этот проект основывается на [правилах использования открытого исходного кода Майкрософт](https://opensource.microsoft.com/codeofconduct/).

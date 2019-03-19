@@ -3,12 +3,12 @@ ms.date: 09/26/2017
 contributor: keithb
 keywords: коллекция,powershell,командлет,psget
 title: Предварительные версии модулей
-ms.openlocfilehash: f58b5adfeba7ed06d231c76accbd52508c7d67d6
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: eced067dd21082de0db653daf3b838217154f1dd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002775"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056251"
 ---
 # <a name="prerelease-module-versions"></a>Предварительные версии модулей
 
@@ -17,7 +17,7 @@ ms.locfileid: "50002775"
 На высоком уровне возможности для предварительных версий модулей включают следующее.
 
 - Добавление строки предварительной версии в раздел PSData манифеста модуля определяет версию модуля как предварительную. При публикации модуля в коллекции PowerShell эти данные извлекаются из манифеста и используются для определения предварительных версий пакетов.
-- Для получения предварительных версий пакетов необходимо добавить флаг `-AllowPrerelease` в команды PowerShellGet `Find-Module`, `Install-Module`, `Update-Module` и `Save-Module`. Если этот флаг не поставлен, предварительные версии не отображаются.
+- Для получения предварительных версий пакетов необходимо добавить флаг `-AllowPrerelease` в команды PowerShellGet `Find-Module`, `Install-Module`, `Update-Module` и `Save-Module`. Если этот флаг не указан, предварительные версии не будут отображаться.
 - Версии модулей, отображаемые в `Find-Module`,`Get-InstalledModule` и коллекции PowerShell, будут отображаться как одна строка с добавлением строки предварительной версии, например: 2.5.0-alpha.
 
 Ниже приведено подробное описание этих возможностей.
@@ -169,10 +169,10 @@ C:\windows\system32> Uninstall-Module TestPackage -RequiredVersion 1.9.0-beta
 Uninstall-Module : The '-AllowPrerelease' parameter must be specified when using the Prerelease string in
 MinimumVersion, MaximumVersion, or RequiredVersion.
 At line:1 char:1
-+ Unnstall-Module TestPackage -RequiredVersion 1.9.0-beta
++ Uninstall-Module TestPackage -RequiredVersion 1.9.0-beta
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidArgument: (:) [Uninstall-Module], ArgumentException
-    + FullyQualifiedErrorId : AllowPrereleaseRequiredToUsePrereleaseStringInVersion,Uninnstall-Module
+    + FullyQualifiedErrorId : AllowPrereleaseRequiredToUsePrereleaseStringInVersion,Uninstall-Module
 
 C:\windows\system32> Uninstall-Module TestPackage -RequiredVersion 1.9.0-beta -AllowPrerelease
 C:\windows\system32> Get-InstalledModule TestPackage -AllVersions

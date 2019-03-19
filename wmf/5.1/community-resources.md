@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Ресурсы сообщества
-ms.openlocfilehash: 144fa655d4c14656246bc6c86e7c43f1ea8dca3c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a26f6eefeb3beb41575675b3dd4077f056606a70
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219374"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794881"
 ---
-# <a name="community-resources"></a>Ресурсы сообщества #
-> Примечание. Эта информация является предварительной и может быть изменена.
+# <a name="community-resources"></a>Ресурсы сообщества
+> Примечание. Это предварительная информация, которая может быть изменена.
 
 Группа разработчиков PowerShell приветствует отзывы клиентов о продукте и предоставляет пользователям несколько способов связи.
 Вы можете отправить нам отзыв любым из указанных ниже способов, однако мы рекомендуем начать со ссылок на домашней странице PowerShell.
