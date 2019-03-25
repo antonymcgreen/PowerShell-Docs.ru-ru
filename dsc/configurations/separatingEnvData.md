@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Разделение данных конфигурации и данных среды
-ms.openlocfilehash: 24a92e5e4f15959498b57a1488a688d5548f3585
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 305a766fec81d4ea4afce187756188b067a2048b
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402371"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794932"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Разделение данных конфигурации и данных среды
 
->Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Отделение данных, используемых в конфигурации DSC, от самой конфигурации с помощью данных конфигурации может быть полезным.
 Это позволит использовать одну конфигурацию для нескольких сред.
@@ -88,7 +88,7 @@ Mode                LastWriteTime         Length Name
 
 Рассмотрим полный пример использования одной и той же конфигурации для настройки среды разработки и рабочей среды веб-сайта. В среде разработки службы IIS и SQL Server устанавливаются на одних и тех же узлах. В рабочей среде службы IIS и SQL Server устанавливаются на отдельных узлах. Для указания данных конфигурации для двух различных сред мы будем использовать PSD1-файл данных конфигурации.
 
- ### <a name="configuration-data-file"></a>Файл данных конфигурации
+### <a name="configuration-data-file"></a>Файл данных конфигурации
 
 Данные среды разработки и рабочей среды определяются в файле `DevProdEnvData.psd1` следующим образом.
 
@@ -135,7 +135,7 @@ Mode                LastWriteTime         Length Name
 
 В конце сценария конфигурации мы вызываем конфигурацию (компилируем ее в документ MOF), передав `DevProdEnvData.psd1` в качестве параметра `$ConfigurationData`.
 
->**Примечание**. Эта конфигурация требует, чтобы модули `xSqlPs` и `xWebAdministration` должны быть установлены на целевом узле.
+>**Примечание**. Эта конфигурация требует, чтобы модули `xSqlPs` и `xWebAdministration` были установлены на целевом узле.
 
 Давайте определим конфигурацию в файле с именем `MyWebApp.ps1`:
 

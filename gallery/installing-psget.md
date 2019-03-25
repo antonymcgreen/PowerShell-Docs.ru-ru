@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Установка PowerShellGet
-ms.openlocfilehash: 5c51cb1c7ea2538cc5f8503ce6c5d80edda70e15
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 23a53a9117c9f6a7ad157b635cd7ff4b3b3444c5
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002229"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054838"
 ---
 # <a name="installing-powershellget"></a>Установка PowerShellGet
 
@@ -57,7 +57,7 @@ ms.locfileid: "50002229"
   Exit
   ```
 
-- Убедитесь, что модули PowerShellGet и PackageManagment не загружены в других процессах.
+- Убедитесь, что модули PowerShellGet и PackageManagement не загружены в других процессах.
 - Удалите содержимое папок `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` и `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\`.
 - Снова откройте консоль PS с повышенным уровнем разрешений, а затем выполните следующие команды.
 

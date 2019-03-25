@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс DSC WaitForAny
-ms.openlocfilehash: 39e90f0df3459b8891ed46e02ae82c45a285e7f5
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.openlocfilehash: 55869f665837b422c006f4cfb3e91366fac60362
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047652"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58058825"
 ---
 # <a name="dsc-waitforany-resource"></a>Ресурс DSC WaitForAny
 
-> Область применения. Windows PowerShell 5.1 и более поздние версии
+> Область применения. Windows PowerShell 5.1 и более поздних версий
 
-Ресурс настройки требуемого состояния **WaitForSome** можно использовать в блоке узла в [конфигурации DSC](../../../configurations/configurations.md) для определения зависимостей от конфигураций на других узлах.
+Ресурс настройки требуемого состояния **WaitForAny** можно использовать в блоке узла в [конфигурации DSC](../../../configurations/configurations.md) для определения зависимостей от конфигураций на других узлах.
 
 Этот ресурс выполняется успешно, если ресурс, указанный свойством **ResourceName**, находится в требуемом состоянии на всех целевых узлах, определенных в свойстве **NodeName**.
 

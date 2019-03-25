@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
-ms.openlocfilehash: d477a9b27e8d5df6653ee40f8b606879b60a80c7
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: 975c978629f81f0f13a235c3d304e5ec03bae6d0
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655452"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795697"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Критические изменения в PowerShell Core 6.0
 
@@ -65,6 +65,10 @@ ms.locfileid: "53655452"
 ### <a name="-counter-cmdlets"></a>Командлеты `*-Counter`
 
 Из-за использования неподдерживаемых API модуль `*-Counter` был удален из PowerShell Core, пока не будет найдено лучшее решение.
+
+### <a name="-eventlog-cmdlets"></a>Командлеты `*-EventLog`
+
+Из-за использования неподдерживаемых API модуль `*-EventLog` был удален из PowerShell Core, пока не будет найдено лучшее решение. `Get-WinEvent` и `Create-WinEvent` доступны для получения и создания событий в Windows.
 
 ## <a name="enginelanguage-changes"></a>Изменения модуля и языка
 
@@ -181,7 +185,7 @@ ms.locfileid: "53655452"
 
 ### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036httpsgithubcompowershellpowershellissues4036"></a>Выполнение скрипта PowerShell с параметром bool не работает [№ 4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-Ранее при использовании powershell.exe (теперь `pwsh.exe`) для выполнения скрипта PowerShell с параметром `-File` было невозможно передать значения $true и $false в качестве значений параметра. Была добавлена поддержка $true и $false в качестве проанализированных значений. Значения параметров также поддерживаются, так как в настоящий момент синтаксис документа не работает.
+Ранее при использовании **powershell.exe** (теперь **pwsh.exe**) для выполнения скрипта PowerShell с параметром `-File` было невозможно передать значения `$true`/`$false` в качестве значений параметра. Была добавлена поддержка `$true`/`$false` в качестве анализируемых значений. Значения параметров также поддерживаются, так как в настоящий момент синтаксис документа не работает.
 
 ### <a name="remove-clrversion-property-from-psversiontable-4027httpsgithubcompowershellpowershellissues4027"></a>Удалено свойство `ClrVersion` из `$PSVersionTable` [№ 4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
@@ -193,7 +197,7 @@ ms.locfileid: "53655452"
 
 ### <a name="implement-unicode-escape-parsing-3958httpsgithubcompowershellpowershellissues3958"></a>Реализован анализ escape-символов в Юникоде [№ 3958](https://github.com/PowerShell/PowerShell/issues/3958)
 
-`` `u#### `` или `` `u{####} `` преобразуются в соответствующий символ Юникода. Для вывода литерала `` `u `` добавьте escape-символ в виде обратного апострофа: ``` ``u ```.
+`` `u####`` или `` `u{####}`` преобразуются в соответствующий символ Юникода. Для вывода литерала `` `u`` добавьте escape-символ в виде обратного апострофа: ``` ``u```.
 
 ### <a name="change-new-modulemanifest-encoding-to-utf8nobom-on-non-windows-platforms-3940httpsgithubcompowershellpowershellissues3940"></a>Кодирование `New-ModuleManifest` изменено на `UTF8NoBOM` на платформах, отличных от Windows [№ 3940](https://github.com/PowerShell/PowerShell/issues/3940)
 
@@ -271,4 +275,4 @@ ms.locfileid: "53655452"
 - Параметры `System.Net.ServicePointManager` больше не обрабатываются.
 - В настоящее время в macOS нет проверки подлинности на основе сертификатов.
 - Использование `-Credential` в URI `http://` завершится ошибкой. Используйте URI `https://` или передайте параметр `-AllowUnencryptedAuthentication`, чтобы подавить ошибку.
-- `-MaximumRedirection` Теперь создает неустранимую ошибку при попытки перенаправления к превышению указанного вместо возвращения результатов последней перенаправления.
+- `-MaximumRedirection` теперь создает неустранимую ошибку, если попытки перенаправления превышают указанный предел, вместо возвращения результатов последнего перенаправления.

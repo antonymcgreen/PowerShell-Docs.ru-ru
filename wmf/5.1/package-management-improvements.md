@@ -4,16 +4,17 @@ ms.topic: conceptual
 keywords: wmf,powershell,установка
 contributor: jianyunt, quoctruong
 title: Усовершенствования в управлении пакетами в WMF 5.1
-ms.openlocfilehash: adcddcc94022f4961f3dd23c2cd56f2a8720049b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 30ef59ed9dc0d56636d85cc6e53523a9a73963a4
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682564"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794286"
 ---
-# <a name="improvements-to-package-management-in-wmf-51"></a>Усовершенствования в управлении пакетами в WMF 5.1#
+# <a name="improvements-to-package-management-in-wmf-51"></a>Усовершенствования в управлении пакетами в WMF 5.1
 
-## <a name="improvements-in-packagemanagement"></a>Усовершенствования в управлении пакетами ##
+## <a name="improvements-in-packagemanagement"></a>Усовершенствования в управлении пакетами
+
 Ниже перечислены исправления, внесенные в WMF 5.1.
 
 ### <a name="version-alias"></a>Псевдоним версии
@@ -30,7 +31,7 @@ ms.locfileid: "55682564"
 
 Но если на компьютере установлена старая версия поставщика NuGet, она иногда может загружаться первой в сеанс PowerShell (и в PackageManagement возникает состояние гонки). Но модуль PowerShellGet требует, чтобы работала последняя версия поставщика NuGet, поэтому он еще раз запрашивает начальную загрузку поставщика NuGet у модуля PackageManagement. Это приводит к выводу нескольких запросов на начальную загрузку поставщика NuGet.
 
-**Решение**. В WMF 5.1 модуль PackageManagement загружает последнюю версию поставщика NuGet во избежание вывода нескольких запросов на начальную загрузку поставщика NuGet.
+**Решение**. В WMF 5.1 модуль PackageManagement теперь загружает последнюю версию поставщика NuGet во избежание вывода нескольких запросов на начальную загрузку поставщика NuGet.
 
 Также имеется обходной путь: вы можете вручную удалить старую версию поставщика NuGet (NuGet-Anycpu.exe), если она существует, из папок $env:ProgramFiles\PackageManagement\ProviderAssemblies и $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies
 
@@ -41,7 +42,7 @@ ms.locfileid: "55682564"
 
 **Ситуация**. В WMF 5.0 модуль PackageManagement не поддерживался на компьютерах с доступом только к интрасети (но не к Интернету).
 
-**Решение**. В WMF 5.1 необходимо выполнить следующие действия, чтобы обеспечить использование PackageManagement на компьютерах интрасети:
+**Решение**. Чтобы обеспечить использование PackageManagement на компьютерах в интрасети, в WMF 5.1 можно выполнить указанные ниже действия.
 
 1. Скачайте поставщик NuGet с другого компьютера, имеющего подключение к Интернету, выполнив команду `Install-PackageProvider -Name NuGet`.
 
@@ -61,6 +62,7 @@ ms.locfileid: "55682564"
 ``` PowerShell
 Find-Package -Source <SourceWithCredential> -Credential (Get-Credential)
 ```
+
 ### <a name="support-for-using-packagemanagement-behind-a-proxy"></a>Поддержка использования PackageManagement через прокси-сервер
 
 В WMF 5.1 модуль PackageManagement принимает новые параметры прокси-сервера, `-ProxyCredential` и `-Proxy`. В этих параметрах можно указать URL-адрес и учетные данные прокси-сервера для командлетов PackageManagement. По умолчанию используются системные настройки прокси-сервера. Например:

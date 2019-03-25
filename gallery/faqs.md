@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Часто задаваемые вопросы по коллекции PowerShell
-ms.openlocfilehash: 3fa52892ce50491c040251baae8b4ae4ee3dcba0
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: bcbb36a9ec60d88d1ef56fd270f0ae1862d5ca6b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002878"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58057694"
 ---
 # <a name="frequently-asked-questions"></a>Вопросы и ответы
 
@@ -31,11 +31,12 @@ ms.locfileid: "50002878"
 
 Перед публикацией пакетов в коллекции необходимо зарегистрировать учетную запись в коллекции PowerShell, так как для публикации требуется ключ NuGetApiKey, который предоставляется при регистрации. Чтобы зарегистрироваться, используйте личную, рабочую или учебную учетную запись для входа в коллекцию PowerShell. При входе в первый раз необходимо пройти однократный процесс регистрации. После этого ваш NuGetApiKey будет доступен на странице профиля.
 
-После регистрации можно опубликовать свой пакет в коллекции с помощью командлетов [Publish-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) или [Publish-Script](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Дополнительные сведения о запуске этих командлетов см. на вкладке "Публикация" или в документации по командлетам [Publish-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) и [Publish-Script](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+После регистрации можно опубликовать свой пакет в коллекции с помощью командлетов [Publish-Module][] или [Publish-Script][].
+Дополнительные сведения о запуске этих командлетов см. на вкладке "Публикация" или в документации по командлетам [Publish-Module][] и [Publish-Script][].
 
 **Для установки или сохранения пакетов не требуется регистрироваться в коллекции или входить в нее.**
 
-## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>Получена ошибка "Не удалось обработать запрос. "Указанный ключ API является недопустимым или не имеет разрешения на доступ к указанному пакету". Удаленный сервер вернул ошибку: (403) запрещено." при попытке опубликовать пакет в коллекции PowerShell. Что это значит?
+## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>Получена ошибка "Не удалось обработать запрос. "Указанный ключ API является недопустимым или не имеет разрешения на доступ к указанному пакету". Удаленный сервер вернул ошибку: (403) запрещено". при попытке опубликовать пакет в коллекции PowerShell. Что это значит?
 
 Эта ошибка может возникать по следующим причинам.
 
@@ -56,29 +57,37 @@ ms.locfileid: "50002878"
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>Каковы требования для публикации модуля в коллекции PowerShell?
 
-В коллекции можно опубликовать любой вид модуля PowerShell (модули сценариев, двоичные модули или модули манифестов). Для публикации модуля необходимо сообщить PowerShellGet некоторые сведения об этом модуле: версию, описание, автора и способ лицензирования. Эти сведения считываются в процессе публикации из файла *манифеста модуля* (PSD1-файла) или из значения параметра **LicenseUri**командлета [**Publish-Module**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Все модули, которые публикуются в коллекции, должны иметь манифесты модуля. В коллекции может быть опубликован любой модуль, содержащий в своем манифесте следующие сведения.
+В коллекции можно опубликовать любой вид модуля PowerShell (модули сценариев, двоичные модули или модули манифестов).
+Для публикации модуля необходимо сообщить PowerShellGet некоторые сведения об этом модуле: версию, описание, автора и способ лицензирования.
+Эти сведения считываются в процессе публикации из файла *манифеста модуля* (PSD1-файла) или из значения параметра **LicenseUri** командлета [Publish-Module][].
+Все модули, которые публикуются в коллекции, должны иметь манифесты модуля.
+В коллекции может быть опубликован любой модуль, содержащий в своем манифесте следующие сведения.
 
 - Версия
 - Описание
 - Дизайнер
-- URI для условий лицензии модуля, либо в разделе **PrivateData** манифеста, либо в параметре **LicenseUri** командлета [**Publish-Module**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+- URI для условий лицензии модуля, либо в разделе **PrivateData** манифеста, либо в параметре **LicenseUri** командлета [Publish-Module][].
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>Как создать правильно сформированный манифест модуля?
 
-Самый простой способ создать манифест модуля — выполнить командлет [**New-ModuleManifest**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). В PowerShell 5.0 или более поздней версии командлет New-ModuleManifest создает правильно сформированный манифест модуля с пустыми полями для нужных метаданных, такими как **ProjectUri**, **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный манифест в качестве примера правильного формата.
+Самый простой способ создать манифест модуля — выполнить командлет [New-ModuleManifest][]. В PowerShell 5.0 или более поздней версии командлет New-ModuleManifest создает правильно сформированный манифест модуля с пустыми полями для нужных метаданных, такими как **ProjectUri**, **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный манифест в качестве примера правильного формата.
 
-Чтобы убедиться, что все необходимые поля метаданных заполнены правильно, используйте командлет [**Test-ModuleManifest**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Чтобы убедиться, что все необходимые поля метаданных заполнены правильно, используйте командлет [Test-ModuleManifest][].
 
-Для обновления полей файла манифеста модуля используйте командлет [**Update-ModuleManifest**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Для обновления полей файла манифеста модуля используйте командлет [Update-ModuleManifest][].
 
 ## <a name="what-are-the-requirements-to-publish-a-script-to-the-gallery"></a>Каковы требования для публикации сценария в коллекции?
 
-В коллекции можно опубликовать любой вид сценария PowerShell (сценарии или рабочие процессы). Для публикации сценария необходимо предоставить PowerShellGet некоторые сведения об этом сценарии: версию, описание, автора и способ лицензирования. Эти сведения считываются в рамках процесса публикации из раздела *PSScriptInfo* файла сценария или из значения параметра **LicenseUri**командлета [**Publish-Script**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Все сценарии, которые публикуются в коллекции, должны сопровождаться метаданными. В коллекции может быть опубликован любой сценарий, содержащий в своем разделе PSScriptInfo следующие сведения.
+В коллекции можно опубликовать любой вид сценария PowerShell (сценарии или рабочие процессы).
+Для публикации сценария необходимо предоставить PowerShellGet некоторые сведения об этом сценарии: версию, описание, автора и способ лицензирования.
+Эти сведения считываются в рамках процесса публикации из раздела *PSScriptInfo* файла сценария или из значения параметра **LicenseUri** командлета [Publish-Script][].
+Все сценарии, которые публикуются в коллекции, должны сопровождаться метаданными.
+В коллекции может быть опубликован любой сценарий, содержащий в своем разделе PSScriptInfo следующие сведения.
 
 - Версия
 - Описание
 - Дизайнер
-- URI для условий лицензии сценария, либо в разделе **PSScriptInfo** сценария, либо в параметре **LicenseUri** командлета [**Publish-Script**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+- URI для условий лицензии сценария, либо в разделе **PSScriptInfo** сценария, либо в параметре **LicenseUri** командлета [Publish-Script][].
 
 ## <a name="how-do-i-search"></a>Как вести поиск?
 
@@ -94,11 +103,11 @@ ms.locfileid: "50002878"
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>Как создать правильно сформированный файл сценария?
 
-Самый простой способ создать правильно сформированный файл сценария — выполнить командлет [**New ScriptFileInfo**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). В PowerShell 5.0 командлет New-ScriptFileInfo создает правильно сформированный файл сценария с пустыми полями для нужных метаданных, такими как **ProjectUri**, **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный файл сценария в качестве примера правильного формата.
+Самый простой способ создать правильно сформированный файл сценария — выполнить командлет [New-ScriptFileInfo][]. В PowerShell 5.0 командлет New-ScriptFileInfo создает правильно сформированный файл сценария с пустыми полями для нужных метаданных, такими как **ProjectUri**, **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный файл сценария в качестве примера правильного формата.
 
-Чтобы убедиться, что все необходимые поля метаданных заполнены правильно, используйте командлет [**Test-ScriptFileInfo**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Чтобы убедиться, что все необходимые поля метаданных заполнены правильно, используйте командлет [Test-ScriptFileInfo][].
 
-Для обновления полей метаданных сценария используйте командлет [**Update-ScriptFileInfo**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Для обновления полей метаданных сценария используйте командлет [Update-ScriptFileInfo][].
 
 ## <a name="what-other-types-of-powershell-modules-exist"></a>Какие существуют другие типы модулей PowerShell?
 
@@ -112,7 +121,10 @@ ms.locfileid: "50002878"
 
 PackageManagement — это общий интерфейс для работы с любым диспетчером пакетов. В конечном счете, работаете ли вы с модулями PowerShell, MSI-файлами, джемами Ruby, пакетами NuGet или же с модулями Perl, вам нужно будет использовать команды PackageManagement (Find-Package и Install-Package), чтобы найти и установить их. PackageManagement делает это при наличии поставщика пакетов для каждого диспетчера пакетов, который подключается к PackageManagement. Поставщики выполняют всю фактическую работу; они извлекают содержимое из репозиториев и устанавливают это содержимое локально. Часто поставщики пакетов просто являются оболочкой существующих инструментов диспетчера пакетов для конкретного типа пакета.
 
-PowerShellGet — это диспетчер пакетов для пакетов PowerShell. Существует поставщик пакетов PSModule, который предоставляет функциональные возможности PowerShellGet через PackageManagement. По этой причине для установки модуля из коллекции PowerShell можно выполнить команду [Install-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) или Install-Package -Provider PSModule. Некоторые функциональные возможности PowerShellGet, в том числе командлеты [Update-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) и [Publish-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409), недоступны через команды PackageManagement.
+PowerShellGet — это диспетчер пакетов для пакетов PowerShell.
+Существует поставщик пакетов PSModule, который предоставляет функциональные возможности PowerShellGet через PackageManagement.
+По этой причине для установки модуля из коллекции PowerShell можно выполнить команду [Install-Module][] или Install-Package -Provider PSModule.
+Некоторые функциональные возможности PowerShellGet, в том числе командлеты [Update-Module][] и [Publish-Module][], недоступны через команды PackageManagement.
 
 Таким образом, PowerShellGet обеспечивает лишь высококлассные возможности управления пакетами для содержимого PowerShell. PackageManagement предназначен для предоставления всех возможностей управления пакетами через один общий набор инструментов. Если этот ответ вас не удовлетворяет, более подробный ответ можно найти в конце этого документа в разделе **Как фактически соотносятся PackageManagement и PowerShellGet?**.
 
@@ -122,7 +134,7 @@ PowerShellGet — это диспетчер пакетов для пакетов
 
 Коллекция PowerShell является модифицированной версией [коллекции NuGet](https://www.nuget.org/). PowerShellGet использует поставщик NuGet для работы с репозиториями на основе NuGet, такими как коллекция PowerShell.
 
-PowerShellGet можно использовать с любым допустимым репозиторием NuGet или с общим файловым ресурсом. Нужно просто добавить этот репозиторий, выполнив командлет [**Register-PSRepository**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+PowerShellGet можно использовать с любым допустимым репозиторием NuGet или с общим файловым ресурсом. Нужно просто добавить этот репозиторий, выполнив командлет [Register-PSRepository][].
 
 ## <a name="does-that-mean-i-can-use-nugetexe-to-work-with-the-gallery"></a>Означает ли это, что для работы с коллекцией можно использовать NuGet.exe?
 
@@ -132,13 +144,13 @@ PowerShellGet можно использовать с любым допустим
 
 За кулисами PowerShellGet интенсивно использует инфраструктуру PackageManagement.
 
-На уровне командлетов PowerShell командлет [Install-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) в действительности является тонкой оболочкой вокруг команды Install-Package -Provider PSModule.
+На уровне командлетов PowerShell командлет [Install-Module][] в действительности является тонкой оболочкой вокруг команды Install-Package -Provider PSModule.
 
 На уровне поставщиков пакетов PackageManagement поставщик пакетов PSModule в действительности обращается к другим поставщикам пакетов PackageManagement. Например, при работе с коллекциями на основе NuGet (такими как коллекция PowerShell) поставщик пакетов PSModule использует поставщик пакетов NuGet для работы с репозиторием.
 
 ![Архитектура PowerShellGet](Images/powershellgetArchitecture.png)
 
-Рис. 1. Архитектура PowerShellGet
+Рисунок 1. Архитектура PowerShellGet
 
 ## <a name="what-is-required-to-run-powershellget"></a>Что требуется для запуска PowerShellGet?
 
@@ -169,3 +181,16 @@ PowerShellGet можно использовать с любым допустим
 ## <a name="how-do-i-deal-with-a-package-owner-who-is-violating-my-package-license"></a>Что делать с владельцем пакета, который нарушает лицензию на мой пакет?
 
 Мы рекомендуем участникам сообщества PowerShell работать вместе, чтобы решать любые споры, возникающие между владельцами разных пакетов.  Мы разработали [процесс разрешения спорных вопросов](./how-to/getting-support/dispute-resolution.md) и просим придерживаться этого процесса до подключения администраторов PowerShellGallery.com.
+
+[New-ModuleManifest]: /powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest
+[Test-ModuleManifest]: /powershell/module/Microsoft.PowerShell.Core/Test-ModuleManifest
+[Update-ModuleManifest]: /powershell/module/Microsoft.PowerShell.Core/Update-ModuleManifest
+
+[Install-Module]: /powershell/module/PowershellGet/Install-Module
+[New-ScriptFileInfo]: /powershell/module/PowershellGet/New-ScriptFileInfo
+[Publish-Module]: /powershell/module/PowershellGet/Publish-Module
+[Publish-Script]: /powershell/module/PowershellGet/Publish-Script
+[Register-PSRepository]: /powershell/module/PowershellGet/Register-PSRepository
+[Test-ScriptFileInfo]: /powershell/module/PowershellGet/Test-ScriptFileInfo
+[Update-Module]: /powershell/module/PowershellGet/Update-Module
+[Update-ScriptFileInfo]: /powershell/module/PowershellGet/Update-ScriptFileInfo

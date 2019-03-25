@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Отладка ресурсов DSC
-ms.openlocfilehash: 9b2e7dd9b42332b869c4d7fabb21bd4b5a6b8800
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: c088e13a25ba31ceebaf52b2d24b5d32b96ae2fc
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402512"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055586"
 ---
 # <a name="debugging-dsc-resources"></a>Отладка ресурсов DSC
 
@@ -105,7 +105,7 @@ Debug-Runspace -Id 9
 
 После вызова командлета [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug) все вызовы [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) приведут к запуску отладчика для конфигурации. Чтобы обеспечить нормальную работу конфигураций, необходимо отключить отладку, вызвав командлет [Disable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Disable-DscDebug).
 
->**Примечание**. Перезагрузка не изменяет состояние отладки LCM. Если отладка включена, после перезагрузки запуск конфигурации по-прежнему будет вызывать отладчик.
+>**Примечание**. Перезагрузка не меняет состояние отладки LCM. Если отладка включена, после перезагрузки запуск конфигурации по-прежнему будет вызывать отладчик.
 
 ## <a name="see-also"></a>См. также
 

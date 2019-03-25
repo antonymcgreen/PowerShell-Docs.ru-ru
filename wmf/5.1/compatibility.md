@@ -3,16 +3,17 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Совместимость WMF 5.1 с операционными системами
-ms.openlocfilehash: f0037dbc3b172fc98f5f8044a794e49f7727a05c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: f4d7d1403c1f397bf6720485d7a7302543c2010f
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187516"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794975"
 ---
-# <a name="wmf-51-operating-system-compatibility"></a>Совместимость WMF 5.1 с операционными системами #
+# <a name="wmf-51-operating-system-compatibility"></a>Совместимость WMF 5.1 с операционными системами
 
-> Примечание. Эта информация является предварительной и может быть изменена.
+> [!NOTE]
+> Это предварительная информация, которая может быть изменена.
 
 | Версия операционной системы | [WMF 5.1](https://aka.ms/wmf51download) | [WMF 5.0](https://aka.ms/wmf5download) | [WMF 4.0](https://aka.ms/wmf4download) |  [WMF 3.0](https://aka.ms/wmf3download) | [WMF 2.0](https://aka.ms/wmf2download) |
 | ------------------------ | ----------- | ----------- | ----------- | ------------ |  ------------- |
@@ -29,11 +30,9 @@ ms.locfileid: "34187516"
 | Windows Server 2003| | | |  | Да |
 | Windows XP | | | |  | Да |
 
-
-По поводу оговорки "Входит в комплект поставки*": функции WMF 5.0 были включены в исходную версию Windows 10 RTM.
+По поводу оговорки "Входит в комплект поставки*": функции WMF 5.0 были включены в исходную версию Windows 10 RTM.
 Функции WMF 5.1 были включены в Windows Server 2016 и юбилейное обновление Windows 10.
 Компонент WMF 5.1 неприменим для этих версий операционной системы, так как обновления предоставляются через Центр обновления Windows.
-
 
 Обратите внимание, что WMF не входит в состав Windows.
 WMF — это пакет обновления, который предоставляет набор компонентов Windows для предыдущих версий Windows.

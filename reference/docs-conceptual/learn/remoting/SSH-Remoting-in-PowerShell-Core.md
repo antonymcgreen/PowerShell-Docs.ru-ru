@@ -2,12 +2,12 @@
 title: Удаленное взаимодействие с PowerShell через SSH
 description: Удаленное взаимодействие в PowerShell Core с помощью SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: b5c6bd70841e270c2c128601612c07af9d9aa6e4
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: 1d7bcb69c7e784bf745cb5c2633106ea53f6226a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655299"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056538"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Удаленное взаимодействие с PowerShell через SSH
 
@@ -30,7 +30,7 @@ ms.locfileid: "53655299"
 
 ## <a name="general-setup-information"></a>Общие сведения об установке
 
-Поддержку протокола SSH необходимо реализовать на всех компьютерах. Установите клиент (`ssh.exe`) и сервер (`sshd.exe`) SSH, чтобы осуществлять удаленное взаимодействие между компьютерами. OpenSSH для Windows теперь доступно в Windows 10 сборки 1809 и Windows Server 2019. Дополнительные сведения см. в разделе [OpenSSH для Windows](/windows-server/administration/openssh/openssh_overview). В Linux нужно реализовать поддержку SSH (включая установку сервера sshd) в соответствии с используемой платформой. Также для поддержки удаленного взаимодействия по SSH нужно установить PowerShell Core с сайта GitHub. Для сервера SSH нужно настроить возможность создать подсистему SSH для размещения процесса PowerShell на удаленном компьютере. Также нужно активировать аутентификацию на основе ключа или пароля.
+Поддержку протокола SSH необходимо реализовать на всех компьютерах. Установите клиент (`ssh.exe`) и сервер (`sshd.exe`) SSH, чтобы осуществлять удаленное взаимодействие между компьютерами. OpenSSH для Windows теперь доступна в Windows 10 сборки 1809 и Windows Server 2019. Дополнительные сведения см. в разделе [OpenSSH для Windows](/windows-server/administration/openssh/openssh_overview). В Linux нужно реализовать поддержку SSH (включая установку сервера sshd) в соответствии с используемой платформой. Также для поддержки удаленного взаимодействия по SSH нужно установить PowerShell Core с сайта GitHub. Для сервера SSH нужно настроить возможность создать подсистему SSH для размещения процесса PowerShell на удаленном компьютере. Также нужно активировать аутентификацию на основе ключа или пароля.
 
 ## <a name="set-up-on-windows-machine"></a>Установка на компьютере Windows
 
@@ -46,8 +46,8 @@ ms.locfileid: "53655299"
    New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
    ```
 
-2. Установите последнюю Win32 OpenSSH. Инструкции по установке см. в разделе [установки из OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).
-3. Изменить `sshd_config` файл, расположенный в `%ProgramData%\ssh`.
+2. Установите последнюю версию Win32 OpenSSH. Инструкции по установке см. в статье [Установка OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).
+3. Измените файл `sshd_config`, расположенный в `$env:ProgramData\ssh`.
 
    - Включите проверку подлинности с помощью пароля:
 
@@ -62,7 +62,7 @@ ms.locfileid: "53655299"
      > [!NOTE]
      > В OpenSSH для Windows обнаружена ошибка, блокирующая работу пробелов в путях к исполняемым файлам подсистемы. См. дополнительные сведения на [сайте GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
 
-     Одно из решений — создать символьную ссылку на папку установки Powershell, которая не содержит пробелы:
+     Одно из решений — создать символьную ссылку на папку установки PowerShell, которая не содержит пробелы:
 
      ```powershell
      mklink /D c:\pwsh "C:\Program Files\PowerShell\6"

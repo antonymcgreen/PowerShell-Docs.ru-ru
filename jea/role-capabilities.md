@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,безопасность
 title: Возможности ролей JEA
-ms.openlocfilehash: bd0a995adc60e50049ff99d6b23e7c2aeb745a18
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.openlocfilehash: b93d206680de485d6cb7a8cb26d63afda5bf8421
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522948"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055059"
 ---
 # <a name="jea-role-capabilities"></a>Возможности ролей JEA
 
-> Область применения: Windows PowerShell 5.0
+> Применяется к: Windows PowerShell 5.0
 
 При создании конечной точки JEA потребуется определить одну или несколько "возможностей ролей", описывающих, *что именно* пользователь может сделать в сеансе JEA.
 Возможность роли — это файл данных PowerShell с расширением PSRC, содержащий все командлеты, функции, поставщики и внешние программы, которые должны быть доступны для подключающихся пользователей.
@@ -58,7 +58,7 @@ New-PSRoleCapabilityFile -Path .\MyFirstJEARole.psrc
 
 ### <a name="allowing-powershell-cmdlets-and-functions"></a>Разрешение функций и командлетов PowerShell
 
-Чтобы разрешить пользователям запускать функции или командлеты PowerShell, добавьте имя функции или командлета в поле VisibleFunctions или VisbibleCmdlets.
+Чтобы разрешить пользователям запускать функции или командлеты PowerShell, добавьте имя функции или командлета в поле VisibleFunctions или VisibleCmdlets.
 Если вы не уверены, является ли команда командлетом или функцией, выполните `Get-Command <name>` и проверьте свойство CommandType в выходных данных.
 
 ```powershell
@@ -100,7 +100,6 @@ VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; Val
 `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'}, @{ Name = 'Param2' }}`               | Разрешает пользователю выполнить `My-Func` с параметрами `Param1` и (или) `Param2`. Для параметров можно задать любое значение.
 `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidateSet = 'Value1', 'Value2' }}`  | Разрешает пользователю выполнить `My-Func` с параметром `Param1`. Для параметра можно задать только значение "Value1" или "Value2".
 `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidatePattern = 'contoso.*' }}`     | Разрешает пользователю выполнить `My-Func` с параметром `Param1`. Для параметра можно задать любое значение, начинающееся с "contoso".
-
 
 > [!WARNING]
 > Для обеспечения наилучшей безопасности при определении видимых командлетов или функций рекомендуется не использовать подстановочные знаки.
@@ -171,7 +170,6 @@ FunctionDefinitions = @{
 > [!IMPORTANT]
 > Не забудьте добавить имя настраиваемых функций в поле **VisibleFunctions**, чтобы пользователи JEA могли запускать их.
 
-
 Основная часть (блок сценария) настраиваемых функций запускается в языковом режиме по умолчанию для данной системы, и на нее не налагаются ограничения языка JEA.
 Это означает, что функции имеют доступ к файловой системе и реестру и могут запускать команды, которые не были сделаны видимыми в файле возможностей роли.
 Примите меры, чтобы избежать выполнения произвольного кода при использовании параметров и передачи вводимых пользователем данных напрямую в такие командлеты, как `Invoke-Expression`.
@@ -211,14 +209,12 @@ Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 
 ## <a name="updating-role-capabilities"></a>Изменение возможностей ролей
 
-
 Файл возможностей ролей можно изменить в любое время, просто сохранив изменения в нем.
 Все новые сеансы JEA, запущенные после изменения возможности роли, будут использовать обновленные возможности.
 
 Именно поэтому так важно управлять доступом к папке возможностей роли.
 Изменять файлы возможностей ролей должно быть разрешено только наиболее надежным администраторам.
 Если пользователь, не являющийся доверенным, может изменять файлы возможностей ролей, он легко сможет получить доступ к командлетам, повышающим его права.
-
 
 Администраторам, желающим заблокировать доступ к возможностям ролей, следует убедиться, что учетная запись Local System имеет доступ на чтение к файлам возможностей ролей и содержащим их модулям.
 
@@ -256,16 +252,14 @@ $roleB = @{
                      @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Server' } }
 }
 
-# Resulting permisisons for a user who belongs to both role A and B
-# - The constraint in role B for the DisplayName parameter on Get-Service is ignored becuase of rule #4
+# Resulting permissions for a user who belongs to both role A and B
+# - The constraint in role B for the DisplayName parameter on Get-Service is ignored because of rule #4
 # - The ValidateSets for Restart-Service are merged because both roles use ValidateSet on the same parameter per rule #5
 $mergedAandB = @{
     VisibleCmdlets = 'Get-Service',
                      @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DNS Server' } }
 }
 ```
-
-
 
 **VisibleExternalCommands, VisibleAliases, VisibleProviders, ScriptsToProcess**
 

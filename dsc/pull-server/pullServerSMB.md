@@ -2,16 +2,16 @@
 ms.date: 04/11/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка опрашивающего SMB-сервера DSC
-ms.openlocfilehash: 722120369df9ff383a02c69111e0bacf2e2e76a5
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 9d087a08861b2f4683e81efd1e25f857b8b75e07
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402259"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58057762"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Настройка опрашивающего SMB-сервера DSC
 
-Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
 > Опрашивающий сервер (компонент Windows *служба DSC*) — поддерживаемый компонент Windows Server, но реализация новых функций и возможностей для него не планируется. Рекомендуется начать перенос управляемых клиентов на [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (включает возможности опрашивающего сервера в Windows Server) или на одно из решений сообщества, указанных [в следующем списке](pullserver.md#community-solutions-for-pull-service).
@@ -59,7 +59,7 @@ Configuration SmbShare
         {
             Name = 'DscSmbShare'
             Path = 'C:\DscSmbShare'
-            FullAccess = 'admininstrator'
+            FullAccess = 'administrator'
             ReadAccess = 'myDomain\Contoso-Server$'
             FolderEnumerationMode = 'AccessBased'
             Ensure = 'Present'
@@ -69,14 +69,14 @@ Configuration SmbShare
 }
 ```
 
-Конфигурация создает каталог `C:\DscSmbShare`, если он еще не существует и затем использует этот каталог в качестве общей папки SMB. **FullAccess** должно предоставляться к любой учетной записи, которые необходимо записывать или удалять данные из общей папки. **ReadAccess** необходимо предоставить всем узлам клиента, которые получают конфигурации и (или) ресурсы DSC из общего ресурса.
+Конфигурация создает каталог `C:\DscSmbShare`, если его еще не существует, и затем использует этот каталог в качестве общего ресурса SMB. Разрешение **FullAccess** должно предоставляться любой учетной записи, которой необходимо записывать или удалять данные на общем ресурсе. Разрешение **ReadAccess** необходимо предоставить всем узлам клиента, которые получают конфигурации и ресурсы DSC из общего ресурса.
 
 > [!NOTE]
-> DSC выполняется с системной учетной записью по умолчанию, поэтому сам компьютер должен иметь доступ к общей папке.
+> DSC по умолчанию выполняется с системной учетной записью, поэтому у самого компьютера должен быть доступ к общему ресурсу.
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>Предоставление файловой системе доступа к опрашивающему клиенту
 
-Предоставление разрешения **ReadAccess** клиенту узла позволяет этому узлу обращаться к ресурсу SMB, но не к файлам или папкам в этом ресурсе. Необходимо явно предоставить узлам клиента доступ к общей папке SMB и вложенные папки. Сделать это можно с помощью DSC, используя ресурс **cNtfsPermissionEntry**, который содержится в модуле [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0). Следующая конфигурация добавляет блок **cNtfsPermissionEntry**, который предоставляет разрешение ReadAndExecute опрашивающему клиенту.
+Предоставление разрешения **ReadAccess** клиенту узла позволяет этому узлу обращаться к ресурсу SMB, но не к файлам или папкам в этом ресурсе. Следует явно предоставить узлам клиента доступ к папке и вложенным папкам общего ресурса SMB. Сделать это можно с помощью DSC, используя ресурс **cNtfsPermissionEntry**, который содержится в модуле [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0). Следующая конфигурация добавляет блок **cNtfsPermissionEntry**, который предоставляет разрешение ReadAndExecute опрашивающему клиенту.
 
 ```powershell
 Configuration DSCSMB
@@ -135,7 +135,7 @@ Configuration DSCSMB
 > [!NOTE]
 > При использовании опрашивающего SMB-сервера необходимо использовать идентификаторы конфигурации. Имена конфигураций не поддерживаются SMB.
 
-Каждый модуль ресурса необходимо упаковать в ZIP-архив и переименовать согласно следующему шаблону: `{Module Name}_{Module Version}.zip`. Например, модуль с именем xWebAdminstration с версией модуля 3.1.2.0 будет иметь имя "xWebAdministration_3.2.1.0.zip". Каждая версия модуля должна находиться в собственном ZIP-файле. Отдельные версии модуля в ZIP-файл не поддерживаются. Перед упаковкой модулей ресурсов DSC для опрашиваемого сервера необходимо внести небольшое изменение в структуру каталогов.
+Каждый модуль ресурса необходимо упаковать в ZIP-архив и переименовать согласно следующему шаблону: `{Module Name}_{Module Version}.zip`. Например, модуль с именем xWebAdminstration с версией модуля 3.1.2.0 будет иметь имя "xWebAdministration_3.2.1.0.zip". Каждая версия модуля должна находиться в собственном ZIP-файле. Отдельные версии модуля в ZIP-файле не поддерживаются. Перед упаковкой модулей ресурсов DSC для опрашиваемого сервера необходимо внести небольшое изменение в структуру каталогов.
 
 Формат модулей, содержащих ресурсы DSC, в WMF 5.0 по умолчанию таков: `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`.
 
@@ -207,7 +207,7 @@ $ConfigurationData = @{
 
 ## <a name="acknowledgements"></a>Благодарности
 
-Особую благодарность следующим:
+Выражаю особую благодарность:
 
 - Майку Ф. Роббинсу, чьи записи об использовании SMB для DSC помогли в составлении этой статьи. Ссылка на его блог — [Майк Ф. Роббинс](http://mikefrobbins.com/).
 - Сергею Николайчуку, который создал модуль **cNtfsAccessControl**. Исходный код этого модуля доступен по ссылке [cNtfsAccessControl](https://github.com/SNikalaichyk/cNtfsAccessControl).

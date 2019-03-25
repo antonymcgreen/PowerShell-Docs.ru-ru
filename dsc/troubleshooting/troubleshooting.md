@@ -2,16 +2,16 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Устранение неполадок в DSC
-ms.openlocfilehash: e1f36bbc97569ac0d65f003ee08f52ec174a4520
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 5ee1b68f4f769426fea3c8e10738c3bb6ef94480
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402920"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059751"
 ---
 # <a name="troubleshooting-dsc"></a>Устранение неполадок в DSC
 
-_Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0_
+_Применяется к: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 В этом разделе описываются способы устранения неполадок в DSC.
 
@@ -74,19 +74,19 @@ InDesiredState        :    False
 InitialState          :
 InstanceName          :    ServiceDll
 RebootRequested       :    False
-ReosurceName          :    File
+ResourceName          :    File
 StartDate             :    11/24/2015  3:44:56
 PSComputerName        :
 ```
 
-## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Мой сценарий не запускается: С помощью DSC в журналы для диагностики ошибок сценария
+## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Мой скрипт не запускается: диагностика ошибок в скриптах с помощью журналов DSC
 
 Как и все программное обеспечение Windows, DSC записывает ошибки и события в [журналы](/windows/desktop/EventLog/about-event-logging) , которые можно просмотреть в [средстве просмотра событий](https://support.microsoft.com/hub/4338813/windows-help).
 Анализ этих журналов может помочь в выявлении причины сбоя конкретной операции и избежать его в будущем. Написание сценариев настройки может быть непростой задачей. Чтобы упростить отслеживание ошибок, используйте ресурс журнала DSC, чтобы ход конфигурации отражался в аналитическом журнале событий DSC.
 
 ## <a name="where-are-dsc-event-logs"></a>Где находятся журналы событий DSC?
 
-В средстве просмотра событий события DSC находятся в: **Приложения и службы журналы/Microsoft/Windows/Desired State Configuration**
+В средстве просмотра событий события DSC находятся в следующем разделе: **Журналы служб и приложений/Microsoft/Windows/Настройка требуемого состояния**.
 
 Кроме того, для просмотра журналов событий можно запустить соответствующий командлет PowerShell [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent):
 
@@ -100,7 +100,7 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-Как показано выше, основное имя журнала DSC — **Microsoft->Windows->DSC** (другие имена журналов в Windows для краткости здесь не показаны). Основное имя журнала добавляется к имени канала для получения полного имени журнала. Подсистема DSC запись преимущественно в журналы трех типов: [Операционные, аналитические и отладочные журналы](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Так как аналитический и отладочный журналы по умолчанию отключены, их следует включить в средстве просмотра событий. Чтобы сделать это, откройте средство просмотра событий, введя "Show-EventLog" в Windows PowerShell или нажав кнопку **Пуск** и выбрав пункты **Панель управления**, **Администрирование** и **Средство просмотра событий**.
+Как показано выше, основное имя журнала DSC — **Microsoft->Windows->DSC** (другие имена журналов в Windows для краткости здесь не показаны). Основное имя журнала добавляется к имени канала для получения полного имени журнала. Подсистема DSC ведет запись преимущественно в журналы трех типов: [операционные, аналитические и отладочные журналы](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Так как аналитический и отладочный журналы по умолчанию отключены, их следует включить в средстве просмотра событий. Чтобы сделать это, откройте средство просмотра событий, введя "Show-EventLog" в Windows PowerShell или нажав кнопку **Пуск** и выбрав пункты **Панель управления**, **Администрирование** и **Средство просмотра событий**.
 В средстве просмотра событий в меню **Представление** выберите команду **Показать аналитический и отладочный журналы**. Имя журнала для аналитического канала — **Microsoft-Windows-Dsc/Analytic**, для отладочного канала — **Microsoft-Windows-Dsc/Debug**. Кроме того, для включения журналов можно воспользоваться средством [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)), как показано в следующем примере.
 
 ```powershell
@@ -327,7 +327,7 @@ SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Job runs under the following LCM setti
 SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Operation Consistency Check or Pull completed successfully.
 ```
 
-Передайте **GUID** назначенный конкретной операции DSC (возвращенный `Get-xDscOperation` командлет) для получения сведений о событии для этой операции DSC:
+Передайте идентификатор **GUID**, назначенный конкретной операции DSC (возвращенный командлетом `Get-xDscOperation`), для получения сведений о событии для этой операции DSC:
 
 ```powershell
 PS C:\DiagnosticsTest> Trace-xDscOperation -JobID 9e0bfb6b-3a3a-11e6-9165-00155d390509
@@ -461,7 +461,7 @@ SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull co
 SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCach...
 ```
 
-## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>Мои ресурсы не обновляются: Как сбросить кэш
+## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>Мои ресурсы не обновляются: как сбросить кэш
 
 Для повышения эффективности подсистема DSC кэширует ресурсы, которые реализованы в виде модулей PowerShell.
 Однако это может вызвать проблемы при одновременной разработке и тестировании ресурса, так как DSC будет загружать кэшированную версию до тех пор, пока процесс не будет перезапущен. Единственный способ принудительной загрузки новой версии в DSC — явным образом завершить процесс подсистемы DSC.
