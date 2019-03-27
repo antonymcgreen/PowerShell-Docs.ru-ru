@@ -2,12 +2,12 @@
 title: Основные сведения о кодировке файлов в VSCode и PowerShell
 description: Настройка кодировки файлов в VSCode и PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: 73e766832d56a08bd5ef16df11899a0aab0badae
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: ec06d8f5d446a92e6cd9d2d70b11260d1d0afda8
+ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795128"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320410"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Основные сведения о кодировке файлов в VSCode и PowerShell
 
@@ -60,8 +60,8 @@ At C:\Users\<User>\<OneDrive>\Development\PowerShell\Scripts\Send-EmailUsingSmtp
 - `â€”` вместо `—`;
 - `Ã„2` вместо `Ä`;
 - `Â` вместо ` ` (неразрывный пробел);
-- `Ã©` вместо `é`
-<!-- markdownlint-enable MD038 -->.
+- `Ã©` вместо `é`.
+<!-- markdownlint-enable MD038 -->
 
 Этот удобный [справочник](https://www.i18nqa.com/debug/utf8-debug.html) перечисляет распространенные шаблоны, которые указывают на проблему между кодировками UTF-8 и Windows-1252.
 
@@ -215,7 +215,7 @@ Get-ChildItem *.ps1 -Recurse | ForEach-Object {
 ### <a name="source-control-software"></a>Система управления версиями
 
 Некоторые системы управления версиями, например git, игнорируют кодировки; git отслеживает только байты.
-Поведение других, например TFS или Mercurial, может отличаться. Даже некоторые средства, основанные на git, полагаются на декодирование текста.
+Поведение других, например Azure DevOps или Mercurial, может отличаться. Даже некоторые средства, основанные на git, полагаются на декодирование текста.
 
 Если это так, убедитесь, что вы:
 
