@@ -3,12 +3,12 @@ ms.date: 08/23/2018
 keywords: powershell,командлет
 title: Принцип работы конвейеров PowerShell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-ms.openlocfilehash: fc7c7f57bdce458185a0f5bdb8bc1fbbd81d0d61
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 05ab98b7261f4d41ade1788a924193eccda6318c
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681104"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623965"
 ---
 # <a name="understanding-pipelines"></a>Принцип работы конвейеров
 
@@ -63,6 +63,18 @@ d-----        8/23/2018   5:07 PM                catroot2
 
 Разницу можно увидеть в диспетчере задач Windows, отслеживая ресурсы ЦП и памяти, используемые PowerShell. Выполните следующую команду: `Get-ChildItem C:\Windows -Recurse`. Сравните использование ресурсов ЦП и памяти с помощью этой команды: `Get-ChildItem C:\Windows -Recurse | Out-Host -Paging`.
 
+> [!NOTE]
+> Параметр **Разбиение по страницам** поддерживается не всеми узлами PowerShell. Например, при попытке использовать параметр **Разбиение по страницам** в интегрированной среде скриптов PowerShell, вы увидите следующую ошибку:
+>
+> ```Output
+> out-lineoutput : The method or operation is not implemented.
+> At line:1 char:1
+> + Get-ChildItem C:\Windows -Recurse | Out-Host -Paging
+> + ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>     + CategoryInfo          : NotSpecified: (:) [out-lineoutput], NotImplementedException
+>     + FullyQualifiedErrorId : System.NotImplementedException,Microsoft.PowerShell.Commands.OutLineOutputCommand
+> ```
+
 ## <a name="objects-in-the-pipeline"></a>Объекты в конвейере
 
 При запуске командлета в PowerShell вы видите выходные данные в виде текста — именно так в окне консоли и должны отображаться объекты. В текстовом представлении могут отображаться не все свойства выводимого объекта.
@@ -82,7 +94,7 @@ C:\
 При передаче выходных данных по конвейеру в командлет `Get-Member` вы получите информацию об объекте, возвращаемом командлетом `Get-Location`.
 
 ```powershell
-PS> Get-Location | Get-Member
+Get-Location | Get-Member
 ```
 
 ```Output
