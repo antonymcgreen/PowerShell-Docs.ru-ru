@@ -122,8 +122,9 @@ items:
       - name: Настройка опрашиваемого HTTP-сервера DSC
         href: pull-server/pullServer.md
     - name: Регистрация узла на опрашиваемом сервере
-      href: pull-server/pullClient.md
       items:
+      - name: Настройка опрашивающего клиента DSC
+        href: pull-server/pullClient.md
       - name: Настройка опрашиваемого клиента с помощью имен конфигурации (версия 5)
         href: pull-server/pullClientConfigNames.md
       - name: Настройка опрашиваемого клиента с помощью идентификаторов конфигурации (версия 5)
@@ -165,7 +166,6 @@ items:
 - name: Ссылка
   items:
   - name: Встроенные ресурсы Windows
-    href: reference/resources/windows/builtInResource.md
     items:
     - name: Ресурс Archive
       href: reference/resources/windows/archiveResource.md
@@ -212,7 +212,6 @@ items:
     - name: Ресурс WindowsProcess
       href: reference/resources/windows/windowsProcessResource.md
   - name: Встроенные ресурсы Linux
-    href: reference/resources/linux/lnxBuiltInResources.md
     items:
     - name: Ресурс nxArchive
       href: reference/resources/linux/lnxArchiveResource.md
@@ -241,8 +240,9 @@ items:
     - name: Ресурс PackageManagementSourceDsc
       href: reference/resources/packagemanagement/PackageManagementSourceDscResource.md
   - name: Класс MSFT_DSCLocalConfigurationManager
-    href: reference/mof-classes/msft-dsclocalconfigurationmanager.md
     items:
+    - name: Обзор
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager.md
     - name: Метод ApplyConfiguration класса MSFT_DSCLocalConfigurationManager
       href: reference/mof-classes/msft-dsclocalconfigurationmanager-applyconfiguration.md
     - name: Метод DisableDebugConfiguration класса MSFT_DSCLocalConfigurationManager
@@ -285,9 +285,9 @@ items:
   items:
   - name: Технические документы
     href: further-reading/whitepapers.md
-ms.openlocfilehash: 177dc88e4a2a92104f6f2c2d4db118531274fcc4
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 68096f26178d4c33fd78e6051a3cc071bd749210
+ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057201"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920345"
