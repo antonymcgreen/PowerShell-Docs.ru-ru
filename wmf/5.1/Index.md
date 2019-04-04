@@ -1,10 +1,15 @@
 ---
 ms.date: 08/12/2017
 ms.topic: conceptual
-keywords: 'wmf,powershell,установка'
+keywords: wmf,powershell,установка
 title: Заметки о выпуске WMF 5.1
+ms.openlocfilehash: dd68f101e6f21256f966f7472dabc273a475a25e
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795340"
 ---
-
 # <a name="windows-management-framework-wmf-51"></a>Windows Management Framework (WMF) 5.1
 
 WMF предоставляет пользователям возможность обновить существующие системы Windows до версий PowerShell, WMI, WinRM и Software Inventory Logging (SIL), которые были выпущены с Windows Server 2016.
