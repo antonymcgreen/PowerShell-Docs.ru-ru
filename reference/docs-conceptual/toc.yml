@@ -2,10 +2,10 @@ items:
 - name: Обзор
   href: overview.md
 - name: Установка
-  href: install/installing-powershell.md
   items:
+  - name: Установка разных версий PowerShell
+    href: install/installing-powershell.md
   - name: PowerShell Core
-    href: ''
     items:
     - name: Установка PowerShell Core в Windows
       href: install/installing-powershell-core-on-windows.md
@@ -16,7 +16,6 @@ items:
     - name: Установка PowerShell Core в ARM
       href: install/powershell-core-on-arm.md
   - name: Windows PowerShell
-    href: ''
     items:
     - name: Установка Windows PowerShell
       href: install/installing-windows-powershell.md
@@ -25,15 +24,17 @@ items:
     - name: Требования к системе для Windows PowerShell
       href: install/windows-powershell-system-requirements.md
 - name: Приступая к работе
-  href: getting-started/getting-started-with-windows-powershell.md
   items:
+  - name: Начало работы с PowerShell
+    href: getting-started/getting-started-with-windows-powershell.md
   - name: Запуск Windows PowerShell
     href: getting-started/starting-windows-powershell.md
   - name: Запуск подсистемы Windows PowerShell 2.0
     href: getting-started/starting-the-windows-powershell-2.0-engine.md
 - name: Изучение PowerShell
-  href: learn/understanding-important-powershell-concepts.md
   items:
+  - name: Основные сведения о важных концепциях PowerShell
+    href: learn/understanding-important-powershell-concepts.md
   - name: Изучение имен PowerShell
     href: learn/learning-powershell-names.md
   - name: Использование знакомых имен команд
@@ -50,9 +51,10 @@ items:
     href: learn/more-powershell-learning.md
   - name: Создание переносимых модулей
     href: learn/writing-portable-modules.md
-  - name: Выполнение удаленных команд
-    href: learn/remoting/running-remote-commands.md
+  - name: Удаленное взаимодействие PowerShell
     items:
+    - name: Выполнение удаленных команд
+      href: learn/remoting/running-remote-commands.md
     - name: Удаленное взаимодействие с PowerShell через SSH
       href: learn/remoting/ssh-remoting-in-powershell-core.md
     - name: Удаленное взаимодействие с WS-Management (WSMan) в PowerShell Core
@@ -64,22 +66,20 @@ items:
   - name: Словарь терминов
     href: learn/windows-powershell-glossary.md
 - name: Компоненты
-  href: ''
   items:
   - name: Консоль
-    href: ''
     items:
     - name: Справка по командной строке PowerShell.exe
       href: components/console/powershell.exe-command-line-help.md
     - name: Завершение по клавише TAB
       href: components/console/using-tab-expansion.md
   - name: ISE
-    href: components/ise/introducing-the-windows-powershell-ise.md
     items:
+    - name: Введение в интегрированную среду сценариев Windows PowerShell
+      href: components/ise/introducing-the-windows-powershell-ise.md
     - name: Интегрированная среда сценариев (ISE) Windows PowerShell
       href: components/ise/windows-powershell-integrated-scripting-environment--ise-.md
     - name: Использование интегрированной среды сценариев Windows PowerShell
-      href: ''
       items:
       - name: Обзор интегрированной среды сценариев Windows PowerShell
         href: components/ise/exploring-the-windows-powershell-ise.md
@@ -100,7 +100,6 @@ items:
       - name: Специальные возможности в интегрированной среде сценариев Windows PowerShell
         href: components/ise/accessibility-in-windows-powershell-ise.md
     - name: Объектная модель скриптов интегрированной среды скриптов
-      href: ''
       items:
       - name: Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell
         href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
@@ -133,8 +132,9 @@ items:
       - name: Объект PowerShellTab
         href: components/ise/object-model/the-powershelltab-object.md
   - name: Visual Studio Code
-    href: components/vscode/using-vscode.md
     items:
+    - name: Использование Visual Studio Code
+      href: components/vscode/using-vscode.md
     - name: Репликация функций интегрированной среды скриптов в Visual Studio Code
       href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
     - name: Удаленные редактирование и отладка в Visual Studio Code
@@ -142,7 +142,6 @@ items:
     - name: Основные сведения о кодировке файлов в VSCode и PowerShell
       href: components/vscode/understanding-file-encoding.md
   - name: Веб-доступ
-    href: ''
     items:
     - name: Правила авторизации и средства безопасности
       href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
@@ -157,20 +156,21 @@ items:
   - name: Руководство по рабочим процессам
     href: components/workflows-guide.md
 - name: Новые возможности
-  href: ''
   items:
-  - name: Новые возможности PowerShell Core 6.1
-    href: whats-new/what-s-new-in-powershell-core-61.md
-  - name: Новые возможности PowerShell Core 6.0
-    href: whats-new/what-s-new-in-powershell-core-60.md
+  - name: Новые возможности в PowerShell Core 6.x
     items:
+    - name: Новые возможности PowerShell Core 6.1
+      href: whats-new/what-s-new-in-powershell-core-61.md
+    - name: Новые возможности PowerShell Core 6.0
+      href: whats-new/what-s-new-in-powershell-core-60.md
     - name: Критические изменения в PowerShell Core 6.0
       href: whats-new/breaking-changes-ps6.md
     - name: Известные проблемы в PowerShell Core 6.0
       href: whats-new/known-issues-ps6.md
-  - name: Новые возможности PowerShell 5.0
-    href: whats-new/what-s-new-with-powershell.md
+  - name: Новые возможности PowerShell 5.x
     items:
+    - name: Новые возможности PowerShell 5.0
+      href: whats-new/what-s-new-with-powershell.md
     - name: Новые возможности Windows PowerShell 5.0
       href: whats-new/what-s-new-in-windows-powershell-50.md
     - name: Новые возможности интегрированной среды сценариев PowerShell версии 5.0
@@ -178,8 +178,9 @@ items:
 - name: Жизненный цикл поддержки PowerShell Core
   href: powershell-support-lifecycle.md
 - name: Примеры скриптов
-  href: samples/sample-scripts-for-administration.md
   items:
+  - name: Примеры скриптов для администрирования
+    href: samples/sample-scripts-for-administration.md
   - name: Изменение состояния компьютера
     href: samples/changing-computer-state.md
   - name: Сбор информации о компьютерах
@@ -187,7 +188,6 @@ items:
   - name: Создание запросов Get-WinEvent с помощью FilterHashtable
     href: samples/creating-get-winEvent-queries-with-filterhashtable.md
   - name: Создание элементов пользовательского интерфейса
-    href: ''
     items:
     - name: Создание настраиваемого поля ввода
       href: samples/creating-a-custom-input-box.md
@@ -220,7 +220,6 @@ items:
   - name: Работа с файлами, папками и разделами реестра
     href: samples/working-with-files-folders-and-registry-keys.md
   - name: Работа с объектами
-    href: samples/working-with-objects.md
     items:
     - name: Получение объектов WMI (Get-WmiObject)
       href: samples/getting-wmi-objects--get-wmiobject-.md
@@ -252,9 +251,9 @@ items:
     href: samples/appendix-1---compatibility-aliases.md
   - name: Приложение 2. Создание настраиваемого ярлыка PowerShell
     href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
-ms.openlocfilehash: dd9cac7e7570d6ff4c58b0255a3909f3f0612605
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: 3894ca88d01d4f84742321445b0b1e962631c10d
+ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320393"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920464"
