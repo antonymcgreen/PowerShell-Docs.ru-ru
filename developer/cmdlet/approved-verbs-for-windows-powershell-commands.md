@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], verb names
 ms.assetid: 2d4e58a9-05bc-437c-86b9-d8d55cba7d48
 caps.latest.revision: 36
-ms.openlocfilehash: d8a0561d6fbb4447a691c434e0518e3e16ce41e7
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
+ms.openlocfilehash: 4475b3f5e15826efbe8bab867011985cd7e2e1ae
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56863670"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293356"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Утвержденные глаголы для команд PowerShell
 
@@ -94,7 +94,7 @@ PowerShell использует [System.Management.Automation.VerbsCommon](/dotn
 |[Выход](/dotnet/api/System.Management.Automation.VerbsCommon.Exit) (ex)|Задает текущую среду или контекст на контекст недавно использованных. Например `Exit-PSSession` командлет помещает пользователю в сеансе, который был использован для запуска интерактивного сеанса. Эта команда используется в паре с `Enter`.|Для этого действия не используйте команды, такие как Pop или Out.|
 |[Найти](/dotnet/api/System.Management.Automation.VerbsCommon.Find) (fd)|Осуществляет поиск объекта в контейнер, который неизвестен, подразумеваемые, необязательные или указанного.||
 |[Формат](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f)|Упорядочивает объекты по указанной формы или макета.||
-|[Получить](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|Указывает действие, которое получает ресурс. Эта команда используется в паре с `Set`.|Для этого действия не используйте команды, такие как чтение, Open, Cat, тип, Dir, получить, дампа, запросов, анализ, поиска или поиска для этого действия.|
+|[Получить](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|Указывает действие, которое получает ресурс. Эта команда используется в паре с `Set`.|Для этого действия не используйте команды, такие как чтение, Open, Cat, тип, Dir, получить, дампа, запросов, анализ, поиска или поиска.|
 |[Скрыть](/dotnet/api/System.Management.Automation.VerbsCommon.Hide) (h)|Делает ресурс числится. Например командлет, имя которого содержит скрыть команды может скрывать службы от пользователя. Эта команда используется в паре с `Show`.|Для этого действия не используйте команды, например блок.|
 |[Присоединяйтесь к](/dotnet/api/System.Management.Automation.VerbsCommon.Join) (j)|Объединяет ресурсы в один ресурс. Например `Join-Path` командлет объединяет путь с помощью одного из его дочерних пути для создания единственный путь. Эта команда используется в паре с `Split`.|Для этого действия не используйте команды, такие как объединение, объединение, Connect или сопоставление.|
 |[Блокировка](/dotnet/api/System.Management.Automation.VerbsCommon.Lock) (lk)|Защищает ресурс. Эта команда используется в паре с `Unlock`.|Для этого действия не используйте команды, такие как ограничение или безопасность.|
@@ -117,7 +117,7 @@ PowerShell использует [System.Management.Automation.VerbsCommon](/dotn
 |[Шаг](/dotnet/api/System.Management.Automation.VerbsCommon.Step) (st)|Переходит к следующей точке или ресурсов в последовательности.||
 |[Коммутатор](/dotnet/api/System.Management.Automation.VerbsCommon.Switch) (sw)|Указывает действие, которое переключается между двумя ресурсами, например, для переключения между двумя расположениями, обязанности или состояния.||
 |[Отменить](/dotnet/api/System.Management.Automation.VerbsCommon.Undo) (un)|Задает ресурс в предыдущее состояние.||
-|[Разблокировать](/dotnet/api/System.Management.Automation.VerbsCommon.Unlock) (Соединенное Королевство)|Освобождает ресурс, который был заблокирован. Эта команда используется в паре с `Lock`.|Для этого действия не используйте команды, такие как выпуск "," Unrestrict "или" незащищенный.|
+|[Разблокировать](/dotnet/api/System.Management.Automation.VerbsCommon.Unlock) (Великобритания)|Освобождает ресурс, который был заблокирован. Эта команда используется в паре с `Lock`.|Для этого действия не используйте команды, такие как выпуск "," Unrestrict "или" незащищенный.|
 |[Контрольные значения](/dotnet/api/System.Management.Automation.VerbsCommon.Watch) (wc)|Постоянно проверяет или мониторы ресурса для изменения.||
 
 ## <a name="communications-verbs"></a>Связь команд
@@ -149,7 +149,7 @@ PowerShell использует [System.Management.Automation.VerbsData](/dotnet
 |[ConvertFrom](/dotnet/api/System.Management.Automation.VerbsData.ConvertFrom) (cf)|Преобразует один первичный тип входных данных (существительное командлет указывает входные данные) в один или несколько поддерживаемых типов вывода.|Для этого действия не используйте команды, такие как экспорта, выходной или Out.|
 |[ConvertTo](/dotnet/api/System.Management.Automation.VerbsData.ConvertTo) (ct)|Преобразует один или несколько типов входных данных с типом основные выходные файлы (существительное командлет указывает тип выходных данных).|Для этого действия, не используйте команды, такие как импорт, входные данные, или в.|
 |[Отключить](/dotnet/api/System.Management.Automation.VerbsData.Dismount) (dm)|Отсоединяет именованной сущности из расположения. Эта команда используется в паре с `Mount`.|Для этого действия не используйте команды, такие как отключить или удалить связь.|
-|[Изменить](/dotnet/api/System.Management.Automation.VerbsData.Edit) (ed)|Изменяет существующие данные путем добавления или удаления содержимого.|Для этого действия не используйте команды, такие как изменение, обновление или изменение для этого действия.|
+|[Изменить](/dotnet/api/System.Management.Automation.VerbsData.Edit) (ed)|Изменяет существующие данные путем добавления или удаления содержимого.|Для этого действия не используйте команды, такие как изменение, обновление или изменение.|
 |[Разверните](/dotnet/api/System.Management.Automation.VerbsData.Expand) (en)|Восстанавливает данные, сжатые ресурса в исходное состояние. Эта команда используется в паре с `Compress`.|Для этого действия не используйте команды, такие как развернуть или распаковать.|
 |[Экспорт](/dotnet/api/System.Management.Automation.VerbsData.Export) (ep)|Инкапсулирует основные входные данные в постоянном хранилище данных, например, файл или в формате обмена данными. Эта команда используется в паре с `Import`.|Для этого действия не используйте команды, такие как извлечение или резервной копии.|
 |[Группа](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp)|Упорядочивает или связывает один или несколько ресурсов.|Для этого действия не используйте команды, такие как связать статистическое выражение, расположение, и корреляции.|
@@ -251,6 +251,6 @@ PowerShell использует [System.Management.Automation.VerbsOther](/dotne
 
 [Объявление командлет](./cmdlet-class-declaration.md)
 
-[Руководство программиста Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md)
+[Руководство программиста по Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md)
 
 [Оболочка Windows PowerShell SDK](../windows-powershell-reference.md)
