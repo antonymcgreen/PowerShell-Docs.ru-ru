@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Перенаправление данных с помощью командлетов Out
 ms.assetid: 2a4acd33-041d-43a5-a3e9-9608a4c52b0c
-ms.openlocfilehash: f08879f436ce751b176af020aba21e90f09aa61f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 7c601b09cc53524eb55014b8ea19a5d79cb98b0e
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402387"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293305"
 ---
 # <a name="redirecting-data-with-out--cmdlets"></a>Перенаправление данных с помощью командлетов Out-*
 
@@ -68,7 +68,7 @@ Name    : explorer
 > [!NOTE]
 > Все командлеты **Out** отображают выходные данные в виде текста, используя при этом действующее в окне консоли форматирование, включая ограничения длины строки.
 
-#### <a name="paging-console-output-out-host"></a>Разбиение выходных данных консоли на страницы (Out-Host)
+## <a name="paging-console-output-out-host"></a>Разбиение выходных данных консоли на страницы (Out-Host)
 
 По умолчанию Windows PowerShell отправляет данные в основное окно. Именно это и делает командлет Out-Host. Как мы уже упоминали, основным назначением командлета Out-Host является разбиение на страницы. Например, следующая команда использует Out-Host для разбиения выходных данных командлета Get-Command на страницы.
 
@@ -93,7 +93,7 @@ default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
 ...
 ```
 
-#### <a name="discarding-output-out-null"></a>Удаление выходных данных (Out-Null)
+## <a name="discarding-output-out-null"></a>Удаление выходных данных (Out-Null)
 
 Командлет **Out-Null** предназначен для немедленного удаления всех получаемых входных данных. Это удобно для удаления посторонних данных, получаемых при выполнении команды. При вводе следующей команды никакие данные не возвращаются:
 
@@ -111,7 +111,7 @@ At line:1 char:12
 + Get-Command  <<<< Is-NotACommand | Out-Null
 ```
 
-#### <a name="printing-data-out-printer"></a>Печать данных (Out-Printer)
+## <a name="printing-data-out-printer"></a>Печать данных (Out-Printer)
 
 Данные можно распечатать с помощью командлета **Out-Printer**. Если имя принтера не задано, командлет **Out-Printer** использует принтер по умолчанию. Можно использовать любой принтер, совместимый с Windows, указав его отображаемое имя. Сопоставление портов и даже наличие физического принтера при этом не требуется. Например, при наличии установленных средств Microsoft Office Document Imaging можно отправить данные в файл образа, введя следующее:
 
@@ -119,7 +119,7 @@ At line:1 char:12
 Get-Command Get-Command | Out-Printer -Name 'Microsoft Office Document Image Writer'
 ```
 
-#### <a name="saving-data-out-file"></a>Сохранение данных (Out-File)
+## <a name="saving-data-out-file"></a>Сохранение данных (Out-File)
 
 С помощью командлета **Out-File** выходные данные можно отправить в файл, а не в окно консоли. Следующая команда отправляет список процессов в файл **C:\\temp\\processlist.txt**:
 

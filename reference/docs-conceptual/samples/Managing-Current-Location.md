@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Управление текущим расположением
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: d1ebc9507a45841e6d4d8219e45c002990e1328c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: f5e0653b2c3bbc9d2526c7a1c2ff88a8a6641695
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293192"
 ---
 # <a name="managing-current-location"></a>Управление текущим расположением
 
@@ -16,7 +16,7 @@ ms.locfileid: "53403008"
 
 Windows PowerShell использует существительное **Location** для ссылки на рабочий каталог и реализует семейство командлетов для просмотра расположения и управления им.
 
-### <a name="getting-your-current-location-get-location"></a>Получение текущего расположения (Get-Location)
+## <a name="getting-your-current-location-get-location"></a>Получение текущего расположения (Get-Location)
 
 Чтобы определить путь к текущему каталогу, введите команду **Get-Location**.
 
@@ -30,7 +30,7 @@ C:\Documents and Settings\PowerUser
 > [!NOTE]
 > Командлет Get-Location аналогичен команде **pwd** в оболочке BASH. Командлет Set-Location аналогичен команде **cd** в Cmd.exe.
 
-### <a name="setting-your-current-location-set-location"></a>Настройка текущего расположения (Set-Location)
+## <a name="setting-your-current-location-set-location"></a>Настройка текущего расположения (Set-Location)
 
 Команда **Get-Location** используется с командой **Set-Location**. Команда **Set-Location** позволяет вам указать расположение текущего каталога.
 
@@ -96,7 +96,7 @@ chdir -Path .. -PassThru
 sl -Path HKLM:\SOFTWARE -PassThru
 ```
 
-### <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>Сохранение и отзыв последних расположений (Push-Location и Pop-Location)
+## <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>Сохранение и отзыв последних расположений (Push-Location и Pop-Location)
 
 При изменении расположения полезно отслеживать свое предыдущее расположение и иметь возможность вернуться к нему. Командлет **Push-Location** в Windows PowerShell создает упорядоченный журнал ("стек") путей к каталогам, которые вы открывали, чтобы можно было вернуться по нему на шаг назад, используя дополнительный командлет **Pop-Location**.
 

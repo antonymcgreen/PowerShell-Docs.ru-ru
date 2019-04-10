@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Удаление объектов из конвейера (Where-Object)
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: c060b93a3823be26ad6c7757acc633bb4fc2fcfa
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 1f7d064c7bf2dd551ea96b29762fbccad8174084
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403259"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293152"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Удаление объектов из конвейера (Where-Object)
 
@@ -16,7 +16,7 @@ ms.locfileid: "53403259"
 
 В Windows PowerShell есть командлет `Where-Object`, который позволяет протестировать каждый объект в конвейере и передать его дальше, только если он удовлетворяет определенному условию теста. Объекты, не прошедшие проверку, удаляются из конвейера. Условие теста передается в виде значения параметра `Where-Object` **FilterScript**.
 
-### <a name="performing-simple-tests-with-where-object"></a>Выполнение простых проверок с использованием командлета Where-Object
+## <a name="performing-simple-tests-with-where-object"></a>Выполнение простых проверок с использованием командлета Where-Object
 
 Значение **FilterScript** представляет собой *блок сценария* (одну или несколько команд Windows PowerShell, заключенных в фигурные скобки {}), который возвращает значение True или False. Такие блоки сценариев могут быть очень простыми, но для их создания требуется понимание другой концепции Windows PowerShell, а именно операторов сравнения. Оператор сравнения сравнивает элементы, расположенные с обеих сторон оператора. Запись операторов сравнения начинается знаком "-", после которого следует имя оператора. Основные операторы сравнения работают, как правило, с любыми видами объектов. Более сложные операторы сравнения работают только с текстом или массивами.
 
@@ -46,7 +46,7 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 2
 ```
 
-### <a name="filtering-based-on-object-properties"></a>Фильтрация, основанная на свойствах объектов
+## <a name="filtering-based-on-object-properties"></a>Фильтрация, основанная на свойствах объектов
 
 Так как переменная `$_` ссылается на текущий объект конвейера, для выполнения проверок можно обратиться к ее свойствам.
 

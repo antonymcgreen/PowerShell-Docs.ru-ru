@@ -3,14 +3,15 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Использование статических классов и методов
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
-ms.openlocfilehash: 0f2b02c3a40365ad0335118b057a4e548c9f6535
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: e4caff63a1ec7295b6fe450c2915baf0cc7e31af
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403211"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293118"
 ---
 # <a name="using-static-classes-and-methods"></a>Использование статических классов и методов
+
 Не все классы .NET Framework можно создать с помощью **New-Object**. Например, при попытке создать объект **System.Environment** или **System.Math** с помощью **New-Object** вы получите следующие сообщения об ошибке:
 
 ```
@@ -29,10 +30,12 @@ At line:1 char:11
 
 Эти ошибки вызваны тем, что из таких классов нельзя создать объект. Эти классы являются справочными библиотеками методов и свойств, которые не изменяют состояние. Их не нужно создавать, а можно просто использовать. Такие классы и методы называются *статическими классами*, так как они не создаются, удаляются или изменяются. В качестве пояснения мы представим примеры, использующие статические классы.
 
-### <a name="getting-environment-data-with-systemenvironment"></a>Получение данных среды с помощью System.Environment
+## <a name="getting-environment-data-with-systemenvironment"></a>Получение данных среды с помощью System.Environment
+
 Обычно первый шаг при работе с объектом в Windows PowerShell — использовать Get-Member, чтобы выяснить, какие элементы он содержит. Работа со статическими классами несколько отличается, так как фактический класс не является объектом.
 
-#### <a name="referring-to-the-static-systemenvironment-class"></a>Ссылка на статический класс System.Environment
+### <a name="referring-to-the-static-systemenvironment-class"></a>Ссылка на статический класс System.Environment
+
 Сослаться на статический класс можно, заключив его имя в квадратные скобки. Например, можно ссылаться на **System.Environment**, введя его имя в квадратные скобки. При этом отображаются сведения об универсальном типе:
 
 ```
@@ -89,7 +92,7 @@ TickCount                               ExitCode
 
 Теперь можно выбрать свойства для просмотра из System.Environment.
 
-#### <a name="displaying-static-properties-of-systemenvironment"></a>Отображение статических свойств System.Environment
+### <a name="displaying-static-properties-of-systemenvironment"></a>Отображение статических свойств System.Environment
 
 Свойства System.Environment также являются статическими и должны быть указаны иначе, чем обычные свойства. Мы используем **::**, чтобы сообщить Windows PowerShell, что требуется использовать статический метод или статическое свойство. Чтобы просмотреть команду, которая использовалась для запуска Windows PowerShell, мы проверяем свойство **CommandLine**, введя следующее:
 
@@ -115,7 +118,7 @@ PS> [System.Environment]::HasShutdownStarted
 False
 ```
 
-### <a name="doing-math-with-systemmath"></a>Математические операции с помощью System.Math
+## <a name="doing-math-with-systemmath"></a>Математические операции с помощью System.Math
 
 Статический класс System.Math полезен для выполнения некоторых математических операций. Важные элементы **System.Math** — главным образом методы, которые можно отобразить с помощью **Get-Member**.
 
