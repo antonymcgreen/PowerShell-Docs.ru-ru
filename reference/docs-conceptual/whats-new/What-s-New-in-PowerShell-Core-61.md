@@ -2,101 +2,101 @@
 title: Новые возможности PowerShell Core 6.1
 description: Новые возможности и изменения в PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 1b41368bee92850e3593ebf4f5b8a469c4282d98
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: fe1e892d4a13a7758f5405867fdd7488c059f5cc
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682317"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293322"
 ---
-# <a name="whats-new-in-powershell-core-61"></a><span data-ttu-id="36f34-103">Новые возможности PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="36f34-103">What's New in PowerShell Core 6.1</span></span>
+# <a name="whats-new-in-powershell-core-61"></a><span data-ttu-id="df5a6-103">Новые возможности PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-103">What's New in PowerShell Core 6.1</span></span>
 
-<span data-ttu-id="36f34-104">Ниже указаны некоторые основные новые функции и изменения, которые были введены в PowerShell Core 6.1.</span><span class="sxs-lookup"><span data-stu-id="36f34-104">Below is a selection of some of the major new features and changes that have been introduced in PowerShell Core 6.1.</span></span>
+<span data-ttu-id="df5a6-104">Ниже указаны некоторые основные новые функции и изменения, которые были введены в PowerShell Core 6.1.</span><span class="sxs-lookup"><span data-stu-id="df5a6-104">Below is a selection of some of the major new features and changes that have been introduced in PowerShell Core 6.1.</span></span>
 
-<span data-ttu-id="36f34-105">Кроме того, доступно **множество** добавлений, позволяющих повысить быстродействие и стабильность PowerShell (а также целый ряд исправлений ошибок).</span><span class="sxs-lookup"><span data-stu-id="36f34-105">There's also **tons** of "boring stuff" that make PowerShell faster and more stable (plus lots and lots of bug fixes)!</span></span>
-<span data-ttu-id="36f34-106">Полный список изменений см. в нашем [журнале изменений на сайте GitHub](https://github.com/PowerShell/PowerShell/blob/master/CHANGELOG.md).</span><span class="sxs-lookup"><span data-stu-id="36f34-106">For a full list of changes, check out our [changelog on GitHub](https://github.com/PowerShell/PowerShell/blob/master/CHANGELOG.md).</span></span>
+<span data-ttu-id="df5a6-105">Кроме того, доступно **множество** добавлений, позволяющих повысить быстродействие и стабильность PowerShell (а также целый ряд исправлений ошибок).</span><span class="sxs-lookup"><span data-stu-id="df5a6-105">There's also **tons** of "boring stuff" that make PowerShell faster and more stable (plus lots and lots of bug fixes)!</span></span>
+<span data-ttu-id="df5a6-106">Полный список изменений см. в нашем [журнале изменений на сайте GitHub](https://github.com/PowerShell/PowerShell/blob/master/CHANGELOG.md).</span><span class="sxs-lookup"><span data-stu-id="df5a6-106">For a full list of changes, check out our [changelog on GitHub](https://github.com/PowerShell/PowerShell/blob/master/CHANGELOG.md).</span></span>
 
-<span data-ttu-id="36f34-107">Несмотря на то что далее мы называем лишь часть имен, мы выражаем благодарность [всем участникам сообщества](https://github.com/PowerShell/PowerShell/graphs/contributors), которые внесли свой вклад в этот выпуск.</span><span class="sxs-lookup"><span data-stu-id="36f34-107">And while we call out some names below, thank you to [all of the community contributors](https://github.com/PowerShell/PowerShell/graphs/contributors) that made this release possible.</span></span>
+<span data-ttu-id="df5a6-107">Несмотря на то что далее мы называем лишь часть имен, мы выражаем благодарность [всем участникам сообщества](https://github.com/PowerShell/PowerShell/graphs/contributors), которые внесли свой вклад в этот выпуск.</span><span class="sxs-lookup"><span data-stu-id="df5a6-107">And while we call out some names below, thank you to [all of the community contributors](https://github.com/PowerShell/PowerShell/graphs/contributors) that made this release possible.</span></span>
 
-## <a name="net-core-21"></a><span data-ttu-id="36f34-108">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="36f34-108">.NET Core 2.1</span></span>
+## <a name="net-core-21"></a><span data-ttu-id="df5a6-108">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-108">.NET Core 2.1</span></span>
 
-<span data-ttu-id="36f34-109">После [выпуска в мае](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) среда PowerShell Core 6.1 перемещена на .NET Core 2.1, что привело к ряду улучшений в PowerShell, включая:</span><span class="sxs-lookup"><span data-stu-id="36f34-109">PowerShell Core 6.1 moved to .NET Core 2.1 after it was [released in May](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/), resulting in a number of improvements to PowerShell, including:</span></span>
+<span data-ttu-id="df5a6-109">После [выпуска в мае](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) среда PowerShell Core 6.1 перемещена на .NET Core 2.1, что привело к ряду улучшений в PowerShell, включая:</span><span class="sxs-lookup"><span data-stu-id="df5a6-109">PowerShell Core 6.1 moved to .NET Core 2.1 after it was [released in May](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/), resulting in a number of improvements to PowerShell, including:</span></span>
 
-- <span data-ttu-id="36f34-110">повышение производительности (см. [ниже](#performance-improvements));</span><span class="sxs-lookup"><span data-stu-id="36f34-110">performance improvements (see [below](#performance-improvements))</span></span>
-- <span data-ttu-id="36f34-111">поддержку Alpine Linux (предварительная версия);</span><span class="sxs-lookup"><span data-stu-id="36f34-111">Alpine Linux support (preview)</span></span>
-- <span data-ttu-id="36f34-112">[поддержку глобального средства .NET](/dotnet/core/tools/global-tools) — выходит в ближайшее время в PowerShell.</span><span class="sxs-lookup"><span data-stu-id="36f34-112">[.NET global tool support](/dotnet/core/tools/global-tools) - coming soon to PowerShell</span></span>
+- <span data-ttu-id="df5a6-110">повышение производительности (см. [ниже](#performance-improvements));</span><span class="sxs-lookup"><span data-stu-id="df5a6-110">performance improvements (see [below](#performance-improvements))</span></span>
+- <span data-ttu-id="df5a6-111">поддержку Alpine Linux (предварительная версия);</span><span class="sxs-lookup"><span data-stu-id="df5a6-111">Alpine Linux support (preview)</span></span>
+- <span data-ttu-id="df5a6-112">[поддержку глобального средства .NET](/dotnet/core/tools/global-tools) — выходит в ближайшее время в PowerShell.</span><span class="sxs-lookup"><span data-stu-id="df5a6-112">[.NET global tool support](/dotnet/core/tools/global-tools) - coming soon to PowerShell</span></span>
 - [`Span<T>`](/dotnet/api/system.span-1?view=netcore-2.1)
 
-## <a name="windows-compatibility-pack-for-net-core"></a><span data-ttu-id="36f34-113">Пакет обеспечения совместимости Windows для .NET Core</span><span class="sxs-lookup"><span data-stu-id="36f34-113">Windows Compatibility Pack for .NET Core</span></span>
+## <a name="windows-compatibility-pack-for-net-core"></a><span data-ttu-id="df5a6-113">Пакет обеспечения совместимости Windows для .NET Core</span><span class="sxs-lookup"><span data-stu-id="df5a6-113">Windows Compatibility Pack for .NET Core</span></span>
 
-<span data-ttu-id="36f34-114">Команда разработчиков .NET добавила [пакет обеспечения совместимости Windows для .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/11/16/announcing-the-windows-compatibility-pack-for-net-core/) — набор сборок, которые добавляют несколько удаленных API-интерфейсов обратно в .NET Core в Windows.</span><span class="sxs-lookup"><span data-stu-id="36f34-114">On Windows, the .NET team shipped the [Windows Compatibility Pack for .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/11/16/announcing-the-windows-compatibility-pack-for-net-core/), a set of assemblies that add a number of removed APIs back to .NET Core on Windows.</span></span>
+<span data-ttu-id="df5a6-114">Команда разработчиков .NET добавила [пакет обеспечения совместимости Windows для .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/11/16/announcing-the-windows-compatibility-pack-for-net-core/) — набор сборок, которые добавляют несколько удаленных API-интерфейсов обратно в .NET Core в Windows.</span><span class="sxs-lookup"><span data-stu-id="df5a6-114">On Windows, the .NET team shipped the [Windows Compatibility Pack for .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/11/16/announcing-the-windows-compatibility-pack-for-net-core/), a set of assemblies that add a number of removed APIs back to .NET Core on Windows.</span></span>
 
-<span data-ttu-id="36f34-115">Мы добавили пакет обеспечения совместимости Windows в выпуск PowerShell Core 6.1, чтобы сделать доступными все модули или сценарии, использующие эти API-интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="36f34-115">We've added the Windows Compatibility Pack to PowerShell Core 6.1 release so that any modules or scripts that use these APIs can rely on them being available.</span></span>
+<span data-ttu-id="df5a6-115">Мы добавили пакет обеспечения совместимости Windows в выпуск PowerShell Core 6.1, чтобы сделать доступными все модули или сценарии, использующие эти API-интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="df5a6-115">We've added the Windows Compatibility Pack to PowerShell Core 6.1 release so that any modules or scripts that use these APIs can rely on them being available.</span></span>
 
-<span data-ttu-id="36f34-116">Благодаря пакету обеспечения совместимости Windows в PowerShell Core можно использовать **более 1900 командлетов, входящих в состав обновления Windows от 10 октября 2018 г. и Windows Server 2019**.</span><span class="sxs-lookup"><span data-stu-id="36f34-116">The Windows Compatibility Pack enables PowerShell Core to use **more than 1900 cmdlets that ship with Windows 10 October 2018 Update and Windows Server 2019**.</span></span>
+<span data-ttu-id="df5a6-116">Благодаря пакету обеспечения совместимости Windows в PowerShell Core можно использовать **более 1900 командлетов, входящих в состав обновления Windows от 10 октября 2018 г. и Windows Server 2019**.</span><span class="sxs-lookup"><span data-stu-id="df5a6-116">The Windows Compatibility Pack enables PowerShell Core to use **more than 1900 cmdlets that ship with Windows 10 October 2018 Update and Windows Server 2019**.</span></span>
 
-## <a name="support-for-application-whitelisting"></a><span data-ttu-id="36f34-117">Поддержка списков разрешенных приложений</span><span class="sxs-lookup"><span data-stu-id="36f34-117">Support for Application Whitelisting</span></span>
+## <a name="support-for-application-whitelisting"></a><span data-ttu-id="df5a6-117">Поддержка списков разрешенных приложений</span><span class="sxs-lookup"><span data-stu-id="df5a6-117">Support for Application Whitelisting</span></span>
 
-<span data-ttu-id="36f34-118">В PowerShell Core 6.1 реализована та же поддержка, что и в Windows PowerShell 5.1, которая позволяет добавлять приложения в список разрешенных в [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) и [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).</span><span class="sxs-lookup"><span data-stu-id="36f34-118">PowerShell Core 6.1 has parity with Windows PowerShell 5.1 supporting [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) and [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) application whitelisting.</span></span>
-<span data-ttu-id="36f34-119">Добавление приложений в список разрешенных обеспечивает более детализированное управление двоичными файлами, которые могут выполняться с помощью [ограниченного языкового режима](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) PowerShell.</span><span class="sxs-lookup"><span data-stu-id="36f34-119">Application whitelisting allows granular control of what binaries are allowed to be executed used with PowerShell [Constrained Language mode](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/).</span></span>
+<span data-ttu-id="df5a6-118">В PowerShell Core 6.1 реализована та же поддержка, что и в Windows PowerShell 5.1, которая позволяет добавлять приложения в список разрешенных в [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) и [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).</span><span class="sxs-lookup"><span data-stu-id="df5a6-118">PowerShell Core 6.1 has parity with Windows PowerShell 5.1 supporting [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) and [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) application whitelisting.</span></span>
+<span data-ttu-id="df5a6-119">Добавление приложений в список разрешенных обеспечивает более детализированное управление двоичными файлами, которые могут выполняться с помощью [ограниченного языкового режима](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) PowerShell.</span><span class="sxs-lookup"><span data-stu-id="df5a6-119">Application whitelisting allows granular control of what binaries are allowed to be executed used with PowerShell [Constrained Language mode](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/).</span></span>
 
-## <a name="performance-improvements"></a><span data-ttu-id="36f34-120">Повышена производительность.</span><span class="sxs-lookup"><span data-stu-id="36f34-120">Performance improvements</span></span>
+## <a name="performance-improvements"></a><span data-ttu-id="df5a6-120">Повышена производительность.</span><span class="sxs-lookup"><span data-stu-id="df5a6-120">Performance improvements</span></span>
 
-<span data-ttu-id="36f34-121">В PowerShell Core 6.0 внесены значительные усовершенствования производительности.</span><span class="sxs-lookup"><span data-stu-id="36f34-121">PowerShell Core 6.0 made some significant performance improvements.</span></span>
-<span data-ttu-id="36f34-122">PowerShell Core 6.1 и далее повышает скорость выполнения определенных операций.</span><span class="sxs-lookup"><span data-stu-id="36f34-122">PowerShell Core 6.1 continues to improve the speed of certain operations.</span></span>
+<span data-ttu-id="df5a6-121">В PowerShell Core 6.0 внесены значительные усовершенствования производительности.</span><span class="sxs-lookup"><span data-stu-id="df5a6-121">PowerShell Core 6.0 made some significant performance improvements.</span></span>
+<span data-ttu-id="df5a6-122">PowerShell Core 6.1 и далее повышает скорость выполнения определенных операций.</span><span class="sxs-lookup"><span data-stu-id="df5a6-122">PowerShell Core 6.1 continues to improve the speed of certain operations.</span></span>
 
-<span data-ttu-id="36f34-123">Например, скорость выполнения `Group-Object` была увеличена до 66 %.</span><span class="sxs-lookup"><span data-stu-id="36f34-123">For example, `Group-Object` has been sped up by 66%:</span></span>
+<span data-ttu-id="df5a6-123">Например, скорость выполнения `Group-Object` была увеличена до 66 %.</span><span class="sxs-lookup"><span data-stu-id="df5a6-123">For example, `Group-Object` has been sped up by 66%:</span></span>
 
 ```powershell
 Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Group-Object }
 ```
 
-|              | <span data-ttu-id="36f34-124">Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="36f34-124">Windows PowerShell 5.1</span></span> | <span data-ttu-id="36f34-125">PowerShell Core 6.0</span><span class="sxs-lookup"><span data-stu-id="36f34-125">PowerShell Core 6.0</span></span> | <span data-ttu-id="36f34-126">PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="36f34-126">PowerShell Core 6.1</span></span> |
+|              | <span data-ttu-id="df5a6-124">Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-124">Windows PowerShell 5.1</span></span> | <span data-ttu-id="df5a6-125">PowerShell Core 6.0</span><span class="sxs-lookup"><span data-stu-id="df5a6-125">PowerShell Core 6.0</span></span> | <span data-ttu-id="df5a6-126">PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-126">PowerShell Core 6.1</span></span> |
 |--------------|------------------------|---------------------|---------------------|
-| <span data-ttu-id="36f34-127">Время (с)</span><span class="sxs-lookup"><span data-stu-id="36f34-127">Time (sec)</span></span>   | <span data-ttu-id="36f34-128">25,178</span><span class="sxs-lookup"><span data-stu-id="36f34-128">25.178</span></span>                 | <span data-ttu-id="36f34-129">19,653</span><span class="sxs-lookup"><span data-stu-id="36f34-129">19.653</span></span>              | <span data-ttu-id="36f34-130">6,641</span><span class="sxs-lookup"><span data-stu-id="36f34-130">6.641</span></span>               |
-| <span data-ttu-id="36f34-131">Ускорение (%)</span><span class="sxs-lookup"><span data-stu-id="36f34-131">Speed-up (%)</span></span> | <span data-ttu-id="36f34-132">Н/Д</span><span class="sxs-lookup"><span data-stu-id="36f34-132">N/A</span></span>                    | <span data-ttu-id="36f34-133">21,9 %</span><span class="sxs-lookup"><span data-stu-id="36f34-133">21.9%</span></span>               | <span data-ttu-id="36f34-134">66,2 %</span><span class="sxs-lookup"><span data-stu-id="36f34-134">66.2%</span></span>               |
+| <span data-ttu-id="df5a6-127">Время (с)</span><span class="sxs-lookup"><span data-stu-id="df5a6-127">Time (sec)</span></span>   | <span data-ttu-id="df5a6-128">25,178</span><span class="sxs-lookup"><span data-stu-id="df5a6-128">25.178</span></span>                 | <span data-ttu-id="df5a6-129">19,653</span><span class="sxs-lookup"><span data-stu-id="df5a6-129">19.653</span></span>              | <span data-ttu-id="df5a6-130">6,641</span><span class="sxs-lookup"><span data-stu-id="df5a6-130">6.641</span></span>               |
+| <span data-ttu-id="df5a6-131">Ускорение (%)</span><span class="sxs-lookup"><span data-stu-id="df5a6-131">Speed-up (%)</span></span> | <span data-ttu-id="df5a6-132">Н/Д</span><span class="sxs-lookup"><span data-stu-id="df5a6-132">N/A</span></span>                    | <span data-ttu-id="df5a6-133">21,9 %</span><span class="sxs-lookup"><span data-stu-id="df5a6-133">21.9%</span></span>               | <span data-ttu-id="df5a6-134">66,2 %</span><span class="sxs-lookup"><span data-stu-id="df5a6-134">66.2%</span></span>               |
 
-<span data-ttu-id="36f34-135">Аналогично, более чем на 15 % улучшена производительность сценариев сортировки следующего вида.</span><span class="sxs-lookup"><span data-stu-id="36f34-135">Similarly, sorting scenarios like this one have improved by more than 15%:</span></span>
+<span data-ttu-id="df5a6-135">Аналогично, более чем на 15 % улучшена производительность сценариев сортировки следующего вида.</span><span class="sxs-lookup"><span data-stu-id="df5a6-135">Similarly, sorting scenarios like this one have improved by more than 15%:</span></span>
 
 ```powershell
 Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Sort-Object }
 ```
 
-|              | <span data-ttu-id="36f34-136">Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="36f34-136">Windows PowerShell 5.1</span></span> | <span data-ttu-id="36f34-137">PowerShell Core 6.0</span><span class="sxs-lookup"><span data-stu-id="36f34-137">PowerShell Core 6.0</span></span> | <span data-ttu-id="36f34-138">PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="36f34-138">PowerShell Core 6.1</span></span> |
+|              | <span data-ttu-id="df5a6-136">Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-136">Windows PowerShell 5.1</span></span> | <span data-ttu-id="df5a6-137">PowerShell Core 6.0</span><span class="sxs-lookup"><span data-stu-id="df5a6-137">PowerShell Core 6.0</span></span> | <span data-ttu-id="df5a6-138">PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-138">PowerShell Core 6.1</span></span> |
 |--------------|------------------------|---------------------|---------------------|
-| <span data-ttu-id="36f34-139">Время (с)</span><span class="sxs-lookup"><span data-stu-id="36f34-139">Time (sec)</span></span>   | <span data-ttu-id="36f34-140">12,170</span><span class="sxs-lookup"><span data-stu-id="36f34-140">12.170</span></span>                 | <span data-ttu-id="36f34-141">8,493</span><span class="sxs-lookup"><span data-stu-id="36f34-141">8.493</span></span>               | <span data-ttu-id="36f34-142">7,08</span><span class="sxs-lookup"><span data-stu-id="36f34-142">7.08</span></span>                |
-| <span data-ttu-id="36f34-143">Ускорение (%)</span><span class="sxs-lookup"><span data-stu-id="36f34-143">Speed-up (%)</span></span> | <span data-ttu-id="36f34-144">Н/Д</span><span class="sxs-lookup"><span data-stu-id="36f34-144">N/A</span></span>                    | <span data-ttu-id="36f34-145">30,2 %</span><span class="sxs-lookup"><span data-stu-id="36f34-145">30.2%</span></span>               | <span data-ttu-id="36f34-146">16,6 %</span><span class="sxs-lookup"><span data-stu-id="36f34-146">16.6%</span></span>               |
+| <span data-ttu-id="df5a6-139">Время (с)</span><span class="sxs-lookup"><span data-stu-id="df5a6-139">Time (sec)</span></span>   | <span data-ttu-id="df5a6-140">12,170</span><span class="sxs-lookup"><span data-stu-id="df5a6-140">12.170</span></span>                 | <span data-ttu-id="df5a6-141">8,493</span><span class="sxs-lookup"><span data-stu-id="df5a6-141">8.493</span></span>               | <span data-ttu-id="df5a6-142">7,08</span><span class="sxs-lookup"><span data-stu-id="df5a6-142">7.08</span></span>                |
+| <span data-ttu-id="df5a6-143">Ускорение (%)</span><span class="sxs-lookup"><span data-stu-id="df5a6-143">Speed-up (%)</span></span> | <span data-ttu-id="df5a6-144">Н/Д</span><span class="sxs-lookup"><span data-stu-id="df5a6-144">N/A</span></span>                    | <span data-ttu-id="df5a6-145">30,2 %</span><span class="sxs-lookup"><span data-stu-id="df5a6-145">30.2%</span></span>               | <span data-ttu-id="df5a6-146">16,6 %</span><span class="sxs-lookup"><span data-stu-id="df5a6-146">16.6%</span></span>               |
 
-<span data-ttu-id="36f34-147">После регрессии из Windows PowerShell также было значительно ускорено выполнение `Import-Csv`.</span><span class="sxs-lookup"><span data-stu-id="36f34-147">`Import-Csv` has also been sped up significantly after a regression from Windows PowerShell.</span></span>
-<span data-ttu-id="36f34-148">В следующем примере используется тестовый CSV-файл с 26 616 строками и шестью столбцами.</span><span class="sxs-lookup"><span data-stu-id="36f34-148">The following example uses a test CSV with 26,616 rows and six columns:</span></span>
+`Import-Csv` <span data-ttu-id="df5a6-147">— выполнение этого командлета также было значительно ускорено после регрессии из Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="df5a6-147">has also been sped up significantly after a regression from Windows PowerShell.</span></span>
+<span data-ttu-id="df5a6-148">В следующем примере используется тестовый CSV-файл с 26 616 строками и шестью столбцами.</span><span class="sxs-lookup"><span data-stu-id="df5a6-148">The following example uses a test CSV with 26,616 rows and six columns:</span></span>
 
 ```powershell
 Measure-Command {$a = Import-Csv foo.csv}
 ```
 
-|              | <span data-ttu-id="36f34-149">Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="36f34-149">Windows PowerShell 5.1</span></span> | <span data-ttu-id="36f34-150">PowerShell Core 6.0</span><span class="sxs-lookup"><span data-stu-id="36f34-150">PowerShell Core 6.0</span></span> | <span data-ttu-id="36f34-151">PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="36f34-151">PowerShell Core 6.1</span></span>    |
+|              | <span data-ttu-id="df5a6-149">Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-149">Windows PowerShell 5.1</span></span> | <span data-ttu-id="df5a6-150">PowerShell Core 6.0</span><span class="sxs-lookup"><span data-stu-id="df5a6-150">PowerShell Core 6.0</span></span> | <span data-ttu-id="df5a6-151">PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-151">PowerShell Core 6.1</span></span>    |
 |--------------|------------------------|---------------------|------------------------|
-| <span data-ttu-id="36f34-152">Время (с)</span><span class="sxs-lookup"><span data-stu-id="36f34-152">Time (sec)</span></span>   | <span data-ttu-id="36f34-153">0,441</span><span class="sxs-lookup"><span data-stu-id="36f34-153">0.441</span></span>                  | <span data-ttu-id="36f34-154">1,069</span><span class="sxs-lookup"><span data-stu-id="36f34-154">1.069</span></span>               | <span data-ttu-id="36f34-155">0,268</span><span class="sxs-lookup"><span data-stu-id="36f34-155">0.268</span></span>                  |
-| <span data-ttu-id="36f34-156">Ускорение (%)</span><span class="sxs-lookup"><span data-stu-id="36f34-156">Speed-up (%)</span></span> | <span data-ttu-id="36f34-157">Н/Д</span><span class="sxs-lookup"><span data-stu-id="36f34-157">N/A</span></span>                    | <span data-ttu-id="36f34-158">–142,4 %</span><span class="sxs-lookup"><span data-stu-id="36f34-158">-142.4%</span></span>             | <span data-ttu-id="36f34-159">74,9 % (39,2 % в WPS)</span><span class="sxs-lookup"><span data-stu-id="36f34-159">74.9% (39.2% from WPS)</span></span> |
+| <span data-ttu-id="df5a6-152">Время (с)</span><span class="sxs-lookup"><span data-stu-id="df5a6-152">Time (sec)</span></span>   | <span data-ttu-id="df5a6-153">0,441</span><span class="sxs-lookup"><span data-stu-id="df5a6-153">0.441</span></span>                  | <span data-ttu-id="df5a6-154">1,069</span><span class="sxs-lookup"><span data-stu-id="df5a6-154">1.069</span></span>               | <span data-ttu-id="df5a6-155">0,268</span><span class="sxs-lookup"><span data-stu-id="df5a6-155">0.268</span></span>                  |
+| <span data-ttu-id="df5a6-156">Ускорение (%)</span><span class="sxs-lookup"><span data-stu-id="df5a6-156">Speed-up (%)</span></span> | <span data-ttu-id="df5a6-157">Н/Д</span><span class="sxs-lookup"><span data-stu-id="df5a6-157">N/A</span></span>                    | <span data-ttu-id="df5a6-158">–142,4 %</span><span class="sxs-lookup"><span data-stu-id="df5a6-158">-142.4%</span></span>             | <span data-ttu-id="df5a6-159">74,9 % (39,2 % в WPS)</span><span class="sxs-lookup"><span data-stu-id="df5a6-159">74.9% (39.2% from WPS)</span></span> |
 
-<span data-ttu-id="36f34-160">Наконец, преобразование из формата JSON в `PSObject` было ускорено более чем на 50 % по сравнению с Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="36f34-160">Lastly, conversion from JSON into `PSObject` has been sped up by more than 50% since Windows PowerShell.</span></span>
-<span data-ttu-id="36f34-161">В следующем примере используется тестовый JSON-файл размером около 2 МБ.</span><span class="sxs-lookup"><span data-stu-id="36f34-161">The following example uses a ~2MB test JSON file:</span></span>
+<span data-ttu-id="df5a6-160">Наконец, преобразование из формата JSON в `PSObject` было ускорено более чем на 50 % по сравнению с Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="df5a6-160">Lastly, conversion from JSON into `PSObject` has been sped up by more than 50% since Windows PowerShell.</span></span>
+<span data-ttu-id="df5a6-161">В следующем примере используется тестовый JSON-файл размером около 2 МБ.</span><span class="sxs-lookup"><span data-stu-id="df5a6-161">The following example uses a ~2MB test JSON file:</span></span>
 
 ```powershell
 Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 ```
 
-|              | <span data-ttu-id="36f34-162">Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="36f34-162">Windows PowerShell 5.1</span></span> | <span data-ttu-id="36f34-163">PowerShell Core 6.0</span><span class="sxs-lookup"><span data-stu-id="36f34-163">PowerShell Core 6.0</span></span> | <span data-ttu-id="36f34-164">PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="36f34-164">PowerShell Core 6.1</span></span>    |
+|              | <span data-ttu-id="df5a6-162">Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-162">Windows PowerShell 5.1</span></span> | <span data-ttu-id="df5a6-163">PowerShell Core 6.0</span><span class="sxs-lookup"><span data-stu-id="df5a6-163">PowerShell Core 6.0</span></span> | <span data-ttu-id="df5a6-164">PowerShell Core 6.1</span><span class="sxs-lookup"><span data-stu-id="df5a6-164">PowerShell Core 6.1</span></span>    |
 |--------------|------------------------|---------------------|------------------------|
-| <span data-ttu-id="36f34-165">Время (с)</span><span class="sxs-lookup"><span data-stu-id="36f34-165">Time (sec)</span></span>   | <span data-ttu-id="36f34-166">0,259</span><span class="sxs-lookup"><span data-stu-id="36f34-166">0.259</span></span>                  | <span data-ttu-id="36f34-167">0,577</span><span class="sxs-lookup"><span data-stu-id="36f34-167">0.577</span></span>               | <span data-ttu-id="36f34-168">0,125</span><span class="sxs-lookup"><span data-stu-id="36f34-168">0.125</span></span>                  |
-| <span data-ttu-id="36f34-169">Ускорение (%)</span><span class="sxs-lookup"><span data-stu-id="36f34-169">Speed-up (%)</span></span> | <span data-ttu-id="36f34-170">Н/Д</span><span class="sxs-lookup"><span data-stu-id="36f34-170">N/A</span></span>                    | <span data-ttu-id="36f34-171">–122,8 %</span><span class="sxs-lookup"><span data-stu-id="36f34-171">-122.8%</span></span>             | <span data-ttu-id="36f34-172">78,3 % (51,7 % в WPS)</span><span class="sxs-lookup"><span data-stu-id="36f34-172">78.3% (51.7% from WPS)</span></span> |
+| <span data-ttu-id="df5a6-165">Время (с)</span><span class="sxs-lookup"><span data-stu-id="df5a6-165">Time (sec)</span></span>   | <span data-ttu-id="df5a6-166">0,259</span><span class="sxs-lookup"><span data-stu-id="df5a6-166">0.259</span></span>                  | <span data-ttu-id="df5a6-167">0,577</span><span class="sxs-lookup"><span data-stu-id="df5a6-167">0.577</span></span>               | <span data-ttu-id="df5a6-168">0,125</span><span class="sxs-lookup"><span data-stu-id="df5a6-168">0.125</span></span>                  |
+| <span data-ttu-id="df5a6-169">Ускорение (%)</span><span class="sxs-lookup"><span data-stu-id="df5a6-169">Speed-up (%)</span></span> | <span data-ttu-id="df5a6-170">Н/Д</span><span class="sxs-lookup"><span data-stu-id="df5a6-170">N/A</span></span>                    | <span data-ttu-id="df5a6-171">–122,8 %</span><span class="sxs-lookup"><span data-stu-id="df5a6-171">-122.8%</span></span>             | <span data-ttu-id="df5a6-172">78,3 % (51,7 % в WPS)</span><span class="sxs-lookup"><span data-stu-id="df5a6-172">78.3% (51.7% from WPS)</span></span> |
 
-## <a name="check-system32-for-compatible-in-box-modules-on-windows"></a><span data-ttu-id="36f34-173">Проверка `system32` на наличие совместимых встроенных модулей в Windows</span><span class="sxs-lookup"><span data-stu-id="36f34-173">Check `system32` for compatible in-box modules on Windows</span></span>
+## <a name="check-system32-for-compatible-in-box-modules-on-windows"></a><span data-ttu-id="df5a6-173">Проверка `system32` на наличие совместимых встроенных модулей в Windows</span><span class="sxs-lookup"><span data-stu-id="df5a6-173">Check `system32` for compatible in-box modules on Windows</span></span>
 
-<span data-ttu-id="36f34-174">В обновлении 1809 Windows 10 и Windows Server 2019 мы обновили несколько готовых модулей PowerShell, и теперь они могут помечаться как совместимые с PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="36f34-174">In the Windows 10 1809 update and Windows Server 2019, we updated a number of in-box PowerShell modules to mark them as compatible with PowerShell Core.</span></span>
+<span data-ttu-id="df5a6-174">В обновлении 1809 Windows 10 и Windows Server 2019 мы обновили несколько готовых модулей PowerShell, и теперь они могут помечаться как совместимые с PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="df5a6-174">In the Windows 10 1809 update and Windows Server 2019, we updated a number of in-box PowerShell modules to mark them as compatible with PowerShell Core.</span></span>
 
-<span data-ttu-id="36f34-175">При запуске PowerShell Core 6.1 будет автоматически включать `$windir\System32` как часть переменной среды `PSModulePath`.</span><span class="sxs-lookup"><span data-stu-id="36f34-175">When PowerShell Core 6.1 starts up, it will automatically include `$windir\System32` as part of the `PSModulePath` environment variable.</span></span>
-<span data-ttu-id="36f34-176">Однако она предоставляет модули в `Get-Module` и `Import-Module`, только если `CompatiblePSEdition` помечен как совместимый с `Core`.</span><span class="sxs-lookup"><span data-stu-id="36f34-176">However, it only exposes modules to `Get-Module` and `Import-Module` if its `CompatiblePSEdition` is marked as compatible with `Core`.</span></span>
+<span data-ttu-id="df5a6-175">При запуске PowerShell Core 6.1 будет автоматически включать `$windir\System32` как часть переменной среды `PSModulePath`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-175">When PowerShell Core 6.1 starts up, it will automatically include `$windir\System32` as part of the `PSModulePath` environment variable.</span></span>
+<span data-ttu-id="df5a6-176">Однако она предоставляет модули в `Get-Module` и `Import-Module`, только если `CompatiblePSEdition` помечен как совместимый с `Core`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-176">However, it only exposes modules to `Get-Module` and `Import-Module` if its `CompatiblePSEdition` is marked as compatible with `Core`.</span></span>
 
 
 ```powershell
@@ -104,7 +104,7 @@ Get-Module -ListAvailable
 ```
 
 > [!NOTE]
-> <span data-ttu-id="36f34-177">В зависимости от установленных ролей и компонентов будут доступны самые разные модули.</span><span class="sxs-lookup"><span data-stu-id="36f34-177">You may see different available modules depending on what roles and features are installed.</span></span>
+> <span data-ttu-id="df5a6-177">В зависимости от установленных ролей и компонентов будут доступны самые разные модули.</span><span class="sxs-lookup"><span data-stu-id="df5a6-177">You may see different available modules depending on what roles and features are installed.</span></span>
 
 ```Output
 ...
@@ -130,8 +130,8 @@ Manifest   2.0.0.0    TrustedPlatformModule               Core,Desk {Get-Tpm, In
 ...
 ```
 
-<span data-ttu-id="36f34-178">С помощью параметра `-SkipEditionCheck` это поведение можно переопределить для отображения всех модулей.</span><span class="sxs-lookup"><span data-stu-id="36f34-178">You can override this behavior to show all modules using the `-SkipEditionCheck` switch parameter.</span></span>
-<span data-ttu-id="36f34-179">Мы также добавили свойство `PSEdition` в выходные данные таблицы.</span><span class="sxs-lookup"><span data-stu-id="36f34-179">We've also added a `PSEdition` property to the table output.</span></span>
+<span data-ttu-id="df5a6-178">С помощью параметра `-SkipEditionCheck` это поведение можно переопределить для отображения всех модулей.</span><span class="sxs-lookup"><span data-stu-id="df5a6-178">You can override this behavior to show all modules using the `-SkipEditionCheck` switch parameter.</span></span>
+<span data-ttu-id="df5a6-179">Мы также добавили свойство `PSEdition` в выходные данные таблицы.</span><span class="sxs-lookup"><span data-stu-id="df5a6-179">We've also added a `PSEdition` property to the table output.</span></span>
 
 ```powershell
 Get-Module Net* -ListAvailable -SkipEditionCheck
@@ -158,76 +158,76 @@ Manifest   1.0.0.0    NetworkSwitchManager        Core,Desk {Disable-NetworkSwit
 Manifest   1.0.0.0    NetworkTransition           Core,Desk {Add-NetIPHttpsCertBinding, Disable-NetDnsTransi...
 ```
 
-<span data-ttu-id="36f34-180">Дополнительные сведения об этом поведении см. в [PowerShell RFC0025](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-PSCore6-and-Windows-Modules.md).</span><span class="sxs-lookup"><span data-stu-id="36f34-180">For more information about this behavior, check out [PowerShell RFC0025](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-PSCore6-and-Windows-Modules.md).</span></span>
+<span data-ttu-id="df5a6-180">Дополнительные сведения об этом поведении см. в [PowerShell RFC0025](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-PSCore6-and-Windows-Modules.md).</span><span class="sxs-lookup"><span data-stu-id="df5a6-180">For more information about this behavior, check out [PowerShell RFC0025](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-PSCore6-and-Windows-Modules.md).</span></span>
 
-## <a name="markdown-cmdlets-and-rendering"></a><span data-ttu-id="36f34-181">Командлеты и отрисовка Markdown</span><span class="sxs-lookup"><span data-stu-id="36f34-181">Markdown cmdlets and rendering</span></span>
+## <a name="markdown-cmdlets-and-rendering"></a><span data-ttu-id="df5a6-181">Командлеты и отрисовка Markdown</span><span class="sxs-lookup"><span data-stu-id="df5a6-181">Markdown cmdlets and rendering</span></span>
 
-<span data-ttu-id="36f34-182">Markdown — это стандарт для создания документов с читаемым открытым текстом с базовым форматированием, которое может отображаться в формате HTML.</span><span class="sxs-lookup"><span data-stu-id="36f34-182">Markdown is a standard for creating readable plaintext documents with basic formatting that can be rendered into HTML.</span></span>
+<span data-ttu-id="df5a6-182">Markdown — это стандарт для создания документов с читаемым открытым текстом с базовым форматированием, которое может отображаться в формате HTML.</span><span class="sxs-lookup"><span data-stu-id="df5a6-182">Markdown is a standard for creating readable plaintext documents with basic formatting that can be rendered into HTML.</span></span>
 
-<span data-ttu-id="36f34-183">Мы добавили в версию 6.1 несколько командлетов, которые позволяют преобразовывать и отображать документы Markdown.</span><span class="sxs-lookup"><span data-stu-id="36f34-183">We've added some cmdlets in 6.1 that allow you to convert and render Markdown documents in the console, including:</span></span>
+<span data-ttu-id="df5a6-183">Мы добавили в версию 6.1 несколько командлетов, которые позволяют преобразовывать и отображать документы Markdown.</span><span class="sxs-lookup"><span data-stu-id="df5a6-183">We've added some cmdlets in 6.1 that allow you to convert and render Markdown documents in the console, including:</span></span>
 
 - `ConvertFrom-Markdown`
 - `Get-MarkdownOption`
 - `Set-MarkdownOption`
 - `Show-Markdown`
 
-<span data-ttu-id="36f34-184">Например, `Show-Markdown` отрисовывает файл Markdown в консоли.</span><span class="sxs-lookup"><span data-stu-id="36f34-184">For example, `Show-Markdown` renders a Markdown file in the console:</span></span>
+<span data-ttu-id="df5a6-184">Например, `Show-Markdown` отрисовывает файл Markdown в консоли.</span><span class="sxs-lookup"><span data-stu-id="df5a6-184">For example, `Show-Markdown` renders a Markdown file in the console:</span></span>
 
 ![Пример Show-Markdown](./images/markdown_example.png)
 
-<span data-ttu-id="36f34-186">Дополнительные сведения об использовании этих командлетов см. в [этом документе RFC](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-Native-Markdown-Rendering.md).</span><span class="sxs-lookup"><span data-stu-id="36f34-186">For more information about how these cmdlets work, check out [this RFC](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-Native-Markdown-Rendering.md).</span></span>
+<span data-ttu-id="df5a6-186">Дополнительные сведения об использовании этих командлетов см. в [этом документе RFC](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-Native-Markdown-Rendering.md).</span><span class="sxs-lookup"><span data-stu-id="df5a6-186">For more information about how these cmdlets work, check out [this RFC](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-Native-Markdown-Rendering.md).</span></span>
 
-## <a name="experimental-feature-flags"></a><span data-ttu-id="36f34-187">Флаги экспериментальных функций</span><span class="sxs-lookup"><span data-stu-id="36f34-187">Experimental feature flags</span></span>
+## <a name="experimental-feature-flags"></a><span data-ttu-id="df5a6-187">Флаги экспериментальных функций</span><span class="sxs-lookup"><span data-stu-id="df5a6-187">Experimental feature flags</span></span>
 
-<span data-ttu-id="36f34-188">Флаги экспериментальных функций позволяют включать функции, которые пока не являются окончательными.</span><span class="sxs-lookup"><span data-stu-id="36f34-188">Experimental feature flags enable users to turn on features that haven't been finalized.</span></span>
-<span data-ttu-id="36f34-189">Эти экспериментальные функции не поддерживаются и могут содержать ошибки.</span><span class="sxs-lookup"><span data-stu-id="36f34-189">These experimental features aren't supported and may have bugs.</span></span>
+<span data-ttu-id="df5a6-188">Флаги экспериментальных функций позволяют включать функции, которые пока не являются окончательными.</span><span class="sxs-lookup"><span data-stu-id="df5a6-188">Experimental feature flags enable users to turn on features that haven't been finalized.</span></span>
+<span data-ttu-id="df5a6-189">Эти экспериментальные функции не поддерживаются и могут содержать ошибки.</span><span class="sxs-lookup"><span data-stu-id="df5a6-189">These experimental features aren't supported and may have bugs.</span></span>
 
-<span data-ttu-id="36f34-190">Дополнительные сведения об этой функции см. в [PowerShell RFC0029](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md).</span><span class="sxs-lookup"><span data-stu-id="36f34-190">You can learn more about this feature in [PowerShell RFC0029](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md).</span></span>
+<span data-ttu-id="df5a6-190">Дополнительные сведения об этой функции см. в [PowerShell RFC0029](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md).</span><span class="sxs-lookup"><span data-stu-id="df5a6-190">You can learn more about this feature in [PowerShell RFC0029](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md).</span></span>
 
-## <a name="web-cmdlet-improvements"></a><span data-ttu-id="36f34-191">Усовершенствования веб-командлетов</span><span class="sxs-lookup"><span data-stu-id="36f34-191">Web cmdlet improvements</span></span>
+## <a name="web-cmdlet-improvements"></a><span data-ttu-id="df5a6-191">Усовершенствования веб-командлетов</span><span class="sxs-lookup"><span data-stu-id="df5a6-191">Web cmdlet improvements</span></span>
 
-<span data-ttu-id="36f34-192">Выражаем благодарность [@markekraus](https://github.com/markekraus) за улучшения, внесенные в веб-командлеты: [`Invoke-WebRequest`](/powershell/module/microsoft.powershell.utility/invoke-webrequest)</span><span class="sxs-lookup"><span data-stu-id="36f34-192">Thanks to [@markekraus](https://github.com/markekraus), a whole slew of improvements have been made to our web cmdlets: [`Invoke-WebRequest`](/powershell/module/microsoft.powershell.utility/invoke-webrequest)</span></span>
-<span data-ttu-id="36f34-193">и [`Invoke-RestMethod`](/powershell/module/microsoft.powershell.utility/invoke-restmethod).</span><span class="sxs-lookup"><span data-stu-id="36f34-193">and [`Invoke-RestMethod`](/powershell/module/microsoft.powershell.utility/invoke-restmethod).</span></span>
+<span data-ttu-id="df5a6-192">Выражаем благодарность [@markekraus](https://github.com/markekraus) за улучшения, внесенные в веб-командлеты: [`Invoke-WebRequest`](/powershell/module/microsoft.powershell.utility/invoke-webrequest)</span><span class="sxs-lookup"><span data-stu-id="df5a6-192">Thanks to [@markekraus](https://github.com/markekraus), a whole slew of improvements have been made to our web cmdlets: [`Invoke-WebRequest`](/powershell/module/microsoft.powershell.utility/invoke-webrequest)</span></span>
+<span data-ttu-id="df5a6-193">и [`Invoke-RestMethod`](/powershell/module/microsoft.powershell.utility/invoke-restmethod).</span><span class="sxs-lookup"><span data-stu-id="df5a6-193">and [`Invoke-RestMethod`](/powershell/module/microsoft.powershell.utility/invoke-restmethod).</span></span>
 
-- <span data-ttu-id="36f34-194">[PR #6109](https://github.com/PowerShell/PowerShell/pull/6109) — по умолчанию задана кодировка UTF-8 для ответов `application-json`</span><span class="sxs-lookup"><span data-stu-id="36f34-194">[PR #6109](https://github.com/PowerShell/PowerShell/pull/6109) - default encoding set to UTF-8 for `application-json` responses</span></span>
-- <span data-ttu-id="36f34-195">[PR #6018](https://github.com/PowerShell/PowerShell/pull/6018) -  — параметр `-SkipHeaderValidation`, позволяющий использовать заголовки `Content-Type`, которые не соответствуют стандартам</span><span class="sxs-lookup"><span data-stu-id="36f34-195">[PR #6018](https://github.com/PowerShell/PowerShell/pull/6018) - `-SkipHeaderValidation` parameter to allow `Content-Type` headers that aren't standards-compliant</span></span>
-- <span data-ttu-id="36f34-196">[PR #5972](https://github.com/PowerShell/PowerShell/pull/5972) -  — параметр `Form` для упрощенной поддержки `multipart/form-data`</span><span class="sxs-lookup"><span data-stu-id="36f34-196">[PR #5972](https://github.com/PowerShell/PowerShell/pull/5972) - `Form` parameter to support simplified `multipart/form-data` support</span></span>
-- <span data-ttu-id="36f34-197">[PR #6338](https://github.com/PowerShell/PowerShell/pull/6338) — соответствующая, не учитывающая регистр обработка ключей отношения</span><span class="sxs-lookup"><span data-stu-id="36f34-197">[PR #6338](https://github.com/PowerShell/PowerShell/pull/6338) - Compliant, case-insensitive handling of relation keys</span></span>
-- <span data-ttu-id="36f34-198">[PR #6447](https://github.com/PowerShell/PowerShell/pull/6447) — добавление параметра `-Resume` для веб-командлетов</span><span class="sxs-lookup"><span data-stu-id="36f34-198">[PR #6447](https://github.com/PowerShell/PowerShell/pull/6447) - Add `-Resume` parameter for web cmdlets</span></span>
+- <span data-ttu-id="df5a6-194">[PR #6109](https://github.com/PowerShell/PowerShell/pull/6109) — по умолчанию задана кодировка UTF-8 для ответов `application-json`</span><span class="sxs-lookup"><span data-stu-id="df5a6-194">[PR #6109](https://github.com/PowerShell/PowerShell/pull/6109) - default encoding set to UTF-8 for `application-json` responses</span></span>
+- <span data-ttu-id="df5a6-195">[PR #6018](https://github.com/PowerShell/PowerShell/pull/6018) -  — параметр `-SkipHeaderValidation`, позволяющий использовать заголовки `Content-Type`, которые не соответствуют стандартам</span><span class="sxs-lookup"><span data-stu-id="df5a6-195">[PR #6018](https://github.com/PowerShell/PowerShell/pull/6018) - `-SkipHeaderValidation` parameter to allow `Content-Type` headers that aren't standards-compliant</span></span>
+- <span data-ttu-id="df5a6-196">[PR #5972](https://github.com/PowerShell/PowerShell/pull/5972) -  — параметр `Form` для упрощенной поддержки `multipart/form-data`</span><span class="sxs-lookup"><span data-stu-id="df5a6-196">[PR #5972](https://github.com/PowerShell/PowerShell/pull/5972) - `Form` parameter to support simplified `multipart/form-data` support</span></span>
+- <span data-ttu-id="df5a6-197">[PR #6338](https://github.com/PowerShell/PowerShell/pull/6338) — соответствующая, не учитывающая регистр обработка ключей отношения</span><span class="sxs-lookup"><span data-stu-id="df5a6-197">[PR #6338](https://github.com/PowerShell/PowerShell/pull/6338) - Compliant, case-insensitive handling of relation keys</span></span>
+- <span data-ttu-id="df5a6-198">[PR #6447](https://github.com/PowerShell/PowerShell/pull/6447) — добавление параметра `-Resume` для веб-командлетов</span><span class="sxs-lookup"><span data-stu-id="df5a6-198">[PR #6447](https://github.com/PowerShell/PowerShell/pull/6447) - Add `-Resume` parameter for web cmdlets</span></span>
 
-## <a name="remoting-improvements"></a><span data-ttu-id="36f34-199">Усовершенствования удаленного взаимодействия</span><span class="sxs-lookup"><span data-stu-id="36f34-199">Remoting improvements</span></span>
+## <a name="remoting-improvements"></a><span data-ttu-id="df5a6-199">Усовершенствования удаленного взаимодействия</span><span class="sxs-lookup"><span data-stu-id="df5a6-199">Remoting improvements</span></span>
 
-### <a name="powershell-direct-for-containers-tries-to-use-powershell-core-first"></a><span data-ttu-id="36f34-200">PowerShell Direct для контейнеров сначала пытается использовать PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="36f34-200">PowerShell Direct for Containers tries to use PowerShell Core first</span></span>
+### <a name="powershell-direct-for-containers-tries-to-use-powershell-core-first"></a><span data-ttu-id="df5a6-200">PowerShell Direct для контейнеров сначала пытается использовать PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="df5a6-200">PowerShell Direct for Containers tries to use PowerShell Core first</span></span>
 
-<span data-ttu-id="36f34-201">[PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) входит в состав PowerShell и Hyper-V и позволяет подключаться к виртуальной машине Hyper-V или контейнеру без сетевого соединения или других служб удаленного управления PowerShell.</span><span class="sxs-lookup"><span data-stu-id="36f34-201">[PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) is a feature of PowerShell and Hyper-V that allows you to connect to a Hyper-V VM or Container without network connectivity or other remote management services.</span></span>
+<span data-ttu-id="df5a6-201">[PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) входит в состав PowerShell и Hyper-V и позволяет подключаться к виртуальной машине Hyper-V или контейнеру без сетевого соединения или других служб удаленного управления PowerShell.</span><span class="sxs-lookup"><span data-stu-id="df5a6-201">[PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) is a feature of PowerShell and Hyper-V that allows you to connect to a Hyper-V VM or Container without network connectivity or other remote management services.</span></span>
 
-<span data-ttu-id="36f34-202">В прошлом для подключения PowerShell Direct использовался готовый экземпляр Windows PowerShell в контейнере.</span><span class="sxs-lookup"><span data-stu-id="36f34-202">In the past, PowerShell Direct connected using the inbox Windows PowerShell instance on the Container.</span></span>
-<span data-ttu-id="36f34-203">Теперь PowerShell Direct сначала пытается подключиться с помощью любого доступного `pwsh.exe` в переменной среды`PATH`.</span><span class="sxs-lookup"><span data-stu-id="36f34-203">Now, PowerShell Direct first attempts to connect using any available `pwsh.exe` on the `PATH` environment variable.</span></span>
-<span data-ttu-id="36f34-204">Если `pwsh.exe` недоступен, PowerShell Direct переключается на использование `powershell.exe`.</span><span class="sxs-lookup"><span data-stu-id="36f34-204">If `pwsh.exe` isn't available, PowerShell Direct falls back to use `powershell.exe`.</span></span>
+<span data-ttu-id="df5a6-202">В прошлом для подключения PowerShell Direct использовался готовый экземпляр Windows PowerShell в контейнере.</span><span class="sxs-lookup"><span data-stu-id="df5a6-202">In the past, PowerShell Direct connected using the inbox Windows PowerShell instance on the Container.</span></span>
+<span data-ttu-id="df5a6-203">Теперь PowerShell Direct сначала пытается подключиться с помощью любого доступного `pwsh.exe` в переменной среды`PATH`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-203">Now, PowerShell Direct first attempts to connect using any available `pwsh.exe` on the `PATH` environment variable.</span></span>
+<span data-ttu-id="df5a6-204">Если `pwsh.exe` недоступен, PowerShell Direct переключается на использование `powershell.exe`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-204">If `pwsh.exe` isn't available, PowerShell Direct falls back to use `powershell.exe`.</span></span>
 
-### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a><span data-ttu-id="36f34-205">`Enable-PSRemoting` теперь создает отдельные конечные точки удаленного взаимодействия для предварительных версий</span><span class="sxs-lookup"><span data-stu-id="36f34-205">`Enable-PSRemoting` now creates separate remoting endpoints for preview versions</span></span>
+### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a><span data-ttu-id="df5a6-205">`Enable-PSRemoting` теперь создает отдельные конечные точки удаленного взаимодействия для предварительных версий</span><span class="sxs-lookup"><span data-stu-id="df5a6-205">`Enable-PSRemoting` now creates separate remoting endpoints for preview versions</span></span>
 
-<span data-ttu-id="36f34-206">`Enable-PSRemoting` теперь создает две конфигурации сеанса удаленного взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="36f34-206">`Enable-PSRemoting` now creates two remoting session configurations:</span></span>
+`Enable-PSRemoting` <span data-ttu-id="df5a6-206">теперь создает две конфигурации сеанса удаленного взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="df5a6-206">now creates two remoting session configurations:</span></span>
 
-- <span data-ttu-id="36f34-207">Одна для основного номера версии PowerShell.</span><span class="sxs-lookup"><span data-stu-id="36f34-207">One for the major version of PowerShell.</span></span> <span data-ttu-id="36f34-208">Например, `PowerShell.6`.</span><span class="sxs-lookup"><span data-stu-id="36f34-208">For example, `PowerShell.6`.</span></span> <span data-ttu-id="36f34-209">Эта конечная точка может быть основной в обновлениях дополнительного номера версии как конфигурация сеанса PowerShell 6 на уровне системы.</span><span class="sxs-lookup"><span data-stu-id="36f34-209">This endpoint that can be relied upon across minor version updates as the "system-wide" PowerShell 6 session configuration</span></span>
-- <span data-ttu-id="36f34-210">Одна конфигурация сеанса для конкретной версии, например: `PowerShell.6.1.0`</span><span class="sxs-lookup"><span data-stu-id="36f34-210">One version-specific session configuration, for example: `PowerShell.6.1.0`</span></span>
+- <span data-ttu-id="df5a6-207">Одна для основного номера версии PowerShell.</span><span class="sxs-lookup"><span data-stu-id="df5a6-207">One for the major version of PowerShell.</span></span> <span data-ttu-id="df5a6-208">Например, `PowerShell.6`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-208">For example, `PowerShell.6`.</span></span> <span data-ttu-id="df5a6-209">Эта конечная точка может быть основной в обновлениях дополнительного номера версии как конфигурация сеанса PowerShell 6 на уровне системы.</span><span class="sxs-lookup"><span data-stu-id="df5a6-209">This endpoint that can be relied upon across minor version updates as the "system-wide" PowerShell 6 session configuration</span></span>
+- <span data-ttu-id="df5a6-210">Одна конфигурация сеанса для конкретной версии, например</span><span class="sxs-lookup"><span data-stu-id="df5a6-210">One version-specific session configuration, for example:</span></span> `PowerShell.6.1.0`
 
-<span data-ttu-id="36f34-211">Это полезно, если вы хотите, чтобы на одном компьютере было установлено и доступно несколько версий PowerShell 6.</span><span class="sxs-lookup"><span data-stu-id="36f34-211">This behavior is useful if you want to have multiple PowerShell 6 versions installed and accessible on the same machine.</span></span>
+<span data-ttu-id="df5a6-211">Это полезно, если вы хотите, чтобы на одном компьютере было установлено и доступно несколько версий PowerShell 6.</span><span class="sxs-lookup"><span data-stu-id="df5a6-211">This behavior is useful if you want to have multiple PowerShell 6 versions installed and accessible on the same machine.</span></span>
 
-<span data-ttu-id="36f34-212">Кроме того, теперь в предварительных версиях PowerShell доступны собственные конфигурации сеанса удаленного взаимодействия после выполнения командлета `Enable-PSRemoting`.</span><span class="sxs-lookup"><span data-stu-id="36f34-212">Additionally, preview versions of PowerShell now get their own remoting session configurations after running the `Enable-PSRemoting` cmdlet:</span></span>
+<span data-ttu-id="df5a6-212">Кроме того, теперь в предварительных версиях PowerShell доступны собственные конфигурации сеанса удаленного взаимодействия после выполнения командлета `Enable-PSRemoting`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-212">Additionally, preview versions of PowerShell now get their own remoting session configurations after running the `Enable-PSRemoting` cmdlet:</span></span>
 
 ```powershell
 C:\WINDOWS\system32> Enable-PSRemoting
 ```
 
-<span data-ttu-id="36f34-213">Если вы еще не настроили WinRM, выходные данные могут отличаться.</span><span class="sxs-lookup"><span data-stu-id="36f34-213">Your output may be different if you haven't set up WinRM before.</span></span>
+<span data-ttu-id="df5a6-213">Если вы еще не настроили WinRM, выходные данные могут отличаться.</span><span class="sxs-lookup"><span data-stu-id="df5a6-213">Your output may be different if you haven't set up WinRM before.</span></span>
 
 ```Output
 WinRM is already set up to receive requests on this computer.
 WinRM is already set up for remote management on this computer.
 ```
 
-<span data-ttu-id="36f34-214">Затем вы увидите отдельные конфигурации сеанса PowerShell для предварительных и стабильных сборок PowerShell 6, а также для каждой конкретной версии.</span><span class="sxs-lookup"><span data-stu-id="36f34-214">Then you can see separate PowerShell session configurations for the preview and stable builds of PowerShell 6, and for each specific version.</span></span>
+<span data-ttu-id="df5a6-214">Затем вы увидите отдельные конфигурации сеанса PowerShell для предварительных и стабильных сборок PowerShell 6, а также для каждой конкретной версии.</span><span class="sxs-lookup"><span data-stu-id="df5a6-214">Then you can see separate PowerShell session configurations for the preview and stable builds of PowerShell 6, and for each specific version.</span></span>
 
 ```powershell
 Get-PSSessionConfiguration
@@ -259,28 +259,28 @@ RunAsUser     :
 Permission    : NT AUTHORITY\INTERACTIVE AccessAllowed, BUILTIN\Administrators AccessAllowed, BUILTIN\Remote Management Users AccessAllowed
 ```
 
-### <a name="userhostport-syntax-supported-for-ssh"></a><span data-ttu-id="36f34-215">Синтаксис `user@host:port`, поддерживаемый для SSH</span><span class="sxs-lookup"><span data-stu-id="36f34-215">`user@host:port` syntax supported for SSH</span></span>
+### <a name="userhostport-syntax-supported-for-ssh"></a><span data-ttu-id="df5a6-215">Синтаксис `user@host:port`, поддерживаемый для SSH</span><span class="sxs-lookup"><span data-stu-id="df5a6-215">`user@host:port` syntax supported for SSH</span></span>
 
-<span data-ttu-id="36f34-216">SSH-клиенты обычно поддерживают строки подключения в формате `user@host:port`.</span><span class="sxs-lookup"><span data-stu-id="36f34-216">SSH clients typically support a connection string in the format `user@host:port`.</span></span>
-<span data-ttu-id="36f34-217">С появлением SSH как протокола для удаленного взаимодействия PowerShell мы добавили поддержку этого формата строки подключения.</span><span class="sxs-lookup"><span data-stu-id="36f34-217">With the addition of SSH as a protocol for PowerShell Remoting, we've added support for this format of connection string:</span></span>
+<span data-ttu-id="df5a6-216">SSH-клиенты обычно поддерживают строки подключения в формате `user@host:port`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-216">SSH clients typically support a connection string in the format `user@host:port`.</span></span>
+<span data-ttu-id="df5a6-217">С появлением SSH как протокола для удаленного взаимодействия PowerShell мы добавили поддержку этого формата строки подключения.</span><span class="sxs-lookup"><span data-stu-id="df5a6-217">With the addition of SSH as a protocol for PowerShell Remoting, we've added support for this format of connection string:</span></span>
 
 `Enter-PSSession -HostName fooUser@ssh.contoso.com:2222`
 
-## <a name="msi-option-to-add-explorer-shell-context-menu-on-windows"></a><span data-ttu-id="36f34-218">Параметр MSI для добавления контекстного меню оболочки Проводника в Windows</span><span class="sxs-lookup"><span data-stu-id="36f34-218">MSI option to add explorer shell context menu on Windows</span></span>
+## <a name="msi-option-to-add-explorer-shell-context-menu-on-windows"></a><span data-ttu-id="df5a6-218">Параметр MSI для добавления контекстного меню оболочки Проводника в Windows</span><span class="sxs-lookup"><span data-stu-id="df5a6-218">MSI option to add explorer shell context menu on Windows</span></span>
 
-<span data-ttu-id="36f34-219">Выражаем благодарность [@bergmeister](https://github.com/bergmeister), так как теперь можно включать контекстное меню в Windows.</span><span class="sxs-lookup"><span data-stu-id="36f34-219">Thanks to [@bergmeister](https://github.com/bergmeister), now you can enable a context menu on Windows.</span></span> <span data-ttu-id="36f34-220">Вы можете открыть системную установку PowerShell 6.1 из любой папки в Проводнике Windows.</span><span class="sxs-lookup"><span data-stu-id="36f34-220">Now you can open your system-wide installation of PowerShell 6.1 from any folder in the Windows Explorer:</span></span>
+<span data-ttu-id="df5a6-219">Выражаем благодарность [@bergmeister](https://github.com/bergmeister), так как теперь можно включать контекстное меню в Windows.</span><span class="sxs-lookup"><span data-stu-id="df5a6-219">Thanks to [@bergmeister](https://github.com/bergmeister), now you can enable a context menu on Windows.</span></span> <span data-ttu-id="df5a6-220">Вы можете открыть системную установку PowerShell 6.1 из любой папки в Проводнике Windows.</span><span class="sxs-lookup"><span data-stu-id="df5a6-220">Now you can open your system-wide installation of PowerShell 6.1 from any folder in the Windows Explorer:</span></span>
 
 ![Контекстное меню оболочки для PowerShell 6](./images/shell_context_menu.png)
 
-## <a name="goodies"></a><span data-ttu-id="36f34-222">Полезные возможности</span><span class="sxs-lookup"><span data-stu-id="36f34-222">Goodies</span></span>
+## <a name="goodies"></a><span data-ttu-id="df5a6-222">Полезные возможности</span><span class="sxs-lookup"><span data-stu-id="df5a6-222">Goodies</span></span>
 
-### <a name="run-as-administrator-in-the-windows-shortcut-jump-list"></a><span data-ttu-id="36f34-223">"Запуск от имени администратора" в списке переходов в Windows</span><span class="sxs-lookup"><span data-stu-id="36f34-223">"Run as Administrator" in the Windows shortcut jump list</span></span>
+### <a name="run-as-administrator-in-the-windows-shortcut-jump-list"></a><span data-ttu-id="df5a6-223">"Запуск от имени администратора" в списке переходов в Windows</span><span class="sxs-lookup"><span data-stu-id="df5a6-223">"Run as Administrator" in the Windows shortcut jump list</span></span>
 
-<span data-ttu-id="36f34-224">Выражаем благодарность [@bergmeister](https://github.com/bergmeister), так как теперь список переходов ярлыка PowerShell Core содержит возможность "Запуск от имени администратора".</span><span class="sxs-lookup"><span data-stu-id="36f34-224">Thanks to [@bergmeister](https://github.com/bergmeister), the PowerShell Core shortcut's jump list now includes "Run as Administrator":</span></span>
+<span data-ttu-id="df5a6-224">Выражаем благодарность [@bergmeister](https://github.com/bergmeister), так как теперь список переходов ярлыка PowerShell Core содержит возможность "Запуск от имени администратора".</span><span class="sxs-lookup"><span data-stu-id="df5a6-224">Thanks to [@bergmeister](https://github.com/bergmeister), the PowerShell Core shortcut's jump list now includes "Run as Administrator":</span></span>
 
 !["Запуск от имени администратора" в списке переходов PowerShell 6](./images/jumplist.png)
 
-### <a name="cd---returns-to-previous-directory"></a><span data-ttu-id="36f34-226">`cd -` возвращается в предыдущий каталог</span><span class="sxs-lookup"><span data-stu-id="36f34-226">`cd -` returns to previous directory</span></span>
+### <a name="cd---returns-to-previous-directory"></a><span data-ttu-id="df5a6-226">`cd -` возвращается в предыдущий каталог</span><span class="sxs-lookup"><span data-stu-id="df5a6-226">`cd -` returns to previous directory</span></span>
 
 ```powershell
 C:\Windows\System32> cd C:\
@@ -288,7 +288,7 @@ C:\> cd -
 C:\Windows\System32>
 ```
 
-<span data-ttu-id="36f34-227">Или в Linux</span><span class="sxs-lookup"><span data-stu-id="36f34-227">Or on Linux:</span></span>
+<span data-ttu-id="df5a6-227">Или в Linux</span><span class="sxs-lookup"><span data-stu-id="df5a6-227">Or on Linux:</span></span>
 
 ```ShellSession
 PS /etc> cd /usr/bin
@@ -296,21 +296,21 @@ PS /usr/bin> cd -
 PS /etc>
 ```
 
-<span data-ttu-id="36f34-228">Кроме того, `cd` и `cd --` изменяются на `$HOME`.</span><span class="sxs-lookup"><span data-stu-id="36f34-228">Also, `cd` and `cd --` change to `$HOME`.</span></span>
+<span data-ttu-id="df5a6-228">Кроме того, `cd` и `cd --` изменяются на `$HOME`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-228">Also, `cd` and `cd --` change to `$HOME`.</span></span>
 
 ### `Test-Connection`
 
-<span data-ttu-id="36f34-229">Выражаем благодарность [@iSazonov](https://github.com/iSazonov) за перенос командлета [`Test-Connection`](/powershell/module/microsoft.powershell.management/test-connection) в PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="36f34-229">Thanks to [@iSazonov](https://github.com/iSazonov), the [`Test-Connection`](/powershell/module/microsoft.powershell.management/test-connection) cmdlet has been ported to PowerShell Core.</span></span>
+<span data-ttu-id="df5a6-229">Выражаем благодарность [@iSazonov](https://github.com/iSazonov) за перенос командлета [`Test-Connection`](/powershell/module/microsoft.powershell.management/test-connection) в PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="df5a6-229">Thanks to [@iSazonov](https://github.com/iSazonov), the [`Test-Connection`](/powershell/module/microsoft.powershell.management/test-connection) cmdlet has been ported to PowerShell Core.</span></span>
 
-### <a name="update-help-as-non-admin"></a><span data-ttu-id="36f34-230">Запуск `Update-Help` без прав администратора</span><span class="sxs-lookup"><span data-stu-id="36f34-230">`Update-Help` as non-admin</span></span>
+### <a name="update-help-as-non-admin"></a><span data-ttu-id="df5a6-230">Запуск `Update-Help` без прав администратора</span><span class="sxs-lookup"><span data-stu-id="df5a6-230">`Update-Help` as non-admin</span></span>
 
-<span data-ttu-id="36f34-231">По многочисленным просьбам `Update-Help` больше не требуется запускать от имени администратора.</span><span class="sxs-lookup"><span data-stu-id="36f34-231">By popular demand, `Update-Help` no longer needs to be run as an administrator.</span></span>
-<span data-ttu-id="36f34-232">Теперь `Update-Help` по умолчанию сохраняет справку в папку пользователя.</span><span class="sxs-lookup"><span data-stu-id="36f34-232">`Update-Help` now defaults to saving help to a user-scoped folder.</span></span>
+<span data-ttu-id="df5a6-231">По многочисленным просьбам `Update-Help` больше не требуется запускать от имени администратора.</span><span class="sxs-lookup"><span data-stu-id="df5a6-231">By popular demand, `Update-Help` no longer needs to be run as an administrator.</span></span>
+`Update-Help` <span data-ttu-id="df5a6-232">теперь по умолчанию сохраняет справку в папку пользователя.</span><span class="sxs-lookup"><span data-stu-id="df5a6-232">now defaults to saving help to a user-scoped folder.</span></span>
 
-### <a name="new-methodsproperties-on-pscustomobject"></a><span data-ttu-id="36f34-233">Новые методы и свойства в `PSCustomObject`</span><span class="sxs-lookup"><span data-stu-id="36f34-233">New methods/properties on `PSCustomObject`</span></span>
+### <a name="new-methodsproperties-on-pscustomobject"></a><span data-ttu-id="df5a6-233">Новые методы и свойства в `PSCustomObject`</span><span class="sxs-lookup"><span data-stu-id="df5a6-233">New methods/properties on `PSCustomObject`</span></span>
 
-<span data-ttu-id="36f34-234">Благодаря [@iSazonov](https://github.com/iSazonov) мы добавили новые методы и свойства в `PSCustomObject`.</span><span class="sxs-lookup"><span data-stu-id="36f34-234">Thanks to [@iSazonov](https://github.com/iSazonov), we've added new methods and properties to `PSCustomObject`.</span></span>
-<span data-ttu-id="36f34-235">`PSCustomObject` теперь включает свойство `Count`/`Length`, как и другие объекты.</span><span class="sxs-lookup"><span data-stu-id="36f34-235">`PSCustomObject` now includes a `Count`/`Length` property like other objects.</span></span>
+<span data-ttu-id="df5a6-234">Благодаря [@iSazonov](https://github.com/iSazonov) мы добавили новые методы и свойства в `PSCustomObject`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-234">Thanks to [@iSazonov](https://github.com/iSazonov), we've added new methods and properties to `PSCustomObject`.</span></span>
+`PSCustomObject` <span data-ttu-id="df5a6-235">теперь включает свойство `Count`/`Length`, как и другие объекты.</span><span class="sxs-lookup"><span data-stu-id="df5a6-235">now includes a `Count`/`Length` property like other objects.</span></span>
 
 ```powershell
 $PSCustomObject = [pscustomobject]@{foo = 1}
@@ -330,7 +330,7 @@ $PSCustomObject.Count
 1
 ```
 
-<span data-ttu-id="36f34-236">Здесь также используются методы `ForEach` и `Where` методы, которые позволяют работать с элементами `PSCustomObject` и фильтровать их.</span><span class="sxs-lookup"><span data-stu-id="36f34-236">This work also includes `ForEach` and `Where` methods that allow you to operate and filter on `PSCustomObject` items:</span></span>
+<span data-ttu-id="df5a6-236">Здесь также используются методы `ForEach` и `Where` методы, которые позволяют работать с элементами `PSCustomObject` и фильтровать их.</span><span class="sxs-lookup"><span data-stu-id="df5a6-236">This work also includes `ForEach` and `Where` methods that allow you to operate and filter on `PSCustomObject` items:</span></span>
 
 ```powershell
 $PSCustomObject.ForEach({$_.foo + 1})
@@ -352,23 +352,23 @@ foo
 
 ### `Where-Object -Not`
 
-<span data-ttu-id="36f34-237">Благодаря @SimonWahlin мы добавили параметр `-Not` в `Where-Object`.</span><span class="sxs-lookup"><span data-stu-id="36f34-237">Thanks to @SimonWahlin, we've added the `-Not` parameter to `Where-Object`.</span></span>
-<span data-ttu-id="36f34-238">Теперь вы можете отфильтровать объект в конвейере для получения отсутствия свойства или нулевого и пустого значения свойства.</span><span class="sxs-lookup"><span data-stu-id="36f34-238">Now you can filter an object at the pipeline for the non-existence of a property, or a null/empty property value.</span></span>
+<span data-ttu-id="df5a6-237">Благодаря @SimonWahlin мы добавили параметр `-Not` в `Where-Object`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-237">Thanks to @SimonWahlin, we've added the `-Not` parameter to `Where-Object`.</span></span>
+<span data-ttu-id="df5a6-238">Теперь вы можете отфильтровать объект в конвейере для получения отсутствия свойства или нулевого и пустого значения свойства.</span><span class="sxs-lookup"><span data-stu-id="df5a6-238">Now you can filter an object at the pipeline for the non-existence of a property, or a null/empty property value.</span></span>
 
-<span data-ttu-id="36f34-239">Например, эта команда возвращает все службы, у которых нет зависимых служб.</span><span class="sxs-lookup"><span data-stu-id="36f34-239">For example, this command returns all services that don't have any dependent services defined:</span></span>
+<span data-ttu-id="df5a6-239">Например, эта команда возвращает все службы, у которых нет зависимых служб.</span><span class="sxs-lookup"><span data-stu-id="df5a6-239">For example, this command returns all services that don't have any dependent services defined:</span></span>
 
 ```powershell
 Get-Service | Where-Object -Not DependentServices
 ```
 
-### <a name="new-modulemanifest-creates-a-bom-less-utf-8-document"></a><span data-ttu-id="36f34-240">`New-ModuleManifest` создает документ в UTF-8 без BOM</span><span class="sxs-lookup"><span data-stu-id="36f34-240">`New-ModuleManifest` creates a BOM-less UTF-8 document</span></span>
+### <a name="new-modulemanifest-creates-a-bom-less-utf-8-document"></a><span data-ttu-id="df5a6-240">`New-ModuleManifest` создает документ в UTF-8 без BOM</span><span class="sxs-lookup"><span data-stu-id="df5a6-240">`New-ModuleManifest` creates a BOM-less UTF-8 document</span></span>
 
-<span data-ttu-id="36f34-241">Учитывая наш переход на UTF-8 без BOM в PowerShell 6.0, мы обновили командлет `New-ModuleManifest`, чтобы вместо документа в UTF-16 создавать документ в UTF-8 без BOM.</span><span class="sxs-lookup"><span data-stu-id="36f34-241">Given our move to BOM-less UTF-8 in PowerShell 6.0, we've updated the `New-ModuleManifest` cmdlet to create a BOM-less UTF-8 document instead of a UTF-16 one.</span></span>
+<span data-ttu-id="df5a6-241">Учитывая наш переход на UTF-8 без BOM в PowerShell 6.0, мы обновили командлет `New-ModuleManifest`, чтобы вместо документа в UTF-16 создавать документ в UTF-8 без BOM.</span><span class="sxs-lookup"><span data-stu-id="df5a6-241">Given our move to BOM-less UTF-8 in PowerShell 6.0, we've updated the `New-ModuleManifest` cmdlet to create a BOM-less UTF-8 document instead of a UTF-16 one.</span></span>
 
-### <a name="conversions-from-psmethod-to-delegate"></a><span data-ttu-id="36f34-242">Преобразования из PSMethod в делегат</span><span class="sxs-lookup"><span data-stu-id="36f34-242">Conversions from PSMethod to Delegate</span></span>
+### <a name="conversions-from-psmethod-to-delegate"></a><span data-ttu-id="df5a6-242">Преобразования из PSMethod в делегат</span><span class="sxs-lookup"><span data-stu-id="df5a6-242">Conversions from PSMethod to Delegate</span></span>
 
-<span data-ttu-id="36f34-243">Выражаем благодарность [@powercode](https://github.com/powercode), так как теперь поддерживается преобразование `PSMethod` в делегат.</span><span class="sxs-lookup"><span data-stu-id="36f34-243">Thanks to [@powercode](https://github.com/powercode), we now support the conversion of a `PSMethod` into a delegate.</span></span>
-<span data-ttu-id="36f34-244">Это позволяет выполнять такие действия, как передача `PSMethod` `[M]::DoubleStrLen` в виде значения делегата в `[M]::AggregateString`.</span><span class="sxs-lookup"><span data-stu-id="36f34-244">This allows you to do things like passing `PSMethod` `[M]::DoubleStrLen` as a delegate value into `[M]::AggregateString`:</span></span>
+<span data-ttu-id="df5a6-243">Выражаем благодарность [@powercode](https://github.com/powercode), так как теперь поддерживается преобразование `PSMethod` в делегат.</span><span class="sxs-lookup"><span data-stu-id="df5a6-243">Thanks to [@powercode](https://github.com/powercode), we now support the conversion of a `PSMethod` into a delegate.</span></span>
+<span data-ttu-id="df5a6-244">Это позволяет выполнять такие действия, как передача `PSMethod` `[M]::DoubleStrLen` в виде значения делегата в `[M]::AggregateString`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-244">This allows you to do things like passing `PSMethod` `[M]::DoubleStrLen` as a delegate value into `[M]::AggregateString`:</span></span>
 
 ```powershell
 class M {
@@ -386,11 +386,11 @@ class M {
 [M]::AggregateString((gci).Name, [M]::DoubleStrLen)
 ```
 
-<span data-ttu-id="36f34-245">Дополнительные сведения об этом изменении см. в [PR #5287](https://github.com/PowerShell/PowerShell/pull/5287).</span><span class="sxs-lookup"><span data-stu-id="36f34-245">For more info on this change, check out [PR #5287](https://github.com/PowerShell/PowerShell/pull/5287).</span></span>
+<span data-ttu-id="df5a6-245">Дополнительные сведения об этом изменении см. в [PR #5287](https://github.com/PowerShell/PowerShell/pull/5287).</span><span class="sxs-lookup"><span data-stu-id="df5a6-245">For more info on this change, check out [PR #5287](https://github.com/PowerShell/PowerShell/pull/5287).</span></span>
 
-### <a name="standard-deviation-in-measure-object"></a><span data-ttu-id="36f34-246">Стандартное отклонение в `Measure-Object`</span><span class="sxs-lookup"><span data-stu-id="36f34-246">Standard deviation in `Measure-Object`</span></span>
+### <a name="standard-deviation-in-measure-object"></a><span data-ttu-id="df5a6-246">Стандартное отклонение в `Measure-Object`</span><span class="sxs-lookup"><span data-stu-id="df5a6-246">Standard deviation in `Measure-Object`</span></span>
 
-<span data-ttu-id="36f34-247">Благодаря [@CloudyDino](https://github.com/CloudyDino) мы добавили свойство `StandardDeviation` в `Measure-Object`.</span><span class="sxs-lookup"><span data-stu-id="36f34-247">Thanks to [@CloudyDino](https://github.com/CloudyDino), we've added a `StandardDeviation` property to `Measure-Object`:</span></span>
+<span data-ttu-id="df5a6-247">Благодаря [@CloudyDino](https://github.com/CloudyDino) мы добавили свойство `StandardDeviation` в `Measure-Object`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-247">Thanks to [@CloudyDino](https://github.com/CloudyDino), we've added a `StandardDeviation` property to `Measure-Object`:</span></span>
 
 ```powershell
 Get-Process | Measure-Object -Property CPU -AllStats
@@ -408,7 +408,7 @@ Property          : CPU
 
 ### `GetPfxCertificate -Password`
 
-<span data-ttu-id="36f34-248">Выражаем благодарность [@maybe-hello-world](https://github.com/maybe-hello-world), так как `Get-PfxCertificate` теперь имеет `Password` параметр, который принимает `SecureString`.</span><span class="sxs-lookup"><span data-stu-id="36f34-248">Thanks to [@maybe-hello-world](https://github.com/maybe-hello-world), `Get-PfxCertificate` now has the `Password` parameter, which takes a `SecureString`.</span></span> <span data-ttu-id="36f34-249">Это позволяет вам использовать его не интерактивно.</span><span class="sxs-lookup"><span data-stu-id="36f34-249">This allows you to use it non-interactively:</span></span>
+<span data-ttu-id="df5a6-248">Выражаем благодарность [@maybe-hello-world](https://github.com/maybe-hello-world), так как `Get-PfxCertificate` теперь имеет `Password` параметр, который принимает `SecureString`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-248">Thanks to [@maybe-hello-world](https://github.com/maybe-hello-world), `Get-PfxCertificate` now has the `Password` parameter, which takes a `SecureString`.</span></span> <span data-ttu-id="df5a6-249">Это позволяет вам использовать его не интерактивно.</span><span class="sxs-lookup"><span data-stu-id="df5a6-249">This allows you to use it non-interactively:</span></span>
 
 ```powershell
 $certFile = '\\server\share\pwd-protected.pfx'
@@ -417,40 +417,40 @@ $certPass = Read-Host -AsSecureString -Prompt 'Enter the password for certificat
 $certThumbPrint = (Get-PfxCertificate -FilePath $certFile -Password $certPass ).ThumbPrint
 ```
 
-### <a name="removal-of-the-more-function"></a><span data-ttu-id="36f34-250">Удаление функции `more`</span><span class="sxs-lookup"><span data-stu-id="36f34-250">Removal of the `more` function</span></span>
+### <a name="removal-of-the-more-function"></a><span data-ttu-id="df5a6-250">Удаление функции `more`</span><span class="sxs-lookup"><span data-stu-id="df5a6-250">Removal of the `more` function</span></span>
 
-<span data-ttu-id="36f34-251">Раньше в состав PowerShell входила функция Windows `more`, которая упаковывала `more.com`.</span><span class="sxs-lookup"><span data-stu-id="36f34-251">In the past, PowerShell shipped a function on Windows called `more` that wrapped `more.com`.</span></span>
-<span data-ttu-id="36f34-252">Сейчас эта функция удалена.</span><span class="sxs-lookup"><span data-stu-id="36f34-252">That function has now been removed.</span></span>
+<span data-ttu-id="df5a6-251">Раньше в состав PowerShell входила функция Windows `more`, которая упаковывала `more.com`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-251">In the past, PowerShell shipped a function on Windows called `more` that wrapped `more.com`.</span></span>
+<span data-ttu-id="df5a6-252">Сейчас эта функция удалена.</span><span class="sxs-lookup"><span data-stu-id="df5a6-252">That function has now been removed.</span></span>
 
-<span data-ttu-id="36f34-253">Кроме того, функция `help` изменена для использования `more.com` в Windows или пейджер системы по умолчанию, определяемый `$env:PAGER` на платформах, отличных от Windows.</span><span class="sxs-lookup"><span data-stu-id="36f34-253">Also, the `help` function changed to use `more.com` on Windows, or the system's default pager specified by `$env:PAGER` on non-Windows platforms.</span></span>
+<span data-ttu-id="df5a6-253">Кроме того, функция `help` теперь использует команду `more.com` в Windows или системную команду просмотра по умолчанию, определяемую `$env:PAGER`, на других платформах.</span><span class="sxs-lookup"><span data-stu-id="df5a6-253">Also, the `help` function changed to use `more.com` on Windows, or the system's default pager specified by `$env:PAGER` on non-Windows platforms.</span></span>
 
-### <a name="cd-drivename-now-returns-users-to-the-current-working-directory-in-that-drive"></a><span data-ttu-id="36f34-254">Теперь `cd DriveName:` возвращает пользователей в текущий рабочий каталог на этом диске</span><span class="sxs-lookup"><span data-stu-id="36f34-254">`cd DriveName:` now returns users to the current working directory in that drive</span></span>
+### <a name="cd-drivename-now-returns-users-to-the-current-working-directory-in-that-drive"></a><span data-ttu-id="df5a6-254">Теперь `cd DriveName:` возвращает пользователей в текущий рабочий каталог на этом диске</span><span class="sxs-lookup"><span data-stu-id="df5a6-254">`cd DriveName:` now returns users to the current working directory in that drive</span></span>
 
-<span data-ttu-id="36f34-255">Раньше при использовании `Set-Location` или `cd` для возврата на PSDrive пользователи отправлялись в расположение по умолчанию для этого диска.</span><span class="sxs-lookup"><span data-stu-id="36f34-255">Previously, using `Set-Location` or `cd` to return to a PSDrive sent users to the default location for that drive.</span></span>
+<span data-ttu-id="df5a6-255">Раньше при использовании `Set-Location` или `cd` для возврата на PSDrive пользователи отправлялись в расположение по умолчанию для этого диска.</span><span class="sxs-lookup"><span data-stu-id="df5a6-255">Previously, using `Set-Location` or `cd` to return to a PSDrive sent users to the default location for that drive.</span></span>
 
-<span data-ttu-id="36f34-256">Выражаем благодарность [@mcbobke](https://github.com/mcbobke), так как теперь пользователи отправляются в последний известный текущий рабочий каталог для данного сеанса.</span><span class="sxs-lookup"><span data-stu-id="36f34-256">Thanks to [@mcbobke](https://github.com/mcbobke), users are now sent to the last known current working directory for that session.</span></span>
+<span data-ttu-id="df5a6-256">Выражаем благодарность [@mcbobke](https://github.com/mcbobke), так как теперь пользователи отправляются в последний известный текущий рабочий каталог для данного сеанса.</span><span class="sxs-lookup"><span data-stu-id="df5a6-256">Thanks to [@mcbobke](https://github.com/mcbobke), users are now sent to the last known current working directory for that session.</span></span>
 
-### <a name="windows-powershell-type-accelerators"></a><span data-ttu-id="36f34-257">Ускорители типов Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="36f34-257">Windows PowerShell type accelerators</span></span>
+### <a name="windows-powershell-type-accelerators"></a><span data-ttu-id="df5a6-257">Ускорители типов Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="df5a6-257">Windows PowerShell type accelerators</span></span>
 
-<span data-ttu-id="36f34-258">Мы включили в Windows PowerShell следующие ускорители типов для упрощения работы с их соответствующими типами.</span><span class="sxs-lookup"><span data-stu-id="36f34-258">In Windows PowerShell, we included the following type accelerators to make it easier to work with their respective types:</span></span>
+<span data-ttu-id="df5a6-258">Мы включили в Windows PowerShell следующие ускорители типов для упрощения работы с их соответствующими типами.</span><span class="sxs-lookup"><span data-stu-id="df5a6-258">In Windows PowerShell, we included the following type accelerators to make it easier to work with their respective types:</span></span>
 
-- <span data-ttu-id="36f34-259">`[adsi]`: `System.DirectoryServices.DirectoryEntry`</span><span class="sxs-lookup"><span data-stu-id="36f34-259">`[adsi]`: `System.DirectoryServices.DirectoryEntry`</span></span>
-- <span data-ttu-id="36f34-260">`[adsisearcher]`: `System.DirectoryServices.DirectorySearcher`</span><span class="sxs-lookup"><span data-stu-id="36f34-260">`[adsisearcher]`: `System.DirectoryServices.DirectorySearcher`</span></span>
-- <span data-ttu-id="36f34-261">`[wmi]`: `System.Management.ManagementObject`</span><span class="sxs-lookup"><span data-stu-id="36f34-261">`[wmi]`: `System.Management.ManagementObject`</span></span>
-- <span data-ttu-id="36f34-262">`[wmiclass]`: `System.Management.ManagementClass`</span><span class="sxs-lookup"><span data-stu-id="36f34-262">`[wmiclass]`: `System.Management.ManagementClass`</span></span>
-- <span data-ttu-id="36f34-263">`[wmisearcher]`: `System.Management.ManagementObjectSearcher`</span><span class="sxs-lookup"><span data-stu-id="36f34-263">`[wmisearcher]`: `System.Management.ManagementObjectSearcher`</span></span>
+- `[adsi]`<span data-ttu-id="df5a6-259">.</span><span class="sxs-lookup"><span data-stu-id="df5a6-259">:</span></span> `System.DirectoryServices.DirectoryEntry`
+- `[adsisearcher]`<span data-ttu-id="df5a6-260">.</span><span class="sxs-lookup"><span data-stu-id="df5a6-260">:</span></span> `System.DirectoryServices.DirectorySearcher`
+- `[wmi]`<span data-ttu-id="df5a6-261">.</span><span class="sxs-lookup"><span data-stu-id="df5a6-261">:</span></span> `System.Management.ManagementObject`
+- `[wmiclass]`<span data-ttu-id="df5a6-262">.</span><span class="sxs-lookup"><span data-stu-id="df5a6-262">:</span></span> `System.Management.ManagementClass`
+- `[wmisearcher]`<span data-ttu-id="df5a6-263">.</span><span class="sxs-lookup"><span data-stu-id="df5a6-263">:</span></span> `System.Management.ManagementObjectSearcher`
 
-<span data-ttu-id="36f34-264">Эти ускорители не были включены в PowerShell 6, но были добавлены в PowerShell 6.1 в Windows.</span><span class="sxs-lookup"><span data-stu-id="36f34-264">These type accelerators were not included in PowerShell 6, but have been added to PowerShell 6.1 running on Windows.</span></span>
+<span data-ttu-id="df5a6-264">Эти ускорители не были включены в PowerShell 6, но были добавлены в PowerShell 6.1 в Windows.</span><span class="sxs-lookup"><span data-stu-id="df5a6-264">These type accelerators were not included in PowerShell 6, but have been added to PowerShell 6.1 running on Windows.</span></span>
 
-<span data-ttu-id="36f34-265">Эти типы полезны при создании объектов AD и WMI.</span><span class="sxs-lookup"><span data-stu-id="36f34-265">These types are useful in easily constructing AD and WMI objects.</span></span>
+<span data-ttu-id="df5a6-265">Эти типы полезны при создании объектов AD и WMI.</span><span class="sxs-lookup"><span data-stu-id="df5a6-265">These types are useful in easily constructing AD and WMI objects.</span></span>
 
-<span data-ttu-id="36f34-266">Например, можно выполнить запрос с помощью LDAP.</span><span class="sxs-lookup"><span data-stu-id="36f34-266">For example, you can query using LDAP:</span></span>
+<span data-ttu-id="df5a6-266">Например, можно выполнить запрос с помощью LDAP.</span><span class="sxs-lookup"><span data-stu-id="df5a6-266">For example, you can query using LDAP:</span></span>
 
 ```powershell
 [adsi]'LDAP://CN=FooUse,OU=People,DC=contoso,DC=com'
 ```
 
-<span data-ttu-id="36f34-267">В следующем примере создается объект CIM Win32_OperatingSystem.</span><span class="sxs-lookup"><span data-stu-id="36f34-267">Following example creates a Win32_OperatingSystem CIM object:</span></span>
+<span data-ttu-id="df5a6-267">В следующем примере создается объект CIM Win32_OperatingSystem.</span><span class="sxs-lookup"><span data-stu-id="df5a6-267">Following example creates a Win32_OperatingSystem CIM object:</span></span>
 
 ```powershell
 [wmi]"Win32_OperatingSystem=@"
@@ -465,7 +465,7 @@ SerialNumber    : 12345-67890-ABCDE-F0123
 Version         : 10.0.18234
 ```
 
-<span data-ttu-id="36f34-268">Этот пример возвращает объект ManagementClass для класса Win32_OperatingSystem.</span><span class="sxs-lookup"><span data-stu-id="36f34-268">This example returns a ManagementClass object for Win32_OperatingSystem class.</span></span>
+<span data-ttu-id="df5a6-268">Этот пример возвращает объект ManagementClass для класса Win32_OperatingSystem.</span><span class="sxs-lookup"><span data-stu-id="df5a6-268">This example returns a ManagementClass object for Win32_OperatingSystem class.</span></span>
 
 ```powershell
 [wmiclass]"Win32_OperatingSystem"
@@ -479,40 +479,47 @@ Name                                Methods              Properties
 Win32_OperatingSystem               {Reboot, Shutdown... {BootDevice, BuildNumber, BuildType, Caption...}
 ```
 
-### <a name="-lp-alias-for-all--literalpath-parameters"></a><span data-ttu-id="36f34-269">Псевдоним `-lp` для всех параметров `-LiteralPath`</span><span class="sxs-lookup"><span data-stu-id="36f34-269">`-lp` alias for all `-LiteralPath` parameters</span></span>
+### <a name="-lp-alias-for-all--literalpath-parameters"></a><span data-ttu-id="df5a6-269">Псевдоним `-lp` для всех параметров `-LiteralPath`</span><span class="sxs-lookup"><span data-stu-id="df5a6-269">`-lp` alias for all `-LiteralPath` parameters</span></span>
 
-<span data-ttu-id="36f34-270">Выражаем благодарность [@kvprasoon](https://github.com/kvprasoon), так как теперь у нас есть псевдоним параметра `-lp` для всех встроенных командлетов PowerShell, у которых есть параметр `-LiteralPath`.</span><span class="sxs-lookup"><span data-stu-id="36f34-270">Thanks to [@kvprasoon](https://github.com/kvprasoon), we now have a parameter alias `-lp` for all the built-in PowerShell cmdlets that have a `-LiteralPath` parameter.</span></span>
+<span data-ttu-id="df5a6-270">Выражаем благодарность [@kvprasoon](https://github.com/kvprasoon), так как теперь у нас есть псевдоним параметра `-lp` для всех встроенных командлетов PowerShell, у которых есть параметр `-LiteralPath`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-270">Thanks to [@kvprasoon](https://github.com/kvprasoon), we now have a parameter alias `-lp` for all the built-in PowerShell cmdlets that have a `-LiteralPath` parameter.</span></span>
 
-## <a name="breaking-changes"></a><span data-ttu-id="36f34-271">Критические изменения</span><span class="sxs-lookup"><span data-stu-id="36f34-271">Breaking Changes</span></span>
+## <a name="breaking-changes"></a><span data-ttu-id="df5a6-271">Критические изменения</span><span class="sxs-lookup"><span data-stu-id="df5a6-271">Breaking Changes</span></span>
 
-### <a name="msi-based-installation-paths-on-windows"></a><span data-ttu-id="36f34-272">Пути установки на основе MSI в Windows</span><span class="sxs-lookup"><span data-stu-id="36f34-272">MSI-based installation paths on Windows</span></span>
+### <a name="msi-based-installation-paths-on-windows"></a><span data-ttu-id="df5a6-272">Пути установки на основе MSI в Windows</span><span class="sxs-lookup"><span data-stu-id="df5a6-272">MSI-based installation paths on Windows</span></span>
 
-<span data-ttu-id="36f34-273">Теперь в Windows пакет MSI устанавливается по следующему пути:</span><span class="sxs-lookup"><span data-stu-id="36f34-273">On Windows, the MSI package now installs to the following path:</span></span>
+<span data-ttu-id="df5a6-273">Теперь в Windows пакет MSI устанавливается по следующему пути:</span><span class="sxs-lookup"><span data-stu-id="df5a6-273">On Windows, the MSI package now installs to the following path:</span></span>
 
-- <span data-ttu-id="36f34-274">`$env:ProgramFiles\PowerShell\6\` для стабильной установки версии 6.x;</span><span class="sxs-lookup"><span data-stu-id="36f34-274">`$env:ProgramFiles\PowerShell\6\` for the stable installation of 6.x</span></span>
-- <span data-ttu-id="36f34-275">`$env:ProgramFiles\PowerShell\6-preview\` для установки предварительной версии 6.x.</span><span class="sxs-lookup"><span data-stu-id="36f34-275">`$env:ProgramFiles\PowerShell\6-preview\` for the preview installation of 6.x</span></span>
+- `$env:ProgramFiles\PowerShell\6\` <span data-ttu-id="df5a6-274">для стабильной установки версии 6.x;</span><span class="sxs-lookup"><span data-stu-id="df5a6-274">for the stable installation of 6.x</span></span>
+- `$env:ProgramFiles\PowerShell\6-preview\` <span data-ttu-id="df5a6-275">для установки предварительной версии 6.x.</span><span class="sxs-lookup"><span data-stu-id="df5a6-275">for the preview installation of 6.x</span></span>
 
-<span data-ttu-id="36f34-276">Это изменение гарантирует, что PowerShell Core можно обновлять и обслуживать с помощью Центра обновления Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="36f34-276">This change ensures that PowerShell Core can be updated/serviced by Microsoft Update.</span></span>
+<span data-ttu-id="df5a6-276">Это изменение гарантирует, что PowerShell Core можно обновлять и обслуживать с помощью Центра обновления Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="df5a6-276">This change ensures that PowerShell Core can be updated/serviced by Microsoft Update.</span></span>
 
-<span data-ttu-id="36f34-277">Дополнительные сведения см. в [PowerShell RFC0026](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0026-MSI-Installation-Path.md).</span><span class="sxs-lookup"><span data-stu-id="36f34-277">For more information, check out [PowerShell RFC0026](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0026-MSI-Installation-Path.md).</span></span>
+<span data-ttu-id="df5a6-277">Дополнительные сведения см. в [PowerShell RFC0026](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0026-MSI-Installation-Path.md).</span><span class="sxs-lookup"><span data-stu-id="df5a6-277">For more information, check out [PowerShell RFC0026](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0026-MSI-Installation-Path.md).</span></span>
 
-### <a name="telemetry-can-only-be-disabled-with-an-environment-variable"></a><span data-ttu-id="36f34-278">Данные телеметрии можно отключить только с помощью переменной среды</span><span class="sxs-lookup"><span data-stu-id="36f34-278">Telemetry can only be disabled with an environment variable</span></span>
+### <a name="telemetry-can-only-be-disabled-with-an-environment-variable"></a><span data-ttu-id="df5a6-278">Данные телеметрии можно отключить только с помощью переменной среды</span><span class="sxs-lookup"><span data-stu-id="df5a6-278">Telemetry can only be disabled with an environment variable</span></span>
 
-<span data-ttu-id="36f34-279">PowerShell Core отправляет основные данные телеметрии в корпорацию Майкрософт при запуске.</span><span class="sxs-lookup"><span data-stu-id="36f34-279">PowerShell Core sends basic telemetry data to Microsoft when it is launched.</span></span> <span data-ttu-id="36f34-280">В эти данные входят имя ОС, версия ОС и версия PowerShell.</span><span class="sxs-lookup"><span data-stu-id="36f34-280">The data includes the OS name, OS version, and PowerShell version.</span></span> <span data-ttu-id="36f34-281">Они позволяют нам лучше понимать среды, где используется PowerShell, а также приоритизировать новые функции и исправления.</span><span class="sxs-lookup"><span data-stu-id="36f34-281">This data allows us to better understand the environments where PowerShell is used and enables us to prioritize new features and fixes.</span></span>
+<span data-ttu-id="df5a6-279">PowerShell Core отправляет основные данные телеметрии в корпорацию Майкрософт при запуске.</span><span class="sxs-lookup"><span data-stu-id="df5a6-279">PowerShell Core sends basic telemetry data to Microsoft when it is launched.</span></span> <span data-ttu-id="df5a6-280">В эти данные входят имя ОС, версия ОС и версия PowerShell.</span><span class="sxs-lookup"><span data-stu-id="df5a6-280">The data includes the OS name, OS version, and PowerShell version.</span></span> <span data-ttu-id="df5a6-281">Они позволяют нам лучше понимать среды, где используется PowerShell, а также приоритизировать новые функции и исправления.</span><span class="sxs-lookup"><span data-stu-id="df5a6-281">This data allows us to better understand the environments where PowerShell is used and enables us to prioritize new features and fixes.</span></span>
 
-<span data-ttu-id="36f34-282">Чтобы отказаться от использования данных телеметрии, задайте для переменной среды `POWERSHELL_TELEMETRY_OPTOUT` значение `true`, `yes` или `1`.</span><span class="sxs-lookup"><span data-stu-id="36f34-282">To opt-out of this telemetry, set the environment variable `POWERSHELL_TELEMETRY_OPTOUT` to `true`, `yes`, or `1`.</span></span> <span data-ttu-id="36f34-283">Мы больше не поддерживаем удаление файла `DELETE_ME_TO_DISABLE_CONSOLEHOST_TELEMETRY` для отключения телеметрии.</span><span class="sxs-lookup"><span data-stu-id="36f34-283">We no longer support deletion of the file `DELETE_ME_TO_DISABLE_CONSOLEHOST_TELEMETRY` to disable telemetry.</span></span>
+<span data-ttu-id="df5a6-282">Чтобы отказаться от использования данных телеметрии, задайте для переменной среды `POWERSHELL_TELEMETRY_OPTOUT` значение `true`, `yes` или `1`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-282">To opt-out of this telemetry, set the environment variable `POWERSHELL_TELEMETRY_OPTOUT` to `true`, `yes`, or `1`.</span></span> <span data-ttu-id="df5a6-283">Мы больше не поддерживаем удаление файла `DELETE_ME_TO_DISABLE_CONSOLEHOST_TELEMETRY` для отключения телеметрии.</span><span class="sxs-lookup"><span data-stu-id="df5a6-283">We no longer support deletion of the file `DELETE_ME_TO_DISABLE_CONSOLEHOST_TELEMETRY` to disable telemetry.</span></span>
 
-### <a name="disallowed-basic-auth-over-http-in-powershell-remoting-on-unix-platforms"></a><span data-ttu-id="36f34-284">В системе удаленного взаимодействия PowerShell на платформах Unix запрещена обычная проверка подлинности по протоколу HTTP</span><span class="sxs-lookup"><span data-stu-id="36f34-284">Disallowed Basic Auth over HTTP in PowerShell Remoting on Unix platforms</span></span>
+### <a name="disallowed-basic-auth-over-http-in-powershell-remoting-on-unix-platforms"></a><span data-ttu-id="df5a6-284">В системе удаленного взаимодействия PowerShell на платформах Unix запрещена обычная проверка подлинности по протоколу HTTP</span><span class="sxs-lookup"><span data-stu-id="df5a6-284">Disallowed Basic Auth over HTTP in PowerShell Remoting on Unix platforms</span></span>
 
-<span data-ttu-id="36f34-285">Чтобы исключить использование незашифрованного трафика, теперь для удаленного взаимодействия PowerShell на платформах Unix требуется использование NTLM или Negotiate либо HTTPS.</span><span class="sxs-lookup"><span data-stu-id="36f34-285">To prevent the use of unencrypted traffic, PowerShell Remoting on Unix platforms now requires usage of NTLM/Negotiate or HTTPS.</span></span>
+<span data-ttu-id="df5a6-285">Чтобы исключить использование незашифрованного трафика, теперь для удаленного взаимодействия PowerShell на платформах Unix требуется использование NTLM или Negotiate либо HTTPS.</span><span class="sxs-lookup"><span data-stu-id="df5a6-285">To prevent the use of unencrypted traffic, PowerShell Remoting on Unix platforms now requires usage of NTLM/Negotiate or HTTPS.</span></span>
 
-<span data-ttu-id="36f34-286">Дополнительные сведения об этих изменениях см. в статье [Проблема № 6779](https://github.com/PowerShell/PowerShell/issues/6779).</span><span class="sxs-lookup"><span data-stu-id="36f34-286">For more information on these changes, check out [Issue #6779](https://github.com/PowerShell/PowerShell/issues/6779).</span></span>
+<span data-ttu-id="df5a6-286">Дополнительные сведения об этих изменениях см. в статье [Проблема № 6779](https://github.com/PowerShell/PowerShell/issues/6779).</span><span class="sxs-lookup"><span data-stu-id="df5a6-286">For more information on these changes, check out [Issue #6779](https://github.com/PowerShell/PowerShell/issues/6779).</span></span>
 
-### <a name="removed-visualbasic-as-a-supported-language-in-add-type"></a><span data-ttu-id="36f34-287">Удален `VisualBasic` как поддерживаемый язык в Add-Type</span><span class="sxs-lookup"><span data-stu-id="36f34-287">Removed `VisualBasic` as a supported language in Add-Type</span></span>
+### <a name="removed-visualbasic-as-a-supported-language-in-add-type"></a><span data-ttu-id="df5a6-287">Удален `VisualBasic` как поддерживаемый язык в Add-Type</span><span class="sxs-lookup"><span data-stu-id="df5a6-287">Removed `VisualBasic` as a supported language in Add-Type</span></span>
 
-<span data-ttu-id="36f34-288">Раньше для компиляции кода Visual Basic использовался командлет `Add-Type`.</span><span class="sxs-lookup"><span data-stu-id="36f34-288">In the past, you could compile Visual Basic code using the `Add-Type` cmdlet.</span></span>
-<span data-ttu-id="36f34-289">Visual Basic редко использовался с `Add-Type`.</span><span class="sxs-lookup"><span data-stu-id="36f34-289">Visual Basic was rarely used with `Add-Type`.</span></span> <span data-ttu-id="36f34-290">Мы удалили эту функцию, чтобы уменьшить размер PowerShell.</span><span class="sxs-lookup"><span data-stu-id="36f34-290">We removed this feature to reduce the size of PowerShell.</span></span>
+<span data-ttu-id="df5a6-288">Раньше для компиляции кода Visual Basic использовался командлет `Add-Type`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-288">In the past, you could compile Visual Basic code using the `Add-Type` cmdlet.</span></span>
+<span data-ttu-id="df5a6-289">Visual Basic редко использовался с `Add-Type`.</span><span class="sxs-lookup"><span data-stu-id="df5a6-289">Visual Basic was rarely used with `Add-Type`.</span></span> <span data-ttu-id="df5a6-290">Мы удалили эту функцию, чтобы уменьшить размер PowerShell.</span><span class="sxs-lookup"><span data-stu-id="df5a6-290">We removed this feature to reduce the size of PowerShell.</span></span>
 
-### <a name="cleaned-up-uses-of-commandtypesworkflow-and-workflowinfocleaned"></a><span data-ttu-id="36f34-291">Отменено использование `CommandTypes.Workflow` и `WorkflowInfoCleaned`</span><span class="sxs-lookup"><span data-stu-id="36f34-291">Cleaned up uses of `CommandTypes.Workflow` and `WorkflowInfoCleaned`</span></span>
+### <a name="cleaned-up-uses-of-commandtypesworkflow-and-workflowinfocleaned"></a><span data-ttu-id="df5a6-291">Отменено использование `CommandTypes.Workflow` и `WorkflowInfoCleaned`</span><span class="sxs-lookup"><span data-stu-id="df5a6-291">Cleaned up uses of `CommandTypes.Workflow` and `WorkflowInfoCleaned`</span></span>
 
-<span data-ttu-id="36f34-292">Дополнительные сведения об этих изменениях см. в статье [PR #6708](https://github.com/PowerShell/PowerShell/pull/6708).</span><span class="sxs-lookup"><span data-stu-id="36f34-292">For more information on these changes, check out [PR #6708](https://github.com/PowerShell/PowerShell/pull/6708).</span></span>
+<span data-ttu-id="df5a6-292">Дополнительные сведения об этих изменениях см. в статье [PR #6708](https://github.com/PowerShell/PowerShell/pull/6708).</span><span class="sxs-lookup"><span data-stu-id="df5a6-292">For more information on these changes, check out [PR #6708](https://github.com/PowerShell/PowerShell/pull/6708).</span></span>
+
+### <a name="group-object-now-sorts-the-groups"></a><span data-ttu-id="df5a6-293">Командлет Group-Object теперь умеет сортировать группы</span><span class="sxs-lookup"><span data-stu-id="df5a6-293">Group-Object now sorts the groups</span></span>
+
+<span data-ttu-id="df5a6-294">В рамках оптимизации производительности `Group-Object` возвращает отсортированный список групп.</span><span class="sxs-lookup"><span data-stu-id="df5a6-294">As part of the performance improvement, `Group-Object` now returns a sorted listing of the groups.</span></span>
+<span data-ttu-id="df5a6-295">При этом порядок может быть произвольным, и может оказаться, что это не то, что вам нужно, если вам потребуется первая группа.</span><span class="sxs-lookup"><span data-stu-id="df5a6-295">Although you should not rely on the order, you could be broken by this change if you wanted the first group.</span></span> <span data-ttu-id="df5a6-296">Мы решили, что это изменение стоит реализовать из-за роста производительности и незначительной зависимости от прежнего поведения командлета.</span><span class="sxs-lookup"><span data-stu-id="df5a6-296">We decided that this performance improvement was worth the change since the impact of being dependent on previous behavior is low.</span></span>
+
+<span data-ttu-id="df5a6-297">Дополнительные сведения об этом изменении см. в разделе [проблема № 7409](https://github.com/PowerShell/PowerShell/issues/7409).</span><span class="sxs-lookup"><span data-stu-id="df5a6-297">For more information on this change, see [Issue #7409](https://github.com/PowerShell/PowerShell/issues/7409).</span></span>
