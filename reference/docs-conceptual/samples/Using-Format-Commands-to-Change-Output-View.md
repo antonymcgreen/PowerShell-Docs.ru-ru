@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Использование команд Format для изменения представления вывода
 ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05
-ms.openlocfilehash: 35ccd2525d40ffd5e3f25a1abfa38904a109bde5
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: fba37b1d0479bf605d8f2171da27cd1bceb9976e
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320427"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293050"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Использование команд Format для изменения представления вывода
 
@@ -29,25 +29,34 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 
 Оставшаяся часть этого раздела посвящена ознакомлению с тем, как использовать командлеты **Format** для изменения способа отображения выходных данных команды.
 
-### <a name="using-format-wide-for-single-item-output"></a>Применение командлета Format-Wide для вывода с одним элементом
+## <a name="using-format-wide-for-single-item-output"></a>Применение командлета Format-Wide для вывода с одним элементом
 
-По умолчанию командлет **Format-Wide** отображает только свойство по умолчанию для объекта. Данные, связанные с каждым объектом, отображаются в одном столбце:
+По умолчанию командлет `Format-Wide` отображает только свойство по умолчанию для объекта.
+Данные, связанные с каждым объектом, отображаются в одном столбце:
 
+```powershell
+Get-Command -Verb Format | Format-Wide
 ```
-PS> Get-Process -Name powershell | Format-Wide
 
-powershell                              powershell
+```output
+Format-Custom                          Format-Hex
+Format-List                            Format-Table
+Format-Wide
 ```
 
 Можно также задать свойство, отличное от используемого по умолчанию:
 
-```
-PS> Get-Process -Name powershell | Format-Wide -Property Id
-
-2760                                    3448
+```powershell
+Get-Command -Verb Format | Format-Wide -Property Noun
 ```
 
-#### <a name="controlling-format-wide-display-with-column"></a>Настройка отображения командлета Format-Wide с помощью параметра Column
+```output
+Custom                                 Hex
+List                                   Table
+Wide
+```
+
+### <a name="controlling-format-wide-display-with-column"></a>Настройка отображения командлета Format-Wide с помощью параметра Column
 
 С помощью командлета `Format-Wide` одновременно можно отобразить только одно свойство.
 Это может быть полезным при отображении простых списков, у которых в каждой строке отображается только один элемент.
@@ -65,7 +74,7 @@ Table
 Wide
 ```
 
-### <a name="using-format-list-for-a-list-view"></a>Использование командлета Format-List для представления в виде списка
+## <a name="using-format-list-for-a-list-view"></a>Использование командлета Format-List для представления в виде списка
 
 Командлет **Format-List** показывает объект в виде списка, в котором каждое свойство имеет метку и отображается в отдельной строке:
 
@@ -100,7 +109,7 @@ StartTime   : 2006-05-24 13:54:28
 Id          : 3448
 ```
 
-#### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>Получение подробных сведений с помощью подстановочных знаков в командлете Format-List
+### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>Получение подробных сведений с помощью подстановочных знаков в командлете Format-List
 
 Командлет **Format-List** позволяет использовать подстановочные знаки в качестве значения параметра **Property**. Это дает возможность отображать подробные сведения. Часто объекты содержат больше информации, чем необходимо. Поэтому Windows PowerShell по умолчанию выводит значения не всех свойств. Чтобы вывести список всех свойств объекта, используйте команду **Format-List -Property \&#42;**. Следующая команда формирует более 60 строк выходных данных для одного процесса:
 
@@ -110,7 +119,7 @@ Get-Process -Name powershell | Format-List -Property *
 
 Хотя команда **Format-List** и полезна для вывода подробных сведений, для получения сведений, содержащих много элементов, обычно удобнее использовать упрощенное табличное представление.
 
-### <a name="using-format-table-for-tabular-output"></a>Применение командлета Format-Table для табличного вывода
+## <a name="using-format-table-for-tabular-output"></a>Применение командлета Format-Table для табличного вывода
 
 Если использовать командлет **Format-Table** без указания имен свойств для форматирования вывода команды **Get-Process**, будут получены точно такие же выходные данные, что и без использования форматирования. Это вызвано тем, что процессы обычно показываются в виде таблицы, как и большинство объектов Windows PowerShell.
 
@@ -123,7 +132,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
     332       9    23140        632   141     1.06   3448 powershell
 ```
 
-#### <a name="improving-format-table-output-autosize"></a>Улучшение вывода командлета Format-Table (параметр AutoSize)
+### <a name="improving-format-table-output-autosize"></a>Улучшение вывода командлета Format-Table (параметр AutoSize)
 
 Хотя табличное представление и полезно при выводе большого количества сведений для сравнения, интерпретация данных может вызвать затруднения, если экран слишком узок и не вмещает все данные. Например, если отобразить путь процесса, идентификатор, имя и организацию, данные в столбцах пути процесса и организации окажутся обрезанными:
 
@@ -173,7 +182,7 @@ Microsoft Corporation C:\Program Files\Windows PowerShell\v1.0\powershell.exe 6
 
 В приведенных выше входных данных столбец идентификатора обрезан, чтобы его значение уместилось в списке, а заголовки столбцов расположены вертикально. Автоматическое изменение размера столбцов не всегда дает желаемый результат.
 
-#### <a name="wrapping-format-table-output-in-columns-wrap"></a>Перенос на следующую строку вывода командлета Format-Table в столбцах (параметр Wrap)
+### <a name="wrapping-format-table-output-in-columns-wrap"></a>Перенос на следующую строку вывода командлета Format-Table в столбцах (параметр Wrap)
 
 Длинные данные командлета **Format-Table** можно принудительно перенести на следующую строку в пределах столбца с помощью параметра **Wrap**. Использование параметра **Wrap** в отдельности не всегда приводит к ожидаемому результату, так как если не указан еще и параметр **AutoSize**, применяются параметры по умолчанию:
 
@@ -216,7 +225,7 @@ C:\Program Files\Windows PowerShell\v1.0\powershell.exe 2836 Microsoft Corporat
                                                              ion
 ```
 
-#### <a name="organizing-table-output--groupby"></a>Организация табличного вывода (параметр -GroupBy)
+### <a name="organizing-table-output--groupby"></a>Организация табличного вывода (параметр -GroupBy)
 
 Другим полезным параметром управления табличным выводом является **GroupBy**. Длинные табличные списки особенно тяжелы для сравнения. Параметр **GroupBy** группирует выходные данные в соответствии со значением свойства. Например, можно сгруппировать процессы по организации для упрощения проверки, исключая название организации из списка свойства:
 

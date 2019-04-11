@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Прямое управление элементами
 ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: 5f5b6cf4a777229029743b9d9967030effc58215
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 4caa7d2e0eecff9783556062d8503fe10e616fe5
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680426"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293271"
 ---
 # <a name="manipulating-items-directly"></a>Прямое управление элементами
 
@@ -32,7 +32,7 @@ Cmdlet          Rename-Item                     Rename-Item [-Path] <String>...
 Cmdlet          Set-Item                        Set-Item [-Path] <String[]> ...
 ```
 
-### <a name="creating-new-items-new-item"></a>Создание новых элементов (New-Item)
+## <a name="creating-new-items-new-item"></a>Создание новых элементов (New-Item)
 
 Чтобы создать элемент в файловой системе, используйте командлет **New-Item**. Включите параметр **Path** с путем к элементу и параметр **ItemType** сo значением file или directory.
 
@@ -75,7 +75,7 @@ SKC  VC Name                           Property
 
 При вводе пути реестра не забудьте добавить двоеточие (**:**) в имена дисков Windows PowerShell — HKLM: и HKCU:. Без двоеточия Windows PowerShell не распознает имена дисков в пути.
 
-### <a name="why-registry-values-are-not-items"></a>Причины, по которым значения реестра не являются элементами
+## <a name="why-registry-values-are-not-items"></a>Причины, по которым значения реестра не являются элементами
 
 При использовании командлета **Get-ChildItem** для поиска элементов в разделе реестра вы не увидите фактических записей реестра или их значений.
 
@@ -93,9 +93,9 @@ SKC  VC Name                           Property
   3   0 OptionalComponents             {}
 ```
 
-Хотя удобнее использовать записи реестра как элементы, невозможно указать путь к записи реестра способом, гарантирующим его уникальность. Нотация пути не различает подраздел реестра с именем **Run** и запись реестра **(Default)** в подразделе **Run**. Кроме того, так как имена записей реестра могут содержать обратную косую черту (**\\**), если записи реестра были элементами, то нотацию пути невозможно использовать для различения записи реестра с именем **Windows\\CurrentVersion\\Run** от подраздела, расположенного по этому пути.
+Хотя удобнее использовать записи реестра как элементы, невозможно указать путь к записи реестра способом, гарантирующим его уникальность. Нотация пути не различает подраздел реестра с именем **Run** и запись реестра **(Default)** в подразделе **Run**. Кроме того, имена записей реестра могут содержать обратную косую черту (**\\**), если записи реестра были элементами. Поэтому нотацию пути невозможно использовать для разграничения записи реестра с именем **Windows\\CurrentVersion\\Run** и подраздела, расположенного по этому пути.
 
-### <a name="renaming-existing-items-rename-item"></a>Переименование существующих элементов (Rename-Item)
+## <a name="renaming-existing-items-rename-item"></a>Переименование существующих элементов (Rename-Item)
 
 Чтобы изменить имя файла или папки, используйте командлет **Rename-Item**. Следующая команда изменяет имя файла **file1.txt** на **fileOne.txt**.
 
@@ -112,7 +112,7 @@ At line:1 char:12
 + Rename-Item  <<<< -Path C:\temp\New.Directory\fileOne c:\temp\fileOne.txt
 ```
 
-### <a name="moving-items-move-item"></a>Перемещение элементов (Move-Item)
+## <a name="moving-items-move-item"></a>Перемещение элементов (Move-Item)
 
 Чтобы переместить файл или папку, используйте командлет **Move-Item**.
 
@@ -128,7 +128,7 @@ Mode                LastWriteTime     Length Name
 d----        2006-05-18  12:14 PM            New.Directory
 ```
 
-### <a name="copying-items-copy-item"></a>Копирование элементов (Copy-Item)
+## <a name="copying-items-copy-item"></a>Копирование элементов (Copy-Item)
 
 Если вы знакомы с операциями копирования в других оболочках, поведение командлета **Copy-Item** в Windows PowerShell может показаться нестандартным. При копировании элемента из одного расположения в другое командлет Copy-Item не копирует его содержимое по умолчанию.
 
@@ -167,7 +167,7 @@ Mode                LastWriteTime     Length Name
 -a---        2006-05-18  11:44 AM          0 file1
 ```
 
-### <a name="deleting-items-remove-item"></a>Удаление элементов (Remove-Item)
+## <a name="deleting-items-remove-item"></a>Удаление элементов (Remove-Item)
 
 Чтобы удалить файлы и папки, используйте командлет **Remove-Item**. Командлеты Windows PowerShell, например **Remove-Item**, которые могут вносить значительные и необратимые изменения, часто будут запрашивать подтверждение при вводе команд. Например, при попытке удалить папку **New.Directory** вам предлагается подтвердить команду, так как папка содержит файлы:
 
@@ -188,7 +188,7 @@ specified. If you continue, all children will be removed with the item. Are you
 Remove-Item C:\temp\New.Directory -Recurse
 ```
 
-### <a name="executing-items-invoke-item"></a>Выполнение элементов (Invoke-Item)
+## <a name="executing-items-invoke-item"></a>Выполнение элементов (Invoke-Item)
 
 Windows PowerShell использует командлет **Invoke-Item** для выполнения действия по умолчанию для файла или папки. Это действие по умолчанию определяется обработчиком приложений по умолчанию в реестре; эффект будет таким же, что и при двойном щелчке элемента в проводнике.
 

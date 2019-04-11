@@ -2,12 +2,12 @@
 title: Установка PowerShell Core в macOS
 description: Сведения об установке PowerShell Core в macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: 91e64cace7d4ed988da56109dde9bf2a80528eb4
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 7db8ca0cb6d13db8ce7f11b4a4b03b7d3f9b6feb
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402560"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293407"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Установка PowerShell Core в macOS
 
@@ -36,7 +36,7 @@ brew cask install powershell
 pwsh
 ```
 
-При выходе новых версий PowerShell, обновите формулы Homebrew и обновить PowerShell:
+После выпуска новых версий PowerShell обновите формулы Homebrew и PowerShell:
 
 ```sh
 brew update
@@ -44,7 +44,7 @@ brew cask upgrade powershell
 ```
 
 > [!NOTE]
-> Приведенные выше команды могут вызываться из узла PowerShell (pwsh), но затем необходимо завершила работу и перезапуска для завершения обновления и обновления значений, приведенных в оболочке PowerShell `$PSVersionTable`.
+> Приведенные выше команды можно вызвать из узла PowerShell (pwsh), но затем потребуется выйти из оболочки PowerShell и перезапустить ее, чтобы завершить обновление и обновить значения в таблице `$PSVersionTable`.
 
 [brew]: http://brew.sh/
 
@@ -52,8 +52,8 @@ brew cask upgrade powershell
 
 См. дополнительные сведения о [Brew](#about-brew).
 
-После установки Homebrew, вы можете установить PowerShell.
-Сначала установите [Cask версии] [ cask-versions] пакет, позволяющий установить альтернативные версии cask пакетов:
+После установки Homebrew можно установить PowerShell.
+Сначала установите пакет [Cask-Versions][cask-versions], который позволит устанавливать альтернативные версии Cask-пакетов.
 
 ```sh
 brew tap homebrew/cask-versions
@@ -71,7 +71,7 @@ brew cask install powershell-preview
 pwsh-preview
 ```
 
-При выходе новых версий PowerShell, обновите формулы Homebrew и обновить PowerShell:
+После выпуска новых версий PowerShell обновите формулы Homebrew и PowerShell:
 
 ```sh
 brew update
@@ -80,17 +80,18 @@ brew cask upgrade powershell-preview
 
 > [!NOTE]
 > Команду, указанную выше, можно вызвать на узле PowerShell (pwsh), но для этого необходимо завершить его обновление. Что в свою очередь будет сделано, когда вы выйдете из PowerShell и перезапустите его.
-> и обновите значения, показанные на `$PSVersionTable`.
+> Обновите значения, которые отображаются в `$PSVersionTable`.
 
 ## <a name="installation-via-direct-download"></a>Установка с помощью прямого скачивания
 
-Скачайте пакет PKG `powershell-6.1.0-osx-x64.pkg`
+Скачайте пакет PKG
+`powershell-6.2.0-osx-x64.pkg`
 со страницы [выпусков][] на компьютер с macOS.
 
 Дважды щелкните файл и следуйте инструкциям на экране либо установите его из командной строки:
 
 ```sh
-sudo installer -pkg powershell-6.1.0-osx-x64.pkg -target /
+sudo installer -pkg powershell-6.2.0-osx-x64.pkg -target /
 ```
 
 Установите [OpenSSL](#install-openssl). OpenSSL требуется для удаленного взаимодействия PowerShell и операций CIM.
@@ -103,19 +104,19 @@ sudo installer -pkg powershell-6.1.0-osx-x64.pkg -target /
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.1.0/powershell-6.1.0-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/6.1.0
+sudo mkdir -p /usr/local/microsoft/powershell/6.2.0
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/6.1.0
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/6.2.0
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/6.1.0/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/6.2.0/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/6.1.0/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/6.2.0/pwsh /usr/local/bin/pwsh
 ```
 
 Установите [OpenSSL](#install-openssl). OpenSSL требуется для удаленного взаимодействия PowerShell и операций CIM.
@@ -136,17 +137,17 @@ OpenSSL требуется для удаленного взаимодейств�
 
 См. дополнительные сведения о [Brew](#about-brew).
 
-Чтобы установить OpenSSL, выполните `brew install openssl`.
+Запустите `brew install openssl`, чтобы установить OpenSSL.
 
 #### <a name="install-openssl-via-macports"></a>Установка OpenSSL с помощью MacPorts
 
-1. Установка [командной строки xcode](#install-xcode-command-line-tools).
+1. Установите [средство командной строки XCode](#install-xcode-command-line-tools).
 1. Установите MacPorts.
-   Если вам нужны инструкции, см. раздел [руководство по установке](https://guide.macports.org/chunked/installing.macports.html).
+   Инструкции см. в [руководстве по установке](https://guide.macports.org/chunked/installing.macports.html).
 1. Обновите MacPorts, выполнив команду `sudo port selfupdate`.
 1. Обновите пакеты MacPorts, выполнив команду `sudo port upgrade outdated`.
-1. Установите OpenSSL, выполнив `sudo port install openssl`.
-1. Привязывать библиотеки, чтобы сделать их доступными для PowerShell:
+1. Установите OpenSSL, запустив `sudo port install openssl`.
+1. Укажите ссылки на библиотеки, чтобы сделать их доступными для PowerShell:
 
 ```sh
 sudo mkdir -p /usr/local/opt/openssl
@@ -167,28 +168,28 @@ brew cask uninstall powershell
 sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 ```
 
-Удалить дополнительные пути PowerShell, см. в статье [пути](#paths) этой статьи и удалить с помощью путей `sudo rm`.
+Чтобы удалить дополнительные пути PowerShell, ознакомьтесь с разделом [Пути](#paths) этой статьи, и удалите их с помощью команды `sudo rm`.
 
 > [!NOTE]
 > Это не требуется в случае установки с помощью Homebrew.
 
 ## <a name="paths"></a>Пути
 
-* `$PSHOME` имеет значение `/usr/local/microsoft/powershell/6.1.0/`.
-* Профили пользователей будут считаны из `~/.config/powershell/profile.ps1`.
-* Профили по умолчанию будут считаны из `$PSHOME/profile.ps1`.
-* Модули пользователей будут считаны из `~/.local/share/powershell/Modules`.
-* Общие модули будут считаны из `/usr/local/share/powershell/Modules`.
-* Модули по умолчанию будут считаны из `$PSHOME/Modules`.
-* Журнал PSReadline будет записан в `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`.
+* `$PSHOME` — это `/usr/local/microsoft/powershell/6.2.0/`
+* Профили пользователей будут считаны из `~/.config/powershell/profile.ps1`
+* Профили по умолчанию будут считаны из `$PSHOME/profile.ps1`
+* Модули пользователей будут считаны из `~/.local/share/powershell/Modules`
+* Общие модули будут считаны из `/usr/local/share/powershell/Modules`
+* Модули по умолчанию будут считаны из `$PSHOME/Modules`
+* Журнал PSReadline будет записан в `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
 
 Профили учитывают конфигурацию PowerShell для отдельных узлов.
-Поэтому профиль конкретных узлов по умолчанию находятся в `Microsoft.PowerShell_profile.ps1` в тех же расположениях.
+Профиль узла по умолчанию находится в `Microsoft.PowerShell_profile.ps1` в тех же расположениях.
 
 PowerShell отвечает требованиям [спецификации каталога размещения файлов, связанных со средой настольной графической среды (X-сервера), стандартизированного XDG (X Desktop Group)][xdg-bds] в macOS.
 
 Так как macOS является развитием BSD, необходимо использовать префикс `/usr/local` вместо `/opt`.
-Таким образом `$PSHOME` — `/usr/local/microsoft/powershell/6.1.0/`, и символьную ссылку, размещаемый в `/usr/local/bin/pwsh`.
+Таким образом, `$PSHOME` имеет значение `/usr/local/microsoft/powershell/6.2.0/`, а символьная ссылка размещается в `/usr/local/bin/pwsh`.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -200,5 +201,5 @@ PowerShell отвечает требованиям [спецификации к�
 [Cask]: https://github.com/Homebrew/homebrew-cask
 [cask-versions]: https://github.com/Homebrew/homebrew-cask-versions
 [GitHub]: https://github.com/Homebrew
-[выпусков]: https://github.com/PowerShell/PowerShell/releases/latest
+[выпуски]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html

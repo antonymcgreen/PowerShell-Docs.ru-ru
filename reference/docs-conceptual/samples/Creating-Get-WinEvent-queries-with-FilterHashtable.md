@@ -1,12 +1,12 @@
 ---
 ms.date: 3/18/2019
 title: Создание запросов Get-WinEvent с помощью FilterHashtable
-ms.openlocfilehash: fae01cc8be5c1805e2aae008e1f21ed387efa325
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: 28ba3c99a297944003a28eaba7de34b77d9df536
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293288"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Создание запросов Get-WinEvent с помощью FilterHashtable
 
@@ -29,12 +29,12 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-### <a name="blog-posts-about-enumeration"></a>Записи блога, посвященные перечислению
+## <a name="blog-posts-about-enumeration"></a>Записи блога, посвященные перечислению
 
 В этой статье представлены сведения о том, как использовать перечисляемые значения в хэш-таблице. Дополнительные сведения о перечислении см. в записях блога **специалистов по сценариям**. Сведения для создания функции, возвращающей перечисляемые значения, см. в [этой записи блога](https://devblogs.microsoft.com/scripting/hey-scripting-guy-weekend-scripter-enumerations-and-values).
 Дополнительные сведения см. в [ряде записей блога специалистов по сценариям, посвященных перечислению](https://devblogs.microsoft.com/scripting/?s=about+enumeration).
 
-### <a name="hash-table-keyvalue-pairs"></a>Пары "ключ — значение" в хэш-таблице
+## <a name="hash-table-keyvalue-pairs"></a>Пары "ключ — значение" в хэш-таблице
 
 Для создания эффективных запросов используйте командлет `Get-WinEvent` с параметром **FilterHashtable**.
 **FilterHashtable** принимает хэш-таблицу в качестве фильтра для получения конкретных сведений из журналов событий Windows. Хэш-таблица использует пары **ключ — значение**. Дополнительные сведения о хэш-таблицах см. [здесь](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
@@ -53,7 +53,7 @@ Get-WinEvent -FilterHashtable @{
 | LogName      | `<String[]>`       | Да |
 | ProviderName | `<String[]>`       | Да |
 | путь         | `<String[]>`       | Нет  |
-| Ключевые слова     | `<Long[]>`         | Нет  |
+| Keywords     | `<Long[]>`         | Нет  |
 | Код           | `<Int32[]>`        | Нет  |
 | Уровень        | `<Int32[]>`        | Нет  |
 | StartTime    | `<DateTime>`       | Нет  |
@@ -62,7 +62,7 @@ Get-WinEvent -FilterHashtable @{
 | Данные         | `<String[]>`       | Нет  |
 | *            | `<String[]>`       | Нет  |
 
-### <a name="building-a-query-with-a-hash-table"></a>Создание запроса с использованием хэш-таблицы
+## <a name="building-a-query-with-a-hash-table"></a>Создание запроса с использованием хэш-таблицы
 
 Для проверки результатов и устранения проблем полезно создавать одну пару **ключ — значение** для хэш-таблицы за раз. Запрос получает данные из журнала **Application**. Хэш-таблица создается в результате запроса `Get-WinEvent –LogName Application`.
 
@@ -89,7 +89,7 @@ Get-WinEvent -FilterHashtable @{
 
 Если запрос должен получить данные из архивных журналов событий, используйте ключ **Path**. Значение **Path** указывает полный путь к файлу журнала. Дополнительные сведения см. в записи блога **специалистов по сценариям** [Use PowerShell to Parse Saved Event Logs for Errors](https://devblogs.microsoft.com/scripting/use-powershell-to-parse-saved-event-logs-for-errors) (Анализ сохраненных журналов событий на наличие ошибок с помощью PowerShell).
 
-### <a name="using-enumerated-values-in-a-hash-table"></a>Использование перечисляемых значений в хэш-таблице
+## <a name="using-enumerated-values-in-a-hash-table"></a>Использование перечисляемых значений в хэш-таблице
 
 **Keywords** — следующий ключ в хэш-таблице. Тип данных **Keywords** представляет собой массив типа значения `[long]`, который содержит большое число. Используйте следующую команду, чтобы найти максимальное значение `[long]`:
 
@@ -156,7 +156,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-#### <a name="keywords-static-property-value-optional"></a>Значение статического свойства Keywords (необязательно)
+### <a name="keywords-static-property-value-optional"></a>Значение статического свойства Keywords (необязательно)
 
 Значение ключа **Keywords** перечисляется, но имя статического свойства можно использовать в запросе с хэш-таблицей.
 Вместо того чтобы использовать возвращаемую строку, имя свойства должно преобразовываться в значение с применением свойства **Value__**.
@@ -172,7 +172,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-### <a name="filtering-by-event-id"></a>Фильтрация по идентификатору события
+## <a name="filtering-by-event-id"></a>Фильтрация по идентификатору события
 
 Для получения более конкретных данных результаты запроса можно отфильтровать по **идентификатору события**. **Идентификатор события** указывается в хэш-таблице как ключ **ID**, а значение соответствует конкретному **идентификатору события**. В средстве **Просмотр событий Windows** отображается **идентификатор события**. В этом примере используется **идентификатор события 1023**.
 
@@ -187,7 +187,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-### <a name="filtering-by-level"></a>Фильтрация по уровню
+## <a name="filtering-by-level"></a>Фильтрация по уровню
 
 Чтобы дополнительно уточнить результаты и включить только события, которые являются ошибками, используйте ключ **Level**.
 В средстве **Просмотр событий Windows** значения **Level** отображаются в виде строковых значений, но они являются перечисляемыми значениями. Если вы используете ключ **Level** со строковым значением, в хэш-таблице отображается сообщение об ошибке.
@@ -218,10 +218,10 @@ Warning       Property   static System.Diagnostics.Eventing.Reader.StandardEvent
 | Name           | Значение |
 | -------------- | ----- |
 | Verbose        |   5   |
-| Сведения  |   4   |
+| Informational  |   4   |
 | Предупреждение        |   3   |
 | Ошибка          |   2   |
-| Критическое       |   1   |
+| Critical       |   1   |
 | LogAlways      |   0   |
 
 Хэш-таблица для готового запроса содержит ключ **Level** и его значение — **2**.
@@ -236,7 +236,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-#### <a name="level-static-property-in-enumeration-optional"></a>Статическое свойство уровня в перечислении (необязательно)
+### <a name="level-static-property-in-enumeration-optional"></a>Статическое свойство уровня в перечислении (необязательно)
 
 Значение ключа **Level** перечисляется, но имя статического свойства можно использовать в запросе к хэш-таблице.
 Вместо того чтобы использовать возвращаемую строку, имя свойства должно преобразовываться в значение с применением свойства **Value__**.

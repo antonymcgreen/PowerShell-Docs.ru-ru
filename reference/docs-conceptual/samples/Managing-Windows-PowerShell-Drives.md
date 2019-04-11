@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Управление дисками Windows PowerShell
 ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
-ms.openlocfilehash: cfc5418e9d2efb1a786817e1b941d75e22291742
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 9ac5136fb28b450ea6397cab2f36082c50f22e1f
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293254"
 ---
 # <a name="managing-windows-powershell-drives"></a>Управление дисками Windows PowerShell
 
@@ -82,7 +82,7 @@ Path
 HKLM:\SOFTWARE\Microsoft
 ```
 
-### <a name="adding-new-windows-powershell-drives-new-psdrive"></a>Добавление новых дисков Windows PowerShell (New-PSDrive)
+## <a name="adding-new-windows-powershell-drives-new-psdrive"></a>Добавление новых дисков Windows PowerShell (New-PSDrive)
 
 Добавить собственные диски Windows PowerShell можно с помощью команды **New-PSDrive**. Чтобы получить синтаксис для команды **New-PSDrive**, введите команду **Get-Command** с параметром **Syntax**.
 
@@ -146,7 +146,7 @@ cvkey:\
 
 Командлет New-PsDrive добавляет новый диск только в текущий сеанс Windows PowerShell. Если закрыть окно Windows PowerShell, новый диск будет потерян. Чтобы сохранить диск Windows PowerShell, используйте командлет Export-Console для экспорта текущего сеанса Windows PowerShell, а затем используйте параметр **PSConsoleFile** PowerShell.exe для импорта. Также можно добавить новый диск в профиль Windows PowerShell.
 
-### <a name="deleting-windows-powershell-drives-remove-psdrive"></a>Удаление дисков Windows PowerShell (Remove-PSDrive)
+## <a name="deleting-windows-powershell-drives-remove-psdrive"></a>Удаление дисков Windows PowerShell (Remove-PSDrive)
 
 Диски из Windows PowerShell можно удалить, используя командлет **Remove-PSDrive**. Командлет **Remove-PSDrive** прост в использовании. Чтобы удалить определенный диск Windows PowerShell, необходимо только указать имя диска Windows PowerShell.
 
@@ -156,7 +156,7 @@ cvkey:\
 Remove-PSDrive -Name Office
 ```
 
-Чтобы удалить **cvkey:** Windows PowerShell диска, также показанный в **New-PSDrive** раздела, используйте следующую команду:
+Чтобы удалить диск Windows PowerShell **cvkey:**, описанный в предыдущем разделе **New-PSDrive**, выполните следующую команду:
 
 ```powershell
 Remove-PSDrive -Name cvkey
@@ -172,6 +172,6 @@ At line:1 char:15
 + remove-psdrive  <<<< -name office
 ```
 
-### <a name="adding-and-removing-drives-outside-windows-powershell"></a>Добавление и удаление дисков за пределами Windows PowerShell
+## <a name="adding-and-removing-drives-outside-windows-powershell"></a>Добавление и удаление дисков за пределами Windows PowerShell
 
 Windows PowerShell обнаруживает диски файловой системы, которые добавляются или удаляются в Windows, включая сопоставленные сетевые диски, подключенные USB-накопители и удаленные диски, с помощью команды **net use** или методов **WScript.Network MapNetworkDrive** и **RemoveNetworkDrive** сценария сервера сценариев Windows (WSH).
