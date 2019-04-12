@@ -2,55 +2,69 @@
 title: Установка PowerShell Core в Windows
 description: Сведения об установке PowerShell Core в Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: 450a38a1ef2e2890059094774fcc3f2ad4fcda6e
-ms.sourcegitcommit: 8dd4394cf867005a8b9ef0bb74b744c964fbc332
+ms.openlocfilehash: 910ee5a653fc1703bfddaf6367225f3b654d600f
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58748952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293016"
 ---
-# <a name="installing-powershell-core-on-windows"></a><span data-ttu-id="26e2d-103">Установка PowerShell Core в Windows</span><span class="sxs-lookup"><span data-stu-id="26e2d-103">Installing PowerShell Core on Windows</span></span>
+# <a name="installing-powershell-core-on-windows"></a><span data-ttu-id="86682-103">Установка PowerShell Core в Windows</span><span class="sxs-lookup"><span data-stu-id="86682-103">Installing PowerShell Core on Windows</span></span>
 
-## <a name="msi"></a><span data-ttu-id="26e2d-104">MSI</span><span class="sxs-lookup"><span data-stu-id="26e2d-104">MSI</span></span>
+<span data-ttu-id="86682-104">Есть несколько способов установки PowerShell Core в Windows.</span><span class="sxs-lookup"><span data-stu-id="86682-104">There are multiple ways to install PowerShell Core in Windows.</span></span>
 
-<span data-ttu-id="26e2d-105">Чтобы установить PowerShell на клиенте Windows или в Windows Server (работает в Windows 7 с пакетом обновления 1 (SP1), Server 2008 R2 и более поздних версий), скачайте пакет MSI из с нашей страницы [выпусков][] GitHub.</span><span class="sxs-lookup"><span data-stu-id="26e2d-105">To install PowerShell on a Windows client or Windows Server (works on Windows 7 SP1, Server 2008 R2, and later), download the MSI package from our GitHub [releases][] page.</span></span>  <span data-ttu-id="26e2d-106">Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить.</span><span class="sxs-lookup"><span data-stu-id="26e2d-106">Scroll down to the **Assets** section of the Release you want to install.</span></span>  <span data-ttu-id="26e2d-107">Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.</span><span class="sxs-lookup"><span data-stu-id="26e2d-107">The Assets section may be collapsed, so you may need to click to expand it.</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="86682-105">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="86682-105">Prerequisites</span></span>
 
-<span data-ttu-id="26e2d-108">MSI-файл имеет следующий вид: `PowerShell-<version>-win-<os-arch>.msi`.</span><span class="sxs-lookup"><span data-stu-id="26e2d-108">The MSI file looks like this - `PowerShell-<version>-win-<os-arch>.msi`</span></span>
+<span data-ttu-id="86682-106">Чтобы включить удаленное взаимодействие PowerShell через WSMan, нужно выполнить следующие условия:</span><span class="sxs-lookup"><span data-stu-id="86682-106">To enable PowerShell remoting over WSMan, the following prerequisites need to be met:</span></span>
+
+- <span data-ttu-id="86682-107">Установите [универсальную среду выполнения C](https://www.microsoft.com/download/details.aspx?id=50410) в версиях Windows, предшествующих Windows 10.</span><span class="sxs-lookup"><span data-stu-id="86682-107">Install the [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410) on Windows versions prior to Windows 10.</span></span> <span data-ttu-id="86682-108">Ее можно скачать самостоятельно или через Центр обновления Windows.</span><span class="sxs-lookup"><span data-stu-id="86682-108">It is available via direct download or Windows Update.</span></span> <span data-ttu-id="86682-109">Поддерживаемые системы, где установлены все исправления (включая дополнительные пакеты), уже содержат ее.</span><span class="sxs-lookup"><span data-stu-id="86682-109">Fully patched (including optional packages), supported systems will already have this installed.</span></span>
+- <span data-ttu-id="86682-110">Установите Windows Management Framework (WMF) 4.0 или более поздней версии в Windows 7 и Windows Server 2008 R2.</span><span class="sxs-lookup"><span data-stu-id="86682-110">Install the Windows Management Framework (WMF) 4.0 or newer on Windows 7 and Windows Server 2008 R2.</span></span>
+
+## <a name="a-idmsi-installing-the-msi-package"></a><span data-ttu-id="86682-111"><a id="msi" />Установка пакета MSI</span><span class="sxs-lookup"><span data-stu-id="86682-111"><a id="msi" />Installing the MSI package</span></span>
+
+<span data-ttu-id="86682-112">Чтобы установить PowerShell на клиент Windows или сервер Windows Server (поддерживаются Windows 7 с пакетом обновления 1 (SP1), Server 2008 R2 и более поздние версии), скачайте пакет MSI с нашей страницы [выпусков][] GitHub.</span><span class="sxs-lookup"><span data-stu-id="86682-112">To install PowerShell on a Windows client or Windows Server (works on Windows 7 SP1, Server 2008 R2, and later), download the MSI package from our GitHub [releases][] page.</span></span> <span data-ttu-id="86682-113">Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить.</span><span class="sxs-lookup"><span data-stu-id="86682-113">Scroll down to the **Assets** section of the Release you want to install.</span></span> <span data-ttu-id="86682-114">Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.</span><span class="sxs-lookup"><span data-stu-id="86682-114">The Assets section may be collapsed, so you may need to click to expand it.</span></span>
+
+<span data-ttu-id="86682-115">MSI-файл выглядит примерно так:</span><span class="sxs-lookup"><span data-stu-id="86682-115">The MSI file looks like this -</span></span> `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
 
-<span data-ttu-id="26e2d-109">После скачивания дважды щелкните установщик и следуйте инструкциям на экране.</span><span class="sxs-lookup"><span data-stu-id="26e2d-109">Once downloaded, double-click the installer and follow the prompts.</span></span>
+<span data-ttu-id="86682-116">После скачивания дважды щелкните установщик и следуйте инструкциям на экране.</span><span class="sxs-lookup"><span data-stu-id="86682-116">Once downloaded, double-click the installer and follow the prompts.</span></span>
 
-<span data-ttu-id="26e2d-110">После установки в меню "Пуск" появляется ярлык.</span><span class="sxs-lookup"><span data-stu-id="26e2d-110">There is a shortcut placed in the Start Menu upon installation.</span></span>
+<span data-ttu-id="86682-117">Программа установки создает ярлык в меню Windows "Пуск".</span><span class="sxs-lookup"><span data-stu-id="86682-117">The installer creates a shortcut in the Windows Start Menu.</span></span>
 
-- <span data-ttu-id="26e2d-111">По умолчанию пакет устанавливается в каталог `$env:ProgramFiles\PowerShell\<version>`.</span><span class="sxs-lookup"><span data-stu-id="26e2d-111">By default the package is installed to `$env:ProgramFiles\PowerShell\<version>`</span></span>
-- <span data-ttu-id="26e2d-112">Вы можете запустить PowerShell с помощью меню "Пуск" или файла `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`.</span><span class="sxs-lookup"><span data-stu-id="26e2d-112">You can launch PowerShell via the Start Menu or `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`</span></span>
+- <span data-ttu-id="86682-118">По умолчанию пакет устанавливается в каталог</span><span class="sxs-lookup"><span data-stu-id="86682-118">By default the package is installed to</span></span> `$env:ProgramFiles\PowerShell\<version>`
+- <span data-ttu-id="86682-119">Вы можете запустить PowerShell с помощью меню "Пуск" или файла</span><span class="sxs-lookup"><span data-stu-id="86682-119">You can launch PowerShell via the Start Menu or</span></span> `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
 
-### <a name="prerequisites"></a><span data-ttu-id="26e2d-113">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="26e2d-113">Prerequisites</span></span>
+### <a name="administrative-install-from-the-command-line"></a><span data-ttu-id="86682-120">Установка администратором из командной строки</span><span class="sxs-lookup"><span data-stu-id="86682-120">Administrative install from the command line</span></span>
 
-<span data-ttu-id="26e2d-114">Чтобы включить удаленное взаимодействие PowerShell через WSMan, нужно выполнить следующие условия:</span><span class="sxs-lookup"><span data-stu-id="26e2d-114">To enable PowerShell remoting over WSMan, the following prerequisites need to be met:</span></span>
+<span data-ttu-id="86682-121">Пакеты MSI можно установить из командной строки.</span><span class="sxs-lookup"><span data-stu-id="86682-121">MSI packages can be installed from the command line.</span></span> <span data-ttu-id="86682-122">Это позволяет администраторам развертывать пакеты без участия пользователя.</span><span class="sxs-lookup"><span data-stu-id="86682-122">This allows administrators to deploy packages without user interaction.</span></span> <span data-ttu-id="86682-123">Пакет MSI для PowerShell включает в себя следующие свойства для управления параметрами установки:</span><span class="sxs-lookup"><span data-stu-id="86682-123">The MSI package for PowerShell includes the following properties to control the installation options:</span></span>
 
-- <span data-ttu-id="26e2d-115">Установите [универсальную среду выполнения C](https://www.microsoft.com/download/details.aspx?id=50410) в версиях Windows, предшествующих Windows 10.</span><span class="sxs-lookup"><span data-stu-id="26e2d-115">Install the [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410) on Windows versions prior to Windows 10.</span></span>
-  <span data-ttu-id="26e2d-116">Ее можно скачать самостоятельно или через Центр обновления Windows.</span><span class="sxs-lookup"><span data-stu-id="26e2d-116">It is available via direct download or Windows Update.</span></span>
-  <span data-ttu-id="26e2d-117">Поддерживаемые системы, где установлены все исправления (включая дополнительные пакеты), уже содержат ее.</span><span class="sxs-lookup"><span data-stu-id="26e2d-117">Fully patched (including optional packages), supported systems will already have this installed.</span></span>
-- <span data-ttu-id="26e2d-118">Установите Windows Management Framework (WMF) 4.0 или более поздней версии в Windows 7 и Windows Server 2008 R2.</span><span class="sxs-lookup"><span data-stu-id="26e2d-118">Install the Windows Management Framework (WMF) 4.0 or newer on Windows 7 and Windows Server 2008 R2.</span></span>
+- <span data-ttu-id="86682-124">**ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL**. Это свойство позволяет добавлять пункт **Открыть PowerShell** в контекстное меню проводника.</span><span class="sxs-lookup"><span data-stu-id="86682-124">**ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL** - This property controls the option for adding the **Open PowerShell** item to the context menu in Windows Explorer.</span></span>
+- <span data-ttu-id="86682-125">**ENABLE_PSREMOTING**. Это свойство позволяет включать удаленное взаимодействие PowerShell во время установки.</span><span class="sxs-lookup"><span data-stu-id="86682-125">**ENABLE_PSREMOTING** - This property controls the option for enabling PowerShell remoting during installation.</span></span>
+- <span data-ttu-id="86682-126">**REGISTER_MANIFEST**. Это свойство позволяет регистрировать манифест ведения журнала событий Windows.</span><span class="sxs-lookup"><span data-stu-id="86682-126">**REGISTER_MANIFEST** - This property controls the option for registering the Windows Event Logging manifest.</span></span>
 
-## <a name="zip"></a><span data-ttu-id="26e2d-119">ZIP</span><span class="sxs-lookup"><span data-stu-id="26e2d-119">ZIP</span></span>
+<span data-ttu-id="86682-127">В следующих примерах показано, как выполнить автоматическую установку PowerShell Core со всеми включенными параметрами установки.</span><span class="sxs-lookup"><span data-stu-id="86682-127">The following examples shows how to silently install PowerShell Core with all the install options enabled.</span></span>
 
-<span data-ttu-id="26e2d-120">Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell.</span><span class="sxs-lookup"><span data-stu-id="26e2d-120">PowerShell binary ZIP archives are provided to enable advanced deployment scenarios.</span></span>
-<span data-ttu-id="26e2d-121">Следует отметить, что при использовании ZIP-архива проверка предварительных условий, как в случае с пакетом MSI, не производится.</span><span class="sxs-lookup"><span data-stu-id="26e2d-121">Be noted that when using the ZIP archive, you won't get the prerequisites check as in the MSI package.</span></span>
-<span data-ttu-id="26e2d-122">Поэтому для правильной работы удаленного взаимодействия через WSMan в версиях Windows, предшествующих Windows 10, убедитесь, что [предварительные условия](#prerequisites) соблюдены.</span><span class="sxs-lookup"><span data-stu-id="26e2d-122">So in order for remoting over WSMan to work properly on Windows versions prior to Windows 10, you need to make sure the [prerequisites](#prerequisites) are met.</span></span>
+```powershell
+msiexec.exe /package PowerShell-<version>-win-<os-arch>.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+```
 
-## <a name="deploying-on-windows-iot"></a><span data-ttu-id="26e2d-123">Развертывание в Windows IoT</span><span class="sxs-lookup"><span data-stu-id="26e2d-123">Deploying on Windows IoT</span></span>
+<span data-ttu-id="86682-128">См. [полный список параметров командной строки для Msiexec.exe](/windows/desktop/Msi/command-line-options).</span><span class="sxs-lookup"><span data-stu-id="86682-128">For a full list of command line options for Msiexec.exe, see [Command line options](/windows/desktop/Msi/command-line-options).</span></span>
 
-<span data-ttu-id="26e2d-124">Windows IoT поставляется с Windows PowerShell, который будет использоваться для развертывания PowerShell Core 6.</span><span class="sxs-lookup"><span data-stu-id="26e2d-124">Windows IoT already comes with Windows PowerShell which we will use to deploy PowerShell Core 6.</span></span>
+## <a name="a-idzip-installing-the-zip-package"></a><span data-ttu-id="86682-129"><a id="zip" />Установка ZIP-пакета</span><span class="sxs-lookup"><span data-stu-id="86682-129"><a id="zip" />Installing the ZIP package</span></span>
 
-1. <span data-ttu-id="26e2d-125">Создайте `PSSession` для целевого устройства</span><span class="sxs-lookup"><span data-stu-id="26e2d-125">Create `PSSession` to target device</span></span>
+<span data-ttu-id="86682-130">Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell.</span><span class="sxs-lookup"><span data-stu-id="86682-130">PowerShell binary ZIP archives are provided to enable advanced deployment scenarios.</span></span> <span data-ttu-id="86682-131">Следует отметить, что при использовании ZIP-архива проверка предварительных условий, как в случае с пакетом MSI, не производится.</span><span class="sxs-lookup"><span data-stu-id="86682-131">Be noted that when using the ZIP archive, you won't get the prerequisites check as in the MSI package.</span></span> <span data-ttu-id="86682-132">Для правильной настройки удаленного взаимодействия с помощью WSMan необходимо выполнить [предварительные требования](#prerequisites).</span><span class="sxs-lookup"><span data-stu-id="86682-132">For remoting over WSMan to work properly,, ensure that you have met the [prerequisites](#prerequisites).</span></span>
+
+## <a name="deploying-on-windows-iot"></a><span data-ttu-id="86682-133">Развертывание в Windows IoT</span><span class="sxs-lookup"><span data-stu-id="86682-133">Deploying on Windows IoT</span></span>
+
+<span data-ttu-id="86682-134">Windows IoT поставляется с Windows PowerShell, который будет использоваться для развертывания PowerShell Core 6.</span><span class="sxs-lookup"><span data-stu-id="86682-134">Windows IoT already comes with Windows PowerShell which we will use to deploy PowerShell Core 6.</span></span>
+
+1. <span data-ttu-id="86682-135">Создайте `PSSession` для целевого устройства</span><span class="sxs-lookup"><span data-stu-id="86682-135">Create `PSSession` to target device</span></span>
 
    ```powershell
    $s = New-PSSession -ComputerName <deviceIp> -Credential Administrator
    ```
 
-2. <span data-ttu-id="26e2d-126">Скопируйте ZIP-файл на устройство</span><span class="sxs-lookup"><span data-stu-id="26e2d-126">Copy the ZIP package to the device</span></span>
+2. <span data-ttu-id="86682-136">Скопируйте ZIP-файл на устройство</span><span class="sxs-lookup"><span data-stu-id="86682-136">Copy the ZIP package to the device</span></span>
 
    ```powershell
    # change the destination to however you had partitioned it with sufficient
@@ -59,7 +73,7 @@ ms.locfileid: "58748952"
    Copy-Item .\PowerShell-<version>-win-<os-arch>.zip -Destination u:\users\administrator\Downloads -ToSession $s
    ```
 
-3. <span data-ttu-id="26e2d-127">Присоединитесь к устройству и извлеките архив</span><span class="sxs-lookup"><span data-stu-id="26e2d-127">Connect to the device and expand the archive</span></span>
+3. <span data-ttu-id="86682-137">Присоединитесь к устройству и извлеките архив</span><span class="sxs-lookup"><span data-stu-id="86682-137">Connect to the device and expand the archive</span></span>
 
    ```powershell
    Enter-PSSession $s
@@ -67,7 +81,7 @@ ms.locfileid: "58748952"
    Expand-Archive .\PowerShell-<version>-win-<os-arch>.zip
    ```
 
-4. <span data-ttu-id="26e2d-128">Удаленное взаимодействие в PowerShell Core 6</span><span class="sxs-lookup"><span data-stu-id="26e2d-128">Setup remoting to PowerShell Core 6</span></span>
+4. <span data-ttu-id="86682-138">Удаленное взаимодействие в PowerShell Core 6</span><span class="sxs-lookup"><span data-stu-id="86682-138">Setup remoting to PowerShell Core 6</span></span>
 
    ```powershell
    Set-Location .\PowerShell-<version>-win-<os-arch>
@@ -77,84 +91,67 @@ ms.locfileid: "58748952"
    # You'll get an error message and will be disconnected from the device because it has to restart WinRM
    ```
 
-5. <span data-ttu-id="26e2d-129">Подключение к конечной точке PowerShell Core 6 на устройстве</span><span class="sxs-lookup"><span data-stu-id="26e2d-129">Connect to PowerShell Core 6 endpoint on device</span></span>
+5. <span data-ttu-id="86682-139">Подключение к конечной точке PowerShell Core 6 на устройстве</span><span class="sxs-lookup"><span data-stu-id="86682-139">Connect to PowerShell Core 6 endpoint on device</span></span>
 
    ```powershell
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.<version>
    ```
 
-## <a name="deploying-on-nano-server"></a><span data-ttu-id="26e2d-130">Развертывание на Nano Server</span><span class="sxs-lookup"><span data-stu-id="26e2d-130">Deploying on Nano Server</span></span>
+## <a name="deploying-on-nano-server"></a><span data-ttu-id="86682-140">Развертывание на Nano Server</span><span class="sxs-lookup"><span data-stu-id="86682-140">Deploying on Nano Server</span></span>
 
-<span data-ttu-id="26e2d-131">Эти инструкции предполагают, что версия PowerShell уже запущена на образе Nano Server и была создана с помощью [Nano Server Image Builder](/windows-server/get-started/deploy-nano-server).</span><span class="sxs-lookup"><span data-stu-id="26e2d-131">These instructions assume that a version of PowerShell is already running on the Nano Server image and that it has been generated by the [Nano Server Image Builder](/windows-server/get-started/deploy-nano-server).</span></span>
-<span data-ttu-id="26e2d-132">Nano Server является "виртуальной" ОС.</span><span class="sxs-lookup"><span data-stu-id="26e2d-132">Nano Server is a "headless" OS.</span></span> <span data-ttu-id="26e2d-133">Двоичные файлы ядра можно развернуть двумя разными методами.</span><span class="sxs-lookup"><span data-stu-id="26e2d-133">Core binaries can be deploy using two different methods.</span></span>
+<span data-ttu-id="86682-141">Эти инструкции предполагают, что версия PowerShell уже запущена на образе Nano Server и была создана с помощью [Nano Server Image Builder](/windows-server/get-started/deploy-nano-server).</span><span class="sxs-lookup"><span data-stu-id="86682-141">These instructions assume that a version of PowerShell is already running on the Nano Server image and that it has been generated by the [Nano Server Image Builder](/windows-server/get-started/deploy-nano-server).</span></span>
+<span data-ttu-id="86682-142">Nano Server является "виртуальной" ОС.</span><span class="sxs-lookup"><span data-stu-id="86682-142">Nano Server is a "headless" OS.</span></span> <span data-ttu-id="86682-143">Двоичные файлы ядра можно развернуть двумя разными методами.</span><span class="sxs-lookup"><span data-stu-id="86682-143">Core binaries can be deploy using two different methods.</span></span>
 
-1. <span data-ttu-id="26e2d-134">Автономно — подключите виртуальный жесткий диск Nano Server и распакуйте содержимое ZIP-файла в выбранное расположение в этом образе.</span><span class="sxs-lookup"><span data-stu-id="26e2d-134">Offline - Mount the Nano Server VHD and unzip the contents of the zip file to your chosen location within the mounted image.</span></span>
-2. <span data-ttu-id="26e2d-135">В сети — передайте ZIP-файл через сеанс PowerShell и распакуйте его в выбранное расположение.</span><span class="sxs-lookup"><span data-stu-id="26e2d-135">Online - Transfer the zip file over a PowerShell Session and unzip it in your chosen location.</span></span>
+1. <span data-ttu-id="86682-144">Автономно — подключите виртуальный жесткий диск Nano Server и распакуйте содержимое ZIP-файла в выбранное расположение в этом образе.</span><span class="sxs-lookup"><span data-stu-id="86682-144">Offline - Mount the Nano Server VHD and unzip the contents of the zip file to your chosen location within the mounted image.</span></span>
+2. <span data-ttu-id="86682-145">В сети — передайте ZIP-файл через сеанс PowerShell и распакуйте его в выбранное расположение.</span><span class="sxs-lookup"><span data-stu-id="86682-145">Online - Transfer the zip file over a PowerShell Session and unzip it in your chosen location.</span></span>
 
-<span data-ttu-id="26e2d-136">В обоих случаях вам понадобится ZIP-пакет выпуска x64 Windows 10 и потребуется выполнять команды в экземпляре PowerShell с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="26e2d-136">In both cases, you will need the Windows 10 x64 ZIP release package and will need to run the commands within an "Administrator" PowerShell instance.</span></span>
+<span data-ttu-id="86682-146">В обоих случаях вам понадобится ZIP-пакет выпуска x64 Windows 10 и потребуется выполнять команды в экземпляре PowerShell с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="86682-146">In both cases, you will need the Windows 10 x64 ZIP release package and will need to run the commands within an "Administrator" PowerShell instance.</span></span>
 
-### <a name="offline-deployment-of-powershell-core"></a><span data-ttu-id="26e2d-137">Автономное развертывание PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="26e2d-137">Offline Deployment of PowerShell Core</span></span>
+### <a name="offline-deployment-of-powershell-core"></a><span data-ttu-id="86682-147">Автономное развертывание PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="86682-147">Offline Deployment of PowerShell Core</span></span>
 
-1. <span data-ttu-id="26e2d-138">С помощью любой служебной программы ZIP распакуйте пакет в каталог, находящийся внутри подключенного образа Nano Server.</span><span class="sxs-lookup"><span data-stu-id="26e2d-138">Use your favorite zip utility to unzip the package to a directory within the mounted Nano Server image.</span></span>
-2. <span data-ttu-id="26e2d-139">Отключите образ и загрузите его.</span><span class="sxs-lookup"><span data-stu-id="26e2d-139">Unmount the image and boot it.</span></span>
-3. <span data-ttu-id="26e2d-140">Подключитесь к входящему экземпляру Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="26e2d-140">Connect to the inbox instance of Windows PowerShell.</span></span>
-4. <span data-ttu-id="26e2d-141">Следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра](../learn/remoting/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).</span><span class="sxs-lookup"><span data-stu-id="26e2d-141">Follow the instructions to create a remoting endpoint using the ["another instance technique"](../learn/remoting/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).</span></span>
+1. <span data-ttu-id="86682-148">С помощью любой служебной программы ZIP распакуйте пакет в каталог, находящийся внутри подключенного образа Nano Server.</span><span class="sxs-lookup"><span data-stu-id="86682-148">Use your favorite zip utility to unzip the package to a directory within the mounted Nano Server image.</span></span>
+2. <span data-ttu-id="86682-149">Отключите образ и загрузите его.</span><span class="sxs-lookup"><span data-stu-id="86682-149">Unmount the image and boot it.</span></span>
+3. <span data-ttu-id="86682-150">Подключитесь к входящему экземпляру Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="86682-150">Connect to the inbox instance of Windows PowerShell.</span></span>
+4. <span data-ttu-id="86682-151">Следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра](../learn/remoting/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).</span><span class="sxs-lookup"><span data-stu-id="86682-151">Follow the instructions to create a remoting endpoint using the ["another instance technique"](../learn/remoting/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).</span></span>
 
-### <a name="online-deployment-of-powershell-core"></a><span data-ttu-id="26e2d-142">Автономное PowerShell Core в сети</span><span class="sxs-lookup"><span data-stu-id="26e2d-142">Online Deployment of PowerShell Core</span></span>
+### <a name="online-deployment-of-powershell-core"></a><span data-ttu-id="86682-152">Автономное PowerShell Core в сети</span><span class="sxs-lookup"><span data-stu-id="86682-152">Online Deployment of PowerShell Core</span></span>
 
-<span data-ttu-id="26e2d-143">В следующих шагах описываются инструкции развертывания PowerShell Core в запущенном экземпляре Nano Server, а также настройка его удаленной конечной точки.</span><span class="sxs-lookup"><span data-stu-id="26e2d-143">The following steps guide you through the deployment of PowerShell Core to a running instance of Nano Server and the configuration of its remote endpoint.</span></span>
+<span data-ttu-id="86682-153">В следующих шагах описываются инструкции развертывания PowerShell Core в запущенном экземпляре Nano Server, а также настройка его удаленной конечной точки.</span><span class="sxs-lookup"><span data-stu-id="86682-153">The following steps guide you through the deployment of PowerShell Core to a running instance of Nano Server and the configuration of its remote endpoint.</span></span>
 
-- <span data-ttu-id="26e2d-144">Подключитесь к входящему экземпляру Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="26e2d-144">Connect to the inbox instance of Windows PowerShell</span></span>
+- <span data-ttu-id="86682-154">Подключитесь к входящему экземпляру Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="86682-154">Connect to the inbox instance of Windows PowerShell</span></span>
 
   ```powershell
   $session = New-PSSession -ComputerName <Nano Server IP address> -Credential <An Administrator account on the system>
   ```
 
-- <span data-ttu-id="26e2d-145">Скопируйте файл на экземпляр Nano Server:</span><span class="sxs-lookup"><span data-stu-id="26e2d-145">Copy the file to the Nano Server instance</span></span>
+- <span data-ttu-id="86682-155">Скопируйте файл на экземпляр Nano Server:</span><span class="sxs-lookup"><span data-stu-id="86682-155">Copy the file to the Nano Server instance</span></span>
 
   ```powershell
   Copy-Item <local PS Core download location>\powershell-<version>-win-x64.zip c:\ -ToSession $session
   ```
 
-- <span data-ttu-id="26e2d-146">Войдите в сеанс:</span><span class="sxs-lookup"><span data-stu-id="26e2d-146">Enter the session</span></span>
+- <span data-ttu-id="86682-156">Войдите в сеанс:</span><span class="sxs-lookup"><span data-stu-id="86682-156">Enter the session</span></span>
 
   ```powershell
   Enter-PSSession $session
   ```
 
-- <span data-ttu-id="26e2d-147">Извлеките ZIP-файл</span><span class="sxs-lookup"><span data-stu-id="26e2d-147">Extract the ZIP file</span></span>
+- <span data-ttu-id="86682-157">Извлеките ZIP-файл</span><span class="sxs-lookup"><span data-stu-id="86682-157">Extract the ZIP file</span></span>
 
   ```powershell
   # Insert the appropriate version.
   Expand-Archive -Path C:\powershell-<version>-win-x64.zip -DestinationPath "C:\PowerShellCore_<version>"
   ```
 
-- <span data-ttu-id="26e2d-148">Если вам требуется удаленное взаимодействие на основе WSMan, следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра](../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).</span><span class="sxs-lookup"><span data-stu-id="26e2d-148">If you want WSMan-based remoting, follow the instructions to create a remoting endpoint using the ["another instance technique"](../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).</span></span>
+- <span data-ttu-id="86682-158">Если вам требуется удаленное взаимодействие на основе WSMan, следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра](../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).</span><span class="sxs-lookup"><span data-stu-id="86682-158">If you want WSMan-based remoting, follow the instructions to create a remoting endpoint using the ["another instance technique"](../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).</span></span>
 
-## <a name="instructions-to-create-a-remoting-endpoint"></a><span data-ttu-id="26e2d-149">Инструкции по созданию конечной точки удаленного взаимодействия</span><span class="sxs-lookup"><span data-stu-id="26e2d-149">Instructions to Create a Remoting Endpoint</span></span>
+## <a name="how-to-create-a-remoting-endpoint"></a><span data-ttu-id="86682-159">Создание конечной точки удаленного взаимодействия</span><span class="sxs-lookup"><span data-stu-id="86682-159">How to create a remoting endpoint</span></span>
 
-<span data-ttu-id="26e2d-150">PowerShell Core поддерживает протокол удаленного взаимодействия PowerShell (PSRP) через SSH и WSMan.</span><span class="sxs-lookup"><span data-stu-id="26e2d-150">PowerShell Core supports the PowerShell Remoting Protocol (PSRP) over both WSMan and SSH.</span></span>
-<span data-ttu-id="26e2d-151">Дополнительная информация:</span><span class="sxs-lookup"><span data-stu-id="26e2d-151">For more information, see:</span></span>
+<span data-ttu-id="86682-160">PowerShell Core поддерживает протокол удаленного взаимодействия PowerShell (PSRP) через SSH и WSMan.</span><span class="sxs-lookup"><span data-stu-id="86682-160">PowerShell Core supports the PowerShell Remoting Protocol (PSRP) over both WSMan and SSH.</span></span> <span data-ttu-id="86682-161">Дополнительная информация:</span><span class="sxs-lookup"><span data-stu-id="86682-161">For more information, see:</span></span>
 
-- <span data-ttu-id="26e2d-152">[Удаленное взаимодействие через SSH в PowerShell Core][ssh-remoting]</span><span class="sxs-lookup"><span data-stu-id="26e2d-152">[SSH Remoting in PowerShell Core][ssh-remoting]</span></span>
-- <span data-ttu-id="26e2d-153">[Удаленное взаимодействие через WSMan в PowerShell Core][wsman-remoting]</span><span class="sxs-lookup"><span data-stu-id="26e2d-153">[WSMan Remoting in PowerShell Core][wsman-remoting]</span></span>
-
-## <a name="artifact-installation-instructions"></a><span data-ttu-id="26e2d-154">Указания по установке артефакта</span><span class="sxs-lookup"><span data-stu-id="26e2d-154">Artifact Installation Instructions</span></span>
-
-<span data-ttu-id="26e2d-155">Мы публикуем архив с кодом CoreCLR для каждой сборки CI с [AppVeyor][].</span><span class="sxs-lookup"><span data-stu-id="26e2d-155">We publish an archive with CoreCLR bits on every CI build with [AppVeyor][].</span></span>
-
-<span data-ttu-id="26e2d-156">Чтобы установить PowerShell Core из CoreCLR Artifact, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="26e2d-156">To install PowerShell Core from the CoreCLR Artifact:</span></span>
-
-1. <span data-ttu-id="26e2d-157">Скачайте ZIP-пакет с вкладки **Артефакты** конкретной сборки.</span><span class="sxs-lookup"><span data-stu-id="26e2d-157">Download ZIP package from **artifacts** tab of the particular build.</span></span>
-2. <span data-ttu-id="26e2d-158">Разблокируйте ZIP-файл: щелкните правой кнопкой мыши в проводнике, выберите "Свойства", установите флажок "Разблокировать" и выберите "Применить".</span><span class="sxs-lookup"><span data-stu-id="26e2d-158">Unblock ZIP file: right-click in File Explorer -> Properties -> check 'Unblock' box -> apply</span></span>
-3. <span data-ttu-id="26e2d-159">Извлеките содержимое ZIP-файла в каталог `bin`.</span><span class="sxs-lookup"><span data-stu-id="26e2d-159">Extract zip file to `bin` directory</span></span>
-4. `./bin/pwsh.exe`
+- <span data-ttu-id="86682-162">[Удаленное взаимодействие через SSH в PowerShell Core][ssh-remoting]</span><span class="sxs-lookup"><span data-stu-id="86682-162">[SSH Remoting in PowerShell Core][ssh-remoting]</span></span>
+- <span data-ttu-id="86682-163">[Удаленное взаимодействие с WSMan в PowerShell Core][wsman-remoting]</span><span class="sxs-lookup"><span data-stu-id="86682-163">[WSMan Remoting in PowerShell Core][wsman-remoting]</span></span>
 
 <!-- [download-center]: TODO -->
-
-[выпусков]: https://github.com/PowerShell/PowerShell/releases
-[releases]: https://github.com/PowerShell/PowerShell/releases
-[ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
-[wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md
-[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+[releases]: https://github.com/PowerShell/PowerShell/releases [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md [wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
