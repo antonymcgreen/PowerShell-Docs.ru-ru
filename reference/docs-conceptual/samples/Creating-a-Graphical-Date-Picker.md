@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Создание графического элемента управления "Выбор даты"
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
-ms.openlocfilehash: 6dd43a3b1f4c67633ad1755de3db88eb8c6772c8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: d3b24af935e781a8a36fc346a6108baaed37b6db
+ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681324"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506807"
 ---
 # <a name="creating-a-graphical-date-picker"></a>Создание графического элемента управления "Выбор даты"
 
@@ -22,101 +22,110 @@ ms.locfileid: "55681324"
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$form = New-Object Windows.Forms.Form
+$form = New-Object Windows.Forms.Form -Property @{
+    StartPosition = [Windows.Forms.FormStartPosition]::CenterScreen
+    Size          = New-Object Drawing.Size 243, 230
+    Text          = 'Select a Date'
+    Topmost       = $true
+}
 
-$form.Text = 'Select a Date'
-$form.Size = New-Object Drawing.Size @(243,230)
-$form.StartPosition = 'CenterScreen'
-
-$calendar = New-Object System.Windows.Forms.MonthCalendar
-$calendar.ShowTodayCircle = $false
-$calendar.MaxSelectionCount = 1
+$calendar = New-Object Windows.Forms.MonthCalendar -Property @{
+    ShowTodayCircle   = $false
+    MaxSelectionCount = 1
+}
 $form.Controls.Add($calendar)
 
-$OKButton = New-Object System.Windows.Forms.Button
-$OKButton.Location = New-Object System.Drawing.Point(38,165)
-$OKButton.Size = New-Object System.Drawing.Size(75,23)
-$OKButton.Text = 'OK'
-$OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+$OKButton = New-Object Windows.Forms.Button -Property @{
+    Location     = New-Object Drawing.Point 38, 165
+    Size         = New-Object Drawing.Size 75, 23
+    Text         = 'OK'
+    DialogResult = [Windows.Forms.DialogResult]::OK
+}
 $form.AcceptButton = $OKButton
 $form.Controls.Add($OKButton)
 
-$CancelButton = New-Object System.Windows.Forms.Button
-$CancelButton.Location = New-Object System.Drawing.Point(113,165)
-$CancelButton.Size = New-Object System.Drawing.Size(75,23)
-$CancelButton.Text = 'Cancel'
-$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+$CancelButton = New-Object Windows.Forms.Button -Property @{
+    Location     = New-Object Drawing.Point 113, 165
+    Size         = New-Object Drawing.Size 75, 23
+    Text         = 'Cancel'
+    DialogResult = [Windows.Forms.DialogResult]::Cancel
+}
 $form.CancelButton = $CancelButton
 $form.Controls.Add($CancelButton)
 
-$form.Topmost = $true
-
 $result = $form.ShowDialog()
 
-if ($result -eq [System.Windows.Forms.DialogResult]::OK)
-{
+if ($result -eq [Windows.Forms.DialogResult]::OK) {
     $date = $calendar.SelectionStart
     Write-Host "Date selected: $($date.ToShortDateString())"
 }
 ```
 
-Сценарий начинается с загрузки двух классов .NET Framework: **System.Drawing** и **System.Windows.Forms**. Затем вы запускаете новый экземпляр класса .NET Framework **Windows.Forms.Form**, предоставляющий пустую форму или окно, в которые можно добавить элементы управления.
+Сначала с помощью скрипта загружаются два класса .NET Framework: **System.Drawing** и **System.Windows.Forms**.
+Затем вы запускаете новый экземпляр класса .NET Framework **Windows.Forms.Form**, предоставляющий пустую форму или окно, в которые можно добавить элементы управления.
 
 ```powershell
-$form = New-Object Windows.Forms.Form
+$form = New-Object Windows.Forms.Form -Property @{
+    StartPosition = [Windows.Forms.FormStartPosition]::CenterScreen
+    Size          = New-Object Drawing.Size 243, 230
+    Text          = 'Select a Date'
+    Topmost       = $true
+}
 ```
 
-После создания экземпляра класса "Форма" назначьте значения для трех свойств этого класса.
+В этом примере четырем свойствам этого класса присваиваются значения с помощью свойства **Свойство** и хэш-таблицы.
 
-- **Text.** Это будет заголовком окна.
+1. **StartPosition.** Если это свойство не добавлено, Windows выберет расположение после открытия формы.
+   Если для этого свойства задать значение **CenterScreen**, форма будет автоматически отображаться в центре экрана при загрузке.
 
-- **Size.** Это размер формы в пикселях. Предыдущий сценарий создает форму шириной 243 пикселей и высотой 230 пикселей.
+2. **Size.** Это размер формы в пикселях.
+   Предыдущий сценарий создает форму шириной 243 пикселей и высотой 230 пикселей.
 
-- **StartingPosition.** Для этого дополнительного свойства задается значение **CenterScreen** в предыдущем сценарии. Если это свойство не добавлено, Windows выберет расположение после открытия формы. Если для **StartingPosition** задать значение **CenterScreen**, форма будет автоматически отображаться в центре экрана при загрузке.
+3. **Text.** Это будет заголовком окна.
+
+4. **Topmost.** Задав для этого свойства значение `$true`, вы сможете принудительно открыть окно поверх других диалоговых окон.
+
+Далее создайте и добавьте элемент управления "Календарь" в форму.
+В этом примере текущий день не выделен и не обведен.
+Пользователи могут выбрать в календаре не больше одного дня за раз.
 
 ```powershell
-$form.Text = 'Select a Date'
-$form.Size = New-Object Drawing.Size @(243,230)
-$form.StartPosition = 'CenterScreen'
-```
-
-Далее создайте и добавьте элемент управления "Календарь" в форму. В этом примере текущий день не выделен и не обведен. Пользователи могут выбрать в календаре не больше одного дня за раз.
-
-```powershell
-$calendar = New-Object System.Windows.Forms.MonthCalendar
-$calendar.ShowTodayCircle = $false
-$calendar.MaxSelectionCount = 1
+$calendar = New-Object Windows.Forms.MonthCalendar -Property @{
+    ShowTodayCircle   = $false
+    MaxSelectionCount = 1
+}
 $form.Controls.Add($calendar)
 ```
 
-Далее создайте кнопку **OК** для формы. Укажите размер и поведение кнопки **ОК**. В этом примере кнопка расположена на 165 пикселей ниже верхней границы формы и на 38 пикселей правее левой границы. Высота кнопки — 23 пикселя, а длина — 75 пикселей. Сценарий использует предопределенные типы Windows Forms для определения поведения кнопок.
+Далее создайте кнопку **OК** для формы.
+Укажите размер и поведение кнопки **ОК**.
+В этом примере кнопка расположена на 165 пикселей ниже верхней границы формы и на 38 пикселей правее левой границы.
+Высота кнопки — 23 пикселя, а длина — 75 пикселей.
+Сценарий использует предопределенные типы Windows Forms для определения поведения кнопок.
 
 ```powershell
-$OKButton = New-Object System.Windows.Forms.Button
-$OKButton.Location = New-Object System.Drawing.Point(38,165)
-$OKButton.Size = New-Object System.Drawing.Size(75,23)
-$OKButton.Text = 'OK'
-$OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+$OKButton = New-Object Windows.Forms.Button -Property @{
+    Location     = New-Object Drawing.Point 38, 165
+    Size         = New-Object Drawing.Size 75, 23
+    Text         = 'OK'
+    DialogResult = [Windows.Forms.DialogResult]::OK
+}
 $form.AcceptButton = $OKButton
 $form.Controls.Add($OKButton)
 ```
 
-Аналогичным образом создайте кнопку **Отмена**. Кнопка **Отмена** расположена на 165 пикселей ниже верхней границы и на 113 пикселей правее левой границы окна.
+Аналогичным образом создайте кнопку **Отмена**.
+Кнопка **Отмена** расположена на 165 пикселей ниже верхней границы и на 113 пикселей правее левой границы окна.
 
 ```powershell
-$CancelButton = New-Object System.Windows.Forms.Button
-$CancelButton.Location = New-Object System.Drawing.Point(113,165)
-$CancelButton.Size = New-Object System.Drawing.Size(75,23)
-$CancelButton.Text = 'Cancel'
-$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+$CancelButton = New-Object Windows.Forms.Button -Property @{
+    Location     = New-Object Drawing.Point 113, 165
+    Size         = New-Object Drawing.Size 75, 23
+    Text         = 'Cancel'
+    DialogResult = [Windows.Forms.DialogResult]::Cancel
+}
 $form.CancelButton = $CancelButton
 $form.Controls.Add($CancelButton)
-```
-
-Задайте для свойства **Topmost** значение **$true**, чтобы принудительно открыть окно поверх других диалоговых окон.
-
-```powershell
-$form.Topmost = $true
 ```
 
 Добавьте следующую строку кода для отображения формы в Windows.
@@ -125,11 +134,11 @@ $form.Topmost = $true
 $result = $form.ShowDialog()
 ```
 
-Наконец, код внутри блока **If** указывает Windows, что следует делать с формой после того, как пользователь выберет день из календаря и нажмет кнопку **ОК** или клавишу **ВВОД**. Windows PowerShell отображает выбранную дату для пользователей.
+Наконец, код внутри блока `if` указывает Windows, что следует делать с формой, когда пользователь выберет день в календаре и нажмет кнопку **ОК** или клавишу **ВВОД**.
+Windows PowerShell отображает выбранную дату для пользователей.
 
 ```powershell
-if ($result -eq [System.Windows.Forms.DialogResult]::OK)
-{
+if ($result -eq [Windows.Forms.DialogResult]::OK) {
     $date = $calendar.SelectionStart
     Write-Host "Date selected: $($date.ToShortDateString())"
 }
@@ -137,6 +146,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>См. также
 
-- [Блог Hey Scripting Guy: Why don’t these PowerShell GUI examples work? (Почему эти примеры скриптов PowerShell GUI не работают)](https://go.microsoft.com/fwlink/?LinkId=506644)
+- [Блог Hey Scripting Guy:  Why don’t these PowerShell GUI examples work? (Почему эти примеры скриптов PowerShell GUI не работают)](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates (WinFormsExampleUpdates от Дэйва Уайята)](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week: Creating a Graphical Date Picker](https://technet.microsoft.com/library/ff730942.aspx) (Совет недели для Windows PowerShell: создание графического элемента управления "Выбор даты")
+- [Windows PowerShell Tip of the Week (Совет недели по работе с Windows PowerShell):  Создание графического элемента управления "Выбор даты"](https://technet.microsoft.com/library/ff730942.aspx)
