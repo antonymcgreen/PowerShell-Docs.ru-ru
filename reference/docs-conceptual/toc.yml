@@ -1,259 +1,254 @@
-items:
 - name: Обзор
   href: overview.md
 - name: Установка
   items:
-  - name: Установка разных версий PowerShell
-    href: install/installing-powershell.md
-  - name: PowerShell Core
-    items:
-    - name: Установка PowerShell Core в Windows
-      href: install/installing-powershell-core-on-windows.md
-    - name: Установка PowerShell Core в Linux
-      href: install/installing-powershell-core-on-linux.md
-    - name: Установка PowerShell Core в macOS
-      href: install/installing-powershell-core-on-macos.md
-    - name: Установка PowerShell Core в ARM
-      href: install/powershell-core-on-arm.md
-  - name: Windows PowerShell
-    items:
-    - name: Установка Windows PowerShell
-      href: install/installing-windows-powershell.md
-    - name: Установка подсистемы Windows PowerShell 2.0
-      href: install/installing-the-windows-powershell-2.0-engine.md
-    - name: Требования к системе для Windows PowerShell
-      href: install/windows-powershell-system-requirements.md
+    - name: Установка разных версий PowerShell
+      href: install/installing-powershell.md
+    - name: PowerShell Core
+      items:
+        - name: Установка PowerShell Core в Windows
+          href: install/installing-powershell-core-on-windows.md
+        - name: Установка PowerShell Core в Linux
+          href: install/installing-powershell-core-on-linux.md
+        - name: Установка PowerShell Core в macOS
+          href: install/installing-powershell-core-on-macos.md
+        - name: Установка PowerShell Core в ARM
+          href: install/powershell-core-on-arm.md
+    - name: Windows PowerShell
+      items:
+        - name: Установка Windows PowerShell
+          href: install/installing-windows-powershell.md
+        - name: "Установка подсистемы Windows PowerShell\_2.0"
+          href: install/installing-the-windows-powershell-2.0-engine.md
+        - name: Требования к системе для Windows PowerShell
+          href: install/windows-powershell-system-requirements.md
 - name: Приступая к работе
   items:
-  - name: Начало работы с PowerShell
-    href: getting-started/getting-started-with-windows-powershell.md
-  - name: Запуск Windows PowerShell
-    href: getting-started/starting-windows-powershell.md
-  - name: Запуск подсистемы Windows PowerShell 2.0
-    href: getting-started/starting-the-windows-powershell-2.0-engine.md
+    - name: Начало работы с PowerShell
+      href: getting-started/getting-started-with-windows-powershell.md
+    - name: Запуск Windows PowerShell
+      href: getting-started/starting-windows-powershell.md
+    - name: "Запуск подсистемы Windows PowerShell\_2.0"
+      href: getting-started/starting-the-windows-powershell-2.0-engine.md
 - name: Изучение PowerShell
   items:
-  - name: Основные сведения о важных концепциях PowerShell
-    href: learn/understanding-important-powershell-concepts.md
-  - name: Изучение имен PowerShell
-    href: learn/learning-powershell-names.md
-  - name: Использование знакомых имен команд
-    href: learn/using-familiar-command-names.md
-  - name: Получение подробной справки
-    href: learn/getting-detailed-help-information.md
-  - name: Получение информации о командах
-    href: learn/getting-information-about-commands.md
-  - name: Использование переменных для хранения объектов
-    href: learn/using-variables-to-store-objects.md
-  - name: Основные сведения о конвейере PowerShell
-    href: learn/understanding-the-powershell-pipeline.md
-  - name: Другие статьи о PowerShell
-    href: learn/more-powershell-learning.md
-  - name: Создание переносимых модулей
-    href: learn/writing-portable-modules.md
-  - name: Удаленное взаимодействие PowerShell
-    items:
-    - name: Выполнение удаленных команд
-      href: learn/remoting/running-remote-commands.md
-    - name: Удаленное взаимодействие с PowerShell через SSH
-      href: learn/remoting/ssh-remoting-in-powershell-core.md
-    - name: Удаленное взаимодействие с WS-Management (WSMan) в PowerShell Core
-      href: learn/remoting/wsman-remoting-in-powershell-core.md
-    - name: Безопасность службы удаленного управления Windows
-      href: learn/remoting/winrmsecurity.md
-    - name: Выполнение второго прыжка при удаленном взаимодействии PowerShell
-      href: learn/remoting/ps-remoting-second-hop.md
-  - name: Словарь терминов
-    href: learn/windows-powershell-glossary.md
+    - name: Основные сведения о важных концепциях PowerShell
+      href: learn/understanding-important-powershell-concepts.md
+    - name: Изучение имен PowerShell
+      href: learn/learning-powershell-names.md
+    - name: Использование знакомых имен команд
+      href: learn/using-familiar-command-names.md
+    - name: Получение подробной справки
+      href: learn/getting-detailed-help-information.md
+    - name: Получение информации о командах
+      href: learn/getting-information-about-commands.md
+    - name: Использование переменных для хранения объектов
+      href: learn/using-variables-to-store-objects.md
+    - name: Основные сведения о конвейере PowerShell
+      href: learn/understanding-the-powershell-pipeline.md
+    - name: Другие статьи о PowerShell
+      href: learn/more-powershell-learning.md
+    - name: Создание переносимых модулей
+      href: learn/writing-portable-modules.md
+    - name: Удаленное взаимодействие PowerShell
+      items:
+        - name: Выполнение удаленных команд
+          href: learn/remoting/running-remote-commands.md
+        - name: Удаленное взаимодействие с PowerShell через SSH
+          href: learn/remoting/ssh-remoting-in-powershell-core.md
+        - name: Удаленное взаимодействие с WS-Management (WSMan) в PowerShell Core
+          href: learn/remoting/wsman-remoting-in-powershell-core.md
+        - name: Безопасность службы удаленного управления Windows
+          href: learn/remoting/winrmsecurity.md
+        - name: Выполнение второго прыжка при удаленном взаимодействии PowerShell
+          href: learn/remoting/ps-remoting-second-hop.md
+    - name: Словарь терминов
+      href: learn/windows-powershell-glossary.md
 - name: Компоненты
   items:
-  - name: Консоль
-    items:
-    - name: Справка по командной строке PowerShell.exe
-      href: components/console/powershell.exe-command-line-help.md
-    - name: Завершение по клавише TAB
-      href: components/console/using-tab-expansion.md
-  - name: ISE
-    items:
-    - name: Введение в интегрированную среду сценариев Windows PowerShell
-      href: components/ise/introducing-the-windows-powershell-ise.md
-    - name: Интегрированная среда сценариев (ISE) Windows PowerShell
-      href: components/ise/windows-powershell-integrated-scripting-environment--ise-.md
-    - name: Использование интегрированной среды сценариев Windows PowerShell
+    - name: Консоль
       items:
-      - name: Обзор интегрированной среды сценариев Windows PowerShell
-        href: components/ise/exploring-the-windows-powershell-ise.md
-      - name: Создание вкладки PowerShell в интегрированной среде сценариев Windows PowerShell
-        href: components/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
-      - name: Отладка сценариев в интегрированной среде сценариев Windows PowerShell
-        href: components/ise/how-to-debug-scripts-in-windows-powershell-ise.md
-      - name: Использование профилей в интегрированной среде сценариев Windows PowerShell
-        href: components/ise/how-to-use-profiles-in-windows-powershell-ise.md
-      - name: Использование завершения нажатием клавиши TAB в областях скриптов и консоли
-        href: components/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
-      - name: Использование области консоли в интегрированной среде сценариев Windows PowerShell
-        href: components/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
-      - name: Написание и запуск скриптов в интегрированной среде сценариев Windows PowerShell
-        href: components/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
-      - name: Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
-        href: components/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
-      - name: Специальные возможности в интегрированной среде сценариев Windows PowerShell
-        href: components/ise/accessibility-in-windows-powershell-ise.md
-    - name: Объектная модель скриптов интегрированной среды скриптов
+        - name: Справка по командной строке PowerShell.exe
+          href: components/console/powershell.exe-command-line-help.md
+        - name: Завершение по клавише TAB
+          href: components/console/using-tab-expansion.md
+    - name: ISE
       items:
-      - name: Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell
-        href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
-      - name: Иерархия объектной модели интегрированной среды сценариев
-        href: components/ise/object-model/the-ise-object-model-hierarchy.md
-      - name: Объект ObjectModelRoot
-        href: components/ise/object-model/the-objectmodelroot-object.md
-      - name: Объект ISEAddOnToolCollection
-        href: components/ise/object-model/the-iseaddontoolcollection-object.md
-      - name: Объект ISEAddOnTool
-        href: components/ise/object-model/the-iseaddontool-object.md
-      - name: Объект ISEEditor
-        href: components/ise/object-model/the-iseeditor-object.md
-      - name: Объект ISEFileCollection
-        href: components/ise/object-model/the-isefilecollection-object.md
-      - name: Объект ISEFile
-        href: components/ise/object-model/the-isefile-object.md
-      - name: Объект ISEMenuItemCollection
-        href: components/ise/object-model/the-isemenuitemcollection-object.md
-      - name: Объект ISEMenuItem
-        href: components/ise/object-model/the-isemenuitem-object.md
-      - name: Объект ISEOptions
-        href: components/ise/object-model/the-iseoptions-object.md
-      - name: Объект ISESnippetCollection
-        href: components/ise/object-model/the-isesnippetcollection-object.md
-      - name: Объект ISESnippet
-        href: components/ise/object-model/the-isesnippetobject.md
-      - name: Объект PowerShellTabCollection
-        href: components/ise/object-model/the-powershelltabcollection-object.md
-      - name: Объект PowerShellTab
-        href: components/ise/object-model/the-powershelltab-object.md
-  - name: Visual Studio Code
-    items:
-    - name: Использование Visual Studio Code
-      href: components/vscode/using-vscode.md
-    - name: Репликация функций интегрированной среды скриптов в Visual Studio Code
-      href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-    - name: Удаленные редактирование и отладка в Visual Studio Code
-      href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
-    - name: Основные сведения о кодировке файлов в VSCode и PowerShell
-      href: components/vscode/understanding-file-encoding.md
-  - name: Веб-доступ
-    items:
-    - name: Правила авторизации и средства безопасности
-      href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
-    - name: Установка
-      href: components/web-access/install-and-use-windows-powershell-web-access.md
-    - name: Устранение неполадок с доступом
-      href: components/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
-    - name: Удаление Windows PowerShell Web Access
-      href: components/web-access/uninstall-windows-powershell-web-access.md
-    - name: Использование веб-консоли PowerShell
-      href: components/web-access/use-the-web-based-windows-powershell-console.md
-  - name: Руководство по рабочим процессам
-    href: components/workflows-guide.md
+        - name: Введение в интегрированную среду сценариев Windows PowerShell
+          href: components/ise/introducing-the-windows-powershell-ise.md
+        - name: Интегрированная среда сценариев (ISE) Windows PowerShell
+          href: components/ise/windows-powershell-integrated-scripting-environment--ise-.md
+        - name: Использование интегрированной среды сценариев Windows PowerShell
+          items:
+            - name: Обзор интегрированной среды сценариев Windows PowerShell
+              href: components/ise/exploring-the-windows-powershell-ise.md
+            - name: Создание вкладки PowerShell в интегрированной среде сценариев Windows PowerShell
+              href: components/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
+            - name: Отладка сценариев в интегрированной среде сценариев Windows PowerShell
+              href: components/ise/how-to-debug-scripts-in-windows-powershell-ise.md
+            - name: Использование профилей в интегрированной среде сценариев Windows PowerShell
+              href: components/ise/how-to-use-profiles-in-windows-powershell-ise.md
+            - name: Использование завершения нажатием клавиши TAB в областях скриптов и консоли
+              href: components/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
+            - name: Использование области консоли в интегрированной среде сценариев Windows PowerShell
+              href: components/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
+            - name: Написание и запуск скриптов в интегрированной среде сценариев Windows PowerShell
+              href: components/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
+            - name: Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
+              href: components/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
+            - name: Специальные возможности в интегрированной среде сценариев Windows PowerShell
+              href: components/ise/accessibility-in-windows-powershell-ise.md
+        - name: Объектная модель скриптов интегрированной среды скриптов
+          items:
+            - name: Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell
+              href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
+            - name: Иерархия объектной модели интегрированной среды сценариев
+              href: components/ise/object-model/the-ise-object-model-hierarchy.md
+            - name: Объект ObjectModelRoot
+              href: components/ise/object-model/the-objectmodelroot-object.md
+            - name: Объект ISEAddOnToolCollection
+              href: components/ise/object-model/the-iseaddontoolcollection-object.md
+            - name: Объект ISEAddOnTool
+              href: components/ise/object-model/the-iseaddontool-object.md
+            - name: Объект ISEEditor
+              href: components/ise/object-model/the-iseeditor-object.md
+            - name: Объект ISEFileCollection
+              href: components/ise/object-model/the-isefilecollection-object.md
+            - name: Объект ISEFile
+              href: components/ise/object-model/the-isefile-object.md
+            - name: Объект ISEMenuItemCollection
+              href: components/ise/object-model/the-isemenuitemcollection-object.md
+            - name: Объект ISEMenuItem
+              href: components/ise/object-model/the-isemenuitem-object.md
+            - name: Объект ISEOptions
+              href: components/ise/object-model/the-iseoptions-object.md
+            - name: Объект ISESnippetCollection
+              href: components/ise/object-model/the-isesnippetcollection-object.md
+            - name: Объект ISESnippet
+              href: components/ise/object-model/the-isesnippetobject.md
+            - name: Объект PowerShellTabCollection
+              href: components/ise/object-model/the-powershelltabcollection-object.md
+            - name: Объект PowerShellTab
+              href: components/ise/object-model/the-powershelltab-object.md
+    - name: Visual Studio Code
+      items:
+        - name: Использование Visual Studio Code
+          href: components/vscode/using-vscode.md
+        - name: Репликация функций интегрированной среды скриптов в Visual Studio Code
+          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+        - name: Удаленные редактирование и отладка в Visual Studio Code
+          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+        - name: Основные сведения о кодировке файлов в VSCode и PowerShell
+          href: components/vscode/understanding-file-encoding.md
+    - name: Веб-доступ
+      items:
+        - name: Правила авторизации и средства безопасности
+          href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
+        - name: Установка
+          href: components/web-access/install-and-use-windows-powershell-web-access.md
+        - name: Устранение неполадок с доступом
+          href: components/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
+        - name: Удаление Windows PowerShell Web Access
+          href: components/web-access/uninstall-windows-powershell-web-access.md
+        - name: Использование веб-консоли PowerShell
+          href: components/web-access/use-the-web-based-windows-powershell-console.md
+    - name: Руководство по рабочим процессам
+      href: components/workflows-guide.md
 - name: Новые возможности
   items:
-  - name: Новые возможности в PowerShell Core 6.x
-    items:
-    - name: Новые возможности PowerShell Core 6.1
-      href: whats-new/what-s-new-in-powershell-core-61.md
-    - name: Новые возможности PowerShell Core 6.0
-      href: whats-new/what-s-new-in-powershell-core-60.md
-    - name: Критические изменения в PowerShell Core 6.0
-      href: whats-new/breaking-changes-ps6.md
-    - name: Известные проблемы в PowerShell Core 6.0
-      href: whats-new/known-issues-ps6.md
-  - name: Новые возможности PowerShell 5.x
-    items:
-    - name: Новые возможности PowerShell 5.0
-      href: whats-new/what-s-new-with-powershell.md
-    - name: Новые возможности Windows PowerShell 5.0
-      href: whats-new/what-s-new-in-windows-powershell-50.md
-    - name: Новые возможности интегрированной среды сценариев PowerShell версии 5.0
-      href: whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: "Новые возможности в PowerShell Core\_6.x"
+      items:
+        - name: Новые возможности PowerShell Core 6.2
+          href: whats-new/what-s-new-in-powershell-core-62.md
+        - name: "Новые возможности PowerShell Core\_6.1"
+          href: whats-new/what-s-new-in-powershell-core-61.md
+        - name: Новые возможности PowerShell Core 6.0
+          href: whats-new/what-s-new-in-powershell-core-60.md
+        - name: "Критические изменения в PowerShell Core\_6.0"
+          href: whats-new/breaking-changes-ps6.md
+        - name: "Известные проблемы в PowerShell Core\_6.0"
+          href: whats-new/known-issues-ps6.md
+    - name: "Новые возможности PowerShell\_5.x"
+      items:
+        - name: "Новые возможности PowerShell\_5.0"
+          href: whats-new/what-s-new-with-powershell.md
+        - name: Новые возможности Windows PowerShell 5.0
+          href: whats-new/what-s-new-in-windows-powershell-50.md
+        - name: Новые возможности интегрированной среды сценариев PowerShell версии 5.0
+          href: whats-new/what-s-new-in-the-powershell-50-ise.md
 - name: Жизненный цикл поддержки PowerShell Core
   href: powershell-support-lifecycle.md
 - name: Примеры скриптов
   items:
-  - name: Примеры скриптов для администрирования
-    href: samples/sample-scripts-for-administration.md
-  - name: Изменение состояния компьютера
-    href: samples/changing-computer-state.md
-  - name: Сбор информации о компьютерах
-    href: samples/collecting-information-about-computers.md
-  - name: Создание запросов Get-WinEvent с помощью FilterHashtable
-    href: samples/creating-get-winEvent-queries-with-filterhashtable.md
-  - name: Создание элементов пользовательского интерфейса
-    items:
-    - name: Создание настраиваемого поля ввода
-      href: samples/creating-a-custom-input-box.md
-    - name: Создание графического элемента управления "Выбор даты"
-      href: samples/creating-a-graphical-date-picker.md
-    - name: Списки с множественным выбором
-      href: samples/multiple-selection-list-boxes.md
-    - name: Выбор элементов из списка
-      href: samples/selecting-items-from-a-list-box.md
-  - name: Декодирование команды PowerShell из выполняемого процесса
-    href: samples/decode-powershell-command-from-a-running-process.md
-  - name: Управление текущим расположением
-    href: samples/managing-current-location.md
-  - name: Управление процессами при помощи командлетов Process
-    href: samples/managing-processes-with-process-cmdlets.md
-  - name: Управление службами
-    href: samples/managing-services.md
-  - name: Управление дисками Windows PowerShell
-    href: samples/managing-windows-powershell-drives.md
-  - name: Прямое управление элементами
-    href: samples/manipulating-items-directly.md
-  - name: Выполнение задач по работе с сетями
-    href: samples/performing-networking-tasks.md
-  - name: Перенаправление данных с помощью командлетов Out-*
-    href: samples/redirecting-data-with-out---cmdlets.md
-  - name: Использование команд Format для изменения представления вывода
-    href: samples/using-format-commands-to-change-output-view.md
-  - name: Работа с файлами и папками
-    href: samples/working-with-files-and-folders.md
-  - name: Работа с файлами, папками и разделами реестра
-    href: samples/working-with-files-folders-and-registry-keys.md
-  - name: Работа с объектами
-    items:
-    - name: Получение объектов WMI (Get-WmiObject)
-      href: samples/getting-wmi-objects--get-wmiobject-.md
-    - name: Создание объектов .NET и COM (New-Object)
-      href: samples/creating-.net-and-com-objects--new-object-.md
-    - name: Удаление объектов из конвейера (Where-Object)
-      href: samples/removing-objects-from-the-pipeline--where-object-.md
-    - name: Выбор частей объекта (Select-Object)
-      href: samples/selecting-parts-of-objects--select-object-.md
-    - name: Сортировка объектов
-      href: samples/sorting-objects.md
-    - name: Повторение задачи для нескольких объектов (ForEach-Object)
-      href: samples/repeating-a-task-for-multiple-objects--foreach-object-.md
-    - name: Использование статических классов и методов
-      href: samples/using-static-classes-and-methods.md
-    - name: Просмотр структуры объектов (Get-Member)
-      href: samples/viewing-object-structure--get-member-.md
-  - name: Работа с принтерами
-    href: samples/working-with-printers.md
-  - name: Работа с записями реестра
-    href: samples/working-with-registry-entries.md
-  - name: Работа с разделами реестра
-    href: samples/working-with-registry-keys.md
-  - name: Работа с программами установки программного обеспечения
-    href: samples/working-with-software-installations.md
-  - name: Другие полезные объекты для написания скриптов
-    href: samples/other-useful-scripting-objects.md
-  - name: Приложение 1. Псевдонимы совместимости
-    href: samples/appendix-1---compatibility-aliases.md
-  - name: Приложение 2. Создание настраиваемого ярлыка PowerShell
-    href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
-ms.openlocfilehash: 3894ca88d01d4f84742321445b0b1e962631c10d
-ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920464"
+    - name: Примеры скриптов для администрирования
+      href: samples/sample-scripts-for-administration.md
+    - name: Изменение состояния компьютера
+      href: samples/changing-computer-state.md
+    - name: Сбор информации о компьютерах
+      href: samples/collecting-information-about-computers.md
+    - name: Создание запросов Get-WinEvent с помощью FilterHashtable
+      href: samples/creating-get-winEvent-queries-with-filterhashtable.md
+    - name: Создание элементов пользовательского интерфейса
+      items:
+        - name: Создание настраиваемого поля ввода
+          href: samples/creating-a-custom-input-box.md
+        - name: Создание графического элемента управления "Выбор даты"
+          href: samples/creating-a-graphical-date-picker.md
+        - name: Списки с множественным выбором
+          href: samples/multiple-selection-list-boxes.md
+        - name: Выбор элементов из списка
+          href: samples/selecting-items-from-a-list-box.md
+    - name: Декодирование команды PowerShell из выполняемого процесса
+      href: samples/decode-powershell-command-from-a-running-process.md
+    - name: Управление текущим расположением
+      href: samples/managing-current-location.md
+    - name: Управление процессами при помощи командлетов Process
+      href: samples/managing-processes-with-process-cmdlets.md
+    - name: Управление службами
+      href: samples/managing-services.md
+    - name: Управление дисками Windows PowerShell
+      href: samples/managing-windows-powershell-drives.md
+    - name: Прямое управление элементами
+      href: samples/manipulating-items-directly.md
+    - name: Выполнение задач по работе с сетями
+      href: samples/performing-networking-tasks.md
+    - name: Перенаправление данных с помощью командлетов Out-*
+      href: samples/redirecting-data-with-out---cmdlets.md
+    - name: Использование команд Format для изменения представления вывода
+      href: samples/using-format-commands-to-change-output-view.md
+    - name: Работа с файлами и папками
+      href: samples/working-with-files-and-folders.md
+    - name: 'Работа с файлами, папками и разделами реестра'
+      href: samples/working-with-files-folders-and-registry-keys.md
+    - name: Работа с объектами
+      items:
+        - name: Получение объектов WMI (Get-WmiObject)
+          href: samples/getting-wmi-objects--get-wmiobject-.md
+        - name: Создание объектов .NET и COM (New-Object)
+          href: samples/creating-.net-and-com-objects--new-object-.md
+        - name: Удаление объектов из конвейера (Where-Object)
+          href: samples/removing-objects-from-the-pipeline--where-object-.md
+        - name: Выбор частей объекта (Select-Object)
+          href: samples/selecting-parts-of-objects--select-object-.md
+        - name: Сортировка объектов
+          href: samples/sorting-objects.md
+        - name: Повторение задачи для нескольких объектов (ForEach-Object)
+          href: samples/repeating-a-task-for-multiple-objects--foreach-object-.md
+        - name: Использование статических классов и методов
+          href: samples/using-static-classes-and-methods.md
+        - name: Просмотр структуры объектов (Get-Member)
+          href: samples/viewing-object-structure--get-member-.md
+    - name: Работа с принтерами
+      href: samples/working-with-printers.md
+    - name: Работа с записями реестра
+      href: samples/working-with-registry-entries.md
+    - name: Работа с разделами реестра
+      href: samples/working-with-registry-keys.md
+    - name: Работа с программами установки программного обеспечения
+      href: samples/working-with-software-installations.md
+    - name: Другие полезные объекты для написания скриптов
+      href: samples/other-useful-scripting-objects.md
+    - name: "Приложение\_1. Псевдонимы совместимости"
+      href: samples/appendix-1---compatibility-aliases.md
+    - name: "Приложение\_2. Создание настраиваемого ярлыка PowerShell"
+      href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
