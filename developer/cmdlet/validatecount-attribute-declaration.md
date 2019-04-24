@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateCount attribute
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
-ms.openlocfilehash: 4e0be34b6f7a56dcf02a4381de4d2a5d08db14df
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
-ms.translationtype: MT
+ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
+ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794453"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59983904"
 ---
 # <a name="validatecount-attribute-declaration"></a>Объявление атрибута ValidateCount
 
@@ -31,28 +31,34 @@ ms.locfileid: "57794453"
 
 #### <a name="parameters"></a>Параметры
 
-`MinLength` ([System.Int32](/dotnet/api/System.Int32)) требуется. Указывает минимальное число аргументов.
+`MinLength` ([System.Int32][]) требуется. Указывает минимальное число аргументов.
 
-`MaxLength`([System.Int32](/dotnet/api/System.Int32)) требуется. Указывает максимальное количество аргументов.
+`MaxLength`([System.Int32][]) требуется. Указывает максимальное количество аргументов.
 
 ## <a name="remarks"></a>Замечания
 
-- Дополнительные сведения о том, как объявить этот атрибут, см. в разделе [как объявить правила проверки входных данных](http://msdn.microsoft.com/en-us/544c2100-62ba-4be4-b2a2-cc0d4e4fc45b).
+- Дополнительные сведения о том, как объявить этот атрибут, см. в разделе [Как проверить количество аргументов][].
 
 - Если этот атрибут не вызывается, соответствующего параметра командлета может иметь любое количество аргументов.
 
 - Среда выполнения Windows PowerShell выдает ошибку при следующих условиях:
 
-    - `MinLength` И `MaxLength` атрибут параметры не имеют тип [System.Int32](/dotnet/api/System.Int32).
+    - `MinLength` И `MaxLength` атрибут параметры не имеют тип [System.Int32][].
 
     - Значение `MaxLength` параметр атрибута меньше, чем значение `MinLength` параметр атрибута.
 
-- Атрибут ValidateCount определяется [System.Management.Automation.Validatecount](/dotnet/api/System.Management.Automation.ValidateCount) класса.
+- Атрибут ValidateCount определяется [System.Management.Automation.ValidateCountAttribute][] класса.
 
 ## <a name="see-also"></a>См. также
 
-[System.Management.Automation.Validatecount](/dotnet/api/System.Management.Automation.ValidateCount)
+[System.Management.Automation.ValidateCountAttribute][]
 
-[Как объявить правила проверки входных данных](http://msdn.microsoft.com/en-us/544c2100-62ba-4be4-b2a2-cc0d4e4fc45b)
+[Как проверить количество аргументов][]
 
-[Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Запись командлета Windows PowerShell][]
+
+[Как проверить количество аргументов]: how-to-validate-an-argument-count.md
+[Запись командлета Windows PowerShell]: writing-a-windows-powershell-cmdlet.md
+
+[System.Int32]: /dotnet/api/System.Int32
+[System.Management.Automation.ValidateCountAttribute]: /dotnet/api/System.Management.Automation.ValidateCountAttribute
