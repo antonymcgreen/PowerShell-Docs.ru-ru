@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Командлеты для работы с каталогами
 ms.openlocfilehash: ec5fc866fe27a894b23b93d3ea46ad9c0cba288e
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057660"
 ---
 # <a name="catalog-cmdlets"></a>Командлеты для работы с каталогами
 

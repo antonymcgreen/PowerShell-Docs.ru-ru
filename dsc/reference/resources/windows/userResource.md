@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс User в DSC
 ms.openlocfilehash: 04543351df19160a2da05ccea96e5d392d8c55bf
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076908"
 ---
 # <a name="dsc-user-resource"></a>Ресурс User в DSC
 
-Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Ресурс **User** в DSC Windows PowerShell предоставляет механизм управления локальными учетными записями на целевом узле.
 

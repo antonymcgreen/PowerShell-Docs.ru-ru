@@ -3,11 +3,11 @@ title: Установка PowerShell Core в macOS
 description: Сведения об установке PowerShell Core в macOS
 ms.date: 12/12/2018
 ms.openlocfilehash: 7db8ca0cb6d13db8ce7f11b4a4b03b7d3f9b6feb
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086465"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Установка PowerShell Core в macOS
 
@@ -84,8 +84,7 @@ brew cask upgrade powershell-preview
 
 ## <a name="installation-via-direct-download"></a>Установка с помощью прямого скачивания
 
-Скачайте пакет PKG
-`powershell-6.2.0-osx-x64.pkg`
+Скачайте пакет PKG `powershell-6.2.0-osx-x64.pkg`
 со страницы [выпусков][] на компьютер с macOS.
 
 Дважды щелкните файл и следуйте инструкциям на экране либо установите его из командной строки:
@@ -175,13 +174,13 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 ## <a name="paths"></a>Пути
 
-* `$PSHOME` — это `/usr/local/microsoft/powershell/6.2.0/`
-* Профили пользователей будут считаны из `~/.config/powershell/profile.ps1`
-* Профили по умолчанию будут считаны из `$PSHOME/profile.ps1`
-* Модули пользователей будут считаны из `~/.local/share/powershell/Modules`
-* Общие модули будут считаны из `/usr/local/share/powershell/Modules`
-* Модули по умолчанию будут считаны из `$PSHOME/Modules`
-* Журнал PSReadline будет записан в `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
+* `$PSHOME` имеет значение `/usr/local/microsoft/powershell/6.2.0/`.
+* Профили пользователей будут считаны из `~/.config/powershell/profile.ps1`.
+* Профили по умолчанию будут считаны из `$PSHOME/profile.ps1`.
+* Модули пользователей будут считаны из `~/.local/share/powershell/Modules`.
+* Общие модули будут считаны из `/usr/local/share/powershell/Modules`.
+* Модули по умолчанию будут считаны из `$PSHOME/Modules`.
+* Журнал PSReadline будет записан в `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`.
 
 Профили учитывают конфигурацию PowerShell для отдельных узлов.
 Профиль узла по умолчанию находится в `Microsoft.PowerShell_profile.ps1` в тех же расположениях.
@@ -201,5 +200,5 @@ PowerShell отвечает требованиям [спецификации к�
 [Cask]: https://github.com/Homebrew/homebrew-cask
 [cask-versions]: https://github.com/Homebrew/homebrew-cask-versions
 [GitHub]: https://github.com/Homebrew
-[выпуски]: https://github.com/PowerShell/PowerShell/releases/latest
+[выпусков]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html

@@ -4,11 +4,11 @@ keywords: powershell,командлет
 title: Создание объектов .NET и COM (New-Object)
 ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
 ms.openlocfilehash: ef8215303aacd90536d3c2ae57bc3629e202f318
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086377"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>Создание объектов .NET и COM (New-Object)
 

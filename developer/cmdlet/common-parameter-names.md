@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0db9f54c-4014-4450-9e81-c9f5fe562a0e
 caps.latest.revision: 12
 ms.openlocfilehash: c65deeda6b2ef1b52de55035dc606259a7f2d232
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068437"
 ---
 # <a name="common-parameter-names"></a>Общие имена параметров
 
@@ -28,13 +28,13 @@ ms.locfileid: "58059666"
 
 ### <a name="debug-alias-db"></a>Отладка (псевдоним: db)
 
-Тип данных: SwitchParameter
+Тип данных: Переключатель
 
 Этот параметр указывает ли отладка на уровне программист сообщения, которые могут отображаться в командной строке. Эти сообщения предназначены для устранения неполадок операцию командлета и создаются путем вызова [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) метод. Отладочные сообщения не обязательно должны быть локализованы.
 
 ### <a name="erroraction-alias-ea"></a>ErrorAction (псевдоним: ea)
 
-Тип данных: Enumeration
+Тип данных: Перечисление
 
 Этот параметр указывает, какое действие следует выполнить при возникновении ошибки. Возможные значения для этого параметра определяются [System.Management.Automation.Actionpreference](/dotnet/api/System.Management.Automation.ActionPreference) перечисления.
 
@@ -58,13 +58,13 @@ ms.locfileid: "58059666"
 
 ### <a name="verbose-alias-vb"></a>Verbose (псевдоним: vb)
 
-Тип данных: SwitchParameter
+Тип данных: Переключатель
 
 Этот параметр указывает, является ли этот командлет записывает пояснительный сообщений, которые могут отображаться в командной строке. Эти сообщения предназначены для получения дополнительной справки для пользователя и создаются путем вызова [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) метод.
 
 ### <a name="warningaction-alias-wa"></a>WarningAction (псевдоним: wa)
 
-Тип данных: Enumeration
+Тип данных: Перечисление
 
 Этот параметр указывает, какое действие должно иметь место, когда этот командлет записывает предупреждающее сообщение. Возможные значения для этого параметра определяются [System.Management.Automation.Actionpreference](/dotnet/api/System.Management.Automation.ActionPreference) перечисления.
 
@@ -80,13 +80,13 @@ ms.locfileid: "58059666"
 
 ### <a name="confirm-alias-cf"></a>Подтвердите (псевдоним: cf)
 
-Тип данных: SwitchParameter
+Тип данных: Переключатель
 
 Этот параметр указывает, отображаются ли командлет запрос, является ли пользователь в том, что они хотят продолжить.
 
 ### <a name="whatif-alias-wi"></a>WhatIf (псевдоним: рабочие элементы)
 
-Тип данных: SwitchParameter
+Тип данных: Переключатель
 
 Этот параметр указывает, является ли этот командлет записывает сообщение, описывающее эффекты выполнения командлета, не выполняя никаких действий.
 
@@ -96,7 +96,7 @@ ms.locfileid: "58059666"
 
 ### <a name="usetransaction-alias-usetx"></a>UseTransaction (псевдоним: usetx)
 
-Тип данных: SwitchParameter
+Тип данных: Переключатель
 
 Этот параметр указывает, использует ли командлет текущей транзакции для выполнения действия.
 
