@@ -3,125 +3,125 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование DSC на сервере Nano Server
 ms.openlocfilehash: ac5eaf3885788f40e12e4f0a0f19025668280f7e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58054668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079733"
 ---
-# <a name="using-dsc-on-nano-server"></a><span data-ttu-id="28a99-103">Использование DSC на сервере Nano Server</span><span class="sxs-lookup"><span data-stu-id="28a99-103">Using DSC on Nano Server</span></span>
+# <a name="using-dsc-on-nano-server"></a><span data-ttu-id="f08f5-103">Использование DSC на сервере Nano Server</span><span class="sxs-lookup"><span data-stu-id="f08f5-103">Using DSC on Nano Server</span></span>
 
-> <span data-ttu-id="28a99-104">Область применения. Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="28a99-104">Applies To: Windows PowerShell 5.0</span></span>
+> <span data-ttu-id="f08f5-104">Область применения. Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="f08f5-104">Applies To: Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="28a99-105">**DSC для Nano Server** — это дополнительный пакет в папке `NanoServer\Packages` носителей Windows Server 2016.</span><span class="sxs-lookup"><span data-stu-id="28a99-105">**DSC on Nano Server** is an optional package in the `NanoServer\Packages` folder of the Windows Server 2016 media.</span></span> <span data-ttu-id="28a99-106">Пакет можно установить при создании виртуального жесткого диска для сервера Nano Server, указав значение **Microsoft-NanoServer-DSC-Package** для параметра **Packages** функции **New-NanoServerImage**.</span><span class="sxs-lookup"><span data-stu-id="28a99-106">The package can be installed when you create a VHD for a Nano Server by specifying **Microsoft-NanoServer-DSC-Package** as the value of the **Packages** parameter of the **New-NanoServerImage** function.</span></span> <span data-ttu-id="28a99-107">Например, при создании виртуального жесткого диска для виртуальной машины команда будет выглядеть следующим образом.</span><span class="sxs-lookup"><span data-stu-id="28a99-107">For example, if you are creating a VHD for a virtual machine, the command would look like the following:</span></span>
+<span data-ttu-id="f08f5-105">**DSC для Nano Server** — это дополнительный пакет в папке `NanoServer\Packages` носителей Windows Server 2016.</span><span class="sxs-lookup"><span data-stu-id="f08f5-105">**DSC on Nano Server** is an optional package in the `NanoServer\Packages` folder of the Windows Server 2016 media.</span></span> <span data-ttu-id="f08f5-106">Пакет можно установить при создании виртуального жесткого диска для сервера Nano Server, указав значение **Microsoft-NanoServer-DSC-Package** для параметра **Packages** функции **New-NanoServerImage**.</span><span class="sxs-lookup"><span data-stu-id="f08f5-106">The package can be installed when you create a VHD for a Nano Server by specifying **Microsoft-NanoServer-DSC-Package** as the value of the **Packages** parameter of the **New-NanoServerImage** function.</span></span> <span data-ttu-id="f08f5-107">Например, при создании виртуального жесткого диска для виртуальной машины команда будет выглядеть следующим образом.</span><span class="sxs-lookup"><span data-stu-id="f08f5-107">For example, if you are creating a VHD for a virtual machine, the command would look like the following:</span></span>
 
 ```powershell
 New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1 -Packages Microsoft-NanoServer-DSC-Package
 ```
 
-<span data-ttu-id="28a99-108">Сведения об установке и использовании сервера Nano Server, а также об управлении этим сервером с помощью удаленного взаимодействия PowerShell см. в статье [Getting Started with Nano Server](/windows-server/get-started/getting-started-with-nano-server) (Приступая к работе с сервером Nano Server).</span><span class="sxs-lookup"><span data-stu-id="28a99-108">For information about installing and using Nano Server, as well as how to manage Nano Server with PowerShell Remoting, see [Getting Started with Nano Server](/windows-server/get-started/getting-started-with-nano-server).</span></span>
+<span data-ttu-id="f08f5-108">Сведения об установке и использовании сервера Nano Server, а также об управлении этим сервером с помощью удаленного взаимодействия PowerShell см. в статье [Getting Started with Nano Server](/windows-server/get-started/getting-started-with-nano-server) (Приступая к работе с сервером Nano Server).</span><span class="sxs-lookup"><span data-stu-id="f08f5-108">For information about installing and using Nano Server, as well as how to manage Nano Server with PowerShell Remoting, see [Getting Started with Nano Server](/windows-server/get-started/getting-started-with-nano-server).</span></span>
 
-## <a name="dsc-features-available-on-nano-server"></a><span data-ttu-id="28a99-109">Функции DSC, доступные на сервере Nano Server</span><span class="sxs-lookup"><span data-stu-id="28a99-109">DSC features available on Nano Server</span></span>
+## <a name="dsc-features-available-on-nano-server"></a><span data-ttu-id="f08f5-109">Функции DSC, доступные на сервере Nano Server</span><span class="sxs-lookup"><span data-stu-id="f08f5-109">DSC features available on Nano Server</span></span>
 
-<span data-ttu-id="28a99-110">Так как сервер Nano Server поддерживает только ограниченный набор API по сравнению с полной версией Windows Server, набор функций DSC в системе Nano Server на данный момент несравним с DSC в полнофункциональных SKU.</span><span class="sxs-lookup"><span data-stu-id="28a99-110">Because Nano Server supports only a limited set of APIs compared to a full version of Windows Server, DSC on Nano Server does not have full functional parity with DSC running on full SKUs for the time being.</span></span> <span data-ttu-id="28a99-111">DSC для Nano Server в настоящее время активно разрабатывается и не является законченным компонентом.</span><span class="sxs-lookup"><span data-stu-id="28a99-111">DSC on Nano Server is in active development and is not yet feature complete.</span></span>
+<span data-ttu-id="f08f5-110">Так как сервер Nano Server поддерживает только ограниченный набор API по сравнению с полной версией Windows Server, набор функций DSC в системе Nano Server на данный момент несравним с DSC в полнофункциональных SKU.</span><span class="sxs-lookup"><span data-stu-id="f08f5-110">Because Nano Server supports only a limited set of APIs compared to a full version of Windows Server, DSC on Nano Server does not have full functional parity with DSC running on full SKUs for the time being.</span></span> <span data-ttu-id="f08f5-111">DSC для Nano Server в настоящее время активно разрабатывается и не является законченным компонентом.</span><span class="sxs-lookup"><span data-stu-id="f08f5-111">DSC on Nano Server is in active development and is not yet feature complete.</span></span>
 
-<span data-ttu-id="28a99-112">Следующие функции DSC в настоящее время доступны для Nano Server:</span><span class="sxs-lookup"><span data-stu-id="28a99-112">The following DSC features are currently available on Nano Server:</span></span>
+<span data-ttu-id="f08f5-112">Следующие функции DSC в настоящее время доступны для Nano Server:</span><span class="sxs-lookup"><span data-stu-id="f08f5-112">The following DSC features are currently available on Nano Server:</span></span>
 
-<span data-ttu-id="28a99-113">Режимы опроса и принудительной отправки</span><span class="sxs-lookup"><span data-stu-id="28a99-113">Both push and pull modes</span></span>
+<span data-ttu-id="f08f5-113">Режимы опроса и принудительной отправки</span><span class="sxs-lookup"><span data-stu-id="f08f5-113">Both push and pull modes</span></span>
 
-- <span data-ttu-id="28a99-114">Все командлеты DSC, которые существуют в полной версии Windows Server, включая следующие:</span><span class="sxs-lookup"><span data-stu-id="28a99-114">All DSC cmdlets that exist on a full version of Windows Server, including the following:</span></span>
-- [<span data-ttu-id="28a99-115">Get-DscLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="28a99-115">Get-DscLocalConfigurationManager</span></span>](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager)
-- [<span data-ttu-id="28a99-116">Set-DscLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="28a99-116">Set-DscLocalConfigurationManager</span></span>](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager)
-- [<span data-ttu-id="28a99-117">Enable-DscDebug</span><span class="sxs-lookup"><span data-stu-id="28a99-117">Enable-DscDebug</span></span>](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug)
-- [<span data-ttu-id="28a99-118">Disable-DscDebug</span><span class="sxs-lookup"><span data-stu-id="28a99-118">Disable-DscDebug</span></span>](/powershell/module/PSDesiredStateConfiguration/Disable-DscDebug)
-- [<span data-ttu-id="28a99-119">Start-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="28a99-119">Start-DscConfiguration</span></span>](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration)
-- [<span data-ttu-id="28a99-120">Stop-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="28a99-120">Stop-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Stop-DscConfiguration)
-- [<span data-ttu-id="28a99-121">Get-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="28a99-121">Get-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration)
-- [<span data-ttu-id="28a99-122">Test-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="28a99-122">Test-DscConfiguration</span></span>](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
-- [<span data-ttu-id="28a99-123">Publish-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="28a99-123">Publish-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration)
-- [<span data-ttu-id="28a99-124">Update-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="28a99-124">Update-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration)
-- [<span data-ttu-id="28a99-125">Restore-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="28a99-125">Restore-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Restore-DscConfiguration)
-- [<span data-ttu-id="28a99-126">Remove-DscConfigurationDocument</span><span class="sxs-lookup"><span data-stu-id="28a99-126">Remove-DscConfigurationDocument</span></span>](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
-- [<span data-ttu-id="28a99-127">Get-DscConfigurationStatus</span><span class="sxs-lookup"><span data-stu-id="28a99-127">Get-DscConfigurationStatus</span></span>](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus)
-- [<span data-ttu-id="28a99-128">Invoke-DscResource</span><span class="sxs-lookup"><span data-stu-id="28a99-128">Invoke-DscResource</span></span>](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource)
-- [<span data-ttu-id="28a99-129">Find-DscResource</span><span class="sxs-lookup"><span data-stu-id="28a99-129">Find-DscResource</span></span>](https://technet.microsoft.com/en-us/library/mt517874.aspx)
-- [<span data-ttu-id="28a99-130">Get-DscResource</span><span class="sxs-lookup"><span data-stu-id="28a99-130">Get-DscResource</span></span>](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)
-- [<span data-ttu-id="28a99-131">New-DscChecksum</span><span class="sxs-lookup"><span data-stu-id="28a99-131">New-DscChecksum</span></span>](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum)
+- <span data-ttu-id="f08f5-114">Все командлеты DSC, которые существуют в полной версии Windows Server, включая следующие:</span><span class="sxs-lookup"><span data-stu-id="f08f5-114">All DSC cmdlets that exist on a full version of Windows Server, including the following:</span></span>
+- [<span data-ttu-id="f08f5-115">Get-DscLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="f08f5-115">Get-DscLocalConfigurationManager</span></span>](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager)
+- [<span data-ttu-id="f08f5-116">Set-DscLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="f08f5-116">Set-DscLocalConfigurationManager</span></span>](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager)
+- [<span data-ttu-id="f08f5-117">Enable-DscDebug</span><span class="sxs-lookup"><span data-stu-id="f08f5-117">Enable-DscDebug</span></span>](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug)
+- [<span data-ttu-id="f08f5-118">Disable-DscDebug</span><span class="sxs-lookup"><span data-stu-id="f08f5-118">Disable-DscDebug</span></span>](/powershell/module/PSDesiredStateConfiguration/Disable-DscDebug)
+- [<span data-ttu-id="f08f5-119">Start-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="f08f5-119">Start-DscConfiguration</span></span>](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration)
+- [<span data-ttu-id="f08f5-120">Stop-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="f08f5-120">Stop-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Stop-DscConfiguration)
+- [<span data-ttu-id="f08f5-121">Get-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="f08f5-121">Get-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration)
+- [<span data-ttu-id="f08f5-122">Test-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="f08f5-122">Test-DscConfiguration</span></span>](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
+- [<span data-ttu-id="f08f5-123">Publish-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="f08f5-123">Publish-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration)
+- [<span data-ttu-id="f08f5-124">Update-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="f08f5-124">Update-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration)
+- [<span data-ttu-id="f08f5-125">Restore-DscConfiguration</span><span class="sxs-lookup"><span data-stu-id="f08f5-125">Restore-DscConfiguration</span></span>](/powershell/module/PSDesiredStateConfiguration/Restore-DscConfiguration)
+- [<span data-ttu-id="f08f5-126">Remove-DscConfigurationDocument</span><span class="sxs-lookup"><span data-stu-id="f08f5-126">Remove-DscConfigurationDocument</span></span>](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
+- [<span data-ttu-id="f08f5-127">Get-DscConfigurationStatus</span><span class="sxs-lookup"><span data-stu-id="f08f5-127">Get-DscConfigurationStatus</span></span>](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus)
+- [<span data-ttu-id="f08f5-128">Invoke-DscResource</span><span class="sxs-lookup"><span data-stu-id="f08f5-128">Invoke-DscResource</span></span>](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource)
+- [<span data-ttu-id="f08f5-129">Find-DscResource</span><span class="sxs-lookup"><span data-stu-id="f08f5-129">Find-DscResource</span></span>](https://technet.microsoft.com/en-us/library/mt517874.aspx)
+- [<span data-ttu-id="f08f5-130">Get-DscResource</span><span class="sxs-lookup"><span data-stu-id="f08f5-130">Get-DscResource</span></span>](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)
+- [<span data-ttu-id="f08f5-131">New-DscChecksum</span><span class="sxs-lookup"><span data-stu-id="f08f5-131">New-DscChecksum</span></span>](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum)
 
-- <span data-ttu-id="28a99-132">Компиляция конфигураций (см. раздел [Конфигурации DSC](../configurations/configurations.md)).</span><span class="sxs-lookup"><span data-stu-id="28a99-132">Compiling configurations (see [DSC configurations](../configurations/configurations.md))</span></span>
+- <span data-ttu-id="f08f5-132">Компиляция конфигураций (см. раздел [Конфигурации DSC](../configurations/configurations.md)).</span><span class="sxs-lookup"><span data-stu-id="f08f5-132">Compiling configurations (see [DSC configurations](../configurations/configurations.md))</span></span>
 
-  <span data-ttu-id="28a99-133">**Проблема**. Не работает шифрование паролей (см. раздел [Защита MOF-файла](../pull-server/secureMOF.md)) во время компиляции конфигурации.</span><span class="sxs-lookup"><span data-stu-id="28a99-133">**Issue:** Password encryption (see [Securing the MOF File](../pull-server/secureMOF.md)) during configuration compilation doesn't work.</span></span>
+  <span data-ttu-id="f08f5-133">**Проблема**. Не работает шифрование паролей (см. раздел [Защита MOF-файла](../pull-server/secureMOF.md)) во время компиляции конфигурации.</span><span class="sxs-lookup"><span data-stu-id="f08f5-133">**Issue:** Password encryption (see [Securing the MOF File](../pull-server/secureMOF.md)) during configuration compilation doesn't work.</span></span>
 
-- <span data-ttu-id="28a99-134">Компиляция метаконфигураций (см. раздел [Настройка локального диспетчера конфигураций](../managing-nodes/metaConfig.md)).</span><span class="sxs-lookup"><span data-stu-id="28a99-134">Compiling metaconfigurations (see [Configuring the Local Configuration Manager](../managing-nodes/metaConfig.md))</span></span>
+- <span data-ttu-id="f08f5-134">Компиляция метаконфигураций (см. раздел [Настройка локального диспетчера конфигураций](../managing-nodes/metaConfig.md)).</span><span class="sxs-lookup"><span data-stu-id="f08f5-134">Compiling metaconfigurations (see [Configuring the Local Configuration Manager](../managing-nodes/metaConfig.md))</span></span>
 
-- <span data-ttu-id="28a99-135">Выполнение ресурса в контексте пользователя (см. раздел [Запуск DSC с учетными данными пользователя (запуск от имени)](../configurations/runAsUser.md)).</span><span class="sxs-lookup"><span data-stu-id="28a99-135">Running a resource under user context (see [Running DSC with user credentials (RunAs)](../configurations/runAsUser.md))</span></span>
+- <span data-ttu-id="f08f5-135">Выполнение ресурса в контексте пользователя (см. раздел [Запуск DSC с учетными данными пользователя (запуск от имени)](../configurations/runAsUser.md)).</span><span class="sxs-lookup"><span data-stu-id="f08f5-135">Running a resource under user context (see [Running DSC with user credentials (RunAs)](../configurations/runAsUser.md))</span></span>
 
-- <span data-ttu-id="28a99-136">Ресурсы на основе класса (см. раздел [Написание пользовательских ресурсов DSC с использованием классов PowerShell](../resources/authoringResourceClass.md)).</span><span class="sxs-lookup"><span data-stu-id="28a99-136">Class-based resources (see [Writing a custom DSC resource with PowerShell classes](../resources/authoringResourceClass.md))</span></span>
+- <span data-ttu-id="f08f5-136">Ресурсы на основе класса (см. раздел [Написание пользовательских ресурсов DSC с использованием классов PowerShell](../resources/authoringResourceClass.md)).</span><span class="sxs-lookup"><span data-stu-id="f08f5-136">Class-based resources (see [Writing a custom DSC resource with PowerShell classes](../resources/authoringResourceClass.md))</span></span>
 
-- <span data-ttu-id="28a99-137">Отладка ресурсов DSC (см. раздел [Отладка ресурсов DSC](../troubleshooting/debugResource.md)).</span><span class="sxs-lookup"><span data-stu-id="28a99-137">Debugging of DSC resources (see [Debugging DSC resources](../troubleshooting/debugResource.md))</span></span>
+- <span data-ttu-id="f08f5-137">Отладка ресурсов DSC (см. раздел [Отладка ресурсов DSC](../troubleshooting/debugResource.md)).</span><span class="sxs-lookup"><span data-stu-id="f08f5-137">Debugging of DSC resources (see [Debugging DSC resources](../troubleshooting/debugResource.md))</span></span>
 
-  <span data-ttu-id="28a99-138">**Проблема**. Отладка не работает, если ресурс использует PsDscRunAsCredential (см. раздел [Запуск DSC с учетными данными пользователя](../configurations/runAsUser.md)).</span><span class="sxs-lookup"><span data-stu-id="28a99-138">**Issue:** Doesn't work if a resource is using PsDscRunAsCredential (see [Running DSC with user credentials](../configurations/runAsUser.md))</span></span>
+  <span data-ttu-id="f08f5-138">**Проблема**. Отладка не работает, если ресурс использует PsDscRunAsCredential (см. раздел [Запуск DSC с учетными данными пользователя](../configurations/runAsUser.md)).</span><span class="sxs-lookup"><span data-stu-id="f08f5-138">**Issue:** Doesn't work if a resource is using PsDscRunAsCredential (see [Running DSC with user credentials](../configurations/runAsUser.md))</span></span>
 
-- [<span data-ttu-id="28a99-139">Указание межузловых зависимостей</span><span class="sxs-lookup"><span data-stu-id="28a99-139">Specifying cross-node dependencies</span></span>](../configurations/crossNodeDependencies.md)
+- [<span data-ttu-id="f08f5-139">Указание межузловых зависимостей</span><span class="sxs-lookup"><span data-stu-id="f08f5-139">Specifying cross-node dependencies</span></span>](../configurations/crossNodeDependencies.md)
 
-- [<span data-ttu-id="28a99-140">Управление версиями ресурсов</span><span class="sxs-lookup"><span data-stu-id="28a99-140">Resource versioning</span></span>](../configurations/sxsResource.md)
+- [<span data-ttu-id="f08f5-140">Управление версиями ресурсов</span><span class="sxs-lookup"><span data-stu-id="f08f5-140">Resource versioning</span></span>](../configurations/sxsResource.md)
 
-- <span data-ttu-id="28a99-141">Опрашивающий клиент (конфигурации и ресурсы) (см. раздел [Настройка опрашивающего клиента с помощью имен конфигураций](../pull-server/pullClientConfigNames.md)).</span><span class="sxs-lookup"><span data-stu-id="28a99-141">Pull client (configurations & resources) (see [Setting up a pull client using configuration names](../pull-server/pullClientConfigNames.md))</span></span>
+- <span data-ttu-id="f08f5-141">Опрашивающий клиент (конфигурации и ресурсы) (см. раздел [Настройка опрашивающего клиента с помощью имен конфигураций](../pull-server/pullClientConfigNames.md)).</span><span class="sxs-lookup"><span data-stu-id="f08f5-141">Pull client (configurations & resources) (see [Setting up a pull client using configuration names](../pull-server/pullClientConfigNames.md))</span></span>
 
-- [<span data-ttu-id="28a99-142">Частичные конфигурации (по запросу и принудительная отправка)</span><span class="sxs-lookup"><span data-stu-id="28a99-142">Partial configurations (pull & push)</span></span>](../pull-server/partialConfigs.md)
+- [<span data-ttu-id="f08f5-142">Частичные конфигурации (по запросу и принудительная отправка)</span><span class="sxs-lookup"><span data-stu-id="f08f5-142">Partial configurations (pull & push)</span></span>](../pull-server/partialConfigs.md)
 
-- [<span data-ttu-id="28a99-143">Передача отчетов на опрашивающий сервер</span><span class="sxs-lookup"><span data-stu-id="28a99-143">Reporting to pull server</span></span>](../pull-server/reportServer.md)
+- [<span data-ttu-id="f08f5-143">Передача отчетов на опрашивающий сервер</span><span class="sxs-lookup"><span data-stu-id="f08f5-143">Reporting to pull server</span></span>](../pull-server/reportServer.md)
 
-- <span data-ttu-id="28a99-144">Шифрование MOF-файлов</span><span class="sxs-lookup"><span data-stu-id="28a99-144">MOF encryption</span></span>
+- <span data-ttu-id="f08f5-144">Шифрование MOF-файлов</span><span class="sxs-lookup"><span data-stu-id="f08f5-144">MOF encryption</span></span>
 
-- <span data-ttu-id="28a99-145">Ведение журналов событий</span><span class="sxs-lookup"><span data-stu-id="28a99-145">Event logging</span></span>
+- <span data-ttu-id="f08f5-145">Ведение журналов событий</span><span class="sxs-lookup"><span data-stu-id="f08f5-145">Event logging</span></span>
 
-- <span data-ttu-id="28a99-146">Отчеты DSC службы автоматизации Azure</span><span class="sxs-lookup"><span data-stu-id="28a99-146">Azure Automation DSC reporting</span></span>
+- <span data-ttu-id="f08f5-146">Отчеты DSC службы автоматизации Azure</span><span class="sxs-lookup"><span data-stu-id="f08f5-146">Azure Automation DSC reporting</span></span>
 
-- <span data-ttu-id="28a99-147">Полнофункциональные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="28a99-147">Resources that are fully functional</span></span>
+- <span data-ttu-id="f08f5-147">Полнофункциональные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="f08f5-147">Resources that are fully functional</span></span>
 
-- <span data-ttu-id="28a99-148">**Archive**</span><span class="sxs-lookup"><span data-stu-id="28a99-148">**Archive**</span></span>
-- <span data-ttu-id="28a99-149">**Environment**</span><span class="sxs-lookup"><span data-stu-id="28a99-149">**Environment**</span></span>
-- <span data-ttu-id="28a99-150">**File**</span><span class="sxs-lookup"><span data-stu-id="28a99-150">**File**</span></span>
-- <span data-ttu-id="28a99-151">**Log**</span><span class="sxs-lookup"><span data-stu-id="28a99-151">**Log**</span></span>
-- <span data-ttu-id="28a99-152">**ProcessSet**</span><span class="sxs-lookup"><span data-stu-id="28a99-152">**ProcessSet**</span></span>
-- <span data-ttu-id="28a99-153">**Registry**</span><span class="sxs-lookup"><span data-stu-id="28a99-153">**Registry**</span></span>
-- <span data-ttu-id="28a99-154">**Script**</span><span class="sxs-lookup"><span data-stu-id="28a99-154">**Script**</span></span>
-- <span data-ttu-id="28a99-155">**WindowsPackageCab**</span><span class="sxs-lookup"><span data-stu-id="28a99-155">**WindowsPackageCab**</span></span>
-- <span data-ttu-id="28a99-156">**WindowsProcess**</span><span class="sxs-lookup"><span data-stu-id="28a99-156">**WindowsProcess**</span></span>
-- <span data-ttu-id="28a99-157">**WaitForAll** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))</span><span class="sxs-lookup"><span data-stu-id="28a99-157">**WaitForAll** (see [Specifying cross-node dependencies](../configurations/crossNodeDependencies.md))</span></span>
-- <span data-ttu-id="28a99-158">**WaitForAny** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))</span><span class="sxs-lookup"><span data-stu-id="28a99-158">**WaitForAny** (see [Specifying cross-node dependencies](../configurations/crossNodeDependencies.md))</span></span>
-- <span data-ttu-id="28a99-159">**WaitForSome** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))</span><span class="sxs-lookup"><span data-stu-id="28a99-159">**WaitForSome** (see [Specifying cross-node dependencies](../configurations/crossNodeDependencies.md))</span></span>
+- <span data-ttu-id="f08f5-148">**Archive**</span><span class="sxs-lookup"><span data-stu-id="f08f5-148">**Archive**</span></span>
+- <span data-ttu-id="f08f5-149">**Environment**</span><span class="sxs-lookup"><span data-stu-id="f08f5-149">**Environment**</span></span>
+- <span data-ttu-id="f08f5-150">**File**</span><span class="sxs-lookup"><span data-stu-id="f08f5-150">**File**</span></span>
+- <span data-ttu-id="f08f5-151">**Log**</span><span class="sxs-lookup"><span data-stu-id="f08f5-151">**Log**</span></span>
+- <span data-ttu-id="f08f5-152">**ProcessSet**</span><span class="sxs-lookup"><span data-stu-id="f08f5-152">**ProcessSet**</span></span>
+- <span data-ttu-id="f08f5-153">**Registry**</span><span class="sxs-lookup"><span data-stu-id="f08f5-153">**Registry**</span></span>
+- <span data-ttu-id="f08f5-154">**Script**</span><span class="sxs-lookup"><span data-stu-id="f08f5-154">**Script**</span></span>
+- <span data-ttu-id="f08f5-155">**WindowsPackageCab**</span><span class="sxs-lookup"><span data-stu-id="f08f5-155">**WindowsPackageCab**</span></span>
+- <span data-ttu-id="f08f5-156">**WindowsProcess**</span><span class="sxs-lookup"><span data-stu-id="f08f5-156">**WindowsProcess**</span></span>
+- <span data-ttu-id="f08f5-157">**WaitForAll** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))</span><span class="sxs-lookup"><span data-stu-id="f08f5-157">**WaitForAll** (see [Specifying cross-node dependencies](../configurations/crossNodeDependencies.md))</span></span>
+- <span data-ttu-id="f08f5-158">**WaitForAny** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))</span><span class="sxs-lookup"><span data-stu-id="f08f5-158">**WaitForAny** (see [Specifying cross-node dependencies](../configurations/crossNodeDependencies.md))</span></span>
+- <span data-ttu-id="f08f5-159">**WaitForSome** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))</span><span class="sxs-lookup"><span data-stu-id="f08f5-159">**WaitForSome** (see [Specifying cross-node dependencies](../configurations/crossNodeDependencies.md))</span></span>
 
-- <span data-ttu-id="28a99-160">Ресурсы, функциональность которых не полная.</span><span class="sxs-lookup"><span data-stu-id="28a99-160">Resources that are partially functional</span></span>
-- <span data-ttu-id="28a99-161">**Группа**</span><span class="sxs-lookup"><span data-stu-id="28a99-161">**Group**</span></span>
-- <span data-ttu-id="28a99-162">**GroupSet**</span><span class="sxs-lookup"><span data-stu-id="28a99-162">**GroupSet**</span></span>
+- <span data-ttu-id="f08f5-160">Ресурсы, функциональность которых не полная.</span><span class="sxs-lookup"><span data-stu-id="f08f5-160">Resources that are partially functional</span></span>
+- <span data-ttu-id="f08f5-161">**Группа**</span><span class="sxs-lookup"><span data-stu-id="f08f5-161">**Group**</span></span>
+- <span data-ttu-id="f08f5-162">**GroupSet**</span><span class="sxs-lookup"><span data-stu-id="f08f5-162">**GroupSet**</span></span>
 
-  <span data-ttu-id="28a99-163">**Проблема**. Приведенные выше ресурсы не работают, если определенный экземпляр вызывается дважды (дважды запускается одна и та же конфигурация).</span><span class="sxs-lookup"><span data-stu-id="28a99-163">**Issue:** Above resources fail if specific instance is called twice (running the same configuration twice)</span></span>
+  <span data-ttu-id="f08f5-163">**Проблема**. Приведенные выше ресурсы не работают, если определенный экземпляр вызывается дважды (дважды запускается одна и та же конфигурация).</span><span class="sxs-lookup"><span data-stu-id="f08f5-163">**Issue:** Above resources fail if specific instance is called twice (running the same configuration twice)</span></span>
 
-- <span data-ttu-id="28a99-164">**Служба**</span><span class="sxs-lookup"><span data-stu-id="28a99-164">**Service**</span></span>
-- <span data-ttu-id="28a99-165">**ServiceSet**</span><span class="sxs-lookup"><span data-stu-id="28a99-165">**ServiceSet**</span></span>
+- <span data-ttu-id="f08f5-164">**Служба**</span><span class="sxs-lookup"><span data-stu-id="f08f5-164">**Service**</span></span>
+- <span data-ttu-id="f08f5-165">**ServiceSet**</span><span class="sxs-lookup"><span data-stu-id="f08f5-165">**ServiceSet**</span></span>
 
-  <span data-ttu-id="28a99-166">**Проблема**. Работает только для запуска или остановки службы (атрибут status).</span><span class="sxs-lookup"><span data-stu-id="28a99-166">**Issue:** Only works for starting/stopping (status) service.</span></span> <span data-ttu-id="28a99-167">Не работает при попытке изменить другие атрибуты службы, например startuptype, credentials, description и т. д.</span><span class="sxs-lookup"><span data-stu-id="28a99-167">Fails, if one tries to change other service attributes like startuptype, credentials, description etc..</span></span> <span data-ttu-id="28a99-168">Возникает ошибка такого вида.</span><span class="sxs-lookup"><span data-stu-id="28a99-168">The error thrown is similar to:</span></span>
+  <span data-ttu-id="f08f5-166">**Проблема**. Работает только для запуска или остановки службы (атрибут status).</span><span class="sxs-lookup"><span data-stu-id="f08f5-166">**Issue:** Only works for starting/stopping (status) service.</span></span> <span data-ttu-id="f08f5-167">Не работает при попытке изменить другие атрибуты службы, например startuptype, credentials, description и т. д.</span><span class="sxs-lookup"><span data-stu-id="f08f5-167">Fails, if one tries to change other service attributes like startuptype, credentials, description etc..</span></span> <span data-ttu-id="f08f5-168">Возникает ошибка такого вида.</span><span class="sxs-lookup"><span data-stu-id="f08f5-168">The error thrown is similar to:</span></span>
 
-  <span data-ttu-id="28a99-169">*Не удается найти тип [management.managementobject]: убедитесь в том, что сборка, содержащая этот тип, загружена.*</span><span class="sxs-lookup"><span data-stu-id="28a99-169">*Cannot find type [management.managementobject]: verify that the assembly containing this type is loaded.*</span></span>
+  <span data-ttu-id="f08f5-169">*Не удается найти тип [management.managementobject]: убедитесь в том, что сборка, содержащая этот тип, загружена.*</span><span class="sxs-lookup"><span data-stu-id="f08f5-169">*Cannot find type [management.managementobject]: verify that the assembly containing this type is loaded.*</span></span>
 
-- <span data-ttu-id="28a99-170">Нефункционирующие ресурсы.</span><span class="sxs-lookup"><span data-stu-id="28a99-170">Resources that are not functional</span></span>
-- <span data-ttu-id="28a99-171">**User**</span><span class="sxs-lookup"><span data-stu-id="28a99-171">**User**</span></span>
+- <span data-ttu-id="f08f5-170">Нефункционирующие ресурсы.</span><span class="sxs-lookup"><span data-stu-id="f08f5-170">Resources that are not functional</span></span>
+- <span data-ttu-id="f08f5-171">**User**</span><span class="sxs-lookup"><span data-stu-id="f08f5-171">**User**</span></span>
 
-## <a name="dsc-features-not-available-on-nano-server"></a><span data-ttu-id="28a99-172">Функции DSC, недоступные на сервере Nano Server</span><span class="sxs-lookup"><span data-stu-id="28a99-172">DSC features not available on Nano Server</span></span>
+## <a name="dsc-features-not-available-on-nano-server"></a><span data-ttu-id="f08f5-172">Функции DSC, недоступные на сервере Nano Server</span><span class="sxs-lookup"><span data-stu-id="f08f5-172">DSC features not available on Nano Server</span></span>
 
-<span data-ttu-id="28a99-173">Следующие функции DSC в настоящее время недоступны для Nano Server:</span><span class="sxs-lookup"><span data-stu-id="28a99-173">The following DSC features are not currently available on Nano Server:</span></span>
+<span data-ttu-id="f08f5-173">Следующие функции DSC в настоящее время недоступны для Nano Server:</span><span class="sxs-lookup"><span data-stu-id="f08f5-173">The following DSC features are not currently available on Nano Server:</span></span>
 
-- <span data-ttu-id="28a99-174">Расшифровка документа MOF с помощью зашифрованных паролей.</span><span class="sxs-lookup"><span data-stu-id="28a99-174">Decrypting MOF document with encrypted password(s)</span></span>
-- <span data-ttu-id="28a99-175">Опрашивающий сервер — в настоящее время опрашивающий сервер нельзя настроить на сервере Nano Server.</span><span class="sxs-lookup"><span data-stu-id="28a99-175">Pull Server--you cannot currently set up a pull server on Nano Server</span></span>
-- <span data-ttu-id="28a99-176">Все компоненты, не указанные в списке функций, работают.</span><span class="sxs-lookup"><span data-stu-id="28a99-176">Anything that is not in the list of feature works</span></span>
+- <span data-ttu-id="f08f5-174">Расшифровка документа MOF с помощью зашифрованных паролей.</span><span class="sxs-lookup"><span data-stu-id="f08f5-174">Decrypting MOF document with encrypted password(s)</span></span>
+- <span data-ttu-id="f08f5-175">Опрашивающий сервер — в настоящее время опрашивающий сервер нельзя настроить на сервере Nano Server.</span><span class="sxs-lookup"><span data-stu-id="f08f5-175">Pull Server--you cannot currently set up a pull server on Nano Server</span></span>
+- <span data-ttu-id="f08f5-176">Все компоненты, не указанные в списке функций, работают.</span><span class="sxs-lookup"><span data-stu-id="f08f5-176">Anything that is not in the list of feature works</span></span>
 
-## <a name="using-custom-dsc-resources-on-nano-server"></a><span data-ttu-id="28a99-177">Использование настраиваемых ресурсов DSC на сервере Nano Server</span><span class="sxs-lookup"><span data-stu-id="28a99-177">Using custom DSC resources on Nano Server</span></span>
+## <a name="using-custom-dsc-resources-on-nano-server"></a><span data-ttu-id="f08f5-177">Использование настраиваемых ресурсов DSC на сервере Nano Server</span><span class="sxs-lookup"><span data-stu-id="f08f5-177">Using custom DSC resources on Nano Server</span></span>
 
-<span data-ttu-id="28a99-178">Поскольку набор API Windows и библиотек CLR, доступный на сервере Nano Server, ограничен, ресурсы DSC, работающие в полной версии среды выполнения Windows, не всегда работают в Nano Server.</span><span class="sxs-lookup"><span data-stu-id="28a99-178">Due to a limited sets of Windows APIs and CLR libraries available on Nano Server, DSC resources that work on the full CLR version of Windows do not necessarily work on Nano Server.</span></span>
-<span data-ttu-id="28a99-179">Перед развертыванием каких-либо настраиваемых ресурсов DSC в рабочей среде рекомендуется выполнять их полное и всестороннее тестирование.</span><span class="sxs-lookup"><span data-stu-id="28a99-179">Complete end-to-end testing before deploying any DSC custom resources to a production environment.</span></span>
+<span data-ttu-id="f08f5-178">Поскольку набор API Windows и библиотек CLR, доступный на сервере Nano Server, ограничен, ресурсы DSC, работающие в полной версии среды выполнения Windows, не всегда работают в Nano Server.</span><span class="sxs-lookup"><span data-stu-id="f08f5-178">Due to a limited sets of Windows APIs and CLR libraries available on Nano Server, DSC resources that work on the full CLR version of Windows do not necessarily work on Nano Server.</span></span>
+<span data-ttu-id="f08f5-179">Перед развертыванием каких-либо настраиваемых ресурсов DSC в рабочей среде рекомендуется выполнять их полное и всестороннее тестирование.</span><span class="sxs-lookup"><span data-stu-id="f08f5-179">Complete end-to-end testing before deploying any DSC custom resources to a production environment.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="28a99-180">См. также</span><span class="sxs-lookup"><span data-stu-id="28a99-180">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f08f5-180">См. также</span><span class="sxs-lookup"><span data-stu-id="f08f5-180">See Also</span></span>
 
-- [<span data-ttu-id="28a99-181">Начало работы с сервером Nano Server</span><span class="sxs-lookup"><span data-stu-id="28a99-181">Getting Started with Nano Server</span></span>](/windows-server/get-started/getting-started-with-nano-server)
+- [<span data-ttu-id="f08f5-181">Начало работы с сервером Nano Server</span><span class="sxs-lookup"><span data-stu-id="f08f5-181">Getting Started with Nano Server</span></span>](/windows-server/get-started/getting-started-with-nano-server)
