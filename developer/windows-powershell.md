@@ -3,15 +3,15 @@ title: Пакет SDK Windows PowerShell
 ms.date: 09/13/2016
 ms.topic: article
 ms.openlocfilehash: 600d43874d9eda04d556a0ece198026dde9174c3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080464"
 ---
 # <a name="windows-powershell"></a>Windows PowerShell
 
-Обновлено: 8 июля 2013 г
+Обновление: 8 июля 2013 г
 
 Windows PowerShell® — это оболочка командной строки на основе задач, а также язык сценариев, предназначенный специально для системного администрирования. На платформе .NET Framework, Windows PowerShell® помогает ИТ-специалистам и опытным пользователям в управлении и автоматизации администрирования операционной системы Windows и приложений, работающих в Windows.
 
