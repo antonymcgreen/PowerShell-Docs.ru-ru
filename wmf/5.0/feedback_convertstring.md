@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,установка
-ms.openlocfilehash: 7730912707bb14e90a9926b387fb3a859d7ca26d
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 27541d903748738675917941dc6b60bc9acdc3f4
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057797"
 ---
 # <a name="convert-string"></a>Convert-String
 **Convert-String** предоставляет функциональность "магическая замена". Укажите примеры того, как должен выглядеть текст в исходном и итоговом виде, чтобы **Convert-String** автоматически отформатировал текста. Продемонстрируем это — возьмем имя и фамилию человека и заменим их последовательностью из фамилии, точки, первой буквы имени и точки. Попробуйте сделать это с помощью регулярного выражения и посмотрите, сколько времени для этого потребуется.

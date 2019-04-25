@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3cbf64e5-f9e8-4002-b40c-4d3f39025c83
 caps.latest.revision: 11
 ms.openlocfilehash: 0ca522cebb22c624902ab986b13e425db3754adf
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082827"
 ---
 # <a name="host04-sample"></a>Пример Host04
 
@@ -23,7 +23,7 @@ ms.locfileid: "58054328"
 
  В этом примере требуется Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Демонстрирует
 
 - Создание пользовательского ведущего приложения, классы являются производными от [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) класс, [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) класс и [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) класса.
 

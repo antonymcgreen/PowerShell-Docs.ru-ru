@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: jea,powershell,безопасность
 title: Аудит и отчеты для JEA
 ms.openlocfilehash: 2388c735840d8d3683aa8bc9869b9fb0371e5902
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084085"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>Аудит и отчеты для JEA
 
-> Область применения: Windows PowerShell 5.0
+> Применяется к: Windows PowerShell 5.0
 
 После развертывания JEA потребуется регулярно проводить аудит конфигурации JEA.
 Это поможет вам убедиться, что доступ к конечной точке JEA получают уполномоченные для этого люди и что назначенные им роли по-прежнему являются допустимыми.

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f607a5ad-5372-4392-b2dc-ef3532fabd0f
 caps.latest.revision: 9
 ms.openlocfilehash: 7fafbc6bc19082abb8f37b68c031e0995bf879f6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082538"
 ---
 # <a name="windows-powershell01-sample"></a>Пример Windows PowerShell01
 
@@ -23,7 +23,7 @@ ms.locfileid: "56856830"
 
 В этом примере требуется Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Демонстрирует
 
 Этот образец демонстрирует следующее:
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 42c1c59c-6da5-4cda-9562-e8059177fee1
 caps.latest.revision: 11
 ms.openlocfilehash: eec9c616fc6d5240db185f764a3ea2c8f9575d03
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082793"
 ---
 # <a name="runspace01-sample"></a>Пример Runspace01
 
@@ -23,7 +23,7 @@ ms.locfileid: "58057915"
 
  В этом примере требуется Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Демонстрирует
 
 - Создание [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) объект для выполнения команды.
 

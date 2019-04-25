@@ -4,11 +4,11 @@ keywords: powershell,командлет
 title: Использование области консоли в интегрированной среде сценариев Windows PowerShell
 ms.assetid: 44d67705-87c7-4a69-a53e-6471fdebb757
 ms.openlocfilehash: 5bbbdd3b1f0324ff1a4f2298459f58640c4dc9a6
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057407"
 ---
 # <a name="how-to-use-the-console-pane-in-the-windows-powershell-ise"></a>Использование области консоли в интегрированной среде сценариев Windows PowerShell
 

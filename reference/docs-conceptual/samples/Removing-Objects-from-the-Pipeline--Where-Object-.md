@@ -4,11 +4,11 @@ keywords: powershell,командлет
 title: Удаление объектов из конвейера (Where-Object)
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
 ms.openlocfilehash: 1f7d064c7bf2dd551ea96b29762fbccad8174084
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057918"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Удаление объектов из конвейера (Where-Object)
 

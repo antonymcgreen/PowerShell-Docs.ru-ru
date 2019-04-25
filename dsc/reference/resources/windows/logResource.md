@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс Log в DSC
 ms.openlocfilehash: 1f94a2d847a4ef63f81e2fb83d1a0f76f5677b09
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077234"
 ---
 # <a name="dsc-log-resource"></a>Ресурс Log в DSC
 
-> Применяется к: Windows PowerShell 4.0, Windows PowerShell 5.0_
+> _Применяется к: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 Ресурс __Log__ в DSC Windows PowerShell предоставляет механизм записи сообщений в журнал событий Microsoft-Windows-Desired State Configuration/Analytic.
 

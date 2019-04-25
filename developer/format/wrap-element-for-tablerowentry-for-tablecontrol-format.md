@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: 64087c6c-2abd-446d-b837-7d3ee03a6874
 caps.latest.revision: 11
 ms.openlocfilehash: 102fe1b9c3bd04562aa296f390ec549d5f8f35e9
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58059893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083609"
 ---
-# <a name="wrap-element-for-tablerowentry-for-tablecontrol--format"></a>Создать оболочку элемент для TableRowEntry TableControl (формат)
+# <a name="wrap-element-for-tablerowentry-for-tablecontrol--format"></a>Элемент Wrap для элемента TableRowEntry для элемента TableControl (формат)
 
 Указывает, что текст, который превышает ширину столбца отображается на следующей строке. По умолчанию текст, не уместившийся по ширине столбца, усекается.
 

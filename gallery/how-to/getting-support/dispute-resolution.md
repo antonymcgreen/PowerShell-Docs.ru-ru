@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Разрешение спорных вопросов
 ms.openlocfilehash: 2376226c14ec1a8c2bf7c9328e29f79528d2aee9
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084272"
 ---
 # <a name="dispute-resolution"></a>Разрешение спорных вопросов
 

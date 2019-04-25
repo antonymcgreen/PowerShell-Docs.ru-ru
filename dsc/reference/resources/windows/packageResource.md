@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс Package в DSC
 ms.openlocfilehash: 9285df71a303c9a53dd50d450272575a64e962e7
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077200"
 ---
 # <a name="dsc-package-resource"></a>Ресурс Package в DSC
 
-Применяется к: Windows PowerShell 4.0, Windows PowerShell 5.0_
+_Применяется к: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 Ресурс **Package** в DSC Windows PowerShell предоставляет механизм установки или удаления пакетов, таких как пакеты установщика Windows и setup.exe, на целевом узле.
 
