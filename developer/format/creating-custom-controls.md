@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: c3baa406-cd33-4420-be5a-07ef09d93480
 caps.latest.revision: 8
 ms.openlocfilehash: 3504ab1d974c55e9279172d0e851961474ccb926
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066691"
 ---
-# <a name="creating-custom-controls"></a><span data-ttu-id="81cc2-102">Создание пользовательских элементов управления</span><span class="sxs-lookup"><span data-stu-id="81cc2-102">Creating Custom Controls</span></span>
+# <a name="creating-custom-controls"></a><span data-ttu-id="0de6c-102">Создание пользовательских элементов управления</span><span class="sxs-lookup"><span data-stu-id="0de6c-102">Creating Custom Controls</span></span>
 
-<span data-ttu-id="81cc2-103">Пользовательские элементы управления — это самый гибкий компоненты форматирования файла.</span><span class="sxs-lookup"><span data-stu-id="81cc2-103">Custom controls are the most flexible components of a formatting file.</span></span> <span data-ttu-id="81cc2-104">В отличие от таблицы, список и широкие представления, которые определяют формальную структуру данных, таких как таблицу данных пользовательские элементы управления позволяют определять способ отображения отдельного элемента данных.</span><span class="sxs-lookup"><span data-stu-id="81cc2-104">Unlike table, list, and wide views that define a formal structure of data, such as a table of data, custom controls allow you to define how an individual piece of data is displayed.</span></span> <span data-ttu-id="81cc2-105">Можно определить общий набор пользовательских элементов управления, доступные для всех представлений для форматирования файла, можно определить пользовательские элементы управления, доступные к определенному представлению, или можно определить набор элементов управления, доступные для группы объектов.</span><span class="sxs-lookup"><span data-stu-id="81cc2-105">You can define a common set of custom controls that are available to all the views of the formatting file, you can define custom controls that are available to a specific view, or you can define a set of controls that are available to a group of objects.</span></span>
+<span data-ttu-id="0de6c-103">Пользовательские элементы управления — это самый гибкий компоненты форматирования файла.</span><span class="sxs-lookup"><span data-stu-id="0de6c-103">Custom controls are the most flexible components of a formatting file.</span></span> <span data-ttu-id="0de6c-104">В отличие от таблицы, список и широкие представления, которые определяют формальную структуру данных, таких как таблицу данных пользовательские элементы управления позволяют определять способ отображения отдельного элемента данных.</span><span class="sxs-lookup"><span data-stu-id="0de6c-104">Unlike table, list, and wide views that define a formal structure of data, such as a table of data, custom controls allow you to define how an individual piece of data is displayed.</span></span> <span data-ttu-id="0de6c-105">Можно определить общий набор пользовательских элементов управления, доступные для всех представлений для форматирования файла, можно определить пользовательские элементы управления, доступные к определенному представлению, или можно определить набор элементов управления, доступные для группы объектов.</span><span class="sxs-lookup"><span data-stu-id="0de6c-105">You can define a common set of custom controls that are available to all the views of the formatting file, you can define custom controls that are available to a specific view, or you can define a set of controls that are available to a group of objects.</span></span>
 
-## <a name="custom-control-example"></a><span data-ttu-id="81cc2-106">Пример пользовательского элемента управления</span><span class="sxs-lookup"><span data-stu-id="81cc2-106">Custom Control Example</span></span>
+## <a name="custom-control-example"></a><span data-ttu-id="0de6c-106">Пример пользовательского элемента управления</span><span class="sxs-lookup"><span data-stu-id="0de6c-106">Custom Control Example</span></span>
 
-<span data-ttu-id="81cc2-107">В следующем примере пользовательский элемент управления, который определен в файле Certificates.Format.ps1xml.</span><span class="sxs-lookup"><span data-stu-id="81cc2-107">The following example shows a custom control that is defined in the Certificates.Format.ps1xml file.</span></span> <span data-ttu-id="81cc2-108">Этот пользовательский элемент управления используется для разделения [System.Management.Automation.Signature](/dotnet/api/System.Management.Automation.Signature) объектов, отображаемых в табличном представлении.</span><span class="sxs-lookup"><span data-stu-id="81cc2-108">This custom control is used to separate the [System.Management.Automation.Signature](/dotnet/api/System.Management.Automation.Signature) objects displayed in a table view.</span></span>
+<span data-ttu-id="0de6c-107">В следующем примере пользовательский элемент управления, который определен в файле Certificates.Format.ps1xml.</span><span class="sxs-lookup"><span data-stu-id="0de6c-107">The following example shows a custom control that is defined in the Certificates.Format.ps1xml file.</span></span> <span data-ttu-id="0de6c-108">Этот пользовательский элемент управления используется для разделения [System.Management.Automation.Signature](/dotnet/api/System.Management.Automation.Signature) объектов, отображаемых в табличном представлении.</span><span class="sxs-lookup"><span data-stu-id="0de6c-108">This custom control is used to separate the [System.Management.Automation.Signature](/dotnet/api/System.Management.Automation.Signature) objects displayed in a table view.</span></span>
 
 ```xml
 <Controls>
@@ -51,6 +51,6 @@ ms.locfileid: "56853200"
 
 ```
 
-## <a name="see-also"></a><span data-ttu-id="81cc2-109">См. также</span><span class="sxs-lookup"><span data-stu-id="81cc2-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0de6c-109">См. также</span><span class="sxs-lookup"><span data-stu-id="0de6c-109">See Also</span></span>
 
-[<span data-ttu-id="81cc2-110">Запись файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="81cc2-110">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="0de6c-110">Запись файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="0de6c-110">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)

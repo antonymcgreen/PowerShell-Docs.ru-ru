@@ -9,35 +9,35 @@ ms.topic: article
 ms.assetid: 1fca30b1-13fe-48a2-b0dd-979c161177a6
 caps.latest.revision: 14
 ms.openlocfilehash: 9a4b7c842c6222fa2e9f1c14f37f45d7a5158107
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082847"
 ---
-# <a name="host01-sample"></a><span data-ttu-id="f51c5-102">Пример Host01</span><span class="sxs-lookup"><span data-stu-id="f51c5-102">Host01 Sample</span></span>
+# <a name="host01-sample"></a><span data-ttu-id="38a8e-102">Пример Host01</span><span class="sxs-lookup"><span data-stu-id="38a8e-102">Host01 Sample</span></span>
 
-<span data-ttu-id="f51c5-103">В этом примере показано, как реализовать ведущее приложение, которое использует пользовательский узел.</span><span class="sxs-lookup"><span data-stu-id="f51c5-103">This sample shows how to implement a host application that uses a custom host.</span></span> <span data-ttu-id="f51c5-104">В этом примере, создается пространство выполнения, которое использует пользовательский узел а затем [System.Management.Automation.Powershell](/dotnet/api/System.Management.Automation.PowerShell) API используется для запуска сценария, который вызывает «exit».</span><span class="sxs-lookup"><span data-stu-id="f51c5-104">In this sample a runspace is created that uses the custom host, and then the [System.Management.Automation.Powershell](/dotnet/api/System.Management.Automation.PowerShell) API is used to run a script that calls "exit."</span></span> <span data-ttu-id="f51c5-105">Затем ведущее приложение анализирует выходные данные скрипта и выводит на экран результаты.</span><span class="sxs-lookup"><span data-stu-id="f51c5-105">The host application then looks at the output of the script and prints out the results.</span></span>
+<span data-ttu-id="38a8e-103">В этом примере показано, как реализовать ведущее приложение, которое использует пользовательский узел.</span><span class="sxs-lookup"><span data-stu-id="38a8e-103">This sample shows how to implement a host application that uses a custom host.</span></span> <span data-ttu-id="38a8e-104">В этом примере, создается пространство выполнения, которое использует пользовательский узел а затем [System.Management.Automation.Powershell](/dotnet/api/System.Management.Automation.PowerShell) API используется для запуска сценария, который вызывает «exit».</span><span class="sxs-lookup"><span data-stu-id="38a8e-104">In this sample a runspace is created that uses the custom host, and then the [System.Management.Automation.Powershell](/dotnet/api/System.Management.Automation.PowerShell) API is used to run a script that calls "exit."</span></span> <span data-ttu-id="38a8e-105">Затем ведущее приложение анализирует выходные данные скрипта и выводит на экран результаты.</span><span class="sxs-lookup"><span data-stu-id="38a8e-105">The host application then looks at the output of the script and prints out the results.</span></span>
 
- <span data-ttu-id="f51c5-106">Этот пример использует возможности пользовательского интерфейса по умолчанию, предоставляемые Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="f51c5-106">This sample uses the default UI features provided by Windows PowerShell.</span></span> <span data-ttu-id="f51c5-107">Дополнительные сведения о реализации функций пользовательского интерфейса пользовательского ведущего приложения, см. в разделе [Host02 пример](./host02-sample.md).</span><span class="sxs-lookup"><span data-stu-id="f51c5-107">For more information about implementing the UI features of a custom host, see [Host02 Sample](./host02-sample.md).</span></span>
+ <span data-ttu-id="38a8e-106">Этот пример использует возможности пользовательского интерфейса по умолчанию, предоставляемые Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="38a8e-106">This sample uses the default UI features provided by Windows PowerShell.</span></span> <span data-ttu-id="38a8e-107">Дополнительные сведения о реализации функций пользовательского интерфейса пользовательского ведущего приложения, см. в разделе [Host02 пример](./host02-sample.md).</span><span class="sxs-lookup"><span data-stu-id="38a8e-107">For more information about implementing the UI features of a custom host, see [Host02 Sample](./host02-sample.md).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="f51c5-108">Требования</span><span class="sxs-lookup"><span data-stu-id="f51c5-108">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="38a8e-108">Требования</span><span class="sxs-lookup"><span data-stu-id="38a8e-108">Requirements</span></span>
 
- <span data-ttu-id="f51c5-109">В этом примере требуется Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="f51c5-109">This sample requires Windows PowerShell 2.0.</span></span>
+ <span data-ttu-id="38a8e-109">В этом примере требуется Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="38a8e-109">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="f51c5-110">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="f51c5-110">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="38a8e-110">Демонстрирует</span><span class="sxs-lookup"><span data-stu-id="38a8e-110">Demonstrates</span></span>
 
-- <span data-ttu-id="f51c5-111">Создание класса пользовательского ведущего приложения, который является производным от [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) класса.</span><span class="sxs-lookup"><span data-stu-id="f51c5-111">Creating a custom host class that derives from the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class.</span></span>
+- <span data-ttu-id="38a8e-111">Создание класса пользовательского ведущего приложения, который является производным от [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) класса.</span><span class="sxs-lookup"><span data-stu-id="38a8e-111">Creating a custom host class that derives from the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class.</span></span>
 
-- <span data-ttu-id="f51c5-112">Создание пространства выполнения, которая использует класс пользовательского ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="f51c5-112">Creating a runspace that uses the custom host class.</span></span>
+- <span data-ttu-id="38a8e-112">Создание пространства выполнения, которая использует класс пользовательского ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="38a8e-112">Creating a runspace that uses the custom host class.</span></span>
 
-- <span data-ttu-id="f51c5-113">Создание [System.Management.Automation.Powershell](/dotnet/api/System.Management.Automation.PowerShell) объект, который запускает сценарий, который вызывает выхода.</span><span class="sxs-lookup"><span data-stu-id="f51c5-113">Creating a [System.Management.Automation.Powershell](/dotnet/api/System.Management.Automation.PowerShell) object that runs a script that calls exit.</span></span>
+- <span data-ttu-id="38a8e-113">Создание [System.Management.Automation.Powershell](/dotnet/api/System.Management.Automation.PowerShell) объект, который запускает сценарий, который вызывает выхода.</span><span class="sxs-lookup"><span data-stu-id="38a8e-113">Creating a [System.Management.Automation.Powershell](/dotnet/api/System.Management.Automation.PowerShell) object that runs a script that calls exit.</span></span>
 
-- <span data-ttu-id="f51c5-114">Проверка того, что код выхода правильный использовался в процессе выхода.</span><span class="sxs-lookup"><span data-stu-id="f51c5-114">Verifying that the correct exit code was used in the exit process.</span></span>
+- <span data-ttu-id="38a8e-114">Проверка того, что код выхода правильный использовался в процессе выхода.</span><span class="sxs-lookup"><span data-stu-id="38a8e-114">Verifying that the correct exit code was used in the exit process.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f51c5-115">Пример</span><span class="sxs-lookup"><span data-stu-id="f51c5-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="38a8e-115">Пример</span><span class="sxs-lookup"><span data-stu-id="38a8e-115">Example</span></span>
 
- <span data-ttu-id="f51c5-116">Следующий код показывает реализацию ведущего приложения, использующего интерфейс простого пользовательского ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="f51c5-116">The following code shows an implementation of a host application that uses a simple custom host interface.</span></span>
+ <span data-ttu-id="38a8e-116">Следующий код показывает реализацию ведущего приложения, использующего интерфейс простого пользовательского ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="38a8e-116">The following code shows an implementation of a host application that uses a simple custom host interface.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -137,9 +137,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="f51c5-117">Пример</span><span class="sxs-lookup"><span data-stu-id="f51c5-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="38a8e-117">Пример</span><span class="sxs-lookup"><span data-stu-id="38a8e-117">Example</span></span>
 
- <span data-ttu-id="f51c5-118">Следующий код является реализацией [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) класс, используемый ведущим приложением.</span><span class="sxs-lookup"><span data-stu-id="f51c5-118">The following code is the implementation of the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class that is used by this host application.</span></span> <span data-ttu-id="f51c5-119">Те элементы, которые не реализованы исключение или не возвращать ничего.</span><span class="sxs-lookup"><span data-stu-id="f51c5-119">Those elements that are not implemented throw an exception or return nothing.</span></span>
+ <span data-ttu-id="38a8e-118">Следующий код является реализацией [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) класс, используемый ведущим приложением.</span><span class="sxs-lookup"><span data-stu-id="38a8e-118">The following code is the implementation of the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class that is used by this host application.</span></span> <span data-ttu-id="38a8e-119">Те элементы, которые не реализованы исключение или не возвращать ничего.</span><span class="sxs-lookup"><span data-stu-id="38a8e-119">Those elements that are not implemented throw an exception or return nothing.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -308,4 +308,4 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f51c5-120">См. также</span><span class="sxs-lookup"><span data-stu-id="f51c5-120">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38a8e-120">См. также</span><span class="sxs-lookup"><span data-stu-id="38a8e-120">See Also</span></span>
