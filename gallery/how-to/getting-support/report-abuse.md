@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Сообщение о нарушении
 ms.openlocfilehash: 70e599a26c6f04312ed7fc188047721bf96fefe2
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084255"
 ---
 # <a name="report-abuse"></a>Сообщение о нарушении
 

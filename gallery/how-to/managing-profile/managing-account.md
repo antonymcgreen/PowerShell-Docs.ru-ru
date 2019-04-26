@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Параметры учетной записи коллекции PowerShell
 ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084526"
 ---
 # <a name="powershell-gallery-account-settings"></a>Параметры учетной записи коллекции PowerShell
 
@@ -39,7 +39,7 @@ ms.locfileid: "50002792"
 ![Изменение адреса электронной почты](../../Images/PSGallery_AccountEmailOptions.png)
 
 Как указано на странице, критически важные уведомления из коллекции PowerShell отключить невозможно.
-К ним относятся следующие задачи.
+А именно:
 
 - уведомления безопасности;
 - уведомления об управлении учетными записями от администраторов коллекции PowerShell;

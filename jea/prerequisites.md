@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: jea,powershell,безопасность
 title: Предварительные условия JEA
 ms.openlocfilehash: acc16c0c7eec357b621c0706a66b8752ae5578cd
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084850"
 ---
 # <a name="prerequisites"></a>Необходимые компоненты
 
-> Область применения: Windows PowerShell 5.0
+> Применяется к: Windows PowerShell 5.0
 
 Just Enough Administration — это функция, входящая в состав Windows PowerShell 5.0 и более поздних версий.
 В этом разделе описываются предварительные условия, которые нужно выполнить, чтобы начать работу с JEA.

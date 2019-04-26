@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
-ms.openlocfilehash: eaa927ec90df6053843f5c942357fed4c7dee966
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 93a8c11099a9883127bca87422e1acaebfd2c093
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082302"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Как написать манифест модуля PowerShell
 
@@ -80,7 +80,7 @@ ms.locfileid: "58059496"
 |DotNetFrameworkVersion<br /><br /> Тип: строка|' '|Минимальная версия Microsoft .NET Framework требуется этим модулем.<br /><br /> Пример: `DotNetFrameworkVersion = '3.5'`|
 |CLRVersion<br /><br /> Тип: строка|' '|Минимальная версия общеязыковой среды выполнения (CLR), необходимых этим модулем.<br /><br /> Пример: `CLRVersion = '3.5'`|
 |ProcessorArchitecture<br /><br /> Тип: строка|' '|Архитектура процессора (нет, X86, Amd64) требуется этим модулем. Допустимые значения: x86, AMD64, IA64 и None (неизвестен или не задан).<br /><br /> Пример: `ProcessorArchitecture = 'x86'`|
-|RequiredModules<br /><br /> Тип: [строка []]|@()|Модули, которые должны быть импортированы в глобальной среде, прежде чем импортировать этот модуль. Он загрузит каких-либо модулей, если они уже были загружены в списке. (Например, некоторые модули могут уже быть загружен модуль.). Это также можно указать определенную версию для загрузки с помощью `RequiredVersion` вместо `ModuleVersion`. При использовании `ModuleVersion` он будет загрузить новейшую версию пакета с как минимум указанной версии.<br /><br /> Пример: `RequiredModules = @(@{ModuleName="myDependentModule", ModuleVersion="2.0",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> Пример: `RequiredModules = @(@{ModuleName="myDependentModule", RequiredVersion="1.5",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|
+|RequiredModules<br /><br /> Тип: [строка []]|@()|Модули, которые должны быть импортированы в глобальной среде, прежде чем импортировать этот модуль. Он загрузит каких-либо модулей, если они уже были загружены в списке. (Например, некоторые модули могут уже быть загружен модуль.). Это также можно указать определенную версию для загрузки с помощью `RequiredVersion` вместо `ModuleVersion`. При использовании `ModuleVersion` он будет загрузить новейшую версию пакета с как минимум указанной версии.<br /><br /> Пример: `RequiredModules = @(@{ModuleName="myDependentModule"; ModuleVersion="2.0"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> Пример: `RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="1.5"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|
 |RequiredAssemblies<br /><br /> Тип: [строка []]|@()|Сборки, необходимо загрузить до импорта этого модуля.<br /><br /> Обратите внимание, что в отличие от RequiredModules, PowerShell будет загружать RequiredAssemblies, если они уже не загружены.|
 |ScriptsToProcess<br /><br /> Тип: [строка []]|@()|Файлы скрипта (ps1), которые выполняются в состоянии сеанса вызывающего при импорте модуля. Это может быть глобальный сеанс, состояние или, для вложенных модулей, состояние сеанса другого модуля. Эти сценарии можно использовать для подготовки среды, так же, как можно использовать скрипт входа в систему.<br /><br /> Эти скрипты выполняются перед загрузкой всех модулей, перечисленных в манифесте.|
 |TypesToProcess<br /><br /> Тип: [объекта []]|@()|Введите файлы (ps1xml), необходимо загрузить, при импорте этого модуля.|
