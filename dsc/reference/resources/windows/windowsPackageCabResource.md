@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс DSC WindowsPackageCab
 ms.openlocfilehash: 035944e7ca5c7469250c48a19b79f2f2d5d38e9a
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076945"
 ---
 # <a name="dsc-windowspackagecab-resource"></a>Ресурс DSC WindowsPackageCab
 
-> Область применения. Windows PowerShell 5.1 и более поздние версии
+> Область применения. Windows PowerShell 5.1 и более поздних версий
 
 Ресурс **WindowsPackageCab** в службе настройки требуемого состояния Windows PowerShell (DSC) предоставляет механизм установки пакетов CAB-файлов Windows на целевом узле или их удаления.
 

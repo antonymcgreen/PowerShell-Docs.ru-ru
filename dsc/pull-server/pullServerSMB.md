@@ -3,11 +3,11 @@ ms.date: 04/11/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка опрашивающего SMB-сервера DSC
 ms.openlocfilehash: 9d087a08861b2f4683e81efd1e25f857b8b75e07
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58057762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079291"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Настройка опрашивающего SMB-сервера DSC
 

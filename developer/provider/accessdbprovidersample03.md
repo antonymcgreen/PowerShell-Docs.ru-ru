@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 9e576199-49c7-4355-9686-f9ed40c64a5f
 caps.latest.revision: 10
 ms.openlocfilehash: 57b6cfaa5f29300c60a5a745797111b6beba3133
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081076"
 ---
 # <a name="accessdbprovidersample03"></a>AccessDBProviderSample03
 
 В этом примере показано, как перезаписать [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) и [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) методы для поддержки вызовов в `Get-Item` и `Set-Item` командлетов. Класс поставщика в этом примере является производным от [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) класса.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Демонстрирует
 
 > [!IMPORTANT]
 > Класс поставщика будет скорее являются производными от одного из следующих классов и возможно реализовать другие интерфейсы поставщика:

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
 ms.openlocfilehash: c9963819f1842d1245735dabc487babaa566c160
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068136"
 ---
 # <a name="events01-sample"></a>Пример командлета Events01
 
@@ -74,7 +74,7 @@ A file was created in the TEMP directory
 
 В этом примере требуется Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Демонстрирует
 
 В этом примере демонстрируется следующее.
 

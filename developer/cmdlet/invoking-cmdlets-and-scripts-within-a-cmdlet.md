@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e7040a5c-4a47-42df-a2ea-96b134a4ed9b
 caps.latest.revision: 10
 ms.openlocfilehash: f20708ff41d9a6de90090997a875ba5371eccd74
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067677"
 ---
 # <a name="invoking-cmdlets-and-scripts-within-a-cmdlet"></a>Вызов командлетов и сценариев внутри командлета
 

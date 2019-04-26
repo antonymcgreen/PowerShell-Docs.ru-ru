@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: 18d86af7-7ff9-4968-81be-2caa61937d49
 caps.latest.revision: 10
 ms.openlocfilehash: 946ffb3fe857503c02b9000238a86775969abbd6
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58059897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075330"
 ---
-# <a name="tablerowentry-element-for-tablerowentries-for-tablecontrol-format"></a>Элемент TableRowEntry для TableRowEntries для TableControl (формат)
+# <a name="tablerowentry-element-for-tablerowentries-for-tablecontrol-format"></a>Элемент TableRowEntry для элемента TableRowEntries для элемента TableControl (формат)
 
 Определяет данные, которые отображаются в строке таблицы.
 
