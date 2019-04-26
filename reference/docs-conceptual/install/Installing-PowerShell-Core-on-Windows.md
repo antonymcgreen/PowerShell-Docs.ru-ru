@@ -3,11 +3,11 @@ title: Установка PowerShell Core в Windows
 description: Сведения об установке PowerShell Core в Windows
 ms.date: 08/06/2018
 ms.openlocfilehash: 910ee5a653fc1703bfddaf6367225f3b654d600f
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058035"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Установка PowerShell Core в Windows
 
@@ -24,15 +24,15 @@ ms.locfileid: "59293016"
 
 Чтобы установить PowerShell на клиент Windows или сервер Windows Server (поддерживаются Windows 7 с пакетом обновления 1 (SP1), Server 2008 R2 и более поздние версии), скачайте пакет MSI с нашей страницы [выпусков][] GitHub. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
 
-MSI-файл выглядит примерно так: `PowerShell-<version>-win-<os-arch>.msi`
+MSI-файл имеет следующий вид: `PowerShell-<version>-win-<os-arch>.msi`.
 <!-- TODO: should be updated to point to the Download Center as well -->
 
 После скачивания дважды щелкните установщик и следуйте инструкциям на экране.
 
 Программа установки создает ярлык в меню Windows "Пуск".
 
-- По умолчанию пакет устанавливается в каталог `$env:ProgramFiles\PowerShell\<version>`
-- Вы можете запустить PowerShell с помощью меню "Пуск" или файла `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
+- По умолчанию пакет устанавливается в каталог `$env:ProgramFiles\PowerShell\<version>`.
+- Вы можете запустить PowerShell с помощью меню "Пуск" или файла `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`.
 
 ### <a name="administrative-install-from-the-command-line"></a>Установка администратором из командной строки
 

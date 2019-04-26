@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,настройка,служба,установка
 title: Создание, компиляция и применение конфигурации
 ms.openlocfilehash: 947308efa165543571801c88a922daf44fa88be0
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080022"
 ---
 > Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -90,7 +90,7 @@ LCM вызывает ресурсы DSC для применения конфиг
 Используйте приведенный ниже код для выполнения командлета `Start-DSCConfiguration`. Укажите путь к каталогу, где хранится "localhost.mof", в параметре `-Path`. Командлет `Start-DSCConfiguration` просматривает каталог, указанный для любых файлов вида "\<имя компьютера\>.mof". Командлет `Start-DSCConfiguration` пытается применить каждый MOF-файл, который найдет, к компьютеру, указанному в имени файла ("localhost", "server01", "dc-02" и т. д.).
 
 > [!NOTE]
-> Если параметр `-Wait` не указан, `Start-DSCConfiguration` создает фоновое задание для выполнения операции. Указание параметра `-Verbose` позволяет наблюдать **подробные** результаты операции. `-Wait`, и `-Verbose` — необязательные параметры.
+> Если параметр `-Wait` не указан, `Start-DSCConfiguration` создает фоновое задание для выполнения операции. Указание параметра `-Verbose` позволяет наблюдать **подробные** результаты операции. И `-Wait`, и `-Verbose` — необязательные параметры.
 
 ```powershell
 Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait

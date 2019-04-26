@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: a26661f2-a63c-4ca7-ad3e-dcb4d32ce5a1
 caps.latest.revision: 8
 ms.openlocfilehash: d7d6d3b377a0089bcf96d0ea46e866321441b537
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081008"
 ---
 # <a name="accessdbprovidersample05"></a>AccessDBProviderSample05
 
 В этом примере показано, как перезаписать методы контейнера для поддержки вызовов в `Move-Item` и `Join-Path` командлетов. Эти методы должны быть реализованы, когда пользователю требуется переместить элементы в контейнере, если хранилище данных содержит вложенные контейнеры. Класс поставщика в этом примере является производным от [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) класса.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Демонстрирует
 
 > [!IMPORTANT]
 > Класс поставщика будет скорее являются производными от одного из следующих классов и возможно реализовать другие интерфейсы поставщика:
