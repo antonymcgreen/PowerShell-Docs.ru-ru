@@ -9,67 +9,67 @@ ms.topic: article
 ms.assetid: ac4903f5-fd40-4f1c-b1d1-18923c16ce45
 caps.latest.revision: 8
 ms.openlocfilehash: 26e882dad839af43945f84d4cdd6cda7bdb2d587
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067343"
 ---
-# <a name="stopprocesssample04-sample"></a><span data-ttu-id="020c8-102">Пример командлета StopProcessSample04</span><span class="sxs-lookup"><span data-stu-id="020c8-102">StopProcessSample04 Sample</span></span>
+# <a name="stopprocesssample04-sample"></a><span data-ttu-id="522d3-102">Пример командлета StopProcessSample04</span><span class="sxs-lookup"><span data-stu-id="522d3-102">StopProcessSample04 Sample</span></span>
 
-<span data-ttu-id="020c8-103">В этом примере показано, как написать командлет, который объявляет наборов параметров, указывает параметр по умолчанию значение и может принимать входной объект.</span><span class="sxs-lookup"><span data-stu-id="020c8-103">This sample shows how to write a cmdlet that declares parameter sets, specifies the default parameter set, and can accept an input object.</span></span> <span data-ttu-id="020c8-104">Этот командлет аналогичен `Stop-Process` командлет, предоставляемые Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="020c8-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="522d3-103">В этом примере показано, как написать командлет, который объявляет наборов параметров, указывает параметр по умолчанию значение и может принимать входной объект.</span><span class="sxs-lookup"><span data-stu-id="522d3-103">This sample shows how to write a cmdlet that declares parameter sets, specifies the default parameter set, and can accept an input object.</span></span> <span data-ttu-id="522d3-104">Этот командлет аналогичен `Stop-Process` командлет, предоставляемые Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="522d3-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
 
-### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="020c8-105">Как построить образец с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="020c8-105">How to build the sample by using Visual Studio.</span></span>
+### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="522d3-105">Как построить образец с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="522d3-105">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="020c8-106">С помощью Windows PowerShell 2.0 установлен пакет SDK перейдите к папке StopProcessSample04.</span><span class="sxs-lookup"><span data-stu-id="020c8-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample04 folder.</span></span> <span data-ttu-id="020c8-107">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04.</span><span class="sxs-lookup"><span data-stu-id="020c8-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04.</span></span>
+1. <span data-ttu-id="522d3-106">С помощью Windows PowerShell 2.0 установлен пакет SDK перейдите к папке StopProcessSample04.</span><span class="sxs-lookup"><span data-stu-id="522d3-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample04 folder.</span></span> <span data-ttu-id="522d3-107">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04.</span><span class="sxs-lookup"><span data-stu-id="522d3-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04.</span></span>
 
-2. <span data-ttu-id="020c8-108">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="020c8-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="020c8-109">Пример проекта откроется в Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="020c8-109">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="522d3-108">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="522d3-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="522d3-109">Пример проекта откроется в Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="522d3-109">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="020c8-110">В **построения** меню, выберите **построить решение**.</span><span class="sxs-lookup"><span data-stu-id="020c8-110">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="522d3-110">В **построения** меню, выберите **построить решение**.</span><span class="sxs-lookup"><span data-stu-id="522d3-110">In the **Build** menu, select **Build Solution**.</span></span>
 
-    <span data-ttu-id="020c8-111">Библиотеки для образца будет располагаться в папках \bin или \bin\debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="020c8-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+    <span data-ttu-id="522d3-111">Библиотеки для образца будет располагаться в папках \bin или \bin\debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="522d3-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="020c8-112">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="020c8-112">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="522d3-112">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="522d3-112">How to run the sample</span></span>
 
-1. <span data-ttu-id="020c8-113">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="020c8-113">Create the following module folder:</span></span>
+1. <span data-ttu-id="522d3-113">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="522d3-113">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/StopProcessSample04`
 
-2. <span data-ttu-id="020c8-114">Скопируйте сборку образца в папке модуля.</span><span class="sxs-lookup"><span data-stu-id="020c8-114">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="522d3-114">Скопируйте сборку образца в папке модуля.</span><span class="sxs-lookup"><span data-stu-id="522d3-114">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="020c8-115">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="020c8-115">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="522d3-115">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="522d3-115">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="020c8-116">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="020c8-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="522d3-116">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="522d3-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
     `import-module stopprossessample04`
 
-5. <span data-ttu-id="020c8-117">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="020c8-117">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="522d3-117">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="522d3-117">Run the following command to run the cmdlet:</span></span>
 
     `stop-proc`
 
-## <a name="requirements"></a><span data-ttu-id="020c8-118">Требования</span><span class="sxs-lookup"><span data-stu-id="020c8-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="522d3-118">Требования</span><span class="sxs-lookup"><span data-stu-id="522d3-118">Requirements</span></span>
 
-<span data-ttu-id="020c8-119">В этом примере требуется Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="020c8-119">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="522d3-119">В этом примере требуется Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="522d3-119">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="020c8-120">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="020c8-120">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="522d3-120">Демонстрирует</span><span class="sxs-lookup"><span data-stu-id="522d3-120">Demonstrates</span></span>
 
-<span data-ttu-id="020c8-121">В этом примере демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="020c8-121">This sample demonstrates the following.</span></span>
+<span data-ttu-id="522d3-121">В этом примере демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="522d3-121">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="020c8-122">Объявление класса командлет с помощью атрибута командлет.</span><span class="sxs-lookup"><span data-stu-id="020c8-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="522d3-122">Объявление класса командлет с помощью атрибута командлет.</span><span class="sxs-lookup"><span data-stu-id="522d3-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="020c8-123">Объявление параметров командлета с помощью параметра атрибута.</span><span class="sxs-lookup"><span data-stu-id="020c8-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
+- <span data-ttu-id="522d3-123">Объявление параметров командлета с помощью параметра атрибута.</span><span class="sxs-lookup"><span data-stu-id="522d3-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="020c8-124">Добавление параметра, который принимает входной объект.</span><span class="sxs-lookup"><span data-stu-id="020c8-124">Adding a parameter that accepts input object.</span></span>
+- <span data-ttu-id="522d3-124">Добавление параметра, который принимает входной объект.</span><span class="sxs-lookup"><span data-stu-id="522d3-124">Adding a parameter that accepts input object.</span></span>
 
-- <span data-ttu-id="020c8-125">Добавление параметров для наборов параметров</span><span class="sxs-lookup"><span data-stu-id="020c8-125">Adding parameters to parameter sets</span></span>
+- <span data-ttu-id="522d3-125">Добавление параметров для наборов параметров</span><span class="sxs-lookup"><span data-stu-id="522d3-125">Adding parameters to parameter sets</span></span>
 
-- <span data-ttu-id="020c8-126">Задание параметра по умолчанию набора данных.</span><span class="sxs-lookup"><span data-stu-id="020c8-126">Specifying the default parameter set.</span></span>
+- <span data-ttu-id="522d3-126">Задание параметра по умолчанию набора данных.</span><span class="sxs-lookup"><span data-stu-id="522d3-126">Specifying the default parameter set.</span></span>
 
-## <a name="example"></a><span data-ttu-id="020c8-127">Пример</span><span class="sxs-lookup"><span data-stu-id="020c8-127">Example</span></span>
+## <a name="example"></a><span data-ttu-id="522d3-127">Пример</span><span class="sxs-lookup"><span data-stu-id="522d3-127">Example</span></span>
 
-<span data-ttu-id="020c8-128">Следующий код показывает реализацию командлета Stop-Proc объявить наборы параметров, указывает параметр по умолчанию значение и может принимать входной объект.</span><span class="sxs-lookup"><span data-stu-id="020c8-128">The following code shows an implementation of the Stop-Proc cmdlet that declare parameter sets, specifies the default parameter set, and can accept an input object.</span></span>
+<span data-ttu-id="522d3-128">Следующий код показывает реализацию командлета Stop-Proc объявить наборы параметров, указывает параметр по умолчанию значение и может принимать входной объект.</span><span class="sxs-lookup"><span data-stu-id="522d3-128">The following code shows an implementation of the Stop-Proc cmdlet that declare parameter sets, specifies the default parameter set, and can accept an input object.</span></span>
 
-<span data-ttu-id="020c8-129">В этом примере показано входной объект, как объявить наборы параметров и способы указания параметра по умолчанию, настроенный для использования.</span><span class="sxs-lookup"><span data-stu-id="020c8-129">This sample shows the input object, how to declare parameter sets, and how to specify the default parameter set to use.</span></span>
+<span data-ttu-id="522d3-129">В этом примере показано входной объект, как объявить наборы параметров и способы указания параметра по умолчанию, настроенный для использования.</span><span class="sxs-lookup"><span data-stu-id="522d3-129">This sample shows the input object, how to declare parameter sets, and how to specify the default parameter set to use.</span></span>
 
 ```csharp
 using System;
@@ -490,6 +490,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="020c8-130">См. также</span><span class="sxs-lookup"><span data-stu-id="020c8-130">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="522d3-130">См. также</span><span class="sxs-lookup"><span data-stu-id="522d3-130">See Also</span></span>
 
-[<span data-ttu-id="020c8-131">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="020c8-131">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="522d3-131">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="522d3-131">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
