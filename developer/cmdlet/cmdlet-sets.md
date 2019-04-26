@@ -9,31 +9,31 @@ ms.topic: article
 ms.assetid: bcf0739e-920e-4dd8-afca-2c6d6927bc2a
 caps.latest.revision: 10
 ms.openlocfilehash: ef3b5bab5dcafc578397bcb4f071776bbdeaced1
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068391"
 ---
-# <a name="cmdlet-sets"></a><span data-ttu-id="50f32-102">Наборы командлетов</span><span class="sxs-lookup"><span data-stu-id="50f32-102">Cmdlet Sets</span></span>
+# <a name="cmdlet-sets"></a><span data-ttu-id="58eae-102">Наборы командлетов</span><span class="sxs-lookup"><span data-stu-id="58eae-102">Cmdlet Sets</span></span>
 
-<span data-ttu-id="50f32-103">При разработке командлетов, возможны случаи, в которых необходимо выполнить несколько действий по одному фрагменту данных.</span><span class="sxs-lookup"><span data-stu-id="50f32-103">When you design your cmdlets, you might encounter cases in which you need to perform several actions on the same piece of data.</span></span> <span data-ttu-id="50f32-104">Например может потребоваться получить и задать данные или запускать и останавливать процесс.</span><span class="sxs-lookup"><span data-stu-id="50f32-104">For example, you might need to get and set data or start and stop a process.</span></span> <span data-ttu-id="50f32-105">Несмотря на то, что необходимо будет создать отдельные командлеты для выполнения каждого действия, в командлет должно содержать базовый класс, от которого наследуются классы для отдельных командлетах.</span><span class="sxs-lookup"><span data-stu-id="50f32-105">Although you will need to create separate cmdlets to perform each action, your cmdlet design should include a base class from which the classes for the individual cmdlets are derived.</span></span>
+<span data-ttu-id="58eae-103">При разработке командлетов, возможны случаи, в которых необходимо выполнить несколько действий по одному фрагменту данных.</span><span class="sxs-lookup"><span data-stu-id="58eae-103">When you design your cmdlets, you might encounter cases in which you need to perform several actions on the same piece of data.</span></span> <span data-ttu-id="58eae-104">Например может потребоваться получить и задать данные или запускать и останавливать процесс.</span><span class="sxs-lookup"><span data-stu-id="58eae-104">For example, you might need to get and set data or start and stop a process.</span></span> <span data-ttu-id="58eae-105">Несмотря на то, что необходимо будет создать отдельные командлеты для выполнения каждого действия, в командлет должно содержать базовый класс, от которого наследуются классы для отдельных командлетах.</span><span class="sxs-lookup"><span data-stu-id="58eae-105">Although you will need to create separate cmdlets to perform each action, your cmdlet design should include a base class from which the classes for the individual cmdlets are derived.</span></span>
 
-<span data-ttu-id="50f32-106">При реализации базового класса, имейте в виду следующее.</span><span class="sxs-lookup"><span data-stu-id="50f32-106">Keep the following things in mind when implementing a base class.</span></span>
+<span data-ttu-id="58eae-106">При реализации базового класса, имейте в виду следующее.</span><span class="sxs-lookup"><span data-stu-id="58eae-106">Keep the following things in mind when implementing a base class.</span></span>
 
-- <span data-ttu-id="50f32-107">Объявите все общие параметры, используемые все командлеты, производные в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="50f32-107">Declare any common parameters used by all the derived cmdlets in the base class.</span></span>
+- <span data-ttu-id="58eae-107">Объявите все общие параметры, используемые все командлеты, производные в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="58eae-107">Declare any common parameters used by all the derived cmdlets in the base class.</span></span>
 
-- <span data-ttu-id="50f32-108">Добавьте в класс соответствующий командлет параметры конкретного командлета.</span><span class="sxs-lookup"><span data-stu-id="50f32-108">Add cmdlet-specific parameters to the appropriate cmdlet class.</span></span>
+- <span data-ttu-id="58eae-108">Добавьте в класс соответствующий командлет параметры конкретного командлета.</span><span class="sxs-lookup"><span data-stu-id="58eae-108">Add cmdlet-specific parameters to the appropriate cmdlet class.</span></span>
 
-- <span data-ttu-id="50f32-109">Переопределите соответствующий метод в базовом классе обработки входных данных.</span><span class="sxs-lookup"><span data-stu-id="50f32-109">Override the appropriate input processing method in the base class.</span></span>
+- <span data-ttu-id="58eae-109">Переопределите соответствующий метод в базовом классе обработки входных данных.</span><span class="sxs-lookup"><span data-stu-id="58eae-109">Override the appropriate input processing method in the base class.</span></span>
 
-- <span data-ttu-id="50f32-110">Объявите [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) атрибут во всех классах командлета, но не объявляется в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="50f32-110">Declare the [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attribute on all cmdlet classes, but do not declare it on the base class.</span></span>
+- <span data-ttu-id="58eae-110">Объявите [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) атрибут во всех классах командлета, но не объявляется в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="58eae-110">Declare the [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attribute on all cmdlet classes, but do not declare it on the base class.</span></span>
 
-- <span data-ttu-id="50f32-111">Реализуйте [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) или [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) класса, имя и описание отражает набор командлетов.</span><span class="sxs-lookup"><span data-stu-id="50f32-111">Implement a [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) or [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) class whose name and description reflects the set of cmdlets.</span></span>
+- <span data-ttu-id="58eae-111">Реализуйте [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) или [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) класса, имя и описание отражает набор командлетов.</span><span class="sxs-lookup"><span data-stu-id="58eae-111">Implement a [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) or [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) class whose name and description reflects the set of cmdlets.</span></span>
 
-## <a name="example"></a><span data-ttu-id="50f32-112">Пример</span><span class="sxs-lookup"><span data-stu-id="50f32-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="58eae-112">Пример</span><span class="sxs-lookup"><span data-stu-id="58eae-112">Example</span></span>
 
-<span data-ttu-id="50f32-113">В следующем примере реализации базового класса, который используется с Get-Proc и командлет Stop-Proc, который является производным от одного базового класса.</span><span class="sxs-lookup"><span data-stu-id="50f32-113">The following example shows the implementation of a base class that is used by Get-Proc and Stop-Proc cmdlet that derive from the same base class.</span></span>
+<span data-ttu-id="58eae-113">В следующем примере реализации базового класса, который используется с Get-Proc и командлет Stop-Proc, который является производным от одного базового класса.</span><span class="sxs-lookup"><span data-stu-id="58eae-113">The following example shows the implementation of a base class that is used by Get-Proc and Stop-Proc cmdlet that derive from the same base class.</span></span>
 
 ```csharp
 using System;
@@ -170,6 +170,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="50f32-114">См. также</span><span class="sxs-lookup"><span data-stu-id="50f32-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58eae-114">См. также</span><span class="sxs-lookup"><span data-stu-id="58eae-114">See Also</span></span>
 
-[<span data-ttu-id="50f32-115">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="50f32-115">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="58eae-115">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="58eae-115">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)

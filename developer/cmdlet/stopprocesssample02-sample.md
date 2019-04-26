@@ -9,67 +9,67 @@ ms.topic: article
 ms.assetid: 213ca1a4-e9fe-4969-b7d0-2fca070c6142
 caps.latest.revision: 10
 ms.openlocfilehash: 594c06367baedd1f9bfdbfff9f0e072d579b4099
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067309"
 ---
-# <a name="stopprocesssample02-sample"></a><span data-ttu-id="5e555-102">Пример командлета StopProcessSample02</span><span class="sxs-lookup"><span data-stu-id="5e555-102">StopProcessSample02 Sample</span></span>
+# <a name="stopprocesssample02-sample"></a><span data-ttu-id="a5d8f-102">Пример командлета StopProcessSample02</span><span class="sxs-lookup"><span data-stu-id="a5d8f-102">StopProcessSample02 Sample</span></span>
 
-<span data-ttu-id="5e555-103">В этом примере показано, как написать командлет, который записывает отладки (метод WriteDebug), verbose (WriteVerbose) и предупреждений (WriteWarning) во время остановки процессов на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="5e555-103">This sample shows how to write a cmdlet that writes debug (WriteDebug), verbose (WriteVerbose), and warning (WriteWarning) messages while stopping processes on the local computer.</span></span> <span data-ttu-id="5e555-104">Этот командлет аналогичен `Stop-Process` командлет, предоставляемые Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="5e555-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="a5d8f-103">В этом примере показано, как написать командлет, который записывает отладки (метод WriteDebug), verbose (WriteVerbose) и предупреждений (WriteWarning) во время остановки процессов на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-103">This sample shows how to write a cmdlet that writes debug (WriteDebug), verbose (WriteVerbose), and warning (WriteWarning) messages while stopping processes on the local computer.</span></span> <span data-ttu-id="a5d8f-104">Этот командлет аналогичен `Stop-Process` командлет, предоставляемые Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
 
-### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="5e555-105">Как построить образец с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="5e555-105">How to build the sample by using Visual Studio.</span></span>
+### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="a5d8f-105">Как построить образец с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-105">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="5e555-106">Откройте Windows Internet Explorer и перейдите в каталог StopProcessSample02 в каталоге примеров.</span><span class="sxs-lookup"><span data-stu-id="5e555-106">Open Windows Internet Explorer and navigate to the StopProcessSample02 directory under the Samples directory.</span></span>
+1. <span data-ttu-id="a5d8f-106">Откройте Windows Internet Explorer и перейдите в каталог StopProcessSample02 в каталоге примеров.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-106">Open Windows Internet Explorer and navigate to the StopProcessSample02 directory under the Samples directory.</span></span>
 
-    <span data-ttu-id="5e555-107">С помощью Windows PowerShell 2.0 установлен пакет SDK перейдите к папке StopProcessSample02.</span><span class="sxs-lookup"><span data-stu-id="5e555-107">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample02 folder.</span></span> <span data-ttu-id="5e555-108">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02.</span><span class="sxs-lookup"><span data-stu-id="5e555-108">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02.</span></span>
+    <span data-ttu-id="a5d8f-107">С помощью Windows PowerShell 2.0 установлен пакет SDK перейдите к папке StopProcessSample02.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-107">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample02 folder.</span></span> <span data-ttu-id="a5d8f-108">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-108">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02.</span></span>
 
-2. <span data-ttu-id="5e555-109">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="5e555-109">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="5e555-110">Пример проекта откроется в Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="5e555-110">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="a5d8f-109">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="a5d8f-109">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="a5d8f-110">Пример проекта откроется в Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-110">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="5e555-111">В **построения** меню, выберите **построить решение**.</span><span class="sxs-lookup"><span data-stu-id="5e555-111">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="a5d8f-111">В **построения** меню, выберите **построить решение**.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-111">In the **Build** menu, select **Build Solution**.</span></span>
 
-    <span data-ttu-id="5e555-112">Библиотеки для образца будет располагаться в папках \bin или \bin\debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5e555-112">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+    <span data-ttu-id="a5d8f-112">Библиотеки для образца будет располагаться в папках \bin или \bin\debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-112">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="5e555-113">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="5e555-113">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="a5d8f-113">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="a5d8f-113">How to run the sample</span></span>
 
-1. <span data-ttu-id="5e555-114">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="5e555-114">Create the following module folder:</span></span>
+1. <span data-ttu-id="a5d8f-114">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="a5d8f-114">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/StopProcessSample02`
 
-2. <span data-ttu-id="5e555-115">Скопируйте сборку образца в папке модуля.</span><span class="sxs-lookup"><span data-stu-id="5e555-115">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="a5d8f-115">Скопируйте сборку образца в папке модуля.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-115">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="5e555-116">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="5e555-116">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="a5d8f-116">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-116">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="5e555-117">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="5e555-117">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="a5d8f-117">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="a5d8f-117">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
     `import-module stopprossessample02`
 
-5. <span data-ttu-id="5e555-118">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="5e555-118">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="a5d8f-118">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="a5d8f-118">Run the following command to run the cmdlet:</span></span>
 
     `stop-proc`
 
-## <a name="requirements"></a><span data-ttu-id="5e555-119">Требования</span><span class="sxs-lookup"><span data-stu-id="5e555-119">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a5d8f-119">Требования</span><span class="sxs-lookup"><span data-stu-id="a5d8f-119">Requirements</span></span>
 
-<span data-ttu-id="5e555-120">В этом примере требуется Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="5e555-120">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="a5d8f-120">В этом примере требуется Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-120">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="5e555-121">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="5e555-121">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="a5d8f-121">Демонстрирует</span><span class="sxs-lookup"><span data-stu-id="a5d8f-121">Demonstrates</span></span>
 
-<span data-ttu-id="5e555-122">В этом примере демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="5e555-122">This sample demonstrates the following.</span></span>
+<span data-ttu-id="a5d8f-122">В этом примере демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-122">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="5e555-123">Объявление класса командлет с помощью атрибута командлет.</span><span class="sxs-lookup"><span data-stu-id="5e555-123">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="a5d8f-123">Объявление класса командлет с помощью атрибута командлет.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-123">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="5e555-124">Объявление параметров командлета с помощью параметра атрибута.</span><span class="sxs-lookup"><span data-stu-id="5e555-124">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
+- <span data-ttu-id="a5d8f-124">Объявление параметров командлета с помощью параметра атрибута.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-124">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="5e555-125">Запись подробных сообщений.</span><span class="sxs-lookup"><span data-stu-id="5e555-125">Writing verbose messages.</span></span> <span data-ttu-id="5e555-126">Дополнительные сведения о методе, используемый для записи подробных сообщений, см. в разделе [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).</span><span class="sxs-lookup"><span data-stu-id="5e555-126">For more information about the method used to write verbose messages, see [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).</span></span>
+- <span data-ttu-id="a5d8f-125">Запись подробных сообщений.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-125">Writing verbose messages.</span></span> <span data-ttu-id="a5d8f-126">Дополнительные сведения о методе, используемый для записи подробных сообщений, см. в разделе [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).</span><span class="sxs-lookup"><span data-stu-id="a5d8f-126">For more information about the method used to write verbose messages, see [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).</span></span>
 
-- <span data-ttu-id="5e555-127">Создание сообщений об ошибках.</span><span class="sxs-lookup"><span data-stu-id="5e555-127">Writing error messages.</span></span> <span data-ttu-id="5e555-128">Дополнительные сведения о методе, используемый для записи сообщения об ошибках, см. в разделе [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError).</span><span class="sxs-lookup"><span data-stu-id="5e555-128">For more information about the method used to write error messages, see [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError).</span></span>
+- <span data-ttu-id="a5d8f-127">Создание сообщений об ошибках.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-127">Writing error messages.</span></span> <span data-ttu-id="a5d8f-128">Дополнительные сведения о методе, используемый для записи сообщения об ошибках, см. в разделе [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError).</span><span class="sxs-lookup"><span data-stu-id="a5d8f-128">For more information about the method used to write error messages, see [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError).</span></span>
 
-- <span data-ttu-id="5e555-129">Написание предупреждающие сообщения.</span><span class="sxs-lookup"><span data-stu-id="5e555-129">Writing warning messages.</span></span> <span data-ttu-id="5e555-130">Дополнительные сведения о методе, используемый для записи предупреждающие сообщения, см. в разделе [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning).</span><span class="sxs-lookup"><span data-stu-id="5e555-130">For more information about the method used to write warning messages, see [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning).</span></span>
+- <span data-ttu-id="a5d8f-129">Написание предупреждающие сообщения.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-129">Writing warning messages.</span></span> <span data-ttu-id="a5d8f-130">Дополнительные сведения о методе, используемый для записи предупреждающие сообщения, см. в разделе [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning).</span><span class="sxs-lookup"><span data-stu-id="a5d8f-130">For more information about the method used to write warning messages, see [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning).</span></span>
 
-## <a name="example"></a><span data-ttu-id="5e555-131">Пример</span><span class="sxs-lookup"><span data-stu-id="5e555-131">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a5d8f-131">Пример</span><span class="sxs-lookup"><span data-stu-id="a5d8f-131">Example</span></span>
 
-<span data-ttu-id="5e555-132">В этом примере показано, как написать отладки, verbose, сообщения и предупреждения, используя `WriteDebug`, `WriteVerbose`, и `WriteWarning` методы.</span><span class="sxs-lookup"><span data-stu-id="5e555-132">This sample shows how to write debug, verbose, and warning messages by using the `WriteDebug`, `WriteVerbose`, and `WriteWarning` methods.</span></span>
+<span data-ttu-id="a5d8f-132">В этом примере показано, как написать отладки, verbose, сообщения и предупреждения, используя `WriteDebug`, `WriteVerbose`, и `WriteWarning` методы.</span><span class="sxs-lookup"><span data-stu-id="a5d8f-132">This sample shows how to write debug, verbose, and warning messages by using the `WriteDebug`, `WriteVerbose`, and `WriteWarning` methods.</span></span>
 
 ```csharp
 using System;
@@ -310,6 +310,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5e555-133">См. также</span><span class="sxs-lookup"><span data-stu-id="5e555-133">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5d8f-133">См. также</span><span class="sxs-lookup"><span data-stu-id="a5d8f-133">See Also</span></span>
 
-[<span data-ttu-id="5e555-134">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="5e555-134">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="a5d8f-134">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="a5d8f-134">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
