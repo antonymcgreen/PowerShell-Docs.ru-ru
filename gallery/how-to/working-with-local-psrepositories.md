@@ -2,66 +2,66 @@
 ms.date: 11/06/2018
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery,psget
-title: Работа с локального PSRepositories
+title: Работа с локальными репозиториями PowerShell
 ms.openlocfilehash: 94824ea584c097838b24c6f2cd02407b6147a781
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084102"
 ---
-# <a name="working-with-local-powershellget-repositories"></a><span data-ttu-id="d067b-103">Работа с локальными хранилищами PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="d067b-103">Working with local PowerShellGet Repositories</span></span>
+# <a name="working-with-local-powershellget-repositories"></a><span data-ttu-id="aab93-103">Работа с локальными хранилищами PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="aab93-103">Working with local PowerShellGet Repositories</span></span>
 
-<span data-ttu-id="d067b-104">Поддержка модуля PowerShellGet репозитории отличный от коллекции PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d067b-104">The PowerShellGet module support repositories other than the PowerShell Gallery.</span></span>
-<span data-ttu-id="d067b-105">Эти командлеты реализации следующих сценариев:</span><span class="sxs-lookup"><span data-stu-id="d067b-105">These cmdlets enable the following scenarios:</span></span>
+<span data-ttu-id="aab93-104">Модуль PowerShellGet поддерживает репозитории, отличные от коллекции PowerShell.</span><span class="sxs-lookup"><span data-stu-id="aab93-104">The PowerShellGet module support repositories other than the PowerShell Gallery.</span></span>
+<span data-ttu-id="aab93-105">Эти командлеты реализуют следующие сценарии:</span><span class="sxs-lookup"><span data-stu-id="aab93-105">These cmdlets enable the following scenarios:</span></span>
 
-- <span data-ttu-id="d067b-106">Поддерживает набор доверенных, предварительно проверенных модулей PowerShell для использования в вашей среде</span><span class="sxs-lookup"><span data-stu-id="d067b-106">Support a trusted, pre-validated set of PowerShell modules for use in your environment</span></span>
-- <span data-ttu-id="d067b-107">Тестирование конвейера CI/CD, который создает модули PowerShell или сценариев</span><span class="sxs-lookup"><span data-stu-id="d067b-107">Testing a CI/CD pipeline that builds PowerShell modules or scripts</span></span>
-- <span data-ttu-id="d067b-108">Доставлять сценариев и модулей PowerShell системы, для которых не удается получить доступ к Интернету</span><span class="sxs-lookup"><span data-stu-id="d067b-108">Deliver PowerShell scripts and modules to systems that can't access the internet</span></span>
+- <span data-ttu-id="aab93-106">поддержка надежного, предварительно проверенного набора модулей PowerShell для использования в вашей среде;</span><span class="sxs-lookup"><span data-stu-id="aab93-106">Support a trusted, pre-validated set of PowerShell modules for use in your environment</span></span>
+- <span data-ttu-id="aab93-107">тестирование конвейера CI/CD, который создает модули или скрипты PowerShell;</span><span class="sxs-lookup"><span data-stu-id="aab93-107">Testing a CI/CD pipeline that builds PowerShell modules or scripts</span></span>
+- <span data-ttu-id="aab93-108">предоставление скриптов и модулей PowerShell для систем, которые не имеют доступа к Интернету.</span><span class="sxs-lookup"><span data-stu-id="aab93-108">Deliver PowerShell scripts and modules to systems that can't access the internet</span></span>
 
-<span data-ttu-id="d067b-109">В этой статье описывается настройка локального репозитория PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d067b-109">This article describes how to set up a local PowerShell repository.</span></span> <span data-ttu-id="d067b-110">В статье также описаны [OfflinePowerShellGetDeploy][] модуль из коллекции PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d067b-110">The article also covers the [OfflinePowerShellGetDeploy][] module available from the PowerShell Gallery.</span></span> <span data-ttu-id="d067b-111">Этот модуль содержит командлеты, чтобы установить последнюю версию PowerShellGet в локальный репозиторий.</span><span class="sxs-lookup"><span data-stu-id="d067b-111">This module contains cmdlets to install the latest version of PowerShellGet into your local repository.</span></span>
+<span data-ttu-id="aab93-109">В этой статье описывается, как настроить локальный репозиторий PowerShell.</span><span class="sxs-lookup"><span data-stu-id="aab93-109">This article describes how to set up a local PowerShell repository.</span></span> <span data-ttu-id="aab93-110">В статье также рассматривается модуль [OfflinePowerShellGetDeploy][], доступный в коллекции PowerShell.</span><span class="sxs-lookup"><span data-stu-id="aab93-110">The article also covers the [OfflinePowerShellGetDeploy][] module available from the PowerShell Gallery.</span></span> <span data-ttu-id="aab93-111">Этот модуль содержит командлеты для установки последней версии PowerShellGet в локальный репозиторий.</span><span class="sxs-lookup"><span data-stu-id="aab93-111">This module contains cmdlets to install the latest version of PowerShellGet into your local repository.</span></span>
 
-## <a name="local-repository-types"></a><span data-ttu-id="d067b-112">Типы локального репозитория</span><span class="sxs-lookup"><span data-stu-id="d067b-112">Local repository types</span></span>
+## <a name="local-repository-types"></a><span data-ttu-id="aab93-112">Типы локальных репозиториев</span><span class="sxs-lookup"><span data-stu-id="aab93-112">Local repository types</span></span>
 
-<span data-ttu-id="d067b-113">Существует два способа для создания локального PSRepository: NuGet server или файловый ресурс.</span><span class="sxs-lookup"><span data-stu-id="d067b-113">There are two ways to create a local PSRepository: NuGet server or file share.</span></span> <span data-ttu-id="d067b-114">Каждый тип имеет преимущества и недостатки:</span><span class="sxs-lookup"><span data-stu-id="d067b-114">Each type has advantages and disadvantages:</span></span>
+<span data-ttu-id="aab93-113">Локальный репозиторий PSRepository можно создать в одном из двух видов: в виде сервера NuGet или файлового ресурса.</span><span class="sxs-lookup"><span data-stu-id="aab93-113">There are two ways to create a local PSRepository: NuGet server or file share.</span></span> <span data-ttu-id="aab93-114">У каждого типа есть свои преимущества и недостатки.</span><span class="sxs-lookup"><span data-stu-id="aab93-114">Each type has advantages and disadvantages:</span></span>
 
-<span data-ttu-id="d067b-115">NuGet Server</span><span class="sxs-lookup"><span data-stu-id="d067b-115">NuGet Server</span></span>
+<span data-ttu-id="aab93-115">Сервер NuGet</span><span class="sxs-lookup"><span data-stu-id="aab93-115">NuGet Server</span></span>
 
-| <span data-ttu-id="d067b-116">Преимущества</span><span class="sxs-lookup"><span data-stu-id="d067b-116">Advantages</span></span>| <span data-ttu-id="d067b-117">Недостатки</span><span class="sxs-lookup"><span data-stu-id="d067b-117">Disadvantages</span></span> |
+| <span data-ttu-id="aab93-116">Преимущества</span><span class="sxs-lookup"><span data-stu-id="aab93-116">Advantages</span></span>| <span data-ttu-id="aab93-117">Недостатки</span><span class="sxs-lookup"><span data-stu-id="aab93-117">Disadvantages</span></span> |
 | --- | --- |
-| <span data-ttu-id="d067b-118">Точно имитирует функциональность PowerShellGallery</span><span class="sxs-lookup"><span data-stu-id="d067b-118">Closely mimics PowerShellGallery functionality</span></span> | <span data-ttu-id="d067b-119">Многоуровневое приложение требует планирования операций и поддержка</span><span class="sxs-lookup"><span data-stu-id="d067b-119">Multi-tier app requires operations planning & support</span></span> |
-| <span data-ttu-id="d067b-120">NuGet интегрируется с Visual Studio и другие средства</span><span class="sxs-lookup"><span data-stu-id="d067b-120">NuGet integrates with Visual Studio, other tools</span></span> | <span data-ttu-id="d067b-121">Модель проверки подлинности и контроля учетных записей NuGet</span><span class="sxs-lookup"><span data-stu-id="d067b-121">Authentication model and NuGet accounts management needed</span></span> |
-| <span data-ttu-id="d067b-122">NuGet поддерживает метаданные в `.Nupkg` пакетов</span><span class="sxs-lookup"><span data-stu-id="d067b-122">NuGet supports metadata in `.Nupkg` packages</span></span> | <span data-ttu-id="d067b-123">Публикации требуется ключ API управление и обслуживание</span><span class="sxs-lookup"><span data-stu-id="d067b-123">Publishing requires API Key management & maintenance</span></span> |
-| <span data-ttu-id="d067b-124">Предоставляет поиска, пакет администрирования и т. д.</span><span class="sxs-lookup"><span data-stu-id="d067b-124">Provides search, package administration, etc.</span></span> | |
+| <span data-ttu-id="aab93-118">Точно имитирует функциональность коллекции PowerShell</span><span class="sxs-lookup"><span data-stu-id="aab93-118">Closely mimics PowerShellGallery functionality</span></span> | <span data-ttu-id="aab93-119">Многоуровневое приложение требует планирования и поддержки операций</span><span class="sxs-lookup"><span data-stu-id="aab93-119">Multi-tier app requires operations planning & support</span></span> |
+| <span data-ttu-id="aab93-120">NuGet интегрируется с Visual Studio и другими средствами</span><span class="sxs-lookup"><span data-stu-id="aab93-120">NuGet integrates with Visual Studio, other tools</span></span> | <span data-ttu-id="aab93-121">Требуется модель аутентификации и управление учетными записями NuGet</span><span class="sxs-lookup"><span data-stu-id="aab93-121">Authentication model and NuGet accounts management needed</span></span> |
+| <span data-ttu-id="aab93-122">NuGet поддерживает метаданные в пакетах `.Nupkg`</span><span class="sxs-lookup"><span data-stu-id="aab93-122">NuGet supports metadata in `.Nupkg` packages</span></span> | <span data-ttu-id="aab93-123">Публикация требует управления ключами API и их обслуживания</span><span class="sxs-lookup"><span data-stu-id="aab93-123">Publishing requires API Key management & maintenance</span></span> |
+| <span data-ttu-id="aab93-124">Возможность поиска, администрирования пакетов и т. д.</span><span class="sxs-lookup"><span data-stu-id="aab93-124">Provides search, package administration, etc.</span></span> | |
 
-<span data-ttu-id="d067b-125">Общая папка</span><span class="sxs-lookup"><span data-stu-id="d067b-125">File Share</span></span>
+<span data-ttu-id="aab93-125">Общая папка</span><span class="sxs-lookup"><span data-stu-id="aab93-125">File Share</span></span>
 
-| <span data-ttu-id="d067b-126">Преимущества</span><span class="sxs-lookup"><span data-stu-id="d067b-126">Advantages</span></span>| <span data-ttu-id="d067b-127">Недостатки</span><span class="sxs-lookup"><span data-stu-id="d067b-127">Disadvantages</span></span> |
+| <span data-ttu-id="aab93-126">Преимущества</span><span class="sxs-lookup"><span data-stu-id="aab93-126">Advantages</span></span>| <span data-ttu-id="aab93-127">Недостатки</span><span class="sxs-lookup"><span data-stu-id="aab93-127">Disadvantages</span></span> |
 | --- | --- |
-| <span data-ttu-id="d067b-128">Легко настроить, резервное копирование и поддерживать</span><span class="sxs-lookup"><span data-stu-id="d067b-128">Easy to set up, back up, and maintain</span></span> | <span data-ttu-id="d067b-129">Метаданные, используемые PowerShellGet недоступна</span><span class="sxs-lookup"><span data-stu-id="d067b-129">Metadata used by PowerShellGet isn't available</span></span> |
-| <span data-ttu-id="d067b-130">Модель безопасности — разрешения пользователя в общей папке</span><span class="sxs-lookup"><span data-stu-id="d067b-130">Simple security model - user permissions on the share</span></span> | <span data-ttu-id="d067b-131">Ни один пользовательский Интерфейс за пределы базовый файловый ресурс</span><span class="sxs-lookup"><span data-stu-id="d067b-131">No UI beyond basic file share</span></span> |
-| <span data-ttu-id="d067b-132">Без ограничений, таких как замена существующих элементов</span><span class="sxs-lookup"><span data-stu-id="d067b-132">No constraints such as replacing existing items</span></span> | <span data-ttu-id="d067b-133">Нет записи, от тех, кто обновляет новые и ограниченной безопасностью</span><span class="sxs-lookup"><span data-stu-id="d067b-133">Limited security and no recording of who updates what</span></span> |
+| <span data-ttu-id="aab93-128">Простота установки, резервного копирования и обслуживания</span><span class="sxs-lookup"><span data-stu-id="aab93-128">Easy to set up, back up, and maintain</span></span> | <span data-ttu-id="aab93-129">Метаданные, используемые PowerShellGet, недоступны</span><span class="sxs-lookup"><span data-stu-id="aab93-129">Metadata used by PowerShellGet isn't available</span></span> |
+| <span data-ttu-id="aab93-130">Простая модель безопасности: разрешения пользователей задаются для файлового ресурса</span><span class="sxs-lookup"><span data-stu-id="aab93-130">Simple security model - user permissions on the share</span></span> | <span data-ttu-id="aab93-131">Отсутствие интерфейса пользователя за пределами основного файлового ресурса</span><span class="sxs-lookup"><span data-stu-id="aab93-131">No UI beyond basic file share</span></span> |
+| <span data-ttu-id="aab93-132">Нет ограничений, таких как замена существующих элементов</span><span class="sxs-lookup"><span data-stu-id="aab93-132">No constraints such as replacing existing items</span></span> | <span data-ttu-id="aab93-133">Ограниченная безопасность и отсутствие записей о том, кто и что обновляет</span><span class="sxs-lookup"><span data-stu-id="aab93-133">Limited security and no recording of who updates what</span></span> |
 
-<span data-ttu-id="d067b-134">PowerShellGet работает с типом и поддерживает поиск версии и установка зависимостей.</span><span class="sxs-lookup"><span data-stu-id="d067b-134">PowerShellGet works with either type and supports locating versions and dependency installation.</span></span>
-<span data-ttu-id="d067b-135">Тем не менее некоторые функции работают для коллекции PowerShell недоступны для базового NuGet серверов или общих папок.</span><span class="sxs-lookup"><span data-stu-id="d067b-135">However, some features that work for the PowerShell Gallery aren't available for base NuGet servers or file shares.</span></span>
+<span data-ttu-id="aab93-134">PowerShellGet работает с любыми типами элементов и поддерживает поиск версий и установку зависимостей.</span><span class="sxs-lookup"><span data-stu-id="aab93-134">PowerShellGet works with either type and supports locating versions and dependency installation.</span></span>
+<span data-ttu-id="aab93-135">Однако некоторые функции, которые работают в коллекции PowerShell, недоступны для базовых серверов NuGet или файловых ресурсов.</span><span class="sxs-lookup"><span data-stu-id="aab93-135">However, some features that work for the PowerShell Gallery aren't available for base NuGet servers or file shares.</span></span>
 
-- <span data-ttu-id="d067b-136">Все, что является пакетом - никакой разницы, сценарии, модули, ресурсы DSC и возможности ролей.</span><span class="sxs-lookup"><span data-stu-id="d067b-136">Everything is a package - no differentiation of scripts, modules, DSC resources, or role capabilities.</span></span>
-- <span data-ttu-id="d067b-137">Файловые серверы общего ресурса не могут видеть метаданные пакета, включая теги.</span><span class="sxs-lookup"><span data-stu-id="d067b-137">File share servers can't see package metadata, including tags.</span></span>
+- <span data-ttu-id="aab93-136">Все элементы представлены в виде пакетов без разграничения скриптов, модулей, ресурсов DSC или возможностей ролей.</span><span class="sxs-lookup"><span data-stu-id="aab93-136">Everything is a package - no differentiation of scripts, modules, DSC resources, or role capabilities.</span></span>
+- <span data-ttu-id="aab93-137">Файловые ресурсы не могут распознавать метаданные пакета, включая теги.</span><span class="sxs-lookup"><span data-stu-id="aab93-137">File share servers can't see package metadata, including tags.</span></span>
 
-## <a name="creating-a-local-repository"></a><span data-ttu-id="d067b-138">Создание локального репозитория</span><span class="sxs-lookup"><span data-stu-id="d067b-138">Creating a local repository</span></span>
+## <a name="creating-a-local-repository"></a><span data-ttu-id="aab93-138">Создание локального репозитория</span><span class="sxs-lookup"><span data-stu-id="aab93-138">Creating a local repository</span></span>
 
-<span data-ttu-id="d067b-139">В следующей статье перечислены шаги по настройке сервера NuGet.</span><span class="sxs-lookup"><span data-stu-id="d067b-139">The following article lists the steps for setting up your own NuGet Server.</span></span>
+<span data-ttu-id="aab93-139">В статье по следующей ссылке перечислены действия по настройке собственного сервера NuGet.</span><span class="sxs-lookup"><span data-stu-id="aab93-139">The following article lists the steps for setting up your own NuGet Server.</span></span>
 
-- <span data-ttu-id="d067b-140">[NuGet.Server][]</span><span class="sxs-lookup"><span data-stu-id="d067b-140">[NuGet.Server][]</span></span>
+- <span data-ttu-id="aab93-140">[NuGet.Server][]</span><span class="sxs-lookup"><span data-stu-id="aab93-140">[NuGet.Server][]</span></span>
 
-<span data-ttu-id="d067b-141">Следуйте инструкциям вплоть до добавления пакетов.</span><span class="sxs-lookup"><span data-stu-id="d067b-141">Follow the steps up to the point of adding packages.</span></span> <span data-ttu-id="d067b-142">Действия по [публикации пакета](#publishing-to-a-local-repository) рассматриваются далее в этой статье.</span><span class="sxs-lookup"><span data-stu-id="d067b-142">The steps for [publishing a package](#publishing-to-a-local-repository) are covered later in this article.</span></span>
+<span data-ttu-id="aab93-141">Следуйте инструкциям до момента добавления пакетов.</span><span class="sxs-lookup"><span data-stu-id="aab93-141">Follow the steps up to the point of adding packages.</span></span> <span data-ttu-id="aab93-142">Действия по [публикации пакета](#publishing-to-a-local-repository) описаны далее в этой статье.</span><span class="sxs-lookup"><span data-stu-id="aab93-142">The steps for [publishing a package](#publishing-to-a-local-repository) are covered later in this article.</span></span>
 
-<span data-ttu-id="d067b-143">Для репозитория основе общих файлов убедитесь, что у пользователей есть разрешения на доступ к общей папке.</span><span class="sxs-lookup"><span data-stu-id="d067b-143">For a file share-based repository, make sure that your users have permissions to access the file share.</span></span>
+<span data-ttu-id="aab93-143">При использовании репозитория на основе файлового ресурса убедитесь, что у ваших пользователей есть разрешения на доступ к файловому ресурсу.</span><span class="sxs-lookup"><span data-stu-id="aab93-143">For a file share-based repository, make sure that your users have permissions to access the file share.</span></span>
 
-## <a name="registering-a-local-repository"></a><span data-ttu-id="d067b-144">Регистрация локального репозитория</span><span class="sxs-lookup"><span data-stu-id="d067b-144">Registering a local repository</span></span>
+## <a name="registering-a-local-repository"></a><span data-ttu-id="aab93-144">Регистрация локального репозитория</span><span class="sxs-lookup"><span data-stu-id="aab93-144">Registering a local repository</span></span>
 
-<span data-ttu-id="d067b-145">Прежде чем можно будет использовать репозиторий, его необходимо зарегистрировать с помощью `Register-PSRepository` команды.</span><span class="sxs-lookup"><span data-stu-id="d067b-145">Before a repository can be used, it must be registered using the `Register-PSRepository` command.</span></span>
-<span data-ttu-id="d067b-146">В приведенных ниже примерах **InstallationPolicy** присваивается *надежных*, на предположении, что вы доверяете ваш собственный репозиторий.</span><span class="sxs-lookup"><span data-stu-id="d067b-146">In the examples below, the **InstallationPolicy** is set to *Trusted*, on the assumption that you trust your own repository.</span></span>
+<span data-ttu-id="aab93-145">Прежде чем репозиторий можно будет использовать, его необходимо зарегистрировать с помощью команды `Register-PSRepository`.</span><span class="sxs-lookup"><span data-stu-id="aab93-145">Before a repository can be used, it must be registered using the `Register-PSRepository` command.</span></span>
+<span data-ttu-id="aab93-146">В приведенных ниже примерах для параметра **InstallationPolicy** установлено значение *Trusted* (предполагается, что вы доверяете собственному репозиторию).</span><span class="sxs-lookup"><span data-stu-id="aab93-146">In the examples below, the **InstallationPolicy** is set to *Trusted*, on the assumption that you trust your own repository.</span></span>
 
 ```powershell
 # Register a NuGet-based server
@@ -71,40 +71,40 @@ Register-PSRepository -Name LocalPSRepo -SourceLocation http://MyLocalNuget/Api/
 Register-PSRepository -Name LocalPSRepo -SourceLocation '\\localhost\PSRepoLocal\' -ScriptSourceLocation '\\localhost\PSRepoLocal\' -InstallationPolicy Trusted
 ```
 
-<span data-ttu-id="d067b-147">Запишите разницу между порядок обработки двух команд **ScriptSourceLocation**.</span><span class="sxs-lookup"><span data-stu-id="d067b-147">Take note of the difference between how the two commands handle **ScriptSourceLocation**.</span></span> <span data-ttu-id="d067b-148">Для файла ресурса репозиториев на основе **SourceLocation** и **ScriptSourceLocation** должны совпадать.</span><span class="sxs-lookup"><span data-stu-id="d067b-148">For a file share-based repositories, the **SourceLocation** and **ScriptSourceLocation** must match.</span></span> <span data-ttu-id="d067b-149">Для репозитория на основе веб технологий, они должны быть разными, поэтому в этом примере символ «/» добавляется **SourceLocation**.</span><span class="sxs-lookup"><span data-stu-id="d067b-149">For a web-based repository, they must be different, so in this example a trailing "/" is added to the **SourceLocation**.</span></span>
+<span data-ttu-id="aab93-147">Обратите внимание на разницу между тем, как две команды обрабатывают параметр **ScriptSourceLocation**.</span><span class="sxs-lookup"><span data-stu-id="aab93-147">Take note of the difference between how the two commands handle **ScriptSourceLocation**.</span></span> <span data-ttu-id="aab93-148">Для репозиториев на основе файлового ресурса значения параметров **SourceLocation** и **ScriptSourceLocation** должны совпадать.</span><span class="sxs-lookup"><span data-stu-id="aab93-148">For a file share-based repositories, the **SourceLocation** and **ScriptSourceLocation** must match.</span></span> <span data-ttu-id="aab93-149">Для веб-репозиториев они должны отличаться, поэтому в этом примере в параметр **SourceLocation** добавлен завершающий символ "/".</span><span class="sxs-lookup"><span data-stu-id="aab93-149">For a web-based repository, they must be different, so in this example a trailing "/" is added to the **SourceLocation**.</span></span>
 
-<span data-ttu-id="d067b-150">Если требуется только что созданный PSRepository быть репозитория по умолчанию, необходимо отменить регистрацию всех PSRepositories.</span><span class="sxs-lookup"><span data-stu-id="d067b-150">If you want the newly created PSRepository to be the default repository, you must unregister all other PSRepositories.</span></span> <span data-ttu-id="d067b-151">Например:</span><span class="sxs-lookup"><span data-stu-id="d067b-151">For example:</span></span>
+<span data-ttu-id="aab93-150">Если вы хотите, чтобы созданный репозиторий PSRepository был репозиторием по умолчанию, необходимо отменить регистрацию всех остальных репозиториев PowerShell.</span><span class="sxs-lookup"><span data-stu-id="aab93-150">If you want the newly created PSRepository to be the default repository, you must unregister all other PSRepositories.</span></span> <span data-ttu-id="aab93-151">Например:</span><span class="sxs-lookup"><span data-stu-id="aab93-151">For example:</span></span>
 
 ```powershell
 Unregister-PSRepository -Name PSGallery
 ```
 
 > [!NOTE]
-> <span data-ttu-id="d067b-152">Имя репозитория «PSGallery» зарезервирован для использования в коллекции PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d067b-152">The repository name 'PSGallery' is reserved for use by the PowerShell Gallery.</span></span> <span data-ttu-id="d067b-153">Вы можете отменить регистрацию PSGallery, но нельзя повторно использовать имя PSGallery для другого репозитория.</span><span class="sxs-lookup"><span data-stu-id="d067b-153">You can unregister PSGallery, but you cannot reuse the name PSGallery for any other repository.</span></span>
+> <span data-ttu-id="aab93-152">Имя репозитория PSGallery зарезервировано для использования в коллекции PowerShell.</span><span class="sxs-lookup"><span data-stu-id="aab93-152">The repository name 'PSGallery' is reserved for use by the PowerShell Gallery.</span></span> <span data-ttu-id="aab93-153">Регистрацию PSGallery можно отменить, но нельзя повторно использовать имя PSGallery для любого другого репозитория.</span><span class="sxs-lookup"><span data-stu-id="aab93-153">You can unregister PSGallery, but you cannot reuse the name PSGallery for any other repository.</span></span>
 
-<span data-ttu-id="d067b-154">Если необходимо восстановить PSGallery, выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="d067b-154">If you need to restore the PSGallery, run the following command:</span></span>
+<span data-ttu-id="aab93-154">Если вам нужно восстановить регистрацию PSGallery, выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="aab93-154">If you need to restore the PSGallery, run the following command:</span></span>
 
 ```powershell
 Register-PSRepository -Default
 ```
 
-## <a name="publishing-to-a-local-repository"></a><span data-ttu-id="d067b-155">Публикации в локальном репозитории</span><span class="sxs-lookup"><span data-stu-id="d067b-155">Publishing to a local repository</span></span>
+## <a name="publishing-to-a-local-repository"></a><span data-ttu-id="aab93-155">Публикация в локальном репозитории</span><span class="sxs-lookup"><span data-stu-id="aab93-155">Publishing to a local repository</span></span>
 
-<span data-ttu-id="d067b-156">После регистрации локального PSRepository, можно опубликовать ваш локальный PSRepository.</span><span class="sxs-lookup"><span data-stu-id="d067b-156">Once you've registered the local PSRepository, you can publish to your local PSRepository.</span></span> <span data-ttu-id="d067b-157">Существует два основных сценария публикации: публикация собственных модулей и публикации модуля из PSGallery.</span><span class="sxs-lookup"><span data-stu-id="d067b-157">There are two main publishing scenarios: publishing your own module and publishing a module from the PSGallery.</span></span>
+<span data-ttu-id="aab93-156">После того, как вы зарегистрировали локальный репозиторий PSRepository, вы можете выполнять в нем публикации.</span><span class="sxs-lookup"><span data-stu-id="aab93-156">Once you've registered the local PSRepository, you can publish to your local PSRepository.</span></span> <span data-ttu-id="aab93-157">Существует два основных сценария публикации: публикация собственного модуля и публикация модуля из репозитория PSGallery.</span><span class="sxs-lookup"><span data-stu-id="aab93-157">There are two main publishing scenarios: publishing your own module and publishing a module from the PSGallery.</span></span>
 
-### <a name="publishing-a-module-you-authored"></a><span data-ttu-id="d067b-158">Для публикации модуля, созданные</span><span class="sxs-lookup"><span data-stu-id="d067b-158">Publishing a module you authored</span></span>
+### <a name="publishing-a-module-you-authored"></a><span data-ttu-id="aab93-158">Публикация созданного вами модуля</span><span class="sxs-lookup"><span data-stu-id="aab93-158">Publishing a module you authored</span></span>
 
-<span data-ttu-id="d067b-159">Используйте `Publish-Module` и `Publish-Script` для публикации модуля в вашей локальной PSRepository так же, как и для коллекции PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d067b-159">Use `Publish-Module` and `Publish-Script` to publish your module to your local PSRepository the same way you do for the PowerShell Gallery.</span></span>
+<span data-ttu-id="aab93-159">Чтобы опубликовать свой модуль в своем локальном репозитории PSRepository так же, как вы делаете это для коллекции PowerShell, используйте командлеты `Publish-Module` и `Publish-Script`.</span><span class="sxs-lookup"><span data-stu-id="aab93-159">Use `Publish-Module` and `Publish-Script` to publish your module to your local PSRepository the same way you do for the PowerShell Gallery.</span></span>
 
-- <span data-ttu-id="d067b-160">Укажите расположение для кода</span><span class="sxs-lookup"><span data-stu-id="d067b-160">Specify the location for your code</span></span>
-- <span data-ttu-id="d067b-161">Укажите ключ API</span><span class="sxs-lookup"><span data-stu-id="d067b-161">Supply an API key</span></span>
-- <span data-ttu-id="d067b-162">Укажите имя репозитория.</span><span class="sxs-lookup"><span data-stu-id="d067b-162">Specify the repository name.</span></span> <span data-ttu-id="d067b-163">Например: `-PSRepository LocalPSRepo`</span><span class="sxs-lookup"><span data-stu-id="d067b-163">For example, `-PSRepository LocalPSRepo`</span></span>
+- <span data-ttu-id="aab93-160">Укажите расположение для своего кода.</span><span class="sxs-lookup"><span data-stu-id="aab93-160">Specify the location for your code</span></span>
+- <span data-ttu-id="aab93-161">Предоставьте ключ API.</span><span class="sxs-lookup"><span data-stu-id="aab93-161">Supply an API key</span></span>
+- <span data-ttu-id="aab93-162">Укажите имя репозитория.</span><span class="sxs-lookup"><span data-stu-id="aab93-162">Specify the repository name.</span></span> <span data-ttu-id="aab93-163">Например: `-PSRepository LocalPSRepo`</span><span class="sxs-lookup"><span data-stu-id="aab93-163">For example, `-PSRepository LocalPSRepo`</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="d067b-164">Необходимо создать учетную запись на сервере NuGet, а затем войдите в для создания и сохранения ключ API.</span><span class="sxs-lookup"><span data-stu-id="d067b-164">You must create an account in the NuGet server, then sign in to generate and save the API key.</span></span>
-> <span data-ttu-id="d067b-165">Для файлового ресурса используйте любой непустой строкой для NuGetApiKey значения.</span><span class="sxs-lookup"><span data-stu-id="d067b-165">For a file share, use any non-blank string for the NuGetApiKey value.</span></span>
+> <span data-ttu-id="aab93-164">Необходимо создать учетную запись на сервере NuGet, а затем войти в систему, чтобы создать и сохранить ключ API.</span><span class="sxs-lookup"><span data-stu-id="aab93-164">You must create an account in the NuGet server, then sign in to generate and save the API key.</span></span>
+> <span data-ttu-id="aab93-165">При использовании файлового ресурса для значения NuGetApiKey укажите любую непустую строку.</span><span class="sxs-lookup"><span data-stu-id="aab93-165">For a file share, use any non-blank string for the NuGetApiKey value.</span></span>
 
-<span data-ttu-id="d067b-166">Примеры</span><span class="sxs-lookup"><span data-stu-id="d067b-166">Examples:</span></span>
+<span data-ttu-id="aab93-166">Примеры</span><span class="sxs-lookup"><span data-stu-id="aab93-166">Examples:</span></span>
 
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
@@ -115,40 +115,40 @@ Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="d067b-167">Чтобы обеспечить безопасность, ключи API не следует жестко заданное в сценарии.</span><span class="sxs-lookup"><span data-stu-id="d067b-167">To ensure security, API keys should not be hard-coded in scripts.</span></span> <span data-ttu-id="d067b-168">Используйте систему безопасное управление ключами.</span><span class="sxs-lookup"><span data-stu-id="d067b-168">Use a secure key management system.</span></span>
+> <span data-ttu-id="aab93-167">Чтобы обеспечить безопасность, ключи API не следует жестко программировать в скриптах.</span><span class="sxs-lookup"><span data-stu-id="aab93-167">To ensure security, API keys should not be hard-coded in scripts.</span></span> <span data-ttu-id="aab93-168">Используйте безопасную систему управления ключами.</span><span class="sxs-lookup"><span data-stu-id="aab93-168">Use a secure key management system.</span></span>
 
-### <a name="publishing-a-module-from-the-psgallery"></a><span data-ttu-id="d067b-169">Публикация модуля из PSGallery</span><span class="sxs-lookup"><span data-stu-id="d067b-169">Publishing a module from the PSGallery</span></span>
+### <a name="publishing-a-module-from-the-psgallery"></a><span data-ttu-id="aab93-169">Публикация модуля из PSGallery</span><span class="sxs-lookup"><span data-stu-id="aab93-169">Publishing a module from the PSGallery</span></span>
 
-<span data-ttu-id="d067b-170">Чтобы опубликовать модуль из PSGallery к вашей локальной PSRepository, можно использовать командлет «Save-Package».</span><span class="sxs-lookup"><span data-stu-id="d067b-170">To publish a module from the PSGallery to your local PSRepository, you can use the 'Save-Package' cmdlet.</span></span>
+<span data-ttu-id="aab93-170">Чтобы опубликовать модуль из PSGallery в локальном репозитории PSRepository, вы можно использовать командлет Save-Package.</span><span class="sxs-lookup"><span data-stu-id="aab93-170">To publish a module from the PSGallery to your local PSRepository, you can use the 'Save-Package' cmdlet.</span></span>
 
-- <span data-ttu-id="d067b-171">Укажите имя пакета</span><span class="sxs-lookup"><span data-stu-id="d067b-171">Specify the Name of the Package</span></span>
-- <span data-ttu-id="d067b-172">Укажите «NuGet» в качестве поставщика</span><span class="sxs-lookup"><span data-stu-id="d067b-172">Specify 'NuGet' as the Provider</span></span>
-- <span data-ttu-id="d067b-173">Укажите расположение PSGallery в качестве источника) [https://www.powershellgallery.com/api/v2](https://www.powershellgallery.com/api/v2))</span><span class="sxs-lookup"><span data-stu-id="d067b-173">Specify the PSGallery location as the source (https://www.powershellgallery.com/api/v2)</span></span>
-- <span data-ttu-id="d067b-174">Укажите путь к локального репозитория</span><span class="sxs-lookup"><span data-stu-id="d067b-174">Specify the path to your local Repository</span></span>
+- <span data-ttu-id="aab93-171">Укажите имя пакета.</span><span class="sxs-lookup"><span data-stu-id="aab93-171">Specify the Name of the Package</span></span>
+- <span data-ttu-id="aab93-172">Укажите NuGet в качестве поставщика.</span><span class="sxs-lookup"><span data-stu-id="aab93-172">Specify 'NuGet' as the Provider</span></span>
+- <span data-ttu-id="aab93-173">Укажите расположение PSGallery в качестве источника (https://www.powershellgallery.com/api/v2)).</span><span class="sxs-lookup"><span data-stu-id="aab93-173">Specify the PSGallery location as the source (https://www.powershellgallery.com/api/v2)</span></span>
+- <span data-ttu-id="aab93-174">Укажите путь к вашему локальному репозиторию.</span><span class="sxs-lookup"><span data-stu-id="aab93-174">Specify the path to your local Repository</span></span>
 
-<span data-ttu-id="d067b-175">Пример:</span><span class="sxs-lookup"><span data-stu-id="d067b-175">Example:</span></span>
+<span data-ttu-id="aab93-175">Пример:</span><span class="sxs-lookup"><span data-stu-id="aab93-175">Example:</span></span>
 
 ```powershell
 # Publish from the PSGallery to your local Repository
 Save-Package -Name 'PackageName' -Provider Nuget -Source https://www.powershellgallery.com/api/v2 -Path '\\localhost\PSRepoLocal\'
 ```
 
-<span data-ttu-id="d067b-176">Если ваш локальный PSRepository веб интерфейсом, то требуется дополнительный шаг, который использует nuget.exe для публикации.</span><span class="sxs-lookup"><span data-stu-id="d067b-176">If your local PSRepository is web-based, it requires an additional step that uses nuget.exe to publish.</span></span>
+<span data-ttu-id="aab93-176">Если ваш локальный репозиторий PSRepository имеет веб-интерфейс, для него требуется дополнительный шаг, на котором выполняется публикация с помощью nuget.exe.</span><span class="sxs-lookup"><span data-stu-id="aab93-176">If your local PSRepository is web-based, it requires an additional step that uses nuget.exe to publish.</span></span>
 
-<span data-ttu-id="d067b-177">См. в документации по использованию [nuget.exe][].</span><span class="sxs-lookup"><span data-stu-id="d067b-177">See the documentation for using [nuget.exe][].</span></span>
+<span data-ttu-id="aab93-177">См. документацию по использованию [nuget.exe][].</span><span class="sxs-lookup"><span data-stu-id="aab93-177">See the documentation for using [nuget.exe][].</span></span>
 
-## <a name="installing-powershellget-on-a-disconnected-system"></a><span data-ttu-id="d067b-178">Установка PowerShellGet в отключенной системе</span><span class="sxs-lookup"><span data-stu-id="d067b-178">Installing PowerShellGet on a disconnected system</span></span>
+## <a name="installing-powershellget-on-a-disconnected-system"></a><span data-ttu-id="aab93-178">Установка PowerShellGet в отключенной системе</span><span class="sxs-lookup"><span data-stu-id="aab93-178">Installing PowerShellGet on a disconnected system</span></span>
 
-<span data-ttu-id="d067b-179">Развертывание PowerShellGet сложно в средах, требующих систем, чтобы быть отключен от Интернета.</span><span class="sxs-lookup"><span data-stu-id="d067b-179">Deploying PowerShellGet is difficult in environments that require systems to be disconnected from the internet.</span></span> <span data-ttu-id="d067b-180">С помощью PowerShellGet процесс начальной загрузки, который устанавливает последнюю версию при первом использовании.</span><span class="sxs-lookup"><span data-stu-id="d067b-180">PowerShellGet has a bootstrap process that installs the latest version the first time it's used.</span></span> <span data-ttu-id="d067b-181">Модуль OfflinePowerShellGetDeploy в коллекции PowerShell предоставляет командлеты, поддерживающие этот процесс начальной загрузки.</span><span class="sxs-lookup"><span data-stu-id="d067b-181">The OfflinePowerShellGetDeploy module in the PowerShell Gallery provides cmdlets that support this bootstrap process.</span></span>
+<span data-ttu-id="aab93-179">Развертывание PowerShellGet затруднено в средах, где требуется отключение систем от Интернета.</span><span class="sxs-lookup"><span data-stu-id="aab93-179">Deploying PowerShellGet is difficult in environments that require systems to be disconnected from the internet.</span></span> <span data-ttu-id="aab93-180">PowerShellGet имеет процесс начальной загрузки, который устанавливает последнюю версию при первом использовании.</span><span class="sxs-lookup"><span data-stu-id="aab93-180">PowerShellGet has a bootstrap process that installs the latest version the first time it's used.</span></span> <span data-ttu-id="aab93-181">Модуль OfflinePowerShellGetDeploy в коллекции PowerShell предоставляет командлеты, которые поддерживают этот процесс начальной загрузки.</span><span class="sxs-lookup"><span data-stu-id="aab93-181">The OfflinePowerShellGetDeploy module in the PowerShell Gallery provides cmdlets that support this bootstrap process.</span></span>
 
-<span data-ttu-id="d067b-182">Чтобы выполнить начальную загрузку развертывания в автономном режиме, вам потребуется:</span><span class="sxs-lookup"><span data-stu-id="d067b-182">To bootstrap an offline deployment, you need to:</span></span>
+<span data-ttu-id="aab93-182">Чтобы выполнить начальную загрузку автономного развертывания, необходимо следующее:</span><span class="sxs-lookup"><span data-stu-id="aab93-182">To bootstrap an offline deployment, you need to:</span></span>
 
-- <span data-ttu-id="d067b-183">Скачайте и установите системы OfflinePowerShellGetDeploy вашей подключенной к Интернету и отключенных систем</span><span class="sxs-lookup"><span data-stu-id="d067b-183">Download and install the OfflinePowerShellGetDeploy your internet-connected system and your disconnected systems</span></span>
-- <span data-ttu-id="d067b-184">Скачайте PowerShellGet и его зависимостей в системе, подключенной к Интернету с помощью `Save-PowerShellGetForOffline` командлета</span><span class="sxs-lookup"><span data-stu-id="d067b-184">Download PowerShellGet and its dependencies on the internet-connected system using the `Save-PowerShellGetForOffline` cmdlet</span></span>
-- <span data-ttu-id="d067b-185">Скопируйте PowerShellGet и его зависимости из системы, подключенной к Интернету в отключенной системе</span><span class="sxs-lookup"><span data-stu-id="d067b-185">Copy PowerShellGet and its dependencies from the internet-connected system to the disconnected system</span></span>
-- <span data-ttu-id="d067b-186">Используйте `Install-PowerShellGetOffline` в отключенной системе, чтобы поместить PowerShellGet и его зависимости в нужные папки</span><span class="sxs-lookup"><span data-stu-id="d067b-186">Use the `Install-PowerShellGetOffline` on the disconnected system to place PowerShellGet and its dependencies into the proper folders</span></span>
+- <span data-ttu-id="aab93-183">Скачайте и установите OfflinePowerShellGetDeploy в вашей подключенной к Интернету и отключенных системах.</span><span class="sxs-lookup"><span data-stu-id="aab93-183">Download and install the OfflinePowerShellGetDeploy your internet-connected system and your disconnected systems</span></span>
+- <span data-ttu-id="aab93-184">Скачайте PowerShellGet и его зависимости на подключенную к Интернету систему с помощью командлета `Save-PowerShellGetForOffline`.</span><span class="sxs-lookup"><span data-stu-id="aab93-184">Download PowerShellGet and its dependencies on the internet-connected system using the `Save-PowerShellGetForOffline` cmdlet</span></span>
+- <span data-ttu-id="aab93-185">Скопируйте PowerShellGet и его зависимости из подключенной к Интернету системы в отключенную систему.</span><span class="sxs-lookup"><span data-stu-id="aab93-185">Copy PowerShellGet and its dependencies from the internet-connected system to the disconnected system</span></span>
+- <span data-ttu-id="aab93-186">Чтобы поместить PowerShellGet и его зависимости в соответствующие папки, используйте командлет `Install-PowerShellGetOffline` в отключенной системе.</span><span class="sxs-lookup"><span data-stu-id="aab93-186">Use the `Install-PowerShellGetOffline` on the disconnected system to place PowerShellGet and its dependencies into the proper folders</span></span>
 
-<span data-ttu-id="d067b-187">Следующие команды используют `Save-PowerShellGetForOffline` для размещения всех компонентов в папку `f:\OfflinePowerShellGet`</span><span class="sxs-lookup"><span data-stu-id="d067b-187">The following commands use `Save-PowerShellGetForOffline` to put all the components into a folder `f:\OfflinePowerShellGet`</span></span>
+<span data-ttu-id="aab93-187">Следующие команды используют `Save-PowerShellGetForOffline`, чтобы поместить все компоненты в папку `f:\OfflinePowerShellGet`.</span><span class="sxs-lookup"><span data-stu-id="aab93-187">The following commands use `Save-PowerShellGetForOffline` to put all the components into a folder `f:\OfflinePowerShellGet`</span></span>
 
 ```powershell
 # Requires -RunAsAdministrator
@@ -161,10 +161,10 @@ Import-Module F:\OfflinePowerShellGetDeploy
 Save-PowerShellGetForOffline -LocalFolder 'F:\OfflinePowerShellGet'
 ```
 
-<span data-ttu-id="d067b-188">На этом этапе необходимо сделать содержимое `F:\OfflinePowerShellGet` для отключенных систем.</span><span class="sxs-lookup"><span data-stu-id="d067b-188">At this point, you must make the contents of `F:\OfflinePowerShellGet` available to your disconnected systems.</span></span> <span data-ttu-id="d067b-189">Запустите `Install-PowerShellGetOffline` командлет, чтобы установить PowerShellGet в отключенной системе.</span><span class="sxs-lookup"><span data-stu-id="d067b-189">Run the `Install-PowerShellGetOffline` cmdlet to install PowerShellGet on the disconnected system.</span></span>
+<span data-ttu-id="aab93-188">На этом этапе необходимо сделать содержимое `F:\OfflinePowerShellGet` доступным для ваших отключенных систем.</span><span class="sxs-lookup"><span data-stu-id="aab93-188">At this point, you must make the contents of `F:\OfflinePowerShellGet` available to your disconnected systems.</span></span> <span data-ttu-id="aab93-189">Запустите командлет `Install-PowerShellGetOffline`, чтобы установить PowerShellGet в отключенной системе.</span><span class="sxs-lookup"><span data-stu-id="aab93-189">Run the `Install-PowerShellGetOffline` cmdlet to install PowerShellGet on the disconnected system.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="d067b-190">Очень важно, что не выполнять PowerShellGet в сеансе PowerShell перед выполнением этих команд.</span><span class="sxs-lookup"><span data-stu-id="d067b-190">It is important that you do not run PowerShellGet in the PowerShell session before running these commands.</span></span> <span data-ttu-id="d067b-191">После загрузки PowerShellGet в сеанс не удается обновить компоненты.</span><span class="sxs-lookup"><span data-stu-id="d067b-191">Once PowerShellGet is loaded into the session, the components cannot be updated.</span></span> <span data-ttu-id="d067b-192">При запуске PowerShellGet по ошибке, закройте и перезапустите PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d067b-192">If you do start PowerShellGet by mistake, exit and restart PowerShell.</span></span>
+> <span data-ttu-id="aab93-190">Важно, чтобы вы не запускали PowerShellGet в сеансе PowerShell перед выполнением этих команд.</span><span class="sxs-lookup"><span data-stu-id="aab93-190">It is important that you do not run PowerShellGet in the PowerShell session before running these commands.</span></span> <span data-ttu-id="aab93-191">После загрузки модуля PowerShellGet в сеанс компоненты невозможно обновить.</span><span class="sxs-lookup"><span data-stu-id="aab93-191">Once PowerShellGet is loaded into the session, the components cannot be updated.</span></span> <span data-ttu-id="aab93-192">Если вы по ошибке запустили PowerShellGet, закройте и перезапустите PowerShell.</span><span class="sxs-lookup"><span data-stu-id="aab93-192">If you do start PowerShellGet by mistake, exit and restart PowerShell.</span></span>
 
 ```powershell
 Import-Module F:\OfflinePowerShellGetDeploy
@@ -172,7 +172,7 @@ Import-Module F:\OfflinePowerShellGetDeploy
 Install-PowerShellGetOffline -LocalFolder 'F:\OfflinePowerShellGet'
 ```
 
-<span data-ttu-id="d067b-193">После выполнения этих команд, все готово для публикации PowerShellGet в локальном репозитории.</span><span class="sxs-lookup"><span data-stu-id="d067b-193">After running these commands, you are ready to publish PowerShellGet to your local repository.</span></span>
+<span data-ttu-id="aab93-193">После выполнения этих команд вы сможете опубликовать модуль PowerShellGet в своем локальном репозитории.</span><span class="sxs-lookup"><span data-stu-id="aab93-193">After running these commands, you are ready to publish PowerShellGet to your local repository.</span></span>
 
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
@@ -183,9 +183,10 @@ Publish-Module -Path 'F:\OfflinePowerShellGet' -Repository LocalPsRepo -NuGetApi
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="d067b-194">Чтобы обеспечить безопасность, ключи API не следует жестко заданное в сценарии.</span><span class="sxs-lookup"><span data-stu-id="d067b-194">To ensure security, API keys should not be hard-coded in scripts.</span></span> <span data-ttu-id="d067b-195">Используйте систему безопасное управление ключами.</span><span class="sxs-lookup"><span data-stu-id="d067b-195">Use a secure key management system.</span></span>
+> <span data-ttu-id="aab93-194">Чтобы обеспечить безопасность, ключи API не следует жестко программировать в скриптах.</span><span class="sxs-lookup"><span data-stu-id="aab93-194">To ensure security, API keys should not be hard-coded in scripts.</span></span> <span data-ttu-id="aab93-195">Используйте безопасную систему управления ключами.</span><span class="sxs-lookup"><span data-stu-id="aab93-195">Use a secure key management system.</span></span>
 
 <!-- external links -->
 [OfflinePowerShellGetDeploy]: https://www.powershellgallery.com/packages/OfflinePowerShellGetDeploy/0.1.1
+[NuGet.Server]: /nuget/hosting-packages/nuget-server
 [Nuget.Server]: /nuget/hosting-packages/nuget-server
 [nuget.exe]: /nuget/tools/nuget-exe-cli-reference
