@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Другие статьи о PowerShell
 ms.openlocfilehash: 5e81801df99a55a358d1d1405bdc79f882aae92f
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058392"
 ---
 # <a name="more-powershell-learning"></a>Другие статьи о PowerShell
 
@@ -29,9 +29,9 @@ ms.locfileid: "54012557"
 - [Быстрое начало работы с PowerShell 3.0](https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-30-jump-start-8276)
 - [Быстрое начало работы с расширенными возможностями средств и сценариев PowerShell 3.0](https://mva.microsoft.com/en-US/training-courses/advanced-tools-scripting-with-powershell-30-jump-start-8277)
 
-### <a name="channel-9-videos"></a>Видео Channel 9
+### <a name="channel-9-videos"></a>Видео на Channel 9
 
-Channel 9 — наши видео платформа публикации. Доступны сотни видео о PowerShell. [Поиск для «PowerShell»](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) доступных видео.
+Channel 9 — это платформа для публикации наших видеоматериалов. На ней представлены сотни видеороликов о PowerShell. [Выполните поиск по запросу "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated), чтобы найти доступные видео.
 
 ## <a name="resources-for-windows-powershell-developers"></a>Ресурсы для разработчиков Windows PowerShell
 

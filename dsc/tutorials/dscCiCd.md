@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Создание конвейера непрерывной интеграции и непрерывного развертывания с помощью DSC
-ms.openlocfilehash: c305d9bc7e0f8c659129b5a20d0b7e8b34d09ba8
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 012057a32ccf85b0d15e76a332cadda4b226180a
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076481"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Создание конвейера непрерывной интеграции и непрерывного развертывания с помощью DSC
 
@@ -388,7 +388,7 @@ Invoke-PSake $PSScriptRoot\InfraDNS\$fileName.ps1
 
 Для этого добавьте новые определения выпуска, связанные с созданным определением сборки `InfraDNS`.
 Установите **непрерывное развертывание**, чтобы новый выпуск запускался при каждом завершении новой сборки
-[Как Работать с определениями выпуска](https://www.visualstudio.com/en-us/docs/build/actions/work-with-release-definitions)) и настройте его следующим образом:
+([What are release pipelines?](/azure/devops/pipelines/release/what-is-release-management) (Сведения о конвейерах выпуска) и настройте его следующим образом:
 
 Добавьте следующие шаги к своему определению выпуска:
 

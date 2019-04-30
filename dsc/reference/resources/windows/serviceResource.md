@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс Service в DSC
 ms.openlocfilehash: 09571bd0eaa428e7d0bb7a533d6ad1c0c936e2cf
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076901"
 ---
 # <a name="dsc-service-resource"></a>Ресурс Service в DSC
 
-> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
 
 Ресурс **Service** в DSC Windows PowerShell предоставляет механизм управления службами на целевом узле.
@@ -39,10 +39,10 @@ Service [string] #ResourceName
 |  Свойство  |  Описание   |
 |---|---|
 | Name| Указывает имя службы. Обратите внимание! Иногда оно отличается от отображаемого имени. Список служб и их текущее состояние можно получить с помощью командлета Get-Service.|
-| BuiltInAccount| Указывает учетную запись, используемую службой для входа. Доступны следующие значения, разрешенные для этого свойства. **LocalService**, **LocalSystem**, и **NetworkService**.|
+| BuiltInAccount| Указывает учетную запись, используемую службой для входа. Допустимые значения этого свойства: **LocalService**, **LocalSystem** и **NetworkService**.|
 | Учетные данные| Указывает учетные данные для учетной записи, от имени которой будет запускаться служба. Это свойство нельзя использовать одновременно со свойством __BuiltinAccount__.|
 | DependsOn| Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — __ResourceName__, а его тип — __ResourceType__, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`.|
-| StartupType| Указывает тип запуска службы. Доступны следующие значения, разрешенные для этого свойства. **Автоматическое**, **отключено**, и **вручную**|
+| StartupType| Указывает тип запуска службы. Допустимые значения этого свойства: **Automatic**, **Disabled** и **Manual**.|
 | State| Указывает состояние, в котором должна находиться служба.|
 | Описание | Указывает описание целевой службы.|
 | DisplayName | Указывает отображаемое имя целевой службы.|

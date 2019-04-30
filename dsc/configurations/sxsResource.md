@@ -3,23 +3,23 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Импорт определенной версии установленного ресурса
 ms.openlocfilehash: 5ed81e11aa67eb6590d958647f48a33b1b5f1c0e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080006"
 ---
 # <a name="import-a-specific-version-of-an-installed-resource"></a>Импорт определенной версии установленного ресурса
 
 > Область применения. Windows PowerShell 5.0
 
-В PowerShell 5.0 можно установить отдельные версии ресурсов DSC на компьютере параллельно. Модуль ресурсов можно хранить отдельные версии ресурса в версии с именем папки.
+В PowerShell 5.0 отдельные версии ресурсов DSC можно устанавливать на компьютере параллельно. Модуль ресурсов может хранить отдельные версии ресурса в папке с именем версии.
 
-## <a name="installing-separate-resource-versions-side-by-side"></a>Установка версий отдельный ресурс параллельно
+## <a name="installing-separate-resource-versions-side-by-side"></a>Параллельная установка отдельных версий ресурса
 
 Параметры **MinimumVersion**, **MaximumVersion** и **RequiredVersion** командлета [Install-Module](/powershell/module/PowershellGet/Install-Module) можно использовать, чтобы указать версию модуля для установки. Вызов командлета **Install-Module** без указания версии устанавливает последнюю версию.
 
-Например, существует несколько версий модуля **xFailOverCluster**, каждая из которых содержит ресурс **xCluster**. Вызов **Install-Module** без указания версии номер устанавливает последнюю версию модуля.
+Например, существует несколько версий модуля **xFailOverCluster**, каждая из которых содержит ресурс **xCluster**. Вызов командлета **Install-Module** без указания номера версии устанавливает последнюю версию модуля.
 
 ```powershell
 PS> Install-Module xFailOverCluster
@@ -32,13 +32,13 @@ ImplementedAs   Name                      ModuleName                     Version
 PowerShell      xCluster                  xFailOverCluster               1.2.0.0    {DomainAdministratorCredential, ...
 ```
 
-Чтобы установить определенную версию модуля, укажите **RequiredVersion** 1.1.0.0. Это установить указанную версию параллельно с установленной версии.
+Чтобы установить определенную версию модуля, укажите **RequiredVersion** 1.1.0.0. При этом указанная версия устанавливается параллельно с установленной версией.
 
 ```powershell
 PS> Install-Module xFailOverCluster -RequiredVersion 1.1
 ```
 
-Вы увидите оба указанная версия модуля, при использовании `Get-DSCResource`.
+Теперь при использовании `Get-DSCResource` отображаются обе установленные версии модуля.
 
 ```powershell
 PS> Get-DscResource xCluster
@@ -53,7 +53,7 @@ PowerShell      xCluster                  xFailOverCluster               1.2.0.0
 
 ## <a name="specifying-a-resource-version-in-a-configuration"></a>Указание версии ресурса в конфигурации
 
-Если у вас есть отдельный ресурс версии, установленные на компьютере, необходимо указать версию нужного ресурса при его использовании в конфигурации. Это делается путем указания параметра **ModuleVersion** ключевого слова **Import-DscResource**. Если не указать версию модуля ресурсов для ресурса, имеющего несколько установленных версий, конфигурация породит ошибку.
+Если на компьютере установлены отдельные версии ресурсов, необходимо указать версию нужного ресурса при его использовании в конфигурации. Это делается путем указания параметра **ModuleVersion** ключевого слова **Import-DscResource**. Если не указать версию модуля ресурсов для ресурса, имеющего несколько установленных версий, конфигурация породит ошибку.
 
 В конфигурации ниже показано, как указать версию ресурса для вызова:
 
@@ -74,7 +74,7 @@ configuration VersionTest
 }
 ```
 
->Примечание. Параметр ModuleVersion ключевого слова Import-DscResource недоступен в PowerShell 4.0. В PowerShell 4.0 версию модуля можно задать, передав объект спецификации модуля в параметр ModuleName ключевого слова Import-DscResource. Объект спецификации модуля представляет собой хэш-таблицу, содержащую ключи ModuleName и RequiredVersion. Например:
+>Примечание. Параметр ModuleVersion ключевого слова Import-DscResource недоступен в PowerShell 4.0. В PowerShell 4.0 версию модуля можно задать, передав объект спецификации модуля в параметр ModuleName ключевого слова Import-DscResource. Объект спецификации модуля представляет собой хэш-таблицу, содержащую ключи ModuleName и RequiredVersion. Например:
 
 ```powershell
 configuration VersionTest

@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: WinRMSecurity
 ms.openlocfilehash: 59717e4806857e6760de523335bbee6028da8e84
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086374"
 ---
 # <a name="powershell-remoting-security-considerations"></a>Вопросы обеспечения безопасности удаленного взаимодействия PowerShell
 
@@ -23,8 +23,8 @@ ms.locfileid: "55682614"
 
 Удаленное взаимодействие PowerShell (и WinRM) прослушивают следующие порты:
 
-- HTTP — 5985;
-- HTTPS — 5986.
+- HTTP: 5985
+- HTTPS: 5986
 
 По умолчанию функция удаленного взаимодействия PowerShell допускает подключения только от участников группы "Администраторы". Сеансы запускаются в контексте пользователя, поэтому все элементы управления доступом операционной системы, примененные к отдельным пользователям и группам, продолжают применяться к ним при подключении через удаленное взаимодействие PowerShell.
 

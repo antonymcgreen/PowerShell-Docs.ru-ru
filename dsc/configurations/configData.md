@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование данных конфигурации
 ms.openlocfilehash: f2d25b9ced805fb4c91378ebfe840104eb6ce52a
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080226"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Использование данных конфигурации в DSC
 
-> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
 С помощью встроенного параметра DSC **ConfigurationData** можно определить данные, которые будут использоваться в конфигурации.
 Это позволяет создать единую конфигурацию, которую можно использовать для нескольких узлов или для различных сред.
@@ -185,11 +185,11 @@ MyDscConfiguration -ConfigurationData .\MyData.psd1
 
 ## <a name="using-configurationdata-variables-in-a-configuration"></a>Использование переменных ConfigurationData в конфигурации
 
-DSC предоставляет следующие специальные переменные, которые могут использоваться в сценарии настройки:
+DSC предоставляет следующие специальные переменные, которые могут использоваться в сценарии конфигурации:
 
 - **$AllNodes** относится ко всей коллекции узлов, определенных в **ConfigurationData**. Коллекцию **AllNodes** можно отфильтровать с помощью **.Where()** и **.ForEach()**.
 - **ConfigurationData** ссылается на всю хэш-таблицу, которая передается в качестве параметра при компиляции конфигурации.
-- **MyTypeName** содержит [конфигурации](configurations.md) переменная используется в имени. Например, в конфигурации `MyDscConfiguration`, `$MyTypeName` будет иметь значение `MyDscConfiguration`.
+- **MyTypeName** содержит имя [конфигурации](configurations.md), в которой используется переменная. Например, в конфигурации `MyDscConfiguration` `$MyTypeName` будет иметь значение `MyDscConfiguration`.
 - После фильтрации коллекции с помощью **.Where()** или **.ForEach()** элемент **Node** будет указывать на конкретную запись в **AllNodes**.
   - Дополнительные сведения об этих методах в см. в разделе [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md).
 

@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Создание пользовательских ресурсов настройки требуемого состояния Windows PowerShell
 ms.openlocfilehash: 882b6efed4564d2354183d7472b301e1e1758335
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076877"
 ---
 # <a name="build-custom-windows-powershell-desired-state-configuration-resources"></a>Создание пользовательских ресурсов настройки требуемого состояния Windows PowerShell
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Настройка требуемого состояния (DSC) Windows PowerShell включает встроенные ресурсы для настройки среды. Этот раздел содержит сведения о разработке ресурсов и ссылок на разделы с описанием особенностей и примерами.
 

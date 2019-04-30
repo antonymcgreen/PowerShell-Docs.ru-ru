@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Написание пользовательских ресурсов DSC с использованием классов PowerShell
-ms.openlocfilehash: 0759685b04688f574d72b62a15833832ad19e816
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076724"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Написание пользовательских ресурсов DSC с использованием классов PowerShell
 
@@ -21,7 +21,7 @@ ms.locfileid: "53402872"
 
 Дополнительные сведения о ресурсах DSC см. в статье [Создание настраиваемых ресурсов для настройки требуемого состояния Windows PowerShell](authoringResource.md).
 
->**Примечание**. Универсальные коллекции не поддерживаются в ресурсах на основе класса.
+>**Примечание**. Универсальные коллекции не поддерживаются в ресурсах на основе классов.
 
 ## <a name="folder-structure-for-a-class-resource"></a>Структура папок для ресурса класса
 
@@ -30,8 +30,8 @@ ms.locfileid: "53402872"
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
     |- MyDscResource (folder)
-        |- MyDscResource.psm1
-           MyDscResource.psd1
+        MyDscResource.psm1
+        MyDscResource.psd1
 ```
 
 ## <a name="create-the-class"></a>Создание класса
@@ -64,10 +64,10 @@ class FileResource {
 
 Обратите внимание, что для изменения свойств используются атрибуты. Значения атрибутов выглядит следующим образом:
 
-- **DscProperty(Key)**: Свойство является обязательным. Это свойство является ключом. Значения всех свойств, помеченных как ключи, необходимо объединять для уникальной идентификации экземпляра ресурсов в конфигурации.
-- **DscProperty(Mandatory)**: Свойство является обязательным.
-- **DscProperty(NotConfigurable)**: Это свойство доступно только для чтения. Свойства с таким атрибутом задаются не конфигурацией, а методом **Get()** (если они есть).
-- **DscProperty()**: Свойство доступно, но это не обязательно.
+- **DscProperty(Key)**: свойство является обязательным. Это свойство является ключом. Значения всех свойств, помеченных как ключи, необходимо объединять для уникальной идентификации экземпляра ресурсов в конфигурации.
+- **DscProperty(Mandatory)**: свойство является обязательным.
+- **DscProperty(NotConfigurable)**: свойство доступно только для чтения. Свойства с таким атрибутом задаются не конфигурацией, а методом **Get()** (если они есть).
+- **DscProperty()**: свойство доступно для настройки, но не является обязательным.
 
 Свойства **$Path** и **$SourcePath** представляют собой строки. **$CreationTime** — это свойство [DateTime](/dotnet/api/system.datetime). Свойство **$Ensure** является перечислением и определяется следующим образом:
 
@@ -86,7 +86,6 @@ enum Ensure
 Кроме того, этот код включает CopyFile() — вспомогательную функцию, которая копирует файл из папки **$SourcePath** в папку **$Path**.
 
 ```powershell
-
     <#
         This method is equivalent of the Set-TargetResource script function.
         It sets the resource to the desired state.
@@ -217,6 +216,7 @@ enum Ensure
 ```
 
 ### <a name="the-complete-file"></a>Полный файл
+
 Полный файл класса:
 
 ```powershell
@@ -414,7 +414,6 @@ class FileResource
 } # This module defines a class for a DSC "FileResource" provider.
 ```
 
-
 ## <a name="create-a-manifest"></a>Создание манифеста
 
 Чтобы сделать ресурс на основе класса доступным для модуля DSC, необходимо добавить в файл манифеста оператор **DscResourcesToExport**, который указывает модулю, что нужно экспортировать этот ресурс. Наш манифест выглядит следующим образом:
@@ -474,7 +473,7 @@ Start-DscConfiguration -Wait -Force Test
 
 ## <a name="supporting-psdscrunascredential"></a>Поддержка PsDscRunAsCredential
 
->**Примечание**. **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
+>**Примечание**. **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
 
 Свойство **PsDscRunAsCredential** может использоваться в блоке ресурса [конфигураций DSC](../configurations/configurations.md), чтобы указать, что ресурс должен выполняться с указанным набором учетных данных.
 Дополнительные сведения см. в разделе [Запуск DSC с учетными данными пользователя](../configurations/runAsUser.md).
@@ -497,6 +496,36 @@ class FileResource {
 }
 ```
 
+### <a name="declaring-multiple-class-resources-in-a-module"></a>Объявление нескольких ресурсов класса в модуле
+
+Модуль может определять несколько ресурсов DSC на основе класса. Структуру папок можно создать одним из следующих способов:
+
+1. Определите первый ресурс в файле <ModuleName>.psm1, а последующие ресурсы в папке **DSCResources**.
+
+   ```
+   $env:ProgramFiles\WindowsPowerShell\Modules (folder)
+        |- MyDscResource (folder)
+           |- MyDscResource.psm1
+              MyDscResource.psd1
+        |- DSCResources
+           |- SecondResource.psm1
+   ```
+
+2. Определите все ресурсы в папке **DSCResources**.
+
+   ```
+   $env:ProgramFiles\WindowsPowerShell\Modules (folder)
+        |- MyDscResource (folder)
+           |- MyDscResource.psm1
+              MyDscResource.psd1
+        |- DSCResources
+           |- FirstResource.psm1
+              SecondResource.psm1
+   ```
+
+> [!NOTE]
+> В приведенных выше примерах можно добавлять любые файлы PSM1 из **DSCResources** в ключ **NestedModules** в файле PSD1.
+
 ### <a name="access-the-user-context"></a>Доступ к контексту пользователя
 
 Чтобы получить доступ к пользовательскому контексту из настраиваемого ресурса, можно использовать автоматическую переменную `$global:PsDscContext`.
@@ -510,5 +539,5 @@ if (PsDscContext.RunAsUser) {
 ```
 
 ## <a name="see-also"></a>См. также
-### <a name="concepts"></a>Концепции
+
 [Создание пользовательских ресурсов DSC Windows PowerShell](authoringResource.md)

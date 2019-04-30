@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Раздел реестра DSCAutomationHostEnabled
-ms.openlocfilehash: 38e3189323c39a522b2ccad89f5cfcadf5e45616
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 2bccd2738b9f61efd656fdf0f98cf71affdbe781
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076500"
 ---
 >Применяется к: Windows PowerShell 5.0
 
 # <a name="dscautomationhostenabled-registry-key"></a>Раздел реестра DSCAutomationHostEnabled
 
 DSC использует раздел реестра **DSCAutomationHostEnabled** в разделе **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System** для включения конфигурации компьютера при начальной загрузке.
-DSCAutomationHostEnabled поддерживает три режима:
+**DSCAutomationHostEnabled** поддерживает три режима:
 
 |  Значение DSCAutomationHostEnabled  |  Описание   |
 |---|---|

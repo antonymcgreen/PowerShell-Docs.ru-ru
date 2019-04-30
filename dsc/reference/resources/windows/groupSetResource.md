@@ -4,11 +4,11 @@ keywords: dsc,powershell,конфигурация,установка
 description: Предоставляет механизм для управления локальными группами на целевом узле.
 title: Ресурс DSC GroupSet
 ms.openlocfilehash: afe4c4d33ac5620c411481e93d76a1f90c26deb9
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077183"
 ---
 # <a name="dsc-groupset-resource"></a>Ресурс DSC GroupSet
 
@@ -44,7 +44,7 @@ Group [string] #ResourceName
 | MembersToInclude| Это свойство используется для добавления участников в существующее членство в группе. Значение этого свойства хранится в массиве строк в формате *домен*\\*имя_пользователя*. Если вы задали это свойство в конфигурации, не используйте свойство **Members**. Это приведет к ошибке.|
 | DependsOn | Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — __ResourceName__, а его тип — __ResourceType__, то синтаксис использования этого свойства таков: "DependsOn = "[ResourceType]ResourceName"".|
 
-## <a name="example-1-ensuring-groups-are-present"></a>Пример 1: Обеспечение групп
+## <a name="example-1-ensuring-groups-are-present"></a>Пример 1: проверка наличия групп
 
 В приведенном ниже примере показано, как обеспечить существование двух групп: myGroup и myOtherGroup.
 

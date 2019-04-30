@@ -4,11 +4,11 @@ keywords: powershell,командлет
 title: Объект ISEOptions
 ms.assetid: 75e2a76f-f3d1-490b-ad5d-e3829946aabb
 ms.openlocfilehash: e756da21aaa5465f7fa6a90563b4180f0c89e87b
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057780"
 ---
 # <a name="the-iseoptions-object"></a>Объект ISEOptions
 
@@ -138,7 +138,7 @@ $psISE.Options.ConsolePaneTextBackgroundColor = 'pink'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
-Задает цвета маркеров IntelliSense в области консоли интегрированной среды сценариев Windows PowerShell. Это свойство является объектом словаря, который содержит пары "имя — значение" для типов и цветов маркеров для области консоли. Сведения об изменении цвета маркеров IntelliSense в области сценариев см. в разделе [TokenColors](#tokencolors). Сведения о восстановлении значений по умолчанию для цветов см. в разделе [RestoreDefaultConsoleTokenColors](#restoredefaultconsoletokencolors). Можно задать цвета маркера в следующих целях: Атрибут, команды, CommandArgument, CommandParameter, комментарий, GroupEnd, GroupStart, ключевое слово, LineContinuation, LoopLabel, член, символ новой строки, номер, оператор, положение, StatementSeparator, строки, тип, Unknown, переменной.
+Задает цвета маркеров IntelliSense в области консоли интегрированной среды сценариев Windows PowerShell. Это свойство является объектом словаря, который содержит пары "имя — значение" для типов и цветов маркеров для области консоли. Сведения об изменении цвета маркеров IntelliSense в области сценариев см. в разделе [TokenColors](#tokencolors). Сведения о восстановлении значений по умолчанию для цветов см. в разделе [RestoreDefaultConsoleTokenColors](#restoredefaultconsoletokencolors). Можно задать цвета для следующих маркеров: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```powershell
 # Sets the color of commands to green.
@@ -435,7 +435,7 @@ $psISE.Options.ShowWarningBeforeSavingOnRun = $true
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Указывает, отображается ли предупреждение при открытии одного и того же файла на разных вкладках PowerShell. Если значение **$true**, чтобы открыть тот же файл на нескольких вкладках отображается сообщение: «Копию этот файл открыт в другой вкладке Windows PowerShell. Изменения, внесенные в данный файл, отразятся на всех его открытых копиях". По умолчанию используется значение **$true**.
+Указывает, отображается ли предупреждение при открытии одного и того же файла на разных вкладках PowerShell. Если задано значение **$true**, при открытии одного файла в нескольких вкладках отображается сообщение: "Этот файл открыт в другой вкладке Windows PowerShell. Изменения, внесенные в данный файл, отразятся на всех его открытых копиях". По умолчанию используется значение **$true**.
 
 ```powershell
 # Enable the warning message when a file is
@@ -447,7 +447,7 @@ $psISE.Options.ShowWarningForDuplicateFiles = $true
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Задает цвета маркеров IntelliSense в области сценариев интегрированной среды сценариев Windows PowerShell. Это свойство является объектом словаря, который содержит пары "имя — значение" для типов и цветов маркеров для области сценариев. Сведения об изменении цветов маркеров IntelliSense в области консоли см. в разделе [ConsoleTokenColors](#consoletokencolors). Сведения о восстановлении значений по умолчанию для цветов см. в разделе [RestoreDefaultTokenColors](#restoredefaulttokencolors). Можно задать цвета маркера в следующих целях: Атрибут, команды, CommandArgument, CommandParameter, комментарий, GroupEnd, GroupStart, ключевое слово, LineContinuation, LoopLabel, член, символ новой строки, номер, оператор, положение, StatementSeparator, строки, тип, Unknown, переменной.
+Задает цвета маркеров IntelliSense в области сценариев интегрированной среды сценариев Windows PowerShell. Это свойство является объектом словаря, который содержит пары "имя — значение" для типов и цветов маркеров для области сценариев. Сведения об изменении цветов маркеров IntelliSense в области консоли см. в разделе [ConsoleTokenColors](#consoletokencolors). Сведения о восстановлении значений по умолчанию для цветов см. в разделе [RestoreDefaultTokenColors](#restoredefaulttokencolors). Можно задать цвета для следующих маркеров: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```powershell
 # Sets the color of commands to green.
@@ -539,7 +539,7 @@ $psISE.Options.WarningForegroundColor = 'yellow'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
-Указывает объект словаря, который содержит пары "имя — значение" для типов и цветов маркеров для XML-содержимого, которое отображается в интегрированной среде сценариев Windows PowerShell. Можно задать цвета маркера в следующих целях: Атрибут, команды, CommandArgument, CommandParameter, комментарий, GroupEnd, GroupStart, ключевое слово, LineContinuation, LoopLabel, член, символ новой строки, номер, оператор, положение, StatementSeparator, строки, тип, Unknown, переменной. См. также [RestoreDefaultXmlTokenColors](#restoredefaultxmltokencolors).
+Указывает объект словаря, который содержит пары "имя — значение" для типов и цветов маркеров для XML-содержимого, которое отображается в интегрированной среде сценариев Windows PowerShell. Можно задать цвета для следующих маркеров: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. См. также [RestoreDefaultXmlTokenColors](#restoredefaultxmltokencolors).
 
 ```powershell
 # Sets the color of XML element names to green.

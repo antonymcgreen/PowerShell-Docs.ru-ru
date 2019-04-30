@@ -3,17 +3,17 @@ ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Удаление Windows PowerShell Web Access
 ms.openlocfilehash: 22c874d766445dccedd8494097daf16c30fa66ff
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058147"
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Удаление Windows PowerShell Web Access
 
-Обновлено: 24 июня 2013 г.
+Обновлено: 24 июня 2013 г.
 
-Область применения: Windows Server 2012 R2, Windows Server 2012
+Область применения. Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе приведена процедура удаления веб-сайта Windows PowerShell Web Access и соответствующего приложения с сервера шлюза, где они установлены.
 
@@ -33,7 +33,7 @@ ms.locfileid: "55682507"
 
 с помощью командлетов Windows PowerShell.
 
-### <a name="step-1-delete-the-web-application-using-cmdlets"></a>Шаг 1. Удалить веб-приложения с помощью командлетов
+### <a name="step-1-delete-the-web-application-using-cmdlets"></a>Шаг 1. Удаление веб-приложения с помощью командлетов
 
 1. Выполните одно из следующих действий, чтобы открыть сеанс Windows PowerShell.
 
@@ -52,7 +52,7 @@ ms.locfileid: "55682507"
 
         `Uninstall-PswaWebApplication -DeleteTestCertificate`
 
-### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>Шаг 2. Удаление с помощью командлетов Windows PowerShell Web Access
+### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>Шаг 2. Удаление Windows PowerShell Web Access с помощью командлетов
 
 1. Выполните одно из следующих действий, чтобы открыть сеанс Windows PowerShell с повышенными правами. Если сеанс уже открыт, переходите к следующему шагу.
 
@@ -76,7 +76,7 @@ ms.locfileid: "55682507"
 
 В этом разделе приводятся процедуры для удаления веб-приложения Windows PowerShell Web Access и компонента Windows PowerShell Web Access с помощью мастера удаления ролей и компонентов в диспетчере серверов и на консоли диспетчера служб IIS.
 
-### <a name="step-1-delete-the-web-application-using-iis-manager"></a>Шаг 1. Удалить веб-приложения с помощью диспетчера IIS
+### <a name="step-1-delete-the-web-application-using-iis-manager"></a>Шаг 1. Удаление веб-приложения с помощью диспетчера IIS
 
 
 1. Откройте консоль "Диспетчер служб IIS", выполнив одно из следующих действий. Если консоль уже открыта, переходите к следующему шагу.
@@ -101,7 +101,7 @@ ms.locfileid: "55682507"
 >
 > Если вы создали самозаверяющий сертификат или использовали тестовый сертификат и хотите удалить его, удалите сертификат в диспетчере служб IIS.
 
-### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Шаг 2. Удаление с помощью удаления ролей и мастер компонентов Windows PowerShell Web Access
+### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Шаг 2. Удаление Windows PowerShell Web Access с помощью мастера удаления ролей и компонентов
 
 1. Если диспетчер серверов уже открыт, переходите к следующему шагу. Если диспетчер серверов еще не открыт, откройте его одним из следующих способов.
 

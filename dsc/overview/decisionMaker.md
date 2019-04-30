@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Обзор платформы Desired State Configuration для руководителей
 ms.openlocfilehash: ce554d4bb994d4b1816d9d9c24599e4ef0e1c593
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079597"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Обзор платформы Desired State Configuration для руководителей
 
@@ -44,7 +44,7 @@ Desired State Configuration в PowerShell — это встроенная в Wi
 
 Кроме того, конфигурации [опираются на данные](../configurations/configData.md), а значит работникам будет проще идентифицировать и изменять среды, не привлекая разработчиков.
 
-## <a name="desired-state-configuration-on-premises-and-off-premises"></a>Desired State Configuration в локальных и дистанционно
+## <a name="desired-state-configuration-on-premises-and-off-premises"></a>Desired State Configuration для локальных и удаленных развертываний
 DSC позволяет управлять как локальным, так и удаленным развертыванием.
 Для локальных решений в DSC используется [опрашивающий сервер](../pull-server/pullServer.md), обеспечивающий централизованное управление компьютерами и создание отчетов об их состоянии.
 Для облачных решений DSC можно применять везде, где можно использовать Windows.

@@ -4,11 +4,11 @@ schema: 2.0.0
 keywords: powershell
 title: Модули, для использования которых требуется принять условия лицензии
 ms.openlocfilehash: 369e32d5278a2e1bf1d3f2ae67f670c524b9f878
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075228"
 ---
 # <a name="modules-requiring-license-acceptance"></a>Модули, для использования которых требуется принять условия лицензии
 
@@ -28,7 +28,7 @@ ms.locfileid: "50002673"
 ## <a name="impact-on-installsaveupdate-module"></a>Влияние на командлеты Install/Save/Update-Module
 
 - Командлеты установки, сохранения и обновления будут поддерживать новый параметр -AcceptLicense. Его поведение аналогично действиям пользователя после прочтения лицензионного соглашения.
-- Если для параметра RequiredLicenseAcceptance установлено значение True, а параметр -AcceptLicense не указан, для пользователя будет отображаться файл license.txt и запрос &quot;Вы принимаете условия лицензионного соглашения? (Yes/No/YesToAll/NoToAll)&quot;.
+- Если для параметра RequiredLicenseAcceptance установлено значение True, а параметр -AcceptLicense не указан, для пользователя будет отображаться файл license.txt и запрос &quot;Вы принимаете условия лицензионного соглашения (Yes/No/YesToAll/NoToAll)&quot;.
   - Если условия лицензионного соглашения принимаются:
     - **Save-Module:** модуль будет скопирован в систему пользователя.
     - **Install-Module:** модуль будет скопирован в надлежащую папку в системе пользователя (в зависимости от области действия).
@@ -51,7 +51,7 @@ ms.locfileid: "50002673"
 
 ## <a name="examples"></a>ПРИМЕРЫ
 
-### <a name="example-1-update-module-manifest-to-require-license-acceptance"></a>Пример 1. Обновление манифеста модуля для запроса на принятие условий лицензионного соглашения
+### <a name="example-1-update-module-manifest-to-require-license-acceptance"></a>Пример 1: обновление манифеста модуля для запроса на принятие условий лицензионного соглашения
 
 ```powershell
 Update-ModuleManifest -Path C:\modulemanifest.psd1 -RequireLicenseAcceptance -PrivateData @{
@@ -88,7 +88,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 Эта команда предназначена для отображения лицензии в файле license.txt и запроса на принятие условий лицензионного соглашения.
 
-### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>Пример 3. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, при помощи -AcceptLicense
+### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>Пример 3. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, при помощи -AcceptLicense
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
@@ -143,7 +143,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 Install-Module -Name ModuleWithDependency -AcceptLicense
 ```
 
-### <a name="example-7-install-module-requiring-license-acceptance-on-a-client-older-than-psgetformatversion-20"></a>Пример 7. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, в клиенте с версией ниже, чем PSGetFormatVersion 2.0
+### <a name="example-7-install-module-requiring-license-acceptance-on-a-client-older-than-psgetformatversion-20"></a>Пример 7. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, в клиенте с версией старше, чем PSGetFormatVersion 2.0
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance

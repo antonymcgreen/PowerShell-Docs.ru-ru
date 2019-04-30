@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование учетных данных с ресурсами DSC
 ms.openlocfilehash: af54c286ce744cd7db0b0e2d05087f60cdf1a33c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080056"
 ---
 # <a name="use-credentials-with-dsc-resources"></a>Использование учетных данных с ресурсами DSC
 
-> Область применения. Windows PowerShell 5.0, Windows PowerShell 5.1
+> Область применения. Windows PowerShell 5.0, Windows PowerShell 5.1
 
 Ресурс DSC можно запускать с определенным набором учетных данных. Для этого используется автоматическое свойство **PsDscRunAsCredential** в конфигурации.
 По умолчанию DSC запускает каждый ресурс в качестве системной учетной записи.

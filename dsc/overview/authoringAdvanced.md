@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Общие сведения о роли DSC в конвейере CI/CD
 ms.openlocfilehash: 7aec414b3d8e61d1daa1ce796184ac34dbbb43ce
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079851"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>Общие сведения о роли DSC в конвейере CI/CD
 
@@ -118,4 +118,4 @@ Configuration Name
 Каждый новый выпуск конфигурации должен содержать статическую ссылку на определенную версию каждого ресурса и должен быть протестирован перед развертыванием на узлах сервера в рабочей среде.
 Процесс тестирования и выпуска изменений из системы управления версиями позволяет сформировать безопасную среду для выпуска изменений небольшими, но часто выходящими пакетами.
 
-Дополнительные сведения об использовании конвейеров выпуска для управления базовой инфраструктурой см. в документе [Модель конвейера выпуска](../further-reading/whitepapers.md).
+Дополнительные сведения об использовании конвейеров выпуска для управления базовой инфраструктурой см. в документе [The Release Pipeline Model](../further-reading/whitepapers.md) (Модель конвейера выпуска).

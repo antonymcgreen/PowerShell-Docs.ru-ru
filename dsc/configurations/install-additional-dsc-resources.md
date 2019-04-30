@@ -1,51 +1,51 @@
 ---
 ms.date: 12/12/2018
-keywords: DSC, powershell, ресурсов, в коллекции, программа установки
+keywords: dsc,powershell,resource,gallery,setup
 title: Установка дополнительных ресурсов DSC
 ms.openlocfilehash: ecaf176230ccd934b57b1c27d72ff83e6ba906e9
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080089"
 ---
 # <a name="install-additional-dsc-resources"></a>Установка дополнительных ресурсов DSC
 
-PowerShell включает несколько ресурсов Out of box для Desired State Configuration (DSC). **PSDesiredStateConfiguration** модуль содержит все ресурсы DSC OOB, доступные в используемой определенной версии PowerShell.
+PowerShell включает в себя несколько установочных ресурсов для Desired State Configuration (DSC). Модуль **PSDesiredStateConfiguration** содержит все OOB ресурсы DSC, доступные в конкретно вашем экземпляре PowerShell.
 
-Это список OOB ресурсы, включенные в PowerShell 4.0 и описание возможностей ресурса.
+Это список OOB ресурсов, включенных в PowerShell 4.0, и описание возможностей ресурса.
 
 > [!NOTE]
-> Это неполный список, поскольку количество ресурсов OOB выросло с каждой версией PowerShell.
+> Этот список неполный, так как количество OOB ресурсов увеличивалось с каждой версией PowerShell.
 
 |Ресурс  |Описание  |
 |---------|---------|
-|**File**|Управляет состоянием файлов и каталогов. Копирует файлы из **источника** для **назначения** и обновляет их при **источника** изменения, сравнивая даты, контрольные суммы и хэши.|
-|**Archive**|Распаковывает архивы и указанное расположение. Проверяет архивы с заданным **контрольной суммы**.|
+|**File**|Управляет состоянием файлов и каталогов. Копирует файлы из **Источника** в **Место назначения** и обновляет их при изменении **Источника** путем сравнения дат, контрольных сумм и хэшей.|
+|**Archive**|Распаковывает архивы и указывает местоположение. Проверяет архивы с указанной **Контрольной суммой**.|
 |**Environment**|Управляет переменными среды.|
-|**Группа**|Управляет локальными группами и контролирует членство в группе.|
-|**Log**|Записывает сообщения в `Microsoft-Windows-Desired State Configuration/Analytic` журнала событий.|
-|**Пакет**|Устанавливает или удаляет пакеты с помощью **аргументы**, **LogPath**, **ReturnCode**, другие параметры.|
-|**Registry**|Управляет разделы реестра и значения.|
-|**Script**|Позволяет разрабатывать собственные [get теста set](../resources/get-test-set.md) блоки сценариев.|
+|**Группа**|Управляет локальными группами и контролирует членство в группах.|
+|**Log**|Записывает сообщения в журнал событий `Microsoft-Windows-Desired State Configuration/Analytic`.|
+|**Пакет**|Устанавливает или удаляет пакеты, используя **Аргументы**, **LogPath**, **ReturnCode**, другие параметры.|
+|**Registry**|Управляет разделами и значениями реестра.|
+|**Script**|Позволяет разрабатывать собственные блоки сценариев [get-test-set](../resources/get-test-set.md).|
 |**Служба**|Настраивает службы Windows.|
-|**User** |Управляет локальными пользователями и атрибуты.|
-|**WindowsFeature**|Управляет ролей и компонентов.|
-|**WindowsProcess**|Настраивает процессов Windows.|
+|**User** |Управляет локальными пользователями и атрибутами.|
+|**WindowsFeature**|Управляет ролями и функциями.|
+|**WindowsProcess**|Настраивает процессы Windows.|
 
-Ресурсы OOB разрешить хорошей отправной точкой для выполнения распространенных операций. Если ресурсы OOB не удовлетворяют вашим потребностям, можно написать собственный [настраиваемый ресурс](../resources/authoringResource.md). Прежде чем писать настраиваемый ресурс решить проблему, при просмотре огромное число ресурсов DSC, которые уже были созданы корпорацией Майкрософт и сообществом PowerShell.
+Ресурсы OOB обеспечивают обычным операциям хорошую отправную точку. Если ресурсы OOB не соответствуют вашим потребностям, вы можете написать свой собственный [Пользовательский ресурс](../resources/authoringResource.md). Прежде чем написать собственный ресурс для решения проблемы, вы должны просмотреть огромное количество уже созданных как Microsoft, так и сообществом PowerShell ресурсов DSC.
 
-Ресурсы DSC, можно найти в обоих [коллекции PowerShell](https://www.powershellgallery.com/) и [GitHub](https://github.com/). Ресурсы DSC также можно установить непосредственно из консоли PowerShell с помощью [PowerShellGet](/powershell/module/powershellget/).
+Ресурсы DSC можно найти как в [коллекции PowerShell](https://www.powershellgallery.com/), так и на [GitHub](https://github.com/). Вы также можете установить ресурсы DSC непосредственно из консоли PowerShell, используя [PowerShellGet](/powershell/module/powershellget/).
 
 ## <a name="installing-powershellget"></a>Установка PowerShellGet
 
-Чтобы определить, есть ли у вас **PowerShell** получения, или Справка по его установке см. в статье в этом руководстве: [Установка PowerShellGet](/powershell/gallery/installing-psget)
+Чтобы определить, есть ли у вас **PowerShell**, или получить справку по его установке, см. руководство [Установка PowerShellGet](/powershell/gallery/installing-psget).
 
 ## <a name="finding-dsc-resources-using-powershellget"></a>Поиск ресурсов DSC с помощью PowerShellGet
 
-Один раз **PowerShellGet** устанавливается на компьютере, можно найти и установить ресурсы DSC, размещенные в [коллекции PowerShell](https://www.powershellgallery.com/).
+После установки **PowerShellGet** на компьютер, вы можете найти и установить ресурсы DSC, размещенные в [коллекции PowerShell](https://www.powershellgallery.com/).
 
-Во-первых, используйте [Find-DSCResource](/powershell/module/powershellget/find-dscresource) командлет, чтобы найти ресурсы DSC. При запуске `Find-DSCResource` в первый раз появится приведенный ниже запрос на установку поставщика NuGet «».
+Сначала используйте командлет [Find-DSCResource](/powershell/module/powershellget/find-dscresource), чтобы найти ресурсы DSC. При первом запуске `Find-DSCResource` вы увидите следующую подсказку для установки "поставщика NuGet".
 
 ```
 PS> Find-DSCResource
@@ -59,15 +59,15 @@ install and import the NuGet provider now?
 [Y] Yes  [N] No  [?] Help (default is "Y"):
 ```
 
-После нажатия клавиши «y» «NuGet» поставщик установлен, отобразится список ресурсов DSC, которые можно установить из коллекции PowerShell.
+После нажатия "y" (установки поставщика NuGet) вы увидите список ресурсов DSC, которые вы можете установить из коллекции PowerShell.
 
 > [!NOTE]
 > Список не отображается, поскольку очень велик.
 
-Можно также указать `-Name` с использованием подстановочных знаков, параметр или `-Filter` параметр без подстановочных знаков, чтобы сузить круг поиска. В этом примере предпринимается попытка найти ресурс «Часовой пояс» DSC с использованием подстановочных знаков.
+Вы также можете указать параметр `-Name`, используя подстановочные знаки, или параметр `-Filter` без подстановочных знаков, чтобы сузить область поиска. В этом примере предпринимается попытка найти ресурс DSC TimeZone с использованием подстановочных знаков.
 
 > [!IMPORTANT]
-> В настоящее время имеется ошибка в `Find-DSCResource` командлет, который предотвращает использование подстановочных знаков в обоих `-Name` и `-Filter` параметров. Во втором примере ниже показано возможное решение с помощью `Where-Object`.
+> В настоящее время в командлете `Find-DSCResource` есть ошибка, которая не позволяет использовать подстановочные знаки в параметрах `-Name` и `-Filter`. Во втором примере, поданном ниже, показано возможное решение с помощью `Where-Object`.
 
 ```
 PS> Find-DSCResource -Name *Time*
@@ -90,7 +90,7 @@ xSqlServerSQLDataRoot               1.0.0      mlSqlServerDSC                   
 xSqlServerStartupParam              1.0.0      mlSqlServerDSC                      PSGallery
 ```
 
-Можно также использовать `Where-Object` для поиска ресурсов DSC с более детализированные фильтрации. Этот подход будет медленнее, чем используя встроенные параметры фильтрации.
+Вы также можете использовать `Where-Object` для поиска ресурсов DSC с более детальной фильтрацией. Этот подход будет медленнее, чем использование встроенных параметров фильтрации.
 
 ```
 PS> Find-DSCResource | Where-Object {$_.Name -like "Time*"}
@@ -104,12 +104,12 @@ TimeZone                            6.0.0.0    ComputerManagementDsc            
 
 ## <a name="installing-dsc-resources-using-powershellget"></a>Установка ресурсов DSC с помощью PowerShellGet
 
-Для установки ресурсов DSC, используйте [Install-Module](/powershell/module/PowershellGet/Install-Module) командлет, указав имя модуля, отображается в поле **модуль** имя в результатах поиска.
+Чтобы установить ресурс DSC, используйте командлет [Install-Module](/powershell/module/PowershellGet/Install-Module), указав имя модуля, отображаемого в имени **модуля** в результатах поиска.
 
-Ресурс «Часовой пояс» существует в модуле «ComputerManagementDSC», чтобы он устанавливает модуль в этом примере.
+Ресурс TimeZone существует в модуле ComputerManagementDSC, поэтому в этом примере устанавливается этот модуль.
 
 > [!NOTE]
-> Если в коллекции PowerShell не является доверенным, вы увидите предупреждение ниже запроса на подтверждение и инструкциями по избежать последующих запросов на устанавливает.
+> Если коллекция PowerShell не является надежной, вы увидите предупреждение ниже с запросом подтверждения и указанием, как избежать последующих запросов при установке.
 
 ```
 PS> Install-Module -Name ComputerManagementDSC
@@ -121,7 +121,7 @@ InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure yo
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
-Нажмите клавишу «y», чтобы продолжить установку модуля. После установки, можно проверить, что установлен с помощью нового ресурса [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource).
+Нажмите "y", чтобы продолжить установку модуля. После установки вы можете проверить, установлен ли ваш новый ресурс, используя [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource).
 
 ```
 PS> Get-DSCResource -Name TimeZone -Syntax
@@ -135,7 +135,7 @@ TimeZone [String] #ResourceName
 }
 ```
 
-Можно также просмотреть другие ресурсы в только что установленного модуля, указав `-ModuleName` параметра.
+Вы также можете просмотреть другие ресурсы в только что установленном модуле, указав параметр `-ModuleName`.
 
 ```
 PS> Get-DSCResource -Module ComputerManagementDSC

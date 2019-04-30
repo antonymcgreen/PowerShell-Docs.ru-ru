@@ -3,40 +3,40 @@ ms.date: 12/14/2018
 keywords: powershell,командлет
 title: Создание переносимых модулей
 ms.openlocfilehash: 38a93b5b030d58784b91292e2cd060b3a2c19a00
-ms.sourcegitcommit: d396d0e4cfe3d279f399c17e7337380a31d373ac
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086414"
 ---
-# <a name="portable-modules"></a>Переносимые модулей
+# <a name="portable-modules"></a>Переносимые модули
 
-Windows PowerShell, написанные для [.NET Framework][] хотя PowerShell Core записывается для [.NET Core][]. Переносимые модули — это модули, которые работают в Windows PowerShell и PowerShell Core. Хотя .NET Framework и .NET Core и высокий уровень совместимости, существуют различия в доступные интерфейсы API. Существуют различия в API в Windows PowerShell и PowerShell Core. Модули, предназначен для использования в обеих средах должны учитывать эти различия.
+Средство Windows PowerShell написано для [.NET Framework][], в то время как PowerShell Core написано для [.NET Core][]. Переносимые модули — это модули, которые работают как в Windows PowerShell, так и в PowerShell Core. Хотя .NET Framework и .NET Core обладают высокой совместимостью, между ними есть различия касательно доступных API-интерфейсов. Существуют также различия в API-интерфейсах, доступных в Windows PowerShell и PowerShell Core. В модулях, которые предназначены для использования в обеих средах, должны учитываться эти различия.
 
 ## <a name="porting-an-existing-module"></a>Перенос существующего модуля
 
-### <a name="porting-a-pssnapin"></a>Перенос PSSnapIn
+### <a name="porting-a-pssnapin"></a>Перенос оснастки PSSnapIn
 
-Оснастки PowerShell (PSSnapIn) не поддерживаются в PowerShell Core. Тем не менее это просто преобразовать PSSnapIn модуля PowerShell. Как правило, является регистрационный код PSSnapIn в один исходный файл класса, производного от [PSSnapIn][]. Удалить этот исходный файл из построения; больше не используется.
+Оснастки PowerShell (PSSnapIn) не поддерживаются в PowerShell Core. Тем не менее PSSnapIn можно легко преобразовать в модуль PowerShell. Как правило, регистрационный код PSSnapIn находится в одном исходном файле класса, который наследуется от [PSSnapIn][]. Удалите этот исходный файл из сборки, так как он больше не нужен.
 
-Используйте [New-ModuleManifest][] для создания нового манифеста модуля, который устраняет необходимость для кода регистрации PSSnapIn. Некоторые значения из PSSnapIn (например, описание) могут использоваться повторно в манифесте модуля.
+Чтобы создать манифест модуля, который заменяет необходимость в регистрационном коде PSSnapIn, используйте командлет [New-ModuleManifest][]. Некоторые значения из PSSnapIn (например, описание) можно повторно использовать в манифесте модуля.
 
-`RootModule` Свойства в манифесте модуля должно быть присвоено имя сборки (dll), реализация командлеты.
+Для свойства `RootModule` в манифесте модуля должно быть указано имя сборки (DLL), реализующей командлеты.
 
-### <a name="the-net-portability-analyzer-aka-apiport"></a>Анализатор переносимости .NET (также называемые APIPort)
+### <a name="the-net-portability-analyzer-aka-apiport"></a>Средство .NET Portability Analyzer (оно же APIPort)
 
-Порт модули, написанные для Windows PowerShell для работы с PowerShell Core, начните с [анализатор переносимости .NET][]. Запустите это средство для скомпилированной сборки для определения API .NET, используемые в модуле совместимы с .NET Framework, .NET Core и других сред выполнения .NET. Утилита предлагает альтернативные интерфейсы API, если они существуют. В противном случае может потребоваться добавить [проверки времени выполнения][] и ограничить возможности, недоступные в конкретных средах выполнения.
+Чтобы перенести модули, написанные для Windows PowerShell, для работы с PowerShell Core, используйте [.NET Portability Analyzer][]. Запустите это средство для вашей скомпилированной сборки, чтобы определить совместимость используемых в модуле интерфейсов API .NET с .NET Framework, .NET Core и другими средами выполнения .NET. Средство предлагает альтернативные API-интерфейсы, если они существуют. В противном случае вам может потребоваться добавить [Проверки среды выполнения][] и ограничить возможности, недоступные в определенных средах выполнения.
 
-## <a name="creating-a-new-module"></a>Создание нового модуля
+## <a name="creating-a-new-module"></a>Создание модуля
 
-Если создается новый модуль, рекомендуется использовать [ИНТЕРФЕЙС КОМАНДНОЙ СТРОКИ .NET][].
+При создании модуля рекомендуется использовать [Интерфейс командной строки.NET][].
 
-### <a name="installing-the-powershell-standard-module-template"></a>Установка модуля PowerShell Standard шаблона
+### <a name="installing-the-powershell-standard-module-template"></a>Установка шаблона стандартного модуля PowerShell
 
-После установки интерфейса командной строки .NET, установите библиотеку шаблонов для создания простого модуля PowerShell.
-Модуль будут совместимы с Windows PowerShell, PowerShell Core, Windows, Linux и macOS.
+После установки интерфейса командной строки .NET установите библиотеку шаблонов, чтобы создать простой модуль PowerShell.
+Модуль будет совместим с Windows PowerShell, PowerShell Core, Windows, Linux и macOS.
 
-В следующем примере показано, как установить шаблон:
+В следующем примере показана установка шаблона:
 
 ```powershell
 dotnet new -i Microsoft.PowerShell.Standard.Module.Template
@@ -74,7 +74,7 @@ PowerShell Standard Module                        psmodule           [C#]       
 
 ### <a name="creating-a-new-module-project"></a>Создание проекта модуля
 
-После установки шаблона, можно создать новый проект модуля PowerShell с использованием этого шаблона. В этом примере образец модуля называется «myModule».
+После установки шаблона можно создать проект модуля PowerShell с использованием этого шаблона. У нас пример модуля называется myModule.
 
 ```
 PS> mkdir myModule
@@ -103,7 +103,7 @@ Restore succeeded.
 
 ### <a name="building-the-module"></a>Создание модуля
 
-Используйте стандартные команды интерфейса командной строки .NET для сборки проекта.
+Используйте стандартные команды интерфейса командной строки .NET для создания проекта.
 
 ```powershell
 dotnet build
@@ -124,9 +124,9 @@ Build succeeded.
 Time Elapsed 00:00:05.40
 ```
 
-### <a name="testing-the-module"></a>Проверка модуля
+### <a name="testing-the-module"></a>Тестирование модуля
 
-После создания модуля, можно импортировать его и выполнить пример командлета.
+После создания модуля вы можете импортировать его и выполнить пример командлета.
 
 ```powershell
 ipmo .\bin\Debug\netstandard2.0\myModule.dll
@@ -160,52 +160,52 @@ FavoriteNumber FavoritePet
              7 Cat
 ```
 
-В следующих разделах подробно некоторые технологии, используемые этим шаблоном.
+В следующих разделах подробно описаны некоторые технологии, используемые этим шаблоном.
 
-## <a name="net-standard-library"></a>Библиотека .NET standard
+## <a name="net-standard-library"></a>Библиотека .NET Standard
 
-[.NET standard][] представляет собой официальную спецификацию интерфейсов API .NET, которые доступны во всех реализациях .NET. Управляемый код, предназначенных для .NET Standard работает с версии .NET Framework и .NET Core, которые совместимы с этой версией .NET Standard.
+[.NET Standard][] — это формальная спецификация API-интерфейсов .NET, доступных во всех реализациях .NET. Управляемый код, предназначенный для .NET Standard, работает с версиями .NET Framework и .NET Core, совместимыми с этой версией .NET Standard.
 
 > [!NOTE]
-> Несмотря на то, что API могут существовать в .NET Standard, реализации API в .NET Core может вызывать исключение `PlatformNotSupportedException` во время выполнения, поэтому для проверки совместимости с Windows PowerShell и PowerShell Core, мы рекомендуем проводить тесты для модуля в обеих средах.
-> Также выполните тесты в Linux и macOS, если модуль должен быть между различными платформами.
+> Хотя API-интерфейс может существовать в .NET Standard, реализация API в .NET Core во время выполнения может вызывать исключение `PlatformNotSupportedException`, поэтому для проверки совместимости с Windows PowerShell и PowerShell Core рекомендуется выполнить тестирование вашего модуля в обеих средах.
+> Если ваш модуль должен быть кроссплатформенным, запустите также тестирование в Linux и macOS.
 
-Применение .NET Standard гарантирует, что, по мере развития модуль несовместимых API не случайно введение в модуль. Во время компиляции, а не среды выполнения будут обнаружены несовместимости.
+Нацеленность на .NET Standard гарантирует, что по мере развития модуля несовместимые API-интерфейсы не будут случайно введены в модуль. Несовместимости обнаруживаются во время компиляции, а не во время выполнения.
 
-Тем не менее он не требуется для .NET Standard, для модуля для работы с Windows PowerShell и PowerShell Core, до тех пор, пока вы используете совместимые интерфейсы API. Промежуточный язык (IL) совместим между двумя средами выполнения. Можно создавать решения .NET Framework 4.6.1, которая совместима с .NET Standard 2.0. Если вы не используете API вне .NET Standard 2.0, затем модуль работает с PowerShell Core 6 без повторной компиляции.
+Однако для работы модуля как с Windows PowerShell, так и с PowerShell Core не требуется указывать платформу .NET Standard как целевую, если используются совместимые API-интерфейсы. Промежуточный язык (IL) совместим с двумя средами выполнения. Вы можете указать как целевую версию .NET Framework 4.6.1, которая совместима с .NET Standard 2.0. Если вы не используете API-интерфейсы за пределами. NET Standard 2.0, тогда ваш модуль будет работать с PowerShell Core 6 без повторной компиляции.
 
-## <a name="powershell-standard-library"></a>PowerShell стандартной библиотеке
+## <a name="powershell-standard-library"></a>Библиотека PowerShell Standard
 
-[Стандартный PowerShell][] библиотека — это Формальная спецификация API-интерфейсы PowerShell доступен во всех версиях PowerShell, не меньше версии этого стандарта.
+[PowerShell Standard][] — это формальная спецификация API-интерфейсов PowerShell, доступная во всех версиях PowerShell, которые больше версии этого стандарта или соответствуют ей.
 
-Например [Стандартный PowerShell 5.1][] является совместимым с Windows PowerShell 5.1 и PowerShell Core 6.0 или более поздней версии.
+Например, [PowerShell Standard 5.1][] совместима как с Windows PowerShell 5.1, так и с PowerShell Core 6.0 или более поздней версией.
 
-Мы рекомендуем компиляции модуля с помощью библиотеки Standard PowerShell. Библиотека гарантирует, что API-интерфейсы будут доступны и реализованных в Windows PowerShell и PowerShell Core 6.
-Стандартный PowerShell позволяет всегда пересылает совместимой. Модуль, созданные с помощью PowerShell стандартные библиотеки 5.1 всегда был совместим с будущими версиями PowerShell.
+Мы советуем вам скомпилировать свой модуль с помощью библиотеки PowerShell Standard. Библиотека гарантирует, что API-интерфейсы будут доступны и реализованы как в Windows PowerShell, так и в PowerShell Core 6.
+PowerShell Standard предназначена для постоянной совместимости с новыми версиями. Модуль, созданный с использованием библиотеки PowerShell Standard 5.1, всегда будет совместим с будущими версиями PowerShell.
 
 ## <a name="module-manifest"></a>Манифест модуля
 
-### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>Указывающее, совместимость с Windows PowerShell и PowerShell Core
+### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>Указание на совместимость с Windows PowerShell и PowerShell Core
 
-После проверки работы вашего модуля с помощью Windows PowerShell и PowerShell Core, манифеста модуля следует явно указать совместимости с помощью [CompatiblePSEditions][] свойство. Значение `Desktop` означает, что модуль совместима с Windows PowerShell, то время как значение из `Core` означает, что модуль является совместимым с PowerShell Core. Включая `Desktop` и `Core` означает, что модуль совместима с Windows PowerShell и PowerShell Core.
+После проверки работы модуля с Windows PowerShell и с PowerShell Core манифест модуля должен явно указывать совместимость с помощью свойства [CompatiblePSEditions][]. Значение `Desktop` означает, что модуль совместим с Windows PowerShell, а значение `Core` указывает на совместимость с PowerShell Core. Наличие обоих значений (`Desktop` и `Core`) означает, что модуль совместим как с Windows PowerShell, так и с PowerShell Core.
 
 > [!NOTE]
-> `Core` не означает, что модуль совместима с Windows, Linux и macOS.
-> **CompatiblePSEditions** свойство появилось в PowerShell версии 5. Модуль манифесты, использующих **CompatiblePSEditions** свойства не удалось загрузить в версиях до PowerShell версии 5.
+> `Core` необязательно означает, что модуль совместим с Windows, Linux и macOS.
+> Свойство **CompatiblePSEditions** впервые появилось в PowerShell версии 5. Манифесты модуля, которые используют свойство **CompatiblePSEditions**, не будут загружаться в версиях, предшествующих PowerShell версии 5.
 
-### <a name="indicating-os-compatibility"></a>Указывающее, совместимость ОС
+### <a name="indicating-os-compatibility"></a>Указание на совместимость с ОС
 
-Во-первых проверьте, что модуль работает в Linux и macOS. Затем результатами означают совместимость с этими операционными системами в манифесте модуля. Это поможет пользователям найти модуль для своей операционной системы, при публикации [Коллекция PowerShell][].
+Сначала убедитесь, что ваш модуль работает в Linux и macOS. Далее укажите совместимость с этими операционными системами в манифесте модуля. В результате пользователям будет проще искать ваш модуль для требуемых операционных систем, когда он будет опубликован в [Коллекция PowerShell][].
 
-В манифесте модуля `PrivateData` свойство имеет `PSData` подчиненных свойств. Необязательный `Tags` свойство `PSData` принимает массив значений, которые отображаются в коллекции PowerShell. В коллекции PowerShell поддерживает следующие значения совместимости:
+В манифесте модуля у свойства `PrivateData` есть вложенное свойство `PSData`. Необязательное свойство `Tags` раздела `PSData` принимает массив значений, которые отображаются в коллекции PowerShell. Коллекция PowerShell поддерживает следующие значения совместимости:
 
 | Tag               | Описание                                |
 |-------------------|--------------------------------------------|
-| PSEdition_Core    | Совместимость с PowerShell Core 6          |
+| PSEdition_Core    | Совместимость с PowerShell Core 6          |
 | PSEdition_Desktop | Совместимость с Windows PowerShell         |
 | Windows           | Совместимость с Windows                    |
-| Linux             | Совместимость с Linux (не дистрибутиву) |
-| macOS             | Совместимый с macOS                      |
+| Linux             | Совместимость с Linux (любой дистрибутив) |
+| macOS             | Совместимость с macOS                      |
 
 Пример:
 
@@ -258,11 +258,11 @@ FavoriteNumber FavoritePet
 [.NET Core]: /dotnet/core/
 [PSSnapIn]: /dotnet/api/system.management.automation.pssnapin
 [New-ModuleManifest]: /powershell/module/microsoft.powershell.core/new-modulemanifest
-[проверки времени выполнения]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
-[ИНТЕРФЕЙС КОМАНДНОЙ СТРОКИ .NET]: /dotnet/core/tools/?tabs=netcore2x
+[Проверки среды выполнения]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
+[Интерфейс командной строки.NET]: /dotnet/core/tools/?tabs=netcore2x
 [.NET Standard]: /dotnet/standard/net-standard
-[Стандартный PowerShell]: https://github.com/PowerShell/PowerShellStandard
-[Стандартный PowerShell 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
+[PowerShell Standard]: https://github.com/PowerShell/PowerShellStandard
+[PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
 [Коллекция PowerShell]: https://www.powershellgallery.com
-[Анализатор переносимости .NET]: https://github.com/Microsoft/dotnet-apiport
+[.NET Portability Analyzer]: https://github.com/Microsoft/dotnet-apiport
 [CompatiblePSEditions]: /powershell/gallery/concepts/module-psedition-support

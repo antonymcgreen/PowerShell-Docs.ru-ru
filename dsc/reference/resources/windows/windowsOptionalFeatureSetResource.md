@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс DSC WindowsOptionalFeatureSet
 ms.openlocfilehash: c27d026e01bbb443a82112e37f1d199fb3482e49
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076979"
 ---
 # <a name="dsc-windowsoptionalfeatureset-resource"></a>Ресурс DSC WindowsOptionalFeatureSet
 
@@ -44,6 +44,6 @@ WindowsOptionalFeature [string] #ResourceName
 | Источник| Не реализовано.|
 | NoWindowsUpdateCheck| Указывает, обращается ли система DISM к Центру обновления Windows при поиске исходных файлов для включения компонентов. Если задано значение $true, система DISM не обращается к Центру обновления Windows.|
 | RemoveFilesOnDisable| Задайте значение **$true**, чтобы удалить все файлы, связанные с компонентами, при их отключении (то есть когда свойству **Ensure** присваивается значение Absent).|
-| Уровень журнала| Максимальный уровень результатов, показываемый в журналах. Допустимыми являются значения: «ErrorsOnly» (записываются только ошибки), «ErrorsAndWarning» (ошибки и предупреждения записываются) и «ErrorsAndWarningAndInformation» (регистрируются ошибки, предупреждения и отладочной информации).|
+| Уровень журнала| Максимальный уровень результатов, показываемый в журналах. Допустимые значения: ErrorsOnly (в журналы записываются только ошибки), ErrorsAndWarning (в журналы записываются ошибки и предупреждения) и ErrorsAndWarningAndInformation (в журналы записываются ошибки, предупреждения и отладочные сведения).|
 | LogPath| Путь к файлу журнала, в котором поставщик ресурсов должен вести журнал работы.|
 | DependsOn| Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — __ResourceName__, а его тип — __ResourceType__, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`.|

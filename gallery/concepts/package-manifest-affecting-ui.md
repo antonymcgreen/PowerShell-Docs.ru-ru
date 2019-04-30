@@ -4,11 +4,11 @@ schema: 2.0.0
 keywords: powershell
 title: Значения манифеста пакета, связанные с пользовательским интерфейсом коллекции PowerShell
 ms.openlocfilehash: cedf81df8de29c54ef559a800d654305029491ec
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58058221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084714"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Значения манифеста пакета, связанные с пользовательским интерфейсом коллекции PowerShell
 
@@ -95,7 +95,7 @@ ms.locfileid: "58058221"
 | Windows |  |
 | Build |  |
 | Развертывание | Тег Deploy используется немного реже. |
-| Облако |  |
+| Cloud |  |
 | GIT |  |
 | Тест | Тег Testing менее предпочтителен. |
 | VersionControl | Тег Version менее точный, хотя используется чаще.  |
@@ -113,7 +113,7 @@ ms.locfileid: "58058221"
 | Network (Сеть) | Тег Networking является аналогом, но используется реже. |
 | SharePoint |  |
 | Формирование отчетов | Для действия используется Reporting, для объекта — Report. |
-| Отчет | Тег Report используется, если речь идет об объекте. |
+| Report | Тег Report используется, если речь идет об объекте. |
 | WinRM |  |
 | Мониторинг |  |
 | VSTS |  |

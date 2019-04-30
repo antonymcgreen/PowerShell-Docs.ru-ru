@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Выполнение второго прыжка при удаленном взаимодействии PowerShell
 ms.openlocfilehash: 1b6e5ad53346324adc7be2d013e154c8600afa4f
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086346"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Выполнение второго прыжка при удаленном взаимодействии PowerShell
 
@@ -43,7 +43,7 @@ ms.locfileid: "56265592"
 
 Для выполнения второго прыжка можно также использовать делегирование Kerberos без ограничений. Однако этот метод не позволяет управлять тем, где именно используются делегированные учетные данные.
 
->**Примечание.** Учетные записи Active Directory, которые имеют набор свойств **Учетная запись важна и не может быть делегирована**, не могут быть делегированы. Дополнительные сведения см. в разделе [Фокус безопасности: анализ свойств "Учетная запись важна и не может быть делегирована" для привилегированных учетных записей](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) и [Средства и параметры проверки подлинности Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
+>**Примечание**. Учетные записи Active Directory, которые имеют набор свойств **Учетная запись важна и не может быть делегирована**, не могут быть делегированы. Дополнительные сведения см. в статье [Security Focus: Analysing 'Account is sensitive and cannot be delegated' for Privileged Accounts](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) (Фокус безопасности: анализ свойств "Учетная запись важна и не может быть делегирована" для привилегированных учетных записей) и [Kerberos Authentication Tools and Settings](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx) (Средства и параметры проверки подлинности Kerberos).
 
 ### <a name="pros"></a>Плюсы
 
@@ -56,10 +56,10 @@ ms.locfileid: "56265592"
 
 ## <a name="kerberos-constrained-delegation"></a>Ограниченное делегирование Kerberos
 
-Для выполнения второго прыжка можно использовать устаревшее ограниченное делегирование (не на основе ресурсов). Настройка ограниченного делегирования Kerberos с параметром «Использовать любой протокол проверки подлинности», чтобы разрешить переход протокола.
+Для выполнения второго прыжка можно использовать устаревшее ограниченное делегирование (не на основе ресурсов). Настройте ограниченное делегирование Kerberos с параметром "Использовать любой протокол проверки подлинности", чтобы разрешить переход протокола.
 
 > [!NOTE]
-> Учетные записи Active Directory, которые имеют набор свойств **Учетная запись важна и не может быть делегирована**, не могут быть делегированы. Дополнительные сведения см. в разделе [Фокус безопасности: анализ свойств "Учетная запись важна и не может быть делегирована" для привилегированных учетных записей](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) и [Средства и параметры проверки подлинности Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
+> Учетные записи Active Directory, которые имеют набор свойств **Учетная запись важна и не может быть делегирована**, не могут быть делегированы. Дополнительные сведения см. в статье [Security Focus: Analysing 'Account is sensitive and cannot be delegated' for Privileged Accounts](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) (Фокус безопасности: анализ свойств "Учетная запись важна и не может быть делегирована" для привилегированных учетных записей) и [Kerberos Authentication Tools and Settings](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx) (Средства и параметры проверки подлинности Kerberos).
 
 ### <a name="pros"></a>Плюсы
 
@@ -77,7 +77,7 @@ ms.locfileid: "56265592"
 С помощью ограниченного делегирования Kerberos на основе ресурсов (которое впервые появилось в Windows Server 2012) можно настроить делегирование учетных данных на объект сервера, где находятся ресурсы.
 В описанном выше сценарии второго прыжка вы настраиваете сервер _ServerC_, чтобы указать, откуда он будет принимать делегированные учетные данные.
 
->**Примечание.** Учетные записи Active Directory, которые имеют набор свойств **Учетная запись важна и не может быть делегирована**, не могут быть делегированы. Дополнительные сведения см. в разделе [Фокус безопасности: анализ свойств "Учетная запись важна и не может быть делегирована" для привилегированных учетных записей](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) и [Средства и параметры проверки подлинности Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
+>**Примечание**. Учетные записи Active Directory, которые имеют набор свойств **Учетная запись важна и не может быть делегирована**, не могут быть делегированы. Дополнительные сведения см. в статье [Security Focus: Analysing 'Account is sensitive and cannot be delegated' for Privileged Accounts](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) (Фокус безопасности: анализ свойств "Учетная запись важна и не может быть делегирована" для привилегированных учетных записей) и [Kerberos Authentication Tools and Settings](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx) (Средства и параметры проверки подлинности Kerberos).
 
 ### <a name="pros"></a>Плюсы
 
@@ -214,8 +214,8 @@ Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
 - [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 1](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1)
 - [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 2](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2)
 - [Основные сведения об ограниченном делегировании Kerberos для развертывания прокси приложения Azure Active Directory со встроенной проверкой подлинности Windows](https://aka.ms/kcdpaper)
-- [[MS-ADA2]. Атрибуты M2.210 схемы Active Directory msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx)
-- [[MS-SFU]. Расширения протокола Kerberos: S4U и протокола ограниченного делегирования 1.3.2 S4U2proxy](https://msdn.microsoft.com/library/cc246079.aspx)
+- [[MS-ADA2]: Active Directory Schema Attributes M2.210 Attribute msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx) (Атрибуты M2.210 схемы Active Directory msDS-AllowedToActOnBehalfOfOtherIdentity)
+- [[MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol 1.3.2 S4U2proxy](https://msdn.microsoft.com/library/cc246079.aspx) (Расширения протокола Kerberos: S4U и протокол ограниченного делегирования 1.3.2 S4U2proxy)
 - [Ограниченное делегирование Kerberos на основе ресурсов](https://blog.kloud.com.au/2013/07/11/kerberos-constrained-delegation/)
 - [Удаленное администрирование без ограниченного делегирования с помощью PrincipalsAllowedToDelegateToAccount](https://blogs.msdn.microsoft.com/taylorb/2012/11/06/remote-administration-without-constrained-delegation-using-principalsallowedtodelegatetoaccount/)
 

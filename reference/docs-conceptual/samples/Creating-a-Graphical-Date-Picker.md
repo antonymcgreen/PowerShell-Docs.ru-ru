@@ -4,11 +4,11 @@ keywords: powershell,командлет
 title: Создание графического элемента управления "Выбор даты"
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
 ms.openlocfilehash: d3b24af935e781a8a36fc346a6108baaed37b6db
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058613"
 ---
 # <a name="creating-a-graphical-date-picker"></a>Создание графического элемента управления "Выбор даты"
 
@@ -148,4 +148,4 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 
 - [Блог Hey Scripting Guy:  Why don’t these PowerShell GUI examples work? (Почему эти примеры скриптов PowerShell GUI не работают)](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates (WinFormsExampleUpdates от Дэйва Уайята)](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week (Совет недели по работе с Windows PowerShell):  Создание графического элемента управления "Выбор даты"](https://technet.microsoft.com/library/ff730942.aspx)
+- [Windows PowerShell Tip of the Week:  Creating a Graphical Date Picker](https://technet.microsoft.com/library/ff730942.aspx) (Совет недели для Windows PowerShell: создание графического элемента управления "Выбор даты")

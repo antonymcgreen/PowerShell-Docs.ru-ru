@@ -4,22 +4,22 @@ contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Синтаксис поиска по коллекции
 ms.openlocfilehash: aabcaa1f1b5b641ab5033c9ba2e358477c84a23b
-ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52742862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084306"
 ---
 # <a name="gallery-search-syntax"></a>Синтаксис поиска по коллекции
 
-Можно найти в коллекции PowerShell с помощью [веб-сайте коллекции PowerShell](https://www.powershellgallery.com/).
-Веб-сайт коллекции PowerShell содержит текстовое окно где слова, фразы и выражения можно использовать для сужения результатов поиска.
+Выполнять поиск в коллекции PowerShell на [веб-сайте коллекции PowerShell](https://www.powershellgallery.com/).
+На веб-сайте коллекции PowerShell есть текстовое окно поиска, где можно использовать слова, фразы и выражения с ключевыми словами, чтобы сузить результаты поиска.
 
 ## <a name="search-by-keywords"></a>Поиск по ключевым словам
 
     dsc azure sql
 
-Поиск пытается найти соответствующие документы, содержащие все три ключевые слова и вернуть соответствующие документы.
+Поисковая система пытается показать соответствующие документы, содержащие все три ключевые слова.
 
 ## <a name="search-using-phrases-and-keywords"></a>Поиск с использованием ключевых слов и фраз
 
@@ -40,7 +40,7 @@ ms.locfileid: "52742862"
 
     ID:PSReadline
     
-Находит все пакеты с Идентификатором, содержащая «PSReadline».
+Находит пакеты с идентификатором, содержащим PSReadline.
 
     Id:"AzureRM.Profile"
 
@@ -50,13 +50,13 @@ ms.locfileid: "52742862"
 
     Id:"azure"
 
-Это обеспечивает результаты, содержащие AzureRM.Profile "и «Azure.Storage более поздней».
+Этот фильтр выводит результаты, содержащие AzureRM.Profile и Azure.Storage.
 
 можно также выполнить поиск с несколькими ключевыми словами в одном поле; 
 
     id:azure tags:intellisense
 
-И может выполнять поиск фраз с использованием двойных кавычек:
+Можно выполнять поиск фраз с использованием двойных кавычек.
 
     id:"azure.storage"
 

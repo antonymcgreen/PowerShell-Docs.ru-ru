@@ -4,16 +4,16 @@ keywords: powershell,командлет
 title: Использование переменных для хранения объектов
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
 ms.openlocfilehash: d166ec58dc658c1b134030c9a9592249ee40d4f5
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086550"
 ---
 # <a name="using-variables-to-store-objects"></a>Использование переменных для хранения объектов
 
 PowerShell работает с объектами. PowerShell позволяет создавать именованные объекты, которые называются переменными.
-Имена переменных могут содержать, символ подчеркивания и любые буквы или цифры. В PowerShell перед именем переменной всегда используется символ \$.
+Имена переменных могут включать символ подчеркивания и любые буквенно-цифровые символы. В PowerShell перед именем переменной всегда используется символ \$.
 
 ## <a name="creating-a-variable"></a>Создание переменной
 

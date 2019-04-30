@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс Registry в DSC
 ms.openlocfilehash: e0ae1a4a27edc08c4e6ccd47786426917eb1ccb4
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076962"
 ---
 # <a name="dsc-registry-resource"></a>Ресурс Registry в DSC
 
-Применяется к: Windows PowerShell 4.0, Windows PowerShell 5.0_
+_Применяется к: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 Ресурс **Registry** в DSC Windows PowerShell предоставляет механизм управления разделами и значениями реестра на целевом узле.
 
@@ -42,7 +42,7 @@ Registry [string] #ResourceName
 | Hex| Указывает, будут ли данные выражены в шестнадцатеричном формате. Если свойство задано, данные значения DWORD/QWORD будут представлены в шестнадцатеричном формате. Недопустимо для других типов. Значение по умолчанию — **$false**.|
 | DependsOn| Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — **ResourceName**, а его тип — **ResourceType**, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`.|
 | ValueData| Данные для значения реестра.|
-| ValueType| Указывает тип значения. Поддерживаемые типы: Строка (REG_SZ), двоичный файл (REG-BINARY), Dword 32-разрядный (REG_DWORD), Qword 64-разрядный (REG_QWORD), несколько строк (REG_MULTI_SZ), Расширяемая строка (REG_EXPAND_SZ) |
+| ValueType| Указывает тип значения. Поддерживаемые типы: строковый (REG_SZ), двоичный (REG-BINARY), Dword — 32-битный (REG_DWORD), Qword — 64-битный (REG_QWORD), многостроковый (REG_MULTI_SZ), расширяемый строковый (REG_EXPAND_SZ). |
 
 ## <a name="example"></a>Пример
 

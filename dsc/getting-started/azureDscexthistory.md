@@ -4,11 +4,11 @@ ms.date: 06/21/2018
 keywords: dsc, powershell, azure, расширение
 title: Журнал версий расширения Azure DSC
 ms.openlocfilehash: 2c076e3beccc15e99af2327820916d7a4d28da68
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079750"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Журнал версий расширения Desired State Configuration Azure
 
@@ -50,8 +50,8 @@ ms.locfileid: "53402931"
 ### <a name="version-275"></a>Версия 2.75
 
 - **Дата выпуска:** 5 марта 2018 г.
-- **Поддержка ОС:** Клиент Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows 7, 8.1, 10, Nano Server
-- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Client 7, 8.1, 10, Nano Server
+- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
@@ -87,8 +87,8 @@ ms.locfileid: "53402931"
 ### <a name="version-270---272"></a>Версии с 2.70 по 2.72
 
 - **Дата выпуска:** 13 ноября 2017 г.
-- **Поддержка ОС:** Клиент Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows 7, 8.1, 10, Nano Server
-- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Client 7, 8.1, 10, Nano Server
+- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
@@ -97,8 +97,8 @@ ms.locfileid: "53402931"
 ### <a name="version-226"></a>Версия 2.26
 
 - **Дата выпуска:** 9 июня 2017 г.
-- **Поддержка ОС:** Клиент Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows 7, 8.1, 10, Nano Server
-- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Client 7, 8.1, 10, Nano Server
+- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
@@ -107,8 +107,8 @@ ms.locfileid: "53402931"
 ### <a name="version-225"></a>Версия 2.25
 
 - **Дата выпуска:** 2 июня 2017 г.
-- **Поддержка ОС:** Клиент Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows 7, 8.1, 10, Nano Server
-- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Client 7, 8.1, 10, Nano Server
+- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
@@ -117,8 +117,8 @@ ms.locfileid: "53402931"
 ### <a name="version-224"></a>Версия 2.24
 
 - **Дата выпуска:** 13 апреля 2017 г.
-- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
-- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Nano Server
+- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
@@ -127,8 +127,8 @@ ms.locfileid: "53402931"
 ### <a name="version-223"></a>Версия 2.23
 
 - **Дата выпуска:** 15 марта 2017 г.
-- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
-- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Nano Server
+- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
@@ -137,8 +137,8 @@ ms.locfileid: "53402931"
 ### <a name="version-222"></a>Версия 2.22
 
 - **Дата выпуска:** 8 февраля 2017 г.
-- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
-- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Nano Server
+- **Поддержка WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
@@ -147,9 +147,9 @@ ms.locfileid: "53402931"
 
 ### <a name="version-221"></a>Версия 2.21
 
-- **Дата выпуска:** 2 декабря 2016 г.
-- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
-- **Поддержка WMF:** WMF 5.1 обновления предварительной версии, WMF 5.0 RTM, WMF 4.0, WMF 4.0
+- **Дата выпуска:** 2 декабря 2016 г.
+- **Поддержка ОС:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Nano Server
+- **Поддержка WMF:** Предварительная версия WMF 5.1, WMF 5.0 RTM, обновление WMF 4.0, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка). В случае Nano Server роль DSC устанавливается на виртуальной машине.
 - **Новые возможности:**
@@ -159,8 +159,8 @@ ms.locfileid: "53402931"
 ### <a name="version-220"></a>Версия 2.20
 
 - **Дата выпуска:** 2 августа 2016 г.
-- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1
-- **Поддержка WMF:** WMF 5.1 обновления предварительной версии, WMF 5.0 RTM, WMF 4.0, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1)
+- **Поддержка WMF:** Предварительная версия WMF 5.1, WMF 5.0 RTM, обновление WMF 4.0, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
 - **Новые возможности:**
@@ -170,8 +170,8 @@ ms.locfileid: "53402931"
 ### <a name="version--219"></a>Версия 2.19
 
 - **Дата выпуска:** 3 июня 2016 г.
-- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1
-- **Поддержка WMF:** Обновление WMF 5.0 RTM, WMF 4.0, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1)
+- **Поддержка WMF:** WMF 5.0 RTM, обновление WMF 4.0, WMF 4.0
 - **Среда:** Azure, Azure для Китая, Azure для государственных организаций
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
 - **Новые возможности:**
@@ -180,8 +180,8 @@ ms.locfileid: "53402931"
 ### <a name="version-218"></a>Версия 2.18
 
 - **Дата выпуска:** 3 июня 2016 г.
-- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1
-- **Поддержка WMF:** Обновление WMF 5.0 RTM, WMF 4.0, WMF 4.0
+- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1)
+- **Поддержка WMF:** WMF 5.0 RTM, обновление WMF 4.0, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
 - **Новые возможности:**
@@ -191,20 +191,20 @@ ms.locfileid: "53402931"
 
 ### <a name="version-217"></a>Версия 2.17
 
-- **Дата выпуска:** 26 апреля 2016 г.
-- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1
-- **Поддержка WMF:** Обновление WMF 5.0 RTM, WMF 4.0, WMF 4.0
+- **Дата выпуска:** 26 апреля 2016 г.
+- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1)
+- **Поддержка WMF:** WMF 5.0 RTM, обновление WMF 4.0, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
 - **Новые возможности:**
   - Поддержка обновления WMF 4.0. Дополнительные сведения об обновлениях WMF 4.0 см. в [этом блоге](https://blogs.msdn.microsoft.com/powershell/2016/01/19/windows-management-framework-wmf-4-0-update-now-available-for-windows-server-2012-windows-server-2008-r2-sp1-and-windows-7-sp1/).
-  - Реализация логики повторов при ошибках, возникающих во время установки расширения DSC или во время применения конфигурации DSC после установки расширения. В рамках этого изменения расширение будет повторять установку в случае сбоя предыдущей установки или повторно активировать ранее неудачную конфигурацию DSC не более трех раз до перехода в состояние завершения (успех или ошибка) либо до поступления нового запроса. Если работа расширения завершается ошибкой из-за недопустимых параметров или введенных данных, повторная попытка не предпринимается. В этом случае расширение необходимо вызывать еще раз с помощью нового запроса и правильных параметров пользователя. Примечание. Расширение DSC является зависимым от агента виртуальных Машин для повторных попыток. Агент виртуальных машин Azure вызывает расширение с использованием последнего неудачного запроса, пока оно не перейдет в состояние успеха или ошибки.
+  - Реализация логики повторов при ошибках, возникающих во время установки расширения DSC или во время применения конфигурации DSC после установки расширения. В рамках этого изменения расширение будет повторять установку в случае сбоя предыдущей установки или повторно активировать ранее неудачную конфигурацию DSC не более трех раз до перехода в состояние завершения (успех или ошибка) либо до поступления нового запроса. Если работа расширения завершается ошибкой из-за недопустимых параметров или введенных данных, повторная попытка не предпринимается. В этом случае расширение необходимо вызывать еще раз с помощью нового запроса и правильных параметров пользователя. Примечание. Выполнение повторных попыток расширения DSC зависит от агента виртуальных машин. Агент виртуальных машин Azure вызывает расширение с использованием последнего неудачного запроса, пока оно не перейдет в состояние успеха или ошибки.
 
 ### <a name="version-216"></a>Версия 2.16
 
-- **Дата выпуска:** 21 апреля 2016 г.
-- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1
-- **Поддержка WMF:** WMF 5.0 RTM, WMF 4.0
+- **Дата выпуска:** 21 апреля 2016 г.
+- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1)
+- **Поддержка WMF:** WMF 5.0 RTM, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
 - **Новые возможности:**
@@ -213,9 +213,9 @@ ms.locfileid: "53402931"
 
 ### <a name="version-215"></a>Версия 2.15
 
-- **Дата выпуска:** 14 марта 2016 г.
-- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1
-- **Поддержка WMF:** WMF 5.0 RTM, WMF 4.0
+- **Дата выпуска:** 14 марта 2016 г.
+- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1)
+- **Поддержка WMF:** WMF 5.0 RTM, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
 - **Новые возможности:**
@@ -226,9 +226,9 @@ ms.locfileid: "53402931"
 
 ### <a name="version-214"></a>Версия 2.14
 
-- **Дата выпуска:** 25 февраля 2016 г.
-- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1
-- **Поддержка WMF:** WMF 5.0 RTM, WMF 4.0
+- **Дата выпуска:** 25 февраля 2016 г.
+- **Поддержка ОС:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 с пакетом обновления 1 (SP1)
+- **Поддержка WMF:** WMF 5.0 RTM, WMF 4.0
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
 - **Новые возможности:**

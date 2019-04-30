@@ -4,11 +4,11 @@ keywords: powershell,командлет
 title: Получение информации о командах
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
 ms.openlocfilehash: 7af83e3a0e776d96e580b442430357b4ea063a72
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057712"
 ---
 # <a name="getting-information-about-commands"></a>Получение информации о командах
 
@@ -74,7 +74,7 @@ Get-Command *
 > Звездочка (\*) используется для сопоставления подстановочных знаков в аргументах командной строки PowerShell. Знак "\*" означает "сопоставление одного или нескольких символов". Чтобы найти все команды, которые начинаются с буквы "a", введите `Get-Command a*`. В отличие от сопоставления подстановочных знаков в **cmd.exe** подстановочный знак PowerShell будет также сопоставлять точку.
 
 Используйте параметр **CommandType** командлета `Get-Command`, чтобы получить собственные команды других типов.
-.
+командлетов.
 
 Чтобы получить псевдонимы команд, которые являются назначенными псевдонимами команд, введите:
 

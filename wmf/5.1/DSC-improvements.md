@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Усовершенствования DSC в WMF 5.1
 ms.openlocfilehash: 92f82d62550e105a187fd7c0c58b49367c646a7e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085590"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Усовершенствования в настройке требуемого состояния (DSC) в WMF 5.1
 
@@ -206,12 +206,12 @@ InstallWindowsFeature -ConfigurationData $configData
 ### <a name="how-to-sign-configuration-and-module"></a>Подписывание конфигурации и модулей
 
 ***
-* Файлы конфигурации (. MOF-файлы): Существующий командлет PowerShell [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) расширена поддержка подписывания MOF-файлы.
-* Модули Подписывания модулей необходимо подписать каталог соответствующего модуля, выполнив следующие действия:
-    1. Создайте файл каталога: Файл каталога содержит коллекцию криптографических хэшей или отпечатков.
+* Файлы конфигурации (MOF-файлы): поддержка подписывания MOF-файлов была добавлена к функциям существующего командлета PowerShell, [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).
+* Модули: для подписывания модулей необходимо подписать каталог соответствующего модуля, выполнив следующие действия.
+    1. Создайте файл каталога: файл каталога содержит коллекцию криптографических хэшей или отпечатков.
        Каждый отпечаток соответствует файлу, включенному в модуль.
        Был добавлен новый командлет [New-FileCatalog](https://technet.microsoft.com/library/cc732148.aspx), благодаря которому пользователи могут создавать файлы каталогов для своих модулей.
-    2. Подпишите файл каталога: Используйте [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) для подписания файла, каталога.
+    2. Подпишите файл каталога: подпишите файл каталога с помощью командлета [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).
     3. Поместите файл каталога в папку модуля.
 По соглашению файл каталога модуля должен находиться в папке модуля и имя файла каталога модуля должно совпадать с именем модуля.
 

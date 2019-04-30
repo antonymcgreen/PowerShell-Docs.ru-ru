@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс Archive в DSC
 ms.openlocfilehash: d5ccd242d000a0907c6768f30923764be6bf20a3
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077557"
 ---
 # <a name="dsc-archive-resource"></a>Ресурс Archive в DSC
 
-> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Ресурс Archive в DSC Windows PowerShell предоставляет механизм распаковки файлов архивов (ZIP) в указанную папку.
 

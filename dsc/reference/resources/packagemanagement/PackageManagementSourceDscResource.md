@@ -3,11 +3,11 @@ ms.date: 06/20/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс PackageManagementSource DSC
 ms.openlocfilehash: e51b5318288bef458567dd4b58d17caaea3ed69b
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077591"
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>Ресурс PackageManagementSource DSC
 
@@ -42,7 +42,7 @@ PackageManagementSource [String] #ResourceName
 | ProviderName| Указывает имя поставщика OneGet, с помощью которого вы можете взаимодействовать с источником пакета.|
 | SourceLocation| Указывает URI источника пакета.|
 | Ensure| Определяет, будет ли зарегистрирован источник пакета или его регистрация будет отменена.|
-| InstallationPolicy| Используется поставщиками, такими как встроенный поставщик NuGet. Определяет, доверяете ли вы источнику пакета.  или . «Без доверия», «доверенных».|
+| InstallationPolicy| Используется поставщиками, такими как встроенный поставщик NuGet. Определяет, доверяете ли вы источнику пакета. Одно из двух значений: "Untrusted", "Trusted".|
 | SourceCredential| Предоставляет доступ к пакету в удаленном источнике.|
 
 ## <a name="example"></a>Пример

@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование конструктора ресурсов
 ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076673"
 ---
 # <a name="using-the-resource-designer-tool"></a>Использование конструктора ресурсов
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Конструктор ресурсов — это набор командлетов, предоставляемых модулем **xDscResourceDesigner** и упрощающих создание ресурсов настройки требуемого состояния (DSC) Windows PowerShell. Командлеты в этом ресурсе помогают создать MOF-схему, модуль сценария и структуру папок для нового ресурса. Дополнительные сведения о ресурсах DSC см. в статье [Встроенные ресурсы настройки требуемого состояния (DSC) Windows PowerShell](authoringResource.md).
 В этом разделе мы создадим ресурс DSC, управляющий пользователями Active Directory.

@@ -3,65 +3,65 @@ title: Репликация функций интегрированной сре
 description: Репликация функций интегрированной среды скриптов в Visual Studio Code
 ms.date: 08/06/2018
 ms.openlocfilehash: 983da850c13d72bcdc7b2d33970c6e9e06b3d869
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058528"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Репликация функций интегрированной среды скриптов в Visual Studio Code
 
-Хотя модуль PowerShell для VSCode не поиск полный функционально полностью интегрированной среде Сценариев PowerShell, позволяющие упростить процесс VSCode более естественным для пользователей интегрированной среды сценариев нет компонентов.
+В то время, как расширение PowerShell для VSCode не совсем совместимо с интегрированной средой сценариев PowerShell, существуют функции, использование которых позволит пользователям интегрированной среды сценариев почувствовать себя более свободно в VSCode.
 
-В этом документе пытается получить список параметров, которые можно настроить в Visual Studio Code для улучшить интерфейс чуть более привычной, по сравнению с в интегрированную среду сценариев пользователя.
+В этой статье приведен список параметров, настраиваемых в VSCode, которые смогут облегчить ее использование для пользователей интегрированной среды сценариев.
 
 ## <a name="key-bindings"></a>Сочетания клавиш
 
-| Функция                              | Интегрированная среда Сценариев привязки                  | VSCode привязки                              |
+| Функция                              | Привязка интегрированной среды сценариев                  | Привязка VSCode                              |
 | ----------------                      | -----------                  | --------------                              |
-| Прерывания и прерывания отладчика          | <kbd>CTRL</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
-| Выполнить текущий текст/выделенной строки | <kbd>F8</kbd>                | <kbd>F8</kbd>                               |
-| Список доступных фрагментов               | <kbd>CTRL</kbd>+<kbd>J</kbd> | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> |
+| Прерывание и остановка отладчика          | <kbd>CTRL</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
+| Выполнение текущей строки / выделение текста | <kbd>F8</kbd>                | <kbd>F8</kbd>                               |
+| Список доступных фрагментов               | <kbd>CTRL</kbd>+<kbd>J</kbd> | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>J</kbd> |
 
-### <a name="custom-key-bindings"></a>Пользовательские привязки ключа
+### <a name="custom-key-bindings"></a>Сочетания клавиш, настраиваемые пользователем
 
-Вы можете [настроить собственные сочетания клавиш](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings) в VSCode также.
+Также в VSCode можно [настраивать собственные сочетания клавиш](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings).
 
 ## <a name="tab-completion"></a>Заполнение нажатием клавиши TAB
 
-Чтобы включить более интегрированной среды Сценариев по принципу нажатием клавиши TAB, добавьте этот параметр:
+Чтобы включить заполнение нажатием клавиши TAB (похожее на интегрированную среду сценариев), добавьте следующий параметр.
 
 ```json
 "editor.tabCompletion": "on"
 ```
 
 > [!NOTE]
-> Этот параметр был добавлен непосредственно в VSCode (а не в расширении). Его поведение определяется непосредственно VSCode и не может изменяться с помощью расширения.
+> Данный параметр был добавлен в VSCode напрямую (вместо расширения). Его поведение определяется напрямую VSCode. Его невозможно изменить с помощью расширения.
 
-## <a name="no-focus-on-console-when-executing"></a>Нет сосредоточиться на консоль при выполнении
+## <a name="no-focus-on-console-when-executing"></a>Отсутствие фокуса на консоли во время выполнения
 
-Чтобы полностью сосредоточиться в редакторе, при выполнении с <kbd>F8</kbd>:
+Чтобы сохранить фокус в редакторе во время выполнения с помощью клавиши <kbd>F8</kbd>, выполните следующее.
 
 ```json
 "powershell.integratedConsole.focusConsoleOnExecute": false
 ```
 
-По умолчанию используется `true` для специальных возможностей.
+Для специальных возможностей значением по умолчанию будет `true`.
 
-## <a name="dont-start-integrated-console-on-startup"></a>Не выполнять интегрированной консоли при запуске
+## <a name="dont-start-integrated-console-on-startup"></a>Интегрированную консоль не следует запускать при начальной загрузке
 
-Чтобы остановить интегрированной консоли при запуске, установите:
+Чтобы остановить запуск интегрированной консоли при начальной загрузке, установите следующий параметр.
 
 ```json
 "powershell.integratedConsole.showOnStartup": false
 ```
 
 > [!NOTE]
-> Фоновый процесс PowerShell по-прежнему начнется с момента, предоставляющий возможности IntelliSense, анализ сценария, навигацию по символам и т. д. Однако консоль не будет отображаться.
+> Тем не менее фоновый процесс PowerShell все равно запустится, так как он предоставляет IntelliSense, анализ сценариев, навигацию по символам и т. д. Консоль не будет отображаться.
 
-## <a name="assume-files-are-powershell-by-default"></a>Предположим, что файлы являются PowerShell по умолчанию
+## <a name="assume-files-are-powershell-by-default"></a>Предположим, что по умолчанию файлы относятся к PowerShell
 
-Чтобы сделать новый/без названия файлов, зарегистрируйте как PowerShell, по умолчанию:
+Чтобы создать новые файлы без имени, по умолчанию следует зарегистрироваться в качестве PowerShell.
 
 ```json
 "files.defaultLanguage": "powershell"
@@ -69,46 +69,46 @@ ms.locfileid: "55681947"
 
 ## <a name="color-scheme"></a>Цветовая схема
 
-Существует ряд темы интегрированной среды Сценариев для VSCode сделать гораздо больше похожи на интегрированную среду Скриптов редактора.
+Существует большое количество тем интегрированной среды сценариев, которые доступны для VSCode, предназначенные для того, чтобы сделать редактор более похожим на интегрированную среду сценариев.
 
-В [Палитра команд] тип `theme` для получения `Preferences: Color Theme` и нажмите клавишу <kbd>ввод</kbd>.
+В [Палитра команд] введите `theme`, чтобы получить `Preferences: Color Theme`, а затем нажмите <kbd>ВВОД</kbd>.
 В раскрывающемся списке выберите `PowerShell ISE`.
 
-В настройках можно задать эту тему:
+Эту тему можно установить в параметрах следующим образом.
 
 ```json
 "workbench.colorTheme": "PowerShell ISE"
 ```
 
-## <a name="powershell-command-explorer"></a>Обозреватель команды PowerShell
+## <a name="powershell-command-explorer"></a>Команды обозревателя PowerShell
 
-Благодаря работе [ @corbob ](https://github.com/corbob), расширения PowerShell имеет об основах explorer свои собственные команды.
+Благодаря работе, проделанной [@corbob](https://github.com/corbob), теперь расширение PowerShell обладает начальными командами обозревателя.
 
-В [Палитра команд], введите `PowerShell Command Explorer` и нажмите клавишу <kbd>ввод</kbd>.
+В [Палитра команд] введите `PowerShell Command Explorer` и нажмите <kbd>ВВОД</kbd>.
 
-## <a name="open-in-the-ise"></a>Откройте в среде ISE
+## <a name="open-in-the-ise"></a>Открытие в интегрированной среде сценариев
 
-Если вы в итоге нужно открыть файл в интегрированной среде Сценариев в любом случае, вы можете использовать <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd>.
+Если вам понадобится открыть файл в интегрированной среде сценариев, то вы также можете использовать <kbd>SHIFT</kbd>+<kbd>ALT</kbd>+<kbd>P</kbd>.
 
 ## <a name="other-resources"></a>Другие ресурсы
 
-- имеет 4sysops [хорошая статья](https://4sysops.com/archives/make-visual-studio-code-look-and-behave-like-powershell-ise/) о настройке Visual Studio Code для быть больше похожи на интегрированную среду Сценариев.
-- Майк Ф. Роббинс имеет [потрясающее сообщение](https://mikefrobbins.com/2017/08/24/how-to-install-visual-studio-code-and-configure-it-as-a-replacement-for-the-powershell-ise/) по настройке VSCode.
-- Узнать, имеет PowerShell [отличную записи](https://www.learnpwsh.com/setup-vs-code-for-powershell/) о том, как VSCode установки для PowerShell.
+- На веб-сайте 4sysops можно найти [замечательную статью](https://4sysops.com/archives/make-visual-studio-code-look-and-behave-like-powershell-ise/) о настройках VSCode, которые приблизят ее к интегрированной среде сценариев.
+- Также Майк Ф. Роббинс (Mike F Robbins) написал [отличную статью](https://mikefrobbins.com/2017/08/24/how-to-install-visual-studio-code-and-configure-it-as-a-replacement-for-the-powershell-ise/) о настройке VSCode.
+- Во время изучения PowerShell можно ознакомится с [информативной статьей](https://www.learnpwsh.com/setup-vs-code-for-powershell/) о настройке VSCode для работы с PowerShell.
 
 ## <a name="more-settings"></a>Дополнительные параметры
 
-Если вы знаете Дополнительные способы повышения VSCode показаться более знакомыми пользователям интегрированной среды Сценариев, участвуют в этом документе. Если вы ищете конфигурации совместимости, но не удается найти любым способом, чтобы включить его, [сообщите о них](https://github.com/PowerShell/vscode-powershell/issues/new/choose) и за ответами!
+Если вам известны дополнительные способы сделать VSCode более удобным для пользователей интегрированной среды разработки, внесите их в этот документ. Если существует конфигурация совместимости, которую вы не можете включить, не медлите и [создайте запрос](https://github.com/PowerShell/vscode-powershell/issues/new/choose).
 
-Мы всегда рады принимать запросы на Вытягивание и вклад также!
+Мы всегда рады содействию и запросам на включение внесенных изменений.
 
-## <a name="vscode-tips"></a>Советы по VSCode
+## <a name="vscode-tips"></a>Советы по работе в VSCode
 
 ### <a name="command-palette"></a>Палитра команд
 
-<kbd>F1</kbd> или <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (<kbd>Cmd</kbd> + <kbd> Сдвинуть</kbd>+<kbd>P</kbd> в Mac OS)
+<kbd>F1</kbd> или <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> (<kbd>Cmd</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> на macOS)
 
-Удобным способом выполнения команд в VSCode.
-Дополнительные сведения см. в разделе [документация VSCode](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
+Удобный способ выполнения команд в VSCode.
+Дополнительные сведения см. в [документации по VSCode](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
 
 [Палитра команд]: #command-palette

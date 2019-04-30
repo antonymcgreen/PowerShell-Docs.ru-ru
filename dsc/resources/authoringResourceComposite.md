@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Составные ресурсы — использование конфигурации DSC как ресурса
 ms.openlocfilehash: 2823d05e0c8feb2933ca691f9ab5149ace2f7ee3
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076690"
 ---
-# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Составные ресурсы Использование конфигурации DSC как ресурса
+# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Составные ресурсы: использование конфигурации DSC как ресурса
 
-> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
 На практике конфигурации часто становятся длинными и сложными — вызывают множество разных ресурсов и задают большое количество свойств. Для решения этой проблемы можно использовать настройку требуемого состояния (DSC) Windows PowerShell как ресурс для других конфигураций. Мы называем это составным ресурсом. Составной ресурс — это конфигурация DSC с возможностью настройки параметров. Параметры конфигурации выступают как свойства ресурса. Конфигурация сохраняется как файл с расширением **.schema.psm1** и применяется вместо MOF-схемы и ресурса сценария в типовом ресурсе DSC (дополнительные сведения о ресурсах DSC см. в статье [Ресурсы настройки требуемого состояния Windows PowerShell](resources.md).
 
@@ -190,7 +190,7 @@ configuration RenameVM
 
 ## <a name="supporting-psdscrunascredential"></a>Поддержка PsDscRunAsCredential
 
->**Примечание**. **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
+>**Примечание**. **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
 
 Свойство **PsDscRunAsCredential** может использоваться в блоке ресурса [конфигураций DSC](../configurations/configurations.md), чтобы указать, что ресурс должен выполняться с указанным набором учетных данных.
 Дополнительные сведения см. в разделе [Запуск DSC с учетными данными пользователя](../configurations/runAsUser.md).

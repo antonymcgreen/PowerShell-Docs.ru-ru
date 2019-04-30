@@ -3,11 +3,11 @@ ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Установка и использование Windows PowerShell Web Access
 ms.openlocfilehash: 53558f9be5065c7f630f06e535ddab4d7ad72d9e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58056725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058572"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Установка и использование Windows PowerShell Web Access
 
@@ -61,7 +61,7 @@ Windows PowerShell Web Access поддерживает перечисленны�
 - Windows Phone 7 и 7.5
 - Google Android WebKit 3.1 Browser Android 2.2.1 (Kernel 2.6)
 - Apple Safari для операционной системы 5.0.1 для iPhone
-- Apple Safari для операционной системы 5.0.1 для iPad
+- Apple Safari для операционной системы 5.0.1 для iPad 2
 
 ### <a name="browser-requirements"></a>Требования к браузерам
 

@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: коллекция,powershell,psgallery,GDPR
 title: Соответствие коллекции PowerShell регламенту GDPR
 ms.openlocfilehash: fb1191d8a1cd12d5994e41238c384eb504d0c261
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084238"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>Соответствие коллекции PowerShell регламенту GDPR
 
@@ -53,8 +53,8 @@ GDPR применяется независимо от того, где вы на
 Через 90 дней сообщения удаляются.
 
 Вы можете запросить копии всех сообщений, которыми вы обменивались с группой коллекции PowerShell со своего адреса электронной почты за последние 90 дней.
-Чтобы запросить эту переписку, отправьте на адрес [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com) сообщение электронной почты с заголовком DSR Request for emails relating to this account (Запрос DSR на получение сообщений электронной почты, связанных с этой учетной записью).
-В тексте сообщения укажите, какую именно информацию вы запрашиваете (например, попросите отправить все сообщения электронной почты, отправленные или полученные с помощью этого адреса электронной почты). Все сообщения, связанные с вашим адресом электронной почты, за 90 дней будут отправлены вам в течение 7 рабочих дней.
+Чтобы запросить это соответствие, напишите по адресу [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com), указав в теме сообщения: "DSR Request for emails relating to this account" (DSR-запрос для сообщений электронной почты, связанных с этой учетной записью).
+В тексте сообщения укажите, какие сведения вам нужны (например: Please send all emails sent to or received from this email address) (перешлите все сообщения электронной почты отправляемых или получаемых с этого адреса электронной почты). Все сообщения, связанные с вашим адресом электронной почты, за 90 дней будут отправлены вам в течение 7 рабочих дней.
 
 ### <a name="powershell-gallery-account-information"></a>Информация об учетной записи коллекции PowerShell
 
@@ -92,7 +92,7 @@ Save-Script Get-repository psgallery
 
 ## <a name="deleting-personal-data-from-the-powershell-gallery"></a>Удаление персональных данных из коллекции PowerShell
 
-Чтобы удалить учетную запись коллекции PowerShell или любой принадлежащий вам пакет в этой коллекции, отправьте на адрес cgadmin@microsoft.com сообщение электронной почты с заголовком GDPR Request for items relating to this account (Запрос GDPR по элементам, связанным с этой учетной записью).
+Чтобы удалить учетную запись коллекции PowerShell или любой принадлежащий вам пакет в этой коллекции, отправьте на адрес cgadmin@microsoft.com сообщение электронной почты, указав теме сообщения GDPR Request for items relating to this account (Запрос GDPR по элементам, связанным с этой учетной записью).
 В тексте сообщения укажите, какую информацию требуется удалить. Например:
 
 - попросите удалить версию x.y.z своего пакета "имя пакета";
