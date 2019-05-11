@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], described
 ms.assetid: 0aa32589-4447-4ead-a5dd-a3be99113140
 caps.latest.revision: 21
-ms.openlocfilehash: f8a8c9300d1ac811c7fbbf7050dd24f78306db8f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 14200aed2fb94c37c8b8af29650f602945e7ac1c
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068476"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229365"
 ---
 # <a name="cmdlet-overview"></a>Общие сведения о командлетах
 
@@ -38,19 +38,53 @@ ms.locfileid: "62068476"
 
 В документации по командлетам Windows PowerShell часто используются следующие термины:
 
-- **Атрибут командлета**: Атрибут .NET Framework, который используется для объявления в классе кандлетов как командлет. Несмотря на то, что Windows PowerShell использует несколько атрибутов, которые не являются обязательными, командлет атрибут является обязательным. Дополнительные сведения об этом атрибуте см. в разделе [объявление атрибута командлет](./cmdlet-attribute-declaration.md).
+### <a name="cmdlet-attribute"></a>Атрибуты командлета
 
-- **Параметр командлета**: Открытые свойства, которые определяют параметры, которые доступны пользователю или приложению, на котором выполняется командлет. Командлеты можно установить обязательные, именованный, позиционные, и *переключения* параметров. Параметры-переключатели позволяют определять параметры, которые вычисляются только в том случае, если параметры указываются в вызове. Дополнительные сведения о различных типах параметров, см. в разделе [параметры командлета](./cmdlet-parameters.md).
+Атрибут .NET Framework, который используется для объявления в классе кандлетов как командлет.
+Несмотря на то, что PowerShell использует несколько атрибутов, которые не являются обязательными, командлет атрибут является обязательным.
+Дополнительные сведения об этом атрибуте см. в разделе [объявление атрибута командлет](cmdlet-attribute-declaration.md).
 
-- **Набор параметров**: Группа параметров, которые можно использовать в одной команде для выполнения определенного действия. У командлета может быть несколько наборов параметров, но каждый набор параметров должен иметь по крайней мере один параметр, который является уникальным. Структуры хороший командлетов строго предполагает, что параметр unique командлета также быть обязательным параметром. Дополнительные сведения о наборах параметров см. в разделе [командлет задает параметр](./cmdlet-parameter-sets.md).
+### <a name="cmdlet-parameter"></a>Параметр командлета
 
-- **Динамический параметр**: Параметр, который добавляется в командлет во время выполнения. Как правило динамические параметры добавляются в командлет при другой установлено определенное значение. Дополнительные сведения о динамических параметров, см. в разделе [динамические параметры командлета](./cmdlet-dynamic-parameters.md).
+Открытые свойства, которые определяют параметры, которые доступны пользователю или приложению, на котором выполняется командлет.
+Командлеты можно установить обязательные, именованный, позиционные, и *переключения* параметров.
+Параметры-переключатели позволяют определять параметры, которые вычисляются только в том случае, если параметры указываются в вызове.
+Дополнительные сведения о различных типах параметров, см. в разделе [параметры командлета](cmdlet-parameters.md).
 
-- **Метод обработки ввода**: Метод, который командлет может использовать для обработки записей, получаемых в качестве входных данных. Методы обработки ввода включают в себя [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод, [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метода [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод и [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) метод. При реализации командлета, необходимо переопределить хотя бы один из [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)и [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) методы. Как правило [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод — метод, который вы переопределить, так как он вызывается для каждой записи, которая обрабатывает командлет. Напротив [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод и [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метода вызываются один раз для выполнения Предварительная обработка или последующей обработки записей. Дополнительные сведения об этих методах см. в разделе [методы обработки ввода](./cmdlet-input-processing-methods.md).
+### <a name="parameter-set"></a>Набор параметров
 
-- **Функция ShouldProcess**: Windows PowerShell позволяет создавать командлеты, которые пользователю запрос на отзыв прежде, чем командлет вносит изменение в систему. Чтобы использовать эту функцию, командлет необходимо объявить, что он поддерживает возможность ShouldProcess, при объявлении атрибута командлет, и необходимо вызвать командлет [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) методы в метод обработки входных данных. Дополнительные сведения о том, как для поддержки функций ShouldProcess см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
+Группа параметров, которые можно использовать в одной команде для выполнения определенного действия.
+У командлета может быть несколько наборов параметров, но каждый набор параметров должен иметь по крайней мере один параметр, который является уникальным.
+Структуры хороший командлетов строго предполагает, что параметр unique командлета также быть обязательным параметром.
+Дополнительные сведения о наборах параметров см. в разделе [командлет задает параметр](cmdlet-parameter-sets.md).
 
-- **Транзакции**: Логическая группа команд, которые обрабатываются как одну задачу. Задача будет автоматически выполнена Если команд в группе завершается ошибкой, и у пользователя есть возможность принять или отклонить действия, выполняемые в рамках транзакции. Для участия в транзакции, командлет необходимо объявить, что он поддерживает транзакции, при объявлении атрибута командлет. Поддержка транзакций появилась в Windows PowerShell 2.0. Дополнительные сведения о транзакциях см. в разделе [транзакции Windows PowerShell](http://msdn.microsoft.com/en-us/74d7bac7-bc53-49f1-a47a-272e8da84710).
+### <a name="dynamic-parameter"></a>Динамический параметр
+
+Параметр, который добавляется в командлет во время выполнения.
+Как правило динамические параметры добавляются в командлет при другой установлено определенное значение.
+Дополнительные сведения о динамических параметров, см. в разделе [динамические параметры командлета](cmdlet-dynamic-parameters.md).
+
+### <a name="input-processing-method"></a>Метод обработки входных данных
+
+Метод, который командлет может использовать для обработки записей, получаемых в качестве входных данных.
+Методы обработки ввода включают в себя [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод, [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метода [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метод и [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) метод. При реализации командлета, необходимо переопределить хотя бы один из [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)и [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) методы.
+Как правило [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод — метод, который вы переопределить, так как он вызывается для каждой записи, которая обрабатывает командлет.
+Напротив [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод и [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) метода вызываются один раз для выполнения Предварительная обработка или последующей обработки записей.
+Дополнительные сведения об этих методах см. в разделе [методы обработки ввода](cmdlet-input-processing-methods.md).
+
+### <a name="shouldprocess-feature"></a>Функция ShouldProcess
+
+PowerShell позволяет создавать командлеты, которые пользователю запрос на отзыв прежде, чем командлет вносит изменение в систему.
+Чтобы использовать эту функцию, командлет необходимо объявить, что он поддерживает возможность ShouldProcess, при объявлении атрибута командлет, и необходимо вызвать командлет [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) методы в метод обработки входных данных.
+Дополнительные сведения о том, как для поддержки функций ShouldProcess см. в разделе [запрашивает подтверждение](requesting-confirmation-from-cmdlets.md).
+
+### <a name="transaction"></a>Транзакции
+
+Логическая группа команд, которые обрабатываются как одну задачу.
+Задача будет автоматически выполнена Если команд в группе завершается ошибкой, и у пользователя есть возможность принять или отклонить действия, выполняемые в рамках транзакции.
+Для участия в транзакции, командлет необходимо объявить, что он поддерживает транзакции, при объявлении атрибута командлет.
+Поддержка транзакций появилась в Windows PowerShell 2.0.
+Дополнительные сведения о транзакциях см. в разделе [как транзакции поддержки](how-to-support-transactions.md).
 
 ## <a name="how-cmdlets-differ-from-commands"></a>Командлеты отличаются от команд
 

@@ -8,26 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
-ms.openlocfilehash: 7c2bfca50de4645676eafc01bbf23d9797e8b758
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082198"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229448"
 ---
 # <a name="installing-a-powershell-module"></a>Установка модуля PowerShell
 
-После создания модуля PowerShell, скорее всего требуется установить модуль в системе, разработанных вами или другими может использовать его. Вообще говоря это просто состоит из копирования файлы модулей (ie, .psm1, или двоичную сборку, манифеста модуля и другие связанные файлы) на каталог на этом компьютере. Для очень небольшого проекта это может быть сложнее, чем копирование и вставка файлов с помощью обозревателя Windows на одном удаленном компьютере; Тем не менее для больших решений вы можете использовать более сложный процесс установки. Независимо от того, как можно получить модуль в систему PowerShell можно использовать ряд приемов, которые помогут пользователям находить и использовать модули. (Дополнительные сведения см. в разделе [импорт модуля PowerShell](./importing-a-powershell-module.md).) Таким образом основная проблема для установки является обеспечение, что PowerShell будут иметь возможность найти ваш модуль.
-
-В этом разделе содержит следующие разделы:
-
-- Правила для установки модулей
-
-- Место установки модулей
-
-- Установка нескольких версий модуля
-
-- Конфликта имен команд обработки
+После создания модуля PowerShell, скорее всего требуется установить модуль в системе, разработанных вами или другими может использовать его. Вообще говоря это состоит из копирования файлы модулей (ie, .psm1, или двоичную сборку, манифеста модуля и другие связанные файлы) на каталог на этом компьютере. Для очень небольшого проекта это может быть сложнее, чем копирование и вставка файлов с помощью обозревателя Windows на одном удаленном компьютере; Тем не менее для больших решений вы можете использовать более сложный процесс установки. Независимо от того, как можно получить модуль в систему PowerShell можно использовать ряд приемов, которые помогут пользователям находить и использовать модули. Таким образом основная проблема для установки является обеспечение, что PowerShell будут иметь возможность найти ваш модуль. Дополнительные сведения см. в разделе [импорт модуля PowerShell](./importing-a-powershell-module.md).
 
 ## <a name="rules-for-installing-modules"></a>Правила для установки модулей
 
@@ -41,14 +31,14 @@ ms.locfileid: "62082198"
 
 По умолчанию **PSModulePath** значение переменной среды содержит следующие системные и каталоги пользователей модуля, но можно добавить и изменить его.
 
-- $PSHome\Modules (%Windir%\System32\WindowsPowerShell\v1.0\Modules)
+- `$PSHome\Modules` (%Windir%\System32\WindowsPowerShell\v1.0\Modules)
 
   > [!WARNING]
   > Это расположение зарезервирован для модулей, входящие в состав Windows. Не следует устанавливать модули в этом расположении.
 
-- $Home\Documents\WindowsPowerShell\Modules (%UserProfile%\Documents\WindowsPowerShell\Modules)
+- `$Home\Documents\WindowsPowerShell\Modules` (%UserProfile%\Documents\WindowsPowerShell\Modules)
 
-- $Env:ProgramFiles\WindowsPowerShell\Modules (%ProgramFiles%\WindowsPowerShell\Modules)
+- `$Env:ProgramFiles\WindowsPowerShell\Modules` (%ProgramFiles%\WindowsPowerShell\Modules)
 
   Чтобы получить значение **PSModulePath** переменной среды, используйте один из следующих команд.
 
@@ -60,7 +50,6 @@ ms.locfileid: "62082198"
   Чтобы добавить путь к модулю значение **PSModulePath** переменной среды значение, используйте следующий формат команды. В этом формате используются **SetEnvironmentVariable** метод **System.Environment** класс для изменения независимый от сеанса к **PSModulePath** среды переменная.
 
   ```powershell
-
   #Save the current value in the $p variable.
   $p = [Environment]::GetEnvironmentVariable("PSModulePath")
 
@@ -77,7 +66,7 @@ ms.locfileid: "62082198"
 
 ### <a name="use-the-correct-module-directory-name"></a>Укажите имя каталога правильный модуль
 
-Модуль «правильного» — это модуль, хранится в каталог, содержащий имя, совпадающее с именем базовое имя хотя бы один файл в каталоге модуля. Если модуль не имеет правильный формат, Windows PowerShell не распознает его как модуль.
+Модуль правильного формата — это модуль, хранится в каталог, содержащий имя, совпадающее с именем базовое имя хотя бы один файл в каталоге модуля. Если модуль не имеет правильный формат, Windows PowerShell не распознает его как модуль.
 
 «Базовое имя «файла является имя без расширения имени файла. В модуле правильный формат имя каталога, который содержит файлы модуля должно соответствовать имени базового, по крайней мере одного файла в модуле.
 
@@ -122,9 +111,7 @@ C:\Program Files
 
 Если создать собственный модуль или получить модуль от другой стороны, таких как веб-сайт сообщества Windows PowerShell, и требуется, чтобы модуль был доступен для учетной записи пользователя только, установите модуль в каталоге модулей конкретного пользователя.
 
-```
-$home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
-```
+`$home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>`
 
 Каталог Modules конкретного пользователя добавляется к значению **PSModulePath** переменной среды по умолчанию.
 
@@ -132,9 +119,7 @@ $home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
 
 Если требуется, чтобы модуль был доступен всем учетным записям пользователей на компьютере, установите модуль в папке Program Files.
 
-```
-$Env:ProgramFiles\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
-```
+`$Env:ProgramFiles\WindowsPowerShell\Modules\<Module Folder>\<Module Files>`
 
 > [!NOTE]
 > Расположение программных файлов добавляется к значению переменной среды PSModulePath по умолчанию в Windows PowerShell 4.0 и более поздних версий. Для более ранних версиях Windows PowerShell, можно вручную создать ((%ProgramFiles%\WindowsPowerShell\Modules) расположение Program Files и добавить этот путь в переменную среды PSModulePath, как описано выше.
@@ -160,7 +145,7 @@ C:\Program Files
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
-$p += "C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
+$p += ";C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
@@ -168,7 +153,7 @@ $p += "C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 
 Если модуль используется в нескольких компонентах продукта или несколько версий продукта, установите модуль в подкаталоге каталога конкретного модуля в подкаталог в каталоге %ProgramFiles%\Common Files\Modules.
 
-В следующем примере в подкаталоге каталога Fabrikam в подкаталог в каталоге %ProgramFiles%\Common Files\Modules установлен модуль Fabrikam. Обратите внимание на то, что каждый модуль находится в свой собственный подкаталог в подкаталоге модулей.
+В следующем примере Fabrikam модуль устанавливается в подкаталоге каталога Fabrikam `%ProgramFiles%\Common Files\Modules` подкаталог. Обратите внимание на то, что каждый модуль находится в свой собственный подкаталог в подкаталоге модулей.
 
 ```
 C:\Program Files
@@ -177,7 +162,6 @@ C:\Program Files
       Fabrikam
         Fabrikam.psd1 (module manifest)
         Fabrikam.dll (module assembly)
-
 ```
 
 Затем установщик гарантирует значение **PSModulePath** переменной среды включает в себя путь подкаталога, общие файлы модулей.
@@ -198,9 +182,7 @@ $p = $q -join ';'
 Чтобы установить несколько версий одного модуля, используйте следующую процедуру.
 
 1. Создайте каталог для каждой версии модуля. Включите номер версии в имени каталога.
-
 2. Создание манифеста модуля для каждой версии модуля. В значении параметра **ModuleVersion** ключа в манифесте, введите номер версии модуля. Сохраните файл манифеста (psd1) в каталоге конкретной версии модуля.
-
 3. Добавьте путь к корневой папке модуля значению **PSModulePath** переменной среды, как показано в следующих примерах.
 
 Чтобы импортировать определенную версию модуля, пользователь может использовать `MinimumVersion` или `RequiredVersion` параметры [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) командлета.

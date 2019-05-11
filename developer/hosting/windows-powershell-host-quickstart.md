@@ -8,16 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
 caps.latest.revision: 9
-ms.openlocfilehash: cc014487a680747ad59437052f79d4576154a1cb
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9a080b6db7416ae6bf65a1b0353e9f17a56cc6c5
+ms.sourcegitcommit: 00cf9a99972ce40db7c25b9a3fc6152dec6bddb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082555"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64530621"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Краткое руководство по узлам Windows PowerShell
 
-Чтобы разместить Windows PowerShell в приложении, используйте [System.Management.Automation.PowerShell](/dotnet/api/System.Management.Automation.PowerShell) класса. Этот класс предоставляет методы, создать конвейер команд, а затем выполните эти команды в пространстве выполнения. Создание ведущего приложения проще всего использовать пространству выполнения по умолчанию. Пространству выполнения по умолчанию содержит все основные команды Windows PowerShell. Если требуется обновлять приложение, чтобы предоставить некоторое подмножество команд Windows PowerShell, необходимо создать пользовательские пространства выполнения.
+Чтобы разместить Windows PowerShell в приложении, используйте [System.Management.Automation.PowerShell](/dotnet/api/System.Management.Automation.PowerShell) класса.
+Этот класс предоставляет методы, создать конвейер команд, а затем выполните эти команды в пространстве выполнения.
+Создание ведущего приложения проще всего использовать пространству выполнения по умолчанию.
+Пространству выполнения по умолчанию содержит все основные команды Windows PowerShell.
+Если требуется обновлять приложение, чтобы предоставить некоторое подмножество команд Windows PowerShell, необходимо создать пользовательские пространства выполнения.
 
 ## <a name="using-the-default-runspace"></a>Использование пространства имен по умолчанию
 
@@ -25,7 +29,9 @@ ms.locfileid: "62082555"
 
 ### <a name="addcommand"></a>AddCommand
 
-Использовании [System.Management.Automation.Powershell.AddCommand*](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) метод [System.Management.Automation.PowerShell](/dotnet/api/System.Management.Automation.PowerShell) класс, чтобы добавить команды в конвейер. Например предположим, что вы хотите получить список выполняющихся процессов на компьютере. Способ выполнения этой команды выглядит следующим образом.
+Использовании [System.Management.Automation.Powershell.AddCommand](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) метод для добавления команды в конвейер.
+Например предположим, что вы хотите получить список выполняющихся процессов на компьютере.
+Способ выполнения этой команды выглядит следующим образом.
 
 1. Создание [System.Management.Automation.PowerShell](/dotnet/api/System.Management.Automation.PowerShell) объекта.
 
@@ -45,11 +51,14 @@ ms.locfileid: "62082555"
    ps.Invoke();
    ```
 
-При вызове метода [System.Management.Automation.Powershell.AddCommand*](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) более одного раза, прежде чем вызывать метод [System.Management.Automation.Powershell.Invoke*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) метод, результат Первая команда передается по конвейеру второго и т. д. Если вы не хотите передать результат выполнения предыдущей команды к команде, добавьте его, вызвав [System.Management.Automation.Powershell.AddStatement*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) вместо этого.
+Если несколько раз вызвать метод AddCommand перед вызовом метода [System.Management.Automation.Powershell.Invoke](/dotnet/api/System.Management.Automation.PowerShell.Invoke) метод, результат первой команды передается по конвейеру второго и т. д.
+Если вы не хотите передать результат выполнения предыдущей команды к команде, добавьте его, вызвав [System.Management.Automation.Powershell.AddStatement](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) вместо этого.
 
 ### <a name="addparameter"></a>AddParameter
 
-В предыдущем примере выполняется одну команду без параметров. Можно добавить параметры к команде с помощью [System.Management.Automation.PSCommand.AddParameter*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) метод к примеру, следующий код получает список всех процессов, которые называются `PowerShell` под управлением компьютер.
+В предыдущем примере выполняется одну команду без параметров.
+Можно добавить параметры к команде с помощью [System.Management.Automation.PSCommand.AddParameter](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) метод.
+Например, следующий код получает список всех процессов, которые называются `PowerShell` на компьютере.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -57,7 +66,7 @@ PowerShell.Create().AddCommand("Get-Process")
                    .Invoke();
 ```
 
-Можно добавить дополнительные параметры, вызвав [System.Management.Automation.PSCommand.AddParameter*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) несколько раз.
+Можно добавить дополнительные параметры, вызвав метод AddParameter несколько раз.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -66,7 +75,7 @@ PowerShell.Create().AddCommand("Get-Process")
                    .Invoke();
 ```
 
-Можно также добавить словарь имен и значений параметров, вызвав [System.Management.Automation.PowerShell.AddParameters*](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) метод.
+Можно также добавить словарь имен и значений параметров, вызвав [System.Management.Automation.PowerShell.AddParameters](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) метод.
 
 ```csharp
 IDictionary parameters = new Dictionary<String, String>();
@@ -81,7 +90,8 @@ PowerShell.Create().AddCommand("Get-Process")
 
 ### <a name="addstatement"></a>AddStatement
 
-Вы можете имитировать пакетной обработки с помощью [System.Management.Automation.PowerShell.AddStatement*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) метод, который добавляет дополнительные инструкции для завершения работы конвейера, следующий код получает список запущенных процессов с именем `PowerShell`, а затем возвращает список запущенных служб.
+Вы можете имитировать пакетной обработки с помощью [System.Management.Automation.PowerShell.AddStatement](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) метод, который добавляет дополнительные инструкции для завершения работы конвейера.
+Следующий код получает список запущенных процессов с именем `PowerShell`, а затем возвращает список запущенных служб.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -92,14 +102,18 @@ ps.Invoke();
 
 ### <a name="addscript"></a>AddScript
 
-Вы можете запустить существующий скрипт, вызов [System.Management.Automation.PowerShell.AddScript*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) метод. В следующем примере добавляется сценарий в конвейер и запускает его. В этом примере предполагается, что уже имеется сценарий с именем `MyScript.ps1` в папку с именем `D:\PSScripts`.
+Вы можете запустить существующий скрипт, вызов [System.Management.Automation.PowerShell.AddScript](/dotnet/api/System.Management.Automation.PowerShell.AddScript) метод.
+В следующем примере добавляется сценарий в конвейер и запускает его.
+В этом примере предполагается, что уже имеется сценарий с именем `MyScript.ps1` в папку с именем `D:\PSScripts`.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
-Есть также версия [System.Management.Automation.PowerShell.AddScript*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) метод, который принимает логический параметр с именем `useLocalScope`. Если этот параметр имеет значение `true`, а затем сценарий выполняется в локальной области. Следующий код выполняет скрипт в локальной области.
+Есть также версия AddScript метода, который принимает логический параметр с именем `useLocalScope`.
+Если этот параметр имеет значение `true`, а затем сценарий выполняется в локальной области.
+Следующий код выполняет скрипт в локальной области.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -108,11 +122,15 @@ ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 
 ## <a name="creating-a-custom-runspace"></a>Создание пользовательского пространства выполнения
 
-Хотя пространству выполнения по умолчанию, используемый в предыдущих примерах загружает все команды Windows PowerShell core, можно создать пользовательские пространства выполнения, который загружает только конкретному подмножеству все команды. Может потребоваться выполнить, чтобы повысить производительность (идет загрузка большее количество команд является снижение производительности), или чтобы ограничить возможности пользователя для выполнения операций. Пространства выполнения, которая предоставляет только ограниченный набор команд, называется ограниченное пространство выполнения. Чтобы создать ограниченное пространство выполнения, используйте [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) и [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) классы.
+Хотя пространству выполнения по умолчанию, используемый в предыдущих примерах загружает все команды Windows PowerShell core, можно создать пользовательские пространства выполнения, который загружает только конкретному подмножеству все команды.
+Может потребоваться выполнить, чтобы повысить производительность (идет загрузка большее количество команд является снижение производительности), или чтобы ограничить возможности пользователя для выполнения операций.
+Пространства выполнения, которая предоставляет только ограниченный набор команд, называется ограниченное пространство выполнения.
+Чтобы создать ограниченное пространство выполнения, используйте [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) и [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) классы.
 
 ### <a name="creating-an-initialsessionstate-object"></a>Создание объекта InitialSessionState
 
-Чтобы создать пользовательские пространства выполнения, необходимо сначала создать [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объекта. В следующем примере мы используем [System.Management.Automation.Runspaces.RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) создать пространство выполнения после создания по умолчанию [System.Management.Automation.Runspaces.InitialSessionState ](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объекта.
+Чтобы создать пользовательские пространства выполнения, необходимо сначала создать [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объекта.
+В следующем примере мы используем [System.Management.Automation.Runspaces.RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) создать пространство выполнения после создания объекта InitialSessionState по умолчанию.
 
 ```csharp
 InitialSessionState iss = InitialSessionState.CreateDefault();
@@ -126,11 +144,15 @@ ps.Invoke();
 
 ### <a name="constraining-the-runspace"></a>Ограничение пространства выполнения
 
-В предыдущем примере мы создали по умолчанию [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объект, который загружает все встроенные ядра Windows PowerShell. Мы также мог бы вызвать [System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) метод для создания объекта InitialSessionState, который будет загружать только команды в Microsoft.PowerShell.Core Оснастка. Чтобы создать более ограниченное пространство выполнения, необходимо создать пустой [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) путем вызова метода [ System.Management.Automation.Runspaces.InitialSessionState.Create*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) метод и чтобы InitialSessionState команд.
+В предыдущем примере мы создали по умолчанию [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) объект, который загружает все встроенные ядра Windows PowerShell.
+Мы также мог бы вызвать [System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) метод для создания объекта InitialSessionState, который будет загружать только команды в Microsoft.PowerShell.Core Оснастка.
+Чтобы создать более ограниченное пространство выполнения, необходимо создать пустой объект InitialSessionState путем вызова [System.Management.Automation.Runspaces.InitialSessionState.Create](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) метод и команд для InitialSessionState.
 
 Использование пространства имен, который загружает только те команды, указываемые обеспечивает значительно улучшенную производительность.
 
-Использование методов [System.Management.Automation.Runspaces.SessionStateCmdletEntry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) класс определяет командлеты для начального состояния сеанса. В следующем примере создается пустой начальное состояние сеанса, а затем определяет и добавляет `Get-Command` и `Import-Module` команды для начального состояния сеанса. Затем мы создания пространства выполнения, ограничены, начальное состояние сеанса и выполните команды в этом пространстве выполнения.
+Использование методов [System.Management.Automation.Runspaces.SessionStateCmdletEntry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) класс определяет командлеты для начального состояния сеанса.
+В следующем примере создается пустой начальное состояние сеанса, а затем определяет и добавляет `Get-Command` и `Import-Module` команды для начального состояния сеанса.
+Затем мы создания пространства выполнения, ограничены, начальное состояние сеанса и выполните команды в этом пространстве выполнения.
 
 Создание начального состояния сеанса.
 

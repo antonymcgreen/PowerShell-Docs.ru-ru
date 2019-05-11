@@ -8,26 +8,29 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
-ms.openlocfilehash: c9963819f1842d1245735dabc487babaa566c160
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8f745cc0e5ef6db7a6bbdf39d826103f3b8a98ce
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068136"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229300"
 ---
 # <a name="events01-sample"></a>Пример командлета Events01
 
-В этом примере показано, как создать командлет, который позволяет пользователю регистрировать события, вызываемые с [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher). С помощью этого командлета пользователи могут регистрировать действие для выполнения при создании файла в конкретном каталоге. В этом примере является производным от [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) базового класса.
+В этом примере показано, как создать командлет, который позволяет пользователю регистрировать события, вызываемые с [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).
+С помощью этого командлета пользователи могут регистрировать действие для выполнения при создании файла в конкретном каталоге.
+В этом примере является производным от [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) базового класса.
 
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>Как построить образец с помощью Visual Studio.
 
-1. С помощью Windows PowerShell 2.0 установлен пакет SDK перейдите к папке Events01. Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01.
+1. С помощью Windows PowerShell 2.0 установлен пакет SDK перейдите к папке Events01.
+   Расположение по умолчанию — `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.
 
-2. Дважды щелкните значок файла решения (SLN). Пример проекта откроется в Microsoft Visual Studio.
+2. Дважды щелкните значок файла решения (SLN).
+   Пример проекта откроется в Microsoft Visual Studio.
 
 3. В **построения** меню, выберите **построить решение**.
-
-    Библиотеки для образца будет располагаться в папках \bin или \bin\debug по умолчанию.
+   Библиотека для образца будет располагаться в значение по умолчанию `\bin` или `\bin\debug` папки.
 
 ### <a name="how-to-run-the-sample"></a>Запуск примера
 
@@ -78,11 +81,14 @@ A file was created in the TEMP directory
 
 В этом примере демонстрируется следующее.
 
-- Как написать командлет для регистрации событий. Командлет является производным от [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) класс, который поддерживает параметры, общие для Register-* командлеты событий. Командлеты, которые являются производными от [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) только необходимо определить их определенными параметрами и переопределить `GetSourceObject` и `GetSourceObjectEventName` абстрактные методы.
+### <a name="how-to-write-a-cmdlet-for-event-registration"></a>Как создать командлет для регистрации событий
+
+Командлет является производным от [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) класс, который обеспечивает поддержку для параметров, общих для `Register-*Event` командлетов.
+Командлеты, которые являются производными от [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) только необходимо определить их определенными параметрами и переопределить `GetSourceObject` и `GetSourceObjectEventName` абстрактные методы.
 
 ## <a name="example"></a>Пример
 
-В этом примере показано, как регистрировать события, вызванные [System.IO.FileSystemWatcher](https://msdn.microsoft.com/en-us/library/system.io.filesystemwatcher\(v=vs.110\).aspx).
+В этом примере показано, как регистрировать события, вызванные [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).
 
 ```csharp
 namespace Sample
@@ -183,4 +189,4 @@ namespace Sample
 
 ## <a name="see-also"></a>См. также
 
-[Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Запись командлета Windows PowerShell](writing-a-windows-powershell-cmdlet.md)

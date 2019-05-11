@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30183927-6f0e-4717-b6f5-f07a6e134cfb
 caps.latest.revision: 6
-ms.openlocfilehash: f2f6b9af7740b1231881294c2f32bf97b5a1568b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 37a297228eb33ff75daf94a12635d42b52c6cc9f
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62064515"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229315"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>Элемент ScriptBlock для элемента GroupBy (формат)
 
@@ -51,14 +51,14 @@ ms.locfileid: "62064515"
 
 ## <a name="remarks"></a>Замечания
 
-Windows PowerShell запускает новую группу, при каждом изменении значения этого сценария.
+PowerShell запускает новую группу, при каждом изменении значения этого сценария.
 
-Если этот элемент указан, нельзя указать [PropertyName](http://msdn.microsoft.com/en-us/396dede0-039a-4a87-a5ef-3ecabb729676) элемент, чтобы начать новую группу.
+Если этот элемент указан, нельзя указать [PropertyName](propertyname-element-for-groupby-format.md) элемент, чтобы начать новую группу.
 
 ## <a name="see-also"></a>См. также
 
-[Элемент PropertyName для GroupBy (формат)](./propertyname-element-for-groupby-format.md)
+[Элемент PropertyName для GroupBy (формат)](propertyname-element-for-groupby-format.md)
 
-[GroupBy-элемент для представления (формат)](./groupby-element-for-view-format.md)
+[GroupBy-элемент для представления (формат)](groupby-element-for-view-format.md)
 
-[Запись файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)
+[Запись файла форматирования PowerShell](writing-a-powershell-formatting-file.md)
