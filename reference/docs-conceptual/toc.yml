@@ -68,7 +68,7 @@
   items:
     - name: Консоль
       items:
-        - name: Справка по командной строке PowerShell.exe
+        - name: Параметры командной строки PowerShell
           href: components/console/powershell.exe-command-line-help.md
         - name: Завершение по клавише TAB
           href: components/console/using-tab-expansion.md
