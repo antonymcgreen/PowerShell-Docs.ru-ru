@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Методы Get, Test, Set
-ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e4aa7770bb5fc8b916b0c0a6488b1ccc0ef0ade9
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076605"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229513"
 ---
 # <a name="get-test-set"></a>Методы Get, Test, Set
 
@@ -121,7 +121,7 @@ ModuleVersion = "1.0";
 };
 ```
 
-При применении этого блока [локальный диспетчер конфигураций](../managing-nodes/metaConfig.md) (LCM) считает значение Spooler из MOF-файла и передаст его параметру `-Name` методов **Get**, **Test** и **Set** экземпляра MyService ресурса **Service**.
+При использовании этого кода [локальный диспетчер конфигураций](../managing-nodes/metaConfig.md) (LCM) считывает из MOF-файла значение "Spooler" и передает его в параметр `-Name` методов **Get**, **Test** и **Set** для экземпляра "MyService" ресурса **Service**.
 
 ## <a name="get"></a>Get
 

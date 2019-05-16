@@ -1,165 +1,20 @@
 ---
-ms.date: 08/14/2018
+ms.date: 05/02/2019
 keywords: powershell,командлет
-title: Справка по командной строке PowerShell.exe
-ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: 0a11ebb11d29adf5853c232b3aa10bc72f92bf0c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Параметры командной строки PowerShell
+ms.openlocfilehash: c7cd96344ce3686fa33725320f86a9c86ac6a68b
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058519"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229778"
 ---
-# <a name="powershellexe-command-line-help"></a>Справка по командной строке PowerShell.exe
+# <a name="powershell-command-line-options"></a>Параметры командной строки PowerShell
 
-Вы можете использовать PowerShell.exe для запуска сеанса PowerShell из командной строки другого средства, такого как Cmd.exe, или использовать его в командной строке PowerShell для запуска нового сеанса. Используйте указанные параметры для настройки сеанса.
+Параметры командной строки можно использовать для запуска PowerShell из командной строки другого средства, например **Cmd.exe** или **bash**, или использовать их в командной строке PowerShell для запуска нового сеанса.
 
-## <a name="syntax"></a>Синтаксис
+Параметры командной строки позволяют настраивать конфигурацию сеанса PowerShell и контролировать ввод.
 
-```syntax
-PowerShell[.exe]
-       [-Command { - | <script-block> [-args <arg-array>]
-                     | <string> [<CommandParameters>] } ]
-       [-EncodedCommand <Base64EncodedCommand>]
-       [-ExecutionPolicy <ExecutionPolicy>]
-       [-File <FilePath> [<Args>]]
-       [-InputFormat {Text | XML}]
-       [-Mta]
-       [-NoExit]
-       [-NoLogo]
-       [-NonInteractive]
-       [-NoProfile]
-       [-OutputFormat {Text | XML}]
-       [-PSConsoleFile <FilePath> | -Version <PowerShell version>]
-       [-Sta]
-       [-WindowStyle <style>]
+Полный список параметров Windows PowerShell (powershell.exe) см. здесь: [about_PowerShell_exe](/powershell/module/Microsoft.PowerShell.Core/About/about_PowerShell_exe).
 
-PowerShell[.exe] -Help | -? | /?
-```
-
-## <a name="parameters"></a>Параметры
-
-### <a name="-encodedcommand-base64encodedcommand"></a>-EncodedCommand <Base64EncodedCommand>
-
-Принимает строковую версию команды в кодировке Base 64. Используйте этот параметр для отправки в PowerShell команд, требующих сложных кавычек или фигурных скобок.
-
-### <a name="-executionpolicy-executionpolicy"></a>-ExecutionPolicy <ExecutionPolicy>
-
-Задает политику выполнения по умолчанию для текущего сеанса и сохраняет ее в переменной среды $env:PSExecutionPolicyPreference. Этот параметр не изменяет политику выполнения PowerShell, заданную в реестре. Дополнительные сведения о политиках выполнения PowerShell, включая список допустимых значений, см. в статье [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
-
-### <a name="-file-filepath-parameters"></a>-File <FilePath> \[<Parameters>]
-
-Запускает указанный сценарий в локальной области ("с точкой"), чтобы создаваемые сценарием функции и переменные были доступны в текущем сеансе. Введите путь к файлу сценария и любые параметры. **File** должен быть последним параметром в команде. Все значения, введенные после параметра **-File** интерпретируются как путь к файлу скрипта и параметры, передаваемые в него.
-
-Передаваемые в скрипт параметры имеют вид строк литералов (после интерпретации текущей оболочкой). Например, если в cmd.exe необходимо передать значение переменной среды, вы должны использовать синтаксис cmd.exe `powershell.exe -File .\test.ps1 -TestParam %windir%`.
-
-Напротив, выполнение `powershell.exe -File .\test.ps1 -TestParam $env:windir` в cmd.exe приводит к тому, что скрипт получает строку литералов `$env:windir`, поскольку она не имеет особого значения для текущей оболочки cmd.exe.
-Стиль `$env:windir` ссылки на переменную среды _можно_ использовать в параметре `-Command`, так как там он будет интерпретироваться как код PowerShell.
-
-### <a name="-inputformat-text--xml"></a>\-InputFormat {Text | XML}
-
-Описывает формат данных, отправляемых в PowerShell. Допустимые значения: "Text" (текстовые строки) или "XML" (сериализованный формат CLIXML).
-
-### <a name="-mta"></a>-Mta
-
-Запускает PowerShell с использованием многопотокового подразделения. Этот параметр впервые появился в PowerShell 3.0. В PowerShell 3.0 по умолчанию используется однопотоковое подразделение (STA). В PowerShell 2.0 по умолчанию используется многопотоковое подразделение (MTA).
-
-### <a name="-noexit"></a>-NoExit
-
-Не завершает работу после выполнения команд запуска.
-
-### <a name="-nologo"></a>-NoLogo
-
-Скрывает баннер авторских прав при запуске программы.
-
-### <a name="-noninteractive"></a>-NonInteractive
-
-Не предоставляет пользователю интерактивный запрос.
-
-### <a name="-noprofile"></a>-NoProfile
-
-Не загружает профиль PowerShell.
-
-### <a name="-outputformat-text--xml"></a>-OutputFormat {Text | XML}
-
-Определяет формат выходных данных PowerShell. Допустимые значения: "Text" (текстовые строки) или "XML" (сериализованный формат CLIXML).
-
-### <a name="-psconsolefile-filepath"></a>-PSConsoleFile <FilePath>
-
-Загружает указанный файл консоли PowerShell. Введите путь и имя файла консоли. Чтобы создать файл консоли, используйте командлет [`Export-Console`](/powershell/module/Microsoft.PowerShell.Core/Export-Console) в PowerShell.
-
-### <a name="-sta"></a>-Sta
-
-Запускает PowerShell с использованием многопотокового подразделения. В PowerShell 3.0 по умолчанию используется однопотоковое подразделение (STA). В PowerShell 2.0 по умолчанию используется многопотоковое подразделение (MTA).
-
-### <a name="-version-powershell-version"></a>-Version <PowerShell Version>
-
-Запускает заданную версию PowerShell. Указанная версия должна быть установлена в системе. Если на компьютере установлен PowerShell 3.0, допустимыми значениями являются "3.0" и "2.0". По умолчанию используется значение "3.0".
-
-Если версия PowerShell 3.0 не установлена, допустимо только значение 2.0. Другие значения игнорируются.
-
-Дополнительные сведения см. в статье [Установка Windows PowerShell](../../setup/installing-windows-powershell.md).
-
-### <a name="-windowstyle-window-style"></a>-WindowStyle <Window style>
-
-Задает стиль окна для сеанса. Допустимые значения: Normal, Minimized, Maximized и Hidden.
-
-### <a name="-command"></a>-Command
-
-Выполняет указанные команды (с любыми параметрами) как введенные в командной строке PowerShell.
-После выполнения PowerShell завершает работу, если не указан параметр **NoExit**.
-Любой текст после `-Command` отправляется в PowerShell как одна командная строка.
-Это отличается от того, как `-File` обрабатывает параметры, передаваемые в скрипт.
-
-Значением `-Command` может быть "–", строка или блок сценария.
-Результаты команды возвращаются родительской оболочке как десериализованные объекты XML, а не как активные объекты.
-
-Если для `-Command` задано значение "–", текст команды считывается из стандартного ввода.
-
-Если значением `-Command` является строка, параметр **Command** _должен_ быть указан последним, так как любой знак, введенный после команды, интерпретируется как ее аргумент.
-
-Параметр **Command** выполняет блок сценария только в том случае, когда он может распознать значение, переданное в `-Command` в качестве типа ScriptBlock.
-Это возможно _только_ при запуске PowerShell.exe с другого хоста PowerShell.
-Существующая переменная может содержать тип ScriptBlock, который возвращается из выражения или анализируется хостом PowerShell как символ блока сценария, заключенный в фигурные скобки `{}`, перед передачей в PowerShell.exe.
-
-В cmd.exe отсутствует такая вещь, как блок сценария (или тип ScriptBlock), поэтому значение, передаваемое в параметр **Command**, _всегда_ будет строкой.
-Вы можете написать блок сценария в строке, но вместо выполнения его поведение будет таким, как если бы вы набирали его в типичном приглашении PowerShell, возвращая содержимое блока сценария обратно.
-
-Строка, переданная в `-Command`, будет по-прежнему выполняться как PowerShell, поэтому фигурные скобки блока сценария редко требуются при запуске из cmd.exe.
-Для выполнения встроенного блока сценария, определенного внутри строки, можно использовать [оператор вызова](/powershell/module/microsoft.powershell.core/about/about_operators#call-operator-) `&`.
-
-```console
-"& {<command>}"
-```
-
-### <a name="-help---"></a>-Help, -?, /?
-
-Показывает синтаксис powershell.exe. При вводе команды PowerShell.exe в PowerShell добавляйте в начало параметров команды дефис (-), а не косую черту (/). В Cmd.exe можно использовать как дефис, так и косую черту.
-
-> [!NOTE]
-> Замечание по устранению неполадок. Обратите внимание, что в PowerShell 2.0 запуск некоторых программ в консоли Windows PowerShell завершается ошибкой с кодом LastExitCode 0xc0000142.
-
-## <a name="examples"></a>ПРИМЕРЫ
-
-```powershell
-# Create a new PowerShell session and load a saved console file
-PowerShell -PSConsoleFile sqlsnapin.psc1
-
-# Create a new PowerShell V2 session with text input, XML output, and no logo
-PowerShell -Version 2.0 -NoLogo -InputFormat text -OutputFormat XML
-
-# Execute a PowerShell Command in a session
-PowerShell -Command "Get-EventLog -LogName security"
-
-# Run a script block in a session
-PowerShell -Command {Get-EventLog -LogName security}
-
-# An alternate way to run a command in a new session
-PowerShell -Command "& {Get-EventLog -LogName security}"
-
-# To use the -EncodedCommand parameter:
-$command = "dir 'c:\program files' "
-$bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
-$encodedCommand = [Convert]::ToBase64String($bytes)
-powershell.exe -encodedCommand $encodedCommand
-```
+Полный список параметров PowerShell Core (pwsh) доступен здесь: [about_pwsh](/powershell/module/Microsoft.PowerShell.Core/About/about_pwsh).

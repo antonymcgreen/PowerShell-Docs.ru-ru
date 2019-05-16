@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка локального диспетчера конфигураций
-ms.openlocfilehash: 86d2cc17872692a738e9c68121b8931833d2a251
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 15d696587d54d4a6464096cfb78757c41e9185c6
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079683"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229496"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Настройка локального диспетчера конфигураций
 
@@ -121,6 +121,10 @@ configuration LCMConfig
 |ConfigurationNames|String[]|Массив имен конфигураций для опроса целевым узлом. Используется, только если узел зарегистрирован в опрашивающей службе с использованием свойства **RegistrationKey**. Дополнительные сведения см. в статье [Настройка опрашивающего клиента с использованием имен конфигураций](../pull-server/pullClientConfigNames.md).|
 |RegistrationKey|строка|GUID регистрации узла в опрашивающей службе. Дополнительные сведения см. в статье [Настройка опрашивающего клиента с использованием имен конфигураций](../pull-server/pullClientConfigNames.md).|
 |ServerURL|строка|URL-адрес службы настройки.|
+|ProxyURL*|строка|URL-адрес прокси-сервера HTTP для взаимодействия со службой настройки.|
+|ProxyCredential*|pscredential|Учетные данные для прокси-сервера HTTP.|
+
+>Внимание! Свойства, отмеченные \*, поддерживаются в Windows 1809 и более поздних версиях.
 
 Доступен пример скрипта, который упрощает настройку значения ConfigurationRepositoryWeb для локальных узлов. См. раздел [Создание метаконфигураций DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations).
 
@@ -143,6 +147,10 @@ configuration LCMConfig
 |CertificateID|строка|Отпечаток сертификата, который используется для проверки подлинности на сервере.|
 |RegistrationKey|строка|GUID для идентификации узла в опрашивающей службе.|
 |ServerURL|строка|URL-адрес сервера конфигураций.|
+|ProxyURL*|строка|URL-адрес прокси-сервера HTTP для взаимодействия со службой настройки.|
+|ProxyCredential*|pscredential|Учетные данные для прокси-сервера HTTP.|
+
+>Внимание! Свойства, отмеченные \*, поддерживаются в Windows 1809 и более поздних версиях.
 
 Доступен пример скрипта, который упрощает настройку значения ResourceRepositoryWeb для локальных узлов. См. раздел [Создание метаконфигураций DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
@@ -166,6 +174,10 @@ configuration LCMConfig
 |CertificateID|строка|Отпечаток сертификата, который используется для проверки подлинности на сервере.|
 |RegistrationKey|строка|GUID для идентификации узла в опрашивающей службе.|
 |ServerURL|строка|URL-адрес сервера конфигураций.|
+|ProxyURL*|строка|URL-адрес прокси-сервера HTTP для взаимодействия со службой настройки.|
+|ProxyCredential*|pscredential|Учетные данные для прокси-сервера HTTP.|
+
+>Внимание! Свойства, отмеченные \*, поддерживаются в Windows 1809 и более поздних версиях.
 
 Доступен пример скрипта, который упрощает настройку значения ReportServerWeb для локальных узлов. См. раздел [Создание метаконфигураций DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,безопасность
 title: Возможности ролей JEA
-ms.openlocfilehash: b93d206680de485d6cb7a8cb26d63afda5bf8421
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 528b41c0e2ffdcfed3251fb0f714c649e7290761
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62084799"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229552"
 ---
 # <a name="jea-role-capabilities"></a>Возможности ролей JEA
 
@@ -183,6 +183,8 @@ FunctionDefinitions = @{
 
 При наличии множества настраиваемых функций может быть проще поместить их в [модуль сценария PowerShell](https://msdn.microsoft.com/library/dd878340(v=vs.85).aspx).
 Затем можно сделать эти функции видимыми в сеансе JEA с помощью поля "VisibleFunctions", как и в случае со встроенными и сторонними модулями.
+
+Для корректной работы завершения при нажатии клавиши TAB в сеансах JEA необходимо включить встроенную функцию `tabexpansion2` в список **VisibleFunctions**.
 
 ## <a name="place-role-capabilities-in-a-module"></a>Помещение возможностей ролей в модуль
 
