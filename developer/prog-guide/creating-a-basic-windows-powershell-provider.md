@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], base provider
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
-ms.openlocfilehash: 19cc3817016d96e1412a5f3506e9d694ba55b48d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5ebc22067b20f0e1d35d31d5f33e599f50cb7564
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082079"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855061"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Создание базового поставщика Windows PowerShell
 
@@ -26,22 +26,6 @@ ms.locfileid: "62082079"
 
 > [!NOTE]
 > Пример поставщика можно найти в файле AccessDBSampleProvider01.cs, предоставляемые Windows PowerShell.
-
-Следующие подразделы этого раздела.
-
-- [Определение класса поставщика PowerShell Windows](#Defining-the-Windows-PowerShell-Provider-Class)
-
-- [Определение сведений о состоянии от поставщика](#Defining-Provider-Specific-State-Information)
-
-- [Инициализация поставщика](#Initializing-the-Provider)
-
-- [Динамические параметры запуска](#Start-Dynamic-Parameters)
-
-- [Отмена инициализации поставщика](#Uninitializing-the-Provider)
-
-- [Пример кода](#Code-Sample)
-
-- [Проверка поставщика в Windows PowerShell](#Testing-the-Windows-PowerShell-Provider)
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Определение класса поставщика PowerShell Windows
 
@@ -77,7 +61,7 @@ ms.locfileid: "62082079"
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesaccessdbprov01#accessdbprov01ProviderStart](Msh_samplesaccessdbprov01#accessdbprov01ProviderStart)]  -->
 
-Поставщик может поддерживать состояние сведения о поставщике, как описано в разделе [состояние данных от поставщика определение](#Defining-Provider-Specific-State-Information). В этом случае необходимо переопределить реализации [System.Management.Automation.Provider.Cmdletprovider.Start*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) метод для возврата экземпляра производного класса.
+Поставщик может поддерживать состояние сведения о поставщике, как описано в разделе [состояние данных от поставщика определение](#defining-provider-specific-state-information). В этом случае необходимо переопределить реализации [System.Management.Automation.Provider.Cmdletprovider.Start*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) метод для возврата экземпляра производного класса.
 
 ## <a name="start-dynamic-parameters"></a>Динамические параметры запуска
 

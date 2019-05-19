@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea15e00e-20dc-4209-9e97-9ffd763e5d97
 caps.latest.revision: 8
-ms.openlocfilehash: 28d55874960f9a64b986204411d38319ef1d0da7
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8d7ba9d122e90b80f6009b6dc8e8e3bb07331e4a
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068357"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854848"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Создание командлета для доступа к хранилищу данных
 
@@ -22,24 +22,6 @@ ms.locfileid: "62068357"
 Командлет Select-Str, описанные здесь можно найти и выбрать строки в файл или в объекте. Шаблоны, используемые для определения строки, которые можно задать явным образом с помощью `Path` параметр командлета или неявно через `Script` параметра.
 
 Командлет предназначен для использования любым поставщиком Windows PowerShell, который является производным от [System.Management.Automation.Provider.Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider). Например командлет можно указать поставщика FileSystem или поставщик Variable, предоставляемый Windows PowerShell. Дополнительные сведения о aboutWindows поставщики PowerShell, см. в разделе [поставщика проектирование Your Windows PowerShell](../prog-guide/designing-your-windows-powershell-provider.md).
-
-Следующие подразделы этого раздела.
-
-- [Определение класса командлета](#Defining-the-Cmdlet-Class)
-
-- [Определение параметров для доступа к данным](#Declaring-the-Path-Parameter)
-
-- [Переопределяя методы обработки ввода](#Overriding-Input-Processing-Methods)
-
-- [Доступ к содержимому](#Accessing-Content)
-
-- [Пример кода](#Code-Sample)
-
-- [Определение типов объектов и форматирование](#Declaring-Search-Support-Parameters)
-
-- [Создание командлета](#Building-the-Cmdlet)
-
-- [Тестирование командлет](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet-class"></a>Определение класса командлета
 
@@ -397,7 +379,7 @@ protected override void ProcessRecord()
 
 ## <a name="code-sample"></a>Пример кода
 
-Следующий код показывает реализацию этой версии этот командлет Select-Str. Обратите внимание на то, что этот код включает класс командлета, закрытые методы, используемые с помощью командлета и Windows PowerShell – – оснастка код, используемый для регистрации командлета. Дополнительные сведения о регистрации командлета см. в разделе [построение командлет](#Building-the-Cmdlet).
+Следующий код показывает реализацию этой версии этот командлет Select-Str. Обратите внимание на то, что этот код включает класс командлета, закрытые методы, используемые с помощью командлета и Windows PowerShell – – оснастка код, используемый для регистрации командлета. Дополнительные сведения о регистрации командлета см. в разделе [построение командлет](#building-the-cmdlet).
 
 ```csharp
 //

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], property provider
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
-ms.openlocfilehash: 6ec0752a9ae06c5c2cdd1a1851caeeff52d8eb74
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: c503b17a670a5d1f07aa48e714d8a0eb0aa78ae9
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081841"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855009"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Создание поставщика свойств Windows PowerShell
 
@@ -31,26 +31,6 @@ ms.locfileid: "62081841"
 
 > [!CAUTION]
 > Методы класса поставщика свойства должен записывать все объекты, с помощью [System.Management.Automation.Provider.Cmdletprovider.Writepropertyobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WritePropertyObject) метод.
-
-Ниже перечислены подразделы этого раздела. Если вы не знакомы с записью поставщика свойства Windows PowerShell, прочтите эти сведения, в том порядке, в котором она появляется. Тем не менее если вы знакомы с записью поставщика свойства Windows PowerShell, перейдите непосредственно к сведениям, вам потребуется.
-
-- [Определение поставщика Windows PowerShell](#Defining-the-Windows-PowerShell-provider)
-
-- [Определение базовой функциональности](#Defining-Base-Functionality)
-
-- [Получение свойств](#Retrieving-Properties)
-
-- [Присоединение динамических параметров в `Get-ItemProperty` командлета](#Attaching-Dynamic-Parameters-to-the-Get-ItemProperty-Cmdlet)
-
-- [Настройка свойств](#Setting-Properties)
-
-- [Присоединение динамических параметров в `Set-ItemProperty` командлета](#Attaching-Dynamic-Parameters-for-the-Set-ItemProperty-Cmdlet)
-
-- [Очистка свойства](#Clearing-Properties)
-
-- [Присоединение динамических параметров в `Clear-ItemProperty` командлета](#Attaching-Dynamic-Parameters-to-the-Clear-ItemProperty-Cmdlet)
-
-- [Создание поставщика Windows PowerShell](#Building-the-Windows-PowerShell-provider)
 
 ## <a name="defining-the-windows-powershell-provider"></a>Определение поставщика Windows PowerShell
 

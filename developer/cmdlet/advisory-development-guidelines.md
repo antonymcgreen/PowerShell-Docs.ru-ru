@@ -8,42 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
-ms.openlocfilehash: 871a74a084da3c7ec36767b7195461e0e7290cb9
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 980b488800587e31286e2ca2ece924e07f8af3f3
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068799"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854862"
 ---
 # <a name="advisory-development-guidelines"></a>Советы по разработке
 
 В этом разделе приводятся рекомендации, которые следует учитывать для предотвращения хороший опыт разработки и пользователя. Иногда они могут применяться, а иногда они не могут.
-
-## <a name="design-guidelines"></a>Рекомендации по проектированию
-
-- [Поддерживает параметр InputObject (AD01)](./advisory-development-guidelines.md#AD01)
-
-- [Поддерживает параметр Force (AD02)](./advisory-development-guidelines.md#AD02)
-
-- [Обработка учетных данных с помощью Windows PowerShell (AD03)](./advisory-development-guidelines.md#AD03)
-
-- [Поддерживает параметры кодирования (AD04)](./advisory-development-guidelines.md#AD04)
-
-- [Командлеты теста должен возвращать логическое значение (AD05)](./advisory-development-guidelines.md#AD05)
-
-## <a name="code-guidelines"></a>Руководствам по кодам
-
-- [Выполните командлет класс соглашения об именовании (AC01)](./advisory-development-guidelines.md#AC01)
-
-- [Если отсутствуют входные данные конвейера переопределить метод BeginProcessing (AC02)](./advisory-development-guidelines.md#AC02)
-
-- [Чтобы обрабатывать запросы остановки Переопределите метод StopProcessing (AC03)](./advisory-development-guidelines.md#AC03)
-
-- [Реализовать интерфейс IDisposable (AC04)](./advisory-development-guidelines.md#AC04)
-
-- [Типы параметров пригодным к сериализации (AC05)](./advisory-development-guidelines.md#AC05)
-
-- [Используйте SecureString для конфиденциальных данных (AC06)](./advisory-development-guidelines.md#AC06)
 
 ## <a name="design-guidelines"></a>Рекомендации по проектированию
 

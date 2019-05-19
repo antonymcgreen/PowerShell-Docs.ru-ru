@@ -11,32 +11,16 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: c380b28570c955de6f41152fd617f5c1b0f9e4bd
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 7f10acf59dedbb4af17bc5250e8624282ba22656
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068340"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854964"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Создание командлета без параметров
 
 В этом разделе описывается, как создать командлет, который извлекает данные из локального компьютера без использования параметров, а затем записывает данные в конвейер. Командлет, описанные здесь является командлет Get-Proc, который извлекает сведения о процессах на локальном компьютере, а затем отображает эти сведения в командной строке.
-
-Следующие подразделы этого раздела.
-
-- [Именование командлет](#Naming-the-Cmdlet)
-
-- [Определение класса командлета](#Defining-the-Cmdlet-Class)
-
-- [Переопределив метод обработки входных данных](#Overriding-an-Input-Processing-Method)
-
-- [Пример кода](#Code-Sample)
-
-- [Определение типов объектов и форматирование](#Defining-Object-Types-and-Formatting)
-
-- [Создание командлета](#Building-the-Cmdlet)
-
-- [Тестирование командлет](#Testing-the-Cmdlet)
 
 > [!NOTE]
 > Имейте в виду, что при написании командлетов, Windows PowerShell® ссылочные сборки загружаются на диск (по умолчанию в C:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0). Они не установлены в глобальный кэш сборок (GAC).

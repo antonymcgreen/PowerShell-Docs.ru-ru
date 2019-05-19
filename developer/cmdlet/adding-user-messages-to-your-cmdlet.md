@@ -31,12 +31,12 @@ helpviewer_keywords:
 - user notifications
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
-ms.openlocfilehash: 5b3a5f5d5d02c7d5a3c1d622ec1a3740739c694f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 138c6a43937e72fffaa2a09243e500e9822e6111
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068782"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854941"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Добавление пользовательских сообщений в командлет
 
@@ -51,32 +51,6 @@ ms.locfileid: "62068782"
 - Отчет о ходе выполнения, что сообщения, содержащие сведения о том, какую работать командлет завершения при выполнении операции, которая занимает много времени.
 
 Отсутствуют ограничения на количество сообщений, командлет может записывать или тип сообщений, которые записывает командлета. Каждое сообщение записывается из определенных вызовом в метод командлета обработки входных данных.
-
-## <a name="the-stopproc-cmdlet"></a>Командлет StopProc
-
-Следующие подразделы этого раздела.
-
-- [Определение командлета](#Defining-the-Cmdlet)
-
-- [Определение параметров для изменения системы](#Defining-Parameters-for-System-Modification)
-
-- [Переопределив метод обработки входных данных](#Overriding-an-Input-Processing-Method)
-
-- [Запись подробных сообщений](#Writing-a-Verbose-Message)
-
-- [Запись сообщения отладки](#Writing-a-Debug-Message)
-
-- [Написание предупреждающее сообщение](#Writing-a-Warning-Message)
-
-- [Запись сообщения о ходе выполнения](#Writing-a-Progress-Message)
-
-- [Пример кода](#Code-Sample)
-
-- [Определение типов объектов и форматирования](#Define-Object-Types-and-Formatting)
-
-- [Создание командлета](#Building-the-Cmdlet)
-
-- [Тестирование командлет](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Определение командлета
 

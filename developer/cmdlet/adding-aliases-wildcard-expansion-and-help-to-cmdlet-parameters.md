@@ -8,40 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: db664e589f625855b5a33a02c522d6b238ad2810
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 946b71e4480a47ac6ccd6930be445d7efb4fb62d
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62075262"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854894"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Добавление псевдонимов, развертывание подстановочных знаков и справка по параметрам командлета
 
 В этом разделе описывается добавление псевдонимы, развертывание знаков подстановки, и сообщения справки для параметров командлета Stop-Proc (описано в разделе [Создание командлет, который изменяет система](./creating-a-cmdlet-that-modifies-the-system.md)).
 
 Этот командлет Stop-Proc пытается остановить процессы, которые можно получить с помощью командлета Get-Proc (описано в разделе [Создание свой первый командлет](./creating-a-cmdlet-without-parameters.md)).
-
-Следующие подразделы этого раздела.
-
-- [Определение командлета](#Defining-the-Cmdlet)
-
-- [Определение параметров для изменения системы](#Defining-Parameters-for-System-Modification)
-
-- [Определение псевдоним параметра](#Defining-a-Parameter-Alias)
-
-- [Создание справки для параметров](#Creating-Help-for-Parameters)
-
-- [Переопределив метод обработки входных данных](#Overriding-an-Input-Processing-Method)
-
-- [Поддержка подстановочных знаков](#Supporting-Wildcard-Expansion)
-
-- [Пример кода](#Defining-a-Parameter-Alias)
-
-- [Определение типов объектов и форматирование](#Define-Object-Types-and-Formatting)
-
-- [Создание командлета](#Building-the-Cmdlet)
-
-- [Тестирование командлет](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Определение командлета
 

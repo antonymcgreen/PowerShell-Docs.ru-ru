@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
-ms.openlocfilehash: 35c68a2b0f8c9bd1ed4fc54c41aa427ddd75907c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d7e237514b4db4bce3366836d3b6e0cd340bf107
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081926"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855023"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Создание поставщика содержимого Windows PowerShell
 
@@ -28,36 +28,6 @@ ms.locfileid: "62081926"
 > Скачанный исходные файлы доступны в  **\<примеры PowerShell >** каталога.
 >
 > Дополнительные сведения о других реализаций поставщика Windows PowerShell, см. в разделе [проектирование ваш поставщик PowerShell Windows](./designing-your-windows-powershell-provider.md).
-
-Ниже перечислены подразделы этого раздела. Если вы не знакомы с записью поставщика содержимого Windows PowerShell, прочтите эти разделы в порядке их появления. Тем не менее если вы знакомы с записью поставщика содержимого Windows PowerShell, перейдите непосредственно к сведениям, вам потребуется.
-
-- [Определение класса поставщика Windows PowerShell содержимого](#Define-the-Windows-PowerShell-Content-Provider-Class)
-
-- [Определение базовой функциональности](#Define-Functionality-of-Base-Class)
-
-- [Реализация модуля чтения содержимого](#Implementing-a-Content-Reader)
-
-- [Реализация содержимого записи](#Implementing-a-Content-Writer)
-
-- [Получение содержимого модуля чтения](#Retrieving-the-Content-Reader)
-
-- [Присоединение динамических параметров в `Get-Content` командлета](#Attaching-Dynamic-Parameters-to-the-Get-Content-Cmdlet)
-
-- [Получение содержимого модуля записи](#Retrieving-the-Content-Writer)
-
-- [Присоединение к Add_Content динамических параметров и `Set-Content` командлетов](#Attaching-Dynamic-Parameters-to-the-Add-Content-and-Set-Content-Cmdlets)
-
-- [Очистка содержимого](#Clearing-Content)
-
-- [Присоединение динамических параметров в `Clear-Content` командлета](#Attaching-Dynamic-Parameters-to-the-Clear-Content-Cmdlet)
-
-- [Пример кода](#Code-Sample)
-
-- [Определение типов объектов и форматирование](#defining-object-types-and-formatting)
-
-- [Создание поставщика Windows PowerShell](#Building-the-Windows-PowerShell-Provider)
-
-- [Проверка поставщика в Windows PowerShell](#Testing-the-Windows-PowerShell-Provider)
 
 ## <a name="define-the-windows-powershell-content-provider-class"></a>Определите класс поставщика Windows PowerShell содержимого
 

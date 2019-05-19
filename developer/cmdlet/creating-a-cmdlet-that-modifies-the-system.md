@@ -13,12 +13,12 @@ helpviewer_keywords:
 - confirm impact [PowerShell Programmer's Guide]
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
-ms.openlocfilehash: bbe9f0213754d1cc47e0fd9a7a898bde916c0636
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a4fa9ce52855928679a2425f24f2e49a68030c63
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068445"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854920"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>Создание командлета, который изменяет систему
 
@@ -42,28 +42,6 @@ ms.locfileid: "62068445"
 ## <a name="the-stopproc-cmdlet"></a>Командлет StopProc
 
 В этом разделе описывается командлет Stop-Proc, который пытается остановить процессы, которые можно получить с помощью командлета Get-Proc (описано в разделе [Создание свой первый командлет](./creating-a-cmdlet-without-parameters.md)).
-
-Следующие подразделы этого раздела.
-
-- [Определение командлета](#Defining-the-Cmdlet)
-
-- [Определение параметров для изменения системы](#Defining-Parameters-for-System-Modification)
-
-- [Переопределив метод обработки входных данных](#Overriding-an-Input-Processing-Method)
-
-- [Вызов метода ShouldProcess](#Calling-the-ShouldProcess-Method)
-
-- [Вызов метода ShouldContinue](#Calling-the-ShouldContinue-Method)
-
-- [Остановка обработки ввода](#Stopping-Input-Processing)
-
-- [Пример кода](#Code-Sample)
-
-- [Определение типов объектов и форматирование](#Defining-Object-Types-and-Formatting)
-
-- [Создание командлета](#Building-the-Cmdlet)
-
-- [Тестирование командлет](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Определение командлета
 

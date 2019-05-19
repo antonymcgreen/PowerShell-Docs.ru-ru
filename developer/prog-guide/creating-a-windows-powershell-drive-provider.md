@@ -12,38 +12,18 @@ helpviewer_keywords:
 - drives [PowerShell Programmer's Guide]
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
-ms.openlocfilehash: 174d3a6860790295e1b73f32d9c1bad46b653917
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 2696d78cae7739310b7684161b597ce436dabe92
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055656"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855203"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Создание поставщика дисков Windows PowerShell
 
 В этом разделе описывается создание поставщика диска Windows PowerShell, который предоставляет способ доступа к хранилищу данных через диск Windows PowerShell. Этот тип поставщиков также называется поставщики диск Windows PowerShell. На дисках Windows PowerShell, используемый поставщиком предоставляют средства для подключения к хранилищу данных.
 
 Поставщик диск Windows PowerShell, описанные здесь предоставляет доступ к базе данных Microsoft Access. Для этого поставщика на диск Windows PowerShell представляет базу данных (это можно добавить любое количество дисков в поставщик диска), контейнеров верхнего уровня диска представления таблиц в базе данных и строки указывают элементы из контейнеров таблицы.
-
-Ниже приведен список разделов этой статьи. Если вы не знакомы с разработка поставщика диска Windows PowerShell, прочтите эти разделы в порядке их появления. Тем не менее если вы знакомы с записью поставщик диска, перейдите непосредственно к сведениям, вам потребуется.
-
-- [Определение класса поставщика PowerShell Windows](#Defining-the-Windows-PowerShell-Provider-Class)
-
-- [Определение базовой функциональности](#Defining-Base-Functionality)
-
-- [Создание сведений о состоянии дисков](#Creating-Drive-State-Information)
-
-- [Создание диска](#Creating-a-Drive)
-
-- [Присоединение к NewDrive динамических параметров](#Attaching-Dynamic-Parameters-to-NewDrive)
-
-- [Удаление диска](#Removing-a-Drive)
-
-- [Инициализация по умолчанию диски](#Initializing-Default-Drives)
-
-- [Пример кода](#Code-Sample)
-
-- [Проверка поставщика диск PowerShell в Windows](#Testing-the-Windows-PowerShell-Drive-Provider)
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Определение класса поставщика PowerShell Windows
 

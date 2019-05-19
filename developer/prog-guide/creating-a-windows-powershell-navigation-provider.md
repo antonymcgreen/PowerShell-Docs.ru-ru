@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
-ms.openlocfilehash: 40454f880b57d5b3a8a8ded21c8c97aebba027fe
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5f7a61e261399d3d2abe62fe4523e8c9895d5ad4
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081858"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855172"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Создание поставщика навигации Windows PowerShell
 
@@ -33,34 +33,6 @@ ms.locfileid: "62081858"
 
 > [!CAUTION]
 > Имейте в виду, что такой подход предполагает базу, которая содержит поле с именем Идентификатором и типом поля является LongInteger.
-
-В следующем списке приведены разделы этой статьи. Если вы не знакомы с записью поставщик навигации Windows PowerShell, прочтите эти сведения, в том порядке, в котором она появляется. Тем не менее если вы знакомы с записью поставщик навигации Windows PowerShell, перейдите непосредственно к сведениям, вам потребуется.
-
-- [Определение класса поставщика навигации PS](#Define-the-Windows-PowerShell-provider)
-
-- [Определение базовой функциональности](#Defining-Base-Functionality)
-
-- [Создание контура PS](#Creating-a-Windows-PowerShell-Path)
-
-- [Получение родительского пути](#Retrieving-the-Parent-Path)
-
-- [Получение имени дочерний путь](#Retrieve-the-Child-Path-Name)
-
-- [Определение, является ли элемент контейнера](#Determining-if-an-Item-is-a-Container)
-
-- [Перемещение элемента](#Moving-an-Item)
-
-- [Присоединение динамических параметров в `Move-Item` командлета](#Attaching-Dynamic-Parameters-to-the-Move-Item-Cmdlet)
-
-- [Нормализация относительный путь](#Normalizing-a-Relative-Path)
-
-- [Пример кода](#Code-Sample)
-
-- [Определение типов объектов и форматирование](#Defining-Object-Types-and-Formatting)
-
-- [Создание поставщика Windows PowerShell](#Building-the-Windows-PowerShell-provider)
-
-- [Проверка поставщика в Windows PowerShell](#Testing-the-Windows-PowerShell-provider)
 
 ## <a name="define-the-windows-powershell-provider"></a>Определение поставщика Windows PowerShell
 

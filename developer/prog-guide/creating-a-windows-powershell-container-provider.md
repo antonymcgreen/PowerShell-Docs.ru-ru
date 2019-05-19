@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 33effed9a96cf1b9ee5f1a50b60a1937526db9d1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9e7da13ff559e802d52df475f2a555baeeeef983
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081909"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855181"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Создание поставщика контейнеров Windows PowerShell
 
@@ -35,44 +35,6 @@ ms.locfileid: "62081909"
 
 > [!CAUTION]
 > Имейте в виду, что такой подход предполагает базу, которая содержит поле с именем Идентификатором и типом поля является LongInteger.
-
-Ниже приведен список разделов этой статьи. Если вы не знакомы с разработка контейнера поставщика Windows PowerShell, прочтите эту информацию в порядке, в котором он отображается. Тем не менее если вы знакомы с разработка контейнера поставщика Windows PowerShell, перейдите непосредственно к сведениям, вам потребуется.
-
-- [Определение класса поставщика контейнера Windows PowerShell](#Defining-a-Windows-PowerShell-Container-Provider-Class)
-
-- [Определение базовой функциональности](#defining-base-functionality)
-
-- [Получение дочерних элементов](#Retrieving-Child-Items)
-
-- [Присоединение динамических параметров в `Get-ChildItem` командлета](#Attaching-Dynamic-Parameters-to-the-Get-ChildItem-Cmdlet)
-
-- [Получение имен дочерних элементов](#Retrieving-Child-Item-Names)
-
-- [Присоединение динамических параметров в `Get-ChildItem` командлет (имя)](#Attaching-Dynamic-Parameters-to-the-Get-ChildItem-Cmdlet-(Name))
-
-- [Переименование элементов](#Renaming-Items)
-
-- [Присоединение динамических параметров в `Rename-Item` командлета](#Attaching-Dynamic-Parameters-to-the-Rename-Item-Cmdlet)
-
-- [Создание новых элементов](#Creating-New-Items)
-
-- [Присоединение динамических параметров в `New-Item` командлета](#Attaching-Dynamic-Parameters-to-the-New-Item-Cmdlet)
-
-- [Удаление элементов](#Removing-Items)
-
-- [Присоединение динамических параметров в `Remove-Item` командлета](#Attaching-Dynamic-Parameters-to-the-Remove-Item-Cmdlet)
-
-- [Запрос для дочерних элементов](#Querying-for-Child-Items)
-
-- [Копирование элементов](#Copying-Items)
-
-- [Присоединение динамических параметров в `Copy-Item` командлета](#Attaching-Dynamic-Parameters-to-the-Copy-Item-Cmdlet)
-
-- [Пример кода](#Code-Sample)
-
-- [Создание поставщика Windows PowerShell](#Building-the-Windows-PowerShell-Provider)
-
-- [Проверка поставщика в Windows PowerShell](#Testing-the-Windows-PowerShell-Provider)
 
 ## <a name="defining-a-windows-powershell-container-provider-class"></a>Определение класса поставщика контейнера Windows PowerShell
 
@@ -398,7 +360,7 @@ protected override bool HasChildItems( string path )
 
 - Реализация [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) отвечает за Предотвращение бесконечной рекурсии, при наличии циклических ссылок и т.п. Завершающий соответствующее исключение должно вызываться для отражения таких условий.
 
-- Реализация [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверьте его возвращаемое значение перед внесением любых изменений в хранилище данных. После вызова [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает значение true, [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) метод как дополнительную проверку для изменения потенциально опасных системы. Дополнительные сведения о вызове этих методов, см. в разделе [переименование элементов](#Renaming-Items).
+- Реализация [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверьте его возвращаемое значение перед внесением любых изменений в хранилище данных. После вызова [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает значение true, [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) метод как дополнительную проверку для изменения потенциально опасных системы. Дополнительные сведения о вызове этих методов, см. в разделе [переименование элементов](#renaming-items).
 
 ## <a name="attaching-dynamic-parameters-to-the-copy-item-cmdlet"></a>Присоединение динамических параметров в командлет Copy-Item
 

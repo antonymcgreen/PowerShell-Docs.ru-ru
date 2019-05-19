@@ -11,34 +11,18 @@ helpviewer_keywords:
 - parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: bd52dc8aee7975d0899083a5c2f595b17690dc33
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: def0ac2ff98575beb29c3c2a7d91a5a5c53e648e
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068765"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854983"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Добавление параметров для обработки входных данных конвейера
 
 Один источник входных данных для командлета — это объект в конвейер, поступающие из вышестоящего командлет. В этом разделе описывается добавление параметра в командлет Get-Proc (описано в разделе [Создание свой первый командлет](./creating-a-cmdlet-without-parameters.md)), чтобы командлет может обрабатывать объекты конвейера.
 
 Этот командлет Get-Proc использует `Name` параметр, который принимает входные данные из объекта конвейера, извлекает сведения о процессе на локальном компьютере, на основе предоставленных имен и затем отображает сведения о процессах в командной строке.
-
-Следующие подразделы этого раздела.
-
-- [Определение класса командлета](#Defining-the-Cmdlet-Class)
-
-- [Определение входных данных из конвейера](#Defining-Input-from-the-Pipeline)
-
-- [Переопределив метод обработки входных данных](#Overriding-an-Input-Processing-Method)
-
-- [Пример кода](#Code-Sample)
-
-- [Определение типов объектов и форматирование](#Defining-Object-Types-and-Formatting)
-
-- [Создание командлета](#Building-the-Cmdlet)
-
-- [Тестирование командлет](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet-class"></a>Определение класса командлета
 

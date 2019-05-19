@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: f2c9e10f0dc392399cf062500b7f28b3d1c07f6e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6f91fd53d41dd72c99f8fbc7bc7b863322d88787
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081875"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855057"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Создание поставщика элементов Windows PowerShell
 
@@ -30,44 +30,6 @@ ms.locfileid: "62081875"
 > Дополнительные сведения о других реализаций поставщика Windows PowerShell, см. в разделе [проектирование ваш поставщик PowerShell Windows](./designing-your-windows-powershell-provider.md).
 
 Элемент поставщика Windows PowerShell, описанных в этом разделе получает элементы данных из базы данных Access. В этом случае «item» является либо таблицу в базе данных Access, либо строку в таблице.
-
-Ниже перечислены подразделы этого раздела. Если вы не знакомы с разработка элемента поставщика Windows PowerShell, прочтите эти разделы в порядке их появления. Тем не менее если вы знакомы с разработка элемента поставщика Windows PowerShell, перейти непосредственно к сведения, вам потребуется:
-
-- [Определение класса поставщика Windows PowerShell элемента](#Defining-the-Windows-PowerShell-Item-Provider-Class)
-
-- [Определение базовой функциональности](#Defining-Base-Functionality)
-
-- [Проверка допустимости пути](#Checking-for-Path-Validity)
-
-- [Определение наличия элемента](#Determining-if-an-Item-Exists)
-
-- [Присоединение динамических параметров в `Test-Path` командлета](#Attaching-Dynamic-Parameters-to-the-Test-Path-Cmdlet)
-
-- [Извлечение элемента](#Retrieving-an-Item)
-
-- [Присоединение динамических параметров в `Get-Item` командлета](#Attaching-Dynamic-Parameters-to-the-Get-Item-Cmdlet)
-
-- [Задание элемента](#Setting-an-Item)
-
-- [Присоединение динамических параметров в `Set-Item` командлета](#Retrieving-Dynamic-Parameters-for-SetItem)
-
-- [Удаление элемента](#Clearing-an-Item)
-
-- [Присоединение динамических параметров в командлет Clear-Item](#Retrieve-Dynamic-Parameters-for-ClearItem)
-
-- [Выполняет действие по умолчанию для элемента](#Performing-a-Default-Action-for-an-Item)
-
-- [Получение динамических параметров InvokeDefaultAction](#Retrieve-Dynamic-Parameters-for-InvokeDefaultAction)
-
-- [Реализация вспомогательные методы и классы](#Implementing-Helper-Methods-and-Classes)
-
-- [Пример кода](#Code-Sample)
-
-- [Определение типов объектов и форматирование](#Defining-Object-Types-and-Formatting)
-
-- [Создание поставщика Windows PowerShell](#Building-the-Windows-PowerShell-provider)
-
-- [Проверка поставщика в Windows PowerShell](#Testing-the-Windows-PowerShell-provider)
 
 ## <a name="defining-the-windows-powershell-item-provider-class"></a>Определение класса поставщика Windows PowerShell элемента
 
@@ -223,7 +185,7 @@ ms.locfileid: "62081875"
 
 ## <a name="implementing-helper-methods-and-classes"></a>Реализация вспомогательные методы и классы
 
-Этот элемент поставщик реализует несколько вспомогательных методов и классы, используемые в общественном переопределения методов, определенных для Windows PowerShell. Код этих вспомогательных методов и классов отображаются в [пример кода](#Code-Sample) раздел.
+Этот элемент поставщик реализует несколько вспомогательных методов и классы, используемые в общественном переопределения методов, определенных для Windows PowerShell. Код этих вспомогательных методов и классов отображаются в [пример кода](#code-sample) раздел.
 
 ### <a name="normalizepath-method"></a>Метод NormalizePath
 
