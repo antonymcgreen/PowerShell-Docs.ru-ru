@@ -3,12 +3,12 @@ ms.date: 08/23/2018
 keywords: powershell,командлет
 title: Принцип работы конвейеров PowerShell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-ms.openlocfilehash: 05ab98b7261f4d41ade1788a924193eccda6318c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 10e09fbe8de83eba2473f8f042657f7c80473fbd
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086448"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854347"
 ---
 # <a name="understanding-pipelines"></a>Принцип работы конвейеров
 
@@ -61,7 +61,10 @@ d-----        8/23/2018   5:07 PM                catroot2
 
 Разбиение на страницы также снижает потребление ресурсов ЦП, так обработку продолжает командлет `Out-Host`, когда он получает всю страницу для отображения. Командлет, стоящий в конвейере выше, приостанавливает выполнение, пока не будет готова следующая страница выходных данных.
 
-Разницу можно увидеть в диспетчере задач Windows, отслеживая ресурсы ЦП и памяти, используемые PowerShell. Выполните следующую команду: `Get-ChildItem C:\Windows -Recurse`. Сравните использование ресурсов ЦП и памяти с помощью этой команды: `Get-ChildItem C:\Windows -Recurse | Out-Host -Paging`.
+Вы можете просмотреть, какую нагрузку создает конвейерная передача на ЦП и память, в диспетчере задач Windows, сравнив процесс выполнения следующих команд:
+
+- `Get-ChildItem C:\Windows -Recurse`
+- `Get-ChildItem C:\Windows -Recurse | Out-Host -Paging`
 
 > [!NOTE]
 > Параметр **Разбиение по страницам** поддерживается не всеми узлами PowerShell. Например, при попытке использовать параметр **Разбиение по страницам** в интегрированной среде скриптов PowerShell, вы увидите следующую ошибку:

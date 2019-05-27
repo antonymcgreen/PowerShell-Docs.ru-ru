@@ -2,12 +2,12 @@
 title: Установка PowerShell Core в Windows
 description: Сведения об установке PowerShell Core в Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: 910ee5a653fc1703bfddaf6367225f3b654d600f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5a3c43e27f0027cfbeeefab33b045e618e0ff045
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058035"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854359"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Установка PowerShell Core в Windows
 
@@ -18,7 +18,7 @@ ms.locfileid: "62058035"
 Чтобы включить удаленное взаимодействие PowerShell через WSMan, нужно выполнить следующие условия:
 
 - Установите [универсальную среду выполнения C](https://www.microsoft.com/download/details.aspx?id=50410) в версиях Windows, предшествующих Windows 10. Ее можно скачать самостоятельно или через Центр обновления Windows. Поддерживаемые системы, где установлены все исправления (включая дополнительные пакеты), уже содержат ее.
-- Установите Windows Management Framework (WMF) 4.0 или более поздней версии в Windows 7 и Windows Server 2008 R2.
+- Установите Windows Management Framework (WMF) 4.0 или более поздней версии в Windows 7 и Windows Server 2008 R2. Подробные сведения о WMF см. в статье с [обзором WMF](/powershell/wmf/overview).
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />Установка пакета MSI
 
