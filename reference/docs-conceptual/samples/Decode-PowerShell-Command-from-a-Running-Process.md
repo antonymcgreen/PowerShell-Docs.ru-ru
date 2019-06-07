@@ -3,12 +3,12 @@ ms.date: 11/13/2018
 keywords: powershell,командлет
 title: Декодирование команды PowerShell из выполняемого процесса
 author: randomnote1
-ms.openlocfilehash: a0602070a8c5b60ce0bb09e227690f48d970a868
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086244"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470968"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>Декодирование команды PowerShell из выполняемого процесса
 
@@ -33,7 +33,7 @@ powershell.exe -Command {
 
 ## <a name="view-the-process"></a>Представление процесса
 
-Текст команды, которая выполняется в PowerShell, хранится в свойстве **CommandLine** класса [Win32_Process][]. Если команда является [Зашифрованная команда][], свойство **CommandLine** содержит строку EncodedCommand. Используя эту информацию, зашифрованная команда может быть удалена с помощью следующего процесса.
+Текст команды, которая выполняется в PowerShell, хранится в свойстве **CommandLine** класса [Win32_Process][]. Если команда является зашифрованной, свойство **CommandLine** содержит строку EncodedCommand. Используя эту информацию, зашифрованная команда может быть удалена с помощью следующего процесса.
 
 Запустите PowerShell от имени администратора. Крайне важно, чтобы PowerShell запускался от имени администратора, иначе при запросе запущенных процессов результаты не возвращаются.
 
@@ -107,4 +107,3 @@ DecodedCommand :
 [Планировщик заданий]: /windows/desktop/TaskSchd/task-scheduler-start-page
 [Агент SQL Server]: /sql/ssms/agent/sql-server-agent
 [Win32_Process]: /windows/desktop/CIMWin32Prov/win32-process
-[Зашифрованная команда]: /powershell/scripting/core-powershell/console/powershell.exe-command-line-help#-encodedcommand-

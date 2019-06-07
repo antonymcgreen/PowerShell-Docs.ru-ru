@@ -2,12 +2,12 @@
 ms.date: 12/14/2018
 keywords: powershell,командлет
 title: Создание переносимых модулей
-ms.openlocfilehash: 38a93b5b030d58784b91292e2cd060b3a2c19a00
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 237f6aaea0ed019c54d04a8477d7a456edf00910
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086414"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470984"
 ---
 # <a name="portable-modules"></a>Переносимые модули
 
@@ -17,11 +17,12 @@ ms.locfileid: "62086414"
 
 ### <a name="porting-a-pssnapin"></a>Перенос оснастки PSSnapIn
 
-Оснастки PowerShell (PSSnapIn) не поддерживаются в PowerShell Core. Тем не менее PSSnapIn можно легко преобразовать в модуль PowerShell. Как правило, регистрационный код PSSnapIn находится в одном исходном файле класса, который наследуется от [PSSnapIn][]. Удалите этот исходный файл из сборки, так как он больше не нужен.
+Оснастки PowerShell ([SnapIns](/powershell/developer/cmdlet/modules-and-snap-ins)) не поддерживаются в PowerShell Core. Тем не менее PSSnapIn можно легко преобразовать в модуль PowerShell. Как правило, регистрационный код PSSnapIn находится в одном исходном файле класса, который наследуется от [PSSnapIn][].
+Удалите этот исходный файл из сборки, так как он больше не нужен.
 
-Чтобы создать манифест модуля, который заменяет необходимость в регистрационном коде PSSnapIn, используйте командлет [New-ModuleManifest][]. Некоторые значения из PSSnapIn (например, описание) можно повторно использовать в манифесте модуля.
+Чтобы создать манифест модуля, который заменяет необходимость в регистрационном коде PSSnapIn, используйте командлет [New-ModuleManifest][]. Некоторые значения из **PSSnapIn** (например, **Description**) можно повторно использовать в манифесте модуля.
 
-Для свойства `RootModule` в манифесте модуля должно быть указано имя сборки (DLL), реализующей командлеты.
+Для свойства **RootModule** в манифесте модуля должно быть указано имя сборки (DLL), реализующей командлеты.
 
 ### <a name="the-net-portability-analyzer-aka-apiport"></a>Средство .NET Portability Analyzer (оно же APIPort)
 
