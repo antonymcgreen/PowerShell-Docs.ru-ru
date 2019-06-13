@@ -2,12 +2,12 @@
 title: Установка PowerShell Core в Windows
 description: Сведения об установке PowerShell Core в Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: e716e24ba47c0c109ab302b4b1a9254d7110ddef
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: 3f21761037311891162f1083234edb0aca80d28b
+ms.sourcegitcommit: 4ec9e10647b752cc62b1eabb897ada3dc03c93eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66471006"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830231"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Установка PowerShell Core в Windows
 
@@ -22,7 +22,7 @@ ms.locfileid: "66471006"
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />Установка пакета MSI
 
-Чтобы установить PowerShell на клиент Windows или сервер Windows Server (поддерживаются Windows 7 с пакетом обновления 1 (SP1), Server 2008 R2 и более поздние версии), скачайте пакет MSI с нашей страницы [выпусков][] GitHub. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
+Чтобы установить PowerShell на клиент Windows или сервер Windows Server (поддерживаются Windows 7 с пакетом обновления 1, Windows Server 2008 R2 и более поздние версии), скачайте пакет MSI на нашей странице GitHub с [выпусками][releases]. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
 
 MSI-файл имеет следующий вид: `PowerShell-<version>-win-<os-arch>.msi`.
 <!-- TODO: should be updated to point to the Download Center as well -->
@@ -151,7 +151,11 @@ Nano Server является "виртуальной" ОС. Двоичные ф�
 PowerShell Core поддерживает протокол удаленного взаимодействия PowerShell (PSRP) через SSH и WSMan. Дополнительная информация:
 
 - [Удаленное взаимодействие через SSH в PowerShell Core][ssh-remoting]
-- [Удаленное взаимодействие с WSMan в PowerShell Core][wsman-remoting]
+- [Удаленное взаимодействие через WSMan в PowerShell Core][wsman-remoting]
 
 <!-- [download-center]: TODO -->
-[releases]: https://github.com/PowerShell/PowerShell/releases [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md [wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+
+[releases]: https://github.com/PowerShell/PowerShell/releases
+[ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
+[wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
+[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
