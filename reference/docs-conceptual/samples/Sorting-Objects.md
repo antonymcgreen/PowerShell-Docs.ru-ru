@@ -2,22 +2,21 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Сортировка объектов
-ms.assetid: 8530caa8-3ed4-4c56-aed7-1295dd9ba199
-ms.openlocfilehash: 06aa15d89888f1ecbe60b8e1dfb4efebb1d73673
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: ed78e7e333f3468781c9cd96df2194fbdfebe753
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086057"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030769"
 ---
-# <a name="sorting-objects"></a><span data-ttu-id="a3deb-103">Сортировка объектов</span><span class="sxs-lookup"><span data-stu-id="a3deb-103">Sorting Objects</span></span>
+# <a name="sorting-objects"></a><span data-ttu-id="d2dd5-103">Сортировка объектов</span><span class="sxs-lookup"><span data-stu-id="d2dd5-103">Sorting Objects</span></span>
 
-<span data-ttu-id="a3deb-104">С помощью командлета `Sort-Object` можно упорядочить отображаемые данные для упрощения их проверки.</span><span class="sxs-lookup"><span data-stu-id="a3deb-104">We can organize displayed data to make it easier to scan by using the `Sort-Object` cmdlet.</span></span> <span data-ttu-id="a3deb-105">`Sort-Object` принимает имя одного или нескольких свойств, по значениям которых выполняется сортировка, и возвращает данные, отсортированные по значениям этих свойств.</span><span class="sxs-lookup"><span data-stu-id="a3deb-105">`Sort-Object` takes the name of one or more properties to sort on, and returns data sorted by the values of those properties.</span></span>
+<span data-ttu-id="d2dd5-104">С помощью командлета `Sort-Object` можно упорядочить отображаемые данные для упрощения их проверки.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-104">We can organize displayed data to make it easier to scan by using the `Sort-Object` cmdlet.</span></span> <span data-ttu-id="d2dd5-105">`Sort-Object` принимает имя одного или нескольких свойств, по значениям которых выполняется сортировка, и возвращает данные, отсортированные по значениям этих свойств.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-105">`Sort-Object` takes the name of one or more properties to sort on, and returns data sorted by the values of those properties.</span></span>
 
-## <a name="basic-sorting"></a><span data-ttu-id="a3deb-106">Базовая сортировка</span><span class="sxs-lookup"><span data-stu-id="a3deb-106">Basic sorting</span></span>
+## <a name="basic-sorting"></a><span data-ttu-id="d2dd5-106">Базовая сортировка</span><span class="sxs-lookup"><span data-stu-id="d2dd5-106">Basic sorting</span></span>
 
-<span data-ttu-id="a3deb-107">Рассмотрите проблему перечисления подкаталогов и файлов в текущем каталоге.</span><span class="sxs-lookup"><span data-stu-id="a3deb-107">Consider the problem of listing subdirectories and files in the current directory.</span></span>
-<span data-ttu-id="a3deb-108">Если требуется отсортировать по **LastWriteTime** (времени последней записи), а затем по **Name** имени, это можно сделать, введя следующие команды.</span><span class="sxs-lookup"><span data-stu-id="a3deb-108">If we want to sort by **LastWriteTime** and then by **Name**, we can do it by typing:</span></span>
+<span data-ttu-id="d2dd5-107">Рассмотрите проблему перечисления подкаталогов и файлов в текущем каталоге.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-107">Consider the problem of listing subdirectories and files in the current directory.</span></span>
+<span data-ttu-id="d2dd5-108">Если требуется отсортировать по **LastWriteTime** (времени последней записи), а затем по **Name** имени, это можно сделать, введя следующие команды.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-108">If we want to sort by **LastWriteTime** and then by **Name**, we can do it by typing:</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -40,7 +39,7 @@ LastWriteTime          Name
 ...
 ```
 
-<span data-ttu-id="a3deb-109">Можно также отсортировать объекты в обратном порядке, указав параметр-переключатель **Descending** (по убыванию).</span><span class="sxs-lookup"><span data-stu-id="a3deb-109">You can also sort the objects in reverse order by specifying the **Descending** switch parameter.</span></span>
+<span data-ttu-id="d2dd5-109">Можно также отсортировать объекты в обратном порядке, указав параметр-переключатель **Descending** (по убыванию).</span><span class="sxs-lookup"><span data-stu-id="d2dd5-109">You can also sort the objects in reverse order by specifying the **Descending** switch parameter.</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -65,14 +64,14 @@ LastWriteTime          Name
 11/6/2017 10:10:11 AM  .localization-config
 ```
 
-## <a name="using-hash-tables"></a><span data-ttu-id="a3deb-110">Использование хэш-таблиц</span><span class="sxs-lookup"><span data-stu-id="a3deb-110">Using hash tables</span></span>
+## <a name="using-hash-tables"></a><span data-ttu-id="d2dd5-110">Использование хэш-таблиц</span><span class="sxs-lookup"><span data-stu-id="d2dd5-110">Using hash tables</span></span>
 
-<span data-ttu-id="a3deb-111">Используя хэш-таблицы в массиве, можно сортировать разные свойства в разном порядке.</span><span class="sxs-lookup"><span data-stu-id="a3deb-111">You can sort different properties in different orders by using hash tables in an array.</span></span>
-<span data-ttu-id="a3deb-112">Каждая хэш-таблица использует ключ **Expression** для указания имени свойства в виде строки и ключ **Ascending** (по возрастанию) или **Descending** (по убыванию) для указания порядка сортировки по `$true` или `$false`.</span><span class="sxs-lookup"><span data-stu-id="a3deb-112">Each hash table uses an **Expression** key to specify the property name as string and an **Ascending** or **Descending** key to specify the sort order by `$true` or `$false`.</span></span>
-<span data-ttu-id="a3deb-113">Ключ **Expression** является обязательным.</span><span class="sxs-lookup"><span data-stu-id="a3deb-113">The **Expression** key is mandatory.</span></span>
-<span data-ttu-id="a3deb-114">Ключи **Ascending** или **Descending** являются необязательными.</span><span class="sxs-lookup"><span data-stu-id="a3deb-114">The **Ascending** or **Descending** key is optional.</span></span>
+<span data-ttu-id="d2dd5-111">Используя хэш-таблицы в массиве, можно сортировать разные свойства в разном порядке.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-111">You can sort different properties in different orders by using hash tables in an array.</span></span>
+<span data-ttu-id="d2dd5-112">Каждая хэш-таблица использует ключ **Expression** для указания имени свойства в виде строки и ключ **Ascending** (по возрастанию) или **Descending** (по убыванию) для указания порядка сортировки по `$true` или `$false`.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-112">Each hash table uses an **Expression** key to specify the property name as string and an **Ascending** or **Descending** key to specify the sort order by `$true` or `$false`.</span></span>
+<span data-ttu-id="d2dd5-113">Ключ **Expression** является обязательным.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-113">The **Expression** key is mandatory.</span></span>
+<span data-ttu-id="d2dd5-114">Ключи **Ascending** или **Descending** являются необязательными.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-114">The **Ascending** or **Descending** key is optional.</span></span>
 
-<span data-ttu-id="a3deb-115">В следующем примере объекты сортируются в порядке убывания по  **LastWriteTime** и в порядке возрастания по **Name**.</span><span class="sxs-lookup"><span data-stu-id="a3deb-115">The following example sorts objects in descending **LastWriteTime** order and ascending **Name** order.</span></span>
+<span data-ttu-id="d2dd5-115">В следующем примере объекты сортируются в порядке убывания по  **LastWriteTime** и в порядке возрастания по **Name**.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-115">The following example sorts objects in descending **LastWriteTime** order and ascending **Name** order.</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -92,10 +91,10 @@ LastWriteTime          Name
 ...
 ```
 
-<span data-ttu-id="a3deb-116">Вы также можете установить блок скрипта для ключа **Expression**.</span><span class="sxs-lookup"><span data-stu-id="a3deb-116">You can also set a scriptblock to the **Expression** key.</span></span>
-<span data-ttu-id="a3deb-117">При выполнении командлета `Sort-Object` выполняется блок сценария, а его результат используется для сортировки.</span><span class="sxs-lookup"><span data-stu-id="a3deb-117">When running the `Sort-Object` cmdlet, the scriptblock is executed and the result is used for sorting.</span></span>
+<span data-ttu-id="d2dd5-116">Вы также можете установить блок скрипта для ключа **Expression**.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-116">You can also set a scriptblock to the **Expression** key.</span></span>
+<span data-ttu-id="d2dd5-117">При выполнении командлета `Sort-Object` выполняется блок сценария, а его результат используется для сортировки.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-117">When running the `Sort-Object` cmdlet, the scriptblock is executed and the result is used for sorting.</span></span>
 
-<span data-ttu-id="a3deb-118">В следующем примере объекты сортируются в порядке убывания в промежутке времени между **CreationTime** (временем создания файла) ​​и **LastWriteTime** (временем последней записи).</span><span class="sxs-lookup"><span data-stu-id="a3deb-118">The following example sorts objects in descending order by the time span between **CreationTime** and **LastWriteTime**.</span></span>
+<span data-ttu-id="d2dd5-118">В следующем примере объекты сортируются в порядке убывания в промежутке времени между **CreationTime** (временем создания файла) ​​и **LastWriteTime** (временем последней записи).</span><span class="sxs-lookup"><span data-stu-id="d2dd5-118">The following example sorts objects in descending order by the time span between **CreationTime** and **LastWriteTime**.</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -117,29 +116,29 @@ LastWriteTime          CreationTime
 ...
 ```
 
-## <a name="tips"></a><span data-ttu-id="a3deb-119">Советы</span><span class="sxs-lookup"><span data-stu-id="a3deb-119">Tips</span></span>
+## <a name="tips"></a><span data-ttu-id="d2dd5-119">Советы</span><span class="sxs-lookup"><span data-stu-id="d2dd5-119">Tips</span></span>
 
-<span data-ttu-id="a3deb-120">Вы можете опустить имя параметра **Свойство** следующим образом.</span><span class="sxs-lookup"><span data-stu-id="a3deb-120">You can omit the **Property** parameter name as following:</span></span>
+<span data-ttu-id="d2dd5-120">Вы можете опустить имя параметра **Свойство** следующим образом.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-120">You can omit the **Property** parameter name as following:</span></span>
 
 ```powershell
 Sort-Object LastWriteTime, Name
 ```
 
-<span data-ttu-id="a3deb-121">Кроме того, вы можете ссылаться на `Sort-Object` по его встроенному псевдониму `sort`.</span><span class="sxs-lookup"><span data-stu-id="a3deb-121">Besides, you can refer to `Sort-Object` by its built-in alias, `sort`:</span></span>
+<span data-ttu-id="d2dd5-121">Кроме того, вы можете ссылаться на `Sort-Object` по его встроенному псевдониму `sort`.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-121">Besides, you can refer to `Sort-Object` by its built-in alias, `sort`:</span></span>
 
 ```powershell
 sort LastWriteTime, Name
 ```
 
-<span data-ttu-id="a3deb-122">Ключи в хэш-таблицах для сортировки можно сократить следующим образом.</span><span class="sxs-lookup"><span data-stu-id="a3deb-122">The keys in the hash tables for sorting can be abbreviated as following:</span></span>
+<span data-ttu-id="d2dd5-122">Ключи в хэш-таблицах для сортировки можно сократить следующим образом.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-122">The keys in the hash tables for sorting can be abbreviated as following:</span></span>
 
 ```powershell
 Sort-Object @{ e = 'LastWriteTime'; d = $true }, @{ e = 'Name'; a = $true }
 ```
 
-<span data-ttu-id="a3deb-123">В этом примере **e** расшифровывается **выражение**, **d** расшифровывается **по убыванию**и **a** обозначает **по возрастанию**.</span><span class="sxs-lookup"><span data-stu-id="a3deb-123">In this example, the **e** stands for **Expression**, the **d** stands for **Descending**, and the **a** stands for **Ascending**.</span></span>
+<span data-ttu-id="d2dd5-123">В этом примере **e** расшифровывается **выражение**, **d** расшифровывается **по убыванию**и **a** обозначает **по возрастанию**.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-123">In this example, the **e** stands for **Expression**, the **d** stands for **Descending**, and the **a** stands for **Ascending**.</span></span>
 
-<span data-ttu-id="a3deb-124">Чтобы улучшить читабельность, хэш-таблицы можно поместить в отдельную переменную.</span><span class="sxs-lookup"><span data-stu-id="a3deb-124">To improve readability, you can place the hash tables into a separate variable:</span></span>
+<span data-ttu-id="d2dd5-124">Чтобы улучшить читабельность, хэш-таблицы можно поместить в отдельную переменную.</span><span class="sxs-lookup"><span data-stu-id="d2dd5-124">To improve readability, you can place the hash tables into a separate variable:</span></span>
 
 ```powershell
 $order = @(

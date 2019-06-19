@@ -2,30 +2,29 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Объект PowerShellTab
-ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
-ms.openlocfilehash: 577e2aaaddf3071801816d9ae91dbf0006dd5072
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: bfa11b553f97b7b27b974855ff4e8f1a48c33fea
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057678"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028908"
 ---
-# <a name="the-powershelltab-object"></a><span data-ttu-id="0fac7-103">Объект PowerShellTab</span><span class="sxs-lookup"><span data-stu-id="0fac7-103">The PowerShellTab Object</span></span>
+# <a name="the-powershelltab-object"></a><span data-ttu-id="e9272-103">Объект PowerShellTab</span><span class="sxs-lookup"><span data-stu-id="e9272-103">The PowerShellTab Object</span></span>
 
-<span data-ttu-id="0fac7-104">Объект **PowerShellTab** представляет среду выполнения Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0fac7-104">The **PowerShellTab** object represents a Windows PowerShell runtime environment.</span></span>
+<span data-ttu-id="e9272-104">Объект **PowerShellTab** представляет среду выполнения Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e9272-104">The **PowerShellTab** object represents a Windows PowerShell runtime environment.</span></span>
 
-## <a name="methods"></a><span data-ttu-id="0fac7-105">Методы</span><span class="sxs-lookup"><span data-stu-id="0fac7-105">Methods</span></span>
+## <a name="methods"></a><span data-ttu-id="e9272-105">Методы</span><span class="sxs-lookup"><span data-stu-id="e9272-105">Methods</span></span>
 
-### <a name="invoke-script-"></a><span data-ttu-id="0fac7-106">Invoke\( Script \)</span><span class="sxs-lookup"><span data-stu-id="0fac7-106">Invoke\( Script \)</span></span>
+### <a name="invoke-script-"></a><span data-ttu-id="e9272-106">Invoke\( Script \)</span><span class="sxs-lookup"><span data-stu-id="e9272-106">Invoke\( Script \)</span></span>
 
-<span data-ttu-id="0fac7-107">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="0fac7-107">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="e9272-107">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="e9272-107">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="0fac7-108">Выполняет заданный сценарий на вкладке PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0fac7-108">Runs the given script in the PowerShell tab.</span></span>
+<span data-ttu-id="e9272-108">Выполняет заданный сценарий на вкладке PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e9272-108">Runs the given script in the PowerShell tab.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="0fac7-109">Этот метод работает только для других вкладок PowerShell, но не для вкладки PowerShell, с которой он выполняется.</span><span class="sxs-lookup"><span data-stu-id="0fac7-109">This method only works on other PowerShell tabs, not the PowerShell tab from which it is run.</span></span> <span data-ttu-id="0fac7-110">Он не возвращает объекты или значения.</span><span class="sxs-lookup"><span data-stu-id="0fac7-110">It does not return any object or value.</span></span> <span data-ttu-id="0fac7-111">Если код изменяет какую-либо переменную, эти изменения сохраняются на вкладке, для которой была вызвана команда.</span><span class="sxs-lookup"><span data-stu-id="0fac7-111">If the code modifies any variable, then those changes persist on the tab against which the command was invoked.</span></span>
+> <span data-ttu-id="e9272-109">Этот метод работает только для других вкладок PowerShell, но не для вкладки PowerShell, с которой он выполняется.</span><span class="sxs-lookup"><span data-stu-id="e9272-109">This method only works on other PowerShell tabs, not the PowerShell tab from which it is run.</span></span> <span data-ttu-id="e9272-110">Он не возвращает объекты или значения.</span><span class="sxs-lookup"><span data-stu-id="e9272-110">It does not return any object or value.</span></span> <span data-ttu-id="e9272-111">Если код изменяет какую-либо переменную, эти изменения сохраняются на вкладке, для которой была вызвана команда.</span><span class="sxs-lookup"><span data-stu-id="e9272-111">If the code modifies any variable, then those changes persist on the tab against which the command was invoked.</span></span>
 
-<span data-ttu-id="0fac7-112">**Script** — System.Management.Automation.ScriptBlock или строка. Блок сценария для запуска.</span><span class="sxs-lookup"><span data-stu-id="0fac7-112">**Script** - System.Management.Automation.ScriptBlock or String The script block to run.</span></span>
+<span data-ttu-id="e9272-112">**Script** — System.Management.Automation.ScriptBlock или строка. Блок сценария для запуска.</span><span class="sxs-lookup"><span data-stu-id="e9272-112">**Script** - System.Management.Automation.ScriptBlock or String The script block to run.</span></span>
 
 ```powershell
 # Manually create a second PowerShell tab before running this script.
@@ -33,21 +32,21 @@ ms.locfileid: "62057678"
 $psISE.PowerShellTabs[1].Invoke({dir})
 ```
 
-### <a name="invokesynchronous-script-usenewscope-millisecondstimeout-"></a><span data-ttu-id="0fac7-113">InvokeSynchronous\( Script, \[useNewScope\], millisecondsTimeout \)</span><span class="sxs-lookup"><span data-stu-id="0fac7-113">InvokeSynchronous\( Script, \[useNewScope\], millisecondsTimeout \)</span></span>
+### <a name="invokesynchronous-script-usenewscope-millisecondstimeout-"></a><span data-ttu-id="e9272-113">InvokeSynchronous\( Script, \[useNewScope\], millisecondsTimeout \)</span><span class="sxs-lookup"><span data-stu-id="e9272-113">InvokeSynchronous\( Script, \[useNewScope\], millisecondsTimeout \)</span></span>
 
-<span data-ttu-id="0fac7-114">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="0fac7-114">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="e9272-114">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="e9272-114">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="0fac7-115">Выполняет заданный сценарий на вкладке PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0fac7-115">Runs the given script in the PowerShell tab.</span></span>
+<span data-ttu-id="e9272-115">Выполняет заданный сценарий на вкладке PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e9272-115">Runs the given script in the PowerShell tab.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="0fac7-116">Этот метод работает только для других вкладок PowerShell, но не для вкладки PowerShell, с которой он выполняется.</span><span class="sxs-lookup"><span data-stu-id="0fac7-116">This method only works on other PowerShell tabs, not the PowerShell tab from which it is run.</span></span> <span data-ttu-id="0fac7-117">Выполняется блок сценария, и любое значение, возвращаемое при выполнении сценария, возвращается в среду выполнения, из которой вызывается команда.</span><span class="sxs-lookup"><span data-stu-id="0fac7-117">The script block is run and any value that is returned from the script is returned to the run environment from which you invoked the command.</span></span> <span data-ttu-id="0fac7-118">Если время выполнения команды превышает значение времени ожидания, заданное параметром **millesecondsTimeout**, команда завершается ошибкой с исключением "Время ожидания операции истекло".</span><span class="sxs-lookup"><span data-stu-id="0fac7-118">If the command takes longer to run than the **millesecondsTimeout** value specifies, then the command fails with an exception: "The operation has timed out."</span></span>
+> <span data-ttu-id="e9272-116">Этот метод работает только для других вкладок PowerShell, но не для вкладки PowerShell, с которой он выполняется.</span><span class="sxs-lookup"><span data-stu-id="e9272-116">This method only works on other PowerShell tabs, not the PowerShell tab from which it is run.</span></span> <span data-ttu-id="e9272-117">Выполняется блок сценария, и любое значение, возвращаемое при выполнении сценария, возвращается в среду выполнения, из которой вызывается команда.</span><span class="sxs-lookup"><span data-stu-id="e9272-117">The script block is run and any value that is returned from the script is returned to the run environment from which you invoked the command.</span></span> <span data-ttu-id="e9272-118">Если время выполнения команды превышает значение времени ожидания, заданное параметром **millesecondsTimeout**, команда завершается ошибкой с исключением "Время ожидания операции истекло".</span><span class="sxs-lookup"><span data-stu-id="e9272-118">If the command takes longer to run than the **millesecondsTimeout** value specifies, then the command fails with an exception: "The operation has timed out."</span></span>
 
-<span data-ttu-id="0fac7-119">**Script** — System.Management.Automation.ScriptBlock или строка. Блок сценария для запуска.</span><span class="sxs-lookup"><span data-stu-id="0fac7-119">**Script** - System.Management.Automation.ScriptBlock or String The script block to run.</span></span>
+<span data-ttu-id="e9272-119">**Script** — System.Management.Automation.ScriptBlock или строка. Блок сценария для запуска.</span><span class="sxs-lookup"><span data-stu-id="e9272-119">**Script** - System.Management.Automation.ScriptBlock or String The script block to run.</span></span>
 
-<span data-ttu-id="0fac7-120">**\[useNewScope\]**  — необязательный логический параметр; значение по умолчанию — **$true**. Если задано значение **$true**, создается новая область для выполнения команды.</span><span class="sxs-lookup"><span data-stu-id="0fac7-120">**\[useNewScope\]** -  Optional Boolean that defaults to **$true** If set to **$true**, then a new scope is created within which to run the command.</span></span> <span data-ttu-id="0fac7-121">Параметр не изменяет среду выполнения вкладки PowerShell, которая указана командой.</span><span class="sxs-lookup"><span data-stu-id="0fac7-121">It does not modify the runtime environment of the PowerShell tab that is specified by the command.</span></span>
+<span data-ttu-id="e9272-120">**\[useNewScope\]**  — необязательный логический параметр; значение по умолчанию — **$true**. Если задано значение **$true**, создается новая область для выполнения команды.</span><span class="sxs-lookup"><span data-stu-id="e9272-120">**\[useNewScope\]** -  Optional Boolean that defaults to **$true** If set to **$true**, then a new scope is created within which to run the command.</span></span> <span data-ttu-id="e9272-121">Параметр не изменяет среду выполнения вкладки PowerShell, которая указана командой.</span><span class="sxs-lookup"><span data-stu-id="e9272-121">It does not modify the runtime environment of the PowerShell tab that is specified by the command.</span></span>
 
-<span data-ttu-id="0fac7-122">**\[millisecondsTimeout\]** — необязательный, целое число. Значение по умолчанию — **500**.</span><span class="sxs-lookup"><span data-stu-id="0fac7-122">**\[millisecondsTimeout\]** -  Optional integer that defaults to **500**.</span></span>
-<span data-ttu-id="0fac7-123">Если команда не завершается в течение указанного времени, то создается исключение **TimeoutException** с сообщением "Время ожидания операции истекло".</span><span class="sxs-lookup"><span data-stu-id="0fac7-123">If the command does not finish within the specified time, then the command generates a **TimeoutException** with the message "The operation has timed out."</span></span>
+<span data-ttu-id="e9272-122">**\[millisecondsTimeout\]** — необязательный, целое число. Значение по умолчанию — **500**.</span><span class="sxs-lookup"><span data-stu-id="e9272-122">**\[millisecondsTimeout\]** -  Optional integer that defaults to **500**.</span></span>
+<span data-ttu-id="e9272-123">Если команда не завершается в течение указанного времени, то создается исключение **TimeoutException** с сообщением "Время ожидания операции истекло".</span><span class="sxs-lookup"><span data-stu-id="e9272-123">If the command does not finish within the specified time, then the command generates a **TimeoutException** with the message "The operation has timed out."</span></span>
 
 ```powershell
 # Create a new PowerShell tab and then switch back to the first
@@ -68,13 +67,13 @@ $a
 Measure-Command {$psISE.PowerShellTabs[1].InvokeSynchronous('sleep 10', $false, 5000)}
 ```
 
-## <a name="properties"></a><span data-ttu-id="0fac7-124">Свойства</span><span class="sxs-lookup"><span data-stu-id="0fac7-124">Properties</span></span>
+## <a name="properties"></a><span data-ttu-id="e9272-124">Свойства</span><span class="sxs-lookup"><span data-stu-id="e9272-124">Properties</span></span>
 
-### <a name="addonsmenu"></a><span data-ttu-id="0fac7-125">AddOnsMenu</span><span class="sxs-lookup"><span data-stu-id="0fac7-125">AddOnsMenu</span></span>
+### <a name="addonsmenu"></a><span data-ttu-id="e9272-125">AddOnsMenu</span><span class="sxs-lookup"><span data-stu-id="e9272-125">AddOnsMenu</span></span>
 
-<span data-ttu-id="0fac7-126">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="0fac7-126">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="e9272-126">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="e9272-126">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="0fac7-127">Свойство только для чтения, которое получает меню надстроек для вкладки PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0fac7-127">The read-only property that gets the Add-ons menu for the PowerShell tab.</span></span>
+<span data-ttu-id="e9272-127">Свойство только для чтения, которое получает меню надстроек для вкладки PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e9272-127">The read-only property that gets the Add-ons menu for the PowerShell tab.</span></span>
 
 ```powershell
 # Clear the Add-ons menu if one exists.
@@ -89,11 +88,11 @@ $parentAdded.SubMenus.Add('_Dir', {dir}, 'Alt+D')
 $psISE.CurrentPowerShellTab.AddOnsMenu
 ```
 
-### <a name="caninvoke"></a><span data-ttu-id="0fac7-128">CanInvoke</span><span class="sxs-lookup"><span data-stu-id="0fac7-128">CanInvoke</span></span>
+### <a name="caninvoke"></a><span data-ttu-id="e9272-128">CanInvoke</span><span class="sxs-lookup"><span data-stu-id="e9272-128">CanInvoke</span></span>
 
-<span data-ttu-id="0fac7-129">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="0fac7-129">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="e9272-129">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="e9272-129">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="0fac7-130">Логическое свойство только для чтения, которое возвращает значение **$true**, если сценарий может быть вызван с помощью метода [Invoke( Script )](#invoke-script-).</span><span class="sxs-lookup"><span data-stu-id="0fac7-130">The read-only Boolean property that returns a **$true** value if a script can be invoked with the [Invoke( Script )](#invoke-script-) method.</span></span>
+<span data-ttu-id="e9272-130">Логическое свойство только для чтения, которое возвращает значение **$true**, если сценарий может быть вызван с помощью метода [Invoke( Script )](#invoke-script-).</span><span class="sxs-lookup"><span data-stu-id="e9272-130">The read-only Boolean property that returns a **$true** value if a script can be invoked with the [Invoke( Script )](#invoke-script-) method.</span></span>
 
 ```powershell
 # CanInvoke will be false if the PowerShell
@@ -108,22 +107,22 @@ $secondTab.Invoke({sleep 20})
 $secondTab.CanInvoke
 ```
 
-### <a name="consolepane"></a><span data-ttu-id="0fac7-131">Consolepane</span><span class="sxs-lookup"><span data-stu-id="0fac7-131">Consolepane</span></span>
+### <a name="consolepane"></a><span data-ttu-id="e9272-131">Consolepane</span><span class="sxs-lookup"><span data-stu-id="e9272-131">Consolepane</span></span>
 
-<span data-ttu-id="0fac7-132">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="0fac7-132">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>  <span data-ttu-id="0fac7-133">В Windows PowerShell ISE 2.0 это свойство называется **CommandPane**.</span><span class="sxs-lookup"><span data-stu-id="0fac7-133">In Windows PowerShell ISE 2.0 this was named **CommandPane**.</span></span>
+<span data-ttu-id="e9272-132">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="e9272-132">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>  <span data-ttu-id="e9272-133">В Windows PowerShell ISE 2.0 это свойство называется **CommandPane**.</span><span class="sxs-lookup"><span data-stu-id="e9272-133">In Windows PowerShell ISE 2.0 this was named **CommandPane**.</span></span>
 
-<span data-ttu-id="0fac7-134">Свойство только для чтения, которое получает объект [editor](The-ISEEditor-Object.md) области консоли.</span><span class="sxs-lookup"><span data-stu-id="0fac7-134">The read-only property that gets the Console pane [editor](The-ISEEditor-Object.md) object.</span></span>
+<span data-ttu-id="e9272-134">Свойство только для чтения, которое получает объект [editor](The-ISEEditor-Object.md) области консоли.</span><span class="sxs-lookup"><span data-stu-id="e9272-134">The read-only property that gets the Console pane [editor](The-ISEEditor-Object.md) object.</span></span>
 
 ```powershell
 # Gets the Console Pane editor.
 $psISE.CurrentPowerShellTab.ConsolePane
 ```
 
-### <a name="displayname"></a><span data-ttu-id="0fac7-135">DisplayName</span><span class="sxs-lookup"><span data-stu-id="0fac7-135">DisplayName</span></span>
+### <a name="displayname"></a><span data-ttu-id="e9272-135">DisplayName</span><span class="sxs-lookup"><span data-stu-id="e9272-135">DisplayName</span></span>
 
-<span data-ttu-id="0fac7-136">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="0fac7-136">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="e9272-136">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="e9272-136">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="0fac7-137">Свойство только для чтения, которое получает или задает текст, выводимый на вкладке PowerShell. По умолчанию вкладкам назначаются имена "PowerShell #", где # — номер вкладки.</span><span class="sxs-lookup"><span data-stu-id="0fac7-137">The read-write property that gets or sets the text that is displayed on the PowerShell tab. By default, tabs are named "PowerShell #", where the # represents a number.</span></span>
+<span data-ttu-id="e9272-137">Свойство только для чтения, которое получает или задает текст, выводимый на вкладке PowerShell. По умолчанию вкладкам назначаются имена "PowerShell #", где # — номер вкладки.</span><span class="sxs-lookup"><span data-stu-id="e9272-137">The read-write property that gets or sets the text that is displayed on the PowerShell tab. By default, tabs are named "PowerShell #", where the # represents a number.</span></span>
 
 ```powershell
 $newTab = $psISE.PowerShellTabs.Add()
@@ -131,22 +130,22 @@ $newTab = $psISE.PowerShellTabs.Add()
 $newTab.DisplayName = 'Brand New Tab'
 ```
 
-### <a name="expandedscript"></a><span data-ttu-id="0fac7-138">ExpandedScript</span><span class="sxs-lookup"><span data-stu-id="0fac7-138">ExpandedScript</span></span>
+### <a name="expandedscript"></a><span data-ttu-id="e9272-138">ExpandedScript</span><span class="sxs-lookup"><span data-stu-id="e9272-138">ExpandedScript</span></span>
 
-<span data-ttu-id="0fac7-139">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="0fac7-139">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="e9272-139">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="e9272-139">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="0fac7-140">Логическое свойство для чтения и записи, которое определяет, развернута или скрыта область сценариев.</span><span class="sxs-lookup"><span data-stu-id="0fac7-140">The read-write Boolean property that determines whether the Script pane is expanded or hidden.</span></span>
+<span data-ttu-id="e9272-140">Логическое свойство для чтения и записи, которое определяет, развернута или скрыта область сценариев.</span><span class="sxs-lookup"><span data-stu-id="e9272-140">The read-write Boolean property that determines whether the Script pane is expanded or hidden.</span></span>
 
 ```powershell
 # Toggle the expanded script property to see its effect.
 $psISE.CurrentPowerShellTab.ExpandedScript = !$psISE.CurrentPowerShellTab.ExpandedScript
 ```
 
-### <a name="files"></a><span data-ttu-id="0fac7-141">Файлы</span><span class="sxs-lookup"><span data-stu-id="0fac7-141">Files</span></span>
+### <a name="files"></a><span data-ttu-id="e9272-141">Файлы</span><span class="sxs-lookup"><span data-stu-id="e9272-141">Files</span></span>
 
-<span data-ttu-id="0fac7-142">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="0fac7-142">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="e9272-142">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="e9272-142">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="0fac7-143">Свойство только для чтения, которое получает [коллекцию файлов сценария](The-ISEFileCollection-Object.md), открытых на вкладке PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0fac7-143">The read-only property that gets the [collection of script files](The-ISEFileCollection-Object.md) that are open in the PowerShell tab.</span></span>
+<span data-ttu-id="e9272-143">Свойство только для чтения, которое получает [коллекцию файлов сценария](The-ISEFileCollection-Object.md), открытых на вкладке PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e9272-143">The read-only property that gets the [collection of script files](The-ISEFileCollection-Object.md) that are open in the PowerShell tab.</span></span>
 
 ```powershell
 $newFile = $psISE.CurrentPowerShellTab.Files.Add()
@@ -155,33 +154,33 @@ $newFile.Editor.Text = "a`r`nb"
 $newFile.Editor.LineCount
 ```
 
-### <a name="output"></a><span data-ttu-id="0fac7-144">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="0fac7-144">Output</span></span>
+### <a name="output"></a><span data-ttu-id="e9272-144">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="e9272-144">Output</span></span>
 
-<span data-ttu-id="0fac7-145">Этот компонент присутствует в интегрированной среде сценариев Windows PowerShell 2.0, но был удален или переименован в более поздних версиях интегрированной среды сценариев.</span><span class="sxs-lookup"><span data-stu-id="0fac7-145">This feature is present in Windows PowerShell ISE 2.0, but was removed or renamed in later versions of the ISE.</span></span>  <span data-ttu-id="0fac7-146">В более поздних версиях интегрированной среды сценариев Windows PowerShell для тех же целей можно использовать объект **ConsolePane**.</span><span class="sxs-lookup"><span data-stu-id="0fac7-146">In later versions of Windows PowerShell ISE, you can use the **ConsolePane** object for the same purposes.</span></span>
+<span data-ttu-id="e9272-145">Этот компонент присутствует в интегрированной среде сценариев Windows PowerShell 2.0, но был удален или переименован в более поздних версиях интегрированной среды сценариев.</span><span class="sxs-lookup"><span data-stu-id="e9272-145">This feature is present in Windows PowerShell ISE 2.0, but was removed or renamed in later versions of the ISE.</span></span>  <span data-ttu-id="e9272-146">В более поздних версиях интегрированной среды сценариев Windows PowerShell для тех же целей можно использовать объект **ConsolePane**.</span><span class="sxs-lookup"><span data-stu-id="e9272-146">In later versions of Windows PowerShell ISE, you can use the **ConsolePane** object for the same purposes.</span></span>
 
-<span data-ttu-id="0fac7-147">Свойство только для чтения, которое получает область вывода текущего [редактора](The-ISEEditor-Object.md).</span><span class="sxs-lookup"><span data-stu-id="0fac7-147">The read-only property that gets the Output pane of the current [editor](The-ISEEditor-Object.md).</span></span>
+<span data-ttu-id="e9272-147">Свойство только для чтения, которое получает область вывода текущего [редактора](The-ISEEditor-Object.md).</span><span class="sxs-lookup"><span data-stu-id="e9272-147">The read-only property that gets the Output pane of the current [editor](The-ISEEditor-Object.md).</span></span>
 
 ```powershell
 # Clears the text in the Output pane.
 $psISE.CurrentPowerShellTab.output.clear()
 ```
 
-### <a name="prompt"></a><span data-ttu-id="0fac7-148">Prompt</span><span class="sxs-lookup"><span data-stu-id="0fac7-148">Prompt</span></span>
+### <a name="prompt"></a><span data-ttu-id="e9272-148">Prompt</span><span class="sxs-lookup"><span data-stu-id="e9272-148">Prompt</span></span>
 
-<span data-ttu-id="0fac7-149">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="0fac7-149">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="e9272-149">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="e9272-149">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="0fac7-150">Свойство только для чтения, которое получает текущий текст запроса.</span><span class="sxs-lookup"><span data-stu-id="0fac7-150">The read-only property that gets the current prompt text.</span></span> <span data-ttu-id="0fac7-151">Примечание. Функция **Prompt** может быть переопределена профилем пользователя.</span><span class="sxs-lookup"><span data-stu-id="0fac7-151">Note: the **Prompt** function can be overridden by the user'™s profile.</span></span> <span data-ttu-id="0fac7-152">Если результат отличается от простой строки, это свойство не возвращает никаких данных.</span><span class="sxs-lookup"><span data-stu-id="0fac7-152">If the result is other than a simple string, then this property returns nothing.</span></span>
+<span data-ttu-id="e9272-150">Свойство только для чтения, которое получает текущий текст запроса.</span><span class="sxs-lookup"><span data-stu-id="e9272-150">The read-only property that gets the current prompt text.</span></span> <span data-ttu-id="e9272-151">Примечание. Функция **Prompt** может быть переопределена профилем пользователя.</span><span class="sxs-lookup"><span data-stu-id="e9272-151">Note: the **Prompt** function can be overridden by the user'™s profile.</span></span> <span data-ttu-id="e9272-152">Если результат отличается от простой строки, это свойство не возвращает никаких данных.</span><span class="sxs-lookup"><span data-stu-id="e9272-152">If the result is other than a simple string, then this property returns nothing.</span></span>
 
 ```powershell
 # Gets the current prompt text.
 $psISE.CurrentPowerShellTab.Prompt
 ```
 
-### <a name="showcommands"></a><span data-ttu-id="0fac7-153">ShowCommands</span><span class="sxs-lookup"><span data-stu-id="0fac7-153">ShowCommands</span></span>
+### <a name="showcommands"></a><span data-ttu-id="e9272-153">ShowCommands</span><span class="sxs-lookup"><span data-stu-id="e9272-153">ShowCommands</span></span>
 
-<span data-ttu-id="0fac7-154">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="0fac7-154">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="e9272-154">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="e9272-154">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="0fac7-155">Свойство для чтения и записи, которое указывает, отображается ли панель команд.</span><span class="sxs-lookup"><span data-stu-id="0fac7-155">The read-write property that indicates if the Commands pane is currently displayed.</span></span>
+<span data-ttu-id="e9272-155">Свойство для чтения и записи, которое указывает, отображается ли панель команд.</span><span class="sxs-lookup"><span data-stu-id="e9272-155">The read-write property that indicates if the Commands pane is currently displayed.</span></span>
 
 ```powershell
 # Gets the current status of the Commands pane and stores it in the $a variable
@@ -190,33 +189,33 @@ $a = $psISE.CurrentPowerShellTab.ShowCommands
 if (!$a) {$psISE.CurrentPowerShellTab.ShowCommands = $true}
 ```
 
-### <a name="statustext"></a><span data-ttu-id="0fac7-156">StatusText</span><span class="sxs-lookup"><span data-stu-id="0fac7-156">StatusText</span></span>
+### <a name="statustext"></a><span data-ttu-id="e9272-156">StatusText</span><span class="sxs-lookup"><span data-stu-id="e9272-156">StatusText</span></span>
 
-<span data-ttu-id="0fac7-157">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="0fac7-157">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="e9272-157">Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="e9272-157">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="0fac7-158">Свойство только для чтения, которое получает текст состояния вкладки **PowerShellTab**.</span><span class="sxs-lookup"><span data-stu-id="0fac7-158">The read-only property that gets the **PowerShellTab** status text.</span></span>
+<span data-ttu-id="e9272-158">Свойство только для чтения, которое получает текст состояния вкладки **PowerShellTab**.</span><span class="sxs-lookup"><span data-stu-id="e9272-158">The read-only property that gets the **PowerShellTab** status text.</span></span>
 
 ```powershell
 # Gets the current status text,
 $psISE.CurrentPowerShellTab.StatusText
 ```
 
-### <a name="horizontaladdontoolspaneopened"></a><span data-ttu-id="0fac7-159">HorizontalAddOnToolsPaneOpened</span><span class="sxs-lookup"><span data-stu-id="0fac7-159">HorizontalAddOnToolsPaneOpened</span></span>
+### <a name="horizontaladdontoolspaneopened"></a><span data-ttu-id="e9272-159">HorizontalAddOnToolsPaneOpened</span><span class="sxs-lookup"><span data-stu-id="e9272-159">HorizontalAddOnToolsPaneOpened</span></span>
 
-<span data-ttu-id="0fac7-160">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="0fac7-160">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="e9272-160">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="e9272-160">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="0fac7-161">Свойство только для чтения, которое указывает, открыта ли горизонтальная область инструментов надстроек.</span><span class="sxs-lookup"><span data-stu-id="0fac7-161">The read-only property that indicates whether the horizontal Add-Ons tool pane is currently open.</span></span>
+<span data-ttu-id="e9272-161">Свойство только для чтения, которое указывает, открыта ли горизонтальная область инструментов надстроек.</span><span class="sxs-lookup"><span data-stu-id="e9272-161">The read-only property that indicates whether the horizontal Add-Ons tool pane is currently open.</span></span>
 
 ```powershell
 # Gets the current state of the horizontal Add-ons tool pane.
 $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 ```
 
-### <a name="verticaladdontoolspaneopened"></a><span data-ttu-id="0fac7-162">VerticalAddOnToolsPaneOpened</span><span class="sxs-lookup"><span data-stu-id="0fac7-162">VerticalAddOnToolsPaneOpened</span></span>
+### <a name="verticaladdontoolspaneopened"></a><span data-ttu-id="e9272-162">VerticalAddOnToolsPaneOpened</span><span class="sxs-lookup"><span data-stu-id="e9272-162">VerticalAddOnToolsPaneOpened</span></span>
 
-<span data-ttu-id="0fac7-163">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="0fac7-163">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="e9272-163">Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.</span><span class="sxs-lookup"><span data-stu-id="e9272-163">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="0fac7-164">Свойство только для чтения, которое указывает, открыта ли вертикальная область инструментов надстроек.</span><span class="sxs-lookup"><span data-stu-id="0fac7-164">The read-only property that indicates whether the vertical Add-Ons tool pane is currently open.</span></span>
+<span data-ttu-id="e9272-164">Свойство только для чтения, которое указывает, открыта ли вертикальная область инструментов надстроек.</span><span class="sxs-lookup"><span data-stu-id="e9272-164">The read-only property that indicates whether the vertical Add-Ons tool pane is currently open.</span></span>
 
 ```powershell
 # Turns on the Commands pane
@@ -225,8 +224,8 @@ $psISE.CurrentPowerShellTab.ShowCommands = $true
 $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0fac7-165">См. также</span><span class="sxs-lookup"><span data-stu-id="0fac7-165">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9272-165">См. также</span><span class="sxs-lookup"><span data-stu-id="e9272-165">See Also</span></span>
 
-- [<span data-ttu-id="0fac7-166">Объект PowerShellTabCollection</span><span class="sxs-lookup"><span data-stu-id="0fac7-166">The PowerShellTabCollection Object</span></span>](The-PowerShellTabCollection-Object.md)
-- [<span data-ttu-id="0fac7-167">Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="0fac7-167">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-- [<span data-ttu-id="0fac7-168">Иерархия объектной модели интегрированной среды скриптов</span><span class="sxs-lookup"><span data-stu-id="0fac7-168">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)
+- [<span data-ttu-id="e9272-166">Объект PowerShellTabCollection</span><span class="sxs-lookup"><span data-stu-id="e9272-166">The PowerShellTabCollection Object</span></span>](The-PowerShellTabCollection-Object.md)
+- [<span data-ttu-id="e9272-167">Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="e9272-167">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [<span data-ttu-id="e9272-168">Иерархия объектной модели интегрированной среды скриптов</span><span class="sxs-lookup"><span data-stu-id="e9272-168">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)
