@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Использование команд Format для изменения представления вывода
-ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05
-ms.openlocfilehash: fba37b1d0479bf605d8f2171da27cd1bceb9976e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a1712dade1e7508c0c4a004685bd1bb04a126f74
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058273"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030058"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Использование команд Format для изменения представления вывода
 
@@ -111,7 +110,7 @@ Id          : 3448
 
 ### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>Получение подробных сведений с помощью подстановочных знаков в командлете Format-List
 
-Командлет **Format-List** позволяет использовать подстановочные знаки в качестве значения параметра **Property**. Это дает возможность отображать подробные сведения. Часто объекты содержат больше информации, чем необходимо. Поэтому Windows PowerShell по умолчанию выводит значения не всех свойств. Чтобы вывести список всех свойств объекта, используйте команду **Format-List -Property \&#42;**. Следующая команда формирует более 60 строк выходных данных для одного процесса:
+Командлет **Format-List** позволяет использовать подстановочные знаки в качестве значения параметра **Property**. Это дает возможность отображать подробные сведения. Часто объекты содержат больше информации, чем необходимо. Поэтому Windows PowerShell по умолчанию выводит значения не всех свойств. Чтобы вывести список всех свойств объекта, используйте команду **Format-List -Property \&#42;** . Следующая команда формирует более 60 строк выходных данных для одного процесса:
 
 ```powershell
 Get-Process -Name powershell | Format-List -Property *

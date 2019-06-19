@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Изменение состояния компьютера
-ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: f8a2ed6a1a0390021eb633c9af64a725146ad136
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 80692ad7c56aa13e55d4997cfec289ffb3605458
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086329"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030283"
 ---
 # <a name="changing-computer-state"></a>Изменение состояния компьютера
 
@@ -48,7 +47,7 @@ shutdown.exe -l
 
 ## <a name="shutting-down-or-restarting-a-computer"></a>Завершение работы или перезапуск компьютера
 
-Завершение работы и перезапуск компьютеров обычно относятся к схожим типам задач. Средства, завершающие работу компьютера, обычно также перезапускают его и наоборот. Существует два варианта непосредственной перезагрузки компьютера из Windows PowerShell. Используйте Tsshutdn.exe или Shutdown.exe с соответствующими аргументами. Подробные сведения об использовании можно получить, запустив **tsshutdn.exe /?** или **shutdown.exe /?**.
+Завершение работы и перезапуск компьютеров обычно относятся к схожим типам задач. Средства, завершающие работу компьютера, обычно также перезапускают его и наоборот. Существует два варианта непосредственной перезагрузки компьютера из Windows PowerShell. Используйте Tsshutdn.exe или Shutdown.exe с соответствующими аргументами. Подробные сведения об использовании можно получить, запустив **tsshutdn.exe /?** или **shutdown.exe /?** .
 
 Операции завершения работы и перезапуска можно также выполнять непосредственно из Windows PowerShell.
 
