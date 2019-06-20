@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a82aba91-71af-447d-b9ef-b6b6ac7d9de4
 caps.latest.revision: 19
-ms.openlocfilehash: d1abdca9ecbb5ab0a13593072e6dcb0d647b0b14
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 743efcf23174a9521925c5c19dd670979bc0c523
+ms.sourcegitcommit: 13f24786ed39ca1c07eff2b73a1974c366e31cb8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62066997"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263816"
 ---
 # <a name="writing-a-windows-powershell-cmdlet"></a>Запись командлета Windows PowerShell
 
@@ -27,7 +27,7 @@ ms.locfileid: "62066997"
 
 [Примеры кода, командлет](./examples-of-cmdlet-code.md) в этом разделе содержится пример кода, который можно использовать для написания собственных командлетов.
 
-[Примеры форматирования выходных данных командлета](https://msdn.microsoft.com/en-us/65829249-124d-47d0-9bf3-8e397dc55855) в этом разделе приведены примеры, демонстрирующие способ форматирования выходных данных командлета.
+[Запись файлов форматирования для выходных данных командлета](../format/writing-a-powershell-formatting-file.md) в этом разделе описывают создание файлов форматирования. Файлы форматирования определяют, каким образом PowerShell отображает объекты в командной строке.
 
 [Учебники по написание командлетов](./tutorials-for-writing-cmdlets.md) этот раздел содержит учебники, которые можно использовать для сведения об основах коде командлета.
 
