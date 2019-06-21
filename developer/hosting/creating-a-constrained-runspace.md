@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 59125e65-7030-40bb-9926-756120b2d952
 caps.latest.revision: 5
-ms.openlocfilehash: 29f1be6a1215219ddd16367a31f528a4f0dbc2e3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 20ac1e2af8e047b8b572d86a55439676aa8df25c
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62083014"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301374"
 ---
 # <a name="creating-a-constrained-runspace"></a>Создание ограниченного пространства выполнения
 
@@ -109,7 +109,7 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 
 ## <a name="making-commands-private"></a>Сделав команды закрытым
 
- Вы также можете команду закрытым, присвоив ему в [System.Management.Automation.Commandinfo.Visibility*](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) свойства [System.Management.Automation.Sessionstateentryvisibility.Private](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility.Private) . Ведущее приложение и другие команды можно вызвать эту команду, но нельзя пользователя или приложения. В следующем примере [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) команда является закрытым.
+ Вы также можете команду закрытым, присвоив ему в [System.Management.Automation.Commandinfo.Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) свойства [System.Management.Automation.SessionStateEntryVisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **Частного**. Ведущее приложение и другие команды можно вызвать эту команду, но нельзя пользователя или приложения. В следующем примере [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) команда является закрытым.
 
 ```csharp
 defaultSessionState = InitialSessionState.CreateDefault();

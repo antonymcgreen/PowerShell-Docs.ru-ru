@@ -13,12 +13,12 @@ helpviewer_keywords:
 - confirm impact [PowerShell Programmer's Guide]
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
-ms.openlocfilehash: a4fa9ce52855928679a2425f24f2e49a68030c63
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 8a65915b88a04e36e773853b903528a65fe11e99
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854920"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301392"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>Создание командлета, который изменяет систему
 
@@ -59,7 +59,7 @@ public class StopProcCommand : Cmdlet
 
 ### <a name="extremely-destructive-actions"></a>Очень разрушительные действия
 
-Некоторые операции являются очень уничтожения данных, например переформатирования active жесткого диска. В этих случаях следует установить командлет `ConfirmImpact`  =  `ConfirmImpact.High` при объявлении [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) атрибута. Этот параметр заставляет командлет для запроса подтверждения пользователя, даже в том случае, если пользователь не указал `Confirm` параметра. Тем не менее, разработчикам командлетов следует избегать чрезмерное `ConfirmImpact` для операций, которые являются просто потенциально необратимыми, например, удаление учетной записи пользователя. Помните, что если `ConfirmImpact` присваивается [System.Management.Automation.Confirmimpact.High](/dotnet/api/System.Management.Automation.ConfirmImpact.High).
+Некоторые операции являются очень уничтожения данных, например переформатирования active жесткого диска. В этих случаях следует установить командлет `ConfirmImpact`  =  `ConfirmImpact.High` при объявлении [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) атрибута. Этот параметр заставляет командлет для запроса подтверждения пользователя, даже в том случае, если пользователь не указал `Confirm` параметра. Тем не менее, разработчикам командлетов следует избегать чрезмерное `ConfirmImpact` для операций, которые являются просто потенциально необратимыми, например, удаление учетной записи пользователя. Помните, что если `ConfirmImpact` присваивается [System.Management.Automation.ConfirmImpact](/dotnet/api/System.Management.Automation.ConfirmImpact) **высокой**.
 
 Аналогично некоторые операции вряд ли уничтожения данных, несмотря на то, что они в теории изменяют состояние системы за пределами Windows PowerShell. Можно задать такие командлеты `ConfirmImpact` для [System.Management.Automation.Confirmimpact.Low](/dotnet/api/system.management.automation.confirmimpact?view=powershellsdk-1.1.0). Эта конструкция запросы подтверждения, где пользователю поступает запрос на подтверждение операции только влияние medium и значительное влияние.
 
@@ -278,11 +278,11 @@ if (criticalProcess &&!force)
 
 ## <a name="defining-object-types-and-formatting"></a>Определение типов объектов и форматирование
 
-Windows PowerShell передает данные между командлетами, используя объекты .net. Следовательно командлета может потребоваться определить его собственного типа, или командлет может потребоваться расширить существующий тип предоставляемые другому командлету. Дополнительные сведения о определение новых типов или расширения существующих типов, см. в разделе [расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Windows PowerShell передает данные между командлетами, используя объекты .net. Следовательно командлета может потребоваться определить его собственного типа, или командлет может потребоваться расширить существующий тип предоставляемые другому командлету. Дополнительные сведения о определение новых типов или расширения существующих типов, см. в разделе [расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85)).
 
 ## <a name="building-the-cmdlet"></a>Создание командлета
 
-После реализации командлета, его необходимо зарегистрировать с помощью Windows PowerShell через оснастку Windows PowerShell. Дополнительные сведения о регистрации командлетов см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+После реализации командлета, его необходимо зарегистрировать с помощью Windows PowerShell через оснастку Windows PowerShell. Дополнительные сведения о регистрации командлетов см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
 
 ## <a name="testing-the-cmdlet"></a>Тестирование командлет
 
@@ -354,9 +354,9 @@ Windows PowerShell передает данные между командлета
 
 [Добавление параметров, которые обрабатывают данные в командной строке](./adding-parameters-that-process-command-line-input.md)
 
-[Расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85))
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85))
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
 

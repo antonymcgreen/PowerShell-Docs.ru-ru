@@ -11,12 +11,12 @@ helpviewer_keywords:
 - parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: def0ac2ff98575beb29c3c2a7d91a5a5c53e648e
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 34643d20c16f8cc45e7fb20dc2a87d78b18bbf10
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854983"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298627"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Добавление параметров для обработки входных данных конвейера
 
@@ -77,7 +77,7 @@ End Property
 
 Если командлет должен обрабатывать входные данные конвейера, ему необходимо переопределить соответствующие методы обработки ввода. Методы базовую обработку ввода, использованные в [Создание свой первый командлет](./creating-a-cmdlet-without-parameters.md).
 
-Этот командлет Get-Proc переопределяет [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод для обработки `Name` входные параметры, предоставляемые пользователем или сценарий. Этот метод будет получения процессов для каждого имени запрошенного процесса и всех процессов, если имя не указано. Обратите внимание, что в [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), вызов [System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) выходные данные механизм для отправки выходных данных объекты в конвейер. Второй параметр этой вызов `enumerateCollection`, имеет значение `true` сообщить среде выполнения Windows PowerShell для перечисления массива объектов процессов и один процесс записи за раз в командную строку.
+Этот командлет Get-Proc переопределяет [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод для обработки `Name` входные параметры, предоставляемые пользователем или сценарий. Этот метод будет получения процессов для каждого имени запрошенного процесса и всех процессов, если имя не указано. Обратите внимание, что в [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), вызов [WriteObject(System.Object,System.Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject?view=pscore-6.2.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) — это механизм для отправки выходных объектов для выходных данных конвейер. Второй параметр этой вызов `enumerateCollection`, имеет значение `true` сообщить среде выполнения Windows PowerShell для перечисления массива объектов процессов и один процесс записи за раз в командную строку.
 
 ```csharp
 protected override void ProcessRecord()
@@ -130,11 +130,11 @@ End Sub 'ProcessRecord
 
 ## <a name="defining-object-types-and-formatting"></a>Определение типов объектов и форматирование
 
-Windows PowerShell передает данные между командлетами, используя объекты .net. Следовательно командлета может потребоваться определить его собственного типа, или командлет может потребоваться расширить существующий тип предоставляемые другому командлету. Дополнительные сведения о определение новых типов или расширения существующих типов, см. в разделе [расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Windows PowerShell передает данные между командлетами, используя объекты .net. Следовательно командлета может потребоваться определить его собственного типа, или командлет может потребоваться расширить существующий тип предоставляемые другому командлету. Дополнительные сведения о определение новых типов или расширения существующих типов, см. в разделе [расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85)).
 
 ## <a name="building-the-cmdlet"></a>Создание командлета
 
-После реализации командлета он зарегистрирован с помощью Windows PowerShell с помощью оснастки Windows PowerShell. Дополнительные сведения о регистрации командлетов см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+После реализации командлета он зарегистрирован с помощью Windows PowerShell с помощью оснастки Windows PowerShell. Дополнительные сведения о регистрации командлетов см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
 
 ## <a name="testing-the-cmdlet"></a>Тестирование командлет
 
@@ -180,9 +180,9 @@ Windows PowerShell передает данные между командлета
 
 [Создайте свой первый командлет](./creating-a-cmdlet-without-parameters.md)
 
-[Расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85))
 
-[Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85))
 
 [Справочник по Windows PowerShell](../windows-powershell-reference.md)
 
