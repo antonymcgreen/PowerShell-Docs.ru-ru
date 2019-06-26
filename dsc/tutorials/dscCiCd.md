@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Создание конвейера непрерывной интеграции и непрерывного развертывания с помощью DSC
-ms.openlocfilehash: 012057a32ccf85b0d15e76a332cadda4b226180a
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2d049cd640f0df9b018a88ad106e59dbeed7bcee
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076481"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301498"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Создание конвейера непрерывной интеграции и непрерывного развертывания с помощью DSC
 
@@ -22,10 +22,10 @@ ms.locfileid: "62076481"
 
 Чтобы использовать этот пример, следует ознакомиться со следующим:
 
-- Основные понятия непрерывной интеграции и развертывания. Хороший справочник можно найти в документе [The Release Pipeline Model](http://aka.ms/thereleasepipelinemodelpdf) (Модель конвейера выпуска).
+- Основные понятия непрерывной интеграции и развертывания. Хороший справочник можно найти в документе [The Release Pipeline Model](https://aka.ms/thereleasepipelinemodelpdf) (Модель конвейера выпуска).
 - Система управления версиями [Git](https://git-scm.com/).
 - Платформа тестирования [Pester](https://github.com/pester/Pester).
-- [Team Foundation Server](https://www.visualstudio.com/tfs/).
+- [Team Foundation Server](https://visualstudio.microsoft.com/tfs/).
 
 ## <a name="what-you-will-need"></a>Что вам понадобится
 
@@ -44,7 +44,7 @@ ms.locfileid: "62076481"
 ### <a name="tfssrv1"></a>TFSSrv1
 
 Компьютер, на котором размещен сервер TFS и где определяется сборка и выпуск.
-На этом компьютере должен быть установлен [Team Foundation Server 2017](https://www.visualstudio.com/tfs/).
+На этом компьютере должен быть установлен [Team Foundation Server 2017](https://visualstudio.microsoft.com/tfs/).
 
 ### <a name="buildagent"></a>BuildAgent
 
@@ -157,7 +157,7 @@ Node $AllNodes.Where{$_.Role -eq 'DNSServer'}.NodeName
 
 Она находит все узлы, определенные как имеющие роль `DNSServer` в [данных конфигурации](../configurations/configData.md), которые создаются с помощью скрипта `DevEnv.ps1`.
 
-Дополнительные сведения о методе `Where` в см. в разделе [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md).
+Дополнительные сведения о методе `Where` в см. в разделе [about_arrays](/powershell/module/microsoft.powershell.core/about/about_arrays).
 
 При выполнении непрерывной интеграции важно использовать данные конфигурации для определения узлов, так как сведения об узле, скорее всего, изменятся между средами. Использование данных конфигурации позволит вам легко вносить изменения в сведения об узле без изменения кода конфигурации.
 
@@ -319,7 +319,7 @@ Invoke-PSake $PSScriptRoot\InfraDNS\$fileName.ps1
 
 Теперь, когда мы передали свой код в TFS и просмотрели, что он делает, определим нашу сборку.
 
-Здесь мы расскажем только о шагах сборки, которые вы добавите к ней. Инструкции о том, как создать определение сборки в TFS и поместить его в очередь, см. в [этой статье](/azure/devops/pipelines/get-started-designer).
+Здесь мы расскажем только о шагах сборки, которые вы добавите к ней. Инструкции о том, как создать определение сборки в TFS и поместить его в очередь, см. в [этой статье](/azure/devops/pipelines/create-first-pipeline).
 
 Создайте определение сборки (выберите шаблон **Пусто**) с именем InfraDNS.
 Добавьте следующие шаги к своему определению сборки:
@@ -388,7 +388,7 @@ Invoke-PSake $PSScriptRoot\InfraDNS\$fileName.ps1
 
 Для этого добавьте новые определения выпуска, связанные с созданным определением сборки `InfraDNS`.
 Установите **непрерывное развертывание**, чтобы новый выпуск запускался при каждом завершении новой сборки
-([What are release pipelines?](/azure/devops/pipelines/release/what-is-release-management) (Сведения о конвейерах выпуска) и настройте его следующим образом:
+([What are release pipelines?](/azure/devops/pipelines/release/) (Сведения о конвейерах выпуска) и настройте его следующим образом:
 
 Добавьте следующие шаги к своему определению выпуска:
 

@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,resource,gallery,setup
 title: Добавление параметров в конфигурацию
-ms.openlocfilehash: 15213404f0cdd6416baf1f83af91b8f5279cc97f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 514bb4cf82b7adbe4cd3d3e34d5464f574cb2206
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080262"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301511"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Добавление параметров в конфигурацию
 
@@ -187,7 +187,7 @@ $State="Running"
 > [!NOTE]
 > Вам не нужно указывать атрибут `parameter` при использовании атрибута `validation`.
 
-Дополнительные сведения об атрибуте `parameter` и атрибутах проверки см. в разделе о [расширенных параметрах функций](/powershell/module/microsoft.powershell.core/about/about_Functions_Advanced_Parameters.md).
+Дополнительные сведения об атрибуте `parameter` и атрибутах проверки см. в разделе о [расширенных параметрах функций](/powershell/module/microsoft.powershell.core/about/about_Functions_Advanced_Parameters).
 
 ## <a name="fully-parameterized-configuration"></a>Полностью параметризованная конфигурация
 
