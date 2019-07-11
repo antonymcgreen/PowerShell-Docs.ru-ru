@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: 7f10acf59dedbb4af17bc5250e8624282ba22656
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 2685215f41c96955fc662d5eee27fc0e7a31da83
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854964"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733967"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Создание командлета без параметров
 
@@ -71,7 +71,7 @@ Windows PowerShell использует [Microsoft.PowerShell.Commands](/dotnet/
 
 ## <a name="overriding-an-input-processing-method"></a>Переопределив метод обработки входных данных
 
-[System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) класс предоставляет три метода основной обработки ввода, по крайней мере один из которых необходимо переопределить командлета. Дополнительные сведения об обработке записей с помощью Windows PowerShell см. в разделе [как Windows PowerShell работает](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
+[System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) класс предоставляет три метода основной обработки ввода, по крайней мере один из которых необходимо переопределить командлета. Дополнительные сведения об обработке записей с помощью Windows PowerShell см. в разделе [как Windows PowerShell работает](/previous-versions//ms714658(v=vs.85)).
 
 Для всех типов входных данных среда выполнения Windows PowerShell вызывает [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , чтобы включить обработку. Если в командлете необходимо выполнить предварительную обработку или установки, его можно сделать путем переопределения этого метода.
 
@@ -135,11 +135,11 @@ End Sub 'ProcessRecord
 
 ## <a name="defining-object-types-and-formatting"></a>Определение типов объектов и форматирование
 
-Windows PowerShell передает данные между командлетами, используя объекты .NET. Следовательно командлета может потребоваться определить его собственного типа, или командлет может потребоваться расширить существующий тип предоставляемые другому командлету. Дополнительные сведения о определение новых типов или расширения существующих типов, см. в разделе [расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Windows PowerShell передает данные между командлетами, используя объекты .NET. Следовательно командлета может потребоваться определить его собственного типа, или командлет может потребоваться расширить существующий тип предоставляемые другому командлету. Дополнительные сведения о определение новых типов или расширения существующих типов, см. в разделе [расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85)).
 
 ## <a name="building-the-cmdlet"></a>Создание командлета
 
-После реализации командлета, необходимо зарегистрировать его с помощью Windows PowerShell через оснастку Windows PowerShell. Дополнительные сведения о регистрации командлетов см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+После реализации командлета, необходимо зарегистрировать его с помощью Windows PowerShell через оснастку Windows PowerShell. Дополнительные сведения о регистрации командлетов см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
 
 ## <a name="testing-the-cmdlet"></a>Тестирование командлет
 
@@ -260,13 +260,13 @@ Windows PowerShell передает данные между командлета
 
 [Создание командлета для обработки входных данных конвейера](./adding-parameters-that-process-pipeline-input.md)
 
-[Как создать командлет Windows PowerShell](https://msdn.microsoft.com/en-us/0d721742-c849-4d0d-964f-78ddd9cd258c)
+[Как создать командлет Windows PowerShell](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[Расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85))
 
-[Как работает Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Как работает Windows PowerShell](/previous-versions//ms714658(v=vs.85))
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85))
 
 [Справочник по Windows PowerShell](../windows-powershell-reference.md)
 

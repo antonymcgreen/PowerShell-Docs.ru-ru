@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell SDK
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
-ms.openlocfilehash: 86595ebaac32318a4e3b9a3c4b295c73fb2e1c75
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 48b2b2b9ab2a39cf185ed54bcfa99d46562e13b6
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080504"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733736"
 ---
 # <a name="windows-powershell-reference"></a>Справочник по Windows PowerShell
 
@@ -53,4 +53,4 @@ Windows PowerShell Software Development Kit (SDK) записывается дл�
 
 [System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) это пространство имен содержит базовые классы, используемые другими классами пространства имен. Например [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) класс является базовым классом для [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) класса.
 
-[System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) это пространство имен содержит классы, перечисления и интерфейсы, используемые для создания пространства выполнения Windows PowerShell. В данном контексте пространства выполнения Windows PowerShell является контекст, в котором один или несколько конвейеров Windows PowerShell вызвать командлеты. То есть командлеты работают в контексте пространства выполнения Windows PowerShell. Дополнительные сведения о aboutWindows пространства выполнения PowerShell, см. в разделе [пространства выполнения Windows PowerShell](http://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9).
+[System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) это пространство имен содержит классы, перечисления и интерфейсы, используемые для создания пространства выполнения Windows PowerShell. В данном контексте пространства выполнения Windows PowerShell является контекст, в котором один или несколько конвейеров Windows PowerShell вызвать командлеты. То есть командлеты работают в контексте пространства выполнения Windows PowerShell. Дополнительные сведения о aboutWindows пространства выполнения PowerShell, см. в разделе [пространства выполнения Windows PowerShell](https://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9).

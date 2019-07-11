@@ -8,19 +8,19 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1106829a-8ddc-454e-bbdd-ade15d4bffb4
 caps.latest.revision: 7
-ms.openlocfilehash: 264e9f7538e13b48d899e87541239250eb88f14e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 4154aeb22b5dde7806f3af133559d471e82bb981
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081212"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733780"
 ---
 # <a name="windows-powershell-sample-code"></a>Пример кода Windows PowerShell
 
 Примеры Windows PowerShell® доступны через пакет SDK Windows. Этот раздел содержит пример кода, который содержится в примеров из Windows SDK.
 
 > [!NOTE]
-> При установке пакета Windows SDK **примеры** создается каталог, в котором становятся доступными все примеры Windows PowerShell. Каталог установки стандартного — **C:\Program Files\Microsoft SDKs\Windows\v6.0**. Запустите Windows PowerShell и введите **«cd Samples\SysMgmt\PowerShell»** для поиска каталога, примеры Windows PowerShell. В этом документе каталоге Windows PowerShell Samples называется  **\<примеры PowerShell >**.
+> При установке пакета Windows SDK **примеры** создается каталог, в котором становятся доступными все примеры Windows PowerShell. Каталог установки стандартного — **C:\Program Files\Microsoft SDKs\Windows\v6.0**. Запустите Windows PowerShell и введите **«cd Samples\SysMgmt\PowerShell»** для поиска каталога, примеры Windows PowerShell. В этом документе каталоге Windows PowerShell Samples называется  **\<примеры PowerShell >** .
 
 ## <a name="sample-code-listing"></a>Пример кода
 
@@ -39,15 +39,15 @@ ms.locfileid: "62081212"
 |[Примеры кода GetProc05](./getproc05-code-samples.md)|Это `Get-Process` командлет аналогичен командлету, описанные в [Добавление устранимые отчеты об ошибках Your командлету](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md).|
 |[Примеры кода StopProc01](./stopproc01-code-samples.md)|Это `Stop-Process` командлетов, которые описаны в [Создание командлет что изменяет система](../cmdlet/creating-a-cmdlet-that-modifies-the-system.md).|
 |[Примеры кода StopProcessSample04](./stopprocesssample04-code-samples.md)|Это `Stop-Process` командлетов, которые описаны в [добавление наборов параметров для командлета](../cmdlet/adding-parameter-sets-to-a-cmdlet.md).|
-|[Примеры кода Runspace01](./runspace01-code-samples.md)|Ниже приведены примеры кода для пространства выполнения, описанных в [Создание консольного приложения, запускающегося команды указан](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e).|
+|[Примеры кода Runspace01](./runspace01-code-samples.md)|Ниже приведены примеры кода для пространства выполнения, описанных в [Создание консольного приложения, запускающегося команды указан](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).|
 |[Примеры кода Runspace02](./runspace02-code-samples.md)|В этом примере используется [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) класс для выполнения `Get-Process` командлет синхронно.|
-|[Примеры кода RunSpace03](./runspace03-code-samples.md)|Ниже приведены примеры кода для пространства выполнения, описанных в [Создание консольного приложения, запускающегося сценария указан](http://msdn.microsoft.com/en-us/a93e6006-36db-4bcc-b9da-c5bebf4ffd68).|
+|[Примеры кода RunSpace03](./runspace03-code-samples.md)|Ниже приведены примеры кода для пространства выполнения, описанных в [Создание консольного приложения, запускающегося сценария указан](fd).|
 |[Примеры кода RunSpace04](./runspace04-code-samples.md)|Ниже приведен пример кода для пространства выполнения, который использует [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) класса, чтобы выполнить скрипт, который создает неустранимую ошибку.|
-|[Пример кода RunSpace05](./runspace05-code-sample.md)|Это исходный код для примера Runspace05, описанных в [Настройка RunspaceConfiguration пространство выполнения с помощью](http://msdn.microsoft.com/en-us/42681d19-2d05-4975-befd-afb1990e79b2).|
-|[Пример кода RunSpace06](./runspace06-code-sample.md)|Это исходный код для примера Runspace06, описанных в [Настройка пространство выполнения с помощью оснастки Windows PowerShell](http://msdn.microsoft.com/en-us/a7289ee8-9732-49ee-91c7-d533e9538b83).|
-|[Пример кода RunSpace07](./runspace07-code-sample.md)|Это исходный код для примера Runspace07, описанных в [Создание консольного приложения, добавляет команд в конвейер](http://msdn.microsoft.com/en-us/01eb7808-e97b-4905-80be-9e2fa38c262e).|
-|[Пример кода RunSpace08](./runspace08-code-sample.md)|Это исходный код для примера Runspace08, описанных в [Создание консоли приложения, добавляет параметры в команду](http://msdn.microsoft.com/en-us/848b2b46-60f1-4a86-b448-cfc7c0cccfba).|
-|[Пример кода RunSpace09](./runspace09-code-sample.md)|Это исходный код для примера Runspace09, описанных в [Создание консольного приложения, вызывает конвейер асинхронно](http://msdn.microsoft.com/en-us/198c1c94-2a06-457e-93ce-c0d910618e47).|
+|[Пример кода RunSpace05](./runspace05-code-sample.md)|Это исходный код для примера Runspace05, описанных в [Настройка RunspaceConfiguration пространство выполнения с помощью](https://msdn.microsoft.com/en-us/42681d19-2d05-4975-befd-afb1990e79b2).|
+|[Пример кода RunSpace06](./runspace06-code-sample.md)|Это исходный код для примера Runspace06, описанных в [Настройка пространство выполнения с помощью оснастки Windows PowerShell](https://msdn.microsoft.com/en-us/a7289ee8-9732-49ee-91c7-d533e9538b83).|
+|[Пример кода RunSpace07](./runspace07-code-sample.md)|Это исходный код для примера Runspace07, описанных в [Создание консольного приложения, добавляет команд в конвейер](https://msdn.microsoft.com/en-us/01eb7808-e97b-4905-80be-9e2fa38c262e).|
+|[Пример кода RunSpace08](./runspace08-code-sample.md)|Это исходный код для примера Runspace08, описанных в [Создание консоли приложения, добавляет параметры в команду](https://msdn.microsoft.com/en-us/848b2b46-60f1-4a86-b448-cfc7c0cccfba).|
+|[Пример кода RunSpace09](./runspace09-code-sample.md)|Это исходный код для примера Runspace09, описанных в [Создание консольного приложения, вызывает конвейер асинхронно](https://msdn.microsoft.com/en-us/198c1c94-2a06-457e-93ce-c0d910618e47).|
 |[Пример кода RunSpace10](./runspace10-code-sample.md)|Это исходный код для примера Runspace10, который добавляет командлету, чтобы [System.Management.Automation.Runspaces.Runspaceconfiguration](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) , а затем использует сведения о конфигурации, измененный на его создание.|
 
 ## <a name="see-also"></a>См. также

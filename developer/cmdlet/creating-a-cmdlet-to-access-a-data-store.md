@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea15e00e-20dc-4209-9e97-9ffd763e5d97
 caps.latest.revision: 8
-ms.openlocfilehash: 8d7ba9d122e90b80f6009b6dc8e8e3bb07331e4a
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 555baec08539403d3c15d1eca2b23eec0a874e49
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854848"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733947"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Создание командлета для доступа к хранилищу данных
 
@@ -72,7 +72,7 @@ private string[] paths;
 
 Два [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) атрибуты объявляют, `Path` параметр относится к `ScriptParameterSet` и `PatternParameterSet`. Дополнительные сведения о наборах параметров см. в разделе [добавление наборов параметров для командлета](./adding-parameter-sets-to-a-cmdlet.md).
 
-[System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) объявляет атрибут `PSPath` псевдоним для `Path` параметра. Объявление этот псевдоним, настоятельно рекомендуется для обеспечения согласованности с другими командлетами, получить доступ к поставщикам Windows PowerShell. Дополнительные сведения о aboutWindows путей PowerShell, см. в разделе «Основные понятия путь PowerShell» в [как Windows PowerShell работает](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
+[System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) объявляет атрибут `PSPath` псевдоним для `Path` параметра. Объявление этот псевдоним, настоятельно рекомендуется для обеспечения согласованности с другими командлетами, получить доступ к поставщикам Windows PowerShell. Дополнительные сведения о aboutWindows путей PowerShell, см. в разделе «Основные понятия путь PowerShell» в [как Windows PowerShell работает](/previous-versions//ms714658(v=vs.85)).
 
 ### <a name="declaring-the-pattern-parameter"></a>Объявление параметров шаблона
 
@@ -379,7 +379,7 @@ protected override void ProcessRecord()
 
 ## <a name="code-sample"></a>Пример кода
 
-Следующий код показывает реализацию этой версии этот командлет Select-Str. Обратите внимание на то, что этот код включает класс командлета, закрытые методы, используемые с помощью командлета и Windows PowerShell – – оснастка код, используемый для регистрации командлета. Дополнительные сведения о регистрации командлета см. в разделе [построение командлет](#building-the-cmdlet).
+Следующий код показывает реализацию этой версии этот командлет Select-Str. Обратите внимание на то, что этот код включает класс командлета, закрытые методы, используемые с помощью командлета и Windows PowerShell – – оснастка код, используемый для регистрации командлета. Дополнительные сведения о регистрации командлета см. в разделе [построение командлет](#Defining-the-Cmdlet-Class).
 
 ```csharp
 //
@@ -1090,7 +1090,7 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="building-the-cmdlet"></a>Создание командлета
 
-После реализации командлета, необходимо зарегистрировать его с помощью Windows PowerShell через оснастку Windows PowerShell. Дополнительные сведения о регистрации командлетов см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+После реализации командлета, необходимо зарегистрировать его с помощью Windows PowerShell через оснастку Windows PowerShell. Дополнительные сведения о регистрации командлетов см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
 
 ## <a name="testing-the-cmdlet"></a>Тестирование командлет
 
@@ -1214,7 +1214,7 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>См. также
 
-[Как создать командлет Windows PowerShell](https://msdn.microsoft.com/en-us/0d721742-c849-4d0d-964f-78ddd9cd258c)
+[Как создать командлет Windows PowerShell](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
 [Создайте свой первый командлет](./creating-a-cmdlet-without-parameters.md)
 
@@ -1222,8 +1222,8 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 [Разработка поставщика Windows PowerShell](../prog-guide/designing-your-windows-powershell-provider.md)
 
-[Как работает Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Как работает Windows PowerShell](/previous-versions//ms714658(v=vs.85))
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85))
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

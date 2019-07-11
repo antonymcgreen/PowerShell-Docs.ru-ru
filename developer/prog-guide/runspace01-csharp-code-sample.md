@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d59f8b7c-e800-4633-aa5b-74d4c57e2706
 caps.latest.revision: 6
-ms.openlocfilehash: 59320365c4a35c3d71af10273eb21b1ce01e5c0c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: ab067485d70523a16493eb57170615ab300eaa98
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081467"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735055"
 ---
 # <a name="runspace01-c-code-sample"></a>Пример кода Runspace01 (C#)
 
-Ниже приведены примеры кода для пространства выполнения, описанных в [Создание консольного приложения, запускающегося команды указан](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e). Чтобы сделать это, приложение вызывает пространство выполнения и затем вызывает команду. (Обратите внимание, что это приложение не содержит сведения о конфигурации пространства выполнения, а также ли его явным образом создать конвейер). Команда, вызываемая `Get-Process` командлета.
+Ниже приведены примеры кода для пространства выполнения, описанных в [Создание консольного приложения, запускающегося команды указан](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program). Чтобы сделать это, приложение вызывает пространство выполнения и затем вызывает команду. (Обратите внимание, что это приложение не содержит сведения о конфигурации пространства выполнения, а также ли его явным образом создать конвейер). Команда, вызываемая `Get-Process` командлета.
 
 > [!NOTE]
 > Вы можете скачать C# исходный файл (runspace01.cs) для этого пространства выполнения, используя Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения Microsoft .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).

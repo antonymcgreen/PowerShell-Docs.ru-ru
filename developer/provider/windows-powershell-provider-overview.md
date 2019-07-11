@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
 caps.latest.revision: 13
-ms.openlocfilehash: 0d4addc0a064873701ae15c204dbd335f3374ab7
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 81f6c8cd75ccea9e711cd8f6d6daa6cca5a499a0
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080919"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734865"
 ---
 # <a name="windows-powershell-provider-overview"></a>Общие сведения о поставщиках Windows PowerShell
 
@@ -27,7 +27,7 @@ ms.locfileid: "62080919"
 
 ## <a name="type-of-providers"></a>Тип поставщиков
 
-Существует несколько типов поставщиков, каждый из которых предоставляет различный уровень функциональных возможностей. Поставщик реализуется как класс, производный от одного из потомков [System.Management.Automation.Sessionstatecategory.Cmdletprovider](/dotnet/api/System.Management.Automation.SessionStateCategory.CmdletProvider) класса. Сведения о различных типов поставщиков, см. в разделе [типы поставщиков](./provider-types.md).
+Существует несколько типов поставщиков, каждый из которых предоставляет различный уровень функциональных возможностей. Поставщик реализуется как класс, производный от одного из потомков [System.Management.Automation.SessionStateCategory](/dotnet/api/system.management.automation.sessionstatecategory?view=pscore-6.2.0) **CmdletProvider** класса. Сведения о различных типов поставщиков, см. в разделе [типы поставщиков](./provider-types.md).
 
 ## <a name="provider-cmdlets"></a>Командлеты поставщика
 
@@ -63,7 +63,7 @@ ms.locfileid: "62080919"
 
 ## <a name="provider-capabilities"></a>Возможностей поставщика
 
-[System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисление определяет ряд возможностей, поддерживаемых поставщиков. К ним относятся возможность подстановочные элементы фильтра и поддерживает транзакции. Чтобы указать возможности для поставщика, добавьте в список значений [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисления, в сочетании с логическим `OR` операции, как [ System.Management.Automation.Provider.Cmdletproviderattribute.Providercapabilities*](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) свойство (второй параметр атрибута) [System.Management.Automation.Provider.Cmdletproviderattribute ](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) атрибута для класса поставщика. Например, следующий атрибут указывает, что поставщик поддерживает [System.Management.Automation.Provider.Providercapabilities.Shouldprocess](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities.ShouldProcess) и [ System.Management.Automation.Provider.Providercapabilities.Transactions](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities.Transactions) возможности.
+[System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисление определяет ряд возможностей, поддерживаемых поставщиков. К ним относятся возможность подстановочные элементы фильтра и поддерживает транзакции. Чтобы указать возможности для поставщика, добавьте в список значений [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисления, в сочетании с логическим `OR` операции, как [ System.Management.Automation.Provider.Cmdletproviderattribute.Providercapabilities*](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) свойство (второй параметр атрибута) [System.Management.Automation.Provider.Cmdletproviderattribute ](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) атрибута для класса поставщика. Например, следующий атрибут указывает, что поставщик поддерживает [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess** и [ System.Management.Automation.Provider.ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **транзакций** возможности.
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]

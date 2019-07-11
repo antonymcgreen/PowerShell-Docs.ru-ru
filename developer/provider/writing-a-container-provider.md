@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 524fd900-c0fe-4d13-87f2-14903a8fd5a4
 caps.latest.revision: 5
-ms.openlocfilehash: bf0a73267b3cad1f50d983ebed53318ec98180e0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 48ab9102e8f1b17b3b533cc3b0aa1dacef0e2076
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080855"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734829"
 ---
 # <a name="writing-a-container-provider"></a>Написание поставщика контейнера
 
@@ -25,7 +25,7 @@ ms.locfileid: "62080855"
 
 ## <a name="implementing-container-methods"></a>Реализация методов контейнера
 
-[System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) реализует методы, которые поддерживают контейнеры и создания, копирования и удаления элементов. Полный список этих методов, см. в разделе [ContainerCmdletProvider методы](http://msdn.microsoft.com/library/system.management.automation.provider.containercmdletprovider_methods\(v=vs.85\).aspx).
+[System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) реализует методы, которые поддерживают контейнеры и создания, копирования и удаления элементов. Полный список этих методов, см. в разделе [System.Management.Automation.Provider.ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider?view=pscore-6.2.0#methods).
 
 > [!NOTE]
 > Материал данной статьи основан на информации из [QuickStart поставщика Windows PowerShell](./windows-powershell-provider-quickstart.md). В этом разделе рассматриваются базовые сведения о настройке проекта поставщика, или как реализовать методы унаследована от [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) класс, создавать и удалять диски. В этом разделе также рассматривается способ реализации методов, предоставляемых [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) класса. Пример, демонстрирующий способы реализации командлетов item, см. в разделе [Создание поставщика элемента](./writing-an-item-provider.md).
@@ -44,7 +44,7 @@ ms.locfileid: "62080855"
 
 ### <a name="implementing-getchilditems"></a>Реализация GetChildItems
 
-Вызывается подсистемой PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.Get-Childitem](/dotnet/api/Microsoft.PowerShell.Commands.Get-ChildItem) командлет. Этот метод возвращает элементы, являющиеся дочерними для элемента по указанному пути.
+Вызывается подсистемой PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.GetChildItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.Getchilditemcommand) командлета. Этот метод возвращает элементы, являющиеся дочерними для элемента по указанному пути.
 
 В примере базы данных Access, поведение [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод зависит от типа указанного элемента. Если элемент — это диск, затем дочерние элементы — это таблицы, и этот метод возвращает набор таблиц из базы данных. Если указанный элемент является таблицей, дочерние элементы являются строки этой таблицы. Если элемент является строкой, затем он не имеет дочерних элементов, и метод возвращает только строки. Все дочерние элементы отправляются в модуль PowerShell, [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) метод.
 
@@ -155,7 +155,7 @@ protected override void GetChildNames(string path,
 
 ### <a name="implementing-newitem"></a>Реализация NewItem
 
-[System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метод создает новый элемент указанного типа по указанному пути. Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.New-Item](/dotnet/api/Microsoft.PowerShell.Commands.New-Item) командлета.
+[System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метод создает новый элемент указанного типа по указанному пути. Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.NewItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.newitemcommand) командлета.
 
 В этом примере метод реализует логику, чтобы определить соответствие путь и тип. То есть непосредственно в рамках диска (база данных) можно создавать только в таблицах и только строки, которые могут быть созданы в таблице. Если указанный путь и тип элемента не соответствует таким образом, метод вызывает исключение.
 
@@ -333,7 +333,7 @@ protected override void NewItem(string path, string type,
 
 ### <a name="implementing-copyitem"></a>Реализация CopyItem
 
-[System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) копирует указанный элемент по указанному пути. Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.Copy-Item](/dotnet/api/Microsoft.PowerShell.Commands.Copy-Item) командлета. Этот метод также могут быть рекурсивными, копирование всех дочерних элементов в дополнение к самому элементу.
+[System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) копирует указанный элемент по указанному пути. Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.CopyItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.copyitemcommand) командлета. Этот метод также могут быть рекурсивными, копирование всех дочерних элементов в дополнение к самому элементу.
 
 Так же, как [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метод, этот метод выполняет логику, чтобы убедиться в том, что указанный элемент имеет правильный тип для пути, к которому выполняется копирование. Например если целевой путь представляет собой таблицу, этот элемент для копирования должен быть строку.
 
@@ -466,7 +466,7 @@ protected override void CopyItem(string path, string copyPath, bool recurse)
 
 ### <a name="implementing-removeitem"></a>Реализация RemoveItem
 
-[System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) метод удаляет элемент по указанному пути. Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.Remove-Item](/dotnet/api/Microsoft.PowerShell.Commands.Remove-Item) командлета.
+[System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) метод удаляет элемент по указанному пути. Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.RemoveItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.removeitemcommand) командлета.
 
 ```csharp
 protected override void RemoveItem(string path, bool recurse)

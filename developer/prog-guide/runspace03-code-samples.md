@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6b8303d-e868-4dd0-bbbb-ed2e6d8f2f76
 caps.latest.revision: 6
-ms.openlocfilehash: 6060c535f07814e4977b72068927205cefe6d012
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 985fbc6f53ca204e700da821fcd08187edc3b60f
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081484"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735032"
 ---
 # <a name="runspace03-code-samples"></a>Примеры кода RunSpace03
 
-Ниже приведены примеры кода для пространства выполнения, описанных в [Создание консольного приложения, запускающегося сценария указан](http://msdn.microsoft.com/en-us/a93e6006-36db-4bcc-b9da-c5bebf4ffd68).
+Ниже приведены примеры кода для пространства выполнения, описанных в [Создание консольного приложения, запускающегося сценария указан](fd).
 
 > [!NOTE]
 > Вы можете скачать C# исходный файл (runspace03.cs) и файл источника VB.NET (runspace03.vb) для этого образца, используя Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения Microsoft .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).

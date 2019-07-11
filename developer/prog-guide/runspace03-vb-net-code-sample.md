@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3611d66b-19da-4477-ac05-2e5e68312f51
 caps.latest.revision: 6
-ms.openlocfilehash: 432105db021bd19f467f6a275b3ea9038fa82d5b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6c625c325e491135af3e5c8d58eead62e89ccb4a
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081399"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734984"
 ---
 # <a name="runspace03-vbnet-code-sample"></a>Пример кода RunSpace03 (VB.NET)
 
-Ниже приведен исходный код VB.NET для консольного приложения, описанных в [Создание консольного приложения, запускающегося сценария указан](http://msdn.microsoft.com/en-us/a93e6006-36db-4bcc-b9da-c5bebf4ffd68). В этом примере используется [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) класс для выполнения скрипта, которое извлекает обрабатывать сведения для списка имен процесс передачи в сценарий. Он показывает, как для передачи входных объектов скрипта и как получить объекты ошибок, а также выходных объектов.
+Ниже приведен исходный код VB.NET для консольного приложения, описанных в [Создание консольного приложения, запускающегося сценария указан](fd). В этом примере используется [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) класс для выполнения скрипта, которое извлекает обрабатывать сведения для списка имен процесс передачи в сценарий. Он показывает, как для передачи входных объектов скрипта и как получить объекты ошибок, а также выходных объектов.
 
 > [!NOTE]
 > Исходный файл VB.NET (runspace03.vb) для этого примера можно загрузить с помощью Windows Software Development Kit для Windows Vista и компоненты среды выполнения Microsoft .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).

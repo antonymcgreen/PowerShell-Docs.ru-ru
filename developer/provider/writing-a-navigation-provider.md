@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98bcfda0-6ee2-46f5-bbc7-5fab8b780d6a
 caps.latest.revision: 5
-ms.openlocfilehash: f449c17e4c373c42f8a1d96fa9075940111c65bc
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: edb4d9944a527391983e068ddf07f4fac415c3f9
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080872"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734723"
 ---
 # <a name="writing-a-navigation-provider"></a>Написание поставщика навигации
 
@@ -25,7 +25,7 @@ ms.locfileid: "62080872"
 
 ## <a name="implementing-navigation-methods"></a>Реализация методов навигации
 
-[System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) класс реализует методы, которые поддерживают вложенные контейнеры, относительные пути и перемещение элементов. Полный список этих методов, см. в разделе [NavigationCmdletProvider методы](http://msdn.microsoft.com/library/system.management.automation.provider.navigationcmdletprovider_methods\(v=vs.85\).aspx).
+[System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) класс реализует методы, которые поддерживают вложенные контейнеры, относительные пути и перемещение элементов. Полный список этих методов, см. в разделе [NavigationCmdletProvider методы](/dotnet/api/system.management.automation.provider.navigationcmdletprovider?view=pscore-6.2.0#methods).
 
 > [!NOTE]
 > Материал данной статьи основан на информации из [QuickStart поставщика Windows PowerShell](./windows-powershell-provider-quickstart.md). В этом разделе рассматриваются базовые сведения о настройке проекта поставщика, или как реализовать методы унаследована от [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) класс, создавать и удалять диски. В этом разделе также рассматривается способ реализации методов, предоставляемых [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) или [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) классы. Пример, демонстрирующий способы реализации командлетов item, см. в разделе [Создание поставщика элемента](./writing-an-item-provider.md). Пример, демонстрирующий способы реализации командлетов контейнера, см. в разделе [разработка поставщика контейнера](./writing-a-container-provider.md).
@@ -132,7 +132,7 @@ protected override string GetParentPath(string path, string root)
 
 ### <a name="implementing-makepath"></a>Реализация MakePath
 
-[System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) метод объединяет указанного родительского пути и пути указанного дочернего элемента для создания поставщика внутреннего пути (для типов сведений о пути, которые Поставщики могут поддерживать, см. в разделе [Общие сведения о поставщике Windows PowerShell](./windows-powershell-provider-overview.md). Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.Join-Path](/dotnet/api/Microsoft.PowerShell.Commands.Join-Path) командлета.
+[System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) метод объединяет указанного родительского пути и пути указанного дочернего элемента для создания поставщика внутреннего пути (для типов сведений о пути, которые Поставщики могут поддерживать, см. в разделе [Общие сведения о поставщике Windows PowerShell](./windows-powershell-provider-overview.md). Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) командлета.
 
 ```csharp
 protected override string MakePath(string parent, string child)
@@ -221,7 +221,7 @@ protected override string NormalizeRelativePath(string path,
 
 ### <a name="implementing-moveitem"></a>Реализация MoveItem
 
-[System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) метод перемещает элемент из указанного пути в указанный целевой путь. Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.Move-Item](/dotnet/api/Microsoft.PowerShell.Commands.Move-Item) командлета.
+[System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) метод перемещает элемент из указанного пути в указанный целевой путь. Подсистема PowerShell вызывает этот метод, когда пользователь вызывает [Microsoft.PowerShell.Commands.MoveItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.moveitemcommand) командлета.
 
 ```csharp
 protected override void MoveItem(string path, string destination)
