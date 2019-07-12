@@ -19,7 +19,10 @@
     - name: "Начало работы с\_DSC в решении \"Виртуальные машины Azure\""
       href: getting-started/azureDSCexthistory.md
 - name: Краткие руководства
+  expanded: true
   items:
+    - name: Создание конфигурации из групповой политики
+      href: quickstarts/gpo-quickstart.md
     - name: Создание веб-сайта с использованием DSC
       href: quickstarts/website-quickStart.md
 - name: Конфигурации
@@ -102,7 +105,7 @@
           href: managing-nodes/apply-get-test.md
         - name: "Настройка локального экземпляра Configuration Manager (версия\_5)"
           href: managing-nodes/metaConfig.md
-        - name: "Настройка локального экземпляра Configuration Manager (версия\_4)"
+        - name: Настройка LCM в PowerShell 4.0
           href: managing-nodes/metaConfig4.md
         - name: Прямой вызов методов ресурсов DSC
           href: managing-nodes/directCallResource.md
@@ -242,43 +245,43 @@
       items:
         - name: Обзор
           href: reference/mof-classes/msft-dsclocalconfigurationmanager.md
-        - name: Метод ApplyConfiguration класса MSFT_DSCLocalConfigurationManager
+        - name: Метод ApplyConfiguration
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-applyconfiguration.md
-        - name: Метод DisableDebugConfiguration класса MSFT_DSCLocalConfigurationManager
+        - name: Метод DisableDebugConfiguration
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
-        - name: Метод EnableDebugConfiguration класса MSFT_DSCLocalConfigurationManager
+        - name: Метод EnableDebugConfiguration
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
-        - name: Метод GetConfiguration класса MSFT_DSCLocalConfigurationManager
+        - name: Метод GetConfiguration
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfiguration.md
-        - name: Метод GetConfigurationResultOutput класса MSFT_DSCLocalConfigurationManager
+        - name: Метод GetConfigurationResultOutput
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
-        - name: Метод GetConfigurationStatus класса MSFT_DSCLocalConfigurationManager
+        - name: Метод GetConfigurationStatus
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationstatus.md
-        - name: Метод GetMetaConfiguration класса MSFT_DSCLocalConfigurationManager
+        - name: Метод GetMetaConfiguration
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-getmetaconfiguration.md
-        - name: Метод PerformRequiredConfigurationChecks класса MSFT_DSCLocalConfigurationManager
+        - name: Метод PerformRequiredConfigurationChecks
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
-        - name: Метод RemoveConfiguration класса MSFT_DSCLocalConfigurationManager
+        - name: Метод RemoveConfiguration
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-removeconfiguration.md
-        - name: Метод ResourceGet класса MSFT_DSCLocalConfigurationManager
+        - name: Метод ResourceGet
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceget.md
-        - name: Метод ResourceSet класса MSFT_DSCLocalConfigurationManager
+        - name: Метод ResourceSet
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceset.md
-        - name: Метод ResourceTest класса MSFT_DSCLocalConfigurationManager
+        - name: Метод ResourceTest
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourcetest.md
-        - name: Метод RollBack класса MSFT_DSCLocalConfigurationManager
+        - name: Метод RollBack
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-rollback.md
-        - name: Метод SendConfiguration класса MSFT_DSCLocalConfigurationManager
+        - name: Метод SendConfiguration
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfiguration.md
-        - name: Метод SendConfigurationApply класса MSFT_DSCLocalConfigurationManager
+        - name: Метод SendConfigurationApply
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapply.md
-        - name: Метод SendConfigurationApplyAsync класса MSFT_DSCLocalConfigurationManager
+        - name: Метод SendConfigurationApplyAsync
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
-        - name: Метод SendMetaConfigurationApply класса MSFT_DSCLocalConfigurationManager
+        - name: Метод SendMetaConfigurationApply
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
-        - name: Метод StopConfiguration класса MSFT_DSCLocalConfigurationManager
+        - name: Метод StopConfiguration
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-stopconfiguration.md
-        - name: Метод TestConfiguration класса MSFT_DSCLocalConfigurationManager
+        - name: Метод TestConfiguration
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-testconfiguration.md
 - name: Дополнительные материалы
   items:
