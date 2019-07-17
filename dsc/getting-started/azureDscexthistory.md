@@ -3,12 +3,12 @@ description: Сведения о журнале версий расширени�
 ms.date: 06/21/2018
 keywords: dsc, powershell, azure, расширение
 title: Журнал версий расширения Azure DSC
-ms.openlocfilehash: 2c076e3beccc15e99af2327820916d7a4d28da68
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6d821e53e9206d99425e8c83f6d90986c7c28b63
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079750"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734662"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Журнал версий расширения Desired State Configuration Azure
 
@@ -164,7 +164,7 @@ ms.locfileid: "62079750"
 - **Среда:** Azure
 - **Примечания:** В этой версии расширение DSC используется в составе Windows Server 2016 Technical Preview. Для других операционных систем Windows устанавливается среда [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (для установки WMF требуется перезагрузка).
 - **Новые возможности:**
-  - Поддержка предварительной версии WMF 5.1. При первой публикации эта версия являлась необязательным обновлением, и для установки предварительной версии WMF 5.1 приходилось указывать Wmfversion = "5.1PP" в шаблонах Resource Manager. Выбор Wmfversion = "latest" по-прежнему приводит к установке [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/). Дополнительные сведения о предварительной версии WMF 5.1 см. в [этом блоге]( https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/).
+  - Поддержка предварительной версии WMF 5.1. При первой публикации эта версия являлась необязательным обновлением, и для установки предварительной версии WMF 5.1 приходилось указывать Wmfversion = "5.1PP" в шаблонах Resource Manager. Выбор Wmfversion = "latest" по-прежнему приводит к установке [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/). Дополнительные сведения о предварительной версии WMF 5.1 см. в [этом блоге](https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/).
   - Были добавлены другие незначительные исправления и улучшения.
 
 ### <a name="version--219"></a>Версия 2.19

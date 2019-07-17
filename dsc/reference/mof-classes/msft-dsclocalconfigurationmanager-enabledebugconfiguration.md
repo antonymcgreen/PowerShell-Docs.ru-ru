@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
-title: Метод EnableDebugConfiguration класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: b2eaebfa901cb5d93fd0183287073e6b31f975d1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Метод EnableDebugConfiguration
+ms.openlocfilehash: f1290e4d898332361850ffc85aa0a8d79863c8f7
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078770"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727145"
 ---
-# <a name="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод EnableDebugConfiguration класса MSFT_DSCLocalConfigurationManager
+# <a name="enabledebugconfiguration-method"></a>Метод EnableDebugConfiguration
 
 Включает отладку ресурсов DSC.
 

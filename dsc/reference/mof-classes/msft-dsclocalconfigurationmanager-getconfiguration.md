@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
-title: Метод GetConfiguration класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: ae31ac30c152c96707b764ddaf00c924806afcfc
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Метод GetConfiguration
+ms.openlocfilehash: eabc536cfe69abe1144ff031a6f64c09a772e638
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078659"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734522"
 ---
-# <a name="getconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод GetConfiguration класса MSFT_DSCLocalConfigurationManager
+# <a name="getconfiguration-method"></a>Метод GetConfiguration
 
 Отправляет документ конфигурации на управляемый узел и использует метод **Get** агента конфигурации для применения конфигурации.
 

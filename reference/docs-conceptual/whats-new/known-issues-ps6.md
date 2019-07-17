@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Известные проблемы в PowerShell 6.0
-ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 502143b660204edada6a9e62bdf6b260a384a078
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085972"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733827"
 ---
 # <a name="known-issues-for-powershell-60"></a>Известные проблемы в PowerShell 6.0
 
@@ -55,7 +55,7 @@ ms.locfileid: "62085972"
 
 PowerShell в Linux и macOS использует .NET Core, которая является частью полной платформы .NET Framework в Microsoft Windows. Это важно, так как PowerShell предоставляет прямой доступ к базовым типам, методам платформы и т. д. В результате скрипты, которые запускаются в Windows, могут не работать в других системах из-за различий в платформах. Дополнительные сведения о .NET Core Framework см. на странице <https://dotnetfoundation.org/net-core>
 
-С выходом [.NET Standard2.0](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/) .NET Core 2.0 вернет многие традиционные типы и методы, представленные в полной версии .NET Framework. Это означает, что PowerShell Core сможет загружать многие традиционные модули Windows PowerShell без изменений. Вы можете следить за нашей работой, связанной с .NET Standard 2.0, [здесь](https://github.com/PowerShell/PowerShell/projects/4).
+С выходом [.NET Standard2.0](https://devblogs.microsoft.com/dotnet/introducing-net-standard/) .NET Core 2.0 вернет многие традиционные типы и методы, представленные в полной версии .NET Framework. Это означает, что PowerShell Core сможет загружать многие традиционные модули Windows PowerShell без изменений. Вы можете следить за нашей работой, связанной с .NET Standard 2.0, [здесь](https://github.com/PowerShell/PowerShell/projects/4).
 
 ### <a name="redirection-issues"></a>Проблемы с перенаправлением
 
@@ -82,7 +82,7 @@ PowerShell в Linux и macOS использует .NET Core, которая яв
 
 Работа по удаленному взаимодействию на основе WSMan выполняется в репозитории [psl-omi-provider](https://github.com/PowerShell/psl-omi-provider).
 
-PowerShell Core также поддерживает PSRP через SSH на всех платформах (Windows, macOS и Linux). Хотя это в настоящее время не поддерживается в рабочей среде, вы можете узнать больше о настройке этой конфигурации [здесь](../core-powershell/ssh-remoting-in-powershell-core.md).
+PowerShell Core также поддерживает PSRP через SSH на всех платформах (Windows, macOS и Linux). Хотя это в настоящее время не поддерживается в рабочей среде, вы можете узнать больше о настройке этой конфигурации [здесь](../learn/remoting/SSH-Remoting-in-PowerShell-Core.md).
 
 ### <a name="just-enough-administration-jea-support"></a>Поддержка Just Enough Administration (JEA)
 

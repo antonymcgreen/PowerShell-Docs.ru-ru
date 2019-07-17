@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
-title: Метод GetConfigurationResultOutput класса MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: ea572a4a66befd4e4b8d83e2957632b1b5ed7d93
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Метод GetConfigurationResultOutput
+ms.openlocfilehash: 480e710ce1a208253f0e664474c3e9bab296066a
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078651"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727136"
 ---
-# <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a>Метод GetConfigurationResultOutput класса MSFT_DSCLocalConfigurationManager
+# <a name="getconfigurationresultoutput-method"></a>Метод GetConfigurationResultOutput
 
 Получает выходные данные агента конфигурации, относящиеся к определенному заданию.
 
