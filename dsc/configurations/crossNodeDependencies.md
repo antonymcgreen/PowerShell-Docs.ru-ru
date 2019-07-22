@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Указание межузловых зависимостей
-ms.openlocfilehash: 1bdfbd9f8a94809d6bf410eff525e1c877fb6aad
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 62e553d894897ae1908745c2788b7b7b9cbe50ff
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080209"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734672"
 ---
 # <a name="specifying-cross-node-dependencies"></a>Указание межузловых зависимостей
 
@@ -55,14 +55,22 @@ WaitForSome [String] #ResourceName
 
 Все ресурсы **WaitForXXXX** используют следующие разделы синтаксиса.
 
-| Свойство | Описание | | RetryIntervalSec| Количество секунд перед повторной попыткой. Минимальное значение — 1.| | RetryCount| Максимальное число повторных попыток.| | ThrottleLimit| Количество одновременно подключаемых компьютеров. Значение по умолчанию — `New-CimSession`.| | DependsOn | Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Дополнительные сведения см. в статье [Использование зависимостей ресурсов с DependsOn](resource-depends-on.md)| | PsDscRunAsCredential | См. в статье [Использование учетных данных с ресурсами DSC](./runAsUser.md) |
-
+|Свойство|  Описание   |
+|---------|---------------------|
+| RetryIntervalSec| Количество секунд перед повторной попыткой. Минимальное значение — 1.|
+| RetryCount| Максимальное число повторных попыток.|
+| ThrottleLimit| Количество одновременно подключаемых компьютеров. Значение по умолчанию — `New-CimSession`.|
+| DependsOn | Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Дополнительные сведения см. в разделе [DependsOn](resource-depends-on.md).|
+| PsDscRunAsCredential | См. статью [Запуск DSC с учетными данными пользователя](./runAsUser.md). |
 
 ## <a name="using-waitforxxxx-resources"></a>Использование ресурсов WaitForXXXX
 
-Каждый ресурс **WaitForXXXX** ожидает выполнения указанных ресурсов на указанном узле. После этого другие ресурсы в той же конфигурации могут *зависеть от* ресурса **WaitForXXXX** с помощью ключа **DependsOn**.
+Каждый ресурс **WaitForXXXX** ожидает выполнения указанных ресурсов на указанном узле.
+После этого другие ресурсы в той же конфигурации могут *зависеть от* ресурса **WaitForXXXX** с помощью ключа **DependsOn**.
 
 Например, в следующей конфигурации целевой узел ожидает завершения выполнения ресурса **xADDomain** на узле **MyDC** не более чем с 30 повторными попытками (с интервалом 15 секунд), прежде чем присоединиться к домену.
+
+По умолчанию ресурсы **WaitForXXX** выполняют одну попытку, а затем выдают ошибку. Хотя это необязательно, обычно требуется указать **RetryCount** и **RetryIntervalSec**.
 
 ```powershell
 Configuration JoinDomain
@@ -111,7 +119,9 @@ Configuration JoinDomain
 
 При компиляции конфигурации создаются два MOF-файла. Примените их на целевые узлы с помощью командлета [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration)
 
->**Примечание**. По умолчанию ресурсы WaitForXXX выполняют одну попытку, а затем выдают ошибку. Хотя это необязательно, обычно требуется указать **RetryCount** и **RetryIntervalSec**.
+> [!NOTE]
+> Ресурсы **WaitForXXX** используют удаленное управление Windows, чтобы проверить состояние других узлов.
+> Дополнительные сведения о требованиях к безопасности и портах для WinRM см. в разделе [Вопросы обеспечения безопасности удаленного взаимодействия PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
 
 ## <a name="see-also"></a>См. также
 

@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell Core 6.0
 description: Новые возможности и изменения в PowerShell Core 6.0
 ms.date: 08/06/2018
-ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e1218a38398f4d86829cf2b4ba6a3a882675eaab
+ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62059021"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843918"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Новые возможности PowerShell Core 6.0
 
@@ -159,7 +159,7 @@ Add-WindowsPSModulePath
 
 В PowerShell Core добавлена поддержка контейнеров Docker для всех основных поддерживаемых нами платформ (включая несколько дистрибутивов Linux, Windows Server Core и Nano Server).
 
-Чтобы ознакомиться с полным списком, см. теги на [`microsoft/powershell` в центре Docker][docker-hub].
+Чтобы ознакомиться с полным списком, см. теги на [`microsoft/powershell` в Docker Hub][docker-hub].
 Дополнительные сведения о Docker и PowerShell Core см. в разделе [Docker][] на GitHub.
 
 ## <a name="ssh-based-powershell-remoting"></a>Удаленное взаимодействие PowerShell на основе SSH
@@ -295,9 +295,10 @@ PowerShell Core изменяет кодировку по умолчанию, ч�
 
 ### <a name="csv-cmdlets"></a>Командлеты CSV
 
+- `Import-Csv` теперь поддерживает расширенный формат файла журнала W3C (#2482) (спасибо, [@iSazonov](https://github.com/iSazonov)!)
 - Добавлена поддержка `PSTypeName` для `Import-Csv` и `ConvertFrom-Csv`. (#5389) (выражаем благодарность [@markekraus](https://github.com/markekraus))
 - В `Import-Csv` реализована поддержка `CR`, `LF` и `CRLF` в качестве разделителей строк. (#5363) (выражаем благодарность [@iSazonov](https://github.com/iSazonov))
-- `-NoTypeInformation` используется по умолчанию в `Export-Csv` и `ConvertTo-Csv`. (#5164) (выражаем благодарность [@markekraus](https://github.com/markekraus))
+- `-NoTypeInformation` используется по умолчанию в `Export-Csv` и `ConvertTo-Csv`. (#5164) (спасибо, [@markekraus](https://github.com/markekraus))
 
 ### <a name="service-cmdlets"></a>Командлеты службы
 

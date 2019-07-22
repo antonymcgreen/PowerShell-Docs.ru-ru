@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
-ms.openlocfilehash: d25cf07baa11040af57f330feede44635c00c551
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 186e55c1ac46ce3fc172df18995f8c15d9eeb8eb
+ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085938"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843940"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Критические изменения в PowerShell Core 6.0
 
@@ -15,7 +15,7 @@ ms.locfileid: "62085938"
 
 ### <a name="powershell-workflow"></a>Рабочий процесс PowerShell
 
-[Рабочий процесс PowerShell][workflow] — это компонент Windows PowerShell, построенный на базе [Windows Workflow Foundation (WF)][workflow-foundation], который позволяет создавать надежные модули Runbook для долго выполняющихся или параллелизованных задач.
+[Рабочий процесс PowerShell][workflow]is a feature in Windows PowerShell that builds on top of [Windows Workflow Foundation (WF)][workflow-foundation], который позволяет создавать надежные runbook для длительных или распараллеленных задач.
 
 Из-за отсутствия поддержки Windows Workflow Foundation в .NET Core мы больше не будем поддерживать рабочий процесс PowerShell в PowerShell Core.
 
@@ -113,9 +113,13 @@ ms.locfileid: "62085938"
 
 Если API возвращал только значение `null`, Invoke-RestMethod сериализовал его в качестве строки `"null"`, а не `$null`. Это изменение исправляет логику в `Invoke-RestMethod`, чтобы надлежащим образом сериализовать одно допустимое значение литерала JSON `null` как `$null`.
 
-### <a name="remove--computername-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Параметр `-ComputerName` удален из командлетов `*-Computer` [№ 5277](https://github.com/PowerShell/PowerShell/issues/5277)
+### <a name="remove--protocol-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Параметр `-Protocol` удален из командлетов `*-Computer` [№ 5277](https://github.com/PowerShell/PowerShell/issues/5277)
 
-Из-за проблем с удаленным взаимодействием RPC в CoreFX (особенно на платформах не под управлением Windows) и обеспечением согласованного удаленного взаимодействия в PowerShell параметр `-ComputerName` был удален из командлетов `\*-Computer`. Используйте `Invoke-Command` для удаленного выполнения командлетов.
+Из-за проблем с удаленным взаимодействием RPC в CoreFX (особенно на платформах не под управлением Windows) и обеспечением согласованного удаленного взаимодействия в PowerShell параметр `-Protocol` был удален из командлетов `\*-Computer`. DCOM больше не поддерживается для удаленного взаимодействия. Следующие командлеты поддерживают только удаленное взаимодействие через WSMAN.
+
+- Rename-Computer
+- Restart-Computer
+- Stop-Computer
 
 ### <a name="remove--computername-from--service-cmdlets-5090httpsgithubcompowershellpowershellissues5094"></a>Параметр `-ComputerName` удален из командлетов `*-Service` [№ 5090](https://github.com/PowerShell/PowerShell/issues/5094)
 
@@ -159,7 +163,7 @@ ms.locfileid: "62085938"
 
 ### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Удалена поддержка `RunspaceConfiguration` [№ 4942](https://github.com/PowerShell/PowerShell/issues/4942)
 
-Ранее при создании пространства выполнения PowerShell программно с помощью API можно было использовать прежние версии [`RunspaceConfiguration`][runspaceconfig] или более новые версии [`InitialSessionState`][iss]. Это изменение удалило поддержку `RunspaceConfiguration`, и теперь поддерживается только `InitialSessionState`.
+Ранее при создании пространства выполнения PowerShell программно с помощью API можно было использовать прежние версии [ `RunspaceConfiguration` ][runspaceconfig] or the newer [`InitialSessionState`][iss]. Это изменение удалило поддержку `RunspaceConfiguration`, и теперь поддерживается только `InitialSessionState`.
 
 [runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
 [iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
