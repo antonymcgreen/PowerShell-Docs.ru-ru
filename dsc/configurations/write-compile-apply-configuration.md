@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,настройка,служба,установка
 title: Создание, компиляция и применение конфигурации
-ms.openlocfilehash: 947308efa165543571801c88a922daf44fa88be0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8bcd55518b0409b9a4b02ca95f027a0a77eb5300
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080022"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372174"
 ---
 > Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -46,6 +46,18 @@ Configuration HelloWorld {
     }
 }
 ```
+
+> Важно! В более сложных сценариях, когда нужно импортировать несколько модулей, чтобы работать с множеством ресурсов DSC в одной конфигурации, обязательно помещайте каждый модуль в отдельную строку с помощью `Import-DscResource`.
+> Такое поведение проще поддерживать в системе управления версиями. Оно требуется при работе с DSC в Azure State Configuration.
+>
+> ```powershell
+>  Configuration HelloWorld {
+>
+>   # Import the module that contains the File resource.
+>   Import-DscResource -ModuleName PsDesiredStateConfiguration
+>   Import-DscResource -ModuleName xWebAdministration
+>
+> ```
 
 Сохраните файл как "HelloWorld.ps1".
 
