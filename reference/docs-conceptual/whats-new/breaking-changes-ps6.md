@@ -3,10 +3,10 @@ ms.date: 05/17/2018
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
 ms.openlocfilehash: 186e55c1ac46ce3fc172df18995f8c15d9eeb8eb
-ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "67843940"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Критические изменения в PowerShell Core 6.0
@@ -15,7 +15,7 @@ ms.locfileid: "67843940"
 
 ### <a name="powershell-workflow"></a>Рабочий процесс PowerShell
 
-[Рабочий процесс PowerShell][workflow]is a feature in Windows PowerShell that builds on top of [Windows Workflow Foundation (WF)][workflow-foundation], который позволяет создавать надежные runbook для длительных или распараллеленных задач.
+[Рабочий процесс PowerShell][workflow] — это компонент Windows PowerShell на основе [Windows Workflow Foundation (WF)][workflow-foundation]. Он позволяет создавать надежные модули Runbook для долго выполняющихся или параллелизованных задач.
 
 Из-за отсутствия поддержки Windows Workflow Foundation в .NET Core мы больше не будем поддерживать рабочий процесс PowerShell в PowerShell Core.
 
@@ -163,7 +163,7 @@ ms.locfileid: "67843940"
 
 ### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Удалена поддержка `RunspaceConfiguration` [№ 4942](https://github.com/PowerShell/PowerShell/issues/4942)
 
-Ранее при создании пространства выполнения PowerShell программно с помощью API можно было использовать прежние версии [ `RunspaceConfiguration` ][runspaceconfig] or the newer [`InitialSessionState`][iss]. Это изменение удалило поддержку `RunspaceConfiguration`, и теперь поддерживается только `InitialSessionState`.
+Ранее при создании пространства выполнения PowerShell программными средствами с помощью API можно было использовать прежние версии [`RunspaceConfiguration`][runspaceconfig] или более новые версии [`InitialSessionState`][iss]. Это изменение удалило поддержку `RunspaceConfiguration`, и теперь поддерживается только `InitialSessionState`.
 
 [runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
 [iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
