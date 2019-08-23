@@ -1,32 +1,32 @@
 ---
-title: Расширение свойств для объектов | Документация Майкрософт
+title: Расширение свойств объектов | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 08/21/2019
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f33ff3e9-213c-44aa-92ab-09450e65c676
 caps.latest.revision: 11
-ms.openlocfilehash: 496e363b041194563d46c09eee67a12055bb54b0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 3b14007384cca0d0cfa35655aee437adf73b1ff0
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068153"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986491"
 ---
 # <a name="extending-properties-for-objects"></a>Расширение свойств для объектов
 
-При расширении объекты .NET Framework, можно добавить псевдоним свойства, свойства кода, свойства примечаний, свойства сценария и наборов свойств к объектам. В следующих разделах описывается XML, который используется для определения этих свойств.
+При расширении .NET Framework объектов можно добавить свойства псевдонима, свойства кода, свойства примечаний, свойства скрипта и наборы свойств в объекты. XML-код, определяющий эти свойства, описан в следующих разделах.
 
 > [!NOTE]
-> В следующих разделах относятся, например из файла Types.ps1xml типы по умолчанию в каталоге установки Windows PowerShell (`$pshome`).
+> Примеры в следующих разделах относятся к файлу типов по умолчанию `Types.ps1xml` в каталоге установки PowerShell (`$PSHOME`). Дополнительные сведения см. в разделе [About types. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
 
 ## <a name="alias-properties"></a>Свойства псевдонима
 
-Свойства псевдонима определяет новое имя для существующего свойства.
+Свойство Alias определяет новое имя для существующего свойства.
 
-В следующем примере `Count` свойство добавляется к [System.Array? Displayproperty = Fullname](/dotnet/api/System.Array) типа. [AliasProperty](http://msdn.microsoft.com/en-us/b140038c-807a-4bb9-beca-332491cda1b1) элемент определяет расширенное свойство как свойство псевдонима. [Имя](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) элемент указывает новое имя. И [ReferencedMemberName](http://msdn.microsoft.com/en-us/0c5db6cc-9033-4d48-88a7-76b962882f7a) элемент задает существующее свойство, на который ссылается псевдоним. (Можно также добавить [AliasProperty](http://msdn.microsoft.com/en-us/d6647953-94ad-4b0b-af2e-4dda6952dee1) элемент членам [наборов элементов](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) элемент.)
+В следующем примере свойство **Count** добавляется к типу [System. Array](/dotnet/api/System.Array) . Элемент [AliasProperty](/dotnet/api/system.management.automation.psaliasproperty) определяет расширенное свойство как свойство Alias. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name) указывает новое имя. И элемент [референцедмембернаме](/dotnet/api/system.management.automation.psaliasproperty.referencedmembername) указывает на существующее свойство, на которое ссылается псевдоним. Также можно добавить `AliasProperty` элемент в элементы элемента [мемберсетс](/dotnet/api/system.management.automation.psmemberset) .
 
 ```xml
 <Type>
@@ -42,9 +42,9 @@ ms.locfileid: "62068153"
 
 ## <a name="code-properties"></a>Свойства кода
 
-Свойство код ссылается на статическое свойство объекта .NET Framework.
+Свойство Code ссылается на статическое свойство объекта .NET Framework.
 
-В следующем примере `Node` свойство добавляется к [System.IO.Directoryinfo? Displayproperty = Fullname](/dotnet/api/System.IO.DirectoryInfo) типа. [CodeProperty](http://msdn.microsoft.com/en-us/59bc4d18-41eb-4c0d-8ad3-bbfa5dc488db) элемент определяет расширенное свойство как свойство кода. [Имя](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) элемент задает имя расширенного свойства. И [GetCodeReference](http://msdn.microsoft.com/en-us/62af34f5-cc22-42c0-9e0c-3bd0f5c1a4a0) элемент определяет статический метод, который ссылается расширенного свойства. (Можно также добавить [CodeProperty](http://msdn.microsoft.com/en-us/59bc4d18-41eb-4c0d-8ad3-bbfa5dc488db) элемент членам [наборов элементов](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) элемент.)
+В следующем примере свойство **mode** добавляется к типу [System. IO. DirectoryInfo](/dotnet/api/System.IO.DirectoryInfo) . Элемент [CodeProperty](/dotnet/api/system.management.automation.pscodeproperty) определяет расширенное свойство как свойство Code. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name) указывает имя расширенного свойства. И элемент [жеткодереференце](/dotnet/api/system.management.automation.pscodeproperty.gettercodereference) определяет статический метод, на который ссылается расширенное свойство. Также можно добавить `CodeProperty` элемент в элементы элемента [мемберсетс](/dotnet/api/system.management.automation.psmemberset) .
 
 ```xml
 <Type>
@@ -61,11 +61,11 @@ ms.locfileid: "62068153"
 </Type>
 ```
 
-## <a name="note-properties"></a>Свойства примечаний
+## <a name="note-properties"></a>Свойства заметки
 
-Свойство примечания определяет свойство, которое имеет статическое значение.
+Свойство Note определяет свойство, имеющее статическое значение.
 
-В следующем примере `Status` свойства (значение которого всегда является «Успех») добавляется к [System.IO.Directoryinfo? Displayproperty = Fullname](/dotnet/api/System.IO.DirectoryInfo) типа. [NoteProperty](http://msdn.microsoft.com/en-us/331e6c50-d703-43f0-89bc-ca9fb97800eb) элемент определяет расширенное свойство как свойство примечания; [имя](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) элемент задает имя расширенного свойства; и [значение](http://msdn.microsoft.com/en-us/f3c77546-b98e-4c4e-bbe0-6dfd06696d1c) элемент Задает статическое значение расширенного свойства. ( [NoteProperty](http://msdn.microsoft.com/en-us/331e6c50-d703-43f0-89bc-ca9fb97800eb) также можно добавить элемент к членам [наборов элементов](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) элемент.)
+В следующем примере свойство **Status** , значение которого всегда равно Success,добавляется в тип [System. IO. DirectoryInfo](/dotnet/api/System.IO.DirectoryInfo) . Элемент [NoteProperty](/dotnet/api/system.management.automation.psnoteproperty) определяет расширенное свойство как свойство Note. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name) указывает имя расширенного свойства. Элемент [value](/dotnet/api/system.management.automation.psnoteproperty.value) указывает статическое значение расширенного свойства. Элемент также можно добавить в элементы элемента [мемберсетс.](/dotnet/api/system.management.automation.psmemberset) `NoteProperty`
 
 ```xml
 <Type>
@@ -79,11 +79,11 @@ ms.locfileid: "62068153"
 </Type>
 ```
 
-## <a name="script-properties"></a>Свойства сценария
+## <a name="script-properties"></a>Свойства скрипта
 
-Свойство скрипт определяет свойство, значение которого является результатом выполнения скрипта.
+Свойство скрипта определяет свойство, значение которого является выходным значением скрипта.
 
-В следующем примере `VersionInfo` свойство добавляется к [System.IO.FileInfo? Displayproperty = Fullname](/dotnet/api/System.IO.FileInfo) типа. [ScriptProperty](http://msdn.microsoft.com/en-us/858a4247-676b-4cc9-9f3e-057109aad350) элемент определяет расширенное свойство как свойство скрипта. [Имя](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) элемент задает имя расширенного свойства. И [GetScriptBlock](http://msdn.microsoft.com/en-us/f3c77546-b98e-4c4e-bbe0-6dfd06696d1c) элемент указывает сценарий, который создает значение свойства. (Можно также добавить [ScriptProperty](http://msdn.microsoft.com/en-us/858a4247-676b-4cc9-9f3e-057109aad350) элемент членам [наборов элементов](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) элемент.)
+В следующем примере свойство **versionInfo** добавляется в тип [System. IO. FileInfo](/dotnet/api/System.IO.FileInfo) . Элемент [ScriptProperty](/dotnet/api/system.management.automation.psscriptproperty) определяет расширенное свойство как свойство скрипта. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name) указывает имя расширенного свойства. И элемент [жетскриптблокк](/dotnet/api/system.management.automation.psscriptproperty.getterscript) указывает скрипт, который создает значение свойства. Также можно добавить `ScriptProperty` элемент в элементы элемента [мемберсетс](/dotnet/api/system.management.automation.psmemberset) .
 
 ```xml
 <Type>
@@ -101,11 +101,13 @@ ms.locfileid: "62068153"
 
 ## <a name="property-sets"></a>Наборы свойств
 
-Набор свойств определяется группа расширенные свойства, которые можно ссылаться по имени набора. Например `Property` параметр [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) командлета можно указать значение для отображения конкретного свойства. Если указан набор свойств, отображаются только те свойства, которые принадлежат к набору.
+Набор свойств определяет группу расширенных свойств, на которые может ссылаться имя набора.
+Например, параметр**Свойства** [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table)
+может указывать конкретный набор свойств для отображения. Если задан набор свойств, отображаются только те свойства, которые принадлежат набору.
 
-Нет никаких ограничений на количество наборов свойств, которые могут быть определены для объекта. Тем не менее наборов свойств, используемый для определения свойств отображения по умолчанию объекта должно быть указано в наборе элементов PSStandardMembers. В файле Types.ps1xml типы имена набора свойств по умолчанию включают DefaultDisplayProperty DefaultDisplayPropertySet и DefaultKeyPropertySet. Все наборы дополнительные свойства, добавленные в набор элементов PSStandardMembers игнорируются.
+Количество наборов свойств, которые могут быть определены для объекта, не ограничено. Однако наборы свойств, используемые для определения свойств экрана по умолчанию для объекта, должны быть указаны в наборе элементов **псстандардмемберс** . В файлетипов имена наборов свойств по умолчанию включают дефаултдисплайпроперти, дефаултдисплайпропертисет и дефаулткэйпропертисет. `Types.ps1xml` Все дополнительные наборы свойств, добавляемые в набор элементов **псстандардмемберс** , игнорируются.
 
-В следующем примере добавляется набор свойств DefaultDisplayPropertySet набором элементов PSStandardMembers [System.Serviceprocess.Servicecontroller? Displayproperty = Fullname](/dotnet/api/System.ServiceProcess.ServiceController) типа. [PropertySet](http://msdn.microsoft.com/en-us/14cdc234-796e-4857-9b51-bdbaa1412188) элемент определяет группу свойств. [Имя](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) элемент задает имя набора свойств. И [ReferencedProperties](http://msdn.microsoft.com/en-us/5e620423-8679-4fbf-b6db-9f79288e4786) элемент определяет свойства набора. (Можно также добавить [PropertySet](http://msdn.microsoft.com/en-us/14cdc234-796e-4857-9b51-bdbaa1412188) элемент членам [тип](http://msdn.microsoft.com/en-us/e5dbd353-d6b2-40a1-92b6-6f1fea744ebe) элемент.)
+В следующем примере набор свойств **дефаултдисплайпропертисет** добавляется в набор элементов **псстандардмемберс** типа [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) . Элемент набора [свойств](/dotnet/api/system.management.automation.pspropertyset) определяет группу свойств. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name) указывает имя набора свойств. И элемент [референцедпропертиес](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) указывает свойства набора. Можно также добавить `PropertySet` элемент в элементы элемента [Type](/dotnet/api/system.management.automation.pstypename) .
 
 ```xml
 <Type>
@@ -128,6 +130,10 @@ ms.locfileid: "62068153"
 </Type>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
+
+[О типах. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)
+
+[System. Management. Automation](/dotnet/api/System.Management.Automation)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

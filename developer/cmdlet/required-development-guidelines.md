@@ -8,211 +8,211 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 41d2b308-a36a-496f-8542-666b6a21eedc
 caps.latest.revision: 19
-ms.openlocfilehash: 3f6bcd2e4ef4d9c404b3a5deeaa9f25d3fa42ec1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e68e43a91f9139e8d3dc636b5740121515aab2e6
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067473"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986670"
 ---
 # <a name="required-development-guidelines"></a>Обязательные требования к разработке
 
-При написании командлетов, должен следовать приведенным ниже рекомендациям. Они разделяются на рекомендации по разработке командлетов и рекомендации по написанию кода командлета. Если не следовать рекомендациям, командлетов может привести к сбою, а у пользователей могут быть слишком ограничивать возможности при использовании командлетов.
+При написании командлетов необходимо следовать приведенным ниже рекомендациям. Они разделены на рекомендации по проектированию командлетов и руководств по написанию кода командлета. Если не следовать этим рекомендациям, командлеты могут завершиться сбоем, и пользователи могут столкнуться с плохими возможностями при использовании командлетов.
 
 ## <a name="in-this-topic"></a>В этом разделе
 
 ### <a name="design-guidelines"></a>Рекомендации по проектированию
 
-- [Используйте только утвержденные глаголы (RD01)](./required-development-guidelines.md#use-only-approved-verbs-rd01)
+- [Использовать только утвержденные команды (RD01)](./required-development-guidelines.md#use-only-approved-verbs-rd01)
 
-- [Имена командлетов: Нельзя использовать символы (RD02)](./required-development-guidelines.md#cmdlet-names-characters-that-cannot-be-used-rd02)
+- [Имена командлетов: Символы, которые не могут быть использованы (RD02)](./required-development-guidelines.md#cmdlet-names-characters-that-cannot-be-used-rd02)
 
 - [Имена параметров, которые нельзя использовать (RD03)](./required-development-guidelines.md#parameters-names-that-cannot-be-used-rd03)
 
-- [Запросы в службу поддержки подтверждения (RD04)](./required-development-guidelines.md#support-confirmation-requests-rd04)
+- [Запросы на подтверждение поддержки (RD04)](./required-development-guidelines.md#support-confirmation-requests-rd04)
 
-- [Поддерживает параметр Force для интерактивных сеансов (RD05)](./required-development-guidelines.md#support-force-parameter-for-interactive-sessions-rd05)
+- [Поддержка параметра Force для интерактивных сеансов (RD05)](./required-development-guidelines.md#support-force-parameter-for-interactive-sessions-rd05)
 
-- [Объекты документа вывода (RD06)](./required-development-guidelines.md#document-output-objects-rd06)
+- [Объекты вывода документа (RD06)](./required-development-guidelines.md#document-output-objects-rd06)
 
-### <a name="code-guidelines"></a>Руководствам по кодам
+### <a name="code-guidelines"></a>Рекомендации по коду
 
-- [Наследовать из командлета или классы PSCmdlet (RC01)](./required-development-guidelines.md#derive-from-the-cmdlet-or-pscmdlet-classes-rc01)
+- [Наследование от классов командлета или PSCmdlet (RC01)](./required-development-guidelines.md#derive-from-the-cmdlet-or-pscmdlet-classes-rc01)
 
 - [Укажите атрибут командлета (RC02)](./required-development-guidelines.md#specify-the-cmdlet-attribute-rc02)
 
-- [Переопределите метод (RC03) обработки входных данных](./required-development-guidelines.md#override-an-input-processing-method-rc03)
+- [Переопределение метода обработки ввода (RC03)](./required-development-guidelines.md#override-an-input-processing-method-rc03)
 
-- [Укажите атрибута OutputType (RC04)](./required-development-guidelines.md#specify-the-outputtype-attribute-rc04)
+- [Указание атрибута OutputType (RC04)](./required-development-guidelines.md#specify-the-outputtype-attribute-rc04)
 
-- [Не сохраняют дескрипторы для вывода объектов (RC05)](./required-development-guidelines.md#do-not-retain-handles-to-output-objects-rc05)
+- [Не сохраняйте дескрипторы для выходных объектов (RC05)](./required-development-guidelines.md#do-not-retain-handles-to-output-objects-rc05)
 
-- [Надежно обрабатывать ошибки (RC06)](./required-development-guidelines.md#handle-errors-robustly-rc06)
+- [Устойчивая работа с ошибками (RC06)](./required-development-guidelines.md#handle-errors-robustly-rc06)
 
-- [Использовать модуль Windows PowerShell для развертывания командлеты (RC07)](./required-development-guidelines.md#use-a-windows-powershell-module-to-deploy-your-cmdlets-rc07)
+- [Использование модуля Windows PowerShell для развертывания командлетов (RC07)](./required-development-guidelines.md#use-a-windows-powershell-module-to-deploy-your-cmdlets-rc07)
 
 ## <a name="design-guidelines"></a>Рекомендации по проектированию
 
-При разработке командлетов, чтобы обеспечить согласованность пользовательского интерфейса между использованием командлетов и другими командлетами, должен следовать приведенным ниже рекомендациям. Когда вы найдете рекомендации разработки для этого применяется в вашей ситуации, убедитесь, что рассмотрим руководствам по кодам аналогичные инструкции.
+При проектировании командлетов необходимо следовать приведенным ниже рекомендациям, чтобы обеспечить согласованное взаимодействие с пользователем при использовании командлетов и других командлетов. Если вы нашли рекомендации по проектированию, применимые к вашей ситуации, ознакомьтесь с рекомендациями по написанию кода для аналогичных руководств.
 
-### <a name="use-only-approved-verbs-rd01"></a>Используйте только утвержденные глаголы (RD01)
+### <a name="use-only-approved-verbs-rd01"></a>Использовать только утвержденные команды (RD01)
 
-Команды, указанной в атрибуте командлета должны поступать из распознанных набор команд, предоставляемых Windows PowerShell. Он не должен быть одним из запрещенных синонимы. Используйте константных строк, которые определяются следующие перечисления для указания команды cmdlet.
+Команда, указанная в атрибуте командлета, должна поступать из распознанного набора команд, предоставляемых Windows PowerShell. Он не должен быть одним из запрещенных синонимов. Используйте константные строки, определенные следующими перечислениями, для указания команд командлета:
 
-- [System.Management.Automation.VerbsCommon](/dotnet/api/System.Management.Automation.VerbsCommon)
+- [System. Management. Automation. Вербскоммон](/dotnet/api/System.Management.Automation.VerbsCommon)
 
-- [System.Management.Automation.VerbsCommunications](/dotnet/api/System.Management.Automation.VerbsCommunications)
+- [System. Management. Automation. Вербскоммуникатионс](/dotnet/api/System.Management.Automation.VerbsCommunications)
 
-- [System.Management.Automation.VerbsData](/dotnet/api/System.Management.Automation.VerbsData)
+- [System. Management. Automation. Вербсдата](/dotnet/api/System.Management.Automation.VerbsData)
 
-- [System.Management.Automation.VerbsDiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
+- [System. Management. Automation. Вербсдиагностик](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
 
-- [System.Management.Automation.VerbsLifeCycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
+- [System. Management. Automation. Вербслифецикле](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
 
-- [System.Management.Automation.VerbsSecurity](/dotnet/api/System.Management.Automation.VerbsSecurity)
+- [System. Management. Automation. Вербссекурити](/dotnet/api/System.Management.Automation.VerbsSecurity)
 
-- [System.Management.Automation.VerbsOther](/dotnet/api/System.Management.Automation.VerbsOther)
+- [System. Management. Automation. Вербсосер](/dotnet/api/System.Management.Automation.VerbsOther)
 
-Дополнительные сведения об именах утвержденного глагола см. в разделе [глаголов командлетов](./approved-verbs-for-windows-powershell-commands.md).
+Дополнительные сведения о утвержденных именах команд см. в разделе [команды командлета](./approved-verbs-for-windows-powershell-commands.md).
 
-Пользователи должны набор имен доступными и ожидаемый командлет. Таким образом, чтобы пользователь мог принять быструю оценку того, что делает командлет и легко находить возможности системы, используйте соответствующую команду. Например, следующую команду Получает список всех команд в системе, имена которых начинаются с «start»: `get-command start-*`. Используйте существительные в командлеты для различения командлеты другие командлеты. Существительное указывает на ресурс, на котором выполняется операция. Сама операция представляется команды.
+Пользователям требуется набор обнаруживаемых и ожидаемых имен командлетов. Используйте соответствующую команду, чтобы пользователь мог быстро оценить то, что делает командлет, и легко обнаружить возможности системы. Например, следующая команда командной строки возвращает список всех команд в системе, имена которых начинаются на "Start": `get-command start-*`. Используйте существительные в командлетах, чтобы отличать командлеты от других командлетов. Существительное указывает ресурс, в котором будет выполнена операция. Сама операция представляется командой.
 
-### <a name="cmdlet-names-characters-that-cannot-be-used-rd02"></a>Имена командлетов: Нельзя использовать символы (RD02)
+### <a name="cmdlet-names-characters-that-cannot-be-used-rd02"></a>Имена командлетов: Символы, которые не могут быть использованы (RD02)
 
-При вводе имени командлеты, не используйте следующие специальные символы.
+При именовании командлетов не используйте следующие специальные символы.
 
-|Символ|Name|
+|Символов|Name|
 |---------------|----------|
-|#|знак числа|
-|,|Запятая|
-|()|Круглые скобки|
+|#|знак номера|
+|,|символа|
+|()|скобки|
 |{}|фигурные скобки|
-|[]|квадратные скобки|
-|&|амперсанд|
-|-|дефис **Примечание:**  Дефис может использоваться для разделения команды с существительным, но его нельзя использовать внутри существительное или команды.|
-|/|косая черта|
-|\|обратная косая черта|
-|$|Знак доллара|
-|^|Курсор|
-|;|Точка с запятой|
-|.|Двоеточие|
+|[]|квадратных|
+|&|знаки|
+|-|дефис **: Примечание.**  Дефис можно использовать для отделения глагола от существительных, но не может использоваться внутри существительного или внутри команды.|
+|/|знак косой черты|
+|\\| Обратная косая черта|
+|$|знак доллара|
+|^|курсор|
+|;|заканчивается|
+|.|ставит|
 |"|двойная кавычка|
 |'|одинарная кавычка|
 |<>|угловые скобки|
 |&#124;|Вертикальная черта|
 |?|вопросительный знак|
-|@|знак|
-|"| резервного кавычки (апостроф)|
-|*|Звездочка|
-|%|Знак процента|
-|+|Знак «плюс»|
-|=|Знак равенства|
-|~|Тильда|
+|@|на входе|
+|`|Обратная шкала (ударение)|
+|*|*|
+|%|знак процента|
+|+|знак "плюс"|
+|=|знак равенства|
+|~|символа|
 
 ### <a name="parameters-names-that-cannot-be-used-rd03"></a>Имена параметров, которые нельзя использовать (RD03)
 
-Windows PowerShell предоставляет общий набор параметров для всех командлетов, а также дополнительные параметры, которые добавляются в определенных ситуациях. При разработке собственных командлетов нельзя использовать следующие имена: Подтвердите, Debug, ErrorAction, ErrorVariable, OutBuffer OutVariable, WarningAction, WarningVariable, WhatIf, UseTransaction и многословными. Дополнительные сведения об этих параметрах см. в разделе [общие имена параметров](./common-parameter-names.md).
+Windows PowerShell предоставляет общий набор параметров для всех командлетов, а также дополнительные параметры, которые добавляются в конкретных ситуациях. При проектировании собственных командлетов нельзя использовать следующие имена: Подтверждение, отладка, ErrorAction, ErrorVariable, буфер, переменная, WarningAction, WarningVariable, WhatIf, UseTransaction и verbose. Дополнительные сведения об этих параметрах см. в разделе [Общие имена параметров](./common-parameter-names.md).
 
-### <a name="support-confirmation-requests-rd04"></a>Запросы в службу поддержки подтверждения (RD04)
+### <a name="support-confirmation-requests-rd04"></a>Запросы на подтверждение поддержки (RD04)
 
-Для командлетов, выполните операцию, которая изменяет система, им следует вызвать [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод запросит подтверждение, а в особых случаях вызвать [ System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод. ( [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод должен вызываться только после [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) вызывается метод.)
+Для командлетов, выполняющих операцию, которая изменяет систему, они должны вызвать метод [System. Management. Automation. командлет. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) , чтобы запросить подтверждение, а в особых случаях вызвать [ Метод System. Management. Automation. командлет. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) . (Метод [System. Management. Automation. командлет. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) следует вызывать только после вызова метода [System. Management. Automation. командлет. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) .)
 
-Для выполнения этих вызовов, командлет необходимо указать, что он поддерживает запросы подтверждения, присвоив `SupportsShouldProcess` ключевое слово атрибута командлет. Дополнительные сведения о настройке этого атрибута см. в разделе [объявление атрибута командлет](./cmdlet-attribute-declaration.md).
+Для выполнения этих вызовов командлет должен указать, что он поддерживает запросы на подтверждение, установив `SupportsShouldProcess` ключевое слово атрибута командлета. Дополнительные сведения о задании этого атрибута см. в разделе [объявление атрибута командлета](./cmdlet-attribute-declaration.md).
 
 > [!NOTE]
-> Если атрибут командлета командлет класса указывает, что командлет поддерживает вызовы [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод и командлет не может обеспечить вызов [ System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод, пользователь может изменять система неожиданно.
+> Если атрибут командлета класса командлета указывает, что командлет поддерживает вызовы метода [System. Management. Automation. командлет. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) , и командлет не может вызвать [метод Метод System. Management. Automation. командлет. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) , пользователь может неожиданно изменить систему.
 
-Используйте [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метода для каких-либо изменений системы. Пользовательские настройки и `WhatIf` элемент управления параметром [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. Напротив [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) вызов выполняет дополнительную проверку для потенциально опасных изменений. Этот метод не может контролировать все пользовательские настройки или `WhatIf` параметра. Если в командлете вызывает [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод, он должен иметь `Force` параметр, который обходит вызовы к этим двум методам, после чего, с операцией. Это важно, так как она допускает командлета для использования в запуске неинтерактивных сценариев и узлов.
+Используйте метод [System. Management. Automation. командлет. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) для любых изменений в системе. Параметры пользователя и `WhatIf` параметр управляют методом [System. Management. Automation. командлет. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) . В отличие от этого, вызов [System. Management. Automation. командлет. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) выполняет дополнительную проверку потенциально опасных изменений. Этот метод не контролируется ни одним из `WhatIf` предпочтений пользователя или параметром. Если командлет вызывает метод [System. Management. Automation. командлет. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , он должен иметь `Force` параметр, который обходит вызовы этих двух методов и продолжает работу. Это важно, так как позволяет использовать командлет в неинтерактивных скриптах и узлах.
 
-Если командлеты поддерживает эти вызовы, пользователь может определить, ли действие фактически должно быть выполнено. Например [Stop-Process](/powershell/module/microsoft.powershell.management/stop-process) вызывает командлет [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) метод до остановки набор критических процессов, включая систему, Winlogon, и Spoolsv процессов.
+Если командлеты поддерживают эти вызовы, пользователь может определить, следует ли выполнять действие фактически. Например, командлет [Stop-Process](/powershell/module/microsoft.powershell.management/stop-process) вызывает метод [System. Management. Automation. командлет. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) перед остановкой набора критически важных процессов, включая процессы System, Winlogon и Spoolsv.
 
-Дополнительные сведения о поддержке этих методов см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
+Дополнительные сведения о поддержке этих методов см. в разделе [запрос подтверждения](./requesting-confirmation-from-cmdlets.md).
 
-### <a name="support-force-parameter-for-interactive-sessions-rd05"></a>Поддерживает параметр Force для интерактивных сеансов (RD05)
+### <a name="support-force-parameter-for-interactive-sessions-rd05"></a>Поддержка параметра Force для интерактивных сеансов (RD05)
 
-Если командлет используется в интерактивном режиме, всегда укажите параметр Force, чтобы переопределить интерактивные действия, такие как запросы и чтение строк входных данных). Это важно, так как она допускает командлета для использования в запуске неинтерактивных сценариев и узлов. Следующие методы можно реализовать интерактивный для узла.
+Если командлет используется в интерактивном режиме, всегда следует использовать параметр Force для переопределения интерактивных действий, таких как запросы или считывание строк ввода. Это важно, так как позволяет использовать командлет в неинтерактивных скриптах и узлах. С помощью интерактивного узла можно реализовать следующие методы.
 
-- [System.Management.Automation.Host.PSHostUserInterface.Prompt*](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.Prompt)
+- [System. Management. Automation. host. Пшостусеринтерфаце. prompt *](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.Prompt)
 
-- [System.Management.Automation.Host.Pshostuserinterface.PromptForChoice](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.PromptForChoice)
+- [System. Management. Automation. host. Пшостусеринтерфаце. Промптфорчоице](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.PromptForChoice)
 
-- [System.Management.Automation.Host.Ihostuisupportsmultiplechoiceselection.PromptForChoice](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection.PromptForChoice)
+- [System. Management. Automation. host. Ихостуисуппортсмултиплечоицеселектион. Промптфорчоице](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection.PromptForChoice)
 
-- [System.Management.Automation.Host.Pshostuserinterface.PromptForCredential*](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.PromptForCredential)
+- [System. Management. Automation. host. Пшостусеринтерфаце. PromptForCredential *](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.PromptForCredential)
 
-- [System.Management.Automation.Host.Pshostuserinterface.ReadLine*](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.ReadLine)
+- [System. Management. Automation. host. Пшостусеринтерфаце. ReadLine *](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.ReadLine)
 
-- [System.Management.Automation.Host.Pshostuserinterface.ReadLineAsSecureString*](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString)
+- [System. Management. Automation. host. Пшостусеринтерфаце. Реадлинеассекурестринг *](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString)
 
-### <a name="document-output-objects-rd06"></a>Объекты документа вывода (RD06)
+### <a name="document-output-objects-rd06"></a>Объекты вывода документа (RD06)
 
-Windows PowerShell использует объекты, которые записываются в конвейер. В соответствующем порядке для пользователей, чтобы воспользоваться преимуществами объекты, возвращаемые для каждого командлета, возвращаемые объекты должны быть документированы и необходимо задокументировать, для чего используются членами этих возвращаемых объектов.
+Windows PowerShell использует объекты, которые записываются в конвейер. Чтобы пользователи могли воспользоваться преимуществами объектов, возвращаемых каждым командлетом, необходимо задокументировать возвращаемые объекты, и необходимо задокументировать, для каких элементов возвращенных объектов используется.
 
-## <a name="code-guidelines"></a>Руководствам по кодам
+## <a name="code-guidelines"></a>Рекомендации по коду
 
-При написании кода командлет, должен следовать приведенным ниже рекомендациям. Когда вы найдете рекомендации код для этого применяется в вашей ситуации, убедитесь, что рассмотрим рекомендации по проектированию аналогичные инструкции.
+При написании кода командлета необходимо следовать приведенным ниже рекомендациям. Когда вы найдете рекомендации по коду, применимые к вашей ситуации, ознакомьтесь с рекомендациями по проектированию для аналогичных руководств.
 
-### <a name="derive-from-the-cmdlet-or-pscmdlet-classes-rc01"></a>Наследовать из командлета или классы PSCmdlet (RC01)
+### <a name="derive-from-the-cmdlet-or-pscmdlet-classes-rc01"></a>Наследование от классов командлета или PSCmdlet (RC01)
 
-Командлет должен быть производным от [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) или [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) базового класса. Командлеты, которые являются производными от [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) класса не зависят от среды выполнения Windows PowerShell. Они могут вызываться непосредственно из любого языка Microsoft .NET Framework. Командлеты, которые являются производными от [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) класс зависят от среды выполнения Windows PowerShell. Таким образом они выполняются в пространство выполнения.
+Командлет должен быть производным от базового класса [System. Management. Automation. командлет](/dotnet/api/System.Management.Automation.Cmdlet) или [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) . Командлеты, производные от класса [System. Management. Automation. командлета](/dotnet/api/System.Management.Automation.Cmdlet) , не зависят от среды выполнения Windows PowerShell. Их можно вызывать непосредственно на любом языке платформы Microsoft .NET Framework. Командлеты, производные от класса [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) , зависят от среды выполнения Windows PowerShell. Поэтому они выполняются в пределах пространства выполнения.
 
-Все классы командлет, реализации должен быть открытых классов. Дополнительные сведения об этих классах командлета см. в разделе [Обзор командлетов](./cmdlet-overview.md).
+Все классы командлетов, которые реализуются, должны быть открытыми классами. Дополнительные сведения об этих классах командлетов см. в разделе [Общие сведения](./cmdlet-overview.md)о командлетах.
 
 ### <a name="specify-the-cmdlet-attribute-rc02"></a>Укажите атрибут командлета (RC02)
 
-Для командлета, распознаваемых Windows PowerShell его класс .NET Framework должны быть оснащены атрибутом командлет. Этот атрибут задает следующие функции командлета.
+Для распознавания командлетом Windows PowerShell его .NET Framework класс должен быть дополнен атрибутом командлета. Этот атрибут задает следующие функции командлета.
 
-- Пара "глагол существительное", определяющий командлет.
+- Пара «глагол--существительное», определяющая командлет.
 
-- Набор параметров по умолчанию используется, если указано несколько наборов параметров. Набор параметров по умолчанию используется в том случае, когда Windows PowerShell не имеет достаточно информации для определения, какой набор параметров следует использовать.
+- Набор параметров по умолчанию, используемый при указании нескольких наборов параметров. Набор параметров по умолчанию используется в том случае, если в Windows PowerShell недостаточно сведений для определения используемого набора параметров.
 
-- Указывает, поддерживает ли командлет вызовы [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) метод. Этот метод отображает сообщение с подтверждением для пользователя, прежде, чем командлет вносит изменение в систему. Дополнительные сведения о том, как выполняются запросы подтверждения, см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
+- Указывает, поддерживает ли командлет вызовы метода [System. Management. Automation. командлета. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) . Этот метод выводит сообщение с подтверждением пользователю перед тем, как командлет вносит изменения в систему. Дополнительные сведения о том, как выполняются запросы на подтверждение, см. в разделе [запрос подтверждения](./requesting-confirmation-from-cmdlets.md).
 
-- Укажите уровень влияния (или серьезность) действие, связанное с сообщением подтверждения. В большинстве случаев следует использовать значение по умолчанию среды. Дополнительные сведения о влиянии уровень влияния на запросы подтверждения, которые отображаются для пользователя, см. в разделе [запрашивает подтверждение](./requesting-confirmation-from-cmdlets.md).
+- Указывает уровень влияния (или серьезность) действия, связанного с сообщением подтверждения. В большинстве случаев следует использовать значение по умолчанию Medium. Дополнительные сведения о том, как уровень влияния влияет на запросы подтверждения, отображаемые пользователю, см. в разделе [запрос подтверждения](./requesting-confirmation-from-cmdlets.md).
 
-Дополнительные сведения о том, как объявить атрибут командлета см. в разделе [объявление CmdletAttribute](./cmdlet-attribute-declaration.md).
+Дополнительные сведения об объявлении атрибута командлета см. в разделе [объявление CmdletAttribute](./cmdlet-attribute-declaration.md).
 
-### <a name="override-an-input-processing-method-rc03"></a>Переопределите метод (RC03) обработки входных данных
+### <a name="override-an-input-processing-method-rc03"></a>Переопределение метода обработки ввода (RC03)
 
-Командлет, чтобы участвовать в среде Windows PowerShell, его необходимо переопределить по крайней мере одно из следующих *методы обработки ввода*.
+Чтобы командлет принимал участие в среде Windows PowerShell, он должен переопределить по крайней мере один из следующих *методов обработки входных данных*.
 
-[System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) этот метод вызывается один раз, и он используется для предоставления функциональных возможностей предварительной обработки.
+[System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) . Этот метод вызывается один раз и используется для предоставления функций предварительной обработки.
 
-[System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) этот метод вызывается несколько раз, и он используется для предоставления функциональности записи по.
+[System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) этот метод вызывается несколько раз и используется для предоставления функциональных возможностей записи по записям.
 
-[System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) этот метод вызывается один раз, и он используется для предоставления функций постобработки.
+[System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Этот метод вызывается один раз и используется для предоставления функций последующей обработки.
 
-### <a name="specify-the-outputtype-attribute-rc04"></a>Укажите атрибута OutputType (RC04)
+### <a name="specify-the-outputtype-attribute-rc04"></a>Указание атрибута OutputType (RC04)
 
-Атрибут OutputType (впервые появилась в Windows PowerShell 2.0) тип .NET Framework, командлет возвращает в конвейер. Указав тип выходных данных командлетов сделать объекты, возвращенные командлета обнаружение других командлетов. Дополнительные сведения о Декорирование класса cmdlet этим атрибутом, см. в разделе [объявление атрибута OutputType](./outputtype-attribute-declaration.md).
+Атрибут OutputType (представленный в Windows PowerShell 2,0) указывает тип .NET Framework, возвращаемый командлетом в конвейер. Указав тип выходных данных командлетов, вы сделаете объекты, возвращаемые командлетом, более доступными для других командлетов. Дополнительные сведения о декорировании класса командлета с помощью этого атрибута см. в разделе [объявление атрибута OutputType](./outputtype-attribute-declaration.md).
 
-### <a name="do-not-retain-handles-to-output-objects-rc05"></a>Не сохраняют дескрипторы для вывода объектов (RC05)
+### <a name="do-not-retain-handles-to-output-objects-rc05"></a>Не сохраняйте дескрипторы для выходных объектов (RC05)
 
-Командлет не должен сохранить все дескрипторы объектов, которые передаются [System.Management.Automation.Cmdlet.WriteObject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) метод. Эти объекты передаются следующему командлету в конвейере, или они используются с помощью сценария. Если вы сохраните дескрипторов к объектам, две сущности будет принадлежать каждый объект, который приводит к возникновению ошибок.
+Командлет не должен хранить дескрипторы объектов, которые передаются в метод [System. Management. Automation. командлет. WriteObject *](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) . Эти объекты передаются следующему командлету в конвейере или используются сценарием. При хранении дескрипторов объектов две сущности будут владеть каждым объектом, что вызывает ошибки.
 
-### <a name="handle-errors-robustly-rc06"></a>Надежно обрабатывать ошибки (RC06)
+### <a name="handle-errors-robustly-rc06"></a>Устойчивая работа с ошибками (RC06)
 
-Администрирование среды по своей природе обнаруживает и вносит важные изменения в системе, где осуществляется Администрирование. Крайне важно правильно обрабатывать ошибки командлетов. Дополнительные сведения о записи об ошибках, см. в разделе [отчеты об ошибках Windows PowerShell](./error-reporting-concepts.md).
+Среда администрирования изначально обнаруживает и вносит важные изменения в систему, которую вы администрировать. Поэтому крайне важно, чтобы командлеты правильно обрабатывали ошибки. Дополнительные сведения о записи об ошибках см. в разделе [отчеты об ошибках Windows PowerShell](./error-reporting-concepts.md).
 
-- Ошибка препятствует командлета продолжит обрабатывать все большее число записей, при неустранимую ошибку. Необходимо вызвать командлет [System.Management.Automation.Cmdlet.ThrowTerminatingError*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) метод, который ссылается на [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта. Если исключение не перехвачено с помощью командлета, в самой среде выполнения Windows PowerShell создает неустранимую ошибку, которая содержит меньше информации.
+- Если ошибка не позволяет командлету продолжить обработку каких-либо записей, это является завершающим ошибкой. Командлет должен вызвать метод [System. Management. Automation. командлет. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) , который ссылается на объект [System. Management. Automation. ерроррекорд](/dotnet/api/System.Management.Automation.ErrorRecord) . Если в командлете не перехвачено исключение, то среда выполнения Windows PowerShell создает завершающую ошибку, которая содержит меньше информации.
 
-- Неустранимая ошибка, которая не останавливает операцию при следующем необходимо вызвать метод записи, которая поступает из конвейера (например, запись создается другим процессом), командлет [System.Management.Automation.Cmdlet.WriteError*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод, который ссылается на [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта. Примером неустранимой ошибки является ошибка, которая возникает, если не удается остановить определенный процесс. Вызов [System.Management.Automation.Cmdlet.WriteError*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) метод позволяет пользователю постоянно выполняющие действий, запрошенных и сохранения сведений для определенного действия, завершившиеся сбоем. Командлет для независимой обработки каждой записи.
+- Для устранимой ошибки, которая не останавливает операцию над следующей записью, которая поступает из конвейера (например, запись, созданная другим процессом), командлет должен вызвать метод [System. Management. Automation. командлет. WriteError *](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) , который ссылается на объект [System. Management. Automation. ерроррекорд](/dotnet/api/System.Management.Automation.ErrorRecord) . Примером неустранимой ошибки является ошибка, которая возникает, если не удается завершить определенный процесс. Вызов метода [System. Management. Automation. командлет. WriteError *](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) позволяет пользователю последовательно выполнять запрошенные действия и хранить сведения о конкретных действиях, которые не удалось выполнить. Командлет должен обрабатывать каждую запись как можно независимо.
 
-- [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта, на который ссылается [System.Management.Automation.Cmdlet.ThrowTerminatingError*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) и [ System.Management.Automation.Cmdlet.WriteError*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) методы требует исключение по своей сути. Выполните рекомендации по разработке .NET Framework, если определить исключение для использования. Если ошибка является семантически так же, как существующие исключения, используйте это исключение или являются производными от этого исключения. В противном случае — наследовать новое исключение, либо иерархия исключений непосредственно из [System.Exception](/dotnet/api/System.Exception) типа.
+- Для объекта [System. Management. Automation. ерроррекорд](/dotnet/api/System.Management.Automation.ErrorRecord) , на который ссылается метод [System. Management. Automation. командлет. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) и [System. Management. Automation. командлет. WriteError *](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) , требуется исключение в ядре. При определении используемого исключения следуйте рекомендациям по проектированию .NET Framework. Если ошибка семантически аналогична существующему исключению, используйте это исключение или производные от этого исключения. В противном случае создайте новое исключение или иерархию исключений непосредственно из типа [System. Exception](/dotnet/api/System.Exception) .
 
-[System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) объекта также требуется категории ошибок, группирующий ошибок для пользователя. Пользователь может просмотреть ошибки по категории, установив значение `$ErrorView` переменной оболочки для CategoryView. Возможные категории определяются [System.Management.Automation.ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) перечисления.
+Объект [System. Management. Automation. ерроррекорд](/dotnet/api/System.Management.Automation.ErrorRecord) также требует категорию ошибок, которая группирует ошибки для пользователя. Пользователь может просматривать ошибки на основе категории, присвоив переменной `$ErrorView` оболочки значение категоривиев. Возможные категории определяются перечислением [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) .
 
-- Командлет создает новый поток, если код, выполняемый в этом потоке вызывает необработанное исключение, Windows PowerShell не перехватывает ошибку и завершает процесс.
+- Если командлет создает новый поток, и если код, выполняемый в этом потоке, создает необработанное исключение, Windows PowerShell не будет перехватывать ошибку и завершит процесс.
 
-- Если объект имеет код в деструкторе, приводит к возникновению необработанного исключения, Windows PowerShell не перехватывает ошибку и завершает процесс. Это также происходит, если объект вызывает метод Dispose, возникновения необработанного исключения.
+- Если у объекта есть код в его деструкторе, который вызывает необработанное исключение, Windows PowerShell не будет перехватывать ошибку и завершит процесс. Это также происходит, если объект вызывает методы Dispose, вызывающие необработанное исключение.
 
-### <a name="use-a-windows-powershell-module-to-deploy-your-cmdlets-rc07"></a>Использовать модуль Windows PowerShell для развертывания командлеты (RC07)
+### <a name="use-a-windows-powershell-module-to-deploy-your-cmdlets-rc07"></a>Использование модуля Windows PowerShell для развертывания командлетов (RC07)
 
-Создание модуля Windows PowerShell для упаковки и развертывания командлетов. Поддержка модулей впервые появился в Windows PowerShell 2.0. Вы можете использовать сборок, содержащих классы командлет непосредственно как файлы двоичных модулей (это очень полезно при тестировании командлетов), или можно создать манифест модуля, ссылается на сборки командлет. (Можно также добавить существующие сборки оснастки при использовании модулей.) Дополнительные сведения о модулях см. в разделе [написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
+Создайте модуль Windows PowerShell для упаковки и развертывания командлетов. Поддержка модулей представлена в Windows PowerShell 2,0. Сборки, содержащие классы командлетов, можно использовать непосредственно в виде файлов двоичных модулей (это очень удобно при тестировании командлетов) или создать манифест модуля, который ссылается на сборки командлетов. (При использовании модулей можно также добавить существующие сборки оснастки). Дополнительные сведения о модулях см. [в разделе Написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
 ## <a name="see-also"></a>См. также
 
-[Рекомендации по разработке настоятельно рекомендуется](./strongly-encouraged-development-guidelines.md)
+[Настоятельно рекомендуется руководство по разработке](./strongly-encouraged-development-guidelines.md)
 
 [Рекомендации по разработке рекомендаций](./advisory-development-guidelines.md)
 

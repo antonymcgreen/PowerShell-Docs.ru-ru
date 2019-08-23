@@ -1,5 +1,5 @@
 ---
-title: Параметры командлета динамической | Документация Майкрософт
+title: Динамические параметры командлета | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,44 +8,44 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8ae2196d-d6c8-4101-8805-4190d293af51
 caps.latest.revision: 13
-ms.openlocfilehash: 2fc73b6ef5a862fafb7a3c8fe3da19ac71bafc05
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 19d31f6b619dff23e7e35bb53d2397f4f41eb728
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068544"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986253"
 ---
-# <a name="cmdlet-dynamic-parameters"></a>Динамические параметры командлетов
+# <a name="cmdlet-dynamic-parameters"></a>Динамические параметры командлета
 
-Командлеты можно определить параметры, доступные для пользователя специальных условиях, например, если аргумент другого параметра конкретное значение. Эти параметры будут добавлены во время выполнения и называются *динамических параметров* так, как они добавляются только в том случае, когда они нужны. Например можно создать командлет, который добавляет несколько параметров, только в том случае, если указан параметр определенного коммутатора.
+Командлеты могут определять параметры, доступные пользователю в особых условиях, например, если аргумент другого параметра является определенным значением. Эти параметры добавляются во время выполнения и называются динамическими параметрами, так как они добавляются только при необходимости. Например, можно создать командлет, добавляющий несколько параметров только в том случае, если указан определенный параметр Switch.
 
 > [!NOTE]
-> Поставщики и функции Windows PowerShell можно также определить динамических параметров.
+> Поставщики и функции PowerShell также могут определять динамические параметры.
 
-## <a name="dynamic-parameters-in-windows-powershell-cmdlets"></a>Динамические параметры в командлетах Windows PowerShell
+## <a name="dynamic-parameters-in-powershell-cmdlets"></a>Динамические параметры в командлетах PowerShell
 
-Windows PowerShell использует динамические параметры в некоторых из его командлетов поставщика. Например `Get-Item` и `Get-ChildItem` добавьте командлеты `CodeSigningCert` параметра во время выполнения при `Path` параметр командлета путь поставщика сертификата. Если `Path` параметр командлета указывает путь для другого поставщика, `CodeSigningCert` параметра не поддерживается.
+PowerShell использует динамические параметры в нескольких командлетах поставщика. `Get-Item` Например, командлеты и `Get-ChildItem` добавляют параметр **CodeSigningCert** во время выполнения, когда параметр **path** указывает путь к поставщику **сертификата** . Если параметр **path** задает путь для другого поставщика, параметр **CodeSigningCert** недоступен.
 
-В следующих примерах показывается как `CodeSigningCert` добавлен параметр во время выполнения при `Get-Item` выполнения командлета.
+В следующих примерах показано, как параметр **CodeSigningCert** добавляется во время `Get-Item` выполнения при запуске.
 
-В первом примере среда выполнения Windows PowerShell добавлен параметр, а командлет прошла успешно.
+В этом примере среда выполнения PowerShell добавила параметр, а командлет — успешно.
 
 ```powershell
-Get-Item -Path cert:\CurrentUser -codesigningcert
+Get-Item -Path cert:\CurrentUser -CodeSigningCert
 ```
 
-```output
+```Output
 Location   : CurrentUser
 StoreNames : {SmartCardRoot, UserDS, AuthRoot, CA...}
 ```
 
-Во втором примере диск файловой системы указан и возвращается сообщение об ошибке. Сообщение об ошибке указывает, что `CodeSigningCert` параметр не найден.
+В этом примере указывается диск **файловой** системы, и возвращается ошибка. Сообщение об ошибке указывает, что не удается найти параметр **CodeSigningCert** .
 
 ```powershell
-Get-Item -Path C:\ -codesigningcert
+Get-Item -Path C:\ -CodeSigningCert
 ```
 
-```output
+```Output
 Get-Item : A parameter cannot be found that matches parameter name 'codesigningcert'.
 At line:1 char:37
 +  get-item -path C:\ -codesigningcert <<<<
@@ -56,17 +56,23 @@ At line:1 char:37
 
 ## <a name="support-for-dynamic-parameters"></a>Поддержка динамических параметров
 
-Для поддержки динамических параметров, код командлета должен включать следующие элементы.
+Для поддержки динамических параметров в код командлета должны быть добавлены следующие элементы.
 
-[System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters) этот интерфейс предоставляет метод, который получает динамические параметры.
+### <a name="interface"></a>Интерфейс
 
-Пример:
+[System. Management. Automation. идинамикпараметерс](/dotnet/api/System.Management.Automation.IDynamicParameters).
+Этот интерфейс предоставляет метод, который получает динамические параметры.
+
+Например:
 
 `public class SendGreetingCommand : Cmdlet, IDynamicParameters`
 
-[System.Management.Automation.Idynamicparameters.Getdynamicparameters*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) этот метод извлекает объект, который содержит определения динамических параметров.
+### <a name="method"></a>Метод
 
-Пример:
+[System. Management. Automation. идинамикпараметерс. жетдинамикпараметерс](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters).
+Этот метод извлекает объект, содержащий определения динамических параметров.
+
+Например:
 
 ```csharp
  public object GetDynamicParameters()
@@ -81,9 +87,11 @@ At line:1 char:37
 private SendGreetingCommandDynamicParameters context;
 ```
 
-Класс динамических параметров в этот класс определяет параметры для добавления. Этот класс должен включать атрибут параметра для каждого параметра и дополнительные атрибуты псевдоним и проверки, которые необходимы с помощью командлета.
+### <a name="class"></a>Класс
 
-Пример:
+Класс, определяющий динамические параметры, которые необходимо добавить. Этот класс должен включать атрибут **Parameter** для каждого параметра, а также любые дополнительные атрибуты псевдонима и **проверки** , необходимые для командлета.
+
+Например:
 
 ```csharp
 public class SendGreetingCommandDynamicParameters
@@ -99,14 +107,14 @@ public class SendGreetingCommandDynamicParameters
 }
 ```
 
-Полный пример, который поддерживает динамические параметры командлета, см. в разделе [как объявить динамических параметров](./how-to-declare-dynamic-parameters.md).
+Полный пример командлета, поддерживающего динамические параметры, см. [в разделе Объявление динамических параметров](./how-to-declare-dynamic-parameters.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters)
+[System. Management. Automation. Идинамикпараметерс](/dotnet/api/System.Management.Automation.IDynamicParameters)
 
-[System.Management.Automation.Idynamicparameters.Getdynamicparameters*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
+[System. Management. Automation. Идинамикпараметерс. Жетдинамикпараметерс](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
 
-[Как объявить динамических параметров](./how-to-declare-dynamic-parameters.md)
+[Объявление динамических параметров](./how-to-declare-dynamic-parameters.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
