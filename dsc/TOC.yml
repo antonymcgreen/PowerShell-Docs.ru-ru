@@ -12,6 +12,8 @@
   items:
     - name: "Начало работы с\_DSC в\_Linux"
       href: getting-started/lnxGettingStarted.md
+    - name: "Начало работы с\_DSC в\_Windows"
+      href: getting-started/winGettingStarted.md
     - name: "Начало работы с\_DSC в\_Nano"
       href: getting-started/nanoDSC.md
     - name: "Начало работы с\_DSC в\_службе автоматизации Azure"
