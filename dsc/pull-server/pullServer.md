@@ -2,12 +2,12 @@
 ms.date: 03/04/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Опрашивающая служба DSC
-ms.openlocfilehash: 3cb2ca09111100f39589072a0d8e7010f9188efb
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 865eae5813e0c7b656a4158f0b1350e60f1e3291
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079410"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986534"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Опрашивающая служба Desired State Configuration
 
@@ -228,12 +228,12 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 
 Каждый модуль ресурса необходимо упаковать в ZIP-архив и переименовать согласно следующему шаблону: `{Module Name}_{Module Version}.zip`.
 
-Например, модуль с именем xWebAdminstration с версией модуля 3.1.2.0 будет иметь имя `xWebAdministration_3.2.1.0.zip`.
+Например, модуль с именем xWebAdminstration с версией модуля 3.1.2.0 будет иметь имя `xWebAdministration_3.1.2.0.zip`.
 Каждая версия модуля должна находиться в собственном ZIP-файле.
 Так как в каждом ZIP-файле существует только одна версия ресурса, формат модулей с поддержкой нескольких версий модуля в одном каталоге, который появился в WMF 5.0, не поддерживается.
 Это означает, что перед упаковкой модулей ресурсов DSC для опрашиваемого сервера необходимо внести небольшое изменение в структуру каталогов.
 Формат модулей, содержащих ресурсы DSC, в WMF 5.0 по умолчанию таков: `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`.
-Перед упаковкой для опрашиваемого сервера удалите папку **{Module version}**, чтобы путь стал таким: `{Module Folder}\DscResources\{DSC Resource Folder}\`.
+Перед упаковкой для опрашиваемого сервера удалите папку **{Module version}** , чтобы путь стал таким: `{Module Folder}\DscResources\{DSC Resource Folder}\`.
 Выполнив это изменение, упакуйте папку в ZIP-архив, как описано выше, и поместите ZIP-архивы в папку **ModulePath**.
 
 Используйте `New-DscChecksum {module zip file}`, чтобы создать файл контрольной суммы для только что добавленного модуля.
