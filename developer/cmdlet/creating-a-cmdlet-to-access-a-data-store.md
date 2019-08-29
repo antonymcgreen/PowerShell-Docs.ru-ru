@@ -1,53 +1,51 @@
 ---
-title: Создание командлету, чтобы получить доступ к Store данных | Документация Майкрософт
+title: Создание командлета для доступа к хранилищу данных
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: ea15e00e-20dc-4209-9e97-9ffd763e5d97
-caps.latest.revision: 8
-ms.openlocfilehash: 555baec08539403d3c15d1eca2b23eec0a874e49
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 7acccbd48dcfb654b11e448a1f24835ad3668fae
+ms.sourcegitcommit: a02ccbeaa17c0e513d6c4a21b877c88ac7725458
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733947"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104461"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Создание командлета для доступа к хранилищу данных
 
-В этом разделе описывается, как создать командлет, который обращается к хранимых данных посредством поставщика Windows PowerShell. Этот тип командлет использует инфраструктуру поставщика Windows PowerShell среды выполнения Windows PowerShell, и, таким образом, класс командлета должен быть производным от [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) базового класса.
+В этом разделе описывается создание командлета, который обращается к сохраненным данным с помощью поставщика Windows PowerShell. Этот тип командлета использует инфраструктуру поставщика Windows PowerShell в среде выполнения Windows PowerShell и, следовательно, класс командлета должен быть производным от базового класса [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) .
 
-Командлет Select-Str, описанные здесь можно найти и выбрать строки в файл или в объекте. Шаблоны, используемые для определения строки, которые можно задать явным образом с помощью `Path` параметр командлета или неявно через `Script` параметра.
+Описанный здесь командлет Select-str может нахождение и выбор строк в файле или объекте. Шаблоны, используемые для указания строки, можно указать явно с помощью `Path` параметра командлета или неявно с `Script` помощью параметра.
 
-Командлет предназначен для использования любым поставщиком Windows PowerShell, который является производным от [System.Management.Automation.Provider.Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider). Например командлет можно указать поставщика FileSystem или поставщик Variable, предоставляемый Windows PowerShell. Дополнительные сведения о aboutWindows поставщики PowerShell, см. в разделе [поставщика проектирование Your Windows PowerShell](../prog-guide/designing-your-windows-powershell-provider.md).
+Командлет предназначен для использования любого поставщика Windows PowerShell, производного от класса [System. Management. Automation. Provider. иконтенткмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider). Например, командлет может указать поставщика FileSystem или поставщика переменных, предоставляемых Windows PowerShell. Дополнительные сведения о поставщиках Абаутвиндовс PowerShell см. в статье [Разработка поставщика Windows PowerShell](../prog-guide/designing-your-windows-powershell-provider.md).
 
 ## <a name="defining-the-cmdlet-class"></a>Определение класса командлета
 
-Первым шагом в создании командлет всегда присвоение имени командлета и объявление класса .NET, который реализует командлет. Этот командлет обнаруживает определенные строки, поэтому имя команды, выбираем — «Выбрать», определяемый [System.Management.Automation.Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) класса. Имя существительное «Str» используется в том случае, так как командлет обрабатывает строки. В приведенном ниже объявлении Обратите внимание, что имя командлета глагол и существительное, отражаются в имени класса cmdlet. Дополнительные сведения о командлет утвержденные глаголы, см. в разделе [имен команд командлет](./approved-verbs-for-windows-powershell-commands.md).
+Первым шагом при создании командлета всегда является присвоение имени командлета и объявление класса .NET, реализующего командлет. Этот командлет обнаруживает определенные строки, поэтому выбранное здесь имя команды — SELECT, определенное классом [System. Management. Automation. вербскоммон](/dotnet/api/System.Management.Automation.VerbsCommon) . Имя существительное "str" используется, так как командлет работает с строками. Обратите внимание, что в приведенном ниже объявлении команда командлета и имя существительное отражаются в имени класса командлета. Дополнительные сведения о утвержденных командах командлетов см. в разделе [имена глаголов командлетов](./approved-verbs-for-windows-powershell-commands.md).
 
-Для этого командлета класс .NET должен быть производным от [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) базового класса, в том случае, так как он поддерживает необходимый средой выполнения Windows PowerShell для предоставления поставщика Windows PowerShell инфраструктура. Обратите внимание, что этот командлет также позволяет использовать классов регулярных выражений .NET Framework, такие как [System.Text.Regularexpressions.Regex](/dotnet/api/System.Text.RegularExpressions.Regex).
+Класс .NET для этого командлета должен быть производным от базового класса [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) , так как он обеспечивает поддержку, необходимую среде выполнения Windows PowerShell для предоставления инфраструктуры поставщика Windows PowerShell. Обратите внимание, что этот командлет также использует классы .NET Framework регулярных выражений, такие как [System. Text. RegularExpressions. Regex](/dotnet/api/System.Text.RegularExpressions.Regex).
 
-Следующий код является определение класса для этого командлета Select-Str.
+Следующий код является определением класса для этого командлета Select-str.
 
 ```csharp
 [Cmdlet(VerbsCommon.Select, "Str", DefaultParameterSetName="PatternParameterSet")]
 public class SelectStringCommand : PSCmdlet
 ```
 
-Этот командлет определяет параметр по умолчанию задается путем добавления `DefaultParameterSetName` атрибута ключевое слово к объявлению класса. Набор параметров по умолчанию `PatternParameterSet` используется, если `Script` параметр не указан. Дополнительные сведения о этот набор параметров, см. в разделе `Pattern` и `Script` обсуждение параметр в следующем разделе.
+Этот командлет определяет набор параметров по умолчанию, добавляя `DefaultParameterSetName` к объявлению класса ключевое слово Attribute. Если параметр не указан `PatternParameterSet` , используется набор параметров по умолчанию. `Script` Дополнительные сведения об этом наборе параметров см `Pattern` . в обсуждении параметров и `Script` в следующем разделе.
 
 ## <a name="defining-parameters-for-data-access"></a>Определение параметров для доступа к данным
 
-Этот командлет определяет несколько параметров, которые пользователи могут проверить хранимых данных. Эти параметры включают в себя `Path` параметр, который указывает расположение хранилища данных, `Pattern` параметра, которое указывает шаблон, используемый при поиске и несколько других параметров, которые поддерживают как выполняется поиск.
+Этот командлет определяет несколько параметров, которые позволяют пользователю получить доступ к сохраненным данным и исследовать их. Эти параметры включают `Path` в себя параметр, указывающий расположение хранилища данных `Pattern` , параметр, указывающий шаблон для использования в поиске, и несколько других параметров, которые поддерживают выполнение поиска.
 
 > [!NOTE]
-> Дополнительные сведения об основах определение параметров, см. в разделе [Добавление параметров командной строки этого процесса входа](./adding-parameters-that-process-command-line-input.md).
+> Дополнительные сведения об определении параметров см. в разделе [Добавление параметров, обрабатывающих вход командной строки](./adding-parameters-that-process-command-line-input.md).
 
-### <a name="declaring-the-path-parameter"></a>Объявление параметра Path
+### <a name="declaring-the-path-parameter"></a>Объявление параметра пути
 
-Чтобы найти хранилище данных, этот командлет следует использовать путь Windows PowerShell для идентификации поставщика Windows PowerShell, предназначенный для доступа к хранилищу данных. Таким образом, он определяет `Path` параметр типа массив строк, чтобы указать расположение поставщика.
+Чтобы найти хранилище данных, этот командлет должен использовать путь Windows PowerShell для указания поставщика Windows PowerShell, предназначенного для доступа к хранилищу данных. Поэтому он определяет `Path` параметр типа строкового массива, указывающий расположение поставщика.
 
 ```csharp
 [Parameter(
@@ -68,15 +66,15 @@ public string[] Path
 private string[] paths;
 ```
 
-Обратите внимание, что этот параметр относится к два разных набора параметров, содержащий псевдоним.
+Обратите внимание, что этот параметр относится к двум разным наборам параметров и имеет псевдоним.
 
-Два [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) атрибуты объявляют, `Path` параметр относится к `ScriptParameterSet` и `PatternParameterSet`. Дополнительные сведения о наборах параметров см. в разделе [добавление наборов параметров для командлета](./adding-parameter-sets-to-a-cmdlet.md).
+Два атрибута [System. Management. Automation. параметераттрибуте](/dotnet/api/System.Management.Automation.ParameterAttribute) объявляют, что `Path` `ScriptParameterSet` параметр принадлежит к и `PatternParameterSet`. Дополнительные сведения о наборах параметров см. [в разделе Добавление наборов параметров в командлет](./adding-parameter-sets-to-a-cmdlet.md).
 
-[System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) объявляет атрибут `PSPath` псевдоним для `Path` параметра. Объявление этот псевдоним, настоятельно рекомендуется для обеспечения согласованности с другими командлетами, получить доступ к поставщикам Windows PowerShell. Дополнительные сведения о aboutWindows путей PowerShell, см. в разделе «Основные понятия путь PowerShell» в [как Windows PowerShell работает](/previous-versions//ms714658(v=vs.85)).
+Атрибут [System. Management. Automation. алиасаттрибуте](/dotnet/api/System.Management.Automation.AliasAttribute) объявляет `PSPath` псевдоним для `Path` параметра. Объявление этого псевдонима настоятельно рекомендуется для обеспечения согласованности с другими командлетами, обращающимися к поставщикам Windows PowerShell. Дополнительные сведения о путях Абаутвиндовс PowerShell см. в разделе "Основные понятия пути PowerShell" в статье [как работает Windows PowerShell](/previous-versions//ms714658(v=vs.85)).
 
-### <a name="declaring-the-pattern-parameter"></a>Объявление параметров шаблона
+### <a name="declaring-the-pattern-parameter"></a>Объявление параметра шаблона
 
-Чтобы указать для шаблонов поиска, объявляет этот командлет `Pattern` параметр, который представляет собой массив строк. Положительный результат возвращается в том случае, если любой из шаблонов находятся в хранилище данных. Обратите внимание на то, что эти шаблоны можно скомпилировать в массив скомпилированные регулярные выражения или массив используется для поиска литерала шаблонов с подстановочными знаками.
+Чтобы указать шаблоны для поиска, этот командлет объявляет `Pattern` параметр, который является массивом строк. Положительный результат возвращается при обнаружении любого из шаблонов в хранилище данных. Обратите внимание, что эти шаблоны можно скомпилировать в массив скомпилированных регулярных выражений или в массив шаблонов с подстановочными знаками, используемый для поиска в виде литералов.
 
 ```csharp
 [Parameter(
@@ -93,13 +91,13 @@ private Regex[] regexPattern;
 private WildcardPattern[] wildcardPattern;
 ```
 
-Если этот параметр указан, командлет использует набор параметров по умолчанию `PatternParameterSet`. В этом случае командлет использует шаблоны, указанные здесь, чтобы выбрать строки. Напротив `Script` параметр может также использоваться для предоставления сценария, содержащего шаблоны. `Script` И `Pattern` параметры определяют две различные наборы параметров, поэтому они являются взаимоисключающими.
+Если этот параметр задан, командлет использует набор `PatternParameterSet`параметров по умолчанию. В этом случае командлет использует указанные здесь шаблоны для выбора строк. В отличие от этого `Script` , параметр может также использоваться для предоставления скрипта, содержащего закономерности. Параметры `Script` и`Pattern` определяют два отдельных набора параметров, поэтому они являются взаимоисключающими.
 
-### <a name="declaring-search-support-parameters"></a>Объявление параметров поддержка поиска
+### <a name="declaring-search-support-parameters"></a>Объявление параметров поддержки поиска
 
-Этот командлет определяет следующие параметры поддержки, которые могут использоваться для изменения возможности поиска в командлет.
+Этот командлет определяет следующие параметры поддержки, которые можно использовать для изменения возможностей поиска командлета.
 
-`Script` Параметр указывает блок скрипта, который может использоваться для предоставления механизма поиска альтернативного для командлета. Сценарий должен содержать шаблоны, используемые для сопоставления и вернуть [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) объекта. Обратите внимание, что этот параметр также используется параметр unique командлета, определяющий `ScriptParameterSet` набор параметров. Когда среда выполнения Windows PowerShell обнаруживает этот параметр, он использует только те параметры, которые принадлежат `ScriptParameterSet` набор параметров.
+`Script` Параметр задает блок скрипта, который может использоваться для предоставления альтернативного механизма поиска для командлета. Скрипт должен содержать шаблоны, используемые для сопоставления и возврата объекта [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) . Обратите внимание, что этот параметр также является уникальным параметром `ScriptParameterSet` , идентифицирующим набор параметров. Когда среда выполнения Windows PowerShell видит этот параметр, она использует только параметры, принадлежащие `ScriptParameterSet` набору параметров.
 
 ```csharp
 [Parameter(
@@ -114,7 +112,7 @@ public ScriptBlock Script
 ScriptBlock script;
 ```
 
-`SimpleMatch` Параметр параметр-переключатель, указывающее, будет ли командлет явным образом соответствуют шаблонам, как они предоставляются. Когда пользователь задает параметр командной строки (`true`), командлет использует шаблоны, как они предоставляются. Если этот параметр не указан (`false`), командлет будет использовать регулярные выражения. Значение по умолчанию для этого параметра — `false`.
+`SimpleMatch` Параметр — это параметр, который указывает, должен ли командлет явно сопоставлять закономерности по мере их передаваемого. Когда пользователь указывает параметр в командной строке (`true`), командлет использует такие шаблоны, как они указаны. Если параметр не указан (`false`), командлет использует регулярные выражения. Значение по умолчанию для этого `false`параметра —.
 
 ```csharp
 [Parameter]
@@ -126,7 +124,7 @@ public SwitchParameter SimpleMatch
 private bool simpleMatch;
 ```
 
-`CaseSensitive` Параметр параметр-переключатель, указывающее, выполняется ли поиск с учетом регистра. Когда пользователь задает параметр командной строки (`true`), командлет проверяет наличие прописных и строчных символов при сравнении шаблонов. Если этот параметр не указан (`false`), командлет не различает верхнего и нижнего регистра. Например «MyFile» и «myfile» оба возвращаются в виде положительного попаданий. Значение по умолчанию для этого параметра — `false`.
+`CaseSensitive` Параметр является параметром переключателя, который указывает, выполняется ли поиск с учетом регистра. Когда пользователь указывает параметр в командной строке (`true`), командлет проверяет символы верхнего и нижнего регистров при сравнении шаблонов. Если параметр не указан (`false`), командлет не различает прописные и строчные буквы. Например, "MyFile" и "myfile" будут возвращаться как положительные совпадения. Значение по умолчанию для этого `false`параметра —.
 
 ```csharp
 [Parameter]
@@ -138,7 +136,7 @@ public SwitchParameter CaseSensitive
 private bool caseSensitive;
 ```
 
-`Exclude` И `Include` параметры определяют элементы, явно исключить из или включить в поиск. По умолчанию командлет выполняет поиск всех элементов в хранилище данных. Тем не менее чтобы ограничить поиск с помощью командлета, эти параметры можно использовать чтобы явно указать элементы, включаемые в поиск или опустить.
+Параметры `Exclude` и`Include` определяют элементы, явно исключенные из поиска или включенные в него. По умолчанию командлет будет искать все элементы в хранилище данных. Однако для ограничения поиска, выполняемого командлетом, эти параметры можно использовать для явного указания элементов, включаемых в поиск или пропущенных.
 
 ```csharp
 [Parameter]
@@ -177,13 +175,13 @@ internal WildcardPattern[] include = null;
 
 ### <a name="declaring-parameter-sets"></a>Объявление наборов параметров
 
-Этот командлет использует два набора параметров (`ScriptParameterSet` и `PatternParameterSet`, который используется по умолчанию) вместо имен два набора параметров, используемых в доступ к данным. `PatternParameterSet` набор параметров по умолчанию, используемый, когда `Pattern` указан параметр. `ScriptParameterSet` используется, когда пользователь указывает механизм поиска альтернативного через `Script` параметра. Дополнительные сведения о наборах параметров см. в разделе [добавление наборов параметров для командлета](./adding-parameter-sets-to-a-cmdlet.md).
+Этот командлет использует два набора параметров (`ScriptParameterSet` и `PatternParameterSet`, который является значением по умолчанию) в качестве имен двух наборов параметров, используемых в доступе к данным. `PatternParameterSet`параметр является набором параметров по умолчанию и используется `Pattern` при указании параметра. `ScriptParameterSet`используется, когда пользователь указывает альтернативный механизм поиска через `Script` параметр. Дополнительные сведения о наборах параметров см. [в разделе Добавление наборов параметров в командлет](./adding-parameter-sets-to-a-cmdlet.md).
 
-## <a name="overriding-input-processing-methods"></a>Переопределяя методы обработки ввода
+## <a name="overriding-input-processing-methods"></a>Переопределение методов обработки входных данных
 
-Командлеты необходимо переопределить некоторые методы для обработки ввода [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) класса. Дополнительные сведения о методы обработки входных данных, см. в разделе [Создание свой первый командлет](./creating-a-cmdlet-without-parameters.md).
+Командлеты должны переопределять один или несколько методов обработки ввода для класса [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) . Дополнительные сведения о методах обработки входных данных см. в разделе [Создание первого командлета](./creating-a-cmdlet-without-parameters.md).
 
-Этот командлет переопределяет [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) метод для создания массива скомпилированные регулярные выражения при запуске. Это увеличивает производительность при поиске по журналу, которые не используют простых совпадений.
+Этот командлет переопределяет метод [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) для создания массива скомпилированных регулярных выражений при запуске. Это повышает производительность во время поиска, не использующих простое сопоставление.
 
 ```csharp
 protected override void BeginProcessing()
@@ -262,7 +260,7 @@ protected override void BeginProcessing()
 }// End of function BeginProcessing().
 ```
 
-Этот командлет также переопределяет [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метод для обработки строки, выбранные пользователем в командной строке. Записывает результаты выбора строки в виде пользовательского объекта путем вызова закрытого **MatchString** метод.
+Этот командлет также переопределяет метод [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) для обработки выбора строк, которые пользователь делает в командной строке. Он записывает результаты выбора строки в форме пользовательского объекта, вызывая закрытый метод **матчстринг** .
 
 ```csharp
 protected override void ProcessRecord()
@@ -373,13 +371,13 @@ protected override void ProcessRecord()
 
 ## <a name="accessing-content"></a>Доступ к содержимому
 
-Командлет необходимо открыть поставщика, определяется путем Windows PowerShell, позволяя получать доступ к данным. [System.Management.Automation.Sessionstate](/dotnet/api/System.Management.Automation.SessionState) объект для пространства выполнения используется для доступа к поставщику, тогда как [System.Management.Automation.PSCmdlet.Invokeprovider*](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) свойство командлет используется для открытия поставщика. Доступ к содержимому обеспечивается получение [System.Management.Automation.Providerintrinsics](/dotnet/api/System.Management.Automation.ProviderIntrinsics) открыть объект для поставщика.
+Командлет должен открыть поставщик, указанный в пути Windows PowerShell, чтобы он мог получить доступ к данным. Объект [System. Management. Automation. sessionState](/dotnet/api/System.Management.Automation.SessionState) для пространства выполнения используется для доступа к поставщику, а свойство [System. Management. Automation. PSCmdlet. инвокепровидер *](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) командлета используется для открытия поставщика. Доступ к содержимому предоставляется путем получения объекта [System. Management. Automation. провидеринтринсикс](/dotnet/api/System.Management.Automation.ProviderIntrinsics) для открытого поставщика.
 
-Этот командлет Select-Str образец использует [System.Management.Automation.Providerintrinsics.Content*](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) свойство для предоставления содержимого для сканирования. Затем можно вызвать [System.Management.Automation.Contentcmdletproviderintrinsics.Getreader*](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) , передавая необходимый путь Windows PowerShell.
+В этом примере командлет Select-Str использует свойство [System. Management. Automation. провидеринтринсикс. Content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) для предоставления содержимого для просмотра. Затем он может вызвать метод [System. Management. Automation. контенткмдлетпровидеринтринсикс. DataReader *](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) , передав необходимый путь Windows PowerShell.
 
 ## <a name="code-sample"></a>Пример кода
 
-Следующий код показывает реализацию этой версии этот командлет Select-Str. Обратите внимание на то, что этот код включает класс командлета, закрытые методы, используемые с помощью командлета и Windows PowerShell – – оснастка код, используемый для регистрации командлета. Дополнительные сведения о регистрации командлета см. в разделе [построение командлет](#Defining-the-Cmdlet-Class).
+В следующем коде показана реализация этой версии командлета Select-str. Обратите внимание, что этот код включает класс командлета, закрытые методы, используемые командлетом, и код оснастки Windows PowerShell, используемый для регистрации командлета. Дополнительные сведения о регистрации командлета см. [в разделе Создание командлета](#defining-the-cmdlet-class).
 
 ```csharp
 //
@@ -1090,19 +1088,19 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="building-the-cmdlet"></a>Создание командлета
 
-После реализации командлета, необходимо зарегистрировать его с помощью Windows PowerShell через оснастку Windows PowerShell. Дополнительные сведения о регистрации командлетов см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
+После реализации командлета необходимо зарегистрировать его в Windows PowerShell с помощью оснастки Windows PowerShell. Дополнительные сведения о регистрации командлетов см. [в разделе Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
 
-## <a name="testing-the-cmdlet"></a>Тестирование командлет
+## <a name="testing-the-cmdlet"></a>Тестирование командлета
 
-При командлета был зарегистрирован с помощью Windows PowerShell, его можно проверить, запустив его в командной строке. Следующую процедуру можно использовать для тестирования командлет Select-Str образец.
+Если командлет зарегистрирован в Windows PowerShell, его можно проверить, запустив его в командной строке. Для проверки примера командлета Select-str можно использовать следующую процедуру.
 
-1. Запустите Windows PowerShell и найдите файл заметки для строк с выражением «.NET». Обратите внимание на то, что имя пути в кавычки требуются, только в том случае, если путь состоит из нескольких слов.
+1. Запустите Windows PowerShell и в файле Notes найдите вхождения строк с выражением «.NET». Обратите внимание, что кавычки вокруг имени пути необходимы только в том случае, если путь состоит из нескольких слов.
 
     ```powershell
     select-str -Path "notes" -Pattern ".NET" -SimpleMatch=$false
     ```
 
-    Появляется следующий результат.
+    Отобразятся следующие выходные данные.
 
     ```output
     IgnoreCase   : True
@@ -1117,13 +1115,13 @@ namespace Microsoft.Samples.PowerShell.Commands
     Pattern      : .NET
     ```
 
-2. Найдите файл заметки для строк со словом «по», следуют любой другой текст. `SimpleMatch` Параметра используется значение по умолчанию `false`. Поиск выполняется без учета регистра поскольку `CaseSensitive` параметр имеет значение `false`.
+2. Поиск вхождений строк в файле Notes с помощью слова "Over", за которым следует любой другой текст. Параметр использует значение по умолчанию `false` `SimpleMatch` . Поиск не учитывает регистр, так как `CaseSensitive` параметр имеет `false`значение.
 
     ```powershell
     select-str -Path notes -Pattern "over*" -SimpleMatch -CaseSensitive:$false
     ```
 
-    Появляется следующий результат.
+    Отобразятся следующие выходные данные.
 
     ```output
     IgnoreCase   : True
@@ -1138,13 +1136,13 @@ namespace Microsoft.Samples.PowerShell.Commands
     Pattern      : over*
     ```
 
-3. Найдите в файле заметки, используя регулярное выражение в качестве шаблона. Командлет ищет буквенные символы и пробелы, заключенные в круглые скобки.
+3. Поиск в файле Notes с помощью регулярного выражения в качестве шаблона. Командлет ищет алфавитные знаки и пробелы, заключенные в круглые скобки.
 
     ```powershell
     select-str -Path notes -Pattern "\([A-Za-z:blank:]" -SimpleMatch:$false
     ```
 
-    Появляется следующий результат.
+    Отобразятся следующие выходные данные.
 
     ```output
     IgnoreCase   : True
@@ -1159,13 +1157,13 @@ namespace Microsoft.Samples.PowerShell.Commands
     Pattern      : \([A-Za-z:blank:]
     ```
 
-4. Учитывать регистр при поиске файла заметки для вхождения слова «Параметр».
+4. Выполните поиск файла Notes с учетом регистра для вхождения слова "параметр".
 
     ```powershell
     select-str -Path notes -Pattern Parameter -CaseSensitive
     ```
 
-    Появляется следующий результат.
+    Отобразятся следующие выходные данные.
 
     ```output
     IgnoreCase   : False
@@ -1180,13 +1178,13 @@ namespace Microsoft.Samples.PowerShell.Commands
     Pattern      : Parameter
     ```
 
-5. Поставщик variable поиска, поставляемых с Windows PowerShell для переменных, имеющих числовые значения от 0 до 9.
+5. Найдите в поставщике переменных, поставляемом с Windows PowerShell, переменные с числовыми значениями от 0 до 9.
 
     ```powershell
     select-str -Path * -Pattern "[0-9]"
     ```
 
-    Появляется следующий результат.
+    Отобразятся следующие выходные данные.
 
     ```output
     IgnoreCase   : True
@@ -1196,13 +1194,13 @@ namespace Microsoft.Samples.PowerShell.Commands
     Pattern      : [0-9]
     ```
 
-6. Используйте блок сценария для поиска файла SelectStrCommandSample.cs для строки «Pos». **Cmatch** функция, сценарий выполняет сопоставление без учета регистра шаблона.
+6. Используйте блок сценария для поиска строки "POS" в файле SelectStrCommandSample.cs. Функция **cmatch** для сценария выполняет сопоставление шаблона без учета регистра.
 
     ```powershell
     select-str -Path "SelectStrCommandSample.cs" -Script { if ($args[0] -cmatch "Pos"){ return $true } return $false }
     ```
 
-    Появляется следующий результат.
+    Отобразятся следующие выходные данные.
 
     ```output
     IgnoreCase   : True
@@ -1214,11 +1212,11 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>См. также
 
-[Как создать командлет Windows PowerShell](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
+[Создание командлета Windows PowerShell](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[Создайте свой первый командлет](./creating-a-cmdlet-without-parameters.md)
+[Создание первого командлета](./creating-a-cmdlet-without-parameters.md)
 
-[Создание командлета, который изменяет системы](./creating-a-cmdlet-that-modifies-the-system.md)
+[Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md)
 
 [Разработка поставщика Windows PowerShell](../prog-guide/designing-your-windows-powershell-provider.md)
 
