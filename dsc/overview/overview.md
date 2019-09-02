@@ -11,7 +11,7 @@ ms.locfileid: "62079977"
 ---
 # <a name="windows-powershell-desired-state-configuration-overview"></a>Общие сведения о службе настройки требуемого состояния Windows PowerShell
 
-> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 DSC — это платформа управления в PowerShell, которая позволяет управлять ИТ-инфраструктурой и инфраструктурой разработки с помощью конфигурации в виде кода.
 

@@ -11,7 +11,7 @@ ms.locfileid: "65229735"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Установка PowerShell Core в macOS
 
-PowerShell Core поддерживает macOS версии 10.12 и более поздних версий
+PowerShell Core поддерживает macOS версии 10.12 и более поздних версий.
 Все пакеты доступны на нашей странице [выпусков][] GitHub.
 После установки пакета запустите `pwsh` из терминала.
 
