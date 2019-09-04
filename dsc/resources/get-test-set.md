@@ -2,18 +2,18 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Методы Get, Test, Set
-ms.openlocfilehash: e4aa7770bb5fc8b916b0c0a6488b1ccc0ef0ade9
-ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
+ms.openlocfilehash: 68738107cd4a222a13dd4afa158f0370953158ad
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65229513"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215431"
 ---
 # <a name="get-test-set"></a>Методы Get, Test, Set
 
->Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
 
-![Получение, тестирования и настройка](/media/get-test-set.png)
+![Получение, тестирования и настройка](../media/get-test-set.png)
 
 Настройка требуемого состояния (DSC) PowerShell основана на процессе **получения**, **тестирования** и **настройки**. Во всех [ресурсах](resources.md) DSC содержатся методы выполнения каждой из этих операций. В [конфигурации](../configurations/configurations.md) необходимо определить блоки ресурсов, чтобы заполнить ключи, которые становятся параметрами для методов ресурса **Get**, **Test** и **Set**.
 
@@ -235,7 +235,7 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также статью
 
 - [Обзор DSC службы автоматизации Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview).
 - [Настройка опрашивающего SMB-сервера](../pull-server/pullServerSMB.md)
