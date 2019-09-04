@@ -8,25 +8,26 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 53fe744a-485f-4c21-9623-1cb546372211
 caps.latest.revision: 9
-ms.openlocfilehash: af554cde5e888f2a008028010332caa473151622
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 346a194c6b4c81aa61a6331cdb62ae380a17bb1e
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733981"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215295"
 ---
 # <a name="defining-default-methods-for-objects"></a>Определение методов по умолчанию для объектов
 
-При расширении объекты .NET Framework, можно добавить код методов и методов скриптов к объектам. XML, который используется для определения этих методов описан в следующих разделах.
+При расширении .NET Framework объектов в объекты можно добавлять методы кода и методы скриптов.
+XML-код, используемый для определения этих методов, описан в следующих разделах.
 
 > [!NOTE]
-> В следующих разделах относятся, например из типов файла Types.ps1xml в каталоге установки Windows PowerShell (`$pshome`).
+> Примеры в следующих разделах взяты из `Types.ps1xml` файла типов в каталоге установки Windows PowerShell (`$PSHOME`). Дополнительные сведения см. в разделе [About types. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
 
 ## <a name="code-methods"></a>Методы кода
 
-Метод код ссылается на статический метод объекта .NET Framework.
+Метод Code ссылается на статический метод объекта .NET Framework.
 
-В следующем примере **ConvertLargeIntegerToInt64** добавляется метод [System.Xml.Xmlnode? Displayproperty = Fullname](/dotnet/api/System.Xml.XmlNode) типа. [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) элемент определяет расширенный метод как метод код. [Имя](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) элемент задает имя расширенного метода. И [CodeReference](/dotnet/api/system.management.automation.pscodemethod.codereference?view=pscore-6.2.0#System_Management_Automation_PSCodeMethod_CodeReference) элемент указывает статический метод. (Можно также добавить [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) элемент членам [PSMemberSets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) элемент.)
+В следующем примере метод **ToString** добавляется в тип [System. XML. XMLNode](/dotnet/api/System.Xml.XmlNode) . Элемент [пскодемесод](/dotnet/api/system.management.automation.pscodemethod) определяет расширенный метод как метод кода. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) указывает имя расширенного метода. И элемент [кодереференце](/dotnet/api/system.management.automation.pscodemethod.codereference?view=pscore-6.2.0#System_Management_Automation_PSCodeMethod_CodeReference) указывает статический метод. Можно также добавить элемент [пскодемесод](/dotnet/api/system.management.automation.pscodemethod) в элементы элемента [псмемберсетс](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) .
 
 ```xml
 <Type>
@@ -35,7 +36,7 @@ ms.locfileid: "67733981"
     <CodeMethod>
       <Name>ToString</Name>
       <CodeReference>
-        <TypeName>Microsoft.PowerShell.ToStringCodemethods</TypeName>
+        <TypeName>Microsoft.PowerShell.ToStringCodeMethods</TypeName>
         <MethodName>XmlNode</MethodName>
       </CodeReference>
     </CodeMethod>
@@ -43,9 +44,9 @@ ms.locfileid: "67733981"
 </Type>
 ```
 
-## <a name="script-methods"></a>Методы сценариев
+## <a name="script-methods"></a>Методы скриптов
 
-Метод скрипт определяет метод, значение которого является результатом выполнения скрипта. В следующем примере **ConvertToDateTime** добавляется метод [System.Management.Managementobject? Displayproperty = Fullname](/dotnet/api/System.Management.ManagementObject) типа. [PSScriptMethod](/dotnet/api/system.management.automation.psscriptmethod?view=pscore-6.2.0) элемент определяет расширенный метод как метод скрипта. [Имя](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) элемент задает имя расширенного метода. И [скрипт](/dotnet/api/system.management.automation.psscriptmethod.script?view=pscore-6.2.0#System_Management_Automation_PSScriptMethod_Script) элемент указывает сценарий, который создает значение метода. (Можно также добавить [PSScriptMethod](/dotnet/api/system.management.automation.psscriptmethod?view=pscore-6.2.0) элемент членам [PSMemberSets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) элемент.)
+Метод скрипта определяет метод, значение которого является выходным значением скрипта. В следующем примере метод **ConvertToDateTime** добавляется в тип [System. Management. ManagementObject](/dotnet/api/System.Management.ManagementObject) . Элемент [псскриптмесод](/dotnet/api/system.management.automation.psscriptmethod?view=pscore-6.2.0) определяет расширенный метод как метод скрипта. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) указывает имя расширенного метода. И элемент [script](/dotnet/api/system.management.automation.psscriptmethod.script?view=pscore-6.2.0#System_Management_Automation_PSScriptMethod_Script) указывает скрипт, который создает значение метода. Можно также добавить элемент [псскриптмесод](/dotnet/api/system.management.automation.psscriptmethod?view=pscore-6.2.0) в элементы элемента [псмемберсетс](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) .
 
 ```xml
 <Type>
@@ -61,6 +62,6 @@ ms.locfileid: "67733981"
 </Type>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

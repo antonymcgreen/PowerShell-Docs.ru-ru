@@ -1,45 +1,55 @@
 ---
 title: Импорт командлетов с помощью модулей | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 08/28/2019
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
 caps.latest.revision: 8
-ms.openlocfilehash: c007bb11324e10ffd100797dccd9e6ab0d09a73e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2f145795a57c988da0cb4ed294142aa141c53cae
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067983"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215276"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>Импорт командлетов с помощью модулей
 
-В этом разделе описывается, как импортировать командлеты в сеанс Windows PowerShell с помощью двоичного модуля.
+В этой статье описывается, как импортировать командлеты в сеанс PowerShell с помощью двоичного модуля.
 
 > [!NOTE]
-> Модули можно входят командлеты, поставщики, функции, переменные, псевдонимы и многое другое. Оснастки может содержать только командлеты и поставщики.
+> Членами модулей могут быть командлеты, поставщики, функции, переменные, псевдонимы и многое другое. Оснастки могут содержать только командлеты и поставщики.
 
-## <a name="how-to-load-cmdlets-using-a-module"></a>Как загрузить командлеты с помощью модуля
+## <a name="how-to-load-cmdlets-using-a-module"></a>Как загружать командлеты с помощью модуля
 
-1. Создайте папку модуля с тем же именем в качестве файла сборки, в котором реализованы командлеты. В этой процедуре вы создадите в папке модуля `system32` папки.
+1. Создайте папку модуля, имя которой совпадает с именем файла сборки, в котором реализуются командлеты. В этой процедуре папка Module создается в папке Windows `system32` .
 
    `%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules\mymodule`
 
-2. Убедитесь, что `PSModulePath` переменная среды включает путь к папке нового модуля. По умолчанию папке системы уже добавлен `PSModulePath` переменной среды.
+1. Убедитесь, что `PSModulePath` переменная среды содержит путь к новой папке модуля. По умолчанию системная папка уже добавлена в `PSModulePath` переменную среды. Чтобы просмотреть `PSModulePath`, введите: `$env:PSModulePath`.
 
-3. Скопируйте командлет сборки в папке модуля.
+1. Скопируйте сборку командлета в папку Module.
 
-4. Выполните следующую команду, чтобы добавить командлеты к сеансу:
+1. Добавьте файл манифеста модуля (`.psd1`) в корневую папку модуля. PowerShell использует манифест модуля для импорта модуля. Дополнительные сведения см. в статье Создание [манифеста модуля PowerShell](../module/how-to-write-a-powershell-module-manifest.md).
 
-   `import-module [Module_Name]`
+1. Выполните следующую команду, чтобы добавить командлеты в сеанс:
 
-   Эту процедуру можно использовать для тестирования командлетов. Он добавляет все командлеты в сборке в сеанс. Дополнительные сведения о модулях различных типов модулей, различные способы загрузки модулей и как ограничить элементы модуля, которые экспортируются, см. в разделе [написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
+   `Import-Module [Module_Name]`
 
-## <a name="see-also"></a>См. также
+   Эту процедуру можно использовать для проверки командлетов. Он добавляет все командлеты в сборку в сеанс. Дополнительные сведения о модулях см. [в разделе Написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
-[Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+## <a name="see-also"></a>См. также:
+
+[Написание манифеста модуля PowerShell](../module/how-to-write-a-powershell-module-manifest.md)
+
+[Импорт модуля PowerShell](../module/importing-a-powershell-module.md)
+
+[Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
 
 [Установка модулей](../module/installing-a-powershell-module.md)
+
+[Изменение пути установки PSModulePath](../module/modifying-the-psmodulepath-installation-path.md)
+
+[Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
