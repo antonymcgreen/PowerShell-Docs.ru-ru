@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Работа с файлами и папками
-ms.openlocfilehash: 0f7cb233918b59475417ec49b611ecc25a94ebe1
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 743e261d2f5e8bfa39f2731fca7fea6e5678c711
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030684"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215537"
 ---
 # <a name="working-with-files-and-folders"></a>Работа с файлами и папками
 
@@ -106,15 +106,17 @@ sure you want to continue?
 Remove-Item -Path C:\temp\DeleteMe -Recurse
 ```
 
-## <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Отображение локальной папки в виде диска, доступного в Windows
+## <a name="mapping-a-local-folder-as-a-drive"></a>Подключение локальной папки как диска
 
-Отобразить локальную папку можно с помощью команды **subst**. Следующая команда создает локальный диск P:, корневым каталогом которого является локальный каталог Program Files:
+Подключить локальную папку можно с помощью команды **New-PSDrive**. Следующая команда создает локальный диск P:, корневым каталогом которого является локальный каталог Program Files, отображающийся только в сеансе PowerShell:
 
 ```powershell
-subst p: $env:programfiles
+New-PSDrive -Name P -Root $env:ProgramFiles -PSProvider FileSystem
 ```
 
-Как и в случае сетевых дисков, диски, отображенные в оболочке Windows PowerShell с помощью команды **subst**, немедленно становятся доступными оболочке Windows PowerShell.
+Как и при использовании сетевых дисков, диски, отображенные в Windows PowerShell, немедленно становятся доступными оболочке Windows PowerShell.
+Чтобы создать подключенный диск, отображающийся в проводнике, нужен параметр **-Persist**. Но с этим параметром можно использовать только удаленные пути.
+
 
 ## <a name="reading-a-text-file-into-an-array"></a>Чтение текстового файла в массив
 

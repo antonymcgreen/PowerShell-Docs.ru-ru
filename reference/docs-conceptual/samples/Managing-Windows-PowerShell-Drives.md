@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Управление дисками Windows PowerShell
-ms.openlocfilehash: 32efa282fb787753942e43acab53c7b6eaeb88e3
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 5d1aba459caeaab2542e17e74534da6713b0faa9
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030143"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215505"
 ---
 # <a name="managing-windows-powershell-drives"></a>Управление дисками Windows PowerShell
 
@@ -105,8 +105,7 @@ ring>] [-OutBuffer <Int32>] [-WhatIf] [-Confirm]
 Например, можно создать диск с именем "Office", который сопоставляется с папкой, содержащей приложения Microsoft Office на компьютере, такой как **C:\\Program Files\\Microsoft Office\\OFFICE11**. Чтобы создать диск, введите следующую команду:
 
 ```
-PS> New-PSDrive -Name Office -PSProvider FileSystem -Root "C:\Program Files\Micr
-osoft Office\OFFICE11"
+PS> New-PSDrive -Name Office -PSProvider FileSystem -Root "C:\Program Files\Microsoft Office\OFFICE11"
 
 Name       Provider      Root                                   CurrentLocation
 ----       --------      ----                                   ---------------
@@ -116,13 +115,12 @@ Office     FileSystem    C:\Program Files\Microsoft Offic...
 > [!NOTE]
 > Обычно пути не зависят от регистра.
 
-Ссылка на новый диск Windows PowerShell, как и на все диски Windows PowerShell, указывается по его имени, за которым следует двоеточие (**:**).
+Ссылка на новый диск Windows PowerShell, как и на все диски Windows PowerShell, указывается по его имени, за которым следует двоеточие ( **:** ).
 
 Диск Windows PowerShell может упростить множество задач. Например, некоторые наиболее важные разделы в реестре Windows содержат слишком длинные пути, что делает их громоздкими и сложными для запоминания. Критически важные сведения о конфигурации находятся в разделе **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion**. Чтобы просмотреть и изменить элементы в разделе реестра CurrentVersion, можно создать диск Windows PowerShell, корень которого находится в этом разделе, введя:
 
 ```
-PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\W
-indows\CurrentVersion
+PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\Windows\CurrentVersion
 
 Name       Provider      Root                                   CurrentLocation
 ----       --------      ----                                   ---------------
@@ -131,7 +129,9 @@ cvkey      Registry      HKLM\Software\Microsoft\Windows\...
 
 После этого можно изменить расположение на диск **cvkey:** (как и для любого другого диска):
 
-`PS> cd cvkey:`
+```
+PS> cd cvkey:
+```
 
 или:
 
@@ -149,13 +149,13 @@ cvkey:\
 
 Диски из Windows PowerShell можно удалить, используя командлет **Remove-PSDrive**. Командлет **Remove-PSDrive** прост в использовании. Чтобы удалить определенный диск Windows PowerShell, необходимо только указать имя диска Windows PowerShell.
 
-Например, если вы добавили диск Windows PowerShell **Office:**, как описано в разделе **New-PSDrive**, вы можете удалить его, выполнив следующую команду:
+Например, если вы добавили диск Windows PowerShell **Office:** , как описано в разделе **New-PSDrive**, вы можете удалить его, выполнив следующую команду:
 
 ```powershell
 Remove-PSDrive -Name Office
 ```
 
-Чтобы удалить диск Windows PowerShell **cvkey:**, описанный в предыдущем разделе **New-PSDrive**, выполните следующую команду:
+Чтобы удалить диск Windows PowerShell **cvkey:** , описанный в предыдущем разделе **New-PSDrive**, выполните следующую команду:
 
 ```powershell
 Remove-PSDrive -Name cvkey

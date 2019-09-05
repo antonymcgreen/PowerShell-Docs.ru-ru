@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка локального диспетчера конфигураций
-ms.openlocfilehash: 15d696587d54d4a6464096cfb78757c41e9185c6
-ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
+ms.openlocfilehash: 42544036d87fcea3189fd6d2e55579fe87f137e1
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65229496"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215385"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Настройка локального диспетчера конфигураций
 
@@ -124,7 +124,8 @@ configuration LCMConfig
 |ProxyURL*|строка|URL-адрес прокси-сервера HTTP для взаимодействия со службой настройки.|
 |ProxyCredential*|pscredential|Учетные данные для прокси-сервера HTTP.|
 
->Внимание! Свойства, отмеченные \*, поддерживаются в Windows 1809 и более поздних версиях.
+> [!NOTE]
+> * Поддерживаются в Windows 1809 и более поздних версиях.
 
 Доступен пример скрипта, который упрощает настройку значения ConfigurationRepositoryWeb для локальных узлов. См. раздел [Создание метаконфигураций DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations).
 
@@ -150,7 +151,8 @@ configuration LCMConfig
 |ProxyURL*|строка|URL-адрес прокси-сервера HTTP для взаимодействия со службой настройки.|
 |ProxyCredential*|pscredential|Учетные данные для прокси-сервера HTTP.|
 
->Внимание! Свойства, отмеченные \*, поддерживаются в Windows 1809 и более поздних версиях.
+> [!NOTE]
+> * Поддерживаются в Windows 1809 и более поздних версиях.
 
 Доступен пример скрипта, который упрощает настройку значения ResourceRepositoryWeb для локальных узлов. См. раздел [Создание метаконфигураций DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
@@ -177,7 +179,8 @@ configuration LCMConfig
 |ProxyURL*|строка|URL-адрес прокси-сервера HTTP для взаимодействия со службой настройки.|
 |ProxyCredential*|pscredential|Учетные данные для прокси-сервера HTTP.|
 
->Внимание! Свойства, отмеченные \*, поддерживаются в Windows 1809 и более поздних версиях.
+> [!NOTE]
+> * Поддерживаются в Windows 1809 и более поздних версиях.
 
 Доступен пример скрипта, который упрощает настройку значения ReportServerWeb для локальных узлов. См. раздел [Создание метаконфигураций DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
