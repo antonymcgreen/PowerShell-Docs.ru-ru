@@ -9,33 +9,33 @@ ms.topic: article
 ms.assetid: 302f00ef-e145-4668-a26a-03bc96ef4b8f
 caps.latest.revision: 10
 ms.openlocfilehash: 9cc6933858f4f37e4fa8b3bbe9afb69a73c68572
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: ffcc1c55f5b3adc063353cb75f2a2183acc2234a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059649"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737581"
 ---
 # <a name="remoterunspace01-sample"></a>Пример RemoteRunspace01
 
-В этом примере показано, как создавать удаленное пространство выполнения, который используется для удаленного подключения.
+В этом примере показано, как создать удаленное пространство выполнения, которое используется для установления удаленного подключения.
 
 ## <a name="requirements"></a>Требования
 
- В этом примере требуется Windows PowerShell 2.0.
+ Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Демонстрирующее
 
-- Создание [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) объекта.
+- Создание объекта [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .
 
-- Установка [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) и [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) свойства [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) объекта.
+- Задание свойств [System. Management. Automation. пространства. рунспацеконнектионинфо. OperationTimeout *](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) и [System. Management. Automation. пространства. рунспацеконнектионинфо. OpenTimeout *](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) элемента [управления Объект System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .
 
-- Создание в удаленном пространстве выполнения, в которой используется [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) для установления удаленного подключения.
+- Создание удаленного пространства выполнения, в котором для установления удаленного соединения используется объект [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .
 
-- Закрытие удаленное пространство выполнения, чтобы освободить удаленного подключения.
+- Закрытие удаленного пространства выполнения для освобождения удаленного подключения.
 
 ## <a name="example"></a>Пример
 
-Этот пример определяет подключение к удаленному и затем использует сведения о подключении для удаленного подключения.
+Этот образец определяет удаленное соединение, а затем использует эти сведения о соединении для установления удаленного подключения.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
