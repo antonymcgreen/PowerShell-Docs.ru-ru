@@ -94,8 +94,6 @@
       items:
         - name: Введение в интегрированную среду сценариев Windows PowerShell
           href: components/ise/introducing-the-windows-powershell-ise.md
-        - name: Интегрированная среда сценариев (ISE) Windows PowerShell
-          href: components/ise/windows-powershell-integrated-scripting-environment--ise-.md
         - name: Использование интегрированной среды сценариев Windows PowerShell
           items:
             - name: Обзор интегрированной среды сценариев Windows PowerShell
@@ -200,12 +198,66 @@
   items:
     - name: Примеры скриптов для администрирования
       href: samples/sample-scripts-for-administration.yml
-    - name: Изменение состояния компьютера
-      href: samples/changing-computer-state.md
-    - name: Сбор информации о компьютерах
-      href: samples/collecting-information-about-computers.md
-    - name: Создание запросов Get-WinEvent с помощью FilterHashtable
-      href: samples/creating-get-winEvent-queries-with-filterhashtable.md
+    - name: Работа с объектами
+      items:
+        - name: Просмотр структуры объектов (Get-Member)
+          href: samples/viewing-object-structure--get-member-.md
+        - name: Выбор частей объекта (Select-Object)
+          href: samples/selecting-parts-of-objects--select-object-.md
+        - name: Удаление объектов из конвейера (Where-Object)
+          href: samples/removing-objects-from-the-pipeline--where-object-.md
+        - name: Сортировка объектов
+          href: samples/sorting-objects.md
+        - name: Повторение задачи для нескольких объектов (ForEach-Object)
+          href: samples/repeating-a-task-for-multiple-objects--foreach-object-.md
+        - name: Создание объектов .NET и COM (New-Object)
+          href: samples/creating-.net-and-com-objects--new-object-.md
+        - name: Использование статических классов и методов
+          href: samples/using-static-classes-and-methods.md
+        - name: Получение объектов WMI (Get-WmiObject)
+          href: samples/getting-wmi-objects--get-wmiobject-.md
+    - name: Управление компьютерами
+      items:
+        - name: Изменение состояния компьютера
+          href: samples/changing-computer-state.md
+        - name: Сбор информации о компьютерах
+          href: samples/collecting-information-about-computers.md
+        - name: Создание запросов Get-WinEvent с помощью FilterHashtable
+          href: samples/creating-get-winEvent-queries-with-filterhashtable.md
+    - name: Управление процессами и службами
+      items:
+        - name: Управление процессами при помощи командлетов Process
+          href: samples/managing-processes-with-process-cmdlets.md
+        - name: Управление службами
+          href: samples/managing-services.md
+        - name: Управление дисками Windows PowerShell
+          href: samples/managing-windows-powershell-drives.md
+        - name: Работа с принтерами
+          href: samples/working-with-printers.md
+        - name: Выполнение задач по работе с сетями
+          href: samples/performing-networking-tasks.md
+        - name: Работа с программами установки программного обеспечения
+          href: samples/working-with-software-installations.md
+        - name: Декодирование команды PowerShell из выполняемого процесса
+          href: samples/decode-powershell-command-from-a-running-process.md
+    - name: Работа с выходными данными
+      items:
+        - name: Перенаправление данных с помощью командлетов Out-*
+          href: samples/redirecting-data-with-out---cmdlets.md
+        - name: Использование команд Format для изменения представления вывода
+          href: samples/using-format-commands-to-change-output-view.md
+    - name: Управление дисками и файлами
+      items:
+        - name: Управление текущим расположением
+          href: samples/managing-current-location.md
+        - name: Работа с файлами и папками
+          href: samples/working-with-files-and-folders.md
+        - name: 'Работа с файлами, папками и разделами реестра'
+          href: samples/working-with-files-folders-and-registry-keys.md
+        - name: Работа с записями реестра
+          href: samples/working-with-registry-entries.md
+        - name: Работа с разделами реестра
+          href: samples/working-with-registry-keys.md
     - name: Создание элементов пользовательского интерфейса
       items:
         - name: Создание настраиваемого поля ввода
@@ -216,57 +268,13 @@
           href: samples/multiple-selection-list-boxes.md
         - name: Выбор элементов из списка
           href: samples/selecting-items-from-a-list-box.md
-    - name: Декодирование команды PowerShell из выполняемого процесса
-      href: samples/decode-powershell-command-from-a-running-process.md
-    - name: Управление текущим расположением
-      href: samples/managing-current-location.md
-    - name: Управление процессами при помощи командлетов Process
-      href: samples/managing-processes-with-process-cmdlets.md
-    - name: Управление службами
-      href: samples/managing-services.md
-    - name: Управление дисками Windows PowerShell
-      href: samples/managing-windows-powershell-drives.md
-    - name: Прямое управление элементами
-      href: samples/manipulating-items-directly.md
-    - name: Выполнение задач по работе с сетями
-      href: samples/performing-networking-tasks.md
-    - name: Перенаправление данных с помощью командлетов Out-*
-      href: samples/redirecting-data-with-out---cmdlets.md
-    - name: Использование команд Format для изменения представления вывода
-      href: samples/using-format-commands-to-change-output-view.md
-    - name: Работа с файлами и папками
-      href: samples/working-with-files-and-folders.md
-    - name: 'Работа с файлами, папками и разделами реестра'
-      href: samples/working-with-files-folders-and-registry-keys.md
-    - name: Работа с объектами
+    - name: Другие примеры
       items:
-        - name: Получение объектов WMI (Get-WmiObject)
-          href: samples/getting-wmi-objects--get-wmiobject-.md
-        - name: Создание объектов .NET и COM (New-Object)
-          href: samples/creating-.net-and-com-objects--new-object-.md
-        - name: Удаление объектов из конвейера (Where-Object)
-          href: samples/removing-objects-from-the-pipeline--where-object-.md
-        - name: Выбор частей объекта (Select-Object)
-          href: samples/selecting-parts-of-objects--select-object-.md
-        - name: Сортировка объектов
-          href: samples/sorting-objects.md
-        - name: Повторение задачи для нескольких объектов (ForEach-Object)
-          href: samples/repeating-a-task-for-multiple-objects--foreach-object-.md
-        - name: Использование статических классов и методов
-          href: samples/using-static-classes-and-methods.md
-        - name: Просмотр структуры объектов (Get-Member)
-          href: samples/viewing-object-structure--get-member-.md
-    - name: Работа с принтерами
-      href: samples/working-with-printers.md
-    - name: Работа с записями реестра
-      href: samples/working-with-registry-entries.md
-    - name: Работа с разделами реестра
-      href: samples/working-with-registry-keys.md
-    - name: Работа с программами установки программного обеспечения
-      href: samples/working-with-software-installations.md
-    - name: Другие полезные объекты для написания скриптов
-      href: samples/other-useful-scripting-objects.md
-    - name: "Приложение\_1. Псевдонимы совместимости"
-      href: samples/appendix-1---compatibility-aliases.md
-    - name: "Приложение\_2. Создание настраиваемого ярлыка PowerShell"
-      href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
+        - name: Прямое управление элементами
+          href: samples/manipulating-items-directly.md
+        - name: Другие полезные объекты для написания скриптов
+          href: samples/other-useful-scripting-objects.md
+        - name: "Приложение\_1. Псевдонимы совместимости"
+          href: samples/appendix-1---compatibility-aliases.md
+        - name: "Приложение\_2. Создание настраиваемого ярлыка PowerShell"
+          href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
