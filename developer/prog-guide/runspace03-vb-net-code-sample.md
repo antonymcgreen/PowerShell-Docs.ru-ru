@@ -1,5 +1,5 @@
 ---
-title: RunSpace03 пример кода (VB.NET) | Документация Майкрософт
+title: Пример кода RunSpace03 (VB.NET) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,21 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3611d66b-19da-4477-ac05-2e5e68312f51
 caps.latest.revision: 6
-ms.openlocfilehash: 6c625c325e491135af3e5c8d58eead62e89ccb4a
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 0931fe7a606b09475084203eaf9fa263ea1cd5f8
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67734984"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848019"
 ---
 # <a name="runspace03-vbnet-code-sample"></a>Пример кода RunSpace03 (VB.NET)
 
-Ниже приведен исходный код VB.NET для консольного приложения, описанных в [Создание консольного приложения, запускающегося сценария указан](fd). В этом примере используется [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) класс для выполнения скрипта, которое извлекает обрабатывать сведения для списка имен процесс передачи в сценарий. Он показывает, как для передачи входных объектов скрипта и как получить объекты ошибок, а также выходных объектов.
+Ниже приведен исходный код VB.NET для консольного приложения, описанного в разделе «Создание консольного приложения, запускающего указанный скрипт». В этом примере класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) используется для выполнения скрипта, который получает сведения о процессе для списка имен процессов, переданных в скрипт. В нем показано, как передавать входные объекты в скрипт и как получать объекты ошибок, а также выходные объекты.
 
 > [!NOTE]
-> Исходный файл VB.NET (runspace03.vb) для этого примера можно загрузить с помощью Windows Software Development Kit для Windows Vista и компоненты среды выполнения Microsoft .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
->
-> Скачанный исходные файлы доступны в  **\<примеры PowerShell >** каталога.
+> Вы можете скачать исходный файл VB.NET (runspace03. vb) для этого примера с помощью пакета средств разработки программного обеспечения Windows для компонентов среды выполнения Windows Vista и Microsoft .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
+> Скачанные исходные файлы доступны в  **\<примерах PowerShell >** Directory.
 
 ## <a name="code-sample"></a>Пример кода
 
@@ -108,6 +107,6 @@ End Namespace
 
 ## <a name="see-also"></a>См. также
 
-[Руководство программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
