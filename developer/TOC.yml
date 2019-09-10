@@ -887,39 +887,13 @@
         - name: "Написание справки для командлетов Windows\_PowerShell"
           href: ./help/writing-help-for-windows-powershell-cmdlets.md
         - name: "Написание справки для поставщиков Windows\_PowerShell"
-          href: ./help/writing-help-for-windows-powershell-providers.md
           items:
-            - name: Как создать раздел справки для поставщика
-              href: ./help/how-to-create-a-provider-help-topic.md
-            - name: Как добавить имя поставщика
-              href: ./help/how-to-add-the-provider-name.md
-            - name: Как добавить диски поставщика
-              href: ./help/how-to-add-the-provider-drives.md
-            - name: Как добавить краткий обзор поставщика
-              href: ./help/how-to-add-the-provider-synopsis.md
-            - name: Как добавить описание поставщика
-              href: ./help/how-to-add-a-provider-description.md
-            - name: Как добавить возможности
-              href: ./help/how-to-add-capabilities.md
-            - name: Как добавить задачи в раздел справки для поставщика
-              href: ./help/how-to-add-tasks-to-a-provider-help-topic.md
             - name: Как добавить динамические параметры в раздел справки для поставщика
               href: ./help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
-            - name: Как добавить примечания в раздел справки для поставщика
-              href: ./help/how-to-add-notes-to-a-provider-help-topic.md
             - name: Как добавить раздел "См. также" в раздел справки для поставщика
               href: ./help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
         - name: "Написание справки для сценариев и функций Windows\_PowerShell"
           href: ./help/writing-help-for-windows-powershell-scripts-and-functions.md
-          items:
-            - name: Написание разделов справки для сценариев и функций на основе XML
-              href: ./help/writing-xml-based-help-topics-for-scripts-and-functions.md
-        - name: "Написание справки для оснасток Windows\_PowerShell"
-          href: ./help/writing-help-for-windows-powershell-snap-ins.md
-        - name: "Написание справки для пользовательских командлетов Windows\_PowerShell"
-          href: ./help/writing-custom-cmdlet-help-for-windows-powershell-providers.md
-        - name: "Написание раздела справки \"О программе\" для Windows\_PowerShell"
-          href: ./help/writing-windows-powershell-about-help.md
         - name: Написание разделов справки на основе комментариев
           href: ./help/writing-comment-based-help-topics.md
           items:
@@ -936,7 +910,6 @@
             - name: Примеры справки на основе комментариев
               href: ./help/examples-of-comment-based-help.md
         - name: Написание разделов справки на основе XML для команд
-          href: ./help/writing-xml-based-help-topics-for-commands.md
           items:
             - name: Как создать файл справки командлета
               href: ./help/how-to-create-the-cmdlet-help-file.md
