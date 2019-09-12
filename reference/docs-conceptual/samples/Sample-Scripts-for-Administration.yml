@@ -1,0 +1,99 @@
+### YamlMime:Landing
+title: Примеры скриптов для системного администрирования
+summary: Коллекция примеров пошаговых сценариев администрирования систем с помощью PowerShell.
+metadata:
+  title: Примеры скриптов для системного администрирования
+  description: Коллекция примеров пошаговых сценариев администрирования систем с помощью PowerShell.
+  ms.topic: landing-page
+  author: sdwheeler
+  ms.author: sewhee
+  ms.date: 09/05/2019
+  ms.openlocfilehash: 95ed43cf713f79d8b648a0f3af77fe2e0119f9c4
+  ms.sourcegitcommit: d1ba596f9e0d4df9565601a70687a126d535c917
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 09/05/2019
+  ms.locfileid: "70392031"
+landingContent:
+- title: Работа с объектами
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Просмотр структуры объектов
+      url: ./viewing-object-structure--get-member-.md
+    - text: Выбор частей объекта
+      url: ./selecting-parts-of-objects--select-object-.md
+    - text: Фильтрация объектов в конвейере
+      url: ./removing-objects-from-the-pipeline--where-object-.md
+    - text: Сортировка объектов
+      url: ./sorting-objects.md
+    - text: Повторение задачи для нескольких объектов
+      url: ./repeating-a-task-for-multiple-objects--foreach-object-.md
+    - text: Создание объектов .NET и COM
+      url: ./creating-.net-and-com-objects--new-object-.md
+    - text: Использование статических классов и методов
+      url: ./using-static-classes-and-methods.md
+    - text: Получение объектов WMI (Get-WmiObject)
+      url: ./getting-wmi-objects--get-wmiobject-.md
+- title: Управление компьютерами
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Изменение состояния компьютера
+      url: ./changing-computer-state.md
+    - text: Сбор информации о компьютерах
+      url: ./collecting-information-about-computers.md
+    - text: Создание запросов Get-WinEvent с помощью FilterHashtable
+      url: ./creating-get-winEvent-queries-with-filterhashtable.md
+- title: Управление процессами и службами
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Управление процессами при помощи командлетов Process
+      url: ./managing-processes-with-process-cmdlets.md
+    - text: Управление службами
+      url: ./managing-services.md
+    - text: Управление дисками Windows PowerShell
+      url: ./managing-windows-powershell-drives.md
+    - text: Работа с принтерами
+      url: ./working-with-printers.md
+    - text: Выполнение задач по работе с сетями
+      url: ./performing-networking-tasks.md
+    - text: Работа с программами установки программного обеспечения
+      url: ./working-with-software-installations.md
+    - text: Декодирование команды PowerShell из выполняемого процесса
+      url: ./decode-powershell-command-from-a-running-process.md
+- title: Работа с выходными данными
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Перенаправление данных с помощью командлетов Out-*
+      url: ./redirecting-data-with-out---cmdlets.md
+    - text: Использование команд Format для изменения представления вывода
+      url: ./using-format-commands-to-change-output-view.md
+- title: Управление дисками и файлами
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Управление текущим расположением
+      url: ./managing-current-location.md
+    - text: Работа с файлами и папками
+      url: ./working-with-files-and-folders.md
+    - text: Работа с файлами, папками и разделами реестра
+      url: ./working-with-files-folders-and-registry-keys.md
+    - text: Работа с записями реестра
+      url: ./working-with-registry-entries.md
+    - text: Работа с разделами реестра
+      url: ./working-with-registry-keys.md
+- title: Создание элементов пользовательского интерфейса
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Создание настраиваемого поля ввода
+      url: ./creating-a-custom-input-box.md
+    - text: Создание графического элемента управления "Выбор даты"
+      url: ./creating-a-graphical-date-picker.md
+    - text: Списки с множественным выбором
+      url: ./multiple-selection-list-boxes.md
+    - text: Выбор элементов из списка
+      url: ./selecting-items-from-a-list-box.md

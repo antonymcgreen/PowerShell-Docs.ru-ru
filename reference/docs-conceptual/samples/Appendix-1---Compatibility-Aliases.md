@@ -1,36 +1,54 @@
 ---
-ms.date: 06/05/2017
+ms.date: 09/09/2019
 keywords: powershell,командлет
 title: Приложение 1. Псевдонимы совместимости
-ms.openlocfilehash: 553b9f01d6b5e3f4e04f1a75c25979b54dc205da
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 2351fdf23711fe1417f7e3fc3cca5b642d5a59fc
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030326"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848162"
 ---
 # <a name="appendix-1---compatibility-aliases"></a>Приложение 1. Псевдонимы совместимости
 
-Windows PowerShell имеет несколько псевдонимов перехода, позволяющих пользователям UNIX и Cmd применять знакомые команды в Windows PowerShell. Наиболее распространенные псевдонимы приведены в таблице ниже, также там указана команда Windows PowerShell для псевдонима и стандартный псевдоним Windows PowerShell, если он существует.
+PowerShell имеет несколько псевдонимов, позволяющих пользователям **UNIX** и **cmd.exe** использовать знакомые команды.
+Команды и связанные с ними командлеты PowerShell и псевдонимы PowerShell показаны в следующей таблице:
 
-Найти команду Windows PowerShell, на которую указывает псевдоним из Windows PowerShell, можно с помощью командлета Get-Alias. Например, введите **get-alias cls**.
-
-```
-CommandType     Name                            Definition
------------     ----                            ----------
-Alias           cls                             Clear-Host
-```
-
-|Команда CMD|Команда UNIX|Команда PS|Псевдоним PS|
+|Команда cmd.exe|Команда UNIX|Командлет PowerShell|Псевдоним PowerShell|
 |---------------|----------------|--------------|------------|
-|**dir**|**ls**|**Get-ChildItem**|**gci**|
-|**cls**|**clear**|**Clear-Host** (функция)|**cls**|
-|**del, erase, rmdir**|**rm**|**Remove-Item**|**ri**|
-|**copy**|**cp**|**Copy-Item**|**ci**|
-|**move**|**mv**|**Move-Item**|**mi**|
-|**rename**|**mv**|**Rename-Item**|**rni**|
-|**type**|**cat**|**Get-Content**|**gc**|
-|**cd**|**cd**|**Set-Location**|**sl**|
-|**md**|**mkdir**|**New-Item**|**ni**|
-|**pushd**|**pushd**|**Push-Location**|**pushd**|
-|**popd**|**popd**|**Pop-Location**|**popd**|
+|**cls**|**clear**|`Clear-Host` (функция)|`cls`|
+|**copy**|**cp**|`Copy-Item`|`cpi`|
+|**dir**|**ls**|`Get-ChildItem`|`gci`|
+|**type**|**cat**|`Get-Content`|`gc`|
+|**move**|**mv**|`Move-Item`|`mi`|
+|**md**|**mkdir**|`New-Item`|`ni`|
+|**pushd**|**pushd**|`Push-Location`|`pushd`|
+|**popd**|**popd**|`Pop-Location`|`popd`|
+|**del**, **erase**, **rd**, **rmdir**|**rm**|`Remove-Item`|`ri`|
+|**ren**|**mv**|`Rename-Item`|`rni`|
+|**cd**, **chdir**|**cd**|`Set-Location`|`sl`|
+
+Чтобы найти псевдонимы PowerShell, используйте командлет [Get-Alias](/powershell/module/Microsoft.PowerShell.Utility/Get-Alias). Чтобы отобразить псевдонимы командлета, используйте параметр **Definition** и укажите имя командлета.
+Чтобы найти имя командлета псевдонима, используйте параметр **Name** и укажите псевдоним.
+
+```powershell
+Get-Alias -Definition Get-ChildItem
+```
+
+```Output
+CommandType     Name
+-----------     ----
+Alias           dir -> Get-ChildItem
+Alias           gci -> Get-ChildItem
+Alias           ls -> Get-ChildItem
+```
+
+```powershell
+Get-Alias -Name gci
+```
+
+```Output
+CommandType     Name
+-----------     ----
+Alias           gci -> Get-ChildItem
+```

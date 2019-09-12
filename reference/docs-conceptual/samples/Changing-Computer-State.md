@@ -2,16 +2,16 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Изменение состояния компьютера
-ms.openlocfilehash: 80692ad7c56aa13e55d4997cfec289ffb3605458
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: de3e31e358548943a015b7bba275c4461202b20f
+ms.sourcegitcommit: d1ba596f9e0d4df9565601a70687a126d535c917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030283"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386286"
 ---
 # <a name="changing-computer-state"></a>Изменение состояния компьютера
 
-Чтобы сбросить компьютер в Windows PowerShell, используйте стандартную программу командной строки или класс инструментария WMI. Хотя Windows PowerShell используется только для запуска программы, сведения об изменении состояния электропитания для компьютера в Windows PowerShell иллюстрируют некоторые важные особенности работы с внешними средствами в Windows PowerShell.
+Чтобы вернуть компьютер в исходное состояние в Windows PowerShell, используйте стандартную программу командной строки, инструментарий WMI или класс CIM. Хотя Windows PowerShell используется только для запуска программы, сведения об изменении состояния электропитания для компьютера в Windows PowerShell иллюстрируют некоторые важные особенности работы с внешними средствами в Windows PowerShell.
 
 ## <a name="locking-a-computer"></a>Блокировка компьютера
 
@@ -37,13 +37,19 @@ rundll32.exe user32.dll,LockWorkStation
 shutdown.exe -l
 ```
 
-Третий вариант — использование инструментария WMI. Класс Win32_OperatingSystem имеет метод Win32Shutdown. Вызов метода с флагом 0 инициирует выход из системы:
+Еще один вариант — использование инструментария WMI. Класс Win32_OperatingSystem имеет метод Win32Shutdown. Вызов метода с флагом 0 инициирует выход из системы:
 
 ```powershell
 (Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(0)
 ```
 
 Дополнительные сведения и другие возможности метода Win32Shutdown см. в статье Win32Shutdown Method of the Win32_OperatingSystem Class (Метод Win32Shutdown класса Win32_OperatingSystem) на сайте MSDN.
+
+Наконец, можно использовать CIM с тем же классом Win32_OperatingSystem, как описано выше в методе WMI.
+
+```powershell
+Get-CIMInstance -Classname Win32_OperatingSystem | Invoke-CimMethod -MethodName Shutdown
+```
 
 ## <a name="shutting-down-or-restarting-a-computer"></a>Завершение работы или перезапуск компьютера
 
