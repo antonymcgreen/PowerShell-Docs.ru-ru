@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: <span data-ttu-id="149f5-101">Примеры скриптов для системного администрирования</span><span class="sxs-lookup"><span data-stu-id="149f5-101">Sample scripts for system administration</span></span>
-summary: <span data-ttu-id="149f5-102">Коллекция примеров пошаговых сценариев администрирования систем с помощью PowerShell.</span><span class="sxs-lookup"><span data-stu-id="149f5-102">A collection of examples walks through scenarios for administering systems with PowerShell.</span></span>
+title: Примеры скриптов для системного администрирования
+summary: Коллекция примеров пошаговых сценариев администрирования систем с помощью PowerShell.
 metadata:
-  title: <span data-ttu-id="149f5-103">Примеры скриптов для системного администрирования</span><span class="sxs-lookup"><span data-stu-id="149f5-103">Sample scripts for system administration</span></span>
-  description: <span data-ttu-id="149f5-104">Коллекция примеров пошаговых сценариев администрирования систем с помощью PowerShell.</span><span class="sxs-lookup"><span data-stu-id="149f5-104">A collection of examples walks through scenarios for administering systems with PowerShell.</span></span>
+  title: Примеры скриптов для системного администрирования
+  description: Коллекция примеров пошаговых сценариев администрирования систем с помощью PowerShell.
   ms.topic: landing-page
   author: sdwheeler
   ms.author: sewhee
@@ -15,85 +15,85 @@ metadata:
   ms.lasthandoff: 09/05/2019
   ms.locfileid: "70392031"
 landingContent:
-- title: <span data-ttu-id="149f5-105">Работа с объектами</span><span class="sxs-lookup"><span data-stu-id="149f5-105">Working with objects</span></span>
+- title: Работа с объектами
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="149f5-106">Просмотр структуры объектов</span><span class="sxs-lookup"><span data-stu-id="149f5-106">Viewing object structure</span></span>
+    - text: Просмотр структуры объектов
       url: ./viewing-object-structure--get-member-.md
-    - text: <span data-ttu-id="149f5-107">Выбор частей объекта</span><span class="sxs-lookup"><span data-stu-id="149f5-107">Selecting parts of object</span></span>
+    - text: Выбор частей объекта
       url: ./selecting-parts-of-objects--select-object-.md
-    - text: <span data-ttu-id="149f5-108">Фильтрация объектов в конвейере</span><span class="sxs-lookup"><span data-stu-id="149f5-108">Filtering objects in the pipeline</span></span>
+    - text: Фильтрация объектов в конвейере
       url: ./removing-objects-from-the-pipeline--where-object-.md
-    - text: <span data-ttu-id="149f5-109">Сортировка объектов</span><span class="sxs-lookup"><span data-stu-id="149f5-109">Sorting objects</span></span>
+    - text: Сортировка объектов
       url: ./sorting-objects.md
-    - text: <span data-ttu-id="149f5-110">Повторение задачи для нескольких объектов</span><span class="sxs-lookup"><span data-stu-id="149f5-110">Repeating a task for multiple objects</span></span>
+    - text: Повторение задачи для нескольких объектов
       url: ./repeating-a-task-for-multiple-objects--foreach-object-.md
-    - text: <span data-ttu-id="149f5-111">Создание объектов .NET и COM</span><span class="sxs-lookup"><span data-stu-id="149f5-111">Creating .NET and COM objects</span></span>
+    - text: Создание объектов .NET и COM
       url: ./creating-.net-and-com-objects--new-object-.md
-    - text: <span data-ttu-id="149f5-112">Использование статических классов и методов</span><span class="sxs-lookup"><span data-stu-id="149f5-112">Using static classes and methods</span></span>
+    - text: Использование статических классов и методов
       url: ./using-static-classes-and-methods.md
-    - text: <span data-ttu-id="149f5-113">Получение объектов WMI (Get-WmiObject)</span><span class="sxs-lookup"><span data-stu-id="149f5-113">Getting WMI objects - Get-WmiObject</span></span>
+    - text: Получение объектов WMI (Get-WmiObject)
       url: ./getting-wmi-objects--get-wmiobject-.md
-- title: <span data-ttu-id="149f5-114">Управление компьютерами</span><span class="sxs-lookup"><span data-stu-id="149f5-114">Managing computers</span></span>
+- title: Управление компьютерами
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="149f5-115">Изменение состояния компьютера</span><span class="sxs-lookup"><span data-stu-id="149f5-115">Changing computer state</span></span>
+    - text: Изменение состояния компьютера
       url: ./changing-computer-state.md
-    - text: <span data-ttu-id="149f5-116">Сбор информации о компьютерах</span><span class="sxs-lookup"><span data-stu-id="149f5-116">Collecting information about computers</span></span>
+    - text: Сбор информации о компьютерах
       url: ./collecting-information-about-computers.md
-    - text: <span data-ttu-id="149f5-117">Создание запросов Get-WinEvent с помощью FilterHashtable</span><span class="sxs-lookup"><span data-stu-id="149f5-117">Creating Get-WinEvent queries with FilterHashtable</span></span>
+    - text: Создание запросов Get-WinEvent с помощью FilterHashtable
       url: ./creating-get-winEvent-queries-with-filterhashtable.md
-- title: <span data-ttu-id="149f5-118">Управление процессами и службами</span><span class="sxs-lookup"><span data-stu-id="149f5-118">Managing processes & services</span></span>
+- title: Управление процессами и службами
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="149f5-119">Управление процессами при помощи командлетов Process</span><span class="sxs-lookup"><span data-stu-id="149f5-119">Managing processes with process cmdlets</span></span>
+    - text: Управление процессами при помощи командлетов Process
       url: ./managing-processes-with-process-cmdlets.md
-    - text: <span data-ttu-id="149f5-120">Управление службами</span><span class="sxs-lookup"><span data-stu-id="149f5-120">Managing services</span></span>
+    - text: Управление службами
       url: ./managing-services.md
-    - text: <span data-ttu-id="149f5-121">Управление дисками Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="149f5-121">Managing Windows PowerShell drives</span></span>
+    - text: Управление дисками Windows PowerShell
       url: ./managing-windows-powershell-drives.md
-    - text: <span data-ttu-id="149f5-122">Работа с принтерами</span><span class="sxs-lookup"><span data-stu-id="149f5-122">Working with printers</span></span>
+    - text: Работа с принтерами
       url: ./working-with-printers.md
-    - text: <span data-ttu-id="149f5-123">Выполнение задач по работе с сетями</span><span class="sxs-lookup"><span data-stu-id="149f5-123">Performing networking tasks</span></span>
+    - text: Выполнение задач по работе с сетями
       url: ./performing-networking-tasks.md
-    - text: <span data-ttu-id="149f5-124">Работа с программами установки программного обеспечения</span><span class="sxs-lookup"><span data-stu-id="149f5-124">Working with software installations</span></span>
+    - text: Работа с программами установки программного обеспечения
       url: ./working-with-software-installations.md
-    - text: <span data-ttu-id="149f5-125">Декодирование команды PowerShell из выполняемого процесса</span><span class="sxs-lookup"><span data-stu-id="149f5-125">Decode a PowerShell command from a running process</span></span>
+    - text: Декодирование команды PowerShell из выполняемого процесса
       url: ./decode-powershell-command-from-a-running-process.md
-- title: <span data-ttu-id="149f5-126">Работа с выходными данными</span><span class="sxs-lookup"><span data-stu-id="149f5-126">Working with output</span></span>
+- title: Работа с выходными данными
   linkLists:
   - linkListType: concept
     links:
-    - text: <span data-ttu-id="149f5-127">Перенаправление данных с помощью командлетов Out-\*</span><span class="sxs-lookup"><span data-stu-id="149f5-127">Redirecting data with Out-\* cmdlets</span></span>
+    - text: Перенаправление данных с помощью командлетов Out-*
       url: ./redirecting-data-with-out---cmdlets.md
-    - text: <span data-ttu-id="149f5-128">Использование команд Format для изменения представления вывода</span><span class="sxs-lookup"><span data-stu-id="149f5-128">Using format commands to change output view</span></span>
+    - text: Использование команд Format для изменения представления вывода
       url: ./using-format-commands-to-change-output-view.md
-- title: <span data-ttu-id="149f5-129">Управление дисками и файлами</span><span class="sxs-lookup"><span data-stu-id="149f5-129">Managing drives & files</span></span>
+- title: Управление дисками и файлами
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="149f5-130">Управление текущим расположением</span><span class="sxs-lookup"><span data-stu-id="149f5-130">Managing current location</span></span>
+    - text: Управление текущим расположением
       url: ./managing-current-location.md
-    - text: <span data-ttu-id="149f5-131">Работа с файлами и папками</span><span class="sxs-lookup"><span data-stu-id="149f5-131">Working with files and folders</span></span>
+    - text: Работа с файлами и папками
       url: ./working-with-files-and-folders.md
-    - text: <span data-ttu-id="149f5-132">Работа с файлами, папками и разделами реестра</span><span class="sxs-lookup"><span data-stu-id="149f5-132">Working with files folders and registry keys</span></span>
+    - text: Работа с файлами, папками и разделами реестра
       url: ./working-with-files-folders-and-registry-keys.md
-    - text: <span data-ttu-id="149f5-133">Работа с записями реестра</span><span class="sxs-lookup"><span data-stu-id="149f5-133">Working with registry entries</span></span>
+    - text: Работа с записями реестра
       url: ./working-with-registry-entries.md
-    - text: <span data-ttu-id="149f5-134">Работа с разделами реестра</span><span class="sxs-lookup"><span data-stu-id="149f5-134">Working with registry keys</span></span>
+    - text: Работа с разделами реестра
       url: ./working-with-registry-keys.md
-- title: <span data-ttu-id="149f5-135">Создание элементов пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="149f5-135">Creating UI elements</span></span>
+- title: Создание элементов пользовательского интерфейса
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="149f5-136">Создание настраиваемого поля ввода</span><span class="sxs-lookup"><span data-stu-id="149f5-136">Creating a custom input box</span></span>
+    - text: Создание настраиваемого поля ввода
       url: ./creating-a-custom-input-box.md
-    - text: <span data-ttu-id="149f5-137">Создание графического элемента управления "Выбор даты"</span><span class="sxs-lookup"><span data-stu-id="149f5-137">Creating a graphical date picker</span></span>
+    - text: Создание графического элемента управления "Выбор даты"
       url: ./creating-a-graphical-date-picker.md
-    - text: <span data-ttu-id="149f5-138">Списки с множественным выбором</span><span class="sxs-lookup"><span data-stu-id="149f5-138">Multiple selection list boxes</span></span>
+    - text: Списки с множественным выбором
       url: ./multiple-selection-list-boxes.md
-    - text: <span data-ttu-id="149f5-139">Выбор элементов из списка</span><span class="sxs-lookup"><span data-stu-id="149f5-139">Selecting items from a list box</span></span>
+    - text: Выбор элементов из списка
       url: ./selecting-items-from-a-list-box.md
