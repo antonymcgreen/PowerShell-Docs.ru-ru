@@ -194,6 +194,55 @@
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
 - name: Жизненный цикл поддержки PowerShell Core
   href: powershell-support-lifecycle.md
+- name: Windows Management Framework (WMF)
+  items:
+    - name: Обзор
+      href: wmf/overview.md
+    - name: Установка
+      items:
+        - name: "Установка и настройка WMF\_5.1"
+          href: wmf/setup/install-configure.md
+        - name: "Удаление WMF\_5.0"
+          href: wmf/setup/uninstall.md
+    - name: Новые возможности
+      expanded: true
+      items:
+        - name: "Заметки о выпуске WMF\_5.x"
+          href: wmf/whats-new/release-notes.md
+        - name: Исправления ошибок в WMF 5.1
+          href: wmf/whats-new/bugfixes.md
+        - name: Новые и обновленные командлеты
+          href: wmf/whats-new/new-updated-cmdlets.md
+        - name: Создание настраиваемых типов с помощью классов PowerShell
+          href: wmf/whats-new/class-overview.md
+        - name: Усовершенствования консоли в WMF 5.1
+          href: wmf/whats-new/console-improvements.md
+        - name: Усовершенствования отладки сценариев PowerShell
+          href: wmf/whats-new/debug-overview.md
+        - name: Трассировка сценариев и ведения журналов для них
+          href: wmf/whats-new/script-logging.md
+        - name: Усовершенствования DSC в WMF 5.1
+          href: wmf/whats-new/DSC-improvements.md
+        - name: Усовершенствования подсистемы PowerShell в WMF 5.1
+          href: wmf/whats-new/engine-improvements.md
+        - name: Поток информации
+          href: wmf/whats-new/informationstream-overview.md
+        - name: Улучшения Just Enough Administration (JEA)
+          href: wmf/whats-new/jea-improvements.md
+        - name: "Усовершенствования в управлении пакетами в WMF\_5.1"
+          href: wmf/whats-new/package-management-improvements.md
+        - name: Инвентаризация программного обеспечения (SIL)
+          href: wmf/whats-new/sil-overview.md
+        - name: Состояние совместимости продуктов
+          href: wmf/whats-new/compatibility.md
+    - name: Известные проблемы
+      items:
+        - name: "Известные проблемы в WMF\_5.0"
+          href: wmf/known-issues/known-issues-50.md
+        - name: Известные проблемы в WMF 5.1
+          href: wmf/known-issues/known-issues-51.md
+        - name: Известные проблемы и ограничения в DSC
+          href: wmf/known-issues/known-issues-dsc.md
 - name: Примеры скриптов
   items:
     - name: Примеры скриптов для администрирования
