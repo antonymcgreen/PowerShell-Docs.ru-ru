@@ -1,5 +1,5 @@
 ---
-title: Элемент TableColumnItem для TableColumnItems для TableControl (формат) | Документация Майкрософт
+title: Элемент Таблеколумнитем для Таблеколумнитемс для Таблеконтрол (Format) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,24 +8,25 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef8395aa-4b31-48c0-a0b8-b481fd0b3738
 caps.latest.revision: 15
-ms.openlocfilehash: 159f943f6bfb33c5403b5714380631351523789f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9e6cffc7476ef01124d95ecbf287d9788b0324c9
+ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62063944"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143582"
 ---
 # <a name="tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format"></a>Элемент TableColumnItem для элемента TableColumnItems для элемента TableControl (формат)
 
-Определяет свойство или скрипта, значение которого отображается в столбце строки.
+Определяет свойство или скрипт, значение которого отображается в столбце строки.
 
-Элемент (формат) элемент ViewDefinitions (формат) представление элемента (формат) TableControl-элемент (формат) TableRowEntries элемента конфигурации для элемента TableRowEntry TableControl (формат) TableRowEntries для TableControl (формат) Элемент TableColumnItems для TableControlEntry для элемента TableColumnItem TableControl (формат) TableColumnItems для TableControl (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент (формат) Таблеконтрол элемент (Format) Таблеровентриес для Таблеконтрол (Format) Таблеровентри для Таблеровентриес в TableControl (Format) Элемент Таблеколумнитемс для Таблеконтролентри для Таблеконтрол (Format) Таблеколумнитем элемента для Таблеколумнитемс для TableControl (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
 ```xml
 <TableColumnItem>
   <Alignment>Left, Right, or Center</Alignment>
+  <FormatString>FormatPattern</FormatString>
   <PropertyName>Nameof.NetProperty</PropertyName>
   <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 </TableColumnItem>
@@ -33,7 +34,7 @@ ms.locfileid: "62063944"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах атрибуты, дочерние элементы и родительский элемент `TableColumnItem` элемент.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `TableColumnItem` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
@@ -43,26 +44,26 @@ ms.locfileid: "62063944"
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Выравнивание элемента для TableColumnItem для TableControl (формат)](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Определяет способ отображения данных в столбце строки.|
-|[Элемент FormatString для TableColumnItem для TableControl (формат)](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)|Задает шаблон формата, который используется для форматирования данных в столбец строки.|
-|[Элемент PropertyName для TableColumnItem для TableControl (формат)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Указывает имя свойства, значение которого отображается.|
-|[Элемент ScriptBlock для TableColumnItem для TableControl (формат)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Указывает сценарий, значение которого отображается в столбце строки.|
+|[Элемент Alignment для Таблеколумнитем для Таблеконтрол (Format)](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Определяет, как отображаются данные в столбце строки.|
+|[Элемент FormatString для Таблеколумнитем для Таблеконтрол (Format)](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)|Задает шаблон формата, используемый для форматирования данных в столбце строки.|
+|[Элемент PropertyName для Таблеколумнитем для Таблеконтрол (Format)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Указывает имя свойства, значение которого отображается.|
+|[Элемент ScriptBlock для Таблеколумнитем для Таблеконтрол (Format)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Задает скрипт, значение которого отображается в столбце строки.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент TableColumnItems для TableControlEntry для TableControl (формат)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|Определяет свойства или скрипты, значения которых отображаются в строке.|
+|[Элемент Таблеколумнитемс для Таблеконтролентри для Таблеконтрол (Format)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|Определяет свойства или скрипты, значения которых отображаются в строке.|
 
 ## <a name="remarks"></a>Замечания
 
-В каждом столбце строки можно указать свойства объекта или скрипта. Если нет дочерних элементов не заданы, элемент — это заполнитель, а данные не отображаются.
+Можно указать свойство объекта или скрипта в каждом столбце строки. Если дочерние элементы не указаны, элемент является заполнителем и данные не отображаются.
 
-Дополнительные сведения о компонентах в табличное представление, см. в разделе [Создание представления таблицы](./creating-a-table-view.md).
+Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
 ## <a name="example"></a>Пример
 
-В этом примере показано `TableColumnItem` элемент, который отображает значение `Status` свойство [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) объекта.
+В `TableColumnItem` этом примере показан элемент, отображающий значение `Status` свойства объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <TableColumnItem>
@@ -74,16 +75,16 @@ ms.locfileid: "62063944"
 
 ## <a name="see-also"></a>См. также
 
-[Создание представления таблицы](./creating-a-table-view.md)
+[Создание табличного представления](./creating-a-table-view.md)
 
-[Выравнивание элемента для TableColumnItem для TableControl (формат)](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[Элемент Alignment для Таблеколумнитем для Таблеконтрол (Format)](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[Элемент TableColumnItems (формат)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
+[Элемент Таблеколумнитемс (Format)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
 
-[Элемент FormatString для TableColumnItem для TableControl (формат)](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[Элемент FormatString для Таблеколумнитем для Таблеконтрол (Format)](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[Элемент PropertyName для TableColumnItem для TableControl (формат)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[Элемент PropertyName для Таблеколумнитем для Таблеконтрол (Format)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[Элемент ScriptBlock для TableColumnItem для TableControl (формат)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[Элемент ScriptBlock для Таблеколумнитем для Таблеконтрол (Format)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[Запись файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)
+[Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)
