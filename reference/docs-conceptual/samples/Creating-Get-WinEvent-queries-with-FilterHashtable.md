@@ -1,12 +1,12 @@
 ---
-ms.date: 03/18/2019
+ms.date: 09/13/2019
 title: Создание запросов Get-WinEvent с помощью FilterHashtable
-ms.openlocfilehash: 2f598fceb570f189bee776b6ed572b11a6938f64
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: 1bf321c09c20736de36eb896fabced31cfdfbd75
+ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66471017"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143661"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Создание запросов Get-WinEvent с помощью FilterHashtable
 
@@ -16,9 +16,11 @@ ms.locfileid: "66471017"
 
 При работе с объемными журналами событий отправка объектов по конвейеру команде `Where-Object` не является эффективной. До выхода версии PowerShell 6 для получения данных журнала также использовался командлет `Get-EventLog`. Например, приведенные ниже команды являются неэффективными для фильтрации журналов **Microsoft-Windows-Defrag**:
 
-`Get-EventLog -LogName Application | Where-Object Source -Match defrag`
+```powershell
+Get-EventLog -LogName Application | Where-Object Source -Match defrag
 
-`Get-WinEvent -LogName Application | Where-Object { $_.ProviderName -Match 'defrag' }`
+Get-WinEvent -LogName Application | Where-Object { $_.ProviderName -Match 'defrag' }
+```
 
 В следующей команде используется хэш-таблица, что повышает производительность:
 
@@ -48,19 +50,35 @@ Get-WinEvent -FilterHashtable @{
 
 В следующей таблице приведены имена ключей, типы данных и сведения о том, принимаются ли подстановочные знаки для значения данных.
 
-| Имя ключа     | Тип данных значения    | Принимает ли подстановочные знаки? |
-|------------- | ------------------ | ---------------------------- |
-| LogName      | `<String[]>`       | Да |
-| ProviderName | `<String[]>`       | Да |
-| путь         | `<String[]>`       | Нет  |
-| Keywords     | `<Long[]>`         | Нет  |
-| Код           | `<Int32[]>`        | Нет  |
-| Уровень        | `<Int32[]>`        | Нет  |
-| StartTime    | `<DateTime>`       | Нет  |
-| EndTime      | `<DateTime>`       | Нет  |
-| UserID       | `<SID>`            | Нет  |
-| Данные         | `<String[]>`       | Нет  |
-| *            | `<String[]>`       | Нет  |
+|    Имя ключа    | Тип данных значения | Принимает ли подстановочные знаки? |
+| -------------- | --------------- | ---------------------------- |
+| LogName        | `<String[]>`    | Да                          |
+| ProviderName   | `<String[]>`    | Да                          |
+| путь           | `<String[]>`    | Нет                           |
+| Keywords       | `<Long[]>`      | Нет                           |
+| Код             | `<Int32[]>`     | Нет                           |
+| Уровень          | `<Int32[]>`     | Нет                           |
+| StartTime      | `<DateTime>`    | Нет                           |
+| EndTime        | `<DateTime>`    | Нет                           |
+| UserID         | `<SID>`         | Нет                           |
+| Данные           | `<String[]>`    | Нет                           |
+| \<named-data\> | `<String[]>`    | Нет                           |
+
+Ключ \<named-data\> представляет собой именованное поле данных событий. Например, событие Perflib 1008 может содержать следующие данные о событии:
+
+```xml
+<EventData>
+  <Data Name="Service">BITS</Data>
+  <Data Name="Library">C:\Windows\System32\bitsperf.dll</Data>
+  <Data Name="Win32Error">2</Data>
+</EventData>
+```
+
+Эти события можно запросить с помощью следующей команды:
+
+```powershell
+Get-WinEvent -FilterHashtable @{LogName='Application'; 'Service'='Bits'}
+```
 
 ## <a name="building-a-query-with-a-hash-table"></a>Создание запроса с использованием хэш-таблицы
 

@@ -1,14 +1,13 @@
 ---
-ms.openlocfilehash: 962d61aac474a04387151de150af75b3f8d62e40
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 3f78dfdac647a95e85501863e66d5b9491dd35a4
+ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055417"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143526"
 ---
 # <a name="readme"></a>файл README
 
-Эта папка содержит документацию по Windows Management Framework (WMF).
-Она настроена как отдельный набор документов в репозитории PowerShell-Docs.
+Содержимое WMF было перемещено в каталог [reference/docs-conceptual/wmf](https://github.com/MicrosoftDocs/PowerShell-Docs/tree/staging/reference/docs-conceptual/wmf).
 
-Сведения об участии в разработке этого набора документов см. в [руководстве участников](https://github.com/PowerShell/PowerShell-Docs/blob/staging/CONTRIBUTING.md) для PowerShell-Docs.
+Такая структура папок требуется для поддержки перенаправления. Ее можно будет изменить после того, как SEO сделает перенаправление ненужным.

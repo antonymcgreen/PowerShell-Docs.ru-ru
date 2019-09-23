@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Установка PowerShellGet
-ms.openlocfilehash: 2d3ba8c4d4d4c7ee023c7e6a948a29d8f47ea242
-ms.sourcegitcommit: 8d47eb41445ffaf10fcd68874e397c9a1703d898
+ms.openlocfilehash: a0ef46a9ee4bbf668a58067256d098967bde48c5
+ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601415"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143597"
 ---
 # <a name="installing-powershellget"></a>Установка PowerShellGet
 
@@ -19,49 +19,45 @@ ms.locfileid: "68601415"
 - [Windows Management Framework (WMF) 5.0](https://www.microsoft.com/download/details.aspx?id=50395) или более поздняя версия;
 - [PowerShell 6](https://github.com/PowerShell/PowerShell/releases).
 
-## <a name="get-powershellget-module-for-powershell-versions-30-and-40"></a>Получение модуля PowerShellGet для PowerShell версии 3.0 и 4.0
-
-- [PackageManagement MSI](https://www.microsoft.com/download/details.aspx?id=51451)
-
 ## <a name="get-the-latest-version-from-powershell-gallery"></a>Получение последней версии из коллекции PowerShell
 
-- Перед обновлением PowerShellGet всегда устанавливайте последний поставщик Nuget. Для этого выполните следующую команду в сеансе PowerShell с повышенными привилегиями.
+Перед обновлением **PowerShellGet** всегда устанавливайте последний поставщик **NuGet**. Откройте сеанс PowerShell с повышенными привилегиями и выполните следующую команду.
 
-  ```powershell
-  Install-PackageProvider Nuget -Force
-  Exit
-  ```
+```powershell
+Install-PackageProvider -Name NuGet -Force
+Exit
+```
 
 ### <a name="for-systems-with-powershell-50-or-newer-you-can-install-the-latest-powershellget"></a>Для систем с PowerShell 5.0 (или более поздней версии) можно установить последнюю версию PowerShellGet
 
-- Чтобы сделать это в Windows 10, Windows Server 2016, любой системе с установленным WMF 5.0 или 5.1 или любой системе с PowerShell 6, выполните следующие команды из сеанса PowerShell с повышенными привилегиями.
+Чтобы установить PowerShellGet в Windows 10, Windows Server 2016, а также любой системе с WMF 5.0, 5.1 или PowerShell 6, выполните следующие команды из сеанса PowerShell с повышенными привилегиями.
 
-  ```powershell
-  Install-Module -Name PowerShellGet -Force
-  Exit
-  ```
+```powershell
+Install-Module -Name PowerShellGet -Force
+Exit
+```
 
-- `Update-Module` позволяет получить более новые версии.
+`Update-Module` позволяет получить более новые версии.
 
-  ```powershell
-  Update-Module -Name PowerShellGet
-  Exit
-  ```
+```powershell
+Update-Module -Name PowerShellGet
+Exit
+```
 
-### <a name="for-systems-running-powershell-3-or-powershell-4-that-have-installed-the-packagemanagement-msihttpswwwmicrosoftcomdownloaddetailsaspxid51451"></a>Для систем под управлением PowerShell 3 или PowerShell 4, на которых установлено [PackageManagement MSI](https://www.microsoft.com/download/details.aspx?id=51451)
+### <a name="for-systems-running-powershell-3-or-powershell-4-that-have-installed-the-packagemanagement-preview"></a>Для систем под управлением PowerShell 3 или PowerShell 4, на которых установлена предварительная версия PackageManagement
 
-- Используйте командлеты PowerShellGet ниже из сеанса PowerShell с повышенными привилегиями, чтобы сохранить модули в локальный каталог.
+1. В сеансе PowerShell с повышенными привилегиями используйте `Save-Module`, чтобы сохранить модули в локальном каталоге.
 
-  ```powershell
-  Save-Module PowerShellGet -Path C:\LocalFolder
-  Exit
-  ```
+   ```powershell
+   Save-Module -Name PowerShellGet -Path C:\LocalFolder
+   Exit
+   ```
 
-- Убедитесь, что модули PowerShellGet и PackageManagement не загружены в других процессах.
-- Удалите содержимое папок `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` и `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\`.
-- Снова откройте консоль PS с повышенным уровнем разрешений, а затем выполните следующие команды.
+1. Убедитесь, что модули **PowerShellGet** и **PackageManagement** не загружаются в других процессах.
+1. Удалите содержимое папок `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` и `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\`.
+1. Снова откройте консоль PowerShell с повышенными привилегиями, а затем выполните следующие команды.
 
-  ```powershell
-  Copy-Item "C:\LocalFolder\PowerShellGet\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
-  Copy-Item "C:\LocalFolder\PackageManagement\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
-  ```
+   ```powershell
+   Copy-Item "C:\LocalFolder\PowerShellGet\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
+   Copy-Item "C:\LocalFolder\PackageManagement\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
+   ```
