@@ -1,5 +1,5 @@
 ---
-title: Создание контейнера поставщика Windows PowerShell | Документация Майкрософт
+title: Создание поставщика контейнеров Windows PowerShell | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -11,34 +11,34 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 9e7da13ff559e802d52df475f2a555baeeeef983
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 0b3ec95dde92644be07927a1d470fe97648c124c
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855181"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323517"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Создание поставщика контейнеров Windows PowerShell
 
-В этом разделе описывается создание поставщика Windows PowerShell, которая может работать в хранилищах данных многоуровневой. Для этого типа хранилища данных верхнем уровне хранилища содержит корневых элементов, и каждый последующий уровень называется узлом дочерних элементов. Позволяя пользователям работать на эти дочерние узлы, пользователь может иерархически взаимодействовать через хранилище данных.
+В этом разделе описывается создание поставщика Windows PowerShell, который может работать с хранилищами данных с несколькими уровнями. Для этого типа хранилища данных верхний уровень хранилища содержит корневые элементы, а каждый последующий уровень называется узлом дочерних элементов. Разрешая пользователю работать с этими дочерними узлами, пользователь может выполнять иерархическую работу через хранилище данных.
 
-Поставщики, которые могут работать в хранилищах многоуровневыми данными, называются контейнера поставщиков Windows PowerShell. Однако имейте в виду, что поставщик контейнеров Windows PowerShell может использоваться только в том случае, если имеется один контейнер (не вложенные контейнеры) с элементами в его. Если имеются вложенные контейнеры, необходимо реализовать поставщик навигации Windows PowerShell. Дополнительные сведения о реализации поставщик навигации Windows PowerShell см. в разделе [Создание поставщика Windows PowerShell навигации](./creating-a-windows-powershell-navigation-provider.md).
+Поставщики, которые могут работать с многоуровневые хранилищами данных, называются поставщиками контейнеров Windows PowerShell. Однако имейте в виду, что поставщик контейнеров Windows PowerShell можно использовать только при наличии одного контейнера (без вложенных контейнеров) с элементами в нем. При наличии вложенных контейнеров необходимо реализовать поставщик навигации Windows PowerShell. Дополнительные сведения о реализации поставщика навигации Windows PowerShell см. [в разделе Создание поставщика навигации Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md).
 
 > [!NOTE]
-> Вы можете скачать C# исходный файл (AccessDBSampleProvider04.cs) для данного поставщика, с помощью Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
+> Вы можете скачать C# исходный файл (AccessDBSampleProvider04.cs) для этого поставщика с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
-> Скачанный исходные файлы доступны в  **\<примеры PowerShell >** каталога.
+> Скачанные исходные файлы доступны в  **\<примерах PowerShell >** Directory.
 >
-> Дополнительные сведения о других реализаций поставщика Windows PowerShell, см. в разделе [проектирование ваш поставщик PowerShell Windows](./designing-your-windows-powershell-provider.md).
+> Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
-Поставщик контейнеров Windows PowerShell, описанные здесь определяет базу данных в качестве ее единый контейнер, в таблицах и строках базы данных, определяемый как элементы контейнера.
+Поставщик контейнера Windows PowerShell, описанный здесь, определяет базу данных в качестве единого контейнера с таблицами и строками базы данных, определенными в качестве элементов контейнера.
 
 > [!CAUTION]
-> Имейте в виду, что такой подход предполагает базу, которая содержит поле с именем Идентификатором и типом поля является LongInteger.
+> Имейте в виду, что в этом проекте предполагается, что база данных имеет поле с ИДЕНТИФИКАТОРом Name, а тип поля — Лонгинтежер.
 
-## <a name="defining-a-windows-powershell-container-provider-class"></a>Определение класса поставщика контейнера Windows PowerShell
+## <a name="defining-a-windows-powershell-container-provider-class"></a>Определение класса поставщика контейнеров Windows PowerShell
 
-Поставщик контейнеров Windows PowerShell необходимо определить класс .NET, который является производным от [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) базового класса. Вот определение класса для поставщика контейнера Windows PowerShell, описанные в этом разделе.
+Поставщик контейнера Windows PowerShell должен определять класс .NET, производный от базового класса [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) . Ниже приведено определение класса для поставщика контейнеров Windows PowerShell, описанного в этом разделе.
 
 ```csharp
    [CmdletProvider("AccessDB", ProviderCapabilities.None)]
@@ -47,23 +47,23 @@ ms.locfileid: "65855181"
 
 [!code-csharp[AccessDBProviderSample04.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L34-L35 "AccessDBProviderSample04.cs")]
 
-Обратите внимание, что в это определение класса [System.Management.Automation.Provider.Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) атрибут содержит два параметра. Первый параметр указывает понятное имя для поставщика, который используется Windows PowerShell. Второй параметр указывает специальной совместимости с Windows PowerShell, которые предоставляет поставщик среды выполнения Windows PowerShell во время обработки команды. Для этого поставщика нет конкретных возможности Windows PowerShell, которые добавляются.
+Обратите внимание, что в этом определении класса атрибут [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) включает два параметра. Первый параметр задает понятное имя для поставщика, используемого Windows PowerShell. Второй параметр указывает специальные возможности Windows PowerShell, которые поставщик предоставляет среде выполнения Windows PowerShell во время обработки команды. Для этого поставщика не добавляются специальные возможности Windows PowerShell.
 
-## <a name="defining-base-functionality"></a>Определение базовой функциональности
+## <a name="defining-base-functionality"></a>Определение базовых функций
 
-Как описано в разделе [проектирование ваш поставщик PowerShell Windows](./designing-your-windows-powershell-provider.md), [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) класс является производным от несколько других классов, которые предоставлены функциональные возможности другого поставщика. Поставщик контейнеров Windows PowerShell, таким образом, необходимо определить все функциональные возможности, предоставляемые этими классами.
+Как описано в разделе [проектирование поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md), класс [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) является производным от нескольких других классов, предоставилих различные функции поставщика. Таким образом, поставщик контейнера Windows PowerShell должен определить все функциональные возможности, предоставляемые этими классами.
 
-Чтобы реализовать функциональные возможности для добавления сведений инициализации сеанса, а также для освобождения ресурсов, которые используются поставщиком, см. в разделе [создание является базовым поставщиком Windows PowerShell](./creating-a-basic-windows-powershell-provider.md). Тем не менее большинство поставщиков (включая поставщика, описанные здесь) можно использовать реализацию по умолчанию эта функция, предоставляемая Windows PowerShell.
+Сведения о реализации функций для добавления сведений об инициализации для конкретного сеанса и освобождения ресурсов, используемых поставщиком, см. в разделе [Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md). Однако большинство поставщиков (включая описанный здесь поставщик) могут использовать реализацию этой функции по умолчанию, предоставляемую Windows PowerShell.
 
-Чтобы получить доступ к хранилищу данных, поставщик должен реализовывать методы [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) базового класса. Дополнительные сведения о реализации этих методов см. в разделе [Создание поставщика диска Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
+Чтобы получить доступ к хранилищу данных, поставщик должен реализовать методы базового класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Дополнительные сведения о реализации этих методов см. в разделе [Создание поставщика диска Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
-Для работы с элементами в хранилище данных, например начало, параметр и очистка элементов, поставщик должен реализовывать методы, предоставленные [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) базового класса. Дополнительные сведения о реализации этих методов см. в разделе [Создание поставщика Windows PowerShell элемента](./creating-a-windows-powershell-item-provider.md).
+Чтобы управлять элементами хранилища данных, такими как получение, установка и очистка элементов, поставщик должен реализовать методы, предоставляемые базовым классом [System. Management. Automation. Provider. итемкмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) . Дополнительные сведения о реализации этих методов см. в разделе [Создание поставщика элементов Windows PowerShell](./creating-a-windows-powershell-item-provider.md).
 
 ## <a name="retrieving-child-items"></a>Получение дочерних элементов
 
-Для получения дочернего элемента, поставщик контейнеров Windows PowerShell необходимо переопределить [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод для поддержки вызовов из `Get-ChildItem` командлета. Этот метод извлекает дочерние элементы из хранилища данных и записывает их в конвейер, как объекты. Если `recurse` указан параметр командлета, этот метод извлекает все дочерние элементы, независимо от того, какой уровень, они состоятся. Если `recurse` параметр не указан, этот метод извлекает только один уровень дочерних элементов.
+Чтобы получить дочерний элемент, поставщик контейнера Windows PowerShell должен переопределить метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) для поддержки вызовов из `Get-ChildItem` командлета. Этот метод получает дочерние элементы из хранилища данных и записывает их в конвейер в виде объектов. Если указан `recurse` параметр командлета, метод получает все дочерние элементы независимо от того, на каком уровне они находятся. `recurse` Если параметр не указан, метод извлекает только один уровень дочерних элементов.
 
-Вот реализация [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метода для данного поставщика. Обратите внимание на то, что этот метод получает дочерние элементы во всех таблицах базы данных, когда путь указывает базы данных Access, а также получает дочерние элементы из строки этой таблицы, если путь указывает на таблицу данных.
+Ниже приведена реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) для этого поставщика. Обратите внимание, что этот метод получает дочерние элементы во всех таблицах базы данных, если путь указывает на базу данных Access, и получает дочерние элементы из строк этой таблицы, если путь указывает на таблицу данных.
 
 ```csharp
 protected override void GetChildItems(string path, bool recurse)
@@ -122,31 +122,31 @@ protected override void GetChildItems(string path, bool recurse)
 
 [!code-csharp[AccessDBProviderSample04.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L311-L362 "AccessDBProviderSample04.cs")]
 
-#### <a name="things-to-remember-about-implementing-getchilditems"></a>О чем следует помнить о реализации GetChildItems
+#### <a name="things-to-remember-about-implementing-getchilditems"></a>Вопросы, связанные с реализацией Жетчилдитемс
 
-Следующие условия могут относиться к реализации [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems):
+Следующие условия могут применяться к реализации [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems):
 
-- При определении класса поставщика, поставщик контейнеров Windows PowerShell может объявлять возможностей поставщика ExpandWildcards фильтра, Include и Exclude, из [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисления. В этих случаях реализация [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод должен соответствовать требованиям указанного пути, передаваемые методу возможности. Чтобы сделать это, метод должен получить доступ к соответствующее свойство, например, [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [ System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) свойства.
+- При определении класса поставщика поставщик контейнера Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) должна обеспечить соответствие пути, переданного методу, требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- Реализация этого метода должна быть учтена в любой форме доступ к элементу, может сделать элемент видимым для пользователя. Например, если пользователь имеет доступ на запись в файл через поставщик FileSystem (указанного в Windows PowerShell), но не доступ на чтение, файл по-прежнему существует и [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) возвращает `true`. Реализация может потребоваться проверка параметров родительского элемента, чтобы увидеть, могут быть перечислены дочерние.
+- Реализация этого метода должна учитывать любую форму доступа к элементу, который может сделать элемент видимым для пользователя. Например, если пользователь имеет доступ на запись к файлу через поставщик FileSystem (предоставляемый Windows PowerShell), но не имеет доступа на чтение, файл все еще существует, а [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) возвращает `true`. Для реализации может потребоваться проверка родительского элемента, чтобы узнать, можно ли перечислить дочерний элемент.
 
-- При написании несколько элементов, [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод может занять некоторое время. Можно спроектировать ваш поставщик нужно записать элементы с помощью [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) метод одной за раз. При использовании этого метода будет представлять элементы для пользователя в потоке.
+- При записи нескольких элементов метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) может занять некоторое время. Вы можете спроектировать поставщик для записи элементов с помощью метода [System. Management. автоматизации. Provider. кмдлетпровидер. вритеитемобжект *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) по одному за раз. При использовании этого метода элементы будут представлены пользователю в потоке.
 
-- Реализация [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) отвечает за Предотвращение бесконечной рекурсии, при наличии циклических ссылок и т.п. Завершающий соответствующее исключение должно вызываться для отражения таких условий.
+- Реализация [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) отвечает за предотвращение бесконечной рекурсии при наличии циклических ссылок и подобной. Для отражения такого условия должно быть создано соответствующее завершающее исключение.
 
-## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet"></a>Присоединение динамических параметров в командлет Get-ChildItem
+## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet"></a>Присоединение динамических параметров к командлету Get-ChildItem
 
-Иногда `Get-ChildItem` командлет, который вызывает [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) требуются дополнительные параметры, заданные динамически во время выполнения. Для обеспечения этих динамических параметров, необходимо реализовать поставщик контейнеров Windows PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) метод. Этот метод получает динамические параметры для элемента в заданный путь и возвращает объект, имеющий свойства и поля с разбор атрибутов, аналогично классу командлета или [ System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объекта. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров к `Get-ChildItem` командлета.
+Иногда командлет, вызывающий [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) , требует дополнительных параметров, заданных динамически во время выполнения. `Get-ChildItem` Чтобы предоставить эти динамические параметры, поставщик контейнера Windows PowerShell должен реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемсдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объектами. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в `Get-ChildItem` командлет.
 
-Этот поставщик контейнеров Windows PowerShell не реализует этот метод. Однако следующий код является реализация по умолчанию этот метод.
+Этот метод не реализуется этим поставщиком контейнера Windows PowerShell. Однако приведенный ниже код является реализацией этого метода по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetchilditemsdynamicparameters](Msh_samplestestcmdlets#testprovidergetchilditemsdynamicparameters)]  -->
 
 ## <a name="retrieving-child-item-names"></a>Получение имен дочерних элементов
 
-Чтобы получить имена дочерних элементов, необходимо переопределить поставщик контейнеров Windows PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Getchildnames*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) метод для поддержки вызовов из `Get-ChildItem`командлет при его `Name` указан параметр. Этот метод извлекает имена дочерних элементов для указанных имен путь или дочернего элемента для всех контейнеров, если `returnAllContainers` указан параметр командлета. Имя дочернего приведен фрагмент конечного пути. Например «abc.dll» имеет имя дочернего c:\windows\system32\abc.dll путь. Дочерний каталог c:\windows\system32 называется «system32».
+Чтобы получить имена дочерних элементов, поставщик контейнера Windows PowerShell должен переопределить метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилднамес *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) для поддержки вызовов из `Get-ChildItem` командлета, когда его свойство `Name` указан параметр. Этот метод получает имена дочерних элементов для указанных пути или имен дочерних элементов для всех контейнеров, если `returnAllContainers` указан параметр командлета. Дочернее имя — это конечная часть пути. Например, дочерним именем для пути c:\windows\system32\abc.dll является ABC. dll. Дочернее имя каталога c:\Windows\System32 — System32.
 
-Вот реализация [System.Management.Automation.Provider.Containercmdletprovider.Getchildnames*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) метода для данного поставщика. Обратите внимание на то, что этот метод извлекает имена таблиц, если указанный путь указывает базы данных Access (диск) и номера строк, если путь указывает на таблицу.
+Ниже приведена реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилднамес *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) для этого поставщика. Обратите внимание, что метод получает имена таблиц, если указанный путь указывает на базу данных Access (диск) и номера строк, если путь указывает на таблицу.
 
 ```csharp
 protected override void GetChildNames(string path,
@@ -196,62 +196,62 @@ protected override void GetChildNames(string path,
 
 [!code-csharp[AccessDBProviderSample04.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L369-L411 "AccessDBProviderSample04.cs")]
 
-#### <a name="things-to-remember-about-implementing-getchildnames"></a>О чем следует помнить о реализации GetChildNames
+#### <a name="things-to-remember-about-implementing-getchildnames"></a>Вопросы, связанные с реализацией Жетчилднамес
 
-Следующие условия могут относиться к реализации [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems):
+Следующие условия могут применяться к реализации [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems):
 
-- При определении класса поставщика, поставщик контейнеров Windows PowerShell может объявлять возможностей поставщика ExpandWildcards фильтра, Include и Exclude, из [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисления. В этих случаях реализация [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод должен соответствовать требованиям указанного пути, передаваемые методу возможности. Чтобы сделать это, метод должен получить доступ к соответствующее свойство, например, [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [ System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) свойства.
+- При определении класса поставщика поставщик контейнера Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) должна обеспечить соответствие пути, переданного методу, требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
   > [!NOTE]
-  > Исключение этого правила возникает, когда `returnAllContainers` указан параметр командлета. В этом случае метод должен получать любое имя дочернего контейнера, даже если он не соответствует значения [System.Management.Automation.Provider.Cmdletprovider.Filter*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Filter), [ System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include), или [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) свойства.
+  > Исключение из этого правила возникает при `returnAllContainers` указании параметра командлета. В этом случае метод должен получить любое дочернее имя для контейнера, даже если оно не соответствует значениям [System. Management. Automation. Provider. кмдлетпровидер. Filter *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Filter), [ Свойства System. Management. Automation. Provider. Кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include)или [System. Management. Automation. Provider. Кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) .
 
-- По умолчанию переопределения этого метода не должен извлекать имена объектов, которые обычно скрыты от пользователя, если не [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) указано свойство. Если указанный путь указывает на контейнер, [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) свойство не является обязательным.
+- По умолчанию переопределения этого метода не должны извлекать имена объектов, которые обычно скрыты от пользователя, если не указано свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) . Если указанный путь указывает на контейнер, свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не является обязательным.
 
-- Реализация [System.Management.Automation.Provider.Containercmdletprovider.Getchildnames*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) отвечает за Предотвращение бесконечной рекурсии, при наличии циклических ссылок и т.п. Завершающий соответствующее исключение должно вызываться для отражения таких условий.
+- Реализация [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилднамес *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) отвечает за предотвращение бесконечной рекурсии при наличии циклических ссылок и подобной. Для отражения такого условия должно быть создано соответствующее завершающее исключение.
 
-## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet-name"></a>Присоединение динамических параметров в командлет Get-ChildItem (имя)
+## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet-name"></a>Присоединение динамических параметров к командлету Get-ChildItem (имя)
 
-Иногда `Get-ChildItem` командлета (с `Name` параметр) требуются дополнительные параметры, заданные динамически во время выполнения. Для обеспечения этих динамических параметров, необходимо реализовать поставщик контейнеров Windows PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Getchildnamesdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) метод. Этот метод получает динамические параметры для элемента в заданный путь и возвращает объект, имеющий свойства и поля с разбор атрибутов, аналогично классу командлета или [ System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объекта. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров к `Get-ChildItem` командлета.
+Иногда командлету (с параметром) требуются дополнительные параметры, заданные динамически во время выполнения. `Name` `Get-ChildItem` Чтобы предоставить эти динамические параметры, поставщик контейнера Windows PowerShell должен реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилднамесдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)объект. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в `Get-ChildItem` командлет.
 
-Этот поставщик не реализует этот метод. Однако следующий код является реализация по умолчанию этот метод.
+Этот метод не реализуется этим поставщиком. Однако приведенный ниже код является реализацией этого метода по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetchildnamesdynamicparameters](Msh_samplestestcmdlets#testprovidergetchildnamesdynamicparameters)]  -->
 
 ## <a name="renaming-items"></a>Переименование элементов
 
-Чтобы переименовать элемент, необходимо переопределить поставщик контейнеров Windows PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Renameitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) метод для поддержки вызовов из `Rename-Item` командлета. Этот метод изменяет имя элемента по указанному пути к предоставлен новое имя. Новое имя всегда должен быть относительно родительского элемента (контейнер).
+Для переименования элемента поставщик контейнера Windows PowerShell должен переопределять метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) для поддержки вызовов из `Rename-Item` командлета. Этот метод изменяет имя элемента по указанному пути на новое указанное имя. Новое имя всегда должно относиться к родительскому элементу (контейнеру).
 
-Этот поставщик не переопределяет [System.Management.Automation.Provider.Containercmdletprovider.Renameitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) метод. Тем не менее ниже приведен пример реализации по умолчанию.
+Этот поставщик не переопределяет метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) . Однако ниже приведена реализация по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderrenameitem](Msh_samplestestcmdlets#testproviderrenameitem)]  -->
 
-#### <a name="things-to-remember-about-implementing-renameitem"></a>О чем следует помнить о реализации RenameItem
+#### <a name="things-to-remember-about-implementing-renameitem"></a>Вопросы, связанные с реализацией Ренамеитем
 
-Следующие условия могут относиться к реализации [System.Management.Automation.Provider.Containercmdletprovider.Renameitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem):
+Следующие условия могут применяться к реализации [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem):
 
-- При определении класса поставщика, поставщик контейнеров Windows PowerShell может объявлять возможностей поставщика ExpandWildcards фильтра, Include и Exclude, из [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисления. В этих случаях реализация [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод должен соответствовать требованиям указанного пути, передаваемые методу возможности. Чтобы сделать это, метод должен получить доступ к соответствующее свойство, например, [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [ System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) свойства.
+- При определении класса поставщика поставщик контейнера Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) должна обеспечить соответствие пути, переданного методу, требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- [System.Management.Automation.Provider.Containercmdletprovider.Renameitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) метод предназначен для изменения имени только элемент, а не для операции перемещения. Реализация метода следует писать ошибку, если `newName` содержит разделители путей или иначе могут привести к записи родительского расположения.
+- Метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) предназначен только для изменения имени элемента, а не для операций перемещения. Ваша реализация метода должна записать ошибку, если `newName` параметр содержит разделители пути, или, в противном случае, заставит элемент изменить его родительское расположение.
 
-- По умолчанию переопределения этого метода нельзя переименовывать объекты Если [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) указано свойство. Если указанный путь указывает на контейнер, [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) свойство не является обязательным.
+- По умолчанию переопределения этого метода не должны переименовывать объекты, если не указано свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) . Если указанный путь указывает на контейнер, свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не является обязательным.
 
-- Реализация [System.Management.Automation.Provider.Containercmdletprovider.Renameitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверьте его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции, при изменении состояния системы, например, переименование файлов. [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, необходимо изменить на пользователя, в среде выполнения Windows PowerShell, принимая во внимание любые параметры командной строки или привилегированных переменных в Определяет, что должно быть отображено.
+- Реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение до внесение любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в состояние системы, например при переименовании файлов. [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, который будет изменен пользователю, при этом среда выполнения Windows PowerShell учитывает все параметры командной строки или привилегированные переменные при определении что следует отображать.
 
-  После вызова [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, [System.Management.Automation.Provider.Containercmdletprovider.Renameitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) метод. Этот метод отправляет сообщение с подтверждением сообщение пользователю, чтобы разрешить дополнительный отзыв сказать, если операция должна быть продолжено. Поставщик должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) как дополнительную проверку для изменения потенциально опасных системы.
+  После того как вызов метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) должен вызывать [ Метод System. Management. Automation. Provider. Кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение с подтверждением, чтобы разрешить дополнительные отзывы, чтобы сказать, следует ли продолжать операцию. Поставщик должен вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) в качестве дополнительной проверки потенциально опасной модификации системы.
 
-## <a name="attaching-dynamic-parameters-to-the-rename-item-cmdlet"></a>Присоединение динамических параметров в командлет Rename-Item
+## <a name="attaching-dynamic-parameters-to-the-rename-item-cmdlet"></a>Присоединение динамических параметров к командлету Rename-Item
 
-Иногда `Rename-Item` командлета требуется Дополнительные параметры, заданные динамически во время выполнения. Для обеспечения этих динамических параметров, необходимо реализовать поставщик контейнеров Windows PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Renameitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) метод. Этот метод извлекает параметры для элемента в заданный путь и возвращает объект, имеющий свойства и поля с разбор атрибутов, аналогично классу командлета или [System.Management.Automation.Runtimedefinedparameterdictionary ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объекта. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров к `Rename-Item` командлета.
+`Rename-Item` Иногда командлету требуются дополнительные параметры, которые задаются динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик контейнера Windows PowerShell должен реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) . Этот метод получает параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объектами. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в `Rename-Item` командлет.
 
-Этот контейнер поставщик не реализует этот метод. Однако следующий код является реализация по умолчанию этот метод.
+Этот метод не реализуется этим поставщиком контейнера. Однако приведенный ниже код является реализацией этого метода по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderrenameitemdynamicparameters](Msh_samplestestcmdlets#testproviderrenameitemdynamicparameters)]  -->
 
 ## <a name="creating-new-items"></a>Создание новых элементов
 
-Чтобы создать новые элементы, должен реализовывать поставщик контейнера [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метод для поддержки вызовов из `New-Item` командлета. Этот метод создает элемент данных, расположенный по указанному пути. `type` Параметр командлета содержит тип определяемых поставщиком для нового элемента. Например, используется поставщик FileSystem `type` параметр со значением «файл» или «каталог». `newItemValue` Параметр командлета указывает значение от поставщика для нового элемента.
+Для создания новых элементов поставщик контейнера должен реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) для поддержки вызовов из `New-Item` командлета. Этот метод создает элемент данных, расположенный по указанному пути. `type` Параметр командлета содержит тип, определяемый поставщиком для нового элемента. Например, Поставщик FileSystem использует `type` параметр со значением "File" или "Directory". `newItemValue` Параметр командлета задает зависящее от поставщика значение для нового элемента.
 
-Вот реализация [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метода для данного поставщика.
+Ниже приведена реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) для этого поставщика.
 
 ```csharp
 protected override void NewItem( string path, string type,
@@ -275,57 +275,57 @@ protected override void NewItem( string path, string type,
 
 [!code-csharp[AccessDBProviderSample04.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L939-L955 "AccessDBProviderSample04.cs")]
 
-#### <a name="things-to-remember-about-implementing-newitem"></a>О чем следует помнить о реализации NewItem
+#### <a name="things-to-remember-about-implementing-newitem"></a>Вопросы, связанные с реализацией NewItem
 
-Следующие условия могут относиться к реализации [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem):
+Следующие условия могут применяться к реализации [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem):
 
-- [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метод должен выполнять сравнение без учета регистра строки, переданной `type` параметра. Что следует учесть также бы неоднозначным совпадений. Например для типов «файл» и «каталог», только первая буква требуется для однозначного определения. Если `type` параметр указывает тип, не удается создать поставщик, [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метод должен записывать ArgumentException с сообщением указывающее типы можно создать поставщик.
+- Метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) должен выполнять сравнение строки, переданной в `type` параметре, без учета регистра. Он также должен позволять наименее неоднозначные совпадения. Например, для типов "File" и "Directory" для устранения неоднозначности требуется только первая буква. Если параметр указывает тип, который поставщик не может создать, метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) должен записать исключение типа ArgumentException с сообщением, указывающим, что типы `type` может создать поставщик.
 
-- Для `newItemValue` параметр, реализация [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) рекомендуется принять строки как минимум. Он также должен принять тип объекта, который извлекается [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) метод тот же путь. [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) можно использовать метод [System.Management.Automation.Languageprimitives.Convertto*](/dotnet/api/System.Management.Automation.LanguagePrimitives.ConvertTo) метод для преобразования типов требуемый тип.
+- Для параметра рекомендуется реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) , чтобы принимать строки как минимум. `newItemValue` Он также должен принять тип объекта, который извлекается методом [System. Management. Automation. Provider. итемкмдлетпровидер. GetObject *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) для того же пути. Метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) может использовать метод [System. Management. Automation. Languageprimitives. ConvertTo *](/dotnet/api/System.Management.Automation.LanguagePrimitives.ConvertTo) для преобразования типов в нужный тип.
 
-- Реализация [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверьте его возвращаемое значение перед внесением любых изменений в хранилище данных. После вызова [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает значение true, [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) метод как дополнительную проверку для изменения потенциально опасных системы.
+- Реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение до внесение любых изменений в хранилище данных. После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает значение true, метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) должен вызывать [ Метод System. Management. Automation. Provider. Кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) в качестве дополнительной проверки потенциально опасного изменения системы.
 
-## <a name="attaching-dynamic-parameters-to-the-new-item-cmdlet"></a>Присоединение динамических параметров в командлет New-Item
+## <a name="attaching-dynamic-parameters-to-the-new-item-cmdlet"></a>Присоединение динамических параметров к командлету New-Item
 
-Иногда `New-Item` командлета требуется Дополнительные параметры, заданные динамически во время выполнения. Для обеспечения этих динамических параметров, необходимо реализовать поставщик контейнеров [System.Management.Automation.Provider.Containercmdletprovider.Newitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItemDynamicParameters) метод. Этот метод извлекает параметры для элемента в заданный путь и возвращает объект, имеющий свойства и поля с разбор атрибутов, аналогично классу командлета или [System.Management.Automation.Runtimedefinedparameterdictionary ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объекта. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров к `New-Item` командлета.
+`New-Item` Иногда командлету требуются дополнительные параметры, которые задаются динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик контейнера должен реализовать метод [System. Management. автоматизации. Provider. контаинеркмдлетпровидер. невитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItemDynamicParameters) . Этот метод получает параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объектами. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в `New-Item` командлет.
 
-Этот поставщик не реализует этот метод. Однако следующий код является реализация по умолчанию этот метод.
+Этот метод не реализуется этим поставщиком. Однако приведенный ниже код является реализацией этого метода по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidernewitemdynamicparameters](Msh_samplestestcmdlets#testprovidernewitemdynamicparameters)]  -->
 
 ## <a name="removing-items"></a>Удаление элементов
 
-Чтобы удалить элементы, необходимо переопределить поставщика Windows PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) метод для поддержки вызовов из `Remove-Item` командлета. Этот метод удаляет элемент из хранилища данных по указанному пути. Если `recurse` параметр `Remove-Item` командлета задано значение `true`, метод удаляет все дочерние элементы, независимо от их уровня. Если параметр имеет значение `false`, метод удаляет только один элемент по указанному пути.
+Чтобы удалить элементы, поставщик Windows PowerShell должен переопределить метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. RemoveItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) для поддержки вызовов из `Remove-Item` командлета. Этот метод удаляет элемент из хранилища данных по указанному пути. `recurse` Если параметр `Remove-Item` командлета имеет значение `true`, метод удаляет все дочерние элементы независимо от их уровня. Если параметр имеет значение `false`, метод удаляет только один элемент по указанному пути.
 
-Этот поставщик не поддерживает удаление элементов. Тем не менее, следующий код является реализация по умолчанию [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem).
+Этот поставщик не поддерживает удаление элементов. Однако следующий код является реализацией класса [System. Management. Automation. Provider. контаинеркмдлетпровидер. RemoveItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem)по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderremoveitem](Msh_samplestestcmdlets#testproviderremoveitem)]  -->
 
-#### <a name="things-to-remember-about-implementing-removeitem"></a>О чем следует помнить о реализации RemoveItem
+#### <a name="things-to-remember-about-implementing-removeitem"></a>Вопросы, связанные с реализацией RemoveItem
 
-Следующие условия могут относиться к реализации [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem):
+Следующие условия могут применяться к реализации [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem):
 
-- При определении класса поставщика, поставщик контейнеров Windows PowerShell может объявлять возможностей поставщика ExpandWildcards фильтра, Include и Exclude, из [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисления. В этих случаях реализация [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод должен соответствовать требованиям указанного пути, передаваемые методу возможности. Чтобы сделать это, метод должен получить доступ к соответствующее свойство, например, [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [ System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) свойства.
+- При определении класса поставщика поставщик контейнера Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) должна обеспечить соответствие пути, переданного методу, требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- По умолчанию переопределения этого метода следует удалять объекты, если не [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) задано значение true. Если указанный путь указывает на контейнер, [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) свойство не является обязательным.
+- По умолчанию переопределения этого метода не должны удалять объекты, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение true. Если указанный путь указывает на контейнер, свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не является обязательным.
 
-- Реализация [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) отвечает за Предотвращение бесконечной рекурсии, при наличии циклических ссылок и т.п. Завершающий соответствующее исключение должно вызываться для отражения таких условий.
+- Реализация [System. Management. Automation. Provider. контаинеркмдлетпровидер. RemoveItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) отвечает за предотвращение бесконечной рекурсии при наличии циклических ссылок и подобной. Для отражения такого условия должно быть создано соответствующее завершающее исключение.
 
-- Реализация [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверьте его возвращаемое значение перед внесением любых изменений в хранилище данных. После вызова [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) метод как дополнительную проверку для изменения потенциально опасных системы.
+- Реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. RemoveItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение до внесение любых изменений в хранилище данных. После того как вызов метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. RemoveItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) должен вызывать [ Метод System. Management. Automation. Provider. Кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) в качестве дополнительной проверки потенциально опасного изменения системы.
 
-## <a name="attaching-dynamic-parameters-to-the-remove-item-cmdlet"></a>Присоединение динамических параметров в командлет Remove-Item
+## <a name="attaching-dynamic-parameters-to-the-remove-item-cmdlet"></a>Присоединение динамических параметров к командлету Remove-Item
 
-Иногда `Remove-Item` командлета требуется Дополнительные параметры, заданные динамически во время выполнения. Для обеспечения этих динамических параметров, необходимо реализовать поставщик контейнеров [System.Management.Automation.Provider.Containercmdletprovider.Removeitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) метод для обработки этих параметров. Этот метод получает динамические параметры для элемента в заданный путь и возвращает объект, имеющий свойства и поля с разбор атрибутов, аналогично классу командлета или [ System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объекта. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров к `Remove-Item` командлета.
+`Remove-Item` Иногда командлету требуются дополнительные параметры, которые задаются динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик контейнера должен реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ремовеитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) для работы с этими параметрами. Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)объект. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в `Remove-Item` командлет.
 
-Этот контейнер поставщик не реализует этот метод. Тем не менее, следующий код является реализация по умолчанию [System.Management.Automation.Provider.Containercmdletprovider.Removeitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters).
+Этот метод не реализуется этим поставщиком контейнера. Однако следующий код является реализацией класса [System. Management. Automation. Provider. контаинеркмдлетпровидер. ремовеитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters)по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderremoveitemdynamicparameters](Msh_samplestestcmdlets#testproviderremoveitemdynamicparameters)]  -->
 
-## <a name="querying-for-child-items"></a>Запрос для дочерних элементов
+## <a name="querying-for-child-items"></a>Запрос дочерних элементов
 
-Для проверки существования дочерних элементов по указанному пути, необходимо переопределить поставщик контейнеров Windows PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Haschilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems) метод. Этот метод возвращает `true` Если элемент имеет дочерние элементы, и `false` в противном случае. Значение null или пустой путь к, метод считает, что все элементы в хранилище данных как дочерние элементы и возвращает `true`.
+Чтобы проверить, существуют ли дочерние элементы по указанному пути, поставщик контейнера Windows PowerShell должен переопределить метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. хасчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems) . Этот метод возвращает `true` , если элемент имеет дочерние `false` элементы, и в противном случае. Для неопределенного или пустого пути метод считает, что все элементы в хранилище данных являются дочерними `true`, и возвращает.
 
-Вот переопределение для [System.Management.Automation.Provider.Containercmdletprovider.Haschilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems) метод. Если существует более двух частей пути, созданным с помощью вспомогательного метода ChunkPath, метод возвращает `false`, поскольку определяются только контейнер базы данных и таблицы. Дополнительные сведения о этот вспомогательный метод, см. в статье рассматривается метод ChunkPath [Создание поставщика Windows PowerShell элемента](./creating-a-windows-powershell-item-provider.md).
+Ниже приведено переопределение для метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. хасчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems) . При наличии более двух частей пути, созданных вспомогательным методом чункпас, метод возвращает `false`, так как определены только контейнер базы данных и контейнер таблицы. Дополнительные сведения об этом вспомогательном методе см. в описании метода Чункпас в разделе [Создание поставщика элементов Windows PowerShell](./creating-a-windows-powershell-item-provider.md).
 
 ```csharp
 protected override bool HasChildItems( string path )
@@ -336,37 +336,37 @@ protected override bool HasChildItems( string path )
 
 [!code-csharp[AccessDBProviderSample04.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L1094-L1097 "AccessDBProviderSample04.cs")]
 
-#### <a name="things-to-remember-about-implementing-haschilditems"></a>О чем следует помнить о реализации HasChildItems
+#### <a name="things-to-remember-about-implementing-haschilditems"></a>Вопросы, связанные с реализацией Хасчилдитемс
 
-Следующие условия могут относиться к реализации [System.Management.Automation.Provider.Containercmdletprovider.Haschilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems):
+Следующие условия могут применяться к реализации [System. Management. Automation. Provider. контаинеркмдлетпровидер. хасчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems):
 
-- Если поставщик контейнер предоставляет корневой элемент, содержащий интересные точки подключения, реализация [System.Management.Automation.Provider.Containercmdletprovider.Haschilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems) метод должен возвращать `true`когда значение null или пустая строка передается в для пути.
+- Если поставщик контейнеров предоставляет корень, который содержит интересные точки подключения, реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. хасчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems) должна возвращать `true` , если значение null или для пути передается пустая строка.
 
 ## <a name="copying-items"></a>Копирование элементов
 
-Копирование элементов, необходимо реализовать поставщик контейнеров [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод для поддержки вызовов из `Copy-Item` командлета. Этот метод копирует элемент данных из местоположения, указанного параметром `path` параметр командлета для местоположения, указанного параметром `copyPath` параметр. Если `recurse` параметр указан, метод копирует всех вложенных контейнерах. Если этот параметр не указан, метод копирует только один уровень элементов.
+Для копирования элементов поставщик контейнера должен реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) для поддержки вызовов из `Copy-Item` командлета. Этот метод копирует элемент данных из расположения, указанного `path` параметром командлета, в расположение, указанное `copyPath` параметром. Если указан `recurse` параметр, метод копирует все подконтейнеры. Если параметр не указан, метод копирует только один уровень элементов.
 
-Этот поставщик не реализует этот метод. Тем не менее, следующий код является реализация по умолчанию [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem).
+Этот метод не реализуется этим поставщиком. Однако следующий код является реализацией класса [System. Management. Automation. Provider. контаинеркмдлетпровидер. CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem)по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidercopyitem](Msh_samplestestcmdlets#testprovidercopyitem)]  -->
 
-#### <a name="things-to-remember-about-implementing-copyitem"></a>О чем следует помнить о реализации CopyItem
+#### <a name="things-to-remember-about-implementing-copyitem"></a>Вопросы, связанные с реализацией CopyItem
 
-Следующие условия могут относиться к реализации [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem):
+Следующие условия могут применяться к реализации [System. Management. Automation. Provider. контаинеркмдлетпровидер. CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem):
 
-- При определении класса поставщика, поставщик контейнеров Windows PowerShell может объявлять возможностей поставщика ExpandWildcards фильтра, Include и Exclude, из [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисления. В этих случаях реализация [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) метод должен соответствовать требованиям указанного пути, передаваемые методу возможности. Чтобы сделать это, метод должен получить доступ к соответствующее свойство, например, [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [ System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) свойства.
+- При определении класса поставщика поставщик контейнера Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) должна обеспечить соответствие пути, переданного методу, требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- По умолчанию переопределения этого метода не следует копировать объекты через существующие объекты Если [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) свойству `true`. Например, поставщик FileSystem не будет копировать c:\temp\abc.txt через существующий файл c:\abc.txt Если [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) свойству `true`. Если путь, указанный в `copyPath` параметр существует и указывает контейнер, [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) свойство не является обязательным. В этом случае [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) следует скопировать элемент обозначается `path` параметр в контейнер обозначается `copyPath` параметр как дочерний элемент.
+- По умолчанию переопределения этого метода не должны копировать объекты поверх существующих объектов, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Например, Поставщик FileSystem не будет копировать к:\темп\абк.ткст для существующего файла к:\абк.ткст, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь, указанный в `copyPath` параметре, существует и указывает на контейнер, свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не является обязательным. В этом случае [System. Management. Automation. Provider. контаинеркмдлетпровидер. CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) должен скопировать элемент, `path` указанный параметром, в `copyPath` контейнер, указанный параметром в качестве дочернего.
 
-- Реализация [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) отвечает за Предотвращение бесконечной рекурсии, при наличии циклических ссылок и т.п. Завершающий соответствующее исключение должно вызываться для отражения таких условий.
+- Реализация [System. Management. Automation. Provider. контаинеркмдлетпровидер. CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) отвечает за предотвращение бесконечной рекурсии при наличии циклических ссылок и подобной. Для отражения такого условия должно быть создано соответствующее завершающее исключение.
 
-- Реализация [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверьте его возвращаемое значение перед внесением любых изменений в хранилище данных. После вызова [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает значение true, [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) метод как дополнительную проверку для изменения потенциально опасных системы. Дополнительные сведения о вызове этих методов, см. в разделе [переименование элементов](#renaming-items).
+- Реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение до внесение любых изменений в хранилище данных. После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает значение true, метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) должен вызывать [ Метод System. Management. Automation. Provider. Кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) в качестве дополнительной проверки потенциально опасного изменения системы. Дополнительные сведения о вызове этих методов см. в разделе [Rename Items](#renaming-items).
 
-## <a name="attaching-dynamic-parameters-to-the-copy-item-cmdlet"></a>Присоединение динамических параметров в командлет Copy-Item
+## <a name="attaching-dynamic-parameters-to-the-copy-item-cmdlet"></a>Присоединение динамических параметров к командлету Copy-Item
 
-Иногда `Copy-Item` командлета требуется Дополнительные параметры, заданные динамически во время выполнения. Для обеспечения этих динамических параметров, необходимо реализовать поставщик контейнеров Windows PowerShell [System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) метод для обработки этих параметры. Этот метод извлекает параметры для элемента в заданный путь и возвращает объект, имеющий свойства и поля с разбор атрибутов, аналогично классу командлета или [System.Management.Automation.Runtimedefinedparameterdictionary ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объекта. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров к `Copy-Item` командлета.
+`Copy-Item` Иногда командлету требуются дополнительные параметры, которые задаются динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик контейнера Windows PowerShell должен реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. копитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) для работы с этими параметрами. Этот метод получает параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объектами. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в `Copy-Item` командлет.
 
-Этот поставщик не реализует этот метод. Тем не менее, следующий код является реализация по умолчанию [System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters).
+Этот метод не реализуется этим поставщиком. Однако следующий код является реализацией класса [System. Management. Automation. Provider. контаинеркмдлетпровидер. копитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters)по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidercopyitemdynamicparameters](Msh_samplestestcmdlets#testprovidercopyitemdynamicparameters)]  -->
 
@@ -376,19 +376,19 @@ protected override bool HasChildItems( string path )
 
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
-См. в разделе [регистрация командлетов, поставщиков и размещения приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
-## <a name="testing-the-windows-powershell-provider"></a>Проверка поставщика в Windows PowerShell
+## <a name="testing-the-windows-powershell-provider"></a>Тестирование поставщика Windows PowerShell
 
-При регистрации поставщика Windows PowerShell с помощью Windows PowerShell можно проверить его с помощью командлетов поддерживаемых в командной строке. Имейте в виду, что в следующем примере выходных данных используется вымышленная базы данных Access.
+Когда ваш поставщик Windows PowerShell зарегистрирован в Windows PowerShell, его можно проверить, запустив в командной строке поддерживаемые командлеты. Имейте в виду, что в следующем примере выходных данных используется вымышленная БД Access.
 
-1. Запустите `Get-ChildItem` командлет, чтобы получить список дочерних элементов из таблицы Customers в базе данных Access.
+1. Выполните командлет `Get-ChildItem` , чтобы получить список дочерних элементов из таблицы Customers в базе данных Access.
 
    ```powershell
    Get-ChildItem mydb:customers
    ```
 
-   Появляется следующий результат.
+   Отобразятся следующие выходные данные.
 
    ```output
    PSPath        : AccessDB::customers
@@ -401,13 +401,13 @@ protected override bool HasChildItems( string path )
    Columns       :
    ```
 
-2. Запустите `Get-ChildItem` еще раз, чтобы получить данные из таблицы.
+2. `Get-ChildItem` Запустите командлет еще раз, чтобы получить данные таблицы.
 
    ```powershell
    (Get-ChildItem mydb:customers).data
    ```
 
-   Появляется следующий результат.
+   Отобразятся следующие выходные данные.
 
    ```output
    TABLE_CAT   : c:\PS\northwind
@@ -417,13 +417,13 @@ protected override bool HasChildItems( string path )
    REMARKS     :
    ```
 
-3. Теперь с помощью `Get-Item` командлет для получения элементов в строке 0 в таблице данных.
+3. Теперь используйте `Get-Item` командлет для получения элементов в строке 0 в таблице данных.
 
    ```powershell
    Get-Item mydb:\customers\0
    ```
 
-   Появляется следующий результат.
+   Отобразятся следующие выходные данные.
 
    ```output
    PSPath        : AccessDB::customers\0
@@ -434,13 +434,13 @@ protected override bool HasChildItems( string path )
    RowNumber     : 0
    ```
 
-4. Повторно использовать `Get-Item` для получения данных для элементов в строке 0.
+4. Повторное использование `Get-Item` для получения данных для элементов в строке 0.
 
    ```powershell
    (Get-Item mydb:\customers\0).data
    ```
 
-   Появляется следующий результат.
+   Отобразятся следующие выходные данные.
 
    ```output
    CustomerID   : 1234
@@ -456,20 +456,20 @@ protected override bool HasChildItems( string path )
    Fax          : (425) 555-0101
    ```
 
-5. Теперь с помощью `New-Item` командлет, чтобы добавить строку в существующую таблицу. `Path` Определяет полный путь к строке и необходимо указать номер строки, больше, чем существующего количества строк в таблице. `Type` Задаёт «row», для указания типа добавляемого элемента. Наконец `Value` параметр задает разделенный запятыми список значений столбцов для строки.
+5. Теперь используйте командлет `New-Item` , чтобы добавить строку в существующую таблицу. `Path` Параметр задает полный путь к строке и должен указывать номер строки, который больше, чем существующее число строк в таблице. `Type` Параметр указывает "Row", чтобы указать добавляемый тип элемента. Наконец, `Value` параметр задает разделенный запятыми список значений столбцов для строки.
 
    ```powershell
    New-Item -Path mydb:\Customers\3 -ItemType "row" -Value "3,CustomerFirstName,CustomerLastName,CustomerEmailAddress,CustomerTitle,CustomerCompany,CustomerPhone, CustomerAddress,CustomerCity,CustomerState,CustomerZip,CustomerCountry"
    ```
 
-6. Проверьте правильность работы нового элемента следующим образом.
+6. Проверьте правильность операции создания элемента следующим образом.
 
    ```none
    PS mydb:\> cd Customers
    PS mydb:\Customers> (Get-Item 3).data
    ```
 
-   Появляется следующий результат.
+   Отобразятся следующие выходные данные.
 
    ```output
    ID        : 3
@@ -492,12 +492,12 @@ protected override bool HasChildItems( string path )
 
 [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Реализация поставщика элементов Windows PowerShell](./creating-a-windows-powershell-item-provider.md)
+[Реализация поставщика элемента Windows PowerShell](./creating-a-windows-powershell-item-provider.md)
 
 [Реализация поставщика навигации Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)
 
-[Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
 
-[Руководство программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)

@@ -1,5 +1,5 @@
 ---
-title: Написание оснастки Windows PowerShell | Документация Майкрософт
+title: Создание оснастки Windows PowerShell | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - snap-ins [PowerShell SDK], PSSnapin example
 ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
 caps.latest.revision: 7
-ms.openlocfilehash: 0c99f4bcfe5e2d34d31714dc85a53b5e8abe0925
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 465ab9e8fa29716ce0f46ad0dcf01d0ddd615bcd
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62066963"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322941"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Написание оснастки Windows PowerShell
 
-В этом примере показано, как написать оснастки Windows PowerShell, который может использоваться, чтобы зарегистрировать все командлеты и поставщики Windows PowerShell в сборке.
+В этом примере показано, как создать оснастку Windows PowerShell, которая может использоваться для регистрации всех командлетов и поставщиков Windows PowerShell в сборке.
 
-С этим типом оснастки вы не выбирайте какие командлеты и поставщики, которые вы хотите зарегистрировать. Для записи, можно выбрать, что регистрируется оснастки см. в разделе [написания пользовательских Windows PowerShell Snap-in](./writing-a-custom-windows-powershell-snap-in.md).
+При использовании этого типа оснастки не следует выбирать командлеты и поставщики, которые нужно зарегистрировать. Чтобы создать оснастку, которая позволяет выбрать регистрируемые объекты, см. раздел [написание пользовательской оснастки Windows PowerShell](./writing-a-custom-windows-powershell-snap-in.md).
 
 ### <a name="writing-a-windows-powershell-snap-in"></a>Написание оснастки Windows PowerShell
 
-1. Добавьте атрибут RunInstallerAttribute.
+1. Добавьте атрибут Рунинсталлераттрибуте.
 
-2. Создайте открытый класс, производный от [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) класса.
+2. Создайте открытый класс, производный от класса [System. Management. Automation. PSSnapin](/dotnet/api/System.Management.Automation.PSSnapIn) .
 
     В этом примере имя класса — «GetProcPSSnapIn01».
 
-3. Добавьте, общедоступное свойство имя оснастки (обязательно). При именовании оснасток, не используйте следующие символы: #. , ( ) { } [ ] & - /\ $ ; : " ' \< > ; ? @ ` *
+3. Добавьте открытое свойство для имени оснастки (обязательно). При именовании оснасток не используйте следующие символы: #. , () {} [] &-/\ $; : "" \< >;? @ ` *
 
-    В этом примере в оснастке называется «GetProcPSSnapIn01».
+    В этом примере имя оснастки — «GetProcPSSnapIn01».
 
 4. Добавьте открытое свойство для поставщика оснастки (обязательно).
 
-    В этом примере поставщиком является корпорация «Майкрософт».
+    В этом примере поставщиком является "Microsoft".
 
-5. Добавьте открытое свойство для соответствующего ресурса поставщика оснастки (необязательно).
+5. Добавьте открытое свойство для ресурса поставщика оснастки (необязательно).
 
-    В этом примере ресурс поставщика является «GetProcPSSnapIn01 Майкрософт».
+    В этом примере ресурсом поставщика является "GetProcPSSnapIn01, Microsoft".
 
 6. Добавьте открытое свойство для описания оснастки (обязательно).
 
-    В этом примере описание является «This is оснастка Windows PowerShell, которая регистрирует командлет get-proc».
+    В этом примере описание: «это оснастка Windows PowerShell, которая регистрирует командлет Get-proc».
 
-7. Добавьте открытое свойство для соответствующего ресурса описание оснастки (необязательно).
+7. Добавьте открытое свойство для ресурса описания оснастки (необязательно).
 
-    В этом примере ресурс поставщика является «GetProcPSSnapIn01, это оснастка Windows PowerShell, которая регистрирует командлет get-proc».
+    В этом примере ресурсом поставщика является «GetProcPSSnapIn01, это оснастка Windows PowerShell, которая регистрирует командлет Get-proc».
 
 ## <a name="example"></a>Пример
 
-В этом примере показано, как написать оснастки Windows PowerShell, который может использоваться для регистрации командлет Get-Proc в оболочке Windows PowerShell. Имейте в виду, что в этом примере завершения сборки будет содержать только GetProcPSSnapIn01 оснастки класс и класс командлета Get-Proc.
+В этом примере показано, как создать оснастку Windows PowerShell, которая может использоваться для регистрации командлета Get-proc в оболочке Windows PowerShell. Имейте в виду, что в этом примере полная сборка будет содержать только класс оснастки GetProcPSSnapIn01 и класс командлета Get-proc.
 
 ```csharp
 [RunInstaller(true)]
@@ -128,6 +128,6 @@ public class GetProcPSSnapIn01 : PSSnapIn
 
 ## <a name="see-also"></a>См. также
 
-[Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
-[Оболочка Windows PowerShell SDK](../windows-powershell-reference.md)
+[Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)

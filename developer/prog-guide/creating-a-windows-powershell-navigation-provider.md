@@ -1,5 +1,5 @@
 ---
-title: Создание поставщика Windows PowerShell навигации | Документация Майкрософт
+title: Создание поставщика навигации Windows PowerShell | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -11,144 +11,144 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
-ms.openlocfilehash: 5f7a61e261399d3d2abe62fe4523e8c9895d5ad4
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 10927381993d89e83fd9f7870138542eeb60fc59
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855172"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323401"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Создание поставщика навигации Windows PowerShell
 
-В этом разделе описывается, как создать поставщик навигации Windows PowerShell, можно перейти в хранилище данных. Этот тип поставщика поддерживает рекурсивной команды, вложенные контейнеры и относительные пути.
+В этом разделе описывается создание поставщика навигации Windows PowerShell, который может перемещаться по хранилищу данных. Этот тип поставщика поддерживает рекурсивные команды, вложенные контейнеры и относительные пути.
 
 > [!NOTE]
-> Вы можете скачать C# исходный файл (AccessDBSampleProvider05.cs) для данного поставщика, с помощью Microsoft Windows программное обеспечение Development Kit для Windows Vista и компоненты среды выполнения .NET Framework 3.0. Инструкции по загрузке см. в разделе [как установка Windows PowerShell и загрузки пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
+> Вы можете скачать C# исходный файл (AccessDBSampleProvider05.cs) для этого поставщика с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
-> Скачанный исходные файлы доступны в  **\<примеры PowerShell >** каталога.
+> Скачанные исходные файлы доступны в  **\<примерах PowerShell >** Directory.
 >
-> Дополнительные сведения о других реализаций поставщика Windows PowerShell, см. в разделе [проектирование ваш поставщик PowerShell Windows](./designing-your-windows-powershell-provider.md).
+> Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
-Описанные здесь поставщик обеспечивает дескриптор пользователя базы данных Access как диск, таким образом, чтобы пользователь мог перейти к таблицам данных в базе данных. При создании собственного поставщика навигации, можно реализовать методы, которые можно сделать диск с указанием пути, необходимые для навигации, нормализовать относительные пути, перемещать элементы в хранилище данных, а также методы, которые получают имена дочерних, получить путь родительского элемента и тестирования Чтобы определить, если элемент является контейнером.
+Описываемый здесь поставщик позволяет пользователю обращаться к базе данных Access как диску, чтобы пользователь мог перейти к таблицам данных в базе данных. При создании собственного поставщика навигации можно реализовать методы, которые могут создавать пути к дискам, необходимые для навигации, нормализовать относительные пути, перемещать элементы хранилища данных, а также методы, которые получают дочерние имена, получают родительский путь к элементу и тест для выяснения, является ли элемент контейнером.
 
 > [!CAUTION]
-> Имейте в виду, что такой подход предполагает базу, которая содержит поле с именем Идентификатором и типом поля является LongInteger.
+> Имейте в виду, что в этом проекте предполагается, что база данных имеет поле с ИДЕНТИФИКАТОРом Name, а тип поля — Лонгинтежер.
 
 ## <a name="define-the-windows-powershell-provider"></a>Определение поставщика Windows PowerShell
 
-Поставщик навигации Windows PowerShell необходимо создать класс .NET, который является производным от [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) базового класса. Вот определение класса для поставщика навигации, описанные в этом разделе.
+Поставщик навигации Windows PowerShell должен создать класс .NET, производный от базового класса [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) . Ниже приведено определение класса для поставщика навигации, описанного в этом разделе.
 
 [!code-csharp[AccessDBProviderSample05.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
 
-Обратите внимание, что в этом поставщике [System.Management.Automation.Provider.Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) атрибут содержит два параметра. Первый параметр указывает понятное имя для поставщика, который используется Windows PowerShell. Второй параметр указывает специальной совместимости с Windows PowerShell, которые предоставляет поставщик среды выполнения Windows PowerShell во время обработки команды. Для этого поставщика нет конкретных возможности Windows PowerShell, которые добавляются.
+Обратите внимание, что в этом поставщике атрибут [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) включает два параметра. Первый параметр задает понятное имя для поставщика, используемого Windows PowerShell. Второй параметр указывает специальные возможности Windows PowerShell, которые поставщик предоставляет среде выполнения Windows PowerShell во время обработки команды. Для этого поставщика не добавляются специальные возможности Windows PowerShell.
 
-## <a name="defining-base-functionality"></a>Определение базовой функциональности
+## <a name="defining-base-functionality"></a>Определение базовых функций
 
-Как описано в разделе [разработки ваш поставщик PS](./designing-your-windows-powershell-provider.md), [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) базовый класс является производным от нескольких других классов для другого поставщика функциональные возможности. Поставщик навигации Windows PowerShell, поэтому необходимо определить все функциональные возможности, предоставляемые этими классами.
+Как описано в разделе [проектирование поставщика PS](./designing-your-windows-powershell-provider.md), базовый класс [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) является производным от нескольких других классов, предоставилих различные функции поставщика. Следовательно, поставщик навигации Windows PowerShell должен определить все функциональные возможности, предоставляемые этими классами.
 
-Чтобы реализовать функциональные возможности для добавления сведений инициализации сеанса, а также для освобождения ресурсов, которые используются поставщиком, см. в разделе [Создание базовый поставщик PS](./creating-a-basic-windows-powershell-provider.md). Тем не менее большинство поставщиков (включая поставщика, описанные здесь) можно использовать реализацию по умолчанию этой функции, предоставляемые Windows PowerShell.
+Сведения о реализации функций для добавления сведений об инициализации для конкретного сеанса и освобождения ресурсов, используемых поставщиком, см. в разделе [Создание базового поставщика PS](./creating-a-basic-windows-powershell-provider.md). Однако большинство поставщиков (включая описанный здесь поставщик) могут использовать реализацию этой функции по умолчанию, предоставляемую Windows PowerShell.
 
-Чтобы получить доступ к хранилищу данных через диск Windows PowerShell, необходимо реализовать методы [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) базового класса. Дополнительные сведения о реализации этих методов см. в разделе [Создание поставщика диска Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
+Чтобы получить доступ к хранилищу данных через диск Windows PowerShell, необходимо реализовать методы базового класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Дополнительные сведения о реализации этих методов см. [в разделе Создание поставщика диска Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
-Для работы с элементами в хранилище данных, например начало, параметр и очистка элементов, поставщик должен реализовывать методы, предоставленные [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) базового класса. Дополнительные сведения о реализации этих методов см. в разделе [Создание поставщика Windows PowerShell элемента](./creating-a-windows-powershell-item-provider.md).
+Чтобы управлять элементами хранилища данных, такими как получение, установка и очистка элементов, поставщик должен реализовать методы, предоставляемые базовым классом [System. Management. Automation. Provider. итемкмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) . Дополнительные сведения о реализации этих методов см. в разделе [Создание поставщика элементов Windows PowerShell](./creating-a-windows-powershell-item-provider.md).
 
-Чтобы получить дочерние элементы, или их имена, хранилище данных, а также способы создания, копирования, переименования и удаления элементов, необходимо реализовать методы, предоставленные [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider)базового класса. Дополнительные сведения о реализации этих методов см. в разделе [Создание поставщика Windows PowerShell контейнера](./creating-a-windows-powershell-container-provider.md).
+Для получения дочерних элементов, их имен, хранилища данных, а также методов создания, копирования, переименования и удаления элементов необходимо реализовать методы, предоставляемые базовым классом [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) . Дополнительные сведения о реализации этих методов см. [в разделе Создание поставщика контейнера Windows PowerShell](./creating-a-windows-powershell-container-provider.md).
 
 ## <a name="creating-a-windows-powershell-path"></a>Создание пути Windows PowerShell
 
-Поставщик навигации Windows PowerShell используйте внутренний поставщик путь Windows PowerShell для перемещения элементов в хранилище данных. Для создания поставщика внутреннего пути поставщик должен реализовывать [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) вызывает метод для поддержки из командлета объединение-Path. Этот метод объединяет родительский и дочерний путь в поставщик внутреннего пути, используя разделитель пути поставщика между родительским и дочерним путями.
+Поставщик навигации Windows PowerShell использует внутренний путь Windows PowerShell поставщика для навигации по элементам хранилища данных. Чтобы создать поставщик — внутренний путь, поставщик должен реализовать метод [System. Management. Automation. Provider. Navigationcmdletprovider. макепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) для поддержки вызовов из командлета Combine-Path. Этот метод сочетает родительский и дочерний путь к внутреннему пути поставщика, используя разделитель пути, зависящий от поставщика, между родительским и дочерним путями.
 
-Реализация по умолчанию получает пути с «/» или "\\«как разделитель пути, нормализует разделитель пути для»\\«, объединяет части пути к родительским и дочерним с разделителем между ними, а затем возвращает строку, содержащую объединенные пути.
+Реализация по умолчанию принимает пути с символом "/\\" или "" в качестве разделителя пути, нормализует разделитель пути до\\"", объединяет родительские и дочерние части пути с разделителем между ними, а затем возвращает строку, содержащую Объединенные пути.
 
-Этот поставщик навигации не реализует этот метод. Тем не менее, следующий код является реализация по умолчанию [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) метод.
+Этот метод не реализуется этим поставщиком навигации. Однако следующий код является реализацией метода [System. Management. Automation. Provider. Navigationcmdletprovider. макепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidermakepath](Msh_samplestestcmdlets#testprovidermakepath)]  -->
 
-#### <a name="things-to-remember-about-implementing-makepath"></a>О чем следует помнить о реализации MakePath
+#### <a name="things-to-remember-about-implementing-makepath"></a>Вопросы, связанные с реализацией Макепас
 
-Следующие условия могут относиться к реализации [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath):
+Следующие условия могут применяться к реализации [System. Management. Automation. Provider. Navigationcmdletprovider. макепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath):
 
-- Реализация [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) метод не следует проверить путь как юридические полный путь в пространстве имен поставщика. Имейте в виду, каждый параметр может представлять только часть пути, что объединенный частей может не создаваться, полный путь. Например [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) метод для поставщика filesystem может появиться «windows\system32» в `parent` параметр и «abc.dll» в `child` параметра. Метод объединяет эти значения с "\\" Разделитель "и" возвращает «windows\system32\abc.dll», не являющийся указания полного пути.
+- Реализация метода [System. Management. Automation. Provider. Navigationcmdletprovider. макепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) не должна проверять путь как допустимый полный путь в пространстве имен поставщика. Имейте в виду, что каждый параметр может представлять только часть пути, а Объединенные части могут не создавать полный путь. Например, метод [System. Management. Automation. Provider. Navigationcmdletprovider. макепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) для поставщика FileSystem может получить "Windows\System32" в `parent` параметре и "ABC. `child` DLL" в параметре. Метод соединяет эти значения с разделителем "\\" и возвращает значение "windows\system32\abc.dll", которое не является полным путем к файловой системе.
 
   > [!IMPORTANT]
-  > Части пути, предоставленные в вызове [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) может содержать символы не допускаются в пространство имен поставщика. Эти символы чаще всего используются для подстановочных знаков и реализация этого метода не следует удалять их.
+  > Части пути, предоставленные при вызове [System. Management. Automation. Provider. Navigationcmdletprovider. макепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) , могут содержать символы, недопустимые в пространстве имен поставщика. Эти символы, скорее всего, используются для расширения подстановочных знаков, и реализация этого метода не должна удалять их.
 
 ## <a name="retrieving-the-parent-path"></a>Получение родительского пути
 
-Поставщики Windows PowerShell переходов реализуют [System.Management.Automation.Provider.Navigationcmdletprovider.Getparentpath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) метод для извлечения родительского часть указанный полный или частичный путь от поставщика. Метод удаляет дочерний часть пути и возвращает путь в родительский объект. `root` Параметр указывает полный путь к корневому каталогу диска. Этот параметр может быть null или пусто, если не используется для операции по извлечению подключенного диска. Если корень указан, метод должен возвращать путь к контейнеру в качестве корневого элемента дерева.
+Поставщики навигации Windows PowerShell реализуют метод [System. Management. Automation. Provider. Navigationcmdletprovider. жетпарентпас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) для получения родительской части указанного полного или частичного пути, зависящего от поставщика. Метод удаляет дочернюю часть пути и возвращает часть родительского пути. `root` Параметр указывает полный путь к корню диска. Этот параметр может иметь значение null или быть пустым, если подключенный диск не используется для операции получения. Если указан корень, метод должен возвращать путь к контейнеру в том же дереве, что и корень.
 
-Поставщик навигации пример переопределения этого метода, но использует реализацию по умолчанию. Он принимает пути, которые используются оба «/» и "\\" в качестве разделителей пути. Сначала он нормализует путь к только "\\" разделителей, затем разделяет родительский путь из системы последнего "\\" и возвращает путь к родительскому.
+Образец поставщика навигации не переопределяет этот метод, но использует реализацию по умолчанию. Он принимает пути, в которых используются разделители пути "\\/" и "". Сначала он нормализует путь, чтобы он имел только разделители "\\", а затем разбивает родительский путь на последний "\\" и возвращает родительский путь.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetparentpath](Msh_samplestestcmdlets#testprovidergetparentpath)]  -->
 
-#### <a name="to-remember-about-implementing-getparentpath"></a>Следует помнить о реализации GetParentPath
+#### <a name="to-remember-about-implementing-getparentpath"></a>Помните о реализации Жетпарентпас
 
-Реализация [System.Management.Automation.Provider.Navigationcmdletprovider.Getparentpath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) метод следует разбить путь лексически на разделитель пути для пространства имен поставщика. Например, поставщик filesystem использует этот метод для поиска последнего "\\" и возвращает все, что слева от разделителя.
+Реализация метода [System. Management. Automation. Provider. Navigationcmdletprovider. жетпарентпас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) должна разбить путь на лексему пути для пространства имен поставщика. Например, Поставщик FileSystem использует этот метод для поиска последней "\\" и возвращает все, что находится слева от разделителя.
 
-## <a name="retrieve-the-child-path-name"></a>Получить имя пути дочерних
+## <a name="retrieve-the-child-path-name"></a>Получение имени дочернего пути
 
-Пользовательский поставщик реализует навигации [System.Management.Automation.Provider.Navigationcmdletprovider.Getchildname*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) метод для извлечения имени дочернего элемента (конечный элемент), расположенный в указанной полной или частичный путь от поставщика.
+Поставщик навигации реализует метод [System. Management. Automation. Provider. Navigationcmdletprovider. жетчилднаме *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) для получения имени (конечного элемента) дочернего элемента, расположенного в указанном полном или частичном путь, зависящий от поставщика.
 
-Пример поставщика навигации не Переопределите этот метод. Реализация по умолчанию. ниже. Он принимает пути, которые используются оба «/» и "\\" в качестве разделителей пути. Сначала он нормализует путь к только "\\" разделителей, затем разделяет родительский путь из системы последнего "\\" и возвращает имя дочернего элемента, часть пути.
+Образец поставщика навигации не переопределяет этот метод. Реализация по умолчанию показана ниже. Он принимает пути, в которых используются разделители пути "\\/" и "". Сначала он нормализует путь, чтобы он имел только разделители "\\", а затем разбивает родительский путь на последний "\\" и возвращает имя части дочернего пути.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetchildname](Msh_samplestestcmdlets#testprovidergetchildname)]  -->
 
-#### <a name="things-to-remember-about-implementing-getchildname"></a>О чем следует помнить о реализации GetChildName
+#### <a name="things-to-remember-about-implementing-getchildname"></a>Вопросы, связанные с реализацией Жетчилднаме
 
-Реализация [System.Management.Automation.Provider.Navigationcmdletprovider.Getchildname*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) метод следует разбить путь лексически на разделитель пути. Если указанный путь содержит без разделителей пути, метод должен вернуть путь без изменений.
+Реализация метода [System. Management. Automation. Provider. Navigationcmdletprovider. жетчилднаме *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) должна разбить путь на лексему пути. Если указанный путь не содержит разделителей пути, метод должен вернуть путь в неизмененном виде.
 
 > [!IMPORTANT]
-> Путь, указанный в вызове этого метода может содержать символы, недопустимые в пространство имен поставщика. Эти символы, скорее всего, используемых для подстановочных знаков или сопоставление регулярных выражений и реализация этого метода не следует удалять их.
+> Путь, указанный в вызове этого метода, может содержать символы, недопустимые в пространстве имен provider. Эти символы, скорее всего, используются для расширения подстановочных знаков или сопоставления регулярных выражений, и реализация этого метода не должна удалять их.
 
-## <a name="determining-if-an-item-is-a-container"></a>Определение, является ли элемент контейнера
+## <a name="determining-if-an-item-is-a-container"></a>Определение, является ли элемент контейнером
 
-Поставщик навигации может реализовать [System.Management.Automation.Provider.Navigationcmdletprovider.Isitemcontainer*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) метод, чтобы определить, если указанный путь контейнера. Она возвращает значение true, если путь представляет контейнер и false в противном случае. Пользователь должен иметь возможность использовать этот метод `Test-Path` командлет для предоставленного пути.
+Поставщик навигации может реализовать метод [System. Management. Automation. Provider. Navigationcmdletprovider. иситемконтаинер *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) , чтобы определить, указывает ли указанный путь на контейнер. Он возвращает значение true, если путь представляет контейнер, и false в противном случае. Пользователю требуется этот метод, чтобы иметь возможность использовать `Test-Path` командлет для предоставленного пути.
 
-В следующем коде показан [System.Management.Automation.Provider.Navigationcmdletprovider.Isitemcontainer*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) реализацию в наш образец поставщика навигации. Метод проверяет правильность указанного пути, и если таблица существует и возвращает значение true, если путь указывает на контейнер.
+В следующем коде показана реализация [System. Management. Automation. Provider. Navigationcmdletprovider. иситемконтаинер *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) в нашем примере поставщика навигации. Метод проверяет, правильно ли указан путь, и если таблица существует, и возвращает значение true, если путь указывает на контейнер.
 
 [!code-csharp[AccessDBProviderSample05.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
 
-#### <a name="things-to-remember-about-implementing-isitemcontainer"></a>О чем следует помнить о реализации IsItemContainer
+#### <a name="things-to-remember-about-implementing-isitemcontainer"></a>Вопросы, связанные с реализацией Иситемконтаинер
 
-Поставщик навигации класс .NET может объявлять возможностей поставщика ExpandWildcards фильтра, Include и Exclude, из [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисления. В этом случае реализация [System.Management.Automation.Provider.Navigationcmdletprovider.Isitemcontainer*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) необходимо убедиться, что путь, переданный соответствует требованиям. Чтобы сделать это, метод должен получить доступ к соответствующее свойство, например, [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) свойство.
+В классе навигации поставщика функций .NET могут объявляться возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В этом случае реализация [System. Management. Automation. Provider. Navigationcmdletprovider. иситемконтаинер *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) должна обеспечить соответствие пути требованиям. Для этого метод должен получить доступ к соответствующему свойству, например свойству [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) .
 
 ## <a name="moving-an-item"></a>Перемещение элемента
 
-Поддержки `Move-Item` реализует поставщик навигации командлета, [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) метод. Этот метод перемещает элемент, заданный параметром `path` параметр контейнера по пути, предоставленного в `destination` параметра.
+При поддержке `Move-Item` командлета поставщик навигации реализует метод [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) . Этот метод перемещает элемент, заданный `path` параметром, в контейнер по пути, указанному `destination` в параметре.
 
-Пример поставщика навигации не переопределяет [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) метод. Ниже приводится реализация по умолчанию.
+Образец поставщика навигации не переопределяет метод [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) . Ниже приведена реализация по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidermoveitem](Msh_samplestestcmdlets#testprovidermoveitem)]  -->
 
-#### <a name="things-to-remember-about-implementing-moveitem"></a>О чем следует помнить о реализации MoveItem
+#### <a name="things-to-remember-about-implementing-moveitem"></a>Вопросы, связанные с реализацией Мовеитем
 
-Поставщик навигации класс .NET может объявлять возможностей поставщика ExpandWildcards фильтра, Include и Exclude, из [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) перечисления. В этом случае реализация [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) необходимо убедиться, что путь, переданный соответствует требованиям. Чтобы сделать это, метод должен получить доступ к соответствующее свойство, например, **CmdletProvider.Exclude** свойство.
+В классе навигации поставщика функций .NET могут объявляться возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В этом случае реализация [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) должна обеспечивать соответствие пути требованиям. Для этого метод должен получить доступ к соответствующему свойству, например к свойству **кмдлетпровидер. Exclude** .
 
-По умолчанию переопределения этого метода не следует перемещать объекты через существующие объекты Если [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) свойству `true`. Например, поставщик filesystem не будет копировать c:\temp\abc.txt через существующий файл c:\bar.txt Если [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) свойству `true`. Если путь, указанный в `destination` параметр существует и является контейнером, [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) свойство не является обязательным. В этом случае [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) следует переместить элемент обозначается `path` параметр в контейнер обозначается `destination` параметр как дочерний элемент.
+По умолчанию переопределения этого метода не должны перемещать объекты поверх существующих объектов, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Например, Поставщик FileSystem не будет копировать к:\темп\абк.ткст для существующего файла к:\бар.ткст, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь, указанный в `destination` параметре, существует и является контейнером, свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не является обязательным. В этом случае [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) должен переместить элемент, `path` указанный параметром, в `destination` контейнер, указанный параметром в качестве дочернего.
 
-Реализация [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверьте его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции, при изменении состояния системы, например, удаление файлов. [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, необходимо изменить на пользователя, в среде выполнения Windows PowerShell, принимая во внимание любые параметры командной строки или привилегированных переменных в Определяет, что должно быть отображено пользователю.
+Реализация метода [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение до внесение любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в состояние системы, например при удалении файлов. [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, который будет изменен пользователю, при этом среда выполнения Windows PowerShell учитывает все параметры командной строки или привилегированные переменные при определении что следует отображать пользователю.
 
-После вызова [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) метод должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) метод. Этот метод отправляет сообщение пользователю, чтобы разрешить отзыв, чтобы сказать, если операция должна быть продолжено. Поставщик должен вызывать [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) как дополнительную проверку для изменения потенциально опасных системы.
+После того как вызов метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, метод [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) должен вызывать [ Метод System. Management. Automation. Provider. Кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение, чтобы разрешить отзыв, если операция должна быть продолжена. Поставщик должен вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) в качестве дополнительной проверки потенциально опасной модификации системы.
 
-## <a name="attaching-dynamic-parameters-to-the-move-item-cmdlet"></a>Присоединение динамических параметров в командлет Move-Item
+## <a name="attaching-dynamic-parameters-to-the-move-item-cmdlet"></a>Присоединение динамических параметров к командлету Move-Item
 
-Иногда `Move-Item` командлета требуется Дополнительные параметры, которые можно динамически во время выполнения. Для обеспечения этих динамических параметров, необходимо реализовать поставщик навигации [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) метод для получения значения обязательных параметров из элемента в заданный путь и возвращают объект, имеющий свойства и поля с помощью синтаксического анализа атрибуты аналогично классу командлета или [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) объекта.
+`Move-Item` Иногда командлету требуются дополнительные параметры, которые динамически предоставляются во время выполнения. Чтобы предоставить эти динамические параметры, поставщик навигации должен реализовать метод [System. Management. автоматизации. Provider. Navigationcmdletprovider. мовеитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) для получения требуемых значений параметров из элемента в указанный путь и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
 
-Этот поставщик навигации не реализует этот метод. Тем не менее, следующий код является реализация по умолчанию [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters).
+Этот метод не реализуется этим поставщиком навигации. Однако следующий код является реализацией класса [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters)по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidermoveitemdynamicparameters](Msh_samplestestcmdlets#testprovidermoveitemdynamicparameters)]  -->
 
-## <a name="normalizing-a-relative-path"></a>Нормализация относительный путь
+## <a name="normalizing-a-relative-path"></a>Нормализация относительного пути
 
-Пользовательский поставщик реализует навигации [System.Management.Automation.Provider.Navigationcmdletprovider.Normalizerelativepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) метод для нормализации полный путь, указанный в `path` параметр как относительно пути, указанному свойством `basePath` параметра. Метод возвращает строковое представление нормализованный путь. Записывает ошибку, если `path` параметр указывает несуществующий путь.
+Поставщик навигации реализует метод [System. Management. Automation. Provider. Navigationcmdletprovider. нормализерелативепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) , чтобы нормализовать полный путь, указанный в `path` параметре, как относительный к элементу управления путь, `basePath` заданный параметром. Метод возвращает строковое представление нормализованного пути. Он записывает ошибку, `path` если параметр указывает несуществующий путь.
 
-Пример поставщика навигации не Переопределите этот метод. Ниже приводится реализация по умолчанию.
+Образец поставщика навигации не переопределяет этот метод. Ниже приведена реализация по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidernormalizepath](Msh_samplestestcmdlets#testprovidernormalizepath)]  -->
 
-#### <a name="things-to-remember-about-implementing-normalizerelativepath"></a>О чем следует помнить о реализации NormalizeRelativePath
+#### <a name="things-to-remember-about-implementing-normalizerelativepath"></a>Вопросы, связанные с реализацией Нормализерелативепас
 
-Реализация [System.Management.Automation.Provider.Navigationcmdletprovider.Normalizerelativepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) синтаксический анализ `path` параметр, но его не нужно использовать исключительно синтаксического анализа. Рекомендуется для разработки, что этот метод следует использовать путь для поиска сведения о пути в хранилище данных и создать путь, который соответствует регистр и стандартизированный синтаксис пути.
+Ваша реализация [System. Management. Automation. Provider. Navigationcmdletprovider. нормализерелативепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) должна проанализировать `path` параметр, но не обязательно использовать чисто синтаксический синтаксический анализ. Рекомендуется разработать этот метод, чтобы использовать путь для поиска сведений о пути в хранилище данных и создать путь, соответствующий синтаксису регистра и стандартизованного пути.
 
 ## <a name="code-sample"></a>Пример кода
 
@@ -156,23 +156,23 @@ ms.locfileid: "65855172"
 
 ## <a name="defining-object-types-and-formatting"></a>Определение типов объектов и форматирование
 
-Это возможно для поставщика для добавления членов к существующим объектам или определения новых объектов. Дополнительные сведения см. в разделе[расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Поставщик может добавлять элементы в существующие объекты или определять новые объекты. Дополнительные сведения см. в разделе[расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
-Дополнительные сведения см. в разделе [как регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Дополнительные сведения см. [в разделе Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
-## <a name="testing-the-windows-powershell-provider"></a>Проверка поставщика в Windows PowerShell
+## <a name="testing-the-windows-powershell-provider"></a>Тестирование поставщика Windows PowerShell
 
-После регистрации поставщиком Windows PowerShell с помощью Windows PowerShell, можно проверить его, выполнив Поддерживаемые командлеты в командной строке, включая командлеты, доступные через наследование. В этом примере тестирование навигации к образцу поставщика.
+Когда ваш поставщик Windows PowerShell зарегистрирован в Windows PowerShell, его можно протестировать, запустив в командной строке поддерживаемые командлеты, включая командлеты, доступные при наследовании. В этом примере проверяется пример поставщика навигации.
 
-1. Запуска новой оболочки и использовать `Set-Location` командлет, чтобы задать путь для указания базы данных Access.
+1. Запустите новую оболочку и используйте командлет `Set-Location` , чтобы указать путь к базе данных Access.
 
    ```powershell
    Set-Location mydb:
    ```
 
-2. Теперь запустите `Get-Childitem` командлет, чтобы получить список элементов базы данных, которые являются таблицами базы данных. Для каждой таблицы этот командлет также извлекает количество строк таблицы.
+2. Теперь запустите `Get-Childitem` командлет, чтобы получить список элементов базы данных, которые являются доступными таблицами базы данных. Для каждой таблицы этот командлет также извлекает количество строк таблицы.
 
    ```powershell
    Get-ChildItem | Format-Table rowcount,name -AutoSize
@@ -199,13 +199,13 @@ ms.locfileid: "65855172"
          29   Suppliers
    ```
 
-3. Используйте `Set-Location` еще раз, чтобы задать расположение данных таблицы «Сотрудники».
+3. Повторно используйте `Set-Location` командлет, чтобы задать расположение таблицы данных Employees.
 
    ```powershell
    Set-Location Employees
    ```
 
-4. Давайте теперь используем `Get-Location` командлет, чтобы получить путь к таблице сотрудников.
+4. Теперь мы используем `Get-Location` командлет для получения пути к таблице Employees.
 
    ```powershell
    Get-Location
@@ -217,7 +217,7 @@ ms.locfileid: "65855172"
    mydb:\Employees
    ```
 
-5. Теперь с помощью `Get-Childitem` командлет по конвейеру в `Format-Table` командлета. Этот набор командлетов извлекает элементы для таблицы данных сотрудников, которые являются строки таблицы. Они форматируются в соответствии со значениями `Format-Table` командлета.
+5. Теперь используйте `Get-Childitem` командлет `Format-Table` , переданный командлету. Этот набор командлетов извлекает элементы для таблицы данных Employees, которые являются строками таблицы. Они форматируются, как указано в `Format-Table` командлете.
 
    ```powershell
    Get-ChildItem | Format-Table rownumber,psiscontainer,data -AutoSize
@@ -237,7 +237,7 @@ ms.locfileid: "65855172"
    8           False            System.Data.DataRow
    ```
 
-6. Теперь вы можете запустить `Get-Item` командлет, чтобы получить элементы для строк 0 таблицы данных сотрудников.
+6. Теперь можно запустить `Get-Item` командлет, чтобы получить элементы для строки 0 таблицы данных Employees.
 
    ```powershell
    Get-Item 0
@@ -254,7 +254,7 @@ ms.locfileid: "65855172"
    RowNumber      : 0
    ```
 
-7. Используйте `Get-Item` еще раз, чтобы получить данные о сотрудниках для элементов в строке 0.
+7. Повторно используйте `Get-Item` командлет, чтобы получить данные о сотрудниках для элементов в строке 0.
 
    ```powershell
    (Get-Item 0).data
@@ -288,14 +288,14 @@ ms.locfileid: "65855172"
 
 [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
-[Поставщик разработки Your Windows PowerShell](./designing-your-windows-powershell-provider.md)
+[Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Расширение типов объектов и форматирование](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Реализация поставщика Windows PowerShell для контейнеров](./creating-a-windows-powershell-container-provider.md)
+[Реализация контейнера Windows PowerShell provider](./creating-a-windows-powershell-container-provider.md)
 
-[Регистрация командлетов, поставщиков и ведущих приложений](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
-[Руководство программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

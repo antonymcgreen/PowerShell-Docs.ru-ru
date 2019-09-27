@@ -1,5 +1,5 @@
 ---
-title: Схема конфигурации авторизации на основе ролей | Документация Майкрософт
+title: Схема настройки авторизации на основе ролей | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/12/2016
 ms.reviewer: ''
@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ba6d1d2-7055-4fef-b752-a5ae8b4eeb65
 caps.latest.revision: 7
-ms.openlocfilehash: 50a02e9a7522fc04b407329f513670215ad051cf
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 0a4d4b0cd2c9672ea9b11698258916ae1d0520c0
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080549"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323041"
 ---
 # <a name="role-based-authorization-configuration-schema"></a>Схема конфигурации для авторизации на основе ролей
 
-[PswsRoleBasedPlugins](http://go.microsoft.com/fwlink/?LinkId=243041) пример использует XML-файлы для настройки политики авторизации. Следующие XSD определяет схему, используемую для этих файлов.
+В примере [псвсролебаседплугинс](https://go.microsoft.com/fwlink/?LinkId=243041) для настройки политики авторизации используются XML-файлы. Следующая XSD-схема определяет схему, используемую для этих файлов.
 
 ```
 <?xml version="1.0" encoding="utf-8"?>

@@ -1,5 +1,5 @@
 ---
-title: Планирование заданий с помощью Windows PowerShell API | Документация Майкрософт
+title: Планирование заданий с помощью API Windows PowerShell | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/12/2016
 ms.reviewer: ''
@@ -8,24 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 64718f8e-de60-4fb7-894d-2975b5257ff6
 caps.latest.revision: 4
-ms.openlocfilehash: 8e1d2feff0665f169966f7d5e99540088e66bdfb
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: bdced961d91088dd75be347b7b74b22467c8c9be
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080362"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322964"
 ---
-# <a name="scheduling-jobs-with-the-powershell-api"></a>Планирование заданий с помощью PowerShell API
+# <a name="scheduling-jobs-with-the-powershell-api"></a>Планирование заданий с помощью API PowerShell
 
-Вы можете использовать объекты, предоставляемые **Microsoft.PowerShell.ScheduledJob** пространство имен для следующих целей:
+Объекты, предоставляемые пространством имен **Microsoft. PowerShell. ScheduledJob** , можно использовать для следующих задач:
 
-- Создание запланированного задания.
-- Определите, когда выполняется задание.
+- Создайте запланированное задание.
+- Укажите время выполнения задания.
 - Получение результатов о завершенном задании.
 
-## <a name="triggering-the-job"></a>Активация задания
+## <a name="triggering-the-job"></a>Запуск задания
 
-Первым шагом создания запланированного задания указывается в том случае, если задание должно запускаться. Это можно сделать, создав и настроив **Microsoft.PowerShell.ScheduledJob.ScheduledJobTrigger** объекта. Следующий код создает триггер, которая позволяет запланировать выполнение задания один раз в будущем 20 секунд.
+Первым шагом в создании запланированного задания является указание времени выполнения задания. Для этого создайте и настройте объект **Microsoft. PowerShell. ScheduledJob. ScheduledJobTrigger** . Следующий код создает триггер, который планирует выполнение задания в течение 20 секунд в будущем.
 
 ```csharp
 ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
@@ -45,13 +45,13 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 |Имя параметра|Описание|
 |--------------------|-----------------|
 |**Name**|Имя задания.|
-|**ScriptBock**|Блок скрипта PowerShell, который указывает, что выполняет задание.|
-|**FilePath**|Путь к файлу, который содержит блок сценария PowerShell, чтобы указать, что выполняет задание.|
-|**InitializationScript**|Блок скрипта PowerShell, который инициализирует задания.|
-|**ArgumentList**|Массив объектов, указывающих аргументы, которые принимает задания.|
-|**RunAs32**|Логическое значение, указывающее, следует ли выполнять задание в 32-разрядном процессе.|
+|**скриптбокк**|Блок сценария PowerShell, который указывает, что делает задание.|
+|**Равно**|Путь к файлу, содержащему блок скрипта PowerShell, для указания действия, выполняемого заданием.|
+|**инитиализатионскрипт**|Блок сценария PowerShell, который инициализирует задание.|
+|**ArgumentList**|Массив объектов, указывающих аргументы, которые принимает задание.|
+|**RunAs32**|Логическое значение, указывающее, следует ли запускать задание в 32-разрядном процессе.|
 
-В следующем коде создается объект словаря параметров и задает **имя** и **ScriptBlock** параметров.
+Следующий код создает объект словаря параметров и задает параметры **Name** и **ScriptBlock** .
 
 ```csharp
 string schedJobDefName = "MySampleSchedJob";
@@ -64,9 +64,9 @@ string schedJobDefName = "MySampleSchedJob";
 
 ```
 
-## <a name="creating-the-invocation-and-job-definition-objects"></a>Создание вызов, а также задания определения объектов
+## <a name="creating-the-invocation-and-job-definition-objects"></a>Создание объектов вызова и определения задания
 
-Затем создайте `ScheduledJobInvocationInfo` и `ScheduledJobDefinition` объектов, чтобы запустить задание, как показано в следующем примере:
+Затем создаются `ScheduledJobInvocationInfo` объекты и `ScheduledJobDefinition` для запуска задания, как показано в следующем примере:
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
@@ -82,9 +82,9 @@ ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
 
 ```
 
-## <a name="registering-the-job-with-the-task-scheduler"></a>Регистрация задания с планировщиком задач
+## <a name="registering-the-job-with-the-task-scheduler"></a>Регистрация задания с помощью планировщика заданий
 
-Следующий код регистрирует задание с [планировщик задач Windows](http://go.microsoft.com/fwlink/?LinkId=251817).
+Следующий код регистрирует задание в [планировщик задач Windows](https://go.microsoft.com/fwlink/?LinkId=251817).
 
 ```csharp
 schedJobDefinition.Register();
@@ -93,9 +93,9 @@ schedJobDefinition.Register();
 
 ```
 
-## <a name="complete-code-example"></a>Полный код примера
+## <a name="complete-code-example"></a>Полный пример кода
 
-Ниже приведен полный пример, из которого были выполнены предыдущие фрагменты кода.
+Ниже приведен полный пример кода, из которого выполнялись предыдущие фрагменты.
 
 ```csharp
 using System;

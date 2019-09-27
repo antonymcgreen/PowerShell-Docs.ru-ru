@@ -1,5 +1,5 @@
 ---
-title: Добавление и вызова команд | Документация Майкрософт
+title: Добавление и вызов команд | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,30 +8,30 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62be8432-28c1-4ca2-bcdb-d0350163fa8c
 caps.latest.revision: 5
-ms.openlocfilehash: 9a01f948c5b474b4f9068030907601543e13cc7e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: f776f13fe743a3f5f67de0d94883e3f754040ffc
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62083031"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323485"
 ---
 # <a name="adding-and-invoking-commands"></a>Добавление и вызов команд
 
-После создания пространства выполнения, можно добавить Windows PowerShellcommands и сценарии конвейера и затем вызвать конвейер синхронно или асинхронно.
+После создания пространства выполнения можно добавить в конвейер Повершеллкоммандс и скрипты Windows, а затем вызывать конвейер синхронно или асинхронно.
 
 ## <a name="creating-a-pipeline"></a>Создание конвейера
 
- [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) класс предоставляет несколько методов для добавления команды, параметры и сценарии в конвейер. Конвейер можно вызвать синхронно, вызвав перегрузку [System.Management.Automation.Powershell.Invoke*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) метод, или асинхронно путем вызова перегрузки [ System.Management.Automation.Powershell.Begininvoke*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) и затем [System.Management.Automation.Powershell.Endinvoke*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) метод.
+ Класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) предоставляет несколько методов для добавления команд, параметров и скриптов в конвейер. Конвейер можно вызвать синхронно, вызвав перегрузку метода [System. Management. Automation. PowerShell. Invoke *](/dotnet/api/System.Management.Automation.PowerShell.Invoke) или асинхронно, вызвав перегрузку класса [System. Management. Automation. PowerShell. BeginInvoke *](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) а затем метод [System. Management. Automation. PowerShell. EndInvoke *](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) .
 
 ### <a name="addcommand"></a>AddCommand
 
-1. Создание [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) объекта.
+1. Создайте объект [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
    ```csharp
    PowerShell ps = PowerShell.Create();
    ```
 
-2. Добавьте в команду, которую требуется выполнить.
+2. Добавьте команду, которую требуется выполнить.
 
    ```csharp
    ps.AddCommand("Get-Process");
@@ -43,11 +43,11 @@ ms.locfileid: "62083031"
    ps.Invoke();
    ```
 
- При вызове метода [System.Management.Automation.Powershell.Addcommand*](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) более одного раза, прежде чем вызывать метод [System.Management.Automation.Powershell.Invoke*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) метод, результат Первая команда передается по конвейеру второго и т. д. Если вы не хотите передать результат выполнения предыдущей команды к команде, добавьте его, вызвав [System.Management.Automation.Powershell.Addstatement*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) вместо этого.
+ Если метод [System. Management. Automation. PowerShell. AddCommand *](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) вызывается более одного раза перед вызовом метода [System. Management. Automation. PowerShell. Invoke *](/dotnet/api/System.Management.Automation.PowerShell.Invoke) , результат первой команды передается второму и т. д. Если вы не хотите передавать результат предыдущей команды команде, добавьте ее, вызвав метод [System. Management. Automation. PowerShell. аддстатемент *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) .
 
-### <a name="addparameter"></a>AddParameter
+### <a name="addparameter"></a>аддпараметер
 
- В предыдущем примере выполняется одну команду без параметров. Можно добавить параметры к команде с помощью [System.Management.Automation.Pscommand.Addparameter*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) метод к примеру, следующий код получает список всех процессов, которые называются `PowerShell` под управлением компьютер.
+ В предыдущем примере выполняется одна команда без параметров. Можно добавить параметры в команду с помощью метода [System. Management. Automation. пскомманд. аддпараметер *.](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) например, следующий код возвращает список всех процессов, именованных `PowerShell` на компьютере.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -55,7 +55,7 @@ PowerShell.Create().AddCommand("Get-Process")
                    .Invoke();
 ```
 
- Можно добавить дополнительные параметры, вызвав [System.Management.Automation.Pscommand.Addparameter*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) несколько раз.
+ Можно добавить дополнительные параметры путем многократного вызова [System. Management. Automation. пскомманд. аддпараметер *](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) .
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -64,7 +64,7 @@ PowerShell.Create().AddCommand("Get-Process")
                    .Invoke();
 ```
 
- Можно также добавить словарь имен и значений параметров, вызвав [System.Management.Automation.Powershell.Addparameters*](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) метод.
+ Также можно добавить словарь имен и значений параметров, вызвав метод [System. Management. Automation. PowerShell. аддпараметерс *](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) .
 
 ```csharp
 IDictionary parameters = new Dictionary<String, String>();
@@ -77,9 +77,9 @@ PowerShell.Create().AddCommand("Get-Process")
 
 ```
 
-### <a name="addstatement"></a>AddStatement
+### <a name="addstatement"></a>аддстатемент
 
- Вы можете имитировать пакетной обработки с помощью [System.Management.Automation.Powershell.Addstatement*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) метод, который добавляет дополнительные инструкции для завершения работы конвейера, следующий код получает список запущенных процессов с именем `PowerShell`, а затем возвращает список запущенных служб.
+ Пакетную обработку можно имитировать с помощью метода [System. Management. Automation. PowerShell. аддстатемент *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , который добавляет дополнительный оператор в конец конвейера. следующий код возвращает список запущенных процессов с именем `PowerShell`. затем получает список выполняющихся служб.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -88,25 +88,25 @@ ps.AddStatement().AddCommand("Get-Service");
 ps.Invoke();
 ```
 
-### <a name="addscript"></a>AddScript
+### <a name="addscript"></a>аддскрипт
 
- Вы можете запустить существующий скрипт, вызов [System.Management.Automation.Powershell.Addscript*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) метод. В следующем примере добавляется сценарий в конвейер и запускает его. В этом примере предполагается, что уже имеется сценарий с именем `MyScript.ps1` в папку с именем `D:\PSScripts`.
+ Можно запустить существующий скрипт, вызвав метод [System. Management. Automation. PowerShell. аддскрипт *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) . В следующем примере в конвейер добавляется скрипт и выполняется его выполнение. В этом примере предполагается, что в `MyScript.ps1` `D:\PSScripts`папке уже есть скрипт с именем.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
- Есть также версия [System.Management.Automation.Powershell.Addscript*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) метод, который принимает логический параметр с именем `useLocalScope`. Если этот параметр имеет значение `true`, а затем сценарий выполняется в локальной области. Следующий код выполняет скрипт в локальной области.
+ Существует также версия метода [System. Management. Automation. PowerShell. аддскрипт *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) , принимающая логический параметр с именем `useLocalScope`. Если этот параметр имеет значение `true`, скрипт выполняется в локальной области. Следующий код запустит скрипт в локальной области.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 ```
 
-### <a name="invoking-a-pipeline-synchronously"></a>Вызов конвейера синхронно
+### <a name="invoking-a-pipeline-synchronously"></a>Синхронный вызов конвейера
 
- После добавления элементов в конвейер, ее можно вызвать. Для вызова конвейера синхронно, вызовите перегрузку [System.Management.Automation.Powershell.Invoke*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) метод. В следующем примере показано, как синхронный вызов конвейера.
+ После добавления элементов в конвейер вы вызываете его. Для синхронного вызова конвейера вызывается перегрузка метода [System. Management. Automation. PowerShell. Invoke *](/dotnet/api/System.Management.Automation.PowerShell.Invoke) . В следующем примере показано, как синхронно вызвать конвейер.
 
 ```csharp
 using System;
@@ -136,11 +136,11 @@ namespace HostPS1e
 }
 ```
 
-### <a name="invoking-a-pipeline-asynchronously"></a>Вызов конвейера асинхронно
+### <a name="invoking-a-pipeline-asynchronously"></a>Асинхронный вызов конвейера
 
- Вызов конвейера асинхронно путем вызова перегрузки [System.Management.Automation.Powershell.Begininvoke*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) для создания [IAsyncResult](http://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) объекта и последующего вызова [ System.Management.Automation.Powershell.Endinvoke*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) метод.
+ Асинхронный вызов конвейера вызывает перегрузку метода [System. Management. Automation. PowerShell. BeginInvoke *](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) для создания объекта [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) и последующего вызова метода [System. Management. Automation. PowerShell. EndInvoke *](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) метод.
 
- В следующем примере показано, как для асинхронного вызова конвейера.
+ В следующем примере показано, как вызвать конвейер асинхронно.
 
 ```csharp
 using System;
@@ -186,4 +186,4 @@ namespace HostPS3
 
  [Создание InitialSessionState](./creating-an-initialsessionstate.md)
 
- [Создание ограниченное пространство выполнения](./creating-a-constrained-runspace.md)
+ [Создание ограниченного пространства выполнения](./creating-a-constrained-runspace.md)
