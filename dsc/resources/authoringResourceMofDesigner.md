@@ -2,22 +2,22 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование конструктора ресурсов
-ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 4f678f4586c75c830bf876b891fe4784aa3b4e95
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076673"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323758"
 ---
 # <a name="using-the-resource-designer-tool"></a>Использование конструктора ресурсов
 
-> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Конструктор ресурсов — это набор командлетов, предоставляемых модулем **xDscResourceDesigner** и упрощающих создание ресурсов настройки требуемого состояния (DSC) Windows PowerShell. Командлеты в этом ресурсе помогают создать MOF-схему, модуль сценария и структуру папок для нового ресурса. Дополнительные сведения о ресурсах DSC см. в статье [Встроенные ресурсы настройки требуемого состояния (DSC) Windows PowerShell](authoringResource.md).
 В этом разделе мы создадим ресурс DSC, управляющий пользователями Active Directory.
 Для установки модуля **xDscResourceDesigner** используйте командлет [Install-Module](/powershell/module/PowershellGet/Install-Module).
 
->**Примечание**. **Install-Module** включен в модуль **PowerShellGet**, содержащийся в PowerShell 5.0. Вы можете скачать модуль **PowerShellGet**для PowerShell 3.0 и 4.0 в разделе [Предварительная версия модулей PackageManagement PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+>**Примечание**. Install-Module включен в модуль **PowerShellGet**, содержащийся в PowerShell 5.0. Вы можете скачать модуль **PowerShellGet**для PowerShell 3.0 и 4.0 в разделе [Предварительная версия модулей PackageManagement PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 
 ## <a name="creating-resource-properties"></a>Создание свойств ресурсов
 В первую очередь необходимо решить, какие свойства будут представлены в ресурсе. В этом примере мы определим пользователя Active Directory со следующими свойствами.
@@ -32,7 +32,7 @@ ms.locfileid: "62076673"
 
 ```powershell
 $UserName = New-xDscResourceProperty –Name UserName -Type String -Attribute Key
-$Ensure = New-xDscResourceProperty –Name Ensure -Type String -Attribute Write –ValidateSet “Present”, “Absent”
+$Ensure = New-xDscResourceProperty –Name Ensure -Type String -Attribute Write –ValidateSet "Present", "Absent"
 $DomainCredential = New-xDscResourceProperty –Name DomainCredential -Type PSCredential -Attribute Write
 $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attribute Write
 ```
@@ -42,7 +42,7 @@ $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attrib
 Теперь, когда свойства ресурса созданы, можно вызвать командлет **New-xDscResource** для создания ресурса. Командлет **New-xDscResource** выводит список свойств в виде параметров. Кроме того, он принимает путь для создания модуля, имя нового ресурса и имя модуля, в котором он будет храниться. Ресурс создает следующая команда PowerShell.
 
 ```powershell
-New-xDscResource –Name Demo_ADUser –Property $UserName, $Ensure, $DomainCredential, $Password –Path ‘C:\Program Files\WindowsPowerShell\Modules’ –ModuleName Demo_DSCModule
+New-xDscResource –Name Demo_ADUser –Property $UserName, $Ensure, $DomainCredential, $Password –Path 'C:\Program Files\WindowsPowerShell\Modules' –ModuleName Demo_DSCModule
 ```
 
 Командлет **New-xDscResource** создает MOF-схему, каркас сценария для ресурса, необходимую структуру папок, а также манифест для модуля, предоставляющего новый ресурс.
@@ -167,8 +167,8 @@ Export-ModuleMember -Function *-TargetResource
 Предположим, вам нужно включить в ресурс время последнего входа пользователя. Вместо того чтобы писать ресурс заново, можно выполнить командлет **New-xDscResourceProperty**, чтобы создать еще одно свойство, а затем командлет **Update-xDscResource**, чтобы добавить его в список свойств.
 
 ```powershell
-$lastLogon = New-xDscResourceProperty –Name LastLogon –Type Hashtable –Attribute Write –Description “For mapping users to their last log on time”
-Update-xDscResource –Name ‘Demo_ADUser’ –Property $UserName, $Ensure, $DomainCredential, $Password, $lastLogon -Force
+$lastLogon = New-xDscResourceProperty –Name LastLogon –Type Hashtable –Attribute Write –Description "For mapping users to their last log on time"
+Update-xDscResource –Name 'Demo_ADUser' –Property $UserName, $Ensure, $DomainCredential, $Password, $lastLogon -Force
 ```
 
 ## <a name="testing-a-resource-schema"></a>Тестирование схемы ресурсов
