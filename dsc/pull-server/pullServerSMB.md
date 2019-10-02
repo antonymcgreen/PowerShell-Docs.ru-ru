@@ -2,16 +2,16 @@
 ms.date: 04/11/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка опрашивающего SMB-сервера DSC
-ms.openlocfilehash: 9d087a08861b2f4683e81efd1e25f857b8b75e07
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 25705d9ae06b3ce8daa352142cc0b84793ab6359
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079291"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71324865"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Настройка опрашивающего SMB-сервера DSC
 
-Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
 > Опрашивающий сервер (компонент Windows *служба DSC*) — поддерживаемый компонент Windows Server, но реализация новых функций и возможностей для него не планируется. Рекомендуется начать перенос управляемых клиентов на [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (включает возможности опрашивающего сервера в Windows Server) или на одно из решений сообщества, указанных [в следующем списке](pullserver.md#community-solutions-for-pull-service).
@@ -164,8 +164,8 @@ MOF-файл конфигурации необходимо сопоставит�
 > **Следует** указать **ConfigurationID** в блоке **Settings** метаконфигурации опрашивающего сервера SMB, даже если вы просто извлекаете ресурсы.
 
 ```powershell
-$secpasswd = ConvertTo-SecureString “Pass1Word” -AsPlainText -Force
-$mycreds = New-Object System.Management.Automation.PSCredential (“TestUser”, $secpasswd)
+$secpasswd = ConvertTo-SecureString "Pass1Word" -AsPlainText -Force
+$mycreds = New-Object System.Management.Automation.PSCredential ("TestUser", $secpasswd)
 
 [DSCLocalConfigurationManager()]
 configuration SmbCredTest

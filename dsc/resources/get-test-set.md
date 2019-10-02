@@ -2,16 +2,16 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Методы Get, Test, Set
-ms.openlocfilehash: 68738107cd4a222a13dd4afa158f0370953158ad
-ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
+ms.openlocfilehash: 42c1df6df2fbf65cbbb8407db613cac2e5b81cfb
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70215431"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323631"
 ---
 # <a name="get-test-set"></a>Методы Get, Test, Set
 
->Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 ![Получение, тестирования и настройка](../media/get-test-set.png)
 
@@ -143,7 +143,7 @@ BuiltInAccount       : LocalSystem
 Credential           :
 Dependencies         : {RPCSS, http}
 Description          : This service spools print jobs and handles interaction with the printer.  If you turn off
-                       this service, you won’t be able to print or see your printers.
+                       this service, you won't be able to print or see your printers.
 DisplayName          : Print Spooler
 Ensure               :
 Name                 : Spooler
@@ -235,7 +235,7 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 - [Обзор DSC службы автоматизации Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview).
 - [Настройка опрашивающего SMB-сервера](../pull-server/pullServerSMB.md)

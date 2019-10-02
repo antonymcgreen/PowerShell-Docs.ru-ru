@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Параметры учетных данных в данных конфигурации
-ms.openlocfilehash: 2a326e45bbbad7bd2362b66b88bf61b98df7b02e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 660c3643f7eb2e9ccb91bd992747fb9d5da0ccdb
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080158"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323304"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Параметры учетных данных в данных конфигурации
 
->Область применения. Windows PowerShell 5.0
+>Область применения: Windows PowerShell 5.0
 
 ## <a name="plain-text-passwords-and-domain-users"></a>Пароли в виде простого текста и пользователи домена
 
@@ -143,7 +143,7 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
 
 В первом сообщении об ошибке находится URL-адрес документации.
 Он содержит инструкции по шифрованию паролей с использованием структуры [ConfigurationData](./configData.md) и сертификата.
-Дополнительные сведения о сертификатах в DSC см. в [этой записи](http://aka.ms/certs4dsc).
+Дополнительные сведения о сертификатах в DSC см. в [этой записи](https://aka.ms/certs4dsc).
 
 Чтобы принудительно использовать пароль в виде простого текста, необходимо добавить в раздел данных конфигурации ресурса ключ `PsDscAllowPlainTextPassword` следующим образом:
 

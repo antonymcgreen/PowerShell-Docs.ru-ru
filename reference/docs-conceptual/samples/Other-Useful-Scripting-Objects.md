@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Другие полезные объекты для сценариев
-ms.openlocfilehash: 8d1d10b518d1aadd6aec831b512802558f8fc075
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 4f236246714b0608658bbd535851489912430336
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030048"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325145"
 ---
 # <a name="other-useful-scripting-objects"></a>Другие полезные объекты для сценариев
 
@@ -63,16 +63,16 @@ $psOnlineHelp | Format-List
 
 ```output
 Key   : Add-Computer
-Value : http://go.microsoft.com/fwlink/p/?LinkID=135194
+Value : https://go.microsoft.com/fwlink/p/?LinkID=135194
 
 Key   : Add-Content
-Value : http://go.microsoft.com/fwlink/p/?LinkID=113278
+Value : https://go.microsoft.com/fwlink/p/?LinkID=113278
 ```
 
 Следующий сценарий добавляет запись в этот список.
 
 ```powershell
-$psOnlineHelp.Add("get-myNoun", "http://www.mydomain.com/MyNoun.html")
+$psOnlineHelp.Add("get-myNoun", "https://www.mydomain.com/MyNoun.html")
 ```
 
 ## <a name="see-also"></a>См. также

@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Выполнение второго прыжка при удаленном взаимодействии PowerShell
-ms.openlocfilehash: 1b6e5ad53346324adc7be2d013e154c8600afa4f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: f4cfde39de8494050c31cfc3181271b968819695
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086346"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692152"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Выполнение второго прыжка при удаленном взаимодействии PowerShell
 
@@ -211,8 +211,8 @@ Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
 ### <a name="information-on-resource-based-kerberos-constrained-delegation"></a>Информация об ограниченном делегировании Kerberos на основе ресурсов
 
 - [Новые возможности проверки подлинности Kerberos](https://technet.microsoft.com/library/hh831747.aspx)
-- [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 1](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1)
-- [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 2](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2)
+- [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 1](https://www.itprotoday.com/windows-server/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1)
+- [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 2](https://www.itprotoday.com/windows-server/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2)
 - [Основные сведения об ограниченном делегировании Kerberos для развертывания прокси приложения Azure Active Directory со встроенной проверкой подлинности Windows](https://aka.ms/kcdpaper)
 - [[MS-ADA2]: Active Directory Schema Attributes M2.210 Attribute msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx) (Атрибуты M2.210 схемы Active Directory msDS-AllowedToActOnBehalfOfOtherIdentity)
 - [[MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol 1.3.2 S4U2proxy](https://msdn.microsoft.com/library/cc246079.aspx) (Расширения протокола Kerberos: S4U и протокол ограниченного делегирования 1.3.2 S4U2proxy)

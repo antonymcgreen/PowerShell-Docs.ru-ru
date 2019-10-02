@@ -2,16 +2,16 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 4.0
-ms.openlocfilehash: 9adc767e91ff19d373c122a0d493e7b8703d5476
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9259c624c8725f7d76f61e9ad7caa42e1bfa308c
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079478"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71324875"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 4.0
 
->Область применения. Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
 > Опрашивающий сервер (компонент Windows *служба DSC*) — поддерживаемый компонент Windows Server, но реализация новых функций и возможностей для него не планируется. Рекомендуется начать перенос управляемых клиентов на [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (включает возможности опрашивающего сервера в Windows Server) или на одно из решений сообщества, указанных [в следующем списке](pullserver.md#community-solutions-for-pull-service).
@@ -63,7 +63,7 @@ Configuration PullClientConfigId
         RefreshFrequencyMins = 30;
         ConfigurationModeFrequencyMins = 30;
         ConfigurationMode = "ApplyAndAutoCorrect";
-        DownloadManagerCustomData = @{ServerUrl = "http://PullServer:8080/PSDSCPullServer/PSDSCPullServer.svc"; AllowUnsecureConnection = “TRUE”}
+        DownloadManagerCustomData = @{ServerUrl = "http://PullServer:8080/PSDSCPullServer/PSDSCPullServer.svc"; AllowUnsecureConnection = "TRUE"}
     }
 }
 PullClientConfigId -Output "."
