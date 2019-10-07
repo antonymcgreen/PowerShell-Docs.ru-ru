@@ -2,18 +2,18 @@
 ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Устранение неполадок с доступом в Windows PowerShell Web Access
-ms.openlocfilehash: 66e913504cf0c34f8d9ab18b088fb06173aca24c
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 74cebbe418fecd21567ba9ecc7c561b51ac008fd
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733870"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692234"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Устранение неполадок с доступом в Windows PowerShell Web Access
 
 Обновлено: 24 июня 2013 г. (пересмотрено 23 августа 2017 г.)
 
-Область применения. Windows Server 2012 R2, Windows Server 2012
+Область применения: Windows Server 2012 R2, Windows Server 2012
 
 В следующем разделе перечислены некоторые часто возникающие проблемы при попытке подключения к удаленному компьютеру с помощью Windows PowerShell Web Access и предложения по разрешению таких проблем.
 
@@ -49,7 +49,7 @@ ms.locfileid: "67733870"
 
 #### <a name="workaround"></a>Обходной путь
 
-1. [Установите и запустите Internet Explorer 10](https://ie.microsoft.com/testdrive/info/downloads/Default.html).
+1. Установите и запустите Internet Explorer 10
 1. Измените **Режим документа** в Internet Explorer на *стандартный IE10*.
    1. Нажмите клавишу **F12**, чтобы открыть консоль "Средства разработчика".
    1. В Internet Explorer 10 щелкните **Режим браузера** и выберите *Internet Explorer 10*.

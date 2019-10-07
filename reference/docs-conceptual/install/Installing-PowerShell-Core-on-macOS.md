@@ -2,12 +2,12 @@
 title: Установка PowerShell Core в macOS
 description: Сведения об установке PowerShell Core в macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: 70f5d64aa8a697a9011d07fbcb2bb821463827e1
-ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
+ms.openlocfilehash: a53cb5b7e159635dac45fb9ca3df28e86dffc653
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65229735"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325265"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Установка PowerShell Core в macOS
 
@@ -47,7 +47,7 @@ brew cask upgrade powershell
 > [!NOTE]
 > Приведенные выше команды можно вызвать из узла PowerShell (pwsh), но затем потребуется выйти из оболочки PowerShell и перезапустить ее, чтобы завершить обновление и обновить значения в таблице `$PSVersionTable`.
 
-[brew]: http://brew.sh/
+[brew]: https://brew.sh/
 
 ## <a name="installation-of-latest-preview-release-via-homebrew-on-macos-1012-or-higher"></a>Установка последнего предварительного выпуска с помощью Homebrew в macOS 10.12 или более поздней версии
 
@@ -193,8 +193,8 @@ PowerShell отвечает требованиям [спецификации к�
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-* [Homebrew Web][brew]
-* [Репозиторий Github Homebrew][GitHub]
+* [Homebrew в Интернете][brew]
+* [Репозиторий Homebrew на Github][GitHub]
 * [Homebrew-Cask][cask]
 
 [brew]: http://brew.sh/

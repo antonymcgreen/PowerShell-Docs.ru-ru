@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Усовершенствования DSC в WMF 5.1
-ms.openlocfilehash: 47c1de362108096f26c0420d6135a9d9028a0302
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: 4de295db539b95d0f4ddef297df5e9523892bffc
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71147674"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692422"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Усовершенствования в настройке требуемого состояния (DSC) в WMF 5.1
 
@@ -353,4 +353,4 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
 
 - Попробуйте отправить подписанный MOF-файл.
 
-  ![Подписанный MOF-файл](../images/DSC-improvements/PushSignedMof.png)
+  ![PushSignedMofFile](../images/DSC-improvements/PushSignedMof.png)

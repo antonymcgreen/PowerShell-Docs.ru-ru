@@ -1,13 +1,13 @@
 ---
 title: Удаленное взаимодействие с PowerShell через SSH
 description: Удаленное взаимодействие в PowerShell Core с помощью SSH
-ms.date: 08/14/2018
-ms.openlocfilehash: d994a3888b9a372b803a65666634775a8905d63a
-ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
+ms.date: 09/30/2019
+ms.openlocfilehash: 744fa95e42b0cf6eb28db0c7014d07f143174214
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68372140"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692171"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Удаленное взаимодействие с PowerShell через SSH
 
@@ -17,7 +17,7 @@ ms.locfileid: "68372140"
 
 Служба удаленного управления Windows обеспечивает надежную модель поддержки удаленных сеансов PowerShell. Удаленное взаимодействие по протоколу SSH сейчас не поддерживает настройку удаленных конечных точек и функцию JEA (Just Enough Administration).
 
-Удаленное взаимодействие по SSH позволяет осуществлять базовое удаленное взаимодействие между компьютерами Windows и Linux в рамках сеансов PowerShell. Функция удаленного взаимодействия по SSH создает хост-процесс PowerShell на целевом компьютере в качестве подсистемы SSH. Со временем для поддержки настройки удаленных конечных точек и функции JEA мы реализуем общую модель размещения, похожую на службе удаленного управления Windows.
+Удаленное взаимодействие по SSH позволяет осуществлять базовое удаленное взаимодействие между компьютерами с Windows и Linux в рамках сеансов PowerShell. Функция удаленного взаимодействия по SSH создает хост-процесс PowerShell на целевом компьютере в качестве подсистемы SSH. Со временем для поддержки настройки удаленных конечных точек и функции JEA мы реализуем общую модель размещения, похожую на службе удаленного управления Windows.
 
 Командлеты `New-PSSession`, `Enter-PSSession` и `Invoke-Command` теперь имеют набор новых параметров для поддержки этой возможности удаленного взаимодействия.
 
@@ -29,137 +29,149 @@ ms.locfileid: "68372140"
 
 ## <a name="general-setup-information"></a>Общие сведения об установке
 
-Поддержку протокола SSH необходимо реализовать на всех компьютерах. Установите клиент (`ssh.exe`) и сервер (`sshd.exe`) SSH, чтобы осуществлять удаленное взаимодействие между компьютерами. Решение OpenSSH для Windows теперь доступно в Windows 10 сборки 1809 и Windows Server 2019. Дополнительные сведения см. в разделе [OpenSSH для Windows](/windows-server/administration/openssh/openssh_overview). В Linux нужно реализовать поддержку SSH (включая установку сервера sshd) в соответствии с используемой платформой. Также для поддержки удаленного взаимодействия по SSH нужно установить PowerShell Core с сайта GitHub. Для сервера SSH нужно настроить возможность создать подсистему SSH для размещения процесса PowerShell на удаленном компьютере. Также нужно активировать аутентификацию на основе ключа или пароля.
+PowerShell 6 или более поздней версии, и на всех компьютерах должен быть установлен SSH. Установите клиент (`ssh.exe`) и сервер (`sshd.exe`) SSH, чтобы осуществлять удаленное взаимодействие между компьютерами. Решение OpenSSH для Windows теперь доступно в Windows 10 сборки 1809 и Windows Server 2019. Дополнительные сведения см. в статье [Управление Windows через OpenSSH](/windows-server/administration/openssh/openssh_overview). В Linux нужно реализовать поддержку SSH (включая установку сервера sshd) в соответствии с используемой платформой. Также для поддержки удаленного взаимодействия по SSH нужно установить PowerShell с сайта GitHub. Для сервера SSH нужно настроить возможность создать подсистему SSH для размещения процесса PowerShell на удаленном компьютере. Также нужно активировать проверку подлинности на основе **пароля** или **ключа**.
 
-## <a name="set-up-on-windows-machine"></a>Установка на компьютере Windows
+## <a name="set-up-on-a-windows-computer"></a>Настройка на компьютере с Windows
 
-1. Установите последнюю версию [PowerShell Core для Windows](../../install/installing-powershell-core-on-windows.md#msi).
+1. Установите последнюю версию PowerShell, см. раздел [Установка PowerShell Core в Windows](../../install/installing-powershell-core-on-windows.md#msi).
 
-   - Чтобы узнать о наличии поддержки удаленного взаимодействия SSH, просмотрите набор параметров для `New-PSSession`.
+   Чтобы убедиться, что в PowerShell есть поддержка удаленного взаимодействия SSH, перечислите наборы параметров `New-PSSession`. Обратите внимание на наличие имен наборов параметров, начинающихся с **SSH**. К этим наборам параметров относятся параметры **SSH**.
 
    ```powershell
-   Get-Command New-PSSession -syntax
+   (Get-Command New-PSSession).ParameterSets.Name
    ```
 
-   ```output
-   New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
+   ```Output
+   Name
+   ----
+   SSHHost
+   SSHHostHashParam
    ```
 
-2. Установите последнюю версию Win32 OpenSSH. Инструкции по установке см. в статье [Установка OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).
-3. Измените файл `sshd_config`, расположенный в `$env:ProgramData\ssh`.
+1. Установите последнюю версию Win32 OpenSSH. Инструкции по установке см. в разделе [Начало работы с OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).
 
-   - Включите проверку подлинности с помощью пароля:
+   > [!NOTE]
+   > Если вы хотите задать PowerShell в качестве оболочки по умолчанию для OpenSSH, см. раздел [Настройка Windows для OpenSSH](/windows-server/administration/openssh/openssh_server_configuration).
 
-     ```
-     PasswordAuthentication yes
-     ```
+1. Измените файл `sshd_config`, расположенный в `$env:ProgramData\ssh`.
 
-     ```
-     Subsystem    powershell c:/program files/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
-     ```
+   Включите проверку подлинности с помощью пароля:
 
-     > [!NOTE]
-     > В OpenSSH для Windows обнаружена ошибка, блокирующая работу пробелов в путях к исполняемым файлам подсистемы. См. дополнительные сведения на [сайте GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
+   ```
+   PasswordAuthentication yes
+   ```
 
-     Одно из решений — создать символьную ссылку на папку установки PowerShell, которая не содержит пробелы:
+   Создайте подсистему SSH, в которой размещается процесс PowerShell на удаленном компьютере:
 
-     ```powershell
-     mklink /D c:\pwsh "C:\Program Files\PowerShell\6"
-     ```
+   ```
+   Subsystem powershell c:/program files/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
+   ```
 
-     а затем ввести ее в подсистеме:
+   > [!NOTE]
+   > В OpenSSH для Windows обнаружена ошибка, блокирующая работу пробелов в путях к исполняемым файлам подсистемы. См. дополнительные сведения на [сайте GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
 
-     ```
-     Subsystem    powershell c:\pwsh\pwsh.exe -sshs -NoLogo -NoProfile
-     ```
+   Одно из решений — создать символьную ссылку на папку установки PowerShell, которая не содержит пробелы:
 
-   - При необходимости включите проверку подлинности на основе ключа:
+   ```powershell
+   New-Item -ItemType SymbolicLink -Path "C:\pwshdir" -Value "C:\Program Files\PowerShell\6"
+   ```
 
-     ```
-     PubkeyAuthentication yes
-     ```
+   Используйте символьную ссылку для исполняемого файла PowerShell в подсистеме:
 
-4. Перезапустите службу sshd.
+   ```
+   Subsystem powershell C:\pwshdir\pwsh.exe -sshs -NoLogo -NoProfile
+   ```
+
+   При необходимости включите проверку подлинности на основе ключа:
+
+   ```
+   PubkeyAuthentication yes
+   ```
+
+   Дополнительные сведения см. в статье [Управление ключами OpenSSH](/windows-server/administration/openssh/openssh_keymanagement).
+
+1. Перезапустите службу **sshd**.
 
    ```powershell
    Restart-Service sshd
    ```
 
-5. Добавьте путь установки OpenSSH в свою переменную среды Path. Например, `C:\Program Files\OpenSSH\`. Это позволит найти файл ssh.exe.
+1. Добавьте путь установки OpenSSH в свою переменную среды Path. Например, `C:\Program Files\OpenSSH\`. Это позволит найти файл `ssh.exe`.
 
-## <a name="set-up-on-linux-ubuntu-1604-machine"></a>Установка на компьютере с Linux (Ubuntu 16.04)
+## <a name="set-up-on-an-ubuntu-1604-linux-computer"></a>Настройка на компьютере с Ubuntu 16.04 Linux
 
-1. Установите последнюю сборку [PowerShell Core для Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604) из GitHub.
-2. При необходимости установите [Ubuntu SSH](https://help.ubuntu.com/lts/serverguide/openssh-server.html).
+1. Установите последнюю версию PowerShell, см. раздел [Установка PowerShell Core в Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604).
+1. Установите [сервер OpenSSH для Ubuntu](https://help.ubuntu.com/lts/serverguide/openssh-server.html).
 
    ```bash
    sudo apt install openssh-client
    sudo apt install openssh-server
    ```
 
-3. Измените файл sshd_config в расположении /etc/ssh.
+1. Измените файл `sshd_config` в расположении `/etc/ssh`.
 
-   - Включите проверку подлинности с помощью пароля:
+   Включите проверку подлинности с помощью пароля:
 
    ```
    PasswordAuthentication yes
    ```
 
-   - Добавьте запись подсистемы PowerShell:
+   Добавьте запись подсистемы PowerShell:
 
    ```
    Subsystem powershell /usr/bin/pwsh -sshs -NoLogo -NoProfile
    ```
 
-   - При необходимости включите проверку подлинности на основе ключа:
+   При необходимости включите проверку подлинности на основе ключа:
 
    ```
    PubkeyAuthentication yes
    ```
 
-4. Перезапустите службу sshd.
+1. Перезапустите службу **sshd**.
 
    ```bash
    sudo service sshd restart
    ```
 
-## <a name="set-up-on-macos-machine"></a>Установка на компьютере MacOS
+## <a name="set-up-on-a-macos-computer"></a>Настройка на компьютере с macOS
 
-1. Установите последнюю сборку [PowerShell Core для MacOS](../../install/installing-powershell-core-on-macos.md).
+1. Установите последнюю версию PowerShell, см. раздел [Установка PowerShell Core в macOS](../../install/installing-powershell-core-on-macos.md).
 
-   - Убедитесь, что удаленное взаимодействие SSH включено, выполните следующие действия:
-     - Откройте `System Preferences`.
-     - Щелкните `Sharing`.
-     - Убедитесь, что `Remote Login` имеет значение `Remote Login: On`.
-     - Разрешите доступ соответствующим пользователям.
+   Убедитесь, что удаленное взаимодействие SSH включено, выполните следующие действия:
 
-2. Измените файл `sshd_config` в расположении `/private/etc/ssh/sshd_config`.
+   1. Откройте `System Preferences`.
+   1. Щелкните `Sharing`.
+   1. Установите флажок `Remote Login`, чтобы задать `Remote Login: On`.
+   1. Разрешите доступ соответствующим пользователям.
 
-   - Используйте привычный вам редактор или следующую команду:
+1. Измените файл `sshd_config` в расположении `/private/etc/ssh/sshd_config`.
 
-     ```bash
-     sudo nano /private/etc/ssh/sshd_config
-     ```
+   Используйте текстовый редактор, например **nano**:
 
-   - Включите проверку подлинности с помощью пароля:
+   ```bash
+   sudo nano /private/etc/ssh/sshd_config
+   ```
 
-     ```
-     PasswordAuthentication yes
-     ```
+   Включите проверку подлинности с помощью пароля:
 
-   - Добавьте запись подсистемы PowerShell:
+   ```
+   PasswordAuthentication yes
+   ```
 
-     ```
-     Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
-     ```
+   Добавьте запись подсистемы PowerShell:
 
-   - При необходимости включите проверку подлинности на основе ключа:
+   ```
+   Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
+   ```
 
-     ```
-     PubkeyAuthentication yes
-     ```
+   При необходимости включите проверку подлинности на основе ключа:
 
-3. Перезапустите службу sshd.
+   ```
+   PubkeyAuthentication yes
+   ```
+
+1. Перезапустите службу **sshd**.
 
    ```bash
    sudo launchctl stop com.openssh.sshd
@@ -181,7 +193,7 @@ ms.locfileid: "68372140"
 $session = New-PSSession -HostName UbuntuVM1 -UserName TestUser
 ```
 
-```output
+```Output
 The authenticity of host 'UbuntuVM1 (9.129.17.107)' cannot be established.
 ECDSA key fingerprint is SHA256:2kCbnhT2dUE6WCGgVJ8Hyfu1z2wE4lifaJXLO7QJy0Y.
 Are you sure you want to continue connecting (yes/no)?
@@ -192,7 +204,7 @@ TestUser@UbuntuVM1s password:
 $session
 ```
 
-```output
+```Output
  Id Name   ComputerName    ComputerType    State    ConfigurationName     Availability
  -- ----   ------------    ------------    -----    -----------------     ------------
   1 SSH1   UbuntuVM1       RemoteMachine   Opened   DefaultShell             Available
@@ -202,7 +214,7 @@ $session
 Enter-PSSession $session
 ```
 
-```output
+```Output
 [UbuntuVM1]: PS /home/TestUser> uname -a
 Linux TestUser-UbuntuVM1 4.2.0-42-generic 49~16.04.1-Ubuntu SMP Wed Jun 29 20:22:11 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 
@@ -213,7 +225,7 @@ Linux TestUser-UbuntuVM1 4.2.0-42-generic 49~16.04.1-Ubuntu SMP Wed Jun 29 20:22
 Invoke-Command $session -ScriptBlock { Get-Process powershell }
 ```
 
-```output
+```Output
 Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName                    PSComputerName
 -------  ------    -----      -----     ------     --  -- -----------                    --------------
       0       0        0         19       3.23  10635 635 powershell                     UbuntuVM1
@@ -228,7 +240,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName           
 Enter-PSSession -HostName WinVM1 -UserName PTestName
 ```
 
-```output
+```Output
 PTestName@WinVM1s password:
 ```
 
@@ -236,7 +248,7 @@ PTestName@WinVM1s password:
 [WinVM1]: PS C:\Users\PTestName\Documents> cmd /c ver
 ```
 
-```output
+```Output
 Microsoft Windows [Version 10.0.10586]
 ```
 
@@ -247,7 +259,7 @@ Microsoft Windows [Version 10.0.10586]
 C:\Users\PSUser\Documents>pwsh.exe
 ```
 
-```output
+```Output
 PowerShell
 Copyright (c) Microsoft Corporation. All rights reserved.
 ```
@@ -256,7 +268,7 @@ Copyright (c) Microsoft Corporation. All rights reserved.
 $session = New-PSSession -HostName WinVM2 -UserName PSRemoteUser
 ```
 
-```output
+```Output
 The authenticity of host 'WinVM2 (10.13.37.3)' can't be established.
 ECDSA key fingerprint is SHA256:kSU6slAROyQVMEynVIXAdxSiZpwDBigpAF/TXjjWjmw.
 Are you sure you want to continue connecting (yes/no)?
@@ -268,7 +280,7 @@ PSRemoteUser@WinVM2's password:
 $session
 ```
 
-```output
+```Output
  Id Name            ComputerName    ComputerType    State         ConfigurationName     Availability
  -- ----            ------------    ------------    -----         -----------------     ------------
   1 SSH1            WinVM2          RemoteMachine   Opened        DefaultShell             Available
@@ -278,7 +290,7 @@ $session
 Enter-PSSession -Session $session
 ```
 
-```output
+```Output
 [WinVM2]: PS C:\Users\PSRemoteUser\Documents> $PSVersionTable
 
 Name                           Value
@@ -299,16 +311,18 @@ GitCommitId                    v6.0.0-alpha.17
 
 ### <a name="known-issues"></a>Известные проблемы
 
-Команда sudo не работает в рамках сеанса удаленного взаимодействия с компьютером Linux.
+Команда **sudo** не работает в рамках сеанса удаленного взаимодействия с компьютером Linux.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[PowerShell Core для Windows](../../install/installing-powershell-core-on-windows.md#msi)
+[Установка PowerShell Core в Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604)
 
-[PowerShell Core для Windows](../../install/installing-powershell-core-on-linux.md#ubuntu-1604)
+[Установка PowerShell Core в macOS](../../install/installing-powershell-core-on-macos.md)
 
-[PowerShell Core для MacOS](../../install/installing-powershell-core-on-macos.md)
+[Установка PowerShell Core в Windows](../../install/installing-powershell-core-on-windows.md#msi)
 
-[OpenSSH для Windows](/windows-server/administration/openssh/openssh_overview)
+[Управление Windows с помощью OpenSSH](/windows-server/administration/openssh/openssh_overview)
+
+[Управление ключами OpenSSH](/windows-server/administration/openssh/openssh_keymanagement)
 
 [Ubuntu SSH](https://help.ubuntu.com/lts/serverguide/openssh-server.html)

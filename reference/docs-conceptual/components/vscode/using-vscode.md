@@ -2,22 +2,20 @@
 title: Использование Visual Studio Code для разработки в PowerShell
 description: Использование Visual Studio Code для разработки в PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 6a0da6e060693dc7cfc08d40fd658414dc23d660
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 0e082b74f99d214749f10224fb5aaf41e2ef8951
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733875"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325231"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Использование Visual Studio Code для разработки в PowerShell
 
-В дополнение к [интегрированной среде сценариев PowerShell][ise] продукт PowerShell также хорошо поддерживается в Visual Studio Code.
-Кроме того, интегрированная среда сценариев не поддерживается в PowerShell Core, хотя Visual Studio Code поддерживается для PowerShell Core на всех платформах (Windows, macOS и Linux)
+В дополнение к [интегрированной среде сценариев PowerShell][ise] продукт PowerShell также хорошо поддерживается в Visual Studio Code (VSCode). Кроме того, интегрированная среда сценариев не поддерживается в PowerShell Core, хотя VSCode поддерживается для PowerShell Core на всех платформах (Windows, macOS и Linux).
 
-Вы можете использовать Visual Studio Code для Windows вместе с PowerShell версии 5 в Windows 10 или установить [Windows Management Framework 5.0 RTM](https://devblogs.microsoft.com/powershell/windows-management-framework-wmf-5-0-rtm-is-now-available-via-the-microsoft-update-catalog/) для более низких версий Windows (например, Windows 8.1 и т. д.).
+Вы можете использовать VSCode для Windows вместе с PowerShell версии 5 в Windows 10 или установить [Windows Management Framework 5.0 RTM](https://devblogs.microsoft.com/powershell/windows-management-framework-wmf-5-0-rtm-is-now-available-via-the-microsoft-update-catalog/) для более низких версий Windows (например, Windows 8.1 и т. д.).
 
-Перед запуском убедитесь, что PowerShell установлен в системе.
-Сведения о современных рабочих нагрузках для Windows, macOS и Linux см. в следующих разделах:
+Перед запуском убедитесь, что PowerShell установлен в системе. Сведения о современных рабочих нагрузках для Windows, macOS и Linux см. в следующих разделах:
 
 - [Установка PowerShell Core в Linux][install-pscore-linux]
 - [Установка PowerShell Core в macOS][install-pscore-macos]
@@ -25,49 +23,40 @@ ms.locfileid: "67733875"
 
 Сведения о традиционных рабочих нагрузках Windows PowerShell см. в разделе [Установка Windows PowerShell][install-winps].
 
-## <a name="editing-with-visual-studio-code"></a>Редактирование с помощью Visual Studio Code
+## <a name="editing-with-vscode"></a>Редактирование с помощью VSCode
 
-### <a name="1-installing-visual-studio-codehttpscodevisualstudiocomdocssetupsetup-overview"></a>[1. Установка Visual Studio Code](https://code.visualstudio.com/Docs/setup/setup-overview)
+1. [Установка VSCode](https://code.visualstudio.com/Docs/setup/setup-overview)
 
-- **Linux**: следуйте инструкциям по установке на странице [Запуск VS Code в Linux](https://code.visualstudio.com/docs/setup/linux).
+   - **Linux**: следуйте инструкциям по установке на странице [Запуск VSCode в Linux](https://code.visualstudio.com/docs/setup/linux).
+   - **macOS**: следуйте инструкциям по установке на странице [Запуск VSCode в macOS](https://code.visualstudio.com/docs/setup/mac).
 
-- **macOS**: следуйте инструкциям по установке на странице [Запуск VS Code в macOS](https://code.visualstudio.com/docs/setup/mac).
+     > [!IMPORTANT]
+     > В macOS нужно установить OpenSSL для правильной работы расширения PowerShell. Для этого проще всего установить [Homebrew](https://brew.sh/), а затем запустить `brew install openssl`. Теперь VSCode сможет загрузить расширение PowerShell правильно.
 
-  > [!IMPORTANT]
-  > В macOS нужно установить OpenSSL для правильной работы расширения PowerShell.
-  > Для этого проще всего установить [Homebrew](https://brew.sh/), а затем запустить `brew install openssl`.
-  > Теперь VS Code сможет загрузить расширение PowerShell правильно.
+   - **Windows**: следуйте инструкциям по установке на странице [Запуск VSCode в Windows](https://code.visualstudio.com/docs/setup/windows).
 
-- **Windows**: следуйте инструкциям по установке на странице [Запуск VS Code в Windows](https://code.visualstudio.com/docs/setup/windows).
+2. Установка расширения PowerShell
 
-### <a name="2-installing-powershell-extension"></a>2. Установка расширения PowerShell
+   - Запустите приложение VSCode, выполнив следующие действия.
+     - **Windows**: введите `code` в сеансе PowerShell.
+     - **Linux**: введите `code` в терминале.
+     - **macOS**: введите `code` в терминале.
+   - Запустите **Quick Open**, нажав клавиши <kbd>CTRL</kbd>+<kbd>P</kbd> (<kbd>CMD</kbd>+<kbd>P</kbd> на Mac).
+   - В Quick Open введите `ext install powershell` и нажмите клавишу **ВВОД**.
+   - На боковой панели открывается представление **Расширения**. Выберите расширение PowerShell корпорации Майкрософт.
+     Отображается примерно следующее:
 
-- Запустите Visual Studio Code следующим образом:
-  - **Windows**: введите `code` в сеансе PowerShell.
-  - **Linux**: введите `code` в терминале.
-  - **macOS**: введите `code` в терминале.
+     ![VSCode](../../images/using-vscode/vscode.png)
 
-- Запустите **Quick Open**, нажав клавиши **CTRL+P** (**CMD+P** на Mac).
-- В Quick Open введите `ext install powershell` и нажмите клавишу **ВВОД**.
-- На боковой панели открывается представление **Расширения**. Выберите расширение PowerShell корпорации Майкрософт.
-  Отображается примерно следующее:
+   - Нажмите кнопку **Установить** для расширения PowerShell корпорации Майкрософт.
+   - После установки кнопка **Установить** изменяется на **Перезагрузить**. Нажмите кнопку **Перезагрузить**.
+   - После перезагрузки VSCode можно приступать к редактированию.
 
-  ![VSCode](../../images/vscode.png)
-
-- Нажмите кнопку **Установить** для расширения PowerShell корпорации Майкрософт.
-- После установки кнопка **Установить** изменяется на **Перезагрузить**.
-  Нажмите кнопку **Перезагрузить**.
-- После перезагрузки Visual Studio Code можно приступать к редактированию.
-
-Например, чтобы создать файл, выберите **Файл -> Создать**.
-Чтобы сохранить его, выберите **Файл -> Сохранить** и укажите имя файла, например `HelloWorld.ps1`.
-Чтобы закрыть файл, щелкните "x" рядом с его именем.
-Чтобы завершить работу Visual Studio Code, выберите **Файл -> Выйти**.
+Например, чтобы создать файл, выберите **Файл -> Создать**. Чтобы сохранить его, выберите **Файл -> Сохранить** и укажите имя файла, например `HelloWorld.ps1`. Чтобы закрыть файл, щелкните "x" рядом с его именем. Чтобы выйти из VSCode, выберите **Файл-> Выход**.
 
 ### <a name="installing-the-powershell-extension-on-restricted-systems"></a>Установка расширения PowerShell в системах с ограниченным доступом
 
-Некоторые системы настроены таким образом, что требуется проверка всех подписей кода, и, следовательно, одобрение службы редактора PowerShell вручную для запуска в системе.
-Обновление групповой политики, которое изменяет политику выполнения, является вероятной причиной того, что после установки расширения PowerShell вы сталкиваетесь со следующей ошибкой.
+Некоторые системы настроены таким образом, что требуется проверка всех подписей кода, и, следовательно, одобрение службы редактора PowerShell вручную для запуска в системе. Обновление групповой политики, которое изменяет политику выполнения, является вероятной причиной того, что после установки расширения PowerShell вы сталкиваетесь со следующей ошибкой.
 
 ```
 Language server startup failed.
@@ -79,8 +68,7 @@ Language server startup failed.
 Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellEditorServices\PowerShellEditorServices.psd1
 ```
 
-Вы увидите подсказку "Не удается проверить издателя. Вы действительно хотите запустить эту программу?"
-Введите `R` для запуска файла. Затем откройте Visual Studio Code и убедитесь, что расширение PowerShell работает правильно. Если у вас все еще есть проблемы с началом работы, сообщите нам об этом на [GitHub](https://github.com/PowerShell/vscode-powershell/issues).
+Вы увидите подсказку "Не удается проверить издателя. Вы действительно хотите запустить эту программу?" Введите `R` для запуска файла. Затем откройте VSCode и убедитесь, что расширение PowerShell работает правильно. Если у вас все еще есть проблемы с началом работы, сообщите нам об этом на [GitHub](https://github.com/PowerShell/vscode-powershell/issues).
 
 #### <a name="choosing-a-version-of-powershell-to-use-with-the-extension"></a>Выбор версии PowerShell для использования с расширением
 
@@ -91,7 +79,7 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 1. Щелкните PowerShell: Show Session Menu (PowerShell: показать меню сеансов).
 1. Выберите версию PowerShell, которую хотите использовать, в списке, например PowerShell Core.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Этот компонент проверяет несколько известных расположений в разных операционных системах, чтобы найти расположения установки PowerShell. Если вы установили PowerShell в нетипичном расположении, оно может первоначально не отобразиться в меню сеансов. Вы можете расширить меню сеансов, [добавив собственные пользовательские пути](#adding-your-own-powershell-paths-to-the-session-menu), как описано ниже.
 
 >[!NOTE]
@@ -99,7 +87,7 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 
 ##### <a name="adding-your-own-powershell-paths-to-the-session-menu"></a>Добавление собственных путей PowerShell в меню сеансов
 
-В меню сеансов можно добавить другие пути к исполнимому файлу PowerShell с помощью VS Code.
+В меню сеансов можно добавить другие пути к исполнимому файлу PowerShell с помощью VSCode.
 
 Добавьте элемент в список `powershell.powerShellAdditionalExePaths` или создайте список, если его нет в `settings.json`:
 
@@ -113,7 +101,7 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
             "versionName": "Downloaded PowerShell"
         }
     ],
-    
+
     // other settings...
 }
 ```
@@ -135,25 +123,25 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
             "versionName": "Downloaded PowerShell"
         }
     ],
-    
+
     "powershell.powerShellDefaultVersion": "Downloaded PowerShell",
-    
+
     // other settings...
 }
 ```
 
-Задав этот параметр, перезапустите Visual Studio Code или используйте действие палитры команд Developer: Reload Window (Разработчик: перезагрузить окно) для перезагрузки текущего окна VS Code.
+Задав этот параметр, перезапустите VSCode или используйте действие палитры команд "Developer: Reload Window" (Разработчик: перезагрузить окно) для перезагрузки текущего окна VSCode.
 
 Открыв меню сеансов, вы увидите дополнительные версии PowerShell.
 
 > [!NOTE]
 > Если вы создаете PowerShell из исходного кода, это отличный способ протестировать локальную сборку PowerShell.
 
-#### <a name="configuration-settings-for-visual-studio-code"></a>Параметры конфигурации для Visual Studio Code
+#### <a name="configuration-settings-for-vscode"></a>Параметры конфигурации VSCode
 
 Следуя инструкциям в предыдущем абзаце, вы можете добавить параметры конфигурации в `settings.json`.
 
-Мы рекомендуем использовать следующие параметры конфигурации для Visual Studio Code:
+Мы рекомендуем использовать следующие параметры конфигурации для VSCode:
 
 ```json
 {
@@ -176,22 +164,19 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 }
 ```
 
-Дополнительные сведения о кодировке файлов в VS Code см. в [этой статье](understanding-file-encoding.md).
+Дополнительные сведения о кодировании файлов в VSCode см. в [этой статье](understanding-file-encoding.md).
 
-## <a name="debugging-with-visual-studio-code"></a>Отладка с помощью Visual Studio Code
+## <a name="debugging-with-vscode"></a>Отладка с помощью VSCode
 
 ### <a name="no-workspace-debugging"></a>Отладка без рабочей области
 
-Начиная с Visual Studio Code версии 1.9, вы можете отлаживать сценарии PowerShell, не открывая папку со сценарием PowerShell. Откройте файл сценария PowerShell с помощью команды **Файл -> Открыть файл...** , установите точку останова на строке (нажав клавишу F9) и нажмите клавишу F5 для запуска отладки. Отображается панель действий отладки, позволяющая прервать работу отладчика, возобновить отладку, выполнить ее пошагово или остановить.
+Начиная с VSCode версии 1.9, вы можете отлаживать сценарии PowerShell, не открывая папку со сценарием PowerShell. Откройте файл сценария PowerShell с помощью команды **Файл -> Открыть файл...** , установите точку останова на строке (нажав клавишу <kbd>F9</kbd>) и нажмите клавишу <kbd>F5</kbd> для запуска отладки. Отображается панель действий отладки, позволяющая прервать работу отладчика, возобновить отладку, выполнить ее пошагово или остановить.
 
 ### <a name="workspace-debugging"></a>Отладка с рабочей областью
 
-Отладка с рабочей областью обозначает отладку в контексте папки, которую вы открыли в Visual Studio Code с помощью команды **Открыть папку...** из меню **Файл**.
-Обычно открытая папка является папкой проекта PowerShell и (или) корнем репозитория Git.
+Отладка с рабочей областью обозначает отладку в контексте папки, которую вы открыли в Visual Studio Code с помощью команды **Открыть папку...** из меню **Файл**. Обычно открытая папка является папкой проекта PowerShell и (или) корнем репозитория Git.
 
-Даже в этом режиме вы можете начать отладку выбранного сценария PowerShell, просто нажав клавишу F5.
-Однако отладка с рабочей областью позволяет задать несколько конфигураций отладки, отличных от простой отладки открытого файла.
-Например, можно добавить конфигурации следующего характера:
+Даже в этом режиме вы можете начать отладку выбранного сценария PowerShell, просто нажав клавишу <kbd>F5</kbd>. Однако отладка с рабочей областью позволяет задать несколько конфигураций отладки, отличных от простой отладки открытого файла. Например, можно добавить конфигурации следующего характера:
 
 - Запуск тестов Pester в отладчике
 - Запуск определенного файла с аргументами в отладчике
@@ -200,13 +185,11 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 
 Выполните следующие действия, чтобы создать файл конфигурации отладки:
 
-  1. Откройте представление **Отладка**, нажав клавиши **CTRL+SHIFT+D** (**CMD+SHIFT+D** на Mac).
+  1. Откройте представление **Отладка**, нажав клавиши <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd> (<kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd> на Mac).
   2. Щелкните значок с шестеренкой **Настройка** на панели инструментов.
-  3. Visual Studio Code предлагает вам **выбрать среду**. Выберите **PowerShell**.
+  3. VSCode предлагает вам **выбрать среду**. Выберите **PowerShell**.
 
-  При этом Visual Studio Code создает каталог и файл ".vscode\launch.json" в корневой папке рабочей области.
-  Именно там хранится ваша конфигурация отладки. Если ваши файлы хранятся в репозитории Git, скорее всего, вы захотите зафиксировать файл launch.json.
-  Файла launch.json содержит следующее:
+  При этом VSCode создает каталог и файл ".vscode\launch.json" в корневой папке рабочей области. Именно там хранится ваша конфигурация отладки. Если ваши файлы хранятся в репозитории Git, скорее всего, вы захотите зафиксировать файл launch.json. Файла launch.json содержит следующее:
 
   ```json
   {
@@ -237,10 +220,7 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
   }
   ```
 
-  Это представляет типичные сценарии отладки.
-  Однако при открытии этого файла в редакторе отображается кнопка **Добавить конфигурацию...** .
-  Можете нажать ее, чтобы добавить дополнительные конфигурации отладки PowerShell. Одной из полезных конфигураций является **PowerShell: Launch Script** (Запустить сценарий).
-  С помощью этой конфигурации можно указать определенный файл с дополнительными аргументами, которые нужно запускать при каждом нажатии клавиши F5 независимо от того, какой именно файл активен в редакторе.
+  Это представляет типичные сценарии отладки. Однако при открытии этого файла в редакторе отображается кнопка **Добавить конфигурацию...** . Можете нажать ее, чтобы добавить дополнительные конфигурации отладки PowerShell. Одной из полезных конфигураций является **PowerShell: Launch Script** (Запустить сценарий). С помощью этой конфигурации можно указать определенный файл с дополнительными аргументами, которые нужно запускать при каждом нажатии клавиши <kbd>F5</kbd>, независимо от того, какой именно файл активен в редакторе.
 
   После задания конфигурации отладки можно указать конфигурацию, используемую во время сеанса отладки, выбрав ее в раскрывающемся списке конфигураций отладки на панели инструментов представления **Отладка**.
 
@@ -271,6 +251,6 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 [debugging-part1]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/06/debugging-powershell-script-in-visual-studio-code-part-1/
 [debugging-part2]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/13/debugging-powershell-script-in-visual-studio-code-part-2/
 
-## <a name="powershell-extension-for-visual-studio-code"></a>Расширение PowerShell для Visual Studio Code
+## <a name="powershell-extension-for-vscode"></a>Расширение PowerShell для VSCode
 
 Исходный код расширения PowerShell доступен на [GitHub](https://github.com/PowerShell/vscode-powershell).

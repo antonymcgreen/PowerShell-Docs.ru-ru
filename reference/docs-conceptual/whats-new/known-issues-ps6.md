@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Известные проблемы в PowerShell 6.0
-ms.openlocfilehash: 502143b660204edada6a9e62bdf6b260a384a078
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: e84dd2f7deefcc64aea09585e7ce24dc1e8515fc
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733827"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692223"
 ---
 # <a name="known-issues-for-powershell-60"></a>Известные проблемы в PowerShell 6.0
 
@@ -53,7 +53,7 @@ ms.locfileid: "67733827"
 
 ### <a name="net-framework-vs-net-core-framework"></a>Платформы .NET Framework и .NET Core Framework
 
-PowerShell в Linux и macOS использует .NET Core, которая является частью полной платформы .NET Framework в Microsoft Windows. Это важно, так как PowerShell предоставляет прямой доступ к базовым типам, методам платформы и т. д. В результате скрипты, которые запускаются в Windows, могут не работать в других системах из-за различий в платформах. Дополнительные сведения о .NET Core Framework см. на странице <https://dotnetfoundation.org/net-core>
+PowerShell в Linux и macOS использует .NET Core, которая является частью полной платформы .NET Framework в Microsoft Windows. Это важно, так как PowerShell предоставляет прямой доступ к базовым типам, методам платформы и т. д. В результате скрипты, которые запускаются в Windows, могут не работать в других системах из-за различий в платформах. Дополнительные сведения о .NET Core Framework см. на странице [dotnetfoundation.org](https://dotnetfoundation.org/).
 
 С выходом [.NET Standard2.0](https://devblogs.microsoft.com/dotnet/introducing-net-standard/) .NET Core 2.0 вернет многие традиционные типы и методы, представленные в полной версии .NET Framework. Это означает, что PowerShell Core сможет загружать многие традиционные модули Windows PowerShell без изменений. Вы можете следить за нашей работой, связанной с .NET Standard 2.0, [здесь](https://github.com/PowerShell/PowerShell/projects/4).
 
