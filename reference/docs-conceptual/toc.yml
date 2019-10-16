@@ -716,3 +716,1119 @@
           href: samples/appendix-1---compatibility-aliases.md
         - name: "Приложение\_2. Создание настраиваемого ярлыка PowerShell"
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
+- name: Пакет SDK для PowerShell
+  items:
+    - name: Обзор
+      href: developer/windows-powershell.md
+    - name: Установка пакета SDK для Windows PowerShell
+      href: developer/installing-the-windows-powershell-sdk.md
+    - name: Написание модуля Windows PowerShell
+      href: developer/module/writing-a-windows-powershell-module.md
+      items:
+        - name: "Общие сведения о модулях Windows\_PowerShell"
+          href: developer/module/understanding-a-windows-powershell-module.md
+        - name: Как написать модуль сценария PowerShell
+          href: developer/module/how-to-write-a-powershell-script-module.md
+        - name: Как написать бинарный модуль PowerShell
+          href: developer/module/how-to-write-a-powershell-binary-module.md
+        - name: Как написать манифест модуля PowerShell
+          href: developer/module/how-to-write-a-powershell-module-manifest.md
+        - name: Установка модуля PowerShell
+          href: developer/module/installing-a-powershell-module.md
+        - name: Изменение пути установки PSModulePath
+          href: developer/module/modifying-the-psmodulepath-installation-path.md
+        - name: Импорт модуля PowerShell
+          href: developer/module/importing-a-powershell-module.md
+        - name: "Написание справки для модулей Windows\_PowerShell"
+          href: developer/module/writing-help-for-windows-powershell-modules.md
+          items:
+            - name: Указание имен для файлов справки
+              href: developer/module/naming-help-files.md
+            - name: Поддержка обновляемой справки
+              href: developer/module/supporting-updatable-help.md
+              items:
+                - name: Общие сведения об обновляемой справке
+                  href: developer/module/updatable-help-overview.md
+                - name: 'Создание обновляемой справки: пошаговые инструкции'
+                  href: developer/module/updatable-help-authoring-step-by-step.md
+                - name: Как работает обновляемая справка
+                  href: developer/module/how-updatable-help-works.md
+                - name: Как создать XML-файл HelpInfo
+                  href: developer/module/how-to-create-a-helpinfo-xml-file.md
+                  items:
+                    - name: Схема XML-файла HelpInfo
+                      href: developer/module/helpinfo-xml-schema.md
+                    - name: Пример XML-файла HelpInfo
+                      href: developer/module/helpinfo-xml-sample-file.md
+                    - name: Как назвать XML-файл HelpInfo
+                      href: developer/module/how-to-name-a-helpinfo-xml-file.md
+                    - name: Как задать номера версий XML-файла HelpInfo
+                      href: developer/module/how-to-set-helpinfo-xml-version-numbers.md
+                - name: Как подготовить CAB-файлы обновляемой справки
+                  href: developer/module/how-to-prepare-updatable-help-cab-files.md
+                  items:
+                    - name: Как создавать и отправлять CAB-файлы
+                      href: developer/module/how-to-create-and-upload-cab-files.md
+                    - name: Как назвать CAB-файл обновляемой справки
+                      href: developer/module/how-to-name-an-updatable-help-cab-file.md
+                    - name: 'Типы файлов, которые могут использоваться в CAB-файле обновляемой справки'
+                      href: developer/module/file-types-permitted-in-an-updatable-help-cab-file.md
+                - name: Как обновить файлы справки
+                  href: developer/module/how-to-update-help-files.md
+                - name: Как проверить обновляемую справку
+                  href: developer/module/how-to-test-updatable-help.md
+            - name: Поддержка справки в Интернете
+              href: developer/module/supporting-online-help.md
+    - name: Запись командлета Windows PowerShell
+      href: developer/cmdlet/writing-a-windows-powershell-cmdlet.md
+      items:
+        - name: Общие сведения о командлетах
+          href: developer/cmdlet/cmdlet-overview.md
+        - name: "Основные понятия, связанные с командлетами Windows\_PowerShell"
+          href: developer/cmdlet/windows-powershell-cmdlet-concepts.md
+          items:
+            - name: Рекомендации по разработке командлетов
+              href: developer/cmdlet/cmdlet-development-guidelines.md
+              items:
+                - name: Обязательные требования к разработке
+                  href: developer/cmdlet/required-development-guidelines.md
+                - name: Настоятельные рекомендации по разработке
+                  href: developer/cmdlet/strongly-encouraged-development-guidelines.md
+                - name: Советы по разработке
+                  href: developer/cmdlet/advisory-development-guidelines.md
+            - name: Объявление класса командлета
+              href: developer/cmdlet/cmdlet-class-declaration.md
+            - name: "Утвержденные глаголы для команд Windows\_PowerShell"
+              href: developer/cmdlet/approved-verbs-for-windows-powershell-commands.md
+            - name: Методы обработки входных данных командлета
+              href: developer/cmdlet/cmdlet-input-processing-methods.md
+            - name: Параметры командлета
+              href: developer/cmdlet/cmdlet-parameters.md
+              items:
+                - name: Объявление свойств в качестве параметров
+                  href: developer/cmdlet/declaring-properties-as-parameters.md
+                - name: Типы параметров командлета
+                  href: developer/cmdlet/types-of-cmdlet-parameters.md
+                - name: Стандартные имена и типы параметров командлета
+                  href: developer/cmdlet/standard-cmdlet-parameter-names-and-types.md
+                  items:
+                    - name: Параметры действий
+                      href: developer/cmdlet/activity-parameters.md
+                    - name: Параметры даты и времени
+                      href: developer/cmdlet/date-and-time-parameters.md
+                    - name: Параметры форматирования
+                      href: developer/cmdlet/format-parameters.md
+                    - name: Параметры свойств
+                      href: developer/cmdlet/property-parameters.md
+                    - name: Параметры количества
+                      href: developer/cmdlet/quantity-parameters.md
+                    - name: Параметры ресурсов
+                      href: developer/cmdlet/resource-parameters.md
+                    - name: Параметры безопасности
+                      href: developer/cmdlet/security-parameters.md
+                - name: Псевдонимы параметров
+                  href: developer/cmdlet/parameter-aliases.md
+                - name: Общие имена параметров
+                  href: developer/cmdlet/common-parameter-names.md
+                - name: Наборы параметров командлета
+                  href: developer/cmdlet/cmdlet-parameter-sets.md
+                - name: Динамические параметры командлетов
+                  href: developer/cmdlet/cmdlet-dynamic-parameters.md
+                - name: Поддержка подстановочных знаков в параметрах командлета
+                  href: developer/cmdlet/supporting-wildcard-characters-in-cmdlet-parameters.md
+                - name: Проверка входных данных параметра
+                  href: developer/cmdlet/validating-parameter-input.md
+                - name: Параметры фильтра ввода
+                  href: developer/cmdlet/input-filter-parameters.md
+            - name: Атрибуты командлета
+              href: developer/cmdlet/cmdlet-attributes.md
+              items:
+                - name: Атрибуты в коде командлета
+                  href: developer/cmdlet/attributes-in-cmdlet-code.md
+                - name: Типы атрибутов
+                  href: developer/cmdlet/attribute-types.md
+                - name: Объявление атрибута псевдонима
+                  href: developer/cmdlet/alias-attribute-declaration.md
+                - name: Объявление атрибута командлета
+                  href: developer/cmdlet/cmdlet-attribute-declaration.md
+                - name: Объявление атрибута учетных данных
+                  href: developer/cmdlet/credential-attribute-declaration.md
+                - name: Объявление атрибута для типа выходных данных
+                  href: developer/cmdlet/outputtype-attribute-declaration.md
+                - name: Объявление атрибута параметра
+                  href: developer/cmdlet/parameter-attribute-declaration.md
+                - name: Объявление атрибута ValidateCount
+                  href: developer/cmdlet/validatecount-attribute-declaration.md
+                - name: Объявление атрибута ValidateLength
+                  href: developer/cmdlet/validatelength-attribute-declaration.md
+                - name: Объявление атрибута ValidatePattern
+                  href: developer/cmdlet/validatepattern-attribute-declaration.md
+                - name: Объявление атрибута ValidateRange
+                  href: developer/cmdlet/validaterange-attribute-declaration.md
+                - name: Объявление атрибута ValidateSet
+                  href: developer/cmdlet/validateset-attribute-declaration.md
+            - name: Псевдонимы командлета
+              href: developer/cmdlet/cmdlet-aliases.md
+            - name: Выходные данные командлета
+              href: developer/cmdlet/cmdlet-output.md
+              items:
+                - name: Типы выходных данных командлета
+                  href: developer/cmdlet/types-of-cmdlet-output.md
+                - name: Отчеты об ошибках командлета
+                  href: developer/cmdlet/cmdlet-error-reporting.md
+                - name: Расширение объектов выходных данных
+                  href: developer/cmdlet/extending-output-objects.md
+                  items:
+                    - name: Расширение свойств для объектов
+                      href: developer/cmdlet/extending-properties-for-objects.md
+                    - name: Определение методов по умолчанию для объектов
+                      href: developer/cmdlet/defining-default-methods-for-objects.md
+                    - name: Определение наборов элементов по умолчанию для объектов
+                      href: developer/cmdlet/defining-default-member-sets-for-objects.md
+                - name: Пользовательские файлы форматирования
+                  href: developer/cmdlet/custom-formatting-files.md
+            - name: Регистрация командлетов
+              href: developer/cmdlet/registering-cmdlets.md
+              items:
+                - name: Модули и оснастки
+                  href: developer/cmdlet/modules-and-snap-ins.md
+                - name: Импорт командлетов с помощью модулей
+                  href: developer/cmdlet/how-to-import-cmdlets-using-modules.md
+                - name: "Как создать оснастку Windows\_PowerShell"
+                  href: developer/cmdlet/how-to-create-a-windows-powershell-snap-in.md
+                  items:
+                    - name: "Написание оснастки Windows\_PowerShell"
+                      href: developer/cmdlet/writing-a-windows-powershell-snap-in.md
+                    - name: "Написание пользовательской оснастки Windows\_PowerShell"
+                      href: developer/cmdlet/writing-a-custom-windows-powershell-snap-in.md
+            - name: Запрос на подтверждение
+              href: developer/cmdlet/requesting-confirmation.md
+              items:
+                - name: Запрос на подтверждение от командлетов
+                  href: developer/cmdlet/requesting-confirmation-from-cmdlets.md
+                - name: Запрос на подтверждение от пользователей
+                  href: developer/cmdlet/users-requesting-confirmation.md
+                - name: Сообщения подтверждения
+                  href: developer/cmdlet/confirmation-messages.md
+            - name: "Отчеты об ошибках Windows\_PowerShell"
+              href: developer/cmdlet/windows-powershell-error-reporting.md
+              items:
+                - name: 'Основные понятия, связанные с отчетами об ошибках'
+                  href: developer/cmdlet/error-reporting-concepts.md
+                - name: Прерывающие ошибки
+                  href: developer/cmdlet/terminating-errors.md
+                - name: Непрерывающие ошибки
+                  href: developer/cmdlet/non-terminating-errors.md
+                - name: Отображение сведений об ошибке
+                  href: developer/cmdlet/displaying-error-information.md
+                - name: "Записи об ошибках Windows\_PowerShell"
+                  href: developer/cmdlet/windows-powershell-error-records.md
+                - name: Интерпретация объектов ErrorRecord
+                  href: developer/cmdlet/interpreting-errorrecord-objects.md
+            - name: Фоновые задания
+              href: developer/cmdlet/background-jobs.md
+            - name: Вызов командлетов и сценариев внутри командлета
+              href: developer/cmdlet/invoking-cmdlets-and-scripts-within-a-cmdlet.md
+            - name: Наборы командлетов
+              href: developer/cmdlet/cmdlet-sets.md
+            - name: "Состояние сеанса Windows\_PowerShell"
+              href: developer/cmdlet/windows-powershell-session-state.md
+        - name: Примеры кода командлетов
+          href: developer/cmdlet/examples-of-cmdlet-code.md
+          items:
+            - name: Как написать простой командлет
+              href: developer/cmdlet/how-to-write-a-simple-cmdlet.md
+            - name: Как объявить параметры командлета
+              href: developer/cmdlet/how-to-declare-cmdlet-parameters.md
+            - name: Как объявить наборы параметров
+              href: developer/cmdlet/how-to-declare-parameter-sets.md
+            - name: Как проверить входные параметры
+              href: developer/cmdlet/how-to-validate-parameter-input.md
+              items:
+                - name: Как проверить набор аргументов
+                  href: developer/cmdlet/how-to-validate-an-argument-set.md
+                - name: Как проверить диапазон аргумента
+                  href: developer/cmdlet/how-to-validate-an-argument-range.md
+                - name: Как проверить шаблон аргумента
+                  href: developer/cmdlet/how-to-validate-an-argument-pattern.md
+                - name: Как проверить длину аргумента
+                  href: developer/cmdlet/how-to-validate-the-argument-length.md
+                - name: Как проверить количество аргументов
+                  href: developer/cmdlet/how-to-validate-an-argument-count.md
+            - name: Как объявить динамические параметры
+              href: developer/cmdlet/how-to-declare-dynamic-parameters.md
+            - name: Как вызвать сценарий из командлета
+              href: developer/cmdlet/how-to-invoke-scripts-within-a-cmdlet.md
+            - name: Как переопределить методы обработки входных данных
+              href: developer/cmdlet/how-to-override-input-processing-methods.md
+            - name: Как запросить подтверждение
+              href: developer/cmdlet/how-to-request-confirmations.md
+            - name: Как обеспечить поддержку транзакций
+              href: developer/cmdlet/how-to-support-transactions.md
+            - name: Как обеспечить поддержку заданий
+              href: developer/cmdlet/how-to-support-jobs.md
+            - name: Как вызвать командлет из другого командлета
+              href: developer/cmdlet/how-to-invoke-a-cmdlet-from-within-a-cmdlet.md
+        - name: Руководства по написанию командлетов
+          href: developer/cmdlet/tutorials-for-writing-cmdlets.md
+          items:
+            - name: Руководство по GetProc
+              href: developer/cmdlet/getproc-tutorial.md
+              items:
+                - name: Создание командлета без параметров
+                  href: developer/cmdlet/creating-a-cmdlet-without-parameters.md
+                - name: Добавление параметров для обработки входных данных команды
+                  href: developer/cmdlet/adding-parameters-that-process-command-line-input.md
+                - name: Добавление параметров для обработки входных данных конвейера
+                  href: developer/cmdlet/adding-parameters-that-process-pipeline-input.md
+                - name: Добавление сообщения о непрерывающей ошибке в командлет
+                  href: developer/cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md
+            - name: Руководство по StopProc
+              href: developer/cmdlet/stopproc-tutorial.md
+              items:
+                - name: 'Создание командлета, который изменяет систему'
+                  href: developer/cmdlet/creating-a-cmdlet-that-modifies-the-system.md
+                - name: Добавление пользовательских сообщений в командлет
+                  href: developer/cmdlet/adding-user-messages-to-your-cmdlet.md
+                - name: 'Добавление псевдонимов, развертывание подстановочных знаков и справка по параметрам командлета'
+                  href: developer/cmdlet/adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters.md
+                - name: Добавление наборов параметров в командлет
+                  href: developer/cmdlet/adding-parameter-sets-to-a-cmdlet.md
+            - name: Руководство по SelectStr
+              href: developer/cmdlet/selectstr-tutorial.md
+              items:
+                - name: Создание командлета для доступа к хранилищу данных
+                  href: developer/cmdlet/creating-a-cmdlet-to-access-a-data-store.md
+        - name: Примеры командлетов
+          href: developer/cmdlet/cmdlet-samples.md
+          items:
+            - name: Пример командлета GetProcessSample01
+              href: developer/cmdlet/getprocesssample01-sample.md
+            - name: Пример командлета GetProcessSample02
+              href: developer/cmdlet/getprocesssample02-sample.md
+            - name: Пример командлета GetProcessSample03
+              href: developer/cmdlet/getprocesssample03-sample.md
+            - name: Пример командлета GetProcessSample04
+              href: developer/cmdlet/getprocesssample04-sample.md
+            - name: Пример командлета GetProcessSample05
+              href: developer/cmdlet/getprocesssample05-sample.md
+            - name: Пример командлета StopProcessSample01
+              href: developer/cmdlet/stopprocesssample01-sample.md
+            - name: Пример командлета StopProcessSample02
+              href: developer/cmdlet/stopprocesssample02-sample.md
+            - name: Пример командлета StopProcessSample03
+              href: developer/cmdlet/stopprocesssample03-sample.md
+            - name: Пример командлета StopProcessSample04
+              href: developer/cmdlet/stopprocesssample04-sample.md
+            - name: Пример командлета Events01
+              href: developer/cmdlet/events01-sample.md
+    - name: "Написание поставщика Windows\_PowerShell"
+      href: developer/provider/writing-a-windows-powershell-provider.md
+      items:
+        - name: "Краткое руководство по поставщикам Windows\_PowerShell"
+          href: developer/provider/windows-powershell-provider-quickstart.md
+        - name: "Общие сведения о поставщиках Windows\_PowerShell"
+          href: developer/provider/windows-powershell-provider-overview.md
+          items:
+            - name: Типы поставщиков
+              href: developer/provider/provider-types.md
+            - name: Командлеты поставщика
+              href: developer/provider/provider-cmdlets.md
+            - name: Параметры командлета поставщика
+              href: developer/provider/provider-cmdlet-parameters.md
+            - name: Динамические параметры командлета поставщика
+              href: developer/provider/provider-cmdlet-dynamic-parameters.md
+        - name: Написание поставщика элемента
+          href: developer/provider/writing-an-item-provider.md
+        - name: Написание поставщика контейнера
+          href: developer/provider/writing-a-container-provider.md
+        - name: Написание поставщика навигации
+          href: developer/provider/writing-a-navigation-provider.md
+        - name: Примеры поставщиков
+          href: developer/provider/provider-samples.md
+          items:
+            - name: AccessDBProviderSample01
+              href: developer/provider/accessdbprovidersample01.md
+            - name: AccessDBProviderSample02
+              href: developer/provider/accessdbprovidersample02.md
+            - name: AccessDBProviderSample03
+              href: developer/provider/accessdbprovidersample03.md
+            - name: AccessDBProviderSample04
+              href: developer/provider/accessdbprovidersample04.md
+            - name: AccessDBProviderSample05
+              href: developer/provider/accessdbprovidersample05.md
+            - name: AccessDBProviderSample06
+              href: developer/provider/accessdbprovidersample06.md
+    - name: "Написание ведущего приложения Windows\_PowerShell"
+      href: developer/hosting/writing-a-windows-powershell-host-application.md
+      items:
+        - name: "Краткое руководство по узлам Windows\_PowerShell"
+          href: developer/hosting/windows-powershell-host-quickstart.md
+        - name: Создание пространств выполнения
+          href: developer/hosting/creating-runspaces.md
+          items:
+            - name: Создание InitialSessionState
+              href: developer/hosting/creating-an-initialsessionstate.md
+            - name: Создание ограниченного пространства выполнения
+              href: developer/hosting/creating-a-constrained-runspace.md
+            - name: Создание нескольких пространств выполнения
+              href: developer/hosting/creating-multiple-runspaces.md
+        - name: Добавление и вызов команд
+          href: developer/hosting/adding-and-invoking-commands.md
+        - name: Создание удаленных пространств выполнения
+          href: developer/hosting/creating-remote-runspaces.md
+        - name: Создание собственного пользовательского интерфейса
+          href: developer/hosting/creating-a-custom-user-interface.md
+        - name: Примеры ведущих приложений
+          href: developer/hosting/host-application-samples.md
+          items:
+            - name: "Примеры API Windows\_PowerShell"
+              href: developer/hosting/windows-powershell-api-samples.md
+              items:
+                - name: "Пример Windows\_PowerShell01"
+                  href: developer/hosting/windows-powershell01-sample.md
+                - name: "Пример Windows\_PowerShell02"
+                  href: developer/hosting/windows-powershell02-sample.md
+            - name: Примеры пользовательских узлов
+              href: developer/hosting/custom-host-samples.md
+              items:
+                - name: Пример Host01
+                  href: developer/hosting/host01-sample.md
+                - name: Пример Host02
+                  href: developer/hosting/host02-sample.md
+                - name: Пример Host03
+                  href: developer/hosting/host03-sample.md
+                - name: Пример Host04
+                  href: developer/hosting/host04-sample.md
+                - name: Пример Host05
+                  href: developer/hosting/host05-sample.md
+                - name: Пример Host06
+                  href: developer/hosting/host06-sample.md
+            - name: Примеры пространств выполнения
+              href: developer/hosting/runspace-samples.md
+              items:
+                - name: Пример Runspace01
+                  href: developer/hosting/runspace01-sample.md
+                - name: Пример Runspace02
+                  href: developer/hosting/runspace02-sample.md
+                - name: Пример Runspace03
+                  href: developer/hosting/runspace03-sample.md
+                - name: Пример Runspace04
+                  href: developer/hosting/runspace04-sample.md
+                - name: Пример Runspace05
+                  href: developer/hosting/runspace05-sample.md
+                - name: Пример Runspace06
+                  href: developer/hosting/runspace06-sample.md
+                - name: Пример Runspace07
+                  href: developer/hosting/runspace07-sample.md
+                - name: Пример Runspace08
+                  href: developer/hosting/runspace08-sample.md
+                - name: Пример Runspace09
+                  href: developer/hosting/runspace09-sample.md
+                - name: Пример Runspace10
+                  href: developer/hosting/runspace10-sample.md
+                - name: Пример Runspace11
+                  href: developer/hosting/runspace11-sample.md
+            - name: Примеры удаленных пространств выполнения
+              href: developer/hosting/remote-runspace-samples.md
+              items:
+                - name: Пример RemoteRunspace01
+                  href: developer/hosting/remoterunspace01-sample.md
+                - name: Пример RemoteRunspacePool01
+                  href: developer/hosting/remoterunspacepool01-sample.md
+    - name: Написание файла форматирования PowerShell
+      href: developer/format/writing-a-powershell-formatting-file.md
+      items:
+        - name: Общие сведения о файлах форматирования
+          href: developer/format/formatting-file-overview.md
+        - name: 'Основные понятия, связанные с файлами форматирования'
+          href: developer/format/formatting-file-concepts.md
+          items:
+            - name: Создание представления таблицы
+              href: developer/format/creating-a-table-view.md
+            - name: Создание представления списка
+              href: developer/format/creating-a-list-view.md
+            - name: Создание широкого представления
+              href: developer/format/creating-a-wide-view.md
+            - name: Создание пользовательских элементов управления
+              href: developer/format/creating-custom-controls.md
+            - name: Загрузка и экспорт данных форматирования
+              href: developer/format/loading-and-exporting-formatting-data.md
+            - name: Определение общих компонентов конфигурации
+              href: developer/format/defining-common-configuration-features.md
+            - name: Определение наборов выделенных фрагментов
+              href: developer/format/defining-selection-sets.md
+            - name: Определение условий для отображения данных
+              href: developer/format/defining-conditions-for-displaying-data.md
+            - name: Форматирование отображаемых данных
+              href: developer/format/formatting-displayed-data.md
+            - name: Файлы форматирования PowerShell
+              href: developer/format/powershell-formatting-files.md
+        - name: Примеры файлов форматирования
+          href: developer/format/examples-of-formatting-files.md
+          items:
+            - name: Как создать файл форматирования (.format.ps1xml)
+              href: developer/format/how-to-create-a-formatting-file-format-ps1xml.md
+            - name: Широкое представление (базовое)
+              href: developer/format/wide-view-basic.md
+            - name: Широкое представление (с группировкой)
+              href: developer/format/wide-view-groupby.md
+            - name: Представление списка (базовое)
+              href: developer/format/list-view-basic.md
+            - name: Представление списка (метки)
+              href: developer/format/list-view-labels.md
+            - name: Представление списка (с группировкой)
+              href: developer/format/list-view-groupby.md
+        - name: Ссылка на схему формата XML
+          href: developer/format/format-schema-xml-reference.md
+          items:
+            - name: Элемент Alignment для TableColumnHeader для TableControl (формат)
+              href: developer/format/alignment-element-for-tablecolumnheader-for-tablecontrol-format.md
+            - name: Элемент Alignment для TableColumnItem для TableControl (формат)
+              href: developer/format/alignment-element-for-tablecolumnitem-for-tablecontrol-format.md
+            - name: Элемент AutoSize для TableControl (формат)
+              href: developer/format/autosize-element-for-tablecontrol-format.md
+            - name: Элемент AutoSize для WideControl (формат)
+              href: developer/format/autosize-element-for-widecontrol-format.md
+            - name: Элемент ColumnNumber для WideControl (формат)
+              href: developer/format/columnnumber-element-for-widecontrol-format.md
+            - name: Элемент Configuration (формат)
+              href: developer/format/configuration-element-format.md
+            - name: Элемент Control для элемента Controls для элемента Configuration (формат)
+              href: developer/format/control-element-for-controls-for-configuration-format.md
+            - name: Элемент Control для элемента Controls для элемента View (формат)
+              href: developer/format/control-element-for-controls-for-view-format.md
+            - name: Элемент Controls для элемента Configuration (формат)
+              href: developer/format/controls-element-for-configuration-format.md
+            - name: Элемент Controls для элемента View (формат)
+              href: developer/format/controls-element-for-view-format.md
+            - name: Элемент CustomControl для элемента Control для элемента Controls для элемента Configuration (формат)
+              href: developer/format/customcontrol-element-for-control-for-controls-for-configuration-format.md
+            - name: Элемент CustomControl для элемента Control для элемента Controls для элемента View (формат)
+              href: developer/format/customcontrol-element-for-control-for-controls-for-view-format.md
+            - name: Элемент CustomControl для элемента GroupBy (формат)
+              href: developer/format/customcontrol-element-for-groupby-format.md
+            - name: Элемент CustomControl для элемента View (формат)
+              href: developer/format/customcontrol-element-for-view-format.md
+            - name: Элемент CustomControlName для элемента ExpressionBinding для элемента Controls для элемента Configuration (формат)
+              href: developer/format/customcontrolname-element-for-expressionbinding-for-controls-for-configuration-format.md
+            - name: Элемент CustomControlName для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+              href: developer/format/customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md
+            - name: Элемент CustomControlName для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
+              href: developer/format/customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md
+            - name: Элемент CustomControlName для элемента ExpressionBinding для GroupBy (формат)
+              href: developer/format/customcontrolname-element-for-expressionbinding-for-groupby-format.md
+            - name: Элемент CustomControlName для элемента GroupBy (формат)
+              href: developer/format/customcontrolname-element-for-groupby-format.md
+            - name: Элемент CustomEntry для элемента CustomControl для элемента Controls для элемента Configuration (формат)
+              href: developer/format/customentry-element-for-customcontrol-for-controls-for-configuration-format.md
+            - name: Элемент CustomEntry для элемента CustomEntries для элемента Controls для элемента View (формат)
+              href: developer/format/customentry-element-for-customentries-for-controls-for-view-format.md
+            - name: Элемент CustomEntry для элемента CustomEntries для элемента CustomControl для элемента View (формат)
+              href: developer/format/customentry-element-for-customentries-for-customcontrol-for-view-format.md
+            - name: Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)
+              href: developer/format/customentry-element-for-customcontrol-for-groupby-format.md
+            - name: Элемент CustomEntries для элемента CustomControl для элемента Controls для элемента Configuration (формат)
+              href: developer/format/customentries-element-for-customcontrol-for-controls-for-configuration-format.md
+            - name: Элемент CustomEntries для элемента CustomControl для элемента Controls для элемента View (формат)
+              href: developer/format/customentries-element-for-customcontrol-for-controls-for-view-format.md
+            - name: Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)
+              href: developer/format/customentries-element-for-customcontrol-for-groupby-format.md
+            - name: Элемент CustomEntries для элемента CustomControl для элемента View (формат)
+              href: developer/format/customentries-element-for-customcontrol-for-view-format.md
+            - name: Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента Configuration (формат)
+              href: developer/format/customitem-element-for-customentry-for-controls-for-configuration-format.md
+            - name: Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента View (формат)
+              href: developer/format/customitem-element-for-customentry-for-controls-for-view-format.md
+            - name: Элемент CustomItem для элемента CustomEntry для элемента CustomControl для элемента View (формат)
+              href: developer/format/customitem-element-for-customentry-for-customcontrol-for-view-format.md
+            - name: Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)
+              href: developer/format/customitem-element-for-customentry-for-groupby-format.md
+            - name: Элемент DefaultSettings (формат)
+              href: developer/format/defaultsettings-element-format.md
+            - name: Элемент DisplayError (формат)
+              href: developer/format/displayerror-element-format.md
+            - name: Элемент EntrySelectedBy для элемента CustomEntry для элемента Controls для элемента Configuration (формат)
+              href: developer/format/entryselectedby-element-for-customentry-for-controls-for-configuration-format.md
+            - name: Элемент EntrySelectedBy для элемента CustomEntry для элемента Controls для элемента View (формат)
+              href: developer/format/entryselectedby-element-for-customentry-for-controls-for-view-format.md
+            - name: Элемент EntrySelectedBy для элемента CustomEntry для элемента CustomControl для элемента View (формат)
+              href: developer/format/entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md
+            - name: Элемент EntrySelectedBy для элемента EnumerableExpansion (формат)
+              href: developer/format/entryselectedby-element-for-enumerableexpansion-format.md
+            - name: Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)
+              href: developer/format/entryselectedby-element-for-customentry-for-groupby-format.md
+            - name: Элемент EntrySelectedBy для элемента ListEntry для элемента ListControl (формат)
+              href: developer/format/entryselectedby-element-for-listentry-for-listcontrol-format.md
+            - name: Элемент EntrySelectedBy для элемента TableRowEntry для элемента TableControl (формат)
+              href: developer/format/entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md
+            - name: Элемент EntrySelectedBy для элемента WideEntry (формат)
+              href: developer/format/entryselectedby-element-for-wideentry-format.md
+            - name: Элемент EnumerableExpansion (формат)
+              href: developer/format/enumerableexpansion-element-format.md
+            - name: Элемент EnumerableExpansions (формат)
+              href: developer/format/enumerableexpansions-element-format.md
+            - name: Элемент EnumerateCollection для элемента ExpressionBinding для элемента Controls для элемента Configuration (формат)
+              href: developer/format/customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md
+            - name: Элемент EnumerateCollection для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+              href: developer/format/enumeratecollection-element-for-expressionbinding-for-controls-for-view-format.md
+            - name: Элемент EnumerateCollection для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
+              href: developer/format/customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md
+            - name: Элемент EnumerateCollection для элемента ExpressionBinding для элемента GroupBy (формат)
+              href: developer/format/enumeratecollection-element-for-expressionbinding-for-groupby-format.md
+            - name: Элемент Expand (формат)
+              href: developer/format/expand-element-format.md
+            - name: Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента Configuration (формат)
+              href: developer/format/expressionbinding-element-for-customitem-for-controls-for-configuration-format.md
+            - name: Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)
+              href: developer/format/expressionbinding-element-for-customitem-for-controls-for-view-format.md
+            - name: Элемент ExpressionBinding для элемента CustomItem для элемента CustomControl для элемента View (формат)
+              href: developer/format/expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md
+            - name: Элемент ExpressionBinding для элемента CustomItem для элемента GroupBy (формат)
+              href: developer/format/expressionbinding-element-for-customitem-for-groupby-format.md
+            - name: Элемент FirstLineHanging для элемента Frame для элемента Controls для элемента Configuration (формат)
+              href: developer/format/firstlinehanging-element-for-frame-for-controls-for-configuration-format.md
+            - name: Элемент FirstLineHanging для элемента Frame для элемента Controls для элемента View (формат)
+              href: developer/format/firstlinehanging-element-for-frame-for-controls-for-view-format.md
+            - name: Элемент FirstLineHanging для элемента Frame для элемента CustomControl для элемента View (формат)
+              href: developer/format/firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md
+            - name: Элемент FirstLineHanging для элемента Frame для элемента GroupBy (формат)
+              href: developer/format/firstlinehanging-element-for-frame-for-groupby-format.md
+            - name: Элемент FirstLineIndent для элемента Frame для элемента Controls для элемента Configuration (формат)
+              href: developer/format/firstlineindent-element-for-frame-for-controls-for-configuration-format.md
+            - name: Элемент FirstLineIndent для элемента Frame для элемента Controls для элемента View (формат)
+              href: developer/format/firstlineindent-element-for-frame-for-controls-for-view-format.md
+            - name: Элемент FirstLineIndent для элемента Frame для элемента CustomControl для элемента View (формат)
+              href: developer/format/firstlineindent-element-for-frame-for-customcontrol-for-view-format.md
+            - name: Элемент FirstLineIndent для элемента Frame для элемента GroupBy (формат)
+              href: developer/format/firstlineindent-element-for-frame-for-groupby-format.md
+            - name: Элемент FormatString для элемента ListItem для элемента ListControl (формат)
+              href: developer/format/formatstring-element-for-listitem-for-listcontrol-format.md
+            - name: Элемент FormatString для элемента TableColumnItem для элемента TableControl (формат)
+              href: developer/format/formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md
+            - name: Элемент FormatString для элемента WideItem для элемента WideControl (формат)
+              href: developer/format/formatstring-element-for-wideitem-for-widecontrol-format.md
+            - name: Элемент Frame для элемента CustomItem для элемента Controls для элемента Configuration (формат)
+              href: developer/format/frame-element-for-customitem-for-controls-for-configuration-format.md
+            - name: Элемент Frame для элемента CustomItem для элемента Controls для элемента View (формат)
+              href: developer/format/frame-element-for-customitem-for-controls-for-view-format.md
+            - name: Элемент Frame для элемента CustomItem для элемента CustomControl для элемента View (формат)
+              href: developer/format/frame-element-for-customitem-for-customcontrol-for-view-format.md
+            - name: Элемент Frame для элемента CustomItem для элемента GroupBy (формат)
+              href: developer/format/frame-element-for-customitem-for-groupby-format.md
+            - name: Элемент GroupBy для элемента View (формат)
+              href: developer/format/groupby-element-for-view-format.md
+            - name: Элемент HideTableHeaders (формат)
+              href: developer/format/hidetableheaders-element-format.md
+            - name: Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента Controls для элемента Configuration (формат)
+              href: developer/format/itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md
+            - name: Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+              href: developer/format/itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md
+            - name: Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента CustomControl (формат)
+              href: developer/format/itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md
+            - name: Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента GroupBy (формат)
+              href: developer/format/itemselectioncondition-element-for-expressionbinding-for-groupby-format.md
+            - name: Элемент ItemSelectionCondition для элемента ListItem для элемента ListControl (формат)
+              href: developer/format/itemselectioncondition-element-for-listitem-for-listcontrol-format.md
+            - name: Элемент Label для элемента ListItem для элемента ListControl (формат)
+              href: developer/format/label-element-for-listitem-for-listcontrol-format.md
+            - name: Элемент Label для элемента GroupBy (формат)
+              href: developer/format/label-element-for-groupby-format.md
+            - name: Элемент Label для элемента TableColumnHeader для элемента TableControl (формат)
+              href: developer/format/label-element-for-tablecolumnheader-for-tablecontrol-format.md
+            - name: Элемент LeftIndent для элемента Frame для элемента Controls для элемента Configuration (формат)
+              href: developer/format/leftindent-element-for-frame-for-controls-for-configuration-format.md
+            - name: Элемент LeftIndent для элемента Frame для элемента Controls для элемента View (формат)
+              href: developer/format/leftindent-element-for-frame-for-controls-for-view-format.md
+            - name: Элемент LeftIndent для элемента Frame для элемента CustomControl для элемента View (формат)
+              href: developer/format/leftindent-element-for-frame-for-customcontrol-for-view-format.md
+            - name: Элемент LeftIndent для элемента Frame для элемента GroupBy (формат)
+              href: developer/format/leftindent-element-for-frame-for-groupby-format.md
+            - name: Элемент ListControl (формат)
+              href: developer/format/listcontrol-element-format.md
+            - name: Элемент ListEntry для элемента ListControl (формат)
+              href: developer/format/listentry-element-for-listcontrol-format.md
+            - name: Элемент ListEntries для элемента ListControl (формат)
+              href: developer/format/listentries-element-for-listcontrol-format.md
+            - name: Элемент ListItem для элемента ListItems для элемента ListControl (формат)
+              href: developer/format/listitem-element-for-listitems-for-listcontrol-format.md
+            - name: Элемент ListItems для элемента ListEntry для элемента ListControl (формат)
+              href: developer/format/listitems-element-for-listentry-for-listcontrol-format.md
+            - name: Элемент Name для элемента Control для элемента Controls для элемента Configuration (формат)
+              href: developer/format/name-element-for-control-for-controls-for-configuration-format.md
+            - name: Элемент Name для элемента Control для элемента Controls для элемента View (формат)
+              href: developer/format/name-element-for-control-for-controls-for-view-format.md
+            - name: Элемент Name для элемента SelectionSet (формат)
+              href: developer/format/name-element-for-selectionset-format.md
+            - name: Элемент Name для элемента View (формат)
+              href: developer/format/name-element-for-view-format.md
+            - name: Элемент NewLine для элемента CustomItem для элемента Controls для элемента Configuration (формат)
+              href: developer/format/newline-element-for-customitem-for-controls-for-configuration-format.md
+            - name: Элемент NewLine для элемента CustomItem для элемента Controls для элемента View (формат)
+              href: developer/format/newline-element-for-customitem-for-controls-for-view-format.md
+            - name: Элемент NewLine для элемента CustomItem для элемента CustomControl для элемента View (формат)
+              href: developer/format/newline-element-for-customitem-for-customcontrol-for-view-format.md
+            - name: Элемент NewLine для элемента CustomItem для элемента GroupBy (формат)
+              href: developer/format/newline-element-for-customitem-for-groupby-format.md
+            - name: Элемент PropertyCountForTable (формат)
+              href: developer/format/propertycountfortable-element-format.md
+            - name: Элемент PropertyName для элемента ExpressionBinding для элемента Controls для элемента Configuration (формат)
+              href: developer/format/itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md
+            - name: Элемент PropertyName для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+              href: developer/format/propertyname-element-for-expressionbinding-for-controls-for-view-format.md
+            - name: Элемент PropertyName для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
+              href: developer/format/propertyname-element-for-expressionbinding-for-customcontrol-for-view-format.md
+            - name: Элемент PropertyName для элемента ExpressionBinding для элемента GroupBy (формат)
+              href: developer/format/propertyname-element-for-expressionbinding-for-groupby-format.md
+            - name: Элемент PropertyName для элемента GroupBy (формат)
+              href: developer/format/propertyname-element-for-groupby-format.md
+            - name: Элемент PropertyName для элемента ItemSeclectionCondition для элемента Controls для элемента Configuration (формат)
+              href: developer/format/itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md
+            - name: Элемент PropertyName для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)
+              href: developer/format/propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md
+            - name: Элемент PropertyName для элемента ItemSelectionCondition для элемента CustomControl для элемента View (формат)
+              href: developer/format/propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md
+            - name: Элемент PropertyName для элемента ItemSelectionCondition для элемента GroupBy (формат)
+              href: developer/format/propertyname-element-for-itemselectioncondition-for-groupby-format.md
+            - name: Элемент PropertyName для элемента ItemSelectionCondition для элемента ListControl (формат)
+              href: developer/format/propertyname-element-for-itemselectioncondition-for-listcontrol-format.md
+            - name: Элемент PropertyName для элемента ListItem для элемента ListControl (формат)
+              href: developer/format/propertyname-element-for-listitem-for-listcontrol-format.md
+            - name: Элемент PropertyName для элемента SelectionCondition для элемента Controls для элемента Configuration (формат)
+              href: developer/format/propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md
+            - name: Элемент PropertyName для элемента SelectionCondition для элемента Controls для элемента View (формат)
+              href: developer/format/propertyname-element-for-selectioncondition-for-controls-for-view-format.md
+            - name: Элемент PropertyName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)
+              href: developer/format/propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md
+            - name: Элемент PropertyName для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+              href: developer/format/propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md
+            - name: Элемент PropertyName для элемента SelectionCondition для элемента GroupBy (формат)
+              href: developer/format/propertyname-element-for-selectioncondition-for-groupby-format.md
+            - name: Элемент PropertyName для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
+              href: developer/format/propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md
+            - name: Элемент PropertyName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableRowEntry (формат)
+              href: developer/format/propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md
+            - name: Элемент PropertyName для элемента SelectionCondition для элемента EntrySelectedBy для элемента WideEntry (формат)
+              href: developer/format/propertyname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md
+            - name: Элемент PropertyName для элемента TableColumnItem для элемента TableControl (формат)
+              href: developer/format/propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md
+            - name: Элемент PropertyName для элемента WideItem для элемента WideControl (формат)
+              href: developer/format/propertyname-element-for-wideitem-for-widecontrol-format.md
+            - name: Элемент RightIndent для элемента Frame для элемента Controls для элемента Configuration (формат)
+              href: developer/format/rightindent-element-for-frame-for-controls-for-configuration-format.md
+            - name: Элемент RightIndent для элемента Frame для элемента Controls для элемента View (формат)
+              href: developer/format/rightindent-element-for-frame-for-controls-for-view-format.md
+            - name: Элемент RightIndent для элемента Frame для элемента CustomControl для элемента View (формат)
+              href: developer/format/rightindent-element-for-frame-for-customcontrol-for-view-format.md
+            - name: Элемент RightIndent для элемента Frame для элемента GroupBy (формат)
+              href: developer/format/rightindent-element-for-frame-for-groupby-format.md
+            - name: Элемент ScriptBlock для элемента ExpressionBinding для элемента Controls для элемента Configuration (формат)
+              href: developer/format/scriptblock-element-for-expressionbinding-for-controls-for-configuration-format.md
+            - name: Элемент ScriptBlock для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+              href: developer/format/scriptblock-element-for-expressionbinding-for-controls-for-view-format.md
+            - name: Элемент ScriptBlock для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
+              href: developer/format/scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format.md
+            - name: Элемент ScriptBlock для элемента ExpressionBinding для элемента GroupBy (формат)
+              href: developer/format/scriptblock-element-for-expressionbinding-for-groupby-format.md
+            - name: Элемент ScriptBlock для элемента GroupBy (формат)
+              href: developer/format/scriptblock-element-for-groupby-format.md
+            - name: Элемент ScriptBlock для элемента ItemSeclectionCondition для элемента Controls для элемента Configuration (формат)
+              href: developer/format/scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md
+            - name: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)
+              href: developer/format/scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md
+            - name: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента CustomControl для элемента View (формат)
+              href: developer/format/scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md
+            - name: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента GroupBy (формат)
+              href: developer/format/scriptblock-element-for-itemselectioncondition-for-groupby-format.md
+            - name: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента ListControl (формат)
+              href: developer/format/scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md
+            - name: Элемент ScriptBlock для элемента ListItem для элемента ListControl (формат)
+              href: developer/format/scriptblock-element-for-listitem-for-listcontrol-format.md
+            - name: Элемент ScriptBlock для элемента SelectionCondition для элемента Controls для элемента Configuration (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md
+            - name: Элемент ScriptBlock для элемента SelectionCondition для элемента Controls для элемента View (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-controls-for-view-format.md
+            - name: Элемент ScriptBlock для элемента SelectionCondition для элемента CustomControl для элемента View (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md
+            - name: Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md
+            - name: Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента GroupBy (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md
+            - name: Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md
+            - name: Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md
+            - name: Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента WideControl (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md
+            - name: Элемент ScriptBlock для TableColumnItem для TableControl (формат)
+              href: developer/format/scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md
+            - name: Элемент ScriptBlock для WideItem для WideControl (формат)
+              href: developer/format/scriptblock-element-for-wideitem-for-widecontrol-format.md
+            - name: Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md
+            - name: Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента View (формат)
+              href: developer/format/selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md
+            - name: Элемент SelectionCondition для элемента EntrySelectedBy для элемента CustomControl (формат)
+              href: developer/format/selectioncondition-element-for-entryselectedby-for-customcontrol-format.md
+            - name: Элемент SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+              href: developer/format/selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md
+            - name: Элемент SelectionCondition для элемента EntrySelectedBy для элемента GroupBy (формат)
+              href: developer/format/selectioncondition-element-for-entryselectedby-for-groupby-format.md
+            - name: Элемент SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
+              href: developer/format/selectioncondition-element-for-entryselectedby-for-listcontrol-format.md
+            - name: Элемент SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
+              href: developer/format/selectioncondition-element-for-entryselectedby-for-tablecontrol-format.md
+            - name: Элемент SelectionCondition для элемента EntrySelectedBy для элемента WideControl (формат)
+              href: developer/format/selectioncondition-element-for-entryselectedby-for-widecontrol-format.md
+            - name: Элемент SelectionSet (формат)
+              href: developer/format/selectionset-element-format.md
+            - name: Элемент SelectionSetName для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)
+              href: developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md
+            - name: Элемент SelectionSetName для элемента EntrySelectedBy для элемента Controls для элемента View (формат)
+              href: developer/format/selectionsetname-element-for-entryselectedby-for-controls-for-view-format.md
+            - name: Элемент SelectionSetName для элемента EntrySelectedBy для элемента CustomControl для элемента View (формат)
+              href: developer/format/selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format.md
+            - name: Элемент SelectionSetName для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+              href: developer/format/selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format.md
+            - name: Элемент SelectionSetName для элемента EntrySelectedBy для элемента GroupBy (формат)
+              href: developer/format/selectionsetname-element-for-entryselectedby-for-groupby-format.md
+            - name: Элемент SelectionSetName для элемента EntrySelectedBy для элемента ListControl (формат)
+              href: developer/format/selectionsetname-element-for-entryselectedby-for-listcontrol-format.md
+            - name: Элемент SelectionSetName для элемента EntrySelectedBy для элемента TableControl (формат)
+              href: developer/format/selectionsetname-element-for-entryselectedby-for-tablecontrol-format.md
+            - name: Элемент SelectionSetName для элемента EntrySelectedBy для элемента WideControl (формат)
+              href: developer/format/selectionsetname-element-for-entryselectedby-for-widecontrol-format.md
+            - name: Элемент SelectionSetName для элемента SelectionCondition для элемента Controls для элемента Configuration (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md
+            - name: Элемент SelectionSetName для элемента SelectionCondition для элемента Controls для элемента View (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md
+            - name: Элемент SelectionSetName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md
+            - name: Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md
+            - name: Элемент SelectionSetName для элемента SelectionCondition для элемента GroupBy (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-groupby-format.md
+            - name: Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListEntry (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md
+            - name: Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md
+            - name: Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента WideEntry (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md
+            - name: Элемент SelectionSetName для элемента ViewSelectedBy (формат)
+              href: developer/format/selectionsetname-element-for-viewselectedby-format.md
+            - name: Элемент SelectionSets (формат)
+              href: developer/format/selectionsets-element-format.md
+            - name: Элемент ShowError (формат)
+              href: developer/format/showerror-element-format.md
+            - name: Элемент TableColumnHeader (формат)
+              href: developer/format/tablecolumnheader-element-format.md
+            - name: Элемент TableColumnItem для элемента TableColumnItems для элемента TableControl (формат)
+              href: developer/format/tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md
+            - name: Элемент TableColumnItems для элемента TableRowEntry для элемента TableControl (формат)
+              href: developer/format/tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md
+            - name: Элемент TableControl (формат)
+              href: developer/format/tablecontrol-element-format.md
+            - name: Элемент TableHeaders (формат)
+              href: developer/format/tableheaders-element-format.md
+            - name: Элемент TableRowEntries для элемента TableControl (формат)
+              href: developer/format/tablerowentries-element-for-tablecontrol-format.md
+            - name: Элемент TableRowEntry для элемента TableRowEntries для элемента TableControl (формат)
+              href: developer/format/tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md
+            - name: Элемент Text для элемента CustomItem для элемента Controls для элемента Configuration (формат)
+              href: developer/format/text-element-for-customitem-for-controls-for-configuration-format.md
+            - name: Элемент Text для элемента CustomItem для элемента Controls для элемента View (формат)
+              href: developer/format/text-element-for-customitem-for-controls-for-view-format.md
+            - name: Элемент Text для элемента CustomItem для элемента CustomView для элемента View (формат)
+              href: developer/format/text-element-for-customitem-for-customview-for-view-format.md
+            - name: Элемент Text для элемента CustomItem для элемента GroupBy (формат)
+              href: developer/format/text-element-for-customitem-for-groupby-format.md
+            - name: Элемент TypeName для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)
+              href: developer/format/typename-element-for-entryselectedby-for-controls-for-configuration-format.md
+            - name: Элемент TypeName для элемента EntrySelectedBy для элемента Controls для элемента View (формат)
+              href: developer/format/typename-element-for-entryselectedby-for-controls-for-view-format.md
+            - name: Элемент TypeName для элемента EntrySelectedBy для элемента CustomEntry для элемента View (формат)
+              href: developer/format/typename-element-for-entryselectedby-for-customentry-for-view-format.md
+            - name: Элемент TypeName для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+              href: developer/format/typename-element-for-entryselectedby-for-enumerableexpansion-format.md
+            - name: Элемент TypeName для элемента EntrySelectedBy для элемента GroupBy (формат)
+              href: developer/format/typename-element-for-entryselectedby-for-groupby-format.md
+            - name: Элемент TypeName для элемента EntrySelectedBy для ListControl (формат)
+              href: developer/format/typename-element-for-entryselectedby-for-listcontrol-format.md
+            - name: Элемент TypeName для элемента EntrySelectedBy для TableControl (формат)
+              href: developer/format/typename-element-for-entryselectedby-for-tablecontrol-format.md
+            - name: Элемент TypeName для элемента EntrySelectedBy для WideEntry (формат)
+              href: developer/format/typename-element-for-entryselectedby-for-wideentry-format.md
+            - name: Элемент TypeName для элемента SelectionCondition для элемента Controls для элемента Configuration (формат)
+              href: developer/format/typename-element-for-selectioncondition-for-controls-for-configuration-format.md
+            - name: Элемент TypeName для элемента SelectionCondition для элемента Controls для элемента View (формат)
+              href: developer/format/typename-element-for-selectioncondition-for-controls-for-view-format.md
+            - name: Элемент TypeName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)
+              href: developer/format/typename-element-for-selectioncondition-for-customcontrol-for-view-format.md
+            - name: Элемент TypeName для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md
+            - name: Элемент TypeName для элемента SelectionCondition для элемента GroupBy (формат)
+              href: developer/format/typename-element-for-selectioncondition-for-groupby-format.md
+            - name: Элемент TypeName для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md
+            - name: Элемент TypeName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
+              href: developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md
+            - name: Элемент TypeName для элемента SelectionCondition для элемента EntrySelectedBy для элемента WideControl (формат)
+              href: developer/format/typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md
+            - name: Элемент TypeName для элемента Types (формат)
+              href: developer/format/typename-element-for-types-format.md
+            - name: Элемент TypeName для элемента ViewSelectedBy (формат)
+              href: developer/format/typename-element-for-viewselectedby-format.md
+            - name: Элемент Types для элемента SelectionSet (формат)
+              href: developer/format/types-element-for-selectionset-format.md
+            - name: Элемент View (формат)
+              href: developer/format/view-element-format.md
+            - name: Элемент ViewDefinitions (формат)
+              href: developer/format/viewdefinitions-element-format.md
+            - name: Элемент ViewSelectedBy (формат)
+              href: developer/format/viewselectedby-element-format.md
+            - name: Элемент WideControl (формат)
+              href: developer/format/widecontrol-element-format.md
+            - name: Элемент WideEntries для WideControl (формат)
+              href: developer/format/wideentries-element-for-widecontrol-format.md
+            - name: Элемент WideEntry для WideControl (формат)
+              href: developer/format/wideentry-element-for-widecontrol-format.md
+            - name: Элемент WideItem для WideControl (формат)
+              href: developer/format/wideitem-element-for-widecontrol-format.md
+            - name: Элемент Width для элемента TableColumnHeader для элемента TableControl (формат)
+              href: developer/format/width-element-for-tablecolumnheader-for-tablecontrol-format.md
+            - name: Элемент Wrap для элемента TableRowEntry для элемента TableControl (формат)
+              href: developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
+            - name: Элемент WrapTables (формат)
+              href: developer/format/wraptables-element-format.md
+    - name: Написание разделов справки на основе комментариев
+      href: developer/help/writing-comment-based-help-topics.md
+      items:
+        - name: "Написание справки для командлетов Windows\_PowerShell"
+          href: developer/help/writing-help-for-windows-powershell-cmdlets.md
+        - name: "Написание справки для поставщиков Windows\_PowerShell"
+          items:
+            - name: Как добавить динамические параметры в раздел справки для поставщика
+              href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
+            - name: Как добавить раздел "См. также" в раздел справки для поставщика
+              href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
+        - name: "Написание справки для сценариев и функций Windows\_PowerShell"
+          href: developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
+        - name: Написание разделов справки на основе комментариев
+          href: developer/help/writing-comment-based-help-topics.md
+          items:
+            - name: Синтаксис справки на основе комментариев
+              href: developer/help/syntax-of-comment-based-help.md
+            - name: Ключевые слова справки на основе комментариев
+              href: developer/help/comment-based-help-keywords.md
+            - name: Размещение справки на основе комментариев в функциях
+              href: developer/help/placing-comment-based-help-in-functions.md
+            - name: Размещение справки на основе комментариев в сценариях
+              href: developer/help/placing-comment-based-help-in-scripts.md
+            - name: Автоматически созданные элементы в справке на основе комментариев
+              href: developer/help/autogenerated-elements-of-comment-based-help.md
+            - name: Примеры справки на основе комментариев
+              href: developer/help/examples-of-comment-based-help.md
+        - name: Написание разделов справки на основе XML для команд
+          items:
+            - name: Как создать файл справки командлета
+              href: developer/help/how-to-create-the-cmdlet-help-file.md
+            - name: Как добавить имя командлета и краткий обзор командлета в раздел справки для командлета
+              href: developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
+            - name: Как добавить описание командлета
+              href: developer/help/how-to-add-a-cmdlet-description.md
+            - name: Как добавить синтаксис в раздел справки для командлета
+              href: developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
+            - name: Как добавить сведения о параметрах
+              href: developer/help/how-to-add-parameter-information.md
+            - name: Как добавить типы входных данных в раздел справки для командлета
+              href: developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
+            - name: Как добавить возвращаемые значения в раздел справки для командлета
+              href: developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
+            - name: Как добавить примечания в раздел справки для командлета
+              href: developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
+            - name: Как добавить примеры в раздел справки для командлета
+              href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
+            - name: Как добавить связанные ссылки в раздел справки для командлета
+              href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+    - name: Создание веб-службы управления OData
+      href: developer/webservices/creating-a-management-odata-web-service.md
+      items:
+        - name: Добавление ресурсов в веб-службу управления OData
+          href: developer/webservices/adding-resources-to-a-management-odata-web-service.md
+        - name: Реализация пользовательской авторизации для веб-службы управления OData
+          href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
+          items:
+            - name: Настройка авторизации на основе ролей
+              href: developer/webservices/configuring-role-based-authorization.md
+              items:
+                - name: Схема конфигурации для авторизации на основе ролей
+                  href: developer/webservices/role-based-authorization-configuration-schema.md
+        - name: Реализация SessionConfiguration для веб-службы управления OData
+          href: developer/webservices/implementing-sessionconfiguration-for-a-management-odata-web-service.md
+        - name: Создание файла схемы MOF для веб-службы управления OData
+          href: developer/webservices/authoring-the-mof-schema-file-for-a-management-odata-web-service.md
+        - name: Создание файла схемы XML для веб-службы управления OData
+          href: developer/webservices/authoring-the-xml-schema-file-for-a-management-odata-web-service.md
+        - name: Создание файла Web.config для веб-службы управления OData
+          href: developer/webservices/authoring-the-web-config-file-for-a-management-odata-web-service.md
+        - name: Развертывание веб-службы управления OData
+          href: developer/webservices/deploying-a-management-odata-web-service.md
+        - name: Связывание сущностей управления OData
+          href: developer/webservices/associating-management-odata-entities.md
+        - name: "Вызов командлетов Windows\_PowerShell в веб-службах управления OData"
+          href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
+        - name: "Управление файлами расширения схемы IIS\_OData"
+          href: developer/webservices/management-odata-iis-extension-schema-files.md
+          items:
+            - name: Схема сопоставления ресурсов
+              href: developer/webservices/resource-mapping-schema.md
+            - name: Общедоступная схема ресурсов
+              href: developer/webservices/public-resource-schema.md
+    - name: Запись рабочего процесса Windows PowerShell
+      href: developer/workflow/writing-a-windows-powershell-workflow.md
+      items:
+        - name: "Добавление действий Windows\_PowerShell в инструментарий Visual\_Studio"
+          href: developer/workflow/adding-windows-powershell-activities-to-the-visual-studio-toolbox.md
+        - name: Общие параметры рабочего процесса
+          href: developer/workflow/common-workflow-parameters.md
+        - name: "Создание действия рабочего процесса из командлета Windows\_PowerShell"
+          href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
+        - name: "Создание рабочего процесса с помощью сценария Windows\_PowerShell"
+          href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
+        - name: "Создание рабочего процесса с помощью действий Windows\_PowerShell"
+          href: developer/workflow/creating-a-workflow-with-windows-powershell-activities.md
+        - name: "Импорт и вызов рабочего процесса Windows\_PowerShell"
+          href: developer/workflow/importing-and-invoking-a-windows-powershell-workflow.md
+        - name: "Планирование заданий с помощью API Windows\_PowerShell"
+          href: developer/workflow/scheduling-jobs-with-the-windows-powershell-api.md
+    - name: "Руководство программиста по Windows\_PowerShell"
+      href: developer/prog-guide/windows-powershell-programmer-s-guide.md
+      items:
+        - name: "Как создать поставщика Windows\_PowerShell"
+          href: developer/prog-guide/how-to-create-a-windows-powershell-provider.md
+          items:
+            - name: "Разработка поставщика Windows\_PowerShell"
+              href: developer/prog-guide/designing-your-windows-powershell-provider.md
+            - name: "Создание базового поставщика Windows\_PowerShell"
+              href: developer/prog-guide/creating-a-basic-windows-powershell-provider.md
+            - name: "Создание поставщика дисков Windows\_PowerShell"
+              href: developer/prog-guide/creating-a-windows-powershell-drive-provider.md
+            - name: "Создание поставщика элементов Windows\_PowerShell"
+              href: developer/prog-guide/creating-a-windows-powershell-item-provider.md
+            - name: "Создание поставщика контейнеров Windows\_PowerShell"
+              href: developer/prog-guide/creating-a-windows-powershell-container-provider.md
+            - name: "Создание поставщика навигации Windows\_PowerShell"
+              href: developer/prog-guide/creating-a-windows-powershell-navigation-provider.md
+            - name: "Создание поставщика содержимого Windows\_PowerShell"
+              href: developer/prog-guide/creating-a-windows-powershell-content-provider.md
+            - name: "Создание поставщика свойств Windows\_PowerShell"
+              href: developer/prog-guide/creating-a-windows-powershell-property-provider.md
+        - name: Создание оболочки консоли
+          href: developer/prog-guide/how-to-create-a-console-shell.md
+        - name: "Основные понятия Windows\_PowerShell"
+          href: developer/prog-guide/windows-powershell-concepts.md
+        - name: "Пример кода Windows\_PowerShell"
+          href: developer/prog-guide/windows-powershell-sample-code.md
+          items:
+            - name: Пример кода AccessDbProviderSample01
+              href: developer/prog-guide/accessdbprovidersample01-code-sample.md
+            - name: Пример кода AccessDbProviderSample02
+              href: developer/prog-guide/accessdbprovidersample02-code-sample.md
+            - name: Пример кода AccessDbProviderSample03
+              href: developer/prog-guide/accessdbprovidersample03-code-sample.md
+            - name: Пример кода AccessDbProviderSample04
+              href: developer/prog-guide/accessdbprovidersample04-code-sample.md
+            - name: Пример кода AccessDbProviderSample05
+              href: developer/prog-guide/accessdbprovidersample05-code-sample.md
+            - name: Пример кода AccessDbProviderSample06
+              href: developer/prog-guide/accessdbprovidersample06-code-sample.md
+            - name: Примеры кода GetProc01
+              href: developer/prog-guide/getproc01-code-samples.md
+              items:
+                - name: 'Пример кода GetProc01 (C#)'
+                  href: developer/prog-guide/getproc01-csharp-sample-code.md
+                - name: Пример кода GetProc01 (VB.NET)
+                  href: developer/prog-guide/getproc01-vb-net-sample-code.md
+            - name: Примеры кода GetProc02
+              href: developer/prog-guide/getproc02-code-samples.md
+              items:
+                - name: 'Пример кода GetProc02 (C#)'
+                  href: developer/prog-guide/getproc02-csharp-sample-code.md
+                - name: Пример кода GetProc02 (VB.NET)
+                  href: developer/prog-guide/getproc02-vb-net-sample-code.md
+            - name: Примеры кода GetProc03
+              href: developer/prog-guide/getproc03-code-samples.md
+              items:
+                - name: 'Пример кода GetProc03 (C#)'
+                  href: developer/prog-guide/getproc03-csharp-sample-code.md
+                - name: Пример кода GetProc03 (VB.NET)
+                  href: developer/prog-guide/getproc03-vb-net-sample-code.md
+            - name: Примеры кода GetProc04
+              href: developer/prog-guide/getproc04-code-samples.md
+              items:
+                - name: 'Пример кода GetProc04 (C#)'
+                  href: developer/prog-guide/getproc04-csharp-sample-code.md
+                - name: Пример кода GetProc04 (VB.NET)
+                  href: developer/prog-guide/getproc04-vb-net-sample-code.md
+            - name: Примеры кода GetProc05
+              href: developer/prog-guide/getproc05-code-samples.md
+              items:
+                - name: 'Пример кода GetProc05 (C#)'
+                  href: developer/prog-guide/getproc05-csharp-sample-code.md
+                - name: Пример кода GetProc05 (VB.NET)
+                  href: developer/prog-guide/getproc05-vb-net-sample-code.md
+            - name: Примеры кода StopProc01
+              href: developer/prog-guide/stopproc01-code-samples.md
+              items:
+                - name: 'Пример кода StopProc01 (C#)'
+                  href: developer/prog-guide/stopproc01-csharp-sample-code.md
+            - name: Примеры кода StopProcessSample04
+              href: developer/prog-guide/stopprocesssample04-code-samples.md
+              items:
+                - name: 'Пример кода StopProcessSample04 (C#)'
+                  href: developer/prog-guide/stopprocesssample04-csharp-sample-code.md
+                - name: Пример кода StopProcessSample04 (VB.NET)
+                  href: developer/prog-guide/stopprocesssample04-vb-net-sample-code.md
+            - name: Примеры кода Runspace01
+              href: developer/prog-guide/runspace01-code-samples.md
+              items:
+                - name: 'Пример кода Runspace01 (C#)'
+                  href: developer/prog-guide/runspace01-csharp-code-sample.md
+                - name: Пример кода Runspace01 (VB.NET)
+                  href: developer/prog-guide/runspace01-vb-net-code-sample.md
+            - name: Примеры кода Runspace02
+              href: developer/prog-guide/runspace02-code-samples.md
+              items:
+                - name: 'Пример кода Runspace02 (C#)'
+                  href: developer/prog-guide/runspace02-csharp-code-sample.md
+                - name: Пример кода Runspace02 (VB.NET)
+                  href: developer/prog-guide/runspace02-vb-net-code-sample.md
+            - name: Примеры кода RunSpace03
+              href: developer/prog-guide/runspace03-code-samples.md
+              items:
+                - name: 'Пример кода RunSpace03 (C#)'
+                  href: developer/prog-guide/runspace03-csharp-code-sample.md
+                - name: Пример кода RunSpace03 (VB.NET)
+                  href: developer/prog-guide/runspace03-vb-net-code-sample.md
+            - name: Примеры кода RunSpace04
+              href: developer/prog-guide/runspace04-code-samples.md
+              items:
+                - name: Пример кода RunSpace04 (VB.NET)
+                  href: developer/prog-guide/runspace04-vb-net-code-sample.md
+            - name: Примеры кода RunSpace05
+              href: developer/prog-guide/runspace05-code-sample.md
+            - name: Примеры кода RunSpace06
+              href: developer/prog-guide/runspace06-code-sample.md
+            - name: Примеры кода RunSpace07
+              href: developer/prog-guide/runspace07-code-sample.md
+            - name: Примеры кода RunSpace08
+              href: developer/prog-guide/runspace08-code-sample.md
+            - name: Примеры кода RunSpace09
+              href: developer/prog-guide/runspace09-code-sample.md
+            - name: Примеры кода RunSpace10
+              href: developer/prog-guide/runspace10-code-sample.md
+    - name: "Справочник по Windows\_PowerShell"
+      href: developer/windows-powershell-reference.md
+      items:
+        - name: Новые возможности
+          href: developer/windows-powershell-reference-whats-new.md
