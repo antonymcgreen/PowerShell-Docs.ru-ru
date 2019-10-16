@@ -1,0 +1,113 @@
+---
+title: Общие имена параметров | Документация Майкрософт
+ms.custom: ''
+ms.date: 09/13/2016
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 0db9f54c-4014-4450-9e81-c9f5fe562a0e
+caps.latest.revision: 12
+ms.openlocfilehash: c65deeda6b2ef1b52de55035dc606259a7f2d232
+ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72365743"
+---
+# <a name="common-parameter-names"></a>Общие имена параметров
+
+Параметры, описанные в этом разделе, называются *общими параметрами*. Они добавляются в командлеты средой выполнения Windows PowerShell и не могут быть объявлены с помощью командлета.
+
+> [!NOTE]
+> Эти параметры также добавляются в командлеты поставщика и в функции, снабженные атрибутом `CmdletBinding`.
+
+## <a name="general-common-parameters"></a>Общие общие параметры
+
+Следующие параметры добавляются во все командлеты и доступны при каждом запуске командлета. Эти параметры определяются классом [System. Management. Automation. internal. общиепараметры](/dotnet/api/System.Management.Automation.Internal.CommonParameters) .
+
+### <a name="debug-alias-db"></a>Отладка (псевдоним: DB)
+
+Тип данных: переключатель
+
+Этот параметр указывает, могут ли сообщения отладки на уровне программиста отображаться в командной строке. Эти сообщения предназначены для устранения неполадок в работе командлета и создаются вызовами метода [System. Management. Automation. командлета. вритедебуг](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) . Сообщения отладки не обязательно должны быть локализованы.
+
+### <a name="erroraction-alias-ea"></a>ErrorAction (псевдоним: EA)
+
+Тип данных: перечисление
+
+Этот параметр указывает, какое действие должно выполняться при возникновении ошибки. Возможные значения для этого параметра определяются перечислением [System. Management. Automation. действие](/dotnet/api/System.Management.Automation.ActionPreference) .
+
+### <a name="errorvariable-alias-ev"></a>ErrorVariable (псевдоним: EV)
+
+Тип данных: строка
+
+Этот параметр задает переменную, в которой должны размещаться объекты при возникновении ошибки. Чтобы добавить к этой переменной, используйте +*имя_переменной* вместо очистки и задания переменной.
+
+### <a name="outvariable-alias-ov"></a>Переменная (Alias: OV)
+
+Тип данных: строка
+
+Этот параметр задает переменную, в которой должны размещаться все выходные объекты, созданные командлетом. Чтобы добавить к этой переменной, используйте +*имя_переменной* вместо очистки и задания переменной.
+
+### <a name="outbuffer-alias-ob"></a>Буфер (псевдоним: OB)
+
+Тип данных: Int32
+
+Этот параметр определяет число объектов для хранения в выходном буфере до того, как все объекты передаются по конвейеру. По умолчанию объекты передаются сразу по конвейеру.
+
+### <a name="verbose-alias-vb"></a>Подробный (псевдоним: VB)
+
+Тип данных: переключатель
+
+Этот параметр указывает, записывает ли командлет пояснительные сообщения, которые могут отображаться в командной строке. Эти сообщения предназначены для предоставления пользователю дополнительной справки и создаются вызовами метода [System. Management. Automation. командлет. вритевербосе](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) .
+
+### <a name="warningaction-alias-wa"></a>WarningAction (псевдоним: WA)
+
+Тип данных: перечисление
+
+Этот параметр указывает, какое действие должно выполняться, когда командлет Записывает предупреждающее сообщение. Возможные значения для этого параметра определяются перечислением [System. Management. Automation. действие](/dotnet/api/System.Management.Automation.ActionPreference) .
+
+### <a name="warningvariable-alias-wv"></a>WarningVariable (псевдоним: WV)
+
+Тип данных: строка
+
+Этот параметр указывает переменную, в которой можно сохранять предупреждающие сообщения. Чтобы добавить к этой переменной, используйте +*имя_переменной* вместо очистки и задания переменной.
+
+## <a name="risk-mitigation-parameters"></a>Параметры защиты от риска
+
+Следующие параметры добавляются в командлеты, которые запрашивают подтверждение перед выполнением действия. Дополнительные сведения о запросах на подтверждение см. в разделе [запрос подтверждения](./requesting-confirmation-from-cmdlets.md). Эти параметры определяются классом [System. Management. Automation. internal. шаулдпроцесспараметерс](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) .
+
+### <a name="confirm-alias-cf"></a>Подтверждение (псевдоним: CF)
+
+Тип данных: переключатель
+
+Этот параметр указывает, отображается ли в командлете запрос, предлагающий пользователю, что он должен продолжить работу.
+
+### <a name="whatif-alias-wi"></a>WhatIf (псевдоним: Wi-in)
+
+Тип данных: переключатель
+
+Этот параметр указывает, записывает ли командлет сообщение, описывающее последствия выполнения командлета, без фактического выполнения каких-либо действий.
+
+## <a name="transaction-parameters"></a>Параметры транзакции
+
+Следующий параметр добавляется в командлеты, которые поддерживают транзакции. Эти параметры определяются классом [System. Management. Automation. internal. трансактионпараметерс](/dotnet/api/System.Management.Automation.Internal.TransactionParameters) .
+
+### <a name="usetransaction-alias-usetx"></a>UseTransaction (псевдоним: усеткс)
+
+Тип данных: переключатель
+
+Этот параметр указывает, будет ли командлет использовать текущую транзакцию для выполнения действия.
+
+## <a name="see-also"></a>См. также:
+
+[System. Management. Automation. internal. Общиепараметры](/dotnet/api/System.Management.Automation.Internal.CommonParameters)
+
+[System. Management. Automation. internal. Шаулдпроцесспараметерс](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters)
+
+[System. Management. Automation. internal. Трансактионпараметерс](/dotnet/api/System.Management.Automation.Internal.TransactionParameters)
+
+[Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+
+[Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
