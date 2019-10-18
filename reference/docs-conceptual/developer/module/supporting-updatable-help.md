@@ -17,28 +17,28 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72367043"
 ---
-# <a name="supporting-updatable-help"></a><span data-ttu-id="503ae-102">Поддержка обновляемой справки</span><span class="sxs-lookup"><span data-stu-id="503ae-102">Supporting Updatable Help</span></span>
+# <a name="supporting-updatable-help"></a><span data-ttu-id="c2a55-102">Поддержка обновляемой справки</span><span class="sxs-lookup"><span data-stu-id="c2a55-102">Supporting Updatable Help</span></span>
 
-<span data-ttu-id="503ae-103">*Обновляемая справочная система Windows PowerShell*, появившаяся в Windows® 8 и windows Server® 2012, предназначена для того, чтобы пользователи всегда имели новейшие разделы справки в командной строке на своем локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="503ae-103">The *Windows PowerShell Updatable Help System*, introduced in Windows® 8 and Windows Server® 2012, is designed to ensure that users always have the newest help topics at the command prompt on their local computer.</span></span> <span data-ttu-id="503ae-104">Вместе с интерактивной справкой Windows PowerShell, обновляемая Справка предоставляет полное справочное решение для пользователей.</span><span class="sxs-lookup"><span data-stu-id="503ae-104">Along with Windows PowerShell online help, Updatable Help provides a complete help solution for users.</span></span> <span data-ttu-id="503ae-105">В этом разделе описывается обновляемая справочная система и объясняется, как авторы модулей могут поддерживать обновляемую справку для своих модулей.</span><span class="sxs-lookup"><span data-stu-id="503ae-105">This section describes the Updatable Help System and explains how module authors can support Updatable Help for their modules.</span></span>
+<span data-ttu-id="c2a55-103">*Обновляемая справочная система Windows PowerShell*, появившаяся в Windows® 8 и windows Server® 2012, предназначена для того, чтобы пользователи всегда имели новейшие разделы справки в командной строке на своем локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="c2a55-103">The *Windows PowerShell Updatable Help System*, introduced in Windows® 8 and Windows Server® 2012, is designed to ensure that users always have the newest help topics at the command prompt on their local computer.</span></span> <span data-ttu-id="c2a55-104">Вместе с интерактивной справкой Windows PowerShell, обновляемая Справка предоставляет полное справочное решение для пользователей.</span><span class="sxs-lookup"><span data-stu-id="c2a55-104">Along with Windows PowerShell online help, Updatable Help provides a complete help solution for users.</span></span> <span data-ttu-id="c2a55-105">В этом разделе описывается обновляемая справочная система и объясняется, как авторы модулей могут поддерживать обновляемую справку для своих модулей.</span><span class="sxs-lookup"><span data-stu-id="c2a55-105">This section describes the Updatable Help System and explains how module authors can support Updatable Help for their modules.</span></span>
 
-<span data-ttu-id="503ae-106">Этот раздел содержит следующие темы.</span><span class="sxs-lookup"><span data-stu-id="503ae-106">This section includes the following topics.</span></span>
+<span data-ttu-id="c2a55-106">Этот раздел содержит следующие темы.</span><span class="sxs-lookup"><span data-stu-id="c2a55-106">This section includes the following topics.</span></span>
 
-- [<span data-ttu-id="503ae-107">Обзор обновляемой справки</span><span class="sxs-lookup"><span data-stu-id="503ae-107">Updatable Help Overview</span></span>](./updatable-help-overview.md)
+- [<span data-ttu-id="c2a55-107">Обзор обновляемой справки</span><span class="sxs-lookup"><span data-stu-id="c2a55-107">Updatable Help Overview</span></span>](./updatable-help-overview.md)
 
-- [<span data-ttu-id="503ae-108">Обновляемая Справка по разработке: пошаговое руководство</span><span class="sxs-lookup"><span data-stu-id="503ae-108">Updatable Help Authoring: Step-by-Step</span></span>](./updatable-help-authoring-step-by-step.md)
+- [<span data-ttu-id="c2a55-108">Обновляемая Справка по разработке: пошаговое руководство</span><span class="sxs-lookup"><span data-stu-id="c2a55-108">Updatable Help Authoring: Step-by-Step</span></span>](./updatable-help-authoring-step-by-step.md)
 
-- [<span data-ttu-id="503ae-109">Как работает обновляемая Справка</span><span class="sxs-lookup"><span data-stu-id="503ae-109">How Updatable Help Works</span></span>](./how-updatable-help-works.md)
+- [<span data-ttu-id="c2a55-109">Как работает обновляемая Справка</span><span class="sxs-lookup"><span data-stu-id="c2a55-109">How Updatable Help Works</span></span>](./how-updatable-help-works.md)
 
-- [<span data-ttu-id="503ae-110">Создание XML-файла HelpInfo</span><span class="sxs-lookup"><span data-stu-id="503ae-110">How to Create a HelpInfo XML File</span></span>](./how-to-create-a-helpinfo-xml-file.md)
+- [<span data-ttu-id="c2a55-110">Создание XML-файла HelpInfo</span><span class="sxs-lookup"><span data-stu-id="c2a55-110">How to Create a HelpInfo XML File</span></span>](./how-to-create-a-helpinfo-xml-file.md)
 
-- [<span data-ttu-id="503ae-111">Подготовка обновляемых CAB-файлов справки</span><span class="sxs-lookup"><span data-stu-id="503ae-111">How to Prepare Updatable Help CAB Files</span></span>](./how-to-prepare-updatable-help-cab-files.md)
+- [<span data-ttu-id="c2a55-111">Подготовка обновляемых CAB-файлов справки</span><span class="sxs-lookup"><span data-stu-id="c2a55-111">How to Prepare Updatable Help CAB Files</span></span>](./how-to-prepare-updatable-help-cab-files.md)
 
-- [<span data-ttu-id="503ae-112">Обновление файлов справки</span><span class="sxs-lookup"><span data-stu-id="503ae-112">How to Update Help Files</span></span>](./how-to-update-help-files.md)
+- [<span data-ttu-id="c2a55-112">Обновление файлов справки</span><span class="sxs-lookup"><span data-stu-id="c2a55-112">How to Update Help Files</span></span>](./how-to-update-help-files.md)
 
-- [<span data-ttu-id="503ae-113">Проверка обновляемой справки</span><span class="sxs-lookup"><span data-stu-id="503ae-113">How to Test Updatable Help</span></span>](./how-to-test-updatable-help.md)
+- [<span data-ttu-id="c2a55-113">Проверка обновляемой справки</span><span class="sxs-lookup"><span data-stu-id="c2a55-113">How to Test Updatable Help</span></span>](./how-to-test-updatable-help.md)
 
-## <a name="see-also"></a><span data-ttu-id="503ae-114">См. также:</span><span class="sxs-lookup"><span data-stu-id="503ae-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2a55-114">См. также:</span><span class="sxs-lookup"><span data-stu-id="c2a55-114">See Also</span></span>
 
-[<span data-ttu-id="503ae-115">Поддержка справки в Интернете</span><span class="sxs-lookup"><span data-stu-id="503ae-115">Supporting Online Help</span></span>](./supporting-online-help.md)
+[<span data-ttu-id="c2a55-115">Поддержка справки в Интернете</span><span class="sxs-lookup"><span data-stu-id="c2a55-115">Supporting Online Help</span></span>](./supporting-online-help.md)
 
-[<span data-ttu-id="503ae-116">Обновляемая таблица состояния справки</span><span class="sxs-lookup"><span data-stu-id="503ae-116">Updatable Help Status Table</span></span>](https://www.microsoft.com/en-us/itpro/windows)
+[<span data-ttu-id="c2a55-116">Обновляемая таблица состояния справки</span><span class="sxs-lookup"><span data-stu-id="c2a55-116">Updatable Help Status Table</span></span>](https://www.microsoft.com/en-us/itpro/windows)
