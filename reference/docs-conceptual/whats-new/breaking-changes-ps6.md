@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
-ms.openlocfilehash: 186e55c1ac46ce3fc172df18995f8c15d9eeb8eb
-ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
+ms.openlocfilehash: df716fc3ad48d640ddefcfd87da445eaf104cfbe
+ms.sourcegitcommit: e1027805385081c2e6f9250f9cd1167a45f035b0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "67843940"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561263"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Критические изменения в PowerShell Core 6.0
 
@@ -20,6 +20,8 @@ ms.locfileid: "67843940"
 Из-за отсутствия поддержки Windows Workflow Foundation в .NET Core мы больше не будем поддерживать рабочий процесс PowerShell в PowerShell Core.
 
 В будущем мы хотели бы реализовать собственный параллелизм в языке PowerShell без необходимости использовать рабочий процесс PowerShell.
+
+Если нужно возобновить выполнение скрипта после перезагрузки операционной системы с помощью контрольных точек, рекомендуем использовать планировщик задач. Он позволит запустить скрипт при запуске ОС. Но скрипт должен поддерживать свое собственное состояние (например, сохранять его в файле).
 
 [workflow]: https://docs.microsoft.com/powershell/scripting/core-powershell/workflows-guide
 [workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/
