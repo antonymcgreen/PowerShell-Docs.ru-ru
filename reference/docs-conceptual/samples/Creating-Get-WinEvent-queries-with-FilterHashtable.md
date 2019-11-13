@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: Создание запросов Get-WinEvent с помощью FilterHashtable
-ms.openlocfilehash: 1bf321c09c20736de36eb896fabced31cfdfbd75
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71143661"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444392"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Создание запросов Get-WinEvent с помощью FilterHashtable
 
@@ -36,12 +36,12 @@ Get-WinEvent -FilterHashtable @{
 В этой статье представлены сведения о том, как использовать перечисляемые значения в хэш-таблице. Дополнительные сведения о перечислении см. в записях блога **специалистов по сценариям**. Сведения для создания функции, возвращающей перечисляемые значения, см. в [этой записи блога](https://devblogs.microsoft.com/scripting/hey-scripting-guy-weekend-scripter-enumerations-and-values).
 Дополнительные сведения см. в [ряде записей блога специалистов по сценариям, посвященных перечислению](https://devblogs.microsoft.com/scripting/?s=about+enumeration).
 
-## <a name="hash-table-keyvalue-pairs"></a>Пары "ключ — значение" в хэш-таблице
+## <a name="hash-table-key-value-pairs"></a>Пары "ключ — значение" в хэш-таблице
 
 Для создания эффективных запросов используйте командлет `Get-WinEvent` с параметром **FilterHashtable**.
 **FilterHashtable** принимает хэш-таблицу в качестве фильтра для получения конкретных сведений из журналов событий Windows. Хэш-таблица использует пары **ключ — значение**. Дополнительные сведения о хэш-таблицах см. [здесь](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
 
-Если пары **ключ — значение** находятся в одной строке, они должны быть разделены точкой с запятой. Если пара **ключ — значение** находится в отдельной строке, точка с запятой не требуется. Например, в этой статье пары **ключ — значение** помещаются в отдельных строках и не содержат точку с запятой.
+Если пары **ключ — значение** находятся в одной строке, они должны быть разделены точкой с запятой. Если пары **ключ — значение** находятся в разных строках, точка с запятой не требуется. Например, в этой статье пары **ключ — значение** расположены в разных строках и разделены точкой с запятой.
 
 В этом примере используется несколько пар **ключ — значение** для параметра **FilterHashtable**. Готовый запрос включает в себя значения **LogName**, **ProviderName**, **Keywords**, **ID** и **Level**.
 
@@ -62,9 +62,9 @@ Get-WinEvent -FilterHashtable @{
 | EndTime        | `<DateTime>`    | Нет                           |
 | UserID         | `<SID>`         | Нет                           |
 | Данные           | `<String[]>`    | Нет                           |
-| \<named-data\> | `<String[]>`    | Нет                           |
+| `<named-data>` | `<String[]>`    | Нет                           |
 
-Ключ \<named-data\> представляет собой именованное поле данных событий. Например, событие Perflib 1008 может содержать следующие данные о событии:
+Ключ `<named-data>` представляет именованное поле данных событий. Например, событие Perflib 1008 может содержать следующие данные о событии:
 
 ```xml
 <EventData>
@@ -80,11 +80,14 @@ Get-WinEvent -FilterHashtable @{
 Get-WinEvent -FilterHashtable @{LogName='Application'; 'Service'='Bits'}
 ```
 
+> [!NOTE]
+> Возможность создавать запросы `<named-data>` была добавлена в PowerShell 6.
+
 ## <a name="building-a-query-with-a-hash-table"></a>Создание запроса с использованием хэш-таблицы
 
-Для проверки результатов и устранения проблем полезно создавать одну пару **ключ — значение** для хэш-таблицы за раз. Запрос получает данные из журнала **Application**. Хэш-таблица создается в результате запроса `Get-WinEvent –LogName Application`.
+Для проверки результатов и устранения проблем полезно создавать по одной паре **ключ — значение** для хэш-таблицы за раз. Запрос получает данные из журнала **Application**. Хэш-таблица создается в результате запроса `Get-WinEvent –LogName Application`.
 
-Для начала создайте запрос `Get-WinEvent`. Используйте пару **ключ — значение** параметра **FilterHashtable** с ключом **LogName** и его значением — **Application**.
+Для начала создайте запрос `Get-WinEvent`. Используйте пару **ключ — значение** параметра **FilterHashtable** с ключом **LogName** и значением **Application**.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -96,7 +99,7 @@ Get-WinEvent -FilterHashtable @{
 
 ![Изображение источников в средстве "Просмотр событий Windows".](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
-Обновите хэш-таблицу и добавьте пару **ключ — значение** с ключом **ProviderName и его значением — **.NET Runtime**.
+Обновите хэш-таблицу и добавьте пару **ключ — значение** с ключом **ProviderName и значением **.NET Runtime**.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -148,7 +151,7 @@ WdiContext       Property   static System.Diagnostics.Eventing.Reader.StandardEv
 WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEventKey…
 ```
 
-Перечисляемые значения описаны в **.NET Framework**. Дополнительные сведения см. в разделе о команде перечисления [StandardEventKeywords](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?redirectedfrom=MSDN&view=netframework-4.7.2).
+Перечисляемые значения описаны в **.NET Framework**. Дополнительные сведения см. в разделе о команде перечисления [StandardEventKeywords](/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?redirectedfrom=MSDN&view=netframework-4.7.2).
 
 Имена **ключевых слов** и перечисляемые значения выглядят следующим образом:
 
@@ -164,7 +167,7 @@ WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEv
 | ResponseTime     | 281474976710656   |
 | Нет             | 0                 |
 
-Обновите хэш-таблицу и добавьте пару **ключ — значение** с ключом **Keywords** и значением перечисления **EventLogClassic** — **36028797018963968** .
+Обновите хэш-таблицу и добавьте пару **ключ — значение** с ключом **Keywords** и значением перечисления **EventLogClassic** **36028797018963968** .
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -194,7 +197,7 @@ Get-WinEvent -FilterHashtable @{
 
 Для получения более конкретных данных результаты запроса можно отфильтровать по **идентификатору события**. **Идентификатор события** указывается в хэш-таблице как ключ **ID**, а значение соответствует конкретному **идентификатору события**. В средстве **Просмотр событий Windows** отображается **идентификатор события**. В этом примере используется **идентификатор события 1023**.
 
-Обновите хэш-таблицу и добавьте пару **ключ — значение** с ключом **ID** и его значением — **1023**.
+Обновите хэш-таблицу и добавьте пару **ключ — значение** с ключом **ID** и значением **1023**.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -229,7 +232,7 @@ Verbose       Property   static System.Diagnostics.Eventing.Reader.StandardEvent
 Warning       Property   static System.Diagnostics.Eventing.Reader.StandardEventLevel Warning {get;}
 ```
 
-Перечисляемые значения описаны в **.NET Framework**. Дополнительные сведения см. в разделе о команде перечисления [StandardEventLevel](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel?redirectedfrom=MSDN&view=netframework-4.7.2).
+Перечисляемые значения описаны в **.NET Framework**. Дополнительные сведения см. в разделе о команде перечисления [StandardEventLevel](/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel?redirectedfrom=MSDN&view=netframework-4.7.2).
 
 Имена ключа **Level** и перечисляемые значения выглядят следующим образом:
 
