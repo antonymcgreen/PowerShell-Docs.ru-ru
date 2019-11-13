@@ -2,16 +2,23 @@
 title: Установка PowerShell Core в Windows
 description: Сведения об установке PowerShell Core в Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: 3f21761037311891162f1083234edb0aca80d28b
-ms.sourcegitcommit: 4ec9e10647b752cc62b1eabb897ada3dc03c93eb
+ms.openlocfilehash: c06eba06e376c3f795ab9c0fae9270cf6cf8f2ce
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830231"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444457"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Установка PowerShell Core в Windows
 
 Есть несколько способов установки PowerShell Core в Windows.
+
+> [!TIP]
+> Если вы уже установили [пакет SDK для .NET Core](/dotnet/core/sdk), установите PowerShell как [глобальный инструмент .NET](/dotnet/core/tools/global-tools).
+>
+> ```
+> dotnet tool install --global PowerShell
+> ```
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
@@ -22,7 +29,7 @@ ms.locfileid: "66830231"
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />Установка пакета MSI
 
-Чтобы установить PowerShell на клиент Windows или сервер Windows Server (поддерживаются Windows 7 с пакетом обновления 1, Windows Server 2008 R2 и более поздние версии), скачайте пакет MSI на нашей странице GitHub с [выпусками][releases]. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
+Чтобы установить PowerShell на клиенте Windows или в Windows Server (работает в Windows 7 с пакетом обновления 1 (SP1), Server 2008 R2 и более поздних версий), скачайте пакет MSI из с нашей страницы [выпусков][releases] GitHub. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
 
 MSI-файл имеет следующий вид: `PowerShell-<version>-win-<os-arch>.msi`.
 <!-- TODO: should be updated to point to the Download Center as well -->

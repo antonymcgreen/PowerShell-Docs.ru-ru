@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Начало работы с настройкой требуемого состояния (DSC) для Linux
-ms.openlocfilehash: 523b91741dba57a98ac6e7ba660a776568af7065
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: b1bc9b9fafd89a1af0f967de38a817bff1f3ffe3
+ms.sourcegitcommit: 14b50e5446f69729f72231f5dc6f536cdd1084c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71953891"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73933850"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Начало работы с настройкой требуемого состояния (DSC) для Linux
 
@@ -128,7 +128,7 @@ $Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Aut
 > [!NOTE]
 > В режиме принудительной передачи необходимо указывать учетные данные привилегированного пользователя на компьютере Linux.
 > DSC для Linux поддерживает только SSL/TLS-подключения, поэтому необходимо использовать командлет `New-CimSession` с параметром –UseSSL, имеющим значение $true.
-> SSL-сертификат, используемый OMI (DSC), указан в файле `/opt/omi/etc/omiserver.conf` со свойствами pemfile и keyfile.
+> SSL-сертификат, используемый OMI (DSC), указан в файле `/etc/opt/omi/conf/omiserver.conf` со свойствами pemfile и keyfile.
 > Если компьютер Windows, на котором выполняется командлет [New-CimSession](/powershell/module/CimCmdlets/New-CimSession), не признает этот сертификат как надежный, проверку сертификата можно пропустить, используя параметры CIMSession: `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
 
 Для принудительной отправки конфигурации DSC на узел Linux используйте следующую команду:

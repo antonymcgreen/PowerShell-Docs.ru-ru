@@ -2,12 +2,12 @@
 title: Удаленное взаимодействие с PowerShell через SSH
 description: Удаленное взаимодействие в PowerShell Core с помощью SSH
 ms.date: 09/30/2019
-ms.openlocfilehash: 744fa95e42b0cf6eb28db0c7014d07f143174214
-ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
+ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71692171"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444365"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Удаленное взаимодействие с PowerShell через SSH
 
@@ -64,23 +64,24 @@ PowerShell 6 или более поздней версии, и на всех к
    Создайте подсистему SSH, в которой размещается процесс PowerShell на удаленном компьютере:
 
    ```
-   Subsystem powershell c:/program files/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
    ```
 
    > [!NOTE]
-   > В OpenSSH для Windows обнаружена ошибка, блокирующая работу пробелов в путях к исполняемым файлам подсистемы. См. дополнительные сведения на [сайте GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
-
-   Одно из решений — создать символьную ссылку на папку установки PowerShell, которая не содержит пробелы:
-
-   ```powershell
-   New-Item -ItemType SymbolicLink -Path "C:\pwshdir" -Value "C:\Program Files\PowerShell\6"
-   ```
-
-   Используйте символьную ссылку для исполняемого файла PowerShell в подсистеме:
-
-   ```
-   Subsystem powershell C:\pwshdir\pwsh.exe -sshs -NoLogo -NoProfile
-   ```
+   > Необходимо использовать краткое имя 8.3 для всех путей к файлам, содержащим пробелы. В OpenSSH для Windows обнаружена ошибка, блокирующая работу пробелов в путях к исполняемым файлам подсистемы. См. дополнительные сведения на [сайте GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
+   >
+   > Обычно краткое имя 8.3 для папки `Program Files` в Windows — это `Progra~1`. Тем не менее для проверки можно использовать следующую команду:
+   >
+   > ```powershell
+   > Get-CimInstance Win32_Directory -Filter 'Name="C:\\Program Files"' |
+   >   Select-Object EightDotThreeFileName
+   > ```
+   >
+   > ```Output
+   > EightDotThreeFileName
+   > ---------------------
+   > c:\progra~1
+   > ```
 
    При необходимости включите проверку подлинности на основе ключа:
 
