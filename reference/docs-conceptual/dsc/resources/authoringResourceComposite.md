@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Составные ресурсы — использование конфигурации DSC как ресурса
-ms.openlocfilehash: ef8d5665e552da01977c2f21a43246c72bb7155f
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: 7fa6ee56d4706b96fb47123c7aa00c4df6256492
+ms.sourcegitcommit: 14b50e5446f69729f72231f5dc6f536cdd1084c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71954351"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73933826"
 ---
 # <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Составные ресурсы: использование конфигурации DSC как ресурса
 
@@ -158,10 +158,8 @@ $env: psmodulepath
 Теперь создадим конфигурацию, которая вызывает составной ресурс. Эта конфигурация вызывает составной ресурс xVirtualMachine для создания виртуальной машины, а затем ресурс **xComputer**, чтобы ее переименовать.
 
 ```powershell
-
 configuration RenameVM
 {
-
     Import-DscResource -Module xVirtualMachine
     Node localhost
     {
@@ -188,9 +186,32 @@ configuration RenameVM
 }
 ```
 
+С помощью этого ресурса также можно создать несколько виртуальных машин путем передачи массива имен виртуальных машин в ресурс xVirtualMachine.
+
+```PowerShell
+Configuration MultipleVms
+{
+    Import-DscResource -Module xVirtualMachine
+    Node localhost
+    {
+        xVirtualMachine VMs
+        {
+            VMName = "IIS01", "SQL01", "SQL02"
+            SwitchName = "Internal"
+            SwitchType = "Internal"
+            VhdParentPath = "C:\Demo\VHD\RTM.vhd"
+            VHDPath = "C:\Demo\VHD"
+            VMStartupMemory = 1024MB
+            VMState = "Running"
+        }
+    }
+}
+```
+
 ## <a name="supporting-psdscrunascredential"></a>Поддержка PsDscRunAsCredential
 
->**Примечание**. **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
+> [!NOTE]
+> **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
 
 Свойство **PsDscRunAsCredential** может использоваться в блоке ресурса [конфигураций DSC](../configurations/configurations.md), чтобы указать, что ресурс должен выполняться с указанным набором учетных данных.
 Дополнительные сведения см. в разделе [Запуск DSC с учетными данными пользователя](../configurations/runAsUser.md).
