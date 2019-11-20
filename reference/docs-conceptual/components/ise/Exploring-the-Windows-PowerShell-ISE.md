@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Обзор интегрированной среды сценариев Windows PowerShell
-ms.openlocfilehash: 8c47e236e2e345a887fc3af281e429f440e176ff
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 7949b690cda73148f07922985b1fc30fe1e8b2d0
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031030"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117441"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Обзор интегрированной среды сценариев Windows PowerShell
 
@@ -18,7 +18,7 @@ ms.locfileid: "67031030"
 
 ## <a name="menu-bar"></a>Строка меню
 
-Строка меню содержит меню **Файл**, **Правка**, **Вид**, **Сервис**, **Отладка**, **Надстройки** и **Справка**. Кнопки в меню позволяют выполнять задачи, связанные с написанием и запуском сценариев и выполнением команд в ISE Windows PowerShell. Кроме того, [дополнительные средства](../../core-powershell/ise/The-ISEAddOnTool-Object.md) могут быть помещены в строку меню при помощи запуска скриптов, которые используют [Иерархию объектной модели интегрированной среды сценариев](../../core-powershell/ise/The-ISE-Object-Model-Hierarchy.md).
+Строка меню содержит меню **Файл**, **Правка**, **Вид**, **Сервис**, **Отладка**, **Надстройки** и **Справка**. Кнопки в меню позволяют выполнять задачи, связанные с написанием и запуском сценариев и выполнением команд в ISE Windows PowerShell. Кроме того, [дополнительные средства](object-model/The-ISEAddOnTool-Object.md) могут быть помещены в строку меню при помощи запуска скриптов, которые используют [Иерархию объектной модели интегрированной среды сценариев](object-model/The-ISE-Object-Model-Hierarchy.md).
 
 > [!NOTE]
 > В интегрированной среде сценариев Windows PowerShell 2.0 меню **Сервис** и **Надстройки** отсутствуют.
@@ -83,4 +83,4 @@ ms.locfileid: "67031030"
 
 ## <a name="see-also"></a>См. также
 
-- [Введение в интегрированную среду сценариев Windows PowerShell](../../core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)
+- [Введение в интегрированную среду сценариев Windows PowerShell](Introducing-the-Windows-PowerShell-ISE.md)
