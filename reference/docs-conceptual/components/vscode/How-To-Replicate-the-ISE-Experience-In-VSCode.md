@@ -2,12 +2,12 @@
 title: Репликация функций интегрированной среды скриптов в Visual Studio Code
 description: Репликация функций интегрированной среды скриптов в Visual Studio Code
 ms.date: 08/06/2018
-ms.openlocfilehash: 983da850c13d72bcdc7b2d33970c6e9e06b3d869
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d5542e9a3a48b1ae64356309be669418edf6c79e
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058528"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117472"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Репликация функций интегрированной среды скриптов в Visual Studio Code
 
@@ -27,12 +27,29 @@ ms.locfileid: "62058528"
 
 Также в VSCode можно [настраивать собственные сочетания клавиш](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings).
 
+## <a name="simplified-ise-like-ui"></a>Упрощенный интерфейс, как в интегрированной среде сценариев
+
+Если вы хотите упростить пользовательский интерфейс Visual Studio Code, чтобы он стал больше похож на интерфейс интегрированной среды сценариев, примените эти два параметра:
+
+```json
+"workbench.activityBar.visible": false,
+"debug.openDebug": "neverOpen",
+```
+
+Это скроет разделы с панелью действий и боковой панелью отладки в красной области, как на изображении ниже.
+
+![Выделенный раздел с панелью действий и боковой панелью отладки](images/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
+
+В итоге представление будет выглядеть так:
+
+![Упрощенное представление VS Code](images/How-To-Replicate-the-ISE-Experience-In-VSCode/2-simplified-ui.png)
+
 ## <a name="tab-completion"></a>Заполнение нажатием клавиши TAB
 
 Чтобы включить заполнение нажатием клавиши TAB (похожее на интегрированную среду сценариев), добавьте следующий параметр.
 
 ```json
-"editor.tabCompletion": "on"
+"editor.tabCompletion": "on",
 ```
 
 > [!NOTE]
@@ -64,7 +81,7 @@ ms.locfileid: "62058528"
 Чтобы создать новые файлы без имени, по умолчанию следует зарегистрироваться в качестве PowerShell.
 
 ```json
-"files.defaultLanguage": "powershell"
+"files.defaultLanguage": "powershell",
 ```
 
 ## <a name="color-scheme"></a>Цветовая схема
@@ -77,7 +94,7 @@ ms.locfileid: "62058528"
 Эту тему можно установить в параметрах следующим образом.
 
 ```json
-"workbench.colorTheme": "PowerShell ISE"
+"workbench.colorTheme": "PowerShell ISE",
 ```
 
 ## <a name="powershell-command-explorer"></a>Команды обозревателя PowerShell
