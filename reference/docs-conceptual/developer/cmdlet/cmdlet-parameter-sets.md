@@ -1,5 +1,5 @@
 ---
-title: Наборы параметров командлета | Документация Майкрософт
+title: Cmdlet Parameter Sets | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,60 +8,59 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f902fd4d-8f6e-4ef1-b07f-59983039a0d1
 caps.latest.revision: 10
-ms.openlocfilehash: d8c00c7ffd369a32af151836785a2c5f47b05a68
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: dfe747893b4aef6376ea3b12dd79b7c144455ed0
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72365903"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74415685"
 ---
-# <a name="cmdlet-parameter-sets"></a>Наборы параметров командлета
+# <a name="cmdlet-parameter-sets"></a>Cmdlet parameter sets
 
-В PowerShell используются наборы параметров, позволяющие создавать один командлет, который может выполнять различные действия в различных сценариях. Наборы параметров позволяют предоставлять пользователю различные параметры. И, чтобы получить различные сведения на основе параметров, указанных пользователем.
+PowerShell uses parameter sets to enable you to write a single cmdlet that can do different actions for different scenarios. Parameter sets enable you to expose different parameters to the user. And, to return different information based on the parameters specified by the user.
 
-## <a name="examples-of-parameter-sets"></a>Примеры наборов параметров
+## <a name="examples-of-parameter-sets"></a>Examples of parameter sets
 
-Например, командлет PowerShell `Get-EventLog` возвращает различную информацию в зависимости от того, указывает ли пользователь параметр **List** или **/l** . Если указан параметр **List** , командлет возвращает сведения о самих файлах журнала, но не сведения о событиях, которые они содержат. Если указан параметр " **/l** ", командлет возвращает сведения о событиях в определенном журнале событий. Параметры **List** и параметров задания указывают два отдельных набора параметров.
+For example, the PowerShell `Get-EventLog` cmdlet returns different information depending on whether the user specifies the **List** or **LogName** parameter. If the **List** parameter is specified, the cmdlet returns information about the log files themselves but not the event information they contain. If the **LogName** parameter is specified, the cmdlet returns information about the events in a specific event log. The **List** and **LogName** parameters identify two separate parameter sets.
 
-## <a name="unique-parameter"></a>Уникальный параметр
+## <a name="unique-parameter"></a>Unique parameter
 
-Каждый набор параметров должен иметь уникальный параметр, используемый средой выполнения PowerShell для предоставления соответствующего набора параметров. Если это возможно, уникальный параметр должен быть обязательным. Если параметр является обязательным, пользователь должен указать параметр, а среда выполнения PowerShell использует этот параметр для определения набора параметров. Уникальный параметр не может быть обязательным, если командлет предназначен для запуска без указания каких-либо параметров.
+Each parameter set must have a unique parameter that the PowerShell runtime uses to expose the appropriate parameter set. If possible, the unique parameter should be a mandatory parameter. When a parameter is mandatory, the user must specify the parameter, and the PowerShell runtime uses that parameter to identify the parameter set. The unique parameter can't be mandatory if your cmdlet is designed to run without specifying any parameters.
 
-## <a name="multiple-parameter-sets"></a>Несколько наборов параметров
+## <a name="multiple-parameter-sets"></a>Multiple parameter sets
 
-На следующем рисунке в левом столбце показаны три допустимых набора параметров. **Параметр A** уникален для первого набора параметров, **параметр B** уникален для второго набора параметров, а **параметр C** является уникальным для третьего набора параметров. В правом столбце наборы параметров не имеют уникального параметра.
+In the following illustration, the left column shows three valid parameter sets. **Parameter A** is unique to the first parameter set, **parameter B** is unique to the second parameter set, and **parameter C** is unique to the third parameter set. In the right column, the parameter sets don't have a unique parameter.
 
 ![ps_parametersets](../media/ps-parametersets.gif)
 
-## <a name="parameter-set-requirements"></a>Требования к наборам параметров
+## <a name="parameter-set-requirements"></a>Parameter set requirements
 
-Следующие требования применяются ко всем наборам параметров.
+The following requirements apply to all parameter sets.
 
-- Каждый набор параметров должен иметь по крайней мере один уникальный параметр. Если это возможно, присвоить этому параметру обязательный параметр.
+- Each parameter set must have at least one unique parameter. If possible, make this parameter a mandatory parameter.
 
-- Набор параметров, содержащий несколько позиционированных параметров, должен определять уникальные позиции для каждого параметра. Ни один из двух параметров позиционирования не может указывать одну и ту же точку.
+- A parameter set that contains multiple positional parameters must define unique positions for each parameter. No two positional parameters can specify the same position.
 
-- Только один параметр в наборе может объявить ключевое слово `ValueFromPipeline` со значением `true`.
-  Несколько параметров могут определять ключевое слово `ValueFromPipelineByPropertyName` со значением `true`.
+- Only one parameter in a set can declare the `ValueFromPipeline` keyword with a value of `true`.
+  Multiple parameters can define the `ValueFromPipelineByPropertyName` keyword with a value of `true`.
 
-- Если для параметра не задан набор параметров, параметр относится ко всем наборам параметров.
+- If no parameter set is specified for a parameter, the parameter belongs to all parameter sets.
 
 > [!NOTE]
-> Для командлета или функции существует ограничение в 32 наборов параметров.
+> For a cmdlet or function, there is a limit of 32 parameter sets.
 
-## <a name="default-parameter-sets"></a>Наборы параметров по умолчанию
+## <a name="default-parameter-sets"></a>Default parameter sets
 
-Если определено несколько наборов параметров, можно использовать ключевое слово `DefaultParameterSetName` атрибута **командлета** , чтобы указать набор параметров по умолчанию. PowerShell использует набор параметров по умолчанию, если не может определить набор параметров для использования на основе сведений, предоставленных командой. Дополнительные сведения об атрибуте **командлета** см. в разделе [объявление атрибута командлета](./cmdlet-attribute-declaration.md).
+When multiple parameter sets are defined, you can use the `DefaultParameterSetName` keyword of the **Cmdlet** attribute to specify the default parameter set. PowerShell uses the default parameter set if it can't determine the parameter set to use based on the information provided by the command. For more information about the **Cmdlet** attribute, see [Cmdlet Attribute Declaration](./cmdlet-attribute-declaration.md).
 
-## <a name="declaring-parameter-sets"></a>Объявление наборов параметров
+## <a name="declaring-parameter-sets"></a>Declaring parameter sets
 
-Чтобы создать набор параметров, необходимо указать ключевое слово `ParameterSetName` при объявлении атрибута **параметра** для каждого параметра в наборе параметров. Для параметров, принадлежащих к нескольким наборам параметров, добавьте атрибут **параметра** для каждого набора параметров. Этот атрибут позволяет определить параметр по-разному для каждого набора параметров. Например, можно определить параметр как обязательный в одном наборе и необязательный в другом. Однако каждый набор параметров должен содержать один уникальный параметр. Дополнительные сведения см. в разделе [объявление атрибута Parameter](parameter-attribute-declaration.md).
+To create a parameter set, you must specify the `ParameterSetName` keyword when you declare the **Parameter** attribute for every parameter in the parameter set. For parameters that belong to multiple parameter sets, add a **Parameter** attribute for each parameter set. This attribute enables you to define the parameter differently for each parameter set. For example, you can define a parameter as mandatory in one set and optional in another. However, each parameter set must contain one unique parameter. For more information, see [Parameter Attribute Declaration](parameter-attribute-declaration.md).
 
-В следующем примере параметр **username** является уникальным параметром набора параметров `Test01`, а параметр **ComputerName** является уникальным параметром набора параметров `Test02`. Параметр **шаредпарам** принадлежит обоим наборам и является обязательным для набора параметров `Test01`, но необязателен для набора параметров `Test02`.
+In the following example, the **UserName** parameter is the unique parameter of the `Test01` parameter set, and the **ComputerName** parameter is the unique parameter of the `Test02` parameter set. The **SharedParam** parameter belongs to both sets and is mandatory for the `Test01` parameter set but optional for the `Test02` parameter set.
 
 ```csharp
-[Parameter(Position = 0, Mandatory = true,
-           ParameterSetName = "Test01")]
+[Parameter(Position = 0, Mandatory = true, ParameterSetName = "Test01")]
 public string UserName
 {
   get { return userName; }
@@ -69,8 +68,7 @@ public string UserName
 }
 private string userName;
 
-[Parameter(Position = 0, Mandatory = true,
-           ParameterSetName = "Test02")]
+[Parameter(Position = 0, Mandatory = true, ParameterSetName = "Test02")]
 public string ComputerName
 {
   get { return computerName; }

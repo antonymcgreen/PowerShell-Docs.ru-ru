@@ -1,5 +1,5 @@
 ---
-title: Пример кода AccessDbProviderSample03 | Документация Майкрософт
+title: AccessDbProviderSample03 Code Sample | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,25 +8,25 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af25b560-017a-4d53-a8c3-97c5ab66b9d4
 caps.latest.revision: 5
-ms.openlocfilehash: a0493fc73efc77d8a80eaf21f78737ff8db9ddd4
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 26c7bafe708fbbd89aecb002f3591daa03f56b77
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72367003"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417529"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>Пример кода AccessDbProviderSample03
 
-В следующем коде показана реализация поставщика Windows PowerShell, описанного в статье [Создание поставщика элементов Windows PowerShell](./creating-a-windows-powershell-item-provider.md). Этот поставщик может управлять данными в хранилище данных.
+The following code shows the implementation of the Windows PowerShell provider described in [Creating a Windows PowerShell Item Provider](./creating-a-windows-powershell-item-provider.md). This provider that can manipulate the data in a data store.
 
 > [!NOTE]
-> Вы можете скачать C# исходный файл (AccessDBSampleProvider03.cs) для этого поставщика с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
+> You can download the C# source file (AccessDBSampleProvider03.cs) for this provider using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> Скачанные исходные файлы доступны в каталоге **\<PowerShell samples >** Directory.
+> The downloaded source files are available in the **\<PowerShell Samples>** directory.
 >
-> Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> For more information about other Windows PowerShell provider implementations, see [Designing Your Windows PowerShell Provider](./designing-your-windows-powershell-provider.md).
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Code Sample
 
 ```csharp
 using System;
@@ -1001,6 +1001,6 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 ## <a name="see-also"></a>См. также:
 
-[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

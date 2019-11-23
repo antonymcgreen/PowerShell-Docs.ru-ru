@@ -1,5 +1,5 @@
 ---
-title: Создание поставщика элементов Windows PowerShell | Документация Майкрософт
+title: Creating a Windows PowerShell Item Provider | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -11,246 +11,246 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: a2d0f2b435b4b56ac491804f3af695641449e17a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: ad42b8de867f468e832380ab6a22a39b6d27d3c6
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72360503"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417485"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Создание поставщика элементов Windows PowerShell
 
-В этом разделе описывается создание поставщика Windows PowerShell, который может управлять данными в хранилище данных. В этом разделе элементы данных в хранилище называются "элементами" хранилища данных. Как следствие, поставщик, который может манипулировать данными в хранилище, называется поставщиком элементов Windows PowerShell.
+This topic describes how to create a Windows PowerShell provider that can manipulate the data in a data store. In this topic, the elements of data in the store are referred to as the "items" of the data store. As a consequence, a provider that can manipulate the data in the store is referred to as a Windows PowerShell item provider.
 
 > [!NOTE]
-> Вы можете скачать C# исходный файл (AccessDBSampleProvider03.cs) для этого поставщика с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
+> You can download the C# source file (AccessDBSampleProvider03.cs) for this provider using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> Скачанные исходные файлы доступны в каталоге **\<PowerShell samples >** Directory.
+> The downloaded source files are available in the **\<PowerShell Samples>** directory.
 >
-> Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> For more information about other Windows PowerShell provider implementations, see [Designing Your Windows PowerShell Provider](./designing-your-windows-powershell-provider.md).
 
-Поставщик элементов Windows PowerShell, описанный в этом разделе, получает элементы данных из базы данных Access. В этом случае «Item» — это либо таблица в базе данных Access, либо строка в таблице.
+The Windows PowerShell item provider described in this topic gets items of data from an Access database. In this case, an "item" is either a table in the Access database or a row in a table.
 
-## <a name="defining-the-windows-powershell-item-provider-class"></a>Определение класса поставщика элементов Windows PowerShell
+## <a name="defining-the-windows-powershell-item-provider-class"></a>Defining the Windows PowerShell Item Provider Class
 
-Поставщик элементов Windows PowerShell должен определить класс .NET, производный от базового класса [System. Management. Automation. Provider. итемкмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) . Ниже приведено определение класса для поставщика элементов, описанного в этом разделе.
+A Windows PowerShell item provider must define a .NET class that derives from the [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) base class. The following is the class definition for the item provider described in this section.
 
 [!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L34-L36 "AccessDBProviderSample03.cs")]
 
-Обратите внимание, что в этом определении класса атрибут [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) включает два параметра. Первый параметр задает понятное имя для поставщика, используемого Windows PowerShell. Второй параметр указывает специальные возможности Windows PowerShell, которые поставщик предоставляет среде выполнения Windows PowerShell во время обработки команды. Для этого поставщика нет добавленных функций Windows PowerShell.
+Note that in this class definition, the [System.Management.Automation.Provider.Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) attribute includes two parameters. The first parameter specifies a user-friendly name for the provider that is used by Windows PowerShell. The second parameter specifies the Windows PowerShell specific capabilities that the provider exposes to the Windows PowerShell runtime during command processing. For this provider, there are no added Windows PowerShell specific capabilities.
 
-## <a name="defining-base-functionality"></a>Определение базовых функций
+## <a name="defining-base-functionality"></a>Defining Base Functionality
 
-Как описано в статье [проектирование поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md), класс [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) является производным от нескольких других классов, предоставилих различные функции поставщика. Поэтому поставщик элементов Windows PowerShell должен определить все функциональные возможности, предоставляемые этими классами.
+As described in [Design Your Windows PowerShell Provider](./designing-your-windows-powershell-provider.md), the [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) class derives from several other classes that provided different provider functionality. A Windows PowerShell item provider, therefore, must define all of the functionality provided by those classes.
 
-Дополнительные сведения о том, как реализовать функции для добавления сведений об инициализации для конкретного сеанса и освобождения ресурсов, используемых поставщиком, см. [в разделе Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md). Однако большинство поставщиков, включая описанный здесь поставщик, могут использовать реализацию этой функции по умолчанию, предоставляемую Windows PowerShell.
+For more information about how to implement functionality for adding session-specific initialization information and for releasing resources used by the provider, see [Creating a Basic Windows PowerShell Provider](./creating-a-basic-windows-powershell-provider.md). However, most providers, including the provider described here, can use the default implementation of this functionality that is provided by Windows PowerShell.
 
-Прежде чем поставщик элементов Windows PowerShell сможет манипулировать элементами в хранилище, он должен реализовать методы базового класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) для доступа к хранилищу данных. Дополнительные сведения о реализации этого класса см. [в разделе Создание поставщика диска Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
+Before the Windows PowerShell item provider can manipulate the items in the store, it must implement the methods of the [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) base class to access to the data store. For more information about implementing this class, see [Creating a Windows PowerShell Drive Provider](./creating-a-windows-powershell-drive-provider.md).
 
-## <a name="checking-for-path-validity"></a>Проверка допустимости пути
+## <a name="checking-for-path-validity"></a>Checking for Path Validity
 
-При поиске элемента данных среда выполнения Windows PowerShell обеспечивает для поставщика путь Windows PowerShell, как определено в разделе "Основные понятия PSPath", [как работает Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58). Поставщик элементов Windows PowerShell должен проверить синтаксическую и семантическую достоверность любого пути, переданного в него, путем реализации метода [System. Management. Automation. Provider. итемкмдлетпровидер. исвалидпас *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) . Этот метод возвращает значение `true`, если путь является допустимым, и `false` в противном случае. Имейте в виду, что реализация этого метода не должна проверять существование элемента по пути, но синтаксические и Семантическо правильные пути.
+When looking for an item of data, the Windows PowerShell runtime furnishes a Windows PowerShell path to the provider, as defined in the "PSPath Concepts" section of [How Windows PowerShell Works](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58). An Windows PowerShell item provider must verify the syntactic and semantic validity of any path passed to it by implementing the [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) method. This method returns `true` if the path is valid, and `false` otherwise. Be aware that the implementation of this method should not verify the existence of the item at the path, but only that the path is syntactically and semantically correct.
 
-Ниже приведена реализация метода [System. Management. Automation. Provider. итемкмдлетпровидер. исвалидпас *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) для этого поставщика. Обратите внимание, что эта реализация вызывает вспомогательный метод Нормализепас, чтобы преобразовать все разделители в пути в одинаковые.
+Here is the implementation of the [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) method for this provider. Note that this implementation calls a NormalizePath helper method to convert all separators in the path to a uniform one.
 
 [!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L274-L298 "AccessDBProviderSample03.cs")]
 
-## <a name="determining-if-an-item-exists"></a>Определение существования элемента
+## <a name="determining-if-an-item-exists"></a>Determining if an Item Exists
 
-После проверки пути среда выполнения Windows PowerShell должна определить, существует ли в этом пути элемент данных. Для поддержки этого типа запросов поставщик элементов Windows PowerShell реализует метод [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) . Этот метод возвращает `true`. элемент найден по указанному пути и `false` (по умолчанию) в противном случае.
+After verifying the path, the Windows PowerShell runtime must determine if an item of data exists at that path. To support this type of query, the Windows PowerShell item provider implements the [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) method. This method returns `true` an item is found at the specified path and `false` (default) otherwise.
 
-Ниже приведена реализация метода [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) для этого поставщика. Обратите внимание, что этот метод вызывает вспомогательные методы Пасисдриве, Чункпас и GetObject и использует определенный поставщиком объект Датабасетаблеинфо.
+Here is the implementation of the [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) method for this provider. Note that this method calls the PathIsDrive, ChunkPath, and GetTable helper methods, and uses a provider defined DatabaseTableInfo object.
 
 [!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L229-L267 "AccessDBProviderSample03.cs")]
 
-#### <a name="things-to-remember-about-implementing-itemexists"></a>Вопросы, связанные с реализацией Итемексистс
+#### <a name="things-to-remember-about-implementing-itemexists"></a>Things to Remember About Implementing ItemExists
 
-Следующие условия могут применяться к реализации [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists):
+The following conditions may apply to your implementation of [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists):
 
-- При определении класса поставщика поставщик элементов Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) должна гарантировать, что путь, передаваемый в метод, соответствует требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
+- When defining the provider class, a Windows PowerShell item provider might declare provider capabilities of ExpandWildcards, Filter, Include, or Exclude, from the [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeration. In these cases, the implementation of the [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) method must ensure that the path passed to the method meets the requirements of the specified capabilities. To do this, the method should access the appropriate property, for example, the [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) and [System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) properties.
 
-- Реализация этого метода должна обеспечивать любой вид доступа к элементу, который может сделать элемент видимым для пользователя. Например, если пользователь имеет доступ на запись к файлу через поставщик FileSystem (предоставляемый Windows PowerShell), но не имеет доступа на чтение, файл все еще существует, а [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) возвращает @no__ t-1. Для реализации может потребоваться проверка родительского элемента, чтобы узнать, можно ли перечислить дочерний элемент.
+- The implementation of this method should handle any form of access to the item that might make the item visible to the user. For example, if a user has write access to a file through the FileSystem provider (supplied by Windows PowerShell), but not read access, the file still exists and [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) returns `true`. Your implementation might require checking a parent item to see if the child item can be enumerated.
 
-## <a name="attaching-dynamic-parameters-to-the-test-path-cmdlet"></a>Присоединение динамических параметров к командлету Test-Path
+## <a name="attaching-dynamic-parameters-to-the-test-path-cmdlet"></a>Attaching Dynamic Parameters to the Test-Path Cmdlet
 
-Иногда для командлета `Test-Path`, вызывающего [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) , требуются дополнительные параметры, которые динамически задаются во время выполнения. Чтобы предоставить эти динамические параметры, поставщик элементов Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. итемкмдлетпровидер. итемексистсдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)объект. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлет `Test-Path`.
+Sometimes the `Test-Path` cmdlet that calls [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) requires additional parameters that are specified dynamically at runtime. To provide these dynamic parameters the Windows PowerShell item provider must implement the [System.Management.Automation.Provider.Itemcmdletprovider.Itemexistsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters) method. This method retrieves the dynamic parameters for the item at the indicated path and returns an object that has properties and fields with parsing attributes similar to a cmdlet class or a [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) object. The Windows PowerShell runtime uses the returned object to add the parameters to the `Test-Path` cmdlet.
 
-Данный поставщик элементов Windows PowerShell не реализует этот метод. Однако приведенный ниже код является реализацией этого метода по умолчанию.
+This Windows PowerShell item provider does not implement this method. However, the following code is the default implementation of this method.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovideritemexistdynamicparameters](Msh_samplestestcmdlets#testprovideritemexistdynamicparameters)]  -->
 
-## <a name="retrieving-an-item"></a>Получение элемента
+## <a name="retrieving-an-item"></a>Retrieving an Item
 
-Чтобы получить элемент, поставщик элементов Windows PowerShell должен переопределить метод [System. Management. Automation. Provider. итемкмдлетпровидер. DataItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) для поддержки вызовов из командлета `Get-Item`. Этот метод записывает элемент с помощью метода [System. Management. автоматизации. Provider. кмдлетпровидер. вритеитемобжект *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) .
+To retrieve an item, the Windows PowerShell item provider must override [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) method to support calls from the `Get-Item` cmdlet. This method writes the item using the [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) method.
 
-Ниже приведена реализация метода [System. Management. автоматизации. Provider. итемкмдлетпровидер. DataItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) для этого поставщика. Обратите внимание, что этот метод использует вспомогательные методы GetRows и GetRow для получения элементов, которые являются либо таблицами в базе данных Access, либо строками в таблице данных.
+Here is the implementation of the [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) method for this provider. Note that this method uses the GetTable and GetRow helper methods to retrieve items that are either tables in the Access database or rows in a data table.
 
 [!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L132-L163 "AccessDBProviderSample03.cs")]
 
-#### <a name="things-to-remember-about-implementing-getitem"></a>Вопросы, связанные с реализацией функции DataItem
+#### <a name="things-to-remember-about-implementing-getitem"></a>Things to Remember About Implementing GetItem
 
-Следующие условия могут применяться к реализации [System. Management. Automation. Provider. итемкмдлетпровидер. DataItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem):
+The following conditions may apply to an implementation of [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem):
 
-- При определении класса поставщика поставщик элементов Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация [System. Management. Automation. Provider. итемкмдлетпровидер. DataItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) должна гарантировать, что путь, передаваемый в метод, соответствует этим требованиям. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
+- When defining the provider class, a Windows PowerShell item provider might declare provider capabilities of ExpandWildcards, Filter, Include, or Exclude, from the [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeration. In these cases, the implementation of [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) must ensure that the path passed to the method meets those requirements. To do this, the method should access the appropriate property, for example, the [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) and [System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) properties.
 
-- По умолчанию переопределения этого метода не должны получать объекты, обычно скрытые от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Например, метод [System. Management. автоматизации. Provider. итемкмдлетпровидер. DataItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) для поставщика FileSystem проверяет свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) перед тем, как оно попытается вызвать [System. Management. Automation. Provider. кмдлетпровидер. вритеитемобжект *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) для скрытых или системных файлов.
+- By default, overrides of this method should not retrieve objects that are generally hidden from the user unless the [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) property is set to `true`. For example, the [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) method for the FileSystem provider checks the [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) property before it attempts to call [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) for hidden or system files.
 
-## <a name="attaching-dynamic-parameters-to-the-get-item-cmdlet"></a>Присоединение динамических параметров к командлету Get-Item
+## <a name="attaching-dynamic-parameters-to-the-get-item-cmdlet"></a>Attaching Dynamic Parameters to the Get-Item Cmdlet
 
-Иногда командлету `Get-Item` требуются дополнительные параметры, которые задаются динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик элементов Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. итемкмдлетпровидер. жетитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)объект. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлет `Get-Item`.
+Sometimes the `Get-Item` cmdlet requires additional parameters that are specified dynamically at runtime. To provide these dynamic parameters the Windows PowerShell item provider must implement the [System.Management.Automation.Provider.Itemcmdletprovider.Getitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters) method. This method retrieves the dynamic parameters for the item at the indicated path and returns an object that has properties and fields with parsing attributes similar to a cmdlet class or a [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) object. The Windows PowerShell runtime uses the returned object to add the parameters to the `Get-Item` cmdlet.
 
-Этот метод не реализуется этим поставщиком. Однако приведенный ниже код является реализацией этого метода по умолчанию.
+This provider does not implement this method. However, the following code is the default implementation of this method.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetitemdynamicparameters](Msh_samplestestcmdlets#testprovidergetitemdynamicparameters)]  -->
 
-## <a name="setting-an-item"></a>Задание элемента
+## <a name="setting-an-item"></a>Setting an Item
 
-Чтобы задать элемент, поставщик элементов Windows PowerShell должен переопределить метод [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) для поддержки вызовов из командлета `Set-Item`. Этот метод задает значение элемента по указанному пути.
+To set an item, the Windows PowerShell item provider must override the [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) method to support calls from the `Set-Item` cmdlet. This method sets the value of the item at the specified path.
 
-Этот поставщик не предоставляет переопределение для метода [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) . Однако ниже приведена реализация этого метода по умолчанию.
+This provider does not provide an override for the  [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) method. However, the following is the default implementation of this method.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidersetitem](Msh_samplestestcmdlets#testprovidersetitem)]  -->
 
-#### <a name="things-to-remember-about-implementing-setitem"></a>Вопросы, связанные с реализацией Сетитем
+#### <a name="things-to-remember-about-implementing-setitem"></a>Things to Remember About Implementing SetItem
 
-Следующие условия могут применяться к реализации [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem):
+The following conditions may apply to your implementation of [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem):
 
-- При определении класса поставщика поставщик элементов Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) должна гарантировать, что путь, передаваемый в метод, соответствует этим требованиям. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
+- When defining the provider class, a Windows PowerShell item provider might declare provider capabilities of ExpandWildcards, Filter, Include, or Exclude, from the [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeration. In these cases, the implementation of [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) must ensure that the path passed to the method meets those requirements. To do this, the method should access the appropriate property, for example, the [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) and [System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) properties.
 
-- По умолчанию переопределения этого метода не должны устанавливать или записывать объекты, скрытые от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь представляет скрытый элемент, то метод [System. Management. Automation. Provider. кмдлетпровидер. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) должен отправить сообщение об ошибке, если он является скрытым элементом. [кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) имеет значение `false`.
+- By default, overrides of this method should not set or write objects that are hidden from the user unless the [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) property is set to `true`. An error should be sent to the [System.Management.Automation.Provider.Cmdletprovider.WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) method if the path represents a hidden item and [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) is set to `false`.
 
-- Реализация метода [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед выполнением любые изменения в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в хранилище данных, например при удалении файлов. Метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, который будет изменен пользователю, при этом среда выполнения Windows PowerShell учитывает все параметры командной строки или переменные предпочтений в определение того, что должно отображаться.
+- Your implementation of the [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) method should call [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) and verify its return value before making any changes to the data store. This method is used to confirm execution of an operation when a change is made to the data store, for example, deleting files. The [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) method sends the name of the resource to be changed to the user, with the Windows PowerShell runtime taking into account any command-line settings or preference variables in determining what should be displayed.
 
-  После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, метод [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) должен вызывать [ Метод System. Management. Automation. Provider. Кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение, чтобы разрешить отзыв, чтобы убедиться, что операция должна быть продолжена. Вызов [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) обеспечивает дополнительную проверку потенциально опасного изменения системы.
+  After the call to [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) returns `true`, the [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) method should call the [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) method. This method sends a message to the user to allow feedback to verify if the operation should be continued. The call to [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) allows an additional check for potentially dangerous system modifications.
 
-## <a name="retrieving-dynamic-parameters-for-setitem"></a>Получение динамических параметров для Сетитем
+## <a name="retrieving-dynamic-parameters-for-setitem"></a>Retrieving Dynamic Parameters for SetItem
 
-Иногда командлету `Set-Item` требуются дополнительные параметры, которые задаются динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик элементов Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. итемкмдлетпровидер. сетитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)объект. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлет `Set-Item`.
+Sometimes the `Set-Item` cmdlet requires additional parameters that are specified dynamically at runtime. To provide these dynamic parameters the Windows PowerShell item provider must implement the [System.Management.Automation.Provider.Itemcmdletprovider.Setitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) method. This method retrieves the dynamic parameters for the item at the indicated path and returns an object that has properties and fields with parsing attributes similar to a cmdlet class or a [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) object. The Windows PowerShell runtime uses the returned object to add the parameters to the `Set-Item` cmdlet.
 
-Этот метод не реализуется этим поставщиком. Однако приведенный ниже код является реализацией этого метода по умолчанию.
+This provider does not implement this method. However, the following code is the default implementation of this method.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidersetitemdynamicparameters](Msh_samplestestcmdlets#testprovidersetitemdynamicparameters)]  -->
 
-## <a name="clearing-an-item"></a>Очистка элемента
+## <a name="clearing-an-item"></a>Clearing an Item
 
-Чтобы очистить элемент, поставщик элементов Windows PowerShell реализует метод [System. Management. Automation. Provider. итемкмдлетпровидер. клеаритем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItem) для поддержки вызовов из командлета `Clear-Item`. Этот метод удаляет элемент данных по указанному пути.
+To clear an item, the Windows PowerShell item provider implements the [System.Management.Automation.Provider.Itemcmdletprovider.Clearitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItem) method to support calls from the `Clear-Item` cmdlet. This method erases the data item at the specified path.
 
-Этот метод не реализуется этим поставщиком. Однако приведенный ниже код является реализацией этого метода по умолчанию.
+This provider does not implement this method. However, the following code is the default implementation of this method.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderclearitem](Msh_samplestestcmdlets#testproviderclearitem)]  -->
 
-#### <a name="things-to-remember-about-implementing-clearitem"></a>Вопросы, связанные с реализацией Клеаритем
+#### <a name="things-to-remember-about-implementing-clearitem"></a>Things to Remember About Implementing ClearItem
 
-Следующие условия могут применяться к реализации [System. Management. Automation. Provider. итемкмдлетпровидер. клеаритем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItem):
+The following conditions may apply to an implementation of [System.Management.Automation.Provider.Itemcmdletprovider.Clearitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItem):
 
-- При определении класса поставщика поставщик элементов Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация [System. Management. Automation. Provider. итемкмдлетпровидер. клеаритем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItem) должна гарантировать, что путь, передаваемый в метод, соответствует этим требованиям. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
+- When defining the provider class, a Windows PowerShell item provider might declare provider capabilities of ExpandWildcards, Filter, Include, or Exclude, from the [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeration. In these cases, the implementation of [System.Management.Automation.Provider.Itemcmdletprovider.Clearitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItem) must ensure that the path passed to the method meets those requirements. To do this, the method should access the appropriate property, for example, the [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) and [System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) properties.
 
-- По умолчанию переопределения этого метода не должны устанавливать или записывать объекты, скрытые от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь представляет элемент, который скрыт от User и [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) , то в метод [System. Management. Automation. Provider. кмдлетпровидер. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) должна быть отправлена ошибка. Задайте значение `false`.
+- By default, overrides of this method should not set or write objects that are hidden from the user unless the [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) property is set to `true`. An error should be sent to the [System.Management.Automation.Provider.Cmdletprovider.WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) method if the path represents an item that is hidden from the user and [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) is set to `false`.
 
-- Реализация метода [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед выполнением любые изменения в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в хранилище данных, например при удалении файлов. Метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, который будет изменен пользователю, с помощью среды выполнения Windows PowerShell и обрабатывает все параметры командной строки или переменные предпочтений в определение того, что должно отображаться.
+- Your implementation of the [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) method should call [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) and verify its return value before making any changes to the data store. This method is used to confirm execution of an operation when a change is made to the data store, for example, deleting files. The [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) method sends the name of the resource to be changed to the user, with the Windows PowerShell runtime and handle any command-line settings or preference variables in determining what should be displayed.
 
-  После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, метод [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) должен вызывать [ Метод System. Management. Automation. Provider. Кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение, чтобы разрешить отзыв, чтобы убедиться, что операция должна быть продолжена. Вызов [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) обеспечивает дополнительную проверку потенциально опасного изменения системы.
+  After the call to [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) returns `true`, the [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) method should call the [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) method. This method sends a message to the user to allow feedback to verify if the operation should be continued. The call to [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) allows an additional check for potentially dangerous system modifications.
 
-## <a name="retrieve-dynamic-parameters-for-clearitem"></a>Получение динамических параметров для Клеаритем
+## <a name="retrieve-dynamic-parameters-for-clearitem"></a>Retrieve Dynamic Parameters for ClearItem
 
-Иногда командлету `Clear-Item` требуются дополнительные параметры, которые задаются динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик элементов Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. итемкмдлетпровидер. клеаритемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)объект. Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлет `Clear-Item`.
+Sometimes the `Clear-Item` cmdlet requires additional parameters that are specified dynamically at runtime. To provide these dynamic parameters the Windows PowerShell item provider must implement the [System.Management.Automation.Provider.Itemcmdletprovider.Clearitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters) method. This method retrieves the dynamic parameters for the item at the indicated path and returns an object that has properties and fields with parsing attributes similar to a cmdlet class or a [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) object. The Windows PowerShell runtime uses the returned object to add the parameters to the `Clear-Item` cmdlet.
 
-Данный поставщик элементов не реализует этот метод. Однако приведенный ниже код является реализацией этого метода по умолчанию.
+This item provider does not implement this method. However, the following code is the default implementation of this method.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderclearitemdynamicparameters](Msh_samplestestcmdlets#testproviderclearitemdynamicparameters)]  -->
 
-## <a name="performing-a-default-action-for-an-item"></a>Выполнение действия по умолчанию для элемента
+## <a name="performing-a-default-action-for-an-item"></a>Performing a Default Action for an Item
 
-Поставщик элементов Windows PowerShell может реализовать метод [System. Management. Automation. Provider. итемкмдлетпровидер. инвокедефаултактион *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) для поддержки вызовов из командлета `Invoke-Item`, что позволяет поставщику выполнять действие по умолчанию для элемент по указанному пути. Например, Поставщик FileSystem может использовать этот метод для вызова ShellExecute для определенного элемента.
+A Windows PowerShell item provider can implement the [System.Management.Automation.Provider.Itemcmdletprovider.Invokedefaultaction*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) method to support calls from the `Invoke-Item` cmdlet, which allows the provider to perform a default action for the item at the specified path. For example, the FileSystem provider might use this method to call ShellExecute for a specific item.
 
-Этот метод не реализуется этим поставщиком. Однако приведенный ниже код является реализацией этого метода по умолчанию.
+This provider does not implement this method. However, the following code is the default implementation of this method.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderinvokedefaultaction](Msh_samplestestcmdlets#testproviderinvokedefaultaction)]  -->
 
-#### <a name="things-to-remember-about-implementing-invokedefaultaction"></a>Вопросы, связанные с реализацией Инвокедефаултактион
+#### <a name="things-to-remember-about-implementing-invokedefaultaction"></a>Things to Remember About Implementing InvokeDefaultAction
 
-Следующие условия могут применяться к реализации [System. Management. Automation. Provider. итемкмдлетпровидер. инвокедефаултактион *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction):
+The following conditions may apply to an implementation of [System.Management.Automation.Provider.Itemcmdletprovider.Invokedefaultaction*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction):
 
-- При определении класса поставщика поставщик элементов Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация [System. Management. Automation. Provider. итемкмдлетпровидер. инвокедефаултактион *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) должна гарантировать, что путь, передаваемый в метод, соответствует этим требованиям. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
+- When defining the provider class, a Windows PowerShell item provider might declare provider capabilities of ExpandWildcards, Filter, Include, or Exclude, from the [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeration. In these cases, the implementation of [System.Management.Automation.Provider.Itemcmdletprovider.Invokedefaultaction*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) must ensure that the path passed to the method meets those requirements. To do this, the method should access the appropriate property, for example, the [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) and [System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) properties.
 
-- По умолчанию переопределения этого метода не должны устанавливать или записывать объекты, скрытые от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь представляет элемент, который скрыт от User и [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) , то в метод [System. Management. Automation. Provider. кмдлетпровидер. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) должна быть отправлена ошибка. Задайте значение `false`.
+- By default, overrides of this method should not set or write objects hidden from the user unless the [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) property is set to `true`. An error should be sent to the [System.Management.Automation.Provider.Cmdletprovider.WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) method if the path represents an item that is hidden from the user and [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) is set to `false`.
 
-## <a name="retrieve-dynamic-parameters-for-invokedefaultaction"></a>Получение динамических параметров для Инвокедефаултактион
+## <a name="retrieve-dynamic-parameters-for-invokedefaultaction"></a>Retrieve Dynamic Parameters for InvokeDefaultAction
 
-Иногда командлету `Invoke-Item` требуются дополнительные параметры, которые задаются динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик элементов Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. итемкмдлетпровидер. инвокедефаултактиондинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [System. Management. Automation. рунтимедефинедпараметердиктионари ](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)объект. Среда выполнения Windows PowerShell использует возвращенный объект для добавления динамических параметров в командлет `Invoke-Item`.
+Sometimes the `Invoke-Item` cmdlet requires additional parameters that are specified dynamically at runtime. To provide these dynamic parameters the Windows PowerShell item provider must implement the [System.Management.Automation.Provider.Itemcmdletprovider.Invokedefaultactiondynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) method. This method retrieves the dynamic parameters for the item at the indicated path and returns an object that has properties and fields with parsing attributes similar to a cmdlet class or a [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) object. The Windows PowerShell runtime uses the returned object to add the dynamic parameters to the `Invoke-Item` cmdlet.
 
-Данный поставщик элементов не реализует этот метод. Однако приведенный ниже код является реализацией этого метода по умолчанию.
+This item provider does not implement this method. However, the following code is the default implementation of this method.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderinvokedefaultactiondynamicparameters](Msh_samplestestcmdlets#testproviderinvokedefaultactiondynamicparameters)]  -->
 
-## <a name="implementing-helper-methods-and-classes"></a>Реализация вспомогательных методов и классов
+## <a name="implementing-helper-methods-and-classes"></a>Implementing Helper Methods and Classes
 
-Этот поставщик элементов реализует несколько вспомогательных методов и классов, которые используются открытыми методами переопределения, определенными в Windows PowerShell. Код для этих вспомогательных методов и классов показан в разделе [пример кода](#code-sample) .
+This item provider implements several helper methods and classes that are used by the public override methods defined by Windows PowerShell. The code for these helper methods and classes are shown in the [Code Sample](#code-sample) section.
 
-### <a name="normalizepath-method"></a>Метод Нормализепас
+### <a name="normalizepath-method"></a>NormalizePath Method
 
-Этот поставщик элементов реализует вспомогательный метод Нормализепас, чтобы обеспечить единообразный формат пути. В указанном формате используется обратная косая черта (\\) в качестве разделителя.
+This item provider implements a NormalizePath helper method to ensure that the path has a consistent format. The format specified uses a backslash (\\) as a separator.
 
-### <a name="pathisdrive-method"></a>Метод Пасисдриве
+### <a name="pathisdrive-method"></a>PathIsDrive Method
 
-Этот поставщик элементов реализует вспомогательный метод Пасисдриве, чтобы определить, действительно ли указанный путь является именем диска.
+This item provider implements a PathIsDrive helper method to determine if the specified path is actually the drive name.
 
-### <a name="chunkpath-method"></a>Метод Чункпас
+### <a name="chunkpath-method"></a>ChunkPath Method
 
-Этот поставщик элементов реализует вспомогательный метод Чункпас, который разбивает указанный путь таким образом, чтобы поставщик мог опознать свои отдельные элементы. Он возвращает массив, состоящий из элементов Path.
+This item provider implements a ChunkPath helper method that breaks up the specified path so that the provider can identify its individual elements. It returns an array composed of the path elements.
 
-### <a name="gettable-method"></a>Метод таблицы
+### <a name="gettable-method"></a>GetTable Method
 
-Этот поставщик элементов реализует вспомогательный метод GetObject, который возвращает объект Датабасетаблеинфо, представляющий сведения о таблице, указанной в вызове.
+This item provider implements the GetTables helper method that returns a DatabaseTableInfo object that represents information about the table specified in the call.
 
-### <a name="getrow-method"></a>Метод GetRow
+### <a name="getrow-method"></a>GetRow Method
 
-Метод [System. Management. автоматизации. Provider. итемкмдлетпровидер. DataItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) этого поставщика элементов вызывает вспомогательный метод GetRows. Этот вспомогательный метод получает объект Датабасеровинфо, представляющий сведения о заданной строке в таблице.
+The [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) method of this item provider calls the GetRows helper method. This helper method retrieves a DatabaseRowInfo object that represents information about the specified row in the table.
 
-### <a name="databasetableinfo-class"></a>Класс Датабасетаблеинфо
+### <a name="databasetableinfo-class"></a>DatabaseTableInfo Class
 
-Этот поставщик элементов определяет класс Датабасетаблеинфо, представляющий коллекцию сведений в таблице данных в базе данных. Этот класс аналогичен классу [System. IO. DirectoryInfo](/dotnet/api/System.IO.DirectoryInfo) .
+This item provider defines a DatabaseTableInfo class that represents a collection of information in a data table in the database. This class is similar to the [System.IO.Directoryinfo](/dotnet/api/System.IO.DirectoryInfo) class.
 
-Поставщик образца элемента определяет метод Датабасетаблеинфо. WebMethod, который возвращает коллекцию объектов табличной информации, определяющих таблицы в базе данных. Этот метод включает блок try/catch, чтобы убедиться, что любая ошибка базы данных отображается как строка с нулевым числом записей.
+The sample item provider defines a DatabaseTableInfo.GetTables method that returns a collection of table information objects defining the tables in the database. This method includes a try/catch block to ensure that any database error shows up as a row with zero entries.
 
-### <a name="databaserowinfo-class"></a>Класс Датабасеровинфо
+### <a name="databaserowinfo-class"></a>DatabaseRowInfo Class
 
-Этот поставщик элементов определяет вспомогательный класс Датабасеровинфо, представляющий строку в таблице базы данных. Этот класс аналогичен классу [System. IO. FileInfo](/dotnet/api/System.IO.FileInfo) .
+This item provider defines the DatabaseRowInfo helper class that represents a row in a table of the database. This class is similar to the [System.IO.FileInfo](/dotnet/api/System.IO.FileInfo) class.
 
-В примере поставщика определяется метод Датабасеровинфо. GetRows, который возвращает коллекцию объектов со сведениями о строках для указанной таблицы. Этот метод включает блок try/catch для перехвата исключений. При любых ошибках не будет сведений о строках.
+The sample provider defines a DatabaseRowInfo.GetRows method to return a collection of row information objects for the specified table. This method includes a try/catch block to trap exceptions. Any errors will result in no row information.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Code Sample
 
-Полный пример кода см. в разделе [пример кода AccessDbProviderSample03](./accessdbprovidersample03-code-sample.md).
+For complete sample code, see [AccessDbProviderSample03 Code Sample](./accessdbprovidersample03-code-sample.md).
 
-## <a name="defining-object-types-and-formatting"></a>Определение типов объектов и форматирование
+## <a name="defining-object-types-and-formatting"></a>Defining Object Types and Formatting
 
-При написании поставщика может потребоваться добавить элементы в существующие объекты или определить новые объекты. По завершении создайте файл типов, который Windows PowerShell может использовать для определения членов объекта и файла форматирования, определяющего способ отображения объекта. Дополнительные сведения о см. в разделе [расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+When writing a provider, it may be necessary to add members to existing objects or define new objects. When finished, create a Types file that Windows PowerShell can use to identify the members of the object and a Format file that defines how the object is displayed. For more information about , see [Extending Object Types and Formatting](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
-## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
+## <a name="building-the-windows-powershell-provider"></a>Building the Windows PowerShell provider
 
-См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+See [How to Register Cmdlets, Providers, and Host Applications](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
-## <a name="testing-the-windows-powershell-provider"></a>Тестирование поставщика Windows PowerShell
+## <a name="testing-the-windows-powershell-provider"></a>Testing the Windows PowerShell provider
 
-Если этот поставщик элементов Windows PowerShell зарегистрирован в Windows PowerShell, можно протестировать только основные функциональные возможности и функции поставщика. Чтобы протестировать манипуляцию с элементами, необходимо также реализовать функциональные возможности контейнера, описанные в разделе [Реализация контейнера Windows PowerShell Provider](./creating-a-windows-powershell-container-provider.md).
+When this Windows PowerShell item provider is registered with Windows PowerShell, you can only test the basic and drive functionality of the provider. To test the manipulation of items, you must also implement container functionality described in [Implementing a Container Windows PowerShell Provider](./creating-a-windows-powershell-container-provider.md).
 
 ## <a name="see-also"></a>См. также:
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
 
-[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
 
-[Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
+[Creating Windows PowerShell Providers](./how-to-create-a-windows-powershell-provider.md)
 
-[Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)
+[Designing Your Windows PowerShell provider](./designing-your-windows-powershell-provider.md)
 
-[Расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Extending Object Types and Formatting](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Как работает Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[How Windows PowerShell Works](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 
-[Создание контейнера Windows PowerShell provider](./creating-a-windows-powershell-container-provider.md)
+[Creating a Container Windows PowerShell provider](./creating-a-windows-powershell-container-provider.md)
 
-[Создание поставщика Windows PowerShell для дисков](./creating-a-windows-powershell-drive-provider.md)
+[Creating a Drive Windows PowerShell provider](./creating-a-windows-powershell-drive-provider.md)
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[How to Register Cmdlets, Providers, and Host Applications](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)

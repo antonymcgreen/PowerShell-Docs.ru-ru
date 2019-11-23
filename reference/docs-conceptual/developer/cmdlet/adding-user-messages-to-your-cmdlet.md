@@ -1,5 +1,5 @@
 ---
-title: Добавление сообщений пользователя в командлет | Документация Майкрософт
+title: Adding User Messages to Your Cmdlet | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -31,34 +31,34 @@ helpviewer_keywords:
 - user notifications
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
-ms.openlocfilehash: 1e048f6ae94ac226218c18c8f8f7590a4db26226
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 9079f40e75dae86c22fd8b4f8a45d501c6125498
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72370073"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416022"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Добавление пользовательских сообщений в командлет
 
-Командлеты могут записывать сообщения нескольких типов, которые могут отображаться для пользователя средой выполнения Windows PowerShell. Эти сообщения включают следующие типы:
+Cmdlets can write several kinds of messages that can be displayed to the user by the Windows PowerShell runtime. These messages include the following types:
 
-- Подробные сообщения, содержащие общие сведения о пользователях.
+- Verbose messages that contain general user information.
 
-- Сообщения отладки, содержащие сведения об устранении неполадок.
+- Debug messages that contain troubleshooting information.
 
-- Предупреждающие сообщения, содержащие уведомление о том, что командлет собирается выполнить операцию, которая может привести к непредвиденным результатам.
+- Warning messages that contain a notification that the cmdlet is about to perform an operation that can have unexpected results.
 
-- Сообщения отчета о состоянии, содержащие сведения о том, сколько работы командлета выполнила при выполнении операции, которая занимает много времени.
+- Progress report messages that contain information about how much work the cmdlet has completed when performing an operation that takes a long time.
 
-Количество сообщений, которые может записывать командлет, и тип сообщений, записываемых командлетом, не ограничены. Каждое сообщение записывается путем выполнения определенного вызова в методе обработки входных данных командлета.
+There are no limits to the number of messages that your cmdlet can write or the type of messages that your cmdlet writes. Each message is written by making a specific call from within the input processing method of your cmdlet.
 
-## <a name="defining-the-cmdlet"></a>Определение командлета
+## <a name="defining-the-cmdlet"></a>Defining the Cmdlet
 
-Первым шагом при создании командлета всегда является присвоение имени командлета и объявление класса .NET, реализующего командлет. Любой командлет может записывать пользовательские уведомления из своих методов обработки входных данных. Таким образом, можно присвоить этому командлету имя, используя любую команду, которая указывает, какие изменения системы выполняет командлет. Дополнительные сведения о утвержденных командах командлетов см. в разделе [имена глаголов командлетов](./approved-verbs-for-windows-powershell-commands.md).
+The first step in cmdlet creation is always naming the cmdlet and declaring the .NET class that implements the cmdlet. Any sort of cmdlet can write user notifications from its input processing methods; so, in general, you can name this cmdlet using any verb that indicates what system modifications the cmdlet performs. For more information about approved cmdlet verbs, see [Cmdlet Verb Names](./approved-verbs-for-windows-powershell-commands.md).
 
-Командлет «останавливает-proc» предназначен для изменения системы; Поэтому объявление [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) для класса .NET должно включать ключевое слово атрибута `SupportsShouldProcess` и иметь значение `true`.
+The Stop-Proc cmdlet is designed to modify the system; therefore, the [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) declaration for the .NET class must include the `SupportsShouldProcess` attribute keyword and be set to `true`.
 
-Следующий код является определением для этого класса командлета-proc. Дополнительные сведения об этом определении см. в разделе [Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md).
+The following code is the definition for this Stop-Proc cmdlet class. For more information about this definition, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "proc",
@@ -66,11 +66,11 @@ ms.locfileid: "72370073"
 public class StopProcCommand : Cmdlet
 ```
 
-## <a name="defining-parameters-for-system-modification"></a>Определение параметров для изменения системы
+## <a name="defining-parameters-for-system-modification"></a>Defining Parameters for System Modification
 
-Командлет "останавливает-proc" определяет три параметра: `Name`, `Force` и `PassThru`. Дополнительные сведения об определении этих параметров см. в разделе [Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md).
+The Stop-Proc cmdlet defines three parameters: `Name`, `Force`, and `PassThru`. For more information about defining these parameters, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
 
-Ниже приведено объявление параметра для командлета "останавливает-proc".
+Here is the parameter declaration for the Stop-Proc cmdlet.
 
 ```csharp
 [Parameter(
@@ -113,18 +113,18 @@ public SwitchParameter PassThru
 private bool passThru;
 ```
 
-## <a name="overriding-an-input-processing-method"></a>Переопределение метода обработки входных данных
+## <a name="overriding-an-input-processing-method"></a>Overriding an Input Processing Method
 
-Командлет должен переопределять метод обработки ввода, чаще всего это будет [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). Этот командлет-Process переопределяет метод обработки ввода [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) . В этой реализации командлета "останавливает-proc" выполняются вызовы для записи подробных сообщений, сообщений отладки и предупреждающих сообщений.
+Your cmdlet must override an input processing method, most often it will be [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). This Stop-Proc cmdlet overrides the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) input processing method. In this implementation of the Stop-Proc cmdlet, calls are made to write verbose messages, debug messages, and warning messages.
 
 > [!NOTE]
-> Дополнительные сведения о том, как этот метод вызывает методы [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , см. в разделе [Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md).
+> For more information about how this method calls the [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) and [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) methods, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
 
-## <a name="writing-a-verbose-message"></a>Запись подробного сообщения
+## <a name="writing-a-verbose-message"></a>Writing a Verbose Message
 
-Метод [System. Management. Automation. командлет. вритевербосе](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) используется для записи общих сведений на уровне пользователя, не связанных с конкретными условиями ошибок. Затем системный администратор может использовать эти сведения для продолжения обработки других команд. Кроме того, любые сведения, написанные с помощью этого метода, должны быть локализованы по мере необходимости.
+The [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) method is used to write general user-level information that is unrelated to specific error conditions. The system administrator can then use that information to continue processing other commands. In addition, any information written using this method should be localized as needed.
 
-В следующем коде из командлета "останавливает-proc" показаны два вызова метода [System. Management. Automation. командлет. вритевербосе](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) из переопределения метода [System. Management. Automation. командлета. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
+The following code from this Stop-Proc cmdlet shows two calls to the [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) method from the override of the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) method.
 
 ```csharp
 message = String.Format("Attempting to stop process \"{0}\".", name);
@@ -138,16 +138,16 @@ message = String.Format("Stopped process \"{0}\", pid {1}.",
 WriteVerbose(message);
 ```
 
-## <a name="writing-a-debug-message"></a>Запись сообщения об отладке
+## <a name="writing-a-debug-message"></a>Writing a Debug Message
 
-Метод [System. Management. Automation. командлет. вритедебуг](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) используется для записи отладочных сообщений, которые можно использовать для устранения неполадок в работе командлета. Вызов выполняется из метода обработки входных данных.
+The [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) method is used to write debug messages that can be used to troubleshoot the operation of the cmdlet. The call is made from an input processing method.
 
 > [!NOTE]
-> Windows PowerShell также определяет параметр `Debug`, который предоставляет как подробную, так и отладочную информацию. Если командлет поддерживает этот параметр, ему не нужно вызывать [System. Management. Automation. командлет. вритедебуг](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) в том же коде, который вызывает [System. Management. Automation. командлет. вритевербосе](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).
+> Windows PowerShell also defines a `Debug` parameter that presents both verbose and debug information. If your cmdlet supports this parameter, it does not need to call [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) in the same code that calls [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).
 
-В следующих двух разделах кода из командлета "Sample-proc" показаны вызовы метода [System. Management. Automation. командлет. вритедебуг](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) из переопределения метода [System. Management. Automation. командлета. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
+The following two sections of code from the sample Stop-Proc cmdlet show calls to the [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) method from the override of the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) method.
 
-Это сообщение отладки записывается непосредственно перед вызовом [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) .
+This debug message is written immediately before [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) is called.
 
 ```csharp
 message =
@@ -156,7 +156,7 @@ message =
 WriteDebug(message);
 ```
 
-Это сообщение отладки записывается непосредственно перед вызовом [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) .
+This debug message is written immediately before [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) is called.
 
 ```csharp
 message =
@@ -166,15 +166,15 @@ WriteDebug(message);
 WriteObject(process);
 ```
 
-Windows PowerShell автоматически направляет все вызовы [System. Management. Automation. командлет. вритедебуг](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) в инфраструктуру и командлеты трассировки. Это позволяет отслеживать вызовы методов для ведущего приложения, файла или отладчика без необходимости выполнять какие-либо дополнительные действия по разработке в командлете. Следующая запись командной строки реализует операцию трассировки.
+Windows PowerShell automatically routes any [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) calls to the tracing infrastructure and cmdlets. This allows the method calls to be traced to the hosting application, a file, or a debugger without your having to do any extra development work within the cmdlet. The following command-line entry implements a tracing operation.
 
-**PS > Трассировка-выражение "Trace-proc-File proc. log-Command"**
+**PS> trace-expression stop-proc -file proc.log -command stop-proc notepad**
 
-## <a name="writing-a-warning-message"></a>Создание сообщения с предупреждением
+## <a name="writing-a-warning-message"></a>Writing a Warning Message
 
-Метод [System. Management. Automation. командлет. вритеварнинг](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) используется для записи предупреждения о том, что командлет собирается выполнить операцию, которая может иметь непредвиденный результат, например перезапись файла, доступного только для чтения.
+The [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) method is used to write a warning when the cmdlet is about to perform an operation that might have an unexpected result, for example, overwriting a read-only file.
 
-В следующем коде командлета "Sample-proc" показан вызов метода [System. Management. Automation. командлет. вритеварнинг](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) из переопределения метода [System. Management. Automation. командлета. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
+The following code from the sample Stop-Proc cmdlet shows the call to the [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) method from the override of the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) method.
 
 ```csharp
  if (criticalProcess)
@@ -186,14 +186,14 @@ Windows PowerShell автоматически направляет все выз
 } // if (criticalProcess...
 ```
 
-## <a name="writing-a-progress-message"></a>Запись сообщения о ходе выполнения
+## <a name="writing-a-progress-message"></a>Writing a Progress Message
 
-[System. Management. Automation. командлет. вритепрогресс](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) используется для записи сообщений о ходе выполнения, когда выполнение операций командлета занимает продолжительное время. Вызов [System. Management. Automation. командлет. вритепрогресс](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) передает объект [System. Management. Automation. Progressrecord](/dotnet/api/System.Management.Automation.ProgressRecord) , который отправляется в приложение размещения для отрисовки пользователю.
+The [System.Management.Automation.Cmdlet.WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) is used to write progress messages when cmdlet operations take an extended amount of time to complete. A call to [System.Management.Automation.Cmdlet.WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) passes a [System.Management.Automation.Progressrecord](/dotnet/api/System.Management.Automation.ProgressRecord) object that is sent to the hosting application for rendering to the user.
 
 > [!NOTE]
-> Этот командлет «останавливает-proc» не включает вызов метода [System. Management. Automation. командлет. вритепрогресс](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) .
+> This Stop-Proc cmdlet does not include a call to the [System.Management.Automation.Cmdlet.WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) method.
 
-Следующий код является примером сообщения о ходе выполнения, написанного командлетом, который пытается скопировать элемент.
+The following code is an example of a progress message written by a cmdlet that is attempting to copy an item.
 
 ```csharp
 int myId = 0;
@@ -206,29 +206,29 @@ pr.RecordType = ProgressRecordType.Completed;
 WriteProgress(pr);
 ```
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Code Sample
 
-Полный C# пример кода см. в разделе [StopProcessSample02 Sample](./stopprocesssample02-sample.md).
+For the complete C# sample code, see [StopProcessSample02 Sample](./stopprocesssample02-sample.md).
 
-## <a name="define-object-types-and-formatting"></a>Определение типов объектов и форматирование
+## <a name="define-object-types-and-formatting"></a>Define Object Types and Formatting
 
-Windows PowerShell передает сведения между командлетами с помощью объектов .NET. Следовательно, командлету может потребоваться определить собственный тип, или командлету может потребоваться расширить существующий тип, предоставленный другим командлетом. Дополнительные сведения об определении новых типов или расширении существующих типов см. в разделе [расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85)).
+Windows PowerShell passes information between cmdlets using .NET objects. Consequently, a cmdlet might need to define its own type, or the cmdlet might need to extend an existing type provided by another cmdlet. For more information about defining new types or extending existing types, see [Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85)).
 
-## <a name="building-the-cmdlet"></a>Создание командлета
+## <a name="building-the-cmdlet"></a>Building the Cmdlet
 
-После реализации командлета его необходимо зарегистрировать в Windows PowerShell с помощью оснастки Windows PowerShell. Дополнительные сведения о регистрации командлетов см. [в разделе Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
+After implementing a cmdlet, it must be registered with Windows PowerShell through a Windows PowerShell snap-in. For more information about registering cmdlets, see [How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85)).
 
-## <a name="testing-the-cmdlet"></a>Тестирование командлета
+## <a name="testing-the-cmdlet"></a>Testing the Cmdlet
 
-Если командлет зарегистрирован в Windows PowerShell, его можно проверить, запустив его в командной строке. Давайте протестируем пример командлета "останавливает-proc". Дополнительные сведения об использовании командлетов из командной строки см. в [Начало работы с помощью Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+When your cmdlet has been registered with Windows PowerShell, you can test it by running it on the command line. Let's test the sample Stop-Proc cmdlet. For more information about using cmdlets from the command line, see the [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
-- Следующая запись командной строки используется для завершения процесса "Блокнот", предоставления подробных уведомлений и печати отладочной информации.
+- The following command-line entry uses Stop-Proc to stop the process named "NOTEPAD", provide verbose notifications, and print debug information.
 
     ```powershell
     PS> stop-proc -Name notepad -Verbose -Debug
     ```
 
-Отобразятся следующие выходные данные.
+The following output appears.
 
     ```
     VERBOSE: Attempting to stop process " notepad ".
@@ -247,12 +247,12 @@ Windows PowerShell передает сведения между командле
 
 ## <a name="see-also"></a>См. также:
 
-[Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md)
+[Create a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md)
 
-[Создание командлета Windows PowerShell](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
+[How to Create a Windows PowerShell Cmdlet](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[Расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85))
+[Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85))
 
-[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85))
+[How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85))
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

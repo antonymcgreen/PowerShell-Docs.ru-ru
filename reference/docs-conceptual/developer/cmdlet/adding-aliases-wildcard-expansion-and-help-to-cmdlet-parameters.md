@@ -1,5 +1,5 @@
 ---
-title: Добавление псевдонимов, расширение подстановочных знаков и Справка по параметрам командлетов | Документация Майкрософт
+title: Adding Aliases, Wildcard Expansion, and Help to Cmdlet Parameters | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,24 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: bc921537062e35aa203fa3ee95d3b7211c89cb28
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: d210a852a90d94df2ab360dd86f0b83a396330e3
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72370093"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74415662"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Добавление псевдонимов, развертывание подстановочных знаков и справка по параметрам командлета
 
-В этом разделе описывается, как добавлять псевдонимы, распознавать подстановочные знаки и сообщения справки для параметров командлета "прекращать-proc" (описывается в разделе [Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md)).
+This section describes how to add aliases, wildcard expansion, and Help messages to the parameters of the Stop-Proc cmdlet (described in [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md)).
 
-Этот командлет останавливает процесс пытается прерывать процессы, полученные с помощью командлета Get-proc (описывается в разделе [Создание первого командлета](./creating-a-cmdlet-without-parameters.md)).
+This Stop-Proc cmdlet attempts to stop processes that are retrieved using the Get-Proc cmdlet (described in [Creating Your First Cmdlet](./creating-a-cmdlet-without-parameters.md)).
 
-## <a name="defining-the-cmdlet"></a>Определение командлета
+## <a name="defining-the-cmdlet"></a>Defining the Cmdlet
 
-Первым шагом при создании командлета всегда является присвоение имени командлета и объявление класса .NET, реализующего командлет. Так как вы создаете командлет для изменения системы, ему следует присвоить соответствующие имена. Поскольку этот командлет останавливает системные процессы, он использует команду Stop, определенную классом [System. Management. Automation. вербслифецикле](/dotnet/api/System.Management.Automation.VerbsLifeCycle) , с существительным "proc" для обозначения процесса. Дополнительные сведения о утвержденных командах командлетов см. в разделе [имена глаголов командлетов](./approved-verbs-for-windows-powershell-commands.md).
+The first step in cmdlet creation is always naming the cmdlet and declaring the .NET class that implements the cmdlet. Because you are writing a cmdlet to change the system, it should be named accordingly. Because this cmdlet stops system processes, it uses the verb "Stop", defined by the [System.Management.Automation.Verbslifecycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle) class, with the noun "Proc" to indicate process. For more information about approved cmdlet verbs, see [Cmdlet Verb Names](./approved-verbs-for-windows-powershell-commands.md).
 
-Следующий код является определением класса для этого командлета "останавливает-proc".
+The following code is the class definition for this Stop-Proc cmdlet.
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "proc",
@@ -33,15 +33,15 @@ ms.locfileid: "72370093"
 public class StopProcCommand : Cmdlet
 ```
 
-## <a name="defining-parameters-for-system-modification"></a>Определение параметров для изменения системы
+## <a name="defining-parameters-for-system-modification"></a>Defining Parameters for System Modification
 
-Командлету необходимо определить параметры, которые поддерживают изменения системы и отзывы пользователей. Командлет должен определить параметр `Name` или эквивалентный, чтобы командлет мог изменять систему с помощью некоторого идентификатора. Кроме того, командлет должен определить параметры `Force` и `PassThru`. Дополнительные сведения об этих параметрах см. в разделе [Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md).
+Your cmdlet needs to define parameters that support system modifications and user feedback. The cmdlet should define a `Name` parameter or equivalent so that the cmdlet will be able to modify the system by some sort of identifier. In addition, the cmdlet should define the `Force` and `PassThru` parameters. For more information about these parameters, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
 
-## <a name="defining-a-parameter-alias"></a>Определение псевдонима параметра
+## <a name="defining-a-parameter-alias"></a>Defining a Parameter Alias
 
-Псевдонимом параметра может быть альтернативное имя или четко определенное имя в виде одной или двух букв для параметра командлета. В обоих случаях цель использования псевдонимов — упростить ввод пользователя из командной строки. Windows PowerShell поддерживает псевдонимы параметров с помощью атрибута [System. Management. Automation. алиасаттрибуте](/dotnet/api/System.Management.Automation.AliasAttribute) , который использует синтаксис объявления [Alias ()].
+A parameter alias can be an alternate name or a well-defined 1-letter or 2-letter short name for a cmdlet parameter. In both cases, the goal of using aliases is to simplify user entry from the command line. Windows PowerShell supports parameter aliases through the [System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) attribute, which uses the declaration syntax [Alias()].
 
-В следующем коде показано, как добавить псевдоним к параметру `Name`.
+The following code shows how an alias is added to the `Name` parameter.
 
 ```csharp
 /// <summary>
@@ -64,13 +64,13 @@ public string[] Name
 private string[] processNames;
 ```
 
-Помимо использования атрибута [System. Management. Automation. алиасаттрибуте](/dotnet/api/System.Management.Automation.AliasAttribute) , среда выполнения Windows PowerShell выполняет частичное совпадение имен, даже если псевдонимы не указаны. Например, если у командлета есть параметр `FileName` и это единственный параметр, который начинается с `F`, пользователь может ввести `Filename`, `Filenam`, `File`, `Fi` или `F` и по-прежнему распознает запись как параметр `FileName`.
+In addition to using the [System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) attribute, the Windows PowerShell runtime performs partial name matching, even if no aliases are specified. For example, if your cmdlet has a `FileName` parameter and that is the only parameter that starts with `F`, the user could enter `Filename`, `Filenam`, `File`, `Fi`, or `F` and still recognize the entry as the `FileName` parameter.
 
-## <a name="creating-help-for-parameters"></a>Создание справки для параметров
+## <a name="creating-help-for-parameters"></a>Creating Help for Parameters
 
-Windows PowerShell позволяет создавать справку для параметров командлета. Это можно сделать для любого параметра, используемого для изменения системы и отзывов пользователей. Для каждого параметра, поддерживающего справку, можно задать ключевое слово `HelpMessage` в объявлении атрибута [System. Management. Automation. параметераттрибуте](/dotnet/api/System.Management.Automation.ParameterAttribute) . Это ключевое слово определяет текст, отображаемый пользователю для помощи в использовании параметра. Можно также задать ключевое слово `HelpMessageBaseName`, чтобы определить базовое имя ресурса, используемого для сообщения. Если задать это ключевое слово, необходимо также задать ключевое слово `HelpMessageResourceId`, чтобы указать идентификатор ресурса.
+Windows PowerShell allows you to create Help for cmdlet parameters. Do this for any parameter used for system modification and user feedback. For each parameter to support Help, you can set the `HelpMessage` attribute keyword in the [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) attribute declaration. This keyword defines the text to display to the user for assistance in using the parameter. You can also set the `HelpMessageBaseName` keyword to identify the base name of a resource to use for the message. If you set this keyword, you must also set the `HelpMessageResourceId` keyword to specify the resource identifier.
 
-Следующий код из командлета «The-proc» определяет ключевое слово атрибута `HelpMessage` для параметра `Name`.
+The following code from this Stop-Proc cmdlet defines the `HelpMessage` attribute keyword for the `Name` parameter.
 
 ```csharp
 /// <summary>
@@ -86,32 +86,32 @@ Windows PowerShell позволяет создавать справку для �
 )]
 ```
 
-## <a name="overriding-an-input-processing-method"></a>Переопределение метода обработки входных данных
+## <a name="overriding-an-input-processing-method"></a>Overriding an Input Processing Method
 
-Командлет должен переопределять метод обработки ввода, чаще всего это будет [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). При изменении системы командлет должен вызвать методы [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , чтобы разрешить пользователю оставлять отзывы до внесения изменений. Дополнительные сведения об этих методах см. в разделе [Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md).
+Your cmdlet must override an input processing method, most often this will be [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). When modifying the system, the cmdlet should call the [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) and [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) methods to allow the user to provide feedback before a change is made. For more information about these methods, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
 
-## <a name="supporting-wildcard-expansion"></a>Поддержка расширения подстановочных знаков
+## <a name="supporting-wildcard-expansion"></a>Supporting Wildcard Expansion
 
-Чтобы разрешить выбор нескольких объектов, командлет может использовать классы [System. Management. Automation. вилдкардпаттерн](/dotnet/api/System.Management.Automation.WildcardPattern) и [System. Management. Automation. вилдкардоптионс](/dotnet/api/System.Management.Automation.WildcardOptions) для предоставления поддержки расширения подстановочных знаков для ввода параметров. Примеры шаблонов с подстановочными знаками: LSA *, @no__t -0. txt и [a-c] \*. Используйте символ обратной кавычки (') в качестве escape-символа, если шаблон содержит символ, который следует использовать буквально.
+To allow the selection of multiple objects, your cmdlet can use the [System.Management.Automation.Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern) and [System.Management.Automation.Wildcardoptions](/dotnet/api/System.Management.Automation.WildcardOptions) classes to provide wildcard expansion support for parameter input. Examples of wildcard patterns are lsa*, \*.txt, and [a-c]\*. Use the back-quote character (`) as an escape character when the pattern contains a character that should be used literally.
 
-Расширения с подстановочными знаками имен файлов и путей — это примеры распространенных сценариев, в которых командлет может разрешить ввод пути, если требуется выбрать несколько объектов. Общий случай — в файловой системе, где пользователь хочет просмотреть все файлы, находящиеся в текущей папке.
+Wildcard expansions of file and path names are examples of common scenarios where the cmdlet may want to allow support for path inputs when the selection of multiple objects is required. A common case is in the file system, where a user wants to see all files residing in the current folder.
 
-Необходимо использовать специальную реализацию шаблона с подстановочным знаком только в редких случаях. В этом случае командлет должен поддерживать полную спецификацию POSIX 1003,2, 3,13 для расширения с подстановочными знаками или следующее упрощенное подмножество:
+You should need a customized wildcard pattern matching implementation only rarely. In this case, your cmdlet should support either the full POSIX 1003.2, 3.13 specification for wildcard expansion or the following simplified subset:
 
-- **Вопросительный знак (?).** Соответствует любому символу в указанном расположении.
+- **Question mark (?).** Matches any character at the specified location.
 
-- **Звездочка (\*).** Соответствует нулю или большему числу символов, начиная с указанного места.
+- **Asterisk (\*).** Matches zero or more characters starting at the specified location.
 
-- **Открывающая скобка ([).** Представляет выражение шаблонной скобки, которое может содержать символы или диапазон символов. Если диапазон является обязательным, для обозначения диапазона используется дефис (-).
+- **Open bracket ([).** Introduces a pattern bracket expression that can contain characters or a range of characters. If a range is required, a hyphen (-) is used to indicate the range.
 
-- **Закрывающая квадратная скобка (]).** Завершает выражение шаблонной скобки.
+- **Close bracket (]).** Ends a pattern bracket expression.
 
-- **Escape-символ обратной кавычки (').** Указывает, что следующий символ должен использоваться буквально. Имейте в виду, что при указании символа обратной кавычки из командной строки (в отличие от программного указания) escape-символ обратной кавычки должен быть указан дважды.
+- **Back-quote escape character (`).** Indicates that the next character should be taken literally. Be aware that when specifying the back-quote character from the command line (as opposed to specifying it programmatically), the back-quote escape character must be specified twice.
 
 > [!NOTE]
-> Дополнительные сведения о шаблонах с подстановочными знаками см. [в разделе Поддержка подстановочных знаков в параметрах командлета](./supporting-wildcard-characters-in-cmdlet-parameters.md).
+> For more information about wildcard patterns, see [Supporting Wildcards in Cmdlet Parameters](./supporting-wildcard-characters-in-cmdlet-parameters.md).
 
-В следующем коде показано, как задать подстановочные знаки и определить шаблон, используемый для разрешения параметра `Name` для этого командлета.
+The following code shows how to set wildcard options and define the wildcard pattern used for resolving the `Name` parameter for this cmdlet.
 
 ```csharp
 WildcardOptions options = WildcardOptions.IgnoreCase |
@@ -119,7 +119,7 @@ WildcardOptions options = WildcardOptions.IgnoreCase |
 WildcardPattern wildcard = new WildcardPattern(name,options);
 ```
 
-В следующем коде показано, как проверить, соответствует ли имя процесса определенному шаблону шаблона. Обратите внимание, что в этом случае, если имя процесса не соответствует шаблону, командлет продолжит процедуру, чтобы получить имя следующего процесса.
+The following code shows how to test whether the process name matches the defined wildcard pattern. Notice that, in this case, if the process name does not match the pattern, the cmdlet continues on to get the next process name.
 
 ```csharp
 if (!wildcard.IsMatch(processName))
@@ -128,29 +128,29 @@ if (!wildcard.IsMatch(processName))
 }
 ```
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Code Sample
 
-Полный C# пример кода см. в разделе [StopProcessSample03 Sample](./stopprocesssample03-sample.md).
+For the complete C# sample code, see [StopProcessSample03 Sample](./stopprocesssample03-sample.md).
 
-## <a name="define-object-types-and-formatting"></a>Определение типов объектов и форматирование
+## <a name="define-object-types-and-formatting"></a>Define Object Types and Formatting
 
-Windows PowerShell передает сведения между командлетами с помощью объектов .NET. Следовательно, командлету может потребоваться определить собственный тип, или командлету может потребоваться расширить существующий тип, предоставленный другим командлетом. Дополнительные сведения об определении новых типов или расширении существующих типов см. в разделе [расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85)).
+Windows PowerShell passes information between cmdlets using .Net objects. Consequently, a cmdlet may need to define its own type, or the cmdlet may need to extend an existing type provided by another cmdlet. For more information about defining new types or extending existing types, see [Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85)).
 
-## <a name="building-the-cmdlet"></a>Создание командлета
+## <a name="building-the-cmdlet"></a>Building the Cmdlet
 
-После реализации командлета его необходимо зарегистрировать в Windows PowerShell с помощью оснастки Windows PowerShell. Дополнительные сведения о регистрации командлетов см. [в разделе Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
+After implementing a cmdlet, it must be registered with Windows PowerShell through a Windows PowerShell snap-in. For more information about registering cmdlets, see [How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85)).
 
-## <a name="testing-the-cmdlet"></a>Тестирование командлета
+## <a name="testing-the-cmdlet"></a>Testing the Cmdlet
 
-Если командлет зарегистрирован в Windows PowerShell, его можно проверить, запустив его в командной строке. Давайте протестируем пример командлета "останавливает-proc". Дополнительные сведения об использовании командлетов из командной строки см. в [Начало работы с помощью Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+When your cmdlet has been registered with Windows PowerShell, you can test it by running it on the command line. Let's test the sample Stop-Proc cmdlet. For more information about using cmdlets from the command line, see the [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
-- Запустите Windows PowerShell и используйте командлет "останавливает-обработать", чтобы прерывать процесс с помощью псевдонима ProcessName для параметра `Name`.
+- Start Windows PowerShell and use Stop-Proc to stop a process using the ProcessName alias for the `Name` parameter.
 
     ```powershell
     PS> stop-proc -ProcessName notepad
     ```
 
-Отобразятся следующие выходные данные.
+The following output appears.
 
     ```
     Confirm
@@ -159,13 +159,13 @@ Windows PowerShell передает сведения между командле
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-- В командной строке выполните следующую команду. Так как параметр name является обязательным, вам будет предложено ввести его. Ввод "!?" выводит текст справки, связанный с параметром.
+- Make the following entry on the command line. Because the Name parameter is mandatory, you are prompted for it. Entering "!?" brings up the help text associated with the parameter.
 
     ```powershell
     PS> stop-proc
     ```
 
-Отобразятся следующие выходные данные.
+The following output appears.
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -176,13 +176,13 @@ Windows PowerShell передает сведения между командле
     Name[0]: notepad
     ```
 
-- Теперь выполните следующую запись, чтобы прерывать все процессы, соответствующие шаблону подстановочного знака "* Note @ no__t-0". Перед остановкой каждого процесса, соответствующего шаблону, выводится запрос.
+- Now make the following entry to stop all processes that match the wildcard pattern "*note\*". You are prompted before stopping each process that matches the pattern.
 
     ```powershell
     PS> stop-proc -Name *note*
     ```
 
-Отобразятся следующие выходные данные.
+The following output appears.
 
     ```
     Confirm
@@ -191,7 +191,7 @@ Windows PowerShell передает сведения между командле
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-Отобразятся следующие выходные данные.
+The following output appears.
 
     ```
     Confirm
@@ -200,7 +200,7 @@ Windows PowerShell передает сведения между командле
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-Отобразятся следующие выходные данные.
+The following output appears.
 
     ```
     Confirm
@@ -211,14 +211,14 @@ Windows PowerShell передает сведения между командле
 
 ## <a name="see-also"></a>См. также:
 
-[Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md)
+[Create a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md)
 
-[Создание командлета Windows PowerShell](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
+[How to Create a Windows PowerShell Cmdlet](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[Расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85))
+[Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85))
 
-[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85))
+[How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85))
 
-[Поддержка подстановочных знаков в параметрах командлета](./supporting-wildcard-characters-in-cmdlet-parameters.md)
+[Supporting Wildcards in Cmdlet Parameters](./supporting-wildcard-characters-in-cmdlet-parameters.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

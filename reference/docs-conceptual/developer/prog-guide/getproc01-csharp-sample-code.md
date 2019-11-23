@@ -1,5 +1,5 @@
 ---
-title: Пример кодаC#GetProc01 () | Документация Майкрософт
+title: GetProc01 (C#) Sample Code | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,28 +8,28 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65094bb7-1972-44b3-b8b0-5f639860b58c
 caps.latest.revision: 5
-ms.openlocfilehash: 06a24266eb8fda6e4f138f1f77ae702f7454e525
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 499a688ce5e8daa78baff58c454ad237836bbe48
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72366803"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416159"
 ---
 # <a name="getproc01-c-sample-code"></a>Пример кода GetProc01 (C#)
 
-В следующем коде показана реализация командлета Sample GetProc01. Обратите внимание, что командлет упрощается за счет выполнения фактической работы по получению процесса к методу [System. Diagnostics. Process.-Processing *](/dotnet/api/System.Diagnostics.Process.GetProcesses) .
+The following code shows the implementation of the GetProc01 sample cmdlet. Notice that the cmdlet is simplified by leaving the actual work of process retrieval to the [System.Diagnostics.Process.Getprocesses*](/dotnet/api/System.Diagnostics.Process.GetProcesses) method.
 
 > [!NOTE]
-> Вы можете скачать C# исходный файл (getproc01.cs) для этого командлета Get-proc с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
+> You can download the C# source file (getproc01.cs) for this Get-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> Скачанные исходные файлы доступны в каталоге **\<PowerShell samples >** Directory.
+> The downloaded source files are available in the **\<PowerShell Samples>** directory.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Code Sample
 
 [!code-csharp[GetProcessSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample01/GetProcessSample01.cs#L11-L126 "GetProcessSample01.cs")]
 
 ## <a name="see-also"></a>См. также:
 
-[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

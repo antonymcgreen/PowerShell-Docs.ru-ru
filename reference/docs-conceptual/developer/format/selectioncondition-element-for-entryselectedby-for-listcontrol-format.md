@@ -1,5 +1,5 @@
 ---
-title: Элемент Селектионкондитион для Ентриселектедби для ListControl (Format) | Документация Майкрософт
+title: SelectionCondition Element for EntrySelectedBy for ListControl (Format) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7649d5d0-2b56-49b5-a670-dde46caca343
 caps.latest.revision: 11
-ms.openlocfilehash: f04a07c241268566eaedfe2b299c33d5be4dc19d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 7150b29ad84dfb587215ee3e64c356adbd5a6305
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72364823"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417537"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
 
-Определяет условие, которое должно существовать для использования этого определения представления списка. Количество условий выбора, которое можно указать для определения списка, не ограничено.
+Defines the condition that must exist to use this definition of the list view. There is no limit to the number of selection conditions that can be specified for a list definition.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент (формат) ListControl элемент (Format) Листентриес элемент (Format) Листентри элемент (Format) Ентриселектедби для Листентри (Format) Селектионкондитион элемент для Ентриселектедби для Листентри (формат)
+Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) ListControl Element (Format) ListEntries Element (Format) ListEntry Element (Format) EntrySelectedBy Element for ListEntry (Format) SelectionCondition Element for EntrySelectedBy for ListEntry (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,7 +34,7 @@ ms.locfileid: "72364823"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `SelectionCondition`.
+The following sections describe attributes, child elements, and the parent element of the `SelectionCondition` element.
 
 ### <a name="attributes"></a>Атрибуты
 
@@ -44,39 +44,39 @@ ms.locfileid: "72364823"
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент PropertyName для Селектионкондитион для Ентриселектедби для Листентри (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
-|[Элемент ScriptBlock для Селектионкондитион для Ентриселектедби для Листентри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает скрипт, который запускает условие.|
-|[Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Листентри (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Необязательный элемент.<br /><br /> Указывает набор типов .NET, которые активируют условие.|
-|[Элемент TypeName для Селектионкондитион для Ентриселектедби для Листентри (Format)](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает тип .NET, который запускает условие.|
+|[PropertyName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optional element.<br /><br /> Specifies the .NET property that triggers the condition.|
+|[ScriptBlock Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optional element.<br /><br /> Specifies the script that triggers the condition.|
+|[SelectionSetName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Optional element.<br /><br /> Specifies the set of .NET types that trigger the condition.|
+|[TypeName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optional element.<br /><br /> Specifies a .NET type that triggers the condition.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Ентриселектедби для Таблеровентри (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Определяет типы .NET, которые используют эту запись таблицы, или условие, которое должно существовать для использования этой записи.|
+|[EntrySelectedBy Element for TableRowEntry (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Defines the .NET types that use this table entry or the condition that must exist for this entry to be used.|
 
 ## <a name="remarks"></a>Замечания
 
-Лвхен вы определяете условие выбора, применяются следующие требования.
+lWhen you are defining a selection condition, the following requirements apply:
 
-- Условие выбора должно указывать по крайней мере одно имя свойства или блок скрипта, но не может указывать и то и другое.
+- The selection condition must specify a least one property name or a script block, but cannot specify both.
 
-- Условие выбора может указывать любое количество типов .NET или наборов выбора, но не может одновременно указывать оба типа.
+- The selection condition can specify any number of .NET types or selection sets, but cannot specify both.
 
-Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
+For more information about how to use selection conditions, see [Defining Conditions for when Data is Displayed](./defining-conditions-for-displaying-data.md).
 
-Дополнительные сведения о других компонентах представления списка см. в разделе [Создание представления списка](./creating-a-list-view.md).
+For more information about other components of a list view, see [Creating a List View](./creating-a-list-view.md).
 
 ## <a name="see-also"></a>См. также:
 
-[Создание представления списка](./creating-a-list-view.md)
+[Creating a List View](./creating-a-list-view.md)
 
-[Определение условий для отображения данных](./defining-conditions-for-displaying-data.md)
+[Defining Conditions for When Data Is Displayed](./defining-conditions-for-displaying-data.md)
 
-[Элемент Листентри (Format)](./listentry-element-for-listcontrol-format.md)
+[ListEntry Element (Format)](./listentry-element-for-listcontrol-format.md)
 
-[Элемент Селектионсетнаме для Ентриселектедби для Листентри (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[SelectionSetName Element for EntrySelectedBy for ListEntry (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-[Элемент TypeName для Ентриселектедби для Листентри (Format)](/powershell/developer/format/typename-element-for-entryselectedby-for-listcontrol-format)
+[TypeName Element for EntrySelectedBy for ListEntry (Format)](/powershell/scripting/developer/format/typename-element-for-entryselectedby-for-listcontrol-format)
 
-[Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)
+[Writing a PowerShell Formatting File](./writing-a-powershell-formatting-file.md)

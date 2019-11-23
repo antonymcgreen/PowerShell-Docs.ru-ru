@@ -1,5 +1,5 @@
 ---
-title: Пример кода RunSpace04 (VB.NET) | Документация Майкрософт
+title: RunSpace04  (VB.NET) Code Sample | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,23 +8,23 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f0dea3c-4354-4d7d-9823-5e6234c9a89e
 caps.latest.revision: 6
-ms.openlocfilehash: c1d38c23ea20d7e5ccbc8e475b0c2246f9670ec3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: a0c04adb64ab5f2a9fd42fa7dee3977638d3b535
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72366503"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417948"
 ---
 # <a name="runspace04--vbnet-code-sample"></a>Пример кода RunSpace04 (VB.NET)
 
-Ниже приведен исходный код VB.NET для примера Runspace04. В этом примере класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) используется для выполнения скрипта, который создает завершающую ошибку. Ведущее приложение отвечает за перехват ошибки и интерпретацию записи об ошибке.
+Here is the VB.NET source code for the Runspace04 sample. This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute a script that generates a terminating error. The host application is responsible for catching the error and interpreting the error record.
 
 > [!NOTE]
-> Вы можете скачать исходный файл VB.NET (runspace02. vb) для этого примера с помощью пакета средств разработки программного обеспечения Windows для компонентов среды выполнения Windows Vista и Microsoft .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
+> You can download the VB.NET source file (runspace02.vb) for this sample by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> Скачанные исходные файлы доступны в каталоге **\<PowerShell samples >** Directory.
+> The downloaded source files are available in the **\<PowerShell Samples>** directory.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Code Sample
 
 ```vb
 Imports System
@@ -117,6 +117,6 @@ End Namespace
 
 ## <a name="see-also"></a>См. также:
 
-[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

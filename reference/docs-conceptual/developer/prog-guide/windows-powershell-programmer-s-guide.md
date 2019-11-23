@@ -1,5 +1,5 @@
 ---
-title: Справочник программистов&#39;Windows PowerShell | Документация Майкрософт
+title: Windows PowerShell Programmer&#39;s Guide | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -10,100 +10,100 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
-ms.openlocfilehash: 44a9c970d32dc6f98456227f8b02101280541dd9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: f8cbaf464345b8f2b693e72f3dbe781a47605b28
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72360053"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417771"
 ---
-# <a name="windows-powershell-programmer39s-guide"></a>Справочник программистов&#39;Windows PowerShell
+# <a name="windows-powershell-programmer39s-guide"></a>Windows PowerShell Programmer&#39;s Guide
 
-Руководство программиста нацелено на разработчиков, заинтересованных в предоставлении среды управления командной строки для системных администраторов. Windows PowerShell предоставляет простой способ создания команд управления, предоставляющих объекты .NET, позволяя Windows PowerShell выполнять большую часть работы за вас.
+This programmer's guide is targeted at developers who are interested in providing a command-line management environment for system administrators. Windows PowerShell provides a simple way for you to build management commands that expose .NET objects, while allowing Windows PowerShell to do most of the work for you.
 
-В традиционной разработке команд необходимо написать средство синтаксического анализа параметров, связыватель параметров, фильтры и все остальные функциональные возможности, предоставляемые каждой командой. Windows PowerShell предоставляет следующие средства для упрощения написания команд:
+In traditional command development, you are required to write a parameter parser, a parameter binder, filters, and all other functionality exposed by each command. Windows PowerShell provides the following to make it easy for you to write commands:
 
-- Мощная среда выполнения Windows PowerShell (механизм выполнения) с собственным средством синтаксического анализа и механизм для автоматической привязки параметров команды.
+- A powerful Windows PowerShell runtime (execution engine) with its own parser and a mechanism for automatically binding command parameters.
 
-- Служебные программы для форматирования и отображения результатов команд с помощью интерпретатора командной строки (CLI).
+- Utilities for formatting and displaying command results using a command line interpreter (CLI).
 
-- Поддержка высокого уровня функциональности (с помощью поставщиков Windows PowerShell), которые упрощают доступ к сохраненным данным.
+- Support for high levels of functionality  (through Windows PowerShell providers) that make it easy to access stored data.
 
-  По незначительным затратам объект .NET можно представить с помощью обширной команды или набора команд, которые предлагают администратору полный интерфейс командной строки.
+  At little cost, you can represent a .NET object by a rich command or set of commands that will offer a complete command-line experience to the administrator.
 
-  В следующем разделе рассматриваются основные понятия и термины Windows PowerShell. Ознакомьтесь с этими понятиями и терминами перед началом разработки.
+  The next section covers the key Windows PowerShell concepts and terms. Familiarize yourself with these concepts and terms before starting development.
 
 ## <a name="about-windows-powershell"></a>Сведения о Windows PowerShell
 
-Windows PowerShell определяет несколько типов команд, которые можно использовать в разработке. Эти команды включают в себя функции, фильтры, скрипты, псевдонимы и исполняемые объекты (приложения). Основной тип команды, описанный в этом разделе, — это простая небольшая команда, называемая "командлетом". Windows PowerShell предоставляет набор командлетов и полностью поддерживает настройку командлетов в соответствии с вашей средой. Среда выполнения Windows PowerShell обрабатывает все типы команд точно так же, как командлеты, используя конвейеры.
+Windows PowerShell defines several types of commands that you can use in development. These commands include: functions, filters, scripts, aliases, and executables (applications). The main command type discussed in this guide is a simple, small command called a "cmdlet". Windows PowerShell furnishes a set of cmdlets and fully supports cmdlet customization to suit your environment. The Windows PowerShell runtime processes all command types just as it does cmdlets, using pipelines.
 
-В дополнение к командам Windows PowerShell поддерживает различные настраиваемые поставщики Windows PowerShell, которые делают доступными определенные наборы командлетов. Оболочка работает в ведущем приложении Windows PowerShell (Windows PowerShell. exe), но оно также доступно из пользовательского ведущего приложения, которое можно разработать для удовлетворения конкретных требований. Дополнительные сведения см. в разделе [как работает Windows PowerShell](/previous-versions//ms714658(v=vs.85)).
+In addition to commands, Windows PowerShell supports various customizable Windows PowerShell providers that make available specific sets of cmdlets. The shell operates within the Windows PowerShell-provided host application (Windows PowerShell.exe), but it is equally accessible from a custom host application that you can develop to meet specific requirements. For more information, see [How Windows PowerShell Works](/previous-versions//ms714658(v=vs.85)).
 
-### <a name="windows-powershell-cmdlets"></a>Командлеты Windows PowerShell
+### <a name="windows-powershell-cmdlets"></a>Windows PowerShell Cmdlets
 
-Командлет — это упрощенная команда, используемая в среде Windows PowerShell. Среда выполнения Windows PowerShell вызывает эти командлеты в контексте сценариев автоматизации, предоставленных в командной строке, а среда выполнения Windows PowerShell также вызывает их программно с помощью API-интерфейсов Windows PowerShell.
+A cmdlet is a lightweight command that is used in the Windows PowerShell environment. The Windows PowerShell runtime invokes these cmdlets within the context of automation scripts that are provided at the command line, and the Windows PowerShell runtime also invokes them programmatically through Windows PowerShell APIs.
 
-Дополнительные сведения о командлетах см. [в разделе Написание командлета Windows PowerShell](../cmdlet/writing-a-windows-powershell-cmdlet.md).
+For more information about cmdlets, see [Writing a Windows PowerShell Cmdlet](../cmdlet/writing-a-windows-powershell-cmdlet.md).
 
-### <a name="windows-powershell-providers"></a>Поставщики Windows PowerShell
+### <a name="windows-powershell-providers"></a>Windows PowerShell Providers
 
-При выполнении административных задач пользователю может потребоваться проверить данные, хранящиеся в хранилище данных (например, файловую систему, реестр Windows или хранилище сертификатов). Чтобы упростить эти операции, Windows PowerShell определяет модуль, называемый поставщиком Windows PowerShell, который можно использовать для доступа к конкретному хранилищу данных, такому как реестр Windows. Каждый поставщик поддерживает набор связанных командлетов для предоставления пользователю симметричного представления данных в хранилище.
+In performing administrative tasks, the user may need to examine data stored in a data store (for example, the file system, the Windows Registry, or a certificate store). To make these operations easier, Windows PowerShell defines a module called a Windows PowerShell provider that can be used to access a specific data store, such as the Windows Registry. Each provider supports a set of related cmdlets to give the user a symmetrical view of the data in the store.
 
-Windows PowerShell предоставляет несколько поставщиков Windows PowerShell по умолчанию. Например, поставщик реестра поддерживает навигацию и обработку реестра Windows. Разделы реестра представлены как элементы, а значения реестра обрабатываются как свойства.
+Windows PowerShell provides several default Windows PowerShell providers. For example, the Registry provider supports navigation and manipulation of the Windows Registry. Registry keys are represented as items, and registry values are treated as properties.
 
-Если вы предоставляете хранилище данных, к которому пользователю потребуется доступ, вам может потребоваться написать собственный поставщик Windows PowerShell, как описано в разделе [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md). Дополнительные сведения о Абаутвиндовсх поставщиков PowerShell см. в статье [как работает Windows PowerShell](/previous-versions//ms714658(v=vs.85)).
+If you expose a data store that the user will need to access, you might need to write your own Windows PowerShell provider, as described in [Creating Windows PowerShell Providers](./how-to-create-a-windows-powershell-provider.md). For more information aboutWindows PowerShell providers, see [How Windows PowerShell Works](/previous-versions//ms714658(v=vs.85)).
 
-### <a name="host-application"></a>Ведущее приложение
+### <a name="host-application"></a>Host Application
 
-Windows PowerShell включает ведущее приложение по умолчанию PowerShell. exe, которое представляет собой консольное приложение, взаимодействующее с пользователем и размещающий среду выполнения Windows PowerShell с помощью окна консоли.
+Windows PowerShell includes the default host application powershell.exe, which is a console application that interacts with the user and hosts the Windows PowerShell runtime using a console window.
 
-Только редко приходится создавать собственное ведущее приложение для Windows PowerShell, хотя Настройка поддерживается. Один из случаев, когда вам может потребоваться ваше собственное приложение, — это потребность в ПОЛЬЗОВАТЕЛЬСКОМ интерфейсе, который более широк, чем интерфейс, предоставленный ведущим приложением по умолчанию. Вам также может потребоваться пользовательское приложение при создании базового графического интерфейса пользователя в командной строке. Дополнительные сведения см. [в разделе Создание ведущего приложения Windows PowerShell](/powershell/developer/hosting/writing-a-windows-powershell-host-application).
+Only rarely will you need to write your own host application for Windows PowerShell, although customization is supported. One case in which you might need your own application is when you have a requirement for a GUI interface that is richer than the interface provided by the default host application. You might also want a custom application when you are basing your GUI on the command line. For more information, see [How to Create a Windows PowerShell Host Application](/powershell/scripting/developer/hosting/writing-a-windows-powershell-host-application).
 
-### <a name="windows-powershell-runtime"></a>Среда выполнения Windows PowerShell
+### <a name="windows-powershell-runtime"></a>Windows PowerShell Runtime
 
-Среда выполнения Windows PowerShell — это подсистема выполнения, реализующая обработку команд. Он включает классы, предоставляющие интерфейс между ведущим приложением и командами и поставщиками Windows PowerShell. Среда выполнения Windows PowerShell реализуется как объект пространства выполнения для текущего сеанса Windows PowerShell, который является рабочей средой, в которой выполняется оболочка и команды. Сведения о работе см. в статье [как работает Windows PowerShell](/previous-versions//ms714658(v=vs.85)).
+The Windows PowerShell runtime is the execution engine that implements command processing. It includes the classes that provide the interface between the host application and Windows PowerShell commands and providers. The Windows PowerShell runtime is implemented as a runspace object for the current Windows PowerShell session, which is the operational environment in which the shell and the commands execute. For operational details, see [How Windows PowerShell Works](/previous-versions//ms714658(v=vs.85)).
 
-### <a name="windows-powershell-language"></a>Язык Windows PowerShell
+### <a name="windows-powershell-language"></a>Windows PowerShell Language
 
-Язык Windows PowerShell предоставляет функции и механизмы создания скриптов для вызова команд. Полные сведения о сценариях см. в справочнике по языку Windows PowerShell, поставляемому с Windows PowerShell.
+The Windows PowerShell language provides scripting functions and mechanisms to invoke commands. For complete scripting information, see the Windows PowerShell Language Reference shipped with Windows PowerShell.
 
-### <a name="extended-type-system-ets"></a>Расширенная система типов (ETS)
+### <a name="extended-type-system-ets"></a>Extended Type System (ETS)
 
-Windows PowerShell предоставляет доступ к различным объектам, таким как .NET и объекты XML. Как следствие, чтобы представить общую абстракцию для всех типов объектов, оболочка использует систему расширенных типов (ETS). Большинство ETS функций прозрачны для пользователя, но сценарий или разработчик .NET использует его в следующих целях:
+Windows PowerShell provides access to a variety of different objects, such as .NET and XML objects. As a consequence, to present a common abstraction for all object types the shell uses its extended type system (ETS). Most ETS functionality is transparent to the user, but the script or .NET developer uses it for the following purposes:
 
-- Просмотр подмножества элементов конкретных объектов. Windows PowerShell предоставляет "адаптированное" представление нескольких конкретных типов объектов.
+- Viewing a subset of the members of specific objects. Windows PowerShell provides an "adapted" view of several specific object types.
 
-- Добавление элементов в существующие объекты.
+- Adding members to existing objects.
 
-- Доступ к сериализованным объектам.
+- Access to serialized objects.
 
-- Написание настраиваемых объектов.
+- Writing customized objects.
 
-  С помощью ETS можно создать гибкие новые типы, совместимые с языком Windows PowerShell. Если вы являетесь разработчиком .NET, то можете работать с объектами, используя ту же семантику, что и язык Windows PowerShell, например, чтобы определить, имеет ли объект значение `true`.
+  Using ETS, you can create flexible new "types" that are compatible with the Windows PowerShell language. If you are a .NET developer, you are able to work with objects using the same semantics as the Windows PowerShell language applies to scripting, for example, to determine if an object evaluates to `true`.
 
-  Дополнительные сведения о ETS и использовании объектов в Windows PowerShell см. в разделе [Основные понятия об объектах Windows PowerShell](/powershell/scripting/learn/understanding-important-powershell-concepts?view=powershell-6).
+  For more information about ETS and how Windows PowerShell uses objects, see [Windows PowerShell Object Concepts](/powershell/scripting/learn/understanding-important-powershell-concepts?view=powershell-6).
 
-## <a name="programming-for-windows-powershell"></a>Программирование для Windows PowerShell
+## <a name="programming-for-windows-powershell"></a>Programming for Windows PowerShell
 
-Windows PowerShell определяет свой код для команд, поставщиков и других программных модулей с помощью .NET Framework. Вы не ограничены использованием Microsoft Visual Studio при создании настроенных модулей для Windows PowerShell, хотя в этом средстве известно, что примеры, приведенные в этом разделе, будут выполняться в этом инструменте. Можно использовать любой язык .NET, который поддерживает наследование классов и использование атрибутов. В некоторых случаях API Windows PowerShell требует, чтобы язык программирования мог получить доступ к универсальным типам.
+Windows PowerShell defines its code for commands, providers, and other program modules using the .NET Framework. You are not confined to the use of Microsoft Visual Studio in creating customized modules for Windows PowerShell, although the samples provided in this guide are known to run in this tool. You can use any .NET language that supports class inheritance and the use of attributes. In some cases, Windows PowerShell APIs require the programming language to be able to access generic types.
 
-## <a name="programmers-reference"></a>Справочник программиста
+## <a name="programmers-reference"></a>Programmer's Reference
 
-Справочные сведения о разработке для Windows PowerShell см. в разделе [Windows POWERSHELL SDK](../windows-powershell-reference.md).
+For reference when developing for Windows PowerShell, see the [Windows PowerShell SDK](../windows-powershell-reference.md).
 
-## <a name="getting-started-using-windows-powershell"></a>начало работы с помощью Windows PowerShell
+## <a name="getting-started-using-windows-powershell"></a>Getting Started Using Windows PowerShell
 
-Дополнительные сведения о начале работы с оболочкой Windows PowerShell см. в [Начало работы с Windows](/powershell/scripting/getting-started/getting-started-with-windows-powershell) PowerShell, поставляемой с Windows PowerShell. В качестве основы использования командлета также предоставляется краткий справочник по документу с тремя сгибами.
+For more information about starting to use the Windows PowerShell shell, see the [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell) shipped with Windows PowerShell. A Quick Reference tri-fold document is also supplied as a primer for cmdlet use.
 
-## <a name="contents-of-this-guide"></a>Содержание этого руководством
+## <a name="contents-of-this-guide"></a>Contents of This Guide
 
 |Раздел|Определение|
 |-----------|----------------|
-|[Создание поставщика Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)|В этом разделе описывается создание поставщика Windows PowerShell для Windows PowerShell.|
-|[Создание ведущего приложения Windows PowerShell](/powershell/developer/hosting/writing-a-windows-powershell-host-application)|В этом разделе описывается написание ведущего приложения, управляющего пространством выполнения и написание ведущего приложения, реализующего собственный пользовательский узел.|
-|[Создание оснастки Windows PowerShell](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|В этом разделе описывается создание оснастки, которая используется для регистрации всех командлетов и поставщиков в сборке, а затем создание пользовательской оснастки.|
-|[Создание консольной оболочки](./how-to-create-a-console-shell.md)|В этом разделе описывается создание оболочки консоли, которая не является расширяемой.|
-|[Основные понятия Windows PowerShell](./windows-powershell-concepts.md)|В этом разделе содержатся общие сведения, которые помогут понять Windows PowerShell с точки зрения разработчика.|
+|[How to Create a Windows PowerShell Provider](./how-to-create-a-windows-powershell-provider.md)|This section describes how to build a Windows PowerShell provider for Windows PowerShell.|
+|[How to Create a Windows PowerShell Host Application](/powershell/scripting/developer/hosting/writing-a-windows-powershell-host-application)|This section describes how to write a host application that manipulates a runspace and how to write a host application that implements its own custom host.|
+|[How to Create a Windows PowerShell Snap-in](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|This section describes how to create a snap-in that is used to register all cmdlets and providers in an assembly and how to create a custom snap-in.|
+|[How to Create a Console Shell](./how-to-create-a-console-shell.md)|This section describes how to create a console shell that is not extensible.|
+|[Windows PowerShell Concepts](./windows-powershell-concepts.md)|This section contains conceptual information that will help you understand Windows PowerShell from the viewpoint of a developer.|
 
 ## <a name="see-also"></a>См. также:
 
