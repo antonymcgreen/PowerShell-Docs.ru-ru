@@ -1,5 +1,5 @@
 ---
-title: Пример кода StopProcessSample04 (VB.NET) | Документация Майкрософт
+title: StopProcessSample04 (VB.NET) Sample Code | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,21 +8,21 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48019ceb-0aeb-4cd1-8b42-79f2c29c3e65
 caps.latest.revision: 5
-ms.openlocfilehash: 8d8ff5f225609fc1ae9a1df6f2e990d632224102
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 3e709f0897b0d77f4c5f12e1c042edd4e24b142a
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72360093"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417810"
 ---
-# <a name="stopprocesssample04-vbnet-sample-code"></a><span data-ttu-id="9e8d8-102">Пример кода StopProcessSample04 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="9e8d8-102">StopProcessSample04 (VB.NET) Sample Code</span></span>
+# <a name="stopprocesssample04-vbnet-sample-code"></a><span data-ttu-id="d5573-102">Пример кода StopProcessSample04 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="d5573-102">StopProcessSample04 (VB.NET) Sample Code</span></span>
 
-<span data-ttu-id="9e8d8-103">Ниже приведен полный пример кода VB.NET для командлета StopProc04 Sample.</span><span class="sxs-lookup"><span data-stu-id="9e8d8-103">Here is the complete VB.NET sample code for the StopProc04 sample cmdlet.</span></span> <span data-ttu-id="9e8d8-104">Это код для командлета `Stop-Process`, описанного в разделе [Добавление наборов параметров в командлет](../cmdlet/adding-parameter-sets-to-a-cmdlet.md).</span><span class="sxs-lookup"><span data-stu-id="9e8d8-104">This is the code for the `Stop-Process` cmdlet described in [Adding Parameter Sets to a Cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md).</span></span> <span data-ttu-id="9e8d8-105">Командлет `Stop-Process` предназначен для завершения процессов, которые извлекаются с помощью командлета Get-proc (описывается в разделе [Создание первого командлета](../cmdlet/creating-a-cmdlet-without-parameters.md)).</span><span class="sxs-lookup"><span data-stu-id="9e8d8-105">The `Stop-Process` cmdlet is designed to stop processes that are retrieved using the Get-Proc cmdlet (described in [Creating Your First Cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).</span></span>
+<span data-ttu-id="d5573-103">Here is the complete VB.NET sample code for the StopProc04 sample cmdlet.</span><span class="sxs-lookup"><span data-stu-id="d5573-103">Here is the complete VB.NET sample code for the StopProc04 sample cmdlet.</span></span> <span data-ttu-id="d5573-104">This is the code for the `Stop-Process` cmdlet described in [Adding Parameter Sets to a Cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md).</span><span class="sxs-lookup"><span data-stu-id="d5573-104">This is the code for the `Stop-Process` cmdlet described in [Adding Parameter Sets to a Cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md).</span></span> <span data-ttu-id="d5573-105">The `Stop-Process` cmdlet is designed to stop processes that are retrieved using the Get-Proc cmdlet (described in [Creating Your First Cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).</span><span class="sxs-lookup"><span data-stu-id="d5573-105">The `Stop-Process` cmdlet is designed to stop processes that are retrieved using the Get-Proc cmdlet (described in [Creating Your First Cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="9e8d8-106">Вы можете скачать исходный файл VB.NET (stopprocesssample04. vb) для командлета "прекращать-proc" с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0.</span><span class="sxs-lookup"><span data-stu-id="9e8d8-106">You can download the VB.NET (stopprocesssample04.vb) source file for this Stop-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="9e8d8-107">Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).</span><span class="sxs-lookup"><span data-stu-id="9e8d8-107">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).</span></span>
+> <span data-ttu-id="d5573-106">You can download the VB.NET (stopprocesssample04.vb) source file for this Stop-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components.</span><span class="sxs-lookup"><span data-stu-id="d5573-106">You can download the VB.NET (stopprocesssample04.vb) source file for this Stop-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="d5573-107">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span><span class="sxs-lookup"><span data-stu-id="d5573-107">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span></span>
 >
-> <span data-ttu-id="9e8d8-108">Скачанные исходные файлы доступны в каталоге **\<PowerShell samples >** Directory.</span><span class="sxs-lookup"><span data-stu-id="9e8d8-108">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
+> <span data-ttu-id="d5573-108">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span><span class="sxs-lookup"><span data-stu-id="d5573-108">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
 
 ```vb
 Imports System
@@ -477,8 +477,8 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[StopProcessSample04.vb](../../powershell-sdk-samples/SDK-2.0/vb/StopProcessSample04/StopProcessSample04.vb#L09-L456 "StopProcessSample04.vb")] -->
 
-## <a name="see-also"></a><span data-ttu-id="9e8d8-109">См. также:</span><span class="sxs-lookup"><span data-stu-id="9e8d8-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5573-109">См. также:</span><span class="sxs-lookup"><span data-stu-id="d5573-109">See Also</span></span>
 
-[<span data-ttu-id="9e8d8-110">Руководством программиста Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="9e8d8-110">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
+[<span data-ttu-id="d5573-110">Windows PowerShell Programmer's Guide</span><span class="sxs-lookup"><span data-stu-id="d5573-110">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
 
-[<span data-ttu-id="9e8d8-111">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="9e8d8-111">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="d5573-111">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="d5573-111">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
