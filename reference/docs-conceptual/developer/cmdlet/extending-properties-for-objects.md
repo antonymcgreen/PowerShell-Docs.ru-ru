@@ -20,7 +20,7 @@ ms.locfileid: "72364453"
 При расширении .NET Framework объектов можно добавить свойства псевдонима, свойства кода, свойства примечаний, свойства скрипта и наборы свойств в объекты. XML-код, определяющий эти свойства, описан в следующих разделах.
 
 > [!NOTE]
-> Примеры в следующих разделах относятся к файлу `Types.ps1xml` типов по умолчанию в каталоге установки PowerShell (`$PSHOME`). Дополнительные сведения см. в разделе [About types. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
+> Примеры в следующих разделах относятся к файлу типов `Types.ps1xml` по умолчанию в каталоге установки PowerShell (`$PSHOME`). Дополнительные сведения см. в разделе [About types. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
 
 ## <a name="alias-properties"></a>Свойства псевдонима
 
@@ -65,7 +65,7 @@ ms.locfileid: "72364453"
 
 Свойство Note определяет свойство, имеющее статическое значение.
 
-В следующем примере свойство **Status** , значение которого всегда равно **Success**, добавляется в тип [System. IO. DirectoryInfo](/dotnet/api/System.IO.DirectoryInfo) . Элемент [NoteProperty](/dotnet/api/system.management.automation.psnoteproperty) определяет расширенное свойство как свойство Note. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name) указывает имя расширенного свойства. Элемент [value](/dotnet/api/system.management.automation.psnoteproperty.value) указывает статическое значение расширенного свойства. Элемент `NoteProperty` также можно добавить в элементы элемента [мемберсетс](/dotnet/api/system.management.automation.psmemberset) .
+В следующем примере свойство **Status** , значение которого всегда равно **Success**, добавляется в тип [System. IO. DirectoryInfo](/dotnet/api/System.IO.DirectoryInfo) . Элемент [NoteProperty](/dotnet/api/system.management.automation.psnoteproperty) определяет расширенное свойство как свойство Note. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name) указывает имя расширенного свойства. Элемент [value](/dotnet/api/system.management.automation.psnoteproperty.value) указывает статическое значение расширенного свойства. Элемент `NoteProperty` можно также добавить в элементы элемента [мемберсетс](/dotnet/api/system.management.automation.psmemberset) .
 
 ```xml
 <Type>
@@ -105,7 +105,7 @@ ms.locfileid: "72364453"
 Например, параметр свойства [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table)
  может указывать конкретный набор свойств для отображения. Если задан набор свойств, отображаются только те свойства, которые принадлежат набору.
 
-Количество наборов свойств, которые могут быть определены для объекта, не ограничено. Однако наборы свойств, используемые для определения свойств экрана по умолчанию для объекта, должны быть указаны в наборе элементов **псстандардмемберс** . В файле типа `Types.ps1xml` имена наборов свойств по умолчанию включают **дефаултдисплайпроперти**, **дефаултдисплайпропертисет**и **дефаулткэйпропертисет**. Все дополнительные наборы свойств, добавляемые в набор элементов **псстандардмемберс** , игнорируются.
+Количество наборов свойств, которые могут быть определены для объекта, не ограничено. Однако наборы свойств, используемые для определения свойств экрана по умолчанию для объекта, должны быть указаны в наборе элементов **псстандардмемберс** . В файле типов `Types.ps1xml` имена наборов свойств по умолчанию: **дефаултдисплайпроперти**, **дефаултдисплайпропертисет**и **дефаулткэйпропертисет**. Все дополнительные наборы свойств, добавляемые в набор элементов **псстандардмемберс** , игнорируются.
 
 В следующем примере набор свойств **дефаултдисплайпропертисет** добавляется в набор элементов **псстандардмемберс** типа [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) . Элемент набора [свойств](/dotnet/api/system.management.automation.pspropertyset) определяет группу свойств. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name) указывает имя набора свойств. И элемент [референцедпропертиес](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) указывает свойства набора. Можно также добавить элемент `PropertySet` в элементы элемента [Type](/dotnet/api/system.management.automation.pstypename) .
 
@@ -130,7 +130,7 @@ ms.locfileid: "72364453"
 </Type>
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 [О типах. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)
 

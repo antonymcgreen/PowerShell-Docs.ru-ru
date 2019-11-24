@@ -23,7 +23,7 @@ ms.locfileid: "72359633"
 
 ### <a name="setting-up-the-project"></a>Настройка проекта
 
-1. Выполните процедуру, описанную в разделе [Добавление действий Windows PowerShell в панель элементов Visual Studio](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md) , чтобы создать проект рабочего процесса и добавить действия из [Microsoft. PowerShell. activitys](/dotnet/api/Microsoft.PowerShell.Activities) и [Microsoft. PowerShell. Management. activitys. ](/dotnet/api/Microsoft.PowerShell.Management.Activities)сборки на панель элементов.
+1. Выполните процедуру [добавления действий Windows PowerShell на панель элементов Visual Studio](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md) , чтобы создать проект рабочего процесса и добавить действия из сборок [Microsoft. PowerShell. activitys](/dotnet/api/Microsoft.PowerShell.Activities) и [Microsoft. PowerShell. Management. Activity](/dotnet/api/Microsoft.PowerShell.Management.Activities) в область элементов.
 
 2. Добавьте System. Management. Automation, Microsoft. PowerShell. Activitys, System. Management, Microsoft. PowerShell. Management. Activitys и Microsoft. PowerShell. Commands. Management как в проект в качестве эталонных сборок.
 
@@ -31,7 +31,7 @@ ms.locfileid: "72359633"
 
 1. Добавьте действие **Sequence** в рабочий процесс.
 
-2. Создайте аргумент с именем `ComputerName` с типом аргумента `String[]`. Этот аргумент представляет имена компьютеров для проверки и присоединение.
+2. Создайте аргумент с именем `ComputerName` и типом аргумента `String[]`. Этот аргумент представляет имена компьютеров для проверки и присоединение.
 
 3. Создайте аргумент с именем `DomainCred` типа [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Этот аргумент представляет учетные данные домена учетной записи домена, которая имеет право присоединить компьютер к домену.
 
@@ -77,4 +77,5 @@ ms.locfileid: "72359633"
 
     После завершения процедур окно конструктора рабочих процессов должно выглядеть следующим образом.
 
-    ![JoinDomain XAML в конструкторе рабочих процессов @ no__t-1![JOINDOMAIN XAML в конструкторе рабочих процессов](../media/joindomainworkflow.png "жоиндомаинворкфлов")
+    ![JoinDomain XAML в конструкторе рабочих процессов](../media/joindomainworkflow.png)
+    ![JOINDOMAIN XAML в конструкторе рабочих процессов](../media/joindomainworkflow.png "жоиндомаинворкфлов")
