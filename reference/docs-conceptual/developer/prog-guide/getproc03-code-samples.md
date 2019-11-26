@@ -1,5 +1,5 @@
 ---
-title: GetProc03 Code Samples | Microsoft Docs
+title: Примеры кода GetProc03 | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -17,22 +17,22 @@ ms.locfileid: "74416155"
 ---
 # <a name="getproc03-code-samples"></a>Примеры кода GetProc03
 
-Here are the code samples for the GetProc03 sample cmdlet. This is the `Get-Process` cmdlet sample described in [Adding Parameters that Process Pipeline Input](../cmdlet/adding-parameters-that-process-pipeline-input.md). This `Get-Process` cmdlet uses a `Name` parameter that accepts input from a pipeline object, retrieves process information from the local computer based on the supplied names, and then displays information about the processes at the command line.
+Ниже приведены примеры кода для командлета GetProc03 Sample. Это пример командлета `Get-Process`, описанный в разделе [Добавление параметров, обрабатывающих входные данные конвейера](../cmdlet/adding-parameters-that-process-pipeline-input.md). Этот командлет `Get-Process` использует параметр `Name`, который принимает входные данные из объекта конвейера, извлекает сведения о процессе с локального компьютера на основе заданных имен, а затем отображает сведения о процессах в командной строке.
 
 > [!NOTE]
-> You can download the C# source file (getprov03.cs) for this Get-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Вы можете скачать C# исходный файл (getprov03.cs) для этого командлета Get-proc с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> The downloaded source files are available in the **\<PowerShell Samples>** directory.
+> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory.
 
-For complete sample code, see the following topics.
+Полный пример кода см. в следующих разделах.
 
-|Language|Раздел|
+|Язык|Раздел|
 |--------------|-----------|
-|C#|[GetProc03 (C#) Sample Code](./getproc03-csharp-sample-code.md)|
-|VB.NET|[GetProc03 (VB.NET) Sample Code](./getproc03-vb-net-sample-code.md)|
+|C#|[Пример кодаC#GetProc03 ()](./getproc03-csharp-sample-code.md)|
+|VB.NET|[Пример кода GetProc03 (VB.NET)](./getproc03-vb-net-sample-code.md)|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
+[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
