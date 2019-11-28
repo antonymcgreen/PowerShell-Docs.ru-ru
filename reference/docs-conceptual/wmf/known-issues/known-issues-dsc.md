@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,установка
 title: Известные проблемы и ограничения настройки требуемого состояния (DSC)
-ms.openlocfilehash: 6faf24795d14a93f265943029d9f6f1388f32263
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: a76c5bb336804c5b384e6b6ba6a705c6049ef7fb
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71147724"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416602"
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Известные проблемы и ограничения настройки требуемого состояния (DSC)
 
@@ -52,7 +52,7 @@ mofcomp $env:windir\system32\wbem\DscCoreConfProv.mof
 
 Когда LCM находится в режиме DebugMode, `Stop-DscConfiguration` может не отвечать при попытке остановить операцию, запущенную `Get-DscConfiguration`
 
-**Решение** Завершите отладку операции, запущенной `Get-DscConfiguration`, как описано в статье [Отладка ресурсов DSC](/powershell/dsc/troubleshooting/debugResource).
+**Решение** Завершите отладку операции, запущенной `Get-DscConfiguration`, как описано в статье [Отладка ресурсов DSC](/powershell/scripting/dsc/troubleshooting/debugResource).
 
 ## <a name="no-verbose-error-messages-are-shown-in-debugmode"></a>В DebugMode не отображаются подробные сообщения об ошибках
 
@@ -80,7 +80,7 @@ mofcomp $env:windir\system32\wbem\DscCoreConfProv.mof
 
 ## <a name="dsc-resources-cannot-be-debugged-easily-when-used-with-invoke-dscresource"></a>Невозможна простая отладка ресурсов DSC при использовании Invoke-DscResource
 
-Когда LCM работает в режиме отладки, командлет `Invoke-DscResource` не предоставляет сведения о пространстве выполнения, к которому нужно подключиться для отладки. Дополнительные сведения см. в разделе [Отладка ресурсов DSC](/powershell/dsc/troubleshooting/debugResource).
+Когда LCM работает в режиме отладки, командлет `Invoke-DscResource` не предоставляет сведения о пространстве выполнения, к которому нужно подключиться для отладки. Дополнительные сведения см. в разделе [Отладка ресурсов DSC](/powershell/scripting/dsc/troubleshooting/debugResource).
 
 **Решение** Найдите пространство выполнения и подключитесь к нему с помощью командлетов `Get-PSHostProcessInfo`, `Enter-PSHostProcess`, `Get-Runspace` и `Debug-Runspace` для отладки ресурса DSC.
 

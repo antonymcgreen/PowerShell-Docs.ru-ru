@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Усовершенствования DSC в WMF 5.1
-ms.openlocfilehash: 4de295db539b95d0f4ddef297df5e9523892bffc
-ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
+ms.openlocfilehash: a5efa38ce791a893580316bad7b61a6689153a86
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71692422"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416667"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Усовершенствования в настройке требуемого состояния (DSC) в WMF 5.1
 
@@ -147,11 +147,11 @@ ms.locfileid: "71692422"
 
 ## <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Использование параметра PsDscRunAsCredential с составными ресурсами DSC
 
-Добавлена поддержка использования параметра [PsDscRunAsCredential](/powershell/dsc/configurations/runAsUser) с [составными](https://msdn.microsoft.com/powershell/dsc/authoringresourcecomposite) ресурсами DSC.
+Добавлена поддержка использования параметра [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser) с [составными](/powershell/scripting/dsc/authoringresourcecomposite) ресурсами DSC.
 
 Теперь можно указать значение параметра **PsDscRunAsCredential** при использовании составных ресурсов в конфигурации. Если значение задано, все ресурсы, включенные в составной ресурс, будут запущены от имени этого пользователя. Если составной ресурс вызывает другой составной ресурс, то все такие ресурсы также будут запущены от имени этого пользователя. Учетные данные запуска от имени распространяются на любой уровень иерархии составных ресурсов. Если для одного из ресурсов, входящих в составной ресурс, указано собственное значение параметра **PsDscRunAsCredential**, при компиляции конфигурации возникает ошибка слияния.
 
-В этом примере показано, как использовать этот параметр с составным ресурсом [WindowsFeatureSet](/powershell/dsc/reference/resources/windows/windowsfeaturesetresource), включенным в модуль PSDesiredStateConfiguration.
+В этом примере показано, как использовать этот параметр с составным ресурсом [WindowsFeatureSet](/powershell/scripting/dsc/reference/resources/windows/windowsfeaturesetresource), включенным в модуль PSDesiredStateConfiguration.
 
 ```powershell
 Configuration InstallWindowsFeature

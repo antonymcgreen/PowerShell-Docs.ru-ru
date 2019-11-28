@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Создание ресурса DSC в C#
-ms.openlocfilehash: 6f2bb4d411237f13e2735c2e5f630b4f40dc6842
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71954321"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417696"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Создание ресурса DSC в C\#
 
 > Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Как правило, настраиваемый ресурс настройки требуемого состояния (DSC) Windows PowerShell реализуется в сценарии PowerShell. Кроме того, для реализации настраиваемого ресурса DSC можно писать командлеты на языке C#. Вводные сведения о написании командлетов на языке C# см. в статье [Написание командлетов Windows PowerShell](/powershell/developer/windows-powershell).
+Как правило, настраиваемый ресурс настройки требуемого состояния (DSC) Windows PowerShell реализуется в сценарии PowerShell. Кроме того, для реализации настраиваемого ресурса DSC можно писать командлеты на языке C#. Вводные сведения о написании командлетов на языке C# см. в статье [Написание командлетов Windows PowerShell](/powershell/scripting/developer/windows-powershell).
 
 Процесс создания схемы MOF и структуры папок, импорт и применения настраиваемого ресурса DSC (кроме реализации ресурса на языке C# в форме командлетов) соответствует описанию в статье [Написание пользовательских ресурсов DSC с использованием MOF](authoringResourceMOF.md).
 
@@ -281,4 +281,4 @@ $env: psmodulepath (folder)
 #### <a name="concepts"></a>Концепции
 [Написание пользовательских ресурсов DSC с использованием MOF](authoringResourceMOF.md)
 #### <a name="other-resources"></a>Прочие ресурсы
-[Запись командлета Windows PowerShell](/powershell/developer/windows-powershell)
+[Запись командлета Windows PowerShell](/powershell/scripting/developer/windows-powershell)

@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Выполнение второго прыжка при удаленном взаимодействии PowerShell
-ms.openlocfilehash: f4cfde39de8494050c31cfc3181271b968819695
-ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
+ms.openlocfilehash: 567d75009f7d53e9e95e5480b275ec3991cfb9f5
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71692152"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417629"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Выполнение второго прыжка при удаленном взаимодействии PowerShell
 
@@ -22,7 +22,7 @@ ms.locfileid: "71692152"
 
 ## <a name="credssp"></a>CredSSP
 
-Для проверки подлинности можно использовать [протокол CredSSP](https://msdn.microsoft.com/library/windows/desktop/bb931352.aspx). Протокол CredSSP кэширует учетные данные на удаленном сервере (_ServerB_), что делает их уязвимыми для атак, направленных на кражу учетных данных. Если безопасность удаленного компьютера нарушена, злоумышленник получает доступ к учетным данным пользователя. Протокол CredSSP по умолчанию отключен на компьютерах клиента и сервера. Включать протокол CredSSP следует только в самых надежных средах. Например, при подключении администратора домена к контроллеру домена, так как контроллер домена является высоконадежным.
+Для проверки подлинности можно использовать [протокол CredSSP](/windows/win32/secauthn/credential-security-support-provider). Протокол CredSSP кэширует учетные данные на удаленном сервере (_ServerB_), что делает их уязвимыми для атак, направленных на кражу учетных данных. Если безопасность удаленного компьютера нарушена, злоумышленник получает доступ к учетным данным пользователя. Протокол CredSSP по умолчанию отключен на компьютерах клиента и сервера. Включать протокол CredSSP следует только в самых надежных средах. Например, при подключении администратора домена к контроллеру домена, так как контроллер домена является высоконадежным.
 
 Дополнительные сведения о вопросах безопасности при использовании протокола CredSSP для удаленного взаимодействия PowerShell см. в статье [Accidental Sabotage: Beware of CredSSP](https://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp) (Непреднамеренный саботаж: берегитесь CredSSP).
 
@@ -153,7 +153,7 @@ $x.'msDS-AllowedToActOnBehalfOfOtherIdentity'.Access
 Get-ADComputer -Identity $ServerC -Properties PrincipalsAllowedToDelegateToAccount
 ```
 
-[Центр распространения ключей (KDC)](https://msdn.microsoft.com/library/windows/desktop/aa378170(v=vs.85).aspx) Kerberos кэширует отклоненные попытки доступа (негативный кэш) в течение 15 минут. Если сервер _ServerB_ ранее пытался получить доступ к серверу _ServerC_, потребуется очистить кэш на сервере _ServerB_, вызвав следующую команду:
+[Центр распространения ключей (KDC)](/windows/win32/secauthn/key-distribution-center) Kerberos кэширует отклоненные попытки доступа (негативный кэш) в течение 15 минут. Если сервер _ServerB_ ранее пытался получить доступ к серверу _ServerC_, потребуется очистить кэш на сервере _ServerB_, вызвав следующую команду:
 
 ```powershell
 Invoke-Command -ComputerName $ServerB.Name -Credential $cred -ScriptBlock {
@@ -214,8 +214,8 @@ Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
 - [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 1](https://www.itprotoday.com/windows-server/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1)
 - [Как Windows Server 2012 упрощает работу с ограниченным делегированием Kerberos, часть 2](https://www.itprotoday.com/windows-server/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2)
 - [Основные сведения об ограниченном делегировании Kerberos для развертывания прокси приложения Azure Active Directory со встроенной проверкой подлинности Windows](https://aka.ms/kcdpaper)
-- [[MS-ADA2]: Active Directory Schema Attributes M2.210 Attribute msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx) (Атрибуты M2.210 схемы Active Directory msDS-AllowedToActOnBehalfOfOtherIdentity)
-- [[MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol 1.3.2 S4U2proxy](https://msdn.microsoft.com/library/cc246079.aspx) (Расширения протокола Kerberos: S4U и протокол ограниченного делегирования 1.3.2 S4U2proxy)
+- [[MS-ADA2]: Active Directory Schema Attributes M2.210 Attribute msDS-AllowedToActOnBehalfOfOtherIdentity](/openspecs/windows_protocols/ms-ada2/cea4ac11-a4b2-4f2d-84cc-aebb4a4ad405) (Атрибуты M2.210 схемы Active Directory msDS-AllowedToActOnBehalfOfOtherIdentity)
+- [[MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol 1.3.2 S4U2proxy](/openspecs/windows_protocols/ms-sfu/bde93b0e-f3c9-4ddf-9f44-e1453be7af5a) (Расширения протокола Kerberos: S4U и протокол ограниченного делегирования 1.3.2 S4U2proxy)
 - [Ограниченное делегирование Kerberos на основе ресурсов](https://blog.kloud.com.au/2013/07/11/kerberos-constrained-delegation/)
 - [Удаленное администрирование без ограниченного делегирования с помощью PrincipalsAllowedToDelegateToAccount](https://blogs.msdn.microsoft.com/taylorb/2012/11/06/remote-administration-without-constrained-delegation-using-principalsallowedtodelegatetoaccount/)
 
@@ -238,7 +238,7 @@ Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
 
 JEA позволяет ограничить команды, доступные администратору во время сеанса PowerShell. Это позволяет решить проблему второго прыжка.
 
-Сведения о JEA см. в разделе [Just Enough Administration](https://docs.microsoft.com/powershell/jea/overview).
+Сведения о JEA см. в разделе [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview).
 
 ### <a name="pros"></a>Плюсы
 
@@ -251,7 +251,7 @@ JEA позволяет ограничить команды, доступные �
 
 ## <a name="pass-credentials-inside-an-invoke-command-script-block"></a>Передача учетных данных внутри блока сценария Invoke-Command
 
-Можно передать учетные данные внутри параметра **ScriptBlock** вызова командлета [Invoke-Command](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/invoke-command).
+Можно передать учетные данные внутри параметра **ScriptBlock** вызова командлета [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command).
 
 ### <a name="pros"></a>Плюсы
 

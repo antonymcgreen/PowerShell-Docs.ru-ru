@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Регистрация конфигураций JEA
-ms.openlocfilehash: c85eddea2196e4db4bbeea54bde11074f3d1c927
-ms.sourcegitcommit: e894ed833cef57967cdaf002f8c883f66864e836
+ms.openlocfilehash: dbed5c7dd71f2f7a09d97416be56dff675799548
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2019
-ms.locfileid: "70017715"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417613"
 ---
 # <a name="registering-jea-configurations"></a>Регистрация конфигураций JEA
 
@@ -51,7 +51,7 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 
 ## <a name="multi-machine-configuration-with-dsc"></a>Конфигурация для нескольких компьютеров с помощью DSC
 
-Если JEA развертывается на нескольких компьютерах, самая простая модель развертывания заключается в использовании ресурса [настройки требуемого состояния (DSC)](/powershell/dsc/overview) JEA, позволяющего быстро и согласованно развернуть JEA на каждом компьютере.
+Если JEA развертывается на нескольких компьютерах, самая простая модель развертывания заключается в использовании ресурса [настройки требуемого состояния (DSC)](/powershell/scripting/dsc/overview) JEA, позволяющего быстро и согласованно развернуть JEA на каждом компьютере.
 
 Чтобы развернуть JEA с помощью DSC, следует убедиться в выполнении следующих условий.
 
@@ -59,7 +59,7 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 - Модуль PowerShell, содержащий нужные роли, хранится в (доступной только для чтения) общей папке, видимой каждому компьютеру.
 - Были определены параметры для конфигурации сеанса. При использовании ресурса DSC JEA создавать файл конфигурации сеанса не требуется.
 - Вы имеете учетные данные, которые позволяют выполнять административные действия на каждом компьютере, или доступ к опрашивающему серверу DSC, используемому для управления компьютерами.
-- Вы скачали [ресурс DSC JEA](https://github.com/PowerShell/JEA/tree/master/DSC%20Resource).
+- Вы скачали [ресурс DSC JEA](https://github.com/powershell/JEA/tree/master/DSC%20Resource).
 
 На целевом компьютере или опрашивающем сервере создайте конфигурацию DSC для конечной точки JEA. В этой конфигурации используйте ресурс DSC **JustEnoughAdministration** для настройки файла конфигурации сеанса и ресурс **File** для копирования возможностей ролей из общей папки.
 
@@ -102,7 +102,7 @@ Configuration JEAMaintenance
 }
 ```
 
-Затем эту конфигурацию можно применить в системе, [напрямую вызвав локальный диспетчер конфигураций](/powershell/dsc/managing-nodes/metaConfig) или обновив [конфигурацию опрашивающего сервера](/powershell/dsc/pull-server/pullServer).
+Затем эту конфигурацию можно применить в системе, [напрямую вызвав локальный диспетчер конфигураций](/powershell/scripting/dsc/managing-nodes/metaConfig) или обновив [конфигурацию опрашивающего сервера](/powershell/scripting/dsc/pull-server/pullServer).
 
 Ресурс DSC также позволяет заменить конечную точку удаленного взаимодействия по умолчанию **Microsoft.PowerShell**. При замене ресурс автоматически регистрирует резервную конечную точку с именем **Microsoft.PowerShell.Restricted**. Резервная конечная точка имеет ACL WinRM по умолчанию, который дает к ней доступ пользователям удаленного управления и локальным администраторам.
 

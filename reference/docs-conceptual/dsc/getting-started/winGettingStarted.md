@@ -2,12 +2,12 @@
 ms.date: 08/15/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Начало работы с Desired State Configuration (DSC) для Windows
-ms.openlocfilehash: a4f9db481afda65fc4ac5e553230dbba3037ac9a
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: a9346b96693acdbad9bacbd4b6ca85971e17a3d1
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71954411"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417770"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Начало работы с Desired State Configuration (DSC) для Windows
 
@@ -110,4 +110,4 @@ Desired State Configuration в Windows PowerShell включает встрое�
 ## <a name="windows-powershell-desired-state-configuration-log-files"></a>Файлы журнала Desired State Configuration в Windows PowerShell
 
 Журналы DSC записываются в журнал событий Windows по пути `Microsoft-Windows-Dsc/Operational`.
-Дополнительные журналы для отладки можно включить, выполнив действия, описанные в разделе [Где находятся журналы событий DSC?](/powershell/dsc/troubleshooting/troubleshooting#where-are-dsc-event-logs)
+Дополнительные журналы для отладки можно включить, выполнив действия, описанные в разделе [Где находятся журналы событий DSC?](/powershell/scripting/dsc/troubleshooting/troubleshooting#where-are-dsc-event-logs)

@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Предварительные условия JEA
-ms.openlocfilehash: 8fca5c068412e86acfdb8bed400699f721b76191
-ms.sourcegitcommit: e894ed833cef57967cdaf002f8c883f66864e836
+ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2019
-ms.locfileid: "70017815"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416729"
 ---
 # <a name="prerequisites"></a>Необходимые компоненты
 
@@ -60,7 +60,7 @@ JEA доступна с PowerShell 5.0 и более поздними верси
 
 ### <a name="install-windows-management-framework"></a>Установка Windows Management Framework
 
-Если вы используете более старую версию PowerShell, может понадобиться установить в системе последнее обновление Windows Management Framework (WMF). Дополнительные сведения см. в документации по [WMF](/powershell/wmf/overview).
+Если вы используете более старую версию PowerShell, может понадобиться установить в системе последнее обновление Windows Management Framework (WMF). Дополнительные сведения см. в документации по [WMF](/powershell/scripting/wmf/overview).
 
 Рекомендуется проверить совместимость рабочей нагрузки с WMF до обновления всех серверов.
 

@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Новые возможности Windows PowerShell 5.0
-ms.openlocfilehash: d86c9c947c521e0aee261a8a0335f1557b0d5a34
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: 08775c1767f1d9d18dafab39d188db152073e69d
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71325137"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417571"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Новые возможности Windows PowerShell 5.0
 
@@ -414,7 +414,7 @@ https://go.microsoft.com/fwlink/?LinkID=223923
 
 Можно также включить значение **HelpUri** в первую связанную ссылку файла справки по командлету на основе XML или директиву .Link справки на основе комментариев в функцию.
 
-Дополнительные сведения о поддержке справки в Интернете см. в статье [Поддержка справки в Интернете](/powershell/developer/module/supporting-online-help) в документации Майкрософт.
+Дополнительные сведения о поддержке справки в Интернете см. в статье [Поддержка справки в Интернете](/powershell/scripting/developer/module/supporting-online-help) в документации Майкрософт.
 
 ### <a name="cim-integration"></a>Интеграция CIM
 

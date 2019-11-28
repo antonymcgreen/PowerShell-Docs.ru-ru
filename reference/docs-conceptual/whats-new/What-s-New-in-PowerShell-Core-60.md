@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell Core 6.0
 description: Новые возможности и изменения в PowerShell Core 6.0
 ms.date: 08/06/2018
-ms.openlocfilehash: c70fcffc2e6225d3fc6a18b5728e063e5ca22f1d
-ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
+ms.openlocfilehash: a623c5b37d5eef2148792203a3c2ff91a0fab266
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117532"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416755"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Новые возможности PowerShell Core 6.0
 
@@ -210,7 +210,7 @@ PowerShell Core изменяет кодировку по умолчанию, ч�
 После запуска конвейера как задания для управления им можно использовать все стандартные командлеты `*-Job`.
 Используемые в конвейере переменные (кроме переменных для конкретных процессов) автоматически копируются в это задание, поэтому `Copy-Item $foo $bar &` работает.
 Кроме того, задание выполняется в текущем каталоге, а не домашнем каталоге пользователя.
-Дополнительные сведения о заданиях PowerShell см. в разделе [about_Jobs](https://msdn.microsoft.com/powershell/reference/6/about/about_jobs).
+Дополнительные сведения о заданиях PowerShell см. в разделе [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 
 ## <a name="semantic-versioning"></a>Семантическое версионирование
 
@@ -388,12 +388,12 @@ PowerShell Core изменяет кодировку по умолчанию, ч�
 [breaking-changes]: breaking-changes-ps6.md
 [журнал изменений]: https://github.com/PowerShell/PowerShell/tree/master/CHANGELOG.md
 [community-dashboard]: https://aka.ms/PSGitHubBI
-[telemetry-blog]: https://blogs.msdn.microsoft.com/powershell/2017/01/31/powershell-open-source-community-dashboard/
+[telemetry-blog]: https://devblogs.microsoft.com/powershell/powershell-open-source-community-dashboard/
 [.NET Standard]: https://docs.microsoft.com/dotnet/standard/net-standard
 [Блог .NET]: https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard
 [YouTube]: https://www.youtube.com/watch?v=YI4MurjfMn8&list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY
 [Вопросы и ответы]: https://github.com/dotnet/standard/blob/master/docs/faq.md
-[CDXML]: https://msdn.microsoft.com/library/jj542525(v=vs.85).aspx
+[CDXML]: /previous-versions/windows/desktop/wmi_v2/getting-started-with-cdxml
 [docker-hub]: https://hub.docker.com/r/microsoft/powershell/
 [docker]: https://github.com/PowerShell/PowerShell/tree/master/docker
 [windowspsmodulepath]: https://www.powershellgallery.com/packages/WindowsPSModulePath/

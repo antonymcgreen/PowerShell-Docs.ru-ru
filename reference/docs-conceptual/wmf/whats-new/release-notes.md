@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Заметки о выпуске WMF 5.x
-ms.openlocfilehash: 8924240a4bbedcd34bc68b7cacdd23189a3716d6
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71147584"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416505"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>Заметки о выпуске Windows Management Framework (WMF) 5.x
 
@@ -56,8 +56,8 @@ WMF 5.1 включает компоненты PowerShell, WMI, WinRM и Softwa
 
 - [Определение запущенного выпуска PowerShell с использованием $PSVersionTable](/powershell/module/microsoft.powershell.core/about/about_automatic_variables)
 - [Фильтрация результатов командлета Get-Module по CompatiblePSEditions с помощью параметра PSEdition](/powershell/module/microsoft.powershell.core/get-module)
-- [Запрет на выполнение сценариев в несовместимых выпусках PowerShell](/powershell/gallery/concepts/script-psedition-support)
-- [Объявление совместимости модуля с определенными версиями PowerShell](/powershell/gallery/concepts/module-psedition-support)
+- [Запрет на выполнение сценариев в несовместимых выпусках PowerShell](/powershell/scripting/gallery/concepts/script-psedition-support)
+- [Объявление совместимости модуля с определенными версиями PowerShell](/powershell/scripting/gallery/concepts/module-psedition-support)
 
 ## <a name="module-analysis-cache"></a>Кэш анализа модуля
 
