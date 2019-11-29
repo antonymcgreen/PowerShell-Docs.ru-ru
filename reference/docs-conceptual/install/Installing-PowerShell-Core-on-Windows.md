@@ -2,12 +2,12 @@
 title: Установка PowerShell Core в Windows
 description: Сведения об установке PowerShell Core в Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: c06eba06e376c3f795ab9c0fae9270cf6cf8f2ce
-ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
+ms.openlocfilehash: 00a1d8064a3c1ec6608a46415bbabb8d98d880f0
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444457"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416794"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Установка PowerShell Core в Windows
 
@@ -25,7 +25,7 @@ ms.locfileid: "73444457"
 Чтобы включить удаленное взаимодействие PowerShell через WSMan, нужно выполнить следующие условия:
 
 - Установите [универсальную среду выполнения C](https://www.microsoft.com/download/details.aspx?id=50410) в версиях Windows, предшествующих Windows 10. Ее можно скачать самостоятельно или через Центр обновления Windows. Поддерживаемые системы, где установлены все исправления (включая дополнительные пакеты), уже содержат ее.
-- Установите Windows Management Framework (WMF) 4.0 или более поздней версии в Windows 7 и Windows Server 2008 R2. Подробные сведения о WMF см. в статье с [обзором WMF](/powershell/wmf/overview).
+- Установите Windows Management Framework (WMF) 4.0 или более поздней версии в Windows 7 и Windows Server 2008 R2. Подробные сведения о WMF см. в статье с [обзором WMF](/powershell/scripting/wmf/overview).
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />Установка пакета MSI
 
@@ -56,6 +56,18 @@ msiexec.exe /package PowerShell-<version>-win-<os-arch>.msi /quiet ADD_EXPLORER_
 ```
 
 См. [полный список параметров командной строки для Msiexec.exe](/windows/desktop/Msi/command-line-options).
+
+## <a name="a-idmsix-installing-the-msix-package"></a><a id="msix" />Установка пакета MSIX
+
+Чтобы вручную установить пакет MSIX на клиент Windows 10, скачайте пакет MSIX на странице GitHub с [выпусками][releases]. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
+
+MSI-файл имеет следующий вид: `PowerShell-<version>-win-<os-arch>.msix`.
+
+После скачивания вы не сможете просто дважды щелкнуть установщик, так как для этого пакета требуются невиртуализованные ресурсы.  Для установки используйте командлет `Add-AppxPackage`.
+
+```powershell
+Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
+```
 
 ## <a name="a-idzip-installing-the-zip-package"></a><a id="zip" />Установка ZIP-пакета
 

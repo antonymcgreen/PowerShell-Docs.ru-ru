@@ -2,16 +2,22 @@
 ms.date: 09/06/2019
 keywords: powershell,командлет
 title: Новые возможности интегрированной среды сценариев PowerShell 5.0
-ms.openlocfilehash: f687c409a1a4b0e6b872863e9f132f7cf5baff20
-ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
+ms.openlocfilehash: 8f15e99c5a6ae33aeae9bd33eb0cf58fb27e3b90
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117512"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416648"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Новые возможности интегрированной среды сценариев Windows PowerShell 5.0
 
-В этой статье описаны новые и обновленные функции, представленные в разных версиях интегрированной среды сценариев Windows PowerShell.
+В этой статье описаны новые и обновленные функции, представленные в версии 5.0 интегрированной среды сценариев (ISE) Windows PowerShell.
+
+> [!NOTE]
+> Функции для ISE PowerShell больше не разрабатываются. Как компонент доставки Windows эта среда по-прежнему официально поддерживается для внесения наиболее важных исправлений, связанных с безопасностью и обслуживанием.
+> Пока что мы не планируем удалять ISE из Windows.
+>
+> ISE не поддерживается в PowerShell версии 6 и более поздних версиях. Пользователям, которые ищут замену ISE, следует использовать [Visual Studio Code](https://code.visualstudio.com/) с расширением [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell).
 
 ## <a name="feature-description"></a>Описание компонента
 

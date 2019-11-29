@@ -1,15 +1,15 @@
 ---
-ms.date: 05/17/2018
+ms.date: 11/15/2019
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
-ms.openlocfilehash: df716fc3ad48d640ddefcfd87da445eaf104cfbe
-ms.sourcegitcommit: e1027805385081c2e6f9250f9cd1167a45f035b0
+ms.openlocfilehash: a1dac42bcda8e1258a99ef281691a9d4c5986b53
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72561263"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417562"
 ---
-# <a name="breaking-changes-for-powershell-60"></a>Критические изменения в PowerShell Core 6.0
+# <a name="breaking-changes-for-powershell-6x"></a>Критические изменения в PowerShell 6.x
 
 ## <a name="features-no-longer-available-in-powershell-core"></a>Функции, которые больше недоступны в PowerShell Core
 
@@ -23,7 +23,7 @@ ms.locfileid: "72561263"
 
 Если нужно возобновить выполнение скрипта после перезагрузки операционной системы с помощью контрольных точек, рекомендуем использовать планировщик задач. Он позволит запустить скрипт при запуске ОС. Но скрипт должен поддерживать свое собственное состояние (например, сохранять его в файле).
 
-[workflow]: https://docs.microsoft.com/powershell/scripting/core-powershell/workflows-guide
+[workflow]: /powershell/scripting/components/workflows-guide
 [workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/
 
 ### <a name="custom-snap-ins"></a>Настраиваемые оснастки
@@ -291,3 +291,4 @@ ms.locfileid: "72561263"
 - В настоящее время в macOS нет проверки подлинности на основе сертификатов.
 - Использование `-Credential` в URI `http://` завершится ошибкой. Используйте URI `https://` или передайте параметр `-AllowUnencryptedAuthentication`, чтобы подавить ошибку.
 - `-MaximumRedirection` теперь создает неустранимую ошибку, если попытки перенаправления превышают указанный предел, вместо возвращения результатов последнего перенаправления.
+- В PowerShell 6.2 мы внесли изменения в кодировку UTF-8 по умолчанию для ответов JSON. Если для ответа JSON не указан набор символов, по умолчанию должна использоваться кодировка UTF-8 в соответствии с RFC 8259.
