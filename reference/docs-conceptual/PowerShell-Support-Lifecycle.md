@@ -111,7 +111,7 @@ PowerShell Core — это отдельный набор средств и ко�
 
 ## <a name="notes-on-licensing"></a>Замечания по лицензированию
 
-PowerShell Core выпускается по [лицензии MIT][]. По этой лицензии и без соглашения о платной подписке пользователям предоставляется только [поддержка сообщества][]. В рамках поддержки сообщества корпорация Майкрософт не предоставляет никаких гарантий оперативного реагирования или выпуска исправлений.
+PowerShell Core выпускается по [Лицензия MIT][]. По этой лицензии и без соглашения о платной подписке пользователям предоставляется только [поддержку сообщества][]. В рамках поддержки сообщества корпорация Майкрософт не предоставляет никаких гарантий оперативного реагирования или выпуска исправлений.
 
 ## <a name="windows-powershell-module"></a>Модуль Windows PowerShell
 
@@ -135,15 +135,15 @@ Add-WindowsPSModulePath
 
 ## <a name="experimental-features"></a>Экспериментальные функции
 
-Для [экспериментальных функций][] предоставляется только [поддержка сообщества](#community-support).
+Для [Экспериментальные функции][] предоставляется только [поддержка сообщества](#community-support).
 
 [Premier]: https://www.microsoft.com/en-us/microsoftservices/support.aspx
 [enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx
-[поддержка сообщества]: https://github.com/powershell/powershell/issues
+[поддержку сообщества]: https://github.com/powershell/powershell/issues
 [pshub]: https://docs.microsoft.com/powershell
-[PowerShell Tech Community]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
-[техническая поддержка]: https://support.microsoft.com/assistedsupportproducts
+[технического сообщества Microsoft PowerShell]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
+[техническую поддержку]: https://support.microsoft.com/assistedsupportproducts
 [modern]: https://support.microsoft.com/help/30881/modern-lifecycle-policy
 [lifecycle-chart]: ./images/modern-lifecycle.png
 [semi-annual]: https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview
