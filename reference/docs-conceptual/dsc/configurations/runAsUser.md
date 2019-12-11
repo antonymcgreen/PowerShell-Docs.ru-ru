@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование учетных данных с ресурсами DSC
 ms.openlocfilehash: fea2e3cad8d081c17853e127203f1d40d98c5de2
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71953981"
 ---
 # <a name="use-credentials-with-dsc-resources"></a>Использование учетных данных с ресурсами DSC

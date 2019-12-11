@@ -3,10 +3,10 @@ ms.date: 08/25/2017
 keywords: powershell,командлет
 title: Объект ObjectModelRoot
 ms.openlocfilehash: 2670321ebac1eac4ecc8457afb796f9f260da471
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "62086788"
 ---
 # <a name="the-objectmodelroot-object"></a>Объект ObjectModelRoot
