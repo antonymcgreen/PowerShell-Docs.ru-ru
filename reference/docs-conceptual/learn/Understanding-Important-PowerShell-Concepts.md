@@ -3,10 +3,10 @@ ms.date: 08/23/2018
 keywords: powershell,командлет
 title: Основные сведения о важных концепциях PowerShell
 ms.openlocfilehash: 8f9af370db46ea47dbccbabb7cc90fc27b8f2765
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67030986"
 ---
 # <a name="understanding-important-powershell-concepts"></a>Основные сведения о важных концепциях PowerShell
