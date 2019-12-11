@@ -3,51 +3,51 @@ ms.date: 08/15/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Начало работы с Desired State Configuration (DSC) для Windows
 ms.openlocfilehash: a9346b96693acdbad9bacbd4b6ca85971e17a3d1
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417770"
 ---
-# <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a><span data-ttu-id="263a0-103">Начало работы с Desired State Configuration (DSC) для Windows</span><span class="sxs-lookup"><span data-stu-id="263a0-103">Get started with Desired State Configuration (DSC) for Windows</span></span>
+# <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a><span data-ttu-id="2e8f3-103">Начало работы с Desired State Configuration (DSC) для Windows</span><span class="sxs-lookup"><span data-stu-id="2e8f3-103">Get started with Desired State Configuration (DSC) for Windows</span></span>
 
-<span data-ttu-id="263a0-104">В этом разделе объясняется, как приступить к работе с Desired State Configuration (DSC) в PowerShell для Windows.</span><span class="sxs-lookup"><span data-stu-id="263a0-104">This topic explains how to get started using PowerShell Desired State Configuration (DSC) for Windows.</span></span>
-<span data-ttu-id="263a0-105">Общие сведения о службе настройки требуемого состояния см. в разделе [Начало работы со службой настройки требуемого состояния Windows PowerShell](../overview/overview.md).</span><span class="sxs-lookup"><span data-stu-id="263a0-105">For general information about DSC, see [Get Started with Windows PowerShell Desired State Configuration](../overview/overview.md).</span></span>
+<span data-ttu-id="2e8f3-104">В этом разделе объясняется, как приступить к работе с Desired State Configuration (DSC) в PowerShell для Windows.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-104">This topic explains how to get started using PowerShell Desired State Configuration (DSC) for Windows.</span></span>
+<span data-ttu-id="2e8f3-105">Общие сведения о службе настройки требуемого состояния см. в разделе [Начало работы со службой настройки требуемого состояния Windows PowerShell](../overview/overview.md).</span><span class="sxs-lookup"><span data-stu-id="2e8f3-105">For general information about DSC, see [Get Started with Windows PowerShell Desired State Configuration](../overview/overview.md).</span></span>
 
-## <a name="supported-windows-operation-system-versions"></a><span data-ttu-id="263a0-106">Поддерживаемые версии операционной системы Windows</span><span class="sxs-lookup"><span data-stu-id="263a0-106">Supported Windows operation system versions</span></span>
+## <a name="supported-windows-operation-system-versions"></a><span data-ttu-id="2e8f3-106">Поддерживаемые версии операционной системы Windows</span><span class="sxs-lookup"><span data-stu-id="2e8f3-106">Supported Windows operation system versions</span></span>
 
-<span data-ttu-id="263a0-107">Поддерживаются следующие версии:</span><span class="sxs-lookup"><span data-stu-id="263a0-107">The following versions are supported:</span></span>
+<span data-ttu-id="2e8f3-107">Поддерживаются следующие версии:</span><span class="sxs-lookup"><span data-stu-id="2e8f3-107">The following versions are supported:</span></span>
 
-- <span data-ttu-id="263a0-108">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="263a0-108">Windows Server 2019</span></span>
-- <span data-ttu-id="263a0-109">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="263a0-109">Windows Server 2016</span></span>
-- <span data-ttu-id="263a0-110">Windows Server 2012 R2;</span><span class="sxs-lookup"><span data-stu-id="263a0-110">Windows Server 2012R2</span></span>
-- <span data-ttu-id="263a0-111">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="263a0-111">Windows Server 2012</span></span>
-- <span data-ttu-id="263a0-112">Windows Server 2008 R2 с пакетом обновления 1 (SP1)</span><span class="sxs-lookup"><span data-stu-id="263a0-112">Windows Server 2008 R2 SP1</span></span>
-- <span data-ttu-id="263a0-113">Windows 10</span><span class="sxs-lookup"><span data-stu-id="263a0-113">Windows 10</span></span>
-- <span data-ttu-id="263a0-114">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="263a0-114">Windows 8.1</span></span>
-- <span data-ttu-id="263a0-115">Windows 7</span><span class="sxs-lookup"><span data-stu-id="263a0-115">Windows 7</span></span>
+- <span data-ttu-id="2e8f3-108">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="2e8f3-108">Windows Server 2019</span></span>
+- <span data-ttu-id="2e8f3-109">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="2e8f3-109">Windows Server 2016</span></span>
+- <span data-ttu-id="2e8f3-110">Windows Server 2012 R2;</span><span class="sxs-lookup"><span data-stu-id="2e8f3-110">Windows Server 2012R2</span></span>
+- <span data-ttu-id="2e8f3-111">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="2e8f3-111">Windows Server 2012</span></span>
+- <span data-ttu-id="2e8f3-112">Windows Server 2008 R2 с пакетом обновления 1 (SP1)</span><span class="sxs-lookup"><span data-stu-id="2e8f3-112">Windows Server 2008 R2 SP1</span></span>
+- <span data-ttu-id="2e8f3-113">Windows 10</span><span class="sxs-lookup"><span data-stu-id="2e8f3-113">Windows 10</span></span>
+- <span data-ttu-id="2e8f3-114">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="2e8f3-114">Windows 8.1</span></span>
+- <span data-ttu-id="2e8f3-115">Windows 7</span><span class="sxs-lookup"><span data-stu-id="2e8f3-115">Windows 7</span></span>
 
-<span data-ttu-id="263a0-116">Номер SKU автономного продукта [Microsoft Hyper-V Server](/windows-server/virtualization/hyper-v/hyper-v-server-2016) не содержит реализацию Desired State Configuration, поэтому управлять им с помощью DSC PowerShell или настройки состояния службы автоматизации Azure невозможно.</span><span class="sxs-lookup"><span data-stu-id="263a0-116">The [Microsoft Hyper-V Server](/windows-server/virtualization/hyper-v/hyper-v-server-2016) standalone product sku does not contain an implementation of Desired State Configuraion so it cannot be managed by PowerShell DSC or Azure Automation State Configuration.</span></span>
+<span data-ttu-id="2e8f3-116">Номер SKU автономного продукта [Microsoft Hyper-V Server](/windows-server/virtualization/hyper-v/hyper-v-server-2016) не содержит реализацию Desired State Configuration, поэтому управлять им с помощью DSC PowerShell или настройки состояния службы автоматизации Azure невозможно.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-116">The [Microsoft Hyper-V Server](/windows-server/virtualization/hyper-v/hyper-v-server-2016) standalone product sku does not contain an implementation of Desired State Configuraion so it cannot be managed by PowerShell DSC or Azure Automation State Configuration.</span></span>
 
-## <a name="installing-dsc"></a><span data-ttu-id="263a0-117">Установка DSC</span><span class="sxs-lookup"><span data-stu-id="263a0-117">Installing DSC</span></span>
+## <a name="installing-dsc"></a><span data-ttu-id="2e8f3-117">Установка DSC</span><span class="sxs-lookup"><span data-stu-id="2e8f3-117">Installing DSC</span></span>
 
-<span data-ttu-id="263a0-118">Desired State Configuration в PowerShell входит в состав Windows и обновляется с помощью Windows Management Framework.</span><span class="sxs-lookup"><span data-stu-id="263a0-118">PowerShell Desired State Configuration is included in Windows and updated through Windows Management Framework.</span></span>
-<span data-ttu-id="263a0-119">Последняя версия — [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).</span><span class="sxs-lookup"><span data-stu-id="263a0-119">The latest version is [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).</span></span>
+<span data-ttu-id="2e8f3-118">Desired State Configuration в PowerShell входит в состав Windows и обновляется с помощью Windows Management Framework.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-118">PowerShell Desired State Configuration is included in Windows and updated through Windows Management Framework.</span></span>
+<span data-ttu-id="2e8f3-119">Последняя версия — [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).</span><span class="sxs-lookup"><span data-stu-id="2e8f3-119">The latest version is [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="263a0-120">Для управления компьютером с помощью DSC не нужно включать компонент Windows Server "DSC-Service".</span><span class="sxs-lookup"><span data-stu-id="263a0-120">You do not need to enable the Windows Server feature 'DSC-Service' to manage a machine using DSC.</span></span>
-> <span data-ttu-id="263a0-121">Этот компонент необходим только при создании экземпляра опрашиваемого сервера Windows.</span><span class="sxs-lookup"><span data-stu-id="263a0-121">That feature is only needed when building a Windows Pull Server instance.</span></span>
+> <span data-ttu-id="2e8f3-120">Для управления компьютером с помощью DSC не нужно включать компонент Windows Server "DSC-Service".</span><span class="sxs-lookup"><span data-stu-id="2e8f3-120">You do not need to enable the Windows Server feature 'DSC-Service' to manage a machine using DSC.</span></span>
+> <span data-ttu-id="2e8f3-121">Этот компонент необходим только при создании экземпляра опрашиваемого сервера Windows.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-121">That feature is only needed when building a Windows Pull Server instance.</span></span>
 
-## <a name="using-dsc-for-windows"></a><span data-ttu-id="263a0-122">Использование DSC для Windows</span><span class="sxs-lookup"><span data-stu-id="263a0-122">Using DSC for Windows</span></span>
+## <a name="using-dsc-for-windows"></a><span data-ttu-id="2e8f3-122">Использование DSC для Windows</span><span class="sxs-lookup"><span data-stu-id="2e8f3-122">Using DSC for Windows</span></span>
 
-<span data-ttu-id="263a0-123">В следующих разделах описывается создание и запуск конфигураций DSC на компьютерах Windows.</span><span class="sxs-lookup"><span data-stu-id="263a0-123">The following sections explain how to create and run DSC configurations on Windows computers.</span></span>
+<span data-ttu-id="2e8f3-123">В следующих разделах описывается создание и запуск конфигураций DSC на компьютерах Windows.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-123">The following sections explain how to create and run DSC configurations on Windows computers.</span></span>
 
-### <a name="creating-a-configuration-mof-document"></a><span data-ttu-id="263a0-124">Создание MOF-документа конфигурации</span><span class="sxs-lookup"><span data-stu-id="263a0-124">Creating a configuration MOF document</span></span>
+### <a name="creating-a-configuration-mof-document"></a><span data-ttu-id="2e8f3-124">Создание MOF-документа конфигурации</span><span class="sxs-lookup"><span data-stu-id="2e8f3-124">Creating a configuration MOF document</span></span>
 
-<span data-ttu-id="263a0-125">Для создания конфигурации используется ключевое слово конфигурации Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="263a0-125">The Windows PowerShell Configuration keyword is used to create a configuration.</span></span>
-<span data-ttu-id="263a0-126">В инструкциях ниже описывается создание документа конфигурации с использованием Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="263a0-126">The following steps describe the creation of a configuration document using Windows PowerShell.</span></span>
+<span data-ttu-id="2e8f3-125">Для создания конфигурации используется ключевое слово конфигурации Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-125">The Windows PowerShell Configuration keyword is used to create a configuration.</span></span>
+<span data-ttu-id="2e8f3-126">В инструкциях ниже описывается создание документа конфигурации с использованием Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-126">The following steps describe the creation of a configuration document using Windows PowerShell.</span></span>
 
-#### <a name="define-a-configuration-and-generate-the-configuration-document"></a><span data-ttu-id="263a0-127">Определите конфигурацию и создайте документ конфигурации:</span><span class="sxs-lookup"><span data-stu-id="263a0-127">Define a configuration and generate the configuration document:</span></span>
+#### <a name="define-a-configuration-and-generate-the-configuration-document"></a><span data-ttu-id="2e8f3-127">Определите конфигурацию и создайте документ конфигурации:</span><span class="sxs-lookup"><span data-stu-id="2e8f3-127">Define a configuration and generate the configuration document:</span></span>
 
 ```powershell
 Configuration EnvironmentVariable_Path
@@ -71,43 +71,43 @@ Configuration EnvironmentVariable_Path
 
 EnvironmentVariable_Path -OutputPath:"C:\EnvironmentVariable_Path"
 ```
-#### <a name="install-a-module-containing-dsc-resources"></a><span data-ttu-id="263a0-128">Установка модуля, содержащего ресурсы DSC</span><span class="sxs-lookup"><span data-stu-id="263a0-128">Install a module containing DSC resources</span></span>
+#### <a name="install-a-module-containing-dsc-resources"></a><span data-ttu-id="2e8f3-128">Установка модуля, содержащего ресурсы DSC</span><span class="sxs-lookup"><span data-stu-id="2e8f3-128">Install a module containing DSC resources</span></span>
 
-<span data-ttu-id="263a0-129">Desired State Configuration в Windows PowerShell включает встроенные модули, содержащие ресурсы DSC.</span><span class="sxs-lookup"><span data-stu-id="263a0-129">Windows PowerShell Desired State Configuration includes built-in modules containing DSC resources.</span></span>
-<span data-ttu-id="263a0-130">Модули также можно загружать из внешних источников, таких как коллекция PowerShell, с помощью командлетов PowerShellGet.</span><span class="sxs-lookup"><span data-stu-id="263a0-130">You can also load modules from external sources such as the PowerShell Gallery, using the PowerShellGet cmdlets.</span></span>
+<span data-ttu-id="2e8f3-129">Desired State Configuration в Windows PowerShell включает встроенные модули, содержащие ресурсы DSC.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-129">Windows PowerShell Desired State Configuration includes built-in modules containing DSC resources.</span></span>
+<span data-ttu-id="2e8f3-130">Модули также можно загружать из внешних источников, таких как коллекция PowerShell, с помощью командлетов PowerShellGet.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-130">You can also load modules from external sources such as the PowerShell Gallery, using the PowerShellGet cmdlets.</span></span>
 
 `Install-Module 'PSDscResources' -Verbose`
 
-#### <a name="apply-the-configuration-to-the-machine"></a><span data-ttu-id="263a0-131">Применение конфигурации к компьютеру</span><span class="sxs-lookup"><span data-stu-id="263a0-131">Apply the configuration to the machine</span></span>
+#### <a name="apply-the-configuration-to-the-machine"></a><span data-ttu-id="2e8f3-131">Применение конфигурации к компьютеру</span><span class="sxs-lookup"><span data-stu-id="2e8f3-131">Apply the configuration to the machine</span></span>
 
-<span data-ttu-id="263a0-132">Документы конфигурации (MOF-файлы) можно применить к компьютеру с помощью командлета [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).</span><span class="sxs-lookup"><span data-stu-id="263a0-132">Configuration documents (MOF files) can be applied to the machine using the [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet.</span></span>
+<span data-ttu-id="2e8f3-132">Документы конфигурации (MOF-файлы) можно применить к компьютеру с помощью командлета [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).</span><span class="sxs-lookup"><span data-stu-id="2e8f3-132">Configuration documents (MOF files) can be applied to the machine using the [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet.</span></span>
 
 `Start-DscConfiguration -Path 'C:\EnvironmentVariable_Path' -Wait -Verbose`
 
-#### <a name="get-the-current-state-of-the-configuration"></a><span data-ttu-id="263a0-133">Получение данных о текущем состоянии конфигурации</span><span class="sxs-lookup"><span data-stu-id="263a0-133">Get the current state of the configuration</span></span>
+#### <a name="get-the-current-state-of-the-configuration"></a><span data-ttu-id="2e8f3-133">Получение данных о текущем состоянии конфигурации</span><span class="sxs-lookup"><span data-stu-id="2e8f3-133">Get the current state of the configuration</span></span>
 
-<span data-ttu-id="263a0-134">Командлет [Get-DscConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) запрашивает текущее состояние компьютера и возвращает текущие значения для конфигурации.</span><span class="sxs-lookup"><span data-stu-id="263a0-134">The [Get-DscConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) cmdlet queries the current status of the machine and returns the current values for the configuration.</span></span>
+<span data-ttu-id="2e8f3-134">Командлет [Get-DscConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) запрашивает текущее состояние компьютера и возвращает текущие значения для конфигурации.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-134">The [Get-DscConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) cmdlet queries the current status of the machine and returns the current values for the configuration.</span></span>
 
 `Get-DscConfiguration`
 
-<span data-ttu-id="263a0-135">Командлет [Get-DscLocalConfigurationManager](/powershell/module/psdesiredstateconfiguration/get-dscLocalConfigurationManager) возвращает текущую метаконфигурацию, примененную к компьютеру.</span><span class="sxs-lookup"><span data-stu-id="263a0-135">The [Get-DscLocalConfigurationManager](/powershell/module/psdesiredstateconfiguration/get-dscLocalConfigurationManager) cmdlet returns the current meta-configuration applied to the machine.</span></span>
+<span data-ttu-id="2e8f3-135">Командлет [Get-DscLocalConfigurationManager](/powershell/module/psdesiredstateconfiguration/get-dscLocalConfigurationManager) возвращает текущую метаконфигурацию, примененную к компьютеру.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-135">The [Get-DscLocalConfigurationManager](/powershell/module/psdesiredstateconfiguration/get-dscLocalConfigurationManager) cmdlet returns the current meta-configuration applied to the machine.</span></span>
 
 `Get-DscLocalConfigurationManager`
 
-#### <a name="remove-the-current-configuration-from-a-machine"></a><span data-ttu-id="263a0-136">Удаление текущей конфигурации с компьютера</span><span class="sxs-lookup"><span data-stu-id="263a0-136">Remove the current configuration from a machine</span></span>
+#### <a name="remove-the-current-configuration-from-a-machine"></a><span data-ttu-id="2e8f3-136">Удаление текущей конфигурации с компьютера</span><span class="sxs-lookup"><span data-stu-id="2e8f3-136">Remove the current configuration from a machine</span></span>
 
-<span data-ttu-id="263a0-137">Командлет [Remove-DscConfigurationDocument](/powershell/module/psdesiredstateconfiguration/remove-dscconfigurationdocument).</span><span class="sxs-lookup"><span data-stu-id="263a0-137">The [Remove-DscConfigurationDocument](/powershell/module/psdesiredstateconfiguration/remove-dscconfigurationdocument)</span></span>
+<span data-ttu-id="2e8f3-137">Командлет [Remove-DscConfigurationDocument](/powershell/module/psdesiredstateconfiguration/remove-dscconfigurationdocument).</span><span class="sxs-lookup"><span data-stu-id="2e8f3-137">The [Remove-DscConfigurationDocument](/powershell/module/psdesiredstateconfiguration/remove-dscconfigurationdocument)</span></span>
 
 `Remove-DscConfigurationDocument -Stage Current -Verbose`
 
-#### <a name="configure-settings-in-local-configuration-manager"></a><span data-ttu-id="263a0-138">Настройка параметров в локальном диспетчере конфигураций</span><span class="sxs-lookup"><span data-stu-id="263a0-138">Configure settings in Local Configuration Manager</span></span>
+#### <a name="configure-settings-in-local-configuration-manager"></a><span data-ttu-id="2e8f3-138">Настройка параметров в локальном диспетчере конфигураций</span><span class="sxs-lookup"><span data-stu-id="2e8f3-138">Configure settings in Local Configuration Manager</span></span>
 
-<span data-ttu-id="263a0-139">Примените MOF-файл метаконфигурации к компьютеру с помощью командлета [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager).</span><span class="sxs-lookup"><span data-stu-id="263a0-139">Apply a Meta Configuration MOF file to the machine using the [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) cmdlet.</span></span>
-<span data-ttu-id="263a0-140">При этом потребуется указать путь к соответствующему MOF-файлу метаконфигурации.</span><span class="sxs-lookup"><span data-stu-id="263a0-140">Requires the path to the Meta Configuration MOF.</span></span>
+<span data-ttu-id="2e8f3-139">Примените MOF-файл метаконфигурации к компьютеру с помощью командлета [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager).</span><span class="sxs-lookup"><span data-stu-id="2e8f3-139">Apply a Meta Configuration MOF file to the machine using the [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) cmdlet.</span></span>
+<span data-ttu-id="2e8f3-140">При этом потребуется указать путь к соответствующему MOF-файлу метаконфигурации.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-140">Requires the path to the Meta Configuration MOF.</span></span>
 
 `Set-DSCLocalConfigurationManager -Path 'c:\metaconfig\localhost.meta.mof' -Verbose`
 
-## <a name="windows-powershell-desired-state-configuration-log-files"></a><span data-ttu-id="263a0-141">Файлы журнала Desired State Configuration в Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="263a0-141">Windows PowerShell Desired State Configuration log files</span></span>
+## <a name="windows-powershell-desired-state-configuration-log-files"></a><span data-ttu-id="2e8f3-141">Файлы журнала Desired State Configuration в Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="2e8f3-141">Windows PowerShell Desired State Configuration log files</span></span>
 
-<span data-ttu-id="263a0-142">Журналы DSC записываются в журнал событий Windows по пути `Microsoft-Windows-Dsc/Operational`.</span><span class="sxs-lookup"><span data-stu-id="263a0-142">Logs for DSC are written to Windows Event Log in the path `Microsoft-Windows-Dsc/Operational`.</span></span>
-<span data-ttu-id="263a0-143">Дополнительные журналы для отладки можно включить, выполнив действия, описанные в разделе [Где находятся журналы событий DSC?](/powershell/scripting/dsc/troubleshooting/troubleshooting#where-are-dsc-event-logs)</span><span class="sxs-lookup"><span data-stu-id="263a0-143">Additional logs for debugging purposes can be enabled following the steps in [Where Are DSC Event Logs](/powershell/scripting/dsc/troubleshooting/troubleshooting#where-are-dsc-event-logs).</span></span>
+<span data-ttu-id="2e8f3-142">Журналы DSC записываются в журнал событий Windows по пути `Microsoft-Windows-Dsc/Operational`.</span><span class="sxs-lookup"><span data-stu-id="2e8f3-142">Logs for DSC are written to Windows Event Log in the path `Microsoft-Windows-Dsc/Operational`.</span></span>
+<span data-ttu-id="2e8f3-143">Дополнительные журналы для отладки можно включить, выполнив действия, описанные в разделе [Где находятся журналы событий DSC?](/powershell/scripting/dsc/troubleshooting/troubleshooting#where-are-dsc-event-logs)</span><span class="sxs-lookup"><span data-stu-id="2e8f3-143">Additional logs for debugging purposes can be enabled following the steps in [Where Are DSC Event Logs](/powershell/scripting/dsc/troubleshooting/troubleshooting#where-are-dsc-event-logs).</span></span>
