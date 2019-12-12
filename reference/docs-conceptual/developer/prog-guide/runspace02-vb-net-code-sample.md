@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 9bd9d599-faa7-4154-ac36-1f35ccf8e320
 caps.latest.revision: 7
 ms.openlocfilehash: 5ad28cfbc73628ba818e42b87128d8f4ad273bda
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366613"
 ---
-# <a name="runspace02-vbnet-code-sample"></a><span data-ttu-id="affbc-102">Пример кода Runspace02 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="affbc-102">Runspace02 (VB.NET) Code Sample</span></span>
+# <a name="runspace02-vbnet-code-sample"></a><span data-ttu-id="8b43c-102">Пример кода Runspace02 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="8b43c-102">Runspace02 (VB.NET) Code Sample</span></span>
 
-<span data-ttu-id="affbc-103">Ниже приведен исходный код VB.NET для примера Runspace02.</span><span class="sxs-lookup"><span data-stu-id="affbc-103">Here is the VB.NET source code for the Runspace02 sample.</span></span> <span data-ttu-id="affbc-104">В этом примере используется класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) для синхронного выполнения командлета `Get-Process`.</span><span class="sxs-lookup"><span data-stu-id="affbc-104">This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute the `Get-Process` cmdlet synchronously.</span></span> <span data-ttu-id="affbc-105">Windows Forms и привязка данных используются для вывода результатов в элементе управления DataGridView.</span><span class="sxs-lookup"><span data-stu-id="affbc-105">Windows Forms and data binding are then used to display the results in a DataGridView control.</span></span>
+<span data-ttu-id="8b43c-103">Ниже приведен исходный код VB.NET для примера Runspace02.</span><span class="sxs-lookup"><span data-stu-id="8b43c-103">Here is the VB.NET source code for the Runspace02 sample.</span></span> <span data-ttu-id="8b43c-104">В этом примере используется класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) для синхронного выполнения командлета `Get-Process`.</span><span class="sxs-lookup"><span data-stu-id="8b43c-104">This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute the `Get-Process` cmdlet synchronously.</span></span> <span data-ttu-id="8b43c-105">Windows Forms и привязка данных используются для вывода результатов в элементе управления DataGridView.</span><span class="sxs-lookup"><span data-stu-id="8b43c-105">Windows Forms and data binding are then used to display the results in a DataGridView control.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="affbc-106">Пример кода</span><span class="sxs-lookup"><span data-stu-id="affbc-106">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="8b43c-106">Образец кода</span><span class="sxs-lookup"><span data-stu-id="8b43c-106">Code Sample</span></span>
 
 ```vb
 Imports System
@@ -86,6 +86,6 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace02.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace02/Runspace02.vb#L09-L68 "Runspace02.vb")] -->
 
-## <a name="see-also"></a><span data-ttu-id="affbc-107">См. также:</span><span class="sxs-lookup"><span data-stu-id="affbc-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b43c-107">См. также:</span><span class="sxs-lookup"><span data-stu-id="8b43c-107">See Also</span></span>
 
-[<span data-ttu-id="affbc-108">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="affbc-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="8b43c-108">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="8b43c-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)

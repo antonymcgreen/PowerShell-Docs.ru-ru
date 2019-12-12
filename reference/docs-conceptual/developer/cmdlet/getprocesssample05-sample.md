@@ -9,71 +9,71 @@ ms.topic: article
 ms.assetid: 6aebd53f-0610-4959-88b2-42339588c859
 caps.latest.revision: 6
 ms.openlocfilehash: ad4300937c10652b677346a62c42fa4f6e8513cf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365703"
 ---
-# <a name="getprocesssample05-sample"></a><span data-ttu-id="bb47d-102">Пример командлета GetProcessSample05</span><span class="sxs-lookup"><span data-stu-id="bb47d-102">GetProcessSample05 Sample</span></span>
+# <a name="getprocesssample05-sample"></a><span data-ttu-id="20c2c-102">Пример командлета GetProcessSample05</span><span class="sxs-lookup"><span data-stu-id="20c2c-102">GetProcessSample05 Sample</span></span>
 
-<span data-ttu-id="bb47d-103">В этом примере показана полная версия командлета Get-proc.</span><span class="sxs-lookup"><span data-stu-id="bb47d-103">This sample shows a complete version of the Get-Proc cmdlet.</span></span>
+<span data-ttu-id="20c2c-103">В этом примере показана полная версия командлета Get-proc.</span><span class="sxs-lookup"><span data-stu-id="20c2c-103">This sample shows a complete version of the Get-Proc cmdlet.</span></span>
 
-## <a name="how-to-build-the-sample-using-visual-studio"></a><span data-ttu-id="bb47d-104">Как создать пример с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="bb47d-104">How to build the sample using Visual Studio.</span></span>
+## <a name="how-to-build-the-sample-using-visual-studio"></a><span data-ttu-id="20c2c-104">Как создать пример с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="20c2c-104">How to build the sample using Visual Studio.</span></span>
 
-1. <span data-ttu-id="bb47d-105">Откройте проводник Windows и перейдите в каталог GetProcessSample05 в каталоге Samples.</span><span class="sxs-lookup"><span data-stu-id="bb47d-105">Open Windows Explorer and navigate to the GetProcessSample05 directory under the Samples directory.</span></span>
+1. <span data-ttu-id="20c2c-105">Откройте проводник Windows и перейдите в каталог GetProcessSample05 в каталоге Samples.</span><span class="sxs-lookup"><span data-stu-id="20c2c-105">Open Windows Explorer and navigate to the GetProcessSample05 directory under the Samples directory.</span></span>
 
-   <span data-ttu-id="bb47d-106">С установленным пакетом SDK для Windows PowerShell 2,0 перейдите в папку GetProcessSample05</span><span class="sxs-lookup"><span data-stu-id="bb47d-106">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample05 folder.</span></span> <span data-ttu-id="bb47d-107">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample05.</span><span class="sxs-lookup"><span data-stu-id="bb47d-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample05.</span></span>
+   <span data-ttu-id="20c2c-106">С установленным пакетом SDK для Windows PowerShell 2,0 перейдите в папку GetProcessSample05</span><span class="sxs-lookup"><span data-stu-id="20c2c-106">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample05 folder.</span></span> <span data-ttu-id="20c2c-107">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample05.</span><span class="sxs-lookup"><span data-stu-id="20c2c-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample05.</span></span>
 
-2. <span data-ttu-id="bb47d-108">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="bb47d-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="bb47d-109">Откроется пример проекта в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="bb47d-109">This opens the sample project in Visual Studio.</span></span>
+2. <span data-ttu-id="20c2c-108">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="20c2c-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="20c2c-109">Откроется пример проекта в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="20c2c-109">This opens the sample project in Visual Studio.</span></span>
 
-3. <span data-ttu-id="bb47d-110">В меню **Сборка** выберите пункт **построить решение**.</span><span class="sxs-lookup"><span data-stu-id="bb47d-110">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="20c2c-110">В меню **Построение** выберите команду **Построить решение**.</span><span class="sxs-lookup"><span data-stu-id="20c2c-110">In the **Build** menu, select **Build Solution**.</span></span>
 
-   <span data-ttu-id="bb47d-111">Библиотека для примера будет построена в каталогах \bin или \bin\Debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="bb47d-111">The library for the sample will be built in the default \bin or \bin\debug directories.</span></span>
+   <span data-ttu-id="20c2c-111">Библиотека для примера будет построена в каталогах \bin или \bin\Debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="20c2c-111">The library for the sample will be built in the default \bin or \bin\debug directories.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="bb47d-112">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="bb47d-112">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="20c2c-112">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="20c2c-112">How to run the sample</span></span>
 
-1. <span data-ttu-id="bb47d-113">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="bb47d-113">Create the following module folder:</span></span>
+1. <span data-ttu-id="20c2c-113">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="20c2c-113">Create the following module folder:</span></span>
 
    `[user]/documents/windowspowershell/modules/GetProcessSample05`
 
-2. <span data-ttu-id="bb47d-114">Скопируйте пример сборки в папку Module.</span><span class="sxs-lookup"><span data-stu-id="bb47d-114">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="20c2c-114">Скопируйте пример сборки в папку Module.</span><span class="sxs-lookup"><span data-stu-id="20c2c-114">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="bb47d-115">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="bb47d-115">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="20c2c-115">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="20c2c-115">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="bb47d-116">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="bb47d-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="20c2c-116">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="20c2c-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
    `Import-module getprossessample05`
 
-5. <span data-ttu-id="bb47d-117">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="bb47d-117">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="20c2c-117">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="20c2c-117">Run the following command to run the cmdlet:</span></span>
 
    `get-proc`
 
-## <a name="requirements"></a><span data-ttu-id="bb47d-118">Требования</span><span class="sxs-lookup"><span data-stu-id="bb47d-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="20c2c-118">Требования</span><span class="sxs-lookup"><span data-stu-id="20c2c-118">Requirements</span></span>
 
-<span data-ttu-id="bb47d-119">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="bb47d-119">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="20c2c-119">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="20c2c-119">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="bb47d-120">Демонстрирующее</span><span class="sxs-lookup"><span data-stu-id="bb47d-120">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="20c2c-120">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="20c2c-120">Demonstrates</span></span>
 
-<span data-ttu-id="bb47d-121">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="bb47d-121">This sample demonstrates the following.</span></span>
+<span data-ttu-id="20c2c-121">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="20c2c-121">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="bb47d-122">Объявление класса командлета с помощью атрибута командлета.</span><span class="sxs-lookup"><span data-stu-id="bb47d-122">Declaring a cmdlet class using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="20c2c-122">Объявление класса командлета с помощью атрибута командлета.</span><span class="sxs-lookup"><span data-stu-id="20c2c-122">Declaring a cmdlet class using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="bb47d-123">Объявление параметра командлета с помощью атрибута Parameter.</span><span class="sxs-lookup"><span data-stu-id="bb47d-123">Declaring a cmdlet parameter using the Parameter attribute.</span></span>
+- <span data-ttu-id="20c2c-123">Объявление параметра командлета с помощью атрибута Parameter.</span><span class="sxs-lookup"><span data-stu-id="20c2c-123">Declaring a cmdlet parameter using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="bb47d-124">Указание позиций для параметров.</span><span class="sxs-lookup"><span data-stu-id="bb47d-124">Specifying positions for parameters.</span></span>
+- <span data-ttu-id="20c2c-124">Указание позиций для параметров.</span><span class="sxs-lookup"><span data-stu-id="20c2c-124">Specifying positions for parameters.</span></span>
 
-- <span data-ttu-id="bb47d-125">Указание того, что параметры могут принимать входные данные из конвейера.</span><span class="sxs-lookup"><span data-stu-id="bb47d-125">Specifying that parameters can take input from the pipeline.</span></span> <span data-ttu-id="bb47d-126">Входные данные могут быть взяты из объекта или значения из свойства объекта, имя свойства которого совпадает с именем параметра.</span><span class="sxs-lookup"><span data-stu-id="bb47d-126">The input can be taken from an object or a value from a property of an object whose property name is the same as the parameter name.</span></span>
+- <span data-ttu-id="20c2c-125">Указание того, что параметры могут принимать входные данные из конвейера.</span><span class="sxs-lookup"><span data-stu-id="20c2c-125">Specifying that parameters can take input from the pipeline.</span></span> <span data-ttu-id="20c2c-126">Входные данные могут быть взяты из объекта или значения из свойства объекта, имя свойства которого совпадает с именем параметра.</span><span class="sxs-lookup"><span data-stu-id="20c2c-126">The input can be taken from an object or a value from a property of an object whose property name is the same as the parameter name.</span></span>
 
-- <span data-ttu-id="bb47d-127">Объявление атрибута проверки для входных параметров.</span><span class="sxs-lookup"><span data-stu-id="bb47d-127">Declaring a validation attribute for the parameter input.</span></span>
+- <span data-ttu-id="20c2c-127">Объявление атрибута проверки для входных параметров.</span><span class="sxs-lookup"><span data-stu-id="20c2c-127">Declaring a validation attribute for the parameter input.</span></span>
 
-- <span data-ttu-id="bb47d-128">Обработка ошибок и исключений.</span><span class="sxs-lookup"><span data-stu-id="bb47d-128">Handling errors and exceptions.</span></span>
+- <span data-ttu-id="20c2c-128">Обработка ошибок и исключений.</span><span class="sxs-lookup"><span data-stu-id="20c2c-128">Handling errors and exceptions.</span></span>
 
-- <span data-ttu-id="bb47d-129">Написание сообщений отладки.</span><span class="sxs-lookup"><span data-stu-id="bb47d-129">Writing debug messages.</span></span>
+- <span data-ttu-id="20c2c-129">Написание сообщений отладки.</span><span class="sxs-lookup"><span data-stu-id="20c2c-129">Writing debug messages.</span></span>
 
-## <a name="example"></a><span data-ttu-id="bb47d-130">Пример</span><span class="sxs-lookup"><span data-stu-id="bb47d-130">Example</span></span>
+## <a name="example"></a><span data-ttu-id="20c2c-130">Пример</span><span class="sxs-lookup"><span data-stu-id="20c2c-130">Example</span></span>
 
-<span data-ttu-id="bb47d-131">В этом примере показано, как создать командлет, отображающий список указанных процессов.</span><span class="sxs-lookup"><span data-stu-id="bb47d-131">This sample shows how to create a cmdlet that displays a list of specified processes.</span></span>
+<span data-ttu-id="20c2c-131">В этом примере показано, как создать командлет, отображающий список указанных процессов.</span><span class="sxs-lookup"><span data-stu-id="20c2c-131">This sample shows how to create a cmdlet that displays a list of specified processes.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands
@@ -479,6 +479,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="bb47d-132">См. также:</span><span class="sxs-lookup"><span data-stu-id="bb47d-132">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20c2c-132">См. также:</span><span class="sxs-lookup"><span data-stu-id="20c2c-132">See Also</span></span>
 
-[<span data-ttu-id="bb47d-133">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="bb47d-133">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="20c2c-133">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="20c2c-133">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
