@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
 ms.openlocfilehash: 9197f5635528e0f52cd08adde1c6bd69467725e8
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417466"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Создание поставщика свойств Windows PowerShell
@@ -130,7 +130,7 @@ ms.locfileid: "74417466"
 
 См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Поставщик Windows PowerShell](./designing-your-windows-powershell-provider.md)
 

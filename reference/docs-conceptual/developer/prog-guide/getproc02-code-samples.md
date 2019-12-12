@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a2fd91af-758b-49b9-b57f-106ee01fc8c1
 caps.latest.revision: 5
 ms.openlocfilehash: 381011ffd9bd4a46dcfcdbebaa0164d03378abe6
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416174"
 ---
 # <a name="getproc02-code-samples"></a>Примеры кода GetProc02
@@ -26,12 +26,12 @@ ms.locfileid: "74416174"
 
 Полный пример кода см. в следующих разделах.
 
-|Язык|Раздел|
+|Language|Раздел|
 |--------------|-----------|
 |C#|[Пример кодаC#GetProc02 ()](./getproc02-csharp-sample-code.md)|
 |VB.NET|[Пример кода GetProc02 (VB.NET)](./getproc02-vb-net-sample-code.md)|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

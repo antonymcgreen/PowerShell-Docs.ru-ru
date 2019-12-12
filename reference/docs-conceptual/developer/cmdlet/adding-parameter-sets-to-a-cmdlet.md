@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
 ms.openlocfilehash: c9c0b9a7a587e856efc82b4d277cee373e3f8b38
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416309"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Добавление наборов параметров в командлет
@@ -211,7 +211,7 @@ End Sub 'ProcessRecord ' ProcessRecord
 
 Вспомогательные методы, вызываемые инструкцией SELECT, не описаны здесь, но их реализация можно увидеть в полном примере кода в следующем разделе.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный C# пример кода см. в разделе [StopProcessSample04 Sample](./stopprocesssample04-sample.md).
 
@@ -247,7 +247,7 @@ Windows PowerShell передает сведения между командле
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md)
 

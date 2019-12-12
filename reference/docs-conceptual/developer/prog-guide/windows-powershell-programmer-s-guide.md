@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
 ms.openlocfilehash: f8cbaf464345b8f2b693e72f3dbe781a47605b28
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417771"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>Справочник программистов&#39;Windows PowerShell
@@ -105,6 +105,6 @@ Windows PowerShell определяет свой код для команд, п�
 |[Создание консольной оболочки](./how-to-create-a-console-shell.md)|В этом разделе описывается создание оболочки консоли, которая не является расширяемой.|
 |[Основные понятия Windows PowerShell](./windows-powershell-concepts.md)|В этом разделе содержатся общие сведения, которые помогут понять Windows PowerShell с точки зрения разработчика.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

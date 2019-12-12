@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 73fb11ee-0ebd-477a-ac36-acdfbb32e70d
 caps.latest.revision: 7
 ms.openlocfilehash: bd0cb69770817ec215ddb1862a43a838baddefcf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364033"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-configuration-format"></a>Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента Configuration (формат)
@@ -59,11 +59,11 @@ ms.locfileid: "72364033"
 
 При указании дочерних элементов элемента `CustomItem` учитывайте следующее:
 
-- Дочерние элементы должны быть добавлены в следующей последовательности: `ExpressionBinding`, `NewLine`, `Text` и `Frame`.
+- Дочерние элементы должны быть добавлены в следующей последовательности: `ExpressionBinding`, `NewLine`, `Text`и `Frame`.
 
 - Максимальное число последовательностей, которое можно указать, не ограничено.
 
-- В каждой последовательности нет максимального ограничения числа элементов `ExpressionBinding`, которые можно использовать.
+- В каждой последовательности нет ограничения на количество элементов `ExpressionBinding`, которые можно использовать.
 
 ## <a name="see-also"></a>См. также:
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 98bcfda0-6ee2-46f5-bbc7-5fab8b780d6a
 caps.latest.revision: 5
 ms.openlocfilehash: edb4d9944a527391983e068ddf07f4fac415c3f9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359873"
 ---
 # <a name="writing-a-navigation-provider"></a>Написание поставщика навигации
@@ -132,7 +132,7 @@ protected override string GetParentPath(string path, string root)
 
 ### <a name="implementing-makepath"></a>Реализация Макепас
 
-Метод [System. Management. Automation. Provider. Navigationcmdletprovider. макепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) соединяет указанный родительский путь и указанный дочерний путь для создания внутреннего пути поставщика (сведения о типах путей, поддерживаемых поставщиками, см. в разделе [Общие сведения о поставщике Windows PowerShell](./windows-powershell-provider-overview.md). Обработчик PowerShell вызывает этот метод, когда пользователь вызывает командлет [Microsoft. PowerShell. Commands. жоинпаскомманд](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) .
+Метод [System. Management. Automation. Provider. Navigationcmdletprovider. макепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) соединяет указанный родительский путь и указанный дочерний путь для создания внутреннего пути поставщика (сведения о типах путей, поддерживаемых поставщиками, см. в [обзоре поставщика Windows PowerShell](./windows-powershell-provider-overview.md). Обработчик PowerShell вызывает этот метод, когда пользователь вызывает командлет [Microsoft. PowerShell. Commands. жоинпаскомманд](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) .
 
 ```csharp
 protected override string MakePath(string parent, string child)
@@ -191,7 +191,7 @@ protected override string MakePath(string parent, string child)
 
 ### <a name="implementing-normalizerelativepath"></a>Реализация Нормализерелативепас
 
-Метод [System. Management. Automation. Provider. Navigationcmdletprovider. нормализерелативепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) принимает `path` и `basepath` параметры и Возвращает нормализованный путь, который эквивалентен параметру `path` и относительно `basepath` параметр.
+Метод [System. Management. Automation. Provider. Navigationcmdletprovider. нормализерелативепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) принимает `path` и `basepath` параметры и Возвращает нормализованный путь, эквивалентный параметру `path` и относительно параметра `basepath`.
 
 ```csharp
 protected override string NormalizeRelativePath(string path,

@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 2b11fbcf-3426-48ae-9319-2c847969f723
 caps.latest.revision: 10
 ms.openlocfilehash: 7afc834e68ef332bee1e23da782fb5c5527fcf54
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368583"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
 
-Указывает блок скрипта, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется запись таблицы.
+Указывает блок скрипта, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется запись таблицы.
 
 Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Ентриселектедби для Таблеровентри (Format) Элемент Селектионкондитион для Ентриселектедби для элемента ScriptBlock Таблеровентри (Format) для Селектионкондитион для ентриселектедби в TableRowEntry (Format)
 

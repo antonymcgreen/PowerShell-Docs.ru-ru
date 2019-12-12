@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: d569f5d5-9746-40c0-be5e-f218bc4560f7
 caps.latest.revision: 4
 ms.openlocfilehash: f52953ee091f05df5f355719ecba788d3d5ee055
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359793"
 ---
 # <a name="authoring-the-webconfig-file-for-a-management-odata-web-service"></a>Создание файла Web.config для веб-службы управления OData
 
-Перед развертыванием веб-службы OData управления необходимо настроить файл Web. config так, чтобы он указывал на файлы XML-схемы и библиотеки DLL, реализующие [Microsoft. Management. OData. кустомаусоризатион](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) и [ Интерфейсы System. Management. Automation. Remoting. PSSessionConfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) .
+Перед развертыванием веб-службы OData управления необходимо настроить файл Web. config так, чтобы он указывал на файлы схемы XML и библиотеки DLL, реализующие интерфейсы [Microsoft. Management. OData. кустомаусоризатион](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) и [System. Management. Automation. Remoting. PSSessionConfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) .
 
 ## <a name="sample-config-file"></a>Пример файла конфигурации
 

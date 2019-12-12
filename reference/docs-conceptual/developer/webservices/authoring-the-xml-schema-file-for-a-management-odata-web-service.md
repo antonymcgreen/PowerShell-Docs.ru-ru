@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 3e83c9d9-6d06-4247-94d9-e3bfd4013b11
 caps.latest.revision: 4
 ms.openlocfilehash: a806d012097d107b6cc35710b9a93f2b27dd1ace
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359803"
 ---
 # <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a>Создание файла схемы XML для веб-службы управления OData
 
-После определения ресурсов, которые будет предоставлять веб-служба (см. раздел [Создание файла схемы MOF для веб-службы OData управления](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), сопоставьте эти ресурсы с базовыми командлетами Windows PowerShell, которые реализуют поддерживаемые операции для каждого ресурс путем создания XML-файла, который соответствует [схеме сопоставления ресурсов](./resource-mapping-schema.md). XML-файл также указывает URL-адреса, используемые клиентом для доступа к ресурсам.
+Определив ресурсы, которые будет предоставлять веб-служба (см. раздел [Создание файла схемы MOF для веб-службы OData управления](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), сопоставьте эти ресурсы с соответствующими командлетами Windows PowerShell, которые реализуют поддерживаемые операции для каждого ресурса, создав XML-файл, соответствующий [схеме сопоставления ресурсов](./resource-mapping-schema.md). XML-файл также указывает URL-адреса, используемые клиентом для доступа к ресурсам.
 
 ## <a name="mappng-resources-to-urls"></a>Маппнг ресурсы по URL-адресам
 

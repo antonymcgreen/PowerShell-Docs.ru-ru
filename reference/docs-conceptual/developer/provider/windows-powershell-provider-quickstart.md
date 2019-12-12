@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
 caps.latest.revision: 5
 ms.openlocfilehash: 949c0d63b1e5bca1bfe670362df4297c29e98fcc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359923"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Краткое руководство по поставщикам Windows PowerShell
@@ -21,7 +21,7 @@ ms.locfileid: "72359923"
 
 ## <a name="writing-a-basic-provider"></a>Написание базового поставщика
 
-Наиболее простой функцией поставщика Windows PowerShell является создание и удаление дисков. В этом примере мы реализуем методы [System. Management. Automation. Provider. дривекмдлетпровидер. невдриве *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) и [System. Management. Automation. Provider. дривекмдлетпровидер. ремоведриве *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) элемента [управления Класс System. Management. Automation. Provider. Дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Вы также узнаете, как объявить класс поставщика.
+Наиболее простой функцией поставщика Windows PowerShell является создание и удаление дисков. В этом примере мы реализуем методы [System. Management. Automation. Provider. дривекмдлетпровидер. невдриве *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) и [System. Management. Automation. Provider. дривекмдлетпровидер. Ремоведриве *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Вы также узнаете, как объявить класс поставщика.
 
 При создании поставщика можно указать диски по умолчанию, которые создаются автоматически при доступности поставщика. Вы также определите метод для создания новых дисков, использующих этот поставщик.
 
@@ -35,15 +35,15 @@ ms.locfileid: "72359923"
 
 1. Добавьте сборку System. Management. Automation в качестве ссылки на проект.
 
-2. Щелкните **проект > свойства акцессдбпровидерсампле > Отладка**. В меню **Запуск проекта**выберите пункт **запустить внешнюю программу**и перейдите к исполняемому файлу Windows PowerShell (обычно это c:\windows\system32\windowspowershell\ v1.0\\.powershell.exe).
+2. Щелкните **проект > свойства акцессдбпровидерсампле > Отладка**. В меню **Запуск проекта**щелкните **запустить внешнюю программу**и перейдите к исполняемому файлу Windows PowerShell (обычно это c:\Windows\System32\WindowsPowerShell\v1.0\\. PowerShell. exe).
 
-3. В разделе **Параметры запуска**введите следующий текст в поле **аргументы командной строки** : `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`.
+3. В разделе **Параметры запуска**введите следующий текст в поле **аргументы командной строки** : `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
 ### <a name="declaring-the-provider-class"></a>Объявление класса поставщика
 
 Наш поставщик является производным от класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Большинство поставщиков, которые предоставляют реальную функциональность (доступ к элементам и управление ими, перемещение по хранилищу данных, получение и задание содержимого элементов), являются производными от класса [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) .
 
-Помимо указания того, что класс является производным от [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider), необходимо снабдить его атрибутом [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) , как показано в примере. .
+Помимо указания того, что класс является производным от [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider), необходимо снабдить его атрибутом [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) , как показано в примере.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Providers
@@ -67,9 +67,9 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 ### <a name="implementing-newdrive"></a>Реализация Невдриве
 
-Метод [System. Management. Automation. Provider. дривекмдлетпровидер. невдриве *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) вызывается подсистемой Windows PowerShell, когда пользователь вызывает командлет [Microsoft. PowerShell. Commands. невпсдривекомманд](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) , указывающий имя поставщики. Параметр PSDriveInfo передается подсистемой Windows PowerShell, а метод возвращает новый диск подсистеме Windows PowerShell. Этот метод должен быть объявлен в классе, созданном выше.
+Метод [System. Management. Automation. Provider. дривекмдлетпровидер. невдриве *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) вызывается подсистемой Windows PowerShell, когда пользователь вызывает командлет [Microsoft. PowerShell. Commands. невпсдривекомманд](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) , указывающий имя поставщика. Параметр PSDriveInfo передается подсистемой Windows PowerShell, а метод возвращает новый диск подсистеме Windows PowerShell. Этот метод должен быть объявлен в классе, созданном выше.
 
-Сначала метод проверяет, чтобы убедиться в том, что были переданы как объект диска, так и корневой диск, и возвращает `null`, если один из них не имеет. Затем он использует конструктор внутреннего класса Акцессдбпсдривеинфо для создания нового диска и соединения с базой данных Access, которую представляет диск.
+Сначала метод проверяет, чтобы убедиться, что были переданы как объект диска, так и корневой диск, и возвращает `null`, если один из них не имеет. Затем он использует конструктор внутреннего класса Акцессдбпсдривеинфо для создания нового диска и соединения с базой данных Access, которую представляет диск.
 
 ```csharp
 protected override PSDriveInfo NewDrive(PSDriveInfo drive)

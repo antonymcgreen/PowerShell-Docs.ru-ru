@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
 ms.openlocfilehash: fcb03d4021f00837095ce703beb0d841233391d6
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416215"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Создание поставщика контейнеров Windows PowerShell
@@ -370,7 +370,7 @@ protected override bool HasChildItems( string path )
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidercopyitemdynamicparameters](Msh_samplestestcmdlets#testprovidercopyitemdynamicparameters)]  -->
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный пример кода см. в разделе [пример кода AccessDbProviderSample04](./accessdbprovidersample04-code-sample.md).
 
@@ -388,7 +388,7 @@ protected override bool HasChildItems( string path )
    Get-ChildItem mydb:customers
    ```
 
-   Отобразятся следующие выходные данные.
+   Появится следующий вывод.
 
    ```output
    PSPath        : AccessDB::customers
@@ -407,7 +407,7 @@ protected override bool HasChildItems( string path )
    (Get-ChildItem mydb:customers).data
    ```
 
-   Отобразятся следующие выходные данные.
+   Появится следующий вывод.
 
    ```output
    TABLE_CAT   : c:\PS\northwind
@@ -423,7 +423,7 @@ protected override bool HasChildItems( string path )
    Get-Item mydb:\customers\0
    ```
 
-   Отобразятся следующие выходные данные.
+   Появится следующий вывод.
 
    ```output
    PSPath        : AccessDB::customers\0
@@ -440,7 +440,7 @@ protected override bool HasChildItems( string path )
    (Get-Item mydb:\customers\0).data
    ```
 
-   Отобразятся следующие выходные данные.
+   Появится следующий вывод.
 
    ```output
    CustomerID   : 1234
@@ -469,7 +469,7 @@ protected override bool HasChildItems( string path )
    PS mydb:\Customers> (Get-Item 3).data
    ```
 
-   Отобразятся следующие выходные данные.
+   Появится следующий вывод.
 
    ```output
    ID        : 3
@@ -486,7 +486,7 @@ protected override bool HasChildItems( string path )
    Country   : USA
    ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 

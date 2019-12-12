@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: af25b560-017a-4d53-a8c3-97c5ab66b9d4
 caps.latest.revision: 5
 ms.openlocfilehash: 26c7bafe708fbbd89aecb002f3591daa03f56b77
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417529"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>Пример кода AccessDbProviderSample03
@@ -26,7 +26,7 @@ ms.locfileid: "74417529"
 >
 > Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 ```csharp
 using System;
@@ -999,7 +999,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 [!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L11-L976 "AccessDBProviderSample03.cs")]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

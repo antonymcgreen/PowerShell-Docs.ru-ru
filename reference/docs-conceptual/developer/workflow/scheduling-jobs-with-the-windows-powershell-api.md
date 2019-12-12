@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 64718f8e-de60-4fb7-894d-2975b5257ff6
 caps.latest.revision: 4
 ms.openlocfilehash: bdced961d91088dd75be347b7b74b22467c8c9be
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366023"
 ---
 # <a name="scheduling-jobs-with-the-powershell-api"></a>Планирование заданий с помощью API PowerShell
@@ -44,7 +44,7 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 
 |Имя параметра|Описание|
 |--------------------|-----------------|
-|**Безымян**|Имя задания.|
+|**Name**|Имя задания.|
 |**скриптбокк**|Блок сценария PowerShell, который указывает, что делает задание.|
 |**Равно**|Путь к файлу, содержащему блок скрипта PowerShell, для указания действия, выполняемого заданием.|
 |**инитиализатионскрипт**|Блок сценария PowerShell, который инициализирует задание.|
@@ -66,7 +66,7 @@ string schedJobDefName = "MySampleSchedJob";
 
 ## <a name="creating-the-invocation-and-job-definition-objects"></a>Создание объектов вызова и определения задания
 
-Затем создайте объекты `ScheduledJobInvocationInfo` и `ScheduledJobDefinition`, чтобы запустить задание, как показано в следующем примере:
+Затем необходимо создать `ScheduledJobInvocationInfo` и `ScheduledJobDefinition` объекты для запуска задания, как показано в следующем примере:
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
