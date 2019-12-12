@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 67a2b061-2a4a-4ad1-84f9-cdbefb64aaab
 caps.latest.revision: 8
 ms.openlocfilehash: abb8b91626128b3deaa2db24a9fd8b34a6563410
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363633"
 ---
 # <a name="groupby-element-for-view-format"></a>Элемент GroupBy для элемента View (формат)
@@ -35,7 +35,7 @@ ms.locfileid: "72363633"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы.
+В следующих разделах описаны атрибуты, дочерние и родительские элементы.
 
 ### <a name="attributes"></a>Атрибуты
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: eb4e72e6-24c4-42b6-b7b9-a62585c17f26
 caps.latest.revision: 15
 ms.openlocfilehash: ed614de125f78cbcf8411cc334baf3c95933dd47
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367123"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>Как написать бинарный модуль PowerShell
@@ -73,9 +73,9 @@ ms.locfileid: "72367123"
 
 3. Упакуйте решение и сохраните пакет в другом месте в пути модуля PowerShell.
 
-   Глобальная переменная среды `PSModulePath` описывает пути по умолчанию, которые PowerShell будет использовать для поиска модуля. Например, общий путь для сохранения модуля в системе будет `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>`. Если вы не используете пути по умолчанию, необходимо явно указать расположение модуля во время установки. Не забудьте создать папку для сохранения модуля в, так как может потребоваться папка для хранения нескольких сборок и файлов для решения.
+   `PSModulePath` глобальная переменная среды описывает пути по умолчанию, которые PowerShell будет использовать для поиска модуля. Например, общий путь для сохранения модуля в системе будет `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>`. Если вы не используете пути по умолчанию, необходимо явно указать расположение модуля во время установки. Не забудьте создать папку для сохранения модуля в, так как может потребоваться папка для хранения нескольких сборок и файлов для решения.
 
-   Обратите внимание, что технически не требуется устанавливать модуль в любом месте `PSModulePath`. это просто расположения по умолчанию, которые PowerShell будет искать в вашем модуле. Однако рекомендуется использовать это решение, если нет веских причин для хранения модуля в другом месте. Дополнительные сведения см. в статьях [Установка модуля PowerShell](./installing-a-powershell-module.md) и [изменение пути установки модуля PowerShell](./modifying-the-psmodulepath-installation-path.md).
+   Обратите внимание, что технически вам не нужно устанавливать модуль в любом месте `PSModulePath` — это просто расположения по умолчанию, которые PowerShell будет искать в вашем модуле. Однако рекомендуется использовать это решение, если нет веских причин для хранения модуля в другом месте. Дополнительные сведения см. в статьях [Установка модуля PowerShell](./installing-a-powershell-module.md) и [изменение пути установки модуля PowerShell](./modifying-the-psmodulepath-installation-path.md).
 
 4. Импортируйте модуль в PowerShell с помощью вызова [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module).
 

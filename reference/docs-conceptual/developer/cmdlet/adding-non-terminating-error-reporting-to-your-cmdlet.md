@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
 caps.latest.revision: 8
 ms.openlocfilehash: a4426abec96cd922360aeef8c157b4e9f41a15b9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364613"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Добавление сообщения о непрерывающей ошибке в командлет
@@ -186,12 +186,12 @@ protected override void ProcessRecord()
 
 Командлету часто требуется изменить действие PowerShell, созданное неустранимой ошибкой.
 Это можно сделать, определив параметры `ErrorAction` и `ErrorVariable`.
-При определении параметра `ErrorAction` командлет представляет пользовательские параметры [System. Management. Automation. действие][]. Вы также можете напрямую повлиять на действие, задав переменную `$ErrorActionPreference`.
+При определении параметра `ErrorAction` командлет представляет пользовательские параметры [System. Management. Automation. действие][], и вы можете напрямую повлиять на действие, задав переменную `$ErrorActionPreference`.
 
-Командлет может сохранить неустранимые ошибки в переменную с помощью параметра `ErrorVariable`, который не зависит от значения `ErrorAction`.
+Командлет может сохранять неустранимые ошибки в переменной с помощью параметра `ErrorVariable`, который не зависит от значения параметра `ErrorAction`.
 Ошибки можно добавить к существующей переменной ошибки, добавив знак «плюс» (+) перед именем переменной.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный C# пример кода см. в разделе [GetProcessSample04 Sample](./getprocesssample04-sample.md).
 
@@ -217,7 +217,7 @@ PowerShell передает сведения между командлетами
     PS> get-proc -name test
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     get-proc : Operation is not valid due to the current state of the object.

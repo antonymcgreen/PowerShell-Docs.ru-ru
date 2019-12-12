@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
 caps.latest.revision: 13
 ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363563"
 ---
 # <a name="background-jobs"></a>Фоновые задания
@@ -35,7 +35,7 @@ ms.locfileid: "72363563"
 
 Чтобы написать командлет, который можно запустить как фоновое задание, необходимо выполнить следующие задачи.
 
-- Определите параметр `asJob`, чтобы пользователь мог решить, следует ли запускать этот командлет как фоновое задание.
+- Определите параметр `asJob` параметра, чтобы пользователь мог решить, следует ли запускать этот командлет как фоновое задание.
 
 - Создайте объект, производный от класса [System. Management. Automation. job](/dotnet/api/System.Management.Automation.Job) . Этот объект может быть пользовательским объектом задания или объектом задания, предоставляемым Windows PowerShell, например объектом [System. Management. Automation. PSEventJob](/dotnet/api/System.Management.Automation.PSEventJob) .
 
@@ -51,7 +51,7 @@ ms.locfileid: "72363563"
 
 Windows PowerShell предоставляет следующие интерфейсы API для управления фоновыми заданиями.
 
-[System. Management. Automation. job](/dotnet/api/System.Management.Automation.Job) наследует пользовательские объекты задания. Это абстрактный класс.
+[System. Management. Automation. job](/dotnet/api/System.Management.Automation.Job) наследует пользовательские объекты задания. Этот класс является абстрактным.
 
 [System. Management. Automation. жобрепоситори](/dotnet/api/System.Management.Automation.JobRepository) управляет и предоставляет сведения о текущих активных фоновых заданиях.
 

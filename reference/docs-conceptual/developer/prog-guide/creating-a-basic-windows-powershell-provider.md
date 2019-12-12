@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
 ms.openlocfilehash: e825581b96f0f33893b38f9f6499dd46a7bf38eb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360523"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Создание базового поставщика Windows PowerShell
@@ -31,7 +31,7 @@ ms.locfileid: "72360523"
 
 Первым шагом в создании поставщика Windows PowerShell является определение его класса .NET. Этот базовый поставщик определяет класс с именем `AccessDBProvider`, производный от базового класса [System. Management. Automation. Provider. кмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) .
 
-Рекомендуется размещать классы поставщиков в пространстве имен API `Providers`, например XXX. PowerShell. Providers. Этот поставщик использует пространство имен `Microsoft.Samples.PowerShell.Provider`, в котором выполняются все примеры поставщика Windows PowerShell.
+Рекомендуется размещать классы поставщиков в `Providers` пространстве имен API, например XXX. PowerShell. Providers. Этот поставщик использует пространство имен `Microsoft.Samples.PowerShell.Provider`, в котором выполняются все примеры поставщика Windows PowerShell.
 
 > [!NOTE]
 > Класс для поставщика Windows PowerShell должен быть явно помечен как открытый. Классы, не помеченные как открытые, по умолчанию будут внутренними и не будут найдены средой выполнения Windows PowerShell.
@@ -49,13 +49,13 @@ ms.locfileid: "72360523"
 
 ## <a name="defining-provider-specific-state-information"></a>Определение сведений о состоянии, зависящем от поставщика
 
-Базовый класс [System. Management. Automation. Provider. кмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) и все производные классы считаются без отслеживания состояния, так как среда выполнения Windows PowerShell создает экземпляры поставщика только по мере необходимости. Таким образом, если поставщику требуется полное управление и обслуживание состояния для данных конкретного поставщика, он должен наследовать класс от класса [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) . Производный класс должен определить элементы, необходимые для поддержания состояния, чтобы обеспечить доступ к данным поставщика, когда среда выполнения Windows PowerShell вызывает метод [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) для Инициализация поставщика.
+Базовый класс [System. Management. Automation. Provider. кмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) и все производные классы считаются без отслеживания состояния, так как среда выполнения Windows PowerShell создает экземпляры поставщика только по мере необходимости. Таким образом, если поставщику требуется полное управление и обслуживание состояния для данных конкретного поставщика, он должен наследовать класс от класса [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) . Производный класс должен определить элементы, необходимые для поддержания состояния, чтобы обеспечить доступ к данным, зависящим от поставщика, когда среда выполнения Windows PowerShell вызывает метод [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) для инициализации поставщика.
 
 Поставщик Windows PowerShell также может поддерживать состояние на основе подключения. Дополнительные сведения о поддержке состояния подключения см. [в разделе Создание поставщика диска PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
 ## <a name="initializing-the-provider"></a>Инициализация поставщика
 
-Чтобы инициализировать поставщик, среда выполнения Windows PowerShell вызывает метод [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) при запуске Windows PowerShell. В большинстве случаев поставщик может использовать реализацию по умолчанию этого метода, который просто возвращает объект [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) , описывающий поставщика. Однако в случае, когда необходимо добавить дополнительные сведения об инициализации, следует реализовать собственный метод [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) , возвращающий измененную версию [ Объект System. Management. Automation. Провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) , который передается поставщику. Как правило, этот метод должен возвращать предоставленный объект [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) , переданный в него, или измененный объект [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) , который содержит другие сведения об инициализации.
+Чтобы инициализировать поставщик, среда выполнения Windows PowerShell вызывает метод [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) при запуске Windows PowerShell. В большинстве случаев поставщик может использовать реализацию по умолчанию этого метода, который просто возвращает объект [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) , описывающий поставщика. Однако в случае, когда необходимо добавить дополнительные сведения об инициализации, следует реализовать собственный метод [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) , возвращающий измененную версию объекта [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) , который передается поставщику. Как правило, этот метод должен возвращать предоставленный объект [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) , переданный в него, или измененный объект [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) , который содержит другие сведения об инициализации.
 
 Этот базовый поставщик не переопределяет этот метод. Однако следующий код демонстрирует реализацию этого метода по умолчанию:
 
@@ -65,7 +65,7 @@ ms.locfileid: "72360523"
 
 ## <a name="start-dynamic-parameters"></a>Запуск динамических параметров
 
-Реализация поставщика метода [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) может потребовать дополнительных параметров. В этом случае поставщик должен переопределять метод [System. Management. Automation. Provider. кмдлетпровидер. стартдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.StartDynamicParameters) и возвращать объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или [ Объект System. Management. Automation. Рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
+Реализация поставщика метода [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) может потребовать дополнительных параметров. В этом случае поставщик должен переопределять метод [System. Management. Automation. Provider. кмдлетпровидер. стартдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.StartDynamicParameters) и возвращать объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
 
 Этот базовый поставщик не переопределяет этот метод. Однако следующий код демонстрирует реализацию этого метода по умолчанию:
 
@@ -79,7 +79,7 @@ ms.locfileid: "72360523"
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesaccessdbprov01#accessdbprov01ProviderStop](Msh_samplesaccessdbprov01#accessdbprov01ProviderStop)]  -->
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный пример кода см. в разделе [пример кода AccessDbProviderSample01](./accessdbprovidersample01-code-sample.md).
 

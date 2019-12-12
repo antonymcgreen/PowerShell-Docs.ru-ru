@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9c8ef289-0659-42d1-9976-044b144201eb
 caps.latest.revision: 6
 ms.openlocfilehash: 2a8372d937fc3c959f7d829bb52495048423d506
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359653"
 ---
 # <a name="adding-windows-powershell-activities-to-the-visual-studio-toolbox"></a>Добавление действий Windows PowerShell в инструментарий Visual Studio
@@ -23,7 +23,7 @@ ms.locfileid: "72359653"
 
 1. Создайте новый проект консольного приложения рабочего процесса в Visual Studio.
 
-2. В меню **вид** выберите пункт **область элементов**.
+2. В меню **Вид** выберите пункт **Область элементов**.
 
 3. Добавьте новую вкладку на панели элементов, щелкнув правой кнопкой мыши внутри области элементов и выбрав пункт **Добавить вкладку**, а затем присвойте новой вкладке Имя, например "действия PowerShell".
 
@@ -33,9 +33,9 @@ ms.locfileid: "72359653"
 
 5. В диалоговом окне **Выбор элементов панели элементов** перейдите на вкладку **System. activitys** .
 
-6. Нажмите кнопку **Обзор**.
+6. Нажмите кнопку **Browse**.
 
-7. Перейдите в папку%WINDIR%\Microsoft.NET\assembly\GAC_MSIL\Microsoft.PowerShell.Core.Activities\v4.0_3.0.0.0__31bf3856ad364e и дважды щелкните файл Microsoft. PowerShell. Core. Activitys. dll.
+7. Перейдите в папку%Виндир%\микрософт.нет\ассембли\ GAC_MSIL \Microsoft.PowerShell.Core.Activities\v4.0_3.0.0.0__31bf3856ad364e и дважды щелкните файл Microsoft. PowerShell. Core. Activitys. dll.
 
 8. Нажмите кнопку **ОК**. Действия, определенные сборкой Microsoft. PowerShell. Core. Activitys, теперь доступны на панели элементов.
 
