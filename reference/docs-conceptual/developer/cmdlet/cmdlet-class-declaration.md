@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
 caps.latest.revision: 14
 ms.openlocfilehash: 979025ad5c34ab73dcc23d0e38ffb9acc431f15a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363523"
 ---
 # <a name="cmdlet-class-declaration"></a>Объявление класса командлета
@@ -25,7 +25,7 @@ ms.locfileid: "72363523"
 > [!NOTE]
 > Атрибут **командлета** определяется классом [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) . Свойства этого класса соответствуют параметрам объявления, которые используются при объявлении атрибута.
 
-## <a name="nouns"></a>Существительные
+## <a name="nouns"></a>существительные;
 
 Существительное командлет задает ресурсы, с которыми работает командлет. Существительное отличает командлеты от других командлетов.
 

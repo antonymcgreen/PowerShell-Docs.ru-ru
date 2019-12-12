@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
 caps.latest.revision: 9
 ms.openlocfilehash: 390eb2d0153c65967d8c0711c852aa6e13fe4660
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360823"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Краткое руководство по узлам Windows PowerShell
@@ -58,7 +58,7 @@ ms.locfileid: "72360823"
 
 В предыдущем примере выполняется одна команда без параметров.
 В команду можно добавить параметры с помощью метода [System. Management. Automation. пскомманд. аддпараметер](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) .
-Например, следующий код возвращает список всех процессов с именем `PowerShell`, запущенных на компьютере.
+Например, следующий код возвращает список всех процессов с именем `PowerShell`, выполняющихся на компьютере.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -104,15 +104,15 @@ ps.Invoke();
 
 Можно запустить существующий скрипт, вызвав метод [System. Management. Automation. PowerShell. аддскрипт](/dotnet/api/System.Management.Automation.PowerShell.AddScript) .
 В следующем примере в конвейер добавляется скрипт и выполняется его выполнение.
-В этом примере предполагается, что в папке с именем `D:\PSScripts` уже существует скрипт с именем `MyScript.ps1`.
+В этом примере предполагается, что в папке с именем `D:\PSScripts`уже есть скрипт с именем `MyScript.ps1`.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
-Существует также версия метода Аддскрипт, принимающая логический параметр с именем `useLocalScope`.
-Если этот параметр имеет значение `true`, скрипт выполняется в локальной области.
+Существует также версия метода Аддскрипт, которая принимает логический параметр с именем `useLocalScope`.
+Если этот параметр имеет значение `true`, сценарий выполняется в локальной области.
 Следующий код запустит скрипт в локальной области.
 
 ```csharp

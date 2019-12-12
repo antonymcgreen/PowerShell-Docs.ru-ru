@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 85d27545-8097-4010-9947-6d8b3ce2eac0
 caps.latest.revision: 15
 ms.openlocfilehash: 71c1c181058c5646c817b90d9832976a78c6c7de
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369833"
 ---
 # <a name="custom-formatting-files"></a>Пользовательские файлы форматирования
@@ -40,7 +40,7 @@ Windows PowerShell использует данные в этих файлах ф
 
 ## <a name="view-xml-elements"></a>Просмотр XML-элементов
 
-В следующем примере показаны XML-теги, используемые для определения табличного представления, содержащего два столбца. Элемент [виевдефинитионс](../format/viewdefinitions-element-format.md) является элементом-контейнером для всех представлений, определенных в файле форматирования. Элемент [View](../format/view-element-format.md) определяет определенную таблицу, список, широкий или настраиваемое представление. В каждом представлении элемент [Name](../format/name-element-for-view-format.md) задает имя представления, элемент [виевселектедби](../format/viewselectedby-element-format.md) определяет объекты, использующие представление, а различные управляющие элементы (например, элемент `TableControl`) определяют формат представления.
+В следующем примере показаны XML-теги, используемые для определения табличного представления, содержащего два столбца. Элемент [виевдефинитионс](../format/viewdefinitions-element-format.md) является элементом-контейнером для всех представлений, определенных в файле форматирования. Элемент [View](../format/view-element-format.md) определяет определенную таблицу, список, широкий или настраиваемое представление. В каждом представлении элемент [Name](../format/name-element-for-view-format.md) задает имя представления, элемент [виевселектедби](../format/viewselectedby-element-format.md) определяет объекты, использующие представление, а различные управляющие элементы (такие как элемент `TableControl`) определяют формат представления.
 
 ```xml
 ViewDefinitions

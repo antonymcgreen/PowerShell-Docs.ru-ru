@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ae37e3f3-5fd6-4ff6-bf66-a249ff96822b
 caps.latest.revision: 7
 ms.openlocfilehash: 2afa0e79d9de781149f31a45666d13f98ca10a26
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359683"
 ---
 # <a name="implementing-custom-authorization-for-a-management-odata-web-service"></a>Реализация пользовательской авторизации для веб-службы управления OData
@@ -21,7 +21,7 @@ ms.locfileid: "72359683"
 
 ## <a name="pass-through-authorization"></a>Сквозная авторизация
 
-Самый простой способ реализации интерфейса [Microsoft. Management. OData. кустомаусоризатион](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) — это сквозная реализация, которая авторизует всех пользователей. Этот пример не обеспечивает безопасность, и в нем предоставлена только Иллюстрация реализации интерфейса. Реализация интерфейса [Microsoft. Management. OData. кустомаусоризатион](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) должна переопределять два метода: [Microsoft. Management. OData. кустомаусоризатион. аусоризеусер](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) и [ Microsoft. Management. OData. Кустомаусоризатион. Жетмембершипид](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId). В этом примере метод [Microsoft. Management. OData. кустомаусоризатион. аусоризеусер](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) всегда возвращает объект **System. Security. Principal. WindowsIdentity** , связанный с текущим пользователем.
+Самый простой способ реализации интерфейса [Microsoft. Management. OData. кустомаусоризатион](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) — это сквозная реализация, которая авторизует всех пользователей. Этот пример не обеспечивает безопасность, и в нем предоставлена только Иллюстрация реализации интерфейса. Реализация интерфейса [Microsoft. Management. OData. кустомаусоризатион](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) должна переопределять два метода: [Microsoft. Management. OData. кустомаусоризатион. аусоризеусер](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) и [Microsoft. Management. OData. кустомаусоризатион. жетмембершипид](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId). В этом примере метод [Microsoft. Management. OData. кустомаусоризатион. аусоризеусер](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) всегда возвращает объект **System. Security. Principal. WindowsIdentity** , связанный с текущим пользователем.
 
 ```csharp
 namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPERLINK "VBScript:u(%227%22,30)" OData. HYPERLINK "VBScript:u(%227%22,36)" BasicPlugins
@@ -738,4 +738,4 @@ namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
 }
 ```
 
-Наконец, класс Рбаксистем реализует методы, которые выполняют проверку разрешений для пользователя и возвращают состояние авторизации для методов, определенных в реализации метода [Microsoft. Management. OData. кустомаусоризатион](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) . взаимодействия.
+Наконец, класс Рбаксистем реализует методы, которые выполняют проверку разрешений для пользователя и возвращают состояние авторизации для методов, определенных в реализации интерфейса [Microsoft. Management. OData. кустомаусоризатион](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) .

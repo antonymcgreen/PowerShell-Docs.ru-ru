@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1106829a-8ddc-454e-bbdd-ade15d4bffb4
 caps.latest.revision: 7
 ms.openlocfilehash: e9df44b17453e9f73f6eb388d9cbc8a69fce4ba2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366423"
 ---
 # <a name="windows-powershell-sample-code"></a>Пример кода Windows PowerShell
@@ -21,11 +21,11 @@ ms.locfileid: "72366423"
 
 > [!NOTE]
 > При установке Windows SDK создается каталог **Samples** , в котором все примеры Windows PowerShell становятся доступными. Типичный каталог установки — **C:\Program Files\Microsoft SDKs\Windows\v6.0**.
-> Запустите Windows PowerShell и введите **"CD самплес\сисмгмт\повершелл"** , чтобы перейти к каталогу примеров Windows PowerShell. В этом документе каталог примеров Windows PowerShell называется **\<PowerShell samples >** .
+> Запустите Windows PowerShell и введите **"CD самплес\сисмгмт\повершелл"** , чтобы перейти к каталогу примеров Windows PowerShell. В этом документе каталог примеров Windows PowerShell называется **\<примеров PowerShell >** .
 
 ## <a name="sample-code-listing"></a>Пример листинга кода
 
-|Пример кода|Описание|
+|Образец кода|Описание|
 |-----------------|-----------------|
 |[Пример кода AccessDbProviderSample01](./accessdbprovidersample01-code-sample.md)|Это поставщик, описанный в статье [Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md).|
 |[Пример кода AccessDbProviderSample02](./accessdbprovidersample02-code-sample.md)|Это поставщик, описанный в разделе [Создание поставщика диска Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).|
@@ -36,9 +36,9 @@ ms.locfileid: "72366423"
 |[Примеры кода GetProc01](./getproc01-code-samples.md)|Это базовый пример командлета `Get-Process`, описанный в разделе [Создание первого командлета](../cmdlet/creating-a-cmdlet-without-parameters.md).|
 |[Примеры кода GetProc02](./getproc02-code-samples.md)|Это пример командлета `Get-Process`, описанный в разделе [Добавление параметров, обрабатывающих входные данные командной строки](../cmdlet/adding-parameters-that-process-command-line-input.md).|
 |[Примеры кода GetProc03](./getproc03-code-samples.md)|Это пример командлета `Get-Process`, описанный в разделе [Добавление параметров, обрабатывающих входные данные конвейера](../cmdlet/adding-parameters-that-process-pipeline-input.md).|
-|[Примеры кода GetProc04](./getproc04-code-samples.md)|Это пример командлета `Get-Process`, описанный в статье Добавление незавершенных [отчетов об ошибках в командлет](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md).|
+|[Примеры кода GetProc04](./getproc04-code-samples.md)|Это пример командлета `Get-Process`, описанный в разделе Добавление незавершенных [отчетов об ошибках в командлет](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md).|
 |[Примеры кода GetProc05](./getproc05-code-samples.md)|Этот командлет `Get-Process` аналогичен командлету, описанному в статье Добавление незавершенных [отчетов об ошибках в командлет](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md).|
-|[Примеры кода StopProc01](./stopproc01-code-samples.md)|Это пример командлета `Stop-Process`, описанный в разделе [Создание командлета, изменяющего систему](../cmdlet/creating-a-cmdlet-that-modifies-the-system.md).|
+|[Примеры кода StopProc01](./stopproc01-code-samples.md)|Это пример командлета `Stop-Process`, описанный в разделе [Создание командлета, который изменяет систему](../cmdlet/creating-a-cmdlet-that-modifies-the-system.md).|
 |[Примеры кода StopProcessSample04](./stopprocesssample04-code-samples.md)|Это пример командлета `Stop-Process`, описанный в разделе [Добавление наборов параметров в командлет](../cmdlet/adding-parameter-sets-to-a-cmdlet.md).|
 |[Примеры кода Runspace01](./runspace01-code-samples.md)|Ниже приведены примеры кода для пространства выполнения, описанного в разделе [Создание консольного приложения, выполняющего указанную команду](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).|
 |[Примеры кода Runspace02](./runspace02-code-samples.md)|В этом примере используется класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) для синхронного выполнения командлета `Get-Process`.|

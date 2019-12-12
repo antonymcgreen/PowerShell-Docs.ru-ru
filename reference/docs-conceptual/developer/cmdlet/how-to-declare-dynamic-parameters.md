@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: db04f1df-def5-4456-8869-336024cda723
 caps.latest.revision: 8
 ms.openlocfilehash: a9c530cdc66302eb6b3d9d2b284eeb486c3b2ba9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364423"
 ---
 # <a name="how-to-declare-dynamic-parameters"></a>Как объявить динамические параметры
 
-В этом примере показано, как определить динамические параметры, добавляемые в командлет во время выполнения. В этом примере параметр `Department` добавляется в командлет каждый раз, когда пользователь задает параметр параметра `Employee`. Дополнительные сведения о динамических параметрах см. в разделе [динамические параметры командлета](./cmdlet-dynamic-parameters.md).
+В этом примере показано, как определить динамические параметры, добавляемые в командлет во время выполнения. В этом примере параметр `Department` добавляется в командлет каждый раз, когда пользователь указывает параметр параметра `Employee`. Дополнительные сведения о динамических параметрах см. в разделе [динамические параметры командлета](./cmdlet-dynamic-parameters.md).
 
 ## <a name="to-define-dynamic-parameters"></a>Определение динамических параметров
 
@@ -27,7 +27,7 @@ ms.locfileid: "72364423"
    public class SendGreetingCommand : Cmdlet, IDynamicParameters
    ```
 
-2. Вызовите метод [System. Management. Automation. идинамикпараметерс. жетдинамикпараметерс *](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) , который возвращает объект, в котором определены динамические параметры. В этом примере метод вызывается, когда указан параметр `Employee`.
+2. Вызовите метод [System. Management. Automation. идинамикпараметерс. жетдинамикпараметерс *](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) , который возвращает объект, в котором определены динамические параметры. В этом примере метод вызывается при указании параметра `Employee`.
 
    ```csharp
    public object GetDynamicParameters()
@@ -60,7 +60,7 @@ ms.locfileid: "72364423"
 
 ## <a name="example"></a>Пример
 
-В этом примере параметр `Department` добавляется каждый раз, когда пользователь задает параметр `Employee`. Параметр `Department` является необязательным параметром, а для указания допустимых аргументов используется атрибут Validate.
+В этом примере параметр `Department` добавляется каждый раз, когда пользователь задает параметр `Employee`. Параметр `Department` является необязательным параметром, и для указания допустимых аргументов используется атрибут Validate.
 
 ```csharp
 using System;

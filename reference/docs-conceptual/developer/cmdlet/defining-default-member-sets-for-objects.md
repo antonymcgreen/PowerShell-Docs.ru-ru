@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 77f94326-8ffe-4d40-bd2a-b79fb0b4a4e5
 caps.latest.revision: 8
 ms.openlocfilehash: 2d634e7638ec0e0117d65ca0b2d08e68f0068a03
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369783"
 ---
 # <a name="defining-default-member-sets-for-objects"></a>Определение наборов элементов по умолчанию для объектов
@@ -43,7 +43,7 @@ ms.locfileid: "72369783"
   </MemberSet>
 ```
 
-Следующие выходные данные показывают свойства по умолчанию, возвращаемые командлетом [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) . Для каждого объекта процесса возвращаются только свойства `Id`, `Handles`, `CPU` и `Name`.
+Следующие выходные данные показывают свойства по умолчанию, возвращаемые командлетом [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) . Для каждого объекта процесса возвращаются только свойства `Id`, `Handles`, `CPU`и `Name`.
 
 ```powershell
 Get-Process | format-list

@@ -9,28 +9,28 @@ ms.topic: article
 ms.assetid: 9abb63b8-6d02-4e24-9c0e-2d15a04e9051
 caps.latest.revision: 8
 ms.openlocfilehash: 7a36f548a3eccdf2c9cad04a8bfe28bf4e8d6dfd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367943"
 ---
 # <a name="wide-view-basic"></a>Широкое представление (базовое)
 
-В этом примере показано, как реализовать базовое представление, которое отображает [System. ServiceProcess. ServiceController? DisplayProperty = FullName](/dotnet/api/System.ServiceProcess.ServiceController) Objects, возвращенные командлетом `Get-Service`. Дополнительные сведения о компонентах широкого представления см. в разделе [Создание расширенного представления](./creating-a-wide-view.md).
+В этом примере показано, как реализовать базовое представление, которое отображает [System. ServiceProcess. ServiceController? DisplayProperty = FullName](/dotnet/api/System.ServiceProcess.ServiceController) , возвращаемое командлетом `Get-Service`. Дополнительные сведения о компонентах широкого представления см. в разделе [Создание расширенного представления](./creating-a-wide-view.md).
 
 ### <a name="to-load-this-formatting-file"></a>Загрузка этого файла форматирования
 
 1. Скопируйте XML-код из раздела "пример" этого раздела в текстовый файл.
 
-2. Сохраните текстовый файл. Не забудьте добавить в файл расширение `format.ps1xml`, чтобы обозначить его как файл форматирования.
+2. Сохраните текстовый файл. Не забудьте добавить расширение `format.ps1xml` в файл, чтобы обозначить его как файл форматирования.
 
 3. Откройте Windows PowerShell и выполните следующую команду, чтобы загрузить файл форматирования в текущий сеанс: `Update-formatdata -prependpath PathToFormattingFile`.
 
    > [!WARNING]
    > Этот файл форматирования определяет отображение объекта, который уже определен файлом форматирования Windows PowerShell. При выполнении командлета необходимо использовать параметр `prependPath`, и этот файл форматирования нельзя загрузить как модуль.
 
-## <a name="demonstrates"></a>Демонстрирующее
+## <a name="demonstrates"></a>Демонстрация
 
 В этом файле форматирования показаны следующие XML-элементы:
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
 ms.openlocfilehash: 98cac43698b3f537ee318cd2570b2174631665a7
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359633"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Создание рабочего процесса с помощью действий Windows PowerShell
@@ -47,7 +47,7 @@ ms.locfileid: "72359633"
 
    |Свойство|Применение|
    |--------------|-----------|
-   |**См**|"Win32_ComputerSystem"|
+   |**Class**|"Win32_ComputerSystem"|
    |**PSComputerName**|соответствовал|
    |**PSCredential**|мачинекред|
 
@@ -57,7 +57,7 @@ ms.locfileid: "72359633"
 
     |Свойство|Применение|
     |--------------|-----------|
-    |**ComputerName**|соответствовал|
+    |**ИмяКомпьютера**|соответствовал|
     |**домаинкредентиал**|домаинкред|
 
 11. Добавьте действие **рестарткомпутер** в последовательность **JoinDomain** после действия **аддкомпутер** .
@@ -66,9 +66,9 @@ ms.locfileid: "72359633"
 
     |Свойство|Применение|
     |--------------|-----------|
-    |**ComputerName**|соответствовал|
-    |**Записям**|мачинекред|
-    |**Предмет**|Microsoft. PowerShell. Commands. Ваитфорсервицетипес. PowerShell|
+    |**ИмяКомпьютера**|соответствовал|
+    |**Учетные данные**|мачинекред|
+    |**Для типа**|Microsoft. PowerShell. Commands. Ваитфорсервицетипес. PowerShell|
     |**Перевести**|True|
     |Wait|True|
     |PSComputerName|{""}|

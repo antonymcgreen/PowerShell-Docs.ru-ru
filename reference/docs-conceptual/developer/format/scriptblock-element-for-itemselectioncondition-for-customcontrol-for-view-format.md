@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 946cd2b5-ac37-4a13-bb49-29fbc70ec8d7
 caps.latest.revision: 6
 ms.openlocfilehash: 0c07ab0e5d04c4056a7e7215bfa55773bfccb41d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362073"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format"></a>Элемент ScriptBlock для элемента ItemSelectionCondition для элемента CustomControl для элемента View (формат)
 
-Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется элемент управления. Этот элемент используется при определении пользовательского представления элемента управления.
+Указывает скрипт, который запускает условие. При вычислении этого скрипта для `true`выполняется условие, и используется элемент управления. Этот элемент используется при определении пользовательского представления элемента управления.
 
 Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент ошибка customcontrol (Format) элемент Кустоментриес для ошибка customcontrol для элемента View (формат) Кустоментри для Кустоментриес для представления (Format) Кустомитем для Кустоментри для элемента ExpressionBinding представления (Format) для Кустомитем для ошибка customcontrol для элемента представления (Format) Итемселектионкондитион для привязки выражения ошибка customcontrol для представления (Format) элемент ScriptBlock для Итемселектионкондитион для Ошибка customcontrol для представления (формат)
 

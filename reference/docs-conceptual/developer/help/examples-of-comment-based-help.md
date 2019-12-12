@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
 caps.latest.revision: 4
 ms.openlocfilehash: 30e98bfcf06b1720005a73ee8294aeba7e1ae066
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367823"
 ---
 # <a name="examples-of-comment-based-help"></a>Примеры справки на основе комментариев
@@ -257,7 +257,7 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
 
 ## <a name="example-3-parameter-descriptions-in-a-param-statement"></a>Пример 3. описания параметров в операторе param
 
-В этом примере показано, как вставить параметердескриптионс в инструкцию `Param` функции или скрипта. Этот формат наиболее удобен, если описания параметров являются краткими.
+В этом примере показано, как вставить параметердескриптионс в оператор `Param` функции или скрипта. Этот формат наиболее удобен, если описания параметров являются краткими.
 
 ```powershell
 function Add-Extension
@@ -311,7 +311,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>Пример 5. перенаправление на другой раздел справки
 
-Следующий код является выдержкой из начала встроенной функции `Help` в Windows PowerShell, которая отображает один экран текста справки за раз. Поскольку раздел справки для командлета Get-Help описывает функцию Help, функция Help использует ключевые слова `.ForwardHelpTargetName` и `.ForwardHelpCategory` для перенаправления пользователя в раздел справки по командлету Get-Help.
+Следующий код является выдержкой из начала встроенной функции `Help` в Windows PowerShell, которая отображает один экран текста справки за раз. Поскольку раздел справки для командлета Get-Help описывает функцию Help, функция Help использует ключевые слова `.ForwardHelpTargetName` и `.ForwardHelpCategory`, чтобы перенаправить пользователя в раздел справки командлета Get-Help.
 
 ```powershell
 function help

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 715ea055-037b-46ad-b70f-87b3f5134403
 caps.latest.revision: 14
 ms.openlocfilehash: 2742be0389a1bf04af100a490a59c0d938165811
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367993"
 ---
 # <a name="widecontrol-element-format"></a>Элемент WideControl (формат)
@@ -55,7 +55,7 @@ ms.locfileid: "72367993"
 
 ## <a name="remarks"></a>Замечания
 
-При определении расширенного представления можно добавить элемент `AutoSize` или `ColumnNumber`, но нельзя добавить оба.
+При определении расширенного представления можно добавить элемент `AutoSize` или `ColumnNumber` но нельзя добавить оба.
 
 В большинстве случаев для каждого расширенного представления требуется только одно определение, но существует несколько определений, если вы хотите использовать одно и то же представление для отображения различных объектов .NET. В таких случаях можно указать отдельное определение для каждого объекта или набора объектов.
 
@@ -63,7 +63,7 @@ ms.locfileid: "72367993"
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан элемент `WideControl`, используемый для отображения свойства объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
+В следующем примере показан элемент `WideControl`, который используется для отображения свойства объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <View>

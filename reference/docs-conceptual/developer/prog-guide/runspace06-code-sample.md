@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d71f86d5-eb62-4b16-aa95-5fd3f314ffd3
 caps.latest.revision: 6
 ms.openlocfilehash: c3ae45ae9587bd130bbe9bb65ef47dc246f6e465
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417919"
 ---
 # <a name="runspace06-code-sample"></a>Примеры кода RunSpace06
@@ -24,11 +24,11 @@ ms.locfileid: "74417919"
 >
 > Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 [!code-csharp[Runspace06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/Runspace06/Runspace06.cs#L11-L85 "Runspace06.cs")]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

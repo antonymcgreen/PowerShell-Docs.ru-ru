@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
 caps.latest.revision: 13
 ms.openlocfilehash: 81f6c8cd75ccea9e711cd8f6d6daa6cca5a499a0
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366293"
 ---
 # <a name="windows-powershell-provider-overview"></a>Общие сведения о поставщиках Windows PowerShell
 
-Поставщик Windows PowerShell позволяет предоставлять любое хранилище данных как файловую систему, как если бы это был подключенный диск. Например, встроенный поставщик реестра позволяет перемещаться по реестру, как при переходе на диск `c` компьютера. Поставщик может также переопределить командлеты `Item` (например, `Get-Item`, `Set-Item` и т. д.) таким образом, чтобы данные в хранилище данных можно было рассматривать как файлы и каталоги, обрабатываемые при переходе по файловой системе. Дополнительные сведения о поставщиках и дисках, а также встроенных поставщиках в Windows PowerShell см. в разделе [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers).
+Поставщик Windows PowerShell позволяет предоставлять любое хранилище данных как файловую систему, как если бы это был подключенный диск. Например, встроенный поставщик реестра позволяет перемещаться по реестру, как при переходе на `c` диск компьютера. Поставщик может также переопределять командлеты `Item` (например, `Get-Item`, `Set-Item`и т. д.) таким образом, чтобы данные в хранилище данных можно было рассматривать как файлы и каталоги, обрабатываемые при переходе по файловой системе. Дополнительные сведения о поставщиках и дисках, а также встроенных поставщиках в Windows PowerShell см. в разделе [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers).
 
 ## <a name="providers-and-drives"></a>Поставщики и диски
 
@@ -51,7 +51,7 @@ ms.locfileid: "72366293"
 
 ### <a name="provider-internal-paths"></a>Поставщик — внутренние пути
 
-Чтобы предоставить командлету поставщика доступ к данным с помощью интерфейсов API, отличных от Windows PowerShell, поставщик Windows PowerShell должен поддерживать внутренний путь поставщика. Этот путь указывается после "::" в пути, уточненном поставщиком. Например, внутренний путь поставщика для файловой системы Windows PowerShell имеет значение `\\uncshare\abc\bar`.
+Чтобы предоставить командлету поставщика доступ к данным с помощью интерфейсов API, отличных от Windows PowerShell, поставщик Windows PowerShell должен поддерживать внутренний путь поставщика. Этот путь указывается после "::" в пути, уточненном поставщиком. Например, внутренний путь поставщика для файловой системы Windows PowerShell Provider — `\\uncshare\abc\bar`.
 
 ## <a name="overriding-cmdlet-parameters"></a>Переопределение параметров командлета
 
@@ -63,7 +63,7 @@ ms.locfileid: "72366293"
 
 ## <a name="provider-capabilities"></a>Возможности поставщика
 
-Перечисление [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) определяет ряд возможностей, поддерживаемых поставщиками. К ним относятся возможность использовать подстановочные знаки, элементы фильтра и транзакции поддержки. Чтобы указать возможности для поставщика, добавьте список значений перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) в сочетании с логической операцией `OR`, так как [ Свойство System. Management. Automation. Provider. Кмдлетпровидераттрибуте. Провидеркапабилитиес *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) (второй параметр атрибута) атрибута [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) для класс поставщика. Например, следующий атрибут указывает, что поставщик поддерживает [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess** и [System. Management. Automation. Provider. провидеркапабилитиес ](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0)Возможности **транзакций** .
+Перечисление [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) определяет ряд возможностей, поддерживаемых поставщиками. К ним относятся возможность использовать подстановочные знаки, элементы фильтра и транзакции поддержки. Чтобы указать возможности для поставщика, добавьте список значений перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) в сочетании с логической операцией `OR` как свойство [System. Management. Automation. Provider. кмдлетпровидераттрибуте. провидеркапабилитиес *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) (второй параметр атрибута) атрибута [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) для класса поставщика. Например, следующий атрибут указывает, что поставщик поддерживает возможности **транзакций** [System. Management. Automation. Provider. Провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess** и [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) .
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]

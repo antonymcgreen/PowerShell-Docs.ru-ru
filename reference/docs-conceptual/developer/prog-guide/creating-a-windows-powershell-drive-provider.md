@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
 ms.openlocfilehash: 2e3d97e224b06bdf36ac0bc1237911e029ea762d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366833"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Создание поставщика дисков Windows PowerShell
@@ -31,11 +31,11 @@ ms.locfileid: "72366833"
 
 [!code-csharp[AccessDBProviderSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L29-L30 "AccessDBProviderSample02.cs")]
 
-Обратите внимание, что в этом примере атрибут [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) указывает понятное имя поставщика и возможности Windows PowerShell, предоставляемые поставщиком в Windows. Среда выполнения PowerShell во время обработки команды. Возможные значения для возможностей поставщика определяются перечислением [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Этот поставщик дисков не поддерживает ни одну из этих возможностей.
+Обратите внимание, что в этом примере атрибут [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) указывает понятное имя поставщика и возможности Windows PowerShell, которые поставщик предоставляет среде выполнения Windows PowerShell во время обработки команды. Возможные значения для возможностей поставщика определяются перечислением [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Этот поставщик дисков не поддерживает ни одну из этих возможностей.
 
 ## <a name="defining-base-functionality"></a>Определение базовых функций
 
-Как описано в статье [проектирование поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md), класс [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) является производным от базового класса [System. Management. Automation. Provider. кмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) , который Определяет методы, необходимые для инициализации и деинициализации поставщика. Сведения о реализации функций для добавления сведений об инициализации для конкретного сеанса и освобождения ресурсов, используемых поставщиком, см. в разделе [Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md). Однако большинство поставщиков (включая описанный здесь поставщик) могут использовать реализацию этой функции по умолчанию, предоставляемую Windows PowerShell.
+Как описано в статье [проектирование поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md), класс [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) является производным от базового класса [System. Management. Automation. Provider. кмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) , который определяет методы, необходимые для инициализации и деинициализации поставщика. Сведения о реализации функций для добавления сведений об инициализации для конкретного сеанса и освобождения ресурсов, используемых поставщиком, см. в разделе [Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md). Однако большинство поставщиков (включая описанный здесь поставщик) могут использовать реализацию этой функции по умолчанию, предоставляемую Windows PowerShell.
 
 ## <a name="creating-drive-state-information"></a>Создание сведений о состоянии диска
 
@@ -81,7 +81,7 @@ ms.locfileid: "72366833"
 
 [!code-csharp[AccessDBProviderSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L91-L116 "AccessDBProviderSample02.cs")]
 
-Если диск можно удалить, метод должен вернуть сведения, передаваемые в метод, с помощью параметра `drive`. Если диск не может быть удален, метод должен записать исключение, а затем вернуть `null`. Если поставщик не переопределяет этот метод, реализация по умолчанию этого метода просто возвращает сведения о диске, переданные в качестве входных данных.
+Если диск можно удалить, метод должен вернуть сведения, передаваемые в метод, с помощью параметра `drive`. Если диск не может быть удален, метод должен записать исключение, а затем возвратить `null`. Если поставщик не переопределяет этот метод, реализация по умолчанию этого метода просто возвращает сведения о диске, переданные в качестве входных данных.
 
 ## <a name="initializing-default-drives"></a>Инициализация дисков по умолчанию
 
@@ -95,9 +95,9 @@ ms.locfileid: "72366833"
 
 #### <a name="things-to-remember-about-implementing-initializedefaultdrives"></a>Вопросы, связанные с реализацией Инитиализедефаултдривес
 
-Все поставщики дисков должны подключить корневой диск, чтобы помочь пользователю с его обнаружением. Корневой диск может иметь список расположений, которые служат корнями для других подключенных дисков. Например, поставщик Active Directory может создать диск, содержащий список контекстов именования, находящихся в атрибутах `namingContext` в корневой распределенной среде системы (DSE). Это помогает пользователям обнаружить точки подключения для других дисков.
+Все поставщики дисков должны подключить корневой диск, чтобы помочь пользователю с его обнаружением. Корневой диск может иметь список расположений, которые служат корнями для других подключенных дисков. Например, поставщик Active Directory может создать диск, содержащий список контекстов именования, находящихся в атрибутах `namingContext` в корневой распределенной системной среде (DSE). Это помогает пользователям обнаружить точки подключения для других дисков.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный пример кода см. в разделе [пример кода AccessDbProviderSample02](./accessdbprovidersample02-code-sample.md).
 
@@ -107,7 +107,7 @@ ms.locfileid: "72366833"
 
 1. Выполните командлет `Get-PSProvider`, чтобы получить список поставщиков, чтобы убедиться в наличии поставщика диска Акцессдб.
 
-   **PS > `Get-PSProvider`**
+   **`Get-PSProvider` > PS**
 
    Появляется следующий результат:
 

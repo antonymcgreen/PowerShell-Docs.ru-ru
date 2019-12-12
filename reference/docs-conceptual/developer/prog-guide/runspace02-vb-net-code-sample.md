@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 9bd9d599-faa7-4154-ac36-1f35ccf8e320
 caps.latest.revision: 7
 ms.openlocfilehash: 5ad28cfbc73628ba818e42b87128d8f4ad273bda
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366613"
 ---
 # <a name="runspace02-vbnet-code-sample"></a>Пример кода Runspace02 (VB.NET)
 
 Ниже приведен исходный код VB.NET для примера Runspace02. В этом примере используется класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) для синхронного выполнения командлета `Get-Process`. Windows Forms и привязка данных используются для вывода результатов в элементе управления DataGridView.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 ```vb
 Imports System

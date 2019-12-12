@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 53fe744a-485f-4c21-9623-1cb546372211
 caps.latest.revision: 9
 ms.openlocfilehash: 346a194c6b4c81aa61a6331cdb62ae380a17bb1e
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365693"
 ---
 # <a name="defining-default-methods-for-objects"></a>Определение методов по умолчанию для объектов
@@ -21,7 +21,7 @@ ms.locfileid: "72365693"
 XML-код, используемый для определения этих методов, описан в следующих разделах.
 
 > [!NOTE]
-> Примеры в следующих разделах относятся к файлу типов `Types.ps1xml` в каталоге установки Windows PowerShell (`$PSHOME`). Дополнительные сведения см. в разделе [About types. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
+> Примеры в следующих разделах взяты из файла типов `Types.ps1xml` в каталоге установки Windows PowerShell (`$PSHOME`). Дополнительные сведения см. в разделе [About types. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
 
 ## <a name="code-methods"></a>Методы кода
 

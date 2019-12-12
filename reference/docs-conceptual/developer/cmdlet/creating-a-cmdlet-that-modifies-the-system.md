@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
 ms.openlocfilehash: 8a65915b88a04e36e773853b903528a65fe11e99
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365763"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>Создание командлета, который изменяет систему
@@ -272,7 +272,7 @@ if (criticalProcess &&!force)
 
 Метод обработки входных данных командлета, который вносит изменения в систему, должен обеспечить способ остановки обработки входных данных. В случае с этим командлетом остановить-proc вызывается метод System. [Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метода System [. Diagnostics. Process. Kill *](/dotnet/api/System.Diagnostics.Process.Kill) . Поскольку параметр `PassThru` имеет значение `true`, [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) также вызывает [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) для отправки объекта процесса в конвейер.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный C# пример кода см. в разделе [StopProcessSample01 Sample](./stopprocesssample01-sample.md).
 
@@ -294,7 +294,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -308,7 +308,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc -Name notepad
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     Confirm
@@ -323,7 +323,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc -Name Winlogon
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```output
     Confirm
@@ -341,7 +341,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc -Name winlogon -Force
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```output
     Confirm

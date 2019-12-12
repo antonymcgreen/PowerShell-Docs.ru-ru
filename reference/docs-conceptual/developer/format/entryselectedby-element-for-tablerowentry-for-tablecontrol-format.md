@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 49623fcf-1238-4d20-a7ce-238d47d9d565
 caps.latest.revision: 15
 ms.openlocfilehash: 9302bfed0324773cb98d698acdcf608f34ee19c1
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363343"
 ---
 # <a name="entryselectedby-element-for-tablerowentry--for-tablecontrol-format"></a>Элемент EntrySelectedBy для элемента TableRowEntry для элемента TableControl (формат)
@@ -57,13 +57,13 @@ ms.locfileid: "72363343"
 
 Необходимо указать по крайней мере один тип, набор выбора или условие выбора для определения табличного представления. Максимальное количество дочерних элементов, которое можно использовать, не ограничено.
 
-Условия выбора используются для определения условия, которое должно существовать, чтобы использовать определение, например, если объект имеет определенное свойство или значение конкретного свойства или скрипта равно `true`. Дополнительные сведения об условиях выбора см. в разделе [Определение условий для, когда используется запись или элемент представления](./defining-conditions-for-displaying-data.md).
+Условия выбора используются для определения условия, которое должно существовать, чтобы использовать определение, например, если объект имеет определенное свойство или значение конкретного свойства или скрипта оценивается как `true`. Дополнительные сведения об условиях выбора см. в разделе [Определение условий для, когда используется запись или элемент представления](./defining-conditions-for-displaying-data.md).
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан элемент `TableRowEntry`, используемый для отображения свойств объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
+В следующем примере показан элемент `TableRowEntry`, который используется для отображения свойств объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <TableRowEntry>

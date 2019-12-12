@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 31298f1b-8b76-4637-8406-863f5ad27e53
 caps.latest.revision: 8
 ms.openlocfilehash: 91b56a78f878e0d9c0fc11e4b882399bdfb108ac
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369373"
 ---
 # <a name="stopprocesssample03-sample"></a>Пример командлета StopProcessSample03
 
-В этом примере показано, как написать командлет, параметры которого имеют псевдонимы, а параметры которых поддерживают символы-шаблоны. Этот командлет похож на командлет `Stop-Process`, предоставляемый Windows PowerShell 2,0.
+В этом примере показано, как написать командлет, параметры которого имеют псевдонимы, а параметры которых поддерживают символы-шаблоны. Этот командлет аналогичен командлету `Stop-Process`, предоставленному Windows PowerShell 2,0.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 
@@ -25,7 +25,7 @@ ms.locfileid: "72369373"
 
 2. Дважды щелкните значок файла решения (SLN). Откроется пример проекта в Microsoft Visual Studio.
 
-3. В меню **Сборка** выберите пункт **построить решение**.
+3. В меню **Построение** выберите команду **Построить решение**.
 
     Библиотека для образца будет построена в папках \bin или \bin\Debug по умолчанию.
 
@@ -51,7 +51,7 @@ ms.locfileid: "72369373"
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрирующее
+## <a name="demonstrates"></a>Демонстрация
 
 В этом образце демонстрируется следующее.
 

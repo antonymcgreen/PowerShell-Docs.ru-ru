@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d0d70864-33fb-49ce-8054-c41ba19fd554
 caps.latest.revision: 11
 ms.openlocfilehash: 32f45702cc0d28e6652ef61ebdbe085291013408
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369983"
 ---
 # <a name="cmdlet-aliases"></a>Псевдонимы командлета
@@ -27,7 +27,7 @@ ms.locfileid: "72369983"
 
 - Прежде чем приступать к назначению псевдонимов, запустите Windows PowerShell, а затем выполните командлет [Get-Alias](/powershell/module/Microsoft.PowerShell.Utility/Get-Alias) , чтобы просмотреть уже используемые псевдонимы.
 
-- Включите префикс псевдонима, который ссылается на глагол имени командлета, и суффикс псевдонима, который ссылается на существительное с именем командлета. Например, псевдоним для командлета `Import-Module` — IPMO. Список всех команд и их псевдонимов см. в разделе [команды командлета](./approved-verbs-for-windows-powershell-commands.md).
+- Включите префикс псевдонима, который ссылается на глагол имени командлета, и суффикс псевдонима, который ссылается на существительное с именем командлета. Например, псевдонимом для командлета `Import-Module` является IPMO. Список всех команд и их псевдонимов см. в разделе [команды командлета](./approved-verbs-for-windows-powershell-commands.md).
 
 - Для командлетов, имеющих одну и ту же команду, следует включить один и тот же префикс псевдонима. Например, псевдонимы для всех командлетов Windows PowerShell, в имени которых есть команда Get, используют префикс g.
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a252e0ec-d456-42d7-bd49-d6b8bc57f388
 caps.latest.revision: 11
 ms.openlocfilehash: 9c9d50c880f843e21621e5735c800e3afb48b2ad
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369723"
 ---
 # <a name="extending-output-objects"></a>Расширение объектов выходных данных
@@ -21,7 +21,7 @@ ms.locfileid: "72369723"
 
 ## <a name="extending-the-systemarray-object"></a>Расширение объекта System. Array
 
-В следующем примере показано, как Windows PowerShell расширяет объект [System. Array](/dotnet/api/System.Array) в файле Types. ps1xml. По умолчанию объекты [System. Array](/dotnet/api/System.Array) имеют свойство `Length`, которое содержит количество объектов в массиве. Однако, поскольку имя "Length" явно не описывает свойство, Windows PowerShell добавляет свойство псевдонима `Count`, которое отображает то же значение, что и свойство `Length`. Следующий XML-код добавляет свойство `Count` в тип [System. Array](/dotnet/api/System.Array) .
+В следующем примере показано, как Windows PowerShell расширяет объект [System. Array](/dotnet/api/System.Array) в файле Types. ps1xml. По умолчанию объекты [System. Array](/dotnet/api/System.Array) имеют свойство `Length`, в котором указано количество объектов в массиве. Однако, поскольку имя "Length" явно не описывает свойство, Windows PowerShell добавляет свойство псевдонима `Count`, которое отображает то же значение, что и свойство `Length`. Следующий XML-код добавляет свойство `Count` в тип [System. Array](/dotnet/api/System.Array) .
 
 ```xml
 <Type>

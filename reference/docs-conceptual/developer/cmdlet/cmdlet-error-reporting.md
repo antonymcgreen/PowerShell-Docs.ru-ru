@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
 caps.latest.revision: 8
 ms.openlocfilehash: 5dfec318438ca139518c596011ac5e56445738ea
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365923"
 ---
 # <a name="cmdlet-error-reporting"></a>Отчеты об ошибках командлетов
@@ -43,7 +43,7 @@ ms.locfileid: "72365923"
 
 ## <a name="reporting-nonterminating-errors"></a>Сообщает о неустранимых ошибках
 
-Отчет о незавершающей ошибке всегда должен быть выполнен в реализации командлета метода [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , метода [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) или метод [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Эти типы ошибок выводятся путем вызова метода [System. Management. Automation. командлета. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) , который, в свою очередь, отправляет запись об ошибке в поток ошибок.
+Отчеты о незавершающей ошибке всегда должны быть выполнены в реализации командлета метода [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , метода [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) или метода [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Эти типы ошибок выводятся путем вызова метода [System. Management. Automation. командлета. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) , который, в свою очередь, отправляет запись об ошибке в поток ошибок.
 
 ## <a name="reporting-terminating-errors"></a>Создание отчетов о прекращении ошибок
 
@@ -82,7 +82,7 @@ PowerShell объединяет этот идентификатор с иден�
 
 Описание доступных категорий ошибок см. в описании перечисления [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) . В общем случае следует избегать использования **ошибок**, **ундефинедеррор**и **Общая ошибка** везде, где это возможно.
 
-Пользователи могут просматривать ошибки на основе категории, когда они устанавливают `$ErrorView` в **категоривиев**.
+Пользователи могут просматривать ошибки на основе категории, если они задают `$ErrorView` **категоривиев**.
 
 ## <a name="see-also"></a>См. также статью
 

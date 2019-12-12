@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9ab83bcb-2d31-4744-a8bc-2ee22e48fc1b
 caps.latest.revision: 17
 ms.openlocfilehash: 34918f32a86718ce82987c029cb4dfa09b4359bd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367483"
 ---
 # <a name="host02-sample"></a>Пример Host02
@@ -23,9 +23,9 @@ ms.locfileid: "72367483"
 
  Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрирующее
+## <a name="demonstrates"></a>Демонстрация
 
-- Создание пользовательского узла, классы которого являются производными от класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , класса [System. Management. Automation. host. пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) и [ Класс System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
+- Создание пользовательского узла, классы которого являются производными от класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , класса [System. Management. Automation. host. Пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) и класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
 
 - Создание пространства выполнения, которое использует пользовательский узел.
 

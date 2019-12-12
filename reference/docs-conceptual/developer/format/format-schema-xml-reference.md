@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ac6f7aaa-d0cc-4c7b-a341-85e736174579
 caps.latest.revision: 21
 ms.openlocfilehash: 437b3d6bb62fdd3a74f3392ec71df360c01a1974
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363723"
 ---
 # <a name="format-schema-xml-reference"></a>Ссылка на схему формата XML
@@ -263,33 +263,33 @@ ms.locfileid: "72363723"
 
 [Элемент ScriptBlock для GroupBy (Format)](./scriptblock-element-for-groupby-format.md) Задает скрипт, запускающий новую группу при изменении ее значения.
 
-[Элемент ScriptBlock для Итемселектионкондитион элементов управления в конфигурации (Format)](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется элемент управления. Этот элемент используется при определении общего элемента управления, который может использоваться всеми представлениями в файле форматирования.
+[Элемент ScriptBlock для Итемселектионкондитион элементов управления в конфигурации (Format)](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта для `true`выполняется условие, и используется элемент управления. Этот элемент используется при определении общего элемента управления, который может использоваться всеми представлениями в файле форматирования.
 
-[Элемент ScriptBlock для Итемселектионкондитион элементов управления для представления (Format)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется элемент управления. Этот элемент используется при определении элементов управления, которые могут использоваться представлением.
+[Элемент ScriptBlock для Итемселектионкондитион элементов управления для представления (Format)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта для `true`выполняется условие, и используется элемент управления. Этот элемент используется при определении элементов управления, которые могут использоваться представлением.
 
-[Элемент ScriptBlock для итемселектионкондитион для ошибка customcontrol для представления (Format)](./scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется элемент управления. Этот элемент используется при определении пользовательского представления элемента управления.
+[Элемент ScriptBlock для итемселектионкондитион для ошибка customcontrol для представления (Format)](./scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта для `true`выполняется условие, и используется элемент управления. Этот элемент используется при определении пользовательского представления элемента управления.
 
-[Элемент ScriptBlock для итемселектионкондитион для GroupBy (Format)](./scriptblock-element-for-itemselectioncondition-for-groupby-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется элемент управления. Этот элемент используется при определении того, как отображается новая группа объектов.
+[Элемент ScriptBlock для итемселектионкондитион для GroupBy (Format)](./scriptblock-element-for-itemselectioncondition-for-groupby-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта для `true`выполняется условие, и используется элемент управления. Этот элемент используется при определении того, как отображается новая группа объектов.
 
-[Элемент ScriptBlock для итемселектионкондитион для ListControl (Format)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется элемент списка. Этот элемент используется при определении представления списка.
+[Элемент ScriptBlock для итемселектионкондитион для ListControl (Format)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется элемент списка. Этот элемент используется при определении представления списка.
 
 [Элемент ScriptBlock для ListItem (Format)](./scriptblock-element-for-listitem-for-listcontrol-format.md) Указывает скрипт, значение которого отображается в строке списка.
 
-[Элемент ScriptBlock для Селектионкондитион элементов управления в конфигурации (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется определение. Этот элемент используется при определении общего элемента управления, который может использоваться всеми представлениями в файле форматирования.
+[Элемент ScriptBlock для Селектионкондитион элементов управления в конфигурации (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется определение. Этот элемент используется при определении общего элемента управления, который может использоваться всеми представлениями в файле форматирования.
 
-[Элемент ScriptBlock для Селектионкондитион элементов управления для представления (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется определение. Этот элемент используется при определении элементов управления, которые могут использоваться представлением.
+[Элемент ScriptBlock для Селектионкондитион элементов управления для представления (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется определение. Этот элемент используется при определении элементов управления, которые могут использоваться представлением.
 
-[Элемент ScriptBlock для селектионкондитион для ошибка customcontrol для представления (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется определение. Этот элемент используется при определении пользовательского представления элемента управления.
+[Элемент ScriptBlock для селектионкондитион для ошибка customcontrol для представления (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется определение. Этот элемент используется при определении пользовательского представления элемента управления.
 
 [Элемент ScriptBlock для селектионкондитион для ентриселектедби для енумерабликспансион (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md) Указывает скрипт, который запускает условие.
 
-[Элемент ScriptBlock для селектионкондитион для GroupBy (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется определение. Этот элемент используется при определении того, как отображается новая группа объектов.
+[Элемент ScriptBlock для селектионкондитион для GroupBy (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется определение. Этот элемент используется при определении того, как отображается новая группа объектов.
 
-[Элемент ScriptBlock для селектионкондитион для ентриселектедби для листентри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется запись списка.
+[Элемент ScriptBlock для селектионкондитион для ентриселектедби для листентри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется запись списка.
 
-[Элемент ScriptBlock для селектионкондитион для ентриселектедби для таблеровентри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md) Указывает блок скрипта, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется запись таблицы.
+[Элемент ScriptBlock для селектионкондитион для ентриселектедби для таблеровентри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md) Указывает блок скрипта, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется запись таблицы.
 
-[Элемент ScriptBlock для селектионкондитион для ентриселектедби для видинтри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md) Указывает скрипт, который запускает условие. Когда этот скрипт оценивается как `true`, условие выполняется, и используется расширенное определение записи.
+[Элемент ScriptBlock для селектионкондитион для ентриселектедби для видинтри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md) Указывает скрипт, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется расширенное определение записи.
 
 [Элемент ScriptBlock для таблеколумнитем (Format)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md) Задает скрипт, значение которого отображается в столбце строки.
 

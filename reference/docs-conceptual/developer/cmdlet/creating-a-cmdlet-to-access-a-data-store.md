@@ -7,10 +7,10 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.openlocfilehash: 3096965ba9f99f70994f2fb5b180cc58691b04f8
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74415711"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Создание командлета для доступа к хранилищу данных
@@ -375,7 +375,7 @@ protected override void ProcessRecord()
 
 В этом примере командлет Select-Str использует свойство [System. Management. Automation. провидеринтринсикс. Content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) для предоставления содержимого для просмотра. Затем он может вызвать метод [System. Management. Automation. контенткмдлетпровидеринтринсикс. DataReader *](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) , передав необходимый путь Windows PowerShell.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 В следующем коде показана реализация этой версии командлета Select-str. Обратите внимание, что этот код включает класс командлета, закрытые методы, используемые командлетом, и код оснастки Windows PowerShell, используемый для регистрации командлета. Дополнительные сведения о регистрации командлета см. [в разделе Создание командлета](#defining-the-cmdlet-class).
 
@@ -1100,7 +1100,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     select-str -Path "notes" -Pattern ".NET" -SimpleMatch=$false
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     IgnoreCase   : True
@@ -1121,7 +1121,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     select-str -Path notes -Pattern "over*" -SimpleMatch -CaseSensitive:$false
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     IgnoreCase   : True
@@ -1142,7 +1142,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     select-str -Path notes -Pattern "\([A-Za-z:blank:]" -SimpleMatch:$false
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     IgnoreCase   : True
@@ -1163,7 +1163,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     select-str -Path notes -Pattern Parameter -CaseSensitive
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     IgnoreCase   : False
@@ -1184,7 +1184,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     select-str -Path * -Pattern "[0-9]"
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     IgnoreCase   : True
@@ -1200,7 +1200,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     select-str -Path "SelectStrCommandSample.cs" -Script { if ($args[0] -cmatch "Pos"){ return $true } return $false }
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     IgnoreCase   : True
@@ -1210,7 +1210,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     Pattern      :
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание командлета Windows PowerShell](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 

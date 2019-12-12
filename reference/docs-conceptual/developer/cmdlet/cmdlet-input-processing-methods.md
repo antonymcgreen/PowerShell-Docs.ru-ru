@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: b0bb8172-c9fa-454b-9f1b-57c3fe60671b
 caps.latest.revision: 12
 ms.openlocfilehash: a28c8d3df19bc72bf338d6abc4e02768c5097209
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369873"
 ---
 # <a name="cmdlet-input-processing-methods"></a>Методы обработки входных данных командлета
@@ -86,6 +86,6 @@ protected override void EndProcessing()
 
 [Руководство по Селектстр](selectstr-tutorial.md)
 
-[System. IDisposable](/dotnet/api/System.IDisposable)
+[System.IDisposable](/dotnet/api/System.IDisposable)
 
 [Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)

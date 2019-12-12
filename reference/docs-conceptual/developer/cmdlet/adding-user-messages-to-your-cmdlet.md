@@ -32,10 +32,10 @@ helpviewer_keywords:
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
 ms.openlocfilehash: 9079f40e75dae86c22fd8b4f8a45d501c6125498
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416022"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Добавление пользовательских сообщений в командлет
@@ -206,7 +206,7 @@ pr.RecordType = ProgressRecordType.Completed;
 WriteProgress(pr);
 ```
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный C# пример кода см. в разделе [StopProcessSample02 Sample](./stopprocesssample02-sample.md).
 
@@ -228,7 +228,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc -Name notepad -Verbose -Debug
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     VERBOSE: Attempting to stop process " notepad ".
@@ -245,7 +245,7 @@ Windows PowerShell передает сведения между командле
     VERBOSE: Stopped process "notepad", pid 5584.
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md)
 

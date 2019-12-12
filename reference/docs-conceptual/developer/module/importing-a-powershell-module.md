@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 697791b3-2135-4a39-b9d7-8566ed67acf2
 caps.latest.revision: 13
 ms.openlocfilehash: bb5d036e5658c365a4fafa2cac05c0bba9f87019
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360703"
 ---
 # <a name="importing-a-powershell-module"></a>Импорт модуля PowerShell
@@ -31,25 +31,25 @@ ms.locfileid: "72360703"
 Import-Module myModule
 ```
 
-При условии, что myModule был размещен в `PSModulePath`, PowerShell загрузит myModule в активную память. Если она не была найдена по пути `PSModulePath`, вы по-прежнему можете явно указать PowerShell, где его найти:
+При условии, что служба myModule была размещена в `PSModulePath`, PowerShell загрузит myModule в активную память. Если она не была найдена по пути `PSModulePath`, вы по-прежнему можете явно указать PowerShell, где его найти:
 
 ```powershell
 Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 ```
 
-Можно также использовать параметр-Verbose для выяснения того, что экспортируется из модуля и что импортируется в активную память. Экспорт и импорт ограничивают содержимое, доступное пользователю. разница заключается в том, кто управляет видимостью. По сути, экспорты управляются кодом внутри модуля. Напротив, импорты управляются вызовом `Import-Module`. Дополнительные сведения см. в разделе **запрещение импортируемых элементов**ниже.
+Можно также использовать параметр-Verbose для выяснения того, что экспортируется из модуля и что импортируется в активную память. Экспорт и импорт ограничивают содержимое, доступное пользователю. разница заключается в том, кто управляет видимостью. По сути, экспорты управляются кодом внутри модуля. В отличие от этого, управление импортом осуществляется с помощью вызова `Import-Module`. Дополнительные сведения см. в разделе **запрещение импортируемых элементов**ниже.
 
 ## <a name="implicitly-importing-a-module-powershell-30"></a>Неявный импорт модуля (PowerShell 3,0)
 
-Начиная с Windows PowerShell 3,0, модули импортируются автоматически при использовании в команде любого командлета или функции. Эта функция работает для любого модуля в каталоге, который входит в значение переменной среды **PSModulePath** . Если вы не сохраните модуль по действительному пути, вы по-прежнему можете загрузить их с помощью явного параметра [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) , описанного выше.
+Начиная с Windows PowerShell 3.0, модули импортируются автоматически, когда любой командлет или любая функция из модуля используются в команде. Эта функция работает для любого модуля в каталоге, который входит в значение переменной среды **PSModulePath** . Если вы не сохраните модуль по действительному пути, вы по-прежнему можете загрузить их с помощью явного параметра [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) , описанного выше.
 
 Следующие действия активируют автоматический импорт модуля, также известный как "Автоматическая загрузка модуля".
 
-- Использование командлета в команде. Например, при вводе `Get-ExecutionPolicy` выполняется импорт модуля Microsoft. PowerShell. Security, содержащего командлет `Get-ExecutionPolicy`.
+- Использование командлета в команде. Например, при вводе `Get-ExecutionPolicy` импортируется модуль Microsoft. PowerShell. Security, содержащий командлет `Get-ExecutionPolicy`.
 
-- Использование командлета [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) для получения команды.  Например, при вводе `Get-Command Get-JobTrigger` выполняется импорт модуля **PSScheduledJob** , содержащего командлет `Get-JobTrigger`. Команда `Get-Command`, которая включает подстановочные знаки, считается обнаружением и не инициирует импорт модуля.
+- Использование командлета [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) для получения команды.  Например, при вводе `Get-Command Get-JobTrigger` импортируется модуль **PSScheduledJob** , содержащий командлет `Get-JobTrigger`. Команда `Get-Command`, содержащая подстановочные знаки, считается обнаружением и не инициирует импорт модуля.
 
-- Использование командлета [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) для получения справки по командлету. Например, при вводе `Get-Help Get-WinEvent` выполняется импорт модуля Microsoft. PowerShell. Diagnostics, содержащего командлет `Get-WinEvent`.
+- Использование командлета [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) для получения справки по командлету. Например, при вводе `Get-Help Get-WinEvent` импортируется модуль Microsoft. PowerShell. Diagnostics, содержащий командлет `Get-WinEvent`.
 
 Для поддержки автоматического импорта модулей командлет `Get-Command` получает все командлеты и функции во всех установленных модулях, даже если модуль не импортируется в сеанс. Дополнительные сведения см. в разделе справки по командлету [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) .
 
@@ -62,7 +62,7 @@ Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 > [!WARNING]
 > Если имя экспортированного элемента использует неутвержденную команду или если имя члена использует ограниченные символы, то при выполнении командлета [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) отображается предупреждение.
 
-По умолчанию командлет [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) не возвращает ни одного объекта в конвейер. Однако командлет поддерживает параметр `PassThru`, который можно использовать для возврата объекта [System. Management. Automation. PSModuleInfo](/dotnet/api/System.Management.Automation.PSModuleInfo) для каждого импортируемого модуля. Для отправки выходных данных на узел Пользователи должны запустить командлет [Write-Host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) .
+По умолчанию командлет [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) не возвращает ни одного объекта в конвейер. Однако командлет поддерживает `PassThru` параметр, который можно использовать для возврата объекта [System. Management. Automation. PSModuleInfo](/dotnet/api/System.Management.Automation.PSModuleInfo) для каждого импортируемого модуля. Для отправки выходных данных на узел Пользователи должны запустить командлет [Write-Host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) .
 
 ## <a name="restricting--the-members-that-are-imported"></a>Ограничьте импортируемые элементы
 
@@ -70,11 +70,11 @@ Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 
 - `Function`: этот параметр разрешает экспортируемые функции. (Если вы используете манифест модуля, см. раздел FunctionsToExport Key.)
 
-- `Cmdlet`: этот параметр позволяет ограничивать экспортируемые командлеты (если вы используете манифест модуля, см. раздел CmdletsToExport).
+- `Cmdlet`. Этот параметр позволяет ограничивать экспортируемые командлеты (если вы используете манифест модуля, см. раздел CmdletsToExport).
 
-- `Variable`: этот параметр позволяет ограничивать экспортируемые переменные (если используется манифест модуля, см. раздел Вариаблестоекспорт).
+- `Variable`: этот параметр позволяет ограничивать экспортируемые переменные (если вы используете манифест модуля, см. раздел Вариаблестоекспорт).
 
-- `Alias`: этот параметр позволяет ограничивать экспортируемые псевдонимы (если вы используете манифест модуля, см. раздел Алиасестоекспорт).
+- `Alias`. Этот параметр позволяет ограничивать экспортируемые псевдонимы (если вы используете манифест модуля, см. раздел Алиасестоекспорт).
 
 ## <a name="see-also"></a>См. также:
 

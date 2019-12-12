@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: eb568878-f63e-4561-98e2-16ee2ac7559d
 caps.latest.revision: 8
 ms.openlocfilehash: e97e9ddb1bf81ba66e5f3cedddd22e3a861ce228
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363623"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>Как создать файл форматирования (.format.ps1xml)
@@ -36,7 +36,7 @@ ms.locfileid: "72363623"
    </Configuration>
    ```
 
-   - Теги > \<Configuration > \</Configuration определяют корневой узел `Configuration`. Все дополнительные XML-теги будут заключены в этот узел.
+   - \<Конфигурация >\</Настройка > Теги определяют корневой узел `Configuration`. Все дополнительные XML-теги будут заключены в этот узел.
 
    - <ViewDefinitions></ViewDefinitions> Теги определяют узел `ViewDefinitions`. Все представления определяются в этом узле.
 

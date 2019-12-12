@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5ae707db-52e0-408c-87fa-b35c42eaaab1
 caps.latest.revision: 5
 ms.openlocfilehash: 9140d03e046def2fbbcc2a842b9ea1b9e1fa2985
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367623"
 ---
 # <a name="creating-an-initialsessionstate"></a>Создание InitialSessionState
@@ -25,7 +25,7 @@ InitialSessionState указывает характеристики простр
 ## <a name="create-a-default-initialsessionstate"></a>Создание InitialSessionState по умолчанию
 
 Методы [CreateDefault](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault) и [CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) класса **InitialSessionState** можно использовать для создания объекта **InitialSessionState** .
-Метод **CreateDefault** создает объект **InitialSessionState** со всеми загруженными встроенными командами, а метод **CreateDefault2** загружает только команды, необходимые для размещения PowerShell (команды из Модуль Microsoft. PowerShell. Core).
+Метод **CreateDefault** создает объект **InitialSessionState** со всеми загруженными встроенными командами, а метод **CreateDefault2** загружает только команды, необходимые для размещения PowerShell (команды из модуля Microsoft. PowerShell. Core).
 
 Если вы хотите дополнительно ограничить команды, доступные в ведущем приложении, необходимо создать ограниченное пространство выполнения.
 Дополнительные сведения см. [в разделе Создание ограниченного пространства выполнения](creating-a-constrained-runspace.md).

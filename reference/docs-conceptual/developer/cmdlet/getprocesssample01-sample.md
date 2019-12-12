@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7b48bf80-cbf0-4cb1-8d5b-3b8d06196598
 caps.latest.revision: 10
 ms.openlocfilehash: 00190c7350cb0f1cfc5c389b56e48e9397480446
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369733"
 ---
 # <a name="getprocesssample01-sample"></a>Пример командлета GetProcessSample01
@@ -25,7 +25,7 @@ ms.locfileid: "72369733"
 
 2. Дважды щелкните значок файла решения (SLN). Откроется пример проекта в Microsoft Visual Studio.
 
-3. В меню **Сборка** выберите пункт **построить решение**.
+3. В меню **Построение** выберите команду **Построить решение**.
 
   Библиотека для образца будет построена в папках \bin или \bin\Debug по умолчанию.
 
@@ -68,7 +68,7 @@ ms.locfileid: "72369733"
 
 Для работы с этим образцом требуется Windows PowerShell 1,0 или более поздней версии.
 
-## <a name="demonstrates"></a>Демонстрирующее
+## <a name="demonstrates"></a>Демонстрация
 
 В этом образце демонстрируется следующее.
 

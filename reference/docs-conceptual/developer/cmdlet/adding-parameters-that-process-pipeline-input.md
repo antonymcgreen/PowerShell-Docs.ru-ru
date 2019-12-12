@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
 ms.openlocfilehash: 9ecb73a4138a5853fa5fb378874da2d81c5dbdba
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364603"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Добавление параметров для обработки входных данных конвейера
@@ -68,16 +68,16 @@ End Property
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesgetproc03#GetProc03VBNameParameter](Msh_samplesgetproc03#GetProc03VBNameParameter)]  -->
 
-В предыдущем объявлении ключевому слову `ValueFromPipeline` присваивается значение `true`, чтобы среда выполнения Windows PowerShell привязать параметр к входящему объекту, если объект имеет тот же тип, что и параметр, или, если он может быть приведен к тому же типу. Для ключевого слова `ValueFromPipelineByPropertyName` также задано значение `true`, чтобы среда выполнения Windows PowerShell проверит входящий объект для свойства `Name`. Если входящий объект имеет такое свойство, среда выполнения привязывает параметр `Name` к свойству `Name` входящего объекта.
+В предыдущем объявлении ключевому слову `ValueFromPipeline` присваивается значение `true`, чтобы среда выполнения Windows PowerShell привязать параметр к входящему объекту, если объект имеет тот же тип, что и параметр, или, если он может быть приведен к тому же типу. Ключевое слово `ValueFromPipelineByPropertyName` также имеет значение `true`, чтобы среда выполнения Windows PowerShell проверит входящий объект на наличие свойства `Name`. Если входящий объект имеет такое свойство, среда выполнения привязывает параметр `Name` к свойству `Name` входящего объекта.
 
 > [!NOTE]
-> Установка ключевого слова атрибута `ValueFromPipeline` для параметра имеет приоритет над параметром для ключевого слова `ValueFromPipelineByPropertyName`.
+> Значение ключевого слова `ValueFromPipeline` атрибута для параметра имеет приоритет над параметром ключевого слова `ValueFromPipelineByPropertyName`.
 
 ## <a name="overriding-an-input-processing-method"></a>Переопределение метода обработки входных данных
 
 Если командлет обрабатывает входные данные конвейера, необходимо переопределить соответствующие методы обработки входных данных. Основные методы обработки ввода представлены при [создании первого командлета](./creating-a-cmdlet-without-parameters.md).
 
-Этот командлет Get-proc переопределяет метод [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) для управления входными параметрами `Name`, предоставленными пользователем или сценарием. Этот метод получит процессы для каждого запрошенного имени процесса или всех процессов, если имя не указано. Обратите внимание, что в [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)вызов [WriteObject (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject?view=pscore-6.2.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) является механизмом вывода для отправки выходных объектов в конвейер. Второй параметр этого вызова, `enumerateCollection`, имеет значение `true`, чтобы сообщить среде выполнения Windows PowerShell о необходимости перечислить массив объектов процессов, а также написать один процесс в командной строке.
+Этот командлет Get-proc переопределяет метод [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) для управления входными параметрами `Name`, предоставленными пользователем или сценарием. Этот метод получит процессы для каждого запрошенного имени процесса или всех процессов, если имя не указано. Обратите внимание, что в [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)вызов [WriteObject (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject?view=pscore-6.2.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) является механизмом вывода для отправки выходных объектов в конвейер. Второй параметр этого вызова, `enumerateCollection`, имеет значение `true`, чтобы сообщить среде выполнения Windows PowerShell о необходимости перечисления массива объектов процессов и записывать один процесс в командную строку.
 
 ```csharp
 protected override void ProcessRecord()
@@ -124,7 +124,7 @@ Protected Overrides Sub ProcessRecord()
 End Sub 'ProcessRecord
 ```
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный C# пример кода см. в разделе [GetProcessSample03 Sample](./getprocesssample03-sample.md).
 
@@ -146,7 +146,7 @@ Windows PowerShell передает сведения между командле
     PS> type ProcessNames | get-proc
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
@@ -157,13 +157,13 @@ Windows PowerShell передает сведения между командле
        3927      62  71836   26984    467  195.19  1848  OUTLOOK
     ```
 
-- Введите следующие строки, чтобы получить объекты процесса со свойством `Name` из процессов, именуемых IEXPLORE. В этом примере используется командлет `Get-Process` (предоставленный Windows PowerShell) в качестве вышестоящей команды для получения процессов IEXPLORE.
+- Введите следующие строки, чтобы получить объекты процесса со свойством `Name` из процессов с именем "IEXPLORE". В этом примере используется командлет `Get-Process` (предоставляемый Windows PowerShell) в качестве вышестоящей команды для получения процессов "IEXPLORE".
 
     ```powershell
     PS> get-process iexplore | get-proc
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName

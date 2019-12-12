@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 76fcc0c1-9795-45d3-a564-40f822b657b5
 caps.latest.revision: 8
 ms.openlocfilehash: 4bc8666ee9053eb368402c8644558f4fe2dcc9ee
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369973"
 ---
 # <a name="displaying-error-information"></a>Отображение сведений об ошибке
@@ -26,7 +26,7 @@ $ stop-service lanmanworkstation
 You do not have sufficient permissions to stop the service Workstation.
 ```
 
-Однако пользователи могут просматривать ошибки по категориям, присвоив переменной `$ErrorView` значение `"CategoryView"`. В представлении "Категория" отображаются конкретные сведения из записи об ошибке, а не описание ошибки в произвольном тексте. Это представление может быть полезно, если имеется длинный список ошибок для проверки. В представлении «Категория» предыдущее сообщение об ошибке отображается следующим образом.
+Тем не менее пользователи могут просматривать ошибки по категориям, присвоив переменной `$ErrorView` значение `"CategoryView"`. В представлении "Категория" отображаются конкретные сведения из записи об ошибке, а не описание ошибки в произвольном тексте. Это представление может быть полезно, если имеется длинный список ошибок для проверки. В представлении «Категория» предыдущее сообщение об ошибке отображается следующим образом.
 
 ```powershell
 $ $ErrorView = "CategoryView"

@@ -9,33 +9,33 @@ ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
 ms.openlocfilehash: 980b488800587e31286e2ca2ece924e07f8af3f3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72370043"
 ---
 # <a name="advisory-development-guidelines"></a>Советы по разработке
 
 В этом разделе описываются рекомендации, которые следует учитывать для обеспечения хорошей разработки и взаимодействия с пользователем. Иногда они могут применяться, и иногда они могут не быть.
 
-## <a name="design-guidelines"></a>Рекомендации по проектированию
+## <a name="design-guidelines"></a>Руководство по проектированию
 
 При проектировании командлетов следует учитывать следующие рекомендации. Если вы нашли рекомендации по проектированию, применимые к вашей ситуации, ознакомьтесь с рекомендациями по написанию кода для аналогичных руководств.
 
 ### <a name="support-an-inputobject-parameter-ad01"></a>Поддержка параметра InputObject (AD01)
 
-Поскольку Windows PowerShell работает непосредственно с объектами Microsoft .NET Framework, часто бывает доступен объект .NET Framework, точно соответствующий типу, который пользователь должен выполнить для выполнения определенной операции. `InputObject` — это стандартное имя параметра, принимающего такой объект в качестве входных данных. Например, командлет "Sample **-proc** " в руководстве по [стоппрок](./stopproc-tutorial.md) определяет параметр `InputObject` типа Process, который поддерживает входные данные из конвейера. Пользователь может получить набор объектов процесса, управлять ими, чтобы выбрать точные объекты для их отмены, а затем передать их непосредственно командлету Process **-proc** .
+Поскольку Windows PowerShell работает непосредственно с объектами Microsoft .NET Framework, часто бывает доступен объект .NET Framework, точно соответствующий типу, который пользователь должен выполнить для выполнения определенной операции. `InputObject` — это стандартное имя параметра, принимающее такой объект в качестве входных данных. Например, командлет «Sample **-proc** » в [руководстве стоппрок](./stopproc-tutorial.md) определяет параметр `InputObject` типа Process, который поддерживает входные данные из конвейера. Пользователь может получить набор объектов процесса, управлять ими, чтобы выбрать точные объекты для их отмены, а затем передать их непосредственно командлету Process **-proc** .
 
 ### <a name="support-the-force-parameter-ad02"></a>Поддержка параметра Force (AD02)
 
-Иногда командлету необходимо защитить пользователя от выполнения запрошенной операции. Такой командлет должен поддерживать параметр `Force`, чтобы разрешить пользователю переопределять эту защиту, если у пользователя есть разрешения на выполнение этой операции.
+Иногда командлету необходимо защитить пользователя от выполнения запрошенной операции. Такой командлет должен поддерживать `Force` параметр, позволяющий пользователю переопределить эту защиту, если у пользователя есть разрешения на выполнение этой операции.
 
-Например, командлет [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) обычно не удаляет файл, который доступен только для чтения. Однако этот командлет поддерживает параметр `Force`, чтобы пользователь мог принудительно удалить файл, предназначенный только для чтения. Если пользователь уже имеет разрешение на изменение атрибута только для чтения и пользователь удаляет файл, использование параметра `Force` упрощает операцию. Однако если пользователь не имеет разрешения на удаление файла, параметр `Force` не оказывает никакого влияния.
+Например, командлет [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) обычно не удаляет файл, который доступен только для чтения. Однако этот командлет поддерживает параметр `Force`, чтобы пользователь мог принудительно удалить файл, предназначенный только для чтения. Если пользователь уже имеет разрешение на изменение атрибута только для чтения и пользователь удаляет файл, использование параметра `Force` упрощает операцию. Однако если пользователь не имеет разрешения на удаление файла, параметр `Force` не действует.
 
 ### <a name="handle-credentials-through-windows-powershell-ad03"></a>Работа с учетными данными с помощью Windows PowerShell (AD03)
 
-Командлет должен определить параметр `Credential` для представления учетных данных. Этот параметр должен иметь тип [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) и должен быть определен с помощью объявления атрибута Credential. Эта поддержка автоматически запрашивает у пользователя имя пользователя, пароль или значение, если полные учетные данные не указаны напрямую. Дополнительные сведения об атрибуте Credential см. в разделе [объявление атрибута учетных данных](./credential-attribute-declaration.md).
+Командлет должен определить `Credential` параметр для представления учетных данных. Этот параметр должен иметь тип [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) и должен быть определен с помощью объявления атрибута Credential. Эта поддержка автоматически запрашивает у пользователя имя пользователя, пароль или значение, если полные учетные данные не указаны напрямую. Дополнительные сведения об атрибуте Credential см. в разделе [объявление атрибута учетных данных](./credential-attribute-declaration.md).
 
 ### <a name="support-encoding-parameters-ad04"></a>Поддержка параметров кодировки (AD04)
 
@@ -59,7 +59,7 @@ ms.locfileid: "72370043"
 
 #### <a name="name-the-cmdlet-class-to-match-the-cmdlet-name"></a>Присвойте классу командлета имя, совпадающее с именем командлета.
 
-При именовании класса .NET Framework, реализующего командлет, назовите класс " *\<Verb > **\<Noun >** \<Command >* ", где заменяются заполнители *\<Verb >* и *\<Noun >* глагол и существительное, используемые для имени командлета. Например, командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) реализуется классом с именем `GetProcessCommand`.
+При именовании класса .NET Framework, реализующего командлет, назовите класс « *\<Verb > **\<существительное >** \<Command >* », где вы замените *\<verb >* и\<заполнителями > *существительное* с помощью глагола и существительного, используемого для имени командлета. Например, командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) реализуется классом с именем `GetProcessCommand`.
 
 ### <a name="if-no-pipeline-input-override-the-beginprocessing-method-ac02"></a>Если входные данные конвейера не переопределяют метод BeginProcessing (AC02)
 
@@ -67,13 +67,13 @@ ms.locfileid: "72370043"
 
 ### <a name="to-handle-stop-requests-override-the-stopprocessing-method-ac03"></a>Для обработки запросов на прерывание переопределяет метод StopProcessing (AC03)
 
-Переопределите метод [System. Management. Automation. командлет. StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) , чтобы командлет мог справиться с сигналом об ошибке. Некоторые командлеты занимают много времени для выполнения операции, и они позволяют длительное время между вызовами среды выполнения Windows PowerShell, например, когда командлет блокирует поток в долгосрочных вызовах RPC. К ним относятся командлеты, которые выполняют вызовы метода [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) в метод [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) и другие механизмы обратной связи, выполнение которых может занять много времени. . В таких случаях пользователю может потребоваться отправить сигнал об ошибке в эти командлеты.
+Переопределите метод [System. Management. Automation. командлет. StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) , чтобы командлет мог справиться с сигналом об ошибке. Некоторые командлеты занимают много времени для выполнения операции, и они позволяют длительное время между вызовами среды выполнения Windows PowerShell, например, когда командлет блокирует поток в долгосрочных вызовах RPC. К ним относятся командлеты, которые выполняют вызовы метода [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) в метод [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) и другие механизмы обратной связи, выполнение которых может занять много времени. В таких случаях пользователю может потребоваться отправить сигнал об ошибке в эти командлеты.
 
 ### <a name="implement-the-idisposable-interface-ac04"></a>Реализация интерфейса IDisposable (AC04)
 
-Если командлет содержит объекты, которые не были удалены (записаны в конвейер) методом [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , для вашего командлета может потребоваться дополнительная реализация объекта. Например, если командлет открывает обработчик файла в методе [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) и сохраняет открытый для использования методом [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , этот маркер должен быть закрыто в конце обработки.
+Если командлет содержит объекты, которые не были удалены (записаны в конвейер) методом [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , для вашего командлета может потребоваться дополнительная реализация объекта. Например, если командлет открывает в методе [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) маркер файла и сохраняет открытый для использования методом [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , этот маркер должен быть закрыт в конце обработки.
 
-Среда выполнения Windows PowerShell не всегда вызывает метод [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Например, метод [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) может не вызываться при отмене самого посредине командлета или при возникновении завершающей ошибки в любой части командлета. Таким образом, класс .NET Framework для командлета, требующего очистки объектов, должен реализовать полный шаблон интерфейса [System. IDisposable](/dotnet/api/System.IDisposable) , включая метод завершения, чтобы среда выполнения Windows PowerShell могла вызывать и [метод Методы System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) и [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) в конце обработки.
+Среда выполнения Windows PowerShell не всегда вызывает метод [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Например, метод [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) может не вызываться при отмене самого посредине командлета или при возникновении завершающей ошибки в любой части командлета. Таким образом, класс .NET Framework для командлета, требующего очистки объектов, должен реализовать полный шаблон интерфейса [System. IDisposable](/dotnet/api/System.IDisposable) , включая метод завершения, чтобы среда выполнения Windows PowerShell могла вызывать методы [System. Management. Automation. командлета. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) и [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) в конце обработки.
 
 ### <a name="use-serialization-friendly-parameter-types-ac05"></a>Использование типов параметров, удобных для сериализации (AC05)
 
@@ -91,7 +91,7 @@ ms.locfileid: "72370043"
 
 - пспримитиведиктионари
 
-- Переключатель
+- Параметр-переключатель
 
 - пслистмодифиер
 
@@ -99,7 +99,7 @@ ms.locfileid: "72370043"
 
 - IPAddress, MailAddress
 
-- Регионов
+- CultureInfo
 
 - X509Certificate2, X500DistinguishedName
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
 ms.openlocfilehash: d210a852a90d94df2ab360dd86f0b83a396330e3
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74415662"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Добавление псевдонимов, развертывание подстановочных знаков и справка по параметрам командлета
@@ -128,7 +128,7 @@ if (!wildcard.IsMatch(processName))
 }
 ```
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный C# пример кода см. в разделе [StopProcessSample03 Sample](./stopprocesssample03-sample.md).
 
@@ -150,7 +150,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc -ProcessName notepad
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     Confirm
@@ -165,7 +165,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -182,7 +182,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc -Name *note*
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     Confirm
@@ -191,7 +191,7 @@ Windows PowerShell передает сведения между командле
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     Confirm
@@ -200,7 +200,7 @@ Windows PowerShell передает сведения между командле
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-Отобразятся следующие выходные данные.
+Появится следующий вывод.
 
     ```
     Confirm
@@ -209,7 +209,7 @@ Windows PowerShell передает сведения между командле
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание командлета, изменяющего систему](./creating-a-cmdlet-that-modifies-the-system.md)
 

@@ -9,21 +9,21 @@ ms.topic: article
 ms.assetid: 7c265084-e072-46ca-9844-c3c0e275d6b0
 caps.latest.revision: 7
 ms.openlocfilehash: fdf0036c68b608d254ed928ae9ac58616a856200
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367343"
 ---
 # <a name="runspace10-sample"></a>Пример Runspace10
 
-В этом примере показано, как создать начальное состояние сеанса по умолчанию, как добавить командлет в [System. Management. Automation. пространства выполнения. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), как создать пространство выполнение, использующее исходное состояние сеанса, и как выполнить команду с помощью Объект [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+В этом примере показано, как создать начальное состояние сеанса по умолчанию, как добавить командлет в [System. Management. Automation. пространствей. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), как создать пространство выполнения, которое использует исходное состояние сеанса, и как выполнить команду с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
 ## <a name="requirements"></a>Требования
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрирующее
+## <a name="demonstrates"></a>Демонстрация
 
 В этом образце демонстрируется следующее.
 

@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
 ms.openlocfilehash: af41c2c9855310d047404114a07b27180a7aa8fc
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74415675"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Создание командлета без параметров
@@ -129,7 +129,7 @@ End Sub 'ProcessRecord
 
 Например, [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) может не вызываться, если в командлете отменено значение Мидуэй или если в какой-либо части командлета возникла неустранимая ошибка. Таким образом, командлет, требующий очистки объектов, должен реализовать полный шаблон [System. IDisposable](/dotnet/api/System.IDisposable) , включая метод завершения, чтобы среда выполнения могла вызывать как [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) , так и [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) в конце обработки.
 
-## <a name="code-sample"></a>Пример кода
+## <a name="code-sample"></a>Образец кода
 
 Полный C# пример кода см. в разделе [GetProcessSample01 Sample](./getprocesssample01-sample.md).
 
@@ -151,7 +151,7 @@ Windows PowerShell передает сведения между командле
     get-proc
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     Handles  NPM(K)  PM(K)  WS(K)  VS(M)  CPU(s)  Id   ProcessName
@@ -175,7 +175,7 @@ Windows PowerShell передает сведения между командле
     $p.length
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     63
@@ -187,7 +187,7 @@ Windows PowerShell передает сведения между командле
     $p[6]
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     Handles  NPM(K)  PM(K)  WS(K)  VS(M)  CPU(s)  Id    ProcessName
@@ -201,7 +201,7 @@ Windows PowerShell передает сведения между командле
     $p[6].starttime
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     Tuesday, July 26, 2005 9:34:15 AM
@@ -221,7 +221,7 @@ Windows PowerShell передает сведения между командле
     $p | Where-Object {$_.HandleCount -gt 500 } | Sort-Object HandleCount
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     Handles  NPM(K)  PM(K)  WS(K)  VS(M)  CPU(s)  Id   ProcessName
@@ -243,7 +243,7 @@ Windows PowerShell передает сведения между командле
         TypeName: System.Diagnostics.Process
     ```
 
-    Отобразятся следующие выходные данные.
+    Появится следующий вывод.
 
     ```output
     Name                     MemberType Definition
@@ -254,7 +254,7 @@ Windows PowerShell передает сведения между командле
     ...
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание командлета для обработки входных данных командной строки](./adding-parameters-that-process-command-line-input.md)
 

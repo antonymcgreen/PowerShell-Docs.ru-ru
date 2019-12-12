@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 58d25835-4636-4c58-9f6c-0332b9318051
 caps.latest.revision: 6
 ms.openlocfilehash: 4045196e306e766cd805b3e7ae31bfcb3de184ee
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364833"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-groupby-format"></a>Элемент ScriptBlock для элемента ItemSelectionCondition для элемента GroupBy (формат)
 
-Указывает скрипт, который запускает условие. При вычислении этого скрипта в `true` условие выполняется, и используется элемент управления. Этот элемент используется при определении того, как отображается новая группа объектов.
+Указывает скрипт, который запускает условие. При вычислении этого скрипта для `true`выполняется условие, и используется элемент управления. Этот элемент используется при определении того, как отображается новая группа объектов.
 
 Элемент конфигурации (Format) Виевдефинитионс элемент (Format) элемент представления (формат) элемент GroupBy для элемента Ошибка customcontrol представления (Format) для элемента Кустоментриес (Format) для ошибка customcontrol для элемента GroupBy (Format) Кустоментри для Ошибка customcontrol для элемента Кустомитем GroupBy для Кустоментри для элемента GroupBy (Format) ExpressionBinding для Кустомитем for GroupBy (Format) Итемселектионкондитион для ExpressionBinding for GroupBy (формат) элемент ScriptBlock для Итемселектионкондитион для GroupBy (Format)
 

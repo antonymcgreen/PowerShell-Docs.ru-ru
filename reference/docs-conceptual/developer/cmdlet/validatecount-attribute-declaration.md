@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
 ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369233"
 ---
 # <a name="validatecount-attribute-declaration"></a>Объявление атрибута ValidateCount
@@ -31,9 +31,9 @@ ms.locfileid: "72369233"
 
 #### <a name="parameters"></a>Параметры
 
-требуется `MinLength` ([System. Int32][]). Указывает минимальное число аргументов.
+требуется `MinLength` ([System.Int32][]). Указывает минимальное число аргументов.
 
-требуется `MaxLength` ([System. Int32][]). Указывает максимальное число аргументов.
+требуется `MaxLength`([System.Int32][]). Указывает максимальное число аргументов.
 
 ## <a name="remarks"></a>Замечания
 
@@ -43,7 +43,7 @@ ms.locfileid: "72369233"
 
 - Среда выполнения Windows PowerShell выдает ошибку при следующих условиях:
 
-    - Параметры атрибута `MinLength` и `MaxLength` не относятся к типу [System. Int32][].
+    - Параметры атрибута `MinLength` и `MaxLength` не относятся к типу [System.Int32][].
 
     - Значение параметра атрибута `MaxLength` меньше значения параметра атрибута `MinLength`.
 
@@ -60,5 +60,5 @@ ms.locfileid: "72369233"
 [Проверка числа аргументов]: how-to-validate-an-argument-count.md
 [Запись командлета Windows PowerShell]: writing-a-windows-powershell-cmdlet.md
 
-[System. Int32]: /dotnet/api/System.Int32
+[System.Int32]: /dotnet/api/System.Int32
 [System. Management. Automation. Валидатекаунтаттрибуте]: /dotnet/api/System.Management.Automation.ValidateCountAttribute

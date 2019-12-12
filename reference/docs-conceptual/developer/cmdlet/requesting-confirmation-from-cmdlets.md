@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 37d6e87f-57b7-40bd-b645-392cf0b6e88e
 caps.latest.revision: 13
 ms.openlocfilehash: 0c0517ef7fbd5ae6434773a2dfe276f3a8c35f39
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369533"
 ---
 # <a name="requesting-confirmation-from-cmdlets"></a>Запрос на подтверждение от командлетов
 
 Командлеты должны запрашивать подтверждение, когда они собирается внести изменения в систему, которая находится за пределами среды Windows PowerShell. Например, если командлет собирается добавить учетную запись пользователя или приостанавливает процесс, командлет должен потребовать подтверждения от пользователя перед тем, как оно будет продолжено. Напротив, если командлет собирается изменить переменную Windows PowerShell, командлету не требуется требовать подтверждения.
 
-Чтобы сделать запрос на подтверждение, командлет должен указать, что он поддерживает запросы на подтверждение, и он должен вызывать методы [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System. Management. Automation. командлет. ShouldContinue ](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)(необязательно) методы для вывода сообщения запроса подтверждения.
+Чтобы сделать запрос на подтверждение, командлет должен указать, что он поддерживает запросы на подтверждение, и он должен вызвать методы [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) (необязательные) для отображения сообщения запроса подтверждения.
 
 ## <a name="supporting-confirmation-requests"></a>Поддержка запросов на подтверждение
 
-Для поддержки запросов на подтверждение командлету необходимо задать параметру `SupportsShouldProcess` атрибута командлета значение `true`. Это включает параметры командлета `Confirm` и `WhatIf`, предоставляемые Windows PowerShell. Параметр `Confirm` позволяет пользователю контролировать, отображается ли запрос подтверждения. Параметр `WhatIf` позволяет пользователю определить, должен ли командлет отображать сообщение или выполнить его действие. Не добавляйте вручную параметры `Confirm` и `WhatIf` в командлет.
+Для поддержки запросов на подтверждение командлету необходимо задать параметру `SupportsShouldProcess` атрибута командлета значение `true`. Это включает параметры командлетов `Confirm` и `WhatIf`, предоставляемые Windows PowerShell. Параметр `Confirm` позволяет пользователю контролировать, отображается ли запрос подтверждения. Параметр `WhatIf` позволяет пользователю определить, должен ли командлет отображать сообщение или выполнить его действие. Не добавляйте в командлет `Confirm` и `WhatIf` параметры вручную.
 
 В следующем примере показано объявление атрибута командлета, которое поддерживает запросы на подтверждение.
 
@@ -40,15 +40,15 @@ ms.locfileid: "72369533"
 
 ## <a name="calling-the-confirmation-request-methods"></a>Вызов методов запроса подтверждения
 
-В коде командлета вызовите метод [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) перед операцией, которая изменяет систему. Разработайте командлет таким образом, чтобы если вызов возвращает значение `false`, операция не выполняется, а командлет обрабатывает следующую операцию.
+В коде командлета вызовите метод [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) перед операцией, которая изменяет систему. Разработайте командлет таким образом, чтобы при вызове метода возвращалось значение `false`, операция не выполняется, а командлет обрабатывает следующую операцию.
 
 ## <a name="calling-the-shouldcontinue-method"></a>Вызов метода ShouldContinue
 
 Большинство командлетов запрашивают подтверждение, используя только метод [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) . Однако в некоторых случаях может потребоваться дополнительное подтверждение. В этих случаях дополнит вызов метода [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) , вызвав метод [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) . Это позволяет командлету или поставщику более точно контролировать область действия **Да для всех** ответов на запрос подтверждения.
 
-Если командлет вызывает метод [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , командлет также должен предоставить параметр `Force`. Если пользователь указывает `Force`, когда пользователь вызывает командлет, командлет все равно должен вызвать метод [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess), но он должен обходить вызов метода [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
+Если командлет вызывает метод [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , командлет также должен предоставить параметр `Force` параметра. Если пользователь указывает `Force`, когда пользователь вызывает командлет, командлет все равно должен вызвать метод [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess), но он должен обходить вызов метода [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
 
-[System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) будет вызывать исключение при вызове из неинтерактивной среды, в которой пользователю не удается получить запрос. Добавление параметра `Force` гарантирует, что команда по-прежнему может быть выполнена при вызове в неинтерактивной среде.
+[System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) будет вызывать исключение при вызове из неинтерактивной среды, в которой пользователю не удается получить запрос. Добавление параметра `Force` гарантирует, что команда будет по-прежнему выполняться при ее вызове в неинтерактивной среде.
 
 В следующем примере показано, как вызвать [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
 
@@ -68,13 +68,13 @@ if (ShouldProcess (...) )
 
 ## <a name="specify-the-impact-level"></a>Укажите уровень влияния
 
-При создании командлета укажите уровень влияния (серьезность) изменения. Для этого присвойте параметру `ConfirmImpact` атрибута командлета значение "высокий", "средний" или "низкий". Значение `ConfirmImpact` можно указать только при указании параметра `SupportsShouldProcess` для командлета.
+При создании командлета укажите уровень влияния (серьезность) изменения. Для этого задайте для параметра `ConfirmImpact` атрибута командлета значение высокий, средний или низкий. Можно указать значение для `ConfirmImpact` только при указании параметра `SupportsShouldProcess` для командлета.
 
-Для большинства командлетов не нужно явно указывать `ConfirmImpact`.  Вместо этого используйте параметр по умолчанию, который является средним. Если задать для `ConfirmImpact` значение High, операция будет подтверждена по умолчанию. Зарезервируйте этот параметр для критических действий, таких как переформатирование тома жесткого диска.
+Для большинства командлетов не нужно явно указывать `ConfirmImpact`.  Вместо этого используйте параметр по умолчанию, который является средним. Если для `ConfirmImpact` задано значение высокий, операция будет подтверждена по умолчанию. Зарезервируйте этот параметр для критических действий, таких как переформатирование тома жесткого диска.
 
 ## <a name="calling-non-confirmation-methods"></a>Вызов методов без подтверждения
 
-Если командлет или поставщик должен отправить сообщение, но не запрашивать подтверждение, он может вызвать следующие три метода. Избегайте использования метода [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) для отправки сообщений этих типов, так как выходные данные [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) запутанной с обычными выходными данными командлета или поставщика. , что затрудняет написание сценариев.
+Если командлет или поставщик должен отправить сообщение, но не запрашивать подтверждение, он может вызвать следующие три метода. Избегайте использования метода [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) для отправки сообщений этих типов, так как выходные данные [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) запутанной с обычными выходными данными командлета или поставщика, что затрудняет написание сценариев.
 
 - Для предупреждения пользователя и продолжения операции командлет или поставщик может вызвать метод [System. Management. Automation. командлет. вритеварнинг](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) .
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 53442bb1-74a3-49f9-9150-3bc3081a7565
 caps.latest.revision: 6
 ms.openlocfilehash: 27de41c88e224f7610c10a764e51524016ecc8cb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362793"
 ---
 # <a name="list-view-labels"></a>Представление списка (метки)
@@ -23,14 +23,14 @@ ms.locfileid: "72362793"
 
 1. Скопируйте XML-код из раздела "пример" этого раздела в текстовый файл.
 
-2. Сохраните текстовый файл. Не забудьте добавить в файл расширение `format.ps1xml`, чтобы обозначить его как файл форматирования.
+2. Сохраните текстовый файл. Не забудьте добавить расширение `format.ps1xml` в файл, чтобы обозначить его как файл форматирования.
 
 3. Откройте Windows PowerShell и выполните следующую команду, чтобы загрузить файл форматирования в текущий сеанс: `Update-formatdata -prependpath PathToFormattingFile`.
 
    > [!WARNING]
    > Этот файл форматирования определяет отображение объекта, который уже определен файлом форматирования Windows PowerShell. При выполнении командлета необходимо использовать параметр `prependPath`, и этот файл форматирования нельзя загрузить как модуль.
 
-## <a name="demonstrates"></a>Демонстрирующее
+## <a name="demonstrates"></a>Демонстрация
 
 В этом файле форматирования показаны следующие XML-элементы:
 
