@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: a7b2cc4d-292f-4714-888b-3b81536bef5d
 caps.latest.revision: 7
 ms.openlocfilehash: 0a71167926a39c821d25228825297e924e9682bd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359643"
 ---
-# <a name="resource-mapping-schema"></a><span data-ttu-id="37918-102">Схема сопоставления ресурсов</span><span class="sxs-lookup"><span data-stu-id="37918-102">Resource Mapping Schema</span></span>
+# <a name="resource-mapping-schema"></a><span data-ttu-id="8f542-102">Схема сопоставления ресурсов</span><span class="sxs-lookup"><span data-stu-id="8f542-102">Resource Mapping Schema</span></span>
 
-<span data-ttu-id="37918-103">Расширение IIS OData использует XML-файлы для определения сопоставления ресурсов.</span><span class="sxs-lookup"><span data-stu-id="37918-103">Management OData IIS Extension uses XML files to define resource mapping.</span></span> <span data-ttu-id="37918-104">Следующая XSD-схема определяет схему, используемую для этих файлов.</span><span class="sxs-lookup"><span data-stu-id="37918-104">The following XSD defines the schema used for these files.</span></span>
+<span data-ttu-id="8f542-103">Расширение IIS OData использует XML-файлы для определения сопоставления ресурсов.</span><span class="sxs-lookup"><span data-stu-id="8f542-103">Management OData IIS Extension uses XML files to define resource mapping.</span></span> <span data-ttu-id="8f542-104">Следующая XSD-схема определяет схему, используемую для этих файлов.</span><span class="sxs-lookup"><span data-stu-id="8f542-104">The following XSD defines the schema used for these files.</span></span>
 
-## <a name="resource-mapping-file-xsd"></a><span data-ttu-id="37918-105">XSD-файл сопоставления ресурсов</span><span class="sxs-lookup"><span data-stu-id="37918-105">Resource Mapping File XSD</span></span>
+## <a name="resource-mapping-file-xsd"></a><span data-ttu-id="8f542-105">XSD-файл сопоставления ресурсов</span><span class="sxs-lookup"><span data-stu-id="8f542-105">Resource Mapping File XSD</span></span>
 
-<span data-ttu-id="37918-106">Следующая XSD-схема определяет схему для файлов сопоставления ресурсов расширения IIS OData для управления.</span><span class="sxs-lookup"><span data-stu-id="37918-106">The following XSD defines the schema for Management OData IIS Extension resource mapping files.</span></span>
+<span data-ttu-id="8f542-106">Следующая XSD-схема определяет схему для файлов сопоставления ресурсов расширения IIS OData для управления.</span><span class="sxs-lookup"><span data-stu-id="8f542-106">The following XSD defines the schema for Management OData IIS Extension resource mapping files.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

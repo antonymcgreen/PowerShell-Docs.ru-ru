@@ -9,33 +9,33 @@ ms.topic: article
 ms.assetid: 302f00ef-e145-4668-a26a-03bc96ef4b8f
 caps.latest.revision: 10
 ms.openlocfilehash: 9cc6933858f4f37e4fa8b3bbe9afb69a73c68572
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361013"
 ---
-# <a name="remoterunspace01-sample"></a><span data-ttu-id="5a052-102">Пример RemoteRunspace01</span><span class="sxs-lookup"><span data-stu-id="5a052-102">RemoteRunspace01 Sample</span></span>
+# <a name="remoterunspace01-sample"></a><span data-ttu-id="840cb-102">Пример RemoteRunspace01</span><span class="sxs-lookup"><span data-stu-id="840cb-102">RemoteRunspace01 Sample</span></span>
 
-<span data-ttu-id="5a052-103">В этом примере показано, как создать удаленное пространство выполнения, которое используется для установления удаленного подключения.</span><span class="sxs-lookup"><span data-stu-id="5a052-103">This sample shows how to create a remote runspace that is used to establish a remote connection.</span></span>
+<span data-ttu-id="840cb-103">В этом примере показано, как создать удаленное пространство выполнения, которое используется для установления удаленного подключения.</span><span class="sxs-lookup"><span data-stu-id="840cb-103">This sample shows how to create a remote runspace that is used to establish a remote connection.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5a052-104">Требования</span><span class="sxs-lookup"><span data-stu-id="5a052-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="840cb-104">Требования</span><span class="sxs-lookup"><span data-stu-id="840cb-104">Requirements</span></span>
 
- <span data-ttu-id="5a052-105">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="5a052-105">This sample requires Windows PowerShell 2.0.</span></span>
+ <span data-ttu-id="840cb-105">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="840cb-105">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="5a052-106">Демонстрирующее</span><span class="sxs-lookup"><span data-stu-id="5a052-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="840cb-106">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="840cb-106">Demonstrates</span></span>
 
-- <span data-ttu-id="5a052-107">Создание объекта [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="5a052-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="840cb-107">Создание объекта [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="840cb-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="5a052-108">Задание свойств [System. Management. Automation. пространства. рунспацеконнектионинфо. OperationTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) и [System. Management. Automation. пространства. рунспацеконнектионинфо. OpenTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) элемента [управления Объект System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="5a052-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="840cb-108">Задание свойств [System. Management. Automation. пространства. рунспацеконнектионинфо. OperationTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) и [System. Management. Automation. пространства. рунспацеконнектионинфо. OpenTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) объекта [System. Management. Automation. пространства](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) выполнения. Wsmanconnectioninfo.</span><span class="sxs-lookup"><span data-stu-id="840cb-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="5a052-109">Создание удаленного пространства выполнения, в котором для установления удаленного соединения используется объект [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="5a052-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
+- <span data-ttu-id="840cb-109">Создание удаленного пространства выполнения, в котором для установления удаленного соединения используется объект [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="840cb-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
 
-- <span data-ttu-id="5a052-110">Закрытие удаленного пространства выполнения для освобождения удаленного подключения.</span><span class="sxs-lookup"><span data-stu-id="5a052-110">Closing the remote runspace to release the remote connection.</span></span>
+- <span data-ttu-id="840cb-110">Закрытие удаленного пространства выполнения для освобождения удаленного подключения.</span><span class="sxs-lookup"><span data-stu-id="840cb-110">Closing the remote runspace to release the remote connection.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5a052-111">Пример</span><span class="sxs-lookup"><span data-stu-id="5a052-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="840cb-111">Пример</span><span class="sxs-lookup"><span data-stu-id="840cb-111">Example</span></span>
 
-<span data-ttu-id="5a052-112">Этот образец определяет удаленное соединение, а затем использует эти сведения о соединении для установления удаленного подключения.</span><span class="sxs-lookup"><span data-stu-id="5a052-112">This sample defines a remote connection and then uses that connection information to establish a remote connection.</span></span>
+<span data-ttu-id="840cb-112">Этот образец определяет удаленное соединение, а затем использует эти сведения о соединении для установления удаленного подключения.</span><span class="sxs-lookup"><span data-stu-id="840cb-112">This sample defines a remote connection and then uses that connection information to establish a remote connection.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

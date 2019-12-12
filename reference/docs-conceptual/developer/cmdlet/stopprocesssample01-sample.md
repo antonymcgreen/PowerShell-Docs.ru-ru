@@ -9,63 +9,63 @@ ms.topic: article
 ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
 caps.latest.revision: 9
 ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365303"
 ---
-# <a name="stopprocesssample01-sample"></a><span data-ttu-id="03b78-102">Пример командлета StopProcessSample01</span><span class="sxs-lookup"><span data-stu-id="03b78-102">StopProcessSample01 Sample</span></span>
+# <a name="stopprocesssample01-sample"></a><span data-ttu-id="fffe5-102">Пример командлета StopProcessSample01</span><span class="sxs-lookup"><span data-stu-id="fffe5-102">StopProcessSample01 Sample</span></span>
 
-<span data-ttu-id="03b78-103">В этом примере показано, как написать командлет, запрашивающий отзыв от пользователя перед попыткой его завершения, и как реализовать параметр `PassThru`, указывающий, что пользователь хочет, чтобы командлет возвращал объект.</span><span class="sxs-lookup"><span data-stu-id="03b78-103">This sample shows how to write a cmdlet that requests feedback from the user before it attempts to stop a process, and how to implement a `PassThru` parameter indicating that the user wants the cmdlet to return an object.</span></span> <span data-ttu-id="03b78-104">Этот командлет похож на командлет `Stop-Process`, предоставляемый Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="03b78-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="fffe5-103">В этом примере показано, как написать командлет, запрашивающий отзыв от пользователя перед попыткой его завершения, и как реализовать параметр `PassThru`, указывающий, что пользователь хочет, чтобы командлет возвращал объект.</span><span class="sxs-lookup"><span data-stu-id="fffe5-103">This sample shows how to write a cmdlet that requests feedback from the user before it attempts to stop a process, and how to implement a `PassThru` parameter indicating that the user wants the cmdlet to return an object.</span></span> <span data-ttu-id="fffe5-104">Этот командлет аналогичен командлету `Stop-Process`, предоставленному Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="fffe5-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
 
-### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="03b78-105">Как создать пример с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="03b78-105">How to build the sample by using Visual Studio.</span></span>
+### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="fffe5-105">Как создать пример с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fffe5-105">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="03b78-106">С установленным пакетом SDK для Windows PowerShell 2,0 перейдите в папку StopProcessSample01</span><span class="sxs-lookup"><span data-stu-id="03b78-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample01 folder.</span></span> <span data-ttu-id="03b78-107">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01.</span><span class="sxs-lookup"><span data-stu-id="03b78-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01.</span></span>
+1. <span data-ttu-id="fffe5-106">С установленным пакетом SDK для Windows PowerShell 2,0 перейдите в папку StopProcessSample01</span><span class="sxs-lookup"><span data-stu-id="fffe5-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample01 folder.</span></span> <span data-ttu-id="fffe5-107">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01.</span><span class="sxs-lookup"><span data-stu-id="fffe5-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01.</span></span>
 
-2. <span data-ttu-id="03b78-108">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="03b78-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="03b78-109">Откроется пример проекта в Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="03b78-109">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="fffe5-108">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="fffe5-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="fffe5-109">Откроется пример проекта в Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fffe5-109">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="03b78-110">В меню **Сборка** выберите пункт **построить решение**.</span><span class="sxs-lookup"><span data-stu-id="03b78-110">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="fffe5-110">В меню **Построение** выберите команду **Построить решение**.</span><span class="sxs-lookup"><span data-stu-id="fffe5-110">In the **Build** menu, select **Build Solution**.</span></span>
 
-    <span data-ttu-id="03b78-111">Библиотека для образца будет построена в папках \bin или \bin\Debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="03b78-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+    <span data-ttu-id="fffe5-111">Библиотека для образца будет построена в папках \bin или \bin\Debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="fffe5-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="03b78-112">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="03b78-112">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="fffe5-112">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="fffe5-112">How to run the sample</span></span>
 
-1. <span data-ttu-id="03b78-113">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="03b78-113">Create the following module folder:</span></span>
+1. <span data-ttu-id="fffe5-113">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="fffe5-113">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/StopProcessSample01`
 
-2. <span data-ttu-id="03b78-114">Скопируйте пример сборки в папку Module.</span><span class="sxs-lookup"><span data-stu-id="03b78-114">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="fffe5-114">Скопируйте пример сборки в папку Module.</span><span class="sxs-lookup"><span data-stu-id="fffe5-114">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="03b78-115">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="03b78-115">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="fffe5-115">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="fffe5-115">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="03b78-116">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="03b78-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="fffe5-116">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="fffe5-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
     `import-module stopprossessample01`
 
-5. <span data-ttu-id="03b78-117">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="03b78-117">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="fffe5-117">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="fffe5-117">Run the following command to run the cmdlet:</span></span>
 
     `stop-proc`
 
-## <a name="requirements"></a><span data-ttu-id="03b78-118">Требования</span><span class="sxs-lookup"><span data-stu-id="03b78-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fffe5-118">Требования</span><span class="sxs-lookup"><span data-stu-id="fffe5-118">Requirements</span></span>
 
-<span data-ttu-id="03b78-119">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="03b78-119">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="fffe5-119">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="fffe5-119">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="03b78-120">Демонстрирующее</span><span class="sxs-lookup"><span data-stu-id="03b78-120">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="fffe5-120">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="fffe5-120">Demonstrates</span></span>
 
-<span data-ttu-id="03b78-121">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="03b78-121">This sample demonstrates the following.</span></span>
+<span data-ttu-id="fffe5-121">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="fffe5-121">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="03b78-122">Объявление класса командлета с помощью атрибута командлета.</span><span class="sxs-lookup"><span data-stu-id="03b78-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="fffe5-122">Объявление класса командлета с помощью атрибута командлета.</span><span class="sxs-lookup"><span data-stu-id="fffe5-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="03b78-123">Объявление параметров командлета с помощью атрибута Parameter.</span><span class="sxs-lookup"><span data-stu-id="03b78-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
+- <span data-ttu-id="fffe5-123">Объявление параметров командлета с помощью атрибута Parameter.</span><span class="sxs-lookup"><span data-stu-id="fffe5-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="03b78-124">Вызов метода ShouldProcess для запроса подтверждения.</span><span class="sxs-lookup"><span data-stu-id="03b78-124">Calling the ShouldProcess method to request confirmation.</span></span>
+- <span data-ttu-id="fffe5-124">Вызов метода ShouldProcess для запроса подтверждения.</span><span class="sxs-lookup"><span data-stu-id="fffe5-124">Calling the ShouldProcess method to request confirmation.</span></span>
 
-- <span data-ttu-id="03b78-125">Реализация параметра `PassThru`, указывающего, хочет ли пользователь командлет вернуть объект.</span><span class="sxs-lookup"><span data-stu-id="03b78-125">Implementing a `PassThru` parameter that indicates if the user wants the cmdlet to return an object.</span></span> <span data-ttu-id="03b78-126">По умолчанию этот командлет не возвращает объект в конвейер.</span><span class="sxs-lookup"><span data-stu-id="03b78-126">By default, this cmdlet does not return an object to the pipeline.</span></span>
+- <span data-ttu-id="fffe5-125">Реализация параметра `PassThru`, указывающего, хочет ли пользователь командлет вернуть объект.</span><span class="sxs-lookup"><span data-stu-id="fffe5-125">Implementing a `PassThru` parameter that indicates if the user wants the cmdlet to return an object.</span></span> <span data-ttu-id="fffe5-126">По умолчанию этот командлет не возвращает объект в конвейер.</span><span class="sxs-lookup"><span data-stu-id="fffe5-126">By default, this cmdlet does not return an object to the pipeline.</span></span>
 
-## <a name="example"></a><span data-ttu-id="03b78-127">Пример</span><span class="sxs-lookup"><span data-stu-id="03b78-127">Example</span></span>
+## <a name="example"></a><span data-ttu-id="fffe5-127">Пример</span><span class="sxs-lookup"><span data-stu-id="fffe5-127">Example</span></span>
 
-<span data-ttu-id="03b78-128">В этом примере показано, как реализовать параметр `PassThru`, который указывает, что пользователь хочет, чтобы командлет возвращал объект, и как запросить отзыв пользователя с помощью вызовов методов `ShouldProcess` и `ShouldContinue`.</span><span class="sxs-lookup"><span data-stu-id="03b78-128">This sample shows how to implement a `PassThru` parameter that indicates that the user wants the cmdlet to return an object, and how to request user feedback by calls to the `ShouldProcess` and `ShouldContinue` methods.</span></span>
+<span data-ttu-id="fffe5-128">В этом примере показано, как реализовать параметр `PassThru`, который указывает, что пользователь хочет, чтобы командлет возвращал объект, и как запросить отзывы пользователей по вызовам методов `ShouldProcess` и `ShouldContinue`.</span><span class="sxs-lookup"><span data-stu-id="fffe5-128">This sample shows how to implement a `PassThru` parameter that indicates that the user wants the cmdlet to return an object, and how to request user feedback by calls to the `ShouldProcess` and `ShouldContinue` methods.</span></span>
 
 ```csharp
 using System;
@@ -263,6 +263,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="03b78-129">См. также:</span><span class="sxs-lookup"><span data-stu-id="03b78-129">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fffe5-129">См. также:</span><span class="sxs-lookup"><span data-stu-id="fffe5-129">See Also</span></span>
 
-[<span data-ttu-id="03b78-130">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="03b78-130">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="fffe5-130">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="fffe5-130">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
