@@ -1,131 +1,130 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/06/2019
 keywords: powershell,командлет
 title: Требования к системе для Windows PowerShell
-ms.openlocfilehash: 95625efdaea55014f6e6f27c1e8d4c196c89f99c
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 713b062916fec0c5c70ea9a7f95fea3570afb64a
+ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67028870"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74953795"
 ---
 # <a name="windows-powershell-system-requirements"></a>Требования к системе для Windows PowerShell
-В этой статье описаны требования к системе для Windows PowerShell версий 3.0, 4.0, 5.0 и 5.1, а также для специальных функций, таких как интегрированная среда сценариев (ISE) Windows PowerShell, команды CIM и рабочие процессы.
+
+В этой статье перечислены требования к системе для Windows PowerShell 3.0, Windows PowerShell 4.0, Windows PowerShell 5.0 и Windows PowerShell 5.1. А также специальные функции, такие как интегрированная среда сценариев Windows PowerShell (ISE), команды модели CIM и рабочие процессы.
 
 Windows® 8.1 и Windows Server® 2012 R2 включают все необходимые программы. Эта статья предназначена для пользователей более ранних версий Windows.
 
 ## <a name="operating-system-requirements"></a>Требования к операционной системе
-Windows PowerShell 5.1 выполняется в следующих версиях Windows:
 
-- Windows Server 2019, устанавливается по умолчанию.
+### <a name="windows-powershell-51"></a>Windows PowerShell 5.1
 
-- Windows Server 2016 — устанавливается по умолчанию.
+Windows PowerShell 5.1 выполняется в следующих версиях Windows: Для запуска Windows PowerShell 5.1 установите Windows Management Framework 5.1. Дополнительные сведения см. в статье [Установка и настройка WMF 5.1](../wmf/setup/install-configure.md).
 
-- Windows Server 2012 R2 — установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) для запуска Windows PowerShell 5.1.
+| Версия Windows | Требования к системе |
+| ----- | ----- |
+| Windows Server 2019 | Устанавливается по умолчанию |
+| Windows Server 2016 | Устанавливается по умолчанию |
+| Windows Server 2012 R2 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows Server 2012 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows Server 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows 10 версии 1607 и выше | Устанавливается по умолчанию |
+| Windows 10 версии 1507, 1511 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows 8.1 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows 7 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 
-- Windows Server 2012 — установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) для запуска Windows PowerShell 5.0.
+### <a name="windows-powershell-50"></a>Windows PowerShell 5.0
 
-- Windows Server 2008 R2 с пакетом обновления 1 (SP1) — установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) для запуска Windows PowerShell 5.1.
+Windows PowerShell 5.0 работает в следующих версиях Windows. Для запуска Windows PowerShell 5.0 установите Windows Management Framework 5.1. Дополнительные сведения см. в статье [Установка и настройка WMF 5.1](../wmf/setup/install-configure.md). Windows Management Framework 5.1 заменяет Windows Management Framework 5.0.
 
-- Windows 10 версии 1607 и выше, устанавливается по умолчанию.
+| Версия Windows | Требования к системе |
+| ----- | ----- |
+| Windows Server 2019 | Более поздняя версия устанавливается по умолчанию |
+| Windows Server 2016 | Более поздняя версия устанавливается по умолчанию |
+| Windows Server 2012 R2 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows Server 2012 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows Server 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows 10 версии 1607 и выше | Более поздняя версия устанавливается по умолчанию |
+| Windows 10 версии 1507, 1511 | Устанавливается по умолчанию |
+| Windows 8.1 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows 7 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 
-- Windows 10 версии 1507, 1511 — установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) для запуска Windows PowerShell 5.1.
+### <a name="windows-powershell-40"></a>Windows PowerShell 4.0
 
-- Windows 8.1 — установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) для запуска Windows PowerShell 5.1.
+Windows PowerShell 4.0 выполняется в следующих версиях Windows: Чтобы запустить Windows PowerShell 4.0, установите указанную версию Windows Management Framework для вашей операционной системы.
 
-- Windows 7 с пакетом обновления 1 (SP1) — установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) для запуска Windows PowerShell 5.1.
+| Версия Windows | Требования к системе |
+| ----- | ----- |
+| Windows 8.1 | Устанавливается по умолчанию |
+| Windows Server 2012 R2 | Устанавливается по умолчанию |
+| Windows 7® с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) |
+| Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) |
 
-Windows PowerShell 5.0 (заменяется выпуском Windows PowerShell 5.1) выполняется в следующих версиях Windows:
+### <a name="windows-powershell-30"></a>Windows PowerShell 3.0
 
-- Windows Server 2019, более поздняя версия устанавливается по умолчанию
+Windows PowerShell 3.0 выполняется в следующих версиях Windows: Чтобы запустить Windows PowerShell 3.0, установите указанную версию Windows Management Framework для вашей операционной системы.
 
-- Windows Server 2016, более поздняя версия устанавливается по умолчанию
-
-- Windows Server 2012 R2 — установите [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) для запуска Windows PowerShell 5.0.
-
-- Windows Server 2012 — установите [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) для запуска Windows PowerShell 5.0.
-
-- Windows Server 2008 R2 с пакетом обновления 1 (SP1) — установите [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) для запуска Windows PowerShell 5.0.
-
-- Windows 10 версии 1607 и выше — более поздняя версия устанавливается по умолчанию.
-
-- Windows 10 версии 1507, 1511 — устанавливается по умолчанию.
-
-- Windows 8.1 — установите [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) для запуска Windows PowerShell 5.0.
-
-- Windows 7 с пакетом обновления 1 (SP1) — установите [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) для запуска Windows PowerShell 5.0.
-
-Windows PowerShell 4.0 выполняется в следующих версиях Windows:
-
-- Windows 8.1, устанавливается по умолчанию
-
-- Windows Server 2012 R2, устанавливается по умолчанию
-
-- Windows® 7 с пакетом обновления 1 (SP1), установите [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) для запуска Windows PowerShell 4.0
-
-- Windows Server® 2008 R2 с пакетом обновления 1 (SP1), установите [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) для запуска Windows PowerShell 4.0
-
-Windows PowerShell 3.0 выполняется в следующих версиях Windows:
-
-- Windows 8, устанавливается по умолчанию
-
-- Windows Server 2012, устанавливается по умолчанию
-
-- Windows® 7 с пакетом обновления 1 (SP1), установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) для запуска Windows PowerShell 3.0
-
-- Windows Server® 2008 R2 с пакетом обновления 1 (SP1), установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) для запуска Windows PowerShell 3.0
-
-- Windows Server 2008 R2 с пакетом обновления 2, установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) для запуска Windows PowerShell 3.0
+| Версия Windows | Требования к системе |
+| ----- | ----- |
+| Windows 8 | Устанавливается по умолчанию |
+| Windows Server 2012 | Устанавливается по умолчанию |
+| Windows 7® с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) |
+| Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) |
+| Windows Server 2008 с пакетом обновления 2 (SP2) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) |
 
 ## <a name="microsoft-net-framework-requirements"></a>Требования к Microsoft .NET Framework
-Для Windows PowerShell 5.1 требуется полная установка Microsoft .NET Framework 4.5. Windows 8.1 и Windows Server 2012 R2 включают Microsoft .NET Framework 4.5 по умолчанию.
 
-Windows PowerShell 5.0 требует полной установки Microsoft .NET Framework 4.5. Windows 8.1 и Windows Server 2012 R2 включают Microsoft .NET Framework 4.5 по умолчанию.
+В следующей таблице приведены требования к .NET Framework для Windows PowerShell.
 
-Windows PowerShell 4.0 требует полной установки Microsoft .NET Framework 4.5. Windows 8.1 и Windows Server 2012 R2 включают Microsoft .NET Framework 4.5 по умолчанию.
+| Версия | Требование к .NET |
+| ----- | ----- |
+| Windows PowerShell 5.1 | Требует полную установку Microsoft .NET Framework 4.5. Windows 8.1 и Windows Server 2012 R2 включают Microsoft .NET Framework 4.5 по умолчанию. |
+| Windows PowerShell 5.0 | Требует полную установку Microsoft .NET Framework 4.5. Windows 8.1 и Windows Server 2012 R2 включают Microsoft .NET Framework 4.5 по умолчанию. |
+| Windows PowerShell 4.0 | Требует полную установку Microsoft .NET Framework 4.5. Windows 8.1 и Windows Server 2012 R2 включают Microsoft .NET Framework 4.5 по умолчанию. |
+| Windows PowerShell 3.0 | Требует полную установку Microsoft .NET Framework 4. Windows 8 и Windows Server 2012 содержат Microsoft .NET Framework 4.5 по умолчанию, что удовлетворяет этому требованию. |
 
-Windows PowerShell 3.0 требует полной установки Microsoft .NET Framework 4. Windows 8 и Windows Server 2012 содержат Microsoft .NET Framework 4.5 по умолчанию, что удовлетворяет этому требованию.
+Используйте следующие ссылки, чтобы загрузить Microsoft .NET Framework из центра загрузки Майкрософт.
 
-Для установки Microsoft .NET Framework 4.5 (dotNetFx45_Full_setup.exe) см. статью [Microsoft .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkID=242919) в Центре загрузки Майкрософт.
-
-Для установки полной версии Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe) см. статью [Microsoft .NET Framework 4 (веб-установщик)](https://go.microsoft.com/fwlink/?LinkID=212931) в Центре загрузки Майкрософт.
+| Версия | Ссылка |
+| ----- | ----- |
+| .NET Framework 4.5 (`dotNetFx45_Full_setup.exe`) | [Microsoft .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkID=242919) |
+| .NET Framework 4 (`dotNetFx40_Full_setup.exe`) | [Microsoft .NET Framework 4 (веб-установщик)](https://www.microsoft.com/en-us/download/details.aspx?id=17851) |
 
 ## <a name="windows-management-framework-40"></a>Windows Management Framework 4.0
+
 Для работы Windows PowerShell 5.0 необходимо установить Windows Management Framework 4.0 в Windows Server 2008 R2 с пакетом обновления 1 (SP1) и Windows 7 с пакетом обновления 1 (SP1).
 
 ## <a name="ws-management-30"></a>WS-Management 3.0
+
 Windows PowerShell 3.0 и Windows PowerShell 4.0 требуют наличия WS-Management 3.0, поддерживающей службу WinRM и протокол WSMan. Эта программа входит в Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 и Windows Management Framework 3.0.
 
 ## <a name="windows-management-instrumentation-30"></a>Инструментарий управления Windows 3.0
+
 Windows PowerShell 3.0 и Windows PowerShell 4.0 требуют инструментарий управления Windows (WMI) 3.0. Эта программа входит в Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 и Windows Management Framework 3.0. Если эта программа не установлена на компьютере, компоненты, нуждающиеся в инструментарии WMI, например команды CIM, не выполняются.
 
 ## <a name="common-language-runtime-40"></a>Среда CLR 4.0
+
 Windows PowerShell 3.0, Windows PowerShell 4.0 и Windows PowerShell 5.0 компилируются для среды CLR версии 4.0.
 
 ## <a name="graphical-user-interface-requirements"></a>Требования к графическому пользовательскому интерфейсу
-Windows PowerShell — это основанное на консоли приложение, для работы которого не требуется графический пользовательский интерфейс. Поэтому оно хорошо подходит для компьютеров без экранов или мониторов либо пользовательского интерфейса, таких как Windows Server 2012 R2 или Windows Server 2012, с установкой основных серверных компонентов.
 
-Однако некоторым элементам, например приведенным ниже, графический пользовательский интерфейс необходим. Дополнительные сведения см. в разделе справки для каждого элемента.
+Windows PowerShell — это основанное на консоли приложение, для работы которого не требуется графический пользовательский интерфейс.
+Оно хорошо подходит для компьютеров без экранов или мониторов либо пользовательского интерфейса, таких как Windows Server 2012 R2 или Windows Server 2012, с установкой основных серверных компонентов.
 
-- Интегрированная среда сценариев (ISE) Windows PowerShell
+Для некоторых элементов необходим графический пользовательский интерфейс. Дополнительные сведения см. в разделе справки для каждого элемента.
 
+- Интегрированная среда сценариев (ISE) Windows PowerShell. Дополнительные сведения см. в обзорной статье об [интегрированной среде сценариев Windows PowerShell](/powershell/scripting/components/ise/introducing-the-windows-powershell-ise).
 - Командлеты
-
-    1.  [Out-GridView](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-gridview)
-
-    2.  [Show-Command](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
-
-    3.  [Show-ControlPanelItem](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
-
-    4.  [Show-EventLog](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
-
+  - [Out-GridView](/powershell/module/microsoft.powershell.utility/out-gridview)
+  - [Show-Command](/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
+  - [Show-ControlPanelItem](/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
+  - [Show-EventLog](/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
 - Параметры
-
-    1.  Параметр **ShowWindow** командлета [Get-Help](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Get-Help).
-
-    2.  Параметр **ShowSecurityDescriptorUI** командлетов [Register-PSSessionConfiguration](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) и [Set-PSSessionConfiguration](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration).
+  - Параметр **ShowWindow** командлета [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help).
+  - Параметр **ShowSecurityDescriptorUI** командлетов [Register-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) и [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration).
 
 ## <a name="windows-powershell-engine-requirements"></a>Требования к подсистеме Windows PowerShell
+
 Windows PowerShell 4.0 предназначен для обратной совместимости с Windows PowerShell 3.0 и Windows PowerShell 2.0. Командлеты, поставщики, оснастки, модули и сценарии, написанные для Windows PowerShell 2.0, выполняются и в Windows PowerShell 3.0, и в Windows PowerShell 4.0 без изменений.
 
 Однако из-за изменений в политике активации среды выполнения в Microsoft .NET Framework 4 основные программы Windows PowerShell, написанные для Windows PowerShell 2.0 и скомпилированные с помощью среды CLR 2.0, не могут выполняться без изменения в Windows PowerShell 3.0, которые компилируются в среде CLR 4.0.
@@ -135,21 +134,23 @@ Windows PowerShell 4.0 предназначен для обратной сов�
 Дополнительные сведения о добавлении или установке подсистемы Windows PowerShell 2.0 и требуемых версий Microsoft .NET Framework см. в статье [Установка подсистемы Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Дополнительные сведения о запуске подсистемы Windows PowerShell 2.0 см. в статье [Запуск подсистемы Windows PowerShell 2.0](../getting-started/Starting-the-Windows-PowerShell-2.0-Engine.md).
 
 ## <a name="windows-preinstallation-environment"></a>Среда предустановки Windows
-Windows PowerShell 2.0, Windows PowerShell 3.0 и Windows PowerShell 4.0 выполняются в среде предустановки Windows (Windows PE). Однако не поддерживаются следующие командлеты:
 
-- [Командлеты фоновой интеллектуальной службы передачи (BITS)](https://go.microsoft.com/fwlink/?LinkId=257514)
+Windows PowerShell 2.0, Windows PowerShell 3.0 и Windows PowerShell 4.0 выполняются в среде предустановки Windows (Windows PE). Однако не поддерживаются следующие командлеты.
 
-- [Get-EventLog](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
+- Командлеты фоновой интеллектуальной службы передачи (BITS). Дополнительные сведения см. в статье [BitsTransfer](/powershell/module/bitstransfer/?view=win10-ps).
+- [Get-EventLog](/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
+- [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
+- [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help)
+- [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help)
 
-- [Get-WinEvent](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
+В Windows PE отсутствует служба **WinRM**.
 
-- [Save-Help](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Save-Help)
+## <a name="see-also"></a>См. также:
 
-- [Update-Help](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Update-Help)
+[Начало работы с Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 
-Кроме того, в Windows PE отсутствует служба **WinRM**.
+[Установка Windows PowerShell](Installing-Windows-PowerShell.md)
 
-## <a name="see-also"></a>См. также
-- [Начало работы с Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
-- [Установка Windows PowerShell](Installing-Windows-PowerShell.md)
-- [Запуск Windows PowerShell](../getting-started/Starting-Windows-PowerShell.md)
+[Запуск Windows PowerShell](../getting-started/Starting-Windows-PowerShell.md)
+
+[Windows Management Framework](../wmf/overview.md)

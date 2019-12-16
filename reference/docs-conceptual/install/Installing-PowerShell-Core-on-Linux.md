@@ -2,16 +2,16 @@
 title: Установка PowerShell Core в Linux
 description: Сведения об установке PowerShell Core в различных дистрибутивах Linux
 ms.date: 07/19/2019
-ms.openlocfilehash: 3159de2d64d9c473e00b58c9f9c52b6d1c7779af
-ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
+ms.openlocfilehash: 9e92958eb6d9c7a6a76331103f42ecadeab978c1
+ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444403"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74953812"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Установка PowerShell Core в Linux
 
-Поддерживает [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] и [Arch Linux][arch].
+Поддерживает [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 8][deb8], [Debian 9][deb9], [Debian 10][deb10], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] и [Arch Linux][arch].
 
 Для дистрибутивов Linux без официальной поддержки попробуйте установить PowerShell с помощью [соответствующего Snap-пакета][snap]. Можно также попытаться развернуть двоичные файлы PowerShell напрямую с помощью [архива`tar.gz`][tar] Linux, но при этом нужно отдельно настроить необходимые зависимости с учетом операционной системы.
 
@@ -23,6 +23,7 @@ ms.locfileid: "73444403"
 [u1904]: #ubuntu-1904
 [deb8]: #debian-8
 [deb9]: #debian-9
+[deb10]: #debian-10
 [cos]: #centos-7
 [rhel7]: #red-hat-enterprise-linux-rhel-7
 [opensuse]: #opensuse
