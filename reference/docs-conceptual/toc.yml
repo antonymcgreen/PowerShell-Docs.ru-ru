@@ -24,7 +24,7 @@
           href: install/installing-the-windows-powershell-2.0-engine.md
         - name: Требования к системе для Windows PowerShell
           href: install/windows-powershell-system-requirements.md
-- name: Приступая к работе
+- name: Начало работы
   items:
     - name: Начало работы с PowerShell
       href: getting-started/getting-started-with-windows-powershell.md
@@ -58,7 +58,7 @@
           items:
             - name: Обзор
               href: learn/remoting/jea/overview.md
-            - name: Необходимые компоненты
+            - name: предварительные требования
               href: learn/remoting/jea/prerequisites.md
             - name: Возможности ролей
               href: learn/remoting/jea/role-capabilities.md
@@ -68,7 +68,7 @@
               href: learn/remoting/jea/register-jea.md
             - name: Использование JEA
               href: learn/remoting/jea/using-jea.md
-            - name: Вопросы обеспечения безопасности
+            - name: Соображения безопасности
               href: learn/remoting/jea/security-considerations.md
             - name: Аудит и отчеты для JEA
               href: learn/remoting/jea/audit-and-report.md
@@ -82,9 +82,9 @@
           href: learn/remoting/winrmsecurity.md
         - name: Выполнение второго прыжка при удаленном взаимодействии PowerShell
           href: learn/remoting/ps-remoting-second-hop.md
-    - name: Словарь терминов
+    - name: Глоссарий
       href: learn/windows-powershell-glossary.md
-- name: Компоненты
+- name: Components
   items:
     - name: Консоль
       items:
@@ -178,7 +178,7 @@
       href: gallery/overview.md
     - name: Установка PowerShellGet
       href: gallery/installing-psget.md
-    - name: Начало работы
+    - name: Приступая к работе
       href: gallery/getting-started.md
     - name: Инструкции
       items:
@@ -222,9 +222,9 @@
               href: gallery/how-to/managing-profile/managing-account.md
             - name: Управление ключами API
               href: gallery/how-to/managing-profile/creating-apikeys.md
-        - name: Работа с локальными хранилищами PowerShellGet
+        - name: Работа с частными репозиториями PowerShellGet
           href: gallery/how-to/working-with-local-psrepositories.md
-    - name: Концепции
+    - name: Основные понятия
       items:
         - name: Руководства и рекомендации для публикации
           href: gallery/concepts/publishing-guidelines.md
@@ -258,15 +258,15 @@
           href: gallery/how-to/getting-support/dispute-resolution.md
         - name: Обращение к администраторам
           href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: Диагностика
+        - name: Устранение неполадок
           href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
         - name: Начальная загрузка поставщика NuGet и NuGet.exe
           href: gallery/how-to/getting-support/bootstrapping-nuget.md
-        - name: Соответствие требованиям GDPR
+        - name: Соответствие GDPR
           href: gallery/how-to/getting-support/gdpr-dsr-policy.md
     - name: Вопросы и ответы о коллекции
       href: gallery/faqs.md
-- name: Новые возможности
+- name: What's New
   items:
     - name: "Новые возможности в PowerShell Core\_6.x"
       items:
@@ -300,7 +300,7 @@
           href: wmf/setup/install-configure.md
         - name: "Удаление WMF\_5.0"
           href: wmf/setup/uninstall.md
-    - name: Новые возможности
+    - name: What's New
       expanded: true
       items:
         - name: "Заметки о выпуске WMF\_5.x"
@@ -372,11 +372,11 @@
           href: dsc/quickstarts/website-quickStart.md
     - name: Конфигурации
       items:
-        - name: Концепции
+        - name: Основные понятия
           items:
             - name: Что такое конфигурация?
               href: dsc/configurations/configurations.md
-        - name: Практические руководства
+        - name: Инструкции
           items:
             - name: 'Создание, компиляция и применение конфигурации'
               href: dsc/configurations/write-compile-apply-configuration.md
@@ -418,7 +418,7 @@
                   href: dsc/configurations/reboot-a-node.md
     - name: Ресурсы
       items:
-        - name: Концепции
+        - name: Основные понятия
           items:
             - name: Общие сведения о ресурсах
               href: dsc/resources/resources.md
@@ -456,7 +456,7 @@
               href: dsc/managing-nodes/directCallResource.md
     - name: Опрашивающий сервер
       items:
-        - name: Концепции
+        - name: Основные понятия
           items:
             - name: Модель опрашивания и запрашивания
               href: dsc/pull-server/enactingConfigurations.md
@@ -496,7 +496,7 @@
                   href: dsc/pull-server/secureServer.md
                 - name: Защита MOF-файлов с помощью сертификатов
                   href: dsc/pull-server/secureMOF.md
-    - name: Руководства
+    - name: Учебники
       items:
         - name: 'Создание конвейера CI/CD с помощью DSC, Pester и Visual Studio Team Services'
           href: dsc/tutorials/dscCiCd.md
@@ -504,13 +504,13 @@
           href: dsc/tutorials/bootstrapDsc.md
         - name: Настройка раздела реестра DSCAutomationHostEnabled
           href: dsc/tutorials/DSCAutomationHostEnabled.md
-    - name: Диагностика
+    - name: Устранение неполадок
       items:
         - name: Известные проблемы
           href: dsc/troubleshooting/troubleshooting.md
         - name: Отладка ресурсов DSC
           href: dsc/troubleshooting/debugResource.md
-    - name: Ссылка
+    - name: Справочник
       items:
         - name: Встроенные ресурсы Windows
           items:
@@ -632,7 +632,7 @@
       items:
         - name: Технические документы
           href: dsc/further-reading/whitepapers.md
-- name: Примеры скриптов
+- name: Примеры сценариев
   items:
     - name: Примеры скриптов для администрирования
       href: samples/sample-scripts-for-administration.yml
@@ -812,7 +812,7 @@
                 - name: Стандартные имена и типы параметров командлета
                   href: developer/cmdlet/standard-cmdlet-parameter-names-and-types.md
                   items:
-                    - name: Параметры действий
+                    - name: Параметры действия
                       href: developer/cmdlet/activity-parameters.md
                     - name: Параметры даты и времени
                       href: developer/cmdlet/date-and-time-parameters.md
@@ -1830,5 +1830,5 @@
     - name: "Справочник по Windows\_PowerShell"
       href: developer/windows-powershell-reference.md
       items:
-        - name: Новые возможности
+        - name: What's New
           href: developer/windows-powershell-reference-whats-new.md
