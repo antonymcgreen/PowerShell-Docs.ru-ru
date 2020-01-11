@@ -1,22 +1,14 @@
 ---
-title: Создание поставщика навигации Windows PowerShell | Документация Майкрософт
-ms.custom: ''
+title: Создание поставщика навигации Windows PowerShell
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- navigation providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
-caps.latest.revision: 5
-ms.openlocfilehash: f73e732ca9416b906b3647c5090dfa04ad940484
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 96a9167019c047bb9c6e56362b2c1110ece553dd
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416201"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870699"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Создание поставщика навигации Windows PowerShell
 
@@ -24,10 +16,7 @@ ms.locfileid: "74416201"
 
 > [!NOTE]
 > Вы можете скачать C# исходный файл (AccessDBSampleProvider05.cs) для этого поставщика с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory.
->
-> Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory. Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 Описываемый здесь поставщик позволяет пользователю обращаться к базе данных Access как диску, чтобы пользователь мог перейти к таблицам данных в базе данных. При создании собственного поставщика навигации можно реализовать методы, которые могут создавать пути к дискам, необходимые для навигации, нормализовать относительные пути, перемещать элементы хранилища данных, а также методы, которые получают дочерние имена, получают родительский путь к элементу и тест для выяснения, является ли элемент контейнером.
 
@@ -38,7 +27,8 @@ ms.locfileid: "74416201"
 
 Поставщик навигации Windows PowerShell должен создать класс .NET, производный от базового класса [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) . Ниже приведено определение класса для поставщика навигации, описанного в этом разделе.
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32
+"AccessDBProviderSample05.cs")]
 
 Обратите внимание, что в этом поставщике атрибут [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) включает два параметра. Первый параметр задает понятное имя для поставщика, используемого Windows PowerShell. Второй параметр указывает специальные возможности Windows PowerShell, которые поставщик предоставляет среде выполнения Windows PowerShell во время обработки команды. Для этого поставщика не добавляются специальные возможности Windows PowerShell.
 
@@ -77,7 +67,8 @@ ms.locfileid: "74416201"
 
 Поставщики навигации Windows PowerShell реализуют метод [System. Management. Automation. Provider. Navigationcmdletprovider. жетпарентпас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) для получения родительской части указанного полного или частичного пути, зависящего от поставщика. Метод удаляет дочернюю часть пути и возвращает часть родительского пути. Параметр `root` указывает полный путь к корню диска. Этот параметр может иметь значение null или быть пустым, если подключенный диск не используется для операции получения. Если указан корень, метод должен возвращать путь к контейнеру в том же дереве, что и корень.
 
-Образец поставщика навигации не переопределяет этот метод, но использует реализацию по умолчанию. Он принимает пути, использующие "/" и "\\" в качестве разделителей пути. Сначала он нормализует путь, чтобы он имел только разделители "\\", а затем разделяет родительский путь с последнего "\\" и возвращает родительский путь.
+Образец поставщика навигации не переопределяет этот метод, но использует реализацию по умолчанию.
+Он принимает пути, использующие "/" и "\\" в качестве разделителей пути. Сначала он нормализует путь, чтобы он имел только разделители "\\", а затем разделяет родительский путь с последнего "\\" и возвращает родительский путь.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetparentpath](Msh_samplestestcmdlets#testprovidergetparentpath)]  -->
 
@@ -126,7 +117,8 @@ ms.locfileid: "74416201"
 
 По умолчанию переопределения этого метода не должны перемещать объекты поверх существующих объектов, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Например, Поставщик FileSystem не будет копировать к:\темп\абк.ткст в существующий файл к:\бар.ткст, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь, указанный в параметре `destination`, существует и является контейнером, свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не является обязательным. В этом случае [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) должен переместить элемент, указанный параметром `path`, в контейнер, указанный параметром `destination` в качестве дочернего.
 
-Реализация метода [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в состояние системы, например при удалении файлов. [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, которое будет изменено пользователю, при этом среда выполнения Windows PowerShell учитывает все параметры командной строки или привилегированные переменные в определении того, что должно отображаться пользователю.
+Реализация метода [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в состояние системы, например при удалении файлов.
+[System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, которое будет изменено пользователю, при этом среда выполнения Windows PowerShell учитывает все параметры командной строки или привилегированные переменные в определении того, что должно отображаться пользователю.
 
 После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, метод [System. Management. Automation. Provider. Navigationcmdletprovider. мовеитем *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) должен вызывать метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение, чтобы разрешить отзыв, если операция должна быть продолжена. Поставщик должен вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) в качестве дополнительной проверки потенциально опасной модификации системы.
 
@@ -156,11 +148,11 @@ ms.locfileid: "74416201"
 
 ## <a name="defining-object-types-and-formatting"></a>Определение типов объектов и форматирование
 
-Поставщик может добавлять элементы в существующие объекты или определять новые объекты. Дополнительные сведения см. в разделе[расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Поставщик может добавлять элементы в существующие объекты или определять новые объекты. Дополнительные сведения см. в разделе[расширение типов объектов и форматирование](/previous-versions/ms714665(v=vs.85)).
 
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
-Дополнительные сведения см. [в разделе Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Дополнительные сведения см. [в разделе Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85)).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Тестирование поставщика Windows PowerShell
 
@@ -178,7 +170,7 @@ ms.locfileid: "74416201"
    Get-ChildItem | Format-Table rowcount,name -AutoSize
    ```
 
-   ```output
+   ```Output
    RowCount   Name
    --------   ----
         180   MSysAccessObjects
@@ -211,7 +203,7 @@ ms.locfileid: "74416201"
    Get-Location
    ```
 
-   ```output
+   ```Output
    Path
    ----
    mydb:\Employees
@@ -223,7 +215,7 @@ ms.locfileid: "74416201"
    Get-ChildItem | Format-Table rownumber,psiscontainer,data -AutoSize
    ```
 
-   ```output
+   ```Output
    RowNumber   PSIsContainer   Data
    ---------   --------------   ----
    0           False            System.Data.DataRow
@@ -243,7 +235,7 @@ ms.locfileid: "74416201"
    Get-Item 0
    ```
 
-   ```output
+   ```Output
    PSPath        : AccessDB::C:\PS\Northwind.mdb\Employees\0
    PSParentPath  : AccessDB::C:\PS\Northwind.mdb\Employees
    PSChildName   : 0
@@ -260,7 +252,7 @@ ms.locfileid: "74416201"
    (Get-Item 0).data
    ```
 
-   ```output
+   ```Output
    EmployeeID      : 1
    LastName        : Davis
    FirstName       : Sara
@@ -284,17 +276,17 @@ ms.locfileid: "74416201"
    ReportsTo       : 2
    ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
 [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Расширение типов объектов и форматирование](/previous-versions/ms714665(v=vs.85))
 
 [Реализация контейнера Windows PowerShell provider](./creating-a-windows-powershell-container-provider.md)
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85))
 
 [Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

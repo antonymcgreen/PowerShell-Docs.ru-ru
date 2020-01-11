@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: fcb03d4021f00837095ce703beb0d841233391d6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 69e45de4220a234783d35a877116ad5a5e47d182
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416215"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870784"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Создание поставщика контейнеров Windows PowerShell
 
@@ -26,10 +26,7 @@ ms.locfileid: "74416215"
 
 > [!NOTE]
 > Вы можете скачать C# исходный файл (AccessDBSampleProvider04.cs) для этого поставщика с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory.
->
-> Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory. Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 Поставщик контейнера Windows PowerShell, описанный здесь, определяет базу данных в качестве единого контейнера с таблицами и строками базы данных, определенными в качестве элементов контейнера.
 
@@ -41,8 +38,8 @@ ms.locfileid: "74416215"
 Поставщик контейнера Windows PowerShell должен определять класс .NET, производный от базового класса [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) . Ниже приведено определение класса для поставщика контейнеров Windows PowerShell, описанного в этом разделе.
 
 ```csharp
-   [CmdletProvider("AccessDB", ProviderCapabilities.None)]
-   public class AccessDBProvider : ContainerCmdletProvider
+[CmdletProvider("AccessDB", ProviderCapabilities.None)]
+public class AccessDBProvider : ContainerCmdletProvider
 ```
 
 [!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L34-L35 "AccessDBProviderSample04.cs")]
@@ -53,7 +50,8 @@ ms.locfileid: "74416215"
 
 Как описано в разделе [проектирование поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md), класс [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) является производным от нескольких других классов, предоставилих различные функции поставщика. Таким образом, поставщик контейнера Windows PowerShell должен определить все функциональные возможности, предоставляемые этими классами.
 
-Сведения о реализации функций для добавления сведений об инициализации для конкретного сеанса и освобождения ресурсов, используемых поставщиком, см. в разделе [Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md). Однако большинство поставщиков (включая описанный здесь поставщик) могут использовать реализацию этой функции по умолчанию, предоставляемую Windows PowerShell.
+Сведения о реализации функций для добавления сведений об инициализации для конкретного сеанса и освобождения ресурсов, используемых поставщиком, см. в разделе [Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md).
+Однако большинство поставщиков (включая описанный здесь поставщик) могут использовать реализацию этой функции по умолчанию, предоставляемую Windows PowerShell.
 
 Чтобы получить доступ к хранилищу данных, поставщик должен реализовать методы базового класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Дополнительные сведения о реализации этих методов см. в разделе [Создание поставщика диска Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
@@ -231,11 +229,13 @@ protected override void GetChildNames(string path,
 
 - При определении класса поставщика поставщик контейнера Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилдитемс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) должна обеспечить соответствие пути, переданного методу, требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- Метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) предназначен только для изменения имени элемента, а не для операций перемещения. Ваша реализация метода должна записать ошибку, если параметр `newName` содержит разделители пути или в противном случае может привести к изменению родительского расположения элемента.
+- Метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) предназначен только для изменения имени элемента, а не для операций перемещения.
+  Ваша реализация метода должна записать ошибку, если параметр `newName` содержит разделители пути или в противном случае может привести к изменению родительского расположения элемента.
 
 - По умолчанию переопределения этого метода не должны переименовывать объекты, если не указано свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) . Если указанный путь указывает на контейнер, свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не является обязательным.
 
-- Реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в состояние системы, например при переименовании файлов. [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, которое будет изменено пользователю, при этом среда выполнения Windows PowerShell учитывает все параметры командной строки или привилегированные переменные в определении того, что следует отображать.
+- Реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в состояние системы, например при переименовании файлов.
+  [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, которое будет изменено пользователю, при этом среда выполнения Windows PowerShell учитывает все параметры командной строки или привилегированные переменные в определении того, что следует отображать.
 
   После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ренамеитем *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) должен вызывать метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение с подтверждением, чтобы разрешить дополнительные отзывы, чтобы сказать, следует ли продолжать операцию. Поставщик должен вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) в качестве дополнительной проверки потенциально опасной модификации системы.
 
@@ -254,8 +254,7 @@ protected override void GetChildNames(string path,
 Ниже приведена реализация метода [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) для этого поставщика.
 
 ```csharp
-protected override void NewItem( string path, string type,
-                                 object newItemValue )
+protected override void NewItem( string path, string type, object newItemValue )
 {
     // Create the new item here after
     // performing necessary validations
@@ -279,7 +278,8 @@ protected override void NewItem( string path, string type,
 
 Следующие условия могут применяться к реализации [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem):
 
-- Метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) должен выполнять сравнение строки, переданной в параметре `type`, без учета регистра. Он также должен позволять наименее неоднозначные совпадения. Например, для типов "File" и "Directory" для устранения неоднозначности требуется только первая буква. Если параметр `type` указывает тип, который поставщик не может создать, метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) должен записать исключение типа ArgumentException с сообщением, указывающим типы, которые может создать поставщик.
+- Метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) должен выполнять сравнение строки, переданной в параметре `type`, без учета регистра.
+  Он также должен позволять наименее неоднозначные совпадения. Например, для типов "File" и "Directory" для устранения неоднозначности требуется только первая буква. Если параметр `type` указывает тип, который поставщик не может создать, метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) должен записать исключение типа ArgumentException с сообщением, указывающим типы, которые может создать поставщик.
 
 - Для параметра `newItemValue` рекомендуется реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) , чтобы принимать строки как минимум. Он также должен принять тип объекта, который извлекается методом [System. Management. Automation. Provider. итемкмдлетпровидер. GetObject *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) для того же пути. Метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. newItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) может использовать метод [System. Management. Automation. Languageprimitives. ConvertTo *](/dotnet/api/System.Management.Automation.LanguagePrimitives.ConvertTo) для преобразования типов в нужный тип.
 
@@ -376,7 +376,7 @@ protected override bool HasChildItems( string path )
 
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
-См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85)).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Тестирование поставщика Windows PowerShell
 
@@ -388,7 +388,7 @@ protected override bool HasChildItems( string path )
    Get-ChildItem mydb:customers
    ```
 
-   Появится следующий вывод.
+   Появится следующий результат.
 
    ```output
    PSPath        : AccessDB::customers
@@ -407,7 +407,7 @@ protected override bool HasChildItems( string path )
    (Get-ChildItem mydb:customers).data
    ```
 
-   Появится следующий вывод.
+   Появится следующий результат.
 
    ```output
    TABLE_CAT   : c:\PS\northwind
@@ -423,7 +423,7 @@ protected override bool HasChildItems( string path )
    Get-Item mydb:\customers\0
    ```
 
-   Появится следующий вывод.
+   Появится следующий результат.
 
    ```output
    PSPath        : AccessDB::customers\0
@@ -440,7 +440,7 @@ protected override bool HasChildItems( string path )
    (Get-Item mydb:\customers\0).data
    ```
 
-   Появится следующий вывод.
+   Появится следующий результат.
 
    ```output
    CustomerID   : 1234
@@ -456,7 +456,8 @@ protected override bool HasChildItems( string path )
    Fax          : (425) 555-0101
    ```
 
-5. Теперь используйте командлет `New-Item`, чтобы добавить строку в существующую таблицу. Параметр `Path` задает полный путь к строке и должен указывать номер строки, который больше, чем существующее число строк в таблице. Параметр `Type` указывает "Row", указывающий добавляемый тип элемента. Наконец, параметр `Value` задает разделенный запятыми список значений столбцов для строки.
+5. Теперь используйте командлет `New-Item`, чтобы добавить строку в существующую таблицу. Параметр `Path` задает полный путь к строке и должен указывать номер строки, который больше, чем существующее число строк в таблице. Параметр `Type` указывает "Row", указывающий добавляемый тип элемента.
+   Наконец, параметр `Value` задает разделенный запятыми список значений столбцов для строки.
 
    ```powershell
    New-Item -Path mydb:\Customers\3 -ItemType "row" -Value "3,CustomerFirstName,CustomerLastName,CustomerEmailAddress,CustomerTitle,CustomerCompany,CustomerPhone, CustomerAddress,CustomerCity,CustomerState,CustomerZip,CustomerCountry"
@@ -469,7 +470,7 @@ protected override bool HasChildItems( string path )
    PS mydb:\Customers> (Get-Item 3).data
    ```
 
-   Появится следующий вывод.
+   Появится следующий результат.
 
    ```output
    ID        : 3
@@ -486,7 +487,7 @@ protected override bool HasChildItems( string path )
    Country   : USA
    ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
@@ -496,7 +497,7 @@ protected override bool HasChildItems( string path )
 
 [Реализация поставщика навигации Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85))
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
 

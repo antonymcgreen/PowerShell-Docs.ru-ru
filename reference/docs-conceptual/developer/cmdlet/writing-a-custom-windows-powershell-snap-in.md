@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], specified in snap-ins
 ms.assetid: 55c8b5cb-8ee2-4080-afc4-3f09c9f20128
 caps.latest.revision: 6
-ms.openlocfilehash: 4d50ef4dcd75d5c0ba802fbcfe2d7d1d7c954707
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: aa6e4a4615f2681efa691008c86611f0df4e07d7
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364253"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870495"
 ---
 # <a name="writing-a-custom-windows-powershell-snap-in"></a>Написание пользовательской оснастки Windows PowerShell
 
@@ -27,12 +27,11 @@ ms.locfileid: "72364253"
 ## <a name="to-write-a-windows-powershell-snap-in-that-registers-specific-cmdlets"></a>Для создания оснастки Windows PowerShell, которая регистрирует определенные командлеты.
 
 1. Добавьте атрибут Рунинсталлераттрибуте.
-
 2. Создайте открытый класс, производный от класса [System. Management. Automation. кустомпсснапин](/dotnet/api/System.Management.Automation.CustomPSSnapIn) .
 
    В этом примере имя класса — «Кустомпсснапинтест».
 
-3. Добавьте открытое свойство для имени оснастки (обязательно). При именовании оснасток не используйте следующие символы: #. , () {} [] &-/\ $; : "\< > &#124; ? @ ` *
+3. Добавьте открытое свойство для имени оснастки (обязательно). При именовании оснасток не используйте следующие символы: `#`, `.`, `,`, `(`, `)`, `{`, `}`, `[`, `]`, `&`, `-`, `/`, `\`, `$`, `;`, `:`, `"`, `'`, `<`, `>`
 
    В этом примере имя оснастки — «Кустомпсснапинтест».
 
@@ -46,13 +45,15 @@ ms.locfileid: "72364253"
 
 6. Добавьте открытое свойство для описания оснастки (обязательно).
 
-   В этом примере описание: "это пользовательская оснастка Windows PowerShell, которая включает командлеты Test-HelloWorld и Test-Кустомснапинтест".
+   В этом примере описание: "это пользовательская оснастка Windows PowerShell, которая включает `Test-HelloWorld` и `Test-CustomSnapinTest` командлеты".
 
 7. Добавьте открытое свойство для ресурса описания оснастки (необязательно).
 
-   В этом примере ресурсом поставщика является «Кустомпсснапинтест, это пользовательская оснастка Windows PowerShell, которая включает командлеты Test-HelloWorld и Test-Кустомснапинтест».
+   В этом примере ресурсом поставщика является:
 
-8. Укажите командлеты, принадлежащие к пользовательской оснастке (необязательно), с помощью класса [System. Management. Automation. пространства. кмдлетконфигуратионентри](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry) . Добавляемые здесь сведения включают имя командлета, его тип .NET и имя файла справки командлета (формат имени файла справки командлета должен быть Name. длл-Хелп. XML).
+   > Кустомпсснапинтест, это пользовательская оснастка Windows PowerShell, которая включает командлеты Test-HelloWorld и Test-Кустомснапинтест.
+
+8. Укажите командлеты, принадлежащие к пользовательской оснастке (необязательно), с помощью класса [System. Management. Automation. пространства. кмдлетконфигуратионентри](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry) . Добавляемые здесь сведения включают имя командлета, его тип .NET и имя файла справки командлета (формат имени файла справки командлета должен быть` name.dll-help.xml`).
 
    В этом примере добавляются командлеты Test-HelloWorld и Тесткустомснапинтест.
 
@@ -70,7 +71,7 @@ ms.locfileid: "72364253"
 
 ## <a name="example"></a>Пример
 
-В этом примере показано, как написать пользовательскую оснастку Windows PowerShell, которая может использоваться для регистрации командлетов Test-HelloWorld и Test-Кустомснапинтест. Имейте в виду, что в этом примере полная сборка может содержать другие командлеты и поставщики, которые не будут зарегистрированы в этой оснастке.
+В этом примере показано, как написать пользовательскую оснастку Windows PowerShell, которая может использоваться для регистрации командлетов `Test-HelloWorld` и `Test-CustomSnapinTest`. Имейте в виду, что в этом примере полная сборка может содержать другие командлеты и поставщики, которые не будут зарегистрированы в этой оснастке.
 
 ```csharp
 [RunInstaller(true)]
@@ -213,10 +214,10 @@ public class CustomPSSnapinTest : CustomPSSnapIn
 }
 ```
 
-Дополнительные сведения о регистрации оснасток см. в разделе [Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c) [руководства программиста Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md).
+Дополнительные сведения о регистрации оснасток см. в разделе [Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85)) [руководства программиста Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85))
 
 [Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)

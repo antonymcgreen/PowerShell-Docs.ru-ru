@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], property provider
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
-ms.openlocfilehash: 9197f5635528e0f52cd08adde1c6bd69467725e8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d6c84c3b23439cd3fd6205a2c1d480e0c063d09c
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417466"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870682"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Создание поставщика свойств Windows PowerShell
 
@@ -24,10 +24,7 @@ ms.locfileid: "74417466"
 
 > [!NOTE]
 > Windows PowerShell предоставляет файл шаблона, который можно использовать для разработки поставщика Windows PowerShell. Файл TemplateProvider.cs доступен в пакете средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> Скачанный шаблон доступен в **\<примеров PowerShell >** Directory. Необходимо создать копию этого файла и использовать копию для создания нового поставщика Windows PowerShell, удалив все ненужные функции.
->
-> Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Скачанный шаблон доступен в **\<примеров PowerShell >** Directory. Необходимо создать копию этого файла и использовать копию для создания нового поставщика Windows PowerShell, удалив все ненужные функции. Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 > [!CAUTION]
 > Методы поставщика свойств должны записывать любые объекты с помощью метода [System. Management. Automation. Provider. кмдлетпровидер. вритепропертйобжект *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WritePropertyObject) .
@@ -72,7 +69,8 @@ ms.locfileid: "74417466"
 
 ## <a name="setting-properties"></a>Установка свойств
 
-Чтобы задать свойства, поставщик свойств Windows PowerShell должен реализовать метод [System. Management. Automation. Provider. ипропертикмдлетпровидер. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) для поддержки вызовов из командлета `Set-ItemProperty`. Этот метод задает одно или несколько свойств элемента по указанному пути и перезаписывает указанные свойства в соответствии с требованиями. [System. Management. Automation. Provider. ипропертикмдлетпровидер. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) также записывает экземпляр объекта [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) , представляющий контейнер свойств обновленных свойств.
+Чтобы задать свойства, поставщик свойств Windows PowerShell должен реализовать метод [System. Management. Automation. Provider. ипропертикмдлетпровидер. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) для поддержки вызовов из командлета `Set-ItemProperty`. Этот метод задает одно или несколько свойств элемента по указанному пути и перезаписывает указанные свойства в соответствии с требованиями.
+[System. Management. Automation. Provider. ипропертикмдлетпровидер. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) также записывает экземпляр объекта [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) , представляющий контейнер свойств обновленных свойств.
 
 Ниже приведена реализация [System. Management. Automation. Provider. ипропертикмдлетпровидер. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) по умолчанию из файла TemplateProvider.cs, предоставляемого Windows PowerShell.
 
@@ -86,7 +84,8 @@ ms.locfileid: "74417466"
 
 - По умолчанию переопределения этого метода не должны извлекать модуль чтения для объектов, которые скрыты от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь представляет элемент, который скрыт от User, а [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) имеет значение `false`, то ошибка должна быть записана.
 
-- Реализация метода [System. Management. Automation. Provider. ипропертикмдлетпровидер. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в состояние системы, например при переименовании файлов. [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, который будет изменен пользователю, с помощью среды выполнения Windows PowerShell и обрабатывая все параметры командной строки или привилегированные переменные в определении того, что следует отображать.
+- Реализация метода [System. Management. Automation. Provider. ипропертикмдлетпровидер. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в состояние системы, например при переименовании файлов.
+  [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, который будет изменен пользователю, с помощью среды выполнения Windows PowerShell и обрабатывая все параметры командной строки или привилегированные переменные в определении того, что следует отображать.
 
   После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, если могут быть сделаны потенциально опасные изменения системы, метод [System. Management. Automation. Provider. ипропертикмдлетпровидер. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) должен вызвать метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение с подтверждением, чтобы разрешить дополнительный отзыв, чтобы указать, что операция должна быть продолжена.
 
@@ -114,7 +113,8 @@ ms.locfileid: "74417466"
 
 - По умолчанию переопределения этого метода не должны извлекать модуль чтения для объектов, которые скрыты от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь представляет элемент, который скрыт от User, а [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) имеет значение `false`, то ошибка должна быть записана.
 
-- Реализация метода [System. Management. Automation. Provider. ипропертикмдлетпровидер. клеарпроперти *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции до внесения изменений в состояние системы, например для очистки содержимого. [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, которое будет изменено пользователю, при этом среда выполнения Windows PowerShell учитывает все параметры командной строки или привилегированные переменные в определении того, что следует отображать.
+- Реализация метода [System. Management. Automation. Provider. ипропертикмдлетпровидер. клеарпроперти *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции до внесения изменений в состояние системы, например для очистки содержимого.
+  [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, которое будет изменено пользователю, при этом среда выполнения Windows PowerShell учитывает все параметры командной строки или привилегированные переменные в определении того, что следует отображать.
 
   После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, если могут быть сделаны потенциально опасные изменения системы, метод [System. Management. Automation. Provider. ипропертикмдлетпровидер. клеарпроперти *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) должен вызвать метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение с подтверждением, чтобы разрешить дополнительный отзыв, чтобы указать, что потенциально опасное действие должно быть продолжено.
 
@@ -128,14 +128,14 @@ ms.locfileid: "74417466"
 
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
-См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Поставщик Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
 [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Расширение типов объектов и форматирование](https://msdn.microsoft.com/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: ad42b8de867f468e832380ab6a22a39b6d27d3c6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a64e49894ce5195cc177e97a7049740389b09456
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417485"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870716"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Создание поставщика элементов Windows PowerShell
 
@@ -24,10 +24,7 @@ ms.locfileid: "74417485"
 
 > [!NOTE]
 > Вы можете скачать C# исходный файл (AccessDBSampleProvider03.cs) для этого поставщика с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory.
->
-> Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory. Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 Поставщик элементов Windows PowerShell, описанный в этом разделе, получает элементы данных из базы данных Access. В этом случае «Item» — это либо таблица в базе данных Access, либо строка в таблице.
 
@@ -43,13 +40,15 @@ ms.locfileid: "74417485"
 
 Как описано в статье [проектирование поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md), класс [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) является производным от нескольких других классов, предоставилих различные функции поставщика. Поэтому поставщик элементов Windows PowerShell должен определить все функциональные возможности, предоставляемые этими классами.
 
-Дополнительные сведения о том, как реализовать функции для добавления сведений об инициализации для конкретного сеанса и освобождения ресурсов, используемых поставщиком, см. [в разделе Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md). Однако большинство поставщиков, включая описанный здесь поставщик, могут использовать реализацию этой функции по умолчанию, предоставляемую Windows PowerShell.
+Дополнительные сведения о том, как реализовать функции для добавления сведений об инициализации для конкретного сеанса и освобождения ресурсов, используемых поставщиком, см. [в разделе Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md).
+Однако большинство поставщиков, включая описанный здесь поставщик, могут использовать реализацию этой функции по умолчанию, предоставляемую Windows PowerShell.
 
 Прежде чем поставщик элементов Windows PowerShell сможет манипулировать элементами в хранилище, он должен реализовать методы базового класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) для доступа к хранилищу данных. Дополнительные сведения о реализации этого класса см. [в разделе Создание поставщика диска Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
 ## <a name="checking-for-path-validity"></a>Проверка допустимости пути
 
-При поиске элемента данных среда выполнения Windows PowerShell обеспечивает для поставщика путь Windows PowerShell, как определено в разделе "Основные понятия PSPath", [как работает Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58). Поставщик элементов Windows PowerShell должен проверить синтаксическую и семантическую достоверность любого пути, переданного в него, путем реализации метода [System. Management. Automation. Provider. итемкмдлетпровидер. исвалидпас *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) . Этот метод возвращает `true`, если путь является допустимым, и `false` в противном случае. Имейте в виду, что реализация этого метода не должна проверять существование элемента по пути, но синтаксические и Семантическо правильные пути.
+При поиске элемента данных среда выполнения Windows PowerShell обеспечивает для поставщика путь Windows PowerShell, как определено в разделе "Основные понятия PSPath", [как работает Windows PowerShell](/previous-versions/ms714658(v=vs.85)).
+Поставщик элементов Windows PowerShell должен проверить синтаксическую и семантическую достоверность любого пути, переданного в него, путем реализации метода [System. Management. Automation. Provider. итемкмдлетпровидер. исвалидпас *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) . Этот метод возвращает `true`, если путь является допустимым, и `false` в противном случае. Имейте в виду, что реализация этого метода не должна проверять существование элемента по пути, но синтаксические и Семантическо правильные пути.
 
 Ниже приведена реализация метода [System. Management. Automation. Provider. итемкмдлетпровидер. исвалидпас *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) для этого поставщика. Обратите внимание, что эта реализация вызывает вспомогательный метод Нормализепас, чтобы преобразовать все разделители в пути в одинаковые.
 
@@ -225,17 +224,17 @@ ms.locfileid: "74417485"
 
 ## <a name="defining-object-types-and-formatting"></a>Определение типов объектов и форматирование
 
-При написании поставщика может потребоваться добавить элементы в существующие объекты или определить новые объекты. По завершении создайте файл типов, который Windows PowerShell может использовать для определения членов объекта и файла форматирования, определяющего способ отображения объекта. Дополнительные сведения о см. в разделе [расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+При написании поставщика может потребоваться добавить элементы в существующие объекты или определить новые объекты. По завершении создайте файл типов, который Windows PowerShell может использовать для определения членов объекта и файла форматирования, определяющего способ отображения объекта. Дополнительные сведения о см. в разделе [расширение типов объектов и форматирование](/previous-versions/ms714665(v=vs.85)).
 
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
-См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85)).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Тестирование поставщика Windows PowerShell
 
 Если этот поставщик элементов Windows PowerShell зарегистрирован в Windows PowerShell, можно протестировать только основные функциональные возможности и функции поставщика. Чтобы протестировать манипуляцию с элементами, необходимо также реализовать функциональные возможности контейнера, описанные в разделе [Реализация контейнера Windows PowerShell Provider](./creating-a-windows-powershell-container-provider.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
 
@@ -245,12 +244,12 @@ ms.locfileid: "74417485"
 
 [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Расширение типов объектов и форматирование](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Расширение типов объектов и форматирование](/previous-versions/ms714665(v=vs.85))
 
-[Как работает Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Как работает Windows PowerShell](/previous-versions/ms714658(v=vs.85))
 
 [Создание контейнера Windows PowerShell provider](./creating-a-windows-powershell-container-provider.md)
 
 [Создание поставщика Windows PowerShell для дисков](./creating-a-windows-powershell-drive-provider.md)
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85))

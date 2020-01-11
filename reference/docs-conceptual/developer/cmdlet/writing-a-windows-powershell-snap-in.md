@@ -10,12 +10,12 @@ helpviewer_keywords:
 - snap-ins [PowerShell SDK], PSSnapin example
 ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
 caps.latest.revision: 7
-ms.openlocfilehash: 465ab9e8fa29716ce0f46ad0dcf01d0ddd615bcd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d12a66e354a23041fffb0f8fa286c849849ec2b0
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364233"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870478"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Написание оснастки Windows PowerShell
 
@@ -31,7 +31,7 @@ ms.locfileid: "72364233"
 
     В этом примере имя класса — «GetProcPSSnapIn01».
 
-3. Добавьте открытое свойство для имени оснастки (обязательно). При именовании оснасток не используйте следующие символы: #. , () {} [] &-/\ $; : "" \< >;? @ ` *
+3. Добавьте открытое свойство для имени оснастки (обязательно). При именовании оснасток не используйте следующие символы: `#`, `.`, `,`, `(`, `)`, `{`, `}`, `[`, `]`, `&`, `-`, `/`, `\`, `$`, `;`, `:`, `"`, `'`, `<`, `>`
 
     В этом примере имя оснастки — «GetProcPSSnapIn01».
 
@@ -53,7 +53,7 @@ ms.locfileid: "72364233"
 
 ## <a name="example"></a>Пример
 
-В этом примере показано, как создать оснастку Windows PowerShell, которая может использоваться для регистрации командлета Get-proc в оболочке Windows PowerShell. Имейте в виду, что в этом примере полная сборка будет содержать только класс оснастки GetProcPSSnapIn01 и класс командлета Get-proc.
+В этом примере показано, как создать оснастку Windows PowerShell, которая может использоваться для регистрации командлета Get-proc в оболочке Windows PowerShell. Имейте в виду, что в этом примере полная сборка будет содержать только класс оснастки GetProcPSSnapIn01 и класс командлета `Get-Proc`.
 
 ```csharp
 [RunInstaller(true)]
@@ -126,8 +126,8 @@ public class GetProcPSSnapIn01 : PSSnapIn
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85))
 
 [Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)
