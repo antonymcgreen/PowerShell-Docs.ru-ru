@@ -1,24 +1,24 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/23/2019
 keywords: powershell,командлет
 title: Работа с принтерами
-ms.openlocfilehash: 816388325cc3155f1dbd1bc15fc1736155216092
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 47c4f230d023ad93e2b65080feaa1dbfae803d08
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030675"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736868"
 ---
-# <a name="working-with-printers"></a>Работа с принтерами
+# <a name="working-with-printers-in-windows"></a>Работа с принтерами в Windows
 
-Windows PowerShell можно использовать для управления принтерами с помощью инструментария WMI и COM-объекта WScript.Network с сервера сценариев Windows. Мы будем использовать сочетание обоих средств, чтобы продемонстрировать выполнение конкретных задач.
+PowerShell можно использовать для управления принтерами с помощью инструментария WMI и COM-объекта **WScript.Network** с сервера сценариев Windows. Мы будем использовать сочетание обоих средств, чтобы продемонстрировать выполнение конкретных задач.
 
 ## <a name="listing-printer-connections"></a>Вывод подключений принтеров
 
 Самый простой способ вывести список принтеров, установленных на компьютере, — использовать класс **Win32_Printer** инструментария WMI.
 
 ```powershell
-Get-WmiObject -Class Win32_Printer
+Get-CimInstance -Class Win32_Printer
 ```
 
 Список принтеров можно также вывести с помощью COM-объекта **WScript.Network**, который обычно используется в сценариях сервера сценариев Windows:
@@ -42,7 +42,7 @@ Get-WmiObject -Class Win32_Printer
 Чтобы задать принтер по умолчанию с помощью инструментария WMI, найдите принтер в коллекции **Win32_Printer**, а затем вызовите метод **SetDefaultPrinter**.
 
 ```powershell
-(Get-WmiObject -ComputerName . -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'").SetDefaultPrinter()
+(Get-CimInstance -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'").SetDefaultPrinter()
 ```
 
 **WScript.Network** немного проще в использовании, так как содержит метод **SetDefaultPrinter**, который принимает в качестве аргумента только имя принтера:

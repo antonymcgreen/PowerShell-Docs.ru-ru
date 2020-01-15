@@ -2,21 +2,21 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Краткое руководство. Создание веб-сайта с использованием DSC
-ms.openlocfilehash: d98607939ccd3cc5e660936d8c0a6d54fce7d65f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 08ca25604998ce8c913ef8112b5342f2e0216b6e
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71955071"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75416130"
 ---
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+# <a name="quickstart---create-a-website-with-desired-state-configuration-dsc"></a>Краткое руководство. Создание веб-сайта с использованием Desired State Configuration (DSC)
 
-# <a name="quickstart---create-a-website-with-dsc"></a>Краткое руководство. Создание веб-сайта с использованием DSC
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 В этом упражнении демонстрируется создание и применение конфигурации Desired State Configuration (DSC).
 В нашем примере на сервере будет включен компонент `Web-Server` (IIS), а содержимое простого веб-сайта "Hello World" будет расположено на этом сервере в каталоге `inetpub\wwwroot`.
 
-См. дополнительные сведения об особенностях [настройки требуемого состояния для руководителей](../overview/decisionMaker.md).
+См. дополнительные сведения об особенностях работы с DSC в [обзоре платформы Desired State Configuration для руководителей](../overview/decisionMaker.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -74,7 +74,7 @@ Configuration WebsiteTest {
 
 Как видно, текст выглядит как функция PowerShell, перед именем которой добавлено ключевое слово **Configuration**.
 
-Блок **Node** определяет настраиваемый целевой узел; в нашем примере это `localhost`.
+В блоке **Node** определяется настраиваемый целевой узел. В этом случае — `localhost`.
 
 Конфигурация вызывает два [ресурса](../resources/resources.md): **WindowsFeature** и **File**.
 Ресурсы обеспечивают для целевого узла состояние, определенное в конфигурации.
@@ -113,6 +113,9 @@ Mode                LastWriteTime         Length Name
 
 Этот командлет `Start-DscConfiguration` сообщает [локальному диспетчеру конфигураций (LCM)](../managing-nodes/metaConfig.md) (ядру DSC) о необходимости применить конфигурацию.
 LCM вызывает ресурсы DSC для применения конфигурации.
+
+> [!NOTE]
+> Чтобы разрешить выполнение DSC, Windows необходимо настроить для получения команд PowerShell из удаленного расположения, даже когда вы запускаете конфигурацию `localhost`. Чтобы правильно настроить среду, запустите `Set-WsManQuickConfig -Force` в терминале PowerShell с повышенными привилегиями.
 
 В консоли PowerShell перейдите к папке с сохраненным файлом конфигурации и выполните следующую команду:
 

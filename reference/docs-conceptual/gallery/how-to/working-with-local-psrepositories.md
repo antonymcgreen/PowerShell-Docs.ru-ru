@@ -3,14 +3,14 @@ ms.date: 11/06/2018
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery,psget
 title: Работа с локальными репозиториями PowerShell
-ms.openlocfilehash: 94824ea584c097838b24c6f2cd02407b6147a781
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c1bd905674ae76a3badd3eff50780f0e1bb5fc64
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327995"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75415825"
 ---
-# <a name="working-with-local-powershellget-repositories"></a>Работа с локальными хранилищами PowerShellGet
+# <a name="working-with-private-powershellget-repositories"></a>Работа с частными репозиториями PowerShellGet
 
 Модуль PowerShellGet поддерживает репозитории, отличные от коллекции PowerShell.
 Эти командлеты реализуют следующие сценарии:
@@ -18,6 +18,7 @@ ms.locfileid: "71327995"
 - поддержка надежного, предварительно проверенного набора модулей PowerShell для использования в вашей среде;
 - тестирование конвейера CI/CD, который создает модули или скрипты PowerShell;
 - предоставление скриптов и модулей PowerShell для систем, которые не имеют доступа к Интернету.
+- предоставление скриптов и модулей PowerShell, доступных только для вашей организации.
 
 В этой статье описывается, как настроить локальный репозиторий PowerShell. В статье также рассматривается модуль [OfflinePowerShellGetDeploy][], доступный в коллекции PowerShell. Этот модуль содержит командлеты для установки последней версии PowerShellGet в локальный репозиторий.
 
@@ -25,7 +26,7 @@ ms.locfileid: "71327995"
 
 Локальный репозиторий PSRepository можно создать в одном из двух видов: в виде сервера NuGet или файлового ресурса. У каждого типа есть свои преимущества и недостатки.
 
-Сервер NuGet
+### <a name="nuget-server"></a>Сервер NuGet
 
 | Преимущества| Недостатки |
 | --- | --- |
@@ -34,7 +35,7 @@ ms.locfileid: "71327995"
 | NuGet поддерживает метаданные в пакетах `.Nupkg` | Публикация требует управления ключами API и их обслуживания |
 | Возможность поиска, администрирования пакетов и т. д. | |
 
-Общая папка
+### <a name="file-share"></a>Общая папка
 
 | Преимущества| Недостатки |
 | --- | --- |
@@ -73,7 +74,7 @@ Register-PSRepository -Name LocalPSRepo -SourceLocation '\\localhost\PSRepoLocal
 
 Обратите внимание на разницу между тем, как две команды обрабатывают параметр **ScriptSourceLocation**. Для репозиториев на основе файлового ресурса значения параметров **SourceLocation** и **ScriptSourceLocation** должны совпадать. Для веб-репозиториев они должны отличаться, поэтому в этом примере в параметр **SourceLocation** добавлен завершающий символ "/".
 
-Если вы хотите, чтобы созданный репозиторий PSRepository был репозиторием по умолчанию, необходимо отменить регистрацию всех остальных репозиториев PowerShell. Например:
+Если вы хотите, чтобы созданный репозиторий PSRepository был репозиторием по умолчанию, необходимо отменить регистрацию всех остальных репозиториев PowerShell. Пример:
 
 ```powershell
 Unregister-PSRepository -Name PSGallery
@@ -98,18 +99,20 @@ Register-PSRepository -Default
 
 - Укажите расположение для своего кода.
 - Предоставьте ключ API.
-- Укажите имя репозитория. Например: `-PSRepository LocalPSRepo`
+- Укажите имя репозитория. Например `-PSRepository LocalPSRepo`.
 
 > [!NOTE]
 > Необходимо создать учетную запись на сервере NuGet, а затем войти в систему, чтобы создать и сохранить ключ API.
 > При использовании файлового ресурса для значения NuGetApiKey укажите любую непустую строку.
 
-Примеры
+Примеры:
 
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
 Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'oy2bi4avlkjolp6bme6azdyssn6ps3iu7ib2qpiudrtbji'
+```
 
+```powershell
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
@@ -126,11 +129,11 @@ Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey
 - Укажите расположение PSGallery в качестве источника (https://www.powershellgallery.com/api/v2) ).
 - Укажите путь к вашему локальному репозиторию.
 
-Пример:
+Пример
 
 ```powershell
 # Publish from the PSGallery to your local Repository
-Save-Package -Name 'PackageName' -Provider Nuget -Source https://www.powershellgallery.com/api/v2 -Path '\\localhost\PSRepoLocal\'
+Save-Package -Name 'PackageName' -Provider NuGet -Source https://www.powershellgallery.com/api/v2 -Path '\\localhost\PSRepoLocal\'
 ```
 
 Если ваш локальный репозиторий PSRepository имеет веб-интерфейс, для него требуется дополнительный шаг, на котором выполняется публикация с помощью nuget.exe.
@@ -181,6 +184,10 @@ Publish-Module -Path 'F:\OfflinePowershellGet' -Repository LocalPsRepo -NuGetApi
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'F:\OfflinePowerShellGet' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
+
+## <a name="use-packaging-solutions-to-host-powershellget-repositories"></a>Использование решений упаковки для размещения репозиториев PowerShellGet
+
+Вы также можете использовать такие решения упаковки, как Azure Artifacts, для размещения частного или общедоступного репозитория PowerShellGet. Дополнительные сведения и инструкции см. в [документации по Azure Artifacts](https://docs.microsoft.com/azure/devops/artifacts/tutorials/private-powershell-library).
 
 > [!IMPORTANT]
 > Чтобы обеспечить безопасность, ключи API не следует жестко программировать в скриптах. Используйте безопасную систему управления ключами.

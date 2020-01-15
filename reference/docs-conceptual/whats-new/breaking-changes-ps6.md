@@ -1,13 +1,13 @@
 ---
-ms.date: 11/15/2019
+ms.date: 12/18/2019
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
-ms.openlocfilehash: a1dac42bcda8e1258a99ef281691a9d4c5986b53
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: dfbbeb5e5bb3d43959ce144afffc5b10193f8b30
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417562"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75415712"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>Критические изменения в PowerShell 6.x
 
@@ -17,7 +17,7 @@ ms.locfileid: "74417562"
 
 [Рабочий процесс PowerShell][workflow] — это компонент Windows PowerShell на основе [Windows Workflow Foundation (WF)][workflow-foundation]. Он позволяет создавать надежные модули Runbook для долго выполняющихся или параллелизованных задач.
 
-Из-за отсутствия поддержки Windows Workflow Foundation в .NET Core мы больше не будем поддерживать рабочий процесс PowerShell в PowerShell Core.
+Из-за отсутствия поддержки Windows Workflow Foundation в .NET Core мы больше не поддерживаем рабочий процесс PowerShell в PowerShell Core.
 
 В будущем мы хотели бы реализовать собственный параллелизм в языке PowerShell без необходимости использовать рабочий процесс PowerShell.
 
@@ -64,6 +64,10 @@ ms.locfileid: "74417562"
 
 Из-за использования неподдерживаемых API модуль `Microsoft.PowerShell.LocalAccounts` был удален из PowerShell Core, пока не будет найдено лучшее решение.
 
+### <a name="new-webserviceproxy-cmdlet-removed"></a>Командлет `New-WebServiceProxy` удален
+
+.NET Core не поддерживает платформу Windows Communication Framework, которая предоставляет службы для использования протокола SOAP. Этот командлет удален, так как для него нужен протокол SOAP.
+
 ### <a name="-computer-cmdlets"></a>Командлеты `*-Computer`
 
 Из-за использования неподдерживаемых API следующие командлеты исключены из PowerShell Core, пока не будет найдено лучшее решение.
@@ -83,7 +87,7 @@ ms.locfileid: "74417562"
 
 ## <a name="enginelanguage-changes"></a>Изменения модуля и языка
 
-### <a name="rename-powershellexe-to-pwshexe-5101httpsgithubcompowershellpowershellissues5101"></a>Файл `powershell.exe` переименован в `pwsh.exe` [№ 5101](https://github.com/PowerShell/PowerShell/issues/5101)
+### <a name="rename-powershellexe-to-pwshexe-5101httpsgithubcompowershellpowershellissues5101"></a>`powershell.exe` переименован в `pwsh.exe` [№ 5101](https://github.com/PowerShell/PowerShell/issues/5101)
 
 Чтобы предоставить пользователям детерминированный способ вызова PowerShell Core в Windows (в отличие от Windows PowerShell), двоичный файл PowerShell Core был переименован в `pwsh.exe` на платформах Windows и в `pwsh` на других платформах.
 
@@ -105,7 +109,7 @@ ms.locfileid: "74417562"
 
 Чтобы ускорить создание области, атрибут `AllScope` был удален из большинства псевдонимов по умолчанию. Атрибут `AllScope` был оставлен для нескольких часто используемых псевдонимов, где поиск выполнялся быстрее.
 
-### <a name="-verbose-and--debug-no-longer-overrides-erroractionpreference-5113httpsgithubcompowershellpowershellissues5113"></a>`-Verbose` и `-Debug` больше не переопределяют `$ErrorActionPreference` [№ 5113](https://github.com/PowerShell/PowerShell/issues/5113)
+### <a name="-verbose-and--debug-no-longer-overrides-erroractionpreference-5113httpsgithubcompowershellpowershellissues5113"></a>`-Verbose` и `-Debug` больше не переопределяют `$ErrorActionPreference` [№ 5113](https://github.com/PowerShell/PowerShell/issues/5113)
 
 Ранее, если `-Verbose` или `-Debug` были указаны, поведение `$ErrorActionPreference` переопределялось. С этим изменением `-Verbose` и `-Debug` больше не влияют на поведение `$ErrorActionPreference`.
 
@@ -115,7 +119,7 @@ ms.locfileid: "74417562"
 
 Если API возвращал только значение `null`, Invoke-RestMethod сериализовал его в качестве строки `"null"`, а не `$null`. Это изменение исправляет логику в `Invoke-RestMethod`, чтобы надлежащим образом сериализовать одно допустимое значение литерала JSON `null` как `$null`.
 
-### <a name="remove--protocol-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Параметр `-Protocol` удален из командлетов `*-Computer` [№ 5277](https://github.com/PowerShell/PowerShell/issues/5277)
+### <a name="remove--protocol-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Параметр `-Protocol` удален из командлетов `*-Computer`[№ 5277](https://github.com/PowerShell/PowerShell/issues/5277)
 
 Из-за проблем с удаленным взаимодействием RPC в CoreFX (особенно на платформах не под управлением Windows) и обеспечением согласованного удаленного взаимодействия в PowerShell параметр `-Protocol` был удален из командлетов `\*-Computer`. DCOM больше не поддерживается для удаленного взаимодействия. Следующие командлеты поддерживают только удаленное взаимодействие через WSMAN.
 
@@ -123,7 +127,7 @@ ms.locfileid: "74417562"
 - Restart-Computer
 - Stop-Computer
 
-### <a name="remove--computername-from--service-cmdlets-5090httpsgithubcompowershellpowershellissues5094"></a>Параметр `-ComputerName` удален из командлетов `*-Service` [№ 5090](https://github.com/PowerShell/PowerShell/issues/5094)
+### <a name="remove--computername-from--service-cmdlets-5090httpsgithubcompowershellpowershellissues5094"></a>Параметр `-ComputerName` удален из командлетов `*-Service`[№ 5090](https://github.com/PowerShell/PowerShell/issues/5094)
 
 Чтобы способствовать согласованному использованию PSRP, параметр `-ComputerName` был удален из командлетов `*-Service`.
 
@@ -135,7 +139,7 @@ ms.locfileid: "74417562"
 
 Ранее объекты, экспортированные с помощью `Export-CSV` с информацией `TypeInformation`, импортированной с помощью `ConvertFrom-Csv`, не сохраняли информацию о типе. Это изменение добавляет информацию о типе в элемент `PSTypeNames`, если она доступна в CSV-файле.
 
-### <a name="-notypeinformation-should-be-default-on-export-csv-5131httpsgithubcompowershellpowershellissues5131"></a>`-NoTypeInformation` теперь присутствует по умолчанию в `Export-Csv` [№ 5131](https://github.com/PowerShell/PowerShell/issues/5131)
+### <a name="-notypeinformation-should-be-default-on-export-csv-5131httpsgithubcompowershellpowershellissues5131"></a>`-NoTypeInformation` теперь присутствует по умолчанию в `Export-Csv` [№ 5131](https://github.com/PowerShell/PowerShell/issues/5131)
 
 Это изменение было внесено с учетом отзывов пользователей о том, чтобы `Export-CSV` по умолчанию содержал сведения о типе.
 
@@ -145,15 +149,15 @@ ms.locfileid: "74417562"
 
 При использовании HTTP содержимое, включая пароли, отправляется в виде открытого текста. В этом изменении такое поведение запрещено по умолчанию и возвращается ошибка, если учетные данные передаются небезопасным образом. Пользователи могут обойти это с помощью параметра `-AllowUnencryptedAuthentication`.
 
-## <a name="api-changes"></a>Изменения API
+## <a name="api-changes"></a>Изменения в API
 
-### <a name="remove-addtypecommandbase-class-5407httpsgithubcompowershellpowershellissues5407"></a>Удален класс `AddTypeCommandBase` [№ 5407](https://github.com/PowerShell/PowerShell/issues/5407)
+### <a name="remove-addtypecommandbase-class-5407httpsgithubcompowershellpowershellissues5407"></a>Удален класс `AddTypeCommandBase`[№ 5407](https://github.com/PowerShell/PowerShell/issues/5407)
 
 Класс `AddTypeCommandBase` был удален из `Add-Type` для повышения производительности. Этот класс используется только командлетом Add-Type и не должен влиять на пользователей.
 
-### <a name="unify-cmdlets-with-parameter--encoding-to-be-of-type-systemtextencoding-5080httpsgithubcompowershellpowershellissues5080"></a>Теперь командлеты с параметром `-Encoding` имеют тип `System.Text.Encoding` [№ 5080](https://github.com/PowerShell/PowerShell/issues/5080)
+### <a name="unify-cmdlets-with-parameter--encoding-to-be-of-type-systemtextencoding-5080httpsgithubcompowershellpowershellissues5080"></a>Теперь командлеты с параметром `-Encoding` имеют тип `System.Text.Encoding` [№ 5080](https://github.com/PowerShell/PowerShell/issues/5080)
 
-Значение `-Encoding` `Byte` было удалено из командлетов поставщика файловой системы. Новый параметр, `-AsByteStream`, теперь используется для указания того, что в качестве входного потока требуется поток байтов или что выходной поток представляет собой поток байтов.
+Значение `-Encoding``Byte` было удалено из командлетов поставщика файловой системы. Новый параметр, `-AsByteStream`, теперь используется для указания того, что в качестве входного потока требуется поток байтов или что выходной поток представляет собой поток байтов.
 
 ### <a name="add-better-error-message-for-empty-and-null--uformat-parameter-5055httpsgithubcompowershellpowershellissues5055"></a>Добавлено улучшенное сообщение об ошибке для параметра `-UFormat` с пустым или нулевым значением [№ 5055](https://github.com/PowerShell/PowerShell/issues/5055)
 
@@ -163,22 +167,22 @@ ms.locfileid: "74417562"
 
 Следующие функции были удалены, так как они не поддерживаются в PowerShell Core. Какие-либо планы по реализации их поддержки отсутствуют, так как они относятся к прежним версиям PowerShell. `-psconsolefile` — параметр и код, `-importsystemmodules` — параметр, код, а также код, изменяющий шрифт.
 
-### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Удалена поддержка `RunspaceConfiguration` [№ 4942](https://github.com/PowerShell/PowerShell/issues/4942)
+### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Удалена поддержка `RunspaceConfiguration`[№ 4942](https://github.com/PowerShell/PowerShell/issues/4942)
 
 Ранее при создании пространства выполнения PowerShell программными средствами с помощью API можно было использовать прежние версии [`RunspaceConfiguration`][runspaceconfig] или более новые версии [`InitialSessionState`][iss]. Это изменение удалило поддержку `RunspaceConfiguration`, и теперь поддерживается только `InitialSessionState`.
 
 [runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
 [iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
 
-### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923httpsgithubcompowershellpowershellissues4923"></a>`CommandInvocationIntrinsics.InvokeScript` — привязка аргументов к `$input`, а не к `$args` [№ 4923](https://github.com/PowerShell/PowerShell/issues/4923)
+### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923httpsgithubcompowershellpowershellissues4923"></a>`CommandInvocationIntrinsics.InvokeScript` — привязка аргументов к `$input`, а не к `$args` [№ 4923](https://github.com/PowerShell/PowerShell/issues/4923)
 
 Из-за неверного положения параметра аргументы передавались в качестве входных данных, а не аргументов.
 
-### <a name="remove-unsupported--showwindow-switch-from-get-help-4903httpsgithubcompowershellpowershellissues4903"></a>Удален неподдерживаемый параметр `-showwindow` из `Get-Help` [№ 4903](https://github.com/PowerShell/PowerShell/issues/4903)
+### <a name="remove-unsupported--showwindow-switch-from-get-help-4903httpsgithubcompowershellpowershellissues4903"></a>Удален неподдерживаемый параметр `-showwindow` из `Get-Help` [№ 4903](https://github.com/PowerShell/PowerShell/issues/4903)
 
 `-showwindow` использует WPF, который не поддерживается в CoreCLR.
 
-### <a name="allow--to-be-used-in-registry-path-for-remove-item-4866httpsgithubcompowershellpowershellissues4866"></a>Разрешено использовать * в пути реестра для `Remove-Item` [№ 4866](https://github.com/PowerShell/PowerShell/issues/4866)
+### <a name="allow--to-be-used-in-registry-path-for-remove-item-4866httpsgithubcompowershellpowershellissues4866"></a>Разрешено использовать * в пути реестра для `Remove-Item` [№ 4866](https://github.com/PowerShell/PowerShell/issues/4866)
 
 Раньше при указании подстановочного знака `-LiteralPath` обрабатывал его так же, как `-Path`, и если для подстановочного знака не было найдено файлов, автоматически выполнялся выход. Правильное поведение — `-LiteralPath` является литералом, поэтому, если файл не существует, должна возвращаться ошибка. С этим изменением подстановочные знаки, используемые с `-Literal`, рассматриваются в качестве литерала.
 
@@ -186,7 +190,7 @@ ms.locfileid: "74417562"
 
 Ранее при использовании `New-Service -StartupType foo` часть `foo` игнорировалась и создавалась служба с определенным типом запуска по умолчанию. Это изменение предназначено, чтобы явно вызывать ошибку недопустимого типа запуска.
 
-### <a name="rename-isosx-to-ismacos-4700httpsgithubcompowershellpowershellissues4700"></a>`$IsOSX` переименован в `$IsMacOS` [№ 4700](https://github.com/PowerShell/PowerShell/issues/4700)
+### <a name="rename-isosx-to-ismacos-4700httpsgithubcompowershellpowershellissues4700"></a>`$IsOSX` переименован в `$IsMacOS` [№ 4700](https://github.com/PowerShell/PowerShell/issues/4700)
 
 Именование в PowerShell должно согласовываться с нашим именованием и соответствовать использованию в Apple ОС macOS вместо OSX. Однако для удобочитаемости и согласованности используется регистр Pascal.
 
@@ -194,7 +198,7 @@ ms.locfileid: "74417562"
 
 Коды выхода `pwsh.exe` изменены в соответствии с соглашениями Unix.
 
-### <a name="removal-of-localaccount-and-cmdlets-from--diagnostics-modules-4302httpsgithubcompowershellpowershellissues4302-4303httpsgithubcompowershellpowershellissues4303"></a>Модуль `LocalAccount` и командлеты удалены из модулей `Diagnostics` [№ 4302](https://github.com/PowerShell/PowerShell/issues/4302) [№ 4303](https://github.com/PowerShell/PowerShell/issues/4303)
+### <a name="removal-of-localaccount-and-cmdlets-from--diagnostics-modules-4302httpsgithubcompowershellpowershellissues4302-4303httpsgithubcompowershellpowershellissues4303"></a>Модуль `LocalAccount` и командлеты удалены из модулей `Diagnostics` [№ 4302](https://github.com/PowerShell/PowerShell/issues/4302) [№ 4303](https://github.com/PowerShell/PowerShell/issues/4303)
 
 Из-за неподдерживаемых API модуль `LocalAccounts` и командлеты `Counter` в модуле `Diagnostics` были удалены, пока не будет найдено лучшее решение.
 
@@ -202,11 +206,11 @@ ms.locfileid: "74417562"
 
 Ранее при использовании **powershell.exe** (теперь **pwsh.exe**) для выполнения скрипта PowerShell с параметром `-File` было невозможно передать значения `$true`/`$false` в качестве значений параметра. Была добавлена поддержка `$true`/`$false` в качестве анализируемых значений. Значения параметров также поддерживаются, так как в настоящий момент синтаксис документа не работает.
 
-### <a name="remove-clrversion-property-from-psversiontable-4027httpsgithubcompowershellpowershellissues4027"></a>Удалено свойство `ClrVersion` из `$PSVersionTable` [№ 4027](https://github.com/PowerShell/PowerShell/issues/4027)
+### <a name="remove-clrversion-property-from-psversiontable-4027httpsgithubcompowershellpowershellissues4027"></a>Свойство `ClrVersion` удалено из `$PSVersionTable` [№ 4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
 Свойство `ClrVersion` параметра `$PSVersionTable` бесполезно в CoreCLR. Пользователи не должны использовать это значение для определения совместимости.
 
-### <a name="change-positional-parameter-for-powershellexe-from--command-to--file-4019httpsgithubcompowershellpowershellissues4019"></a>Позиционный параметр для `powershell.exe` из `-Command` изменен на `-File` [№ 4019](https://github.com/PowerShell/PowerShell/issues/4019)
+### <a name="change-positional-parameter-for-powershellexe-from--command-to--file-4019httpsgithubcompowershellpowershellissues4019"></a>Позиционный параметр для `powershell.exe` из `-Command` изменен на `-File` [№ 4019](https://github.com/PowerShell/PowerShell/issues/4019)
 
 Разрешите использование знака решетки PowerShell на платформах, отличных от Windows. В системах на основе Unix это означает, что вы можете создать исполняемый файл скрипта, который будет вызывать PowerShell автоматически, а не явно вызывать `pwsh`. Это также означает, что вы можете выполнять такие команды, как `powershell foo.ps1` или `powershell fooScript`, без указания `-File`. Однако это изменение требует явно указать `-c` или `-Command` при попытке запуска таких команд, как `powershell.exe Get-Command`.
 
@@ -238,7 +242,7 @@ ms.locfileid: "74417562"
 
 `BiosSerialNumber` был написан с ошибкой (как `BiosSeralNumber`). Теперь ошибка исправлена.
 
-### <a name="add-get-stringhash-and-get-filehash-cmdlets-3024httpsgithubcompowershellpowershellissues3024"></a>Добавлены командлеты `Get-StringHash` и `Get-FileHash` [№ 3024](https://github.com/PowerShell/PowerShell/issues/3024)
+### <a name="add-get-stringhash-and-get-filehash-cmdlets-3024httpsgithubcompowershellpowershellissues3024"></a>Добавлены командлеты `Get-StringHash` и `Get-FileHash`[№ 3024](https://github.com/PowerShell/PowerShell/issues/3024)
 
 Это изменение заключается в том, что некоторые хэш-алгоритмы не поддерживаются CoreFX, поэтому они больше недоступны:
 
@@ -265,7 +269,7 @@ ms.locfileid: "74417562"
 - `Get-WmiObject -Class`
 - `Get-WmiObject -Property`
 
-### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482httpsgithubcompowershellpowershellissues2482"></a>Добавлена поддержка расширенного формата файла журнала W3C в `Import-Csv` [№ 2482](https://github.com/PowerShell/PowerShell/issues/2482)
+### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482httpsgithubcompowershellpowershellissues2482"></a>Добавлена поддержка расширенного формата файла журнала W3C в `Import-Csv` [№ 2482](https://github.com/PowerShell/PowerShell/issues/2482)
 
 Ранее командлет `Import-Csv` не мог использоваться для непосредственного импорта файлов журнала в расширенный формат журнала W3C и требовалось дополнительное действие. Благодаря этому изменению теперь поддерживается расширенный формат журнала W3C.
 
@@ -273,7 +277,7 @@ ms.locfileid: "74417562"
 
 `ValueFromRemainingArguments` теперь возвращает значения в виде массива, а не одного значения, которое само по себе являлось массивом.
 
-### <a name="buildversion-is-removed-from-psversiontable-1415httpsgithubcompowershellpowershellissues1415"></a>`BuildVersion` удалено из `$PSVersionTable` [№ 1415](https://github.com/PowerShell/PowerShell/issues/1415)
+### <a name="buildversion-is-removed-from-psversiontable-1415httpsgithubcompowershellpowershellissues1415"></a>Свойство `BuildVersion` удалено из `$PSVersionTable` [№ 1415](https://github.com/PowerShell/PowerShell/issues/1415)
 
 Свойство `BuildVersion` удалено из `$PSVersionTable`. Это свойство было привязано к версии сборки Windows. Вместо этого мы рекомендуем использовать `GitCommitId` для получения точной версии сборки PowerShell Core.
 

@@ -1,17 +1,18 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,командлет
 title: Объект ISEMenuItem
-ms.openlocfilehash: a513a3e9f2eb97f3955fa817faedbcbf4e0ed018
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c3ffe6e8f0b28987543fe0a873c552292dc5158a
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028936"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736987"
 ---
 # <a name="the-isemenuitem-object"></a>Объект ISEMenuItem
 
-Объект **ISEMenuItem** является экземпляром класса Microsoft.PowerShell.Host.ISE.ISEMenuItem. Все объекты в меню **Надстройки** являются экземплярами класса **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
+Объект **ISEMenuItem** является экземпляром класса **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
+Все объекты в меню **Надстройки** являются экземплярами класса **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
 
 ## <a name="properties"></a>Свойства
 
@@ -44,7 +45,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].Action
 $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].Action.Invoke()
 ```
 
-### <a name="shortcut"></a>Установленное напрямую доверие
+### <a name="shortcut"></a>Клавиша
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
@@ -87,7 +88,7 @@ $parentAdded = $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add('Parent', $nu
 $parentAdded.SubMenus.Add('_Dir', {dir}, 'Alt+D')
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект ISEMenuItemCollection](The-ISEMenuItemCollection-Object.md)
 - [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

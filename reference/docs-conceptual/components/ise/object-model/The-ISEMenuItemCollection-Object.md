@@ -1,17 +1,17 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,командлет
 title: Объект ISEMenuItemCollection
-ms.openlocfilehash: b3795af1a6ed61ed6e371e5fc20cc4e95f643fd4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 39e8547c9b19ba323d4b224a46eda416542b2807
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030538"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736178"
 ---
 # <a name="the-isemenuitemcollection-object"></a>Объект ISEMenuItemCollection
 
-Объект **ISEMenuItemCollection**  — это коллекция объектов **ISEMenuItem**. Он является экземпляром класса Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection. Примером является объект **$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus**, используемый для настройки меню **Надстройка** (Add-On) в интегрированной среде скриптов Windows PowerShell® (ISE).
+Объект **ISEMenuItemCollection**  — это коллекция объектов **ISEMenuItem**. Он представляет собой экземпляр класса **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection**. Примером является объект `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`, используемый для настройки меню **Надстройка** (Add-On) в интегрированной среде скриптов Windows PowerShell® (ISE).
 
 ## <a name="method"></a>Метод
 
@@ -27,7 +27,7 @@ ms.locfileid: "67030538"
 
 **Shortcut** — сочетание клавиш для действия.
 
-**Returns** — объект ISEMenuItem, который только что был добавлен.
+**Returns** — объект **ISEMenuItem**, который только что был добавлен.
 
 ```powershell
 # Create an Add-ons menu with an fast access key and a shortcut.
@@ -46,7 +46,7 @@ $menuAdded = $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add('_Process', {Ge
 $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Clear()
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект ISEMenuItem](The-ISEMenuItem-Object.md)
 - [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

@@ -2,16 +2,16 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Объект PowerShellTabCollection
-ms.openlocfilehash: 5a1318534ddce19c2f5faa0d2013e2b38d8b79e5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0aad885afd3ba3ae3b00f5c11d2c62a9ff303798
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030482"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736119"
 ---
 # <a name="the-powershelltabcollection-object"></a>Объект PowerShellTabCollection
 
-Объект коллекции **PowerShellTabCollection** — это коллекция объектов **PowerShellTab**. Каждый объект **PowerShellTab** функционирует как отдельная среда выполнения. Он является экземпляром класса Microsoft.PowerShell.Host.ISE.PowerShellTabs. Примером является объект **$psISE.PowerShellTabs**.
+Объект коллекции **PowerShellTabCollection** — это коллекция объектов **PowerShellTab**. Каждый объект **PowerShellTab** функционирует как отдельная среда выполнения. Он является экземпляром класса Microsoft.PowerShell.Host.ISE.PowerShellTabs. Примером является объект `$psISE.PowerShellTabs`.
 
 ## <a name="methods"></a>Методы
 
@@ -61,7 +61,7 @@ $newTab.DisplayName = 'Brand New Tab'
 $psISE.PowerShellTabs.SelectedPowerShellTab = $oldTab
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект PowerShellTab](The-PowerShellTab-Object.md)
 - [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

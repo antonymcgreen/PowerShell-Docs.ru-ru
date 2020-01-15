@@ -2,20 +2,20 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Объект ISESnippet
-ms.openlocfilehash: 62d470569deb051fca80005235d4c492319cf5ec
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 60456ec90f56753fa96f141b8b8299ef3f7e41c9
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028885"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736970"
 ---
 # <a name="the-isesnippetobject"></a>Объект ISESnippet
 
-Объект **ISESnippet** является экземпляром класса Microsoft.PowerShell.Host.ISE.ISESnippet. Элементы коллекции **$psISE.CurrentPowerShellTab.Snippets** являются примерами объектов **ISESnippet**. Самый простой способ создать фрагмент кода — использовать командлет [New-IseSnippet&#91;PSITPro5_ISE&#93;](https://technet.microsoft.com/library/0a6339a3-2683-4a8e-8929-90ad9a95c3e0).
+Объект **ISESnippet** является экземпляром класса Microsoft.PowerShell.Host.ISE.ISESnippet. Элементы коллекции `$psISE.CurrentPowerShellTab.Snippets` являются примерами объектов **ISESnippet**. Самый простой способ создать фрагмент кода — использовать командлет [New-IseSnippet](/reference/5.1/ISE/New-IseSnippet.md).
 
 ## <a name="properties"></a>Свойства
 
-### <a name="author"></a>Дизайнер
+### <a name="author"></a>Автор
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
@@ -37,7 +37,7 @@ $psISE.CurrentPowerShellTab.Snippets.Item(0).Author
 $psISE.CurrentPowerShellTab.Snippets.Item(0).CodeFragment
 ```
 
-### <a name="shortcut"></a>Установленное напрямую доверие
+### <a name="shortcut"></a>Клавиша
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
@@ -50,7 +50,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add('_Process', {Get-Process}, '
 $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].Shortcut
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект ISESnippetCollection](The-ISESnippetCollection-Object.md)
 - [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](purpose-of-the-windows-powershell-ise-scripting-object-model.md)

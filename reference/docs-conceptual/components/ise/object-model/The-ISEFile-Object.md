@@ -1,17 +1,17 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,командлет
 title: Объект ISEFile
-ms.openlocfilehash: ebb5a35f6ea9d93eab633b9f4e6c84e4fddd6ae8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1069e46aa586b8df2050129194a909b90f77b745
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028958"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737004"
 ---
 # <a name="the-isefile-object"></a>Объект ISEFile
 
-Объект **ISEFile** представляет файл в интегрированной среде скриптов (ISE) Windows PowerShell®. Он является экземпляром класса Microsoft.PowerShell.Host.ISE.ISEFile. В этом разделе перечислены его члены (методы и свойства). Объект **$PsISE.CurrentFile** и все файлы в коллекции "Файлы" на вкладке PowerShell являются экземплярами класса Microsoft.PowerShell.Host.ISE.ISEFile.
+Объект **ISEFile** представляет файл в интегрированной среде скриптов (ISE) Windows PowerShell®. Он является экземпляром класса **Microsoft.PowerShell.Host.ISE.ISEFile**. В этом разделе перечислены его члены (методы и свойства). Объект `$psISE.CurrentFile` и все файлы в коллекции "Файлы" на вкладке PowerShell являются экземплярами класса ****Microsoft.PowerShell.Host.ISE.ISEFile**.
 
 ## <a name="methods"></a>Методы
 
@@ -69,14 +69,14 @@ $psISE.CurrentFile.SaveAs($fullPath, [System.Text.Encoding]::UTF8)
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Свойство только для чтения, которое получает строку, содержащую отображаемое имя этого файла. Имя отображается на вкладке **Файл** в верхней части окна редактора. Наличие звездочки \(\*\) в конце имени указывает, что в файле есть изменения, которые не были сохранены.
+Свойство только для чтения, которое получает строку, содержащую отображаемое имя этого файла. Имя отображается на вкладке **Файл** в верхней части окна редактора. Наличие звездочки (`(*)`) в конце имени указывает, что файл содержит изменения, которые не были сохранены.
 
 ```powershell
 # Shows the display name of the file.
 $psISE.CurrentFile.DisplayName
 ```
 
-### <a name="editor"></a>Editor
+### <a name="editor"></a>Редактор
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
@@ -87,7 +87,7 @@ $psISE.CurrentFile.DisplayName
 $psISE.CurrentFile.Editor.Text
 ```
 
-### <a name="encoding"></a>Encoding
+### <a name="encoding"></a>Кодирование
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
@@ -113,7 +113,7 @@ $psISE.CurrentFile.FullPath
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Логическое свойство только для чтения, которое возвращает значение **$true**, если файл был сохранен после последнего изменения.
+Логическое свойство только для чтения, которое возвращает значение `$true`, если файл был сохранен после последнего изменения.
 
 ```powershell
 # Determines whether the file has been saved since it was last modified.
@@ -125,7 +125,7 @@ $myfile.IsSaved
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Свойство только для чтения, которое возвращает значение **$true**, если для файла не задано имя.
+Свойство только для чтения, которое возвращает значение `$true`, если для файла не задано имя.
 
 ```powershell
 # Determines whether the file has never been given a title.
@@ -134,7 +134,7 @@ $psISE.CurrentFile.SaveAs("temp.txt")
 $psISE.CurrentFile.IsUntitled
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект ISEFileCollection](The-ISEFileCollection-Object.md)
 - [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

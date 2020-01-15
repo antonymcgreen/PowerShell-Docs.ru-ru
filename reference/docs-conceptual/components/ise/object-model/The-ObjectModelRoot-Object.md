@@ -2,17 +2,16 @@
 ms.date: 08/25/2017
 keywords: powershell,командлет
 title: Объект ObjectModelRoot
-ms.openlocfilehash: 2670321ebac1eac4ecc8457afb796f9f260da471
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0b04bdb3127edaac7b504556843efb64ee65ed13
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62086788"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736034"
 ---
 # <a name="the-objectmodelroot-object"></a>Объект ObjectModelRoot
 
-Объект **$PsISE**, который является основным корневым объектом в интегрированной среде скриптов Windows PowerShell® (ISE), — это экземпляр класса Microsoft.PowerShell.Host.ISE.ObjectModelRoot.
-В этом разделе описаны свойства объекта **ObjectModelRoot**.
+Объект `$psISE`, который является основным корневым объектом в интегрированной среде сценариев Windows PowerShell® (ISE), — это экземпляр класса Microsoft.PowerShell.Host.ISE.ObjectModelRoot. В этом разделе описаны свойства объекта **ObjectModelRoot**.
 
 ## <a name="properties"></a>Свойства
 
@@ -52,7 +51,7 @@ ms.locfileid: "62086788"
 
 Свойство только для чтения, которое получает коллекцию вкладок PowerShell, открытых в интегрированной среде сценариев Windows PowerShell. По умолчанию этот объект содержит одну вкладку PowerShell. Тем не менее можно добавить в этот объект больше вкладок PowerShell с помощью сценариев или меню в интегрированной среде сценариев Windows PowerShell.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Иерархия объектной модели интегрированной среды скриптов](The-ISE-Object-Model-Hierarchy.md)
