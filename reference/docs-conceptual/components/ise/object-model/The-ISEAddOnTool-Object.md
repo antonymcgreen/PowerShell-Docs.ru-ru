@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Объект ISEAddOnTool
-ms.openlocfilehash: c71602d200b941ed4fb142b9c35f0fe68982e3e9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a5357005ec1a883f5a14882a42e3150e09ff33a2
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028997"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736136"
 ---
 # <a name="the-iseaddontool-object"></a>Объект ISEAddOnTool
 
@@ -23,7 +23,7 @@ ms.locfileid: "67028997"
 
 ## <a name="properties"></a>Свойства
 
-### <a name="control"></a>Элемент
+### <a name="control"></a>Control
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
@@ -33,6 +33,9 @@ ms.locfileid: "67028997"
 # View the properties of the Commands add-on tool.
 # (assumes that it is visible in the vertical pane)
 $psISE.CurrentVisibleVerticalTool.Control
+```
+
+```Output
 HostObject                  : Microsoft.PowerShell.Host.ISE.ObjectModelRoot
 Content                     :
 HasContent                  :
@@ -143,7 +146,7 @@ Dispatcher                  : System.Windows.Threading.Dispatcher
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
-Логическое свойство, которое определяет видимость надстройки в соответствующей области. Если она видна, свойству **IsVisible** можно присвоить значение **$false**, чтобы скрыть средство, или **IsVisible** **$true**, чтобы оно отображалось на вкладке PowerShell. Обратите внимание, что к скрытой надстройке нельзя получить доступ с помощью объекта **CurrentVisibleHorizontalTool** или **CurrentVisibleVerticalTool**, а значит, ее нельзя сделать видимой, используя данное свойство объекта.
+Логическое свойство, которое определяет видимость надстройки в соответствующей области. Если она видна, свойству **IsVisible** можно присвоить значение `$false`, чтобы скрыть средство, или **IsVisible** `$true`, чтобы средство отображалось на вкладке PowerShell. Обратите внимание, что к скрытой надстройке нельзя получить доступ с помощью объекта **CurrentVisibleHorizontalTool** или **CurrentVisibleVerticalTool**, а значит, ее нельзя сделать видимой, используя данное свойство объекта.
 
 ```powershell
 # Hide the current tool in the vertical tool pane
@@ -152,7 +155,7 @@ $psISE.CurrentVisibleVerticalTool.IsVisible = $false
 $psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible = $true
 ```
 
-### <a name="name"></a>Name
+### <a name="name"></a>Имя
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
@@ -161,10 +164,13 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible = $true
 ```powershell
 # Gets the name of the visible vertical pane add-on tool.
 $psISE.CurrentVisibleVerticalTool.Name
+```
+
+```Output
 Commands
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект ISEAddOnToolCollection](The-ISEAddOnToolCollection-Object.md)
 - [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
