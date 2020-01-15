@@ -2,12 +2,12 @@
 ms.date: 10/11/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Обзор платформы Desired State Configuration для руководителей
-ms.openlocfilehash: b6d483d105c2d3b9be7215be36397d452338c7f1
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: bb73ee8fe636272f99989aa45712fe34fedad617
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75737259"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870801"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Обзор платформы DSC для руководителей
 
@@ -38,7 +38,7 @@ PowerShell DSC — это встроенная в Windows платформа у
 ## <a name="dsc-on-premises-and-off-premises"></a>DSC для локальных и удаленных развертываний
 
 DSC позволяет управлять как локальными, так и удаленными развертываниями. Для локальных решений в DSC используется [опрашиваемый сервер](../pull-server/pullServer.md), который обеспечивает централизованное управление компьютерами и создание отчетов об их состоянии. Для удаленных облачных решений DSC можно применять везде, где поддерживается Windows.
-В DSC включены такие специализированные предложения от Azure, как [служба автоматизации Azure](https://azure.microsoft.com/en-us/documentation/services/automation/), которая отвечает за централизацию отчетов DSC.
+В DSC включены такие специализированные предложения от Azure, как [служба автоматизации Azure](/azure/automation), которая отвечает за централизацию отчетов DSC.
 
 ## <a name="dsc-and-compatibility"></a>DSC и совместимость
 
