@@ -1,135 +1,137 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/23/2019
 keywords: powershell,командлет
 title: Получение объектов WMI (Get-WmiObject)
-ms.openlocfilehash: 93276ce12135342af2d6f238976e65e5d8bdde7a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 23fd8cf596a8be7e36651ac3f9c79ca97240e647
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030216"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737225"
 ---
-# <a name="getting-wmi-objects-get-wmiobject"></a><span data-ttu-id="2c03d-103">Получение объектов WMI (Get-WmiObject)</span><span class="sxs-lookup"><span data-stu-id="2c03d-103">Getting WMI Objects (Get-WmiObject)</span></span>
+# <a name="getting-wmi-objects-get-wmiobject"></a><span data-ttu-id="0443c-103">Получение объектов WMI (Get-WmiObject)</span><span class="sxs-lookup"><span data-stu-id="0443c-103">Getting WMI Objects (Get-WmiObject)</span></span>
 
-## <a name="getting-wmi-objects-get-wmiobject"></a><span data-ttu-id="2c03d-104">Получение объектов WMI (Get-WmiObject)</span><span class="sxs-lookup"><span data-stu-id="2c03d-104">Getting WMI Objects (Get-WmiObject)</span></span>
+## <a name="getting-wmi-objects-get-wmiobject"></a><span data-ttu-id="0443c-104">Получение объектов WMI (Get-WmiObject)</span><span class="sxs-lookup"><span data-stu-id="0443c-104">Getting WMI Objects (Get-WmiObject)</span></span>
 
-<span data-ttu-id="2c03d-105">Инструментарий управления Windows (WMI) является ключевой технологией системного администрирования Windows, поскольку предоставляет широкий спектр сведений в унифицированном виде.</span><span class="sxs-lookup"><span data-stu-id="2c03d-105">Windows Management Instrumentation (WMI) is a core technology for Windows system administration because it exposes a wide range of information in a uniform manner.</span></span> <span data-ttu-id="2c03d-106">Так как спектр возможностей инструментария WMI достаточно широк, командлет **Get-WmiObject** Windows PowerShell, служащий для доступа к объектам WMI, — один из наиболее полезных.</span><span class="sxs-lookup"><span data-stu-id="2c03d-106">Because of how much WMI makes possible, the Windows PowerShell cmdlet for accessing WMI objects, **Get-WmiObject**, is one of the most useful for doing real work.</span></span> <span data-ttu-id="2c03d-107">Мы рассмотрим, как командлет Get-WmiObject обращается к объектам WMI и как использовать объекты WMI для выполнения определенных задач.</span><span class="sxs-lookup"><span data-stu-id="2c03d-107">We are going to discuss how to use Get-WmiObject to access WMI objects and then how to use WMI objects to do specific things.</span></span>
+<span data-ttu-id="0443c-105">Инструментарий управления Windows (WMI) является ключевой технологией системного администрирования Windows, поскольку предоставляет широкий спектр сведений в унифицированном виде.</span><span class="sxs-lookup"><span data-stu-id="0443c-105">Windows Management Instrumentation (WMI) is a core technology for Windows system administration because it exposes a wide range of information in a uniform manner.</span></span> <span data-ttu-id="0443c-106">Так как спектр возможностей инструментария WMI достаточно широк, командлет `Get-CimInstance` PowerShell для доступа к объектам WMI наиболее полезный.</span><span class="sxs-lookup"><span data-stu-id="0443c-106">Because of how much WMI makes possible, the PowerShell cmdlet for accessing WMI objects, `Get-CimInstance`, is one of the most useful for doing real work.</span></span> <span data-ttu-id="0443c-107">Мы рассмотрим, как командлет CimCmdletst обращается к объектам WMI и как использовать объекты WMI для выполнения определенных задач.</span><span class="sxs-lookup"><span data-stu-id="0443c-107">We are going to discuss how to use the CimCmdlets to access WMI objects and then how to use WMI objects to do specific things.</span></span>
 
-### <a name="listing-wmi-classes"></a><span data-ttu-id="2c03d-108">Вывод списка классов WMI</span><span class="sxs-lookup"><span data-stu-id="2c03d-108">Listing WMI Classes</span></span>
+### <a name="listing-wmi-classes"></a><span data-ttu-id="0443c-108">Вывод списка классов WMI</span><span class="sxs-lookup"><span data-stu-id="0443c-108">Listing WMI Classes</span></span>
 
-<span data-ttu-id="2c03d-109">Первая проблема, с которой сталкивается большинство пользователей WMI, — это выяснение того, что можно сделать с помощью инструментария WMI.</span><span class="sxs-lookup"><span data-stu-id="2c03d-109">The first problem most WMI users encounter is trying to find out what can be done with WMI.</span></span> <span data-ttu-id="2c03d-110">Классы WMI описывают ресурсы, которыми можно управлять.</span><span class="sxs-lookup"><span data-stu-id="2c03d-110">WMI classes describe the resources that can be managed.</span></span> <span data-ttu-id="2c03d-111">Имеются сотни классов WMI, некоторые из которых содержат множество свойств.</span><span class="sxs-lookup"><span data-stu-id="2c03d-111">There are hundreds of WMI classes, some of which contain dozens of properties.</span></span>
+<span data-ttu-id="0443c-109">Первая проблема, с которой сталкивается большинство пользователей WMI, — это выяснение того, что можно сделать с помощью инструментария WMI.</span><span class="sxs-lookup"><span data-stu-id="0443c-109">The first problem most WMI users encounter is trying to find out what can be done with WMI.</span></span> <span data-ttu-id="0443c-110">Классы WMI описывают ресурсы, которыми можно управлять.</span><span class="sxs-lookup"><span data-stu-id="0443c-110">WMI classes describe the resources that can be managed.</span></span> <span data-ttu-id="0443c-111">Имеются сотни классов WMI, некоторые из которых содержат множество свойств.</span><span class="sxs-lookup"><span data-stu-id="0443c-111">There are hundreds of WMI classes, some of which contain dozens of properties.</span></span>
 
-<span data-ttu-id="2c03d-112">Командлет **Get-WmiObject** решает эту проблему, предоставляя сведения об инструментарии WMI.</span><span class="sxs-lookup"><span data-stu-id="2c03d-112">**Get-WmiObject** addresses this problem by making WMI discoverable.</span></span> <span data-ttu-id="2c03d-113">Список классов WMI, доступных на локальном компьютере, можно получить, введя команду:</span><span class="sxs-lookup"><span data-stu-id="2c03d-113">You can get a list of the WMI classes available on the local computer by typing:</span></span>
-
-```
-PS> Get-WmiObject -List
-
-__SecurityRelatedClass                  __NTLMUser9X
-__PARAMETERS                            __SystemSecurity
-__NotifyStatus                          __ExtendedStatus
-Win32_PrivilegesStatus                  Win32_TSNetworkAdapterSettingError
-Win32_TSRemoteControlSettingError       Win32_TSEnvironmentSettingError
-...
-```
-
-<span data-ttu-id="2c03d-114">Можно извлечь те же сведения на удаленном компьютере, указав в параметре ComputerName имя компьютера или его IP-адрес:</span><span class="sxs-lookup"><span data-stu-id="2c03d-114">You can retrieve the same information from a remote computer by using the ComputerName parameter, specifying a computer name or IP address:</span></span>
-
-```
-PS> Get-WmiObject -List -ComputerName 192.168.1.29
-
-__SystemClass                           __NAMESPACE
-__Provider                              __Win32Provider
-__ProviderRegistration                  __ObjectProviderRegistration
-...
-```
-
-<span data-ttu-id="2c03d-115">Список классов, возвращаемый удаленным компьютером, может различаться в зависимости от операционной системы компьютера и определенных расширений WMI, добавленных установленными приложениями.</span><span class="sxs-lookup"><span data-stu-id="2c03d-115">The class listing returned by remote computers may vary due to the specific operating system the computer is running and the particular WMI extensions added by installed applications.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="2c03d-116">При использовании командлета Get-WmiObject для подключения к удаленному компьютеру на последнем должен быть запущен инструментарий WMI, а используемая учетная запись должна входить в группу локальных администраторов на удаленном компьютере (конфигурация по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="2c03d-116">When using Get-WmiObject to connect to a remote computer, the remote computer must be running WMI and, under the default configuration, the account you are using must be in the local administrators group on the remote computer.</span></span> <span data-ttu-id="2c03d-117">На удаленной системе может быть не установлена оболочка Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="2c03d-117">The remote system does not need to have Windows PowerShell installed.</span></span> <span data-ttu-id="2c03d-118">Это позволяет администрировать операционные системы, на которых не запущена оболочка Windows PowerShell, но имеется инструментарий WMI.</span><span class="sxs-lookup"><span data-stu-id="2c03d-118">This allows you to administer operating systems that are not running Windows PowerShell, but do have WMI available.</span></span>
-
-<span data-ttu-id="2c03d-119">При подключении к локальной системе можно указать и параметр ComputerName.</span><span class="sxs-lookup"><span data-stu-id="2c03d-119">You can even include the ComputerName when connecting to the local system.</span></span> <span data-ttu-id="2c03d-120">Можно использовать имя локального компьютера, его IP-адрес (или петлевой адрес 127.0.0.1) либо "." (в стиле инструментария WMI) в качестве имени компьютера.</span><span class="sxs-lookup"><span data-stu-id="2c03d-120">You can use the local computer's name, its IP address (or the loopback address 127.0.0.1), or the WMI-style '.' as the computer name.</span></span> <span data-ttu-id="2c03d-121">Если на компьютере с именем "Admin01" и IP-адресом 192.168.1.90 запущена оболочка Windows PowerShell, следующие команды возвратят список классов WMI для этого компьютера:</span><span class="sxs-lookup"><span data-stu-id="2c03d-121">If you are running Windows PowerShell on a computer named Admin01 with IP address 192.168.1.90, the following commands will all return the WMI class listing for that computer:</span></span>
+<span data-ttu-id="0443c-112">Командлет `Get-CimClass` решает эту проблему, предоставляя сведения об инструментарии WMI.</span><span class="sxs-lookup"><span data-stu-id="0443c-112">`Get-CimClass` addresses this problem by making WMI discoverable.</span></span> <span data-ttu-id="0443c-113">Список классов WMI, доступных на локальном компьютере, можно получить, введя команду:</span><span class="sxs-lookup"><span data-stu-id="0443c-113">You can get a list of the WMI classes available on the local computer by typing:</span></span>
 
 ```powershell
-Get-WmiObject -List
-Get-WmiObject -List -ComputerName .
-Get-WmiObject -List -ComputerName Admin01
-Get-WmiObject -List -ComputerName 192.168.1.90
-Get-WmiObject -List -ComputerName 127.0.0.1
-Get-WmiObject -List -ComputerName localhost
+Get-CimClass -Namespace root/CIMV2 |
+  Where-Object CimClassName -like Win32* |
+    Select-Object CimClassName
 ```
 
-<span data-ttu-id="2c03d-122">Командлет Get-WmiObject использует по умолчанию пространство имен root/cimv2.</span><span class="sxs-lookup"><span data-stu-id="2c03d-122">Get-WmiObject uses the root/cimv2 namespace by default.</span></span> <span data-ttu-id="2c03d-123">Чтобы задать другое пространство имен WMI, воспользуйтесь параметром **Namespace** и укажите путь к соответствующему пространству имен:</span><span class="sxs-lookup"><span data-stu-id="2c03d-123">If you want to specify another WMI namespace, use the **Namespace** parameter and specify the corresponding namespace path:</span></span>
-
-```
-PS> Get-WmiObject -List -ComputerName 192.168.1.29 -Namespace root
-
-__SystemClass                           __NAMESPACE
-__Provider                              __Win32Provider
+```Output
+CimClassName
+------------
+Win32_DeviceChangeEvent
+Win32_SystemConfigurationChangeEvent
+Win32_VolumeChangeEvent
+Win32_SystemTrace
+Win32_ProcessTrace
+Win32_ProcessStartTrace
+Win32_ProcessStopTrace
+Win32_ThreadTrace
+Win32_ThreadStartTrace
+Win32_ThreadStopTrace
 ...
 ```
 
-### <a name="displaying-wmi-class-details"></a><span data-ttu-id="2c03d-124">Вывод сведений о классе WMI</span><span class="sxs-lookup"><span data-stu-id="2c03d-124">Displaying WMI Class Details</span></span>
+<span data-ttu-id="0443c-114">Те же сведения можно извлечь на удаленном компьютере, указав в параметре **ComputerName** имя или IP-адрес компьютера.</span><span class="sxs-lookup"><span data-stu-id="0443c-114">You can retrieve the same information from a remote computer by using the **ComputerName** parameter, specifying a computer name or IP address:</span></span>
 
-<span data-ttu-id="2c03d-125">Если имя класса WMI уже известно, можно немедленно получить сведения о нем.</span><span class="sxs-lookup"><span data-stu-id="2c03d-125">If you already know the name of a WMI class, you can use it to get information immediately.</span></span> <span data-ttu-id="2c03d-126">Например, одним из классов WMI, используемых для получения сведений о компьютере, является **Win32_OperatingSystem**.</span><span class="sxs-lookup"><span data-stu-id="2c03d-126">For example, one of the WMI classes commonly used for retrieving information about a computer is **Win32_OperatingSystem**.</span></span>
-
-```
-PS> Get-WmiObject -Class Win32_OperatingSystem -Namespace root/cimv2 -ComputerName .
-
-SystemDirectory : C:\WINDOWS\system32
-Organization    : Global Network Solutions
-BuildNumber     : 2600
-RegisteredUser  : Oliver W. Jones
-SerialNumber    : 12345-678-9012345-67890
-Version         : 5.1.2600
+```powershell
+Get-CimClass -Namespace root/CIMV2 -ComputerName 192.168.1.29
 ```
 
-<span data-ttu-id="2c03d-127">Хотя показаны все параметры, команда может быть представлена в более короткой форме.</span><span class="sxs-lookup"><span data-stu-id="2c03d-127">Although we are showing all of the parameters, the command can be expressed in a more succinct way.</span></span> <span data-ttu-id="2c03d-128">Параметр **ComputerName** не является обязательным при подключении к локальной системе.</span><span class="sxs-lookup"><span data-stu-id="2c03d-128">The **ComputerName** parameter is not necessary when connecting to the local system.</span></span> <span data-ttu-id="2c03d-129">Мы покажем это, чтобы продемонстрировать наиболее общий случай и напомнить об этом параметре.</span><span class="sxs-lookup"><span data-stu-id="2c03d-129">We show it to demonstrate the most general case and remind you about the parameter.</span></span> <span data-ttu-id="2c03d-130">По умолчанию параметр **Namespace** получает значение root/cimv2 и может быть опущен.</span><span class="sxs-lookup"><span data-stu-id="2c03d-130">The **Namespace** defaults to root/cimv2, and can be omitted as well.</span></span> <span data-ttu-id="2c03d-131">В конце концов, большинство командлетов позволяет опускать имя типовых параметров.</span><span class="sxs-lookup"><span data-stu-id="2c03d-131">Finally, most cmdlets allow you to omit the name of common parameters.</span></span> <span data-ttu-id="2c03d-132">Если в командлете Get-WmiObject не указано имя для первого параметра, Windows PowerShell считает его параметром **Class**.</span><span class="sxs-lookup"><span data-stu-id="2c03d-132">With Get-WmiObject, if no name is specified for the first parameter, Windows PowerShell treats it as the **Class** parameter.</span></span> <span data-ttu-id="2c03d-133">Это значит, что последнюю команду можно было ввести в таком виде:</span><span class="sxs-lookup"><span data-stu-id="2c03d-133">This means the last command could have been issued by typing:</span></span>
+<span data-ttu-id="0443c-115">Список классов, возвращаемый удаленным компьютером, может различаться в зависимости от операционной системы компьютера и определенных расширений WMI, добавленных установленными приложениями.</span><span class="sxs-lookup"><span data-stu-id="0443c-115">The class listing returned by remote computers may vary due to the specific operating system the computer is running and the particular WMI extensions added by installed applications.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="0443c-116">При использовании командлетов CIM для подключения к удаленному компьютеру на последнем должен быть запущен инструментарий WMI, а используемая учетная запись должна входить в группу локальных администраторов на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="0443c-116">When using CIM cmdlets to connect to a remote computer, the remote computer must be running WMI and the account you are using must be in the local administrators group on the remote computer.</span></span>
+> <span data-ttu-id="0443c-117">В удаленной системе можно не устанавливать оболочку PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0443c-117">The remote system does not need to have PowerShell installed.</span></span> <span data-ttu-id="0443c-118">Это позволяет администрировать операционные системы, на которых не запущена оболочка PowerShell, но есть инструментарий WMI.</span><span class="sxs-lookup"><span data-stu-id="0443c-118">This allows you to administer operating systems that are not running PowerShell, but do have WMI available.</span></span>
+
+### <a name="displaying-wmi-class-details"></a><span data-ttu-id="0443c-119">Вывод сведений о классе WMI</span><span class="sxs-lookup"><span data-stu-id="0443c-119">Displaying WMI Class Details</span></span>
+
+<span data-ttu-id="0443c-120">Если имя класса WMI уже известно, можно немедленно получить сведения о нем.</span><span class="sxs-lookup"><span data-stu-id="0443c-120">If you already know the name of a WMI class, you can use it to get information immediately.</span></span> <span data-ttu-id="0443c-121">Например, одним из классов WMI, используемых для получения сведений о компьютере, является **Win32_OperatingSystem**.</span><span class="sxs-lookup"><span data-stu-id="0443c-121">For example, one of the WMI classes commonly used for retrieving information about a computer is **Win32_OperatingSystem**.</span></span>
+
+```powershell
+Get-CimInstance -Class Win32_OperatingSystem
+```
+
+```Output
+SystemDirectory     Organization BuildNumber RegisteredUser SerialNumber            Version
+---------------     ------------ ----------- -------------- ------------            -------
+C:\WINDOWS\system32 Microsoft    18362       USER1          00330-80000-00000-AA175 10.0.18362
+```
+
+<span data-ttu-id="0443c-122">Хотя показаны все параметры, команда может быть представлена в более короткой форме.</span><span class="sxs-lookup"><span data-stu-id="0443c-122">Although we are showing all of the parameters, the command can be expressed in a more succinct way.</span></span>
+<span data-ttu-id="0443c-123">Параметр **ComputerName** не является обязательным при подключении к локальной системе.</span><span class="sxs-lookup"><span data-stu-id="0443c-123">The **ComputerName** parameter is not necessary when connecting to the local system.</span></span> <span data-ttu-id="0443c-124">Мы покажем это, чтобы продемонстрировать наиболее общий случай и напомнить об этом параметре.</span><span class="sxs-lookup"><span data-stu-id="0443c-124">We show it to demonstrate the most general case and remind you about the parameter.</span></span> <span data-ttu-id="0443c-125">По умолчанию параметр **Namespace** имеет значение `root/CIMV2` и может быть опущен.</span><span class="sxs-lookup"><span data-stu-id="0443c-125">The **Namespace** defaults to `root/CIMV2`, and can be omitted as well.</span></span> <span data-ttu-id="0443c-126">В конце концов, большинство командлетов позволяет опускать имя типовых параметров.</span><span class="sxs-lookup"><span data-stu-id="0443c-126">Finally, most cmdlets allow you to omit the name of common parameters.</span></span> <span data-ttu-id="0443c-127">Если в командлете `Get-CimInstance` не указано имя для первого параметра, PowerShell считает его параметром **Class**.</span><span class="sxs-lookup"><span data-stu-id="0443c-127">With `Get-CimInstance`, if no name is specified for the first parameter, PowerShell treats it as the **Class** parameter.</span></span> <span data-ttu-id="0443c-128">Это значит, что последнюю команду можно было ввести в таком виде:</span><span class="sxs-lookup"><span data-stu-id="0443c-128">This means the last command could have been issued by typing:</span></span>
 
 ```powershell
 Get-WmiObject Win32_OperatingSystem
 ```
 
-<span data-ttu-id="2c03d-134">Класс **Win32_OperatingSystem** имеет больше свойств, чем показано здесь.</span><span class="sxs-lookup"><span data-stu-id="2c03d-134">The **Win32_OperatingSystem** class has many more properties than those displayed here.</span></span> <span data-ttu-id="2c03d-135">Можно воспользоваться командлетом Get-Member, чтобы показать все свойства.</span><span class="sxs-lookup"><span data-stu-id="2c03d-135">You can use Get-Member to see all the properties.</span></span> <span data-ttu-id="2c03d-136">Свойства класса WMI автоматически доступны, как и другие свойства объекта:</span><span class="sxs-lookup"><span data-stu-id="2c03d-136">The properties of a WMI class are automatically available like other object properties:</span></span>
+<span data-ttu-id="0443c-129">Класс **Win32_OperatingSystem** имеет больше свойств, чем показано здесь.</span><span class="sxs-lookup"><span data-stu-id="0443c-129">The **Win32_OperatingSystem** class has many more properties than those displayed here.</span></span> <span data-ttu-id="0443c-130">Можно воспользоваться командлетом Get-Member, чтобы показать все свойства.</span><span class="sxs-lookup"><span data-stu-id="0443c-130">You can use Get-Member to see all the properties.</span></span> <span data-ttu-id="0443c-131">Свойства класса WMI автоматически доступны, как и другие свойства объекта:</span><span class="sxs-lookup"><span data-stu-id="0443c-131">The properties of a WMI class are automatically available like other object properties:</span></span>
 
+```powershell
+Get-CimInstance -Class Win32_OperatingSystem | Get-Member -MemberType Property
 ```
-PS> Get-WmiObject -Class Win32_OperatingSystem -Namespace root/cimv2 -ComputerName . | Get-Member -MemberType Property
 
-   TypeName: System.Management.ManagementObject#root\cimv2\Win32_OperatingSyste
-m
-
+```Output
+   TypeName: Microsoft.Management.Infrastructure.CimInstance#root/cimv2/Win32_OperatingSystem
 Name                                      MemberType Definition
 ----                                      ---------- ----------
-__CLASS                                   Property   System.String __CLASS {...
-...
-BootDevice                                Property   System.String BootDevic...
-BuildNumber                               Property   System.String BuildNumb...
+BootDevice                                Property   string BootDevice {get;}
+BuildNumber                               Property   string BuildNumber {get;}
+BuildType                                 Property   string BuildType {get;}
+Caption                                   Property   string Caption {get;}
+CodeSet                                   Property   string CodeSet {get;}
+CountryCode                               Property   string CountryCode {get;}
+CreationClassName                         Property   string CreationClassName {get;}
+CSCreationClassName                       Property   string CSCreationClassName {get;}
+CSDVersion                                Property   string CSDVersion {get;}
+CSName                                    Property   string CSName {get;}
+CurrentTimeZone                           Property   short CurrentTimeZone {get;}
+DataExecutionPrevention_32BitApplications Property   bool DataExecutionPrevention_32BitApplications {get;}
+DataExecutionPrevention_Available         Property   bool DataExecutionPrevention_Available {get;}
 ...
 ```
 
-#### <a name="displaying-non-default-properties-with-format-cmdlets"></a><span data-ttu-id="2c03d-137">Вывод свойств, отличных от используемых по умолчанию, с помощью командлетов Format</span><span class="sxs-lookup"><span data-stu-id="2c03d-137">Displaying Non-Default Properties with Format Cmdlets</span></span>
+#### <a name="displaying-non-default-properties-with-format-cmdlets"></a><span data-ttu-id="0443c-132">Вывод свойств, отличных от используемых по умолчанию, с помощью командлетов Format</span><span class="sxs-lookup"><span data-stu-id="0443c-132">Displaying Non-Default Properties with Format Cmdlets</span></span>
 
-<span data-ttu-id="2c03d-138">Если необходимо показать сведения, содержащиеся в классе **Win32_OperatingSystem**, которые не выводятся по умолчанию, можно воспользоваться командлетом **Format**.</span><span class="sxs-lookup"><span data-stu-id="2c03d-138">If you want information contained in the **Win32_OperatingSystem** class that is not displayed by default, you can display it by using the **Format** cmdlets.</span></span> <span data-ttu-id="2c03d-139">Например, если нужно показать сведения о количестве доступной памяти, введите:</span><span class="sxs-lookup"><span data-stu-id="2c03d-139">For example, if you want to display available memory data, type:</span></span>
+<span data-ttu-id="0443c-133">Если необходимо показать сведения, содержащиеся в классе **Win32_OperatingSystem**, которые не выводятся по умолчанию, можно воспользоваться командлетом **Format**.</span><span class="sxs-lookup"><span data-stu-id="0443c-133">If you want information contained in the **Win32_OperatingSystem** class that is not displayed by default, you can display it by using the **Format** cmdlets.</span></span> <span data-ttu-id="0443c-134">Например, если нужно показать сведения о количестве доступной памяти, введите:</span><span class="sxs-lookup"><span data-stu-id="0443c-134">For example, if you want to display available memory data, type:</span></span>
 
+```powershell
+Get-CimInstance -Class Win32_OperatingSystem |
+  Format-Table -Property TotalVirtualMemorySize, TotalVisibleMemorySize,
+    FreePhysicalMemory, FreeVirtualMemory, FreeSpaceInPagingFiles
 ```
-PS> Get-WmiObject -Class Win32_OperatingSystem -Namespace root/cimv2 -ComputerName . | Format-Table -Property TotalVirtualMemorySize,TotalVisibleMemorySize,FreePhysicalMemory,FreeVirtualMemory,FreeSpaceInPagingFiles
 
-TotalVirtualMemorySize TotalVisibleMemory FreePhysicalMemory FreeVirtualMemory FreeSpaceInPagingFiles
----------------------- ---------------    ------------------ -==--------------------- ---------------
-               2097024          785904                305808           2056724                1558232
+```Output
+TotalVirtualMemorySize TotalVisibleMemorySize FreePhysicalMemory FreeVirtualMemory FreeSpaceInPagingFiles
+---------------------- ---------------------- ------------------ ----------------- ----------------------
+              33449088               16671872            6451868          18424496               16285032
 ```
 
 > [!NOTE]
-> <span data-ttu-id="2c03d-140">В именах свойств в командлете **Format-Table** допускаются подстановочные знаки, поэтому последний элемент конвейера может быть сокращен до `Format-Table -Property Total,Free`</span><span class="sxs-lookup"><span data-stu-id="2c03d-140">Wildcards work with property names in **Format-Table**, so the final pipeline element can be reduced to `Format-Table -Property Total,Free`</span></span>
+> <span data-ttu-id="0443c-135">В именах свойств в командлете `Format-Table` допускаются подстановочные знаки, поэтому последний элемент конвейера может быть сокращен до `Format-Table -Property Total*Memory*, Free*`.</span><span class="sxs-lookup"><span data-stu-id="0443c-135">Wildcards work with property names in `Format-Table`, so the final pipeline element can be reduced to `Format-Table -Property Total*Memory*, Free*`</span></span>
 
-<span data-ttu-id="2c03d-141">Сведения о памяти можно представить в более понятном виде, отформатировав список с помощью следующей команды:</span><span class="sxs-lookup"><span data-stu-id="2c03d-141">The memory data might be more readable if you format it as a list by typing:</span></span>
+<span data-ttu-id="0443c-136">Сведения о памяти можно представить в более понятном виде, отформатировав список с помощью следующей команды:</span><span class="sxs-lookup"><span data-stu-id="0443c-136">The memory data might be more readable if you format it as a list by typing:</span></span>
 
+```powershell
+Get-CimInstance -Class Win32_OperatingSystem | Format-List Total*Memory*, Free*
 ```
-PS> Get-WmiObject -Class Win32_OperatingSystem -Namespace root/cimv2 -ComputerName . | Format-List TotalVirtualMemorySize,TotalVisibleMemorySize,FreePhysicalMemory,FreeVirtualMemory,FreeSpaceInPagingFiles
 
-TotalVirtualMemorySize : 2097024
-TotalVisibleMemorySize : 785904
-FreePhysicalMemory     : 301876
-FreeVirtualMemory      : 2056724
-FreeSpaceInPagingFiles : 1556644
+```Output
+TotalVirtualMemorySize : 33449088
+TotalVisibleMemorySize : 16671872
+FreePhysicalMemory     : 6524456
+FreeSpaceInPagingFiles : 16285808
+FreeVirtualMemory      : 18393668
+Name                   : Microsoft Windows 10 Pro|C:\WINDOWS|\Device\Harddisk0\Partition2
 ```
