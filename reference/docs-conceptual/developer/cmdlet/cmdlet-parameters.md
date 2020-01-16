@@ -16,12 +16,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], parameters
 ms.assetid: 3f1cca5f-5b95-4bce-94a6-a22db1aefd47
 caps.latest.revision: 23
-ms.openlocfilehash: 914a10907bcf980eed8d7e2f819c382fe6b341ad
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c1d8984f4aad7bae6f9be66a2222e2c74c8afa3d
+ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365933"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022208"
 ---
 # <a name="cmdlet-parameters"></a>Параметры командлета
 
@@ -33,7 +33,7 @@ ms.locfileid: "72365933"
 
 [Типы параметров командлета](./types-of-cmdlet-parameters.md) Описывает различные типы параметров, которые можно объявить в командлетах.
 
-[Имя параметра командлета и рекомендации по функциональности](./standard-cmdlet-parameter-names-and-types.md) Дискусес имена, рекомендуемый тип данных и функциональность стандартных параметров.
+[Имя параметра командлета и рекомендации по функциональности](./standard-cmdlet-parameter-names-and-types.md) Описывает имена, Рекомендуемые типы данных и функциональные возможности стандартных параметров.
 
 [Псевдонимы параметров](./parameter-aliases.md) Описывает псевдонимы, которые можно определить для параметров.
 
@@ -53,7 +53,7 @@ ms.locfileid: "72365933"
 
 [Проверка входных параметров](./how-to-validate-parameter-input.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Объявление атрибута Parameter](./parameter-attribute-declaration.md)
 
