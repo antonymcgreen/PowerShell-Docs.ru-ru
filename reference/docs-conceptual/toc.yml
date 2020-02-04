@@ -58,7 +58,7 @@
           items:
             - name: Обзор
               href: learn/remoting/jea/overview.md
-            - name: предварительные требования
+            - name: Предварительные требования
               href: learn/remoting/jea/prerequisites.md
             - name: Возможности ролей
               href: learn/remoting/jea/role-capabilities.md
@@ -288,6 +288,8 @@
           href: whats-new/what-s-new-in-windows-powershell-50.md
         - name: Новые возможности интегрированной среды сценариев PowerShell версии 5.0
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: Журнал выпуска модулей и командлетов
+      href: whats-new/cmdlet-versions.md
 - name: Жизненный цикл поддержки PowerShell Core
   href: powershell-support-lifecycle.md
 - name: Windows Management Framework (WMF)
