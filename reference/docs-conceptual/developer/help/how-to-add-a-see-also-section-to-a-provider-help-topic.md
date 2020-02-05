@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c754ac3-cee3-4c13-9bad-e499c8a68a09
 caps.latest.revision: 4
-ms.openlocfilehash: f5c48fd04c620828a6e99c5c5424d11b31fd10e5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1c1b7f4cf56ea2f9e30438a60e7bee29d87b80ba
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367843"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995950"
 ---
 # <a name="how-to-add-a-see-also-section-to-a-provider-help-topic"></a>Как добавить раздел "См. также" в раздел справки для поставщика
 
@@ -29,7 +29,7 @@ ms.locfileid: "72367843"
 
 1. В файле *AssemblyName*. длл-Хелп. XML в элементе `providerHelp` добавьте элемент `RelatedLinks`. Элемент `RelatedLinks` должен быть последним элементом в элементе `providerHelp`. В каждом разделе справки по поставщику допускается только один элемент `RelatedLinks`.
 
-   Пример:
+   Например:
 
     ```xml
     <providerHelp>
@@ -40,7 +40,7 @@ ms.locfileid: "72367843"
 
 2. Для каждого раздела в разделе " **см. также** " в элементе `RelatedLinks` добавьте элемент `navigationLink`. Затем в каждом элементе `navigationLink` добавьте один элемент `linkText` и один элемент `uri`. Если элемент `uri` не используется, его можно добавить как пустой элемент (\<URI/>).
 
-   Пример:
+   Например:
 
     ```xml
     <providerHelp>
@@ -70,7 +70,7 @@ ms.locfileid: "72367843"
             </navigationLink>
             <navigationLink>
                 <linkText> Windows PowerShell Getting Started Guide </linkText>
-                <uri>http://go.microsoft.com/fwlink/?LinkID=89597<uri/>
+                <uri>https://go.microsoft.com/fwlink/?LinkID=89597<uri/>
             </navigationLink>
         </RelatedLinks>
     </providerHelp>

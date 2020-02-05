@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 10098160-c6b4-4339-b8ff-2c4f8cc0699b
 caps.latest.revision: 13
-ms.openlocfilehash: fbc77cc0fafce93d239da1c459d4b761b21ef3cb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a5290265f3d729504983b95195c793b88c4a2613
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366993"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995989"
 ---
 # <a name="updatable-help-authoring-step-by-step"></a>Создание обновляемой справки: пошаговые инструкции
 
@@ -33,14 +33,14 @@ ms.locfileid: "72366993"
 
 Добавьте ключ **HelpInfoURI** в манифест модуля. Значение ключа — это универсальный код ресурса (URI) расположения XML-файла данных HelpInfo для модуля. В целях безопасности адрес должен начинаться с "http" или "HTTPS". URI должен указывать расположение в Интернете, но не должно включать имя XML-файла HelpInfo.
 
-Пример:
+Например:
 
 ```powershell
 
 @{
 RootModule = TestModule.psm1
 ModuleVersion = '2.0'
-HelpInfoURI = 'http://go.microsoft.com/fwlink/?LinkID=0123'
+HelpInfoURI = 'https://go.microsoft.com/fwlink/?LinkID=0123'
 }
 ```
 

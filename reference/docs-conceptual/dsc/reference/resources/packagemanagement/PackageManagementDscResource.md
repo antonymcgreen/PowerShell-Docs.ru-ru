@@ -2,18 +2,18 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс PackageManagement DSC
-ms.openlocfilehash: dfc23bfabbc45041e15c56a29a77c5bdda430a30
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 28ae8772170bd4559c8a19c3a1df8c9118734857
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71953241"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995967"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Ресурс PackageManagement DSC
 
 Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
 
-Ресурс **PackageManagement** в службе настройки требуемого состояния Windows PowerShell (DSC) предоставляет механизм установки пакетов управления пакетами на целевом узле или их удаления. Для этого ресурса требуется модуль **PackageManagement**, доступный из [http://PowerShellGallery.com](https://PowerShellGallery.com).
+Ресурс **PackageManagement** в службе настройки требуемого состояния Windows PowerShell (DSC) предоставляет механизм установки пакетов управления пакетами на целевом узле или их удаления. Для этого ресурса требуется модуль **PackageManagement**, доступный из [https://PowerShellGallery.com](https://PowerShellGallery.com).
 
 > [!IMPORTANT]
 > Указанные ниже сведения о свойствах относятся к модулю **PackageManagement** версии 1.1.7.0 и новее.
@@ -41,7 +41,7 @@ PackageManagement [string] #ResourceName
 
 |Свойство |Описание |
 |---|---|
-|Name |Указывает имя устанавливаемого или удаляемого пакета. |
+|Имя |Указывает имя устанавливаемого или удаляемого пакета. |
 |AdditionalParameters |Предоставляет определенную хэш-таблицу параметров, которые передаются в аргумент `Get-Package -AdditionalArguments`. Например, для поставщика NuGet можно передать дополнительные параметры, такие как DestinationPath. |
 |MaximumVersion |Указывает максимальную версию пакета, которую требуется найти. Если этот параметр не указан, ресурс находит новейшую версию пакета. |
 |MinimumVersion |Указывает минимальную версию пакета, которую требуется найти. Если этот параметр не указан, ресурс находит новейшую доступную версию пакета, номер которой не превышает тот, что указан в параметре **MaximumVersion**. |

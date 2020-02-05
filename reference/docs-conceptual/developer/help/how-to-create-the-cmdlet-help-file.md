@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a88dd89-6beb-494f-9e2a-6b10baed1a8d
 caps.latest.revision: 17
-ms.openlocfilehash: 08e05939f8aee42f2cd502a3da7a528d8460dec1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 186a8ceecea47564503dc181a76cc314033b6d3f
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361203"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76996036"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>Как создать файл справки командлета
 
@@ -36,7 +36,7 @@ ms.locfileid: "72361203"
 
    В следующей таблице перечислены элементы XML для каждого узла, за которыми следуют описания каждого узла.
 
-   |Узел|Описание|
+   |Узел|Description|
    |----------|-----------------|
    |`<details>`|Добавляет содержимое для разделов "имя" и "КРАТКИй Обзор" раздела справки по командлетам. Дополнительные сведения см. в разделе [Добавление имени командлета и кратких](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)сведений.|
    |`<maml:description>`|Добавляет содержимое для раздела описания в разделе справки по командлету. Дополнительные сведения см. в [разделе Добавление подробного описания в раздел справки по командлетам](./how-to-add-a-cmdlet-description.md).|
@@ -54,9 +54,9 @@ ms.locfileid: "72361203"
 
 ```xml
 <command:command
-  xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
-  xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
-  xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  xmlns:maml="https://schemas.microsoft.com/maml/2004/10"
+  xmlns:command="https://schemas.microsoft.com/maml/dev/command/2004/10"
+  xmlns:dev="https://schemas.microsoft.com/maml/dev/2004/10">
   <command:details>
     <!--Add name an synopsis here-->
   </command:details>
@@ -87,7 +87,7 @@ ms.locfileid: "72361203"
 </command:command>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Добавление имени командлета и кратких обзоров](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
 
