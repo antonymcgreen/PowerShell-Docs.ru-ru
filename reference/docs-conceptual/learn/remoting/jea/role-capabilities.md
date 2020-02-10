@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Возможности ролей JEA
-ms.openlocfilehash: 613557d03bb481f9280a06ca1506166a18b4dab2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5b5b5977d4fec1ed850f1146fe7c09463908651b
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416774"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818181"
 ---
 # <a name="jea-role-capabilities"></a>Возможности ролей JEA
 
@@ -34,7 +34,7 @@ ms.locfileid: "74416774"
 
 В таблице ниже приведено несколько примеров команд, которые в состоянии без ограничений быть использованы злоумышленниками. Этот список не является исчерпывающим и служит лишь отправной точкой для дальнейших действий.
 
-|                                            Риск                                            |                                Пример                                |                                                                              Связанные команды                                                                              |
+|                                            "Риск";                                            |                                Пример                                |                                                                              Связанные команды                                                                              |
 | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Предоставление прав администратора подключающемуся пользователю для обхода JEA                                | `Add-LocalGroupMember -Member 'CONTOSO\jdoe' -Group 'Administrators'` | `Add-ADGroupMember`, `Add-LocalGroupMember`, `net.exe`, `dsadd.exe`                                                                                                        |
 | Выполнение произвольного кода, например вредоносных программ, эксплойтов или пользовательских сценариев для обхода защиты | `Start-Process -FilePath '\\san\share\malware.exe'`                   | `Start-Process`, `New-Service`, `Invoke-Item`, `Invoke-WmiMethod`, `Invoke-CimMethod`, `Invoke-Expression`, `Invoke-Command`, `New-ScheduledTask`, `Register-ScheduledJob` |
@@ -79,7 +79,7 @@ VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; Val
 
 |                                           Пример                                           |                                                             Вариант использования                                                              |
 | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `'My-Func'` или `@{ Name = 'My-Func' }`                                                      | Разрешает пользователю выполнить `My-Func` без каких-либо ограничений для параметров.                                                      |
+| `'My-Func'` либо `@{ Name = 'My-Func' }`                                                      | Разрешает пользователю выполнить `My-Func` без каких-либо ограничений для параметров.                                                      |
 | `'MyModule\My-Func'`                                                                        | Разрешает пользователю выполнить `My-Func` из модуля `MyModule` без каких-либо ограничений для параметров.                           |
 | `'My-*'`                                                                                    | Разрешает пользователю выполнить любой командлет или функцию с командой `My`.                                                                 |
 | `'*-Func'`                                                                                  | Разрешает пользователю выполнить любой командлет или функцию с существительным `Func`.                                                               |
@@ -157,9 +157,11 @@ FunctionDefinitions = @{
 
 Для корректной работы завершения при нажатии клавиши TAB в сеансах JEA необходимо включить встроенную функцию `tabexpansion2` в список **VisibleFunctions**.
 
-## <a name="place-role-capabilities-in-a-module"></a>Помещение возможностей ролей в модуль
+## <a name="make-the-role-capabilities-available-to-a-configuration"></a>Обеспечение доступности возможностей роли для конфигурации
 
-Чтобы среда PowerShell обнаружила файл возможности роли, его следует поместить в папку **RoleCapabilities** в модуле PowerShell. Этот модуль может храниться в любой папке, включенной в переменную среды `$env:PSModulePath`, однако не следует помещать его в папку System32 либо в папку, где не являющиеся доверенными подключающиеся пользователи могут изменить его. Ниже приведен пример создания базового модуля сценария PowerShell с именем **ContosoJEA** в папке `$env:ProgramFiles`.
+До PowerShell 6, чтобы среда PowerShell обнаружила файл возможности роли, его нужно было поместить в папку **RoleCapabilities** в модуле PowerShell. Этот модуль может храниться в любой папке, включенной в переменную среды `$env:PSModulePath`, однако не следует помещать его в папку `$env:SystemRoot\System32` либо в папку, где они могут быть изменены пользователями, которые не являются доверенными.
+
+В следующем примере для размещения файла возможностей роли в пути `$env:ProgramFiles` создается модуль скрипта PowerShell с именем **ContosoJEA**.
 
 ```powershell
 # Create a folder for the module
@@ -178,6 +180,8 @@ Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 ```
 
 Дополнительные сведения о модулях PowerShell см. в разделе [Основные сведения о модуле PowerShell](/powershell/scripting/developer/windows-powershell).
+
+Начиная с PowerShell 6, свойство **RoleDefinitions** было добавлено в файл конфигурации сеанса. Это свойство позволяет указать расположение файла конфигурации роли для определения роли. См. примеры в [New-PSSessionConfigurationFile](/powershell/module/microsoft.powershell.core/new-pssessionconfigurationfile).
 
 ## <a name="updating-role-capabilities"></a>Изменение возможностей ролей
 

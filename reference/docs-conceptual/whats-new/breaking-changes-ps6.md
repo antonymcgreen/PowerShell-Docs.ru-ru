@@ -1,17 +1,29 @@
 ---
-ms.date: 12/18/2019
+ms.date: 02/03/2020
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
-ms.openlocfilehash: dfbbeb5e5bb3d43959ce144afffc5b10193f8b30
-ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
+ms.openlocfilehash: 47ed14cceed86e4dd04a8e0079af00f6a98988ea
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75415712"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995462"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>Критические изменения в PowerShell 6.x
 
 ## <a name="features-no-longer-available-in-powershell-core"></a>Функции, которые больше недоступны в PowerShell Core
+
+### <a name="modules-not-shipped-for-powershell-6x"></a>Модули, не поставляемые для PowerShell 6.x
+
+По различным причинам совместимости следующие модули не включены в PowerShell 6.
+
+- ISE
+- Microsoft.PowerShell.LocalAccounts
+- Microsoft.PowerShell.ODataUtils
+- Microsoft.PowerShell.Operation.Validation
+- PSScheduledJob
+- PSWorkflow
+- PSWorkflowUtility
 
 ### <a name="powershell-workflow"></a>Рабочий процесс PowerShell
 
@@ -40,10 +52,11 @@ ms.locfileid: "75415712"
 
 Из-за сложности поддержки двух наборов модулей на основе инструментария WMI мы удалили командлеты инструментария WMI версии 1 из PowerShell Core:
 
-- `Get-WmiObject`
-- `Invoke-WmiMethod`
 - `Register-WmiEvent`
 - `Set-WmiInstance`
+- `Invoke-WmiMethod`
+- `Get-WmiObject`
+- `Remove-WmiObject`
 
 Вместо этого мы рекомендуем вам использовать командлеты CIM (также называемыми инструментарием WMI версии 2), которые обеспечивают те же функциональные возможности, а также новые возможности и обновленный синтаксис:
 
@@ -68,14 +81,51 @@ ms.locfileid: "75415712"
 
 .NET Core не поддерживает платформу Windows Communication Framework, которая предоставляет службы для использования протокола SOAP. Этот командлет удален, так как для него нужен протокол SOAP.
 
-### <a name="-computer-cmdlets"></a>Командлеты `*-Computer`
+### <a name="-transaction-cmdlets-removed"></a>`*-Transaction` командлеты удалены
+
+Эти командлеты использовали очень ограниченный объем использования. Было принято решение о прекращении их поддержки.
+
+- `Complete-Transaction`
+- `Get-Transaction`
+- `Start-Transaction`
+- `Undo-Transaction`
+- `Use-Transaction`
+
+### <a name="security-cmdlets-not-available-on-non-windows-platforms"></a>Командлеты безопасности недоступны на платформах, отличных от Windows
+
+- `Get-Acl`
+- `Set-Acl`
+- `Get-AuthenticodeSignature`
+- `Set-AuthenticodeSignature`
+- `Get-CmsMessage`
+- `Protect-CmsMessage`
+- `Unprotect-CmsMessage`
+- `New-FileCatalog`
+- `Test-FileCatalog`
+
+### <a name="-computerand-other-windows-specific-cmdlets"></a>`*-Computer`и другие командлеты для Windows
 
 Из-за использования неподдерживаемых API следующие командлеты исключены из PowerShell Core, пока не будет найдено лучшее решение.
 
-- Add-Computer
-- Checkpoint-Computer
-- Remove-Computer
-- Restore-Computer
+- `Get-Clipboard`
+- `Set-Clipboard`
+- `Add-Computer`
+- `Checkpoint-Computer`
+- `Remove-Computer`
+- `Restore-Computer`
+- `Reset-ComputerMachinePassword`
+- `Disable-ComputerRestore`
+- `Enable-ComputerRestore`
+- `Get-ComputerRestorePoint`
+- `Test-ComputerSecureChannel`
+- `Get-ControlPanelItem`
+- `Show-ControlPanelItem`
+- `Get-HotFix`
+- `Clear-RecycleBin`
+- `Update-List`
+- `Out-Printer`
+- `ConvertFrom-String`
+- `Convert-String`
 
 ### <a name="-counter-cmdlets"></a>Командлеты `*-Counter`
 
@@ -84,6 +134,31 @@ ms.locfileid: "75415712"
 ### <a name="-eventlog-cmdlets"></a>Командлеты `*-EventLog`
 
 Из-за использования неподдерживаемых API модуль `*-EventLog` был удален из PowerShell Core, пока не будет найдено лучшее решение. `Get-WinEvent` и `Create-WinEvent` доступны для получения и создания событий в Windows.
+
+### <a name="cmdlets-that-use-wpf-removed"></a>Командлеты, использующие WPF, удалены
+
+Платформа Windows Presentation Framework не поддерживается в CoreCLR. Затрагиваются следующие командлеты:
+
+- `Show-Command`
+- `Out-GridView`
+- Параметр **showwindow** для `Get-Help`
+
+### <a name="some-dsc-cmdlets-removed"></a>Некоторые командлеты DSC удалены
+
+- `Get-DscConfiguration`
+- `Publish-DscConfiguration`
+- `Restore-DscConfiguration`
+- `Start-DscConfiguration`
+- `Stop-DscConfiguration`
+- `Test-DscConfiguration`
+- `Update-DscConfiguration`
+- `Remove-DscConfigurationDocument`
+- `Get-DscConfigurationStatus`
+- `Disable-DscDebug`
+- `Enable-DscDebug`
+- `Get-DscLocalConfigurationManager`
+- `Set-DscLocalConfigurationManager`
+- `Invoke-DscResource`
 
 ## <a name="enginelanguage-changes"></a>Изменения модуля и языка
 

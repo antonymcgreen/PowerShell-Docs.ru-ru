@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Приступая к работе с коллекцией PowerShell
-ms.openlocfilehash: ee3fe7d9c65ad1a8f9ffd2ddec0f4ce6659bc3d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fd4185234136dd9f3e628df50954b6ebff637639
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328465"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995891"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Начало работы с коллекцией PowerShell
 
@@ -23,16 +23,16 @@ PowerShell Gallery — это репозиторий пакета, которы
 
 Вы можете отфильтровать результаты в коллекции используя следующие параметры:
 
-- Name
+- Имя
 - AllVersions
 - MinimumVersion
 - RequiredVersion
-- Tag
+- Тег
 - Includes
 - DscResource
 - RoleCapability
-- Команда
-- Фильтр
+- Get-Help
+- Filter
 
 Если вас интересуют только определенные ресурсы DSC в коллекции, выполните командлет [Find-DscResource][]. Командлет Find-DscResource возвращает сведения о ресурсах DSC, содержащихся в коллекции. Поскольку ресурсы DSC всегда являются частью модуля, вам по-прежнему потребуется выполнить командлет [Install-Module][], чтобы установить их.
 
@@ -98,3 +98,5 @@ PowerShell Gallery — это репозиторий пакета, которы
 [Register-PSRepository]: /powershell/module/powershellget/Register-Repository
 [Save-Module]: /powershell/module/powershellget/Save-Module
 [Save-Script]: /powershell/module/powershellget/Save-Script
+[Update-Module]: /powershell/module/powershellget/Update-Module
+[Update-Script]: /powershell/module/powershellget/Update-Script

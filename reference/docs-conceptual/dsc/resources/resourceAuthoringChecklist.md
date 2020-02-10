@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Контрольный список для создания ресурсов
-ms.openlocfilehash: c0a18169b5e9f6ba0c3848b00725731453763611
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e7401071db9cb149fff572d79568d69a0b8ea004
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71952881"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818147"
 ---
 # <a name="resource-authoring-checklist"></a>Контрольный список для создания ресурсов
 
@@ -36,7 +36,7 @@ xPSDesiredStateConfiguration
 ## <a name="resource-and-schema-are-correct"></a>Ресурс и схема верны
 
 Проверьте файл схемы ресурса (*.schema.mof). Для разработки и проверки схемы можно использовать [Конструктор ресурсов DSC](https://www.powershellgallery.com/packages/xDSCResourceDesigner/1.12.0.0).
-Убедитесь в следующем.
+Убедитесь, что выполнены следующие условия:
 
 - Типы свойств являются правильными (например, не используйте String для свойств, принимающих числовые значения, в таких случаях следует использовать UInt32 или другие числовые типы).
 - Атрибуты свойств указаны правильно: ([key], [required], [write], [read]).
@@ -52,7 +52,7 @@ xPSDesiredStateConfiguration
 
 - Понятное имя указано и соответствует соглашениям об именовании DSC.
 
-  Пример: `[ClassVersion("1.0.0.0"), FriendlyName("xRemoteFile")]`
+  Например, `[ClassVersion("1.0.0.0"), FriendlyName("xRemoteFile")]`.
 
 - Каждое поле имеет осмысленное описание. В репозитории GitHub PowerShell есть хорошие примеры, такие как [схема .schema.mof для xRemoteFile](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCResources/MSFT_xRemoteFile/MSFT_xRemoteFile.schema.mof).
 
@@ -63,7 +63,7 @@ Test-xDscResource <Resource_folder>
 Test-xDscSchema <Path_to_resource_schema_file>
 ```
 
-Например:
+Пример:
 
 ```powershell
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
@@ -130,7 +130,7 @@ File file {
 - Учетные данные или сеанса могут работать по-разному, так как агент DSC выполняется как служба.  Обязательно выполните комплексное тестирование всех этих функций.
 - Ошибки, выдаваемые командлетом `Start-DscConfiguration`, могут отличаться от ошибок, отображаемых при вызове функции `Set-TargetResource` напрямую.
 
-## <a name="test-compatability-on-all-dsc-supported-platforms"></a>Проверка совместимости на всех платформах, поддерживаемых DSC
+## <a name="test-compatibility-on-all-dsc-supported-platforms"></a>Проверка совместимости на всех платформах, поддерживаемых DSC
 
 Ресурс должен работать на всех платформах, поддерживаемых DSC (Windows Server 2008 R2 и более поздней версии). Для получения последней версии DSC установите последнюю версию WMF (Windows Management Framework) в своей операционной системе. Если ресурс по своей природе не поддерживает некоторые из этих платформ, должно быть возвращено сообщение об ошибке. Кроме того, убедитесь, что ресурс проверяет, присутствуют ли вызываемые командлеты на конкретном компьютере. В Windows Server 2012 было добавлено большое количество новых командлетов, которые недоступны в Windows Server 2008 R2 даже при установленном WMF.
 
@@ -244,9 +244,9 @@ Invoke-Expression $commandToExecute
 Убедитесь, в реализации ресурса нет ни одного жестко заданного пути, особенно в том случае, если они предполагают язык (en-us) или имеются системные переменные, которые могут использоваться.
 Если ресурсу требуется доступ к определенным путям, используйте переменные среды вместо жесткого задания пути, так как на других компьютерах он может отличаться.
 
-Пример:
+Пример
 
-Вместо этого:
+Вместо:
 
 ```powershell
 $tempPath = "C:\Users\kkaczma\AppData\Local\Temp\MyResource"

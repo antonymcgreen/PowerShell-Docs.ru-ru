@@ -3,14 +3,14 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Часто задаваемые вопросы по коллекции PowerShell
-ms.openlocfilehash: bcbb36a9ec60d88d1ef56fd270f0ae1862d5ca6b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 70e2220bd68b351e0b09dd3c59901104f7874335
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328055"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818130"
 ---
-# <a name="frequently-asked-questions"></a>Вопросы и ответы
+# <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 
 ## <a name="what-is-a-powershell-module"></a>Что такое модуль PowerShell?
 
@@ -36,7 +36,7 @@ ms.locfileid: "71328055"
 
 **Для установки или сохранения пакетов не требуется регистрироваться в коллекции или входить в нее.**
 
-## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>Получена ошибка "Не удалось обработать запрос. "Указанный ключ API является недопустимым или не имеет разрешения на доступ к указанному пакету". Удаленный сервер вернул ошибку: (403) запрещено". при попытке опубликовать пакет в коллекции PowerShell. Что это значит?
+## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>Получена ошибка "Не удалось обработать запрос. "Указанный ключ API является недопустимым или не имеет разрешения на доступ к указанному пакету". Удаленный сервер вернул ошибку: (403) запрещено". при попытке опубликовать пакет в коллекции PowerShell. Что это означает?
 
 Эта ошибка может возникать по следующим причинам.
 
@@ -65,7 +65,7 @@ ms.locfileid: "71328055"
 
 - Версия
 - Описание
-- Дизайнер
+- Автор
 - URI для условий лицензии модуля, либо в разделе **PrivateData** манифеста, либо в параметре **LicenseUri** командлета [Publish-Module][].
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>Как создать правильно сформированный манифест модуля?
@@ -86,7 +86,7 @@ ms.locfileid: "71328055"
 
 - Версия
 - Описание
-- Дизайнер
+- Автор
 - URI для условий лицензии сценария, либо в разделе **PSScriptInfo** сценария, либо в параметре **LicenseUri** командлета [Publish-Script][].
 
 ## <a name="how-do-i-search"></a>Как вести поиск?
@@ -161,8 +161,8 @@ PowerShellGet можно использовать с любым допустим
 Таким образом, для **PowerShellGet** требуется одна из следующих операционных систем:
 
 - Windows 10
-- Windows 8.1 Профессиональная
-- Windows 8.1 Корпоративная
+- Windows 8.1 Профессиональная
+- Windows 8.1 Корпоративная
 - Windows 7 с пакетом обновления 1 (SP1)
 - Windows Server 2016
 - Windows Server 2012 R2
