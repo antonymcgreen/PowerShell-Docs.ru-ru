@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Устранение неполадок в DSC
-ms.openlocfilehash: 2a0d2138f30573b9ae6cf52d8b106a05f1193407
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5cbe6496a6e0b9940f4b69e13d1e19e43b3915f0
+ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954621"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478791"
 ---
 # <a name="troubleshooting-dsc"></a>Устранение неполадок в DSC
 
@@ -119,7 +119,7 @@ Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 Consistency engine was run successfully.
 ```
 
-События DSC записываются в определенной структуре, что позволяет пользователю собрать все события из одного задания DSC. Эта структура выглядит следующим образом:
+События DSC записываются в определенной структуре, что позволяет пользователю собрать все события из одного задания DSC. Его структура выглядит следующим образом.
 
 ```
 Job ID : <Guid>
@@ -194,7 +194,7 @@ TimeCreated                     Id LevelDisplayName Message
 
 С помощью [Where-Object](/powershell/module/microsoft.powershell.core/where-object) можно извлечь данные в переменную `$SeparateDscOperations`. Ниже приведены пять ситуаций, в которых может потребоваться извлечь данные для устранения неполадок DSC:
 
-### <a name="1-operations-failures"></a>1\. Сбои при выполнении операций
+### <a name="1-operations-failures"></a>1: Сбои при выполнении операций
 
 Все события имеют [уровни серьезности](/windows/desktop/WES/defining-severity-levels). С помощью этих сведений можно определить события с ошибкой:
 
@@ -206,7 +206,7 @@ Count Name                      Group
    38 {5BCA8BE7-5BB6-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
 ```
 
-### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2\. Подробные сведения об операциях за последние полчаса
+### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2: Подробные сведения об операциях за последние полчаса
 
 `TimeCreated`, свойство каждого события Windows, содержит время создания события. Для фильтрации событий можно сравнить это свойство с конкретным объектом даты и времени:
 
@@ -219,7 +219,7 @@ Count Name                      Group
     1 {6CEC5B09-5BB0-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord}
 ```
 
-### <a name="3-messages-from-the-latest-operation"></a>3\. Сообщения последней операции
+### <a name="3-messages-from-the-latest-operation"></a>3: Сообщения последней операции
 
 Последняя операция хранится по первому индексу в группе массива `$SeparateDscOperations`.
 При запросе сообщений группы для индекса 0 возвращаются все сообщения для последней операции:
@@ -242,7 +242,7 @@ Displaying messages from built-in DSC resources:
  Message : [INCH-VM]:                            [] Consistency check completed.
 ```
 
-### <a name="4-error-messages-logged-for-recent-failed-operations"></a>4\. Сообщения об ошибках в журнале для последних неудачных операций
+### <a name="4-error-messages-logged-for-recent-failed-operations"></a>4: Сообщения об ошибках в журнале для последних неудачных операций
 
 `$SeparateDscOperations[0].Group` содержит набор событий для последней операции. Запустите командлет `Where-Object` для фильтрации событий в зависимости от их отображаемого уровня. Результаты сохраняются в переменной `$myFailedEvent`, которую можно разделить на составные части для получения сообщения о событии:
 
@@ -258,7 +258,7 @@ rameter to specify a configuration file and create a current configuration first
 Error Code : 1
 ```
 
-### <a name="5-all-events-generated-for-a-particular-job-id"></a>5\. Все события, созданные для идентификатора конкретного задания.
+### <a name="5-all-events-generated-for-a-particular-job-id"></a>5: Все события, созданные для идентификатора конкретного задания.
 
 `$SeparateDscOperations` представляет собой массив групп, каждая из которых имеет имя, являющееся уникальным идентификатором задания. Запустив командлет `Where-Object`, можно извлечь группы событий, которые имеют идентификатор конкретного задания:
 
@@ -643,12 +643,22 @@ https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned une
 Это может произойти, если сертификат, используемый на сервере для шифрования трафика, имеет общее имя (CN), отличающееся от DNS-имени, которое используется узлом для разрешения URL-адреса.
 Измените настройки экземпляра опрашиваемого сервера Windows и используйте сертификат с правильным именем.
 
-## <a name="see-also"></a>См. также
+## <a name="error-when-running-sysprep-after-applying-a-dsc-configuration"></a>Ошибка при запуске программы Sysprep после применения конфигурации DSC
 
-### <a name="concepts"></a>Концепции
+При попытке запустить Sysprep для подготовки к использованию Windows Server после применения конфигурации DSC может возникнуть следующая ошибка.
+
+```
+SYSPRP LaunchDll:Failure occurred while executing 'DscCore.dll,SysPrep_Cleanup', returned error code 0x2
+```
+
+Подготовка к использованию сервера после его настройки с помощью Windows PowerShell Desired State Configuration не поддерживается.  Вместо этого примените конфигурации к Windows после завершения этапа специализации (Specialize) программы установки Windows.
+
+## <a name="see-also"></a>См. также:
+
+### <a name="concepts"></a>Основные понятия
 
 - [Создание пользовательских ресурсов DSC Windows PowerShell](../resources/authoringResource.md)
 
-### <a name="other-resources"></a>Прочие ресурсы
+### <a name="other-resources"></a>Другие ресурсы
 
 - [Конфигурация требуемого состояния Windows PowerShell (DSC)](/powershell/module/psdesiredstateconfiguration/)

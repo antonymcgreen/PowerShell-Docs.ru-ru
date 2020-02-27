@@ -2,12 +2,12 @@
 title: Жизненный цикл поддержки PowerShell Core
 description: Политики, распространяемые на поддержку PowerShell Core
 ms.date: 08/06/2018
-ms.openlocfilehash: 57804df830da01bee0f48acc374658b025a46b85
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+ms.openlocfilehash: d535199e19c1aabbbfdd140b38aad329bc5d957e
+ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022233"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478808"
 ---
 # <a name="powershell-core-support-lifecycle"></a>Жизненный цикл поддержки PowerShell Core
 
@@ -50,22 +50,20 @@ PowerShell Core — это отдельный набор средств и ко�
 Отмеченные как `Experimental` (экспериментальные) платформы официально не поддерживаются, но они доступны для экспериментов с возможностью обратной связи.
 
 | Платформа                                          |      6.2      |    7.0    |
-|---------------------------------------------------|:-------------:|:---------:|
-| Windows 7, 8.1 и 10                            |   Поддерживается   | Поддерживается |
-| Windows Server 2008 R2, 2012 R2, 2016             |   Поддерживается   | Поддерживается |
+| ------------------------------------------------- | :-----------: | :-------: |
+| Windows 8.1 и 10                               |   Поддерживается   | Поддерживается |
+| Windows Server 2012 R2 и 2016                      |   Поддерживается   | Поддерживается |
 | [Windows Server Semi-Annual Channel][semi-annual] |   Поддерживается   | Поддерживается |
 | Ubuntu 16.04 и 18.04.                            |   Поддерживается   | Поддерживается |
-| Ubuntu 18.10 (с помощью snap-пакета)                   |   Сообщество   | Сообщество |
-| Ubuntu 19.04 (через snap-пакет)                   |   Сообщество   | Сообщество |
+| Ubuntu 19.10 (через Snap-пакет)                   |   Сообщество   | Сообщество |
+| Ubuntu 20.04 (через Snap-пакет)                   |   Сообщество   | Сообщество |
 | Debian 9                                          |   Поддерживается   | Поддерживается |
 | Debian 10                                         | Не поддерживается | Поддерживается |
 | CentOS 7                                          |   Поддерживается   | Поддерживается |
 | CentOS 8                                          | Не поддерживается | Поддерживается |
 | Red Hat Enterprise Linux 7                        |   Поддерживается   | Поддерживается |
 | Red Hat Enterprise Linux 8                        | Не поддерживается | Поддерживается |
-| openSUSE 42.3                                     |   Поддерживается   | Поддерживается |
-| Fedora 28                                         |   Поддерживается   | Поддерживается |
-| Fedora 29, 30                                     | Не поддерживается | Поддерживается |
+| Fedora 30                                         | Не поддерживается | Поддерживается |
 | Alpine 3.8                                        |   См. примечание    | См. примечание  |
 | Alpine 3.9 и 3.10                               | Не поддерживается | См. примечание  |
 | macOS 10.12+                                      |   Поддерживается   | Поддерживается |
@@ -97,19 +95,23 @@ PowerShell Core — это отдельный набор средств и ко�
 
 Таким образом, поддержка следующих версий прекращается владельцами дистрибутивов.
 
-| Платформа | Версия | Завершение срока службы                                                                                 |
-|----------|---------|---------------------------------------------------------------------------------------------|
-| Fedora   | 24      | [Август 2017 г.](https://fedoramagazine.org/fedora-24-eol/)                                    |
-| Fedora   | 25      | [Декабрь 2017 г.](https://fedoramagazine.org/fedora-25-end-life/)                             |
-| Fedora   | 26      | [Май 2018 г.](https://fedoramagazine.org/fedora-26-end-life/)                                  |
-| openSUSE | 42.1    | [Май 2017 г.](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)     |
-| openSUSE | 42.2    | [Январь 2018 г.](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
-| Ubuntu   | 16.10   | [Июль 2017 г.](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)        |
-| Ubuntu   | 17.04   | [Январь 2018 г.](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
-| Ubuntu   | 17.10   | [Июль 2018 г.](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)        |
-| Debian   | 8       | [Июнь 2018 г.](https://lists.debian.org/debian-security-announce/2018/msg00132.html)           |
-| Fedora   | 27      | [Ноябрь 2018 г.](https://fedoramagazine.org/fedora-27-end-of-life/)                          |
-| Ubuntu   | 14.04   | [Апрель 2019 г.](https://wiki.ubuntu.com/Releases)                                              |
+| Платформа       | Версия | Завершение срока службы                                                                                                                        |
+| -------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Debian         | 8       | [Июнь 2018 г.](https://lists.debian.org/debian-security-announce/2018/msg00132.html)                                                  |
+| Fedora         | 24      | [Август 2017 г.](https://fedoramagazine.org/fedora-24-eol/)                                                                           |
+| Fedora         | 25      | [Декабрь 2017 г.](https://fedoramagazine.org/fedora-25-end-life/)                                                                    |
+| Fedora         | 26      | [Май 2018 г.](https://fedoramagazine.org/fedora-26-end-life/)                                                                         |
+| Fedora         | 27      | [Ноябрь 2018 г.](https://fedoramagazine.org/fedora-27-end-of-life/)                                                                 |
+| Fedora         | 28      | [Май 2019 г.](https://fedoramagazine.org/fedora-28-end-of-life/)                                                                      |
+| openSUSE       | 42.1    | [Май 2017 г.](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)                                            |
+| openSUSE       | 42.2    | [Январь 2018 г.](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html)                                        |
+| openSUSE       | 42.3    | [Июль 2019 г.](https://lists.opensuse.org/opensuse-security-announce/2019-07/msg00000.html)                                           |
+| Ubuntu         | 14.04   | [Апрель 2019 г.](https://wiki.ubuntu.com/Releases)                                                                                     |
+| Ubuntu         | 16.10   | [Июль 2017 г.](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)                                               |
+| Ubuntu         | 17.04   | [Январь 2018 г.](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)                                                 |
+| Ubuntu         | 17.10   | [Июль 2018 г.](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)                                               |
+| Windows        | 7       | [Январь 2020 г.](https://support.microsoft.com/en-us/help/4057281/windows-7-support-ended-on-january-14-2020)                        |
+| Windows Server | 2008 R2 | [Январь 2020 г.](https://support.microsoft.com/en-us/help/4456235/end-of-support-for-windows-server-2008-and-windows-server-2008-r2) |
 
 ## <a name="notes-on-licensing"></a>Замечания по лицензированию
 
