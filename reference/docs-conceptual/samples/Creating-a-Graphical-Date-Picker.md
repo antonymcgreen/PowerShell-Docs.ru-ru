@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Создание графического элемента управления "Выбор даты"
-ms.openlocfilehash: d05445963b41af61a61aa29a425e638d43fb5d9d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b748e301b24ed643488079b547e2da1a5a7a6551
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030252"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706141"
 ---
 # <a name="creating-a-graphical-date-picker"></a>Создание графического элемента управления "Выбор даты"
 
@@ -34,23 +34,23 @@ $calendar = New-Object Windows.Forms.MonthCalendar -Property @{
 }
 $form.Controls.Add($calendar)
 
-$OKButton = New-Object Windows.Forms.Button -Property @{
+$okButton = New-Object Windows.Forms.Button -Property @{
     Location     = New-Object Drawing.Point 38, 165
     Size         = New-Object Drawing.Size 75, 23
     Text         = 'OK'
     DialogResult = [Windows.Forms.DialogResult]::OK
 }
-$form.AcceptButton = $OKButton
-$form.Controls.Add($OKButton)
+$form.AcceptButton = $okButton
+$form.Controls.Add($okButton)
 
-$CancelButton = New-Object Windows.Forms.Button -Property @{
+$cancelButton = New-Object Windows.Forms.Button -Property @{
     Location     = New-Object Drawing.Point 113, 165
     Size         = New-Object Drawing.Size 75, 23
     Text         = 'Cancel'
     DialogResult = [Windows.Forms.DialogResult]::Cancel
 }
-$form.CancelButton = $CancelButton
-$form.Controls.Add($CancelButton)
+$form.CancelButton = $cancelButton
+$form.Controls.Add($cancelButton)
 
 $result = $form.ShowDialog()
 
@@ -60,8 +60,7 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 }
 ```
 
-Сначала с помощью скрипта загружаются два класса .NET Framework: **System.Drawing** и **System.Windows.Forms**.
-Затем вы запускаете новый экземпляр класса .NET Framework **Windows.Forms.Form**, предоставляющий пустую форму или окно, в которые можно добавить элементы управления.
+Сначала с помощью скрипта загружаются два класса .NET Framework: **System.Drawing** и **System.Windows.Forms**. Затем вы запускаете новый экземпляр класса .NET Framework **Windows.Forms.Form**, предоставляющий пустую форму или окно, в которые можно добавить элементы управления.
 
 ```powershell
 $form = New-Object Windows.Forms.Form -Property @{
@@ -74,8 +73,7 @@ $form = New-Object Windows.Forms.Form -Property @{
 
 В этом примере четырем свойствам этого класса присваиваются значения с помощью свойства **Свойство** и хэш-таблицы.
 
-1. **StartPosition.** Если это свойство не добавлено, Windows выберет расположение после открытия формы.
-   Если для этого свойства задать значение **CenterScreen**, форма будет автоматически отображаться в центре экрана при загрузке.
+1. **StartPosition.** Если это свойство не добавлено, Windows выберет расположение после открытия формы. Если для этого свойства задать значение **CenterScreen**, форма будет автоматически отображаться в центре экрана при загрузке.
 
 2. **Size.** Это размер формы в пикселях.
    Предыдущий сценарий создает форму шириной 243 пикселей и высотой 230 пикселей.
@@ -96,35 +94,31 @@ $calendar = New-Object Windows.Forms.MonthCalendar -Property @{
 $form.Controls.Add($calendar)
 ```
 
-Далее создайте кнопку **OК** для формы.
-Укажите размер и поведение кнопки **ОК**.
-В этом примере кнопка расположена на 165 пикселей ниже верхней границы формы и на 38 пикселей правее левой границы.
-Высота кнопки — 23 пикселя, а длина — 75 пикселей.
-Сценарий использует предопределенные типы Windows Forms для определения поведения кнопок.
+Далее создайте кнопку **OК** для формы. Укажите размер и поведение кнопки **ОК**. В этом примере кнопка расположена на 165 пикселей ниже верхней границы формы и на 38 пикселей правее левой границы. Высота кнопки — 23 пикселя, а длина — 75 пикселей. Сценарий использует предопределенные типы Windows Forms для определения поведения кнопок.
 
 ```powershell
-$OKButton = New-Object Windows.Forms.Button -Property @{
+$okButton = New-Object Windows.Forms.Button -Property @{
     Location     = New-Object Drawing.Point 38, 165
     Size         = New-Object Drawing.Size 75, 23
     Text         = 'OK'
     DialogResult = [Windows.Forms.DialogResult]::OK
 }
-$form.AcceptButton = $OKButton
-$form.Controls.Add($OKButton)
+$form.AcceptButton = $okButton
+$form.Controls.Add($okButton)
 ```
 
 Аналогичным образом создайте кнопку **Отмена**.
 Кнопка **Отмена** расположена на 165 пикселей ниже верхней границы и на 113 пикселей правее левой границы окна.
 
 ```powershell
-$CancelButton = New-Object Windows.Forms.Button -Property @{
+$cancelButton = New-Object Windows.Forms.Button -Property @{
     Location     = New-Object Drawing.Point 113, 165
     Size         = New-Object Drawing.Size 75, 23
     Text         = 'Cancel'
     DialogResult = [Windows.Forms.DialogResult]::Cancel
 }
-$form.CancelButton = $CancelButton
-$form.Controls.Add($CancelButton)
+$form.CancelButton = $cancelButton
+$form.Controls.Add($cancelButton)
 ```
 
 Добавьте следующую строку кода для отображения формы в Windows.
@@ -133,8 +127,7 @@ $form.Controls.Add($CancelButton)
 $result = $form.ShowDialog()
 ```
 
-Наконец, код внутри блока `if` указывает Windows, что следует делать с формой, когда пользователь выберет день в календаре и нажмет кнопку **ОК** или клавишу **ВВОД**.
-Windows PowerShell отображает выбранную дату для пользователей.
+Наконец, код внутри блока `if` указывает Windows, что следует делать с формой, когда пользователь выберет день в календаре и нажмет кнопку **ОК** или клавишу **ВВОД**. Windows PowerShell отображает выбранную дату для пользователей.
 
 ```powershell
 if ($result -eq [Windows.Forms.DialogResult]::OK) {
@@ -143,8 +136,7 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Блог Hey Scripting Guy:  Why don’t these PowerShell GUI examples work? (Почему эти примеры скриптов PowerShell GUI не работают)](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates (WinFormsExampleUpdates от Дэйва Уайята)](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week:  Creating a Graphical Date Picker](https://technet.microsoft.com/library/ff730942.aspx) (Совет недели для Windows PowerShell: создание графического элемента управления "Выбор даты")
+- [Windows PowerShell Tip of the Week:  Creating a Graphical Date Picker](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730942(v=technet.10)) (Совет недели для Windows PowerShell: создание графического элемента управления "Выбор даты")

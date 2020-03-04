@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Регистрация конфигураций JEA
-ms.openlocfilehash: dbed5c7dd71f2f7a09d97416be56dff675799548
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7cc67e891bc14dd667c97e9a8b550b33b4c2b874
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417613"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706212"
 ---
 # <a name="registering-jea-configurations"></a>Регистрация конфигураций JEA
 
@@ -51,7 +51,7 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 
 ## <a name="multi-machine-configuration-with-dsc"></a>Конфигурация для нескольких компьютеров с помощью DSC
 
-Если JEA развертывается на нескольких компьютерах, самая простая модель развертывания заключается в использовании ресурса [настройки требуемого состояния (DSC)](/powershell/scripting/dsc/overview) JEA, позволяющего быстро и согласованно развернуть JEA на каждом компьютере.
+Если JEA развертывается на нескольких компьютерах, самая простая модель развертывания заключается в использовании ресурса [настройки требуемого состояния (DSC)](../../../dsc/overview/overview.md) JEA, позволяющего быстро и согласованно развернуть JEA на каждом компьютере.
 
 Чтобы развернуть JEA с помощью DSC, следует убедиться в выполнении следующих условий.
 
