@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 98cac43698b3f537ee318cd2570b2174631665a7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7d399786b9b43ee302493359d9702981045212e9
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359633"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277476"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Создание рабочего процесса с помощью действий Windows PowerShell
 
@@ -45,7 +45,7 @@ ms.locfileid: "72359633"
 
 8. Измените свойства действия **жетвмиобжект** следующим образом.
 
-   |Свойство|Применение|
+   |Свойство|Значение|
    |--------------|-----------|
    |**Class**|"Win32_ComputerSystem"|
    |**PSComputerName**|соответствовал|
@@ -55,7 +55,7 @@ ms.locfileid: "72359633"
 
 10. Измените свойства действия **аддкомпутер** следующим образом.
 
-    |Свойство|Применение|
+    |Свойство|Значение|
     |--------------|-----------|
     |**ИмяКомпьютера**|соответствовал|
     |**домаинкредентиал**|домаинкред|
@@ -64,18 +64,18 @@ ms.locfileid: "72359633"
 
 12. Измените свойства действия **рестарткомпутер** следующим образом.
 
-    |Свойство|Применение|
+    |Свойство|Значение|
     |--------------|-----------|
     |**ИмяКомпьютера**|соответствовал|
     |**Учетные данные**|мачинекред|
-    |**Для типа**|Microsoft. PowerShell. Commands. Ваитфорсервицетипес. PowerShell|
+    |**Предмет**|Microsoft. PowerShell. Commands. Ваитфорсервицетипес. PowerShell|
     |**Перевести**|True|
-    |Wait|True|
+    |Ожидание|True|
     |PSComputerName|{""}|
 
 13. Добавьте действие **жетвмиобжект** в последовательность **JoinDomain** после действия **рестарткомпутер** . Измените его свойства, чтобы они совпадали с предыдущим действием **жетвмиобжект** .
 
     После завершения процедур окно конструктора рабочих процессов должно выглядеть следующим образом.
 
-    ![JoinDomain XAML в конструкторе рабочих процессов](../media/joindomainworkflow.png)
-    ![JOINDOMAIN XAML в конструкторе рабочих процессов](../media/joindomainworkflow.png "жоиндомаинворкфлов")
+    ![JoinDomain XAML в конструкторе рабочих процессов](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
+    ![JOINDOMAIN XAML в конструкторе рабочих процессов](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "жоиндомаинворкфлов")

@@ -2,12 +2,12 @@
 title: Жизненный цикл поддержки PowerShell Core
 description: Политики, распространяемые на поддержку PowerShell Core
 ms.date: 08/06/2018
-ms.openlocfilehash: d535199e19c1aabbbfdd140b38aad329bc5d957e
-ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
+ms.openlocfilehash: 8cf8a0ac6140d28e55b065bf711763ba1c681d63
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478808"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706263"
 ---
 # <a name="powershell-core-support-lifecycle"></a>Жизненный цикл поддержки PowerShell Core
 
@@ -141,6 +141,22 @@ Add-WindowsPSModulePath
 
 Для [Экспериментальные функции][] предоставляется только [поддержка сообщества](#community-support).
 
+## <a name="release-history"></a>История выпусков
+
+В следующей таблице содержится временная шкала основных выпусков PowerShell. Эта таблица предоставляется для хронологической справки. Не используйте ее для определения жизненного цикла поддержки.
+
+|       Версия        | Дата выпуска |                                                                     Примечание                                                                      |
+| -------------------- | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| PowerShell 7.0 (LTS) |   Март 2020 г.   | На основе .NET Core 3.1 (LTS)                                                                                                                  |
+| PowerShell 6.0       |   Январь 2018 г.   | Первый выпуск, на основе .NET Core 2.1. Устанавливается в Windows, Linux и macOS.                                                              |
+| PowerShell 5.1       |   Август 2016 г.   | Выпущено в юбилейном обновлении Windows 10 и Windows Server 2016.                                                                             |
+| PowerShell 5.0       |   Февраль 2016 г.   | Выпущено в Windows Management Framework (WMF) 5.0                                                                                            |
+| PowerShell 4.0       |   Октябрь 2013 г.   | Интегрировано в Windows 8.1 и Windows Server 2012 R2. Устанавливается в Windows 7 с пакетом обновления 1 (SP1), Windows Server 2008 R2 с пакетом обновления 1 (SP1) и Windows Server 2012. |
+| PowerShell 3.0       |   Октябрь 2012 г.   | Интегрировано в Windows 8 и Windows Server 2012. Устанавливается в Windows 7 с пакетом обновления 1 (SP1), Windows Server 2008 SP1 с пакетом обновления 1 (R2) и Windows Server 2008 R2.  |
+| PowerShell 2.0       |   Июль 2009 г.   | Интегрировано в Windows 7 и Windows Server 2008 R2. Устанавливается в Windows XP с пакетом обновления 3 (SP3), Windows Server 2003 с пакетом обновления 2 (SP2) и Windows Vista с пакетом обновления 1 (SP1).            |
+| PowerShell 1.0       |   Ноябрь 2006 г.   | Устанавливается в Windows XP с пакетом обновления 2 (SP2), Windows Server 2003 с пакетом обновления 1 (SP1) и Windows Vista. Необязательный компонент Windows Server 2008.                          |
+
+<!-- hyperlink references -->
 [Premier]: https://www.microsoft.com/en-us/microsoftservices/support.aspx
 [enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx

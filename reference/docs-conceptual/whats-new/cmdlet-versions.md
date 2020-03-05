@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: История выпусков модулей и командлетов
-ms.openlocfilehash: e421201d74da2cc74b1bd57529fb3c3e5245ecae
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: e0fe9b263bdd0a5e1bedd0762b7613a4bbe02a58
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995441"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706140"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>История выпусков модулей и командлетов
 
@@ -47,7 +47,7 @@ ms.locfileid: "76995441"
 | PSScheduledJob                            | &check; |         |         |         | Только Windows |
 | PSWorkflow                                | &check; |         |         |         | Только Windows |
 | PSWorkflowUtility                         | &check; |         |         |         | Только Windows |
-| ThreadJob                                 |         | &check; | &check; | &check; |              |
+| ThreadJob                                 |         | &check; | &check; | &check; | Можно установить в PowerShell 5.1 |
 
 ## <a name="cmdlet-release-history"></a>История выпусков командлета
 
@@ -121,7 +121,7 @@ ms.locfileid: "76995441"
 | Get-PSSessionCapability           | &check; | &check; | &check; | &check; |                            |
 | Get-PSSessionConfiguration        | &check; | &check; | &check; | &check; |                            |
 | Get-PSSnapin                      | &check; |         |         |         | Только Windows               |
-| Get-Verb                          | &check; |         |         |         | Только Windows               |
+| Get-Verb                          | &check; |         |         |         | Перенесено в Microsoft.PowerShell.Utility 6.0+ |
 | Import-Module                     | &check; | &check; | &check; | &check; |                            |
 | Invoke-Command                    | &check; | &check; | &check; | &check; |                            |
 | Invoke-History                    | &check; | &check; | &check; | &check; |                            |
@@ -636,4 +636,4 @@ ms.locfileid: "76995441"
 
 |   Имя командлета   |  5.1  |   6.x   |   7.0   |   7.1   | Примечание |
 | --------------- | :---: | :-----: | :-----: | :-----: | ---- |
-| Start-ThreadJob |       | &check; | &check; | &check; |      |
+| Start-ThreadJob |       | &check; | &check; | &check; | Можно установить в PowerShell 5.1 |
