@@ -8,18 +8,21 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc5ce5a2-50e9-4c88-abf1-ac148a8a6b7b
 caps.latest.revision: 15
-ms.openlocfilehash: 5957ea4c15cd3778bd09b67c4b97de0ef0cfdd2a
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.openlocfilehash: b176d8439025ac132962859f79e72ae6f9703e82
+ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74953846"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78405034"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>Изменение пути установки PSModulePath
 
 Переменная среды `PSModulePath` сохраняет пути к расположениям модулей, установленных на диске. PowerShell использует эту переменную для поиска модулей, когда пользователь не указал полный путь к модулю. Пути в этой переменной ищутся в том порядке, в котором они отображаются.
 
-При запуске PowerShell `PSModulePath` создается как системная переменная среды со следующим значением по умолчанию: `$HOME\Documents\PowerShell\Modules; $PSHOME\Modules` или `$HOME\Documents\WindowsPowerShell\Modules; $PSHOME\Modules` для Windows PowerShell.
+При запуске PowerShell `PSModulePath` создается как системная переменная среды со следующим значением по умолчанию: `$HOME\Documents\PowerShell\Modules; $PSHOME\Modules` в Windows и `$HOME/.local/share/powershell/Modules: usr/local/share/powershell/Modules` в Linux или Mac, а также `$HOME\Documents\WindowsPowerShell\Modules; $PSHOME\Modules` для Windows PowerShell.
+
+> [!NOTE]
+> Заданное пользователем расположение **CurrentUser** — это папка `WindowsPowerShell\Modules`, расположенная в папке **Documents** в профиле пользователя. Конкретный путь к этому расположению зависит от версии Windows, а также от того, используется ли перенаправление папок. По умолчанию в Windows 10 это расположение `$HOME\Documents\WindowsPowerShell\Modules`.
 
 ## <a name="to-view-the-psmodulepath-variable"></a>Просмотр переменной PSModulePath
 
@@ -56,3 +59,5 @@ ms.locfileid: "74953846"
 ## <a name="see-also"></a>См. также:
 
 [Написание модуля Windows PowerShell](./writing-a-windows-powershell-module.md)
+
+[about_Modules](/powershell/module/microsoft.powershell.core/about/about_modules)
