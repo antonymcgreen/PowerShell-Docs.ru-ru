@@ -6,7 +6,7 @@
   items:
     - name: Установка разных версий PowerShell
       href: install/installing-powershell.md
-    - name: PowerShell Core
+    - name: Установка PowerShell
       items:
         - name: Установка PowerShell Core в Windows
           href: install/installing-powershell-core-on-windows.md
@@ -16,7 +16,7 @@
           href: install/installing-powershell-core-on-macos.md
         - name: Установка PowerShell Core в ARM
           href: install/powershell-core-on-arm.md
-    - name: Windows PowerShell
+    - name: "Установка Windows PowerShell\_5.1"
       items:
         - name: Установка Windows PowerShell
           href: install/installing-windows-powershell.md
@@ -24,6 +24,8 @@
           href: install/installing-the-windows-powershell-2.0-engine.md
         - name: Требования к системе для Windows PowerShell
           href: install/windows-powershell-system-requirements.md
+    - name: "Использование PowerShell в\_Docker"
+      href: install/PowerShell-in-Docker.md
 - name: Начало работы
   items:
     - name: Начало работы с PowerShell
@@ -268,6 +270,10 @@
       href: gallery/faqs.md
 - name: What's New
   items:
+    - name: "Новые возможности PowerShell\_7.x"
+      items:
+        - name: "Новые возможности PowerShell\_7.0"
+          href: whats-new/what-s-new-in-powershell-70.md
     - name: "Новые возможности в PowerShell Core\_6.x"
       items:
         - name: Новые возможности PowerShell Core 6.2
