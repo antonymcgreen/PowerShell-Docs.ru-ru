@@ -2,12 +2,12 @@
 title: Удаленные редактирование и отладка в Visual Studio Code
 description: Удаленные редактирование и отладка в Visual Studio Code
 ms.date: 06/13/2019
-ms.openlocfilehash: ae3b7a3709498fcd547a48d0849b0dc880217225
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67264009"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279177"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Удаленные редактирование и отладка в Visual Studio Code
 
@@ -15,7 +15,7 @@ ms.locfileid: "67264009"
 
 Эта функция также доступна в расширении PowerShell для VSCode. В этом руководстве показано, как это сделать.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Предварительные требования
 
 В этом руководстве предполагается, что у вас есть:
 
@@ -38,7 +38,7 @@ ms.locfileid: "67264009"
 
 С помощью расширения PowerShell для VSCode и открытой интегрированной консоли PowerShell напечатайте `Open-EditorFile foo.ps1` или `psedit foo.ps1`, чтобы открыть локальный файл foo.ps1 прямо в редакторе.
 
-![Файл foo.ps1 в открытом редакторе файлов работает локально](images/Using-VSCode-for-Remote-Editing-and-Debugging/1-open-local-file.png)
+![Файл foo.ps1 в открытом редакторе файлов работает локально](media/Using-VSCode-for-Remote-Editing-and-Debugging/1-open-local-file.png)
 
 >[!NOTE]
 > Файл `foo.ps1` должен уже существовать.
@@ -47,11 +47,11 @@ ms.locfileid: "67264009"
 
 - Добавить точки останова во внутреннее поле.
 
-  ![добавление точки останова во внутреннее поле](images/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
+  ![добавление точки останова во внутреннее поле](media/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
 
 - Нажать клавишу F5 для отладки сценария PowerShell.
 
-  ![отладка локального скрипта PowerShell](images/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
+  ![отладка локального скрипта PowerShell](media/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
 
 Во время отладки можно взаимодействовать с консолью отладки, ознакомиться с переменными в левой области и другими стандартными средствами отладки.
 
@@ -73,20 +73,20 @@ ms.locfileid: "67264009"
 
 Сначала в интегрированной консоли запустите `Enter-PSSession`. Вы подключены к удаленному сеансу, когда `[<hostname>]` отображается слева от командной строки.
 
-![Вызов Enter-PSSession](images/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
+![Вызов Enter-PSSession](media/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
 
 Теперь мы можем выполнить те же шаги, что и при редактировании локального скрипта.
 
 1. Чтобы открыть удаленный файл `test.ps1`, запустите `Open-EditorFile test.ps1` или `psedit test.ps1`.
 
-  ![Открытый файл test.ps1 в редакторе файлов](images/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
+  ![Открытый файл test.ps1 в редакторе файлов](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
 
 1. Отредактируйте файл, установите точки останова.
 
-   ![Редактирование и установка точек останова](images/Using-VSCode-for-Remote-Editing-and-Debugging/6-set-breakpoints.png)
+   ![Редактирование и установка точек останова](media/Using-VSCode-for-Remote-Editing-and-Debugging/6-set-breakpoints.png)
 
 1. Начните отладку (F5) удаленного файла.
 
-   ![Отладка удаленного файла](images/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
+   ![Отладка удаленного файла](media/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
 
 Если у вас возникли проблемы, вы можете писать вопросы [в репозитории GitHub](https://github.com/powershell/vscode-powershell).

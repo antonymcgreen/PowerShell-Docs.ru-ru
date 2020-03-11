@@ -2,12 +2,12 @@
 ms.date: 10/20/2019
 keywords: powershell,командлет
 title: Использование документации по PowerShell
-ms.openlocfilehash: 80f72bb89b3bb82ee7c4d16b8969395f02d7d4ca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7b73bc82f32e3ce1e6015822e0cc82078183931b
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72676161"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279318"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>Использование документации по PowerShell
 
@@ -25,7 +25,7 @@ ms.locfileid: "72676161"
 
 Используйте средство выбора версий в верхней части страницы, чтобы выбрать нужную версию PowerShell.
 
-![Средство выбора](images/how-to-use-docs/version-search.gif)
+![Средство выбора](media/how-to-use-docs/version-search.gif)
 
 Чтобы узнать используемую версию PowerShell, проверьте значение `$PSversionTable.PSVersion`. В следующем примере показаны выходные данные для Windows PowerShell 5.1.
 

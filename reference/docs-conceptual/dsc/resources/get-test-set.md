@@ -2,18 +2,18 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Методы Get, Test, Set
-ms.openlocfilehash: 42c1df6df2fbf65cbbb8407db613cac2e5b81cfb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954291"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278429"
 ---
 # <a name="get-test-set"></a>Методы Get, Test, Set
 
 >Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-![Получение, тестирования и настройка](../media/get-test-set.png)
+![Получение, тестирования и настройка](media/get-test-set/get-test-set.png)
 
 Настройка требуемого состояния (DSC) PowerShell основана на процессе **получения**, **тестирования** и **настройки**. Во всех [ресурсах](resources.md) DSC содержатся методы выполнения каждой из этих операций. В [конфигурации](../configurations/configurations.md) необходимо определить блоки ресурсов, чтобы заполнить ключи, которые становятся параметрами для методов ресурса **Get**, **Test** и **Set**.
 
@@ -123,7 +123,7 @@ ModuleVersion = "1.0";
 
 При использовании этого кода [локальный диспетчер конфигураций](../managing-nodes/metaConfig.md) (LCM) считывает из MOF-файла значение "Spooler" и передает его в параметр `-Name` методов **Get**, **Test** и **Set** для экземпляра "MyService" ресурса **Service**.
 
-## <a name="get"></a>Get
+## <a name="get"></a>Получить
 
 Метод ресурса **Get** извлекает состояние ресурса, настроенное на целевом узле. Это состояние возвращается в виде [хэш-таблицы](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Ключами **хэш-таблицы** будут настраиваемые значения или параметры, принимаемые ресурсом.
 
@@ -204,7 +204,7 @@ localhost       {[Service]Spooler}                                            Tr
 
 Дополнительные сведения о [командлете Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration).
 
-## <a name="set"></a>Установить
+## <a name="set"></a>Присвойте параметру
 
 Метод **Set** ресурса пытается сделать узел совместимым с *требуемым состоянием* ресурса. Метод **Set** должен быть **идемпотентным**. Это означает, что при любом запуске **Set** всегда будет получен один и тот же результат без ошибок.  При запуске командлета [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration) LCM циклически перебирает каждый ресурс в текущей применяемой конфигурации. LCM извлекает значения ключей текущего экземпляра ресурса из MOF-файла и использует их как параметры метода **Test**. Если метод **Test** возвращает значение `$True`, узел соответствует текущему ресурсу, а метод **Set** не вызывается. Если **Test** возвращает значение `$False`, значит, узел не соответствует текущему ресурсу.  LCM передает значения ключей экземпляра ресурса в качестве параметров методу **Set** ресурса, восстанавливая соответствие узла.
 
@@ -235,7 +235,7 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Обзор DSC службы автоматизации Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview).
 - [Настройка опрашивающего SMB-сервера](../pull-server/pullServerSMB.md)

@@ -3,12 +3,12 @@ ms.date: 12/11/2018
 contributor: JKeithB, SydneyhSmith
 keywords: коллекции,powershell,командлет,psgallery
 title: Пакеты с совместимыми выпусками PowerShell или операционных систем
-ms.openlocfilehash: 14038aa9b0453e1d06e6587e97da391b56297c75
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b414ce2c2b189e9da150cbe612e0bb2572d39e76
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328445"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278387"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>Пакеты с совместимыми выпусками PowerShell или операционных систем
 
@@ -25,7 +25,7 @@ ms.locfileid: "71328445"
 Если пакет имеет указанные совместимые версии PSEdition, они будут перечислены в разделе "Выпуски PowerShell" на странице отображения пакета, а также в результатах среди пакетов.
 Кроме того, можно вести поиск совместимых пакетов с помощью PowerShell.
 
-![Страница отображения элемента с выпусками PSEdition](../../Images/packagedisplaypagewithpseditions.PNG)
+![Страница отображения элемента с выпусками PSEdition](media/searching-by-compatibility/packagedisplaypagewithpseditions.PNG)
 
 ### <a name="search-for-packages-in-the-gallery-ui-that-work-on-powershell-core"></a>Поиск пакетов в коллекции пользовательского интерфейса, работающих в PowerShellCore
 
@@ -33,11 +33,11 @@ ms.locfileid: "71328445"
 
 ### <a name="use-tagspsedition_core-to-search-items-compatible-with-powershell-core-edition"></a>Для поиска элементов, совместимых с выпуском PowerShell Core, используйте Tags:"PSEdition_Core".
 
-![Результаты поиска элементов, совместимых с Core PSEdition](../../Images/searchresultswithpseditions.PNG)
+![Результаты поиска элементов, совместимых с Core PSEdition](media/searching-by-compatibility/searchresultswithpseditions.PNG)
 
 ### <a name="use-tagspsedition_desktop-to-search-items-compatible-with-powershell-desktop-edition"></a>Для поиска элементов, совместимых с выпуском PowerShell Desktop, используйте Tags:"PSEdition_Desktop".
 
-![Результаты поиска элементов, совместимых с Desktop PSEdition](../../Images/searchresultswithpseditionsdesktop.PNG)
+![Результаты поиска элементов, совместимых с Desktop PSEdition](media/searching-by-compatibility/searchresultswithpseditionsdesktop.PNG)
 
 ### <a name="search-for-packages-to-find-compatible-editions-using-powershell"></a>Поиск совместимых выпусков среди пакетов с помощью PowerShell
 Можно указать теги для фильтрации выпуска PowerShell и операционной системы.
@@ -90,4 +90,4 @@ Find-Module -Tag PSEdition_Core,MacOS
 ## <a name="more-details-on-authoring-and-finding-the-packages-with-compatible-powershell-editions"></a>Дополнительные сведения о разработке и поиске пакетов с совместимыми выпусками PowerShell
 
 - [Модули с PSEditions](../../concepts/module-psedition-support.md)
-- [Скрипты с PSEdition](../../concepts/script-psedition-support.md)
+- [Сценарии с PSEditions](../../concepts/script-psedition-support.md)

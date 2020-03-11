@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell Core 6.1
 description: Новые возможности и изменения в PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 531259217f2b71213776e7d394616c7790e9aca9
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995506"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277757"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Новые возможности PowerShell Core 6.1
 
@@ -169,7 +169,7 @@ Markdown — это стандарт для создания документо�
 
 Например, `Show-Markdown` отрисовывает файл Markdown в консоли.
 
-![Пример Show-Markdown](./images/markdown_example.png)
+![Пример Show-Markdown](media/What-s-New-in-PowerShell-Core-61/markdown_example.png)
 
 Дополнительные сведения об использовании этих командлетов см. в [этом документе RFC](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-Native-Markdown-Rendering.md).
 
@@ -264,7 +264,7 @@ SSH-клиенты обычно поддерживают строки подкл
 
 Выражаем благодарность [@bergmeister](https://github.com/bergmeister), так как теперь можно включать контекстное меню в Windows. Вы можете открыть системную установку PowerShell 6.1 из любой папки в Проводнике Windows.
 
-![Контекстное меню оболочки для PowerShell 6](./images/shell_context_menu.png)
+![Контекстное меню оболочки для PowerShell 6](media/What-s-New-in-PowerShell-Core-61/shell_context_menu.png)
 
 ## <a name="goodies"></a>Полезные возможности
 
@@ -272,7 +272,7 @@ SSH-клиенты обычно поддерживают строки подкл
 
 Выражаем благодарность [@bergmeister](https://github.com/bergmeister), так как теперь список переходов ярлыка PowerShell Core содержит возможность "Запуск от имени администратора".
 
-!["Запуск от имени администратора" в списке переходов PowerShell 6](./images/jumplist.png)
+!["Запуск от имени администратора" в списке переходов PowerShell 6](media/What-s-New-in-PowerShell-Core-61/jumplist.png)
 
 ### <a name="cd---returns-to-previous-directory"></a>`cd -` возвращается в предыдущий каталог
 

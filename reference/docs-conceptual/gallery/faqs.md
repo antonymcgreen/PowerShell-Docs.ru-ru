@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Часто задаваемые вопросы по коллекции PowerShell
-ms.openlocfilehash: 70e2220bd68b351e0b09dd3c59901104f7874335
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: 9572a61d38b0d540b0b8933405810ac4f2b6377e
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818130"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278190"
 ---
 # <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 
@@ -148,7 +148,7 @@ PowerShellGet можно использовать с любым допустим
 
 На уровне поставщиков пакетов PackageManagement поставщик пакетов PSModule в действительности обращается к другим поставщикам пакетов PackageManagement. Например, при работе с коллекциями на основе NuGet (такими как коллекция PowerShell) поставщик пакетов PSModule использует поставщик пакетов NuGet для работы с репозиторием.
 
-![Архитектура PowerShellGet](Images/powershellgetArchitecture.png)
+![Архитектура PowerShellGet](media/faqs/powershellgetArchitecture.png)
 
 Рисунок 1. Архитектура PowerShellGet
 

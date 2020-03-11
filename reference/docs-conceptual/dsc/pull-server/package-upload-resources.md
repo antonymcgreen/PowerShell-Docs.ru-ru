@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Упаковка и передача ресурсов на опрашиваемый сервер
-ms.openlocfilehash: 29a62f96393a53c9e7da57a5e51732dcb0937194
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8aac343d7495ecda94ed76d1d97079397eecd65f
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954381"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278513"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>Упаковка и передача ресурсов на опрашиваемый сервер
 
@@ -27,7 +27,7 @@ ms.locfileid: "71954381"
 
 Вы можете сжать каталог ресурсов, используя любую программу, сценарий или метод. В Windows вы можете *щелкнуть правой кнопкой мыши* каталог xPSDesiredStateConfiguration и выбрать "Отправить", а затем "Сжатая папка".
 
-![Щелчок правой кнопкой мыши](../media/right-click.gif)
+![Щелчок правой кнопкой мыши](media/package-upload-resources/right-click.gif)
 
 ### <a name="naming-the-resource-archive"></a>Именование ресурса Archive
 
@@ -95,7 +95,7 @@ ConfigurationRepositoryShare SMBPullServer
 
 Вы можете заставить узел обновлять свои ресурсы, изменив номер версии в имени архива или создав новую контрольную сумму. Клиент — получатель данных будет проверять наличие новых версий из необходимых ресурсов, а также обновлять контрольные суммы при обновлении его LCM.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Настройка опрашиваемого SMB-сервера DSC](pullServerSmb.md)
 - [Настройка опрашиваемого HTTP-сервера DSC](pullServer.md)

@@ -2,12 +2,12 @@
 title: Использование Visual Studio Code для разработки в PowerShell
 description: Использование Visual Studio Code для разработки в PowerShell
 ms.date: 11/07/2019
-ms.openlocfilehash: 4f197e71d3b79828f466584f5d862415726818b1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 16ae228c0d169261b783366a730fd2d5d77d32d6
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74117397"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279080"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Использование Visual Studio Code для разработки в PowerShell
 
@@ -48,7 +48,7 @@ ms.locfileid: "74117397"
    1. На боковой панели открывается представление **Расширения**. Выберите расширение PowerShell корпорации Майкрософт.
       Откроется примерно следующий экран VSCode:
 
-      ![VSCode](../../images/using-vscode/vscode.png)
+      ![VSCode](media/using-vscode/vscode.png)
 
    1. Нажмите кнопку **Установить** для расширения PowerShell корпорации Майкрософт.
    1. После установки кнопка **Установить** изменяется на **Перезагрузить**. Нажмите кнопку **Перезагрузить**.
@@ -157,7 +157,7 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 }
 ```
 
-Если вы не хотите, чтобы эти параметры влияли на все типы файлов, VSCode также позволяет задавать конфигурации для каждого языка отдельно. Создать параметр для конкретного языка можно, поместив параметры в поле `[<language-name>]`. Например:
+Если вы не хотите, чтобы эти параметры влияли на все типы файлов, VSCode также позволяет задавать конфигурации для каждого языка отдельно. Создать параметр для конкретного языка можно, поместив параметры в поле `[<language-name>]`. Пример:
 
 ```json
 "[powershell]": {

@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Параметры учетной записи коллекции PowerShell
-ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: db61c3fd8c73048b51f3411a8c1dab52fb03d08a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328035"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278132"
 ---
 # <a name="powershell-gallery-account-settings"></a>Параметры учетной записи коллекции PowerShell
 
@@ -25,7 +25,7 @@ ms.locfileid: "71328035"
 
 Адрес электронной почты является назначением для уведомлений коллекции PowerShell. Он не должен совпадать с учетной записью входа. Можно использовать любую доступную учетную запись электронной почты. Коллекция PowerShell никогда напрямую не предоставляет ваш адрес электронной почты другим пользователям.
 
-![Изменение адреса электронной почты](../../Images/PSGallery_AcccountEmailAddress.png)
+![Изменение адреса электронной почты](media/managing-account/PSGallery_AcccountEmailAddress.png)
 
 Когда вы вводите новый адрес электронной почты, коллекция PowerShell отправляет на него проверочное сообщение. В этом сообщении содержится ссылка на коллекцию PowerShell для завершения процесса изменения. Пока вы не завершите процесс проверки, все уведомления отправляются на предыдущий адрес.
 
@@ -36,10 +36,10 @@ ms.locfileid: "71328035"
 - Users can contact me through the PowerShell Gallery (Пользователи могут связываться со мной с помощью коллекции PowerShell)
 - Notify me when an item is pushed to the PowerShell Gallery using my account (Уведомлять об отправке пакета в коллекцию PowerShell с помощью моей учетной записи)
 
-![Изменение адреса электронной почты](../../Images/PSGallery_AccountEmailOptions.png)
+![Изменение адреса электронной почты](media/managing-account/PSGallery_AccountEmailOptions.png)
 
 Как указано на странице, критически важные уведомления из коллекции PowerShell отключить невозможно.
-А именно:
+К ним относятся следующие объекты.
 
 - уведомления безопасности;
 - уведомления об управлении учетными записями от администраторов коллекции PowerShell;
@@ -49,20 +49,20 @@ ms.locfileid: "71328035"
 
 Чтобы изменить учетную запись входа, необходимо выполнить вход с помощью текущей учетной записи. Выполните следующие действия для изменения учетной записи.
 
-![Параметры учетной записи](../../Images/PSGallery_LoginAccountSettings.png)
+![Параметры учетной записи](media/managing-account/PSGallery_LoginAccountSettings.png)
 
 1. Щелкните **Изменить учетную запись**. Появится всплывающее окно объясняющее, что изменение учетной записи входа применяется ко всем случаям использования этой учетной записи в коллекции PowerShell. Ознакомьтесь с информацией и нажмите кнопку **ОК**, чтобы продолжить.
 
-   ![Параметры учетной записи](../../Images/PSGallery_LoginAccountChange-1.png)
+   ![Параметры учетной записи](media/managing-account/PSGallery_LoginAccountChange-1.png)
 
 2. Затем вам будет предложено выполнить вход с помощью _новой учетной записи_.
 
-   ![Параметры учетной записи](../../Images/PSGallery_LoginAccountChange-2.png)
+   ![Параметры учетной записи](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
 3. После нажатия кнопки **Далее** появится сообщение, информирующее о входе с использованием текущей учетной записи.
    Щелкните **Выйти и выполнить вход с использованием другой учетной записи**.
 
-   ![Параметры учетной записи](../../Images/PSGallery_LoginAccountChange-3.png)
+   ![Параметры учетной записи](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. Введите пароль новой учетной записи. После ввода пароля вы вернетесь на страницу параметров учетной записи, где отображается обновленная учетная запись.
 
