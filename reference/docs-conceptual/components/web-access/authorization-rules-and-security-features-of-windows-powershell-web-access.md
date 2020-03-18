@@ -3,11 +3,11 @@ ms.date: 06/27/2017
 keywords: powershell,командлет
 title: Правила авторизации и средства безопасности Windows PowerShell Web Access
 ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62058426"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402611"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Правила авторизации и средства безопасности Windows PowerShell Web Access
 
@@ -47,7 +47,7 @@ Windows PowerShell Web Access в Windows Server 2012 R2 и Windows Server 201
 
 В следующей таблице описаны четыре уровня безопасности между конечными пользователями и целевыми компьютерами.
 
-|Уровень|Уровень|
+|Level|Уровень|
 |-|-|
 |1|[средства безопасности веб-сервера iis](#iis-web-server-security-features)|
 |2|[проверка подлинности шлюза windows powershell web access на основе форм](#windows-powershell-web-access-forms-based-gateway-authentication)|
@@ -182,7 +182,7 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal `
 
    > [!NOTE]
    > Если шлюз и конечные компьютеры находятся в разных рабочих группах или доменах, то должно быть установлено отношение доверия между двумя компьютерами рабочей группы, между двумя доменами или между рабочей группой и доменом. Это отношение нельзя настроить при помощи командлетов правил авторизации Windows PowerShell Web Access. Правила авторизации не определяют отношение доверия между компьютерами. Они только разрешают пользователям подключаться к определенным конечным компьютерам и конфигурациям сеансов. Дополнительные сведения о настройке отношения доверия между разными доменами см. в статье о [создании отношений доверия между доменами и лесами](https://technet.microsoft.com/library/cc794775.aspx).
-   > Дополнительные сведения о добавлении компьютеров рабочей группы в список надежных узлов см. в разделе [Удаленное управление при помощи диспетчера сервера](https://technet.microsoft.com/library/dd759202.aspx).
+   > Дополнительные сведения о добавлении компьютеров рабочей группы в список надежных узлов см. в статье об [удаленном управлении при помощи диспетчера сервера](https://technet.microsoft.com/library/dd759202.aspx).
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Использование одного набора правил авторизации для нескольких сайтов
 
@@ -223,7 +223,7 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal `
 
 Если сервер шлюза работает под управлением Windows Server 2012 R2, Windows PowerShell Web Access предоставляет пользователям возможность повторного подключения к сохраненным сеансам позднее, но, когда сеанс был отключен из-за сетевых ошибок, незапланированного завершения работы или другого сбоя, пользователи не смогут увидеть сохраненные сеансы и повторно к ним подключиться, пока не истечет время ожидания, заданное администратором шлюза.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Установка и использование Windows PowerShell Web Access](https://technet.microsoft.com/library/hh831611(v=ws.11).aspx)
 

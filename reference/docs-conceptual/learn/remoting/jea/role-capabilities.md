@@ -3,11 +3,11 @@ ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Возможности ролей JEA
 ms.openlocfilehash: 5b5b5977d4fec1ed850f1146fe7c09463908651b
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818181"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402401"
 ---
 # <a name="jea-role-capabilities"></a>Возможности ролей JEA
 
@@ -34,7 +34,7 @@ ms.locfileid: "76818181"
 
 В таблице ниже приведено несколько примеров команд, которые в состоянии без ограничений быть использованы злоумышленниками. Этот список не является исчерпывающим и служит лишь отправной точкой для дальнейших действий.
 
-|                                            "Риск";                                            |                                Пример                                |                                                                              Связанные команды                                                                              |
+|                                            Риск                                            |                                Пример                                |                                                                              Связанные команды                                                                              |
 | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Предоставление прав администратора подключающемуся пользователю для обхода JEA                                | `Add-LocalGroupMember -Member 'CONTOSO\jdoe' -Group 'Administrators'` | `Add-ADGroupMember`, `Add-LocalGroupMember`, `net.exe`, `dsadd.exe`                                                                                                        |
 | Выполнение произвольного кода, например вредоносных программ, эксплойтов или пользовательских сценариев для обхода защиты | `Start-Process -FilePath '\\san\share\malware.exe'`                   | `Start-Process`, `New-Service`, `Invoke-Item`, `Invoke-WmiMethod`, `Invoke-CimMethod`, `Invoke-Expression`, `Invoke-Command`, `New-ScheduledTask`, `Register-ScheduledJob` |

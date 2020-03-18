@@ -5,11 +5,11 @@ keywords: wmf,powershell,установка
 contributor: keithb
 title: Установка и настройка WMF 5.1
 ms.openlocfilehash: 241f52be011e1afc87d25c9a934db0c1e0361b76
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71147694"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402371"
 ---
 # <a name="install-and-configure-wmf-51"></a>Установка и настройка WMF 5.1
 
@@ -21,12 +21,12 @@ ms.locfileid: "71147694"
 
 Скачайте пакет WMF 5.1 для той операционной системы и архитектуры, в которой будет производиться установка.
 
-| Операционная система       | Необходимые компоненты           | Ссылки на пакеты                          |
+| Операционная система       | Предварительные требования           | Ссылки на пакеты                          |
 |------------------------|-------------------------|----------------------------------------|
 | Windows Server 2012 R2 |                         | [Win8.1AndW2K12R2-KB3191564-x64.msu][] |
-| Windows Server 2012    |                         | [W2K12-KB3191565-x64.msu][]            |
-| Windows Server 2008 R2 | [.NET Framework 4.5.2][]| [Win7AndW2K8R2-KB3191566-x64.ZIP][]    |
-| Windows 8.1            |                         | **x64:** [Win8.1AndW2K12R2-KB3191564-x64.msu][]</br>**x86:** [Win8.1-KB3191564-x86.msu][] |
+| Windows Server 2012    |                         | [W2K12-KB3191565-x64.msu][]            |
+| Windows Server 2008 R2 | [.NET Framework 4.5.2][]| [Win7AndW2K8R2-KB3191566-x64.ZIP][]    |
+| Windows 8.1            |                         | **x64:** [Win8.1AndW2K12R2-KB3191564-x64.msu][]</br>**x86:** [Win8.1-KB3191564-x86.msu][] |
 | Windows 7 с пакетом обновления 1 (SP1)          | [.NET Framework 4.5.2][]| **x64:** [Win7AndW2K8R2-KB3191566-x64.ZIP][]</br>**x86:** [Win7-KB3191566-x86.ZIP][] |
 
 [.NET Framework 4.5.2]: https://www.microsoft.com/download/details.aspx?id=42642

@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Использование Import-DSCResource
-ms.openlocfilehash: 4bc269ab1dd4696298b4f33f7661473aae869eba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a041169ad557becf7ca87641d9ce5222ee8f6beb
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417423"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402451"
 ---
 # <a name="using-import-dscresource"></a>Использование Import-DSCResource
 
@@ -29,7 +29,7 @@ Import-DscResource [-Name <ResourceName(s)>] [-ModuleName <ModuleName>] [-Module
 Import-DscResource -ModuleName xActiveDirectory
 ```
 
-## <a name="example-use-import-dscresource-within-a-configuration"></a>Пример: использование Import-DSCResource в конфигурации
+## <a name="example-use-import-dscresource-within-a-configuration"></a>Пример использование Import-DSCResource в конфигурации
 
 ```powershell
 Configuration MSDSCConfiguration
@@ -80,7 +80,7 @@ Configuration MSDSCConfiguration
 
 При создании конфигурации DSC в ISE программа PowerShell предоставляет IntelliSence для ресурсов и их свойств. Определения ресурсов в пути модуля `$pshome` загружаются автоматически. При импорте ресурсов с использованием ключевого слова `Import-DSCResource` добавляются определения указанного ресурса и в Intellisense добавляется схема импортируемых ресурсов.
 
-![Применение технологии Intellisense для ресурса](../media/resource-intellisense.png)
+![Применение технологии Intellisense для ресурса](media/import-dscresource/resource-intellisense.png)
 
 > [!NOTE]
 > Начиная с PowerShell 5.0 в ISE было добавлено завершение нажатием клавиши TAB для ресурсов DSC и их свойств. Дополнительные сведения см. в статье о [ресурсах DSC](../resources/resources.md).
@@ -139,11 +139,11 @@ IntelliSense и проверка схемы позволяют обнаружи�
 
 На рисунке ниже показано, что установлены две версии модуля **xPSDesiredStateConfiguration**.
 
-![Исправление нескольких версий ресурсов](../media/multiple-resource-versions-broken.png)
+![Исправление нескольких версий ресурсов](media/import-dscresource/multiple-resource-versions-broken.png)
 
 Скопируйте содержимое нужной версии модуля на верхний уровень каталога модуля.
 
-![Исправление нескольких версий ресурсов](../media/multiple-resource-versions-fixed.png)
+![Исправление нескольких версий ресурсов](media/import-dscresource/multiple-resource-versions-fixed.png)
 
 ### <a name="resource-location"></a>Расположение ресурса
 
@@ -153,6 +153,6 @@ IntelliSense и проверка схемы позволяют обнаружи�
 
 Начиная с версии PowerShell 5.0, параметр `-ModuleVersion` позволяет указать версию модуля для использования в конфигурации.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Ресурсы](../resources/resources.md)
