@@ -1,32 +1,30 @@
 ---
-title: Установка PowerShell Core в macOS
-description: Сведения об установке PowerShell Core в macOS
+title: Установка PowerShell в macOS
+description: Сведения об установке PowerShell в macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: ad1306e99261e8e6e2fd49d3199d863929c31e92
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7f0d6a1aa275deb39a7d670546ee7e833b8ef315
+ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73444440"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78404822"
 ---
-# <a name="installing-powershell-core-on-macos"></a>Установка PowerShell Core в macOS
+# <a name="installing-powershell-on-macos"></a>Установка PowerShell в macOS
 
-PowerShell Core поддерживает macOS версии 10.12 и более поздних версий.
+PowerShell поддерживает macOS версии 10.12 и более поздних.
 Все пакеты доступны на нашей странице [выпусков][] GitHub.
 После установки пакета запустите `pwsh` из терминала.
 
-> [!TIP]
-> Если вы уже установили [пакет SDK для .NET Core](/dotnet/core/sdk), установите PowerShell как [глобальный инструмент .NET](/dotnet/core/tools/global-tools).
+> [!NOTE]
+> PowerShell 7 является обновлением на месте, при установке которого PowerShell Core 6.x удаляется.
 >
-> ```
-> dotnet tool install --global PowerShell
-> ```
+> Папка `/usr/local/microsoft/powershell/6` заменяется на `/usr/local/microsoft/powershell/7`.
+>
+> Если вы хотите запускать PowerShell 6 параллельно с PowerShell 7, переустановите PowerShell 6 с использованием [двоичного архива](#binary-archives).
 
 ## <a name="about-brew"></a>Сведения о Brew
 
-[Homebrew][brew] является предпочтительным диспетчером пакетов для macOS.
-Если команда `brew` не найдена, нужно установить Homebrew по [соответствующим инструкциям][brew].
-Вы также можете установить PowerShell с помощью [прямого скачивания](#installation-via-direct-download) или из [архивов двоичных файлов](#binary-archives).
+[Homebrew][brew] является предпочтительным диспетчером пакетов для macOS. Если команда `brew` не найдена, нужно установить Homebrew по [соответствующим инструкциям][brew]. Вы также можете установить PowerShell с помощью [прямого скачивания](#installation-via-direct-download) или из [архивов двоичных файлов](#binary-archives).
 
 ## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1012-or-higher"></a>Установка последнего стабильного выпуска с помощью Homebrew в macOS 10.12 или более поздней версии
 
@@ -103,6 +101,14 @@ sudo installer -pkg powershell-6.2.0-osx-x64.pkg -target /
 
 Установите [OpenSSL](#install-openssl). OpenSSL требуется для удаленного взаимодействия PowerShell и операций CIM.
 
+## <a name="install-as-a-net-global-tool"></a>Установка в качестве глобального средства .NET
+
+Если вы уже установили [пакет SDK для .NET Core](/dotnet/core/sdk), установите PowerShell как [глобальное средство .NET](/dotnet/core/tools/global-tools).
+
+```
+dotnet tool install --global PowerShell
+```
+
 ## <a name="binary-archives"></a>Архивы двоичных файлов
 
 Для поддержки расширенных сценариев развертывания на платформе macOS доступны архивы `tar.gz` двоичных файлов PowerShell.
@@ -161,7 +167,7 @@ sudo mkdir -p /usr/local/opt/openssl
 sudo ln -s /opt/local/lib /usr/local/opt/openssl/lib
 ```
 
-## <a name="uninstalling-powershell-core"></a>Удаление PowerShell Core
+## <a name="uninstalling-powershell"></a>Удаление PowerShell
 
 Если вы установили PowerShell с помощью Homebrew, используйте следующую команду для удаления:
 

@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Удаление Windows PowerShell Web Access
-ms.openlocfilehash: 22c874d766445dccedd8494097daf16c30fa66ff
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3c2c83525f5a240976eef215b5eac939796c91e8
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62058147"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279016"
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Удаление Windows PowerShell Web Access
 
@@ -21,8 +21,7 @@ ms.locfileid: "62058147"
 
 Прежде чем начать, известите пользователей веб-консоли, что вы удаляете веб-сайт.
 
-Удаление Windows PowerShell Web Access не приводит к удалению IIS или любых других компонентов, которые были установлены автоматически, поскольку они требуются для выполнения Windows PowerShell Web Access.
-В процессе удаления остаются установленными компоненты, от которых зависит Windows PowerShell Web Access. Вы можете удалить эти компоненты при необходимости.
+Удаление Windows PowerShell Web Access не приводит к удалению IIS или любых других компонентов, которые были установлены автоматически, поскольку они требуются для выполнения Windows PowerShell Web Access. В процессе удаления остаются установленными компоненты, от которых зависит Windows PowerShell Web Access. Вы можете удалить эти компоненты при необходимости.
 
 ## <a name="recommended-quick-uninstallation"></a>Рекомендуемое (быстрое) удаление
 
@@ -33,40 +32,41 @@ ms.locfileid: "62058147"
 
 с помощью командлетов Windows PowerShell.
 
-### <a name="step-1-delete-the-web-application-using-cmdlets"></a>Шаг 1. Удаление веб-приложения с помощью командлетов
+### <a name="step-1-delete-the-web-application-using-cmdlets"></a>Шаг 1. Удаление веб-приложения с помощью командлетов
 
 1. Выполните одно из следующих действий, чтобы открыть сеанс Windows PowerShell.
 
-    -   На рабочем столе Windows щелкните правой кнопкой мыши **Windows PowerShell** на панели задач.
-
-    -   На **начальном** экране Windows щелкните **Windows PowerShell**.
+   - На рабочем столе Windows щелкните правой кнопкой мыши **Windows PowerShell** на панели задач.
+   - На **начальном** экране Windows щелкните **Windows PowerShell**.
 
 2. Введите `Uninstall-PswaWebApplication` и нажмите клавишу **ВВОД**.
-   1. Если вы задали настраиваемое имя веб-сайта, добавьте параметр `-WebsiteName` в команду и укажите имя веб-сайта.
 
-        `Uninstall-PswaWebApplication -WebsiteName <web-site-name>`
+   1. Если вы задали собственное имя веб-сайта, добавьте параметр `-WebsiteName` в команду и укажите имя веб-сайта.
+
+      `Uninstall-PswaWebApplication -WebsiteName <web-site-name>`
+
    1. Если использовалось настраиваемое веб-приложение (не приложение **pswa** по умолчанию), добавьте параметр `-WebApplicationName` в команду и укажите имя веб-приложения.
 
-        `Uninstall-PswaWebApplication -WebApplicationName <web-application-name>`
-   1. Если используется тестовый сертификат, добавьте в командлет параметр `DeleteTestCertificate` , как показано в следующем примере.
+      `Uninstall-PswaWebApplication -WebApplicationName <web-application-name>`
 
-        `Uninstall-PswaWebApplication -DeleteTestCertificate`
+   1. Если используется тестовый сертификат, добавьте в командлет параметр `DeleteTestCertificate`, как показано в примере ниже.
 
-### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>Шаг 2. Удаление Windows PowerShell Web Access с помощью командлетов
+      `Uninstall-PswaWebApplication -DeleteTestCertificate`
+
+### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>Шаг 2. Удаление Windows PowerShell Web Access с помощью командлетов
 
 1. Выполните одно из следующих действий, чтобы открыть сеанс Windows PowerShell с повышенными правами. Если сеанс уже открыт, переходите к следующему шагу.
 
-    -   На рабочем столе Windows щелкните правой кнопкой мыши **Windows PowerShell** на панели задач и выберите команду **Запустить от имени администратора**.
+    - На рабочем столе Windows щелкните правой кнопкой мыши **Windows PowerShell** на панели задач и выберите команду **Запустить от имени администратора**.
+    - На **начальном экране** Windows щелкните правой кнопкой мыши **Windows PowerShell**, а затем выберите команду **Запустить от имени администратора**.
 
-    -   На **начальном экране** Windows щелкните правой кнопкой мыши **Windows PowerShell**, а затем выберите команду **Запустить от имени администратора**.
+1. Введите следующую команду и нажмите клавишу **ВВОД**, где *computer_name* представляет удаленный сервер, с которого требуется удалить Windows PowerShell Web Access. Параметр `-Restart` автоматически перезапускает конечные серверы, если это требуется при удалении.
 
-1. Введите следующую команду и нажмите клавишу **ВВОД**, где *computer_name* представляет удаленный сервер, с которого требуется удалить Windows PowerShell Web Access. Параметр `-Restart` автоматически перезапускает целевые серверы, если это требуется при удалении.
+    `Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -Restart`
 
-        Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -Restart
+    Чтобы удалить роли и компоненты с автономного виртуального жесткого диска, необходимо добавить оба параметра, `-ComputerName` и `-VHD`. В параметре `-ComputerName` содержится имя сервера, на котором требуется подключить виртуальный жесткий диск, а в параметре `-VHD` — путь к VHD-файлу на указанном сервере.
 
-    Чтобы удалить роли и компоненты с автономного виртуального жесткого диска (VHD), необходимо добавить оба параметра, `-ComputerName` и `-VHD` . Параметр `-ComputerName` содержит имя сервера, на котором следует подключить виртуальный жесткий диск, а параметр `-VHD` — путь к VHD-файлу на указанном сервере.
-
-        Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -VHD <path> -ComputerName <computer_name> -Restart
+    `Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -VHD <path> -ComputerName <computer_name> -Restart`
 
 1. После завершения удаления Windows PowerShell Web Access откройте для проверки страницу **Все серверы** в диспетчере серверов, выберите сервер, с которого был удален компонент, и просмотрите плитку **Роли и компоненты** на странице для выбранного сервера.
 
@@ -76,14 +76,13 @@ ms.locfileid: "62058147"
 
 В этом разделе приводятся процедуры для удаления веб-приложения Windows PowerShell Web Access и компонента Windows PowerShell Web Access с помощью мастера удаления ролей и компонентов в диспетчере серверов и на консоли диспетчера служб IIS.
 
-### <a name="step-1-delete-the-web-application-using-iis-manager"></a>Шаг 1. Удаление веб-приложения с помощью диспетчера IIS
-
+### <a name="step-1-delete-the-web-application-using-iis-manager"></a>Шаг 1. Удаление веб-приложения с помощью диспетчера IIS
 
 1. Откройте консоль "Диспетчер служб IIS", выполнив одно из следующих действий. Если консоль уже открыта, переходите к следующему шагу.
 
-    -   На рабочем столе Windows запустите диспетчер серверов, щелкнув **Диспетчер серверов** на панели задач Windows. В диспетчере серверов откройте меню **Сервис** и выберите пункт **Диспетчер служб IIS**.
+   - На рабочем столе Windows запустите диспетчер серверов, щелкнув **Диспетчер серверов** на панели задач Windows. В диспетчере серверов откройте меню **Сервис** и выберите пункт **Диспетчер служб IIS**.
 
-    -   На **начальном** экране Windows введите любую часть имени **Диспетчер служб IIS**. Щелкните ярлык, когда он появится в списке результатов **Приложения**.
+   - На **начальном** экране Windows введите любую часть имени **Диспетчер служб IIS**. Щелкните ярлык, когда он появится в списке результатов **Приложения**.
 
 1. В области дерева диспетчера служб IIS выберите веб-сайт, на котором выполняется веб-приложение Windows PowerShell Web Access.
 
@@ -95,19 +94,15 @@ ms.locfileid: "62058147"
 
 1. Закройте диспетчер IIS.
 
-> ![Предупреждение](images/SecurityNote.jpeg)**Note**.
->
-> Сертификат не удаляется при этой операции удаления.
->
-> Если вы создали самозаверяющий сертификат или использовали тестовый сертификат и хотите удалить его, удалите сертификат в диспетчере служб IIS.
+   > [!WARNING]
+   > Сертификат не удаляется при этой операции удаления. Если вы создали самозаверяющий сертификат или использовали тестовый сертификат и хотите удалить его, удалите сертификат в диспетчере служб IIS.
 
-### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Шаг 2. Удаление Windows PowerShell Web Access с помощью мастера удаления ролей и компонентов
+### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Шаг 2. Удаление Windows PowerShell Web Access с помощью мастера удаления ролей и компонентов
 
 1. Если диспетчер серверов уже открыт, переходите к следующему шагу. Если диспетчер серверов еще не открыт, откройте его одним из следующих способов.
 
-    -   На рабочем столе Windows запустите диспетчер серверов, щелкнув **Диспетчер серверов** на панели задач Windows.
-
-    -   На **начальном** экране в Windows выберите **Диспетчер серверов**.
+    - На рабочем столе Windows запустите диспетчер серверов, щелкнув **Диспетчер серверов** на панели задач Windows.
+    - На **начальном** экране в Windows выберите **Диспетчер серверов**.
 
 1. В меню **Управление** выберите команду **Удалить роли и компоненты**.
 
@@ -119,7 +114,7 @@ ms.locfileid: "62058147"
 
 1. На странице **Подтверждение удаления компонентов** щелкните **Удалить**.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Установка и использование Windows PowerShell Web Access](install-and-use-windows-powershell-web-access.md)
 - [Справка по диспетчеру IIS 7.0](https://technet.microsoft.com/library/cc732664.aspx)

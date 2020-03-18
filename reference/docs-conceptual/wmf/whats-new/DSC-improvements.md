@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Усовершенствования DSC в WMF 5.1
-ms.openlocfilehash: d9339ec9f316c4a32c5fa6cb2360c077973ee334
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: 99434d14100de54d2d4c89c5888741ab2f1c512a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818113"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277642"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Усовершенствования в настройке требуемого состояния (DSC) в WMF 5.1
 
@@ -59,7 +59,7 @@ ms.locfileid: "76818113"
 
 - Параметры локальной конфигурации, определяющие частичную конфигурацию, которую разрешено получать узлу.
 
-  ![Пример метаконфигурации](../images/DSC-improvements/MetaConfigPartialOne.png)
+  ![Пример метаконфигурации](media/DSC-improvements/MetaConfigPartialOne.png)
 
 - Пример определения частичной конфигурации.
 
@@ -80,11 +80,11 @@ ms.locfileid: "76818113"
 
 - Имя конфигурации (ConfigurationName), включенное в созданный MOF-файл.
 
-  ![Пример созданного MOF-файла](../images/DSC-improvements/PartialGeneratedMof.png)
+  ![Пример созданного MOF-файла](media/DSC-improvements/PartialGeneratedMof.png)
 
 - Имя файла в репозитории конфигураций извлечения.
 
-  ![Имя файла в репозитории конфигураций](../images/DSC-improvements/PartialInConfigRepository.png)
+  ![Имя файла в репозитории конфигураций](media/DSC-improvements/PartialInConfigRepository.png)
 
   Служба автоматизации Azure создавала MOF-файлы с именами `<ConfigurationName>.<NodeName>.mof`. Поэтому следующая конфигурация компилируется в файл PartialOne.Localhost.mof.
 
@@ -249,7 +249,7 @@ Configuration WebApplication
 
 #### <a name="pull"></a>По запросу
 
-Локальный диспетчер конфигураций узла выполняет проверку подписи модулей и конфигураций в соответствии со своими текущими параметрами. По умолчанию проверка подписи отключена. Проверку подписи можно включить, добавив блок "SignatureValidation" в определение метаконфигурации узла, как показано ниже.
+Локальный диспетчер конфигураций узла выполняет проверку подписи модулей и конфигураций в соответствии со своими текущими параметрами. По умолчанию проверка подписи отключена. Проверку подписи можно включить, добавив блок SignatureValidation в определение метаконфигурации узла, как показано ниже.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -293,11 +293,11 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
 > Проверка подписи каталога модуля и конфигурации выполняется только при первом применении конфигурации к системе или при скачивании и установке модуля.
 > При проверке на согласованность не проверяется подпись файла Current.mof и зависимости для его модулей. Если проверка на любом этапе завершается неудачно, например если конфигурация, полученная с опрашивающего сервера, не подписана, обработка конфигурации завершается ошибкой, показанной ниже, и все временные файлы удаляются.
 
-![Пример ошибки конфигурации](../images/DSC-improvements/PullUnsignedConfigFail.png)
+![Пример ошибки конфигурации](media/DSC-improvements/PullUnsignedConfigFail.png)
 
 Точно так же при попытке получить модуль, каталог для которого не подписан, появляется следующая ошибка:
 
-![Пример ошибки модуля](../images/DSC-improvements/PullUnisgnedCatalog.png)
+![Пример ошибки модуля](media/DSC-improvements/PullUnisgnedCatalog.png)
 
 #### <a name="push"></a>push
 
@@ -345,12 +345,12 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
   Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
   ```
 
-  ![Ошибка "MOF-файл не подписан"](../images/DSC-improvements/PushUnsignedMof.png)
+  ![Ошибка "MOF-файл не подписан"](media/DSC-improvements/PushUnsignedMof.png)
 
 - Подпишите файл конфигурации с помощью сертификата подписи кода.
 
-  ![Подписанный MOF-файл](../images/DSC-improvements/SignMofFile.png)
+  ![Подписанный MOF-файл](media/DSC-improvements/SignMofFile.png)
 
 - Попробуйте отправить подписанный MOF-файл.
 
-  ![PushSignedMofFile](../images/DSC-improvements/PushSignedMof.png)
+  ![PushSignedMofFile](media/DSC-improvements/PushSignedMof.png)

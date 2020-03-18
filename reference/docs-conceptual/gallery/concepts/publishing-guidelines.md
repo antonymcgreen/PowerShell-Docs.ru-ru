@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: коллекции,powershell,командлет,psgallery
 description: Руководства для издателей
 title: Руководства и рекомендации для публикации коллекции PowerShell
-ms.openlocfilehash: 9047e938ab961c68e225c9029e52403c40afbe26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 07271e037100350d3efc7ae63860f42afd22aae7
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417682"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278225"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Руководства и рекомендации для публикации коллекции PowerShell
 
@@ -26,7 +26,7 @@ ms.locfileid: "74417682"
 Ниже приведены важные рекомендации пользователей, использующих элементы коллекции PowerShell. Они перечисляются в порядке номинального приоритета. Пользователи чаще скачивают и применяют пакеты, опубликованные в соответствии с этими рекомендациями.
 
 - Используйте PSScriptAnalyzer.
-- Добавьте документацию и примеры.
+- Добавление документации и примеров
 - Поддерживайте обратную связь с пользователями.
 - Предоставьте модули вместо скриптов.
 - Предоставьте ссылки на сайт проекта.
@@ -41,7 +41,7 @@ ms.locfileid: "74417682"
 
 Каждая из этих рекомендаций кратко описывается в разделах ниже.
 
-## <a name="use-psscriptanalyzer"></a>Использование PSScriptAnalyzer
+## <a name="use-psscriptanalyzer"></a>Используйте PSScriptAnalyzer.
 
 [PSScriptAnalyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer) — это бесплатное средство статического анализа кода, которое можно использовать с кодом PowerShell. **PSScriptAnalyzer** определяет наиболее распространенные проблемы, возникающие в коде PowerShell, и часто предоставляет рекомендации по устранению проблемы. Это простое в использовании средство, которое классифицирует проблемы как ошибки (серьезные ошибки, которые необходимо устранить), предупреждения (которые необходимо изучить и устранить) и сведения (которые стоит рассмотреть в качестве рекомендаций). Все пакеты, опубликованные в коллекции PowerShell, будут сканироваться с помощью **PSScriptAnalyzer**. Сведения об ошибках, которые необходимо устранить, будут передаваться владельцу для устранения.
 
@@ -123,12 +123,12 @@ Example: RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="
 
 - PSEdition_Desktop: пакеты, которые совместимы с Windows PowerShell
 - PSEdition_Core: пакеты, которые совместимы с PowerShell Core
-- Windows. пакеты, которые совместимы с операционной системой Windows
-- Linux. пакеты, которые совместимы с операционной системой Linux
+- Windows: пакеты, которые совместимы с операционной системой Windows
+- Linux: пакеты, которые совместимы с операционной системой Linux
 - MacOS: пакеты, которые совместимы с операционной системой компьютеров Mac
 
 Отмеченный с помощью тегов пакет с совместимыми платформами будет включен в фильтры поиска в коллекции на панели результатов поиска слева. Если вы, отмечая пакет тегами, размещаете его на сайте GitHub, вы сможете воспользоваться преимуществами [экранирования совместимости коллекции PowerShell](https://img.shields.io/powershellgallery/p/:packageName.svg)
-![экранирование совместимости](../Images/CosmosDB.svg).
+![экранирование совместимости](media/publishing-guidelines/CosmosDB.svg).
 
 ## <a name="include-tests"></a>Включение тестов
 
@@ -140,7 +140,7 @@ Example: RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="
 
 Целевые объекты для тестов указаны в [документации по высококачественному модулю ресурсов](https://github.com/PowerShell/DscResources/blob/master/HighQualityModuleGuidelines.md) с рекомендуемым покрытием кода модульных тестов 70 %.
 
-## <a name="include-andor-link-to-license-terms"></a>Включение условий лицензионного соглашения и/или предоставление ссылки на них
+## <a name="include-andor-link-to-license-terms"></a>Включите условия лицензионного соглашения и/или предоставьте ссылку на них.
 
 Для всех пакетов, опубликованных в коллекции PowerShell, необходимо указать условия лицензии, или же использование пакета должно регулироваться лицензией, представленной в **приложении А** к [условиям использования](https://www.powershellgallery.com/policies/Terms). Чтобы указать другую лицензию, лучше всего предоставить на нее ссылку с помощью **LicenseURI** в **PSData**. Дополнительные сведения см. в статье о [манифесте пакета и пользовательском интерфейсе коллекции](package-manifest-affecting-ui.md).
 

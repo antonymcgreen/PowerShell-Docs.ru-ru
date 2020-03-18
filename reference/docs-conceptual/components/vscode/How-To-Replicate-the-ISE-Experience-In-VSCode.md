@@ -2,12 +2,12 @@
 title: Репликация функций интегрированной среды скриптов в Visual Studio Code
 description: Репликация функций интегрированной среды скриптов в Visual Studio Code
 ms.date: 08/06/2018
-ms.openlocfilehash: d5542e9a3a48b1ae64356309be669418edf6c79e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 193243dc2e3e921b22a6ee068370200ae84ce4ac
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74117472"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279276"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Репликация функций интегрированной среды скриптов в Visual Studio Code
 
@@ -15,9 +15,25 @@ ms.locfileid: "74117472"
 
 В этой статье приведен список параметров, настраиваемых в VSCode, которые смогут облегчить ее использование для пользователей интегрированной среды сценариев.
 
+## <a name="ise-mode"></a>Режим ISE
+
+> [!NOTE]
+> Эта функция доступна в расширении предварительной версии PowerShell, начиная с версии 2019.12.0, и в расширении PowerShell, начиная с версии 2020.3.0.
+
+Самый простой способ реплицировать функции интегрированной среды скриптов (ISE) в Visual Studio Code — включить режим ISE.
+Для этого откройте палитру команд (<kbd>F1</kbd> или <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> или <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> в macOS) и введите "ISE Mode" (Режим ISE).
+Выберите в списке пункт "PowerShell: Enable ISE Mode" (PowerShell: включить режим ISE).
+
+Эта команда автоматически применяет многие параметры, описанные в этом документе.
+Результат имеет следующий вид:
+
+![Режим ISE](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
+
+В оставшейся части этой статьи приводятся более подробные сведения о параметрах в режиме ISE и некоторых дополнительных параметрах.
+
 ## <a name="key-bindings"></a>Сочетания клавиш
 
-| Функция                              | Привязка интегрированной среды сценариев                  | Привязка VSCode                              |
+| Компонент                              | Привязка интегрированной среды сценариев                  | Привязка VSCode                              |
 | ----------------                      | -----------                  | --------------                              |
 | Прерывание и остановка отладчика          | <kbd>CTRL</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
 | Выполнение текущей строки / выделение текста | <kbd>F8</kbd>                | <kbd>F8</kbd>                               |
@@ -36,13 +52,16 @@ ms.locfileid: "74117472"
 "debug.openDebug": "neverOpen",
 ```
 
+> [!NOTE]
+> Эти параметры включены в [режим ISE](#ise-mode).
+
 Это скроет разделы с панелью действий и боковой панелью отладки в красной области, как на изображении ниже.
 
-![Выделенный раздел с панелью действий и боковой панелью отладки](images/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
+![Выделенный раздел с панелью действий и боковой панелью отладки](media/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
 
 В итоге представление будет выглядеть так:
 
-![Упрощенное представление VS Code](images/How-To-Replicate-the-ISE-Experience-In-VSCode/2-simplified-ui.png)
+![Упрощенное представление VS Code](media/How-To-Replicate-the-ISE-Experience-In-VSCode/2-simplified-ui.png)
 
 ## <a name="tab-completion"></a>Заполнение нажатием клавиши TAB
 
@@ -55,7 +74,10 @@ ms.locfileid: "74117472"
 > [!NOTE]
 > Данный параметр был добавлен в VSCode напрямую (вместо расширения). Его поведение определяется напрямую VSCode. Его невозможно изменить с помощью расширения.
 
-## <a name="no-focus-on-console-when-executing"></a>Отсутствие фокуса на консоли во время выполнения
+> [!NOTE]
+> Этот параметр включен в [режим ISE](#ise-mode).
+
+## <a name="no-focus-on-console-when-executing"></a>Отсутствие фокуса в консоли во время выполнения
 
 Чтобы сохранить фокус в редакторе во время выполнения с помощью клавиши <kbd>F8</kbd>, выполните следующее.
 
@@ -63,7 +85,10 @@ ms.locfileid: "74117472"
 "powershell.integratedConsole.focusConsoleOnExecute": false
 ```
 
-Для специальных возможностей значением по умолчанию будет `true`.
+> [!NOTE]
+> Этот параметр включен в [режим ISE](#ise-mode).
+
+Значение по умолчанию `true` устанавливается в соответствии с требованиями к поддержке специальных возможностей.
 
 ## <a name="dont-start-integrated-console-on-startup"></a>Интегрированную консоль не следует запускать при начальной загрузке
 
@@ -84,6 +109,9 @@ ms.locfileid: "74117472"
 "files.defaultLanguage": "powershell",
 ```
 
+> [!NOTE]
+> Этот параметр включен в [режим ISE](#ise-mode).
+
 ## <a name="color-scheme"></a>Цветовая схема
 
 Существует большое количество тем интегрированной среды сценариев, которые доступны для VSCode, предназначенные для того, чтобы сделать редактор более похожим на интегрированную среду сценариев.
@@ -97,11 +125,17 @@ ms.locfileid: "74117472"
 "workbench.colorTheme": "PowerShell ISE",
 ```
 
+> [!NOTE]
+> Этот параметр включен в [режим ISE](#ise-mode).
+
 ## <a name="powershell-command-explorer"></a>Команды обозревателя PowerShell
 
 Благодаря работе, проделанной [@corbob](https://github.com/corbob), теперь расширение PowerShell обладает начальными командами обозревателя.
 
 В [Палитра команд] введите `PowerShell Command Explorer` и нажмите <kbd>ВВОД</kbd>.
+
+> [!NOTE]
+> В [режиме ISE](#ise-mode) они отображаются автоматически.
 
 ## <a name="open-in-the-ise"></a>Открытие в интегрированной среде сценариев
 
