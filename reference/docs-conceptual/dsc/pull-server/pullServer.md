@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Опрашивающая служба DSC
-ms.openlocfilehash: f171c3dc579dfb24a8c9fb87fbb50dccae619091
-ms.sourcegitcommit: aaf1284dfec2e4c698009d6dc27ff103aaafd581
+ms.openlocfilehash: cf2420e6889f63ac3b2859e5ee36fa888b728afc
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76885393"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402441"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Опрашивающая служба Desired State Configuration
 
@@ -28,10 +28,10 @@ ms.locfileid: "76885393"
 |                   Решение                   |              Клиентские узлы              |
 | -------------------------------------------- | -------------------------------------- |
 | Опрашивающий сервер Windows, использующий базу данных MDB или ESENT | До 500 узлов                        |
-| Опрашивающий сервер Windows, использующий базу данных SQL       | До 1000 узлов                       |
-| DSC службы автоматизации Azure                         | Сценарии с более чем 1000 узлами |
+| Опрашивающий сервер Windows, использующий базу данных SQL       | До 3500 узлов                       |
+| DSC службы автоматизации Azure                         | Малые и большие среды      |
 
-**Рекомендуемое решение** и вариант с наибольшим числом доступных функций — [DSC в службе автоматизации Azure](/azure/automation/automation-dsc-getting-started).
+**Рекомендуемое решение** и вариант с наибольшим числом доступных функций — [DSC в службе автоматизации Azure](/azure/automation/automation-dsc-getting-started). Не определен верхний предел количества узлов на учетную запись службы автоматизации.
 
 Служба Azure может управлять узлами в локальных частных центрах обработки данных или в общедоступных облаках, таких как Azure и AWS. Для частных сред, где серверы не могут напрямую подключаться к Интернету, рекомендуем ограничить исходящий трафик только опубликованным диапазоном IP-адресов Azure (см. сведения о [диапазонах IP-адресов для центров обработки данных Azure](https://www.microsoft.com/download/details.aspx?id=41653)).
 
