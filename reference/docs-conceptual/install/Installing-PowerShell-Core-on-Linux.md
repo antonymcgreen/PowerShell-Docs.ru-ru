@@ -2,12 +2,12 @@
 title: Установка PowerShell в Linux
 description: Сведения об установке PowerShell в различных дистрибутивах Linux
 ms.date: 03/09/2020
-ms.openlocfilehash: 0c7b2bd804d07b2fcb61a61240b139f84fabd6db
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 13b8583ed45f1201e61225b377112a59d2b26cb2
+ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402541"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082802"
 ---
 # <a name="installing-powershell-on-linux"></a>Установка PowerShell в Linux
 
@@ -298,7 +298,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>Установка с помощью прямого скачивания — Alpine 3.9 и 3.10
 
-Скачайте пакет tar.gz `powershell_7.0.0-linux-x64.tar.gz` на странице с [выпусками][] на компьютер с Alpine.
+Скачайте пакет tar.gz `powershell-7.0.0-linux-alpine-x64.tar.gz` на странице с [выпусками][] на компьютер с Alpine.
 
 Затем выполните в терминале следующие команды:
 
@@ -693,6 +693,8 @@ rm -rf ~/powershell
 ```
 dotnet tool install --global PowerShell
 ```
+
+Установщик инструмента dotnet добавляет `~/.dotnet/tools` в переменную среды `PATH`. Но в выполняющейся оболочке отсутствует обновленная переменная `PATH`. Вы можете запустить PowerShell из новой оболочки, введя `pwsh`.
 
 ## <a name="binary-archives"></a>Архивы двоичных файлов
 
