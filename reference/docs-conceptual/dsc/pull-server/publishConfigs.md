@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Публикация на опрашиваемом сервере с помощью идентификаторов конфигурации (v4/v5)
-ms.openlocfilehash: 3b094308338e62c783b19f4d3bb41634feee63f6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 99c5b89e7d556fa72eaa6a3ba1654936f96a0b9d
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417259"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500749"
 ---
 # <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>Публикация на опрашиваемом сервере с помощью идентификаторов конфигурации (v4/v5)
 
@@ -47,7 +47,7 @@ GenericConfig
 [System.Guid]::NewGuid()
 ```
 
-Пример вывода
+Пример выходных данных
 
 ```Output
 Guid
@@ -61,7 +61,7 @@ Guid
 Rename-Item -Path .\localhost.mof -NewName '64856475-939e-41fb-aba5-4469f4006059.mof'
 ```
 
-Дополнительные сведения об использовании **идентификаторов GUID** в вашей среде см. в разделе [Планирование для идентификаторов GUID](/powershell/scripting/dsc/secureserver#guids).
+Дополнительные сведения об использовании **идентификаторов GUID** в вашей среде см. в разделе [Планирование для идентификаторов GUID](secureServer.md#guids).
 
 ### <a name="configuration-names"></a>Имена файлов конфигурации
 
@@ -122,7 +122,7 @@ ConfigurationRepositoryShare SMBPullServer
 - [Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 5.0 и выше](pullClientConfigId.md)
 - [Настройка опрашивающего клиента с помощью имен конфигурации в PowerShell 5.0 и выше](pullClientConfigNames.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Настройка опрашиваемого SMB-сервера DSC](pullServerSmb.md)
 - [Настройка опрашиваемого HTTP-сервера DSC](pullServer.md)

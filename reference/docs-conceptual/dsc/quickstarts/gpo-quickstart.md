@@ -2,12 +2,12 @@
 ms.date: 07/09/2019
 keywords: DSC,объект групповой политики,powershell,настройка,установка
 title: Краткое руководство. Преобразование групповой политики в DSC
-ms.openlocfilehash: 8c89dbbce5b2b146194b799d7e36ecce3105bfeb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5e6b86be5127332fe4fd400980c8e147b735247b
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71953471"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500659"
 ---
 > Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -56,6 +56,6 @@ Mode                LastWriteTime     Length Name
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- Чтобы отправить скрипт конфигурации в конфигурацию состояния службы автоматизации Azure, см. раздел [Приступая к работе](/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation).
+- Чтобы отправить скрипт конфигурации в конфигурацию состояния службы автоматизации Azure, см. раздел [Приступая к работе](/azure/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation).
 - Добавьте модули **SecurityPolicyDSC** и **AuditPolicyDSC** в свою [учетную запись службы автоматизации](/azure/automation/shared-resources/modules).
 - Конфигурации DSC и ресурсы доступны в [коллекции PowerShell](https://www.powershellgallery.com/).

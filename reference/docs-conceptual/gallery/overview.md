@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery,psget
 title: Коллекция PowerShell
-ms.openlocfilehash: d3e3b9d8bb3d6cefd3a3bfe79b012bb1dc1d8a2d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e489d2dd4db087b53eb07d2a8793c8f586c9b210
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327865"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500561"
 ---
 # <a name="the-powershell-gallery"></a>Коллекция PowerShell
 
@@ -21,31 +21,20 @@ ms.locfileid: "71327865"
 
 ## <a name="getting-started-with-the-gallery"></a>Начало работы с коллекцией
 
-Для установки пакетов из коллекции требуется последняя версия модуля PowerShellGet.
-Полные инструкции по установке см. в разделе [Установка PowerShellGet](installing-psget.md).
+Для установки пакетов из коллекции требуется последняя версия модуля PowerShellGet. Полные инструкции по установке см. в разделе [Установка PowerShellGet](installing-psget.md).
 
 Дополнительные сведения об использовании команд PowerShellGet при работе с коллекцией см. в статье [Начало работы](getting-started.md). Вы также можете запустить командлет *Update-Help -Module PowerShellGet*, чтобы установить локальную справку по этим командам.
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
-Для модуля **PowerShellGet** требуется **Windows PowerShell версии 3.0 или более поздней** либо **PowerShell Core версии 6.0 или более поздней**.
-
-Подходящая версия **Windows PowerShell** доступна для следующих операционных систем:
-
-- Windows 10
-- Windows 8.1 Профессиональная
-- Windows 8.1 Корпоративная
-- Windows 7 с пакетом обновления 1 (SP1)
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2008 R2 с пакетом обновления 1 (SP1)
+Для модуля **PowerShellGet** требуется **PowerShell 3.0 или более поздней версии**.
 
 Для **PowerShellGet** требуется .NET Framework 4.5 или более поздней версии. Установить .NET Framework 4.5 или более поздней версии можно [отсюда](https://msdn.microsoft.com/library/5a4x27ek.aspx).
 
-Так как **PowerShell Core** является кроссплатформенным решением, которое работает в Windows, Linux и MacOS, это также означает поддержку **PowerShellGet** в этих системах. Полный список систем, поддерживаемых **PowerShell Core**, см. в руководстве по [установке PowerShell](/powershell/scripting/setup/installing-powershell).
+Так как **PowerShell Core** является кроссплатформенным решением, которое работает в Windows, Linux и MacOS, это также означает поддержку **PowerShellGet** в этих системах. Полный список систем, поддерживаемых **PowerShell Core**, см. в руководстве по [установке PowerShell](/powershell/scripting/install/installing-powershell).
 
-Много модулей, размещенных в коллекции, поддерживают различные ОС и имеют дополнительные требования. Дополнительные сведения см. в документации по модулям.
+Много модулей, размещенных в коллекции, поддерживают различные ОС и имеют дополнительные требования.
+Дополнительные сведения см. в документации по модулям.
 
 ## <a name="got-a-question-have-feedback"></a>Возник вопрос? Хотите поделиться мнением?
 

@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 5.0 и выше
-ms.openlocfilehash: bd173a1079b916c450a0292dca7a595a9bcff985
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a014e04fc5fbf2e813d9b0d79f39fe5aa3836f86
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417233"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500732"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 5.0 и выше
 
@@ -30,7 +30,7 @@ ms.locfileid: "74417233"
 
 После запуска любого из примеров ниже будет создана новая выходная папка **PullClientConfigID**, в которую будет помещен MOF-файл метаконфигурации. В этом случае MOF-файл метаконфигурации будет называться `localhost.meta.mof`.
 
-Чтобы применить конфигурацию, вызовите командлет **Set-DscLocalConfigurationManager**, в параметре **Path** которого задано расположение MOF-файла метаконфигурации. Например:
+Чтобы применить конфигурацию, вызовите командлет **Set-DscLocalConfigurationManager**, в параметре **Path** которого задано расположение MOF-файла метаконфигурации. Пример:
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigId –Verbose.
@@ -46,7 +46,7 @@ Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientC
 [System.Guid]::NewGuid()
 ```
 
-Дополнительные сведения об использовании **идентификаторов GUID** в вашей среде см. в разделе [Планирование для идентификаторов GUID](/powershell/scripting/dsc/secureserver#guids).
+Дополнительные сведения об использовании **идентификаторов GUID** в вашей среде см. в разделе [Планирование для идентификаторов GUID](secureserver.md#guids).
 
 ## <a name="set-up-a-pull-client-to-download-configurations"></a>Настройка опрашивающего клиента для скачивания конфигураций
 
@@ -244,8 +244,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-Чтобы указать сервер отчетов, используйте блок **ReportRepositoryWeb**. Сервер отчетов не может быть SMB-сервером.
-Следующая метаконфигурация настраивает опрашивающий клиент для получения конфигураций из **CONTOSO-PullSrv** и ресурсов из **CONTOSO-ResourceSrv**, а также для отправки отчетов о состоянии на **CONTOSO-ReportSrv**:
+Чтобы указать сервер отчетов, используйте блок **ReportRepositoryWeb**. Сервер отчетов не может быть SMB-сервером. Следующая метаконфигурация настраивает опрашивающий клиент для получения конфигураций из **CONTOSO-PullSrv** и ресурсов из **CONTOSO-ResourceSrv**, а также для отправки отчетов о состоянии на **CONTOSO-ReportSrv**:
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -285,13 +284,13 @@ PullClientConfigID
 
 Сервер отчетов не может быть общим ресурсом SMB.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Next Steps
 
 После настройки опрашивающего клиента можно воспользоваться следующими руководствами для выполнения дальнейших шагов:
 
 - [Публикация конфигураций на опрашиваемом сервере (версии 4 и 5)](publishConfigs.md)
 - [Упаковка и передача ресурсов на опрашиваемый сервер (версия 4)](package-upload-resources.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 * [Настройка опрашивающего клиента с именами конфигураций](pullClientConfigNames.md)

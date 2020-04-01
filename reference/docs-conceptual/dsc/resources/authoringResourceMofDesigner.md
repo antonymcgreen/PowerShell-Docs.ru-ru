@@ -2,22 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование конструктора ресурсов
-ms.openlocfilehash: 4f678f4586c75c830bf876b891fe4784aa3b4e95
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71952861"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500626"
 ---
 # <a name="using-the-resource-designer-tool"></a>Использование конструктора ресурсов
 
 > Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Конструктор ресурсов — это набор командлетов, предоставляемых модулем **xDscResourceDesigner** и упрощающих создание ресурсов настройки требуемого состояния (DSC) Windows PowerShell. Командлеты в этом ресурсе помогают создать MOF-схему, модуль сценария и структуру папок для нового ресурса. Дополнительные сведения о ресурсах DSC см. в статье [Встроенные ресурсы настройки требуемого состояния (DSC) Windows PowerShell](authoringResource.md).
-В этом разделе мы создадим ресурс DSC, управляющий пользователями Active Directory.
-Для установки модуля **xDscResourceDesigner** используйте командлет [Install-Module](/powershell/module/PowershellGet/Install-Module).
-
->**Примечание**. **Install-Module** включен в модуль **PowerShellGet**, содержащийся в PowerShell 5.0. Вы можете скачать модуль **PowerShellGet**для PowerShell 3.0 и 4.0 в разделе [Предварительная версия модулей PackageManagement PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+Конструктор ресурсов — это набор командлетов, предоставляемых модулем **xDscResourceDesigner** и упрощающих создание ресурсов настройки требуемого состояния (DSC) Windows PowerShell. Командлеты в этом ресурсе помогают создать MOF-схему, модуль сценария и структуру папок для нового ресурса. Дополнительные сведения о ресурсах DSC см. в статье [Встроенные ресурсы настройки требуемого состояния (DSC) Windows PowerShell](authoringResource.md). В этом разделе мы создадим ресурс DSC, управляющий пользователями Active Directory. Для установки модуля **xDscResourceDesigner** используйте командлет [Install-Module](/powershell/module/PowershellGet/Install-Module).
 
 ## <a name="creating-resource-properties"></a>Создание свойств ресурсов
 В первую очередь необходимо решить, какие свойства будут представлены в ресурсе. В этом примере мы определим пользователя Active Directory со следующими свойствами.
@@ -26,7 +22,7 @@ ms.locfileid: "71952861"
 * **UserName**: основное свойство, которое служит уникальным идентификатором пользователя.
 * **Ensure**: указывает, должна ли учетная запись пользователя присутствовать (Present) или отсутствовать (Absent). Этот параметр имеет только два возможных значения.
 * **DomainCredential**: доменный пароль для пользователя.
-* **Password**: пароль для пользователя, позволяющий конфигурации при необходимости изменить пароль пользователя.
+* **Пароль**. пароль для пользователя, позволяющий конфигурации при необходимости изменить пароль пользователя.
 
 Для создания свойств используется командлет **New-xDscResourceProperty**. Описанные выше свойства создаются следующими командами PowerShell.
 
@@ -37,7 +33,7 @@ $DomainCredential = New-xDscResourceProperty –Name DomainCredential -Type PSCr
 $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attribute Write
 ```
 
-## <a name="create-the-resource"></a>Создание ресурсов
+## <a name="create-the-resource"></a>Создание ресурса
 
 Теперь, когда свойства ресурса созданы, можно вызвать командлет **New-xDscResource** для создания ресурса. Командлет **New-xDscResource** выводит список свойств в виде параметров. Кроме того, он принимает путь для создания модуля, имя нового ресурса и имя модуля, в котором он будет храниться. Ресурс создает следующая команда PowerShell.
 
@@ -60,7 +56,8 @@ class Demo_ADUser : OMI_BaseResource
 };
 ```
 
-Сценарий ресурса находится в файле **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**. Он не содержит фактической логики реализации ресурса — ее необходимо добавить самостоятельно. Каркас сценария выглядит следующим образом.
+Сценарий ресурса находится в файле **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**.
+Он не содержит фактической логики реализации ресурса — ее необходимо добавить самостоятельно. Каркас сценария выглядит следующим образом.
 
 ```powershell
 function Get-TargetResource
@@ -175,10 +172,10 @@ Update-xDscResource –Name 'Demo_ADUser' –Property $UserName, $Ensure, $Domai
 
 Конструктор ресурсов предоставляет еще один командлет, который можно использовать для проверки работоспособности MOF-схемы, написанной вами вручную. Вызовите командлет **Test-xDscSchema**, передав в качестве параметра путь к MOF-схеме ресурса. Командлет выдаст все имеющиеся в схеме ошибки.
 
-### <a name="see-also"></a>См. также
+### <a name="see-also"></a>См. также:
 
-#### <a name="concepts"></a>Концепции
+#### <a name="concepts"></a>Основные понятия
 [Создание пользовательских ресурсов DSC Windows PowerShell](authoringResource.md)
 
-#### <a name="other-resources"></a>Прочие ресурсы
+#### <a name="other-resources"></a>Другие ресурсы
 [Модуль xDscResourceDesigner](https://www.powershellgallery.com/packages/xDscResourceDesigner/1.12.0.0)

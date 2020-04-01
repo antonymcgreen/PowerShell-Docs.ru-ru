@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Обновление узлов на опрашиваемом сервере
-ms.openlocfilehash: 516e50b0c39e4747a123307cb3f5e25259ac7ce5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fa59a2f6574db2dbc96621be4326f1d5a55e5de9
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417715"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500662"
 ---
 # <a name="update-nodes-from-a-pull-server"></a>Обновление узлов на опрашиваемом сервере
 
@@ -36,6 +36,6 @@ Invoke-CimMethod -CimSession $cimSession -Namespace 'root/microsoft/windows/desi
 $cimSession | Remove-CimSession
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[PerformRequiredConfigurationChecks](/powershell/scripting/dsc/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks)
+[PerformRequiredConfigurationChecks](../reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)

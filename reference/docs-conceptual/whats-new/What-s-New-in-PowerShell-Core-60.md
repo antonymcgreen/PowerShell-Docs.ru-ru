@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell Core 6.0
 description: Новые возможности и изменения в PowerShell Core 6.0
 ms.date: 08/06/2018
-ms.openlocfilehash: d1bc1ef2676da60062b8bdd57042331f0f245bec
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 39bcb343c44c32d183c8bb90306a8f4a57397eb6
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995492"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500486"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Новые возможности PowerShell Core 6.0
 
@@ -231,7 +231,7 @@ Add-WindowsPSModulePath
 - Поддержка разбивки на страницы для заголовков ссылок в веб-командлетах (#3828)
   - Когда для `Invoke-WebRequest` ответ содержит заголовок ссылки, мы создаем свойство RelationLink в качестве словаря, представляющего URL-адреса и атрибуты `rel`, и делаем эти URL-адреса абсолютными, чтобы упростить задачу разработчику.
   - Когда для `Invoke-RestMethod` ответ содержит заголовок ссылки, мы предоставляем параметр `-FollowRelLink` для автоматического следования по ссылкам `next` `rel`, пока они не перестанут существовать или мы не попадем на необязательное значение параметра `-MaximumFollowRelLink`.
-- Добавлен параметр `-CustomMethod` для веб-командлетов, чтобы разрешить нестандартные команды методов. (#3142) (выражаем благодарность [@Lee303](https://github.com/Lee303))
+- Добавлен параметр `-CustomMethod` для веб-командлетов, чтобы разрешить нестандартные команды методов. (#3142) (выражаем благодарность @Lee303)
 - Добавлена поддержка `SslProtocol` для веб-командлетов. (#5329) (выражаем благодарность [@markekraus](https://github.com/markekraus))
 - Добавлена поддержка составных данных для веб-командлетов. (#4782) (выражаем благодарность [@markekraus](https://github.com/markekraus))
 - Добавлен `-NoProxy` для веб-командлетов, чтобы они игнорировали параметры прокси-сервера, действующие на уровне всей системы. (#3447) (выражаем благодарность [@TheFlyingCorpse](https://github.com/TheFlyingCorpse))
@@ -248,7 +248,7 @@ Add-WindowsPSModulePath
 - Изменены веб-командлеты `UserAgent` с `WindowsPowerShell` на `PowerShell`. (#4914) (выражаем благодарность [@markekraus](https://github.com/markekraus))
 - Добавлено явное обнаружение `ContentType` в `Invoke-RestMethod` (#4692)
 - Исправлены веб-командлеты `-SkipHeaderValidation`, чтобы работать с нестандартными заголовками агента пользователя. (#4479 &
-  #<a name="4512-thanks-markekraushttpsgithubcommarkekraus"></a>4512) (выражаем благодарность [@markekraus](https://github.com/markekraus))
+  #<a name="4512-thanks-markekraus"></a>4512) (выражаем благодарность [@markekraus](https://github.com/markekraus))
 
 ### <a name="json-cmdlets"></a>Командлеты JSON
 
