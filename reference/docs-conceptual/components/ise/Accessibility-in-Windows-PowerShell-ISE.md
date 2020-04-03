@@ -2,12 +2,12 @@
 ms.date: 12/19/2019
 keywords: powershell,командлет
 title: Специальные возможности в интегрированной среде сценариев Windows PowerShell
-ms.openlocfilehash: e618daca98d76f767a8b60a3425760bfc0bd0f64
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: 89eff839d69fdbd5a1fa48b61dab627ef83f751b
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75736289"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500961"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Специальные возможности в интегрированной среде сценариев Windows PowerShell
 
@@ -121,7 +121,7 @@ ms.locfileid: "75736289"
 | **Остановить отладчик**          | <kbd>SHIFT</kbd>+<kbd>F5</kbd>                 | Область сценариев при отладке сценария |
 
 > [!NOTE]
-> При отладке сценариев в интегрированной среде сценариев Windows PowerShell также можно использовать сочетания клавиш, предназначенные для консоли Windows PowerShell. Для этого необходимо ввести ярлык в области консоли и нажать клавишу ВВОД.
+> При отладке сценариев в интегрированной среде сценариев Windows PowerShell также можно использовать сочетания клавиш, предназначенные для консоли Windows PowerShell. Для этого необходимо ввести ярлык в области консоли и нажать клавишу <kbd>ВВОД</kbd>.
 
 |                 Действие                  |      Сочетание клавиш       |                Область использования                 |
 | --------------------------------------- | ---------------------------- | ------------------------------------- |
@@ -143,7 +143,7 @@ ms.locfileid: "75736289"
 | ------------------------------- | ---------------------------------------------------------------------------------- |
 | **Закрыть вкладку PowerShell**        | <kbd>CTRL</kbd>+<kbd>W</kbd>                                                       |
 | **Создать вкладку PowerShell**          | <kbd>CTRL</kbd>+<kbd>T</kbd>                                                       |
-| **Предыдущая вкладка PowerShell**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd> (это сочетание клавиш работает только в том случае, если на вкладках PowerShell нет открытых файлов)                 |
+| **Предыдущая вкладка PowerShell**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd> (это сочетание клавиш работает только в том случае, если на вкладках PowerShell нет открытых файлов) |
 | **Следующая вкладка Windows PowerShell** | <kbd>CTRL</kbd>+<kbd>TAB</kbd> (это сочетание клавиш работает только в том случае, если на вкладках PowerShell нет открытых файлов) |
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Сочетания клавиш для запуска и выхода
@@ -157,8 +157,7 @@ ms.locfileid: "75736289"
 
 ## <a name="breakpoint-management"></a>Управление точками останова
 
-Для пользователей с ослабленным зрением сведения о точках останова доступны через командлеты для управления точками останова, например [Get-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Get-PSBreakpoint.md) и [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md).
-Дополнительные сведения см. в разделе "Управление точками останова" в статье [Отладка сценариев в интегрированной среде сценариев Windows PowerShell](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md).
+Для пользователей с ослабленным зрением сведения о точках останова доступны через командлеты для управления точками останова, например [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint) и [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint). Дополнительные сведения см. в разделе "Управление точками останова" в статье [Отладка сценариев в интегрированной среде сценариев Windows PowerShell](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md).
 
 ## <a name="see-also"></a>См. также:
 

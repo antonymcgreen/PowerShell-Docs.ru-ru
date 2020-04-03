@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell 7.0
 description: Новые возможности и изменения в PowerShell 7.0
 ms.date: 03/04/2020
-ms.openlocfilehash: 6915bb70d6e54da86d2b935e3feed8d7f3770ba9
-ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
+ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
+ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78404988"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80263141"
 ---
 # <a name="whats-new-in-powershell-70"></a>Новые возможности PowerShell 7.0
 
@@ -396,6 +396,7 @@ Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration
 - Устранена утечка ресурсов путем отмены регистрации обработчика событий в AppDomain.CurrentDomain.ProcessExit (№ 10626)
 - Добавлена поддержка значения ActionPreference.Break для прерывания работы отладчика при создании сообщения Debug, Error, Information, Progress, Verbose или Warning (№ 8205) (выражаем благодарность @KirkMunro)
 - Добавлена возможность запуска надстроек панели управления в PowerShell Core без указания расширения .CPL (№ 9828)
+- Поддержка отрицательных чисел в операторе -split (8960) (Спасибо, @ece-jacob-scott!)
 
 ### <a name="general-cmdlet-updates-and-fixes"></a>Общие обновления и исправления командлетов
 

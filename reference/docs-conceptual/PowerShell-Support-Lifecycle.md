@@ -2,18 +2,18 @@
 title: Жизненный цикл поддержки PowerShell Core
 description: Политики, распространяемые на поддержку PowerShell Core
 ms.date: 03/09/2020
-ms.openlocfilehash: c1e91aa193dd4a6353098e16ae18301c0753ea85
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: c319371778eb4615559ae12e0cd153a535ed22bf
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082409"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500991"
 ---
 # <a name="powershell-support-lifecycle"></a>Жизненный цикл поддержки PowerShell
 
 PowerShell — это отдельный набор средств и компонентов, поставляемых, устанавливаемых и настраиваемых отдельно от Windows PowerShell. PowerShell не входит в состав соглашений о лицензировании Windows.
 
-PowerShell поддерживается в рамках традиционных соглашений о поддержке корпорации Майкрософт, включая [Premier][], [соглашения Microsoft Enterprise][enterprise-agreement] и [Microsoft Software Assurance][assurance].
+PowerShell поддерживается в рамках традиционных соглашений о поддержке корпорации Майкрософт, включая [платную поддержку][], [соглашения Microsoft Enterprise][enterprise-agreement] и [Microsoft Software Assurance][assurance].
 Вы также можете оплатить [техническую поддержку][] по PowerShell, направив в службу поддержки запрос о своей проблеме.
 
 ## <a name="community-support"></a>Поддержка сообщества
@@ -155,7 +155,7 @@ PowerShell 7 обладает более высокой совместимос�
 | PowerShell 1.0       |   Ноябрь 2006 г.   | Устанавливается в Windows XP с пакетом обновления 2 (SP2), Windows Server 2003 с пакетом обновления 1 (SP1) и Windows Vista. Необязательный компонент Windows Server 2008.                          |
 
 <!-- hyperlink references -->
-[Premier]: https://www.microsoft.com/microsoftservices/support.aspx
+[платную поддержку]: https://support.microsoft.com/hub/4343728/support-for-business
 [enterprise-agreement]: https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx
 [поддержку сообщества]: /powershell/scripting/community/community-support

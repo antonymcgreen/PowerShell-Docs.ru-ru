@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Использование веб-консоли Windows PowerShell
-ms.openlocfilehash: 4c1bac2c712e430263d748b36897f4cfd8885919
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 29aa123049884004dd4e1a8f042783538d80abc6
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402591"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500871"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Использование веб-консоли Windows PowerShell
 
@@ -102,7 +102,7 @@ Windows PowerShell Web Access поддерживает перечисленны�
 
 - Выключение клиентского устройства, на котором открыт браузер или отключение его от сети.
 
-- Выполнение команды **Exit** в веб-консоли. Эта команда не действует, если в конфигурации сеанса, которая используется для подключения, настроена поддержка режима [NoLanguage](https://msdn.microsoft.com/library/windows/desktop/system.management.automation.pslanguagemode.aspx) или пространство выполнения ограничено.
+- Выполнение команды **Exit** в веб-консоли. Эта команда не действует, если в конфигурации сеанса, которая используется для подключения, настроена поддержка режима [NoLanguage](/dotnet/api/system.management.automation.pslanguagemode) или пространство выполнения ограничено.
 
 Если необходимо снова выполнить вход, откройте веб-страницу Windows PowerShell Web Access и войдите, выполнив процедуру, описанную в разделе [Вход в систему Windows PowerShell Web Access](#signing-in-to-windows-powershell-web-access) этой статьи.
 
@@ -215,8 +215,5 @@ ALT+F7          | Очистка списка журнала команд
 
 ## <a name="see-also"></a>См. также:
 
-- [Справочник по командлетам Windows PowerShell](https://technet.microsoft.com/library/ee407531(ws.10).aspx)
-- [Windows PowerShell на веб-сайте Microsoft TechNet](https://technet.microsoft.com/library/bb978526.aspx)
-- [Репозиторий центра сценариев TechNet](https://gallery.technet.microsoft.com/scriptcenter)
-- [Центр сценариев — Эй, сценарист!](https://technet.microsoft.com/scriptcenter)
-- [Блог команды разработчиков Windows PowerShell](https://blogs.msdn.com/b/powershell/)
+- [Приглашаем авторов скриптов!](https://devblogs.microsoft.com/scripting/)
+- [Блог команды разработчиков PowerShell](https://devblogs.microsoft.com/powershell/)

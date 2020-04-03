@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Опрашивающая служба DSC
-ms.openlocfilehash: cf2420e6889f63ac3b2859e5ee36fa888b728afc
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402441"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500724"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Опрашивающая служба Desired State Configuration
 
@@ -70,7 +70,7 @@ ms.locfileid: "79402441"
 | ------- | -------------------- | -------------------- | ---------------------------------------------- |
 | MDB     | ESENT (по умолчанию), MDB | ESENT (по умолчанию), MDB | ESENT (по умолчанию), SQL Server, MDB               |
 
-Начиная с выпуска 17090 [Windows Server Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewserver), в опрашивающей службе (компонент Windows *служба DSC*) поддерживается SQL Server. Это новый вариант масштабирования крупных сред DSC, которые не были перенесены в [Azure Automation DSC](/azure/automation/automation-dsc-getting-started).
+Начиная с выпуска Windows Server 17090 в опрашивающей службе (компонент Windows *служба DSC*) поддерживается SQL Server. Это новый вариант масштабирования крупных сред DSC, которые не были перенесены в [Azure Automation DSC](/azure/automation/automation-dsc-getting-started).
 
 > [!NOTE]
 > Поддержка SQL Server не будет добавлена в предыдущие версии WMF 5.1 (или более ранние версии) и будет доступна только в Windows Server версии 17090 и более поздних версиях.
@@ -82,7 +82,7 @@ ms.locfileid: "79402441"
 
 Самый простой способ настроить опрашиваемый веб-сервер — использовать ресурс **xDscWebService**, включенный в модуль **xPSDesiredStateConfiguration**. В следующих действиях показано, как использовать ресурс в скрипте `Configuration`, используемом для настройки веб-службы.
 
-1. Вызовите командлет [Install-Module](/reference/6/PowerShellGet/Install-Module.md), чтобы установить модуль **xPSDesiredStateConfiguration**.
+1. Вызовите командлет [Install-Module](/powershell/module/PowerShellGet/Install-Module), чтобы установить модуль **xPSDesiredStateConfiguration**.
 
    > [!NOTE]
    > `Install-Module` включен в модуль **PowerShellGet**, содержащийся в PowerShell 5.0 и более поздних версий.
@@ -234,7 +234,7 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 
 ### <a name="configuration-mof-format"></a>Формат файлов конфигурации MOF
 
-MOF-файл конфигурации необходимо сопоставить с файлом контрольной суммы, чтобы LCM на целевом узле мог проверить конфигурацию. Чтобы создать контрольную сумму, вызовите командлет [New-DscChecksum](/reference/6/PSDesiredStateConfiguration/New-DSCCheckSum.md). Командлет принимает параметр **Path**, указывающий папку, в которой располагается MOF-файл конфигурации. Командлет создает файл контрольной суммы `ConfigurationMOFName.mof.checksum`, где `ConfigurationMOFName` — имя MOF-файла конфигурации. Если в указанной папке есть несколько MOF-файлов конфигурации, контрольная сумма создается для каждой конфигурации в папке. Поместите файлы MOF и их файлы контрольных сумм в папку **ConfigurationPath**.
+MOF-файл конфигурации необходимо сопоставить с файлом контрольной суммы, чтобы LCM на целевом узле мог проверить конфигурацию. Чтобы создать контрольную сумму, вызовите командлет [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum). Командлет принимает параметр **Path**, указывающий папку, в которой располагается MOF-файл конфигурации. Командлет создает файл контрольной суммы `ConfigurationMOFName.mof.checksum`, где `ConfigurationMOFName` — имя MOF-файла конфигурации. Если в указанной папке есть несколько MOF-файлов конфигурации, контрольная сумма создается для каждой конфигурации в папке. Поместите файлы MOF и их файлы контрольных сумм в папку **ConfigurationPath**.
 
 > [!NOTE]
 > Если вы измените MOF-файл конфигурации каким-либо образом, потребуется повторно создать файл контрольной суммы.

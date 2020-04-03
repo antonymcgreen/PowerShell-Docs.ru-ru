@@ -2,12 +2,12 @@
 title: Использование Visual Studio Code для разработки в PowerShell
 description: Использование Visual Studio Code для разработки в PowerShell
 ms.date: 11/07/2019
-ms.openlocfilehash: 86739970b58460bef9686a75bf0604d0605d4888
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: 8644aa7c648d649651ca679238e0b79ff35ac579
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082434"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500913"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Использование Visual Studio Code для разработки в PowerShell
 
@@ -22,9 +22,9 @@ ms.locfileid: "80082434"
 
 Перед запуском убедитесь, что оболочка PowerShell установлена в системе. Сведения о современных рабочих нагрузках для Windows, macOS и Linux см. по следующим ссылкам:
 
-- [Установка PowerShell Core в Linux][install-pscore-linux]
-- [Установка PowerShell Core в macOS][install-pscore-macos]
-- [Установка PowerShell Core в Windows][install-pscore-windows]
+- [Установка PowerShell в Linux][install-pscore-linux]
+- [Установка PowerShell в macOS][install-pscore-macos]
+- [Установка PowerShell в Windows][install-pscore-windows]
 
 Сведения о традиционных рабочих нагрузках Windows PowerShell см. в разделе [Установка Windows PowerShell][install-winps].
 
@@ -268,7 +268,16 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 
 После задания конфигурации отладки вы можете указать конфигурацию, используемую во время сеанса отладки, выбрав ее в раскрывающемся списке конфигураций отладки на панели инструментов представления **Отладка**.
 
-Существует несколько блогов, которые могут оказаться полезными при начале работы с расширением PowerShell для Visual Studio Code:
+## <a name="useful-resources"></a>Полезные ресурсы
+
+Существует несколько видео и записей блогов, которые могут оказаться полезными при начале работы с расширением PowerShell для Visual Studio Code:
+
+### <a name="videos"></a>Видео
+
+- [Использование Visual Studio Code в качестве редактора PowerShell по умолчанию](https://youtu.be/bGn45vIeAMM)
+- [Visual Studio Code: подробный обзор отладки сценариев PowerShell](https://youtu.be/cSbIXmlkr8o)
+
+### <a name="blog-posts"></a>Записи блога
 
 - [Расширение PowerShell][ps-extension]
 - [Написание и отладка в сценариев PowerShell в Visual Studio Code][debug]
@@ -279,6 +288,16 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 - [Функции редактирования Visual Studio Code для разработки PowerShell. Часть 2][editing-part2]
 - [Отладка сценария PowerShell в Visual Studio Code. Часть 1][debugging-part1]
 - [Отладка сценария PowerShell в Visual Studio Code. Часть 2][debugging-part2]
+
+## <a name="powershell-extension-for-visual-studio-code"></a>Расширение PowerShell для Visual Studio Code
+
+Исходный код расширения PowerShell доступен на [GitHub](https://github.com/PowerShell/vscode-powershell).
+
+Если вы заинтересованы в участии, запрос на вытягивание очень важен. Чтобы приступить к работе, следуйте указаниям в [документации для разработчиков на сайте GitHub](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md).
+
+## <a name="troubleshooting-the-powershell-extension-for-visual-studio-code"></a>Устранение проблем с расширением PowerShell для Visual Studio Code.
+
+Если у вас возникли проблемы с использованием Visual Studio Code для разработки сценариев PowerShell, ознакомьтесь с [руководством по устранению проблем на сайте GitHub](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md)
 
 [ise]: ../ise/Introducing-the-Windows-PowerShell-ISE.md
 [install-pscore-linux]:  ../../install/Installing-PowerShell-Core-on-Linux.md
@@ -294,13 +313,3 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 [editing-part2]: https://devblogs.microsoft.com/scripting/visual-studio-code-editing-features-for-powershell-development-part-2/
 [debugging-part1]: https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-1/
 [debugging-part2]: https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-2/
-
-## <a name="powershell-extension-for-visual-studio-code"></a>Расширение PowerShell для Visual Studio Code
-
-Исходный код расширения PowerShell доступен на [GitHub](https://github.com/PowerShell/vscode-powershell).
-
-Если вы заинтересованы в участии, запрос на вытягивание очень важен. Чтобы приступить к работе, следуйте указаниям в [документации для разработчиков на сайте GitHub](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md).
-
-## <a name="troubleshooting-the-powershell-extension-for-visual-studio-code"></a>Устранение проблем с расширением PowerShell для Visual Studio Code.
-
-Если у вас возникли проблемы с использованием Visual Studio Code для разработки сценариев PowerShell, ознакомьтесь с [руководством по устранению проблем на сайте GitHub](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md)

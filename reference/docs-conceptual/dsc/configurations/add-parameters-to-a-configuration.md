@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,resource,gallery,setup
 title: Добавление параметров в конфигурацию
-ms.openlocfilehash: 72e6c15593d11ed39d7fe8ea79f794089f410cf8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9dd9f2be58c13840be2b24e7e21a0d4af79b67cc
+ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954201"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80263158"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Добавление параметров в конфигурацию
 
@@ -36,17 +36,18 @@ Configuration TestConfig
 
 В отличие от функции, атрибут [CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) не добавляет функциональных возможностей. Помимо [общих параметров](/powershell/module/microsoft.powershell.core/about/about_commonparameters), конфигурации могут также использовать следующие встроенные параметры, не требуя их определения пользователем.
 
-|Параметр  |Описание  |
-|---------|---------|
-|`-InstanceName`|Используется при определении [составных конфигураций](compositeconfigs.md)|
-|`-DependsOn`|Используется при определении [составных конфигураций](compositeconfigs.md)|
-|`-PSDSCRunAsCredential`|Используется при определении [составных конфигураций](compositeconfigs.md)|
-|`-ConfigurationData`|Используется для передачи структурированных [данных конфигурации](configData.md), применяемых в конфигурации.|
-|`-OutputPath`|Используется, чтобы указать, где будет скомпилирован файл \<имя_компьютера\>.mof.|
+|        Параметр        |                                         Описание                                          |
+| ----------------------- | -------------------------------------------------------------------------------------------- |
+| `-InstanceName`         | Используется при определении [составных конфигураций](compositeconfigs.md)                             |
+| `-DependsOn`            | Используется при определении [составных конфигураций](compositeconfigs.md)                             |
+| `-PSDSCRunAsCredential` | Используется при определении [составных конфигураций](compositeconfigs.md)                             |
+| `-ConfigurationData`    | Используется для передачи структурированных [данных конфигурации](configData.md), применяемых в конфигурации. |
+| `-OutputPath`           | Используется, чтобы указать, где будет скомпилирован файл \<имя_компьютера\>.mof.                      |
 
 ## <a name="adding-your-own-parameters-to-configurations"></a>Добавление собственных параметров в конфигурации
 
-Помимо встроенных параметров, вы можете также добавить в конфигурации собственные параметры. Блок параметров помещается непосредственно в объявлении конфигурации, как и функция. Блок параметров конфигурации должен быть вне любых объявлений **узла** и выше любых инструкций *import*. Добавив параметры, вы можете сделать конфигурации более надежными и динамическими.
+Помимо встроенных параметров, вы можете также добавить в конфигурации собственные параметры.
+Блок параметров помещается непосредственно в объявлении конфигурации, как и функция. Блок параметров конфигурации должен быть вне любых объявлений **узла** и выше любых инструкций *import*. Добавив параметры, вы можете сделать конфигурации более надежными и динамическими.
 
 ```powershell
 Configuration TestConfig
@@ -117,7 +118,8 @@ TestConfig -ComputerName "server01", "server02", "server03"
 
 ## <a name="advanced-parameters-in-configurations"></a>Расширенные параметры в конфигурациях
 
-В дополнение к параметру `-ComputerName`, вы можете добавить параметры для имени и состояния службы. В следующем примере добавляется блок параметров с параметром `-ServiceName`. Этот блок используется для динамического определения блока ресурса **Service**. В нем также добавляется параметр `-State` для динамического определения **состояния** в блоке ресурса **Service**.
+В дополнение к параметру `-ComputerName`, вы можете добавить параметры для имени и состояния службы.
+В следующем примере добавляется блок параметров с параметром `-ServiceName`. Этот блок используется для динамического определения блока ресурса **Service**. В нем также добавляется параметр `-State` для динамического определения **состояния** в блоке ресурса **Service**.
 
 ```powershell
 Configuration TestConfig
@@ -213,7 +215,7 @@ Configuration TestConfig
     # It is best practice to explicitly import any required resources or modules.
     Import-DSCResource -Module PSDesiredStateConfiguration
 
-    Node localhost
+    Node $ComputerName
     {
         Service $ServiceName
         {
@@ -224,7 +226,7 @@ Configuration TestConfig
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Создание справки по конфигурациям DSC](configHelp.md)
 - [Условные операторы и циклы в конфигурациях](flow-control-in-configurations.md)
