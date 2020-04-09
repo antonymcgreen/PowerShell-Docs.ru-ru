@@ -1,19 +1,58 @@
 ---
 title: Новое в документации по PowerShell
 description: Список изменений в документации по PowerShell
-ms.date: 03/04/2020
-ms.openlocfilehash: b2b196a83eafc87daf9f9eb06a93377058f1ff20
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.date: 03/31/2020
+ms.openlocfilehash: b7fee886b1c5584dc9d75b86ca79980579040db7
+ms.sourcegitcommit: ef1a3079809ec2e3c58e785c84de2df968145658
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060219"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537063"
 ---
 # <a name="whats-new-in-powershell-docs"></a>Новое в документации по PowerShell
 
 В этой статье перечислены некоторые основные изменения в документации, появившиеся за предыдущий месяц, а также выражается благодарность за вклад участников сообщества.
 
 Помогите нам улучшить документацию. Чтобы узнать, как приступить к работе, обратитесь к [руководству для участников][contrib].
+
+## <a name="2020-march"></a>Март 2020 г.
+
+### <a name="highlights"></a>Особенности
+
+- Новые документы
+  - Страницы сообщества в документации PowerShell
+    - Страница [ресурсов сообщества](/powershell/scripting/community/community-support)
+    - Страница [Новое в документации по PowerShell](#2020-march) (текущая страница)
+    - [Инфографика PowerShell](https://github.com/MicrosoftDocs/PowerShell-Docs/blob/staging/assets/PowerShell_7_Infographic.pdf) как новый ресурс на странице цифровых графических материалов
+    - [Руководство для соавторов документации PowerShell](/powershell/scripting/community/contributing/overview?view=powershell-7)
+  - Новое содержимое для PowerShell
+    - [Миграция с Windows PowerShell 5.1 на PowerShell 7](/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7)
+    - [Список совместимых модулей PowerShell 7](/PowerShell/scripting/whats-new/module-compatibility)
+    - [Использование PowerShell в Docker](/powershell/scripting/install/powershell-in-docker)
+  - Новое содержимое вики-сайта
+    - [PowerShell предотвращает исключения для несуществующих ключей для типов, реализующих IDictionary TKey, TValue](https://github.com/MicrosoftDocs/PowerShell-Docs/wiki/PowerShell-prevents-exceptions-for-non-existent-keys-for-types-that-implement-IDictionary-TKey,-TValue-)
+    - [PowerShell обрабатывает пространства имен без учета, но с сохранением регистра](https://github.com/MicrosoftDocs/PowerShell-Docs/wiki/PowerShell's-treatment-of-namespaces-is-case-insensitive-but-case-preserving)
+
+- Поддержка документации
+  - Массовая очистка неработающих ссылок
+  - Очистка старых и дублируемых проблем
+
+- Статистика GitHub:
+  - Слияние 100 запросов на вытягивание (14 от сообщества)
+  - 68 открытых проблем (56 от сообщества)
+  - 109 закрытых проблем
+
+### <a name="top-community-contributors"></a>Наиболее активные участники сообщества
+
+Перечисленные ниже пользователи принимали участие в работе над документацией по PowerShell, отправляя запросы на вытягивание и сообщая о проблемах. Спасибо!
+
+- k-takai — 7 запросов на вытягивание
+- mklement0 — 5 проблем
+- juvtib — 4 проблемы
+- iSazonov — 3 проблемы
+- doctordns — 2 проблемы
+- mdorantesm — 2 проблемы
+- qt3m45su0najc7 — 2 проблемы
 
 ## <a name="2020-february"></a>Февраль 2020 г.
 
@@ -32,7 +71,7 @@ ms.locfileid: "79060219"
 
 ### <a name="top-community-contributors"></a>Наиболее активные участники сообщества
 
-Перечисленные ниже пользователи принимали наиболее активное участие в работе над документацией по PowerShell, отправляя запросы на вытягивание и открывая проблемы. Спасибо!
+Перечисленные ниже пользователи принимали участие в работе над документацией по PowerShell, отправляя запросы на вытягивание и сообщая о проблемах. Спасибо!
 
 - Maamue — 2 запроса на вытягивание
 - doctordns — 2 запроса на вытягивание
@@ -56,7 +95,7 @@ ms.locfileid: "79060219"
 
 ### <a name="top-community-contributors"></a>Наиболее активные участники сообщества
 
-Перечисленные ниже пользователи принимали наиболее активное участие в работе над документацией по PowerShell, отправляя запросы на вытягивание и открывая проблемы. Спасибо!
+Перечисленные ниже пользователи принимали участие в работе над документацией по PowerShell, отправляя запросы на вытягивание и сообщая о проблемах. Спасибо!
 
 - Makovec — 3 запроса на вытягивание
 - mklement0 — 9 проблем
@@ -77,11 +116,11 @@ ms.locfileid: "79060219"
 
 | Отправлено запросов на вытягивание | 2016 | 2017 | 2018 | 2019 | 2020 | Grand Total |
 | ------------------ | ---: | ---: | ---: | ---: | ---: | ----------: |
-| Всего сообществом    |  194 |  447 |  467 |  320 |   16 |        1447 |
+| Всего сообществом    |  198 |  448 |  468 |  322 |   22 |        1469 |
 | matt9ucci          |      |  157 |   80 |   30 |      |         267 |
 | nschonni           |      |      |   14 |  138 |      |         152 |
 | kiazhi             |   25 |   79 |   12 |      |      |         116 |
-| alexandair         |   57 |    7 |   26 |    2 |      |          92 |
+| alexandair         |   59 |    8 |   26 |    2 |      |          95 |
 | doctordns          |    5 |   32 |   20 |    7 |    2 |          66 |
 | sethvs             |      |    1 |   44 |      |      |          45 |
 | Dan1el42           |   20 |      |      |      |      |          20 |
@@ -89,8 +128,10 @@ ms.locfileid: "79060219"
 | it-praktyk         |      |      |   16 |    1 |      |          17 |
 | markekraus         |      |   11 |    5 |      |      |          16 |
 | purdo17            |      |      |   13 |      |      |          13 |
+| k-takai            |      |      |    5 |    1 |    7 |          13 |
 | kvprasoon          |    2 |    1 |    7 |    2 |      |          12 |
 | PlagueHO           |   10 |      |      |    1 |      |          11 |
+| KirkMunro          |    1 |    1 |    2 |    6 |      |          10 |
 | exchange12rocks    |      |    7 |    3 |      |      |          10 |
 
 ### <a name="github-issues-opened"></a>Открытые проблемы в GitHub
@@ -99,14 +140,14 @@ ms.locfileid: "79060219"
 
 | Открыто проблем | 2016 | 2017 | 2018 | 2019 | 2020 | Grand Total |
 | ------------------ | ---: | ---: | ---: | ---: | ---: | ----------: |
-| Всего сообществом    |   34 |   95 |  213 |  575 |   86 |        1003 |
-| mklement0          |      |   19 |   60 |   56 |   13 |         148 |
+| Всего сообществом    |   34 |   95 |  213 |  575 |  123 |        1081 |
+| mklement0          |      |   19 |   60 |   56 |   17 |         153 |
 | jszabo98           |      |      |    2 |   15 |    2 |          19 |
-| iSazonov           |      |    1 |    4 |   10 |      |          15 |
-| doctordns          |      |    5 |    3 |    5 |    2 |          15 |
+| iSazonov           |      |    1 |    4 |   10 |    2 |          18 |
+| doctordns          |      |    5 |    3 |    5 |    4 |          17 |
+| alexandair         |    9 |    4 |    2 |      |      |          15 |
 | KirkMunro          |      |      |    7 |    7 |      |          14 |
 | vexx32             |      |      |    3 |   11 |      |          14 |
-| alexandair         |    6 |    4 |    2 |      |      |          12 |
 
 <!-- Link references -->
 [contrib]: contributing/overview.md

@@ -4,12 +4,12 @@ description: Использование среды PowerShell, предвари�
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/03/2020
-ms.openlocfilehash: 771214c719ef01fe2c8bc56a4b26c629fcad3856
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: b16a31a04ca863ab55c7c9718b1a1a973e61ee46
+ms.sourcegitcommit: f55da6dea4b58a2cd13c7be7c24c07341f177b71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78279661"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80646377"
 ---
 # <a name="using-powershell-in-docker"></a>Использование PowerShell в Docker
 
@@ -35,7 +35,7 @@ docker run -it mcr.microsoft.com/powershell
 
 ### <a name="remove-the-image-when-no-longer-needed"></a>Удаление ненужного образа
 
-Приведенная ниже команда служит для удаления контейнера Docker, если он больше не нужен.
+Следующая команда используется для удаления образа Docker, который больше не нужен.
 
 ```console
 docker rmi mcr.microsoft.com/powershell
