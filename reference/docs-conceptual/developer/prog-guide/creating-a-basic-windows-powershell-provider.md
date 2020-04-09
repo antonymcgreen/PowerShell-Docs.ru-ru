@@ -11,16 +11,16 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], base provider
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
-ms.openlocfilehash: e825581b96f0f33893b38f9f6499dd46a7bf38eb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360523"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978514"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Создание базового поставщика Windows PowerShell
 
-Этот раздел является отправной точкой для изучения создания поставщика Windows PowerShell. Описанный здесь базовый поставщик предоставляет методы для запуска и остановки поставщика, и хотя этот поставщик не предоставляет средств для доступа к хранилищу данных или для получения или установки данных в хранилище данных, он предоставляет базовые функциональные возможности, необходимые для все поставщики.
+Этот раздел является отправной точкой для изучения создания поставщика Windows PowerShell. Базовый поставщик, описанный здесь, предоставляет методы для запуска и остановки поставщика, и хотя этот поставщик не предоставляет средств для доступа к хранилищу данных или для получения или установки данных в хранилище данных, он предоставляет базовые функциональные возможности, необходимые для всех поставщиков.
 
 Как упоминалось ранее, базовый поставщик, описанный здесь, реализует методы для запуска и остановки поставщика. Среда выполнения Windows PowerShell вызывает эти методы для инициализации и деинициализации поставщика.
 
@@ -38,7 +38,7 @@ ms.locfileid: "72360523"
 
 Ниже приведено определение класса для этого базового поставщика:
 
-[!code-csharp[AccessDBProviderSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs#L23-L24 "AccessDBProviderSample01.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs" range="23-24":::
 
 Непосредственно перед определением класса необходимо объявить атрибут [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) с синтаксисом [кмдлетпровидер ()].
 
@@ -91,9 +91,9 @@ ms.locfileid: "72360523"
 Get-PSProvider
 ```
 
-Появляется следующий результат:
+Отобразятся следующие выходные данные:
 
-```output
+```Output
 Name                 Capabilities                  Drives
 ----                 ------------                  ------
 AccessDb             None                          {}

@@ -11,21 +11,22 @@ helpviewer_keywords:
 - declaring cmdlets [PowerShell SDK]
 ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
 caps.latest.revision: 14
-ms.openlocfilehash: 979025ad5c34ab73dcc23d0e38ffb9acc431f15a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0de49d979c31b0e8d111323a2e1899d97868ec3f
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363523"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978718"
 ---
 # <a name="cmdlet-class-declaration"></a>Объявление класса командлета
 
-Класс Microsoft .NET Framework объявляется как командлет, указывая атрибут **командлета** в качестве метаданных для класса. (Атрибут **командлета** является единственным обязательным атрибутом для всех командлетов). При указании атрибута **командлета** необходимо указать пару глагол-существительное, которая идентифицирует командлет для пользователя. И необходимо описать функциональные возможности Windows PowerShell, поддерживаемые командлетом. Дополнительные сведения о синтаксисе объявления, который используется для указания атрибута **командлета** , см. в разделе [объявление атрибута командлета](./cmdlet-attribute-declaration.md).
+Класс Microsoft .NET Framework объявляется как командлет, указывая атрибут **командлета** в качестве метаданных для класса. (Атрибут **командлета** является единственным обязательным атрибутом для всех командлетов).
+При указании атрибута **командлета** необходимо указать пару глагол-существительное, которая идентифицирует командлет для пользователя. И необходимо описать функциональные возможности Windows PowerShell, поддерживаемые командлетом. Дополнительные сведения о синтаксисе объявления, который используется для указания атрибута **командлета** , см. в разделе [объявление атрибута командлета](./cmdlet-attribute-declaration.md).
 
 > [!NOTE]
 > Атрибут **командлета** определяется классом [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) . Свойства этого класса соответствуют параметрам объявления, которые используются при объявлении атрибута.
 
-## <a name="nouns"></a>существительные;
+## <a name="nouns"></a>Существительные
 
 Существительное командлет задает ресурсы, с которыми работает командлет. Существительное отличает командлеты от других командлетов.
 
@@ -49,7 +50,7 @@ ms.locfileid: "72363523"
 
 Следующий код является определением для класса командлета proc. Обратите внимание, что используется регистр Pascal, а имя класса включает глагол и существительное командлета.
 
-[!code-csharp[GetProcessSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample01/GetProcessSample01.cs#L33-L34 "GetProcessSample01.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample01/GetProcessSample01.cs" range="33-34":::
 
 ## <a name="pascal-casing"></a>Регистр символов в стиле Pascal
 
