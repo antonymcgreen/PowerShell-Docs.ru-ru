@@ -158,7 +158,7 @@
           href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
         - name: Удаленные редактирование и отладка в Visual Studio Code
           href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
-        - name: Основные сведения о кодировке файлов в VSCode и PowerShell
+        - name: "Основные сведения о кодировке файлов в VS\_Code и PowerShell"
           href: components/vscode/understanding-file-encoding.md
     - name: Веб-доступ
       items:
