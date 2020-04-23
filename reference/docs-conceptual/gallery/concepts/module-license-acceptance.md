@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: powershell
 title: Модули, для использования которых требуется принять условия лицензии
 ms.openlocfilehash: a2f7ed72aae8579a6723f65b86dd0993f1a22afd
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80082811"
 ---
 # <a name="modules-requiring-license-acceptance"></a>Модули, для использования которых требуется принять условия лицензии
@@ -52,7 +52,7 @@ ms.locfileid: "80082811"
 
 ## <a name="examples"></a>Примеры
 
-### <a name="example-1-update-module-manifest-to-require-license-acceptance"></a>Пример 1: обновление манифеста модуля для запроса на принятие условий лицензионного соглашения
+### <a name="example-1-update-module-manifest-to-require-license-acceptance"></a>Пример 1. Обновление манифеста модуля для запроса на принятие условий лицензионного соглашения
 
 ```powershell
 Update-ModuleManifest -Path C:\modulemanifest.psd1 -RequireLicenseAcceptance -PrivateData @{
@@ -89,7 +89,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 Эта команда предназначена для отображения лицензии файла `license.txt` и запроса на принятие условий лицензионного соглашения пользователем.
 
-### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>Пример 3. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, при помощи -AcceptLicense
+### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>Пример 3. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, при помощи -AcceptLicense
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
@@ -97,7 +97,7 @@ Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
 
 Модуль устанавливается без запросов на принятие условий лицензионного соглашения.
 
-### <a name="example-4-install-module-requiring-license-acceptance-with--force"></a>Пример 4. Установка модуля, для использования которого требуется принять условия лицензионного соглашения при помощи -Force
+### <a name="example-4-install-module-requiring-license-acceptance-with--force"></a>Пример 4. Установка модуля, для использования которого требуется принять условия лицензионного соглашения при помощи -Force
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance -Force
@@ -144,7 +144,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 Install-Module -Name ModuleWithDependency -AcceptLicense
 ```
 
-### <a name="example-7-install-module-requiring-license-acceptance-on-a-client-older-than-psgetformatversion-20"></a>Пример 7. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, в клиенте с версией старше, чем PSGetFormatVersion 2.0
+### <a name="example-7-install-module-requiring-license-acceptance-on-a-client-older-than-psgetformatversion-20"></a>Пример 7. Установка модуля, для использования которого требуется принять условия лицензионного соглашения, в клиенте с версией ниже, чем PSGetFormatVersion 2.0
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance

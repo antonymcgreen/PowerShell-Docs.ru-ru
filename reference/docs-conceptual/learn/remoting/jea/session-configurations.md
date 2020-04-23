@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Конфигурации сеансов JEA
 ms.openlocfilehash: 650d0d11ef13605847d0822249e29e3491180629
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70017735"
 ---
 # <a name="jea-session-configurations"></a>Конфигурации сеансов JEA
@@ -38,10 +38,10 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -Path .\MyJEA
 - Clear-Host (cls, clear)
 - Exit-PSSession (exsn, exit)
 - Get-Command (gcm)
-- Get-FormatData
+- Get-FormatData;
 - Get-Help
 - Measure-Object (measure)
-- Out-Default
+- Out-Default;
 - Select-Object (select)
 
 Поставщики PowerShell недоступны, как и внешние программы (исполняемые файлы, скрипты).

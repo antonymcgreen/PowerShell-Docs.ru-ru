@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Управление дисками Windows PowerShell
 ms.openlocfilehash: 5d1aba459caeaab2542e17e74534da6713b0faa9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70215505"
 ---
 # <a name="managing-windows-powershell-drives"></a>Управление дисками Windows PowerShell
@@ -149,19 +149,19 @@ cvkey:\
 
 Диски из Windows PowerShell можно удалить, используя командлет **Remove-PSDrive**. Командлет **Remove-PSDrive** прост в использовании. Чтобы удалить определенный диск Windows PowerShell, необходимо только указать имя диска Windows PowerShell.
 
-Например, если вы добавили диск Windows PowerShell **Office:** , как описано в разделе **New-PSDrive**, вы можете удалить его, выполнив следующую команду:
+Например, если вы добавили диск Windows PowerShell **Office:** , как показано в статье **New-PSDrive**, можно удалить его, введя:
 
 ```powershell
 Remove-PSDrive -Name Office
 ```
 
-Чтобы удалить диск Windows PowerShell **cvkey:** , описанный в предыдущем разделе **New-PSDrive**, выполните следующую команду:
+Чтобы удалить диск Windows PowerShell **cvkey:** , также показанный в статье **New-PSDrive**, используйте следующую команду:
 
 ```powershell
 Remove-PSDrive -Name cvkey
 ```
 
-Удалить диск Windows PowerShell легко, но его невозможно удалить, если он открыт. Например:
+Удалить диск Windows PowerShell легко, но его невозможно удалить, если он открыт. Пример:
 
 ```
 PS> cd office:

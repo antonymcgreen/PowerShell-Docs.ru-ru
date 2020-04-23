@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: коллекция,powershell,psgallery,GDPR
 title: Соответствие коллекции PowerShell регламенту GDPR
 ms.openlocfilehash: fb1191d8a1cd12d5994e41238c384eb504d0c261
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328325"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>Соответствие коллекции PowerShell регламенту GDPR
@@ -41,7 +41,7 @@ GDPR применяется независимо от того, где вы на
 
 Следующие разделы описывают, как коллекция PowerShell поддерживает запросы субъекта данных (DSR), и поясняют, как экспортировать данные, хранящиеся в коллекции PowerShell, и запросить их удаление.
 
-### <a name="email"></a>Электронная почта
+### <a name="email"></a>Email
 
 Переписка по электронной почте может содержать любые из следующих сведений.
 
@@ -93,7 +93,7 @@ Save-Script Get-repository psgallery
 ## <a name="deleting-personal-data-from-the-powershell-gallery"></a>Удаление персональных данных из коллекции PowerShell
 
 Чтобы удалить учетную запись коллекции PowerShell или любой принадлежащий вам пакет в этой коллекции, отправьте на адрес cgadmin@microsoft.com сообщение электронной почты, указав теме сообщения GDPR Request for items relating to this account (Запрос GDPR по элементам, связанным с этой учетной записью).
-В тексте сообщения укажите, какую информацию требуется удалить. Например:
+В тексте сообщения укажите, какую информацию требуется удалить. Пример:
 
 - попросите удалить версию x.y.z своего пакета "имя пакета";
 - попросите удалить все версии своего пакета "имя пакета";

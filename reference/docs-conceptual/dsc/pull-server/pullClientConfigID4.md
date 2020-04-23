@@ -3,15 +3,15 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 4.0
 ms.openlocfilehash: 9259c624c8725f7d76f61e9ad7caa42e1bfa308c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71955151"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 4.0
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
 > Опрашивающий сервер (компонент Windows *служба DSC*) — поддерживаемый компонент Windows Server, но реализация новых функций и возможностей для него не планируется. Рекомендуется начать перенос управляемых клиентов на [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (включает возможности опрашивающего сервера в Windows Server) или на одно из решений сообщества, указанных [в следующем списке](pullserver.md#community-solutions-for-pull-service).
@@ -27,7 +27,7 @@ ms.locfileid: "71955151"
 
 После запуска любого из примеров ниже будет создана новая выходная папка **PullClientConfigID**, в которую будет помещен MOF-файл метаконфигурации. В этом случае MOF-файл метаконфигурации будет называться `localhost.meta.mof`.
 
-Чтобы применить конфигурацию, вызовите командлет **Set-DscLocalConfigurationManager**, в параметре **Path** которого задано расположение MOF-файла метаконфигурации. Например:
+Чтобы применить конфигурацию, вызовите командлет **Set-DscLocalConfigurationManager**, в параметре **Path** которого задано расположение MOF-файла метаконфигурации. Пример:
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigId –Verbose.
@@ -91,14 +91,14 @@ Configuration PullClientConfigId
 PullClientConfigId -Output "."
 ```
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Next Steps
 
 После настройки опрашивающего клиента можно воспользоваться следующими руководствами для выполнения дальнейших шагов:
 
 - [Публикация конфигураций на опрашиваемом сервере (версии 4 и 5)](publishConfigs.md)
 - [Упаковка и передача ресурсов на опрашиваемый сервер (версия 4)](package-upload-resources.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Опрашивающая служба Desired State Configuration](pullServer.md)
 - [Настройка опрашиваемого SMB-сервера DSC](pullServerSMB.md)

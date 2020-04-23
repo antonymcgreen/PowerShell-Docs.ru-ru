@@ -3,10 +3,10 @@ ms.date: 08/24/2018
 keywords: powershell,командлет
 title: Изучение имен команд PowerShell
 ms.openlocfilehash: a65ffcdca6510093b0a77234e20546b6cc1f02bf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030416"
 ---
 # <a name="learning-powershell-command-names"></a>Изучение имен команд PowerShell
@@ -79,7 +79,7 @@ Cmdlet          Suspend-Service                 Suspend-Service [-Name] <Str...
 
 В отличие от большинства других распространенных интерфейсов командной строки PowerShell обрабатывает параметры непосредственно. Наряду с руководством для разработчиков это позволяет стандартизировать имена параметров. Так как это руководство содержит рекомендации, не командлеты будут унифицированными.
 
-Разделитель параметров в PowerShell также является стандартным. В команде PowerShell имени параметра всегда предшествует символ дефиса (-). Рассмотрим следующий пример.
+Разделитель параметров в PowerShell также является стандартным. В команде PowerShell имени параметра всегда предшествует символ дефиса (-). Рассмотрим следующий пример:
 
 ```powershell
 Get-Command -Name Clear-Host

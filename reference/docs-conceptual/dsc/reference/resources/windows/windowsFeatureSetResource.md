@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс DSC WindowsFeatureSet
 ms.openlocfilehash: 1758d248dde4fdee57bd01c157a3f9a8340d6194
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952961"
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>Ресурс DSC WindowsFeatureSet
@@ -37,7 +37,7 @@ WindowsFeatureSet [string] #ResourceName
 
 |  Свойство  |  Описание   |
 |---|---|
-|Name |Имена ролей или компонентов, которые необходимо добавить или удалить. Это свойство аналогично свойству **Name** командлета [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature?view=winserver2012r2-ps) и не содержит отображаемые имена ролей или компонентов. |
+|Имя |Имена ролей или компонентов, которые необходимо добавить или удалить. Это свойство аналогично свойству **Name** командлета [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature?view=winserver2012r2-ps) и не содержит отображаемые имена ролей или компонентов. |
 |Источник |Указывает расположение исходного файла для установки, если он необходим. |
 |IncludeAllSubFeature |Присвойте этому свойству значение `$true`, чтобы включить все необходимые дополнительные компоненты для компонентов, указанных в свойстве **Name**. |
 |Учетные данные |Учетные данные для добавления или удаления ролей или компонентов. |

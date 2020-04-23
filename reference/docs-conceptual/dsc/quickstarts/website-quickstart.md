@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Краткое руководство. Создание веб-сайта с использованием DSC
 ms.openlocfilehash: 08ca25604998ce8c913ef8112b5342f2e0216b6e
-ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75416130"
 ---
 # <a name="quickstart---create-a-website-with-desired-state-configuration-dsc"></a>Краткое руководство. Создание веб-сайта с использованием Desired State Configuration (DSC)
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 В этом упражнении демонстрируется создание и применение конфигурации Desired State Configuration (DSC).
 В нашем примере на сервере будет включен компонент `Web-Server` (IIS), а содержимое простого веб-сайта "Hello World" будет расположено на этом сервере в каталоге `inetpub\wwwroot`.

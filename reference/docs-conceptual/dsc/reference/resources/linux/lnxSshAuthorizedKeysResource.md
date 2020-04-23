@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс nxSshAuthorizedKeys в DSC для Linux
 ms.openlocfilehash: 6e008efcbff2e679650d0bc3d5b8b573f6ef83e0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953261"
 ---
 # <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a>Ресурс nxSshAuthorizedKeys в DSC для Linux
@@ -28,7 +28,7 @@ nxAuthorizedKeys <string> #ResourceName
 
 ## <a name="properties"></a>Свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
 |KeyComment |Уникальный комментарий к ключу. Используется для уникальной идентификации ключей. |
 |Имя пользователя |Указывает, для какого пользователя осуществляется управление авторизованными SSH-ключами. Если свойство не определено, пользователь по умолчанию — **root**. |
@@ -36,7 +36,7 @@ nxAuthorizedKeys <string> #ResourceName
 
 ## <a name="common-properties"></a>Общие свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Указывает, определен ли ключ. Если это свойство имеет значение **Absent**, обеспечивается отсутствие ключа в файле авторизованных ключей пользователя. Если это свойство имеет значение **Present**, обеспечивается наличие определения ключа в файле авторизованных ключей пользователя. |

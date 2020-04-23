@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Аудит и отчеты для JEA
 ms.openlocfilehash: 2afefe83acecc1fc3643d49766120ffecc25378f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70017795"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>Аудит и отчеты для JEA
@@ -31,7 +31,7 @@ Permission    : CONTOSO\JEA_DNS_ADMINS AccessAllowed, CONTOSO\JEA_DNS_OPERATORS 
                 CONTOSO\JEA_DNS_AUDITORS AccessAllowed
 ```
 
-Действующие права для конечной точки перечислены в свойстве **Permission**. Эти пользователи имеют право на подключение к конечной точке JEA. Доступные им роли и команды определяются в свойстве **RoleDefinitions** [файла конфигурации сеанса](session-configurations.md), который использовался для регистрации конечной точки. Вы можете оценить сопоставления ролей в зарегистрированной конечной точке JEA, развернув данные в свойстве **RoleDefinitions**.
+Действующие права для конечной точки перечислены в свойстве **Permission**. Эти пользователи имеют право на подключение к конечной точке JEA. Доступные им роли и команды определяются в свойстве **RoleDefinitions**[файла конфигурации сеанса](session-configurations.md), который использовался для регистрации конечной точки. Вы можете оценить сопоставления ролей в зарегистрированной конечной точке JEA, развернув данные в свойстве **RoleDefinitions**.
 
 ```powershell
 # Get the desired session configuration
@@ -135,6 +135,6 @@ Running  Dns                DNS Server
 
 Выходные данные каждой команды также вызывают **CommandInvocation**, обычно `Out-Default`. **InputObject** в `Out-Default` представляет собой объект PowerShell, возвращаемый из команды. Сведения об этом объекте выводятся несколькими строчками ниже, в точности имитируя то, что увидел бы пользователь.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Запись блога *PowerShell ♥ the Blue Team* по безопасности](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/)

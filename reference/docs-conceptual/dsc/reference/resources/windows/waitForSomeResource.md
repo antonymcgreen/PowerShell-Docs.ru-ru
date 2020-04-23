@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс DSC WaitForSome
 ms.openlocfilehash: 91589c84518a2bd0f4816d11aa011dec1d5305e1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952981"
 ---
 # <a name="dsc-waitforsome-resource"></a>Ресурс DSC WaitForSome

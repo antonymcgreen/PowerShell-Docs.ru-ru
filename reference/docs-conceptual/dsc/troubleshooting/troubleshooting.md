@@ -3,15 +3,15 @@ ms.date: 10/30/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Устранение неполадок в DSC
 ms.openlocfilehash: 5cbe6496a6e0b9940f4b69e13d1e19e43b3915f0
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402411"
 ---
 # <a name="troubleshooting-dsc"></a>Устранение неполадок в DSC
 
-_Применяется к: Windows PowerShell 4.0, Windows PowerShell 5.0_
+_Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 В этом разделе описываются способы устранения неполадок в DSC.
 
@@ -100,8 +100,8 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-Как показано выше, основное имя журнала DSC — **Microsoft->Windows->DSC** (другие имена журналов в Windows для краткости здесь не показаны). Основное имя журнала добавляется к имени канала для получения полного имени журнала. Подсистема DSC ведет запись преимущественно в журналы трех типов: [операционные, аналитические и отладочные журналы](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Так как аналитический и отладочный журналы по умолчанию отключены, их следует включить в средстве просмотра событий. Чтобы сделать это, откройте средство просмотра событий, введя "Show-EventLog" в Windows PowerShell или нажав кнопку **Пуск** и выбрав пункты **Панель управления**, **Администрирование** и **Средство просмотра событий**.
-В средстве просмотра событий в меню **Представление** выберите команду **Показать аналитический и отладочный журналы**. Имя журнала для аналитического канала — **Microsoft-Windows-Dsc/Analytic**, для отладочного канала — **Microsoft-Windows-Dsc/Debug**. Кроме того, для включения журналов можно воспользоваться средством [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)), как показано в следующем примере.
+Как показано выше, основное имя журнала DSC — **Microsoft->Windows->DSC** (другие имена журналов в Windows для краткости здесь не показаны). Основное имя журнала добавляется к имени канала для получения полного имени журнала. DSC производит запись преимущественно в журналы трех типов: [операционные, аналитические и отладочные](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Так как аналитический и отладочный журналы по умолчанию отключены, их следует включить в средстве просмотра событий. Чтобы сделать это, откройте средство просмотра событий, введя команду "Show-EventLog" в Windows PowerShell или нажав кнопку **Пуск** и выбрав пункты **Панель управления**, **Администрирование** и **Средство просмотра событий**.
+В средстве просмотра событий в меню **Вид** выберите команду **Отобразить аналитический и отладочный журналы**. Имя журнала для аналитического канала — **Microsoft-Windows-Dsc/Analytic**, для отладочного канала — **Microsoft-Windows-Dsc/Debug**. Кроме того, для включения журналов можно воспользоваться средством [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)), как показано в следующем примере.
 
 ```powershell
 wevtutil.exe set-log "Microsoft-Windows-Dsc/Analytic" /q:true /e:true
@@ -192,9 +192,9 @@ TimeCreated                     Id LevelDisplayName Message
 12/2/2013 3:47:29 PM          4182 Information      Job {1A776B6A-5BAC-11E3-BF41-00155D553612} : ...
 ```
 
-С помощью [Where-Object](/powershell/module/microsoft.powershell.core/where-object) можно извлечь данные в переменную `$SeparateDscOperations`. Ниже приведены пять ситуаций, в которых может потребоваться извлечь данные для устранения неполадок DSC:
+С помощью `$SeparateDscOperations`Where-Object[ можно извлечь данные в переменную ](/powershell/module/microsoft.powershell.core/where-object). Ниже приведены пять ситуаций, в которых может потребоваться извлечь данные для устранения неполадок DSC:
 
-### <a name="1-operations-failures"></a>1: Сбои при выполнении операций
+### <a name="1-operations-failures"></a>1\. Сбой при выполнении операции
 
 Все события имеют [уровни серьезности](/windows/desktop/WES/defining-severity-levels). С помощью этих сведений можно определить события с ошибкой:
 
@@ -206,7 +206,7 @@ Count Name                      Group
    38 {5BCA8BE7-5BB6-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
 ```
 
-### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2: Подробные сведения об операциях за последние полчаса
+### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2\. Подробные сведения об операциях за последние полчаса
 
 `TimeCreated`, свойство каждого события Windows, содержит время создания события. Для фильтрации событий можно сравнить это свойство с конкретным объектом даты и времени:
 
@@ -219,7 +219,7 @@ Count Name                      Group
     1 {6CEC5B09-5BB0-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord}
 ```
 
-### <a name="3-messages-from-the-latest-operation"></a>3: Сообщения последней операции
+### <a name="3-messages-from-the-latest-operation"></a>3\. Сообщения последней операции
 
 Последняя операция хранится по первому индексу в группе массива `$SeparateDscOperations`.
 При запросе сообщений группы для индекса 0 возвращаются все сообщения для последней операции:
@@ -242,7 +242,7 @@ Displaying messages from built-in DSC resources:
  Message : [INCH-VM]:                            [] Consistency check completed.
 ```
 
-### <a name="4-error-messages-logged-for-recent-failed-operations"></a>4: Сообщения об ошибках в журнале для последних неудачных операций
+### <a name="4-error-messages-logged-for-recent-failed-operations"></a>4\. Сообщения об ошибках в журнале для последних неудачных операций
 
 `$SeparateDscOperations[0].Group` содержит набор событий для последней операции. Запустите командлет `Where-Object` для фильтрации событий в зависимости от их отображаемого уровня. Результаты сохраняются в переменной `$myFailedEvent`, которую можно разделить на составные части для получения сообщения о событии:
 
@@ -258,7 +258,7 @@ rameter to specify a configuration file and create a current configuration first
 Error Code : 1
 ```
 
-### <a name="5-all-events-generated-for-a-particular-job-id"></a>5: Все события, созданные для идентификатора конкретного задания.
+### <a name="5-all-events-generated-for-a-particular-job-id"></a>5\. Все события, созданные для идентификатора конкретного задания
 
 `$SeparateDscOperations` представляет собой массив групп, каждая из которых имеет имя, являющееся уникальным идентификатором задания. Запустив командлет `Where-Object`, можно извлечь группы событий, которые имеют идентификатор конкретного задания:
 
@@ -488,7 +488,7 @@ Get-Process -Id $dscProcessID | Stop-Process
 
 ## <a name="using-debugmode"></a>Использование DebugMode
 
-Можно настроить локальный диспетчер конфигурации DSC, так чтобы он всегда очищал кэш с помощью `DebugMode` при перезапуске хост-процесса. При установке значения **TRUE** ядро всегда перегружает ресурс PowerShell DSC. После завершения записи ресурса можно снова установить свойство равным **FALSE**, и подсистема вернется к кэшированию модулей.
+Можно настроить локальный диспетчер конфигурации DSC, так чтобы он всегда очищал кэш с помощью `DebugMode` при перезапуске хост-процесса. При установке значения **TRUE** ядро всегда перезагружает ресурс PowerShell DSC. После завершения записи ресурса можно снова установить свойство равным **FALSE**, и подсистема вернется к кэшированию модулей.
 
 Ниже приведена демонстрация автоматического обновления кэша с помощью `DebugMode`. Во-первых, просмотрите конфигурацию по умолчанию:
 

@@ -3,15 +3,15 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс WindowsProcess в DSC
 ms.openlocfilehash: e168cdebb04f7ec83b73a537a5f188299f40d8b7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952841"
 ---
 # <a name="dsc-windowsprocess-resource"></a>Ресурс WindowsProcess в DSC
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.x
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Ресурс **WindowsProcess** в DSC Windows PowerShell предоставляет механизм настройки процессов на целевом узле.
 
@@ -35,7 +35,7 @@ WindowsProcess [string] #ResourceName
 
 ## <a name="properties"></a>Свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
 |Аргументы |Указывает строку аргументов, которая будет передана процессу "как есть". Если необходимо передать несколько аргументов, поместите их все в эту строку. |
 |путь |Путь к исполняемому файлу процесса. Если это имя исполняемого файла (а не полный путь к нему), ресурс DSC будет искать переменную среды `$env:Path`, чтобы найти исполняемый файл. Если значение этого свойства — полный путь, ресурс DSC не будет использовать переменную среды `$env:Path` для поиска файла и вызовет ошибку в случае отсутствия пути. Относительные пути не допускаются. |
@@ -47,7 +47,7 @@ WindowsProcess [string] #ResourceName
 
 ## <a name="common-properties"></a>Общие свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Указывает, существует ли процесс. Чтобы гарантировать, что процесс существует, укажите для этого свойства значение **Present**. В противном случае укажите значение **Absent**. Значение по умолчанию — **Present**. |

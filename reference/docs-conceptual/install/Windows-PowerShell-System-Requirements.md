@@ -3,10 +3,10 @@ ms.date: 12/06/2019
 keywords: powershell,командлет
 title: Требования к системе для Windows PowerShell
 ms.openlocfilehash: 713b062916fec0c5c70ea9a7f95fea3570afb64a
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74953795"
 ---
 # <a name="windows-powershell-system-requirements"></a>Требования к системе для Windows PowerShell
@@ -23,14 +23,14 @@ Windows PowerShell 5.1 выполняется в следующих версия
 
 | Версия Windows | Требования к системе |
 | ----- | ----- |
-| Windows Server 2019 | Устанавливается по умолчанию |
+| Windows Server 2019 | Устанавливается по умолчанию |
 | Windows Server 2016 | Устанавливается по умолчанию |
 | Windows Server 2012 R2 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
-| Windows Server 2012 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows Server 2012 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 | Windows Server 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 | Windows 10 версии 1607 и выше | Устанавливается по умолчанию |
 | Windows 10 версии 1507, 1511 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
-| Windows 8.1 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows 8.1 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 | Windows 7 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 
 ### <a name="windows-powershell-50"></a>Windows PowerShell 5.0
@@ -39,14 +39,14 @@ Windows PowerShell 5.0 работает в следующих версиях W
 
 | Версия Windows | Требования к системе |
 | ----- | ----- |
-| Windows Server 2019 | Более поздняя версия устанавливается по умолчанию |
+| Windows Server 2019 | Более поздняя версия устанавливается по умолчанию |
 | Windows Server 2016 | Более поздняя версия устанавливается по умолчанию |
 | Windows Server 2012 R2 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
-| Windows Server 2012 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows Server 2012 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 | Windows Server 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 | Windows 10 версии 1607 и выше | Более поздняя версия устанавливается по умолчанию |
 | Windows 10 версии 1507, 1511 | Устанавливается по умолчанию |
-| Windows 8.1 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
+| Windows 8.1 | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 | Windows 7 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 5.1](https://aka.ms/wmf5download) |
 
 ### <a name="windows-powershell-40"></a>Windows PowerShell 4.0
@@ -55,7 +55,7 @@ Windows PowerShell 4.0 выполняется в следующих верси�
 
 | Версия Windows | Требования к системе |
 | ----- | ----- |
-| Windows 8.1 | Устанавливается по умолчанию |
+| Windows 8.1 | Устанавливается по умолчанию |
 | Windows Server 2012 R2 | Устанавливается по умолчанию |
 | Windows 7® с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) |
 | Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) |
@@ -67,7 +67,7 @@ Windows PowerShell 3.0 выполняется в следующих верси�
 | Версия Windows | Требования к системе |
 | ----- | ----- |
 | Windows 8 | Устанавливается по умолчанию |
-| Windows Server 2012 | Устанавливается по умолчанию |
+| Windows Server 2012 | Устанавливается по умолчанию |
 | Windows 7® с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) |
 | Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) |
 | Windows Server 2008 с пакетом обновления 2 (SP2) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) |
@@ -145,7 +145,7 @@ Windows PowerShell 2.0, Windows PowerShell 3.0 и Windows PowerShell 4.0 вы
 
 В Windows PE отсутствует служба **WinRM**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Начало работы с Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 

@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Начало работы с Windows PowerShell
 ms.openlocfilehash: fde0788a877cf93ee6423566c3275380474f4ee4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74117546"
 ---
 # <a name="getting-started-with-windows-powershell"></a>Начало работы с Windows PowerShell
@@ -20,7 +20,7 @@ Windows PowerShell — это оболочка командной строки W
 
 Это руководство по началу работы содержит вводные сведения о Windows PowerShell — язык, командлеты, поставщики и использование объектов.
 
-Содержание раздела:
+В этом разделе:
 
 - [Требования Windows PowerShell к системе](../install/Windows-PowerShell-System-Requirements.md)
 

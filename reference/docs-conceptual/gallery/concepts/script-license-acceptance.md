@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: powershell
 title: Запрос на принятие условий лицензии для сценариев
 ms.openlocfilehash: e7101eb6a480dd87965b7b9be9d49583042b603f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328085"
 ---
 # <a name="requiring-license-acceptance-for-scripts"></a>Запрос на принятие условий лицензии для сценариев
@@ -16,9 +16,9 @@ ms.locfileid: "71328085"
 
 Команды скрипта (Install-Script/Save-Script/Update-Script) поддерживают новый параметр -AcceptLicense. Его поведение аналогично действиям пользователя после прочтения лицензионного соглашения. Если параметр -AcceptLicense не указан, для пользователя будет отображаться файл license.txt зависимого модуля и запрос на принятие условий лицензионного соглашения.
 
-## <a name="examples"></a>ПРИМЕРЫ
+## <a name="examples"></a>Примеры
 
-### <a name="example-1-install-script-with-dependencies-requiring-license-acceptance"></a>Пример 1: установка скрипта с зависимостями, для использования которого требуется принять условия лицензионного соглашения
+### <a name="example-1-install-script-with-dependencies-requiring-license-acceptance"></a>Пример 1. Установка скрипта с зависимостями, для использования которого требуется принять условия лицензионного соглашения
 
 Скрипт ScriptRequireLicenseAcceptance зависит от модуля ModuleRequireLicenseAcceptance. Пользователю предлагается принять условия лицензионного соглашения.
 
@@ -46,7 +46,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 PS> Install-Script -Name ScriptRequireLicenseAcceptance -AcceptLicense
 ```
 
-## <a name="more-details"></a>Дополнительные подробности
+## <a name="more-details"></a>Дополнительные сведения
 
 - [Поддержка запроса на принятие условий лицензионного соглашения для модулей](module-license-acceptance.md)
 - [Поддержка запроса на принятие условий лицензионного соглашения в коллекции PowerShell](../how-to/working-with-packages/packages-that-require-license-acceptance.md)

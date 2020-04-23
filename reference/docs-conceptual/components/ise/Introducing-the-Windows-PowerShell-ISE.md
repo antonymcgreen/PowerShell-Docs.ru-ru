@@ -3,10 +3,10 @@ ms.date: 08/14/2018
 keywords: powershell,командлет
 title: Введение в интегрированную среду сценариев Windows PowerShell
 ms.openlocfilehash: 3e4471d0982ba4d7ef1a9d59906a9ff297f6f7cb
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736204"
 ---
 # <a name="the-windows-powershell-ise"></a>Интегрированная среда сценариев Windows PowerShell

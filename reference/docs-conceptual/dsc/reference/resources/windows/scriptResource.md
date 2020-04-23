@@ -3,15 +3,15 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс Script в DSC
 ms.openlocfilehash: e09e86011fa7dbb2a4d7f28b5032b4328b6f6ec2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953071"
 ---
 # <a name="dsc-script-resource"></a>Ресурс Script в DSC
 
-> Область применения. Windows PowerShell 4.0, Windows PowerShell 5.x
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Ресурс **Script** в DSC Windows PowerShell предоставляет механизм запуска блоков сценариев на целевых узлах. Ресурс **Script** имеет свойства **GetScript**, **SetScript** и **TestScript**, которые содержат блоки скриптов, определяемые вами для выполнения соответствующих операций DSC.
 
@@ -34,7 +34,7 @@ Script [string] #ResourceName
 
 ## <a name="properties"></a>Свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
 |GetScript |Блок скрипта, который возвращает текущее состояние узла. |
 |SetScript |Блок скрипта, который DSC использует для обеспечения совместимости, если узел не находится в нужном состоянии. |
@@ -43,7 +43,7 @@ Script [string] #ResourceName
 
 ## <a name="common-properties"></a>Общие свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
 |PsDscRunAsCredential |Задает учетные данные для выполнения всего ресурса от другого имени. |
@@ -73,7 +73,7 @@ DSC выполняет **TestScript**, чтобы определить, необ
 
 ## <a name="examples"></a>Примеры
 
-### <a name="example-1-write-sample-text-using-a-script-resource"></a>Пример 1: написание примера текста с помощью ресурса Script
+### <a name="example-1-write-sample-text-using-a-script-resource"></a>Пример 1. Написание примера текста с помощью ресурса Script
 
 Этот пример проверяет наличие `C:\TempFolder\TestFile.txt` на каждом узле. Если такой файл не существует, он создается с помощью `SetScript`. `GetScript` возвращает содержимое файла, а его возвращаемое значение не используется.
 

@@ -3,15 +3,15 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс WindowsFeature в DSC
 ms.openlocfilehash: d3384b1f45324df6b6b209f25b64d9d77615ad7f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954631"
 ---
 # <a name="dsc-windowsfeature-resource"></a>Ресурс WindowsFeature в DSC
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.x
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Ресурс **WindowsFeature** в DSC Windows PowerShell предоставляет механизм добавления и удаления ролей и компонентов на целевом узле.
 
@@ -33,9 +33,9 @@ WindowsFeature [string] #ResourceName
 
 ## <a name="properties"></a>Свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
-|Name |Указывает имя роли или компонента, которые необходимо добавить или удалить. Это свойство аналогично свойству **Name** командлета [Get-WindowsFeature](/powershell/module/servermanager/Get-WindowsFeature) и не является отображаемым именем роли или компонента. |
+|Имя |Указывает имя роли или компонента, которые необходимо добавить или удалить. Это свойство аналогично свойству **Name** командлета [Get-WindowsFeature](/powershell/module/servermanager/Get-WindowsFeature) и не является отображаемым именем роли или компонента. |
 |Учетные данные |Указывает учетные данные для добавления или удаления роли или компонента. |
 |IncludeAllSubFeature |Присвойте этому свойству значение `$true` для синхронизации состояния всех необходимых дополнительных компонентов с состоянием компонента, указанного в свойстве **Name**. |
 |LogPath |Указывает путь к файлу журнала, в котором поставщик ресурсов должен вести журнал работы. |
@@ -43,7 +43,7 @@ WindowsFeature [string] #ResourceName
 
 ## <a name="common-properties"></a>Общие свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Указывает, добавляется или удаляется роль или компонент. Чтобы гарантировать, что роль или компонент добавлены, присвойте этому свойству значение **Present**. Чтобы гарантировать, что роль или компонент удалены, присвойте этому свойству значение **Absent**. Значение по умолчанию — **Present**. |

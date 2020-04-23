@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,установка
 title: Усовершенствования отладки сценариев PowerShell
 ms.openlocfilehash: f1771a451ba671da2371fcfc95374e6131573ddc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147814"
 ---
 # <a name="improvements-in-powershell-script-debugging"></a>Усовершенствования отладки сценариев PowerShell
@@ -48,7 +48,7 @@ PowerShell 5.0 включает несколько улучшений для б
 
 ### <a name="attach-to-process-hosting-powershell"></a>Подключение к процессу, в котором размещается PowerShell
 
-Теперь вы можете подключиться к любому процессу компьютера с загруженным PowerShell. Чтобы сделать это, войдите в интерактивный сеанс с процессом узла. Дополнительная информация:
+Теперь вы можете подключиться к любому процессу компьютера с загруженным PowerShell. Чтобы сделать это, войдите в интерактивный сеанс с процессом узла. Дополнительные сведения см. в разделе:
 
 - [Enter-PSHostProcess](/powershell/module/Microsoft.PowerShell.Core/Enter-PSHostProcess)
 - [Exit-PSHostProcess](/powershell/module/Microsoft.PowerShell.Core/Exit-PSHostProcess)

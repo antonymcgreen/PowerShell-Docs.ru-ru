@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Прямой вызов методов ресурсов DSC
 ms.openlocfilehash: cf237f638593706e5959e2bcc0d851b0e55baf0e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954391"
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Прямой вызов методов ресурсов DSC
@@ -51,7 +51,7 @@ $result.ItemValue | fl
 
 >**Примечание**. Прямой вызов методов составного ресурса не поддерживается. Вместо этого вызывайте методы базовых ресурсов, входящих в составной ресурс.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 - [Написание пользовательских ресурсов DSC с использованием MOF](../resources/authoringResourceMOF.md)
 - [Написание пользовательских ресурсов DSC с использованием классов PowerShell](../resources/authoringResourceClass.md)
 - [Отладка ресурсов DSC](../troubleshooting/debugResource.md)

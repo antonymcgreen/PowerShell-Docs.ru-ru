@@ -3,10 +3,10 @@ ms.date: 12/23/2019
 keywords: powershell,командлет
 title: Сбор информации о компьютерах
 ms.openlocfilehash: 9407ff15b3c3ca6b3adab60d4d01d957c599e79e
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75737242"
 ---
 # <a name="collecting-information-about-computers"></a>Сбор информации о компьютерах
@@ -92,7 +92,7 @@ Source Description     HotFixID  InstalledBy   InstalledOn PSComputerName
        Security Update KB4048951 Administrator 12/16/2017  .
 ```
 
-Для получения более кратких сведений нужно исключить некоторые свойства. Параметр **Property** в `Get-CimInstance`позволяет выбрать только идентификаторы **HotFixID**, однако на самом деле возвращается больше данных, так как по умолчанию отображаются все метаданные:
+Для получения более кратких сведений нужно исключить некоторые свойства. Параметр `Get-CimInstance`Property**в**позволяет выбрать только идентификаторы **HotFixID**, однако на самом деле возвращается больше данных, так как по умолчанию отображаются все метаданные:
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixID
@@ -138,7 +138,7 @@ Get-CimInstance -ClassName Win32_OperatingSystem |
   Select-Object -Property BuildNumber,BuildType,OSType,ServicePackMajorVersion,ServicePackMinorVersion
 ```
 
-С параметром **Property** в `Select-Object` можно использовать подстановочные символы. Поскольку в рассматриваемом случае важны все свойства, имена которых начинаются с **Build** либо с **ServicePack**, указанную строку можно сократить:
+С параметром `Select-Object`Property**в** можно использовать подстановочные символы. Поскольку в рассматриваемом случае важны все свойства, имена которых начинаются с **Build** либо с **ServicePack**, указанную строку можно сократить:
 
 ```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object -Property Build*,OSType,ServicePack*

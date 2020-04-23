@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Работа с файлами, папками и разделами реестра
 ms.openlocfilehash: 0c8716c384827d0816e2847ff81232c14638681b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030761"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Работа с файлами, папками и разделами реестра
@@ -43,7 +43,7 @@ Get-Command -Name Get-ChildItem -Syntax
 
 ### <a name="listing-all-contained-items--recurse"></a>Перечисление всех элементов в контейнере (-Recurse)
 
-Чтобы увидеть оба элемента в папке Windows и все элементы во вложенных папках, используйте параметр **Recurse** для **Get-ChildItem**. В списке отображается все, что находится в папке Windows, а также элементы в ее вложенных папках. Например:
+Чтобы увидеть оба элемента в папке Windows и все элементы во вложенных папках, используйте параметр **Recurse** для **Get-ChildItem**. В списке отображается все, что находится в папке Windows, а также элементы в ее вложенных папках. Пример:
 
 ```
 PS> Get-ChildItem -Path C:\WINDOWS -Recurse
@@ -70,7 +70,7 @@ assembly
 
 ### <a name="forcibly-listing-hidden-items--force"></a>Принудительное перечисление скрытых элементов (-Force)
 
-В выходных данных команды **Get-ChildItem** не отображаются элементы, которые обычно невидимы в проводнике или Cmd.exe. Чтобы показать скрытые элементы, используйте параметр **Force** для **Get-ChildItem**. Например:
+В выходных данных команды **Get-ChildItem** не отображаются элементы, которые обычно невидимы в проводнике или Cmd.exe. Чтобы показать скрытые элементы, используйте параметр **Force** для **Get-ChildItem**. Пример:
 
 ```powershell
 Get-ChildItem -Path C:\Windows -Force

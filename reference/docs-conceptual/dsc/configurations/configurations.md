@@ -3,15 +3,15 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Конфигурации DSC
 ms.openlocfilehash: d7749ec88f9cca3e29c6b38d61fb73776af7ceb4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954501"
 ---
 # <a name="dsc-configurations"></a>Конфигурации DSC
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Конфигурации DSC — это сценарии PowerShell, определяющие особый тип функции.
 Для определения конфигурации используйте ключевое слово PowerShell **Configuration**.
@@ -173,8 +173,8 @@ Mode                LastWriteTime         Length Name
 
 Из-за существующих различий ресурсы DSC должны храниться в PowerShell 4.0. Дополнительные сведения см. в разделе о [расположении ресурса](import-dscresource.md#resource-location).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Общие сведения о службе настройки требуемого состояния Windows PowerShell](../overview/overview.md)
+- [Обзор Windows PowerShell Desired State Configuration](../overview/overview.md)
 - [Ресурсы DSC](../resources/resources.md)
 - [Настройка локального диспетчера конфигураций](../managing-nodes/metaConfig.md)

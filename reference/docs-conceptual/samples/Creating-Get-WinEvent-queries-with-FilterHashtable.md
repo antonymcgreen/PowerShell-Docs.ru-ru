@@ -2,10 +2,10 @@
 ms.date: 09/13/2019
 title: Создание запросов Get-WinEvent с помощью FilterHashtable
 ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73444392"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Создание запросов Get-WinEvent с помощью FilterHashtable
@@ -54,15 +54,15 @@ Get-WinEvent -FilterHashtable @{
 | -------------- | --------------- | ---------------------------- |
 | LogName        | `<String[]>`    | Да                          |
 | ProviderName   | `<String[]>`    | Да                          |
-| путь           | `<String[]>`    | Нет                           |
-| Keywords       | `<Long[]>`      | Нет                           |
-| Код             | `<Int32[]>`     | Нет                           |
-| Уровень          | `<Int32[]>`     | Нет                           |
-| StartTime      | `<DateTime>`    | Нет                           |
-| EndTime        | `<DateTime>`    | Нет                           |
-| UserID         | `<SID>`         | Нет                           |
-| Данные           | `<String[]>`    | Нет                           |
-| `<named-data>` | `<String[]>`    | Нет                           |
+| путь           | `<String[]>`    | нет                           |
+| Keywords       | `<Long[]>`      | нет                           |
+| ID             | `<Int32[]>`     | нет                           |
+| Level          | `<Int32[]>`     | нет                           |
+| StartTime      | `<DateTime>`    | нет                           |
+| EndTime        | `<DateTime>`    | нет                           |
+| UserID         | `<SID>`         | нет                           |
+| Данные           | `<String[]>`    | нет                           |
+| `<named-data>` | `<String[]>`    | нет                           |
 
 Ключ `<named-data>` представляет именованное поле данных событий. Например, событие Perflib 1008 может содержать следующие данные о событии:
 
@@ -108,7 +108,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-Если запрос должен получить данные из архивных журналов событий, используйте ключ **Path**. Значение **Path** указывает полный путь к файлу журнала. Дополнительные сведения см. в записи блога **специалистов по сценариям** [Use PowerShell to Parse Saved Event Logs for Errors](https://devblogs.microsoft.com/scripting/use-powershell-to-parse-saved-event-logs-for-errors) (Анализ сохраненных журналов событий на наличие ошибок с помощью PowerShell).
+Если запрос должен получить данные из архивных журналов событий, используйте ключ **Path**. Значение **Path** указывает полный путь к файлу журнала. Дополнительные сведения см. в записи блога **специалистов по сценариям**[Use PowerShell to Parse Saved Event Logs for Errors](https://devblogs.microsoft.com/scripting/use-powershell-to-parse-saved-event-logs-for-errors) (Анализ сохраненных журналов событий на наличие ошибок с помощью PowerShell).
 
 ## <a name="using-enumerated-values-in-a-hash-table"></a>Использование перечисляемых значений в хэш-таблице
 
@@ -155,7 +155,7 @@ WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEv
 
 Имена **ключевых слов** и перечисляемые значения выглядят следующим образом:
 
-| Name             |  Значение            |
+| Имя             |  Значение            |
 | ---------------- | ------------------|
 | AuditFailure     | 4503599627370496  |
 | AuditSuccess     | 9007199254740992  |
@@ -165,7 +165,7 @@ WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEv
 | WdiDiagnostic    | 1125899906842624  |
 | WdiContext       | 562949953421312   |
 | ResponseTime     | 281474976710656   |
-| Нет             | 0                 |
+| None             | 0                 |
 
 Обновите хэш-таблицу и добавьте пару **ключ — значение** с ключом **Keywords** и значением перечисления **EventLogClassic** **36028797018963968** .
 
@@ -236,12 +236,12 @@ Warning       Property   static System.Diagnostics.Eventing.Reader.StandardEvent
 
 Имена ключа **Level** и перечисляемые значения выглядят следующим образом:
 
-| Name           | Значение |
+| Имя           | Значение |
 | -------------- | ----- |
-| Verbose        |   5   |
+| Подробный        |   5   |
 | Informational  |   4   |
 | Предупреждение        |   3   |
-| Ошибка          |   2   |
+| Error          |   2   |
 | Critical       |   1   |
 | LogAlways      |   0   |
 

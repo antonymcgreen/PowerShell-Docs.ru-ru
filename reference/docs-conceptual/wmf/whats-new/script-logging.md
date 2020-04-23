@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,установка
 title: Трассировка сценариев и ведения журналов для них
 ms.openlocfilehash: 6b7e5022cb4c974da5ddb3d670b5808dc9fb7bdc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147804"
 ---
 # <a name="script-tracing-and-logging"></a>Трассировка сценариев и ведения журналов для них
@@ -17,13 +17,13 @@ ms.locfileid: "71147804"
 
 Доступны следующие события.
 
-| Канал |                               Operational                               |
+| Channel |                               Операционный                               |
 | ------- | ----------------------------------------------------------------------- |
-| Уровень   | Verbose                                                                 |
-| Код операции  | Создать                                                                  |
+| Level   | Подробный                                                                 |
+| Код операции  | Создание                                                                  |
 | Задача    | CommandStart                                                            |
 | Ключевое слово | Пространство выполнения                                                                |
-| Код события | Engine_ScriptBlockCompiled (0x1008 = 4104)                              |
+| EventId | Engine_ScriptBlockCompiled (0x1008 = 4104)                              |
 | Сообщение | Создание текста Scriptblock (%1 из %2): </br> %3 </br> ИД ScriptBlock: %4 |
 
 
@@ -31,13 +31,13 @@ ms.locfileid: "71147804"
 
 При включении подробного ведения журналов функция записывает начальный и конечный маркеры:
 
-| Канал |                                 Operational                                |
+| Channel |                                 Операционный                                |
 | ------- | -------------------------------------------------------------------------- |
-| Уровень   | Verbose                                                                    |
+| Level   | Подробный                                                                    |
 | Код операции  | Открыть / Закрыть                                                               |
 | Задача    | CommandStart / CommandStop                                                 |
 | Ключевое слово | Пространство выполнения                                                                   |
-| Код события | ScriptBlock\_Invoke\_Start\_Detail (0x1009 = 4105) / </br> ScriptBlock\_Invoke\_Complete\_Detail (0x100A = 4106) |
+| EventId | ScriptBlock\_Invoke\_Start\_Detail (0x1009 = 4105) / </br> ScriptBlock\_Invoke\_Complete\_Detail (0x100A = 4106) |
 | Сообщение | Запущен/Завершен вызов ИД ScriptBlock: %1 </br> ИД пространства выполнения: %2 |
 
 Идентификатор — это GUID, представляющий блок сценария (который может быть связан с идентификатором событиями 0x1008), а идентификатор пространства выполнения представляет пространство, в котором был запущен этот блок скрипта.

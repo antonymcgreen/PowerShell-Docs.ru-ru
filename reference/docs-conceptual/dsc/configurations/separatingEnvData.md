@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Разделение данных конфигурации и данных среды
 ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954441"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Разделение данных конфигурации и данных среды
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Отделение данных, используемых в конфигурации DSC, от самой конфигурации с помощью данных конфигурации может быть полезным.
 Это позволит использовать одну конфигурацию для нескольких сред.
@@ -68,7 +68,7 @@ $MyData =
 MyDscConfiguration -ConfigurationData $MyData
 ```
 
-В последней строке этого сценария выполняется компиляция конфигурации. Для этого в качестве значения параметра **ConfigurationData** передается `$MyData`.
+В последней строке этого сценария выполняется компиляция конфигурации. Для этого в качестве значения параметра `$MyData`ConfigurationData**передается**.
 
 В результате этого создаются два MOF-файла:
 
@@ -312,7 +312,7 @@ configuration WebsiteConfig
 ```
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 - [Использование данных конфигурации](configData.md)
 - [Параметры учетных данных в данных конфигурации](configDataCredentials.md)
 - [Конфигурации DSC](configurations.md)

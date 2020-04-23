@@ -3,13 +3,13 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,настройка,служба,установка
 title: Создание, компиляция и применение конфигурации
 ms.openlocfilehash: eb61e518762b9f13e617ecd4711bfef7a86814ec
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "76818164"
 ---
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 # <a name="write-compile-and-apply-a-configuration"></a>Создание, компиляция и применение конфигурации
 

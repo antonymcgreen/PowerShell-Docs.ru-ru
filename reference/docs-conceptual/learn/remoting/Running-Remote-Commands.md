@@ -3,10 +3,10 @@ ms.date: 08/14/2018
 keywords: powershell,командлет
 title: Выполнение удаленных команд
 ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030316"
 ---
 # <a name="running-remote-commands"></a>Выполнение удаленных команд
@@ -118,7 +118,7 @@ $s = New-PSSession -ComputerName Server01, Server02
 Invoke-Command -Session $s {$h = Get-HotFix}
 ```
 
-Теперь вы можете использовать данные в переменной `$h` с другими командами в том же сеансе. Результаты отобразятся на локальном компьютере. Например:
+Теперь вы можете использовать данные в переменной `$h` с другими командами в том же сеансе. Результаты отобразятся на локальном компьютере. Пример:
 
 ```powershell
 Invoke-Command -Session $s {$h | where {$_.InstalledBy -ne "NTAUTHORITY\SYSTEM"}}
@@ -132,7 +132,7 @@ Windows PowerShell включает поставщик WSMan. Поставщик
 
 См. дополнительные сведения о [поставщике WSMan](https://technet.microsoft.com/library/dd819476.aspx) и [командлетах WS-Management](/powershell/module/microsoft.powershell.core/about/about_ws-management_cmdlets) или введите команду `Get-Help wsman` в консоли Windows PowerShell.
 
-Дополнительная информация:
+Дополнительные сведения см. в разделе:
 
 - [Часто задаваемые вопросы об удаленном взаимодействии](https://technet.microsoft.com/library/dd315359.aspx)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
@@ -140,7 +140,7 @@ Windows PowerShell включает поставщик WSMan. Поставщик
 
 Справку по ошибкам службы удаленного взаимодействия см. в статье [about_Remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [about_Remote](https://technet.microsoft.com/library/9b4a5c87-9162-4adf-bdfe-fbc80b9b8970)
 - [about_Remote_FAQ](https://technet.microsoft.com/library/e23702fd-9415-4a98-9975-390a4d3adc42)

@@ -4,10 +4,10 @@ contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Модули с совместимыми выпусками PowerShell
 ms.openlocfilehash: 425588c168a4f864fdc0c52aa53cfd748b80dc98
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328505"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Модули с совместимыми выпусками PowerShell
@@ -239,7 +239,7 @@ Find-Module -Tag PSEdition_Desktop
 Find-Module -Tag PSEdition_Core
 ```
 
-## <a name="more-details"></a>Дополнительные подробности
+## <a name="more-details"></a>Дополнительные сведения
 
 [Сценарии с PSEditions](script-psedition-support.md)
 

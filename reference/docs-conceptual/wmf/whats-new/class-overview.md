@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,установка
 title: Создание настраиваемых типов с помощью классов PowerShell
 ms.openlocfilehash: c2c50fb65ce4931fcf6ae529b4146df391c831c4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147844"
 ---
 # <a name="creating-custom-types-using-powershell-classes"></a>Создание настраиваемых типов с помощью классов PowerShell
@@ -310,7 +310,7 @@ $b.DoSomething(42)
 
 Свойства, использующие атрибуты проверки или преобразования аргументов (например, `[ValidateSet("aaa")]`) работают должным образом.
 
-### <a name="hidden"></a>Hidden
+### <a name="hidden"></a>Скрытый
 
 Добавлено новое ключевое слово `Hidden`. `Hidden` может применяться к свойствам и методам (включая конструкторы).
 
@@ -318,7 +318,7 @@ $b.DoSomething(42)
 
 Добавлен новый атрибут **System.Management.Automation.HiddenAttribute**, чтобы код C\# мог иметь ту же семантику в PowerShell.
 
-### <a name="return-types"></a>Типы возвращаемых значений
+### <a name="return-types"></a>Типы возвращаемых данных
 
 Тип возвращаемого значения является контрактом. Возвращаемое значение преобразуется к ожидаемому типу. Если тип возвращаемого значения не указан, ему присваивается значение **void**. Потоковая передача объектов отсутствует. Записать объекты в конвейер специально или случайно невозможно.
 

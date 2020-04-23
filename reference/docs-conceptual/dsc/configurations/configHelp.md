@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Запись поддержки конфигураций DSC
 ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954141"
 ---
 # <a name="writing-help-for-dsc-configurations"></a>Запись поддержки конфигураций DSC
@@ -159,7 +159,7 @@ REMARKS
 > [!NOTE]
 > PowerShell автоматически создает поля синтаксиса и атрибуты параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Конфигурации DSC](configurations.md)
 - [Создание, компиляция и применение конфигурации](write-compile-apply-configuration.md)

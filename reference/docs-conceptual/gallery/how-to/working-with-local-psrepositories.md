@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery,psget
 title: Работа с локальными репозиториями PowerShell
 ms.openlocfilehash: c1bd905674ae76a3badd3eff50780f0e1bb5fc64
-ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75415825"
 ---
 # <a name="working-with-private-powershellget-repositories"></a>Работа с частными репозиториями PowerShellGet

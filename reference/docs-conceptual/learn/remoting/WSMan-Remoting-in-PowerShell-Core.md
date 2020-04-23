@@ -3,10 +3,10 @@ title: Удаленное взаимодействие с WS-Management (WSMan) 
 description: Удаленное взаимодействие в PowerShell Core с помощью WSMan
 ms.date: 08/06/2018
 ms.openlocfilehash: e5f00128bc8ebc1b432cc77a5896a9e09d684109
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "62058885"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>Удаленное взаимодействие с WS-Management (WSMan) в PowerShell Core
@@ -24,7 +24,7 @@ ms.locfileid: "62058885"
 Сценарий установки — это временное решение, пока в `Enable-PSRemoting` не будет добавлена дополнительная функциональность для выполнения данной задачи.
 Дополнительные сведения см. в описании вопроса [1193](https://github.com/PowerShell/PowerShell/issues/1193).
 
-### <a name="script-actions"></a>Действия сценария
+### <a name="script-actions"></a>Элемент "Действия скрипта"
 
 Сценарий
 
@@ -56,7 +56,7 @@ Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 .\Install-PowerShellRemoting.ps1 -PowerShellHome "C:\Program Files\PowerShell\6.0.0\"
 ```
 
-**Примечание:** Сценарий регистрации удаленного взаимодействия перезапускает WinRM, поэтому все существующие сеансы PSRP завершаются сразу после его запуска. Если запустить его во время удаленного сеанса, соединение будет разорвано.
+**Примечание**. Сценарий регистрации удаленного взаимодействия перезапускает WinRM, поэтому сразу после его запуска все существующие сеансы PSRP завершаются. Если запустить его во время удаленного сеанса, соединение будет разорвано.
 
 ## <a name="how-to-connect-to-the-new-endpoint"></a>Подключение к новой конечной точке
 

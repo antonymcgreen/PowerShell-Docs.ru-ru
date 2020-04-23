@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 5.0 и выше
 ms.openlocfilehash: a014e04fc5fbf2e813d9b0d79f39fe5aa3836f86
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500732"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 5.0 и выше
@@ -244,7 +244,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-Чтобы указать сервер отчетов, используйте блок **ReportRepositoryWeb**. Сервер отчетов не может быть SMB-сервером. Следующая метаконфигурация настраивает опрашивающий клиент для получения конфигураций из **CONTOSO-PullSrv** и ресурсов из **CONTOSO-ResourceSrv**, а также для отправки отчетов о состоянии на **CONTOSO-ReportSrv**:
+Чтобы указать сервер отчетов, используйте блок **ReportRepositoryWeb**. Сервер отчетов не может быть SMB-сервером. Следующая метаконфигурация настраивает для опрашивающего клиента получение конфигураций с **CONTOSO-PullSrv**, ресурсов — с **CONTOSO-ResourceSrv**, а также отправку отчетов о состоянии на **CONTOSO-ReportSrv**.
 
 ```powershell
 [DSCLocalConfigurationManager()]

@@ -3,15 +3,15 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Методы Get, Test, Set
 ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278429"
 ---
 # <a name="get-test-set"></a>Методы Get, Test, Set
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 ![Получение, тестирования и настройка](media/get-test-set/get-test-set.png)
 

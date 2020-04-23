@@ -3,10 +3,10 @@ ms.date: 08/27/2018
 keywords: powershell,командлет
 title: Получение подробной справки
 ms.openlocfilehash: e722eb8a0ca13e3d2de864314775a0a9fa578390
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417655"
 ---
 # <a name="getting-detailed-help-information"></a>Получение подробной справки
@@ -23,13 +23,13 @@ PowerShell содержит подробные статьи справки, об
 Get-Help Get-ChildItem
 ```
 
-или
+или диспетчер конфигурации служб
 
 ```powershell
 Get-ChildItem -?
 ```
 
-Справку можно получить и по самому командлету Get-Help. Например:
+Справку можно получить и по самому командлету Get-Help. Пример:
 
 ```powershell
 Get-Help Get-Help
@@ -48,7 +48,7 @@ Get-Help -Category Cmdlet
 man Get-ChildItem
 ```
 
-или
+или диспетчер конфигурации служб
 
 ```powershell
 help Get-ChildItem
@@ -173,7 +173,7 @@ Online version: https://go.microsoft.com/fwlink/?LinkId=821564
 
 Сведения об обеспечении интернет-поддержки собственных статей справки см. в разделе [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [about_Functions](/powershell/module/microsoft.powershell.core/about/about_functions)
 - [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts)

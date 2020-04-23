@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Составные ресурсы — использование конфигурации DSC как ресурса
 ms.openlocfilehash: 79fe94bd5bab8fa460714e5994d2e2487f302410
-ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75415890"
 ---
-# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Составные ресурсы: использование конфигурации DSC как ресурса
+# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Составные ресурсы: использование DSC как ресурса
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 На практике конфигурации часто становятся длинными и сложными — вызывают множество разных ресурсов и задают большое количество свойств. Для решения этой проблемы можно использовать настройку требуемого состояния (DSC) Windows PowerShell как ресурс для других конфигураций. Это называется составным ресурсом. Составной ресурс — это конфигурация DSC с возможностью настройки параметров. Параметры конфигурации выступают как свойства ресурса. Конфигурация сохраняется в виде файла с расширением `.schema.psm1`. Он используется вместо схемы MOF и сценария ресурса в типовом ресурсе DSC. Дополнительные сведения см. в статье [Ресурсы DSC](resources.md).
 

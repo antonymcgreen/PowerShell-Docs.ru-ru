@@ -4,10 +4,10 @@ description: В этой статье описывается, как предо�
 ms.date: 03/05/2020
 ms.topic: conceptual
 ms.openlocfilehash: fa2c74d55cdcd779646c50d58f7705f7a4c33542
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79060299"
 ---
 # <a name="how-to-file-a-powershell-docs-issue"></a>Как сообщить о проблеме с PowerShell-Docs

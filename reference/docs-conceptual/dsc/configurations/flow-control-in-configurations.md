@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Условные операторы и циклы в конфигурациях
 ms.openlocfilehash: 86f75be4a3d1c1760dd6269335431e8ab9fd8d09
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736902"
 ---
 # <a name="conditional-statements-and-loops-in-a-configuration"></a>Условные операторы и циклы в конфигурации

@@ -3,10 +3,10 @@ title: Установка PowerShell в Linux
 description: Сведения об установке PowerShell в различных дистрибутивах Linux
 ms.date: 03/09/2020
 ms.openlocfilehash: 31da32b81dbbcf4b46fd5f0cd9d921f28f434763
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500556"
 ---
 # <a name="installing-powershell-on-linux"></a>Установка PowerShell в Linux
@@ -590,7 +590,7 @@ PowerShell можно получить из пользовательского �
 
 ### <a name="getting-snapd"></a>Установка Snap
 
-Утилита `snapd` необходима для запуска snap-пакетов. Чтобы убедиться, что утилита `snapd` установлена, воспользуйтесь [этими инструкциями](https://docs.snapcraft.io/core/install).
+Утилита `snapd` необходима для запуска snap-пакетов. Чтобы убедиться, что утилита [ установлена, воспользуйтесь ](https://docs.snapcraft.io/core/install)этими инструкциями`snapd`.
 
 ### <a name="installation-via-snap"></a>Установка с использованием Snap
 

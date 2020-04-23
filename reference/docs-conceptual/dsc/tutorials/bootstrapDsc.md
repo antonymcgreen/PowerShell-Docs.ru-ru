@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка виртуальных машин при начальной загрузке с помощью DSC
 ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954611"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Настройка виртуальных машин при начальной загрузке с помощью DSC
@@ -66,7 +66,7 @@ Configuration SampleIISInstall
 
 ### <a name="to-inject-the-configuration-mof-document-on-the-vhd"></a>Добавление документа MOF конфигурации в VHD
 
-1. Подключите VHD, в который нужно добавить конфигурацию, вызвав командлет [Mount-VHD](/powershell/module/hyper-v/mount-vhd). Например:
+1. Подключите VHD, в который нужно добавить конфигурацию, вызвав командлет [Mount-VHD](/powershell/module/hyper-v/mount-vhd). Пример:
 
    ```powershell
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -84,13 +84,13 @@ Configuration SampleIISInstall
    ```
 
 5. Будет создан файл `localhost.mof` в новой папке с именем `SampleIISInstall`.
-   Переименуйте и переместите этот файл в нужное место на VHD как `Pending.mof` при помощи командлета [Move-Item](/powershell/module/microsoft.powershell.management/move-item). Например:
+   Переименуйте и переместите этот файл в нужное место на VHD как `Pending.mof` при помощи командлета [Move-Item](/powershell/module/microsoft.powershell.management/move-item). Пример:
 
    ```powershell
        Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\System32\Configuration\Pending.mof
    ```
 
-6. Отключите VHD, вызвав командлет [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd). Например:
+6. Отключите VHD, вызвав командлет [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd). Пример:
 
    ```powershell
    Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -134,7 +134,7 @@ configuration PullClientBootstrap
 
 ### <a name="to-inject-the-metaconfiguration-mof-document-on-the-vhd"></a>Добавление документа MOF метаконфигурации в VHD
 
-1. Подключите VHD, в который нужно добавить метаконфигурацию, вызвав командлет [Mount-VHD](/powershell/module/hyper-v/mount-vhd). Например:
+1. Подключите VHD, в который нужно добавить метаконфигурацию, вызвав командлет [Mount-VHD](/powershell/module/hyper-v/mount-vhd). Пример:
 
    ```powershell
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -160,7 +160,7 @@ configuration PullClientBootstrap
    Move-Item -Path C:\DSCTest\PullClientBootstrap\localhost.meta.mof -Destination E:\Windows\System32\Configuration\MetaConfig.mof
    ```
 
-7. Отключите VHD, вызвав командлет [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd). Например:
+7. Отключите VHD, вызвав командлет [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd). Пример:
 
    ```powershell
    Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -175,7 +175,7 @@ configuration PullClientBootstrap
 
 По умолчанию раздел `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DSCAutomationHostEnabled` имеет значение 2, что позволяет запускать конфигурацию DSC, если компьютер находится в состоянии ожидания или в текущем состоянии. Если запускать конфигурацию при начальной загрузке не следует, необходимо задать для этого раздела значение 0.
 
-1. Подключите VHD, вызвав командлет [Mount-VHD](/powershell/module/hyper-v/mount-vhd). Например:
+1. Подключите VHD, вызвав командлет [Mount-VHD](/powershell/module/hyper-v/mount-vhd). Пример:
 
    ```powershell
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -206,7 +206,7 @@ configuration PullClientBootstrap
    reg unload HKLM\Vhd
    ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Конфигурации DSC](../configurations/configurations.md)
 

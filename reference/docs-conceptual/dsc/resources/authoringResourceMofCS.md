@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Создание ресурса DSC в C#
 ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417696"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Создание ресурса DSC в C\#
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Как правило, настраиваемый ресурс настройки требуемого состояния (DSC) Windows PowerShell реализуется в сценарии PowerShell. Кроме того, для реализации настраиваемого ресурса DSC можно писать командлеты на языке C#. Вводные сведения о написании командлетов на языке C# см. в статье [Написание командлетов Windows PowerShell](/powershell/scripting/developer/windows-powershell).
 
@@ -37,7 +37,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 ### <a name="setting-up-the-visual-studio-project"></a>Настройка проекта Visual Studio
 #### <a name="setting-up-a-cmdlet-project"></a>Настройка проекта командлета
 
-1. Откройте Visual Studio.
+1. Запустите Visual Studio.
 1. Создайте проект C# и укажите имя.
 1. Выберите в списке доступных шаблонов проектов **библиотеку классов**.
 1. Нажмите кнопку **ОК**.
@@ -277,8 +277,8 @@ $env: psmodulepath (folder)
                 |- MSFT_XDemoFile.schema.mof (file, required)
 ```
 
-### <a name="see-also"></a>См. также
-#### <a name="concepts"></a>Концепции
+### <a name="see-also"></a>См. также:
+#### <a name="concepts"></a>Основные понятия
 [Написание пользовательских ресурсов DSC с использованием MOF](authoringResourceMOF.md)
-#### <a name="other-resources"></a>Прочие ресурсы
+#### <a name="other-resources"></a>Другие ресурсы
 [Запись командлета Windows PowerShell](/powershell/scripting/developer/windows-powershell)

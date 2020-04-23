@@ -3,10 +3,10 @@ ms.date: 01/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Опрашивающая служба DSC
 ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500724"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Опрашивающая служба Desired State Configuration
@@ -75,7 +75,7 @@ ms.locfileid: "80500724"
 > [!NOTE]
 > Поддержка SQL Server не будет добавлена в предыдущие версии WMF 5.1 (или более ранние версии) и будет доступна только в Windows Server версии 17090 и более поздних версиях.
 
-Чтобы настроить на опрашивающем сервере использование SQL Server, установите значение `$true` для параметра **SqlProvider** и допустимую строку подключения SQL Server для параметра **SqlConnectionString**. Дополнительные сведения см. в разделе [Строки подключения SqlClient](/dotnet/framework/data/adonet/connection-string-syntax#sqlclient-connection-strings).
+Чтобы настроить на опрашивающем сервере использование SQL Server, установите значение **для параметра**SqlProvider`$true` и допустимую строку подключения SQL Server для параметра **SqlConnectionString**. Дополнительные сведения см. в разделе [Строки подключения SqlClient](/dotnet/framework/data/adonet/connection-string-syntax#sqlclient-connection-strings).
 Чтобы ознакомиться с настройкой SQL Server с помощью **xDscWebService**, прочтите статью [Использование ресурса xDscWebService](#using-the-xdscwebservice-resource) и просмотрите файл [Sample_xDscWebServiceRegistration_UseSQLProvider.ps1 в GitHub](https://github.com/dsccommunity/xPSDesiredStateConfiguration/blob/master/source/Examples/Sample_xDscWebServiceRegistration_UseSQLProvider.ps1).
 
 ### <a name="using-the-xdscwebservice-resource"></a>Использование ресурса xDSCWebService
@@ -278,5 +278,5 @@ MOF-файл конфигурации необходимо сопоставит�
 - [Обзор Windows PowerShell Desired State Configuration](../overview/overview.md)
 - [Активированные конфигурации](enactingConfigurations.md)
 - [Использование сервера отчетов DSC](reportServer.md)
-- [[MS-DSCPM]: Требуемое состояние конфигурации протокола с активным опросом сообщений](https://docs.microsoft.com/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9)
-- [[MS-DSCPM]: Требуемое состояние конфигурации протокола с активным опросом сообщений (поправки)](https://docs.microsoft.com/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5)
+- [[MS-DSCPM]: Desired State Configuration Pull Model Protocol](https://docs.microsoft.com/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9) (MS-DSCPM: Требуемое состояние конфигурации протокола с активным опросом сообщений)
+- [[MS-DSCPM]: Desired State Configuration Pull Model Protocol](https://docs.microsoft.com/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5) (MS-DSCPM: Требуемое состояние конфигурации протокола с активным опросом сообщений об ошибке)

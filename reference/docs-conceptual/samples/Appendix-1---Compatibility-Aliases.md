@@ -3,10 +3,10 @@ ms.date: 09/09/2019
 keywords: powershell,командлет
 title: Приложение 1. Псевдонимы совместимости
 ms.openlocfilehash: 2351fdf23711fe1417f7e3fc3cca5b642d5a59fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70848162"
 ---
 # <a name="appendix-1---compatibility-aliases"></a>Приложение 1. Псевдонимы совместимости
@@ -16,7 +16,7 @@ PowerShell имеет несколько псевдонимов, позволя�
 
 |Команда cmd.exe|Команда UNIX|Командлет PowerShell|Псевдоним PowerShell|
 |---------------|----------------|--------------|------------|
-|**cls**|**clear**|`Clear-Host` (функция)|`cls`|
+|**cls**|**пусто**|`Clear-Host` (функция)|`cls`|
 |**copy**|**cp**|`Copy-Item`|`cpi`|
 |**dir**|**ls**|`Get-ChildItem`|`gci`|
 |**type**|**cat**|`Get-Content`|`gc`|

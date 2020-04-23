@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Применение, получение и тестирование конфигураций на узле
 ms.openlocfilehash: 41f8d2d75d3dd9621de615e7999c2690cb8ce44a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953841"
 ---
 # <a name="apply-get-and-test-configurations-on-a-node"></a>Применение, получение и тестирование конфигураций на узле
@@ -219,6 +219,6 @@ Remove-DSCConfigurationDocument -Stage Current
 Publish-DscConfiguration -Path '$home\WebServer' -ComputerName "ContosoWebServer" -Credential (get-credential Contoso\webadministrator)
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Получение, тестирование и настройка](../resources/get-test-set.md)

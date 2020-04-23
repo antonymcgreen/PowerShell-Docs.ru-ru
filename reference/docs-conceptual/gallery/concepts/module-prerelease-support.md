@@ -4,10 +4,10 @@ contributor: keithb
 keywords: коллекция,powershell,командлет,psget
 title: Предварительные версии модулей
 ms.openlocfilehash: eced067dd21082de0db653daf3b838217154f1dd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328145"
 ---
 # <a name="prerelease-module-versions"></a>Предварительные версии модулей
@@ -123,7 +123,7 @@ Version         Name          Repository  Description
 1.9.0-alpha     TestPackage   PSGallery   Package used to validate changes to the PowerShe...
 ```
 
-Не поддерживается одновременная установка модулей, версии которых отличаются только значением предварительной версии. При использовании PowerShellGet разные версии одного модуля могут быть установлены одновременно. Каждая из них помещается в папку с именем, использующим значение ModuleVersion. ModuleVersion используется для имени папки без добавления строки предварительной версии. Если пользователь установит модуль MyModule версии 2.5.0-alpha, этот модуль будет помещен в папку `MyModule\2.5.0`. Если пользователь затем установит версию 2.5.0-beta, содержимое папки `MyModule\2.5.0` будет **перезаписано**. Одним из преимуществ такого подхода является то, что нет необходимости удалять предварительную версию после установки версии, готовой к использованию. Пример ниже иллюстрирует работу этого правила.
+Не поддерживается одновременная установка модулей, версии которых отличаются только значением предварительной версии. При использовании PowerShellGet разные версии одного модуля могут быть установлены одновременно. Каждая из них помещается в папку с именем, использующим значение ModuleVersion. ModuleVersion используется для имени папки без добавления строки предварительной версии. Если пользователь установит модуль MyModule версии 2.5.0-alpha, этот модуль будет помещен в папку `MyModule\2.5.0`. Если пользователь затем установит версию 2.5.0-beta, содержимое папки **будет**перезаписано`MyModule\2.5.0`. Одним из преимуществ такого подхода является то, что нет необходимости удалять предварительную версию после установки версии, готовой к использованию. Пример ниже иллюстрирует работу этого правила.
 
 ``` powershell
 C:\windows\system32> Get-InstalledModule TestPackage -AllVersions
@@ -192,7 +192,7 @@ Version         Name          Repository   Description
 1.1.3.2         TestPackage   PSGallery    Package used to validate changes to the PowerShe...
 ```
 
-## <a name="more-details"></a>Дополнительные подробности
+## <a name="more-details"></a>Дополнительные сведения
 
 - [Предварительные версии сценариев](script-prerelease-support.md)
 - [Find-Module](/powershell/module/powershellget/find-module)

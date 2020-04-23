@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,командлет
 title: Правила авторизации и средства безопасности Windows PowerShell Web Access
-ms.openlocfilehash: 9bc1be125ebab4e9ba29ba832b442777e9bfc859
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: ee25df052994e47e559daa87b89af813471d896b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500887"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624760"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Правила авторизации и средства безопасности Windows PowerShell Web Access
 

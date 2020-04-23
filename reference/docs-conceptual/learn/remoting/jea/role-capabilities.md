@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Возможности ролей JEA
 ms.openlocfilehash: 5b5b5977d4fec1ed850f1146fe7c09463908651b
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402401"
 ---
 # <a name="jea-role-capabilities"></a>Возможности ролей JEA
@@ -34,7 +34,7 @@ ms.locfileid: "79402401"
 
 В таблице ниже приведено несколько примеров команд, которые в состоянии без ограничений быть использованы злоумышленниками. Этот список не является исчерпывающим и служит лишь отправной точкой для дальнейших действий.
 
-|                                            Риск                                            |                                Пример                                |                                                                              Связанные команды                                                                              |
+|                                            "Риск";                                            |                                Пример                                |                                                                              Связанные команды                                                                              |
 | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Предоставление прав администратора подключающемуся пользователю для обхода JEA                                | `Add-LocalGroupMember -Member 'CONTOSO\jdoe' -Group 'Administrators'` | `Add-ADGroupMember`, `Add-LocalGroupMember`, `net.exe`, `dsadd.exe`                                                                                                        |
 | Выполнение произвольного кода, например вредоносных программ, эксплойтов или пользовательских сценариев для обхода защиты | `Start-Process -FilePath '\\san\share\malware.exe'`                   | `Start-Process`, `New-Service`, `Invoke-Item`, `Invoke-WmiMethod`, `Invoke-CimMethod`, `Invoke-Expression`, `Invoke-Command`, `New-ScheduledTask`, `Register-ScheduledJob` |
@@ -161,7 +161,7 @@ FunctionDefinitions = @{
 
 До PowerShell 6, чтобы среда PowerShell обнаружила файл возможности роли, его нужно было поместить в папку **RoleCapabilities** в модуле PowerShell. Этот модуль может храниться в любой папке, включенной в переменную среды `$env:PSModulePath`, однако не следует помещать его в папку `$env:SystemRoot\System32` либо в папку, где они могут быть изменены пользователями, которые не являются доверенными.
 
-В следующем примере для размещения файла возможностей роли в пути `$env:ProgramFiles` создается модуль скрипта PowerShell с именем **ContosoJEA**.
+В следующем примере для размещения файла возможностей роли в пути **создается модуль скрипта PowerShell с именем**ContosoJEA`$env:ProgramFiles`.
 
 ```powershell
 # Create a folder for the module

@@ -5,10 +5,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/03/2020
 ms.openlocfilehash: b16a31a04ca863ab55c7c9718b1a1a973e61ee46
-ms.sourcegitcommit: f55da6dea4b58a2cd13c7be7c24c07341f177b71
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80646377"
 ---
 # <a name="using-powershell-in-docker"></a>Использование PowerShell в Docker
@@ -17,7 +17,7 @@ ms.locfileid: "80646377"
 
 ## <a name="finding-available-images"></a>Поиск доступных образов
 
-Для выпущенных образов требуется Docker 17.05 или более поздней версии. Также предполагается, что Docker можно запускать без `sudo` или прав локального администратора. Чтобы правильно установить `docker`, следуйте официальным [инструкциям][install] Docker.
+Для выпущенных образов требуется Docker 17.05 или более поздней версии. Также предполагается, что Docker можно запускать без `sudo` или прав локального администратора. Чтобы правильно установить [, следуйте официальным ][install]инструкциям`docker` Docker.
 
 Контейнеры выпуска извлекают содержимое из официального распространяемого образа, например `centos:7`, затем устанавливают зависимости и, наконец, устанавливают пакет PowerShell.
 

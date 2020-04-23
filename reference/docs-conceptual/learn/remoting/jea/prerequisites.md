@@ -3,13 +3,13 @@ ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Предварительные условия JEA
 ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74416729"
 ---
-# <a name="prerequisites"></a>Необходимые компоненты
+# <a name="prerequisites"></a>предварительные требования
 
 Just Enough Administration — это функция, входящая в состав PowerShell 5.0 и более поздних версий. В этой статье описываются предварительные условия, которые нужно выполнить, чтобы начать работу с JEA.
 
@@ -34,8 +34,8 @@ JEA доступна с PowerShell 5.0 и более поздними верси
 | ----------------------- | ---------------------------------------------- |
 | Windows Server 2016+    | Предустанавливается                                   |
 | Windows Server 2012 R2  | Полный набор функций с WMF 5.1                |
-| Windows Server 2012     | Полный набор функций с WMF 5.1                |
-| Windows Server 2008 R2  | Ограниченная функциональность<sup>1</sup> с WMF 5.1 |
+| Windows Server 2012     | Полный набор функций с WMF 5.1                |
+| Windows Server 2008 R2  | Ограниченная функциональность<sup>1</sup> с WMF 5.1 |
 
 Вы можете также использовать JEA на домашнем или рабочем компьютере:
 
@@ -102,7 +102,7 @@ Enable-PSRemoting
 
 [Создание файла конфигурации сеанса](session-configurations.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Безопасность WinRM](/powershell/scripting/learn/remoting/winrmsecurity)
 

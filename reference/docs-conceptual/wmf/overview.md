@@ -3,10 +3,10 @@ ms.date: 04/19/2019
 keywords: wmf,powershell,установка
 title: Windows Management Framework (WMF)
 ms.openlocfilehash: d581370fd602e03c86aa549eb8b273ff4d01b4e5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147914"
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
@@ -37,16 +37,16 @@ Windows Management Framework (WMF) — это согласованный инт
 
 |        Версия операционной системы         | [WMF 5.1][]  | WMF 5.0<br>*Не поддерживается* | [WMF 4.0][]  | [WMF 3.0][]  | [WMF 2.0][]  |
 | --------------------------------------- | ------------ | --------------------------- | ------------ | ------------ | ------------ |
-| Windows Server 2019                     | Входит в комплект поставки |                             |              |              |              |
+| Windows Server 2019                     | Входит в комплект поставки |                             |              |              |              |
 | Windows Server 2016                     | Входит в комплект поставки |                             |              |              |              |
 | Windows 10                              | Входит в комплект поставки | Входит в комплект поставки                |              |              |              |
 | Windows Server 2012 R2                  | Да          | Да                         | Входит в комплект поставки |              |              |
-| Windows 8.1                             | Да          | Да                         | Входит в комплект поставки |              |              |
-| Windows Server 2012                     | Да          | Да                         | Да          | Входит в комплект поставки |              |
+| Windows 8.1                             | Да          | Да                         | Входит в комплект поставки |              |              |
+| Windows Server 2012                     | Да          | Да                         | Да          | Входит в комплект поставки |              |
 | Windows 8<br>*Не поддерживается*           |              |                             |              | Входит в комплект поставки |              |
 | Windows Server 2008 R2 с пакетом обновления 1 (SP1)              | Да          | Да                         | Да          | Да          | Входит в комплект поставки |
 | Windows 7 с пакетом обновления 1 (SP1)                           | Да          | Да                         | Да          | Да          | Входит в комплект поставки |
-| Windows Server 2008 с пакетом обновления 2 (SP2)                 |              |                             |              | Да          | Да          |
+| Windows Server 2008 с пакетом обновления 2 (SP2)                 |              |                             |              | Да          | Да          |
 | Windows Vista<br>*Не поддерживается*       |              |                             |              |              | Да          |
 | Windows Server 2003<br>*Не поддерживается* |              |                             |              |              | Да          |
 | Windows XP<br>*Не поддерживается*          |              |                             |              | Да          | Да          |

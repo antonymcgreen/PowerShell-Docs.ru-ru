@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: коллекция,powershell,командлет,psget
 title: Начальная загрузка поставщика NuGet
 ms.openlocfilehash: 70403006c7a48ac70a6766de3aa52d80cebbd86a
-ms.sourcegitcommit: 1fa89ab20d14a61f139f1394c45aaedd5a7c5438
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78935180"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Начальная загрузка поставщика NuGet и NuGet.exe
@@ -158,7 +158,7 @@ Import-PackageProvider -Name NuGet
   $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
   ```
 
-Второй вариант — загрузить NuGet.exe с веб-сайта NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) При выборе версии для рабочих компьютеров убедитесь, что это версия младше 2.8.5.208, и определите версию с пометкой "рекомендуется". Обязательно разблокируйте файл, если он был скачан с помощью браузера. Это можно сделать с помощью командлета `Unblock-File`.
+Второй вариант — загрузить NuGet.exe с веб-сайта NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) При выборе версии для рабочих компьютеров убедитесь, что это версия позднее 2.8.5.208, и определите версию с пометкой "рекомендуется". Обязательно разблокируйте файл, если он был скачан с помощью браузера. Это можно сделать с помощью командлета `Unblock-File`.
 
 В любом случае можно скопировать файл NuGet.exe в любое расположение в `$env:path`, но стандартные расположения следующие:
 

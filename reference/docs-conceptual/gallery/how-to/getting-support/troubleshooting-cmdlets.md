@@ -4,10 +4,10 @@ contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Командлеты для устранения неполадок
 ms.openlocfilehash: d87c680472c2588efbfe8b3c4d6f2dbee6883a0c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "72352110"
 ---
 # <a name="troubleshooting-cmdlets"></a>Командлеты для устранения неполадок
@@ -27,7 +27,7 @@ Update-Module Azure -Verbose
 Для командлетов Install и Update требуется доступ к Интернету для подключения к конечным точкам сети, используемым коллекцией PowerShell. Убедитесь, что политики сетевого доступа позволяют подключаться к приведенным ниже конечным точкам.
 
 - oneget.org
-- go.microsoft.com
+- сайт go.microsoft.com;
 - az818661.vo.msecnd.net
-- [www.powershellgallery.com](www.powershellgallery.com)
+- www.powershellgallery.com
 - devopsgallerystorage.blob.core.windows.net

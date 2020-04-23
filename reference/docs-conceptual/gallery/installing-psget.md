@@ -4,10 +4,10 @@ contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Установка PowerShellGet
 ms.openlocfilehash: 69dc851c54089b47fb19e5b32990d579d26effb9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328205"
 ---
 # <a name="installing-powershellget"></a>Установка PowerShellGet

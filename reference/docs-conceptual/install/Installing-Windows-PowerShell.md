@@ -3,10 +3,10 @@ ms.date: 08/09/2017
 keywords: powershell, cmdlet, командлет, download, скачать, install, установить, setup, установка, windows 10, windows 8.1, windows 8.0, windows 7
 title: Установка Windows PowerShell
 ms.openlocfilehash: 345cde8012bece730e7217ed16be6175ad26bb28
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "62086482"
 ---
 # <a name="installing-windows-powershell"></a>Установка Windows PowerShell
@@ -24,7 +24,7 @@ Windows PowerShell установлен по умолчанию в каждой 
 
 ### <a name="for-console"></a>Консоль
 
-Версия | Расположение
+Версия | Location
 -- | --
 Windows 10 | Щелкните значок Windows в левом нижнем углу и начните вводить PowerShell.
 Windows 8.1, 8.0 | На начальном экране начните вводить PowerShell.<br/>Если вы находитесь на рабочем столе, щелкните значок Windows в левом нижнем углу и начните вводить PowerShell.
@@ -32,7 +32,7 @@ Windows 7 с пакетом обновления 1 (SP1) | Щелкните зн
 
 ### <a name="for-ise"></a>ISE
 
-Версия | Расположение
+Версия | Location
 -- | --
 Windows 10 | Щелкните значок Windows в левом нижнем углу и начните вводить ISE.
 Windows 8.1, 8.0 | На начальном экране введите **PowerShell ISE**.<br/>Если вы находитесь на рабочем столе, щелкните значок Windows в левом нижнем углу и введите **PowerShell ISE**.
@@ -71,8 +71,8 @@ Windows 7 с пакетом обновления 1 (SP1) | Щелкните зн
 Windows | PS 3.0 | PS 4.0 | PS 5.0 | PS 5.1 |
 --|--|--|--|--|
 Windows 10 (см. примечание 1)<br/>Windows Server 2016 | - | - | - | установлено
-Windows 8.1<br/>Windows Server 2012 R2 | - | установлено | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
-Windows 8<br/>Windows Server 2012 | установлено | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
+Windows 8.1<br/>Windows Server 2012 R2 | - | установлено | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
+Windows 8<br/>Windows Server 2012 | установлено | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 Windows 7 с пакетом обновления 1 (SP1)<br/>Windows Server 2008 R2 с пакетом обновления 1 (SP1) | [WMF 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 
 > [!NOTE]
@@ -87,7 +87,7 @@ Windows 7 с пакетом обновления 1 (SP1)<br/>Windows Server 2008
 
 Либо вам нужен раздел [Установка и настройка Azure PowerShell](/powershell/azure/install-az-ps)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Требования Windows PowerShell к системе](Windows-PowerShell-System-Requirements.md)
 

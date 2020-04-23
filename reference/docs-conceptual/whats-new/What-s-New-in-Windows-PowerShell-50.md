@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Новые возможности Windows PowerShell 5.0
-ms.openlocfilehash: 8c1858a63adad467e389a683708bccba2a6768c7
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: dba016546fe034684f6b7afe43ec2e7a1b793d96
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500463"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978208"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Новые возможности Windows PowerShell 5.0
 
@@ -460,7 +460,7 @@ Windows PowerShell 3.0 включает поддержку модели CIM, к
 
 Кроме того, в запланированные задания включен настраиваемый набор командлетов для управления ими. Командлеты позволяют создавать, изменять, отключать, повторно включать запланированные задания и управлять ими, создавать триггеры запланированных заданий и устанавливать параметры запланированных заданий.
 
-Дополнительные сведения о запланированных заданиях см. в статье [about_Scheduled_Jobs](/powershell/module/microsoft.powershell.core/about/about_Scheduled_Jobs).
+Дополнительные сведения о запланированных заданиях см. в статье [about_Scheduled_Jobs](/powershell/module/psscheduledjob/about/about_scheduled_jobs?view=powershell-5.1).
 
 ### <a name="windows-powershell-language-enhancements"></a>Усовершенствования языка Windows PowerShell
 

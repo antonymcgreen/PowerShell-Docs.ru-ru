@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Управление текущим расположением
 ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030197"
 ---
 # <a name="managing-current-location"></a>Управление текущим расположением
@@ -81,7 +81,7 @@ Path
 HKLM:\
 ```
 
-Вы можете ввести Set-Location или использовать любой из встроенных псевдонимов Windows PowerShell для Set-Location (cd, chdir, sl). Например:
+Вы можете ввести Set-Location или использовать любой из встроенных псевдонимов Windows PowerShell для Set-Location (cd, chdir, sl). Пример:
 
 ```powershell
 cd -Path C:\Windows
@@ -161,7 +161,7 @@ C:\Documents and Settings\PowerUser
 Set-Location \\FS01\Public
 ```
 
-или
+или диспетчер конфигурации служб
 
 ```powershell
 Push-Location \\FS01\Public

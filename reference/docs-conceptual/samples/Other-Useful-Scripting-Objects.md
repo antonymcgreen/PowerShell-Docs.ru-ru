@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Другие полезные объекты для сценариев
 ms.openlocfilehash: 4f236246714b0608658bbd535851489912430336
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71325145"
 ---
 # <a name="other-useful-scripting-objects"></a>Другие полезные объекты для сценариев
@@ -75,6 +75,6 @@ Value : https://go.microsoft.com/fwlink/p/?LinkID=113278
 $psOnlineHelp.Add("get-myNoun", "https://www.mydomain.com/MyNoun.html")
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](../components/ise/object-model/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

@@ -3,10 +3,10 @@ ms.date: 08/27/2018
 keywords: powershell,командлет
 title: Создание сценариев PowerShell
 ms.openlocfilehash: 281f2e798b3d3fa1c150b079d633cb7e8490dcec
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "62058494"
 ---
 # <a name="powershell"></a>PowerShell
@@ -48,7 +48,7 @@ Get-Help Get-Service
 Get-Service | Get-Member
 ```
 
-### <a name="consistency"></a>Consistency
+### <a name="consistency"></a>Согласованность
 
 Управление системами может быть непростой задачей. Средства с согласованным интерфейсом помогают справляться с такими трудностями. К сожалению, программы командной строки и COM-объекты с поддержкой скриптов не обеспечивают согласованность.
 

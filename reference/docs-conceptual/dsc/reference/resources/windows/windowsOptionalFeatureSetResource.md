@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс DSC WindowsOptionalFeatureSet
 ms.openlocfilehash: f378006a6c362ee9890d70dd76fb552dd262a544
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952871"
 ---
 # <a name="dsc-windowsoptionalfeatureset-resource"></a>Ресурс DSC WindowsOptionalFeatureSet
@@ -38,11 +38,11 @@ WindowsOptionalFeatureSet [string] #ResourceName
 
 |Свойство |Описание |
 |---|---|
-|Name |Указывает имена компонентов, которые необходимо включить или отключить. |
+|Имя |Указывает имена компонентов, которые необходимо включить или отключить. |
 |Источник |Не реализовано. |
 |NoWindowsUpdateCheck |Указывает, обращается ли система DISM к Центру обновления Windows при поиске исходных файлов для включения компонентов. Если задано значение `$true`, система DISM не обращается к Центру обновления Windows. |
 |RemoveFilesOnDisable |Задайте значение `$true`, чтобы удалить все файлы, связанные с компонентами, когда свойству **Ensure** присваивается значение **Absent**. |
-|Уровень журнала |Максимальный уровень результатов, показываемый в журналах. Допустимые значения: **ErrorsOnly**, **ErrorsAndWarning** и **ErrorsAndWarningAndInformation**. |
+|LogLevel |Максимальный уровень результатов, показываемый в журналах. Допустимые значения: **ErrorsOnly**, **ErrorsAndWarning** и **ErrorsAndWarningAndInformation**. |
 |LogPath |Путь к файлу журнала, в котором поставщик ресурсов должен вести журнал работы. |
 
 ## <a name="common-properties"></a>Общие свойства

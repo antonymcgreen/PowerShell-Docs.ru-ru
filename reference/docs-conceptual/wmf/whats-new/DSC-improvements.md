@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Усовершенствования DSC в WMF 5.1
-ms.openlocfilehash: 99434d14100de54d2d4c89c5888741ab2f1c512a
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 78c15f453977384ba437b0bd69cd620eb1a29fbd
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78277642"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978293"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Усовершенствования в настройке требуемого состояния (DSC) в WMF 5.1
 
@@ -147,7 +147,7 @@ ms.locfileid: "78277642"
 
 ## <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Использование параметра PsDscRunAsCredential с составными ресурсами DSC
 
-Добавлена поддержка использования параметра [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser) с [составными](/powershell/scripting/dsc/authoringresourcecomposite) ресурсами DSC.
+Добавлена поддержка использования параметра [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser) с [составными](/powershell/scripting/dsc/resources/authoringresourcecomposite) ресурсами DSC.
 
 Теперь можно указать значение параметра **PsDscRunAsCredential** при использовании составных ресурсов в конфигурации. Если значение задано, все ресурсы, включенные в составной ресурс, будут запущены от имени этого пользователя. Если составной ресурс вызывает другой составной ресурс, то все такие ресурсы также будут запущены от имени этого пользователя. Учетные данные запуска от имени распространяются на любой уровень иерархии составных ресурсов. Если для одного из ресурсов, входящих в составной ресурс, указано собственное значение параметра **PsDscRunAsCredential**, при компиляции конфигурации возникает ошибка слияния.
 

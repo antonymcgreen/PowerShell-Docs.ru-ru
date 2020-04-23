@@ -4,10 +4,10 @@ description: В этой статье приводятся общие сведе
 ms.date: 03/05/2020
 ms.topic: conceptual
 ms.openlocfilehash: 5db78ae2805cb26aa79aa698cfb8b5d8ba8911dc
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402631"
 ---
 # <a name="contributing-to-powershell-documentation"></a>Участие в работе над документацией по PowerShell
@@ -70,9 +70,9 @@ ms.locfileid: "79402631"
 
 Дополнительные ресурсы
 
-- [Контрольный список редактора](editorial-checklist.md)
+- [Контрольный список для редактора](editorial-checklist.md)
 - [Рассмотрение сообщений о проблемах](managing-issues.md)
-- [Рассмотрение запросов на внесение изменений](managing-pull-requests.md)
+- [Рассмотрение запросов на вытягивание](managing-pull-requests.md)
 
 <!--link refs-->
 [cla]: https://cla.microsoft.com/

@@ -3,17 +3,17 @@ ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Удаление Windows PowerShell Web Access
 ms.openlocfilehash: 3c2c83525f5a240976eef215b5eac939796c91e8
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78279016"
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Удаление Windows PowerShell Web Access
 
-Обновлено: 24 июня 2013 г.
+Обновлено: 24 июня 2013 г.
 
-Область применения: Windows Server 2012 R2, Windows Server 2012
+Область применения: Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе приведена процедура удаления веб-сайта Windows PowerShell Web Access и соответствующего приложения с сервера шлюза, где они установлены.
 

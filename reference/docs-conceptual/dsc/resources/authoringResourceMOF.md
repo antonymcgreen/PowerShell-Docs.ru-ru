@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Написание пользовательских ресурсов DSC с использованием MOF
 ms.openlocfilehash: 24e9d15bcbe1eddd297daeb04e0713c443e52c38
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952901"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Написание пользовательских ресурсов DSC с использованием MOF
@@ -129,7 +129,7 @@ function Get-TargetResource
 * Обновление существующего веб-сайта
 * Удаление существующего веб-сайта
 
-Это демонстрируется в следующем примере:
+Это показано в следующем примере.
 
 ```powershell
 # The Set-TargetResource function is used to create, delete or configure a website on the target machine.
@@ -215,7 +215,7 @@ $result
 }
 ```
 
-**Примечание**. Чтобы упростить отладку, используйте в реализации трех предыдущих функций командлет **Write-Verbose**.
+**Примечание.** Чтобы упростить отладку, используйте в реализации трех предыдущих функций командлет **Write-Verbose**.
 >Он записывает текст в поток подробных сообщений.
 >По умолчанию поток подробных сообщений не отображается, однако его можно вывести на экран, изменив значение переменной **$VerbosePreference** или применив в командлетах DSC параметр **Verbose** со значением new.
 
@@ -277,7 +277,7 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 
 ## <a name="supporting-psdscrunascredential"></a>Поддержка PsDscRunAsCredential
 
->**Примечание**. **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
+>**Примечание.** **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
 
 Свойство **PsDscRunAsCredential** может использоваться в блоке ресурса [конфигураций DSC](../configurations/configurations.md), чтобы указать, что ресурс должен выполняться с указанным набором учетных данных.
 Дополнительные сведения см. в разделе [Запуск DSC с учетными данными пользователя](../configurations/runAsUser.md).

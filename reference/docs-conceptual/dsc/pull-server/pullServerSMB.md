@@ -3,15 +3,15 @@ ms.date: 04/11/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка опрашивающего SMB-сервера DSC
 ms.openlocfilehash: be41f7a708f1a129919fae8300fc4307441097f7
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500707"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Настройка опрашивающего SMB-сервера DSC
 
-Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
 > Опрашивающий сервер (компонент Windows *служба DSC*) — поддерживаемый компонент Windows Server, но реализация новых функций и возможностей для него не планируется. Рекомендуется начать перенос управляемых клиентов на [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (включает возможности опрашивающего сервера в Windows Server) или на одно из решений сообщества, указанных [в следующем списке](pullserver.md#community-solutions-for-pull-service).
@@ -29,7 +29,7 @@ ms.locfileid: "80500707"
 
 ### <a name="install-the-xsmbshare-resource"></a>Установка ресурса xSmbShare
 
-Для установки модуля **xSmbShare** используйте командлет [Install-Module](/powershell/module/PowershellGet/Install-Module).
+Для установки модуля [xSmbShare](/powershell/module/PowershellGet/Install-Module) используйте командлет **Install-Module**.
 
 > [!NOTE]
 > `Install-Module` включен в модуль **PowerShellGet**, содержащийся в PowerShell 5.0.
@@ -76,7 +76,7 @@ Configuration SmbShare
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>Предоставление файловой системе доступа к опрашивающему клиенту
 
-Предоставление разрешения **ReadAccess** клиенту узла позволяет этому узлу обращаться к ресурсу SMB, но не к файлам или папкам в этом ресурсе. Следует явно предоставить узлам клиента доступ к папке и вложенным папкам общего ресурса SMB. Сделать это можно с помощью DSC, используя ресурс **cNtfsPermissionEntry**, который содержится в модуле [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0).
+Предоставление разрешения **ReadAccess** клиенту узла позволяет этому узлу обращаться к SMB-ресурсу, но не к файлам или папкам в этом ресурсе. Следует явно предоставить узлам клиента доступ к папке и вложенным папкам общего ресурса SMB. Сделать это можно с помощью DSC, используя ресурс **cNtfsPermissionEntry**, который содержится в модуле [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0).
 Следующая конфигурация добавляет блок **cNtfsPermissionEntry**, который предоставляет разрешение ReadAndExecute опрашивающему клиенту.
 
 ```powershell

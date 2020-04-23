@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Использование веб-консоли Windows PowerShell
-ms.openlocfilehash: 29aa123049884004dd4e1a8f042783538d80abc6
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 9a5d6d825dc82710466768bc612b012dd80937da
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500871"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978667"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Использование веб-консоли Windows PowerShell
 
@@ -211,9 +211,8 @@ ALT+F7          | Очистка списка журнала команд
 
     Таким же способом изменяется высота окна консоли.
 
-    Дополнительные примеры по настройке внешнего вида консоли доступны в [блоге группы Windows PowerShell](hhttps://devblogs.microsoft.com/powershell).
+    Дополнительные примеры по настройке внешнего вида консоли доступны в [блоге группы Windows PowerShell](https://devblogs.microsoft.com/powershell).
 
 ## <a name="see-also"></a>См. также:
 
 - [Приглашаем авторов скриптов!](https://devblogs.microsoft.com/scripting/)
-- [Блог команды разработчиков PowerShell](https://devblogs.microsoft.com/powershell/)

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование DSC на сервере Nano Server
 ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953861"
 ---
 # <a name="using-dsc-on-nano-server"></a>Использование DSC на сервере Nano Server
@@ -74,19 +74,19 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 
 - Шифрование MOF-файлов
 
-- Ведение журналов событий
+- ведение журнала событий.
 
 - Отчеты DSC службы автоматизации Azure
 
 - Полнофункциональные ресурсы.
 
-- **Archive**
-- **Environment**
-- **File**
-- **Log**
+- **Архив**
+- **Среда**
+- **Файл**
+- **Журнал**
 - **ProcessSet**
-- **Registry**
-- **Script**
+- **Реестр**
+- **Скрипт**
 - **WindowsPackageCab**
 - **WindowsProcess**
 - **WaitForAll** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))
@@ -94,7 +94,7 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 - **WaitForSome** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))
 
 - Ресурсы, функциональность которых не полная.
-- **Группа**
+- **Группирование**
 - **GroupSet**
 
   **Проблема**. Приведенные выше ресурсы не работают, если определенный экземпляр вызывается дважды (дважды запускается одна и та же конфигурация).
@@ -107,7 +107,7 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
   *Не удается найти тип [management.managementobject]: убедитесь в том, что сборка, содержащая этот тип, загружена.*
 
 - Нефункционирующие ресурсы.
-- **User**
+- **Пользователь**
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Функции DSC, недоступные на сервере Nano Server
 
@@ -122,6 +122,6 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 Поскольку набор API Windows и библиотек CLR, доступный на сервере Nano Server, ограничен, ресурсы DSC, работающие в полной версии среды выполнения Windows, не всегда работают в Nano Server.
 Перед развертыванием каких-либо настраиваемых ресурсов DSC в рабочей среде рекомендуется выполнять их полное и всестороннее тестирование.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Начало работы с сервером Nano Server](/windows-server/get-started/getting-started-with-nano-server)

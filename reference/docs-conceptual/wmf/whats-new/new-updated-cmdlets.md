@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,установка
 title: Новые и обновленные командлеты
 ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147594"
 ---
 # <a name="new-and-updated-cmdlets"></a>Новые и обновленные командлеты
@@ -32,7 +32,7 @@ ms.locfileid: "71147594"
 
 Командлеты `Get-Clipboard` и `Set-Clipboard` упрощают передачу содержимого в сеанс Windows PowerShell и из него. Командлеты Clipboard поддерживают изображения, звуковые файлы, списки файлов и текст.
 
-Дополнительная информация:
+Дополнительные сведения см. в разделе:
 
 - [Get-Clipboard](/powershell/module/Microsoft.PowerShell.Management/Get-Clipboard)
 - [Set-Clipboard](/powershell/module/Microsoft.PowerShell.Management/Set-Clipboard)
@@ -45,7 +45,7 @@ ms.locfileid: "71147594"
 
 Открытый ключ можно свободно распространять, так как он не относится к конфиденциальным сведениям. Любое содержимое, зашифрованное с помощью открытого ключа, можно расшифровать только с помощью закрытого ключа. Дополнительные сведения см. на странице о [шифровании с открытым ключом](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
-Дополнительная информация:
+Дополнительные сведения см. в разделах:
 
 - [Get-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Get-CmsMessage)
 - [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage)
@@ -138,7 +138,7 @@ e19d6ea5-3cc2-4db9-8095-0cdaed5a703d
 
 ## <a name="nonewline-parameter"></a>Параметр NoNewLine
 
-Теперь для `Out-File`, `Add-Content` и `Set-Content` есть новый параметр **NoNewline**, который пропускает новую строку после выходных данных. Например:
+Теперь для `Out-File`, `Add-Content` и `Set-Content` есть новый параметр **NoNewline**, который пропускает новую строку после выходных данных. Пример:
 
 ```powershell
 "This is " | Out-File -FilePath Example.txt -NoNewline
@@ -190,7 +190,7 @@ New-Item -ItemType SymbolicLink -Path C:\Temp\MySymLinkDir -Value $pshome
 New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkDir -Value $pshome
 ```
 
-### <a name="hard-links"></a>жесткие ссылки;
+### <a name="hard-links"></a>Жесткие связи.
 
 Одинаковые комбинации **пути** и **имени** разрешены, как описано выше.
 

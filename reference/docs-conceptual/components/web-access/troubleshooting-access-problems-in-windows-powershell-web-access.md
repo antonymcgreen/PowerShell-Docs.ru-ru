@@ -3,17 +3,17 @@ ms.date: 08/23/2017
 keywords: powershell,командлет
 title: Устранение неполадок с доступом в Windows PowerShell Web Access
 ms.openlocfilehash: 818beffaf7df55ae36a154b7b751f9201c5b4299
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75870189"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Устранение неполадок с доступом в Windows PowerShell Web Access
 
 Обновлено: 24 июня 2013 г. (пересмотрено 23 августа 2017 г.)
 
-Область применения: Windows Server 2012 R2, Windows Server 2012
+Область применения: Windows Server 2012 R2, Windows Server 2012
 
 В следующем разделе перечислены некоторые часто возникающие проблемы при попытке подключения к удаленному компьютеру с помощью Windows PowerShell Web Access и предложения по разрешению таких проблем.
 

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,установка
 title: Усовершенствования консоли в WMF 5.1
 ms.openlocfilehash: d0dd8e3c31dc0ddebab1bb899468b77a9292954d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147634"
 ---
 # <a name="console-improvements-in-wmf-51"></a>Усовершенствования консоли в WMF 5.1
@@ -20,7 +20,7 @@ ms.locfileid: "71147634"
 В Windows 10 реализована поддержка [escape-последовательностей VT100](/windows/console/console-virtual-terminal-sequences).
 При расчете ширины таблиц PowerShell игнорирует некоторые escape-последовательности форматирования VT100.
 
-В PowerShell также появился новый интерфейс API, который можно использовать при форматировании кода для определения наличия поддержки VT100. Например:
+В PowerShell также появился новый интерфейс API, который можно использовать при форматировании кода для определения наличия поддержки VT100. Пример:
 
 ```powershell
 if ($host.UI.SupportsVirtualTerminal)

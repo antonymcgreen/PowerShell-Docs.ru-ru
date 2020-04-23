@@ -4,15 +4,15 @@ ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Исправления ошибок в WMF 5.1
 ms.openlocfilehash: 8edf295eb6304dc04de2fa5d3792b1c2fc4b01f3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147854"
 ---
 # <a name="bug-fixes-in-wmf-51"></a>Исправления ошибок в WMF 5.1
 
-## <a name="bug-fixes"></a>Устранение ошибок
+## <a name="bug-fixes"></a>Исправления ошибок
 
 В WMF 5.1 исправлены следующие важные ошибки.
 
@@ -53,7 +53,7 @@ $obj.SendKeys([char]173)
 
 #### <a name="enumerable-com-objects-not-always-handled-correctly"></a>Перечисляемые COM-объекты не всегда обрабатывались правильно
 
-Среда PowerShell, как правило, перечисляет большинство перечисляемых объектов, но регрессия, появившаяся в WMF 5.0, препятствовала перечислению COM-объектов, реализующих интерфейс IEnumerable. Например:
+Среда PowerShell, как правило, перечисляет большинство перечисляемых объектов, но регрессия, появившаяся в WMF 5.0, препятствовала перечислению COM-объектов, реализующих интерфейс IEnumerable. Пример:
 
 ```powershell
 function Get-COMDictionary

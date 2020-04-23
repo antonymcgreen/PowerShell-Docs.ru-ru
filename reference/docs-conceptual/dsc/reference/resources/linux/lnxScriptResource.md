@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс nxScript в DSC для Linux
 ms.openlocfilehash: a7f2114aba47bb581cdd19168e784b79dfc5b6ad
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953191"
 ---
 # <a name="dsc-for-linux-nxscript-resource"></a>Ресурс nxScript в DSC для Linux
@@ -29,17 +29,17 @@ nxScript <string> #ResourceName
 
 ## <a name="properties"></a>Свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
 |GetScript |Предоставляет скрипт для возврата сведений о текущем состоянии компьютера. Этот скрипт выполняется при вызове скрипта [GetDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer). Сценарий должен начинаться со знака решетки, например `#!/bin/bash`. |
 |SetScript |Предоставляет скрипт, с помощью которого компьютер переходит в надлежащее состояние. При вызове скрипта [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) в первую очередь выполняется команда **TestScript**. Если блок **TestScript** возвращает код выхода, отличный от 0, запускается блок **SetScript**. Если блок **TestScript** возвращает код выхода 0, **SetScript** не выполняется. Сценарий должен начинаться со знака решетки, например `#!/bin/bash`. |
 |TestScript |Предоставляет скрипт для оценки состояния узла. Этот скрипт выполняется при вызове скрипта [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer). Если он возвращает код выхода, отличный от 0, выполняется команда **SetScript**. Если он возвращает код выхода 0, команда **SetScript** не выполняется. Кроме того, **TestScript** выполняется при вызове скрипта [TestDscConfiguration](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer). Однако в этом случае **SetScript** не будет запущен, какое бы значение ни вернул блок **TestScript**. Блок **TestScript** должен содержать контент и возвращать код выхода 0, если фактическая конфигурация соответствует текущей настройке требуемого состояния, и другой код выхода, если они не совпадают. Текущей конфигурацией требуемого состояния является последняя конфигурация, активированная на узле, который использует DSC. Сценарий должен начинаться со знака решетки, например `#!/bin/bash`. |
-|User |Указывает, от имени какого пользователя выполняется сценарий. |
+|Пользователь |Указывает, от имени какого пользователя выполняется сценарий. |
 |Группа |Указывает, от имени какой группы выполняется сценарий. |
 
 ## <a name="common-properties"></a>Общие свойства
 
-|Свойство |Описание |
+|Свойство |Description |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
 

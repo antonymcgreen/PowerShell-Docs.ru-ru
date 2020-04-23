@@ -3,10 +3,10 @@ title: Удаленные редактирование и отладка в Visu
 description: Удаленные редактирование и отладка в Visual Studio Code
 ms.date: 06/13/2019
 ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78279177"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Удаленные редактирование и отладка в Visual Studio Code
@@ -15,7 +15,7 @@ ms.locfileid: "78279177"
 
 Эта функция также доступна в расширении PowerShell для VSCode. В этом руководстве показано, как это сделать.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 В этом руководстве предполагается, что у вас есть:
 
@@ -77,7 +77,7 @@ ms.locfileid: "78279177"
 
 Теперь мы можем выполнить те же шаги, что и при редактировании локального скрипта.
 
-1. Чтобы открыть удаленный файл `test.ps1`, запустите `Open-EditorFile test.ps1` или `psedit test.ps1`.
+1. Чтобы открыть удаленный файл `Open-EditorFile test.ps1`, запустите `psedit test.ps1` или `test.ps1`.
 
   ![Открытый файл test.ps1 в редакторе файлов](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
 
