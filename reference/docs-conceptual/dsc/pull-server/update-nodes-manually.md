@@ -3,32 +3,32 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Обновление узлов на опрашиваемом сервере
 ms.openlocfilehash: fa59a2f6574db2dbc96621be4326f1d5a55e5de9
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500662"
 ---
-# <a name="update-nodes-from-a-pull-server"></a><span data-ttu-id="9a550-103">Обновление узлов на опрашиваемом сервере</span><span class="sxs-lookup"><span data-stu-id="9a550-103">Update Nodes from a Pull Server</span></span>
+# <a name="update-nodes-from-a-pull-server"></a><span data-ttu-id="27a0b-103">Обновление узлов на опрашиваемом сервере</span><span class="sxs-lookup"><span data-stu-id="27a0b-103">Update Nodes from a Pull Server</span></span>
 
-<span data-ttu-id="9a550-104">В следующих разделах предполагается, что вы уже настроили опрашиваемый сервер.</span><span class="sxs-lookup"><span data-stu-id="9a550-104">The sections below assume that you have already set up a Pull Server.</span></span> <span data-ttu-id="9a550-105">Если вы не настроили опрашиваемый сервер, можно воспользоваться следующими руководствами.</span><span class="sxs-lookup"><span data-stu-id="9a550-105">If you have not set up your Pull Server, you can use the following guides:</span></span>
+<span data-ttu-id="27a0b-104">В следующих разделах предполагается, что вы уже настроили опрашиваемый сервер.</span><span class="sxs-lookup"><span data-stu-id="27a0b-104">The sections below assume that you have already set up a Pull Server.</span></span> <span data-ttu-id="27a0b-105">Если вы не настроили опрашиваемый сервер, можно воспользоваться следующими руководствами.</span><span class="sxs-lookup"><span data-stu-id="27a0b-105">If you have not set up your Pull Server, you can use the following guides:</span></span>
 
-- [<span data-ttu-id="9a550-106">Настройка опрашиваемого SMB-сервера DSC</span><span class="sxs-lookup"><span data-stu-id="9a550-106">Set up a DSC SMB Pull Server</span></span>](pullServerSmb.md)
-- [<span data-ttu-id="9a550-107">Настройка опрашиваемого HTTP-сервера DSC</span><span class="sxs-lookup"><span data-stu-id="9a550-107">Set up a DSC HTTP Pull Server</span></span>](pullServer.md)
+- [<span data-ttu-id="27a0b-106">Настройка опрашиваемого SMB-сервера DSC</span><span class="sxs-lookup"><span data-stu-id="27a0b-106">Set up a DSC SMB Pull Server</span></span>](pullServerSmb.md)
+- [<span data-ttu-id="27a0b-107">Настройка опрашиваемого HTTP-сервера DSC</span><span class="sxs-lookup"><span data-stu-id="27a0b-107">Set up a DSC HTTP Pull Server</span></span>](pullServer.md)
 
-<span data-ttu-id="9a550-108">Для каждого целевого узла можно настроить скачивание конфигураций, ресурсов и даже отчет о состоянии.</span><span class="sxs-lookup"><span data-stu-id="9a550-108">Each target node can be configured to download configurations, resources, and even report its status.</span></span> <span data-ttu-id="9a550-109">В этой статье показано, как передать ресурсы, чтобы они были доступны для загрузки, и настроить клиенты, чтобы ресурсы загружались автоматически.</span><span class="sxs-lookup"><span data-stu-id="9a550-109">This article will show you how to upload resources so they are available to be downloaded, and configure clients to download resources automatically.</span></span> <span data-ttu-id="9a550-110">Когда Узел получает назначенную конфигурацию с помощью команды **получить** или **отправить** (v5), он автоматически загружает любые ресурсы, требуемые конфигурацией, из расположения, указанного в LCM.</span><span class="sxs-lookup"><span data-stu-id="9a550-110">When the Node's receives an assigned Configuration, through **Pull** or **Push** (v5), it automatically downloads any resources required by the Configuration from the location specified in the LCM.</span></span>
+<span data-ttu-id="27a0b-108">Для каждого целевого узла можно настроить скачивание конфигураций, ресурсов и даже отчет о состоянии.</span><span class="sxs-lookup"><span data-stu-id="27a0b-108">Each target node can be configured to download configurations, resources, and even report its status.</span></span> <span data-ttu-id="27a0b-109">В этой статье показано, как передать ресурсы, чтобы они были доступны для загрузки, и настроить клиенты, чтобы ресурсы загружались автоматически.</span><span class="sxs-lookup"><span data-stu-id="27a0b-109">This article will show you how to upload resources so they are available to be downloaded, and configure clients to download resources automatically.</span></span> <span data-ttu-id="27a0b-110">Когда Узел получает назначенную конфигурацию с помощью команды **получить** или **отправить** (v5), он автоматически загружает любые ресурсы, требуемые конфигурацией, из расположения, указанного в LCM.</span><span class="sxs-lookup"><span data-stu-id="27a0b-110">When the Node's receives an assigned Configuration, through **Pull** or **Push** (v5), it automatically downloads any resources required by the Configuration from the location specified in the LCM.</span></span>
 
-## <a name="using-the-update-dscconfiguration-cmdlet"></a><span data-ttu-id="9a550-111">Использование командлета Update-DSCConfiguration</span><span class="sxs-lookup"><span data-stu-id="9a550-111">Using the Update-DSCConfiguration cmdlet</span></span>
+## <a name="using-the-update-dscconfiguration-cmdlet"></a><span data-ttu-id="27a0b-111">Использование командлета Update-DSCConfiguration</span><span class="sxs-lookup"><span data-stu-id="27a0b-111">Using the Update-DSCConfiguration cmdlet</span></span>
 
-<span data-ttu-id="9a550-112">Начиная с PowerShell 5.0, командлет [Update-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/update-dscconfiguration) принуждает узел обновлять свою конфигурацию с опрашиваемого сервера, настроенного в LCM.</span><span class="sxs-lookup"><span data-stu-id="9a550-112">Beginning in PowerShell 5.0, the [Update-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/update-dscconfiguration) cmdlet, forces a Node to update its configuration from the Pull Server configured in the LCM.</span></span>
+<span data-ttu-id="27a0b-112">Начиная с PowerShell 5.0, командлет [Update-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/update-dscconfiguration) принуждает узел обновлять свою конфигурацию с опрашиваемого сервера, настроенного в LCM.</span><span class="sxs-lookup"><span data-stu-id="27a0b-112">Beginning in PowerShell 5.0, the [Update-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/update-dscconfiguration) cmdlet, forces a Node to update its configuration from the Pull Server configured in the LCM.</span></span>
 
 ```powershell
 Update-DSCConfiguration -ComputerName "Server01"
 ```
 
-## <a name="using-invoke-cimmethod"></a><span data-ttu-id="9a550-113">Использование Invoke-CimMethod</span><span class="sxs-lookup"><span data-stu-id="9a550-113">Using Invoke-CIMMethod</span></span>
+## <a name="using-invoke-cimmethod"></a><span data-ttu-id="27a0b-113">Использование Invoke-CimMethod</span><span class="sxs-lookup"><span data-stu-id="27a0b-113">Using Invoke-CIMMethod</span></span>
 
-<span data-ttu-id="9a550-114">В PowerShell 4.0 вы по прежнему можете вручную заставить клиента — получателя данных обновить свою конфигурацию, используя [Invoke-CIMMethod](/powershell/module/cimcmdlets/invoke-cimmethod).</span><span class="sxs-lookup"><span data-stu-id="9a550-114">In PowerShell 4.0, you can still manually force a Pull Client to update its Configuration using [Invoke-CIMMethod](/powershell/module/cimcmdlets/invoke-cimmethod).</span></span> <span data-ttu-id="9a550-115">В следующем примере создается сеанс CIM с указанными учетными данными, который вызывает соответствующий метод CIM и удаляет сеанс.</span><span class="sxs-lookup"><span data-stu-id="9a550-115">The following example creates a CIM session with specified credentials, invokes the appropriate CIM method, and removes the session.</span></span>
+<span data-ttu-id="27a0b-114">В PowerShell 4.0 вы по прежнему можете вручную заставить клиента — получателя данных обновить свою конфигурацию, используя [Invoke-CIMMethod](/powershell/module/cimcmdlets/invoke-cimmethod).</span><span class="sxs-lookup"><span data-stu-id="27a0b-114">In PowerShell 4.0, you can still manually force a Pull Client to update its Configuration using [Invoke-CIMMethod](/powershell/module/cimcmdlets/invoke-cimmethod).</span></span> <span data-ttu-id="27a0b-115">В следующем примере создается сеанс CIM с указанными учетными данными, который вызывает соответствующий метод CIM и удаляет сеанс.</span><span class="sxs-lookup"><span data-stu-id="27a0b-115">The following example creates a CIM session with specified credentials, invokes the appropriate CIM method, and removes the session.</span></span>
 
 ```powershell
 $cimSession = New-CimSession -ComputerName "Server01" -Credential $(Get-Credential)
@@ -36,6 +36,6 @@ Invoke-CimMethod -CimSession $cimSession -Namespace 'root/microsoft/windows/desi
 $cimSession | Remove-CimSession
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9a550-116">См. также:</span><span class="sxs-lookup"><span data-stu-id="9a550-116">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="27a0b-116">См. также:</span><span class="sxs-lookup"><span data-stu-id="27a0b-116">See Also</span></span>
 
-[<span data-ttu-id="9a550-117">PerformRequiredConfigurationChecks</span><span class="sxs-lookup"><span data-stu-id="9a550-117">PerformRequiredConfigurationChecks</span></span>](../reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)
+[<span data-ttu-id="27a0b-117">PerformRequiredConfigurationChecks</span><span class="sxs-lookup"><span data-stu-id="27a0b-117">PerformRequiredConfigurationChecks</span></span>](../reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)
