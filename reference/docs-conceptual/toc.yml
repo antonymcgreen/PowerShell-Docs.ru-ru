@@ -60,7 +60,7 @@
           items:
             - name: Обзор
               href: learn/remoting/jea/overview.md
-            - name: предварительные требования
+            - name: Предварительные требования
               href: learn/remoting/jea/prerequisites.md
             - name: Возможности ролей
               href: learn/remoting/jea/role-capabilities.md
@@ -372,9 +372,9 @@
         - name: "Начало работы с\_DSC в\_Nano"
           href: dsc/getting-started/nanoDSC.md
         - name: "Начало работы с\_DSC в\_службе автоматизации Azure"
-          href: dsc/getting-started/azureDSC.md
-        - name: "Начало работы с\_DSC в решении \"Виртуальные машины Azure\""
-          href: dsc/getting-started/azureDSCexthistory.md
+          href: /azure/automation/automation-dsc-getting-started
+        - name: "Начало работы с гостевой конфигурацией в службе \"Политика\_Azure\""
+          href: /azure/governance/policy/concepts/guest-configuration
     - name: Краткие руководства
       expanded: true
       items:
@@ -734,7 +734,7 @@
       href: community/community-support.md
     - name: Цифровые графические материалы
       href: community/digital-art.md
-    - name: Новое в документации по PowerShell
+    - name: Новое в документации PowerShell
       href: community/whats-new-in-docs.md
     - name: Руководство для соавторов
       items:
@@ -752,7 +752,7 @@
           href: community/contributing/editing-cmdlet-ref.md
         - name: Дополнительные ресурсы
           items:
-            - name: Контрольный список для редактора
+            - name: Контрольный список редактора
               href: community/contributing/editorial-checklist.md
             - name: Рассмотрение сообщений о проблемах
               href: community/contributing/managing-issues.md
