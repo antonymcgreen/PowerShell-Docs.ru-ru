@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод TestConfiguration
 ms.openlocfilehash: 384134212e3b29b63dc045aee4b708c87c970302
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954871"
 ---
 # <a name="testconfiguration-method"></a>Метод TestConfiguration
@@ -30,15 +30,15 @@ uint32 TestConfiguration(
 
 *InDesiredState* \[out\] В выходных данных указывает, находится ли управляемый узел в состоянии, указанном в документе конфигурации.
 
-*ResourcesInDesiredState* \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceInDesiredState**, указывающий ресурсы, которые находятся в нужном состоянии.
+*ResourcesInDesiredState* \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceInDesiredState**, определяющий ресурсы, которые находятся в нужном состоянии.
 
-*ResourcesNotInDesiredState* \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceNotInDesiredState**, указывающий ресурсы, которые не находятся в нужном состоянии.
+*ResourcesNotInDesiredState* \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceNotInDesiredState**, определяющий ресурсы, которые не находятся в нужном состоянии.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Это статический метод.
 
@@ -48,6 +48,6 @@ uint32 TestConfiguration(
 
 **Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод SendMetaConfigurationApply
 ms.openlocfilehash: b2e420bafb8ea22aea43800f6e429d3ed785d1e8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954881"
 ---
 # <a name="sendmetaconfigurationapply-method"></a>Метод SendMetaConfigurationApply
@@ -26,13 +26,13 @@ uint32 SendMetaConfigurationApply(
 
 *ConfigurationData* \[in\] Данные среды для конфигурации.
 
-*force* \[in\] **true** для принудительной остановки конфигурации.
+*force* \[in\] **true** Принудительная остановка конфигурации.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Это статический метод.
 
@@ -42,6 +42,6 @@ uint32 SendMetaConfigurationApply(
 
 **Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

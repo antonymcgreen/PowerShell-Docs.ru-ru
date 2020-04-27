@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод ResourceTest
 ms.openlocfilehash: ff06fd645a94055e79aa0f8d20f2f06e16483720
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954951"
 ---
 # <a name="resourcetest-method"></a>Метод ResourceTest
@@ -38,7 +38,7 @@ uint32 ResourceTest(
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Это статический метод.
 
@@ -48,6 +48,6 @@ uint32 ResourceTest(
 
 **Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

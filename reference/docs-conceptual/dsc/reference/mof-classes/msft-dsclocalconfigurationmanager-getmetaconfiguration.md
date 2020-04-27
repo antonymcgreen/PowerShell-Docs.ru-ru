@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод GetMetaConfiguration
 ms.openlocfilehash: bd280cb8ebd7b0522e4e01cbd24bd9bdcfddf4c2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953411"
 ---
 # <a name="getmetaconfiguration-method"></a>Метод GetMetaConfiguration
@@ -29,7 +29,7 @@ uint32 GetMetaConfiguration(
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Это статический метод.
 
@@ -39,6 +39,6 @@ uint32 GetMetaConfiguration(
 
 **Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Написание пользовательских ресурсов DSC с использованием классов PowerShell
 ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952831"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Написание пользовательских ресурсов DSC с использованием классов PowerShell
@@ -21,7 +21,7 @@ ms.locfileid: "71952831"
 
 Дополнительные сведения о ресурсах DSC см. в статье [Создание настраиваемых ресурсов для настройки требуемого состояния Windows PowerShell](authoringResource.md).
 
->**Примечание**. Универсальные коллекции не поддерживаются в ресурсах на основе классов.
+>**Примечание.** Универсальные коллекции не поддерживаются в ресурсах на основе классов.
 
 ## <a name="folder-structure-for-a-class-resource"></a>Структура папок для ресурса класса
 
@@ -473,7 +473,7 @@ Start-DscConfiguration -Wait -Force Test
 
 ## <a name="supporting-psdscrunascredential"></a>Поддержка PsDscRunAsCredential
 
->**Примечание**. **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
+>**Примечание.** **PsDscRunAsCredential** поддерживается в PowerShell 5.0 и более поздних версий.
 
 Свойство **PsDscRunAsCredential** может использоваться в блоке ресурса [конфигураций DSC](../configurations/configurations.md), чтобы указать, что ресурс должен выполняться с указанным набором учетных данных.
 Дополнительные сведения см. в разделе [Запуск DSC с учетными данными пользователя](../configurations/runAsUser.md).
@@ -483,8 +483,8 @@ Start-DscConfiguration -Wait -Force Test
 Атрибут **DscResource()** принимает необязательный параметр **RunAsCredential**.
 Этот параметр принимает одно из трех значений:
 
-- `Optional` **PsDscRunAsCredential** необязателен для конфигураций, которые вызывают этот ресурс. Это значение по умолчанию.
-- `Mandatory` **PsDscRunAsCredential** должен использоваться для какой-либо конфигурации, которая вызывает этот ресурс.
+- `Optional` **PsDscRunAsCredential** является необязательным для конфигураций, которые вызывают этот ресурс. Это значение по умолчанию.
+- `Mandatory` **PsDscRunAsCredential** является обязательным для конфигурации, которая вызывает этот ресурс.
 - Конфигурации `NotSupported`, которые вызывают этот ресурс, не могут использовать **PsDscRunAsCredential**.
 - `Default` аналогичен `Optional`.
 
@@ -538,6 +538,6 @@ if (PsDscContext.RunAsUser) {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание пользовательских ресурсов DSC Windows PowerShell](authoringResource.md)

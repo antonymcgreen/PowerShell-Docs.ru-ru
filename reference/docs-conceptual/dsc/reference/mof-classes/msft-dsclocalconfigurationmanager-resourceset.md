@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Метод ResourceSet
 ms.openlocfilehash: 18364027b249e502e1f0b8802d9f3e031c7b07ce
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954961"
 ---
 # <a name="resourceset-method"></a>Метод ResourceSet
@@ -38,7 +38,7 @@ uint32 ResourceSet(
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Это статический метод.
 
@@ -48,6 +48,6 @@ uint32 ResourceSet(
 
 **Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

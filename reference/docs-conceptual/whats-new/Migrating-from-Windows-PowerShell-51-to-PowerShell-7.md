@@ -2,12 +2,12 @@
 title: Миграция с Windows PowerShell 5.1 на PowerShell 7
 description: Обновите PowerShell 5.1 до PowerShell 7 для платформ Windows.
 ms.date: 03/25/2020
-ms.openlocfilehash: e3881b1758f50119444969ad39541aec694cebe5
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 8f19297bdb4825f3bbd50544dc5737997e3c83e3
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500503"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81440498"
 ---
 # <a name="migrating-from-windows-powershell-51-to-powershell-7"></a>Миграция с Windows PowerShell 5.1 на PowerShell 7
 
@@ -176,7 +176,7 @@ PowerShell 7 устанавливается в новом каталоге и �
 Enter-PSSession -HostName <Computer> -UserName <Username>
 ```
 
-Кроме того, при использовании параметра **HostName** укажите имя пользователя, за которым должен следовать символ ('@'), а затем имя компьютера.
+Кроме того, при использовании параметра **HostName** укажите имя пользователя, за которым должен следовать символ (`@`) и затем имя компьютера.
 
 ```powershell
 Enter-PSSession -HostName <Username>@<Computer>

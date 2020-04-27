@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Приступая к работе с коллекцией PowerShell
-ms.openlocfilehash: fd4185234136dd9f3e628df50954b6ebff637639
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: bae0af144e6f520142e7eaea3dd0e1039976dae4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995891"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81219699"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Начало работы с коллекцией PowerShell
 
@@ -85,6 +85,16 @@ PowerShell Gallery — это репозиторий пакета, которы
 Чтобы узнать, какие модули вы установили из коллекции PowerShell, выполните командлет [Get-InstalledModule][]. Эта команда перечисляет все модули в системе, установленные непосредственно из коллекции PowerShell.
 
 Аналогично, чтобы узнать, какие скрипты были установлены из коллекции PowerShell, выполните командлет [Get-InstalledScript][]. Эта команда перечисляет все скрипты в системе, установленные непосредственно из коллекции PowerShell.
+
+## <a name="network-access-to-the-powershell-gallery"></a>Сетевой доступ к коллекция PowerShell
+
+В коллекции PowerShell используются следующие имена узлов:
+
+- `psg-prod-eastus.azureedge.net` — имя узла CDN;
+- `devopsgallerystorage.blob.core.windows.net` — имя узла учетной записи хранения;
+- `*.powershellgallery.com` — веб-сайт.
+
+Эти имена узлов должны быть добавлены в списки разрешений, управляющие доступом из сети.
 
 [Find-DscResource]: /powershell/module/powershellget/Find-DscResource
 [Find-Module]: /powershell/module/powershellget/Find-Module
