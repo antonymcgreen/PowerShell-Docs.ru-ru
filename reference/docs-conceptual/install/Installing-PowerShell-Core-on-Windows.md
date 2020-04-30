@@ -2,12 +2,12 @@
 title: Установка PowerShell в Windows
 description: Сведения об установке PowerShell в Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: ea5432725f4baea8c688fb8e67482910e2c3981e
-ms.sourcegitcommit: b6cf10224eb9f32919a505cdffbe5968241c18a1
+ms.openlocfilehash: a8543a91ad503364c5346a11c9c9d9f910547278
+ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80374898"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141383"
 ---
 # <a name="installing-powershell-on-windows"></a>Установка PowerShell в Windows
 
@@ -82,11 +82,11 @@ Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />Установка ZIP-пакета
 
-Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell. При установке ZIP-архив не проверяется на соответствие требованиям, как при установке MSI-пакетов. Для правильного удаленного взаимодействия с помощью WSMan необходимо обеспечить соответствие [предварительным требованиям](#prerequisites).
+Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell. При установке ZIP-архив не проверяется на соответствие требованиям, как при установке MSI-пакетов. Скачайте ZIP-архив со страницы [выпуски][releases]. В зависимости от способа загрузки файла может потребоваться разблокировать файл с помощью командлета `Unblock-File`. Распакуйте содержимое в выбранное расположение и запустите `pwsh.exe`. Для правильного удаленного взаимодействия с помощью WSMan необходимо обеспечить соответствие [предварительным требованиям](#prerequisites).
 
-## <a name="deploying-on-windows-iot"></a>Развертывание в Windows IoT
+## <a name="deploying-on-windows-10-iot-enterprise"></a>Развертывание в Windows 10 IoT Корпоративная
 
-Windows IoT поставляется с Windows PowerShell, который можно использовать для развертывания PowerShell 7.
+Windows 10 IoT Корпоративная поставляется со средой Windows PowerShell, которую можно использовать для развертывания PowerShell 7.
 
 1. Создайте `PSSession` для целевого устройства
 
@@ -128,6 +128,16 @@ Windows IoT поставляется с Windows PowerShell, который мо
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.<version>
    ```
+## <a name="deploying-on-windows-10-iot-core"></a>Развертывание в Windows 10 IoT Базовая
+
+Windows PowerShell добавляется в Windows 10 IoT Базовая, если вы включаете функцию *IOT_POWERSHELL*, которую можно использовать для развертывания PowerShell 7.
+Действия, описанные выше для Windows 10 IoT Корпоративная, могут быть выполнены и для центра Интернета вещей.
+
+Чтобы добавить последнюю версию PowerShell в образ для доставки, используйте команду [Import-PSCoreRelease](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/IoTCoreImaging/Docs/Import-PSCoreRelease.md#Import-PSCoreRelease), чтобы включить пакет в рабочую область и добавить *OPENSRC_POWERSHELL* в образ.
+
+> [!NOTE]
+> В архитектуре ARM64 Windows PowerShell не добавляется при включении *IOT_POWERSHELL*. Поэтому установка на основе ZIP-файла не поддерживается.
+> Для добавления в образ используйте команду Import-PSCoreRelease.
 
 ## <a name="deploying-on-nano-server"></a>Развертывание на Nano Server
 

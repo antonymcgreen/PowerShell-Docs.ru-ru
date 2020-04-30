@@ -2,12 +2,12 @@
 title: Удаленное взаимодействие с PowerShell через SSH
 description: Удаленное взаимодействие в PowerShell Core с помощью SSH
 ms.date: 09/30/2019
-ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9fe3e22c54a4695a1027f416acf113f2f7fd2cd7
+ms.sourcegitcommit: 7c7f8bb9afdc592d07bf7ff4179d000a48716f13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "73444365"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82174145"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Удаленное взаимодействие с PowerShell через SSH
 
@@ -64,10 +64,12 @@ PowerShell 6 или более поздней версии, и на всех к
    Создайте подсистему SSH, в которой размещается процесс PowerShell на удаленном компьютере:
 
    ```
-   Subsystem powershell c:/progra~1/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo -NoProfile
    ```
 
    > [!NOTE]
+   > Расположение исполняемого файла PowerShell по умолчанию — `c:/progra~1/powershell/7/pwsh.exe`. Расположение может различаться в зависимости от способа установки PowerShell.
+   >
    > Необходимо использовать краткое имя 8.3 для всех путей к файлам, содержащим пробелы. В OpenSSH для Windows обнаружена ошибка, блокирующая работу пробелов в путях к исполняемым файлам подсистемы. См. дополнительные сведения на [сайте GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
    >
    > Обычно краткое имя 8.3 для папки `Program Files` в Windows — это `Progra~1`. Тем не менее для проверки можно использовать следующую команду:
@@ -123,6 +125,9 @@ PowerShell 6 или более поздней версии, и на всех к
    Subsystem powershell /usr/bin/pwsh -sshs -NoLogo -NoProfile
    ```
 
+   > [!NOTE]
+   > Расположение исполняемого файла PowerShell по умолчанию — `/usr/bin/pwsh`. Расположение может различаться в зависимости от способа установки PowerShell.
+
    При необходимости включите проверку подлинности на основе ключа:
 
    ```
@@ -165,6 +170,9 @@ PowerShell 6 или более поздней версии, и на всех к
    ```
    Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
    ```
+
+   > [!NOTE]
+   > Расположение исполняемого файла PowerShell по умолчанию — `/usr/local/bin/pwsh`. Расположение может различаться в зависимости от способа установки PowerShell.
 
    При необходимости включите проверку подлинности на основе ключа:
 
