@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6c700c8-0889-49a1-a990-8c6e9aaf4735
 caps.latest.revision: 6
-ms.openlocfilehash: 5166213f8247fa23d5e0b3fdfd2367062d595169
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0b3a54a9bd6af0f9532faa37a873d3598eeb529d
+ms.sourcegitcommit: a5e945e0889d0635b7af767d80d6a13bc5526269
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365483"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82584467"
 ---
 # <a name="how-to-validate-parameter-input"></a>Как проверить входные параметры
 
 Этот раздел содержит примеры, демонстрирующие проверку входных параметров с помощью различных атрибутов для реализации правил проверки.
 
-## <a name="in-this-section"></a>Содержание
+## <a name="in-this-section"></a>В этом разделе
 
 [Проверка набора аргументов](./how-to-validate-an-argument-set.md) Описывает, как проверить набор аргументов с помощью атрибута набора аргументов.
 
@@ -33,8 +33,8 @@ ms.locfileid: "72365483"
 
 Способ объявления параметра может повлиять на проверку. Дополнительные сведения см. [в разделе как объявлять параметры командлета](./how-to-declare-cmdlet-parameters.md).
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочник
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
