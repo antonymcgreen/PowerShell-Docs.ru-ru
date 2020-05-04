@@ -731,13 +731,20 @@
         - name: "Приложение\_2. Создание настраиваемого ярлыка PowerShell"
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
 - name: Сообщество
+  expanded: true
   items:
-    - name: Ресурсы сообщества
+    - name: Обновление сообщества
+      href: community/community-update.yml
+    - name: Поддержка сообщества
       href: community/community-support.md
-    - name: Цифровые графические материалы
-      href: community/digital-art.md
-    - name: Новое в документации PowerShell
-      href: community/whats-new-in-docs.md
+    - name: Зал славы участников
+      href: community/hall-of-fame.md
+    - name: Новые возможности в Документации Майкрософт
+      items:
+        - name: Второй квартал 2020 года
+          href: community/2020-Q2.md
+        - name: Первый квартал 2020 года
+          href: community/2020-Q1.md
     - name: Руководство для соавторов
       items:
         - name: Обзор
@@ -760,6 +767,8 @@
               href: community/contributing/managing-issues.md
             - name: Рассмотрение запросов на вытягивание
               href: community/contributing/managing-pull-requests.md
+    - name: Цифровые графические материалы
+      href: community/digital-art.md
 - name: Пакет SDK для PowerShell
   items:
     - name: Обзор
