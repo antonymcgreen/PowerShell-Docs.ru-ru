@@ -1,19 +1,17 @@
 ---
-title: Ресурсы сообщества PowerShell
+title: Ресурсы поддержки сообщества PowerShell
 description: Список ресурсов, предназначенных для пользователей PowerShell и созданных ими
-ms.date: 03/04/2020
-ms.openlocfilehash: 50f5eaaef9ef30351fa605f74648a8efbce90af3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.date: 04/29/2020
+ms.openlocfilehash: f35524c8a1a457ffd6cccf0d2165cc340f7519ca
+ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80395018"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82630841"
 ---
-# <a name="powershell-community-resources"></a>Ресурсы сообщества PowerShell
+# <a name="getting-support-from-the-community"></a>Получение поддержки от сообщества
 
 Сообщество PowerShell — это активная группа пользователей. Эта статья поможет вам связаться с другим участником сообщества.
-
-## <a name="getting-support-from-the-community"></a>Получение поддержки от сообщества
 
 Участники сообщества PowerShell могут сообщать о проблемах и ошибках, а также запрашивать новые функции в нашем репозитории [GitHub](https://github.com/powershell/powershell/issues). Если у вас есть вопросы, вы можете получить помощь от других участников сообщества на одном из следующих общедоступных форумов.
 
@@ -27,9 +25,3 @@ ms.locfileid: "80395018"
 - [PowerShell на Discord](https://discord.gg/Ju25cw6)
 
 Сведения о нашей политике поддержки см. в статье [Жизненный цикл поддержки PowerShell](/powershell/scripting/powershell-support-lifecycle).
-
-## <a name="looking-for-logos-and-other-digital-goodies"></a>Поиск логотипов и других цифровых материалов
-
-Мы предлагаем вам коллекцию цифровых графических материалов.
-
-[Цифровые графические материалы](/powershell/scripting/community/digital-art)

@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: Обновление сообщества
+summary: Список ресурсов и сводка новых статей и вкладов членов сообщества.
+metadata:
+  title: Обновление сообщества
+  description: Список ресурсов и сводка новых статей и вкладов членов сообщества.
+  ms.topic: landing-page
+  author: sdwheeler
+  ms.author: sewhee
+  ms.date: 04/29/2020
+  ms.openlocfilehash: 42d8de8ffedf9ac1b0bd7ee5df1483f8d1316da7
+  ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82630890"
+landingContent:
+- title: Ресурсы сообщества
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Поддержка сообщества
+      url: community-support.md
+    - text: Цифровые графические материалы
+      url: digital-art.md
+    - text: Зал славы участников
+      url: hall-of-fame.md
+- title: Новое в документации по PowerShell
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Второй квартал 2020 года
+      url: ./2020-Q2.md
+    - text: Первый квартал 2020 года
+      url: ./2020-Q1.md
+- title: Примите участие в разработке документации по PowerShell
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Руководство для участников PowerShell
+      url: contributing/overview.md
+    - text: Участие в работе над документацией
+      url: contributing/get-started-writing.md
+  - linkListType: how-to-guide
+    links:
+    - text: Как отправить сообщение о проблеме
+      url: contributing/file-an-issue.md
+    - text: Отправка запроса на вытягивание
+      url: contributing/pull-requests.md
+    - text: Руководство по стилю для документации PowerShell
+      url: contributing/powershell-style-guide.md
+    - text: Редактирование справки по командлетам
+      url: contributing/editing-cmdlet-ref.md
+  - linkListType: reference
+    links:
+    - text: Контрольный список для редактора
+      url: contributing/editorial-checklist.md
+    - text: Рассмотрение сообщений о проблемах
+      url: contributing/managing-issues.md
+    - text: Рассмотрение запросов на вытягивание
+      url: contributing/managing-pull-requests.md
