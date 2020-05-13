@@ -2,12 +2,12 @@
 title: Основные сведения о кодировке файлов в VS Code и PowerShell
 description: Настройка кодировки файлов в VS Code и PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: b09c13374c28e88c66d1d84fbe56ca5c66b34c8c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 991e3ccc95dd0dd2106cefe6c68371e59c031f35
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80978684"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271871"
 ---
 # <a name="understanding-file-encoding-in-vs-code-and-powershell"></a>Основные сведения о кодировке файлов в VS Code и PowerShell
 
@@ -73,7 +73,7 @@ At C:\Users\<User>\<OneDrive>\Development\PowerShell\Scripts\Send-EmailUsingSmtp
 2. При выполнении скриптов в интегрированной консоли они считываются оболочкой PowerShell непосредственно из файла. Если кодировка PowerShell отличается от кодировки VS Code, может произойти сбой.
 3. Когда скрипт, который открыт в VS Code, ссылается на другой скрипт, который не был открыт в VS Code, расширение загружает содержимое второго скрипта из файловой системы. Расширение PowerShell по умолчанию использует кодировку UTF-8, но при этом применяет обнаружение [метки порядка байтов][] (BOM), чтобы выбрать правильную кодировку.
 
-Проблема возникает при предположении кодировки, не использующей BOM (такой как [UTF-8][] без метки порядка байтов или [Windows-1252][]). Расширение PowerShell по умолчанию использует UTF-8. Расширение не может изменить параметры кодировки в VS Code. Дополнительные сведения см. в описании проблемы № 824 (https://github.com/Microsoft/VS ).
+Проблема возникает при предположении кодировки, не использующей BOM (такой как [UTF-8][] без метки порядка байтов или [Windows-1252][]). Расширение PowerShell по умолчанию использует UTF-8. Расширение не может изменить параметры кодировки в VS Code. Дополнительные сведения см. в разделе [Проблема № 824](https://github.com/Microsoft/VSCode/issues/824).
 
 ## <a name="choosing-the-right-encoding"></a>Выбор подходящей кодировки
 
@@ -255,11 +255,11 @@ Get-ChildItem *.ps1 -Recurse | ForEach-Object {
 
 - [Обзор [@mklement0] о кодировке PowerShell на сайте StackOverflow](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8).
 - Предыдущие проблемы с кодировками, найденные в VS Code и PowerShell:
-  - [#1308](https://github.com/PowerShell/VS Code-powershell/issues/1308)
-  - [#1628](https://github.com/PowerShell/VS Code-powershell/issues/1628)
-  - [#1680](https://github.com/PowerShell/VS Code-powershell/issues/1680)
-  - [#1744](https://github.com/PowerShell/VS Code-powershell/issues/1744)
-  - [#1751](https://github.com/PowerShell/VS Code-powershell/issues/1751)
+  - [#1308](https://github.com/PowerShell/VSCode-powershell/issues/1308)
+  - [#1628](https://github.com/PowerShell/VSCode-powershell/issues/1628)
+  - [#1680](https://github.com/PowerShell/VSCode-powershell/issues/1680)
+  - [#1744](https://github.com/PowerShell/VSCode-powershell/issues/1744)
+  - [#1751](https://github.com/PowerShell/VSCode-powershell/issues/1751)
 - [Классическая статья *Joel on Software* про Юникод](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
 - [Кодировка в .NET Standard](https://github.com/dotnet/standard/issues/260#issuecomment-289549508)
 
