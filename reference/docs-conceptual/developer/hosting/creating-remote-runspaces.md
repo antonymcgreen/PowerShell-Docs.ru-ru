@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 057a666f-731b-423d-9d80-7be6b1836244
 caps.latest.revision: 5
-ms.openlocfilehash: c97b0dfc12d96f99c53383d3578579f1988efd52
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 964320108d7aff24d59905028fb976e0f75642e7
+ms.sourcegitcommit: 08e9ed4bc9bffc7af82b3130e74ec7763db74e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367683"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83382632"
 ---
 # <a name="creating-remote-runspaces"></a>Создание удаленных пространств выполнения
 
@@ -21,7 +21,7 @@ ms.locfileid: "72367683"
 
 ## <a name="using-a-wsmanconnection-to-create-a-remote-runspace"></a>Использование Всманконнектион для создания удаленного пространства выполнения
 
- Чтобы создать пространство выполнения, которое подключается к удаленному компьютеру, создайте объект [System. Management. Automation. пространства. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) . Укажите целевую конечную точку для соединения, задав свойство [System. Management. Automation. пространства. WSManConnectionInfo. ConnectionURI](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri) объекта. Затем создайте пространство выполнения, вызвав метод [System. Management. Automation. пространства. рунспацефактори. креатерунспаце](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) , указав объект [System. Management. Automation. пространства. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) в качестве параметра `connectionInfo`.
+ Чтобы создать пространство выполнения, которое подключается к удаленному компьютеру, создайте объект [System. Management. Automation. пространства. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) . Укажите целевую конечную точку для соединения, задав свойство [System. Management. Automation. пространства. WSManConnectionInfo. ConnectionURI](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri) объекта. Затем создайте пространство выполнения, вызвав метод [System. Management. Automation. пространства. рунспацефактори. креатерунспаце](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) , указав в качестве параметра объект [System. Management. Automation. пространства. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) . `connectionInfo`
 
  В следующем примере показано, как создать пространство выполнения, которое подключается к удаленному компьютеру. В этом примере `RemoteComputerUri` используется в качестве заполнителя для фактического URI удаленного компьютера.
 
@@ -48,7 +48,7 @@ namespace Samples
       // Create a WSManConnectionInfo object using the default constructor
       // to connect to the "localHost". The WSManConnectionInfo object can
       // also be used to specify connections to remote computers.
-      Uri RemoteComputerUri = new uri("http://Server01:5985/WSMAN");
+      Uri RemoteComputerUri = new Uri("http://Server01:5985/WSMAN");
       WSManConnectionInfo connectionInfo = new WSManConnectionInfo(RemoteComputerUri);
 
       // Set the OperationTimeout property and OpenTimeout properties.
