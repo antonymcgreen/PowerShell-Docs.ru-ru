@@ -755,22 +755,20 @@
               href: community/contributing/managing-pull-requests.md
     - name: Цифровые графические материалы
       href: community/digital-art.md
-- name: PowerShell для разработчиков
+- name: Написание скриптов и разработка
   items:
-    - name: Кроссплатформенная разработка
+    - name: Visual Studio Code
       items:
-        - name: Visual Studio Code
-          items:
-            - name: Использование Visual Studio Code
-              href: components/vscode/using-vscode.md
-            - name: Репликация функций интегрированной среды скриптов в Visual Studio Code
-              href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-            - name: Удаленные редактирование и отладка в Visual Studio Code
-              href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
-            - name: "Основные сведения о кодировке файлов в VS\_Code и PowerShell"
-              href: components/vscode/understanding-file-encoding.md
-        - name: Создание переносимых модулей
-          href: learn/writing-portable-modules.md
+        - name: Использование Visual Studio Code
+          href: components/vscode/using-vscode.md
+        - name: Репликация функций интегрированной среды скриптов в Visual Studio Code
+          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+        - name: Удаленные редактирование и отладка в Visual Studio Code
+          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+        - name: "Основные сведения о кодировке файлов в VS\_Code и PowerShell"
+          href: components/vscode/understanding-file-encoding.md
+    - name: Создание переносимых модулей
+      href: learn/writing-portable-modules.md
     - name: Прежние версии пакета SDK для PowerShell
       items:
         - name: Обзор
