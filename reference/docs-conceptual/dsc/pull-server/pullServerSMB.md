@@ -29,7 +29,7 @@ ms.locfileid: "80500707"
 
 ### <a name="install-the-xsmbshare-resource"></a>Установка ресурса xSmbShare
 
-Для установки модуля [xSmbShare](/powershell/module/PowershellGet/Install-Module) используйте командлет **Install-Module**.
+Для установки модуля **xSmbShare** используйте командлет [Install-Module](/powershell/module/PowershellGet/Install-Module).
 
 > [!NOTE]
 > `Install-Module` включен в модуль **PowerShellGet**, содержащийся в PowerShell 5.0.
