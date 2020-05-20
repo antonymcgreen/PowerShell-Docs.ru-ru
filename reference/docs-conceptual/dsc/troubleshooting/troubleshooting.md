@@ -192,7 +192,7 @@ TimeCreated                     Id LevelDisplayName Message
 12/2/2013 3:47:29 PM          4182 Information      Job {1A776B6A-5BAC-11E3-BF41-00155D553612} : ...
 ```
 
-С помощью `$SeparateDscOperations`Where-Object[ можно извлечь данные в переменную ](/powershell/module/microsoft.powershell.core/where-object). Ниже приведены пять ситуаций, в которых может потребоваться извлечь данные для устранения неполадок DSC:
+С помощью [Where-Object](/powershell/module/microsoft.powershell.core/where-object) можно извлечь данные в переменную `$SeparateDscOperations`. Ниже приведены пять ситуаций, в которых может потребоваться извлечь данные для устранения неполадок DSC:
 
 ### <a name="1-operations-failures"></a>1\. Сбой при выполнении операции
 

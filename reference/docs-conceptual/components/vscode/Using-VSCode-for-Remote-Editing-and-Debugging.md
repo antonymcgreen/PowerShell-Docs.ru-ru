@@ -77,7 +77,7 @@ ms.locfileid: "78279177"
 
 Теперь мы можем выполнить те же шаги, что и при редактировании локального скрипта.
 
-1. Чтобы открыть удаленный файл `Open-EditorFile test.ps1`, запустите `psedit test.ps1` или `test.ps1`.
+1. Чтобы открыть удаленный файл `test.ps1`, запустите `Open-EditorFile test.ps1` или `psedit test.ps1`.
 
   ![Открытый файл test.ps1 в редакторе файлов](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
 
