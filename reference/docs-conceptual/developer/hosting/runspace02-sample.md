@@ -8,22 +8,22 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7630bb63-ef39-4abd-b795-8000f984c1e5
 caps.latest.revision: 9
-ms.openlocfilehash: 6352169cffbb8a8bf59a42f79979f5003c150fa4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 997b1d6841ff014093ba54bf7a1db7b0b7d746b8
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360983"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564812"
 ---
 # <a name="runspace02-sample"></a>Пример Runspace02
 
-В этом примере показано, как использовать класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для синхронного выполнения командлетов [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) . Командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) возвращает объекты [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) для каждого процесса, выполняемого на локальном компьютере, а `Sort-Object` сортирует объекты на основе их свойства [System.Diagnostics.Process.ID *](/dotnet/api/System.Diagnostics.Process.Id) . Результаты этих команд отображаются с помощью элемента управления [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) .
+В этом примере показано, как использовать класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для синхронного выполнения командлетов [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) . Командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) возвращает объекты [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) для каждого процесса, выполняемого на локальном компьютере, и `Sort-Object` сортирует объекты на основе их свойства [System.Diagnostics.Process.ID *](/dotnet/api/System.Diagnostics.Process.Id) . Результаты этих команд отображаются с помощью элемента управления [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) .
 
 ## <a name="requirements"></a>Требования
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом образце демонстрируется следующее.
 
@@ -116,4 +116,4 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 
 ## <a name="see-also"></a>См. также:
 
-[Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)
+[Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

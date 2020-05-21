@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7b48bf80-cbf0-4cb1-8d5b-3b8d06196598
 caps.latest.revision: 10
-ms.openlocfilehash: 00190c7350cb0f1cfc5c389b56e48e9397480446
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 27f1c346863458920b310c6c4ce1403b3aab69ba
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369733"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83563804"
 ---
 # <a name="getprocesssample01-sample"></a>Пример командлета GetProcessSample01
 
-В этом примере показано, как реализовать командлет, который получает процессы на локальном компьютере. Этот командлет является упрощенной версией командлета `Get-Process`, предоставляемого Windows PowerShell 2,0.
+В этом примере показано, как реализовать командлет, который получает процессы на локальном компьютере. Этот командлет является упрощенной версией `Get-Process` командлета, предоставляемого Windows PowerShell 2,0.
 
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 
@@ -31,7 +31,7 @@ ms.locfileid: "72369733"
 
 ### <a name="how-to-run-the-sample"></a>Запуск примера
 
-1. Откройте окно командной строки.
+1. Откройте окно командной строки и
 
 2. Перейдите к каталогу, содержащему файл Sample. dll.
 
@@ -68,7 +68,7 @@ ms.locfileid: "72369733"
 
 Для работы с этим образцом требуется Windows PowerShell 1,0 или более поздней версии.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом образце демонстрируется следующее.
 

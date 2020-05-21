@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50e6f9b1-2678-4f53-9250-7c48843a9549
 caps.latest.revision: 5
-ms.openlocfilehash: 1113c0d1cd68bb97d2f96b529f755b62137d1f40
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a9497d72a586d0cc64c1d4e090819230285767e8
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366043"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564972"
 ---
 # <a name="importing-and-invoking-a-windows-powershell-workflow"></a>Импорт и вызов рабочего процесса Windows PowerShell
 
@@ -25,7 +25,7 @@ Windows PowerShell 3 позволяет импортировать и вызыв
 
 1. Создайте объект [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo), чтобы создать соединение с удаленным пространством выполнения.
 
-2. Задайте для свойства [System. Management. Automation. пространства. Wsmanconnectioninfo. шеллури *](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ShellUri) объекта [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)значение `Microsoft.PowerShell.Workflow`, чтобы указать конечную точку Windows PowerShell.
+2. Задайте свойство [System. Management. Automation. пространства. Wsmanconnectioninfo. шеллури *](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ShellUri) объекта [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo), чтобы `Microsoft.PowerShell.Workflow` указать конечную точку Windows PowerShell.
 
 3. Создайте пространство выполнения, использующее соединение, созданное путем выполнения предыдущих шагов.
 

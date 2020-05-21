@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
-ms.openlocfilehash: 8f745cc0e5ef6db7a6bbdf39d826103f3b8a98ce
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 772f73793449856651ab6b03e1ccc14faed941fc
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369743"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561453"
 ---
 # <a name="events01-sample"></a>Пример командлета Events01
 
@@ -24,13 +24,13 @@ ms.locfileid: "72369743"
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 
 1. С установленным пакетом SDK для Windows PowerShell 2,0 перейдите в папку Events01
-   Расположение по умолчанию: `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.
+   По умолчанию он расположен в папке `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.
 
 2. Дважды щелкните значок файла решения (SLN).
    Откроется пример проекта в Microsoft Visual Studio.
 
 3. В меню **Построение** выберите команду **Построить решение**.
-   Библиотека для примера будет построена в папке по умолчанию `\bin` или `\bin\debug`.
+   Библиотека для образца будет построена в папках по умолчанию `\bin` или `\bin\debug` .
 
 ### <a name="how-to-run-the-sample"></a>Запуск примера
 
@@ -77,14 +77,14 @@ A file was created in the TEMP directory
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом образце демонстрируется следующее.
 
 ### <a name="how-to-write-a-cmdlet-for-event-registration"></a>Написание командлета для регистрации событий
 
-Командлет является производным от класса [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , который обеспечивает поддержку параметров, общих для командлетов `Register-*Event`.
-Командлеты, производные от [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , должны определять свои конкретные параметры и переопределять `GetSourceObject` и `GetSourceObjectEventName` абстрактные методы.
+Командлет является производным от класса [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , который обеспечивает поддержку параметров, общих для `Register-*Event` командлетов.
+Командлеты, производные от [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , должны определять свои конкретные параметры и переопределять `GetSourceObject` `GetSourceObjectEventName` абстрактные методы.
 
 ## <a name="example"></a>Пример
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98bcfda0-6ee2-46f5-bbc7-5fab8b780d6a
 caps.latest.revision: 5
-ms.openlocfilehash: edb4d9944a527391983e068ddf07f4fac415c3f9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c557a6ec51d52f529faaaa316c89da359cd97051
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359873"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83562515"
 ---
 # <a name="writing-a-navigation-provider"></a>Написание поставщика навигации
 
@@ -191,7 +191,7 @@ protected override string MakePath(string parent, string child)
 
 ### <a name="implementing-normalizerelativepath"></a>Реализация Нормализерелативепас
 
-Метод [System. Management. Automation. Provider. Navigationcmdletprovider. нормализерелативепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) принимает `path` и `basepath` параметры и Возвращает нормализованный путь, эквивалентный параметру `path` и относительно параметра `basepath`.
+Метод [System. Management. Automation. Provider. Navigationcmdletprovider. нормализерелативепас *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) принимает `path` Параметры и `basepath` и Возвращает нормализованный путь, эквивалентный `path` параметру и относящийся к `basepath` параметру.
 
 ```csharp
 protected override string NormalizeRelativePath(string path,
@@ -300,6 +300,6 @@ protected override void MoveItem(string path, string destination)
 
 ## <a name="see-also"></a>См. также:
 
-[Создание поставщика контейнера](./writing-a-container-provider.md)
+[Написание поставщика контейнера](./writing-a-container-provider.md)
 
-[Общие сведения о поставщике Windows PowerShell](./windows-powershell-provider-overview.md)
+[Общие сведения о поставщиках Windows PowerShell](./windows-powershell-provider-overview.md)

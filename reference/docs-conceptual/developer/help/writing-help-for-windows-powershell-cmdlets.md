@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55908d67-7cbe-482a-a105-5a6da93c5311
 caps.latest.revision: 4
-ms.openlocfilehash: 8d692cf88d1d356886ef973f0989294d6b51ee6d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fd565e8bf8429d91d785664c8cc69d1843439219
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361073"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560599"
 ---
 # <a name="writing-help-for-powershell-cmdlets"></a>Написание справки по командлетам PowerShell
 
@@ -34,7 +34,7 @@ ms.locfileid: "72361073"
 
 ### <a name="write-simply"></a>Писать просто
 Используйте простые слова и фразы.
-Избегайте жаргоне.
+Избегайте профессиональных терминов.
 Учтите, что многие читатели оснащены только словарем на иностранном языке и вашим разделом справки.
 
 ### <a name="write-consistently"></a>Согласованная запись
@@ -85,24 +85,24 @@ ms.locfileid: "72361073"
 
 ## <a name="see-also"></a>См. также:
 
- [Создание файла справки по командлетам](./how-to-create-the-cmdlet-help-file.md)
+ [Как создать файл справки командлета](./how-to-create-the-cmdlet-help-file.md)
 
- [Добавление имени командлета и кратких сведений в раздел справки по командлетам](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
+ [Как добавить имя командлета и краткий обзор командлета в раздел справки для командлета](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
 
  [Добавление подробного описания в раздел справки по командлету](./how-to-add-a-cmdlet-description.md)
 
- [Добавление синтаксиса в раздел справки по командлету](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
+ [Как добавить синтаксис в раздел справки для командлета](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
 
  [Добавление параметров в раздел справки по командлету](./how-to-add-parameter-information.md)
 
  [Добавление типов входных данных в раздел справки по командлетам](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
 
- [Добавление возвращаемых значений в раздел справки по командлетам](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
+ [Как добавить возвращаемые значения в раздел справки для командлета](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
 
- [Добавление заметок в раздел справки по командлетам](./how-to-add-notes-to-a-cmdlet-help-topic.md)
+ [Как добавить примечания в раздел справки для командлета](./how-to-add-notes-to-a-cmdlet-help-topic.md)
 
- [Добавление примеров в раздел справки по командлетам](./how-to-add-examples-to-a-cmdlet-help-topic.md)
+ [Как добавить примеры в раздел справки для командлета](./how-to-add-examples-to-a-cmdlet-help-topic.md)
 
- [Добавление связанных ссылок в раздел справки по командлетам](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
+ [Как добавить связанные ссылки в раздел справки для командлета](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
 
  [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

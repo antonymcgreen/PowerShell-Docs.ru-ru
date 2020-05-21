@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4497b64c-7875-4047-bf77-07e04c098ffe
 caps.latest.revision: 4
-ms.openlocfilehash: 376d90394b632e82322b848cb124f002ff91d8b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d29a652b32d07b7825bc5bed5099daa67dd32ff4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366183"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564601"
 ---
 # <a name="deploying-a-management-odata-web-service"></a>Развертывание веб-службы управления OData
 
@@ -23,7 +23,7 @@ ms.locfileid: "72366183"
 
 Выполните следующие действия, чтобы развернуть веб-службу OData управления.
 
-1. Создайте каталог для веб-приложения в каталоге IIS `WWWRoot`.
+1. Создайте каталог для веб-приложения в `WWWRoot` каталоге IIS.
 
 2. Скопируйте файл схемы MOF, файл схемы XML, библиотеки DLL, в которых экспортируются интерфейсы [Microsoft. Management. OData. кустомаусоризатион](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) и [System. Management. Automation. Remoting. PSSessionConfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) , а также файл Web. config в каталог приложения.
 
@@ -427,14 +427,14 @@ Start-Sleep 10
 
 ## <a name="see-also"></a>См. также:
 
-[Реализация пользовательской авторизации для веб-службы OData управления](./implementing-custom-authorization-for-a-management-odata-web-service.md)
+[Реализация пользовательской авторизации для веб-службы управления OData](./implementing-custom-authorization-for-a-management-odata-web-service.md)
 
-[Реализация Сессионконфигуратион для веб-службы OData управления](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
+[Реализация SessionConfiguration для веб-службы управления OData](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
 
-[Создание файла схемы MOF для веб-службы OData управления](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[Создание файла схемы MOF для веб-службы управления OData](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
-[Создание файла схемы XML для веб-службы OData управления](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
+[Создание файла схемы XML для веб-службы управления OData](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
 
-[Создание файла Web. config для веб-службы OData управления](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
+[Создание файла Web.config для веб-службы управления OData](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
 
-[Создание веб-службы OData для управления](./creating-a-management-odata-web-service.md)
+[Создание веб-службы управления OData](./creating-a-management-odata-web-service.md)

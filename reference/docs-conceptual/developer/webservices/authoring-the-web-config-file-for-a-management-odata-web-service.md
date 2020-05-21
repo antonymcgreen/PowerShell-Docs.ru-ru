@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d569f5d5-9746-40c0-be5e-f218bc4560f7
 caps.latest.revision: 4
-ms.openlocfilehash: eee515252cf03c05d15368ee6e2a1cb62dc82647
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 8e5897c3df38689e80d2135dfb82898bf9a05b86
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500786"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561487"
 ---
 # <a name="authoring-the-webconfig-file-for-a-management-odata-web-service"></a>Создание файла Web.config для веб-службы управления OData
 
@@ -63,12 +63,12 @@ ms.locfileid: "80500786"
 
 ## <a name="see-also"></a>См. также:
 
-[Реализация пользовательской авторизации для веб-службы OData управления](./implementing-custom-authorization-for-a-management-odata-web-service.md)
+[Реализация пользовательской авторизации для веб-службы управления OData](./implementing-custom-authorization-for-a-management-odata-web-service.md)
 
-[Реализация Сессионконфигуратион для веб-службы OData управления](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
+[Реализация SessionConfiguration для веб-службы управления OData](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
 
-[Создание файла схемы MOF для веб-службы OData управления](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[Создание файла схемы MOF для веб-службы управления OData](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
-[Создание файла схемы XML для веб-службы OData управления](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
+[Создание файла схемы XML для веб-службы управления OData](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
 
-[Создание веб-службы OData для управления](./creating-a-management-odata-web-service.md)
+[Создание веб-службы управления OData](./creating-a-management-odata-web-service.md)

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e83c9d9-6d06-4247-94d9-e3bfd4013b11
 caps.latest.revision: 4
-ms.openlocfilehash: b830571418fe75bbfc68df02f20a6012efefd99a
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 7ccdeeb2833b79cabc7c77d1a400e0c9132b2dcd
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996069"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561470"
 ---
 # <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a>Создание файла схемы XML для веб-службы управления OData
 
@@ -47,11 +47,11 @@ ms.locfileid: "76996069"
 |CRUD, команда|XML-элемент|
 |------------------|-----------------|
 |Создать|Создать|
-|Чтение|Запрос|
-|Обновление:|Обновление:|
-|Удалить|Удалить|
+|Чтение|query|
+|Обновление|Update|
+|DELETE|Удалить|
 
-В следующем примере показаны сопоставления для операций создания, чтения и обновления в ресурсе `Service`.
+В следующем примере показаны сопоставления для операций создания, чтения и обновления `Service` ресурса.
 
 ```xml
 <ClassImplementations>
@@ -157,10 +157,10 @@ ms.locfileid: "76996069"
         </Class>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Создание файла схемы MOF для веб-службы OData управления](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[Создание файла схемы MOF для веб-службы управления OData](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
 [Схема сопоставления ресурсов](./resource-mapping-schema.md)
 
-[Создание веб-службы OData для управления](./creating-a-management-odata-web-service.md)
+[Создание веб-службы управления OData](./creating-a-management-odata-web-service.md)

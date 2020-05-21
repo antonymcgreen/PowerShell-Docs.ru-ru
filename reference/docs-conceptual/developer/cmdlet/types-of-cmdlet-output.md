@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], output
 ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
 caps.latest.revision: 12
-ms.openlocfilehash: 3efa98c7aa22fdaee8042bae99282aea0618ef5f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: de21d9ebfec4f23d3819695df225f7a230864a7b
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369293"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561424"
 ---
 # <a name="types-of-cmdlet-output"></a>Типы выходных данных командлета
 
@@ -66,8 +66,8 @@ PowerShell предоставляет несколько методов, кот�
 
 ## <a name="see-also"></a>См. также статью
 
-[Основные понятия отчетов об ошибках](./error-reporting-concepts.md)
+[Основные понятия, связанные с отчетами об ошибках](./error-reporting-concepts.md)
 
-[Обзор командлетов](./cmdlet-overview.md)
+[Общие сведения о командлетах](./cmdlet-overview.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

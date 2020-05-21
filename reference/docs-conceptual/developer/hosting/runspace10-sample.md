@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7c265084-e072-46ca-9844-c3c0e275d6b0
 caps.latest.revision: 7
-ms.openlocfilehash: fdf0036c68b608d254ed928ae9ac58616a856200
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1a73c0b6731073b1bac941e323416e8c45d2c252
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367343"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83565246"
 ---
 # <a name="runspace10-sample"></a>Пример Runspace10
 
@@ -23,7 +23,7 @@ ms.locfileid: "72367343"
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом образце демонстрируется следующее.
 
@@ -157,4 +157,4 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 
 ## <a name="see-also"></a>См. также:
 
-[Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)
+[Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

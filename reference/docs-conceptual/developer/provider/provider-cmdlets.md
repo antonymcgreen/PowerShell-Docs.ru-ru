@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d2465420-0970-4408-9ee5-260cf444cb67
 caps.latest.revision: 8
-ms.openlocfilehash: e6a0711cff6a550100f584fb64ae7f59f71a3cfb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b266a22e3ab16762b22e9d630b968ee510ff1c49
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359983"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564195"
 ---
 # <a name="provider-cmdlets"></a>Командлеты поставщика
 
@@ -91,7 +91,7 @@ ms.locfileid: "72359983"
 
 ### <a name="location-cmdlets"></a>Командлеты Location
 
-- `Get-Location`: получает сведения о текущем рабочем расположении. Для поддержки этого командлета не требуется перезаписывать методы.
+- `Get-Location`— Получает сведения о текущем рабочем расположении. Для поддержки этого командлета не требуется перезаписывать методы.
 
 - `Pop-Location`: Этот командлет изменяет текущее расположение на расположение, которое недавно было отправлено в стек. Для поддержки этого командлета не требуется перезаписывать методы.
 
@@ -107,7 +107,7 @@ ms.locfileid: "72359983"
 
 - `Split-Path`: Возвращает указанную часть пути.
 
-- `Resolve-Path`: разрешает подстановочные знаки в пути и отображает содержимое пути.
+- `Resolve-Path`: Разрешает подстановочные знаки в пути и отображает содержимое пути.
 
 - `Test-Path`: Этот командлет определяет, существуют ли все элементы пути. Для поддержки этого командлета перезапишите методы [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) и [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистсдинамикпараметерс](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters) .
 

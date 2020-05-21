@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a88dd89-6beb-494f-9e2a-6b10baed1a8d
 caps.latest.revision: 17
-ms.openlocfilehash: 186a8ceecea47564503dc181a76cc314033b6d3f
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: cc77c0546de98e492c9724e051b9d72f1ebfdcb6
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996036"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560174"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>Как создать файл справки командлета
 
@@ -36,7 +36,7 @@ ms.locfileid: "76996036"
 
    В следующей таблице перечислены элементы XML для каждого узла, за которыми следуют описания каждого узла.
 
-   |Узел|Description|
+   |Узел|Описание|
    |----------|-----------------|
    |`<details>`|Добавляет содержимое для разделов "имя" и "КРАТКИй Обзор" раздела справки по командлетам. Дополнительные сведения см. в разделе [Добавление имени командлета и кратких](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)сведений.|
    |`<maml:description>`|Добавляет содержимое для раздела описания в разделе справки по командлету. Дополнительные сведения см. в [разделе Добавление подробного описания в раздел справки по командлетам](./how-to-add-a-cmdlet-description.md).|
@@ -87,24 +87,24 @@ ms.locfileid: "76996036"
 </command:command>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [Добавление имени командлета и кратких обзоров](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
 
  [Добавление подробного описания в раздел справки по командлету](./how-to-add-a-cmdlet-description.md)
 
- [Добавление синтаксиса в раздел справки по командлету](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
+ [Как добавить синтаксис в раздел справки для командлета](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
 
  [Добавление параметров в раздел справки по командлету](./how-to-add-parameter-information.md)
 
- [Добавление типов входных данных в раздел справки по командлетам](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
+ [Как добавить типы входных данных в раздел справки для командлета](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
 
- [Добавление возвращаемых значений в раздел справки по командлетам](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
+ [Как добавить возвращаемые значения в раздел справки для командлета](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
 
  [Добавление заметок в раздел справки по командлетам](./how-to-add-notes-to-a-cmdlet-help-topic.md)
 
- [Добавление примеров в раздел справки по командлетам](./how-to-add-examples-to-a-cmdlet-help-topic.md)
+ [Как добавить примеры в раздел справки для командлета](./how-to-add-examples-to-a-cmdlet-help-topic.md)
 
- [Добавление связанных ссылок в раздел справки по командлетам](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
+ [Как добавить связанные ссылки в раздел справки для командлета](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
 
  [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

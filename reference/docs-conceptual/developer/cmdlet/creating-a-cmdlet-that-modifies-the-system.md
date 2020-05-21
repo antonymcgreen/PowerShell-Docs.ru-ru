@@ -13,12 +13,12 @@ helpviewer_keywords:
 - confirm impact [PowerShell Programmer's Guide]
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
-ms.openlocfilehash: 8a65915b88a04e36e773853b903528a65fe11e99
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f0ce30c3fa76141908680934bcac41a989622c42
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365763"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560072"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>Создание командлета, который изменяет систему
 
@@ -26,15 +26,15 @@ ms.locfileid: "72365763"
 
 Для поддержки подтверждения командлет должен выполнить два действия.
 
-- Объявите, что командлет поддерживает подтверждение при указании атрибута [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) , установив для ключевого слова SupportsShouldProcess значение `true`.
+- Объявите, что командлет поддерживает подтверждение при указании атрибута [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) , установив для ключевого слова SupportsShouldProcess значение `true` .
 
 - Вызовите [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) во время выполнения командлета (как показано в следующем примере).
 
-При поддержке подтверждения командлет предоставляет параметры `Confirm` и `WhatIf`, предоставляемые Windows PowerShell, а также рекомендации по разработке для командлетов (Дополнительные сведения о рекомендациях по разработке командлетов см. в разделе [рекомендации по разработке командлетов](./cmdlet-development-guidelines.md)).
+При поддержке подтверждения командлет предоставляет `Confirm` `WhatIf` Параметры и, предоставляемые Windows PowerShell, а также рекомендации по разработке для командлетов (Дополнительные сведения о рекомендациях по разработке командлетов см. в разделе [рекомендации по разработке командлетов](./cmdlet-development-guidelines.md)).
 
 ## <a name="changing-the-system"></a>Изменение системы
 
-Действие «изменение системы» относится к любому командлету, который потенциально изменяет состояние системы за пределами Windows PowerShell. Например, остановка процесса, включение или отключение учетной записи пользователя или добавление строки в таблицу базы данных — это все изменения в системе, которые должны быть подтверждены. В отличие от этого, операции, считывающие данные или устанавливающие временные подключения, не изменяют систему и, как правило, не нуждаются в подтверждении. Подтверждение также не требуется для действий, воздействие которых ограничено внутри среды выполнения Windows PowerShell, например `set-variable`. Командлеты, которые могут или не могут вносить постоянные изменения, должны объявлять `SupportsShouldProcess` и вызывать [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) , только если они собирается внести постоянные изменения.
+Действие «изменение системы» относится к любому командлету, который потенциально изменяет состояние системы за пределами Windows PowerShell. Например, остановка процесса, включение или отключение учетной записи пользователя или добавление строки в таблицу базы данных — это все изменения в системе, которые должны быть подтверждены. В отличие от этого, операции, считывающие данные или устанавливающие временные подключения, не изменяют систему и, как правило, не нуждаются в подтверждении. Подтверждение также не требуется для действий, воздействие которых ограничено внутри среды выполнения Windows PowerShell, например `set-variable` . Командлеты, которые могут или не могут вносить постоянные изменения, должны объявлять `SupportsShouldProcess` и вызывать [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) только в том случае, если они собирается внести постоянные изменения.
 
 > [!NOTE]
 > Подтверждение ShouldProcess применяется только к командлетам. Если команда или сценарий изменяет состояние выполнения системы путем непосредственного вызова методов или свойств .NET или путем вызова приложений за пределами Windows PowerShell, такая форма подтверждения будет недоступна.
@@ -55,25 +55,25 @@ ms.locfileid: "72365763"
 public class StopProcCommand : Cmdlet
 ```
 
-Учтите, что в объявлении [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) ключевое слово `SupportsShouldProcess` Attribute имеет значение `true`, чтобы позволить командлету вызывать методы [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Если это ключевое слово не задано, параметры `Confirm` и `WhatIf` не будут доступны пользователю.
+Имейте в виду, что в объявлении [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) `SupportsShouldProcess` ключевое слово Attribute имеет значение, `true` чтобы позволить командлету вызывать методы [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) и [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Если это ключевое слово не задано, `Confirm` `WhatIf` Параметры и не будут доступны пользователю.
 
 ### <a name="extremely-destructive-actions"></a>Чрезвычайно разрушительные действия
 
-Некоторые операции являются чрезвычайно разрушительными, например переформатирование активного раздела жесткого диска. В этих случаях командлет должен задать `ConfirmImpact` = `ConfirmImpact.High` при объявлении атрибута [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) . Этот параметр заставляет командлет запрашивать подтверждение пользователя даже в том случае, если пользователь не указал параметр `Confirm`. Однако разработчикам командлетов следует избегать использования `ConfirmImpact` для операций, которые являются просто разрушительными, например удаление учетной записи пользователя. Помните, что если `ConfirmImpact` имеет значение [System. Management. Automation. ConfirmImpact](/dotnet/api/System.Management.Automation.ConfirmImpact) **High**.
+Некоторые операции являются чрезвычайно разрушительными, например переформатирование активного раздела жесткого диска. В этих случаях командлет должен быть задан `ConfirmImpact`  =  `ConfirmImpact.High` при объявлении атрибута [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) . Этот параметр заставляет командлет запрашивать подтверждение пользователя даже в том случае, если пользователь не указал `Confirm` параметр. Однако разработчики командлетов должны избегать использования `ConfirmImpact` для операций, которые просто являются обратимыми, например для удаления учетной записи пользователя. Помните, что если для задано `ConfirmImpact` значение [System. Management. Automation. ConfirmImpact](/dotnet/api/System.Management.Automation.ConfirmImpact) **High**.
 
-Аналогично, некоторые операции вряд ли будут разрушительными, хотя они и теоретически изменяют состояние выполнения системы за пределами Windows PowerShell. Такие командлеты могут устанавливать `ConfirmImpact` в значение [System. Management. Automation. ConfirmImpact. Low](/dotnet/api/system.management.automation.confirmimpact?view=powershellsdk-1.1.0). Это позволит обходить запросы на подтверждение, когда пользователь попросит подтвердить только средние и значительные последствия.
+Аналогично, некоторые операции вряд ли будут разрушительными, хотя они и теоретически изменяют состояние выполнения системы за пределами Windows PowerShell. Такие командлеты могут иметь значение `ConfirmImpact` [System. Management. Automation. ConfirmImpact. Low](/dotnet/api/system.management.automation.confirmimpact?view=powershellsdk-1.1.0). Это позволит обходить запросы на подтверждение, когда пользователь попросит подтвердить только средние и значительные последствия.
 
 ## <a name="defining-parameters-for-system-modification"></a>Определение параметров для изменения системы
 
 В этом разделе описывается, как определить параметры командлета, включая те, которые необходимы для поддержки изменения системы. Общие сведения об определении параметров см. [в разделе Добавление параметров, обрабатывающих входные данные командной строки](./adding-parameters-that-process-command-line-input.md) .
 
-Командлет "останавливает-proc" определяет три параметра: `Name`, `Force`и `PassThru`.
+Командлет "останавливает-proc" определяет три параметра: `Name` , `Force` и `PassThru` .
 
-Параметр `Name` соответствует свойству `Name` для входного объекта обработки. Имейте в виду, что параметр `Name` в этом образце является обязательным, так как командлет завершится ошибкой, если у него нет именованного процесса для его завершения.
+`Name`Параметр соответствует `Name` свойству входного объекта процесса. Имейте в виду, что `Name` параметр в этом образце является обязательным, так как командлет завершится ошибкой, если у него нет именованного процесса для его завершения.
 
-Параметр `Force` позволяет пользователю переопределить вызовы метода [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Фактически, любой командлет, вызывающий [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , должен иметь параметр `Force`, чтобы при указании `Force` командлет пропускает вызов метода [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) и продолжает операцию. Имейте в виду, что это не влияет на вызовы метода [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess).
+`Force`Параметр позволяет пользователю переопределить вызовы метода [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Фактически, любой командлет, вызывающий [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , должен иметь `Force` параметр, чтобы при `Force` указании командлет пропустить вызов [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) и продолжить операцию. Имейте в виду, что это не влияет на вызовы метода [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess).
 
-Параметр `PassThru` позволяет пользователю указать, передает ли командлет выходной объект через конвейер, в данном случае после остановки процесса. Имейте в виду, что этот параметр привязан к самому командлету, а не к свойству входного объекта.
+`PassThru`Параметр позволяет пользователю указать, передает ли командлет выходной объект через конвейер, в данном случае после остановки процесса. Имейте в виду, что этот параметр привязан к самому командлету, а не к свойству входного объекта.
 
 Ниже приведено объявление параметра для командлета "останавливает-proc".
 
@@ -120,7 +120,7 @@ private bool passThru;
 
 ## <a name="overriding-an-input-processing-method"></a>Переопределение метода обработки входных данных
 
-Командлет должен переопределять метод обработки ввода. В следующем коде показано переопределение [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , используемое в командлете-proc. Для каждого запрошенного имени процесса этот метод гарантирует, что процесс не является специальным процессом, пытается прерывать процесс, а затем отправляет выходной объект, если указан параметр `PassThru`.
+Командлет должен переопределять метод обработки ввода. В следующем коде показано переопределение [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , используемое в командлете-proc. Для каждого запрошенного имени процесса этот метод гарантирует, что процесс не является специальным процессом, пытается прерывать процесс, а затем отправляет выходной объект, если `PassThru` указан параметр.
 
 ```csharp
 protected override void ProcessRecord()
@@ -243,7 +243,7 @@ if (!ShouldProcess(string.Format("{0} ({1})", processName,
 
 ## <a name="calling-the-shouldcontinue-method"></a>Вызов метода ShouldContinue
 
-Вызов метода [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) отправляет пользователю дополнительное сообщение. Этот вызов выполняется после вызова метода [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) , возвращающего `true` и если для параметра `Force` не задано значение `true`. Пользователь может предоставить отзыв, чтобы сказать, следует ли продолжать операцию. Командлет вызывает [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) в качестве дополнительной проверки потенциально опасных изменений системы или для предоставления пользователю параметров «Да» и «нет».
+Вызов метода [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) отправляет пользователю дополнительное сообщение. Этот вызов выполняется после вызова метода [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) `true` и если `Force` параметру не было присвоено значение `true` . Пользователь может предоставить отзыв, чтобы сказать, следует ли продолжать операцию. Командлет вызывает [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) в качестве дополнительной проверки потенциально опасных изменений системы или для предоставления пользователю параметров «Да» и «нет».
 
 В следующем примере показан вызов [System. Management. Automation. командлет. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) из переопределения метода [System. Management. Automation. командлета. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) в командлете-proc.
 
@@ -270,11 +270,11 @@ if (criticalProcess &&!force)
 
 ## <a name="stopping-input-processing"></a>Остановка обработки ввода
 
-Метод обработки входных данных командлета, который вносит изменения в систему, должен обеспечить способ остановки обработки входных данных. В случае с этим командлетом остановить-proc вызывается метод System. [Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метода System [. Diagnostics. Process. Kill *](/dotnet/api/System.Diagnostics.Process.Kill) . Поскольку параметр `PassThru` имеет значение `true`, [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) также вызывает [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) для отправки объекта процесса в конвейер.
+Метод обработки входных данных командлета, который вносит изменения в систему, должен обеспечить способ остановки обработки входных данных. В случае с этим командлетом остановить-proc вызывается метод System. [Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) метода System [. Diagnostics. Process. Kill *](/dotnet/api/System.Diagnostics.Process.Kill) . Поскольку `PassThru` параметр имеет значение `true` , [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) также вызывает [System. Management. Automation. командлет. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) для отправки объекта процесса в конвейер.
 
 ## <a name="code-sample"></a>Образец кода
 
-Полный C# пример кода см. в разделе [StopProcessSample01 Sample](./stopprocesssample01-sample.md).
+Полный пример кода на C# см. в разделе [StopProcessSample01 Sample](./stopprocesssample01-sample.md).
 
 ## <a name="defining-object-types-and-formatting"></a>Определение типов объектов и форматирование
 
@@ -294,7 +294,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc
     ```
 
-Появится следующий вывод.
+    Появится следующий результат.
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -308,7 +308,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc -Name notepad
     ```
 
-Появится следующий вывод.
+    Появится следующий результат.
 
     ```
     Confirm
@@ -323,7 +323,7 @@ Windows PowerShell передает сведения между командле
     PS> stop-proc -Name Winlogon
     ```
 
-Появится следующий вывод.
+    Появится следующий результат.
 
     ```output
     Confirm
@@ -335,13 +335,13 @@ Windows PowerShell передает сведения между командле
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-- Теперь попробуем прерывать процесс WINLOGON без предупреждения. Имейте в виду, что эта запись команды использует параметр `Force` для переопределения предупреждения.
+- Теперь попробуем прерывать процесс WINLOGON без предупреждения. Имейте в виду, что эта запись команды использует `Force` параметр для переопределения предупреждения.
 
     ```powershell
     PS> stop-proc -Name winlogon -Force
     ```
 
-Появится следующий вывод.
+    Появится следующий результат.
 
     ```output
     Confirm

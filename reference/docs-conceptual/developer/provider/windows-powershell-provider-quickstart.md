@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
 caps.latest.revision: 5
-ms.openlocfilehash: 949c0d63b1e5bca1bfe670362df4297c29e98fcc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4693a2ec02a8f010f900bebf5a50853edef88cb1
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359923"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560939"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Краткое руководство по поставщикам Windows PowerShell
 
@@ -35,9 +35,9 @@ ms.locfileid: "72359923"
 
 1. Добавьте сборку System. Management. Automation в качестве ссылки на проект.
 
-2. Щелкните **проект > свойства акцессдбпровидерсампле > Отладка**. В меню **Запуск проекта**щелкните **запустить внешнюю программу**и перейдите к исполняемому файлу Windows PowerShell (обычно это c:\Windows\System32\WindowsPowerShell\v1.0\\. PowerShell. exe).
+2. Щелкните **проект > свойства акцессдбпровидерсампле > Отладка**. В меню **Запуск проекта**щелкните **запустить внешнюю программу**и перейдите к исполняемому файлу Windows PowerShell (обычно это c:\Windows\System32\WindowsPowerShell\v1.0 \\ . PowerShell. exe).
 
-3. В разделе **Параметры запуска**введите следующий текст в поле **аргументы командной строки** : `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
+3. В разделе **Параметры запуска**введите следующий текст в поле **аргументы командной строки** :`-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
 ### <a name="declaring-the-provider-class"></a>Объявление класса поставщика
 
@@ -69,7 +69,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 Метод [System. Management. Automation. Provider. дривекмдлетпровидер. невдриве *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) вызывается подсистемой Windows PowerShell, когда пользователь вызывает командлет [Microsoft. PowerShell. Commands. невпсдривекомманд](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) , указывающий имя поставщика. Параметр PSDriveInfo передается подсистемой Windows PowerShell, а метод возвращает новый диск подсистеме Windows PowerShell. Этот метод должен быть объявлен в классе, созданном выше.
 
-Сначала метод проверяет, чтобы убедиться, что были переданы как объект диска, так и корневой диск, и возвращает `null`, если один из них не имеет. Затем он использует конструктор внутреннего класса Акцессдбпсдривеинфо для создания нового диска и соединения с базой данных Access, которую представляет диск.
+Сначала метод проверяет, чтобы убедиться в том, что были переданы как объект диска, так и корневой диск, и возвращает `null` значение, если в любом из них нет. Затем он использует конструктор внутреннего класса Акцессдбпсдривеинфо для создания нового диска и соединения с базой данных Access, которую представляет диск.
 
 ```csharp
 protected override PSDriveInfo NewDrive(PSDriveInfo drive)
