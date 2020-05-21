@@ -12,52 +12,52 @@ helpviewer_keywords:
 - ValidateCount attribute
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
-ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3cae95fab30a4abe4e544ed5cb7dadc9f4debf02
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369233"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692378"
 ---
-# <a name="validatecount-attribute-declaration"></a><span data-ttu-id="73ce0-102">Объявление атрибута ValidateCount</span><span class="sxs-lookup"><span data-stu-id="73ce0-102">ValidateCount Attribute Declaration</span></span>
+# <a name="validatecount-attribute-declaration"></a><span data-ttu-id="c342b-102">Объявление атрибута ValidateCount</span><span class="sxs-lookup"><span data-stu-id="c342b-102">ValidateCount Attribute Declaration</span></span>
 
-<span data-ttu-id="73ce0-103">Атрибут Валидатекаунт указывает минимальное и максимальное число аргументов, допустимых для параметра командлета.</span><span class="sxs-lookup"><span data-stu-id="73ce0-103">The ValidateCount attribute specifies the minimum and maximum number of arguments allowed for a cmdlet parameter.</span></span>
+<span data-ttu-id="c342b-103">Атрибут Валидатекаунт указывает минимальное и максимальное число аргументов, допустимых для параметра командлета.</span><span class="sxs-lookup"><span data-stu-id="c342b-103">The ValidateCount attribute specifies the minimum and maximum number of arguments allowed for a cmdlet parameter.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="73ce0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="73ce0-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="c342b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c342b-104">Syntax</span></span>
 
 ```csharp
 [ValidateCount(int minLength, int maxlength)]
 ```
 
-#### <a name="parameters"></a><span data-ttu-id="73ce0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="73ce0-105">Parameters</span></span>
+#### <a name="parameters"></a><span data-ttu-id="c342b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c342b-105">Parameters</span></span>
 
-<span data-ttu-id="73ce0-106">требуется `MinLength` ([System.Int32][]).</span><span class="sxs-lookup"><span data-stu-id="73ce0-106">`MinLength` ([System.Int32][]) Required.</span></span> <span data-ttu-id="73ce0-107">Указывает минимальное число аргументов.</span><span class="sxs-lookup"><span data-stu-id="73ce0-107">Specifies the minimum number of arguments.</span></span>
+<span data-ttu-id="c342b-106">`MinLength`([System. Int32][]) обязательный.</span><span class="sxs-lookup"><span data-stu-id="c342b-106">`MinLength` ([System.Int32][]) Required.</span></span> <span data-ttu-id="c342b-107">Указывает минимальное число аргументов.</span><span class="sxs-lookup"><span data-stu-id="c342b-107">Specifies the minimum number of arguments.</span></span>
 
-<span data-ttu-id="73ce0-108">требуется `MaxLength`([System.Int32][]).</span><span class="sxs-lookup"><span data-stu-id="73ce0-108">`MaxLength`([System.Int32][]) Required.</span></span> <span data-ttu-id="73ce0-109">Указывает максимальное число аргументов.</span><span class="sxs-lookup"><span data-stu-id="73ce0-109">Specifies the maximum number of arguments.</span></span>
+<span data-ttu-id="c342b-108">`MaxLength`([System. Int32][]) обязательный.</span><span class="sxs-lookup"><span data-stu-id="c342b-108">`MaxLength`([System.Int32][]) Required.</span></span> <span data-ttu-id="c342b-109">Указывает максимальное число аргументов.</span><span class="sxs-lookup"><span data-stu-id="c342b-109">Specifies the maximum number of arguments.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="73ce0-110">Замечания</span><span class="sxs-lookup"><span data-stu-id="73ce0-110">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c342b-110">Комментарии</span><span class="sxs-lookup"><span data-stu-id="c342b-110">Remarks</span></span>
 
-- <span data-ttu-id="73ce0-111">Дополнительные сведения об объявлении этого атрибута см. в разделе [проверка числа аргументов][].</span><span class="sxs-lookup"><span data-stu-id="73ce0-111">For more information about how to declare this attribute, see [How to Validate an Argument Count][].</span></span>
+- <span data-ttu-id="c342b-111">Дополнительные сведения об объявлении этого атрибута см. в разделе [проверка числа аргументов][].</span><span class="sxs-lookup"><span data-stu-id="c342b-111">For more information about how to declare this attribute, see [How to Validate an Argument Count][].</span></span>
 
-- <span data-ttu-id="73ce0-112">Если этот атрибут не вызывается, соответствующий параметр командлета может иметь любое количество аргументов.</span><span class="sxs-lookup"><span data-stu-id="73ce0-112">When this attribute is not invoked, the corresponding cmdlet parameter can have any number of arguments.</span></span>
+- <span data-ttu-id="c342b-112">Если этот атрибут не вызывается, соответствующий параметр командлета может иметь любое количество аргументов.</span><span class="sxs-lookup"><span data-stu-id="c342b-112">When this attribute is not invoked, the corresponding cmdlet parameter can have any number of arguments.</span></span>
 
-- <span data-ttu-id="73ce0-113">Среда выполнения Windows PowerShell выдает ошибку при следующих условиях:</span><span class="sxs-lookup"><span data-stu-id="73ce0-113">The Windows PowerShell runtime throws an error under the following conditions:</span></span>
+- <span data-ttu-id="c342b-113">Среда выполнения Windows PowerShell выдает ошибку при следующих условиях:</span><span class="sxs-lookup"><span data-stu-id="c342b-113">The Windows PowerShell runtime throws an error under the following conditions:</span></span>
 
-    - <span data-ttu-id="73ce0-114">Параметры атрибута `MinLength` и `MaxLength` не относятся к типу [System.Int32][].</span><span class="sxs-lookup"><span data-stu-id="73ce0-114">The `MinLength` and `MaxLength` attribute parameters are not of type [System.Int32][].</span></span>
+  - <span data-ttu-id="c342b-114">`MinLength` `MaxLength` Параметры атрибута и не относятся к типу [System. Int32][].</span><span class="sxs-lookup"><span data-stu-id="c342b-114">The `MinLength` and `MaxLength` attribute parameters are not of type [System.Int32][].</span></span>
 
-    - <span data-ttu-id="73ce0-115">Значение параметра атрибута `MaxLength` меньше значения параметра атрибута `MinLength`.</span><span class="sxs-lookup"><span data-stu-id="73ce0-115">The value of the `MaxLength` attribute parameter is less than the value of the `MinLength` attribute parameter.</span></span>
+  - <span data-ttu-id="c342b-115">Значение `MaxLength` параметра атрибута меньше значения `MinLength` параметра атрибута.</span><span class="sxs-lookup"><span data-stu-id="c342b-115">The value of the `MaxLength` attribute parameter is less than the value of the `MinLength` attribute parameter.</span></span>
 
-- <span data-ttu-id="73ce0-116">Атрибут Валидатекаунт определяется классом [System. Management. Automation. валидатекаунтаттрибуте][] .</span><span class="sxs-lookup"><span data-stu-id="73ce0-116">The ValidateCount attribute is defined by the [System.Management.Automation.ValidateCountAttribute][] class.</span></span>
+- <span data-ttu-id="c342b-116">Атрибут Валидатекаунт определяется классом [System. Management. Automation. валидатекаунтаттрибуте][] .</span><span class="sxs-lookup"><span data-stu-id="c342b-116">The ValidateCount attribute is defined by the [System.Management.Automation.ValidateCountAttribute][] class.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="73ce0-117">См. также:</span><span class="sxs-lookup"><span data-stu-id="73ce0-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c342b-117">См. также:</span><span class="sxs-lookup"><span data-stu-id="c342b-117">See Also</span></span>
 
-<span data-ttu-id="73ce0-118">[System. Management. Automation. Валидатекаунтаттрибуте][]</span><span class="sxs-lookup"><span data-stu-id="73ce0-118">[System.Management.Automation.ValidateCountAttribute][]</span></span>
+<span data-ttu-id="c342b-118">[System. Management. Automation. Валидатекаунтаттрибуте][]</span><span class="sxs-lookup"><span data-stu-id="c342b-118">[System.Management.Automation.ValidateCountAttribute][]</span></span>
 
-<span data-ttu-id="73ce0-119">[Проверка числа аргументов][]</span><span class="sxs-lookup"><span data-stu-id="73ce0-119">[How to Validate an Argument Count][]</span></span>
+<span data-ttu-id="c342b-119">[Как проверить количество аргументов][]</span><span class="sxs-lookup"><span data-stu-id="c342b-119">[How to Validate an Argument Count][]</span></span>
 
-<span data-ttu-id="73ce0-120">[Запись командлета Windows PowerShell][]</span><span class="sxs-lookup"><span data-stu-id="73ce0-120">[Writing a Windows PowerShell Cmdlet][]</span></span>
+<span data-ttu-id="c342b-120">[Запись командлета Windows PowerShell][]</span><span class="sxs-lookup"><span data-stu-id="c342b-120">[Writing a Windows PowerShell Cmdlet][]</span></span>
 
-[Проверка числа аргументов]: how-to-validate-an-argument-count.md
+[Как проверить количество аргументов]: how-to-validate-an-argument-count.md
 [How to Validate an Argument Count]: how-to-validate-an-argument-count.md
 [Запись командлета Windows PowerShell]: writing-a-windows-powershell-cmdlet.md
 [Writing a Windows PowerShell Cmdlet]: writing-a-windows-powershell-cmdlet.md
