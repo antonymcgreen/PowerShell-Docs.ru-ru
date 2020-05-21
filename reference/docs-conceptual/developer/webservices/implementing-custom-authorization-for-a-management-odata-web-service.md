@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ae37e3f3-5fd6-4ff6-bf66-a249ff96822b
 caps.latest.revision: 7
-ms.openlocfilehash: 2afa0e79d9de781149f31a45666d13f98ca10a26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4989b0bb8a379011cde1a1d2cc803a081d79d97f
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359683"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557300"
 ---
 # <a name="implementing-custom-authorization-for-a-management-odata-web-service"></a>Реализация пользовательской авторизации для веб-службы управления OData
 
@@ -134,7 +134,7 @@ namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPE
 
 ### <a name="role-based-authorization"></a>Авторизация на основе ролей
 
-В следующем примере реализуется политика авторизации на основе ролей. Политика определяется в XML-файле, расположенном в главном каталоге приложения с файлами схемы сопоставления Web. config и MOF и XML. Сведения о настройке файла схемы авторизации см. в разделе [Настройка авторизации на основе ролей](./configuring-role-based-authorization.md). В первой части примера реализуются методы [Microsoft. Management. OData. кустомаусоризатион. аусоризеусер](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) и [Microsoft. Management. OData. кустомаусоризатион. жетмембершипид](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId) . В этом случае методы интерфейса вызывают методы в классе `RbacSystem` (определенный ниже), которые выполняют фактическую работу по проверке разрешений для пользователя.
+В следующем примере реализуется политика авторизации на основе ролей. Политика определяется в XML-файле, расположенном в главном каталоге приложения с файлами схемы сопоставления Web. config и MOF и XML. Сведения о настройке файла схемы авторизации см. в разделе [Настройка авторизации на основе ролей](./configuring-role-based-authorization.md). В первой части примера реализуются методы [Microsoft. Management. OData. кустомаусоризатион. аусоризеусер](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) и [Microsoft. Management. OData. кустомаусоризатион. жетмембершипид](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId) . В этом случае методы интерфейса вызывают методы `RbacSystem` класса (определенные ниже), которые выполняют фактическую работу по проверке разрешений для пользователя.
 
 ```csharp
 namespace Microsoft.Samples.Management.OData.RoleBasedPlugins

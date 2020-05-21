@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 7d399786b9b43ee302493359d9702981045212e9
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 12b0b246b78142f3811f9f566cd94e4dabd40cc9
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78277476"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557471"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Создание рабочего процесса с помощью действий Windows PowerShell
 
@@ -31,15 +31,15 @@ ms.locfileid: "78277476"
 
 1. Добавьте действие **Sequence** в рабочий процесс.
 
-2. Создайте аргумент с именем `ComputerName` и типом аргумента `String[]`. Этот аргумент представляет имена компьютеров для проверки и присоединение.
+2. Создайте аргумент с именем `ComputerName` и типом аргумента `String[]` . Этот аргумент представляет имена компьютеров для проверки и присоединение.
 
-3. Создайте аргумент с именем `DomainCred` типа [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Этот аргумент представляет учетные данные домена учетной записи домена, которая имеет право присоединить компьютер к домену.
+3. Создайте аргумент с именем `DomainCred` [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Этот аргумент представляет учетные данные домена учетной записи домена, которая имеет право присоединить компьютер к домену.
 
-4. Создайте аргумент с именем `MachineCred` типа [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Этот аргумент представляет учетные данные администратора на компьютерах, которые необходимо проверить и присоединить.
+4. Создайте аргумент с именем `MachineCred` [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Этот аргумент представляет учетные данные администратора на компьютерах, которые необходимо проверить и присоединить.
 
-5. Добавьте действие **ParallelForEach** в действие **Sequence** . Введите `comp` и `ComputerName` в текстовые поля, чтобы цикл пробирал элементы массива `ComputerName`.
+5. Добавьте действие **ParallelForEach** в действие **Sequence** . Введите `comp` и `ComputerName` в текстовые поля, чтобы цикл перебирает элементы `ComputerName` массива.
 
-6. Добавьте действие **Sequence** в тело действия **ParallelForEach** . Задайте для свойства **DisplayName** последовательности значение `JoinDomain`.
+6. Добавьте действие **Sequence** в тело действия **ParallelForEach** . Установите для свойства **DisplayName** последовательности значение `JoinDomain` .
 
 7. Добавьте действие **жетвмиобжект** в последовательность **JoinDomain** .
 
@@ -57,7 +57,7 @@ ms.locfileid: "78277476"
 
     |Свойство|Значение|
     |--------------|-----------|
-    |**ИмяКомпьютера**|соответствовал|
+    |**ComputerName**|соответствовал|
     |**домаинкредентиал**|домаинкред|
 
 11. Добавьте действие **рестарткомпутер** в последовательность **JoinDomain** после действия **аддкомпутер** .
@@ -66,7 +66,7 @@ ms.locfileid: "78277476"
 
     |Свойство|Значение|
     |--------------|-----------|
-    |**ИмяКомпьютера**|соответствовал|
+    |**ComputerName**|соответствовал|
     |**Учетные данные**|мачинекред|
     |**Предмет**|Microsoft. PowerShell. Commands. Ваитфорсервицетипес. PowerShell|
     |**Перевести**|True|
@@ -77,5 +77,5 @@ ms.locfileid: "78277476"
 
     После завершения процедур окно конструктора рабочих процессов должно выглядеть следующим образом.
 
-    ![JoinDomain XAML в конструкторе рабочих процессов](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
-    ![JOINDOMAIN XAML в конструкторе рабочих процессов](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "жоиндомаинворкфлов")
+    ![JoinDomain XAML в конструкторе рабочих процессов ](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
+     ![JoinDomain XAML в конструкторе рабочих процессов](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "жоиндомаинворкфлов")

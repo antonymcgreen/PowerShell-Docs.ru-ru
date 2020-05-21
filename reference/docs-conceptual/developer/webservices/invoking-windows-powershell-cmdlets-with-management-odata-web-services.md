@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2a35f87-3580-4ceb-b0c5-e7575e1bd151
 caps.latest.revision: 4
-ms.openlocfilehash: a5677296558c648e62b71153330d90e6f02ed098
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 84255eb086ee01a2b5bba040e90d797c38d0031e
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366153"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557266"
 ---
 # <a name="invoking-windows-powershell-cmdlets-with-management-odata-web-services"></a>Вызов командлетов Windows PowerShell в веб-службах управления OData
 
@@ -21,8 +21,8 @@ ms.locfileid: "72366153"
 
 ## <a name="section-heading"></a>Заголовок раздела
 
-Вставьте сюда основной текст раздела.
+Вставьте сюда основную часть.
 
 ### <a name="subsection-heading"></a>Заголовок подраздела
 
-Вставьте сюда основной текст подраздела.
+Вставьте сюда основную часть подраздела.

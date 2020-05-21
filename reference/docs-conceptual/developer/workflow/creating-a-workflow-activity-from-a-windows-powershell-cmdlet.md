@@ -8,24 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4174e84f-d516-4aca-b418-273047dcfb07
 caps.latest.revision: 7
-ms.openlocfilehash: 5761ed2168a46d6ed9a2e50554d459f5b93223ee
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f45b5e985fa38ca4ff41707f1842ddb8b930e2b1
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359663"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557505"
 ---
 # <a name="creating-a-workflow-activity-from-a-windows-powershell-cmdlet"></a>Создание действия рабочего процесса из командлета Windows PowerShell
 
-Любой модуль или командлет Windows PowerShell можно упаковать как действие рабочего процесса с помощью методов класса [Microsoft. PowerShell. activitys. активитиженератор](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator) . Используйте методы Microsoft. PowerShell [. activitys. активитиженератор. женератефроммодулеинфо *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromModuleInfo), [Microsoft. PowerShell. activitys. активитиженератор. Женератефромкоммандинфо *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromCommandInfo)и [Microsoft. PowerShell. activitys. Activitygenerator. Generatefromname *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromName) класса [Microsoft. PowerShell. activitys. Activitygenerator](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator) для создания C# кода, представляющего действие. Затем полученный C# код можно скомпилировать в сборку, которую можно добавить в проект в качестве действия.
+Любой модуль или командлет Windows PowerShell можно упаковать как действие рабочего процесса с помощью методов класса [Microsoft. PowerShell. activitys. активитиженератор](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator) . Используйте методы Microsoft. PowerShell [. activitys. активитиженератор. женератефроммодулеинфо *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromModuleInfo), [Microsoft. PowerShell. activitys. активитиженератор. Женератефромкоммандинфо *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromCommandInfo)и [Microsoft. PowerShell. activitys. Activitygenerator. Generatefromname *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromName) класса [Microsoft. PowerShell. activitys. Activitygenerator](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator) для создания кода C#, представляющего действие. Затем полученный код C# можно скомпилировать в сборку, которую можно добавить в проект в качестве действия.
 
-Затем полученный C# код можно скомпилировать в сборку, которую можно добавить в проект как действие с помощью командной строки со следующей формой.
+Затем полученный код C# можно скомпилировать в сборку, которую можно добавить в проект как действие с помощью командной строки со следующей формой.
 
 **CSC/nologo/out: AssemblyName/target: Библиотека/Reference: System. Activitys. действие/Reference: Microsoft. PowerShell. Activitys codefile.cs**
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как создать C# код для действия из модуля Windows PowerShell.
+В следующем примере показано, как создать код C# для действия из модуля Windows PowerShell.
 
 ```csharp
 using System;
@@ -73,7 +73,7 @@ namespace MakeActivity
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как создать C# код для действия из командлета Windows PowerShell.
+В следующем примере показано, как создать код C# для действия из командлета Windows PowerShell.
 
 ```csharp
 using System;
