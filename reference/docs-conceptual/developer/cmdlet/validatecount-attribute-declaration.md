@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateCount attribute
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
-ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3cae95fab30a4abe4e544ed5cb7dadc9f4debf02
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369233"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692378"
 ---
 # <a name="validatecount-attribute-declaration"></a>Объявление атрибута ValidateCount
 
@@ -31,11 +31,11 @@ ms.locfileid: "72369233"
 
 #### <a name="parameters"></a>Параметры
 
-требуется `MinLength` ([System.Int32][]). Указывает минимальное число аргументов.
+`MinLength`([System. Int32][]) обязательный. Указывает минимальное число аргументов.
 
-требуется `MaxLength`([System.Int32][]). Указывает максимальное число аргументов.
+`MaxLength`([System. Int32][]) обязательный. Указывает максимальное число аргументов.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
 - Дополнительные сведения об объявлении этого атрибута см. в разделе [проверка числа аргументов][].
 
@@ -43,9 +43,9 @@ ms.locfileid: "72369233"
 
 - Среда выполнения Windows PowerShell выдает ошибку при следующих условиях:
 
-    - Параметры атрибута `MinLength` и `MaxLength` не относятся к типу [System.Int32][].
+  - `MinLength` `MaxLength` Параметры атрибута и не относятся к типу [System. Int32][].
 
-    - Значение параметра атрибута `MaxLength` меньше значения параметра атрибута `MinLength`.
+  - Значение `MaxLength` параметра атрибута меньше значения `MinLength` параметра атрибута.
 
 - Атрибут Валидатекаунт определяется классом [System. Management. Automation. валидатекаунтаттрибуте][] .
 
@@ -53,11 +53,11 @@ ms.locfileid: "72369233"
 
 [System. Management. Automation. Валидатекаунтаттрибуте][]
 
-[Проверка числа аргументов][]
+[Как проверить количество аргументов][]
 
 [Запись командлета Windows PowerShell][]
 
-[Проверка числа аргументов]: how-to-validate-an-argument-count.md
+[Как проверить количество аргументов]: how-to-validate-an-argument-count.md
 [Запись командлета Windows PowerShell]: writing-a-windows-powershell-cmdlet.md
 
 [System.Int32]: /dotnet/api/System.Int32

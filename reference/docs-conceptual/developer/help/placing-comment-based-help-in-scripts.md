@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49f8267c-d887-4d7d-b9b7-80dc624b1261
 caps.latest.revision: 4
-ms.openlocfilehash: d199c53a748ac57bb2a5f998b5056e39d3e80c0d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1bebfbd822963830363012060067c656d7709543
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361183"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83565532"
 ---
 # <a name="placing-comment-based-help-in-scripts"></a>Размещение справки на основе комментариев в сценариях
 
-В этом разделе объясняется, куда разместить справку на основе комментариев для скрипта, чтобы командлет `Get-Help` сопоставленный с комментариями раздел справки с скриптами, а не с функциями, которые могут быть в скрипте.
+В этом разделе объясняется, куда поместить справку на основе комментариев для сценария, чтобы `Get-Help` командлет привязывает раздел справки на основе комментариев с скриптами, а не с функциями, которые могут быть в скрипте.
 
 ## <a name="where-to-place-comment-based-help-for-a-script"></a>Размещение справки на основе комментариев для сценария
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - attributes, ValidateRange
 ms.assetid: 1f8066e6-e5d3-4f4e-8948-a90af5dace82
 caps.latest.revision: 11
-ms.openlocfilehash: 155a406b9855c435041fe175ac7d983a4b4eb8b7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 560fa105ac3f93ae6334df0112f5290dfa20576c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369133"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692011"
 ---
 # <a name="validaterange-attribute-declaration"></a>Объявление атрибута ValidateRange
 
@@ -31,19 +31,19 @@ ms.locfileid: "72369133"
 
 #### <a name="parameters"></a>Параметры
 
-требуется `MinRange` ([System. Object](/dotnet/api/system.object)). Указывает минимальное допустимое значение.
+`MinRange`Требуется ([System. Object](/dotnet/api/system.object)). Указывает минимальное допустимое значение.
 
-требуется `MaxRange` ([System. Object](/dotnet/api/system.object)). Указывает максимально допустимое значение.
+`MaxRange`Требуется ([System. Object](/dotnet/api/system.object)). Указывает максимально допустимое значение.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
-- Среда выполнения Windows PowerShell создает ошибку создания, если значение параметра `MinRange` больше значения параметра `MaxRange`.
+- Среда выполнения Windows PowerShell создает ошибку создания, если значение `MinRange` параметра больше значения `MaxRange` параметра.
 
 - Среда выполнения Windows PowerShell выдает ошибку проверки при выполнении следующих условий.
 
-    - Если значение аргумента меньше `MinRange` предела или превышает ограничение `MaxRange`.
+  - , Если значение аргумента меньше `MinRange` ограничения или превышает его `MaxRange` .
 
-    - Если аргумент имеет тип, отличный от типа `MinRange` и параметров `MaxRange`.
+  - Если аргумент имеет тип, отличный от типа `MinRange` и `MaxRange` параметров.
 
 - Атрибут Валидатеранже определяется классом [System. Management. Automation. валидатеранжеаттрибуте](/dotnet/api/System.Management.Automation.ValidateRangeAttribute) .
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateLength attribute
 ms.assetid: 82fe3a35-a94b-4bc1-ad9e-dfc5f1e788b3
 caps.latest.revision: 13
-ms.openlocfilehash: a25fa2410fcc6803563573596af1bc99052c3ffa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a1a494534169b2da470286020dfacfa8e9084839
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369183"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692326"
 ---
 # <a name="validatelength-attribute-declaration"></a>Объявление атрибута ValidateLength
 
@@ -31,11 +31,11 @@ ms.locfileid: "72369183"
 
 #### <a name="parameters"></a>Параметры
 
-требуется `MinLength` ([System. Int32](/dotnet/api/System.Int32)). Указывает минимальное допустимое число символов.
+`MinLength`([System. Int32](/dotnet/api/System.Int32)) обязательный. Указывает минимальное допустимое число символов.
 
-требуется `MaxLength` ([System. Int32](/dotnet/api/System.Int32)). Указывает максимально допустимое число символов.
+`MaxLength`([System. Int32](/dotnet/api/System.Int32)) обязательный. Указывает максимально допустимое число символов.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
 - Дополнительные сведения об объявлении этого атрибута см. в разделе [как объявлять правила проверки входных данных](./how-to-validate-parameter-input.md).
 
@@ -43,11 +43,11 @@ ms.locfileid: "72369183"
 
 - Среда выполнения Windows PowerShell выдает ошибку при следующих условиях:
 
-    - Если значение параметра атрибута `MaxLength` меньше значения параметра атрибута `MinLength`.
+  - Если значение `MaxLength` параметра атрибута меньше значения `MinLength` параметра атрибута.
 
-    - Если параметр атрибута `MaxLength` имеет значение 0.
+  - Если `MaxLength` параметр атрибута имеет значение 0.
 
-    - Если аргумент не является строкой.
+  - Если аргумент не является строкой.
 
 - Атрибут Валидателенгс определяется классом [System. Management. Automation. валидателенгсаттрибуте](/dotnet/api/System.Management.Automation.ValidateLengthAttribute) .
 

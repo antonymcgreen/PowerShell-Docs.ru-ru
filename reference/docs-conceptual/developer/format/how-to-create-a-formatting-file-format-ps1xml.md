@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb568878-f63e-4561-98e2-16ee2ac7559d
 caps.latest.revision: 8
-ms.openlocfilehash: e97e9ddb1bf81ba66e5f3cedddd22e3a861ce228
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7a578dd63a53562f992b2970573258b8676e2a52
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363623"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692274"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>Как создать файл форматирования (.format.ps1xml)
 
@@ -36,11 +36,11 @@ ms.locfileid: "72363623"
    </Configuration>
    ```
 
-   - \<Конфигурация >\</Настройка > Теги определяют корневой узел `Configuration`. Все дополнительные XML-теги будут заключены в этот узел.
+   - `<Configuration></Configuration>`Теги определяют корневой `Configuration` узел. Все дополнительные XML-теги будут заключены в этот узел.
 
-   - <ViewDefinitions></ViewDefinitions> Теги определяют узел `ViewDefinitions`. Все представления определяются в этом узле.
+   - `<ViewDefinitions></ViewDefinitions>`Теги определяют `ViewDefinitions` узел. Все представления определяются в этом узле.
 
-3. Сохраните файл в папку установки Windows PowerShell, в папку модуля или во вложенную папку папки Module. При сохранении файла используйте следующий формат имени: `MyFile.format.ps1xml`. Файлы форматирования должны использовать расширение `.format.ps1xml`.
+3. Сохраните файл в папку установки Windows PowerShell, в папку модуля или во вложенную папку папки Module. При сохранении файла используйте следующий формат имени: `MyFile.format.ps1xml` . Файлы форматирования должны использовать `.format.ps1xml` расширение.
 
    Теперь все готово к добавлению представлений в файл форматирования. Количество представлений, которые могут быть определены в файле форматирования, не ограничено. Можно добавить одно представление для каждого объекта, несколько представлений для одного и того же объекта или одно представление, используемое несколькими объектами.
 

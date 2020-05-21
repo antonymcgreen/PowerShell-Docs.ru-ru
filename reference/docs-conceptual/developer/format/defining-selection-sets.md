@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00dbb5ee-93d4-4914-a082-ef4d8b236b5c
 caps.latest.revision: 16
-ms.openlocfilehash: 596212f2e64401a751cf3dca0ee7d60b80912c00
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 95eeb037b3b9190fec1212a68029624993f3fd9f
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368853"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692293"
 ---
 # <a name="defining-selection-sets"></a>Определение наборов выделенных фрагментов
 
-При создании нескольких представлений и элементов управления можно определить наборы объектов, которые называются наборами выбора. Набор выбора позволяет определять объекты один раз без необходимости их многократного определения для каждого представления или элемента управления. Обычно наборы выбора используются при наличии набора связанных объектов .NET. Например, файл форматирования `FileSystem` (FileSystem. Format. ps1xml) определяет набор типов файловой системы, используемых несколькими представлениями.
+При создании нескольких представлений и элементов управления можно определить наборы объектов, которые называются наборами выбора. Набор выбора позволяет определять объекты один раз без необходимости их многократного определения для каждого представления или элемента управления. Обычно наборы выбора используются при наличии набора связанных объектов .NET. Например, `FileSystem` файл форматирования (FileSystem. Format. ps1xml) определяет набор типов файловой системы, используемых несколькими представлениями.
 
 ## <a name="where-selection-sets-are-defined-and-referenced"></a>Где определяются и указываются наборы выбора
 
@@ -35,15 +35,15 @@ ms.locfileid: "72368853"
 
 Ссылаться на наборы выбора можно следующими способами.
 
-- Каждое представление содержит элемент `ViewSelectedBy`, который определяет, какие объекты отображаются с помощью представления. Элемент `ViewSelectedBy` имеет `SelectionSetName` дочерний элемент, указывающий набор выбора, который используется всеми определениями представления. На количество наборов выбора, на которые можно ссылаться из представления, нет ограничений.
+- Каждое представление содержит `ViewSelectedBy` элемент, который определяет, какие объекты отображаются с помощью представления. `ViewSelectedBy`Элемент имеет `SelectionSetName` дочерний элемент, указывающий набор выбора, который используется всеми определениями представления. На количество наборов выбора, на которые можно ссылаться из представления, нет ограничений.
 
-- В каждом определении представления или элемента управления элемент `EntrySelectedBy` определяет, какие объекты отображаются с помощью этого определения. Как правило, представление или элемент управления имеет только одно определение, поэтому объекты определяются элементом `ViewSelectedBy`. Элемент `EntrySelectedBy` определения содержит дочерний элемент `SelectionSetName`, указывающий набор выбора. При указании набора, выбранного для определения, нельзя указать какие-либо другие дочерние элементы элемента `EntrySelectedBy`.
+- В каждом определении представления или элемента управления `EntrySelectedBy` элемент определяет, какие объекты отображаются с помощью этого определения. Как правило, представление или элемент управления имеет только одно определение, поэтому объекты определяются `ViewSelectedBy` элементом. `EntrySelectedBy`Элемент определения содержит `SelectionSetName` дочерний элемент, указывающий набор выбора. При указании набора, выбранного для определения, нельзя указать какие-либо другие дочерние элементы `EntrySelectedBy` элемента.
 
-- В каждом определении представления или элемента управления элемент `SelectionCondition` можно использовать для указания условия использования определения. Элемент `SelectionCondition` имеет `SelectionSetName` дочерний элемент, указывающий набор выбора, который запускает условие. Условие активируется при отображении любого из объектов, определенных в наборе выбора. Дополнительные сведения о настройке этих условий см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
+- В каждом определении представления или элемента управления `SelectionCondition` элемент можно использовать для указания условия использования определения. `SelectionCondition`Элемент имеет `SelectionSetName` дочерний элемент, указывающий набор выбора, который запускает условие. Условие активируется при отображении любого из объектов, определенных в наборе выбора. Дополнительные сведения о настройке этих условий см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
 ## <a name="selection-set-example"></a>Пример набора выбора
 
-В следующем примере показан набор выбора, который берется непосредственно из файла форматирования `FileSystem`, предоставляемого Windows PowerShell. Дополнительные сведения о других файлах форматирования Windows PowerShell см. в разделе [файлы форматирования Windows PowerShell](./powershell-formatting-files.md).
+В следующем примере показан набор выбора, который берется непосредственно из `FileSystem` файла форматирования, предоставляемого Windows PowerShell. Дополнительные сведения о других файлах форматирования Windows PowerShell см. в разделе [файлы форматирования Windows PowerShell](./powershell-formatting-files.md).
 
 ```xml
 <SelectionSets>
@@ -59,7 +59,7 @@ ms.locfileid: "72368853"
 </SelectionSets>
 ```
 
-В элементе `ViewSelectedBy` представления таблицы содержится ссылка на предыдущий набор элементов.
+В элементе табличного представления имеется ссылка на предыдущий набор элементов `ViewSelectedBy` .
 
 ```xml
 <ViewDefinitions>
@@ -90,47 +90,47 @@ ms.locfileid: "72368853"
 
 - Следующий элемент задает набор выбора, который будет использоваться во всех определениях представления:
 
-    - [Элемент Селектионсетнаме для Виевселектедби (Format)](./selectionsetname-element-for-viewselectedby-format.md)
+  - [Элемент SelectionSetName для элемента ViewSelectedBy (формат)](./selectionsetname-element-for-viewselectedby-format.md)
 
-    - [Элемент Селектионсетнаме для Ентриселектедби для GroupBy (Format)](./selectionsetname-element-for-entryselectedby-for-groupby-format.md)
+  - [Элемент SelectionSetName для элемента EntrySelectedBy для элемента GroupBy (формат)](./selectionsetname-element-for-entryselectedby-for-groupby-format.md)
 
 - Следующие элементы определяют набор выбора, используемый одним определением представления:
 
-    - [Элемент Селектионсетнаме для Ентриселектедби для ListControl (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+  - [Элемент SelectionSetName для элемента EntrySelectedBy для элемента ListControl (формат)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-    - [Элемент Селектионсетнаме для Ентриселектедби для Таблеконтрол (Format)](./selectionsetname-element-for-entryselectedby-for-tablecontrol-format.md)
+  - [Элемент SelectionSetName для элемента EntrySelectedBy для элемента TableControl (формат)](./selectionsetname-element-for-entryselectedby-for-tablecontrol-format.md)
 
-    - [Элемент Селектионсетнаме для Ентриселектедби для Видеконтрол (Format)](./selectionsetname-element-for-entryselectedby-for-widecontrol-format.md)
+  - [Элемент SelectionSetName для элемента EntrySelectedBy для элемента WideControl (формат)](./selectionsetname-element-for-entryselectedby-for-widecontrol-format.md)
 
-    - [Элемент Селектионсетнаме для Ентриселектедби для ошибка customcontrol для представления (Format)](./selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format.md)
+  - [Элемент SelectionSetName для элемента EntrySelectedBy для элемента CustomControl для элемента View (формат)](./selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format.md)
 
 - Следующие элементы задают набор элементов, используемый в определениях типов Common и View Control:
 
-    - [Элемент Селектионсетнаме для Ентриселектедби элементов управления для представления (формат)](./selectionsetname-element-for-entryselectedby-for-controls-for-view-format.md)
+  - [Элемент SelectionSetName для элемента EntrySelectedBy для элемента Controls для элемента View (формат)](./selectionsetname-element-for-entryselectedby-for-controls-for-view-format.md)
 
-    - [Элемент Селектионсетнаме для Ентриселектедби для элементов управления конфигурации (Format)](./selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format.md)
+  - [Элемент SelectionSetName для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)](./selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format.md)
 
 - Следующие элементы определяют набор выбора, используемый при определении, какой объект следует развернуть:
 
-    - [Элемент Селектионсетнаме для Ентриселектедби для Енумерабликспансион (Format)](./selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format.md)
+  - [Элемент SelectionSetName для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)](./selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format.md)
 
 - Следующие элементы определяют набор элементов, используемый условиями выбора.
 
-    - [Элемент Селектионсетнаме для Селектионкондитион для элементов управления конфигурации (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md)
+  - [Элемент SelectionSetName для элемента SelectionCondition для элемента Controls для элемента Configuration (формат)](./selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
-    - [Элемент Селектионсетнаме для Селектионкондитион элементов управления для представления (формат)](./selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md)
+  - [Элемент SelectionSetName для элемента SelectionCondition для элемента Controls для элемента View (формат)](./selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md)
 
-    - [Элемент Селектионсетнаме для Селектионкондитион для ошибка customcontrol для представления (Format)](./selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
+  - [Элемент SelectionSetName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)](./selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
-    - [Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Енумерабликспансион (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)
+  - [Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)
 
-    - [Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Листентри (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)
+  - [Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListEntry (формат)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)
 
-    - [Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Таблеконтрол (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)
+  - [Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)
 
-    - [Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Видинтри (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md)
+  - [Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента WideEntry (формат)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md)
 
-    - [Элемент Селектионсетнаме для Селектионкондитион для GroupBy (Format)](./selectionsetname-element-for-selectioncondition-for-groupby-format.md)
+  - [Элемент SelectionSetName для элемента SelectionCondition для элемента GroupBy (формат)](./selectionsetname-element-for-selectioncondition-for-groupby-format.md)
 
 ## <a name="see-also"></a>См. также:
 
