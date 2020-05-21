@@ -8,20 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e83c9d9-6d06-4247-94d9-e3bfd4013b11
 caps.latest.revision: 4
-ms.openlocfilehash: b830571418fe75bbfc68df02f20a6012efefd99a
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 7ccdeeb2833b79cabc7c77d1a400e0c9132b2dcd
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996069"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561470"
 ---
-# <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a><span data-ttu-id="35a0d-102">Создание файла схемы XML для веб-службы управления OData</span><span class="sxs-lookup"><span data-stu-id="35a0d-102">Authoring the XML schema file for a Management OData web service</span></span>
+# <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a><span data-ttu-id="1c0bb-102">Создание файла схемы XML для веб-службы управления OData</span><span class="sxs-lookup"><span data-stu-id="1c0bb-102">Authoring the XML schema file for a Management OData web service</span></span>
 
-<span data-ttu-id="35a0d-103">Определив ресурсы, которые будет предоставлять веб-служба (см. раздел [Создание файла схемы MOF для веб-службы OData управления](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), сопоставьте эти ресурсы с соответствующими командлетами Windows PowerShell, которые реализуют поддерживаемые операции для каждого ресурса, создав XML-файл, соответствующий [схеме сопоставления ресурсов](./resource-mapping-schema.md).</span><span class="sxs-lookup"><span data-stu-id="35a0d-103">After you define the resources your web service will expose (see [Authoring the MOF schema file for a Management OData web service](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), you map those resources to the underlying Windows PowerShell cmdlets that implement the supported operations for each resource by creating an XML file that conforms to the [Resource Mapping Schema](./resource-mapping-schema.md).</span></span> <span data-ttu-id="35a0d-104">XML-файл также указывает URL-адреса, используемые клиентом для доступа к ресурсам.</span><span class="sxs-lookup"><span data-stu-id="35a0d-104">The XML file also specifies the URLs that are used by the client to access the resources.</span></span>
+<span data-ttu-id="1c0bb-103">Определив ресурсы, которые будет предоставлять веб-служба (см. раздел [Создание файла схемы MOF для веб-службы OData управления](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), сопоставьте эти ресурсы с соответствующими командлетами Windows PowerShell, которые реализуют поддерживаемые операции для каждого ресурса, создав XML-файл, соответствующий [схеме сопоставления ресурсов](./resource-mapping-schema.md).</span><span class="sxs-lookup"><span data-stu-id="1c0bb-103">After you define the resources your web service will expose (see [Authoring the MOF schema file for a Management OData web service](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), you map those resources to the underlying Windows PowerShell cmdlets that implement the supported operations for each resource by creating an XML file that conforms to the [Resource Mapping Schema](./resource-mapping-schema.md).</span></span> <span data-ttu-id="1c0bb-104">XML-файл также указывает URL-адреса, используемые клиентом для доступа к ресурсам.</span><span class="sxs-lookup"><span data-stu-id="1c0bb-104">The XML file also specifies the URLs that are used by the client to access the resources.</span></span>
 
-## <a name="mappng-resources-to-urls"></a><span data-ttu-id="35a0d-105">Маппнг ресурсы по URL-адресам</span><span class="sxs-lookup"><span data-stu-id="35a0d-105">Mappng resources to URLs</span></span>
+## <a name="mappng-resources-to-urls"></a><span data-ttu-id="1c0bb-105">Маппнг ресурсы по URL-адресам</span><span class="sxs-lookup"><span data-stu-id="1c0bb-105">Mappng resources to URLs</span></span>
 
-<span data-ttu-id="35a0d-106">Первая часть XML-файла сопоставляет ресурсы, определенные в файле схемы MOF, с URL-адресами, используемыми для доступа к ним.</span><span class="sxs-lookup"><span data-stu-id="35a0d-106">The first part of the XML file maps the resources defined in the MOF schema file to the URLs that are used to access them.</span></span> <span data-ttu-id="35a0d-107">В следующем примере показано сопоставление.</span><span class="sxs-lookup"><span data-stu-id="35a0d-107">The following example shows that mapping.</span></span>
+<span data-ttu-id="1c0bb-106">Первая часть XML-файла сопоставляет ресурсы, определенные в файле схемы MOF, с URL-адресами, используемыми для доступа к ним.</span><span class="sxs-lookup"><span data-stu-id="1c0bb-106">The first part of the XML file maps the resources defined in the MOF schema file to the URLs that are used to access them.</span></span> <span data-ttu-id="1c0bb-107">В следующем примере показано сопоставление.</span><span class="sxs-lookup"><span data-stu-id="1c0bb-107">The following example shows that mapping.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -40,18 +40,18 @@ ms.locfileid: "76996069"
     </Resources>
 ```
 
-## <a name="mapping-cmdlets-to-crud-operations"></a><span data-ttu-id="35a0d-108">Сопоставление командлетов с операциями CRUD</span><span class="sxs-lookup"><span data-stu-id="35a0d-108">Mapping cmdlets to CRUD operations</span></span>
+## <a name="mapping-cmdlets-to-crud-operations"></a><span data-ttu-id="1c0bb-108">Сопоставление командлетов с операциями CRUD</span><span class="sxs-lookup"><span data-stu-id="1c0bb-108">Mapping cmdlets to CRUD operations</span></span>
 
-<span data-ttu-id="35a0d-109">Затем необходимо указать командлеты, соответствующие операциям CRUD (создание, чтение, обновление и удаление), которые поддерживаются ресурсами.</span><span class="sxs-lookup"><span data-stu-id="35a0d-109">You then specify the cmdlets that correspond to the CRUD (create, read, update, and delete) operations that the resources support.</span></span> <span data-ttu-id="35a0d-110">Операции CRUD в [схеме сопоставления ресурсов](./resource-mapping-schema.md)OData управления сопоставляются следующим образом.</span><span class="sxs-lookup"><span data-stu-id="35a0d-110">In the Management OData [Resource Mapping Schema](./resource-mapping-schema.md), the CRUD operations are mapped as follows.</span></span>
+<span data-ttu-id="1c0bb-109">Затем необходимо указать командлеты, соответствующие операциям CRUD (создание, чтение, обновление и удаление), которые поддерживаются ресурсами.</span><span class="sxs-lookup"><span data-stu-id="1c0bb-109">You then specify the cmdlets that correspond to the CRUD (create, read, update, and delete) operations that the resources support.</span></span> <span data-ttu-id="1c0bb-110">Операции CRUD в [схеме сопоставления ресурсов](./resource-mapping-schema.md)OData управления сопоставляются следующим образом.</span><span class="sxs-lookup"><span data-stu-id="1c0bb-110">In the Management OData [Resource Mapping Schema](./resource-mapping-schema.md), the CRUD operations are mapped as follows.</span></span>
 
-|<span data-ttu-id="35a0d-111">CRUD, команда</span><span class="sxs-lookup"><span data-stu-id="35a0d-111">CRUD command</span></span>|<span data-ttu-id="35a0d-112">XML-элемент</span><span class="sxs-lookup"><span data-stu-id="35a0d-112">XML element</span></span>|
+|<span data-ttu-id="1c0bb-111">CRUD, команда</span><span class="sxs-lookup"><span data-stu-id="1c0bb-111">CRUD command</span></span>|<span data-ttu-id="1c0bb-112">XML-элемент</span><span class="sxs-lookup"><span data-stu-id="1c0bb-112">XML element</span></span>|
 |------------------|-----------------|
-|<span data-ttu-id="35a0d-113">Создать</span><span class="sxs-lookup"><span data-stu-id="35a0d-113">Create</span></span>|<span data-ttu-id="35a0d-114">Создать</span><span class="sxs-lookup"><span data-stu-id="35a0d-114">Create</span></span>|
-|<span data-ttu-id="35a0d-115">Чтение</span><span class="sxs-lookup"><span data-stu-id="35a0d-115">Read</span></span>|<span data-ttu-id="35a0d-116">Запрос</span><span class="sxs-lookup"><span data-stu-id="35a0d-116">Query</span></span>|
-|<span data-ttu-id="35a0d-117">Обновление:</span><span class="sxs-lookup"><span data-stu-id="35a0d-117">Update</span></span>|<span data-ttu-id="35a0d-118">Обновление:</span><span class="sxs-lookup"><span data-stu-id="35a0d-118">Update</span></span>|
-|<span data-ttu-id="35a0d-119">Удалить</span><span class="sxs-lookup"><span data-stu-id="35a0d-119">Delete</span></span>|<span data-ttu-id="35a0d-120">Удалить</span><span class="sxs-lookup"><span data-stu-id="35a0d-120">Delete</span></span>|
+|<span data-ttu-id="1c0bb-113">Создать</span><span class="sxs-lookup"><span data-stu-id="1c0bb-113">Create</span></span>|<span data-ttu-id="1c0bb-114">Создать</span><span class="sxs-lookup"><span data-stu-id="1c0bb-114">Create</span></span>|
+|<span data-ttu-id="1c0bb-115">Чтение</span><span class="sxs-lookup"><span data-stu-id="1c0bb-115">Read</span></span>|<span data-ttu-id="1c0bb-116">query</span><span class="sxs-lookup"><span data-stu-id="1c0bb-116">Query</span></span>|
+|<span data-ttu-id="1c0bb-117">Обновление</span><span class="sxs-lookup"><span data-stu-id="1c0bb-117">Update</span></span>|<span data-ttu-id="1c0bb-118">Update</span><span class="sxs-lookup"><span data-stu-id="1c0bb-118">Update</span></span>|
+|<span data-ttu-id="1c0bb-119">DELETE</span><span class="sxs-lookup"><span data-stu-id="1c0bb-119">Delete</span></span>|<span data-ttu-id="1c0bb-120">Удалить</span><span class="sxs-lookup"><span data-stu-id="1c0bb-120">Delete</span></span>|
 
-<span data-ttu-id="35a0d-121">В следующем примере показаны сопоставления для операций создания, чтения и обновления в ресурсе `Service`.</span><span class="sxs-lookup"><span data-stu-id="35a0d-121">The following example shows the mappings for the Create, Read, and Update operations on the `Service` resource.</span></span>
+<span data-ttu-id="1c0bb-121">В следующем примере показаны сопоставления для операций создания, чтения и обновления `Service` ресурса.</span><span class="sxs-lookup"><span data-stu-id="1c0bb-121">The following example shows the mappings for the Create, Read, and Update operations on the `Service` resource.</span></span>
 
 ```xml
 <ClassImplementations>
@@ -157,10 +157,10 @@ ms.locfileid: "76996069"
         </Class>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="35a0d-122">См. также</span><span class="sxs-lookup"><span data-stu-id="35a0d-122">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c0bb-122">См. также:</span><span class="sxs-lookup"><span data-stu-id="1c0bb-122">See Also</span></span>
 
-[<span data-ttu-id="35a0d-123">Создание файла схемы MOF для веб-службы OData управления</span><span class="sxs-lookup"><span data-stu-id="35a0d-123">Authoring the MOF schema file for a Management OData web service</span></span>](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[<span data-ttu-id="1c0bb-123">Создание файла схемы MOF для веб-службы управления OData</span><span class="sxs-lookup"><span data-stu-id="1c0bb-123">Authoring the MOF schema file for a Management OData web service</span></span>](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="35a0d-124">Схема сопоставления ресурсов</span><span class="sxs-lookup"><span data-stu-id="35a0d-124">Resource Mapping Schema</span></span>](./resource-mapping-schema.md)
+[<span data-ttu-id="1c0bb-124">Схема сопоставления ресурсов</span><span class="sxs-lookup"><span data-stu-id="1c0bb-124">Resource Mapping Schema</span></span>](./resource-mapping-schema.md)
 
-[<span data-ttu-id="35a0d-125">Создание веб-службы OData для управления</span><span class="sxs-lookup"><span data-stu-id="35a0d-125">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)
+[<span data-ttu-id="1c0bb-125">Создание веб-службы управления OData</span><span class="sxs-lookup"><span data-stu-id="1c0bb-125">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)

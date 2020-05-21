@@ -8,22 +8,22 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65fbac8b-07d0-4513-bc8d-79f1f389be0f
 caps.latest.revision: 5
-ms.openlocfilehash: 7aadee07b38d2e9d87c5f0c548d13a5cdad1939f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5c55ec1346e1f2a9a3fd59445ce267c80bdb5ae4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366173"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561711"
 ---
-# <a name="authoring-the-mof-schema-file-for-a-management-odata-web-service"></a><span data-ttu-id="98d83-102">Создание файла схемы MOF для веб-службы управления OData</span><span class="sxs-lookup"><span data-stu-id="98d83-102">Authoring the MOF schema file for a Management OData web service</span></span>
+# <a name="authoring-the-mof-schema-file-for-a-management-odata-web-service"></a><span data-ttu-id="647b7-102">Создание файла схемы MOF для веб-службы управления OData</span><span class="sxs-lookup"><span data-stu-id="647b7-102">Authoring the MOF schema file for a Management OData web service</span></span>
 
-<span data-ttu-id="98d83-103">Ресурсы, предоставляемые веб-службой OData управления, определяются путем создания файла MOF, который использует схему общедоступных ресурсов.</span><span class="sxs-lookup"><span data-stu-id="98d83-103">You define the resources that your Management OData web service exposes by creating a MOF file that used the public resource schema.</span></span> <span data-ttu-id="98d83-104">Каждый ресурс определяется как класс в файле, а свойства определяются как члены класса.</span><span class="sxs-lookup"><span data-stu-id="98d83-104">Each resource is defined as a class in the file, and properties are defined as class members.</span></span> <span data-ttu-id="98d83-105">Дополнительные сведения о схеме, используемой в MOF-файле, см. в разделе [схема общедоступного ресурса](./public-resource-schema.md).</span><span class="sxs-lookup"><span data-stu-id="98d83-105">For more information about the schema used in the MOF file, see [Public Resource Schema](./public-resource-schema.md).</span></span>
+<span data-ttu-id="647b7-103">Ресурсы, предоставляемые веб-службой OData управления, определяются путем создания файла MOF, который использует схему общедоступных ресурсов.</span><span class="sxs-lookup"><span data-stu-id="647b7-103">You define the resources that your Management OData web service exposes by creating a MOF file that used the public resource schema.</span></span> <span data-ttu-id="647b7-104">Каждый ресурс определяется как класс в файле, а свойства определяются как члены класса.</span><span class="sxs-lookup"><span data-stu-id="647b7-104">Each resource is defined as a class in the file, and properties are defined as class members.</span></span> <span data-ttu-id="647b7-105">Дополнительные сведения о схеме, используемой в MOF-файле, см. в разделе [схема общедоступного ресурса](./public-resource-schema.md).</span><span class="sxs-lookup"><span data-stu-id="647b7-105">For more information about the schema used in the MOF file, see [Public Resource Schema](./public-resource-schema.md).</span></span>
 
-## <a name="example-mof-file"></a><span data-ttu-id="98d83-106">Пример MOF-файла</span><span class="sxs-lookup"><span data-stu-id="98d83-106">Example MOF file</span></span>
+## <a name="example-mof-file"></a><span data-ttu-id="647b7-106">Пример MOF-файла</span><span class="sxs-lookup"><span data-stu-id="647b7-106">Example MOF file</span></span>
 
-<span data-ttu-id="98d83-107">В следующем файле определяются ресурсы службы и процесса.</span><span class="sxs-lookup"><span data-stu-id="98d83-107">The following file defines Service and Process resources.</span></span> <span data-ttu-id="98d83-108">Каждый из этих ресурсов соответствует объекту, который может управляться с помощью набора командлетов Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="98d83-108">Each of these resources corresponds to an object that can be managed by a set of Windows PowerShell cmdlet.</span></span> <span data-ttu-id="98d83-109">Свойства соответствуют параметрам, используемым этими командлетами.</span><span class="sxs-lookup"><span data-stu-id="98d83-109">The properties correspond to parameters used by those cmdlets.</span></span>
+<span data-ttu-id="647b7-107">В следующем файле определяются ресурсы службы и процесса.</span><span class="sxs-lookup"><span data-stu-id="647b7-107">The following file defines Service and Process resources.</span></span> <span data-ttu-id="647b7-108">Каждый из этих ресурсов соответствует объекту, который может управляться с помощью набора командлетов Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="647b7-108">Each of these resources corresponds to an object that can be managed by a set of Windows PowerShell cmdlet.</span></span> <span data-ttu-id="647b7-109">Свойства соответствуют параметрам, используемым этими командлетами.</span><span class="sxs-lookup"><span data-stu-id="647b7-109">The properties correspond to parameters used by those cmdlets.</span></span>
 
-<span data-ttu-id="98d83-110">Каждый из этих двух ресурсов содержит свойства сложного типа.</span><span class="sxs-lookup"><span data-stu-id="98d83-110">Each of the two resources contains properties that are of complex type.</span></span> <span data-ttu-id="98d83-111">Сложные типы определяются как классы, измененные с помощью квалификатора `ComplexType`.</span><span class="sxs-lookup"><span data-stu-id="98d83-111">The complex types are defined as classes modified with the `ComplexType` qualifier.</span></span>
+<span data-ttu-id="647b7-110">Каждый из этих двух ресурсов содержит свойства сложного типа.</span><span class="sxs-lookup"><span data-stu-id="647b7-110">Each of the two resources contains properties that are of complex type.</span></span> <span data-ttu-id="647b7-111">Сложные типы определяются как классы, измененные с помощью `ComplexType` квалификатора.</span><span class="sxs-lookup"><span data-stu-id="647b7-111">The complex types are defined as classes modified with the `ComplexType` qualifier.</span></span>
 
 ```csharp
 
@@ -209,8 +209,8 @@ class PswsTest_Stream
 
 ```
 
-## <a name="see-also"></a><span data-ttu-id="98d83-112">См. также:</span><span class="sxs-lookup"><span data-stu-id="98d83-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="647b7-112">См. также:</span><span class="sxs-lookup"><span data-stu-id="647b7-112">See Also</span></span>
 
-[<span data-ttu-id="98d83-113">Создание веб-службы OData для управления</span><span class="sxs-lookup"><span data-stu-id="98d83-113">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)
+[<span data-ttu-id="647b7-113">Создание веб-службы управления OData</span><span class="sxs-lookup"><span data-stu-id="647b7-113">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)
 
-[<span data-ttu-id="98d83-114">Схема общих ресурсов</span><span class="sxs-lookup"><span data-stu-id="98d83-114">Public Resource Schema</span></span>](./public-resource-schema.md)
+[<span data-ttu-id="647b7-114">Общедоступная схема ресурсов</span><span class="sxs-lookup"><span data-stu-id="647b7-114">Public Resource Schema</span></span>](./public-resource-schema.md)
