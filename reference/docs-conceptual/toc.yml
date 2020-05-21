@@ -148,20 +148,6 @@
               href: components/ise/object-model/the-powershelltabcollection-object.md
             - name: Объект PowerShellTab
               href: components/ise/object-model/the-powershelltab-object.md
-    - name: Веб-доступ
-      items:
-        - name: Правила авторизации и средства безопасности
-          href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
-        - name: Установка
-          href: components/web-access/install-and-use-windows-powershell-web-access.md
-        - name: Устранение неполадок с доступом
-          href: components/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
-        - name: Удаление Windows PowerShell Web Access
-          href: components/web-access/uninstall-windows-powershell-web-access.md
-        - name: Использование веб-консоли PowerShell
-          href: components/web-access/use-the-web-based-windows-powershell-console.md
-    - name: Руководство по рабочим процессам
-      href: components/workflows-guide.md
 - name: Коллекция PowerShell
   items:
     - name: Обзор
