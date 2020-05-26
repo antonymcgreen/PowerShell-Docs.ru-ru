@@ -1,57 +1,48 @@
 - name: Как использовать эту документацию
   href: how-to-use-docs.md
 - name: Обзор
-  href: overview.md
+  expanded: true
+  items:
+    - name: Что такое PowerShell?
+      href: overview.md
+    - name: Жизненный цикл поддержки PowerShell
+      href: powershell-support-lifecycle.md
 - name: Установка
   items:
-    - name: Установка разных версий PowerShell
+    - name: Обзор
       href: install/installing-powershell.md
-    - name: Установка PowerShell
-      items:
-        - name: Установка PowerShell в Windows
-          href: install/installing-powershell-core-on-windows.md
-        - name: Установка PowerShell в Linux
-          href: install/installing-powershell-core-on-linux.md
-        - name: Установка PowerShell в macOS
-          href: install/installing-powershell-core-on-macos.md
-        - name: Установка PowerShell в ARM
-          href: install/powershell-core-on-arm.md
-    - name: "Установка Windows PowerShell\_5.1"
-      items:
-        - name: Установка Windows PowerShell
-          href: install/installing-windows-powershell.md
-        - name: "Установка подсистемы Windows PowerShell\_2.0"
-          href: install/installing-the-windows-powershell-2.0-engine.md
-        - name: Требования к системе для Windows PowerShell
-          href: install/windows-powershell-system-requirements.md
+    - name: "Миграция с Windows PowerShell\_5.1 на PowerShell\_7"
+      href: install/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
+    - name: Установка PowerShell в Windows
+      href: install/installing-powershell-core-on-windows.md
+    - name: Установка PowerShell в Linux
+      href: install/installing-powershell-core-on-linux.md
+    - name: Установка PowerShell в macOS
+      href: install/installing-powershell-core-on-macos.md
+    - name: Установка PowerShell в ARM
+      href: install/powershell-core-on-arm.md
     - name: "Использование PowerShell в\_Docker"
       href: install/PowerShell-in-Docker.md
-- name: Начало работы
-  items:
-    - name: Начало работы с PowerShell
-      href: getting-started/getting-started-with-windows-powershell.md
-    - name: Запуск Windows PowerShell
-      href: getting-started/starting-windows-powershell.md
-    - name: "Запуск подсистемы Windows PowerShell\_2.0"
-      href: getting-started/starting-the-windows-powershell-2.0-engine.md
 - name: Изучение PowerShell
   items:
-    - name: Основные сведения о важных концепциях PowerShell
-      href: learn/understanding-important-powershell-concepts.md
-    - name: Изучение имен PowerShell
-      href: learn/learning-powershell-names.md
-    - name: Использование знакомых имен команд
-      href: learn/using-familiar-command-names.md
-    - name: Получение подробной справки
-      href: learn/getting-detailed-help-information.md
-    - name: Получение информации о командах
-      href: learn/getting-information-about-commands.md
-    - name: Использование переменных для хранения объектов
-      href: learn/using-variables-to-store-objects.md
-    - name: Основные сведения о конвейере PowerShell
-      href: learn/understanding-the-powershell-pipeline.md
-    - name: Другие статьи о PowerShell
-      href: learn/more-powershell-learning.md
+    - name: Основы PowerShell
+      items:
+        - name: Изучение имен PowerShell
+          href: learn/ps101/learning-powershell-names.md
+        - name: Использование знакомых имен команд
+          href: learn/ps101/using-familiar-command-names.md
+        - name: Получение подробной справки
+          href: learn/ps101/getting-detailed-help-information.md
+        - name: Получение информации о командах
+          href: learn/ps101/getting-information-about-commands.md
+        - name: Использование переменных для хранения объектов
+          href: learn/ps101/using-variables-to-store-objects.md
+        - name: Параметры командной строки PowerShell
+          href: learn/ps101/powershell.exe-command-line-help.md
+        - name: Завершение по клавише TAB
+          href: learn/ps101/using-tab-expansion.md
+    - name: Использование экспериментальных возможностей
+      href: learn/experimental-features.md
     - name: Удаленное взаимодействие PowerShell
       items:
         - name: Just Enough Administration (JEA)
@@ -82,167 +73,12 @@
           href: learn/remoting/winrmsecurity.md
         - name: Выполнение второго прыжка при удаленном взаимодействии PowerShell
           href: learn/remoting/ps-remoting-second-hop.md
+    - name: Дополнительные ресурсы
+      href: learn/more-powershell-learning.md
     - name: Глоссарий
-      href: learn/windows-powershell-glossary.md
-- name: Components
-  items:
-    - name: Консоль
-      items:
-        - name: Параметры командной строки PowerShell
-          href: components/console/powershell.exe-command-line-help.md
-        - name: Завершение по клавише TAB
-          href: components/console/using-tab-expansion.md
-    - name: ISE
-      items:
-        - name: Введение в интегрированную среду сценариев Windows PowerShell
-          href: components/ise/introducing-the-windows-powershell-ise.md
-        - name: Использование интегрированной среды сценариев Windows PowerShell
-          items:
-            - name: Обзор интегрированной среды сценариев Windows PowerShell
-              href: components/ise/exploring-the-windows-powershell-ise.md
-            - name: Создание вкладки PowerShell в интегрированной среде сценариев Windows PowerShell
-              href: components/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
-            - name: Отладка сценариев в интегрированной среде сценариев Windows PowerShell
-              href: components/ise/how-to-debug-scripts-in-windows-powershell-ise.md
-            - name: Использование профилей в интегрированной среде сценариев Windows PowerShell
-              href: components/ise/how-to-use-profiles-in-windows-powershell-ise.md
-            - name: Использование завершения нажатием клавиши TAB в областях скриптов и консоли
-              href: components/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
-            - name: Использование области консоли в интегрированной среде сценариев Windows PowerShell
-              href: components/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
-            - name: Написание и запуск скриптов в интегрированной среде сценариев Windows PowerShell
-              href: components/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
-            - name: Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
-              href: components/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
-            - name: Специальные возможности в интегрированной среде сценариев Windows PowerShell
-              href: components/ise/accessibility-in-windows-powershell-ise.md
-        - name: Объектная модель скриптов интегрированной среды скриптов
-          items:
-            - name: Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell
-              href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
-            - name: Иерархия объектной модели интегрированной среды сценариев
-              href: components/ise/object-model/the-ise-object-model-hierarchy.md
-            - name: Объект ObjectModelRoot
-              href: components/ise/object-model/the-objectmodelroot-object.md
-            - name: Объект ISEAddOnToolCollection
-              href: components/ise/object-model/the-iseaddontoolcollection-object.md
-            - name: Объект ISEAddOnTool
-              href: components/ise/object-model/the-iseaddontool-object.md
-            - name: Объект ISEEditor
-              href: components/ise/object-model/the-iseeditor-object.md
-            - name: Объект ISEFileCollection
-              href: components/ise/object-model/the-isefilecollection-object.md
-            - name: Объект ISEFile
-              href: components/ise/object-model/the-isefile-object.md
-            - name: Объект ISEMenuItemCollection
-              href: components/ise/object-model/the-isemenuitemcollection-object.md
-            - name: Объект ISEMenuItem
-              href: components/ise/object-model/the-isemenuitem-object.md
-            - name: Объект ISEOptions
-              href: components/ise/object-model/the-iseoptions-object.md
-            - name: Объект ISESnippetCollection
-              href: components/ise/object-model/the-isesnippetcollection-object.md
-            - name: Объект ISESnippet
-              href: components/ise/object-model/the-isesnippetobject.md
-            - name: Объект PowerShellTabCollection
-              href: components/ise/object-model/the-powershelltabcollection-object.md
-            - name: Объект PowerShellTab
-              href: components/ise/object-model/the-powershelltab-object.md
-- name: Коллекция PowerShell
-  items:
-    - name: Обзор
-      href: gallery/overview.md
-    - name: Установка PowerShellGet
-      href: gallery/installing-psget.md
-    - name: Приступая к работе
-      href: gallery/getting-started.md
-    - name: Инструкции
-      items:
-        - name: Поиск пакетов в коллекции
-          items:
-            - name: Поиск пакетов
-              href: gallery/how-to/finding-packages/search-syntax.md
-            - name: Поиск по совместимости
-              href: gallery/how-to/finding-packages/searching-by-compatibility.md
-            - name: Фильтрация результатов поиска
-              href: gallery/how-to/finding-packages/filtering-packages.md
-        - name: Публикация в галерее
-          items:
-            - name: Создание и публикация пакетов
-              href: gallery/how-to/publishing-packages/publishing-a-package.md
-            - name: Создание учетной записи PowerShellGallery
-              href: gallery/how-to/publishing-packages/creating-an-account.md
-            - name: Исключение пакетов
-              href: gallery/how-to/publishing-packages/unlisting-packages.md
-            - name: Удаление пакетов
-              href: gallery/how-to/publishing-packages/deleting-packages.md
-            - name: Управление владельцами пакетов
-              href: gallery/how-to/publishing-packages/managing-package-owners.md
-        - name: Работа с пакетами
-          items:
-            - name: Представление FileList
-              href: gallery/how-to/working-with-packages/filelist-view.md
-            - name: Развертывание в службу автоматизации Azure
-              href: gallery/how-to/working-with-packages/deploy-to-azure-automation.md
-            - name: Скачивание пакета вручную
-              href: gallery/how-to/working-with-packages/manual-download.md
-            - name: 'Пакеты, требующие принятия условий лицензионного соглашения'
-              href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
-            - name: Обращение к владельцам пакетов
-              href: gallery/how-to/working-with-packages/contacting-package-owners.md
-            - name: Отправка отзывов через социальные сети или комментарии
-              href: gallery/how-to/working-with-packages/social-media-feedback.md
-        - name: Управление профилем учетной записи
-          items:
-            - name: Параметры учетной записи коллекции PowerShell
-              href: gallery/how-to/managing-profile/managing-account.md
-            - name: Управление ключами API
-              href: gallery/how-to/managing-profile/creating-apikeys.md
-        - name: Работа с частными репозиториями PowerShellGet
-          href: gallery/how-to/working-with-local-psrepositories.md
-    - name: Основные понятия
-      items:
-        - name: Руководства и рекомендации для публикации
-          href: gallery/concepts/publishing-guidelines.md
-        - name: Манифест пакетов и пользовательский интерфейс коллекции
-          href: gallery/concepts/package-manifest-affecting-ui.md
-        - name: Запрос определенных PSEdition
-          items:
-            - name: Написание скриптов с поддержкой PSEditions
-              href: gallery/concepts/script-psedition-support.md
-            - name: Написание модулей с поддержкой PSEditions
-              href: gallery/concepts/module-psedition-support.md
-        - name: Запрос принять условия лицензии
-          items:
-            - name: Запрос на принятие условий лицензии для скриптов
-              href: gallery/concepts/script-license-acceptance.md
-            - name: Запрос принять условия лицензии для модулей
-              href: gallery/concepts/module-license-acceptance.md
-        - name: Определение пакетов в качестве предварительной версии
-          items:
-            - name: Определение модуля в качестве предварительной версии
-              href: gallery/concepts/module-prerelease-support.md
-            - name: Определение скрипта в качестве предварительной версии
-              href: gallery/concepts/script-prerelease-support.md
-        - name: Профиль правила PSScriptAnalyzer
-          href: gallery/concepts/scriptanalyzer-rule-profile.md
-    - name: Получение поддержки
-      items:
-        - name: Сообщение о нарушении
-          href: gallery/how-to/getting-support/report-abuse.md
-        - name: Разрешение спорных вопросов
-          href: gallery/how-to/getting-support/dispute-resolution.md
-        - name: Обращение к администраторам
-          href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: Устранение неполадок
-          href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
-        - name: Начальная загрузка поставщика NuGet и NuGet.exe
-          href: gallery/how-to/getting-support/bootstrapping-nuget.md
-        - name: Соответствие GDPR
-          href: gallery/how-to/getting-support/gdpr-dsr-policy.md
-    - name: Вопросы и ответы о коллекции
-      href: gallery/faqs.md
+      href: learn/glossary.md
 - name: What's New
+  expanded: true
   items:
     - name: "Новые возможности PowerShell\_7.x"
       items:
@@ -260,71 +96,135 @@
           href: whats-new/breaking-changes-ps6.md
         - name: "Известные проблемы в PowerShell Core\_6.0"
           href: whats-new/known-issues-ps6.md
-    - name: "Новые возможности PowerShell\_5.x"
-      items:
-        - name: "Новые возможности Windows PowerShell\_5.x"
-          href: whats-new/what-s-new-in-windows-powershell-50.md
-        - name: Новые возможности интегрированной среды сценариев PowerShell версии 5.0
-          href: whats-new/what-s-new-in-the-powershell-50-ise.md
-    - name: "Миграция с Windows PowerShell\_5.1 на PowerShell\_7"
-      href: whats-new/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
-    - name: Использование экспериментальных возможностей
-      href: whats-new/experimental-features.md
     - name: Журнал выпуска модулей и командлетов
       href: whats-new/cmdlet-versions.md
     - name: Список совместимости модулей
       href: whats-new/module-compatibility.md
-- name: Жизненный цикл поддержки PowerShell
-  href: powershell-support-lifecycle.md
-- name: Windows Management Framework (WMF)
+- name: Windows PowerShell
   items:
-    - name: Обзор
-      href: wmf/overview.md
-    - name: Установка
+    - name: "Установка Windows PowerShell\_5.1"
       items:
-        - name: "Установка и настройка WMF\_5.1"
-          href: wmf/setup/install-configure.md
-        - name: "Удаление WMF\_5.0"
-          href: wmf/setup/uninstall.md
-    - name: What's New
-      expanded: true
+        - name: Установка Windows PowerShell
+          href: windows-powershell/install/installing-windows-powershell.md
+        - name: "Установка подсистемы Windows PowerShell\_2.0"
+          href: windows-powershell/install/installing-the-windows-powershell-2.0-engine.md
+        - name: Требования к системе для Windows PowerShell
+          href: windows-powershell/install/windows-powershell-system-requirements.md
+    - name: "Новые возможности PowerShell\_5.x"
       items:
-        - name: "Заметки о выпуске WMF\_5.x"
-          href: wmf/whats-new/release-notes.md
-        - name: Исправления ошибок в WMF 5.1
-          href: wmf/whats-new/bugfixes.md
-        - name: Новые и обновленные командлеты
-          href: wmf/whats-new/new-updated-cmdlets.md
-        - name: Создание настраиваемых типов с помощью классов PowerShell
-          href: wmf/whats-new/class-overview.md
-        - name: Усовершенствования консоли в WMF 5.1
-          href: wmf/whats-new/console-improvements.md
-        - name: Усовершенствования отладки сценариев PowerShell
-          href: wmf/whats-new/debug-overview.md
-        - name: Трассировка сценариев и ведения журналов для них
-          href: wmf/whats-new/script-logging.md
-        - name: Усовершенствования DSC в WMF 5.1
-          href: wmf/whats-new/DSC-improvements.md
-        - name: Усовершенствования подсистемы PowerShell в WMF 5.1
-          href: wmf/whats-new/engine-improvements.md
-        - name: Поток информации
-          href: wmf/whats-new/informationstream-overview.md
-        - name: Улучшения Just Enough Administration (JEA)
-          href: wmf/whats-new/jea-improvements.md
-        - name: "Усовершенствования в управлении пакетами в WMF\_5.1"
-          href: wmf/whats-new/package-management-improvements.md
-        - name: Инвентаризация программного обеспечения (SIL)
-          href: wmf/whats-new/sil-overview.md
-        - name: Состояние совместимости продуктов
-          href: wmf/whats-new/compatibility.md
-    - name: Известные проблемы
+        - name: "Новые возможности Windows PowerShell\_5.x"
+          href: windows-powershell/whats-new/what-s-new-in-windows-powershell-50.md
+        - name: Новые возможности интегрированной среды сценариев PowerShell версии 5.0
+          href: windows-powershell/whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: ISE
       items:
-        - name: "Известные проблемы в WMF\_5.0"
-          href: wmf/known-issues/known-issues-50.md
-        - name: Известные проблемы в WMF 5.1
-          href: wmf/known-issues/known-issues-51.md
-        - name: Известные проблемы и ограничения в DSC
-          href: wmf/known-issues/known-issues-dsc.md
+        - name: Введение в интегрированную среду сценариев Windows PowerShell
+          href: windows-powershell/ise/introducing-the-windows-powershell-ise.md
+        - name: Использование интегрированной среды сценариев Windows PowerShell
+          items:
+            - name: Обзор интегрированной среды сценариев Windows PowerShell
+              href: windows-powershell/ise/exploring-the-windows-powershell-ise.md
+            - name: Создание вкладки PowerShell в интегрированной среде сценариев Windows PowerShell
+              href: windows-powershell/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
+            - name: Отладка сценариев в интегрированной среде сценариев Windows PowerShell
+              href: windows-powershell/ise/how-to-debug-scripts-in-windows-powershell-ise.md
+            - name: Использование профилей в интегрированной среде сценариев Windows PowerShell
+              href: windows-powershell/ise/how-to-use-profiles-in-windows-powershell-ise.md
+            - name: Использование завершения нажатием клавиши TAB в областях скриптов и консоли
+              href: windows-powershell/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
+            - name: Использование области консоли в интегрированной среде сценариев Windows PowerShell
+              href: windows-powershell/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
+            - name: Написание и запуск скриптов в интегрированной среде сценариев Windows PowerShell
+              href: windows-powershell/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
+            - name: Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
+              href: windows-powershell/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
+            - name: Специальные возможности в интегрированной среде сценариев Windows PowerShell
+              href: windows-powershell/ise/accessibility-in-windows-powershell-ise.md
+        - name: Объектная модель скриптов интегрированной среды скриптов
+          items:
+            - name: Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell
+              href: windows-powershell/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
+            - name: Иерархия объектной модели интегрированной среды сценариев
+              href: windows-powershell/ise/object-model/the-ise-object-model-hierarchy.md
+            - name: Объект ObjectModelRoot
+              href: windows-powershell/ise/object-model/the-objectmodelroot-object.md
+            - name: Объект ISEAddOnToolCollection
+              href: windows-powershell/ise/object-model/the-iseaddontoolcollection-object.md
+            - name: Объект ISEAddOnTool
+              href: windows-powershell/ise/object-model/the-iseaddontool-object.md
+            - name: Объект ISEEditor
+              href: windows-powershell/ise/object-model/the-iseeditor-object.md
+            - name: Объект ISEFileCollection
+              href: windows-powershell/ise/object-model/the-isefilecollection-object.md
+            - name: Объект ISEFile
+              href: windows-powershell/ise/object-model/the-isefile-object.md
+            - name: Объект ISEMenuItemCollection
+              href: windows-powershell/ise/object-model/the-isemenuitemcollection-object.md
+            - name: Объект ISEMenuItem
+              href: windows-powershell/ise/object-model/the-isemenuitem-object.md
+            - name: Объект ISEOptions
+              href: windows-powershell/ise/object-model/the-iseoptions-object.md
+            - name: Объект ISESnippetCollection
+              href: windows-powershell/ise/object-model/the-isesnippetcollection-object.md
+            - name: Объект ISESnippet
+              href: windows-powershell/ise/object-model/the-isesnippetobject.md
+            - name: Объект PowerShellTabCollection
+              href: windows-powershell/ise/object-model/the-powershelltabcollection-object.md
+            - name: Объект PowerShellTab
+              href: windows-powershell/ise/object-model/the-powershelltab-object.md
+    - name: Windows Management Framework (WMF)
+      items:
+        - name: Обзор
+          href: windows-powershell/wmf/overview.md
+        - name: Установка
+          items:
+            - name: "Установка и настройка WMF\_5.1"
+              href: windows-powershell/wmf/setup/install-configure.md
+            - name: "Удаление WMF\_5.0"
+              href: windows-powershell/wmf/setup/uninstall.md
+        - name: What's New
+          expanded: true
+          items:
+            - name: "Заметки о выпуске WMF\_5.x"
+              href: windows-powershell/wmf/whats-new/release-notes.md
+            - name: Исправления ошибок в WMF 5.1
+              href: windows-powershell/wmf/whats-new/bugfixes.md
+            - name: Новые и обновленные командлеты
+              href: windows-powershell/wmf/whats-new/new-updated-cmdlets.md
+            - name: Создание настраиваемых типов с помощью классов PowerShell
+              href: windows-powershell/wmf/whats-new/class-overview.md
+            - name: Усовершенствования консоли в WMF 5.1
+              href: windows-powershell/wmf/whats-new/console-improvements.md
+            - name: Усовершенствования отладки сценариев PowerShell
+              href: windows-powershell/wmf/whats-new/debug-overview.md
+            - name: Трассировка сценариев и ведения журналов для них
+              href: windows-powershell/wmf/whats-new/script-logging.md
+            - name: Усовершенствования DSC в WMF 5.1
+              href: windows-powershell/wmf/whats-new/DSC-improvements.md
+            - name: Усовершенствования подсистемы PowerShell в WMF 5.1
+              href: windows-powershell/wmf/whats-new/engine-improvements.md
+            - name: Поток информации
+              href: windows-powershell/wmf/whats-new/informationstream-overview.md
+            - name: Улучшения Just Enough Administration (JEA)
+              href: windows-powershell/wmf/whats-new/jea-improvements.md
+            - name: "Усовершенствования в управлении пакетами в WMF\_5.1"
+              href: windows-powershell/wmf/whats-new/package-management-improvements.md
+            - name: Инвентаризация программного обеспечения (SIL)
+              href: windows-powershell/wmf/whats-new/sil-overview.md
+            - name: Состояние совместимости продуктов
+              href: windows-powershell/wmf/whats-new/compatibility.md
+            - name: Известные проблемы
+              items:
+                - name: "Известные проблемы в WMF\_5.0"
+                  href: windows-powershell/wmf/known-issues/known-issues-50.md
+                - name: Известные проблемы в WMF 5.1
+                  href: windows-powershell/wmf/known-issues/known-issues-51.md
+                - name: Известные проблемы и ограничения в DSC
+                  href: windows-powershell/wmf/known-issues/known-issues-dsc.md
+    - name: Запуск Windows PowerShell
+      href: windows-powershell/starting-windows-powershell.md
+    - name: "Запуск подсистемы Windows PowerShell\_2.0"
+      href: windows-powershell/starting-the-windows-powershell-2.0-engine.md
 - name: Настройка требуемого состояния (DSC)
   items:
     - name: Обзор
@@ -618,6 +518,44 @@
       items:
         - name: Технические документы
           href: dsc/further-reading/whitepapers.md
+- name: Сообщество
+  items:
+    - name: Обновление сообщества
+      href: community/community-update.yml
+    - name: Поддержка сообщества
+      href: community/community-support.md
+    - name: Зал славы участников
+      href: community/hall-of-fame.md
+    - name: Новые возможности в Документации Майкрософт
+      items:
+        - name: Второй квартал 2020 года
+          href: community/2020-Q2.md
+        - name: Первый квартал 2020 года
+          href: community/2020-Q1.md
+    - name: Руководство для соавторов
+      items:
+        - name: Обзор
+          href: community/contributing/overview.md
+        - name: Как сообщить о проблеме с документацией
+          href: community/contributing/file-an-issue.md
+        - name: Приступая к работе с документацией
+          href: community/contributing/get-started-writing.md
+        - name: Отправка запроса на вытягивание
+          href: community/contributing/pull-requests.md
+        - name: "Руководство по стилю для документации\_PowerShell"
+          href: community/contributing/powershell-style-guide.md
+        - name: Редактирование справки по командлетам
+          href: community/contributing/editing-cmdlet-ref.md
+        - name: Дополнительные ресурсы
+          items:
+            - name: Контрольный список редактора
+              href: community/contributing/editorial-checklist.md
+            - name: Рассмотрение сообщений о проблемах
+              href: community/contributing/managing-issues.md
+            - name: Рассмотрение запросов на вытягивание
+              href: community/contributing/managing-pull-requests.md
+    - name: Цифровые графические материалы
+      href: community/digital-art.md
 - name: Примеры сценариев
   items:
     - name: Примеры скриптов для администрирования
@@ -702,124 +640,125 @@
           href: samples/appendix-1---compatibility-aliases.md
         - name: "Приложение\_2. Создание настраиваемого ярлыка PowerShell"
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
-- name: Сообщество
-  expanded: true
+- name: Коллекция PowerShell
   items:
-    - name: Обновление сообщества
-      href: community/community-update.yml
-    - name: Поддержка сообщества
-      href: community/community-support.md
-    - name: Зал славы участников
-      href: community/hall-of-fame.md
-    - name: Новые возможности в Документации Майкрософт
+    - name: Обзор
+      href: gallery/overview.md
+    - name: Установка PowerShellGet
+      href: gallery/installing-psget.md
+    - name: Приступая к работе
+      href: gallery/getting-started.md
+    - name: Инструкции
       items:
-        - name: Второй квартал 2020 года
-          href: community/2020-Q2.md
-        - name: Первый квартал 2020 года
-          href: community/2020-Q1.md
-    - name: Руководство для соавторов
-      items:
-        - name: Обзор
-          href: community/contributing/overview.md
-        - name: Как сообщить о проблеме с документацией
-          href: community/contributing/file-an-issue.md
-        - name: Приступая к работе с документацией
-          href: community/contributing/get-started-writing.md
-        - name: Отправка запроса на вытягивание
-          href: community/contributing/pull-requests.md
-        - name: "Руководство по стилю для документации\_PowerShell"
-          href: community/contributing/powershell-style-guide.md
-        - name: Редактирование справки по командлетам
-          href: community/contributing/editing-cmdlet-ref.md
-        - name: Дополнительные ресурсы
+        - name: Поиск пакетов в коллекции
           items:
-            - name: Контрольный список редактора
-              href: community/contributing/editorial-checklist.md
-            - name: Рассмотрение сообщений о проблемах
-              href: community/contributing/managing-issues.md
-            - name: Рассмотрение запросов на вытягивание
-              href: community/contributing/managing-pull-requests.md
-    - name: Цифровые графические материалы
-      href: community/digital-art.md
+            - name: Поиск пакетов
+              href: gallery/how-to/finding-packages/search-syntax.md
+            - name: Поиск по совместимости
+              href: gallery/how-to/finding-packages/searching-by-compatibility.md
+            - name: Фильтрация результатов поиска
+              href: gallery/how-to/finding-packages/filtering-packages.md
+        - name: Публикация в галерее
+          items:
+            - name: Создание и публикация пакетов
+              href: gallery/how-to/publishing-packages/publishing-a-package.md
+            - name: Создание учетной записи PowerShellGallery
+              href: gallery/how-to/publishing-packages/creating-an-account.md
+            - name: Исключение пакетов
+              href: gallery/how-to/publishing-packages/unlisting-packages.md
+            - name: Удаление пакетов
+              href: gallery/how-to/publishing-packages/deleting-packages.md
+            - name: Управление владельцами пакетов
+              href: gallery/how-to/publishing-packages/managing-package-owners.md
+        - name: Работа с пакетами
+          items:
+            - name: Представление FileList
+              href: gallery/how-to/working-with-packages/filelist-view.md
+            - name: Развертывание в службу автоматизации Azure
+              href: gallery/how-to/working-with-packages/deploy-to-azure-automation.md
+            - name: Скачивание пакета вручную
+              href: gallery/how-to/working-with-packages/manual-download.md
+            - name: 'Пакеты, требующие принятия условий лицензионного соглашения'
+              href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
+            - name: Обращение к владельцам пакетов
+              href: gallery/how-to/working-with-packages/contacting-package-owners.md
+            - name: Отправка отзывов через социальные сети или комментарии
+              href: gallery/how-to/working-with-packages/social-media-feedback.md
+        - name: Управление профилем учетной записи
+          items:
+            - name: Параметры учетной записи коллекции PowerShell
+              href: gallery/how-to/managing-profile/managing-account.md
+            - name: Управление ключами API
+              href: gallery/how-to/managing-profile/creating-apikeys.md
+        - name: Работа с частными репозиториями PowerShellGet
+          href: gallery/how-to/working-with-local-psrepositories.md
+    - name: Основные понятия
+      items:
+        - name: Руководства и рекомендации для публикации
+          href: gallery/concepts/publishing-guidelines.md
+        - name: Манифест пакетов и пользовательский интерфейс коллекции
+          href: gallery/concepts/package-manifest-affecting-ui.md
+        - name: Запрос определенных PSEdition
+          items:
+            - name: Написание скриптов с поддержкой PSEditions
+              href: gallery/concepts/script-psedition-support.md
+            - name: Написание модулей с поддержкой PSEditions
+              href: gallery/concepts/module-psedition-support.md
+        - name: Запрос принять условия лицензии
+          items:
+            - name: Запрос на принятие условий лицензии для скриптов
+              href: gallery/concepts/script-license-acceptance.md
+            - name: Запрос принять условия лицензии для модулей
+              href: gallery/concepts/module-license-acceptance.md
+        - name: Определение пакетов в качестве предварительной версии
+          items:
+            - name: Определение модуля в качестве предварительной версии
+              href: gallery/concepts/module-prerelease-support.md
+            - name: Определение скрипта в качестве предварительной версии
+              href: gallery/concepts/script-prerelease-support.md
+        - name: Профиль правила PSScriptAnalyzer
+          href: gallery/concepts/scriptanalyzer-rule-profile.md
+    - name: Получение поддержки
+      items:
+        - name: Сообщение о нарушении
+          href: gallery/how-to/getting-support/report-abuse.md
+        - name: Разрешение спорных вопросов
+          href: gallery/how-to/getting-support/dispute-resolution.md
+        - name: Обращение к администраторам
+          href: gallery/how-to/getting-support/contacting-administrators.md
+        - name: Устранение неполадок
+          href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
+        - name: Начальная загрузка поставщика NuGet и NuGet.exe
+          href: gallery/how-to/getting-support/bootstrapping-nuget.md
+        - name: Соответствие GDPR
+          href: gallery/how-to/getting-support/gdpr-dsr-policy.md
+    - name: Вопросы и ответы о коллекции
+      href: gallery/faqs.md
 - name: Написание скриптов и разработка
   items:
     - name: Visual Studio Code
       items:
         - name: Использование Visual Studio Code
-          href: components/vscode/using-vscode.md
+          href: dev-cross-plat/vscode/using-vscode.md
         - name: Репликация функций интегрированной среды скриптов в Visual Studio Code
-          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+          href: dev-cross-plat/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
         - name: Удаленные редактирование и отладка в Visual Studio Code
-          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+          href: dev-cross-plat/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
         - name: "Основные сведения о кодировке файлов в VS\_Code и PowerShell"
-          href: components/vscode/understanding-file-encoding.md
+          href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: Создание переносимых модулей
-      href: learn/writing-portable-modules.md
+      href: dev-cross-plat/writing-portable-modules.md
     - name: Прежние версии пакета SDK для PowerShell
       items:
         - name: Обзор
           href: developer/windows-powershell.md
         - name: Установка пакета SDK для Windows PowerShell
           href: developer/installing-the-windows-powershell-sdk.md
-        - name: Написание модуля Windows PowerShell
-          href: developer/module/writing-a-windows-powershell-module.md
-          items:
-            - name: "Общие сведения о модулях Windows\_PowerShell"
-              href: developer/module/understanding-a-windows-powershell-module.md
-            - name: Как написать модуль сценария PowerShell
-              href: developer/module/how-to-write-a-powershell-script-module.md
-            - name: Как написать бинарный модуль PowerShell
-              href: developer/module/how-to-write-a-powershell-binary-module.md
-            - name: Как написать манифест модуля PowerShell
-              href: developer/module/how-to-write-a-powershell-module-manifest.md
-            - name: Установка модуля PowerShell
-              href: developer/module/installing-a-powershell-module.md
-            - name: Изменение пути установки PSModulePath
-              href: developer/module/modifying-the-psmodulepath-installation-path.md
-            - name: Импорт модуля PowerShell
-              href: developer/module/importing-a-powershell-module.md
-            - name: "Написание справки для модулей Windows\_PowerShell"
-              href: developer/module/writing-help-for-windows-powershell-modules.md
-              items:
-                - name: Указание имен для файлов справки
-                  href: developer/module/naming-help-files.md
-                - name: Поддержка обновляемой справки
-                  href: developer/module/supporting-updatable-help.md
-                  items:
-                    - name: Общие сведения об обновляемой справке
-                      href: developer/module/updatable-help-overview.md
-                    - name: 'Создание обновляемой справки: пошаговые инструкции'
-                      href: developer/module/updatable-help-authoring-step-by-step.md
-                    - name: Как работает обновляемая справка
-                      href: developer/module/how-updatable-help-works.md
-                    - name: Как создать XML-файл HelpInfo
-                      href: developer/module/how-to-create-a-helpinfo-xml-file.md
-                      items:
-                        - name: Схема XML-файла HelpInfo
-                          href: developer/module/helpinfo-xml-schema.md
-                        - name: Пример XML-файла HelpInfo
-                          href: developer/module/helpinfo-xml-sample-file.md
-                        - name: Как назвать XML-файл HelpInfo
-                          href: developer/module/how-to-name-a-helpinfo-xml-file.md
-                        - name: Как задать номера версий XML-файла HelpInfo
-                          href: developer/module/how-to-set-helpinfo-xml-version-numbers.md
-                    - name: Как подготовить CAB-файлы обновляемой справки
-                      href: developer/module/how-to-prepare-updatable-help-cab-files.md
-                      items:
-                        - name: Как создавать и отправлять CAB-файлы
-                          href: developer/module/how-to-create-and-upload-cab-files.md
-                        - name: Как назвать CAB-файл обновляемой справки
-                          href: developer/module/how-to-name-an-updatable-help-cab-file.md
-                        - name: 'Типы файлов, которые могут использоваться в CAB-файле обновляемой справки'
-                          href: developer/module/file-types-permitted-in-an-updatable-help-cab-file.md
-                    - name: Как обновить файлы справки
-                      href: developer/module/how-to-update-help-files.md
-                    - name: Как проверить обновляемую справку
-                      href: developer/module/how-to-test-updatable-help.md
-                - name: Поддержка справки в Интернете
-                  href: developer/module/supporting-online-help.md
+        - name: "Справочник по Windows\_PowerShell"
+          href: developer/windows-powershell-reference.md
+        - name: What's New
+          href: developer/windows-powershell-reference-whats-new.md
         - name: Запись командлета Windows PowerShell
-          href: developer/cmdlet/writing-a-windows-powershell-cmdlet.md
           items:
             - name: Общие сведения о командлетах
               href: developer/cmdlet/cmdlet-overview.md
@@ -926,20 +865,6 @@
                           href: developer/cmdlet/defining-default-member-sets-for-objects.md
                     - name: Пользовательские файлы форматирования
                       href: developer/cmdlet/custom-formatting-files.md
-                - name: Регистрация командлетов
-                  href: developer/cmdlet/registering-cmdlets.md
-                  items:
-                    - name: Модули и оснастки
-                      href: developer/cmdlet/modules-and-snap-ins.md
-                    - name: Импорт командлетов с помощью модулей
-                      href: developer/cmdlet/how-to-import-cmdlets-using-modules.md
-                    - name: "Как создать оснастку Windows\_PowerShell"
-                      href: developer/cmdlet/how-to-create-a-windows-powershell-snap-in.md
-                      items:
-                        - name: "Написание оснастки Windows\_PowerShell"
-                          href: developer/cmdlet/writing-a-windows-powershell-snap-in.md
-                        - name: "Написание пользовательской оснастки Windows\_PowerShell"
-                          href: developer/cmdlet/writing-a-custom-windows-powershell-snap-in.md
                 - name: Запрос на подтверждение
                   href: developer/cmdlet/requesting-confirmation.md
                   items:
@@ -1061,8 +986,41 @@
                   href: developer/cmdlet/stopprocesssample04-sample.md
                 - name: Пример командлета Events01
                   href: developer/cmdlet/events01-sample.md
+        - name: Написание модуля Windows PowerShell
+          items:
+            - name: Обзор
+              href: developer/module/writing-a-windows-powershell-module.md
+            - name: "Общие сведения о модулях Windows\_PowerShell"
+              href: developer/module/understanding-a-windows-powershell-module.md
+            - name: Как написать модуль сценария PowerShell
+              href: developer/module/how-to-write-a-powershell-script-module.md
+            - name: Как написать бинарный модуль PowerShell
+              href: developer/module/how-to-write-a-powershell-binary-module.md
+            - name: Как написать манифест модуля PowerShell
+              href: developer/module/how-to-write-a-powershell-module-manifest.md
+            - name: Установка модуля PowerShell
+              href: developer/module/installing-a-powershell-module.md
+            - name: Изменение пути установки PSModulePath
+              href: developer/module/modifying-the-psmodulepath-installation-path.md
+            - name: Регистрация командлетов
+              items:
+                - name: Обзор
+                  href: developer/module/registering-cmdlets.md
+                - name: Модули и оснастки
+                  href: developer/module/modules-and-snap-ins.md
+                - name: Импорт командлетов с помощью модулей
+                  href: developer/module/how-to-import-cmdlets-using-modules.md
+                - name: "Как создать оснастку Windows\_PowerShell"
+                  items:
+                    - name: Обзор
+                      href: developer/module/how-to-create-a-windows-powershell-snap-in.md
+                    - name: "Написание оснастки Windows\_PowerShell"
+                      href: developer/module/writing-a-windows-powershell-snap-in.md
+                    - name: "Написание пользовательской оснастки Windows\_PowerShell"
+                      href: developer/module/writing-a-custom-windows-powershell-snap-in.md
+            - name: Импорт модуля PowerShell
+              href: developer/module/importing-a-powershell-module.md
         - name: "Написание поставщика Windows\_PowerShell"
-          href: developer/provider/writing-a-windows-powershell-provider.md
           items:
             - name: "Краткое руководство по поставщикам Windows\_PowerShell"
               href: developer/provider/windows-powershell-provider-quickstart.md
@@ -1099,7 +1057,6 @@
                 - name: AccessDBProviderSample06
                   href: developer/provider/accessdbprovidersample06.md
         - name: "Написание ведущего приложения Windows\_PowerShell"
-          href: developer/hosting/writing-a-windows-powershell-host-application.md
           items:
             - name: "Краткое руководство по узлам Windows\_PowerShell"
               href: developer/hosting/windows-powershell-host-quickstart.md
@@ -1176,13 +1133,13 @@
                     - name: Пример RemoteRunspacePool01
                       href: developer/hosting/remoterunspacepool01-sample.md
         - name: Написание файла форматирования PowerShell
-          href: developer/format/writing-a-powershell-formatting-file.md
           items:
             - name: Общие сведения о файлах форматирования
               href: developer/format/formatting-file-overview.md
             - name: 'Основные понятия, связанные с файлами форматирования'
-              href: developer/format/formatting-file-concepts.md
               items:
+                - name: Обзор
+                  href: developer/format/formatting-file-concepts.md
                 - name: Создание представления таблицы
                   href: developer/format/creating-a-table-view.md
                 - name: Создание представления списка
@@ -1201,13 +1158,14 @@
                   href: developer/format/defining-conditions-for-displaying-data.md
                 - name: Форматирование отображаемых данных
                   href: developer/format/formatting-displayed-data.md
-                - name: Файлы форматирования PowerShell
-                  href: developer/format/powershell-formatting-files.md
-            - name: Примеры файлов форматирования
-              href: developer/format/examples-of-formatting-files.md
+            - name: Файлы форматирования PowerShell
               items:
+                - name: Обзор
+                  href: developer/format/powershell-formatting-files.md
                 - name: Как создать файл форматирования (.format.ps1xml)
                   href: developer/format/how-to-create-a-formatting-file-format-ps1xml.md
+            - name: Примеры файлов форматирования
+              items:
                 - name: Широкое представление (базовое)
                   href: developer/format/wide-view-basic.md
                 - name: Широкое представление (с группировкой)
@@ -1639,22 +1597,14 @@
                   href: developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
                 - name: Элемент WrapTables (формат)
                   href: developer/format/wraptables-element-format.md
-        - name: Написание разделов справки на основе комментариев
-          href: developer/help/writing-comment-based-help-topics.md
+        - name: "Написание справки для Windows\_PowerShell"
           items:
-            - name: "Написание справки для командлетов Windows\_PowerShell"
-              href: developer/help/writing-help-for-windows-powershell-cmdlets.md
-            - name: "Написание справки для поставщиков Windows\_PowerShell"
-              items:
-                - name: Как добавить динамические параметры в раздел справки для поставщика
-                  href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
-                - name: Как добавить раздел "См. также" в раздел справки для поставщика
-                  href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
-            - name: "Написание справки для сценариев и функций Windows\_PowerShell"
+            - name: Обзор
               href: developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
             - name: Написание разделов справки на основе комментариев
-              href: developer/help/writing-comment-based-help-topics.md
               items:
+                - name: Обзор
+                  href: developer/help/writing-comment-based-help-topics.md
                 - name: Синтаксис справки на основе комментариев
                   href: developer/help/syntax-of-comment-based-help.md
                 - name: Ключевые слова справки на основе комментариев
@@ -1669,39 +1619,92 @@
                   href: developer/help/examples-of-comment-based-help.md
             - name: Написание разделов справки на основе XML для команд
               items:
-                - name: Как создать файл справки командлета
-                  href: developer/help/how-to-create-the-cmdlet-help-file.md
-                - name: Как добавить имя командлета и краткий обзор командлета в раздел справки для командлета
-                  href: developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
-                - name: Как добавить описание командлета
-                  href: developer/help/how-to-add-a-cmdlet-description.md
-                - name: Как добавить синтаксис в раздел справки для командлета
-                  href: developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
-                - name: Как добавить сведения о параметрах
-                  href: developer/help/how-to-add-parameter-information.md
-                - name: Как добавить типы входных данных в раздел справки для командлета
-                  href: developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
-                - name: Как добавить возвращаемые значения в раздел справки для командлета
-                  href: developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
-                - name: Как добавить примечания в раздел справки для командлета
-                  href: developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
-                - name: Как добавить примеры в раздел справки для командлета
-                  href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
-                - name: Как добавить связанные ссылки в раздел справки для командлета
-                  href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+                - name: "Написание справки для командлетов Windows\_PowerShell"
+                  items:
+                    - name: Обзор
+                      href: developer/help/writing-help-for-windows-powershell-cmdlets.md
+                    - name: Как создать файл справки командлета
+                      href: developer/help/how-to-create-the-cmdlet-help-file.md
+                    - name: Как добавить имя командлета и краткий обзор командлета в раздел справки для командлета
+                      href: developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
+                    - name: Как добавить описание командлета
+                      href: developer/help/how-to-add-a-cmdlet-description.md
+                    - name: Как добавить синтаксис в раздел справки для командлета
+                      href: developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
+                    - name: Как добавить сведения о параметрах
+                      href: developer/help/how-to-add-parameter-information.md
+                    - name: Как добавить типы входных данных в раздел справки для командлета
+                      href: developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
+                    - name: Как добавить возвращаемые значения в раздел справки для командлета
+                      href: developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
+                    - name: Как добавить примечания в раздел справки для командлета
+                      href: developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
+                    - name: Как добавить примеры в раздел справки для командлета
+                      href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
+                    - name: Как добавить связанные ссылки в раздел справки для командлета
+                      href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+                - name: "Написание справки для модулей Windows\_PowerShell"
+                  href: developer/module/writing-help-for-windows-powershell-modules.md
+                  items:
+                    - name: Указание имен для файлов справки
+                      href: developer/help/naming-help-files.md
+                    - name: Поддержка обновляемой справки
+                      href: developer/help/supporting-updatable-help.md
+                      items:
+                        - name: Общие сведения об обновляемой справке
+                          href: developer/help/updatable-help-overview.md
+                        - name: 'Создание обновляемой справки: пошаговые инструкции'
+                          href: developer/help/updatable-help-authoring-step-by-step.md
+                        - name: Как работает обновляемая справка
+                          href: developer/help/how-updatable-help-works.md
+                        - name: Как создать XML-файл HelpInfo
+                          href: developer/help/how-to-create-a-helpinfo-xml-file.md
+                          items:
+                            - name: Схема XML-файла HelpInfo
+                              href: developer/help/helpinfo-xml-schema.md
+                            - name: Пример XML-файла HelpInfo
+                              href: developer/help/helpinfo-xml-sample-file.md
+                            - name: Как назвать XML-файл HelpInfo
+                              href: developer/help/how-to-name-a-helpinfo-xml-file.md
+                            - name: Как задать номера версий XML-файла HelpInfo
+                              href: developer/help/how-to-set-helpinfo-xml-version-numbers.md
+                        - name: Как подготовить CAB-файлы обновляемой справки
+                          href: developer/help/how-to-prepare-updatable-help-cab-files.md
+                          items:
+                            - name: Как создавать и отправлять CAB-файлы
+                              href: developer/help/how-to-create-and-upload-cab-files.md
+                            - name: Как назвать CAB-файл обновляемой справки
+                              href: developer/help/how-to-name-an-updatable-help-cab-file.md
+                            - name: 'Типы файлов, которые могут использоваться в CAB-файле обновляемой справки'
+                              href: developer/help/file-types-permitted-in-an-updatable-help-cab-file.md
+                            - name: Как обновить файлы справки
+                              href: developer/help/how-to-update-help-files.md
+                            - name: Как проверить обновляемую справку
+                              href: developer/help/how-to-test-updatable-help.md
+                        - name: Поддержка справки в Интернете
+                          href: developer/help/supporting-online-help.md
+                - name: "Написание справки для поставщиков Windows\_PowerShell"
+                  items:
+                    - name: Как добавить динамические параметры в раздел справки для поставщика
+                      href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
+                    - name: Как добавить раздел "См. также" в раздел справки для поставщика
+                      href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
         - name: Создание веб-службы управления OData
-          href: developer/webservices/creating-a-management-odata-web-service.md
           items:
+            - name: Обзор
+              href: developer/webservices/creating-a-management-odata-web-service.md
             - name: Добавление ресурсов в веб-службу управления OData
               href: developer/webservices/adding-resources-to-a-management-odata-web-service.md
             - name: Реализация пользовательской авторизации для веб-службы управления OData
-              href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
               items:
+                - name: Обзор
+                  href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
                 - name: Настройка авторизации на основе ролей
                   href: developer/webservices/configuring-role-based-authorization.md
-                  items:
-                    - name: Схема конфигурации для авторизации на основе ролей
-                      href: developer/webservices/role-based-authorization-configuration-schema.md
+                - name: Схема конфигурации для авторизации на основе ролей
+                  href: developer/webservices/role-based-authorization-configuration-schema.md
+                - name: "Вызов командлетов Windows\_PowerShell в веб-службах управления OData"
+                  href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
             - name: Реализация SessionConfiguration для веб-службы управления OData
               href: developer/webservices/implementing-sessionconfiguration-for-a-management-odata-web-service.md
             - name: Создание файла схемы MOF для веб-службы управления OData
@@ -1714,32 +1717,32 @@
               href: developer/webservices/deploying-a-management-odata-web-service.md
             - name: Связывание сущностей управления OData
               href: developer/webservices/associating-management-odata-entities.md
-            - name: "Вызов командлетов Windows\_PowerShell в веб-службах управления OData"
-              href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
             - name: "Управление файлами расширения схемы IIS\_OData"
-              href: developer/webservices/management-odata-iis-extension-schema-files.md
               items:
+                - name: Обзор
+                  href: developer/webservices/management-odata-iis-extension-schema-files.md
                 - name: Схема сопоставления ресурсов
                   href: developer/webservices/resource-mapping-schema.md
                 - name: Общедоступная схема ресурсов
                   href: developer/webservices/public-resource-schema.md
         - name: Запись рабочего процесса Windows PowerShell
-          href: developer/workflow/writing-a-windows-powershell-workflow.md
           items:
+            - name: Обзор
+              href: developer/workflow/writing-a-windows-powershell-workflow.md
             - name: "Добавление действий Windows\_PowerShell в инструментарий Visual\_Studio"
               href: developer/workflow/adding-windows-powershell-activities-to-the-visual-studio-toolbox.md
-            - name: Общие параметры рабочего процесса
-              href: developer/workflow/common-workflow-parameters.md
-            - name: "Создание действия рабочего процесса из командлета Windows\_PowerShell"
-              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
-            - name: "Создание рабочего процесса с помощью сценария Windows\_PowerShell"
-              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
             - name: "Создание рабочего процесса с помощью действий Windows\_PowerShell"
               href: developer/workflow/creating-a-workflow-with-windows-powershell-activities.md
+            - name: "Создание рабочего процесса с помощью сценария Windows\_PowerShell"
+              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
             - name: "Импорт и вызов рабочего процесса Windows\_PowerShell"
               href: developer/workflow/importing-and-invoking-a-windows-powershell-workflow.md
+            - name: "Создание действия рабочего процесса из командлета Windows\_PowerShell"
+              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
             - name: "Планирование заданий с помощью API Windows\_PowerShell"
               href: developer/workflow/scheduling-jobs-with-the-windows-powershell-api.md
+            - name: Общие параметры рабочего процесса
+              href: developer/workflow/common-workflow-parameters.md
         - name: "Руководство программиста по Windows\_PowerShell"
           href: developer/prog-guide/windows-powershell-programmer-s-guide.md
           items:
@@ -1866,8 +1869,3 @@
                   href: developer/prog-guide/runspace09-code-sample.md
                 - name: Примеры кода RunSpace10
                   href: developer/prog-guide/runspace10-code-sample.md
-        - name: "Справочник по Windows\_PowerShell"
-          href: developer/windows-powershell-reference.md
-          items:
-            - name: What's New
-              href: developer/windows-powershell-reference-whats-new.md
