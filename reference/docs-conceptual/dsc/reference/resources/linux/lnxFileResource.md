@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс nxFile в DSC для Linux
-ms.openlocfilehash: 71096b2d269340b3568c95071089e114ef5c5db9
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: be5f098d2fe1c8b354c07e6a8f882b8fdf00e1db
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560871"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954831"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>Ресурс nxFile в DSC для Linux
 

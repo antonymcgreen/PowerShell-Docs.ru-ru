@@ -2,16 +2,16 @@
 ms.date: 07/09/2019
 keywords: DSC,объект групповой политики,powershell,настройка,установка
 title: Краткое руководство. Преобразование групповой политики в DSC
-ms.openlocfilehash: 5e6b86be5127332fe4fd400980c8e147b735247b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: a9ce9cecd71fe00d2908024a3ee474ec836af3ba
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500659"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808254"
 ---
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
-
 # <a name="quickstart-convert-group-policy-into-dsc"></a>Краткое руководство. Преобразование групповой политики в DSC
+
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Конфигурацию DSC можно создать из групповой политики или базовых показателей Центра безопасности Azure. Модуль [BaselineManagement](https://www.powershellgallery.com/packages/BaselineManagement) содержит следующие команды для выполнения этих задач.
 

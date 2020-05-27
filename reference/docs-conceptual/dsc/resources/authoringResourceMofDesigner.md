@@ -2,24 +2,23 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование конструктора ресурсов
-ms.openlocfilehash: 9e7488e922bdca70bb152e7e976077e43cfad7af
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692180"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80500626"
 ---
 # <a name="using-the-resource-designer-tool"></a>Использование конструктора ресурсов
 
 > Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Конструктор ресурсов — это набор командлетов, предоставляемых модулем **xDscResourceDesigner** и упрощающих создание ресурсов настройки требуемого состояния (DSC) Windows PowerShell. Командлеты в этом ресурсе помогают создать MOF-схему, модуль сценария и структуру папок для нового ресурса. Дополнительные сведения о ресурсах DSC см. в статье [Встроенные ресурсы настройки требуемого состояния (DSC) Windows PowerShell](authoringResource.md). В этом разделе мы создадим ресурс DSC, управляющий пользователями Active Directory. Для установки модуля [xDscResourceDesigner](/powershell/module/PowershellGet/Install-Module) используйте командлет **Install-Module**.
+Конструктор ресурсов — это набор командлетов, предоставляемых модулем **xDscResourceDesigner** и упрощающих создание ресурсов настройки требуемого состояния (DSC) Windows PowerShell. Командлеты в этом ресурсе помогают создать MOF-схему, модуль сценария и структуру папок для нового ресурса. Дополнительные сведения о ресурсах DSC см. в статье [Встроенные ресурсы настройки требуемого состояния (DSC) Windows PowerShell](authoringResource.md). В этом разделе мы создадим ресурс DSC, управляющий пользователями Active Directory. Для установки модуля **xDscResourceDesigner** используйте командлет [Install-Module](/powershell/module/PowershellGet/Install-Module).
 
 ## <a name="creating-resource-properties"></a>Создание свойств ресурсов
 В первую очередь необходимо решить, какие свойства будут представлены в ресурсе. В этом примере мы определим пользователя Active Directory со следующими свойствами.
 
 Имя параметра Описание
-
 * **UserName**: основное свойство, которое служит уникальным идентификатором пользователя.
 * **Ensure**: указывает, должна ли учетная запись пользователя присутствовать (Present) или отсутствовать (Absent). Этот параметр имеет только два возможных значения.
 * **DomainCredential**: доменный пароль для пользователя.

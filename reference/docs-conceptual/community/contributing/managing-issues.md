@@ -3,12 +3,12 @@ title: Рассмотрение сообщений о проблемах
 description: В этой статье описывается, как команда PowerShell-Docs управляет запросами на вытягивание.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: cd7aba83d42a6a2eba1ce73910fdd34096342c21
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 018200f1a9384f1ea956c9b27a7605db21f2da9e
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060279"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692530"
 ---
 # <a name="how-we-manage-issues"></a>Рассмотрение сообщений о проблемах
 
@@ -60,21 +60,25 @@ ms.locfileid: "79060279"
 - Введите комментарий для клиента о том, что это отзыв о продукте, и предоставьте ссылку на соответствующий канал обратной связи.
 - Необязательное действие: Скопируйте проблему в соответствующий канал обратной связи, добавьте ссылку на скопированный элемент и закройте проблему. НЕ копируйте проблемы в UserVoice.
 
-  | Набор документации    | URL-адрес для отзыва о продукте                                         |
-  | --------- | ------------------------------------------------------------ |
-  | developer | https://github.com/PowerShell/PowerShell/issues/new/choose   |
-  | DSC       | https://windowsserver.uservoice.com/forums/301869-powershell |
-  | gallery   | https://github.com/powershell/powershellgallery/issues/new   |
-  | jea       | https://github.com/powershell/jea/issues/new                 |
-  | reference | https://github.com/PowerShell/PowerShell/issues/new/choose   |
-  | wmf       | https://windowsserver.uservoice.com/forums/301869-powershell |
+  | Набор документации    | URL-адрес для отзыва о продукте                                           |
+  | --------- | -------------------------------------------------------------- |
+  | developer | `https://github.com/PowerShell/PowerShell/issues/new/choose`   |
+  | DSC       | `https://windowsserver.uservoice.com/forums/301869-powershell` |
+  | gallery   | `https://github.com/powershell/powershellgallery/issues/new`   |
+  | jea       | `https://github.com/powershell/jea/issues/new`                 |
+  | reference | `https://github.com/PowerShell/PowerShell/issues/new/choose`   |
+  | wmf       | `https://windowsserver.uservoice.com/forums/301869-powershell` |
 
 ### <a name="support-requests"></a>Запросы в службу поддержки
 
 - Если вопрос в службу поддержки прост, ответьте на него и закройте проблему.
 - Если вопрос сложный или отправитель задает дополнительные вопросы, перенаправьте его на форумы и в каналы поддержки. Вариант текста для перенаправления на форумы:
 
-    > Это не самый подходящий форум для вопросов такого рода. Попробуйте опубликовать свой вопрос на форуме поддержки сообщества. Список форумов сообщества см. по следующему адресу: https://docs.microsoft.com/powershell/scripting/community/community-support
+  ```Markdown
+  > This is not the right forum for these kinds of questions. Try posting your question in a
+  > community support forum. For a list of community forums see:
+  > https://docs.microsoft.com/powershell/scripting/community/community-support
+  ```
 
 ### <a name="code-of-conduct-violations"></a>Нарушение кодекса поведения
 

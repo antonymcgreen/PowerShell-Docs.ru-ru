@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс nxEnvironment в DSC для Linux
-ms.openlocfilehash: 64de54fbde15f9d4d7fac425af27b6ef11347dce
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 55c1b2402e23c1042ed48b40c1084aa63c515b36
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560901"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71953231"
 ---
 # <a name="dsc-for-linux-nxenvironment-resource"></a>Ресурс nxEnvironment в DSC для Linux
 
@@ -32,7 +32,7 @@ nxEnvironment <string> #ResourceName
 |---|---|
 |Имя |Указывает имя переменной среды, для которой требуется обеспечить определенное состояние. |
 |Значение |Значение, которое нужно присвоить переменной среды. |
-|путь |Определяет настраиваемую переменную среды. Для переменной `$true`Path**присвойте этому свойству значение**; для остальных переменных используйте значение `$false`. Значение по умолчанию — `$false`. Если настраивается переменная **Path**, к существующему значению прикрепляется значение свойства **Value**. |
+|путь |Определяет настраиваемую переменную среды. Для переменной **Path** присвойте этому свойству значение `$true`; для остальных переменных используйте значение `$false`. Значение по умолчанию — `$false`. Если настраивается переменная **Path**, к существующему значению прикрепляется значение свойства **Value**. |
 
 ## <a name="common-properties"></a>Общие свойства
 

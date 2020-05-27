@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Разделение данных конфигурации и данных среды
-ms.openlocfilehash: 076e17054cfa20fad5ca925df126e239a77268db
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692424"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954441"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Разделение данных конфигурации и данных среды
 
@@ -32,14 +32,14 @@ ms.locfileid: "83692424"
 ```powershell
 Configuration MyDscConfiguration {
 
-  Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
+    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
     {
-  WindowsFeature IISInstall {
-    Ensure = 'Present'
-    Name   = 'Web-Server'
-  }
+        WindowsFeature IISInstall {
+            Ensure = 'Present'
+            Name   = 'Web-Server'
+        }
 
- }
+    }
     Node $AllNodes.Where{$_.Role -eq "VMHost"}.NodeName
     {
         WindowsFeature HyperVInstall {
@@ -68,7 +68,7 @@ $MyData =
 MyDscConfiguration -ConfigurationData $MyData
 ```
 
-В последней строке этого сценария выполняется компиляция конфигурации. Для этого в качестве значения параметра `$MyData`ConfigurationData**передается**.
+В последней строке этого сценария выполняется компиляция конфигурации. Для этого в качестве значения параметра **ConfigurationData** передается `$MyData`.
 
 В результате этого создаются два MOF-файла:
 
@@ -102,7 +102,7 @@ Mode                LastWriteTime         Length Name
             SQLServerName   = "MySQLServer"
             SqlSource       = "C:\Software\Sql"
             DotNetSrc       = "C:\Software\sxs"
-            WebSiteName     = "New website"
+        WebSiteName     = "New website"
         },
 
         @{
@@ -253,12 +253,11 @@ Mode                LastWriteTime         Length Name
 
 Доступ к дополнительным ключам можно получить с помощью специальной переменной **$ConfigurationData**.
 В этом примере доступ к `ConfigFileContents` осуществляется с помощью строки
-
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
  ```
-
  в блоке ресурса `File`.
+
 
 ```powershell
 $MyData =
@@ -312,8 +311,8 @@ configuration WebsiteConfig
 }
 ```
 
-## <a name="see-also"></a>См. также:
 
+## <a name="see-also"></a>См. также:
 - [Использование данных конфигурации](configData.md)
 - [Параметры учетных данных в данных конфигурации](configDataCredentials.md)
 - [Конфигурации DSC](configurations.md)
