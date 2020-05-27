@@ -3,12 +3,12 @@ ms.date: 12/11/2018
 contributor: JKeithB, SydneyhSmith
 keywords: коллекции,powershell,командлет,psgallery
 title: Пакеты с совместимыми выпусками PowerShell или операционных систем
-ms.openlocfilehash: b414ce2c2b189e9da150cbe612e0bb2572d39e76
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: fce1383fa604a555a40b050ce92c5cc45ca7054c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278387"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691454"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>Пакеты с совместимыми выпусками PowerShell или операционных систем
 
@@ -17,6 +17,7 @@ ms.locfileid: "78278387"
 ## <a name="searching-by-powershell-edition"></a>Поиск по выпуску PowerShell
 
 Есть два выпуска PowerShell:
+
 - **Desktop Edition:** создан на базе платформы .NET Framework и обеспечивает совместимость со сценариями и модулями, предназначенными для версий PowerShell в полноценных выпусках Windows, таких как Server Core и Windows Desktop.
 - **Core Edition:** построен на основе .NET Core и обеспечивает совместимость со скриптами и модулями, которые предназначены для версий PowerShell, выполняющихся в выпусках Windows с ограниченными возможностями, таких как Nano Server и Windows IoT.
 

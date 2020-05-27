@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка локального диспетчера конфигураций
-ms.openlocfilehash: 5847a29efd165724ffe9f1f0e89cfaf358ade31c
-ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
+ms.openlocfilehash: c736f1c6a7cd6740f9d777dd68559f29909bc5b6
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83271854"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691993"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Настройка локального диспетчера конфигураций
 
@@ -125,6 +125,7 @@ configuration LCMConfig
 |ProxyCredential*|pscredential|Учетные данные для прокси-сервера HTTP.|
 
 > [!NOTE]
+>
 > * Поддерживаются в Windows 1809 и более поздних версиях.
 
 Доступен пример скрипта, который упрощает настройку значения ConfigurationRepositoryWeb для локальных узлов. См. раздел [Создание метаконфигураций DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations).
@@ -152,6 +153,7 @@ configuration LCMConfig
 |ProxyCredential*|pscredential|Учетные данные для прокси-сервера HTTP.|
 
 > [!NOTE]
+>
 > * Поддерживаются в Windows 1809 и более поздних версиях.
 
 Доступен пример скрипта, который упрощает настройку значения ResourceRepositoryWeb для локальных узлов. См. раздел [Создание метаконфигураций DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
@@ -180,6 +182,7 @@ configuration LCMConfig
 |ProxyCredential*|pscredential|Учетные данные для прокси-сервера HTTP.|
 
 > [!NOTE]
+>
 > * Поддерживаются в Windows 1809 и более поздних версиях.
 
 Доступен пример скрипта, который упрощает настройку значения ReportServerWeb для локальных узлов. См. раздел [Создание метаконфигураций DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)

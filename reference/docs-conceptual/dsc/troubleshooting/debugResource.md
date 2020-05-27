@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Отладка ресурсов DSC
-ms.openlocfilehash: c088e13a25ba31ceebaf52b2d24b5d32b96ae2fc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 53ee9ea5652ffb577f0c7fba2f240f63816281db
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954261"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691953"
 ---
 # <a name="debugging-dsc-resources"></a>Отладка ресурсов DSC
 
@@ -22,7 +22,6 @@ ms.locfileid: "71954261"
 Убедитесь, что отладка включена, вызвав командлет [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) и проверив результат.
 
 Следующие выходные данные PowerShell демонстрируют результат включения отладки:
-
 
 ```powershell
 PS C:\DebugTest> $LCM = Get-DscLocalConfigurationManager
@@ -40,7 +39,6 @@ ResourceScriptBreakAll
 
 PS C:\DebugTest>
 ```
-
 
 ## <a name="starting-a-configuration-with-debug-enabled"></a>Запуск конфигурации с включенной функцией отладки
 Для отладки ресурса DSC необходимо запустить конфигурацию, вызывающую этот ресурс.
@@ -61,6 +59,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
+
 Скомпилировав конфигурацию, запустите ее, вызвав командлет [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).
 Конфигурация остановится, когда локальный диспетчер конфигураций (LCM) вызовет первый ресурс в конфигурации.
 Если используются параметры `-Verbose` и `-Wait`, выходные данные будут содержать строки, которые нужно ввести для запуска отладки.
@@ -85,6 +84,7 @@ Enter-PSSession -ComputerName TEST-SRV -Credential <credentials>
 Enter-PSHostProcess -Id 9000 -AppDomainName DscPsPluginWkr_AppDomain
 Debug-Runspace -Id 9
 ```
+
 К этому моменту LCM вызвал ресурс и достиг первой контрольной точки.
 Последние три строки выходных данных показывают, как присоединиться к процессу и запустить отладку сценария ресурса.
 

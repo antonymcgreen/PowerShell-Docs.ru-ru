@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Использование Import-DSCResource
-ms.openlocfilehash: a041169ad557becf7ca87641d9ce5222ee8f6beb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1b066e231d158fb5b6333e42c91d24690e9b0223
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79402451"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692459"
 ---
 # <a name="using-import-dscresource"></a>Использование Import-DSCResource
 
@@ -123,10 +123,12 @@ IntelliSense и проверка схемы позволяют обнаружи�
 
 > [!NOTE]
 > Каждый ресурс DSC может иметь имя и **FriendlyName**, определенное схемой ресурса. Ниже приведены две первые строки файла MSFT_ServiceResource.shema.mof.
+>
 > ```syntax
 > [ClassVersion("1.0.0"),FriendlyName("Service")]
 > class MSFT_ServiceResource : OMI_BaseResource
 > ```
+>
 > При использовании этого ресурса в конфигурации можно указать **MSFT_ServiceResource** или **Service**.
 
 ## <a name="powershell-v4-and-v5-differences"></a>Различия PowerShell версий 4 и 5

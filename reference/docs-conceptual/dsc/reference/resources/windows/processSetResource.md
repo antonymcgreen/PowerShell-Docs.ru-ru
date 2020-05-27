@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс DSC ProcessSet
-ms.openlocfilehash: 72925d3a9516f5c0040427773a3b1d66034667bb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 0f4f311f7609b6bd67607d89aceb804c67dba980
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953131"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83559919"
 ---
 # <a name="dsc-processset-resource"></a>Ресурс DSC ProcessSet
 

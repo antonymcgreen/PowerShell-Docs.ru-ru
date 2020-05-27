@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Значения манифеста пакета, связанные с пользовательским интерфейсом коллекции PowerShell
-ms.openlocfilehash: 9e37fec879f2f5cbe3926c7dbc946389425d856a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 460b1c67af0af81dd993a45c4f988b825dc2f3eb
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417043"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560429"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Значения манифеста пакета, связанные с пользовательским интерфейсом коллекции PowerShell
 
@@ -45,7 +45,6 @@ ms.locfileid: "74417043"
 | **Сайт проекта** | Сайт проекта задается для модулей в разделе манифеста модуля Privatedata\PSData с указанием ProjectURI. В манифесте скрипта элемент указывается в .PROJECTURI. | Да | Да |
 | **Лицензия** | Ссылка на лицензию задается для модулей в разделе манифеста модуля Privatedata\PSData с указанием ProjectURI. В манифесте скрипта элемент указывается в .LICENSEURI. Обратите внимание, что, если лицензия не задана с помощью свойства LicenseURI или внутри модуля, условия использования пакета определяются условиями использования коллекции PowerShell. Дополнительные сведения см. в условиях использования. | Да | Да |
 | **Значок**: | Значок можно указать для любого пакета в коллекции PowerShell, установив флажок IconURI в манифесте скрипта или в разделе Privatedata-PSData в манифесте модуля. IconURI должен указывать на изображение формата 32 x 32 с прозрачным фоном. URI **должен** быть прямым URL-адресом изображения и **не должен** вести на веб-страницу, содержащую изображение, или к файлу в пакете коллекции PowerShell. | Да | Да |
-
 
 ## <a name="editing-package-details"></a>Изменение сведений о пакете
 

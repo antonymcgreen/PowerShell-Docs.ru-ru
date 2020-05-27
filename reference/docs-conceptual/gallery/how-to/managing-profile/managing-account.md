@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Параметры учетной записи коллекции PowerShell
-ms.openlocfilehash: db61c3fd8c73048b51f3411a8c1dab52fb03d08a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7f67311b42123f247a00a9c7a5bf775685b64d48
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278132"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560463"
 ---
 # <a name="powershell-gallery-account-settings"></a>Параметры учетной записи коллекции PowerShell
 
@@ -65,7 +65,6 @@ ms.locfileid: "78278132"
    ![Параметры учетной записи](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. Введите пароль новой учетной записи. После ввода пароля вы вернетесь на страницу параметров учетной записи, где отображается обновленная учетная запись.
-
 
 ## <a name="enable-two-factor-authentication-2fa"></a>Включение двухфакторной проверки подлинности
 

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Исключение пакетов
-ms.openlocfilehash: b7404420db531ac5d97debd46e1b84c6fdd49d9a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4291b910dcea65b2ca241e55838ea00d4ec53ee4
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80978276"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692363"
 ---
 # <a name="unlisting-packages"></a>Исключение пакетов
 
@@ -32,6 +32,7 @@ ms.locfileid: "80978276"
 
 В ситуации, когда пакет необходимо удалить, обратитесь к администраторам коллекции PowerShell.
 Удаление элементов будет оправдано в следующих случаях:
+
 - Проблемы с нарушением авторских прав.
 - Пакет содержит потенциально вредоносное содержимое.
 - Пакет содержит конфиденциальные данные.

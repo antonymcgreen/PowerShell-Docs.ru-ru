@@ -1,13 +1,13 @@
 ---
 title: Установка PowerShell в Windows
 description: Сведения об установке PowerShell в Windows
-ms.date: 08/06/2018
-ms.openlocfilehash: a8543a91ad503364c5346a11c9c9d9f910547278
-ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
+ms.date: 05/21/2020
+ms.openlocfilehash: 864f297e4f569030439bd6b581ef593d36f8b910
+ms.sourcegitcommit: fd6a33b9fac973b3554fecfea7f51475e650a606
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141383"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791484"
 ---
 # <a name="installing-powershell-on-windows"></a>Установка PowerShell в Windows
 
@@ -30,8 +30,8 @@ ms.locfileid: "82141383"
 
 MSI-файл выглядит примерно так: `PowerShell-<version>-win-<os-arch>.msi`. Пример:
 
-- `PowerShell-7.0.0-win-x64.msi`
-- `PowerShell-7.0.0-win-x86.msi`
+- `PowerShell-7.0.1-win-x64.msi`
+- `PowerShell-7.0.1-win-x86.msi`
 
 После скачивания дважды щелкните установщик и следуйте инструкциям на экране.
 
@@ -60,7 +60,7 @@ MSI-пакеты можно устанавливать из командной �
 В следующих примерах показано, как выполнить автоматическую установку PowerShell со всеми включенными параметрами.
 
 ```powershell
-msiexec.exe /package PowerShell-7.0.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.0.1-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 ```
 
 Полный список параметров командной строки для `Msiexec.exe` см. [здесь](/windows/desktop/Msi/command-line-options).
@@ -128,6 +128,7 @@ Windows 10 IoT Корпоративная поставляется со сре
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.<version>
    ```
+
 ## <a name="deploying-on-windows-10-iot-core"></a>Развертывание в Windows 10 IoT Базовая
 
 Windows PowerShell добавляется в Windows 10 IoT Базовая, если вы включаете функцию *IOT_POWERSHELL*, которую можно использовать для развертывания PowerShell 7.

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Фильтрация результатов поиска
-ms.openlocfilehash: 13270a310613a974e1588a9f56d443a936cfebb8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 51f8d243cb9b1f4ff7413eec8839697299e8dd52
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328045"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691465"
 ---
 # <a name="filtering-search-results"></a>Фильтрация результатов поиска
 
@@ -20,12 +20,14 @@ ms.locfileid: "71328045"
 ## <a name="filter-by"></a>Фильтровать по
 
 В раскрывающемся списке в разделе "Фильтровать по" можно отфильтровать результаты по следующим параметрам:
+
 - "Включить предварительные выпуски";
 - "Только стабильные".
 
 Сведения о параметрах "Предварительный выпуск" и "Стабильный" см. в статье о [добавленной функции управления предварительными выпусками в PowerShellGet и коллекции PowerShell](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) в блоге команды PowerShell.
 
 Установив флажки в раскрывающемся списке, можно отфильтровать результаты по:
+
 - Типы пакетов
   - Модуль
   - Скрипт
@@ -49,6 +51,7 @@ ms.locfileid: "71328045"
 ## <a name="sort-by"></a>Сортировать по
 
 Раскрывающийся список "Сортировать по" позволяет сортировать результаты по следующим параметрам:
+
 - "Популярность" — определяется по числу скачиваний;
 - A–Z — в алфавитном порядке по имени пакета;
 - "Последние" — пакеты располагаются по дате их публикации.

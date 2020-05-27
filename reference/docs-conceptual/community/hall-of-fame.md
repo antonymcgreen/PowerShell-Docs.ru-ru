@@ -2,12 +2,12 @@
 title: Новое в документации по PowerShell
 description: Список изменений в документации по PowerShell
 ms.date: 04/29/2020
-ms.openlocfilehash: a3b99c4d98362f2509ca9974d32c1a4d4780b664
-ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
+ms.openlocfilehash: 6f1e6bbc04efa13287154be45eceaab204fbdd7c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82630910"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692508"
 ---
 # <a name="community-contributor-hall-of-fame"></a>Зал славы участников сообщества
 
@@ -15,7 +15,7 @@ ms.locfileid: "82630910"
 
 Ниже приведен список пользователей GitHub, являющихся самыми активными участниками сообщества за все время по состоянию на апрель 2020 г.
 
-### <a name="pull-requests-opened"></a>Открытые запросы на вытягивание
+## <a name="pull-requests-opened"></a>Открытые запросы на вытягивание
 
 Запросы на вытягивание помогают нам устранять проблемы и улучшать документацию для всех пользователей.
 
@@ -40,7 +40,7 @@ ms.locfileid: "82630910"
 | exchange12rocks    |      |    7 |    3 |      |      |          10 |
 | KirkMunro          |    1 |    1 |    2 |    6 |      |          10 |
 
-### <a name="github-issues-opened"></a>Открытые проблемы в GitHub
+## <a name="github-issues-opened"></a>Открытые проблемы в GitHub
 
 Проблемы в GitHub помогают нам выявлять ошибки и пробелы в нашей документации.
 

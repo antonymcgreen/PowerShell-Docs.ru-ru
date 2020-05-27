@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Прямой вызов методов ресурсов DSC
-ms.openlocfilehash: cf237f638593706e5959e2bcc0d851b0e55baf0e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9955de4f284c182a724b004c17080a8b8e19808d
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954391"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692413"
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Прямой вызов методов ресурсов DSC
 
@@ -26,8 +26,8 @@ ms.locfileid: "71954391"
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Set -Property @{
-                            DestinationPath = "$env:SystemDrive\\DirectAccess.txt";
-                            Contents = 'This file is create by Invoke-DscResource'} -Verbose
+              DestinationPath = "$env:SystemDrive\\DirectAccess.txt";
+              Contents = 'This file is create by Invoke-DscResource'} -Verbose
 $result | fl
 ```
 
@@ -35,8 +35,8 @@ $result | fl
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Test -Property @{
-                            DestinationPath="$env:SystemDrive\\DirectAccess.txt";
-                            Contents='This file is create by Invoke-DscResource'} -Verbose
+              DestinationPath="$env:SystemDrive\\DirectAccess.txt";
+              Contents='This file is create by Invoke-DscResource'} -Verbose
 $result | fl
 ```
 
@@ -44,14 +44,15 @@ $result | fl
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Get -Property @{
-                            DestinationPath="$env:SystemDrive\\DirectAccess.txt";
-                            Contents='This file is create by Invoke-DscResource'} -Verbose
+              DestinationPath="$env:SystemDrive\\DirectAccess.txt";
+              Contents='This file is create by Invoke-DscResource'} -Verbose
 $result.ItemValue | fl
 ```
 
 >**Примечание**. Прямой вызов методов составного ресурса не поддерживается. Вместо этого вызывайте методы базовых ресурсов, входящих в составной ресурс.
 
 ## <a name="see-also"></a>См. также:
+
 - [Написание пользовательских ресурсов DSC с использованием MOF](../resources/authoringResourceMOF.md)
 - [Написание пользовательских ресурсов DSC с использованием классов PowerShell](../resources/authoringResourceClass.md)
 - [Отладка ресурсов DSC](../troubleshooting/debugResource.md)
