@@ -2,16 +2,16 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс Script в DSC
-ms.openlocfilehash: e09e86011fa7dbb2a4d7f28b5032b4328b6f6ec2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 50d4667396c8c619079288ec51599152ed2d6cd5
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953071"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557028"
 ---
 # <a name="dsc-script-resource"></a>Ресурс Script в DSC
 
-> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.x
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Ресурс **Script** в DSC Windows PowerShell предоставляет механизм запуска блоков сценариев на целевых узлах. Ресурс **Script** имеет свойства **GetScript**, **SetScript** и **TestScript**, которые содержат блоки скриптов, определяемые вами для выполнения соответствующих операций DSC.
 
@@ -34,7 +34,7 @@ Script [string] #ResourceName
 
 ## <a name="properties"></a>Свойства
 
-|Свойство |Description |
+|Свойство |Описание |
 |---|---|
 |GetScript |Блок скрипта, который возвращает текущее состояние узла. |
 |SetScript |Блок скрипта, который DSC использует для обеспечения совместимости, если узел не находится в нужном состоянии. |
@@ -43,7 +43,7 @@ Script [string] #ResourceName
 
 ## <a name="common-properties"></a>Общие свойства
 
-|Свойство |Description |
+|Свойство |Описание |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
 |PsDscRunAsCredential |Задает учетные данные для выполнения всего ресурса от другого имени. |
@@ -73,7 +73,7 @@ DSC выполняет **TestScript**, чтобы определить, необ
 
 ## <a name="examples"></a>Примеры
 
-### <a name="example-1-write-sample-text-using-a-script-resource"></a>Пример 1. Написание примера текста с помощью ресурса Script
+### <a name="example-1-write-sample-text-using-a-script-resource"></a>Пример 1: написание примера текста с помощью ресурса Script
 
 Этот пример проверяет наличие `C:\TempFolder\TestFile.txt` на каждом узле. Если такой файл не существует, он создается с помощью `SetScript`. `GetScript` возвращает содержимое файла, а его возвращаемое значение не используется.
 
@@ -136,4 +136,63 @@ Configuration ScriptTest
         }
     }
 }
+```
+
+### <a name="example-3-utilizing-parameters-in-a-script-resource"></a>Пример 3. Использование параметров в ресурсе Script
+
+В этом примере осуществляется доступ к параметрам из ресурса Script с использованием области `using`. Обратите внимание, что аналогичным образом можно получить доступ к **ConfigurationData**. Как и в примере 2, ожидается сохраненная версия в локальном файле на целевом узле. Можно настроить как локальный путь к файлу, так и версию, что позволяет отделить код от данных конфигурации.
+
+```powershell
+Configuration ScriptTest
+{
+    param
+    (
+        [Version]
+        $Version,
+
+        [string]
+        $FilePath
+    )
+
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+
+    Node localhost
+    {
+        Script UpdateConfigurationVersion
+        {
+            GetScript = {
+                $currentVersion = Get-Content -Path $using:FilePath
+                return @{ 'Result' = "$currentVersion" }
+            }
+            TestScript = {
+                # Create and invoke a scriptblock using the $GetScript automatic variable, which contains a string representation of the GetScript.
+                $state = [scriptblock]::Create($GetScript).Invoke()
+
+                if( $state['Result'] -eq $using:Version )
+                {
+                    Write-Verbose -Message ('{0} -eq {1}' -f $state['Result'],$using:version)
+                    return $true
+                }
+
+                Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
+                return $false
+            }
+            SetScript = {
+                Set-Content -Path $using:FilePath -Value $using:Version
+            }
+        }
+    }
+}
+```
+
+Полученный MOF-файл включает переменные и их значения, доступ к которым осуществляется через область `using`.
+Они вставляются в каждый блок scriptblock, использующий переменные. Сценарии Test и Set были удалены для краткости:
+
+```Output
+instance of MSFT_ScriptResource as $MSFT_ScriptResource1ref
+{
+ GetScript = "$FilePath ='C:\\Config.ini'\n\n $currentVersion = Get-Content -Path $FilePath\n return @{ 'Result' = \"$currentVersion\" }\n";
+ TestScript = ...;
+ SetScript = ...;
+};
 ```

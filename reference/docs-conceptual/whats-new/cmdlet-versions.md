@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: История выпусков модулей и командлетов
-ms.openlocfilehash: 824380c7aa732e6a2027d86be33cbde901ab11e1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4cb69e9d53151a0a221654f76ad7eb5eeb8fa218
+ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80082736"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83751328"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>История выпусков модулей и командлетов
 
@@ -77,7 +77,6 @@ ms.locfileid: "80082736"
 | Get-IseSnippet    | &check; |      |       |       | Только Windows |
 | Import-IseSnippet | &check; |      |       |       | Только Windows |
 | New-IseSnippet    | &check; |      |       |       | Только Windows |
-
 
 ### <a name="microsoftpowershellarchive"></a>Microsoft.PowerShell.Archive
 
@@ -260,7 +259,7 @@ ms.locfileid: "80082736"
 | Rename-ItemProperty           | &check; | &check; | &check; | &check; |                                  |
 | Reset-ComputerMachinePassword | &check; |         |         |         | Только Windows                     |
 | Resolve-Path                  | &check; | &check; | &check; | &check; |                                  |
-| Restart-Computer              | &check; | &check; | &check; | &check; |                                  |
+| Restart-Computer              | &check; | &check; | &check; | &check; | Добавлена поддержка для Linux/macOS в 7.1. |
 | Restart-Service               | &check; | &check; | &check; | &check; | Только Windows                     |
 | Restore-Computer              | &check; |         |         |         | Только Windows                     |
 | Resume-Service                | &check; | &check; | &check; | &check; | Только Windows                     |
@@ -278,7 +277,7 @@ ms.locfileid: "80082736"
 | Start-Process                 | &check; | &check; | &check; | &check; |                                  |
 | Start-Service                 | &check; | &check; | &check; | &check; | Только Windows                     |
 | Start-Transaction             | &check; |         |         |         | Только Windows                     |
-| Stop-Computer                 | &check; | &check; | &check; | &check; | Добавлена поддержка Linux/macOS в 7.0 |
+| Stop-Computer                 | &check; | &check; | &check; | &check; | Добавлена поддержка для Linux/macOS в 7.1. |
 | Stop-Process                  | &check; | &check; | &check; | &check; |                                  |
 | Stop-Service                  | &check; | &check; | &check; | &check; | Только Windows                     |
 | Suspend-Service               | &check; | &check; | &check; | &check; | Только Windows                     |

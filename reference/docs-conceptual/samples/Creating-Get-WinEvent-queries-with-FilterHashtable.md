@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: Создание запросов Get-WinEvent с помощью FilterHashtable
-ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 485b0cf05489d9add201c71c01fe2ed0c48db387
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "73444392"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83563941"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Создание запросов Get-WinEvent с помощью FilterHashtable
 
@@ -99,7 +99,7 @@ Get-WinEvent -FilterHashtable @{
 
 ![Изображение источников в средстве "Просмотр событий Windows".](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
-Обновите хэш-таблицу и добавьте пару **ключ — значение** с ключом **ProviderName и значением **.NET Runtime**.
+Обновите хэш-таблицу и добавьте пару **ключ-значение** с ключом **ProviderName** и значением **.NET Runtime**.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{

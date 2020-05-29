@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell 7.0
 description: Новые возможности и изменения в PowerShell 7.0
 ms.date: 03/04/2020
-ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 313ed2b663262b57abd52bfc7378e1f4661dc03a
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80263141"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808407"
 ---
 # <a name="whats-new-in-powershell-70"></a>Новые возможности PowerShell 7.0
 
@@ -53,19 +53,20 @@ PowerShell 7 в настоящее время поддерживает след
 
 ## <a name="running-powershell-7"></a>Запуск PowerShell 7
 
-PowerShell 7 устанавливается в новом каталоге и работает параллельно с Windows PowerShell 5.1. Для PowerShell Core 6.x версия PowerShell 7 является обновлением на месте, при установке которого PowerShell Core 6.x удаляется.
+PowerShell 7 устанавливается в каталог отдельно от Windows PowerShell.
+Это позволяет использовать PowerShell 7 параллельно с Windows PowerShell 5.1. Для PowerShell Core 6.x версия PowerShell 7 является обновлением на месте, при установке которого PowerShell Core 6.x удаляется.
 
 - PowerShell 7 устанавливается в папке `%programfiles%\PowerShell\7`.
 - Папка `%programfiles%\PowerShell\7` добавляется в переменную `$env:PATH`.
 
-Пакеты установщика PowerShell 7 обновляют предыдущие версии PowerShell Core 6.x.
+Пакет установщика PowerShell 7 обновляет предыдущие версии PowerShell Core 6.x.
 
 - PowerShell Core 6.x в Windows: каталог `%programfiles%\PowerShell\6` заменяется каталогом `%programfiles%\PowerShell\7`.
 - Linux: каталог `/opt/microsoft/powershell/6` заменяется каталогом `/opt/microsoft/powershell/7`.
 - macOS: каталог `/usr/local/microsoft/powershell/6` заменяется каталогом `/usr/local/microsoft/powershell/7`.
 
 > [!NOTE]
-> В Windows PowerShell исполняемый файл для запуска PowerShell называется `powershell.exe`. В версии 6 и более поздних имя исполняемого файла было изменено для поддержки параллельного выполнения. Новый исполняемый файл для запуска PowerShell 7 называется `pwsh.exe`. Предварительные сборки сохраняются как `pwsh-preview` (а не `pwsh`) в каталоге 7-preview.
+> В Windows PowerShell исполняемый файл для запуска PowerShell называется `powershell.exe`. Начиная с версии 6, имя исполняемого файла было изменено для поддержки параллельного выполнения. Новый исполняемый файл для запуска PowerShell 7 называется `pwsh.exe`. Сборки предварительных версий сохраняются как `pwsh-preview` (а не `pwsh`) в каталоге 7-preview.
 
 ## <a name="improved-backwards-compatibility-with-windows-powershell"></a>Улучшенная обратная совместимость с Windows PowerShell
 
@@ -240,14 +241,14 @@ ${Service}?.status
 Stopped
 ```
 
-В следующем примере возвращается значение NULL без попытки доступа к члену **Status**:
+В следующем примере возвращается значение NULL без попытки доступа к элементу **Status**:
 
 ```powershell
 $service = $Null
 ${Service}?.status
 ```
 
-Аналогичным образом при использовании оператора `?[]` возвращается значение элемента:
+Аналогичным образом при использовании `?[]` возвращается значение элемента:
 
 ```powershell
 $a = 1..10
@@ -266,7 +267,7 @@ ${a}?[0]
 
 ## <a name="new-view-conciseview-and-cmdlet-get-error"></a>Новое представление ConciseView и командлет Get-Error
 
-Новое представление **ConciseView**, используемое по умолчанию, улучшает отображение сообщений об ошибках интерактивных функций и скриптов. Пользователь может выбирать представление с помощью привилегированной переменной `$ErrorView`.
+PowerShell 7.0 использует новое представление **ConciseView** по умолчанию для сообщений об ошибках, которое улучшает читаемость интерактивных сообщений и ошибок сценариев. Пользователь может выбирать представление с помощью привилегированной переменной `$ErrorView`.
 
 Если ошибка возникла не в скрипте и не в средстве синтаксического анализа, то в представлении **ConciseView** сообщение о ней выводится в одной строке:
 
@@ -282,8 +283,8 @@ Get-ChildItem: Cannot find path 'C:\NotReal' because it does not exist
 
 ![Отображение ошибки скрипта](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
-В PowerShell 7 представление **ConciseView** используется по умолчанию. Ранее представлением по умолчанию было **NormalView**. Пользователь может выбрать его, задав привилегированную переменную `$ErrorView`.
-
+В PowerShell 7 представление **ConciseView** используется по умолчанию. Ранее по умолчанию использовалось представление **NormalView**, и его можно выбрать с помощью переменной `$ErrorView`.
+ 
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
 $ErrorView = 'ConciseView' # Sets the error view to ConciseView
@@ -292,7 +293,7 @@ $ErrorView = 'ConciseView' # Sets the error view to ConciseView
 > [!NOTE]
 > В `$Host.PrivateData` добавлено новое свойство **ErrorAccentColor**, позволяющее изменять контрастный цвет сообщения об ошибке.
 
-Новый командлет `Get-Error` позволяет получать подробные сведения об ошибке, когда это необходимо.
+Новый командлет `Get-Error` позволяет при необходимости получить полную ошибку со всеми подробными сведениями.
 По умолчанию этот командлет выводит полные сведения, включая внутренние исключения, о последней произошедшей ошибке.
 
 ![Выходные данные командлета Get-Error](./media/What-s-New-in-PowerShell-70/myscript-geterror.png)
@@ -517,7 +518,7 @@ Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration
 - Исправление проблем со стилем CodeFactor в фиксациях за последний месяц (№ 10591) (выражаем благодарность @iSazonov)
 - Исправлена опечатка в описании экспериментальной возможности PSTernaryOperator (№ 10586) (выражаем благодарность @bergmeister)
 - Значение перечисления ActionPreference.Suspend переведено в неподдерживаемое зарезервированное состояние; устранено ограничение на использование ActionPreference.Ignore в привилегированных переменных (№ 10317) (выражаем благодарность @KirkMunro)
-- Класс ArrayList заменен на List<T> для повышения удобочитаемости и надежности кода без изменения функциональности (№ 10333) (выражаем благодарность @iSazonov)
+- Класс ArrayList заменен на List\<T> для повышения удобочитаемости и надежности кода без изменения функциональности (№ 10333). (Выражаем благодарность @iSazonov!)
 - Исправления стиля кода в TestConnectionCommand (№ 10439) (выражаем благодарность @vexx32)
 - Очистка AutomationEngine и удаление лишнего вызова метода SetSessionStateDrive (№ 10416) (выражаем благодарность @iSazonov)
 - Переименование атрибута ParameterSetName обратно в Delimiter для командлетов ConvertTo-Csv и ConvertFrom-Csv (№ 10425)

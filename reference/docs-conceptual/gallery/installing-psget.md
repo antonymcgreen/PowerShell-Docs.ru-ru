@@ -3,12 +3,12 @@ ms.date: 09/19/2019
 contributor: manikb
 keywords: коллекция,powershell,командлет,psget
 title: Установка PowerShellGet
-ms.openlocfilehash: 69dc851c54089b47fb19e5b32990d579d26effb9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: f42eb0df101eb63a5dc267196fa9f666747b8e35
+ms.sourcegitcommit: 23ea4a36ee85f923684657de5313a5adf0b6b094
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328205"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83727801"
 ---
 # <a name="installing-powershellget"></a>Установка PowerShellGet
 
@@ -48,7 +48,12 @@ Exit
 
 Эти инструкции применимы к компьютерам, на которых установлена предварительная версия **PackageManagement** или не установлены никакие версии **PowerShellGet**.
 
-Командлет `Save-Module` используется в обоих наборах инструкций. `Save-Module` скачивает и сохраняет модуль и все зависимости из зарегистрированного репозитория. Самая последняя версия модуля сохраняется по указанному пути на локальном компьютере, но не устанавливается. Дополнительные сведения см. в статье [Save-Module](/powershell/module/PowershellGet/Save-Module).
+Командлет `Save-Module` используется в обоих наборах инструкций. `Save-Module` скачивает и сохраняет модуль и все зависимости из зарегистрированного репозитория. Самая последняя версия модуля сохраняется по указанному пути на локальном компьютере, но не устанавливается. Чтобы установить модули в PowerShell 3.0 или 4.0, скопируйте сохраненные папки модуля в `$env:ProgramFiles\WindowsPowerShell\Modules`.
+
+Дополнительные сведения см. в статье [Save-Module](/powershell/module/PowershellGet/Save-Module).
+
+> [!NOTE]
+> PowerShell 3.0 и 4.0 поддерживают только одну версию модуля. Начиная с версии PowerShell 5.0 модули устанавливаются в папку `<modulename>\<version>`. Это позволяет устанавливать несколько версий параллельно. Скачав модуль с помощью `Save-Module`, необходимо скопировать файлы из `<modulename>\<version>` в папку `<modulename>` на целевом компьютере.
 
 #### <a name="computers-with-the-packagemanagement-preview-installed"></a>Компьютеры с установленной предварительной версией PackageManagement
 
@@ -63,8 +68,8 @@ Exit
 1. Снова откройте консоль PowerShell с повышенными привилегиями, а затем выполните следующие команды.
 
    ```powershell
-   Copy-Item "C:\LocalFolder\PowerShellGet\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
-   Copy-Item "C:\LocalFolder\PackageManagement\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
+   Copy-Item "C:\LocalFolder\PowerShellGet\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
+   Copy-Item "C:\LocalFolder\PackageManagement\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
    ```
 
 #### <a name="computers-without-powershellget"></a>Компьютеры без PowerShellGet

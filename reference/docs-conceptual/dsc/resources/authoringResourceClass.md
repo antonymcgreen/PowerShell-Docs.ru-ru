@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Написание пользовательских ресурсов DSC с использованием классов PowerShell
-ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: f96a567253ab4808381c004df243c96886948407
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952831"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692229"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Написание пользовательских ресурсов DSC с использованием классов PowerShell
 
@@ -500,7 +500,7 @@ class FileResource {
 
 Модуль может определять несколько ресурсов DSC на основе класса. Структуру папок можно создать одним из следующих способов:
 
-1. Определите первый ресурс в файле <ModuleName>.psm1, а последующие ресурсы в папке **DSCResources**.
+1. Определите первый ресурс в файле `<ModuleName>.psm1`, а последующие ресурсы в папке **DSCResources**.
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)

@@ -1,25 +1,25 @@
 ---
 ms.date: 06/18/2019
 keywords: powershell,командлет
-title: Другие статьи о PowerShell
-ms.openlocfilehash: 9d756d24e46215bea5cb9530c2628b996327cb87
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+title: Учебные ресурсы для PowerShell
+ms.openlocfilehash: 5681fd903b323ab3cf87dc212ba64dbfdf2d78e7
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74416745"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808441"
 ---
-# <a name="more-powershell-learning"></a>Другие статьи о PowerShell
+# <a name="powershell-learning-resources"></a>Учебные ресурсы для PowerShell
 
-Другие источники для изучения PowerShell
+Дополнительные ресурсы для изучения PowerShell.
 
-## <a name="resources-for-powershell-users"></a>Ресурсы для пользователей PowerShell
+## <a name="blogs-and-community"></a>Блоги и сообщество
 
 Помимо справки, доступной в командной строке, пользователи, желающие использовать PowerShell, могут найти дополнительную информацию в следующих источниках.
 
 - [Блог команды разработчиков PowerShell](https://devblogs.microsoft.com/powershell/). Лучший ресурс, позволяющий учиться непосредственно у рабочей группы по PowerShell.
 - В блоге [Hey, Scripting Guy! ](https://devblogs.microsoft.com/scripting/) статьи основаны на сценариях и написаны приятным и живым языком.
-- Возникли вопросы по использованию PowerShell? Общайтесь с сотнями других людей, имеющих схожие интересы, на одном из многочисленных форумов сообщества, перечисленных на странице [Сообщества PowerShell](/powershell/#pivot=main&panel=community).
+- Возникли вопросы по использованию PowerShell? Общайтесь с сотнями других людей, имеющих схожие интересы, на одном из многочисленных форумов сообщества, перечисленных на странице [Сообщества PowerShell](/powershell/scripting/community/community-support).
 
 ## <a name="channel-9-videos"></a>Видео на Channel 9
 

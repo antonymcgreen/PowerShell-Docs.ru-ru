@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 034d75a84e39cb0cf88a272ca58b5ccc229c5d9b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 0d91230aa063e58106b35a4ada1d577f316f8f27
+ms.sourcegitcommit: c752ae8d0fa47eaaf3c5eae2a5a770f06c63921c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74540461"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840995"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Правила поведения при работе с открытым кодом, принятые в проектах корпорации Майкрософт
 
@@ -15,9 +15,9 @@ ms.locfileid: "74540461"
 
 ## <a name="build-status"></a>Состояние сборки
 
-| Активная ветвь | Промежуточная ветвь |
-|:------------|:---------------|
-| [![live-badge][]][live-badge] | [![staging-badge][]][staging-badge]
+|          Активная ветвь          |           Промежуточная ветвь            |
+| :---------------------------- | :---------------------------------- |
+| [![live-badge][]][live-badge] | [![staging-badge][]][staging-badge] |
 
 ## <a name="powershell-documentation"></a>Документация по PowerShell
 
@@ -32,15 +32,16 @@ ms.locfileid: "74540461"
     - [/developer/](https://docs.microsoft.com/powershell/scripting/developer/) — папка для документации по пакету SDK PowerShell (перенесена из MSDN).
     - [/dsc/](https://docs.microsoft.com/powershell/scripting/dsc/) — папка для функции Desired State Configuration.
     - [/gallery/](https://docs.microsoft.com/powershell/scripting/gallery) — для [коллекции PowerShell](https://www.powershellgallery.com/).
-    - [/jea/](https://docs.microsoft.com/powershell/scripting/jea/) — для функции Just Enough Administration (JEA).
-    - [wmf/](https://docs.microsoft.com/powershell/scripting/wmf/overview) — содержит заметки о платформе Windows Management Framework (пакет, используемый для распространения новых версий PowerShell в предыдущих версиях Windows).
+    - [/jea/](https://docs.microsoft.com/powershell/scripting/learn/remoting/jea/overview) — для функции Just Enough Administration (JEA).
+    - [wmf/](https://docs.microsoft.com/powershell/scripting/windows-powershell/wmf/overview) — содержит заметки о платформе Windows Management Framework (пакет, используемый для распространения новых версий PowerShell в предыдущих версиях Windows).
 
 ## <a name="contributing"></a>Участие
 
-Мы активно объединяем публикации в этом репозитории с помощью [запроса на включение внесенных изменений](https://help.github.com/articles/using-pull-requests/) в *промежуточной* ветви.
-Примечание. Для того, чтобы сообщество свободно использовало ваши публикации, перед отправкой запроса на включение внесенных изменений необходимо [подписать соглашение Contribution License Agreement](https://cla.microsoft.com/).
+Мы постоянно включаем в этот репозиторий предложения, вносимые участниками через [запросы на вытягивание](https://help.github.com/articles/using-pull-requests/) в _промежуточной_ ветви.
+Обратите внимание, что перед отправкой запросов на вытягивание требуется подписать [Лицензионное соглашение участника](https://cla.microsoft.com/), чтобы сообщество могло свободно использовать ваш вклад.
 
-Дополнительные сведения о публикации можно прочесть в [руководстве по публикациям](https://docs.microsoft.com/contribute/powershell/powershell-contribute). Руководство по публикациям содержит подробные сведения об участии в составлении документации и рекомендуемых инструментах, а также требования к стилю и форматированию. Используйте шаблоны "Проблема" и "Запрос на включение внесенных изменений", чтобы обеспечить согласованность документации по разным версиям.
+Дополнительные сведения о публикации можно прочесть в [руководстве по публикациям](https://docs.microsoft.com/powershell/scripting/community/contributing/overview).
+Руководство по публикациям содержит подробные сведения об участии в составлении документации и рекомендуемых инструментах, а также требования к стилю и форматированию. Используйте шаблоны "Проблема" и "Запрос на включение внесенных изменений", чтобы обеспечить согласованность документации по разным версиям.
 
 ## <a name="licenses"></a>Лицензии
 
