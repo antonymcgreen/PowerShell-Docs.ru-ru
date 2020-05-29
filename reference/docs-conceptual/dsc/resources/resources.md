@@ -2,12 +2,12 @@
 ms.date: 02/28/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурсы DSC
-ms.openlocfilehash: 863898d910cc3c75c3e5977a5b6b0657ba7ed512
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: bae08447763a3bdb6ee8fcdd4f8d49209a5de805
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278258"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692202"
 ---
 # <a name="dsc-resources"></a>Ресурсы DSC
 
@@ -22,9 +22,9 @@ ms.locfileid: "78278258"
 Каждый ресурс содержит *схему, которая определяет синтаксис, используемый ресурсом при [конфигурации](../configurations/configurations.md).
 Схема ресурса может быть определена следующими способами.
 
-- Файлом **Schema.Mof**. Большинство ресурсов определяют свою _схему_ в файле schema.mof с помощью [MOF](/windows/desktop/wmisdk/managed-object-format--mof-).
-- Файлом **\<Имя ресурса\>.schema.psm1**. [Составные ресурсы](../configurations/compositeConfigs.md) определяют свою *схему* в файле <ResourceName>.schema.psm1 с помощью [блока параметров](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
-- Файлом **\<Имя ресурса\>.psm1**. Ресурсы DSC, основанные на классе, определяют свою _схему_ в описании класса. Элементы синтаксиса обозначаются как свойства класса. Дополнительные сведения см. в статье [About Classes and Desired State Configuration](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc) (О классах и настройке требуемого состояния).
+- Файл `Schema.Mof`. Большинство ресурсов определяют свою _схему_ в файле schema.mof с помощью [MOF](/windows/desktop/wmisdk/managed-object-format--mof-).
+- Файл `<Resource Name>.schema.psm1`. [Составные ресурсы](../configurations/compositeConfigs.md) определяют свою *схему* в файле `<ResourceName>.schema.psm1` с помощью [блока параметров](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
+- Файл `<Resource Name>.psm1`. Ресурсы DSC, основанные на классе, определяют свою _схему_ в описании класса. Элементы синтаксиса обозначаются как свойства класса. Дополнительные сведения см. в статье [About Classes and Desired State Configuration](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc) (О классах и настройке требуемого состояния).
 
 Чтобы получить синтаксис из ресурса DSC, используйте командлет [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) вместе с параметром `-Syntax`. Это похоже на использование командлета [Get-Command](/powershell/module/microsoft.powershell.core/get-command) с параметром `-Syntax` для получения синтаксиса командлета. В выходных данных будет показан шаблон, используемый в указанном блоке ресурса.
 
