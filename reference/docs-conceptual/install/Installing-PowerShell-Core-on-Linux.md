@@ -2,12 +2,12 @@
 title: Установка PowerShell в Linux
 description: Сведения об установке PowerShell в различных дистрибутивах Linux
 ms.date: 05/21/2020
-ms.openlocfilehash: b87827635cc66de3714100dfac6de56860495d79
-ms.sourcegitcommit: fd6a33b9fac973b3554fecfea7f51475e650a606
+ms.openlocfilehash: 1f3526507f84c43fbe44235e9a44e43d7f3d3e37
+ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791504"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84148469"
 ---
 # <a name="installing-powershell-on-linux"></a>Установка PowerShell в Linux
 
@@ -84,7 +84,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-В качестве суперпользователя однократно зарегистрируйте репозиторий Майкрософт. После регистрации можно обновить PowerShell с помощью `sudo apt-get upgrade powershell`.
+В качестве суперпользователя однократно зарегистрируйте репозиторий Майкрософт. После регистрации можно обновить PowerShell с помощью `sudo apt-get install powershell`.
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Установка с помощью прямого скачивания — Ubuntu 16.04
 
@@ -134,7 +134,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-В качестве суперпользователя однократно зарегистрируйте репозиторий Майкрософт. После регистрации можно обновить PowerShell с помощью `sudo apt-get upgrade powershell`.
+В качестве суперпользователя однократно зарегистрируйте репозиторий Майкрософт. После регистрации можно обновить PowerShell с помощью `sudo apt-get install powershell`.
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>Установка с помощью прямого скачивания — Ubuntu 18.04
 
@@ -203,7 +203,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-В качестве суперпользователя однократно зарегистрируйте репозиторий Майкрософт. После регистрации можно обновить PowerShell с помощью `sudo apt-get upgrade powershell`.
+В качестве суперпользователя однократно зарегистрируйте репозиторий Майкрософт. После регистрации можно обновить PowerShell с помощью `sudo apt-get install powershell`.
 
 ## <a name="debian-9"></a>Debian 9
 
@@ -234,7 +234,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-В качестве суперпользователя однократно зарегистрируйте репозиторий Майкрософт. После регистрации можно обновить PowerShell с помощью `sudo apt-get upgrade powershell`.
+В качестве суперпользователя однократно зарегистрируйте репозиторий Майкрософт. После регистрации можно обновить PowerShell с помощью `sudo apt-get install powershell`.
 
 ### <a name="installation-via-direct-download---debian-9"></a>Установка с помощью прямого скачивания — Debian 9
 
