@@ -3,12 +3,12 @@ title: Все, что вы хотели знать об исключениях
 description: Обработка ошибок — это лишь часть процесса написания кода.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: fd3ddacbf14d1faeee98682697161f86c6ff0c72
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 3ecb1669fa8d58bc742d4e8e77051b3ace4452a0
+ms.sourcegitcommit: 4a40e3ea3601c02366be3495a5dcc7f4cac9f1ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149547"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84337188"
 ---
 # <a name="everything-you-wanted-to-know-about-exceptions"></a>Все, что вы хотели знать об исключениях
 
@@ -55,7 +55,7 @@ ms.locfileid: "84149547"
 Чтобы вызвать собственное событие исключения, воспользуйтесь ключевым словом `throw`.
 
 ```powershell
-function Do-Something
+function Start-Something
 {
     throw "Bad thing happened"
 }
@@ -64,7 +64,7 @@ function Do-Something
 Это приведет к созданию исключения во время выполнения, которое является неустранимой ошибкой. Оно обрабатывается с помощью `catch` в вызывающей функции или приводит к выходу из скрипта с сообщением следующего вида.
 
 ```powershell
-PS> Do-Something
+PS> Start-Something
 
 Bad thing happened
 At line:1 char:1
@@ -89,7 +89,7 @@ Write-Error -Message "Houston, we have a problem." -ErrorAction Stop
 Если указать `-ErrorAction Stop` в любой расширенной функции или командлете, все инструкции `Write-Error` будут преобразованы в неустранимые ошибки, которые приводят к остановке выполнения или могут быть обработаны с помощью `catch`.
 
 ```powershell
-Do-Something -ErrorAction Stop
+Start-Something -ErrorAction Stop
 ```
 
 ### <a name="trycatch"></a>Try и Catch
@@ -99,7 +99,7 @@ Do-Something -ErrorAction Stop
 ```powershell
 try
 {
-    Do-Something
+    Start-Something
 }
 catch
 {
@@ -108,7 +108,7 @@ catch
 
 try
 {
-    Do-Something -ErrorAction Stop
+    Start-Something -ErrorAction Stop
 }
 catch
 {
@@ -213,7 +213,7 @@ InvocationName        : Get-Resource
 ```powershell
 PS> $PSItem.ScriptStackTrace
 at Get-Resource, C:\blog\throwerror.ps1: line 13
-at Do-Something, C:\blog\throwerror.ps1: line 5
+at Start-Something, C:\blog\throwerror.ps1: line 5
 at <ScriptBlock>, C:\blog\throwerror.ps1: line 18
 ```
 
@@ -276,7 +276,7 @@ at CallSite.Target(Closure , CallSite , Type , String )
 ```powershell
 try
 {
-    Do-Something -Path $path
+    Start-Something -Path $path
 }
 catch [System.IO.FileNotFoundException]
 {
@@ -300,7 +300,7 @@ catch [System.IO.IOException]
 ```powershell
 try
 {
-    Do-Something -Path $path -ErrorAction Stop
+    Start-Something -Path $path -ErrorAction Stop
 }
 catch [System.IO.DirectoryNotFoundException],[System.IO.FileNotFoundException]
 {
@@ -449,7 +449,6 @@ At line:31 char:9
     + FullyQualifiedErrorId : Unable to find the specified file.
 ```
 
-
 Если сообщение об ошибке сообщает о том, что скрипт работает неправильно из-за вызова `throw` в строке 31, оно не подходит для отображения пользователям скрипта. Оно не сообщает им ничего полезного.
 
 Декстер Дхами отметил, что для устранения этой проблемы я могу использовать `ThrowTerminatingError()`.
@@ -495,13 +494,13 @@ catch
 Кирк Манро указывает, что некоторые исключения являются неустранимыми ошибками только при выполнении внутри блока `try/catch`. В этом предоставленном им примере исключение во время выполнения вызывается вследствие деления на ноль.
 
 ```powershell
-function Do-Something { 1/(1-1) }
+function Start-Something { 1/(1-1) }
 ```
 
 Вызовем его теперь следующим образом, чтобы код содержал ошибку, но при этом выводилось сообщение.
 
 ```powershell
-&{ Do-Something; Write-Output "We did it. Send Email" }
+&{ Start-Something; Write-Output "We did it. Send Email" }
 ```
 
 Однако если поместить этот же код в `try/catch`, то происходит нечто иное.
@@ -509,14 +508,13 @@ function Do-Something { 1/(1-1) }
 ```powershell
 try
 {
-    &{ Do-Something; Write-Output "We did it. Send Email" }
+    &{ Start-Something; Write-Output "We did it. Send Email" }
 }
 catch
 {
     Write-Output "Notify Admin to fix error and send email"
 }
 ```
-
 
 Ошибка становится неустранимой, а первое сообщение не выводится. Не нравится мне в этом то, что при наличии такого кода в функции поведение становится другим, если использовать `try/catch`.
 
@@ -528,12 +526,12 @@ catch
 
 ### <a name="public-function-templates"></a>Шаблоны общих функций
 
-В одной из последних бесед с Кирком Манро мы говорили о том, что он помещает каждый блок `begin`, `process` и `end` во всех своих расширенных функциях в блок `try{...}catch{...}`. В этих универсальных блоках catch у него есть одна строка с методом `$PSCmdlet.ThrowTerminatingError($PSitem)` для обработки всех исключений, вызываемых его функциями.
+В одной из последних бесед с Кирком Манро мы говорили о том, что он помещает каждый блок `begin`, `process` и `end` во всех своих расширенных функциях в блок `try{...}catch{...}`. В этих универсальных блоках catch у него есть одна строка с методом `$PSCmdlet.ThrowTerminatingError($PSItem)` для обработки всех исключений, вызываемых его функциями.
 
 ```powershell
-function Do-Something
+function Start-Something
 {
-    [cmdletbinding()]
+    [CmdletBinding()]
     param()
 
     process
@@ -544,7 +542,7 @@ function Do-Something
         }
         catch
         {
-            $PSCmdlet.ThrowTerminatingError($PSitem)
+            $PSCmdlet.ThrowTerminatingError($PSItem)
         }
     }
 }
