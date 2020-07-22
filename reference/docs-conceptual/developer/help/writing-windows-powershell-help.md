@@ -1,23 +1,16 @@
 ---
-title: Справка по Windows PowerShell | Документация Майкрософт
-ms.custom: ''
+title: Создание справки Windows PowerShell
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 20cbf009-9633-476e-b0b3-5604117ef2dd
-caps.latest.revision: 4
-ms.openlocfilehash: adde7c205f26c9bb87307f7eaa56988cefccdeaf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8807fe48c6354022900738de0b912c55dec9febb
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367673"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86892903"
 ---
 # <a name="writing-windows-powershell-help"></a>Создание справки Windows PowerShell
 
-Этот документ предназначен для всех пользователей, пишущих справочные материалы по командлетам, поставщикам и концепциям Windows PowerShell, которые можно просмотреть в командной строке с помощью командлета `Get-Help`.
+Этот документ предназначен для всех пользователей, пишущих справочные материалы по командлетам PowerShell, поставщикам и концептуальным темам, которые можно просмотреть в командной строке с помощью `Get-Help` командлета.
 
 ## <a name="cmdlet-help"></a>Справка по командлетам
 
@@ -29,4 +22,4 @@ ms.locfileid: "72367673"
 
  Windows PowerShell использует схему ПСМАМЛ для определения элементов XML-файлов для файлов справки командлетов и поставщиков.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также

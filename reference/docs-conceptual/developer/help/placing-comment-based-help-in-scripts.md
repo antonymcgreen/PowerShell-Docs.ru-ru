@@ -1,19 +1,12 @@
 ---
-title: Размещение справки на основе комментариев в скриптах | Документация Майкрософт
-ms.custom: ''
+title: Размещение справки на основе комментариев в сценариях
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 49f8267c-d887-4d7d-b9b7-80dc624b1261
-caps.latest.revision: 4
-ms.openlocfilehash: 1bebfbd822963830363012060067c656d7709543
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: a3ade6c3138826b924939056b9d1ffb233006d44
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565532"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893192"
 ---
 # <a name="placing-comment-based-help-in-scripts"></a>Размещение справки на основе комментариев в сценариях
 
@@ -21,7 +14,9 @@ ms.locfileid: "83565532"
 
 ## <a name="where-to-place-comment-based-help-for-a-script"></a>Размещение справки на основе комментариев для сценария
 
-- В начале файла скрипта. Справка по скрипту может предшествоваться в сценарии только по комментариям и пустым строкам.
+- В начале файла скрипта.
+
+  Справка по скрипту может предшествоваться в сценарии только по комментариям и пустым строкам.
 
 - В конце файла скрипта.
 
@@ -29,13 +24,13 @@ ms.locfileid: "83565532"
 
 ## <a name="examples-of-help-placement-in-a-script"></a>Примеры размещения справки в сценарии
 
- В следующих примерах показаны параметры размещения для скрипта справки на основе комментариев.
+В следующих примерах показаны параметры размещения для скрипта справки на основе комментариев.
 
 ### <a name="help-at-the-beginning-of-a-script"></a>Справка в начале сценария
 
- В следующем примере показано, как на основе комментариев в начале скрипта.
+В следующем примере показано, как на основе комментариев в начале скрипта.
 
-```
+```powershell
 <#
 .Description
 This script performs a series of network connection tests.
@@ -57,5 +52,4 @@ function Ping { Test-Connection -ComputerName $ComputerName }
 .Description
 This script performs a series of network connection tests.
 #>
-
 ```

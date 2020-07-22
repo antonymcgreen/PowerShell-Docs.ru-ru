@@ -1,19 +1,12 @@
 ---
-title: Написание разделов справки на основе комментариев | Документация Майкрософт
-ms.custom: ''
+title: Написание разделов справки на основе комментариев
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e619ab16-90ad-46e9-9bde-d6dce492ba56
-caps.latest.revision: 4
-ms.openlocfilehash: d740c0028fd2d4ddd83fe97d66ea45aa6300e16b
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: f29a30d27eba2b84883c4c2bd3cee68349c94e19
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561041"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893107"
 ---
 # <a name="writing-comment-based-help-topics"></a>Написание разделов справки на основе комментариев
 
@@ -23,7 +16,7 @@ ms.locfileid: "83561041"
 
  Также можно писать разделы справки на основе XML для сценариев и функций и использовать ключевые слова комментариев справки для перенаправления пользователей в разделы на основе XML или в другие разделы.
 
-## <a name="in-this-section"></a>в этом разделе
+## <a name="in-this-section"></a>В этом разделе
 
  [Синтаксис справки на основе комментариев](./syntax-of-comment-based-help.md) Описывает синтаксис справки на основе комментариев.
 

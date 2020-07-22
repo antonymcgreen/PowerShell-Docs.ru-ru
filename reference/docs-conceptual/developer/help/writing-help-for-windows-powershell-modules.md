@@ -1,12 +1,12 @@
 ---
 title: Создание справки по модулям PowerShell
 ms.date: 04/10/2020
-ms.openlocfilehash: 2c6450c03fb9847de331605fb6b9bfb203af3d89
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 115ea3f3c5941e74ed6ddbc8480d4a21576bc5c6
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811463"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893073"
 ---
 # <a name="writing-help-for-powershell-modules"></a>Создание справки по модулям PowerShell
 
@@ -29,7 +29,7 @@ ms.locfileid: "83811463"
 - **Концептуальная Справка ("о программе")**. Концептуальный раздел справки ("About") можно использовать для описания модуля и его элементов, а также для объяснения того, как эти элементы можно использовать вместе для выполнения задач.
   Основные разделы справки — это текстовые файлы с кодировкой Юникод (UTF-8). Имя файла должно иметь `about_<name>.help.txt` Формат, например `about_MyModule.help.txt` . По умолчанию PowerShell включает более 100 этих концептуальных разделов справки и форматирует их, как показано в следующем примере.
 
-  ```
+  ```Output
   TOPIC
       about_<subject or module name>
 
@@ -107,7 +107,7 @@ ms.locfileid: "83811463"
 
 Дополнительные сведения см. в разделе [поддержка справки в Интернете](./supporting-online-help.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание модуля PowerShell](../module/writing-a-windows-powershell-module.md)
 

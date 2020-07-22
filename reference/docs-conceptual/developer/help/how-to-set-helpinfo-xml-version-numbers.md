@@ -1,19 +1,12 @@
 ---
-title: Как задать номера версий XML для HelpInfo | Документация Майкрософт
-ms.custom: ''
+title: Как задать номера версий XML-файла HelpInfo
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 93a00463-af58-41c8-b088-450909fa1d05
-caps.latest.revision: 6
-ms.openlocfilehash: 864372bfb0f43922f6066ff3db19956a7942db49
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 42164f98414da0b6f1a0021e9d860c57a63a9eec
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811363"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86892988"
 ---
 # <a name="how-to-set-helpinfo-xml-version-numbers"></a>Как задать номера версий XML-файла HelpInfo
 
@@ -21,15 +14,13 @@ ms.locfileid: "83811363"
 
 ## <a name="how-to-set-helpinfo-xml-version-numbers"></a>Как задать номера версий XML-файла HelpInfo
 
-Номера версий в XML-файле HelpInfo критически важны для работы обновляемой справки.
-Командлеты [Update — Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) и [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) загружают новые файлы справки только в том случае, если номер версии языка и региональных параметров пользовательского интерфейса в удаленном XML-файле HelpInfo больше номера версии для этого языка и региональных параметров пользовательского интерфейса в локальном HelpInfo XML или отсутствует локальный XML-файл HelpInfo.
+Номера версий в XML-файле HelpInfo критически важны для работы обновляемой справки. Командлеты [Update — Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) и [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) загружают новые файлы справки только в том случае, если номер версии языка и региональных параметров пользовательского интерфейса в удаленном XML-файле HelpInfo больше номера версии для этого языка и региональных параметров пользовательского интерфейса в локальном HelpInfo XML или отсутствует локальный XML-файл HelpInfo.
 
 XML-файл HelpInfo использует номер версии из 4 частей, определенный в классе **System. Version** платформы Microsoft .NET Framework. Формат — `N1.N2.N3.N4`. Авторы модулей могут использовать любую схему нумерации версий, которая разрешена классом **System. Version** . Для обновляемой справки необходимо, чтобы номер версии языка и региональных параметров пользовательского интерфейса был увеличен, когда новая версия CAB-файла для этого языка и региональных параметров пользовательского интерфейса передается в расположение, указанное элементом **хелпконтентури** в файле XML HelpInfo.
 
 В следующем примере показаны элементы XML-файла HelpInfo для языка и региональных параметров (de-DE) пользовательского интерфейса, если версия 2.15.0.10.
 
 ```xml
-
 <UICulture>
   <UICultureName>de-DE</UICultureName>
   <UICultureVersion>2.15.0.10</UICultureVersion>
