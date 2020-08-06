@@ -1,25 +1,18 @@
 ---
 title: Элемент Селектионсетнаме для Ентриселектедби для ошибка customcontrol для представления (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 859d2335-7fcd-4efd-b1cc-3d171e334c6b
-caps.latest.revision: 7
-ms.openlocfilehash: f4bf820be88919af43eeaf043b3ed8b9c06e1bf2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3728a1886d5406b8fa4888125d1c031d0f9b1b03
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364753"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785308"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format"></a>Элемент SelectionSetName для элемента EntrySelectedBy для элемента CustomControl для элемента View (формат)
 
 Задает набор объектов .NET для записи списка. Количество наборов выбора, которые можно указать для записи, не ограничено.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ошибка customcontrol элемент (Format) Кустоментриес для ошибка customcontrol для элемента представления (Format) Кустоментри для Кустоментриес для представления (Format) Ентриселектедби Элемент для Кустоментри для элемента Селектионсетнаме представления (Format) для Ентриселектедби для Кустоментри (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ошибка customcontrol элемент (Format) Кустоментриес для ошибка customcontrol для элемента кустоментри представления для кустоментриес для представления (Format) ентриселектедби для кустоментри для SelectionSetName for EntrySelectedBy (формат).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72364753"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `SelectionSetName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `SelectionSetName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,7 +42,7 @@ ms.locfileid: "72364753"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Для каждой записи пользовательского элемента управления должно быть определено по крайней мере одно имя типа, набор выбора или условие выбора.
 
@@ -57,7 +50,7 @@ ms.locfileid: "72364753"
 
 Дополнительные сведения о компонентах представления пользовательского элемента управления см. в разделе [Создание пользовательских элементов управления](./creating-custom-controls.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Элемент Ентриселектедби для Кустоментри для представления (Format)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)
 

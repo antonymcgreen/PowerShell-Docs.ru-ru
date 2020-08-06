@@ -1,25 +1,18 @@
 ---
 title: Выходные данные командлета | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1362f4cd-4e05-4ace-ade6-7128da8ad86c
-caps.latest.revision: 10
-ms.openlocfilehash: 4c6aacd49b0a87bca6806ba5f08a1b4d48a90959
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7697db01c8c4d1c831202c07256559bf638aeaef
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365943"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784441"
 ---
 # <a name="cmdlet-output"></a>Выходные данные командлета
 
 В этом разделе обсуждаются типы выходных данных командлета и методы, которые могут вызываться командлетами для создания выходных данных, таких как сообщения об ошибках и объекты. В этом разделе также описано, как определить типы .NET Framework, возвращаемые командлетами, и способ отображения этих объектов.
 
-## <a name="in-this-section"></a>Содержание
+## <a name="in-this-section"></a>В этом разделе
 
 [Типы выходных данных командлета](./types-of-cmdlet-output.md) Описывает типы и выходные данные, которые могут быть созданы командлетами, и методы, которые вызываются командлетами для создания выходных данных.
 
@@ -27,10 +20,10 @@ ms.locfileid: "72365943"
 
 [Расширение выходных объектов](./extending-output-objects.md) Описывает использование файлов типов (. ps1xml) для расширения объектов .NET Framework, возвращаемых командлетами, функциями и скриптами.
 
-[Файлы форматирования PowerShell](../format/powershell-formatting-files.md) Описание файлов форматирования (. Format. ps1xml), определяющих отображение по умолчанию для определенного набора объектов .NET Framework в Windows PowerShell.
+[Файлы форматирования PowerShell](../format/powershell-formatting-files.md) Описывает файлы форматирования (.format.ps1XML), определяющие отображение по умолчанию для определенного набора .NET Framework объектов в Windows PowerShell.
 
 [Пользовательские файлы форматирования](./custom-formatting-files.md) Описание создания собственных файлов форматирования для перезаписи форматов отображения по умолчанию или для определения отображения объектов, возвращаемых собственными командами.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

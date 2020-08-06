@@ -1,19 +1,12 @@
 ---
 title: Элемент Таблеровентриес для Таблеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d10b68ca-256c-4c58-b503-73f7777b39ae
-caps.latest.revision: 15
-ms.openlocfilehash: 88de19be02de4933f892e02093403a82ccdd5788
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4cc5d354df3e552e181a95148caa020f0041db92
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368153"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785121"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>Элемент TableRowEntries для элемента TableControl (формат)
 
@@ -31,33 +24,33 @@ ms.locfileid: "72368153"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `TableRowEntries`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `TableRowEntries` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Таблеровентри для Таблеровентриес для Таблеконтрол (Format)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Обязательный элемент.<br /><br /> Определяет данные, отображаемые в строке таблицы.|
+|[Элемент TableRowEntry для элемента TableRowEntries для элемента TableControl (формат)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Обязательный элемент.<br /><br /> Определяет данные, отображаемые в строке таблицы.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Таблеконтрол (Format)](./tablecontrol-element-format.md)|Определяет формат таблицы для представления.|
+|[Элемент TableControl (формат)](./tablecontrol-element-format.md)|Определяет формат таблицы для представления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-Необходимо указать один или несколько элементов `TableRowEntry` для табличного представления. Максимальное ограничение числа элементов `TableRowEntry`, которые могут быть добавлены, не ограничено.
+Необходимо указать один или несколько `TableRowEntry` элементов для табличного представления. Максимальное ограничение количества `TableRowEntry` элементов, которое можно добавить, не ограничено.
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан элемент `TableRowEntries`, определяющий строку, в которой отображаются значения двух свойств объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
+В следующем примере показан `TableRowEntries` элемент, определяющий строку, в которой отображаются значения двух свойств объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <TableRowEntries>
@@ -78,11 +71,11 @@ ms.locfileid: "72368153"
 
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
-[Элемент Таблеконтрол (Format)](./tablecontrol-element-format.md)
+[Элемент TableControl (формат)](./tablecontrol-element-format.md)
 
 [Элемент Таблеровентри (Format)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 

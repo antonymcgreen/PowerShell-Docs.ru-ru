@@ -1,23 +1,16 @@
 ---
 title: Пример GetProcessSample02 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 481f557d-3344-4d33-b2da-4736a0165181
-caps.latest.revision: 7
-ms.openlocfilehash: fa4cd8a724793e71b615c84a5c5a833aa92c93fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fa10774508b70f4aab4546cf4d6fbe8978032f1b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364573"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784237"
 ---
 # <a name="getprocesssample02-sample"></a>Пример командлета GetProcessSample02
 
-В этом примере показано, как написать командлет, который получает процессы на локальном компьютере. Он предоставляет `Name` параметр, который можно использовать для указания процессов, которые требуется получить. Этот командлет является упрощенной версией командлета `Get-Process`, предоставляемого Windows PowerShell 2,0.
+В этом примере показано, как написать командлет, который получает процессы на локальном компьютере. Он предоставляет `Name` параметр, который можно использовать для указания процессов, которые необходимо получить. Этот командлет является упрощенной версией `Get-Process` командлета, предоставляемого Windows PowerShell 2,0.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 
@@ -51,7 +44,7 @@ ms.locfileid: "72364573"
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом образце демонстрируется следующее.
 
@@ -65,7 +58,7 @@ ms.locfileid: "72364573"
 
 ## <a name="example"></a>Пример
 
-В этом примере показана реализация командлета Get-proc, который включает параметр `Name`.
+В этом примере показана реализация командлета Get-proc, который содержит `Name` параметр.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands
@@ -135,6 +128,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

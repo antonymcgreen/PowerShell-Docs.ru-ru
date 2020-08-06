@@ -1,23 +1,16 @@
 ---
 title: Пример GetProcessSample03 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fc9d80ee-6ebd-48cd-a7ea-53cb2b442a22
-caps.latest.revision: 6
-ms.openlocfilehash: ec5a8c284dd3fa772261099281aba1fb68c49118
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 09df93792ab611e167279bc35755d8d6c28e7cf3
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369713"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784220"
 ---
 # <a name="getprocesssample03-sample"></a>Пример командлета GetProcessSample03
 
-В этом примере показано, как реализовать командлет, который получает процессы на локальном компьютере. Он предоставляет параметр `Name`, который может принимать объект из конвейера или значение свойства объекта, имя свойства которого совпадает с именем параметра. Этот командлет является упрощенной версией командлета `Get-Process`, предоставляемого Windows PowerShell 2,0.
+В этом примере показано, как реализовать командлет, который получает процессы на локальном компьютере. Он предоставляет `Name` параметр, который может принимать объект из конвейера или значение свойства объекта, имя свойства которого совпадает с именем параметра. Этот командлет является упрощенной версией `Get-Process` командлета, предоставляемого Windows PowerShell 2,0.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 
@@ -51,7 +44,7 @@ ms.locfileid: "72369713"
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом образце демонстрируется следующее.
 
@@ -67,7 +60,7 @@ ms.locfileid: "72369713"
 
 ## <a name="example"></a>Пример
 
-В этом примере показана реализация командлета Get-proc, который включает параметр `Name`, который принимает входные данные из конвейера.
+В этом примере показана реализация командлета Get-proc, который содержит `Name` параметр, который принимает входные данные из конвейера.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands
@@ -140,6 +133,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

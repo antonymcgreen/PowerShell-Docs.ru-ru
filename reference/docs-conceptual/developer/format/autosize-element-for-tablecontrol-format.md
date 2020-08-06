@@ -1,19 +1,12 @@
 ---
 title: Элемент AutoSize для Таблеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1df5de23-9ffc-427e-bb34-f5efe073f3fe
-caps.latest.revision: 11
-ms.openlocfilehash: f50ba257ee57c36aedc6b37c680a0130842b69b0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f29b3eb278fd9ff29d2f6f4fbd000513dcaeec7b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364213"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783897"
 ---
 # <a name="autosize-element-for-tablecontrol-format"></a>Элемент AutoSize для TableControl (формат)
 
@@ -29,30 +22,30 @@ ms.locfileid: "72364213"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `AutoSize`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `AutoSize` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Таблеконтрол (Format)](./tablecontrol-element-format.md)|Определяет формат таблицы для представления.|
+|[Элемент TableControl (формат)](./tablecontrol-element-format.md)|Определяет формат таблицы для представления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
-[Элемент Таблеконтрол (Format)](./tablecontrol-element-format.md)
+[Элемент TableControl (формат)](./tablecontrol-element-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

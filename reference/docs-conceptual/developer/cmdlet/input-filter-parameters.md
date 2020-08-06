@@ -1,19 +1,12 @@
 ---
 title: Параметры входного фильтра | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e45929d1-bbb4-4dc6-892f-f9eacdb1c84c
-caps.latest.revision: 8
-ms.openlocfilehash: 7a1582031d27f78bad069f5539408312ccabb3f2
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: ccaf6c4859d2a4f14866ec1252b999e90e1a830f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563874"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784050"
 ---
 # <a name="input-filter-parameters"></a>Параметры фильтра ввода
 
@@ -33,6 +26,6 @@ ms.locfileid: "83563874"
 
 Если не указано ни одного набора входных объектов, обычно это означает фильтрацию по всем объектам. Дополнительные сведения см. в разделе[Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

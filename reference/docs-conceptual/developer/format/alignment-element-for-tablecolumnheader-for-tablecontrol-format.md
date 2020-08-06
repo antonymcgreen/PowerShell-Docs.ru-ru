@@ -1,19 +1,12 @@
 ---
 title: Элемент Alignment для Таблеколумнхеадер для Таблеконтрол (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ff85e83a-c9c2-4c37-accc-e6a27c182f3c
-caps.latest.revision: 19
-ms.openlocfilehash: 16b41535109ca503e679a135f5ba30054e33de5b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1bf395b84af90d725c14b2f0ef569f72b5fcc613
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364383"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783931"
 ---
 # <a name="alignment-element-for-tablecolumnheader-for-tablecontrol-format"></a>Элемент Alignment для TableColumnHeader для TableControl (формат)
 
@@ -29,21 +22,21 @@ ms.locfileid: "72364383"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `Alignment`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `Alignment` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Таблеколумнхеадер (Format)](./tablecolumnheader-element-format.md)|Определяет метку, ширину и выравнивание данных для столбца таблицы.|
+|[Элемент TableColumnHeader (формат)](./tablecolumnheader-element-format.md)|Определяет метку, ширину и выравнивание данных для столбца таблицы.|
 
 ## <a name="text-value"></a>Текстовое значение
 
@@ -55,13 +48,13 @@ ms.locfileid: "72364383"
 
 Центрирование центров данных, отображаемых в столбце.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
 ## <a name="example"></a>Пример
 
-В этом примере показан элемент `TableColumnHeader`, данные по которому выводятся слева.
+В этом примере показан `TableColumnHeader` элемент, данные которого выводятся слева.
 
 ```xml
 <TableColumnHeader>
@@ -71,10 +64,10 @@ ms.locfileid: "72364383"
 </TableColumnHeader>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
-[Элемент Таблеколумнхеадер (Format)](./tablecolumnheader-element-format.md)
+[Элемент TableColumnHeader (формат)](./tablecolumnheader-element-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

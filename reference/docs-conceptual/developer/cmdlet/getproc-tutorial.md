@@ -1,19 +1,12 @@
 ---
 title: Руководство по proc | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4663905f-560a-4e39-9b03-6db2c315c322
-caps.latest.revision: 6
-ms.openlocfilehash: bbd07a0d0abd30742b7e02482adedae3af43aca4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cc99cb4de8e3b8fcab8eac28b21162764aecd8a1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364443"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784271"
 ---
 # <a name="getproc-tutorial"></a>Руководство по GetProc
 
@@ -31,13 +24,13 @@ ms.locfileid: "72364443"
 
 [Добавление в командлет незавершающего сообщения об ошибках](./adding-non-terminating-error-reporting-to-your-cmdlet.md) В этом разделе описывается добавление непрерывающих отчетов об ошибках в командлет. Описанная здесь реализация определяет неустранимые ошибки, возникающие при обработке входных данных, и записывает запись об ошибке в поток ошибок.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание командлета без параметров](./creating-a-cmdlet-without-parameters.md)
 
 [Добавление параметров, обрабатывающих входные данные командной строки](./adding-parameters-that-process-command-line-input.md)
 
-[Добавление параметров, обрабатывающих входные данные конвейера](./adding-parameters-that-process-pipeline-input.md)
+[Добавление параметров для обработки входных данных конвейера](./adding-parameters-that-process-pipeline-input.md)
 
 [Добавление в командлет незавершающего сообщения об ошибках](./adding-non-terminating-error-reporting-to-your-cmdlet.md)
 

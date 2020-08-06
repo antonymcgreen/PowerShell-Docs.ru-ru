@@ -1,19 +1,12 @@
 ---
 title: Пример Runspace09 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f19f12c0-82e9-42f6-a7df-76c45b733855
-caps.latest.revision: 8
-ms.openlocfilehash: 49b03bcf1b049918b200d68cb2c6f7aff878db58
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6110fcb96af25f55682064c466ba2add6377902d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563313"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783149"
 ---
 # <a name="runspace09-sample"></a>Пример Runspace09
 
@@ -148,6 +141,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

@@ -1,25 +1,18 @@
 ---
 title: Элемент TypeName для Ентриселектедби для Кустоментри для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 76548af7-05bd-4d12-bf71-6fb69c434ef2
-caps.latest.revision: 10
-ms.openlocfilehash: c3dd761cd9b6c468d4833ea35b897ba5d425f598
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f8dc2c808e6eb3d6a7873cdbddc936b95d94c541
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368073"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785104"
 ---
 # <a name="typename-element-for-entryselectedby-for-customentry-for-view-format"></a>Элемент TypeName для элемента EntrySelectedBy для элемента CustomEntry для элемента View (формат)
 
 Указывает тип .NET, который использует это определение представления пользовательского элемента управления. Количество типов, которое можно указать для определения, не ограничено.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ошибка customcontrol элемент (Format) Кустоментриес для ошибка customcontrol для элемента представления (Format) Кустоментри для Кустоментриес для представления (Format) Ентриселектедби Элемент для Кустоментри для элемента TypeName представления (Format) для Ентриселектедби для Кустоментри для представления (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ошибка customcontrol элемент (Format) Кустоментриес для ошибка customcontrol для элемента представления кустоментри для кустоментриес для представления (Format) ентриселектедби для кустоментри для EntrySelectedBy для представления (формат).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72368073"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `TypeName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `TypeName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -47,15 +40,15 @@ ms.locfileid: "72368073"
 
 ## <a name="text-value"></a>Текстовое значение
 
-Укажите полное имя типа .NET, например `System.IO.DirectoryInfo`.
+Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Для каждого определения представления пользовательского элемента управления должно быть определено по крайней мере одно имя типа, набор выбора или условие выбора.
 
 Дополнительные сведения о компонентах представления пользовательского элемента управления см. в разделе [Создание пользовательских элементов управления](./creating-custom-controls.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание пользовательских элементов управления](./creating-custom-controls.md)
 

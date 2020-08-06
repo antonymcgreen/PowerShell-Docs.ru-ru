@@ -1,19 +1,12 @@
 ---
 title: Пример Host06 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 459b6d0f-d596-4269-9113-915a283c1e28
-caps.latest.revision: 10
-ms.openlocfilehash: 8b89d7bf8a69626dc3e6bd566dab7951a4c7c5ab
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5dfcdb2b8a968d91e938c27c6e1e6a8503c90aba
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361023"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783251"
 ---
 # <a name="host06-sample"></a>Пример Host06
 
@@ -25,7 +18,7 @@ ms.locfileid: "72361023"
 
 - Это приложение должно быть запущено в режиме с повышенными правами (Запуск от имени администратора).
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 - Создание пользовательского узла, классы которого являются производными от класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , класса [System. Management. Automation. host. Пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) и класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
 
@@ -1845,7 +1838,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)
 

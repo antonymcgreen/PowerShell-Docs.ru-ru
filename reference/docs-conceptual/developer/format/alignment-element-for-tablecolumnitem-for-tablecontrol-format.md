@@ -1,25 +1,18 @@
 ---
 title: Элемент Alignment для Таблеколумнитем для Таблеконтрол (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b07a53df-64f1-49b0-8cea-c993b3f1f76b
-caps.latest.revision: 10
-ms.openlocfilehash: 1bc936b94ee6fd6239e9e3c4afcdb8f14fbe36eb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: baa858b7c15b5afcc7f6087e8a9eace8d8fb67bb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369083"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783914"
 ---
 # <a name="alignment-element-for-tablecolumnitem-for-tablecontrol-format"></a>Элемент Alignment для TableColumnItem для TableControl (формат)
 
 Определяет, как отображаются данные в столбце строки.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Таблеколумнитемс элемент (Format) Таблеколумнитем элемент (Format) Элемент Alignment для Таблеколумнитем (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Таблеколумнитемс элемент (Format) Таблеколумнитем элемент (формат) элемент выравнивания для TableColumnItem (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72369083"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `Alignment`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `Alignment` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -55,11 +48,11 @@ ms.locfileid: "72369083"
 
 Центрирование центров данных, отображаемых в столбце.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [табличное представление](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Табличное представление](./creating-a-table-view.md)
 

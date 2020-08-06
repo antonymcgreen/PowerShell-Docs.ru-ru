@@ -1,19 +1,12 @@
 ---
 title: Элемент Виевселектедби (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: acdeef4d-3554-4f39-a7e6-a684e3848fd7
-caps.latest.revision: 19
-ms.openlocfilehash: efc1c5d1338889ecd0be7150b7733842ce78979e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c8704c1504c6e24c9cac6bc8bc25e92a0d9110cc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367973"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785019"
 ---
 # <a name="viewselectedby-element-format"></a>Элемент ViewSelectedBy (формат)
 
@@ -32,30 +25,30 @@ ms.locfileid: "72367973"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ViewSelectedBy`. Этот элемент должен содержать по крайней мере один `TypeName` или `SelectionSetName` дочерний элемент. Количество дочерних элементов, которые можно указать, не ограничено, а их порядок не является значимым.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ViewSelectedBy` элемента. Этот элемент должен содержать по крайней мере один `TypeName` или `SelectionSetName` дочерний элемент. Количество дочерних элементов, которые можно указать, не ограничено, а их порядок не является значимым.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент TypeName для Виевселектедби (Format)](./typename-element-for-viewselectedby-format.md)|Необязательный элемент.<br /><br /> Задает объект .NET, отображаемый представлением.|
-|[Элемент Селектионсетнаме для Виевселектедби (Format)](./selectionsetname-element-for-viewselectedby-format.md)|Необязательный элемент.<br /><br /> Задает набор объектов .NET, отображаемых представлением.|
+|[Элемент TypeName для элемента ViewSelectedBy (формат)](./typename-element-for-viewselectedby-format.md)|Необязательный элемент.<br /><br /> Задает объект .NET, отображаемый представлением.|
+|[Элемент SelectionSetName для элемента ViewSelectedBy (формат)](./selectionsetname-element-for-viewselectedby-format.md)|Необязательный элемент.<br /><br /> Задает набор объектов .NET, отображаемых представлением.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[View, элемент (Format)](./view-element-format.md)|Определяет представление, в котором отображается один или несколько объектов .NET.|
+|[Элемент View (формат)](./view-element-format.md)|Определяет представление, в котором отображается один или несколько объектов .NET.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Дополнительные сведения об использовании этого элемента в различных представлениях см. в разделе [компоненты табличного](./creating-a-table-view.md)представления, [Компоненты представления списка](./creating-a-list-view.md), [компоненты расширенного представления](./creating-a-wide-view.md)и [компоненты пользовательского элемента управления](./creating-custom-controls.md).
 
-Элемент `SelectionSetName` используется, когда файл форматирования определяет набор объектов, отображаемых несколькими представлениями. Дополнительные сведения о том, как определяются и указываются наборы выбора, см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
+`SelectionSetName`Элемент используется, когда файл форматирования определяет набор объектов, отображаемых несколькими представлениями. Дополнительные сведения о том, как определяются и указываются наборы выбора, см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
 
 ## <a name="example"></a>Пример
 
@@ -71,19 +64,19 @@ ms.locfileid: "72367973"
 </View>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание представления списка](./creating-a-list-view.md)
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
-[Создание расширенного представления](./creating-a-wide-view.md)
+[Создание широкого представления](./creating-a-wide-view.md)
 
 [Создание пользовательских элементов управления](./creating-custom-controls.md)
 
-[Определение наборов выбора](./defining-selection-sets.md)
+[Определение наборов выделенных фрагментов](./defining-selection-sets.md)
 
-[Элемент Селектионсетнаме для Виевселектедби (Format)](./selectionsetname-element-for-viewselectedby-format.md)
+[Элемент SelectionSetName для элемента ViewSelectedBy (формат)](./selectionsetname-element-for-viewselectedby-format.md)
 
 [Элемент TypeName (Format)](./typename-element-for-viewselectedby-format.md)
 

@@ -1,25 +1,18 @@
 ---
 title: Элемент Итемселектионкондитион для ListItem для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d2668aea-37e9-4753-a4e9-7980ae5ec2eb
-caps.latest.revision: 10
-ms.openlocfilehash: 6bc0ccbcc5bd62429f63ed220da66dc66f44f7ca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f5c388928668e03b96923130fb5849f637548f12
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365193"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783625"
 ---
 # <a name="itemselectioncondition-element-for-listitem-for-listcontrol-format"></a>Элемент ItemSelectionCondition для элемента ListItem для элемента ListControl (формат)
 
 Определяет условие, которое должно существовать для использования этого элемента списка.
 
-Элемент Configuration (Format) Виевдефинитионс элемент представления (Format) элемент ListControl (Format) элемент Листентриес для ListControl (Format) Листентри для Листентриес для ListControl (Format) элемент ListItems для Листентри Элемент ListControl (Format) ListItem для элементов ListItem для ListControl (Format) Итемселектионкондитион для элемента ListItem для ListControl (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (Format) элемент представления (формат) ListControl элемент (Format) Листентриес для ListControl (Format) Листентри элемент для Листентриес для ListControl (Format) элемент ListItem для листентри для элементов ListItem в ListControl (формат) ListControl для элемента SPListItem (формат) элемент для элементов ListItem для итемселектионкондитион (формат)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,35 +25,35 @@ ms.locfileid: "72365193"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ItemSelectionCondition`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ItemSelectionCondition` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент PropertyName для Итемселектионкондитион для ListControl (Format)](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
-|[Элемент ScriptBlock для Итемселектионкондитион для ListControl (Format)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает скрипт, который запускает условие.|
+|[Элемент PropertyName для элемента ItemSelectionCondition для элемента ListControl (формат)](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
+|[Элемент ScriptBlock для элемента ItemSelectionCondition для элемента ListControl (формат)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает скрипт, который запускает условие.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент ListItem для элементов ListItem для ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)|Определяет свойство или скрипт, значение которого отображается в строке представления списка.|
+|[Элемент ListItem для элемента ListItems для элемента ListControl (формат)](./listitem-element-for-listitems-for-listcontrol-format.md)|Определяет свойство или скрипт, значение которого отображается в строке представления списка.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Можно указать одно имя свойства или скрипт для этого условия, но не указывать оба значения.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент ListItem для элементов ListItem для ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)
+[Элемент ListItem для элемента ListItems для элемента ListControl (формат)](./listitem-element-for-listitems-for-listcontrol-format.md)
 
-[Элемент PropertyName для Итемселектионкондитион для ListControl (Format)](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md)
+[Элемент PropertyName для элемента ItemSelectionCondition для элемента ListControl (формат)](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md)
 
-[Элемент ScriptBlock для Итемселектионкондитион для ListControl (Format)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)
+[Элемент ScriptBlock для элемента ItemSelectionCondition для элемента ListControl (формат)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

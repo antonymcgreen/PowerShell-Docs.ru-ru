@@ -1,25 +1,18 @@
 ---
 title: Элемент Селектионсетнаме для Ентриселектедби для Видеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c9c6e18f-6cca-465c-bd20-3969e7897a96
-caps.latest.revision: 10
-ms.openlocfilehash: 6b6a4a4647412d11d947f1dc4ea12d1e05ff536e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 546225b0619ebec83d04a7e27bbc298ffef0a14d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361983"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785257"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-widecontrol-format"></a>Элемент SelectionSetName для элемента EntrySelectedBy для элемента WideControl (формат)
 
 Задает набор объектов .NET для определения. Определение используется при каждом отображении одного из этих объектов.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент (формат) Видеконтрол элемент (Format) Видинтриес элемент (Format) Видинтри элемент (Format) Ентриселектедби для Видинтри (Format) Селектионсетнаме элемент для Ентриселектедби для Видинтри (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Видеконтрол элемент (Format) Видинтриес элемент (Format) Видинтри элемент (Format) Ентриселектедби для видинтри (Format) Селектионсетнаме для EntrySelectedBy в WideEntry (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,27 +23,27 @@ ms.locfileid: "72361983"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `SelectionSetName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `SelectionSetName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Ентриселектедби для Видинтри (Format)](./entryselectedby-element-for-wideentry-format.md)|Определяет типы .NET, которые используют эту расширенную запись или условие, которое должно существовать для использования этой записи.|
+|[Элемент EntrySelectedBy для элемента WideEntry (формат)](./entryselectedby-element-for-wideentry-format.md)|Определяет типы .NET, которые используют эту расширенную запись или условие, которое должно существовать для использования этой записи.|
 
 ## <a name="text-value"></a>Текстовое значение
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Каждое определение должно содержать одно имя типа, набор выбора или условие выбора.
 
@@ -58,12 +51,12 @@ ms.locfileid: "72361983"
 
 Дополнительные сведения о других компонентах расширенного представления см. [в разделе Создание расширенного представления](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание расширенного представления](./creating-a-wide-view.md)
+[Создание широкого представления](./creating-a-wide-view.md)
 
-[Определение наборов выбора](./defining-selection-sets.md)
+[Определение наборов выделенных фрагментов](./defining-selection-sets.md)
 
-[Элемент Ентриселектедби для Видинтри (Format)](./entryselectedby-element-for-wideentry-format.md)
+[Элемент EntrySelectedBy для элемента WideEntry (формат)](./entryselectedby-element-for-wideentry-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

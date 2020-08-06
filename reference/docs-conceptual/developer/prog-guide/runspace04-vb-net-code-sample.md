@@ -1,19 +1,12 @@
 ---
 title: Пример кода RunSpace04 (VB.NET) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8f0dea3c-4354-4d7d-9823-5e6234c9a89e
-caps.latest.revision: 6
-ms.openlocfilehash: a0c04adb64ab5f2a9fd42fa7dee3977638d3b535
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 853e3d223843fb39b2e6a08a21d041a5e696ce2c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417948"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784764"
 ---
 # <a name="runspace04--vbnet-code-sample"></a>Пример кода RunSpace04 (VB.NET)
 
@@ -22,7 +15,7 @@ ms.locfileid: "74417948"
 > [!NOTE]
 > Вы можете скачать исходный файл VB.NET (runspace02. vb) для этого примера с помощью пакета средств разработки программного обеспечения Windows для компонентов среды выполнения Windows Vista и Microsoft .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory.
+> Скачанные исходные файлы доступны в **\<PowerShell Samples>** каталоге.
 
 ## <a name="code-sample"></a>Образец кода
 
@@ -115,8 +108,8 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace04.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace04.vb#L09-L92 "Runspace04.vb")] -->
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

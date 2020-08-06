@@ -1,19 +1,12 @@
 ---
 title: Динамические параметры командлета | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8ae2196d-d6c8-4101-8805-4190d293af51
-caps.latest.revision: 13
-ms.openlocfilehash: 19d31f6b619dff23e7e35bb53d2397f4f41eb728
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f44f71326d4711242c754c332a151dd997721595
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369883"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782367"
 ---
 # <a name="cmdlet-dynamic-parameters"></a>Динамические параметры командлета
 
@@ -24,9 +17,9 @@ ms.locfileid: "72369883"
 
 ## <a name="dynamic-parameters-in-powershell-cmdlets"></a>Динамические параметры в командлетах PowerShell
 
-PowerShell использует динамические параметры в нескольких командлетах поставщика. Например, командлеты `Get-Item` и `Get-ChildItem` добавляют параметр **CodeSigningCert** во время выполнения, когда параметр **path** указывает путь к поставщику **сертификата** . Если параметр **path** задает путь для другого поставщика, параметр **CodeSigningCert** недоступен.
+PowerShell использует динамические параметры в нескольких командлетах поставщика. Например, `Get-Item` `Get-ChildItem` командлеты и добавляют параметр **CodeSigningCert** во время выполнения, когда параметр **path** указывает путь к поставщику **сертификата** . Если параметр **path** задает путь для другого поставщика, параметр **CodeSigningCert** недоступен.
 
-В следующих примерах показано, как параметр **CodeSigningCert** добавляется во время выполнения при выполнении `Get-Item`.
+В следующих примерах показано, как параметр **CodeSigningCert** добавляется во время выполнения при `Get-Item` запуске.
 
 В этом примере среда выполнения PowerShell добавила параметр, а командлет — успешно.
 
@@ -109,12 +102,12 @@ public class SendGreetingCommandDynamicParameters
 
 Полный пример командлета, поддерживающего динамические параметры, см. [в разделе Объявление динамических параметров](./how-to-declare-dynamic-parameters.md).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [System. Management. Automation. Идинамикпараметерс](/dotnet/api/System.Management.Automation.IDynamicParameters)
 
 [System. Management. Automation. Идинамикпараметерс. Жетдинамикпараметерс](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
 
-[Объявление динамических параметров](./how-to-declare-dynamic-parameters.md)
+[Как объявить динамические параметры](./how-to-declare-dynamic-parameters.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

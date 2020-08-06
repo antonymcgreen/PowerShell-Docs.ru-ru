@@ -1,25 +1,18 @@
 ---
 title: Текстовый элемент для Кустомитем для Кустомвиев для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fab6c0f4-ba55-48ae-9c16-f9a998169239
-caps.latest.revision: 9
-ms.openlocfilehash: 00ff3a357cfef0b250bb55dd3a206d69d5d42609
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 94294665b481edabdb8ed920d1a209a609b18fd8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368123"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783387"
 ---
 # <a name="text-element-for-customitem-for-customview-for-view-format"></a>Элемент Text для элемента CustomItem для элемента CustomView для элемента View (формат)
 
 Задает текст, который добавляется в данные, отображаемые элементом управления, например метку, скобки для заключения данных, а также пробелы для отступа данных. Этот элемент используется при определении пользовательского представления элемента управления.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент ошибка customcontrol (Format) элемент Кустоментриес для ошибка customcontrol для элемента View (формат) Кустоментри для Кустоментриес для представления (Format) Кустомитем для Кустоментри для текстового элемента представления (Format) для Кустомитем (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ошибка customcontrol элемент (Format) Кустоментриес для ошибка customcontrol для элемента кустоментри представления (формат). для кустоментриес для элемента представления (Format) кустомитем для кустоментри (формат).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72368123"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `Text`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `Text` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,9 +42,9 @@ ms.locfileid: "72368123"
 
 Укажите текст элемента управления для данных, которые требуется отобразить.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Элемент Кустомитем для Кустоментри для представления (Format)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)
 

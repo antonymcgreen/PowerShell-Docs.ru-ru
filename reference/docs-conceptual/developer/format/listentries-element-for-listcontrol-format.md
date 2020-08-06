@@ -1,19 +1,12 @@
 ---
 title: Элемент Листентриес для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b62e81cc-4175-40fa-829f-634245b09f86
-caps.latest.revision: 12
-ms.openlocfilehash: aaf16702e485135b5299ccb43a2b62db2d9f5762
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0fe07e739c2d2fec153599ec6c0c0b3ecc14df18
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362763"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785716"
 ---
 # <a name="listentries-element-for-listcontrol-format"></a>Элемент ListEntries для элемента ListControl (формат)
 
@@ -31,11 +24,11 @@ ms.locfileid: "72362763"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ListEntries`. Необходимо указать по крайней мере один дочерний элемент.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ListEntries` элемента. Необходимо указать по крайней мере один дочерний элемент.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -47,9 +40,9 @@ ms.locfileid: "72362763"
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент ListControl (Format)](./listcontrol-element-format.md)|Определяет формат списка для представления.|
+|[Элемент ListControl (формат)](./listcontrol-element-format.md)|Определяет формат списка для представления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Дополнительные сведения о представлениях списков см. в разделе [представление списка](./creating-a-list-view.md).
 
@@ -73,9 +66,9 @@ ms.locfileid: "72362763"
 </View>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент ListControl (Format)](./listcontrol-element-format.md)
+[Элемент ListControl (формат)](./listcontrol-element-format.md)
 
 [Элемент Листентри (Format)](./listentry-element-for-listcontrol-format.md)
 

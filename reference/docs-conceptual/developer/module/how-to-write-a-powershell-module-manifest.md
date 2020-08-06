@@ -1,19 +1,12 @@
 ---
 title: Написание манифеста модуля PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 10/16/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
-caps.latest.revision: 23
-ms.openlocfilehash: 992148c9e39b6edbfa26907de03a5ae57691d831
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 734adab5ce26df6e26353de8e0bc9084e0fd3f3b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84148402"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784917"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Написание манифеста модуля PowerShell
 
@@ -66,7 +59,7 @@ ms.locfileid: "84148402"
 |**GUID**<br /> Тип: `GUID`|`'<GUID>'`|Идентификатор, используемый для уникальной идентификации этого модуля. Если значение не указано, `New-ModuleManifest` автоматически создает значение. В настоящее время модуль нельзя импортировать по **идентификатору GUID**. <br /> Например, `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`.|
 |**Author**<br /> Тип: `String`|`'<Current user>'`|Автор этого модуля. Если значение не указано, `New-ModuleManifest` использует текущего пользователя. <br /> Например, `Author = 'AuthorNameHere'`.|
 |**CompanyName**<br /> Тип: `String`|`'Unknown'`|Компания или поставщик этого модуля. Если значение не задано, `New-ModuleManifest` используется значение по умолчанию.<br /> Например, `CompanyName = 'Fabrikam'`.|
-|**Информация**<br /> Тип: `String`|`'(c) <Author>. All rights reserved.'`| Заявление об авторских правах для этого модуля. Если значение не указано, `New-ModuleManifest` то использует значение по умолчанию с текущим пользователем в качестве `<Author>` . Чтобы указать автора, используйте параметр **Author** . <br /> Например, `Copyright = '2019 AuthorName. All rights reserved.'`.|
+|**Copyright**<br /> Тип: `String`|`'(c) <Author>. All rights reserved.'`| Заявление об авторских правах для этого модуля. Если значение не указано, `New-ModuleManifest` то использует значение по умолчанию с текущим пользователем в качестве `<Author>` . Чтобы указать автора, используйте параметр **Author** . <br /> Например, `Copyright = '2019 AuthorName. All rights reserved.'`.|
 |**Описание**<br /> Тип: `String`|`<empty string>`|Описание функциональных возможностей, предоставляемых этим модулем.<br /> Например, `Description = 'This is the module's description.'`.|
 |**PowerShellVersion**<br /> Тип: `Version`|`<empty string>`|Минимальная версия модуля PowerShell, необходимая для этого модуля. Допустимые значения: 1,0, 2,0, 3,0, 4,0, 5,0, 5,1, 6 и 7.<br /> Например, `PowerShellVersion = '5.0'`.|
 |**повершеллхостнаме**<br /> Тип: `String`|`<empty string>`|Имя узла PowerShell, необходимого для этого модуля. Это имя предоставляется в PowerShell. Чтобы найти имя основной программы, в программе введите: `$host.name` .<br /> Например, `PowerShellHostName = 'ConsoleHost'`.|
@@ -88,7 +81,7 @@ ms.locfileid: "84148402"
 |**модулелист**<br /> Тип: `Object[]`|`@()`|Указывает все модули, Упакованные в этот модуль. Эти модули можно вводить по имени, используя строку с разделителями-запятыми или хэш-таблицу с ключами **ModuleName** и **GUID** . Хэш-таблица может также иметь **необязательный** ключ «ключом». Ключ **модулелист** предназначен для выполнения функций инвентаризации модуля. Эти модули не обрабатываются автоматически. <br /> Например, `ModuleList = @("SampleModule", "MyModule", @{ModuleName="MyModule"; ModuleVersion="1.0.0.0"; GUID="50cdb55f-5ab7-489f-9e94-4ec21ff51e59"})`.|
 |**Список файлов**<br /> Тип: `String[]`|`@()`|Список всех файлов, упакованных с помощью этого модуля. Как и в случае с **модулелист**, **FileList** — это список инвентаризации, который в противном случае не обрабатывается. <br /> Например, `FileList = @("File1", "File2", "File3")`.|
 |**PrivateData**<br /> Тип: `Object`|`@{...}`|Указывает все закрытые данные, которые необходимо передать в корневой модуль, заданный ключом **RootModule** (Alias: **модулетопроцесс**). **PrivateData** — это хэш-таблица, состоящая из нескольких элементов: **Tags**, **LicenseUri**, **ProjectURI**, **IconUri**, **ReleaseNotes**, **Предварительный выпуск**, **RequireLicenseAcceptance**и **екстерналмодуледепенденЦиес**. |
-|**Tags** <br /> Тип: `String[]` |`@()`| Теги помогают при поиске модулей в онлайн-галереях. <br /> Например, `Tags = "PackageManagement", "PowerShell", "Manifest"`.|
+|**Теги** <br /> Тип: `String[]` |`@()`| Теги помогают при поиске модулей в онлайн-галереях. <br /> Например, `Tags = "PackageManagement", "PowerShell", "Manifest"`.|
 |**LicenseUri**<br /> Тип: `Uri` |`<empty string>`| URL-адрес лицензии для этого модуля. <br /> Например, `LicenseUri = 'https://www.contoso.com/license'`.|
 |**ProjectUri**<br /> Тип: `Uri` |`<empty string>`| URL-адрес основного веб-сайта для этого проекта. <br /> Например, `ProjectUri = 'https://www.contoso.com/project'`.|
 |**IconUri**<br /> Тип: `Uri` |`<empty string>`| URL-адрес значка, представляющего этот модуль. <br /> Например, `IconUri = 'https://www.contoso.com/icons/icon.png'`.|
@@ -237,7 +230,7 @@ PrivateData = @{
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [about_Comparison_Operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
 
@@ -245,7 +238,7 @@ PrivateData = @{
 
 [Глобальный кэш сборок](/dotnet/framework/app-domains/gac)
 
-[Импорт-модуль](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
+[Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
 
 [New-ModuleManifest](/powershell/module/microsoft.powershell.core/new-modulemanifest)
 

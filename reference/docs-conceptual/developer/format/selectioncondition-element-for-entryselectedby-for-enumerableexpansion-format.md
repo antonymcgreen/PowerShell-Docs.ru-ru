@@ -1,25 +1,18 @@
 ---
 title: Элемент Селектионкондитион для Ентриселектедби для Енумерабликспансион (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8c012115-9241-4851-9015-841eb508faf3
-caps.latest.revision: 10
-ms.openlocfilehash: d6adf2fa62384d671fd6a07dd185a941daa44cec
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d5858145e092dc962174a776889a4f62db366d71
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362013"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785342"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
 
 Определяет условие, которое должно существовать для расширения объектов коллекции этого определения.
 
-Элемент конфигурации (Format) Дефаултсеттингс элемент (Format) Енумерабликспансионс элемент (Format) Енумерабликспансион элемент (Format) Ентриселектедби элемент для енумерабликспансион (Format) SelectionCondition для EntrySelectedBy Енумерабликспансион (формат)
+Элемент конфигурации (Format) Дефаултсеттингс элемент (Format) Енумерабликспансионс элемент (Format) Енумерабликспансион элемент (Format) Ентриселектедби элемент для енумерабликспансион (Format) SelectionCondition для EntrySelectedBy в EnumerableExpansion (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,28 +27,28 @@ ms.locfileid: "72362013"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `SelectionCondition`. Необходимо указать один элемент `PropertyName` или `ScriptBlock`. Элементы `SelectionSetName` и `TypeName` необязательны. Можно указать один из этих элементов.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `SelectionCondition` элемента. Необходимо указать один `PropertyName` `ScriptBlock` элемент или. `SelectionSetName`Элементы и `TypeName` являются необязательными. Можно указать один из этих элементов.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент PropertyName для Селектионкондитион для Ентриселектедби для Енумерабликспансион (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
-|[Элемент ScriptBlock для Селектионкондитион для Ентриселектедби для Енумерабликспансион (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Указывает скрипт, который запускает условие.|
-|[Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Енумерабликспансион (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Указывает набор типов .NET, которые инициируют условие.|
-|[Элемент TypeName для Селектионкондитион для Ентриселектедби для Енумерабликспансион (Format)](./typename-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Указывает тип .NET, который запускает условие.|
+|[Элемент PropertyName для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
+|[Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Указывает скрипт, который запускает условие.|
+|[Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Указывает набор типов .NET, которые инициируют условие.|
+|[Элемент TypeName для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)](./typename-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Указывает тип .NET, который запускает условие.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Ентриселектедби для Енумерабликспансион (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)|Определяет, какие объекты коллекции .NET разворачиваются этим определением.|
+|[Элемент EntrySelectedBy для элемента EnumerableExpansion (формат)](./entryselectedby-element-for-enumerableexpansion-format.md)|Определяет, какие объекты коллекции .NET разворачиваются этим определением.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Каждое определение должно иметь по крайней мере одно определенное имя типа, набор выбора или условие выбора.
 
@@ -69,7 +62,7 @@ ms.locfileid: "72362013"
 
 Дополнительные сведения о других компонентах расширенного представления см. в разделе [широкие представления](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md)
 

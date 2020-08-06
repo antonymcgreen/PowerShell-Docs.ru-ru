@@ -1,25 +1,18 @@
 ---
 title: Элемент Кустоментриес для ошибка customcontrol элементов управления для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3485958a-ba87-4932-907c-a8f140c4abdb
-caps.latest.revision: 8
-ms.openlocfilehash: 4856aee930285781a101868bd6cb67824585bce1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a52bd2368044c34a0b73da331785d55597e30260
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368813"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783710"
 ---
 # <a name="customentries-element-for-customcontrol-for-controls-for-view-format"></a>Элемент CustomEntries для элемента CustomControl для элемента Controls для элемента View (формат)
 
 Предоставляет определения для элемента управления. Этот элемент используется при определении элементов управления, которые могут использоваться представлением.
 
-Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет управляющий элемент (Format) элемент управления для элементов управления представления (Format) ошибка customcontrol для элементов управления элемента Кустоментриес представления (Format) для Ошибка customcontrol для элементов управления для представления (формат)
+Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет элементом управления "элемент (Format)" для элементов управления для элемента "View" (Format) ошибка customcontrol для элемента управления элементов
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,32 +24,32 @@ ms.locfileid: "72368813"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы элемента `CustomEntries`. Максимальное количество дочерних элементов, которое можно указать, не ограничено.
+В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы `CustomEntries` элемента. Максимальное количество дочерних элементов, которое можно указать, не ограничено.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Кустоментри для Кустоментриес элементов управления для представления (формат)](./customentry-element-for-customentries-for-controls-for-view-format.md)|Обязательный элемент.<br /><br /> Предоставляет определение элемента управления.|
+|[Элемент CustomEntry для элемента CustomEntries для элемента Controls для элемента View (формат)](./customentry-element-for-customentries-for-controls-for-view-format.md)|Обязательный элемент.<br /><br /> Предоставляет определение элемента управления.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент ошибка customcontrol для элемента управления для элементов управления в представлении (формат)](./customcontrol-element-for-control-for-controls-for-view-format.md)|Определяет элемент управления, используемый представлением.|
+|[Элемент CustomControl для элемента Control для элемента Controls для элемента View (формат)](./customcontrol-element-for-control-for-controls-for-view-format.md)|Определяет элемент управления, используемый представлением.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-В большинстве случаев элемент управления имеет только одно определение, которое указывается в одном элементе `CustomEntry`. Однако можно предоставить несколько определений, если вы хотите использовать один и тот же элемент управления для вывода различных объектов .NET. В таких случаях можно определить элемент `CustomEntry` для каждого объекта или набора объектов.
+В большинстве случаев элемент управления имеет только одно определение, которое указывается в одном `CustomEntry` элементе. Однако можно предоставить несколько определений, если вы хотите использовать один и тот же элемент управления для вывода различных объектов .NET. В таких случаях можно определить `CustomEntry` элемент для каждого объекта или набора объектов.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Кустоментри для Кустоментриес элементов управления для представления (формат)](./customentry-element-for-customentries-for-controls-for-view-format.md)
+[Элемент CustomEntry для элемента CustomEntries для элемента Controls для элемента View (формат)](./customentry-element-for-customentries-for-controls-for-view-format.md)
 
-[Элемент ошибка customcontrol для элемента управления для элементов управления в представлении (формат)](./customcontrol-element-for-control-for-controls-for-view-format.md)
+[Элемент CustomControl для элемента Control для элемента Controls для элемента View (формат)](./customcontrol-element-for-control-for-controls-for-view-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

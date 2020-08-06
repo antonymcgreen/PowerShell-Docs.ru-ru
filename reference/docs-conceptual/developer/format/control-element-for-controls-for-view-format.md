@@ -1,19 +1,12 @@
 ---
 title: Элемент Control для элементов управления для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1fd53f55-698d-4df5-bb9a-fe28dc3193e1
-caps.latest.revision: 11
-ms.openlocfilehash: df568ccb36a2646b983622cdf95718dd5cac62c3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 13ea2f09aec7fea8e5460197f133b5f5219cd369
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363473"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783812"
 ---
 # <a name="control-element-for-controls-for-view--format"></a>Элемент Control для элемента Controls для элемента View (формат)
 
@@ -32,18 +25,18 @@ ms.locfileid: "72363473"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `Control`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `Control` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
 |[Элемент Name элемента управления для представления (формат)](./name-element-for-control-for-controls-for-view-format.md)|Обязательный элемент.<br /><br /> Задает имя элемента управления.|
-|[Элемент ошибка customcontrol для элемента управления для элементов управления в представлении (формат)](./customcontrol-element-for-control-for-controls-for-view-format.md)|Обязательный элемент.<br /><br /> Определяет элемент управления, используемый этим представлением.|
+|[Элемент CustomControl для элемента Control для элемента Controls для элемента View (формат)](./customcontrol-element-for-control-for-controls-for-view-format.md)|Обязательный элемент.<br /><br /> Определяет элемент управления, используемый этим представлением.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -51,32 +44,32 @@ ms.locfileid: "72363473"
 |-------------|-----------------|
 |[Элемент Controls (Format)](./controls-element-for-view-format.md)|Определяет элементы управления представления, которые могут использоваться в определенном представлении.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Этот элемент управления может быть задан следующими элементами:
 
-- [Элемент Кустомконтролнаме для ExpressionBinding элементов управления для представления (формат)](./customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md)
+- [Элемент CustomControlName для элемента ExpressionBinding для элемента Controls для элемента View (формат)](./customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md)
 
-- [Элемент Кустомконтролнаме для ExpressionBinding для ошибка customcontrol для представления (Format)](./customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md)
+- [Элемент CustomControlName для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)](./customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md)
 
-- [Элемент Кустомконтролнаме для ExpressionBinding для GroupBy (Format)](./customcontrolname-element-for-expressionbinding-for-groupby-format.md)
+- [Элемент CustomControlName для элемента ExpressionBinding для GroupBy (формат)](./customcontrolname-element-for-expressionbinding-for-groupby-format.md)
 
-- [Элемент Кустомконтролнаме для GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)
+- [Элемент CustomControlName для элемента GroupBy (формат)](./customcontrolname-element-for-groupby-format.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент ошибка customcontrol для элемента управления для элементов управления в представлении (формат)](./customcontrol-element-for-control-for-controls-for-view-format.md)
+[Элемент CustomControl для элемента Control для элемента Controls для элемента View (формат)](./customcontrol-element-for-control-for-controls-for-view-format.md)
 
-[Элемент Кустомконтролнаме для ExpressionBinding элементов управления для представления (формат)](./customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md)
+[Элемент CustomControlName для элемента ExpressionBinding для элемента Controls для элемента View (формат)](./customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md)
 
-[Элемент Кустомконтролнаме для ExpressionBinding для ошибка customcontrol для представления (Format)](./customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md)
+[Элемент CustomControlName для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)](./customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md)
 
-[Элемент Кустомконтролнаме для ExpressionBinding для GroupBy (Format)](./customcontrolname-element-for-expressionbinding-for-groupby-format.md)
+[Элемент CustomControlName для элемента ExpressionBinding для GroupBy (формат)](./customcontrolname-element-for-expressionbinding-for-groupby-format.md)
 
-[Элемент Кустомконтролнаме для ExpressionBinding для GroupBy (Format)](./customcontrolname-element-for-expressionbinding-for-groupby-format.md)
+[Элемент CustomControlName для элемента ExpressionBinding для GroupBy (формат)](./customcontrolname-element-for-expressionbinding-for-groupby-format.md)
 
 [Элемент Controls (Format)](./controls-element-for-view-format.md)
 
-[Элемент Name для элемента управления для элементов управления в представлении (формат)](./name-element-for-control-for-controls-for-view-format.md)
+[Элемент Name для элемента Control для элемента Controls для элемента View (формат)](./name-element-for-control-for-controls-for-view-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

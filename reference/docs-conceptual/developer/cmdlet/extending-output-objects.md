@@ -1,27 +1,20 @@
 ---
 title: Расширение выходных объектов | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a252e0ec-d456-42d7-bd49-d6b8bc57f388
-caps.latest.revision: 11
-ms.openlocfilehash: 12a826363221b8a7ce06245c787a7bd0529e42f8
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 48f4f2996159d84257ad72d499e3a796aeaa9116
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690901"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784322"
 ---
 # <a name="extending-output-objects"></a>Расширение объектов выходных данных
 
-.NET Framework объекты, возвращаемые командлетами, функциями и скриптами, можно расширить с помощью файлов типов (. ps1xml). Файлы типов — это файлы на основе XML, которые позволяют добавлять свойства и методы в существующие объекты. Например, Windows PowerShell предоставляет файл Types. ps1xml, который добавляет элементы в несколько существующих объектов .NET Framework. Файл Types. ps1xml находится в каталоге установки Windows PowerShell ( `$pshome` ). Вы можете создать собственный файл типов, чтобы расширить эти объекты или расширить другие объекты. При расширении объекта с помощью файла типов любой экземпляр объекта расширяется с помощью новых элементов.
+.NET Framework объекты, возвращаемые командлетами, функциями и скриптами, можно расширить с помощью файлов типов (. ps1xml). Файлы типов — это файлы на основе XML, которые позволяют добавлять свойства и методы в существующие объекты. Например, Windows PowerShell предоставляет Types.ps1XML-файл, который добавляет элементы в несколько существующих объектов .NET Framework. Types.ps1XML-файл находится в каталоге установки Windows PowerShell ( `$pshome` ). Вы можете создать собственный файл типов, чтобы расширить эти объекты или расширить другие объекты. При расширении объекта с помощью файла типов любой экземпляр объекта расширяется с помощью новых элементов.
 
 ## <a name="extending-the-systemarray-object"></a>Расширение объекта System. Array
 
-В следующем примере показано, как Windows PowerShell расширяет объект [System. Array](/dotnet/api/System.Array) в файле Types. ps1xml. По умолчанию объекты [System. Array](/dotnet/api/System.Array) имеют `Length` свойство, которое перечисляет количество объектов в массиве. Однако, поскольку имя "Length" явно не описывает свойство, Windows PowerShell добавляет `Count` свойство Alias, которое отображает то же значение, что и `Length` свойство. Следующий XML-код добавляет `Count` свойство в тип [System. Array](/dotnet/api/System.Array) .
+В следующем примере показано, как Windows PowerShell расширяет объект [System. Array](/dotnet/api/System.Array) в Types.ps1XML-файле. По умолчанию объекты [System. Array](/dotnet/api/System.Array) имеют `Length` свойство, которое перечисляет количество объектов в массиве. Однако, поскольку имя "Length" явно не описывает свойство, Windows PowerShell добавляет `Count` свойство Alias, которое отображает то же значение, что и `Length` свойство. Следующий XML-код добавляет `Count` свойство в тип [System. Array](/dotnet/api/System.Array) .
 
 ```xml
 <Type>
@@ -89,14 +82,14 @@ PS> (1, 2, 3, 4).Length
 
 После определения собственных расширенных типов используйте один из следующих методов, чтобы сделать доступными расширенные объекты:
 
-- Чтобы сделать файл расширенных типов доступным для текущего сеанса, используйте командлет [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) , чтобы добавить новый файл. Если требуется, чтобы типы применялись к типам, определенным в файлах других типов (включая Types. ps1xml), используйте `PrependData` параметр командлета [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) .
+- Чтобы сделать файл расширенных типов доступным для текущего сеанса, используйте командлет [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) , чтобы добавить новый файл. Если требуется, чтобы типы применялись к типам, определенным в файлах других типов (включая файл Types.ps1XML), используйте `PrependData` параметр командлета [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) .
 - Чтобы сделать файл расширенных типов доступным для всех будущих сеансов, добавьте файл типов в модуль, экспортируйте текущий сеанс или добавьте команду [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) в профиль Windows PowerShell.
 
 ## <a name="signing-types-files"></a>Файлы типов подписывания
 
 Файлы типов должны иметь цифровую подпись, чтобы предотвратить незаконное изменение, так как XML может включать блоки сценариев. Дополнительные сведения о добавлении цифровых подписей см. в разделе [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Определение свойств по умолчанию для объектов](./extending-properties-for-objects.md)
 

@@ -1,25 +1,18 @@
 ---
 title: Элемент ScriptBlock для Селектионкондитион для Ентриселектедби для Таблеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2b11fbcf-3426-48ae-9319-2c847969f723
-caps.latest.revision: 10
-ms.openlocfilehash: 7afc834e68ef332bee1e23da782fb5c5527fcf54
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a23d3515749393e9f5a2053634a44d1a817ebf38
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368583"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783455"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
 
-Указывает блок скрипта, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется запись таблицы.
+Указывает блок скрипта, который запускает условие. При вычислении этого скрипта `true` выполняется условие, и используется запись в таблице.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Ентриселектедби для Таблеровентри (Format) Элемент Селектионкондитион для Ентриселектедби для элемента ScriptBlock Таблеровентри (Format) для Селектионкондитион для ентриселектедби в TableRowEntry (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Ентриселектедби для Таблеровентри (Format) SelectionCondition для EntrySelectedBy в TableRowEntry для SelectionCondition в EntrySelectedBy (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72368583"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ScriptBlock`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ScriptBlock` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,19 +42,19 @@ ms.locfileid: "72368583"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Условие выбора должно указывать по крайней мере один блок скрипта или имя свойства, но не может одновременно указывать оба значения. Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для, когда используется запись или элемент представления](./defining-conditions-for-displaying-data.md).
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
 [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md)
 
-[Элемент PropertyName для Селектионкондитион для Ентриселектедби для Таблеровентри (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md)
+[Элемент PropertyName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableRowEntry (формат)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md)
 
 [Элемент Селектионкондитион для Ентриселектедби для Таблеровентри (Format)](./selectioncondition-element-for-entryselectedby-for-tablecontrol-format.md)
 

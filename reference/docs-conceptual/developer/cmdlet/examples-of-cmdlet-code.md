@@ -1,19 +1,12 @@
 ---
 title: Примеры кода командлета | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6fed2f68-ce6d-4a8f-bf21-f94f27a155c2
-caps.latest.revision: 9
-ms.openlocfilehash: 936728d64f30a08fb9e2fa9ccef103683594aa3e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2d2597d3d3f64cae1c1494eb2f05873f6feae5e0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364503"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784339"
 ---
 # <a name="examples-of-cmdlet-code"></a>Примеры кода командлетов
 
@@ -22,7 +15,7 @@ ms.locfileid: "72364503"
 > [!IMPORTANT]
 > Пошаговые инструкции по написанию командлетов см. в [руководствах по написанию командлетов](./tutorials-for-writing-cmdlets.md).
 
-## <a name="in-this-section"></a>Содержание
+## <a name="in-this-section"></a>В этом разделе
 
 [Написание простого командлета](./how-to-write-a-simple-cmdlet.md) В этом примере показана базовая структура кода командлета.
 
@@ -46,6 +39,6 @@ ms.locfileid: "72364503"
 
 [Вызов командлета из командлета](./how-to-invoke-a-cmdlet-from-within-a-cmdlet.md) В этом примере показано, как вызвать командлет из другого командлета, который позволяет добавлять функциональные возможности вызванного командлета в разрабатываемый командлет.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

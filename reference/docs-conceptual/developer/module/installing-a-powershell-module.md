@@ -1,19 +1,12 @@
 ---
 title: Установка модуля PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
-caps.latest.revision: 28
-ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6a4e9ac2884d0b300b5c1ad8b6156525438a1650
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367073"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784866"
 ---
 # <a name="installing-a-powershell-module"></a>Установка модуля PowerShell
 
@@ -31,14 +24,14 @@ ms.locfileid: "72367073"
 
 По умолчанию значение переменной среды **PSModulePath** содержит следующие системные и пользовательские каталоги модулей, но можно добавлять и изменять значения.
 
-- `$PSHome\Modules` (%Windir%\System32\WindowsPowerShell\v1.0\Modules)
+- `$PSHome\Modules`(%Windir%\System32\WindowsPowerShell\v1.0\Modules)
 
   > [!WARNING]
   > Это расположение зарезервировано для модулей, поставляемых с Windows. Не устанавливайте модули в это расположение.
 
-- `$Home\Documents\WindowsPowerShell\Modules` (%Усерпрофиле%\документс\виндовсповершелл\модулес)
+- `$Home\Documents\WindowsPowerShell\Modules`(%Усерпрофиле%\документс\виндовсповершелл\модулес)
 
-- `$Env:ProgramFiles\WindowsPowerShell\Modules` (%Програмфилес%\виндовсповершелл\модулес)
+- `$Env:ProgramFiles\WindowsPowerShell\Modules`(%Програмфилес%\виндовсповершелл\модулес)
 
   Чтобы получить значение переменной среды **PSModulePath** , используйте одну из следующих команд.
 
@@ -62,7 +55,7 @@ ms.locfileid: "72367073"
   ```
 
   > [!IMPORTANT]
-  > После добавления пути к **PSModulePath**следует транслировать сообщение окружения об изменении. Широковещательная рассылка изменений позволяет другим приложениям, таким как оболочка, принимать изменения. Чтобы выполнить широковещательную рассылку изменений, попросите код установки продукта отправить **WM_SETTINGCHANGE** сообщение с `lParam` для строки "Environment". Не забудьте отправить сообщение после того, как код установки модуля обновил **PSModulePath**.
+  > После добавления пути к **PSModulePath**следует транслировать сообщение окружения об изменении. Широковещательная рассылка изменений позволяет другим приложениям, таким как оболочка, принимать изменения. Чтобы выполнить широковещательную рассылку изменений, попросите код установки продукта отправить **WM_SETTINGCHANGE** сообщение со `lParam` значением "Environment" в строке "среда". Не забудьте отправить сообщение после того, как код установки модуля обновил **PSModulePath**.
 
 ### <a name="use-the-correct-module-directory-name"></a>Использовать правильное имя каталога модулей
 
@@ -70,7 +63,7 @@ ms.locfileid: "72367073"
 
 "Базовое имя" файла — это имя без расширения имени файла. В правильно оформленном модуле имя каталога, содержащего файлы модулей, должно совпадать с базовым именем по крайней мере одного файла в модуле.
 
-Например, в примере модуля Fabrikam каталог, содержащий файлы модулей, называется Fabrikam, а по крайней мере один файл имеет базовое имя "Fabrikam". В этом случае Fabrikam. PSD1 и Fabrikam. DLL имеют базовое имя "Fabrikam".
+Например, в примере модуля Fabrikam каталог, содержащий файлы модулей, называется Fabrikam, а по крайней мере один файл имеет базовое имя "Fabrikam". В этом случае и Fabrikam.psd1, и Fabrikam.dll имеют базовое имя "Fabrikam".
 
 ```
 C:\Program Files
@@ -89,7 +82,7 @@ C:\Program Files
 
 - Функция автоматической загрузки модуля не может автоматически импортировать модуль.
 
-- Параметр `ListAvailable` командлета [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) не может найти модуль.
+- `ListAvailable`Параметру командлета [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) не удается найти модуль.
 
 - Командлету [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) не удается найти модуль. Чтобы импортировать модуль, необходимо указать полный путь к файлу корневого модуля или файла манифеста модуля.
 
@@ -101,7 +94,7 @@ C:\Program Files
 
 - Командлету " [Показать-команда](/powershell/module/Microsoft.PowerShell.Utility/Show-Command) " не удается найти и отобразить команды в модуле.
 
-  Команды в модуле отсутствуют в окне `Show-Command` в интегрированной среде сценариев Windows PowerShell (ISE).
+  Команды в модуле отсутствуют в `Show-Command` окне в интегрированной среде сценариев Windows PowerShell (ISE).
 
 ## <a name="where-to-install-modules"></a>Место установки модулей
 
@@ -153,7 +146,7 @@ $p += ";C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 
 Если модуль используется несколькими компонентами продукта или несколькими версиями продукта, установите модуль в подкаталог, зависящий от модуля, в подкаталоге%ProgramFiles%\Common Филес\модулес.
 
-В следующем примере модуль Fabrikam устанавливается в подкаталог Fabrikam подкаталога `%ProgramFiles%\Common Files\Modules`. Обратите внимание, что каждый модуль находится в отдельном подкаталоге в подкаталоге modules.
+В следующем примере модуль Fabrikam устанавливается в подкаталог Fabrikam `%ProgramFiles%\Common Files\Modules` подкаталога. Обратите внимание, что каждый модуль находится в отдельном подкаталоге в подкаталоге modules.
 
 ```
 C:\Program Files
@@ -185,7 +178,7 @@ $p = $q -join ';'
 2. Создайте манифест модуля для каждой версии модуля. В поле **значение ключа "** в манифесте" введите номер версии модуля. Сохраните файл манифеста (. PSD1) в каталоге, зависящем от версии, для модуля.
 3. Добавьте путь к корневой папке модуля в значение переменной среды **PSModulePath** , как показано в следующих примерах.
 
-Чтобы импортировать определенную версию модуля, конечный пользователь может использовать `MinimumVersion` или `RequiredVersion` параметры командлета [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
+Чтобы импортировать определенную версию модуля, конечный пользователь может использовать `MinimumVersion` `RequiredVersion` Параметры или командлета [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
 
 Например, если модуль Fabrikam доступен в версиях 8,0 и 9,0, структура каталогов модуля Fabrikam может выглядеть следующим образом.
 
@@ -210,7 +203,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-После выполнения этих действий параметр **ListAvailable** командлета [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) получает оба модуля Fabrikam. Чтобы импортировать определенный модуль, используйте параметры `MinimumVersion` или `RequiredVersion` командлета [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
+После выполнения этих действий параметр **ListAvailable** командлета [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) получает оба модуля Fabrikam. Чтобы импортировать определенный модуль, используйте `MinimumVersion` `RequiredVersion` Параметры или командлета [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
 
 Если оба модуля импортируются в один сеанс, а модули содержат командлеты с одинаковыми именами, командлеты, импортируемые последними, вступают в силу в этом сеансе.
 
@@ -220,7 +213,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 
 Если сеанс содержит две команды с одинаковыми именами, Windows PowerShell выполняет тип команды, имеющий приоритет. Если сеанс содержит две команды с одинаковым именем и одним и тем же типом, Windows PowerShell выполняет команду, которая была добавлена в сеанс в последнее время. Чтобы выполнить команду, которая не выполняется по умолчанию, пользователи могут указать имя модуля в качестве имени команды.
 
-Например, если сеанс содержит функцию `Get-Date` и командлет `Get-Date`, Windows PowerShell по умолчанию выполняет эту функцию. Чтобы выполнить командлет, перед командой введите имя модуля, например:
+Например, если сеанс содержит `Get-Date` функцию и `Get-Date` командлет, Windows PowerShell по умолчанию выполняет эту функцию. Чтобы выполнить командлет, перед командой введите имя модуля, например:
 
 ```powershell
 Microsoft.PowerShell.Utility\Get-Date
@@ -228,9 +221,9 @@ Microsoft.PowerShell.Utility\Get-Date
 
 Чтобы предотвратить конфликты имен, авторы модулей могут использовать ключ **DefaultCommandPrefix** в манифесте модуля, чтобы указать префикс существительное для всех команд, экспортируемых из модуля.
 
-Пользователи могут использовать параметр **prefix** командлета `Import-Module` для использования альтернативного префикса. Значение параметра **prefix** имеет приоритет над значением ключа **DefaultCommandPrefix** .
+Пользователи могут использовать параметр **prefix** `Import-Module` командлета для использования альтернативного префикса. Значение параметра **prefix** имеет приоритет над значением ключа **DefaultCommandPrefix** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [about_Command_Precedence](/powershell/module/microsoft.powershell.core/about/about_command_precedence)
 

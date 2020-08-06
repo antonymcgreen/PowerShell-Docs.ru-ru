@@ -1,23 +1,16 @@
 ---
 title: Пример Runspace10 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7c265084-e072-46ca-9844-c3c0e275d6b0
-caps.latest.revision: 7
-ms.openlocfilehash: 1a73c0b6731073b1bac941e323416e8c45d2c252
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 4d858c432c6221f2347f6de664d1e4ee299f5801
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565246"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784951"
 ---
 # <a name="runspace10-sample"></a>Пример Runspace10
 
-В этом примере показано, как создать начальное состояние сеанса по умолчанию, как добавить командлет в [System. Management. Automation. пространствей. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), как создать пространство выполнения, которое использует исходное состояние сеанса, и как выполнить команду с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+В этом примере показано, как создать начальное состояние сеанса по умолчанию, как добавить командлет в [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), как создать пространство выполнения, использующее исходное состояние сеанса, и как выполнить команду с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
 ## <a name="requirements"></a>Требования
 
@@ -27,9 +20,9 @@ ms.locfileid: "83565246"
 
 В этом образце демонстрируется следующее.
 
-- Создание объекта [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+- Создание объекта [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 
-- Добавление командлета (определенного ведущим приложением) в объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+- Добавление командлета (определенного ведущим приложением) в объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 
 - Создание объекта [System. Management. Automation. пространства выполнения](/dotnet/api/System.Management.Automation.Runspaces.Runspace) , использующего объект.
 
@@ -41,7 +34,7 @@ ms.locfileid: "83565246"
 
 ## <a name="example"></a>Пример
 
-В этом примере создается пространство выполнения, в котором используется объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) для определения элементов, доступных при открытии пространства выполнения. В этом примере командлет Get-proc (определенный ведущим приложением) добавляется в исходное состояние сеанса, а командлет выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+В этом примере создается пространство выполнения, которое использует объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) для определения элементов, доступных при открытии пространства выполнения. В этом примере командлет Get-proc (определенный ведущим приложением) добавляется в исходное состояние сеанса, а командлет выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -155,6 +148,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

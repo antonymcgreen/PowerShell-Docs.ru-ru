@@ -1,19 +1,12 @@
 ---
 title: Элемент ShowError (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a456e5df-fbf9-42b6-a6d8-4b2adafb86b1
-caps.latest.revision: 9
-ms.openlocfilehash: ff320619b7f768718ace7d482332a60a73c625b7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4b48e532aeb51a947b1dc4f49c2487bb41e5d0bb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368243"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785223"
 ---
 # <a name="showerror-element-format"></a>Элемент ShowError (формат)
 
@@ -29,24 +22,24 @@ ms.locfileid: "72368243"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ShowError`. Значение по умолчанию для этого элемента — `false`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ShowError` элемента. Значение по умолчанию для этого элемента — `false` .
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Дефаултсеттингс (Format)](./defaultsettings-element-format.md)|Определяет общие параметры, которые применяются ко всем представлениям файла форматирования.|
+|[Элемент DefaultSettings (формат)](./defaultsettings-element-format.md)|Определяет общие параметры, которые применяются ко всем представлениям файла форматирования.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

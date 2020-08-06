@@ -1,19 +1,12 @@
 ---
 title: Элемент Видинтриес для Видеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0c4bff45-0960-4b3a-95e7-47f2cee03ac5
-caps.latest.revision: 12
-ms.openlocfilehash: 083f3c8df8136858e32778ed231943ef983e47aa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 74383b288c945008c1d7b5119363a166c04802ae
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361433"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785053"
 ---
 # <a name="wideentries-element-for-widecontrol-format"></a>Элемент WideEntries для WideControl (формат)
 
@@ -32,11 +25,11 @@ ms.locfileid: "72361433"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `WideEntries`. Необходимо указать по крайней мере один дочерний элемент.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `WideEntries` элемента. Необходимо указать по крайней мере один дочерний элемент.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -48,15 +41,15 @@ ms.locfileid: "72361433"
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Видеконтрол (Format)](./widecontrol-element-format.md)|Определяет для представления широкий формат списка (одно значение).|
+|[Элемент WideControl (формат)](./widecontrol-element-format.md)|Определяет для представления широкий формат списка (одно значение).|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Расширенное представление — это формат списка, который отображает одно значение свойства или значение скрипта для каждого объекта. Дополнительные сведения о компонентах широкого представления см. в разделе [широкие компоненты представления](./creating-a-wide-view.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан элемент `WideEntries`, определяющий один элемент `WideEntry`. Элемент `WideEntry` содержит один элемент `WideItem`, который определяет, какое свойство или значение скрипта отображается в представлении.
+В следующем примере показан `WideEntries` элемент, определяющий один `WideEntry` элемент. `WideEntry`Элемент содержит единственный `WideItem` элемент, который определяет, какое свойство или значение скрипта отображается в представлении.
 
 ```xml
 <WideControl>
@@ -70,11 +63,11 @@ ms.locfileid: "72361433"
 
 Полный пример расширенного представления см. в разделе [широкие представления (базовый)](./wide-view-basic.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание расширенного представления](./creating-a-wide-view.md)
+[Создание широкого представления](./creating-a-wide-view.md)
 
-[Элемент Видеконтрол (Format)](./widecontrol-element-format.md)
+[Элемент WideControl (формат)](./widecontrol-element-format.md)
 
 [Элемент Видинтри (Format)](./wideentry-element-for-widecontrol-format.md)
 

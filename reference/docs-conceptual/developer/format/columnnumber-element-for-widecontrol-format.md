@@ -1,19 +1,12 @@
 ---
 title: Элемент ColumnNumber для Видеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fe9eb5f9-a193-41a4-ad47-a96ba3f8d7e3
-caps.latest.revision: 8
-ms.openlocfilehash: 49f501538b8f72777984a5e575b999866abcdebf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5f151bb0e629efcebe6295cdcae6cebcbbb1b39b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364223"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783863"
 ---
 # <a name="columnnumber-element-for-widecontrol-format"></a>Элемент ColumnNumber для WideControl (формат)
 
@@ -29,29 +22,29 @@ ms.locfileid: "72364223"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ColumnNumber`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ColumnNumber` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Описание|
+|Элемент|Description|
 |-------------|-----------------|
-|[Элемент Видеконтрол (Format)](./widecontrol-element-format.md)|Определяет для представления широкий формат списка (одно значение).|
+|[Элемент WideControl (формат)](./widecontrol-element-format.md)|Определяет для представления широкий формат списка (одно значение).|
 
 ## <a name="text-value"></a>Текстовое значение
 
 Укажите положительное целое значение.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
-При определении расширенного представления можно добавить элемент `AutoSize` или `ColumnNumber`, но нельзя добавить оба.
+При определении широкого представления можно добавить `AutoSize` элемент или `ColumnNumber` элемент, но нельзя добавить оба элемента.
 
 Дополнительные сведения о компонентах широкого представления см. в разделе [Создание расширенного представления](./creating-a-wide-view.md).
 
@@ -61,8 +54,8 @@ ms.locfileid: "72364223"
 
 [Элемент AutoSize для Видеконтрол (Format)](./autosize-element-for-widecontrol-format.md)
 
-[Создание расширенного представления](./creating-a-wide-view.md)
+[Создание широкого представления](./creating-a-wide-view.md)
 
-[Широкой вид (базовый)](./wide-view-basic.md)
+[Широкое представление (базовое)](./wide-view-basic.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

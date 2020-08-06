@@ -1,25 +1,18 @@
 ---
 title: Элемент Селектионсетнаме для Ентриселектедби для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: cff7763c-5ce0-49c1-a480-1249c9f57a13
-caps.latest.revision: 11
-ms.openlocfilehash: 7fd431b4b1ddecd3a7358c2bf97f299b97162b34
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4315d81da4ceeb7a5b171087434ae15fb09e6592
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362003"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785274"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-listcontrol-format"></a>Элемент SelectionSetName для элемента EntrySelectedBy для элемента ListControl (формат)
 
 Задает набор объектов .NET для записи списка. Количество наборов выбора, которые можно указать для записи, не ограничено.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент (формат) ListControl элемент (Format) Листентриес элемент (Format) Листентри элемент (Format) Ентриселектедби для Листентри (Format) Селектионсетнаме элемент для Ентриселектедби для Листентри (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ListControl элемент (Format) Листентриес элемент (Format) Листентри элемент (Format) Ентриселектедби для листентри (Format) Селектионсетнаме для EntrySelectedBy в ListEntry (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72362003"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `SelectionSetName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `SelectionSetName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,7 +42,7 @@ ms.locfileid: "72362003"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Каждая запись списка должна иметь по крайней мере одно определенное имя типа, набор выбора или условие выбора.
 
@@ -70,7 +63,7 @@ ms.locfileid: "72362003"
 </ListEntry>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание представления списка](./creating-a-list-view.md)
 

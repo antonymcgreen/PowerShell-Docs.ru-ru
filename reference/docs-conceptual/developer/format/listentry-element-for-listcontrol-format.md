@@ -1,19 +1,12 @@
 ---
 title: Элемент Листентри для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6d16bca8-d025-432d-aa84-8b607b8af3ae
-caps.latest.revision: 12
-ms.openlocfilehash: 1a3bafd4ca94aee70e869c699f7a4ef8befc5511
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d98f0b5215eea7668f866d2733214ade79d748f1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362753"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785699"
 ---
 # <a name="listentry-element-for-listcontrol-format"></a>Элемент ListEntry для элемента ListControl (формат)
 
@@ -32,11 +25,11 @@ ms.locfileid: "72362753"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ListEntry`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ListEntry` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -51,7 +44,7 @@ ms.locfileid: "72362753"
 |-------------|-----------------|
 |[Элемент Листентриес (Format)](./listentries-element-for-listcontrol-format.md)|Предоставляет определения представления списка.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Представление списка — это формат списка, который отображает значения свойств или значения скриптов для каждого объекта. Дополнительные сведения о представлениях списков см. [в разделе Создание представления списка](./creating-a-list-view.md).
 
@@ -75,7 +68,7 @@ ms.locfileid: "72362753"
 </View>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание представления списка](./creating-a-list-view.md)
 

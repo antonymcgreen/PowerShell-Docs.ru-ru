@@ -1,35 +1,28 @@
 ---
 title: Пример кода RunSpace05 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9688cd69-07ea-4ea0-8822-0a4850bcf86c
-caps.latest.revision: 7
-ms.openlocfilehash: 4d9a2db76fe69a8509d33a22124f5f952b1d3c80
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 31a73f965a6e38dceec740a2f7d4adead3e2a3f9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978310"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784747"
 ---
 # <a name="runspace05-code-sample"></a>Примеры кода RunSpace05
 
 Ниже приведен исходный код для примера Runspace05, описанный в разделе [Настройка пространства выполнения с помощью рунспацеконфигуратион](https://msdn.microsoft.com/42681d19-2d05-4975-befd-afb1990e79b2).
-В этом примере показано, как создать сведения о конфигурации пространства выполнения, создать пространство выполнения, создать конвейер с помощью одной команды, а затем выполнить конвейер. Выполняемая команда является командлетом `Get-Process`.
+В этом примере показано, как создать сведения о конфигурации пространства выполнения, создать пространство выполнения, создать конвейер с помощью одной команды, а затем выполнить конвейер. Команда, которая выполняется, является `Get-Process` командлетом.
 
 > [!NOTE]
-> C# Исходный файл (runspace05.cs) можно загрузить с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и Microsoft .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
-> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory.
+> Исходный файл C# (runspace05.cs) можно загрузить с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и Microsoft .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Скачанные исходные файлы доступны в **\<PowerShell Samples>** каталоге.
 
 ## <a name="code-sample"></a>Образец кода
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/Runspace05/Runspace05.cs" range="11-86":::
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

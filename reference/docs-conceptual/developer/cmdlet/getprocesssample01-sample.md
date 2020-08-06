@@ -1,19 +1,12 @@
 ---
 title: Пример GetProcessSample01 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7b48bf80-cbf0-4cb1-8d5b-3b8d06196598
-caps.latest.revision: 10
-ms.openlocfilehash: 27f1c346863458920b310c6c4ce1403b3aab69ba
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 84956fbafdd58623ca4f332efc940fb93b421c6e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563804"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784254"
 ---
 # <a name="getprocesssample01-sample"></a>Пример командлета GetProcessSample01
 
@@ -35,7 +28,7 @@ ms.locfileid: "83563804"
 
 2. Перейдите к каталогу, содержащему файл Sample. dll.
 
-3. Запустите InstallUtil "GetProcessSample01. dll".
+3. Запустите InstallUtil "GetProcessSample01.dll".
 
 4. Запустите Windows PowerShell.
 
@@ -192,6 +185,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

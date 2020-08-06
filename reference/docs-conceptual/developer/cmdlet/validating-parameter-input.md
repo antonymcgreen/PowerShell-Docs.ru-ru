@@ -1,23 +1,16 @@
 ---
 title: Проверка входных параметров | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - parameters, validation rules
 - validation, examples
 - validation
-ms.assetid: 3f15bf20-a068-4a7d-a170-bc43f755d1fe
-caps.latest.revision: 14
-ms.openlocfilehash: 171e3e974619e197a0bcc9dfc759297005e34568
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e12c715cfa24edfff958b12be1f3517b2f545256
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363513"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783999"
 ---
 # <a name="validating-parameter-input"></a>Проверка входных данных параметра
 
@@ -57,8 +50,8 @@ PowerShell применяет правила проверки на основе 
 Указывает допустимые значения для аргумента параметра.
 Дополнительные сведения см. в разделе [объявление атрибута "Validate](./validateset-attribute-declaration.md)".
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Проверка входных параметров](./how-to-validate-parameter-input.md)
+[Как проверить входные параметры](./how-to-validate-parameter-input.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

@@ -1,24 +1,17 @@
 ---
 title: Записи об ошибках Windows PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - error category [PowerShell SDK]
 - error identifier [PowerShell SDK]
 - error records [PowerShell SDK]
 - error category string [PowerShell SDK]
-ms.assetid: bdd66fea-eb63-4bb6-9cbe-9a799e5e0db5
-caps.latest.revision: 9
-ms.openlocfilehash: 5412d88b690a1f5f1ef387416e3bf9da3a32c95d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 52243916adf18b4f3a1e00f1fb4199c2619946e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369113"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783982"
 ---
 # <a name="windows-powershell-error-records"></a>Записи об ошибках Windows PowerShell
 
@@ -38,7 +31,7 @@ ms.locfileid: "72369113"
 
 - Дополнительные сведения о вызове командлета, вызвавшего ошибку. Эти сведения указываются в Windows PowerShell (см. сообщение о вызове).
 
-- Целевой объект, который был обработан при возникновении ошибки. Это может быть входной объект или другой объект, обрабатываемый командлетом. Например, для команды `remove-item -recurse c:\somedirectory`ошибка может быть экземпляром объекта FileInfo для "к:\сомедиректори\локкедфиле". Сведения о целевом объекте являются необязательными.
+- Целевой объект, который был обработан при возникновении ошибки. Это может быть входной объект или другой объект, обрабатываемый командлетом. Например, для команды `remove-item -recurse c:\somedirectory` ошибка может быть экземпляром объекта FileInfo для "к:\сомедиректори\локкедфиле". Сведения о целевом объекте являются необязательными.
 
 ## <a name="error-identifier"></a>Идентификатор ошибки
 
@@ -60,7 +53,7 @@ ms.locfileid: "72369113"
 
 ## <a name="error-category"></a>Категория ошибки
 
-При создании записи об ошибке укажите категорию ошибки с помощью одной из констант, определенных перечислением [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) . Windows PowerShell использует категорию ошибок для вывода сведений об ошибках, когда пользователь устанавливает переменную `$ErrorView` для `"CategoryView"`.
+При создании записи об ошибке укажите категорию ошибки с помощью одной из констант, определенных перечислением [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) . Windows PowerShell использует категорию ошибок для вывода сведений об ошибках, когда пользователь присваивает `$ErrorView` переменной значение `"CategoryView"` .
 
 Старайтесь не использовать константу [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) **NotSpecified** . Если у вас есть какие-либо сведения об ошибке или об операции, вызвавшей ошибку, выберите категорию, которая лучше описывает ошибку или операцию, даже если категория не является идеальным соответствием.
 
@@ -102,9 +95,9 @@ ms.locfileid: "72369113"
 
 ## <a name="invocation-information"></a>Сведения о вызове
 
-Если командлет использует [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) или [System. Management. Automation. командлет. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) для передачи записи об ошибке, Windows PowerShell автоматически добавляет сведения, описывающие команду, которая была вызвана при возникновении ошибки. Эта информация предоставляется объектом [System. Management. Automation. инвокатионинфо](/dotnet/api/System.Management.Automation.InvocationInfo) , который содержит имя командлета, который был вызван командой, самой командой, а также сведения о конвейере или скрипте. Это свойство предназначено только для чтения.
+Если командлет использует [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) или [System. Management. Automation. командлет. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) для передачи записи об ошибке, Windows PowerShell автоматически добавляет сведения, описывающие команду, которая была вызвана при возникновении ошибки. Эта информация предоставляется объектом [System. Management. Automation. инвокатионинфо](/dotnet/api/System.Management.Automation.InvocationInfo) , который содержит имя командлета, который был вызван командой, самой командой, а также сведения о конвейере или скрипте. Это свойство доступно только для чтения.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 
@@ -120,6 +113,6 @@ ms.locfileid: "72369113"
 
 [System. Management. Automation. Инвокатионинфо](/dotnet/api/System.Management.Automation.InvocationInfo)
 
-[Отчеты об ошибках Windows PowerShell](./error-reporting-concepts.md)
+[Отчеты об ошибках Windows PowerShell](./error-reporting-concepts.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

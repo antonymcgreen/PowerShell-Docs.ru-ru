@@ -1,25 +1,18 @@
 ---
 title: Элемент Кустомитем для Кустоментри элементов управления для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 33cb5350-73ef-4b79-a879-0edf051869e4
-caps.latest.revision: 7
-ms.openlocfilehash: 174ba6a14819f823ec39f72e49a626e781221d8c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 747ea14e7118be62ebee00e7d80af2dccb5c8353
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363943"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785852"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-view-format"></a>Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента View (формат)
 
 Определяет, какие данные отображаются элементом управления и как они отображаются. Этот элемент используется при определении элементов управления, которые могут использоваться представлением.
 
-Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет управляющий элемент (Format) элемент управления для элементов управления представления (Format) ошибка customcontrol для элементов управления элемента Кустоментриес представления (Format) для Ошибка customcontrol для элемента Кустоментри представления (Format) для Кустоментриес для элементов управления для представления (Format) Кустомитем для Кустоментри для элементов управления представления (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет элементом управления "элемент (Format)" для элементов управления для элемента управления "View" (Format) ошибка customcontrol для элемента Control (формат) Кустоментриес элемент для элементов управления для представления (Format) Кустоментри для Кустоментриес для элементов управления представления (формат) кустомитем для кустоментри для элементов управления для представления (формат)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,45 +27,45 @@ ms.locfileid: "72363943"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `CustomItem`. Дополнительные сведения см. в разделе Примечания.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `CustomItem` элемента. Дополнительные сведения см. в подразделе "Примечания".
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Определяет данные, отображаемые элементом управления.|
-|[Элемент Frame для Кустомитем элементов управления для представления (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Определяет способ отображения данных, например сдвиг данных влево или вправо.|
-|[Элемент новой строки для элементов управления Кустомитем для представления (формат)](./newline-element-for-customitem-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Добавляет пустую строку к отображению элемента управления.|
-|[Текстовый элемент для Кустомитем элементов управления для представления (формат)](./text-element-for-customitem-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Добавляет текст, например круглые скобки или квадратные скобки, к отображаемому элементу управления.|
+|[Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Определяет данные, отображаемые элементом управления.|
+|[Элемент Frame для элемента CustomItem для элемента Controls для элемента View (формат)](./frame-element-for-customitem-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Определяет способ отображения данных, например сдвиг данных влево или вправо.|
+|[Элемент NewLine для элемента CustomItem для элемента Controls для элемента View (формат)](./newline-element-for-customitem-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Добавляет пустую строку к отображению элемента управления.|
+|[Элемент Text для элемента CustomItem для элемента Controls для элемента View (формат)](./text-element-for-customitem-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Добавляет текст, например круглые скобки или квадратные скобки, к отображаемому элементу управления.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Кустоментри для Кустоментриес элементов управления для представления (формат)](./customentry-element-for-customentries-for-controls-for-view-format.md)|Предоставляет определение элемента управления.|
+|[Элемент CustomEntry для элемента CustomEntries для элемента Controls для элемента View (формат)](./customentry-element-for-customentries-for-controls-for-view-format.md)|Предоставляет определение элемента управления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-При указании дочерних элементов элемента `CustomItem` учитывайте следующее:
+При указании дочерних элементов `CustomItem` элемента учитывайте следующее:
 
-- Дочерние элементы должны быть добавлены в следующей последовательности: `ExpressionBinding`, `NewLine`, `Text`и `Frame`.
+- Дочерние элементы должны быть добавлены в следующей последовательности: `ExpressionBinding` , `NewLine` , `Text` и `Frame` .
 
 - Максимальное число последовательностей, которое можно указать, не ограничено.
 
-- В каждой последовательности нет ограничения на количество элементов `ExpressionBinding`, которые можно использовать.
+- В каждой последовательности не существует максимального ограничения на количество `ExpressionBinding` элементов, которые можно использовать.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
-[Элемент Frame для Кустомитем элементов управления для представления (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)
+[Элемент Frame для элемента CustomItem для элемента Controls для элемента View (формат)](./frame-element-for-customitem-for-controls-for-view-format.md)
 
-[Элемент новой строки для элементов управления Кустомитем для представления (формат)](./newline-element-for-customitem-for-controls-for-view-format.md)
+[Элемент NewLine для элемента CustomItem для элемента Controls для элемента View (формат)](./newline-element-for-customitem-for-controls-for-view-format.md)
 
-[Текстовый элемент для Кустомитем элементов управления для представления (формат)](./text-element-for-customitem-for-controls-for-view-format.md)
+[Элемент Text для элемента CustomItem для элемента Controls для элемента View (формат)](./text-element-for-customitem-for-controls-for-view-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

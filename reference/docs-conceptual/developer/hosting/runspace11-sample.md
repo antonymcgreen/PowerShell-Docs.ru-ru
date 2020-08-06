@@ -1,19 +1,12 @@
 ---
 title: Пример Runspace11 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9c90d268-730b-4e73-9dfd-5f288c27aed0
-caps.latest.revision: 8
-ms.openlocfilehash: 606f06339d0bbec3393c6b2602df3636c1f4e458
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6e8a4080bb4fb33f7e0d428e24483b5cfac5c70e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565389"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784934"
 ---
 # <a name="runspace11-sample"></a>Пример Runspace11
 
@@ -29,11 +22,11 @@ ms.locfileid: "83565389"
 
 - Создание объекта [System. Management. Automation. коммандметадата](/dotnet/api/System.Management.Automation.CommandMetadata) , описывающего метаданные существующего командлета.
 
-- Создание объекта [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+- Создание объекта [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 
 - Изменение метаданных командлета для удаления параметра командлета.
 
-- Добавление командлета в объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) и предоставление закрытого командлета.
+- Добавьте командлет в объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) и сделайте командлет закрытым.
 
 - Создание прокси-функции, которая вызывает существующий командлет, но предоставляет только ограниченный набор параметров.
 
@@ -244,6 +237,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

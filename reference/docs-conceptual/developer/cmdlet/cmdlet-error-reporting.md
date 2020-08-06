@@ -1,25 +1,18 @@
 ---
 title: Отчеты об ошибках командлетов | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - error records [PowerShell], terminating
 - non-terminating errors [PowerShell]
 - error records [PowerShell]
 - terminating errors [PowerShell]
 - error records [PowerShell], non-terminating
-ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
-caps.latest.revision: 8
-ms.openlocfilehash: 5dfec318438ca139518c596011ac5e56445738ea
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30b19914253db5f517f5ab76623b54aced0c0598
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365923"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784475"
 ---
 # <a name="cmdlet-error-reporting"></a>Отчеты об ошибках командлетов
 
@@ -82,12 +75,12 @@ PowerShell объединяет этот идентификатор с иден�
 
 Описание доступных категорий ошибок см. в описании перечисления [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) . В общем случае следует избегать использования **ошибок**, **ундефинедеррор**и **Общая ошибка** везде, где это возможно.
 
-Пользователи могут просматривать ошибки на основе категории, если они задают `$ErrorView` **категоривиев**.
+Пользователи могут просматривать ошибки на основе категории, если для них задано значение `$ErrorView` **категоривиев**.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
-[Обзор командлетов](./cmdlet-overview.md)
+[Общие сведения о командлетах](./cmdlet-overview.md)
 
 [Типы выходных данных командлета](./types-of-cmdlet-output.md)
 
-[Справочник по Windows PowerShell](../windows-powershell-reference.md)
+[Справочник по Windows PowerShell](../windows-powershell-reference.md)

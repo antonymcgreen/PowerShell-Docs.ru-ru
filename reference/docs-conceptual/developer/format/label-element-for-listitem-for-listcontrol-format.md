@@ -1,25 +1,18 @@
 ---
 title: Элемент Label для ListItem для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c693ff46-d1ad-4dc7-93ac-41ff2fc6c103
-caps.latest.revision: 9
-ms.openlocfilehash: c1293d5a1f942704ac01388c66bd9009fd340e82
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ad80cc0478e7567b12d264ab661d843248ba48e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362893"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783642"
 ---
 # <a name="label-element-for-listitem-for-listcontrol-format"></a>Элемент Label для элемента ListItem для элемента ListControl (формат)
 
 Задает метку, которая отображается слева от значения свойства или скрипта в строке.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент ListControl (Format) элемент Листентриес для ListControl (Format) Листентри для элемента ListControl (Format) для листентри в элементе ListControl ( Format) элемент ListItem для элементов ListItem для элемента ListControl (Format) Метки для ListItem для ListControl (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ListControl элемент (Format) Листентриес для ListControl (Format) Листентри элемент для элементов ListItem в ListControl (формат) для листентри (Format) элемент ListItem для элементов ListItem для ListControl (Format) элемент Label для элемента SPListItem для ListControl (Format).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,27 +22,27 @@ ms.locfileid: "72362893"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `Label`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `Label` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент ListItem для элементов ListItem для ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)|Определяет свойство или скрипт, значение которого отображается в строке представления списка.|
+|[Элемент ListItem для элемента ListItems для элемента ListControl (формат)](./listitem-element-for-listitems-for-listcontrol-format.md)|Определяет свойство или скрипт, значение которого отображается в строке представления списка.|
 
 ## <a name="text-value"></a>Текстовое значение
 
 Укажите метку, которая будет отображаться слева от значения свойства или скрипта.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Если метка не указана, отображается имя свойства или скрипт. Дополнительные сведения об использовании меток в представлении списка см. в разделе [Создание представления списка](./creating-a-list-view.md).
 
@@ -65,7 +58,7 @@ ms.locfileid: "72362893"
 
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание представления списка](./creating-a-list-view.md)
 

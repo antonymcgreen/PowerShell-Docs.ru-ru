@@ -1,19 +1,12 @@
 ---
 title: Типы атрибутов | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9b1026ad-f072-4fca-8052-a2d8eb491c2a
-caps.latest.revision: 6
-ms.openlocfilehash: 52c75b3ca73706da39029d5b3ead52ff7197a5f1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 96fdd38ba10eb748ab0762f0c910463dd472494d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364583"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782384"
 ---
 # <a name="attribute-types"></a>Типы атрибутов
 
@@ -35,7 +28,7 @@ ms.locfileid: "72364583"
 Определяет открытое свойство в классе командлета как параметр командлета.
 Дополнительные сведения см. в разделе [объявление атрибута Parameter](./parameter-attribute-declaration.md).
 
-### <a name="alias"></a>Alias
+### <a name="alias"></a>Псевдоним
 
 Указывает один или несколько псевдонимов для параметра.
 Дополнительные сведения см. в разделе [объявление атрибута Alias](./alias-attribute-declaration.md).
@@ -67,6 +60,6 @@ ms.locfileid: "72364583"
 Задает набор допустимых значений для аргумента параметра командлета.
 Дополнительные сведения см. в разделе [объявление атрибута "Validate](./validateset-attribute-declaration.md)".
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

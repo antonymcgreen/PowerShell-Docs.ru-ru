@@ -1,23 +1,16 @@
 ---
 title: Вызов командлета из командлета | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: efa4dc9c-ddee-46a3-978a-9dbb61e9bb6f
-caps.latest.revision: 12
-ms.openlocfilehash: 57543a88d04eb66c9d109249a99ddd272b02ef9d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2d5b0788d3310d0dd7b311f86c497afe8eec9d11
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365553"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784152"
 ---
 # <a name="how-to-invoke-a-cmdlet-from-within-a-cmdlet"></a>Как вызвать командлет из другого командлета
 
-В этом примере показано, как вызвать командлет из другого командлета, который позволяет добавлять функциональные возможности вызванного командлета в разрабатываемый командлет. В этом примере вызывается командлет `Get-Process` для получения процессов, выполняемых на локальном компьютере. Вызов командлета `Get-Process` эквивалентен следующей команде. Эта команда извлекает все процессы, имена которых начинаются с символов "a" и т. д.
+В этом примере показано, как вызвать командлет из другого командлета, который позволяет добавлять функциональные возможности вызванного командлета в разрабатываемый командлет. В этом примере `Get-Process` вызывается командлет для получения процессов, выполняемых на локальном компьютере. Вызов `Get-Process` командлета эквивалентен следующей команде. Эта команда извлекает все процессы, имена которых начинаются с символов "a" и т. д.
 
 ```powershell
 Get-Process -name [a-t]
@@ -28,7 +21,7 @@ Get-Process -name [a-t]
 
 ## <a name="to-invoke-a-cmdlet-from-within-a-cmdlet"></a>Вызов командлета из командлета
 
-1. Убедитесь, что указана сборка, определяющая вызываемый командлет, и что добавляется соответствующая инструкция `using`. В этом примере добавляются следующие пространства имен.
+1. Убедитесь, что указана сборка, определяющая вызываемый командлет, и что `using` добавляется соответствующая инструкция. В этом примере добавляются следующие пространства имен.
 
     ```csharp
     using System.Diagnostics;
@@ -43,7 +36,7 @@ Get-Process -name [a-t]
     gp.Name = new string[] { "[a-t]*" };
     ```
 
-3. Вызовите метод [System. Management. Automation. командлет. Invoke *](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) , чтобы вызвать командлет `Get-Process`.
+3. Вызовите метод [System. Management. Automation. командлет. Invoke *](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) , чтобы вызвать `Get-Process` командлет.
 
     ```csharp
       foreach (Process p in gp.Invoke<Process>())
@@ -55,7 +48,7 @@ Get-Process -name [a-t]
 
 ## <a name="example"></a>Пример
 
-В этом примере командлет `Get-Process` вызывается из метода [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) командлета.
+В этом примере `Get-Process` командлет вызывается из метода [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) командлета.
 
 ```csharp
 using System;
@@ -103,6 +96,6 @@ namespace SendGreeting
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

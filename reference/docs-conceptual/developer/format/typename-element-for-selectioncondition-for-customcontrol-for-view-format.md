@@ -1,25 +1,18 @@
 ---
 title: Элемент TypeName для Селектионкондитион для ошибка customcontrol для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d2c65171-4d4c-46a9-a545-591df058acd1
-caps.latest.revision: 7
-ms.openlocfilehash: 00e9ae0916dd6d22602b99b201c9c4b7e549dc48
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 28409604b8905440890161f66981264748bc2c33
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361593"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785070"
 ---
 # <a name="typename-element-for-selectioncondition-for-customcontrol-for-view--format"></a>Элемент TypeName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)
 
 Указывает тип .NET, который запускает условие. Этот элемент используется при определении пользовательского представления элемента управления.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (Format) представление элемента Ошибка customcontrol для элемента представления (Format) Кустоментриес для ошибка customcontrol для элемента View (Format) Кустоментри для Кустоментриес для ошибка customcontrol View ( Формат). элемент Кустомитем для Кустоментри для ошибка customcontrol для представления (Format) Селектионкондитион для Ентриселектедби для ошибка customcontrol в элементе TypeName для селектионкондитион для ошибка customcontrol для представления (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (Format) представление элемента Ошибка customcontrol для элемента Кустоментриес представления (Format) Кустоментри для Кустоментриес для ошибка customcontrol для типа представления (Format) ошибка customcontrol для элемента для для кустомитем для представления (Format) кустоментри для ошибка customcontrol for для селектионкондитион для EntrySelectedBy для представления (формат).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,15 +23,15 @@ ms.locfileid: "72361593"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `TypeName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `TypeName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -48,11 +41,11 @@ ms.locfileid: "72361593"
 
 ## <a name="text-value"></a>Текстовое значение
 
-Укажите полное имя типа .NET, например `System.IO.DirectoryInfo`.
+Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Элемент Селектионкондитион для Ентриселектедби для ошибка customcontrol для представления (Format)](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
 

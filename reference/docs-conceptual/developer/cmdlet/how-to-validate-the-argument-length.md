@@ -1,21 +1,14 @@
 ---
 title: Проверка длины аргумента | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateLength attribute, example
-ms.assetid: d5ddaa6e-4904-46da-beb0-0295a8f38332
-caps.latest.revision: 12
-ms.openlocfilehash: 8a21675acd087df93f93c25952c78931255d60b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: aa0545def6d9628f6b41090a425f0c5af25f6ad7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365493"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784084"
 ---
 # <a name="how-to-validate-the-argument-length"></a>Как проверить длину аргумента
 
@@ -41,8 +34,8 @@ ms.locfileid: "72365493"
 
 Дополнительные сведения об объявлении этого атрибута см. в разделе [объявление атрибута валидателенгс](./validatelength-attribute-declaration.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Объявление атрибута Валидателенгс](./validatelength-attribute-declaration.md)
+[Объявление атрибута ValidateLength](./validatelength-attribute-declaration.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

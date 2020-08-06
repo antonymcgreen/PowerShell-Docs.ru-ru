@@ -1,19 +1,12 @@
 ---
 title: Объявление атрибута учетных данных | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 96a5dcad-faed-44d8-8c80-321f10499710
-caps.latest.revision: 6
-ms.openlocfilehash: 49a62ccb09f06f77862d4737199e58293e7fbe0a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a6deca52fa6c9e46138ae92401f58ac5dbd15852
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369893"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784373"
 ---
 # <a name="credential-attribute-declaration"></a>Объявление атрибута учетных данных
 
@@ -25,7 +18,7 @@ ms.locfileid: "72369893"
 [Credential]
 ```
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 - Обычно этот атрибут используется параметрами типа [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) , что позволяет передавать строку в качестве аргумента в параметр. Когда объект [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) передается в параметр, Windows PowerShell ничего не делает.
 
@@ -35,10 +28,10 @@ ms.locfileid: "72369893"
 
 - Атрибут Credential определяется классом [System. Management. Automation. кредентиалаттрибуте](/dotnet/api/System.Management.Automation.CredentialAttribute) .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Псевдонимы параметров](./parameter-aliases.md)
 
-[Объявление атрибута Parameter](./parameter-attribute-declaration.md)
+[Объявление атрибута параметра](./parameter-attribute-declaration.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

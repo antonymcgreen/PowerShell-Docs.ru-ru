@@ -1,19 +1,12 @@
 ---
 title: Элемент Таблеколумнхеадер (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 49ff3062-6396-4aa8-919b-3fd3ac60899a
-caps.latest.revision: 19
-ms.openlocfilehash: d3ad7fa563def17d43ce4dc64d155b65b650521f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6296aea5c567663b1c3c0a2cf0a57b21aa5394de
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361853"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785189"
 ---
 # <a name="tablecolumnheader-element-format"></a>Элемент TableColumnHeader (формат)
 
@@ -33,37 +26,37 @@ ms.locfileid: "72361853"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `TableColumnHeader`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `TableColumnHeader` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
 |[Элемент Label для Таблеколумнхеадер для Таблеконтрол (Format)](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Определяет метку, отображаемую в верхней части столбца. Если метка не указана, то используется имя свойства, значение которого отображается в строках.|
-|[Элемент Width для Таблеколумнхеадер для Таблеконтрол (Format)](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|Обязательный элемент.<br /><br /> Задает ширину (в символах) столбца.|
-|[Элемент Alignment для Таблеколумнхеадер для Таблеконтрол (Format)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Задает способ отображения метки столбца. Если выравнивание не задано, то метка выравнивается слева.|
+|[Элемент Width для элемента TableColumnHeader для элемента TableControl (формат)](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|Обязательный элемент.<br /><br /> Задает ширину (в символах) столбца.|
+|[Элемент Alignment для TableColumnHeader для TableControl (формат)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Задает способ отображения метки столбца. Если выравнивание не задано, то метка выравнивается слева.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Таблехеадерс (Format)](./tableheaders-element-format.md)|Определяет столбцы табличного представления.|
+|[Элемент TableHeaders (формат)](./tableheaders-element-format.md)|Определяет столбцы табличного представления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-Укажите заголовок для каждого столбца таблицы. Столбцы отображаются в том порядке, в котором определены элементы `TableColumnHeader`.
+Укажите заголовок для каждого столбца таблицы. Столбцы отображаются в том порядке, в котором `TableColumnHeader` определены элементы.
 
-Таблица должна иметь то же количество `TableColumnHeader` элементов, что и элементы `TableRowEntry`. Заголовок столбца определяет, как будет отображаться текст в верхней части таблицы. Записи строки определяют, какие данные отображаются в строках таблицы.
+Таблица должна иметь то же количество элементов, `TableColumnHeader` что и `TableRowEntry` элементы. Заголовок столбца определяет, как будет отображаться текст в верхней части таблицы. Записи строки определяют, какие данные отображаются в строках таблицы.
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [табличное представление](./creating-a-table-view.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере показаны два элемента `TableColumnHeader`. Первый элемент определяет столбец, метка которого равна "Column 1", имеет ширину 16 символов, а метка — слева. Второй элемент определяет столбец, метка которого равна «Column 2», имеет ширину 10 символов, а метка — по центру столбца.
+В следующем примере показаны два `TableColumnHeader` элемента. Первый элемент определяет столбец, метка которого равна "Column 1", имеет ширину 16 символов, а метка — слева. Второй элемент определяет столбец, метка которого равна «Column 2», имеет ширину 10 символов, а метка — по центру столбца.
 
 ```xml
 <TableHeaders>
@@ -80,13 +73,13 @@ ms.locfileid: "72361853"
 </TableHeaders>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Alignment для Таблеколумнхеадер для Таблеконтрол (Format)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[Элемент Alignment для TableColumnHeader для TableControl (формат)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
-[Элемент Label для Таблеколумнхеадер для Таблеконтрол (Format)](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[Элемент Label для элемента TableColumnHeader для элемента TableControl (формат)](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
 [Элемент Таблехеадерс для Таблеконтрол (Format)](./tableheaders-element-format.md)
 

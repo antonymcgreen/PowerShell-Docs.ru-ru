@@ -1,25 +1,18 @@
 ---
 title: Элемент ScriptBlock для Таблеколумнитем для Таблеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5f1f0f95-1e0a-4607-ab68-bdf85ef29448
-caps.latest.revision: 9
-ms.openlocfilehash: c52cb4c93512090024b43504d382f6dc7255f19a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 676d2462de077213a933eff632a4e3d23757b731
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368493"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783438"
 ---
 # <a name="scriptblock-element-for-tablecolumnitem-for-tablecontrol-format"></a>Элемент ScriptBlock для TableColumnItem для TableControl (формат)
 
 Задает скрипт, значение которого отображается в столбце строки.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Таблеколумнитемс элемент (Format) Таблеколумнитем элемент (Format) Элемент ScriptBlock для Таблеколумнитем (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Таблеколумнитемс элемент (Format) Таблеколумнитем элемент (Format) ScriptBlock для TableColumnItem (Format).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72368493"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ScriptBlock`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ScriptBlock` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,13 +42,13 @@ ms.locfileid: "72368493"
 
 Укажите скрипт, значение которого отображается.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
 [Элемент Таблеколумнитем (Format)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)
 
