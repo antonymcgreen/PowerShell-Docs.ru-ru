@@ -1,21 +1,14 @@
 ---
 title: Создание оснастки Windows PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - snap-ins [PowerShell SDK], PSSnapin example
-ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
-caps.latest.revision: 7
-ms.openlocfilehash: d12a66e354a23041fffb0f8fa286c849849ec2b0
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 02603c54fb9852a8b78ecf68e3ee387d1fd418fc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811623"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779106"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Написание оснастки Windows PowerShell
 
@@ -126,7 +119,7 @@ public class GetProcPSSnapIn01 : PSSnapIn
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85))
 

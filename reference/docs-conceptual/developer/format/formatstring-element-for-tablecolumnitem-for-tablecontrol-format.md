@@ -1,25 +1,18 @@
 ---
 title: Элемент FormatString для Таблеколумнитем для Таблеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8a150731-d4b4-4d63-8db5-f14d463c8c37
-caps.latest.revision: 13
-ms.openlocfilehash: b7e1d0adc43254141056a729e1c1cc9699b6ac9b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 848583e697d0ab7bd5b017c14c47aba3c51a3c17
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363713"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781551"
 ---
 # <a name="formatstring-element-for-tablecolumnitem-for-tablecontrol-format"></a>Элемент FormatString для элемента TableColumnItem для элемента TableControl (формат)
 
 Задает шаблон формата, определяющий способ отображения значения свойства или скрипта таблицы.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Таблеколумнитемс элемент (Format) Таблеколумнитем элемент (Format) Элемент FormatString для Таблеколумнитем (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Таблеколумнитемс элемент (Format) Таблеколумнитем элемент (формат) элемент FormatString для TableColumnItem (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72363713"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `FormatString`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `FormatString` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,7 +42,7 @@ ms.locfileid: "72363713"
 
 Укажите шаблон, используемый для форматирования данных. Например, этот шаблон можно использовать для форматирования значения любого свойства типа [System. TimeSpan](/dotnet/api/System.TimeSpan): {0: MMM} {0: DD} {0: HH}: {0: mm}.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Строки формата можно использовать при создании табличных представлений, представлений списков, расширенных представлений или пользовательских представлений. Дополнительные сведения о форматировании значения, отображаемого в представлении, см. в разделе [Форматирование отображаемых данных](./formatting-displayed-data.md).
 
@@ -57,7 +50,7 @@ ms.locfileid: "72363713"
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как определить строку форматирования для значения свойства `StartTime`.
+В следующем примере показано, как определить строку форматирования для значения `StartTime` Свойства.
 
 ```xml
 <TableColumnItem>
@@ -66,9 +59,9 @@ ms.locfileid: "72363713"
 </TableColumnItem>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
 [Форматирование отображаемых данных](./formatting-displayed-data.md)
 

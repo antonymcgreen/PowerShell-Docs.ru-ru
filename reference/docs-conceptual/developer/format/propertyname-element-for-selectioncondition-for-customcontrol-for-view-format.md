@@ -1,25 +1,18 @@
 ---
 title: Элемент PropertyName для Селектионкондитион для ошибка customcontrol в представлении (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fc48a417-2083-46d4-ac38-16c12e65b6b9
-caps.latest.revision: 7
-ms.openlocfilehash: e08037d5d051d3be51e90193c7e87cc2e738f78a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: aa3955b84b8de9901f394e8108f31440fcb6c942
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362353"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780803"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>Элемент PropertyName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)
 
-Указывает свойство .NET, которое запускает условие. Если это свойство имеется или если оно имеет значение `true`, условие выполняется, и используется определение. Этот элемент используется при определении пользовательского представления элемента управления.
+Указывает свойство .NET, которое запускает условие. При наличии этого свойства или при его вычислении `true` условие выполняется, и используется определение. Этот элемент используется при определении пользовательского представления элемента управления.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (Format) представление элемента Ошибка customcontrol для элемента представления (Format) Кустоментриес для ошибка customcontrol для элемента View (Format) Кустоментри для Кустоментриес для ошибка customcontrol View ( Формат). элемент Кустомитем для Кустоментри для ошибка customcontrol для представления (Format) Ентриселектедби для Кустоментри для ошибка customcontrol for View (Format) Селектионкондитион для ентриселектедби для ошибка customcontrol для представления (формат) PropertyName Элемент для Селектионкондитион для ошибка customcontrol для представления (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемент (Format) представление элемента Ошибка customcontrol для элемента представления (Format) Кустоментриес для ошибка customcontrol для элемента представления (Format) Кустоментри для Кустоментриес для ошибка customcontrol для представления (Format) Кустомитем элемент для Кустоментри для ошибка customcontrol для элемента Ентриселектедби представления (Format) для CustomEntry для ошибка customcontrol для элемента SelectionCondition для представления (Format) EntrySelectedBy (формат).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72362353"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `PropertyName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `PropertyName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,11 +42,11 @@ ms.locfileid: "72362353"
 
 Укажите имя свойства .NET.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Условие выбора должно указывать по крайней мере одно имя свойства или скрипт, но не может указывать и то, и другое. Дополнительные сведения о том, как можно использовать условия выбора, см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Элемент Селектионкондитион для Ентриселектедби для ошибка customcontrol для представления (Format)](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
 

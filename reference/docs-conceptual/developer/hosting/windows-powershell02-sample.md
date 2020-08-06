@@ -1,19 +1,12 @@
 ---
 title: Пример PowerShell02 для Windows | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 92492a7e-257d-47d3-b119-89df3c5545e8
-caps.latest.revision: 9
-ms.openlocfilehash: 4d697e73ff4ab4cc4b88593f814d589f89005663
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: a82366a88addb08e186eede79e621d90d915c50f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978650"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779392"
 ---
 # <a name="windows-powershell02-sample"></a>Пример Windows PowerShell02
 
@@ -25,7 +18,7 @@ ms.locfileid: "80978650"
 
 ## <a name="demonstrates"></a>Что демонстрирует
 
-В этом образце демонстрируется следующее.
+В этом образце демонстрируется следующее:
 
 - Создание объекта Рунспацепул с минимальным и максимальным числом пространств выполнения, которые могут быть открыты одновременно.
 - Создание списка команд.
@@ -39,6 +32,6 @@ ms.locfileid: "80978650"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/PowerShell02/PowerShell02.cs" range="11-96":::
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)
+[Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

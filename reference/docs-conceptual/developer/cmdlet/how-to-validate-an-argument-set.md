@@ -1,21 +1,14 @@
 ---
 title: Проверка набора аргументов | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateSet attribute, example
-ms.assetid: 55f0f664-d2ad-4501-a3dc-9f7a27c8ab11
-caps.latest.revision: 8
-ms.openlocfilehash: 6d8b189ed6311efd5a7348ab1e58934e9bff12a3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6173f1380583f5b27e2b188990a5ea041f447c57
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365513"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782010"
 ---
 # <a name="how-to-validate-an-argument-set"></a>Как проверить набор аргументов
 
@@ -26,7 +19,7 @@ ms.locfileid: "72365513"
 
 ## <a name="to-validate-an-argument-set"></a>Проверка набора аргументов
 
-- Добавьте атрибут "Validate", как показано в следующем коде. В этом примере задается набор из трех возможных значений для параметра `UserName`.
+- Добавьте атрибут "Validate", как показано в следующем коде. В этом примере указывается набор из трех возможных значений для `UserName` параметра.
 
     ```csharp
     [ValidateSet("Steve", "Mary", "Carl", IgnoreCase = true)]
@@ -42,10 +35,10 @@ ms.locfileid: "72365513"
 
 Дополнительные сведения об объявлении этого атрибута см. в разделе [Проверка объявления атрибута](./validateset-attribute-declaration.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [System. Management. Automation. Валидатесетаттрибуте](/dotnet/api/System.Management.Automation.ValidateSetAttribute)
 
-[Объявление атрибута "Validate"](./validateset-attribute-declaration.md)
+[Объявление атрибута ValidateSet](./validateset-attribute-declaration.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

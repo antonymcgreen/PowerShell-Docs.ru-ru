@@ -1,19 +1,12 @@
 ---
 title: Элемент ListItems для Листентри для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d2c1da6d-acc7-4fe8-9e7d-6dcddc2787cd
-caps.latest.revision: 9
-ms.openlocfilehash: c25f18489d9c7abd8889758499dbbacd6ee29304
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 03b89a3df2ab0498533d0c00f303f643e0039b25
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362743"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781143"
 ---
 # <a name="listitems-element-for-listentry-for-listcontrol-format"></a>Элемент ListItems для элемента ListEntry для элемента ListControl (формат)
 
@@ -31,11 +24,11 @@ ms.locfileid: "72362743"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ListItems`. Количество дочерних элементов, которые можно указать, не ограничено. Порядок дочерних элементов определяет порядок отображения значений в представлении списка.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ListItems` элемента. Количество дочерних элементов, которые можно указать, не ограничено. Порядок дочерних элементов определяет порядок отображения значений в представлении списка.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -47,9 +40,9 @@ ms.locfileid: "72362743"
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Листентри для ListControl (Format)](./listentry-element-for-listcontrol-format.md)|Предоставляет определение представления списка.|
+|[Элемент ListEntry для элемента ListControl (формат)](./listentry-element-for-listcontrol-format.md)|Предоставляет определение представления списка.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Дополнительные сведения об этом типе представления см. в разделе [Создание представления списка](./creating-a-list-view.md).
 
@@ -73,9 +66,9 @@ ms.locfileid: "72362743"
   </ListEntry>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Листентри для ListControl (Format)](./listentry-element-for-listcontrol-format.md)
+[Элемент ListEntry для элемента ListControl (формат)](./listentry-element-for-listcontrol-format.md)
 
 [Элемент ListItem для ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)
 

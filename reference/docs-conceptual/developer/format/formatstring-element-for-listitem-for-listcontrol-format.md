@@ -1,25 +1,18 @@
 ---
 title: Элемент FormatString для ListItem для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fd2cac66-88bb-449f-9d47-bd2cd4fe1801
-caps.latest.revision: 13
-ms.openlocfilehash: e6024ec4f7fc490c92408047c8c15c775e45bf9d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9ec73aa1c2e8180258722627e30344de4e67bda5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363023"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781585"
 ---
 # <a name="formatstring-element-for-listitem-for-listcontrol--format"></a>Элемент FormatString для элемента ListItem для элемента ListControl (формат)
 
 Задает шаблон формата, определяющий способ отображения значения свойства или скрипта.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ListControl элемент (Format) Листентриес для ListControl (Format) Листентри элемента для ListControl (Format) элемент ListItems для ListControl (Format) Элемент ListItem для ListControl (Format) элемент FormatString для элемента ListItem для ListControl (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ListControl элемент (Format) Листентриес для ListControl (Format) Листентри элемент для ListControl (Format) элемент списка элементов для ListControl (формат) элемента ListItem для ListControl (Format) элемент списка (формат) для элемента списка (Format) ListControl (формат)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72363023"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `FormatString`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `FormatString` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,7 +42,7 @@ ms.locfileid: "72363023"
 
 Укажите шаблон, используемый для форматирования данных. Например, этот шаблон можно использовать для форматирования значения любого свойства типа [System. TimeSpan](/dotnet/api/System.TimeSpan): {0: MMM} {0: DD} {0: HH}: {0: mm}.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Строки формата можно использовать при создании табличных представлений, представлений списков, расширенных представлений или пользовательских представлений. Дополнительные сведения о форматировании значения, отображаемого в представлении, см. в разделе [Форматирование отображаемых данных](./formatting-displayed-data.md).
 
@@ -57,7 +50,7 @@ ms.locfileid: "72363023"
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как определить строку форматирования для значения свойства `StartTime`.
+В следующем примере показано, как определить строку форматирования для значения `StartTime` Свойства.
 
 ```xml
 <ListItem>
@@ -66,7 +59,7 @@ ms.locfileid: "72363023"
 </ListItem>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание представления списка](./creating-a-list-view.md)
 

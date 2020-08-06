@@ -1,23 +1,16 @@
 ---
 title: Объявление атрибута параметра | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attributes, Parameter
 - Parameter attribute, described
 - Parameter attribute
-ms.assetid: 08433d0b-169b-42c8-9335-2881d9034698
-caps.latest.revision: 13
-ms.openlocfilehash: 7482690c44cdaabf23b886107ac5d112c0fa5c9d
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 55b157b93c3a42324d63e16ddfa8db1f0d38f82b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692386"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781857"
 ---
 # <a name="parameter-attribute-declaration"></a>Объявление атрибута параметра
 
@@ -32,17 +25,17 @@ ms.locfileid: "83692386"
 
 #### <a name="parameters"></a>Параметры
 
-`Mandatory`([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True`Указывает, что параметр командлета является обязательным. Если требуемый параметр не указан при вызове командлета, Windows PowerShell предлагает пользователю указать значение параметра. Значение по умолчанию — `false`.
+`Mandatory`([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True`Указывает, что параметр командлета является обязательным. Если требуемый параметр не указан при вызове командлета, Windows PowerShell предлагает пользователю указать значение параметра. Значение по умолчанию — `false`.
 
 `ParameterSetName`([System. String](/dotnet/api/System.String)) необязательный именованный параметр. Задает набор параметров, к которому относится этот параметр командлета. Если набор параметров не задан, параметр относится ко всем наборам параметров.
 
 `Position`([System. Int32](/dotnet/api/System.Int32)) необязательный именованный параметр. Задает расположение параметра в команде Windows PowerShell.
 
-`ValueFromPipeline`([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True`Указывает, что параметр командлета принимает значение из объекта конвейера. Укажите это ключевое слово, если командлет обращается к полному объекту, а не только к свойству объекта. Значение по умолчанию — `false`.
+`ValueFromPipeline`([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True`Указывает, что параметр командлета принимает значение из объекта конвейера. Укажите это ключевое слово, если командлет обращается к полному объекту, а не только к свойству объекта. Значение по умолчанию — `false`.
 
-`ValueFromPipelineByPropertyName`([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True`Указывает, что параметр командлета принимает свое значение из свойства объекта конвейера с тем же именем или псевдонимом, что и у этого параметра. Например, если у командлета есть `Name` параметр, а у объекта конвейера также есть `Name` свойство, значение `Name` свойства присваивается `Name` параметру командлета. Значение по умолчанию — `false`.
+`ValueFromPipelineByPropertyName`([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True`Указывает, что параметр командлета принимает свое значение из свойства объекта конвейера с тем же именем или псевдонимом, что и у этого параметра. Например, если у командлета есть `Name` параметр, а у объекта конвейера также есть `Name` свойство, значение `Name` свойства присваивается `Name` параметру командлета. Значение по умолчанию — `false`.
 
-`ValueFromRemainingArguments`([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True`Указывает, что параметр командлета принимает все оставшиеся аргументы, переданные в командлет. Значение по умолчанию — `false`.
+`ValueFromRemainingArguments`([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. `True`Указывает, что параметр командлета принимает все оставшиеся аргументы, переданные в командлет. Значение по умолчанию — `false`.
 
 `HelpMessage`Необязательный именованный параметр. Задает краткое описание параметра. Windows PowerShell отображает это сообщение при выполнении командлета, а обязательный параметр не указан.
 
@@ -50,7 +43,7 @@ ms.locfileid: "83692386"
 
 `HelpMessageResourceId`Необязательный именованный параметр. Указывает идентификатор ресурса для сообщения справки.
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 
 - Дополнительные сведения об объявлении этого атрибута см. в разделе [как объявлять параметры командлета](./how-to-declare-cmdlet-parameters.md).
 
@@ -76,7 +69,7 @@ ms.locfileid: "83692386"
 
 - Атрибут параметра определяется классом [System. Management. Automation. параметераттрибуте](/dotnet/api/System.Management.Automation.ParameterAttribute) .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [System. Management. Automation. Параметераттрибуте](/dotnet/api/System.Management.Automation.ParameterAttribute)
 

@@ -1,25 +1,18 @@
 ---
 title: Элемент Итемселектионкондитион для ExpressionBinding элементов управления для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 82c15014-2440-410d-b02d-b7f1a49240a0
-caps.latest.revision: 7
-ms.openlocfilehash: 80f375c53c205c793600655fa6031d114871618e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e8e3ea64fd947fbb2b98c410ac08533f386c9505
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362943"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781211"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format"></a>Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента Controls для элемента View (формат)
 
 Определяет условие, которое должно существовать для использования этого элемента управления. Этот элемент используется при определении элементов управления, которые могут использоваться представлением.
 
-Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет управляющий элемент (Format) элемент управления для элементов управления представления (Format) ошибка customcontrol для элементов управления элемента Кустоментриес представления (Format) для Ошибка customcontrol для элемента Кустоментри представления (Format) для Кустоментриес для элементов управления для представления (Format) Кустомитем элемента для Кустоментри для элементов управления для представления (Format) ExpressionBinding для Кустомитем элементов управления для представления (формат) Элемент Итемселектионкондитион элемента ExpressionBinding для элементов управления для представления (формат)
+Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет элементом управления "элемент (Format)" для элементов управления в элементе "View" (Format) ошибка customcontrol для элемента управления элементов формат). элемент Кустоментри для Кустоментриес для элементов управления для элемента Кустомитем представления (Format) для Кустоментри для элементов управления для элемента "View" (формат) ExpressionBinding для Кустомитем для элементов управления для представления (Format) ItemSelectionCondition элемента ExpressionBinding для элементов управления представления (формат)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,35 +25,35 @@ ms.locfileid: "72362943"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ItemSelectionCondition`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ItemSelectionCondition` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент PropertyName для Итемселектионкондитион элементов управления для представления (Format)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
-|[Элемент ScriptBlock для Итемселектионкондитион элементов управления для представления (Format)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Указывает скрипт, который запускает условие.|
+|[Элемент PropertyName для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
+|[Элемент ScriptBlock для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md)|Необязательный элемент.<br /><br /> Указывает скрипт, который запускает условие.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Определяет данные, отображаемые элементом управления.|
+|[Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Определяет данные, отображаемые элементом управления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Можно указать одно имя свойства или скрипт для этого условия, но не указывать оба значения.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент PropertyName для Итемселектионкондитион элементов управления для представления (Format)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md)
+[Элемент PropertyName для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md)
 
-[Элемент ScriptBlock для Итемселектионкондитион элементов управления для представления (Format)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md)
+[Элемент ScriptBlock для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md)
 
-[Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

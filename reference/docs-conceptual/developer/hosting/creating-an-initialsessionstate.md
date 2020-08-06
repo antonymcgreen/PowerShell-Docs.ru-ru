@@ -1,25 +1,18 @@
 ---
 title: Создание InitialSessionState | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5ae707db-52e0-408c-87fa-b35c42eaaab1
-caps.latest.revision: 5
-ms.openlocfilehash: 9140d03e046def2fbbcc2a842b9ea1b9e1fa2985
-ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
+ms.openlocfilehash: 946adf1006d1afcad2810c85e39f14514e837327
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83271888"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779732"
 ---
 # <a name="creating-an-initialsessionstate"></a>Создание InitialSessionState
 
 Команды PowerShell выполняются в пространстве выполнения.
 Чтобы разместить PowerShell в приложении, необходимо создать объект [System. Management. Automation. пространства. пространство](/dotnet/api/System.Management.Automation.Runspaces.Runspace) .
-Каждому пространству выполнения соответствует связанный с ним объект [System. Management. Automation. пространства. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+С каждым пространством выполнения связано [System.Management.Automation.Runspaces.Iniобъект тиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 InitialSessionState указывает характеристики пространства выполнения, например, какие команды, переменные и модули доступны для этого пространства выполнения.
 
 ## <a name="create-a-default-initialsessionstate"></a>Создание InitialSessionState по умолчанию
@@ -93,7 +86,7 @@ namespace SampleHost
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание ограниченного пространства выполнения](creating-a-constrained-runspace.md)
 

@@ -1,25 +1,18 @@
 ---
 title: Элемент Width для Таблеколумнхеадер для Таблеконтрол (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 94eb0535-8002-4f17-9a2b-4be75ec20e5c
-caps.latest.revision: 18
-ms.openlocfilehash: 4a25c9d81df670dc10955065bfb66766cdb1bd33
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e9540d3d351041ad7cb98a21bb360ebea7eca117
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367873"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779919"
 ---
 # <a name="width-element-for-tablecolumnheader-for-tablecontrol-format"></a>Элемент Width для элемента TableColumnHeader для элемента TableControl (формат)
 
 Определяет ширину (в символах) столбца.
 
-Элемент конфигурации (Format) Виевдефинитионс элемента представления (Format) элемент Таблеконтрол (Format) элемент Таблехеадерс для Таблеконтрол (Format) Таблеколумнхеадер элемент Таблехеадерс для TableControl (формат) элемент Width для Таблеколумнхеадер для Таблеконтрол (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемента представления (Format) элемент Таблеконтрол (Format) элемент Таблехеадерс для Таблеконтрол (Format) Таблеколумнхеадер элемент Таблехеадерс для TableControl (формат) элемент TableColumnHeader для TableControl (формат)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72367873"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `Width`, используемого при определении заголовков столбцов.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `Width` элемента, используемого при определении заголовков столбцов.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,13 +42,13 @@ ms.locfileid: "72367873"
 
 Когда это возможно, укажите ширину (в символах), превышающую длину отображаемых значений свойств.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан элемент `TableColumnHeader`, ширина которого составляет 16 символов.
+В следующем примере показан `TableColumnHeader` элемент, ширина которого составляет 16 символов.
 
 ```xml
 <TableColumnHeader>
@@ -65,9 +58,9 @@ ms.locfileid: "72367873"
 </TableColumnHeader>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
 [Элемент Таблеколумнхеадер для Таблехеадер для Таблеконтрол (Format)](./tablecolumnheader-element-format.md)
 

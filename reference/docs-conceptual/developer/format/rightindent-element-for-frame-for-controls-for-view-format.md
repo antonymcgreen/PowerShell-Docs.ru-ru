@@ -1,25 +1,18 @@
 ---
 title: Элемент Ригхтиндент для элемента управления Frame для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: af128d87-24f3-4e33-9457-6f8678993236
-caps.latest.revision: 6
-ms.openlocfilehash: b9b66adb9c36977859c9516dc132f99be424d12b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7a688997791dc901e81236c5d467425ad145eb33
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362213"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780463"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-view-format"></a>Элемент RightIndent для элемента Frame для элемента Controls для элемента View (формат)
 
 Указывает, сколько символов перемещает данные с правого края. Этот элемент используется при определении элементов управления, которые могут использоваться представлением.
 
-Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет управляющий элемент (Format) элемент управления для элементов управления представления (Format) ошибка customcontrol для элементов управления элемента Кустоментриес представления (Format) для Ошибка customcontrol для элемента Кустоментри представления (Format) для Кустоментриес для элементов управления для представления (Format) Кустомитем элемента для Кустоментри для элементов управления элемента Frame (формат) для кустомитем для элементов управления представления (Format) Ригхтиндент элемента Frame Элементы управления представления (формат)
+Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет элементом управления "элемент (Format)" для элементов управления в элементе "View" (Format) ошибка customcontrol для элемента управления элементов формат) элемент Кустоментри для Кустоментриес для элементов управления элемента Кустомитем View (формат) для Кустоментри для элементов управления элемента Frame (формат) для Кустомитем для элементов управления представления (Format) RightIndent элемента управления представления (формат)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,30 +22,30 @@ ms.locfileid: "72362213"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `RightIndent`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `RightIndent` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Frame для Кустомитем элементов управления для представления (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)|Определяет способ отображения данных, например сдвиг данных влево или вправо.|
+|[Элемент Frame для элемента CustomItem для элемента Controls для элемента View (формат)](./frame-element-for-customitem-for-controls-for-view-format.md)|Определяет способ отображения данных, например сдвиг данных влево или вправо.|
 
 ## <a name="text-value"></a>Текстовое значение
 
 Укажите число символов, на которое нужно сдвинуть данные справа.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Frame для Кустомитем элементов управления для представления (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)
+[Элемент Frame для элемента CustomItem для элемента Controls для элемента View (формат)](./frame-element-for-customitem-for-controls-for-view-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

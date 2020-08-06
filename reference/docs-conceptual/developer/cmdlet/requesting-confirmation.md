@@ -1,25 +1,18 @@
 ---
 title: Запрос подтверждения | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4468066f-6759-402f-84db-0d8303cfd5cb
-caps.latest.revision: 7
-ms.openlocfilehash: c5deaa9bb0dd9621b6f03aeb188cf76ed35dff6c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 42ab001e3e8894f2ca17332634214af108fc5918
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365353"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781789"
 ---
 # <a name="requesting-confirmation"></a>Запрос на подтверждение
 
 В этом разделе обсуждаются сообщения подтверждения, которые можно отобразить перед командлетом, функцией или поставщиком, выполняющим действие.
 
-## <a name="in-this-section"></a>Содержание
+## <a name="in-this-section"></a>В этом разделе
 
 [Запрос подтверждения процесса для команд](./requesting-confirmation-from-cmdlets.md) Обсуждается процесс, которым должны следовать командлеты, функции и поставщики, чтобы запросить подтверждение перед внесением изменений в систему.
 
@@ -27,6 +20,6 @@ ms.locfileid: "72365353"
 
 [Сообщения подтверждения](./confirmation-messages.md) Содержит примеры различных сообщений с подтверждением, которые могут быть отображены.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

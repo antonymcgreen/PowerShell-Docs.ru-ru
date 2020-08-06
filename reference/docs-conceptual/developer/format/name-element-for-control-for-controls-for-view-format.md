@@ -1,19 +1,12 @@
 ---
 title: Элемент Name для элементов управления для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 26437467-d578-4e8d-8cdd-17dfe644957a
-caps.latest.revision: 7
-ms.openlocfilehash: 7e24aa60f7abae5768707d2527826c452b709002
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 109f3a40606dbe82322decf0c69d2367c75175f6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365103"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781092"
 ---
 # <a name="name-element-for-control-for-controls-for-view-format"></a>Элемент Name для элемента Control для элемента Controls для элемента View (формат)
 
@@ -29,15 +22,15 @@ ms.locfileid: "72365103"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `Name`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `Name` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,7 +42,7 @@ ms.locfileid: "72365103"
 
 Укажите имя, используемое для ссылки на элемент управления.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Указанное здесь имя можно использовать в следующих элементах для ссылки на этот элемент управления.
 
@@ -57,11 +50,11 @@ ms.locfileid: "72365103"
 
 - При создании другого элемента управления, который может использоваться представлением, этот элемент управления может быть задан следующим элементом: [ExpressionBinding для кустомитем для элементов управления в представлении (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md) .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент GroupBy для представления (формат)](./groupby-element-for-view-format.md)
+[Элемент GroupBy для элемента View (формат)](./groupby-element-for-view-format.md)
 
-[Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
 [Элемент Control для элементов управления для представления (формат)](./control-element-for-controls-for-view-format.md)
 

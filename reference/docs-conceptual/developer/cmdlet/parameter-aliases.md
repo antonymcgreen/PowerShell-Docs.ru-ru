@@ -1,23 +1,16 @@
 ---
 title: Псевдонимы параметров | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7c9096a1-46fa-48ea-9b8a-a583484b9d68
-caps.latest.revision: 13
-ms.openlocfilehash: 6545e71ea18d10621ee9c203e70f64dece460ef5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e320eeb4d2ab91acf2116fdc817a50e93c82aead
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369593"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781993"
 ---
 # <a name="parameter-aliases"></a>Псевдонимы параметров
 
-Параметры командлетов могут также иметь псевдонимы. Вместо имен параметров можно использовать псевдонимы при вводе или указании параметра в команде.
+Параметры командлета также могут иметь псевдонимы. Вместо имен параметров можно использовать псевдонимы при вводе или указании параметра в команде.
 
 ## <a name="benefits-of-using-aliases"></a>Преимущества использования псевдонимов
 
@@ -48,10 +41,10 @@ public string UserName
 private string userName;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Общие имена параметров](./common-parameter-names.md)
 
-[Как объявлять параметры командлета](./how-to-declare-cmdlet-parameters.md)
+[Как объявить параметры командлета](./how-to-declare-cmdlet-parameters.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

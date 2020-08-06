@@ -1,19 +1,12 @@
 ---
 title: Импорт командлетов с помощью модулей | Документация Майкрософт
-ms.custom: ''
 ms.date: 08/28/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
-caps.latest.revision: 8
-ms.openlocfilehash: 840c5bc92d718ec4e54d864dc5e012cd33f83905
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: fa8d629c14b06e3f9e9d6151cf09aa6b4acce358
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811323"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779375"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>Импорт командлетов с помощью модулей
 
@@ -40,13 +33,13 @@ ms.locfileid: "83811323"
 
    Эту процедуру можно использовать для проверки командлетов. Он добавляет все командлеты в сборку в сеанс. Дополнительные сведения о модулях см. [в разделе Написание модуля Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Как написать манифест модуля PowerShell](../module/how-to-write-a-powershell-module-manifest.md)
 
 [Импорт модуля PowerShell](../module/importing-a-powershell-module.md)
 
-[Импорт-модуль](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
+[Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
 
 [Установка модулей](../module/installing-a-powershell-module.md)
 

@@ -1,19 +1,12 @@
 ---
 title: Элемент GroupBy для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 67a2b061-2a4a-4ad1-84f9-cdbefb64aaab
-caps.latest.revision: 8
-ms.openlocfilehash: abb8b91626128b3deaa2db24a9fd8b34a6563410
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2f9071a3ebbc7cc2ccb7721dd518e82723e9cc4e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363633"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781432"
 ---
 # <a name="groupby-element-for-view-format"></a>Элемент GroupBy для элемента View (формат)
 
@@ -39,38 +32,38 @@ ms.locfileid: "72363633"
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент ошибка customcontrol для GroupBy (Format)](./customcontrol-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Определяет пользовательский элемент управления, отображающий новые группы.|
-|[Элемент Кустомконтролнаме для GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Задает имя элемента управления, используемого для вывода новой группы.|
-|[Элемент Label для GroupBy (Format)](./label-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Указывает метку, которая отображается при обнаружении новой группы.|
-|[Элемент PropertyName для GroupBy (Format)](./propertyname-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает новую группу при изменении ее значения.|
-|[Элемент ScriptBlock для GroupBy (Format)](./scriptblock-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Задает скрипт, запускающий новую группу при изменении ее значения.|
+|[Элемент CustomControl для элемента GroupBy (формат)](./customcontrol-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Определяет пользовательский элемент управления, отображающий новые группы.|
+|[Элемент CustomControlName для элемента GroupBy (формат)](./customcontrolname-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Задает имя элемента управления, используемого для вывода новой группы.|
+|[Элемент Label для элемента GroupBy (формат)](./label-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Указывает метку, которая отображается при обнаружении новой группы.|
+|[Элемент PropertyName для элемента GroupBy (формат)](./propertyname-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает новую группу при изменении ее значения.|
+|[Элемент ScriptBlock для элемента GroupBy (формат)](./scriptblock-element-for-groupby-format.md)|Необязательный элемент.<br /><br /> Задает скрипт, запускающий новую группу при изменении ее значения.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[View, элемент (Format)](./view-element-format.md)|Определяет представление, в котором отображается один или несколько объектов .NET.|
+|[Элемент View (формат)](./view-element-format.md)|Определяет представление, в котором отображается один или несколько объектов .NET.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 При определении того, как отображается новая группа объектов, необходимо указать свойство или скрипт, который будет запускать новую группу. Однако нельзя указать и то, и другое.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Кустомконтролнаме для GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)
+[Элемент CustomControlName для элемента GroupBy (формат)](./customcontrolname-element-for-groupby-format.md)
 
-[Элемент Label для GroupBy (Format)](./label-element-for-groupby-format.md)
+[Элемент Label для элемента GroupBy (формат)](./label-element-for-groupby-format.md)
 
-[Элемент PropertyName для GroupBy (Format)](./propertyname-element-for-groupby-format.md)
+[Элемент PropertyName для элемента GroupBy (формат)](./propertyname-element-for-groupby-format.md)
 
-[Элемент ScriptBlock для GroupBy (Format)](./scriptblock-element-for-groupby-format.md)
+[Элемент ScriptBlock для элемента GroupBy (формат)](./scriptblock-element-for-groupby-format.md)
 
-[View, элемент (Format)](./view-element-format.md)
+[Элемент View (формат)](./view-element-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

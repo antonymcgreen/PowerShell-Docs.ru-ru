@@ -1,25 +1,18 @@
 ---
 title: Элемент Селектионкондитион для Ентриселектедби для Таблеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 912f3e63-e4d5-41ce-8710-6dfd8c885dc2
-caps.latest.revision: 12
-ms.openlocfilehash: 2faca6021dc26878869bdd2d35bc4ffc64d0fe7b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4a829f9daef22c4b3fd6b21dfb3af2f8539bdeb3
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368393"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780293"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-tablecontrol-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
 
 Определяет условие, которое должно существовать для использования в этом определении табличного представления. Количество условий выбора, которое можно указать для определения таблицы, не ограничено.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Ентриселектедби для Таблеровентри (Format) Элемент Селектионкондитион для Ентриселектедби для Таблеровентри (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Ентриселектедби для таблеровентри (Format) SelectionCondition для EntrySelectedBy в TableRowEntry (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,13 +31,13 @@ ms.locfileid: "72368393"
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент PropertyName для Селектионкондитион для Ентриселектедби для Таблеровентри (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
+|[Элемент PropertyName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableRowEntry (формат)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
 |[Элемент ScriptBlock для Селектионкондитион для Ентриселектедби для Таблеровентри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Указывает скрипт, который запускает условие.|
 |[Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Таблеровентри (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Указывает набор типов .NET, которые активируют условие.|
 |[Элемент TypeName для Селектионкондитион для Ентриселектедби для Таблеровентри (Format)](./typename-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Указывает тип .NET, который запускает условие.|
@@ -55,7 +48,7 @@ ms.locfileid: "72368393"
 |-------------|-----------------|
 |[Элемент Ентриселектедби для Таблеровентри (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Определяет типы .NET, которые используют эту запись таблицы, или условие, которое должно существовать для использования этой записи.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Каждая запись списка должна иметь по крайней мере одно определенное имя типа, набор выбора или условие выбора.
 
@@ -69,15 +62,15 @@ ms.locfileid: "72368393"
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
 [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md)
 
 [Элемент Ентриселектедби (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)
 
-[Элемент PropertyName для Селектионкондитион для Ентриселектедби для Таблеровентри (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md)
+[Элемент PropertyName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableRowEntry (формат)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md)
 
 [Элемент ScriptBlock для Селектионкондитион для Ентриселектедби для Таблеровентри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)
 

@@ -1,25 +1,18 @@
 ---
 title: Элемент TypeName для Ентриселектедби для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 33c7345c-b808-4c1e-bd54-cb870b407432
-caps.latest.revision: 14
-ms.openlocfilehash: 0f7216d4dcc0380bceb47ea7c15b3d4a7e5ceeb2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5e7b73db5aa597d96141454008c5c58b1827df24
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361663"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780225"
 ---
 # <a name="typename-element-for-entryselectedby-for-listcontrol-format"></a>Элемент TypeName для элемента EntrySelectedBy для ListControl (формат)
 
 Указывает тип .NET, который использует эту запись представления списка. Количество типов, которое можно указать для записи списка, не ограничено.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) ListControl элемент (Format) Листентриес элемент (Format) Листентри элемент (Format) Ентриселектедби для элемента TypeName Листентри (Format) для Ентриселектедби для ListControl (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ListControl элемент (Format) Листентриес элемент (Format) Листентри элемент (Format) Ентриселектедби для листентри (Format) элемент TypeName для ентриселектедби в ListControl (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72361663"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `TypeName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `TypeName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -47,9 +40,9 @@ ms.locfileid: "72361663"
 
 ## <a name="text-value"></a>Текстовое значение
 
-Укажите полное имя типа .NET, например `System.IO.DirectoryInfo`.
+Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Каждая запись списка должна иметь по крайней мере одно определенное имя типа, набор выбора или условие выбора.
 
@@ -68,7 +61,7 @@ ms.locfileid: "72361663"
 </ListEntry>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание представления списка](./creating-a-list-view.md)
 

@@ -1,25 +1,18 @@
 ---
 title: Основные понятия файла форматирования | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1804dbe4-69eb-4b0b-bc40-cbb2f00bb083
-caps.latest.revision: 10
-ms.openlocfilehash: 81b035f3cb44dcb672f5951511d03542e694cc42
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6849a61ab1796ae49c73550b48e78de6f787274e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362983"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781500"
 ---
 # <a name="formatting-file-concepts"></a>Основные понятия, связанные с файлами форматирования
 
 В подразделах этого раздела содержатся сведения, которые могут потребоваться при создании собственных файлов форматирования, таких как различные типы представлений, которые можно определить, и специальные компоненты этих представлений.
 
-## <a name="in-this-section"></a>Содержание
+## <a name="in-this-section"></a>В этом разделе
 
 [Создание табличного представления](./creating-a-table-view.md) Содержит пример отображаемого табличного представления и XML-элементов, используемых для определения представления.
 
@@ -29,7 +22,7 @@ ms.locfileid: "72362983"
 
 [Создание пользовательских элементов управления](./creating-custom-controls.md) Содержит пример пользовательского элемента управления.
 
-[Определение общих функций конфигурации](./defining-common-configuration-features.md)
+[Определение общих компонентов конфигурации](./defining-common-configuration-features.md)
 
 [Определение наборов выбора](./defining-selection-sets.md) Предоставляет сведения, пример и описывает элементы XML, используемые для создания набора выбора.
 

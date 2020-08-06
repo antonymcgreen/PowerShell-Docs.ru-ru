@@ -1,22 +1,20 @@
 ---
 title: Создание поставщика содержимого Windows PowerShell
 ms.date: 09/13/2016
-ms.topic: article
-ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
-ms.openlocfilehash: e7a59d902633a6d4c73236b7f5a10fc4b405c9bf
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: b4bc0c8d1f8ef9f85bd711fdc2770b54418bbf4a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978480"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779071"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Создание поставщика содержимого Windows PowerShell
 
 В этом разделе описывается создание поставщика Windows PowerShell, который позволяет пользователю управлять содержимым элементов в хранилище данных. Как следствие, поставщик, который может манипулировать содержимым элементов, называется поставщиком содержимого Windows PowerShell.
 
 > [!NOTE]
-> Вы можете скачать C# исходный файл (AccessDBSampleProvider06.cs) для этого поставщика с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
-> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory. Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Исходный файл C# (AccessDBSampleProvider06.cs) для этого поставщика можно скачать с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Скачанные исходные файлы доступны в **\<PowerShell Samples>** каталоге. Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 ## <a name="define-the-windows-powershell-content-provider-class"></a>Определение класса поставщика содержимого Windows PowerShell
 
@@ -57,7 +55,7 @@ ms.locfileid: "80978480"
 
 ## <a name="retrieving-the-content-reader"></a>Получение средства чтения содержимого
 
-Чтобы получить содержимое из элемента, поставщик должен реализовать [System. Management. Automation. Provider. иконтенткмдлетпровидер. жетконтентреадер *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) для поддержки командлета `Get-Content`. Этот метод возвращает средство чтения содержимого для элемента, расположенного по указанному пути. Затем объект модуля чтения можно открыть для чтения содержимого.
+Чтобы получить содержимое из элемента, поставщик должен реализовать [System. Management. Automation. Provider. иконтенткмдлетпровидер. жетконтентреадер *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) для поддержки `Get-Content` командлета. Этот метод возвращает средство чтения содержимого для элемента, расположенного по указанному пути. Затем объект модуля чтения можно открыть для чтения содержимого.
 
 Ниже приведена реализация класса [System. Management. Automation. Provider. иконтенткмдлетпровидер. жетконтентреадер *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) для этого метода для данного поставщика.
 
@@ -90,11 +88,11 @@ public IContentReader GetContentReader(string path)
 
 - При определении класса поставщика поставщик содержимого Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. иконтенткмдлетпровидер. жетконтентреадер *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) должна гарантировать, что путь, передаваемый в метод, соответствует требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- По умолчанию переопределения этого метода не должны извлекать модуль чтения для объектов, которые скрыты от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь представляет элемент, который скрыт от User, а [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) имеет значение `false`, то ошибка должна быть записана.
+- По умолчанию переопределения этого метода не должны извлекать модуль чтения для объектов, которые скрыты от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true` . Если путь представляет элемент, который скрыт от User, а параметр [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) имеет значение, то ошибка должна быть записана `false` .
 
 ## <a name="attaching-dynamic-parameters-to-the-get-content-cmdlet"></a>Присоединение динамических параметров к командлету Get-Content
 
-Командлету `Get-Content` могут потребоваться дополнительные параметры, заданные динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик содержимого Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. иконтенткмдлетпровидер. жетконтентреадердинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) . Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлет.
+`Get-Content`Командлету могут потребоваться дополнительные параметры, заданные динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик содержимого Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. иконтенткмдлетпровидер. жетконтентреадердинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) . Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлет.
 
 Этот метод не реализуется этим поставщиком контейнера Windows PowerShell. Однако приведенный ниже код является реализацией этого метода по умолчанию.
 
@@ -109,7 +107,7 @@ public object GetContentReaderDynamicParameters(string path)
 
 ## <a name="retrieving-the-content-writer"></a>Получение модуля записи содержимого
 
-Для записи содержимого в элемент поставщик должен реализовать [System. Management. Automation. Provider. иконтенткмдлетпровидер. жетконтентвритер *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) для поддержки командлетов `Set-Content` и `Add-Content`. Этот метод возвращает модуль записи содержимого для элемента, расположенного по указанному пути.
+Для записи содержимого в элемент поставщик должен реализовать [System. Management. Automation. Provider. иконтенткмдлетпровидер. жетконтентвритер *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) для поддержки `Set-Content` `Add-Content` командлетов и. Этот метод возвращает модуль записи содержимого для элемента, расположенного по указанному пути.
 
 Ниже приведена реализация класса [System. Management. Automation. Provider. иконтенткмдлетпровидер. жетконтентвритер *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) для этого метода.
 
@@ -142,11 +140,11 @@ public IContentWriter GetContentWriter(string path)
 
 - При определении класса поставщика поставщик содержимого Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. иконтенткмдлетпровидер. жетконтентвритер *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) должна гарантировать, что путь, передаваемый в метод, соответствует требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- По умолчанию переопределения этого метода не должны извлекать модуль записи для объектов, которые скрыты от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь представляет элемент, который скрыт от User, а [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) имеет значение `false`, то ошибка должна быть записана.
+- По умолчанию переопределения этого метода не должны извлекать модуль записи для объектов, которые скрыты от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true` . Если путь представляет элемент, который скрыт от User, а параметр [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) имеет значение, то ошибка должна быть записана `false` .
 
 ## <a name="attaching-dynamic-parameters-to-the-add-content-and-set-content-cmdlets"></a>Присоединение динамических параметров к командлетам Add-Content и Set-Content
 
-Командлеты `Add-Content` и `Set-Content` могут потребовать дополнительных динамических параметров, которые добавляют среду выполнения. Чтобы предоставить эти динамические параметры, поставщик содержимого Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. иконтенткмдлетпровидер. жетконтентвритердинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) для работы с этими параметрами. Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) . Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлеты.
+`Add-Content` `Set-Content` Командлеты и могут потребовать дополнительных динамических параметров, которые добавляют среду выполнения. Чтобы предоставить эти динамические параметры, поставщик содержимого Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. иконтенткмдлетпровидер. жетконтентвритердинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) для работы с этими параметрами. Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) . Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлеты.
 
 Этот метод не реализуется этим поставщиком контейнера Windows PowerShell. Однако приведенный ниже код является реализацией этого метода по умолчанию.
 
@@ -154,7 +152,7 @@ public IContentWriter GetContentWriter(string path)
 
 ## <a name="clearing-content"></a>Очистка содержимого
 
-Поставщик содержимого реализует метод [System. Management. Automation. Provider. иконтенткмдлетпровидер. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) для поддержки командлета `Clear-Content`. Этот метод удаляет содержимое элемента по указанному пути, но оставляет элемент неизменным.
+Поставщик содержимого реализует метод [System. Management. Automation. Provider. иконтенткмдлетпровидер. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) для поддержки `Clear-Content` командлета. Этот метод удаляет содержимое элемента по указанному пути, но оставляет элемент неизменным.
 
 Ниже приведена реализация метода [System. Management. Automation. Provider. иконтенткмдлетпровидер. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) для этого поставщика.
 
@@ -166,15 +164,15 @@ public IContentWriter GetContentWriter(string path)
 
 - При определении класса поставщика поставщик содержимого Windows PowerShell может объявлять возможности поставщика Експандвилдкардс, Filter, include или Exclude из перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . В таких случаях реализация метода [System. Management. Automation. Provider. иконтенткмдлетпровидер. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) должна гарантировать, что путь, передаваемый в метод, соответствует требованиям указанных возможностей. Для этого метод должен получить доступ к соответствующему свойству, например к свойствам [System. Management. Automation. Provider. кмдлетпровидер. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) и [System. Management. Automation. Provider. кмдлетпровидер. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- По умолчанию переопределения этого метода не должны очищать содержимое объектов, которые скрыты от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true`. Если путь представляет элемент, который скрыт от User, а [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) имеет значение `false`, то ошибка должна быть записана.
+- По умолчанию переопределения этого метода не должны очищать содержимое объектов, которые скрыты от пользователя, если свойство [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) не имеет значение `true` . Если путь представляет элемент, который скрыт от User, а параметр [System. Management. Automation. Provider. кмдлетпровидер. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) имеет значение, то ошибка должна быть записана `false` .
 
 - Реализация метода [System. Management. Automation. Provider. иконтенткмдлетпровидер. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) должна вызывать [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) и проверять его возвращаемое значение перед внесением любых изменений в хранилище данных. Этот метод используется для подтверждения выполнения операции при внесении изменений в хранилище данных, таких как очистка содержимого. Метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) отправляет имя ресурса, который будет изменен пользователю, при этом среда выполнения Windows PowerShell обрабатывает все параметры командной строки или привилегированные переменные в определении того, что следует отображать.
 
-  После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true`, метод [System. Management. Automation. Provider. иконтенткмдлетпровидер. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) должен вызывать метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение, чтобы разрешить отзыв, чтобы убедиться, что операция должна быть продолжена. Вызов [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) обеспечивает дополнительную проверку потенциально опасного изменения системы.
+  После того как вызов метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true` , метод [System. Management. Automation. Provider. иконтенткмдлетпровидер. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) должен вызвать метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение, чтобы разрешить отзыв, чтобы убедиться, что операция должна быть продолжена. Вызов [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) обеспечивает дополнительную проверку потенциально опасного изменения системы.
 
 ## <a name="attaching-dynamic-parameters-to-the-clear-content-cmdlet"></a>Присоединение динамических параметров к командлету Clear-Content
 
-Командлету `Clear-Content` могут потребоваться дополнительные динамические параметры, добавляемые во время выполнения. Чтобы предоставить эти динамические параметры, поставщик содержимого Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. иконтенткмдлетпровидер. клеарконтентдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters) для работы с этими параметрами. Этот метод получает параметры для элемента по указанному пути. Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) . Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлет.
+Для `Clear-Content` командлета могут потребоваться дополнительные динамические параметры, добавляемые во время выполнения. Чтобы предоставить эти динамические параметры, поставщик содержимого Windows PowerShell должен реализовать метод [System. Management. автоматизации. Provider. иконтенткмдлетпровидер. клеарконтентдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters) для работы с этими параметрами. Этот метод получает параметры для элемента по указанному пути. Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) . Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в командлет.
 
 Этот метод не реализуется этим поставщиком контейнера Windows PowerShell. Однако приведенный ниже код является реализацией этого метода по умолчанию.
 
@@ -203,7 +201,7 @@ public object ClearContentDynamicParameters(string path)
 
 Когда ваш поставщик Windows PowerShell зарегистрирован в Windows PowerShell, его можно проверить, запустив в командной строке поддерживаемые командлеты. Например, протестируйте пример поставщика содержимого.
 
-Используйте командлет `Get-Content`, чтобы получить содержимое указанного элемента в таблице базы данных по пути, указанному параметром `Path`. Параметр `ReadCount` задает количество элементов, которое считывается для чтения определенным считыванием содержимого (по умолчанию 1). С помощью следующей записи команды командлет извлекает из таблицы две строки (элементы) и отображает их содержимое. Обратите внимание, что в следующем примере выходных данных используется вымышленная БД Access.
+Используйте `Get-Content` командлет, чтобы получить содержимое указанного элемента в таблице базы данных по пути, указанному `Path` параметром. `ReadCount`Параметр задает число элементов, которое считывается для чтения определенным считыванием содержимого (по умолчанию 1). С помощью следующей записи команды командлет извлекает из таблицы две строки (элементы) и отображает их содержимое. Обратите внимание, что в следующем примере выходных данных используется вымышленная БД Access.
 
 ```powershell
 Get-Content -Path mydb:\Customers -ReadCount 2
@@ -236,7 +234,7 @@ Zip       : 98089
 Country   : USA
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
@@ -250,4 +248,4 @@ Country   : USA
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
 
-[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)

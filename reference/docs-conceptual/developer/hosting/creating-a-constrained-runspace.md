@@ -1,23 +1,16 @@
 ---
 title: Создание ограниченного пространства выполнения | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 59125e65-7030-40bb-9926-756120b2d952
-caps.latest.revision: 5
-ms.openlocfilehash: 20ac1e2af8e047b8b572d86a55439676aa8df25c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367653"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779817"
 ---
 # <a name="creating-a-constrained-runspace"></a>Создание ограниченного пространства выполнения
 
-В целях повышения производительности или безопасности может потребоваться ограничить команды Windows PowerShell, доступные для ведущего приложения. Чтобы сделать это, создайте пустой объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , вызвав метод [System. Management. Automation. пространства выполнения. Initialsessionstate. Create *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) , а затем добавив только те команды, которые должны быть доступны.
+В целях повышения производительности или безопасности может потребоваться ограничить команды Windows PowerShell, доступные для ведущего приложения. Чтобы сделать это, создайте пустую [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , вызвав [System.Management.Automation.Runspaces.Iniтиалсессионстате. Создайте метод *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) , а затем добавьте только те команды, которые должны быть доступны.
 
  Использование пространства выполнения, которое загружает только указанные команды, обеспечивает значительно повышенную производительность.
 
@@ -120,6 +113,6 @@ this.runspace = RunspaceFactory.CreateRunspace(defaultSessionState);
 this.runspace.Open();
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Создание InitialSessionState](./creating-an-initialsessionstate.md)

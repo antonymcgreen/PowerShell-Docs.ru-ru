@@ -1,19 +1,12 @@
 ---
 title: Добавление и вызов команд | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 62be8432-28c1-4ca2-bcdb-d0350163fa8c
-caps.latest.revision: 5
-ms.openlocfilehash: f776f13fe743a3f5f67de0d94883e3f754040ffc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b51c4ae3fa5c5239e3c5c5e65bf7aa63c58c4da9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367643"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779800"
 ---
 # <a name="adding-and-invoking-commands"></a>Добавление и вызов команд
 
@@ -47,7 +40,7 @@ ms.locfileid: "72367643"
 
 ### <a name="addparameter"></a>аддпараметер
 
- В предыдущем примере выполняется одна команда без параметров. Можно добавить параметры в команду с помощью метода [System. Management. Automation. пскомманд. аддпараметер *.](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) например, следующий код возвращает список всех процессов с именем `PowerShell`, выполняющихся на компьютере.
+ В предыдущем примере выполняется одна команда без параметров. Можно добавить параметры в команду с помощью метода [System. Management. Automation. пскомманд. аддпараметер *.](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) например, следующий код возвращает список всех процессов, именованных `PowerShell` на компьютере.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -79,7 +72,7 @@ PowerShell.Create().AddCommand("Get-Process")
 
 ### <a name="addstatement"></a>аддстатемент
 
- Пакетную обработку можно имитировать с помощью метода [System. Management. Automation. PowerShell. аддстатемент *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , который добавляет дополнительный оператор в конец конвейера. следующий код получает список запущенных процессов с именем `PowerShell`, а затем получает список запущенных служб.
+ Пакетную обработку можно имитировать с помощью метода [System. Management. Automation. PowerShell. аддстатемент *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , который добавляет дополнительный оператор в конец конвейера. следующий код возвращает список запущенных процессов с именем `PowerShell` , а затем получает список запущенных служб.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -90,14 +83,14 @@ ps.Invoke();
 
 ### <a name="addscript"></a>аддскрипт
 
- Можно запустить существующий скрипт, вызвав метод [System. Management. Automation. PowerShell. аддскрипт *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) . В следующем примере в конвейер добавляется скрипт и выполняется его выполнение. В этом примере предполагается, что в папке с именем `D:\PSScripts`уже есть скрипт с именем `MyScript.ps1`.
+ Можно запустить существующий скрипт, вызвав метод [System. Management. Automation. PowerShell. аддскрипт *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) . В следующем примере в конвейер добавляется скрипт и выполняется его выполнение. В этом примере предполагается, что в папке уже есть скрипт с именем `MyScript.ps1` `D:\PSScripts` .
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
- Существует также версия метода [System. Management. Automation. PowerShell. аддскрипт *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) , которая принимает логический параметр с именем `useLocalScope`. Если этот параметр имеет значение `true`, сценарий выполняется в локальной области. Следующий код запустит скрипт в локальной области.
+ Существует также версия метода [System. Management. Automation. PowerShell. аддскрипт *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) , принимающая логический параметр с именем `useLocalScope` . Если этот параметр имеет значение `true` , скрипт выполняется в локальной области. Следующий код запустит скрипт в локальной области.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -182,7 +175,7 @@ namespace HostPS3
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Создание InitialSessionState](./creating-an-initialsessionstate.md)
 
