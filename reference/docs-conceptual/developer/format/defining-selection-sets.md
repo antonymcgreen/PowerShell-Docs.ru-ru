@@ -1,23 +1,16 @@
 ---
 title: Определение наборов выбора | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 00dbb5ee-93d4-4914-a082-ef4d8b236b5c
-caps.latest.revision: 16
-ms.openlocfilehash: 95eeb037b3b9190fec1212a68029624993f3fd9f
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 58c812b69f92c33304bf7fc7b2891cc2a0227918
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692293"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774309"
 ---
 # <a name="defining-selection-sets"></a>Определение наборов выделенных фрагментов
 
-При создании нескольких представлений и элементов управления можно определить наборы объектов, которые называются наборами выбора. Набор выбора позволяет определять объекты один раз без необходимости их многократного определения для каждого представления или элемента управления. Обычно наборы выбора используются при наличии набора связанных объектов .NET. Например, `FileSystem` файл форматирования (FileSystem. Format. ps1xml) определяет набор типов файловой системы, используемых несколькими представлениями.
+При создании нескольких представлений и элементов управления можно определить наборы объектов, которые называются наборами выбора. Набор выбора позволяет определять объекты один раз без необходимости их многократного определения для каждого представления или элемента управления. Обычно наборы выбора используются при наличии набора связанных объектов .NET. Например, `FileSystem` файл форматирования (FileSystem.format.ps1XML) определяет набор типов файловой системы, используемых несколькими представлениями.
 
 ## <a name="where-selection-sets-are-defined-and-referenced"></a>Где определяются и указываются наборы выбора
 
@@ -132,13 +125,13 @@ ms.locfileid: "83692293"
 
   - [Элемент SelectionSetName для элемента SelectionCondition для элемента GroupBy (формат)](./selectionsetname-element-for-selectioncondition-for-groupby-format.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [селектионсетс](./selectionsets-element-format.md)
 
 [Набор выбора](./selectionset-element-format.md)
 
-[Name](./name-element-for-selectionset-format.md)
+[Имя](./name-element-for-selectionset-format.md)
 
 [Типы](./types-element-for-selectionset-format.md)
 

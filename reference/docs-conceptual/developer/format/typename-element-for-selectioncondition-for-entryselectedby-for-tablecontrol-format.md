@@ -1,25 +1,18 @@
 ---
 title: Элемент TypeName для Селектионкондитион для Ентриселектедби для Таблеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e97d56fb-4e35-447a-9282-26f10d0a4609
-caps.latest.revision: 11
-ms.openlocfilehash: fe65ac95cead7df0069ffdae666fb34b7309fbb6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b9367f0ea659b9dce8fe200a5a08873d53bc03a8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361473"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772592"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>Элемент TypeName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
 
 Указывает тип .NET, который запускает условие. При наличии этого типа условие выполняется, и используется строка таблицы.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Ентриселектедби для Таблеровентри (Format) Элемент Селектионкондитион для Ентриселектедби для элемента TypeName Таблеровентри (Format) для Селектионкондитион для Ентриселектедби в TableRowEntry (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Ентриселектедби для таблеровентри (Format) SelectionCondition для EntrySelectedBy в TableRowEntry для SelectionCondition (Format).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72361473"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `TypeName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `TypeName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -47,17 +40,17 @@ ms.locfileid: "72361473"
 
 ## <a name="text-value"></a>Текстовое значение
 
-Укажите полное имя типа .NET, например `System.IO.DirectoryInfo`.
+Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Условие выбора может указывать любое количество типов .NET или наборов выбора, но не может одновременно указывать оба типа. Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для, когда используется запись или элемент представления](./defining-conditions-for-displaying-data.md).
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
 [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md)
 

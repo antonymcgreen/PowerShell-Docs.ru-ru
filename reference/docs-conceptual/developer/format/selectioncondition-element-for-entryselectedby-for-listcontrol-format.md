@@ -1,25 +1,18 @@
 ---
 title: Элемент Селектионкондитион для Ентриселектедби для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7649d5d0-2b56-49b5-a670-dde46caca343
-caps.latest.revision: 11
-ms.openlocfilehash: 7150b29ad84dfb587215ee3e64c356adbd5a6305
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 29626b181f21d168e1ebf973e01afeb411d9ef54
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417537"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772779"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
 
 Определяет условие, которое должно существовать для использования этого определения представления списка. Количество условий выбора, которое можно указать для определения списка, не ограничено.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент (формат) ListControl элемент (Format) Листентриес элемент (Format) Листентри элемент (Format) Ентриселектедби для Листентри (Format) Селектионкондитион элемент для Ентриселектедби для Листентри (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ListControl элемент (Format) Листентриес элемент (Format) Листентри элемент (Format) Ентриселектедби для листентри (Format) Селектионкондитион для EntrySelectedBy в ListEntry (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,11 +27,11 @@ ms.locfileid: "74417537"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `SelectionCondition`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `SelectionCondition` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -46,7 +39,7 @@ ms.locfileid: "74417537"
 |-------------|-----------------|
 |[Элемент PropertyName для Селектионкондитион для Ентриселектедби для Листентри (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает свойство .NET, которое запускает условие.|
 |[Элемент ScriptBlock для Селектионкондитион для Ентриселектедби для Листентри (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает скрипт, который запускает условие.|
-|[Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Листентри (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Необязательный элемент.<br /><br /> Указывает набор типов .NET, которые активируют условие.|
+|[Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListEntry (формат)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Необязательный элемент.<br /><br /> Указывает набор типов .NET, которые активируют условие.|
 |[Элемент TypeName для Селектионкондитион для Ентриселектедби для Листентри (Format)](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Необязательный элемент.<br /><br /> Указывает тип .NET, который запускает условие.|
 
 ### <a name="parent-elements"></a>Родительские элементы
@@ -55,7 +48,7 @@ ms.locfileid: "74417537"
 |-------------|-----------------|
 |[Элемент Ентриселектедби для Таблеровентри (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Определяет типы .NET, которые используют эту запись таблицы, или условие, которое должно существовать для использования этой записи.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Лвхен вы определяете условие выбора, применяются следующие требования.
 
@@ -67,7 +60,7 @@ ms.locfileid: "74417537"
 
 Дополнительные сведения о других компонентах представления списка см. в разделе [Создание представления списка](./creating-a-list-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Создание представления списка](./creating-a-list-view.md)
 

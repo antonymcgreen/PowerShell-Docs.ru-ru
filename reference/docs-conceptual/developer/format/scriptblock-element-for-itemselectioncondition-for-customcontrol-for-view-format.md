@@ -1,25 +1,18 @@
 ---
 title: Элемент ScriptBlock для Итемселектионкондитион для ошибка customcontrol для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 946cd2b5-ac37-4a13-bb49-29fbc70ec8d7
-caps.latest.revision: 6
-ms.openlocfilehash: 0c07ab0e5d04c4056a7e7215bfa55773bfccb41d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 31873e886af04f8eedaf859af1d6bc1d5bcfdbf7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362073"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772881"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format"></a>Элемент ScriptBlock для элемента ItemSelectionCondition для элемента CustomControl для элемента View (формат)
 
-Указывает скрипт, который запускает условие. При вычислении этого скрипта для `true`выполняется условие, и используется элемент управления. Этот элемент используется при определении пользовательского представления элемента управления.
+Указывает скрипт, который запускает условие. При вычислении этого скрипта `true` выполняется условие, и используется элемент управления. Этот элемент используется при определении пользовательского представления элемента управления.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент ошибка customcontrol (Format) элемент Кустоментриес для ошибка customcontrol для элемента View (формат) Кустоментри для Кустоментриес для представления (Format) Кустомитем для Кустоментри для элемента ExpressionBinding представления (Format) для Кустомитем для ошибка customcontrol для элемента представления (Format) Итемселектионкондитион для привязки выражения ошибка customcontrol для представления (Format) элемент ScriptBlock для Итемселектионкондитион для Ошибка customcontrol для представления (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент ошибка customcontrol (Format) элемент Кустоментриес для ошибка customcontrol для элемента View (формат) Кустоментри для Кустоментриес для представления (Format) Кустомитем для Кустоментри для элемента ExpressionBinding представления (Format) для Кустомитем для ошибка customcontrol для элемента "View" ItemSelectionCondition в качестве привязывания выражения для ошибка customcontrol для представления (Format) элемент ScriptBlock для ItemSelectionCondition для ошибка customcontrol для представления (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72362073"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ScriptBlock`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ScriptBlock` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,13 +42,13 @@ ms.locfileid: "72362073"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Если используется этот элемент, нельзя указать элемент [PropertyName](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) при определении условия выбора.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент PropertyName для Итемселектионкондитион для ошибка customcontrol в представлении (формат)](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md)
+[Элемент PropertyName для элемента ItemSelectionCondition для элемента CustomControl для элемента View (формат)](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md)
 
 [Элемент Итемселектионкондитион для привязки выражения ошибка customcontrol для представления (Format)](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)
 

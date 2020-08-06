@@ -1,25 +1,18 @@
 ---
 title: Элемент PropertyName для Селектионкондитион для Ентриселектедби для Видинтри (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 340abb12-6df1-42f4-bdae-b0509c90952c
-caps.latest.revision: 11
-ms.openlocfilehash: 196877b97db9ed0592e357486c1318dc1e7efd31
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ca2106dbbd8da345e71e83a3ead3cf7a1cb44cb4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362243"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773119"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format"></a>Элемент PropertyName для элемента SelectionCondition для элемента EntrySelectedBy для элемента WideEntry (формат)
 
-Указывает свойство .NET, которое запускает условие. Если это свойство имеется или если оно имеет значение `true`, условие выполняется, и используется определение.
+Указывает свойство .NET, которое запускает условие. При наличии этого свойства или при его вычислении `true` условие выполняется, и используется определение.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент (формат) Видеконтрол элемент (Format) Видинтриес элемент (Format) Видинтри элемент (Format) Ентриселектедби для Видинтри (Format) Селектионкондитион элемент для Ентриселектедби для Видинтри (Format) PropertyName элемент для Селектионкондитион для Ентриселектедби для Видинтри (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Видеконтрол элемент (Format) Видинтриес элемент (Format) Видинтри элемент (Format) Ентриселектедби для видинтри (Format) Селектионкондитион для EntrySelectedBy в WideEntry для SelectionCondition в EntrySelectedBy (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,15 +26,15 @@ ms.locfileid: "72362243"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `PropertyName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `PropertyName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -53,15 +46,15 @@ ms.locfileid: "72362243"
 
 Укажите имя свойства .NET.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Условие выбора должно указывать по крайней мере одно имя свойства или скрипт для вычисления, но не может одновременно указывать оба значения. Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
 Дополнительные сведения о других компонентах расширенного представления см. в разделе [широкие представления](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание расширенного представления](./creating-a-wide-view.md)
+[Создание широкого представления](./creating-a-wide-view.md)
 
 [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md)
 

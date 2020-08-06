@@ -1,19 +1,12 @@
 ---
 title: Представление списка (GroupBy) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a2e66c86-83a7-4148-8575-c28d6d429d4f
-caps.latest.revision: 6
-ms.openlocfilehash: c178c4a48f9595001bcc249d5f55886fa54bb9f2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7956d13e196454a3f6da185e9be74f9d3cb8ef63
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365143"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773408"
 ---
 # <a name="list-view-groupby"></a>Представление списка (с группировкой)
 
@@ -23,14 +16,14 @@ ms.locfileid: "72365143"
 
 1. Скопируйте XML-код из раздела "пример" этого раздела в текстовый файл.
 
-2. Сохраните текстовый файл. Не забудьте добавить расширение `format.ps1xml` в файл, чтобы обозначить его как файл форматирования.
+2. Сохраните текстовый файл. Не забудьте добавить `format.ps1xml` расширение в файл, чтобы обозначить его как файл форматирования.
 
-3. Откройте Windows PowerShell и выполните следующую команду, чтобы загрузить файл форматирования в текущий сеанс: `Update-formatdata -prependpath PathToFormattingFile`.
+3. Откройте Windows PowerShell и выполните следующую команду, чтобы загрузить файл форматирования в текущий сеанс: `Update-formatdata -prependpath PathToFormattingFile` .
 
    > [!WARNING]
-   > Этот файл форматирования определяет отображение объекта, который уже определен файлом форматирования Windows PowerShell. При выполнении командлета необходимо использовать параметр `prependPath`, и этот файл форматирования нельзя загрузить как модуль.
+   > Этот файл форматирования определяет отображение объекта, который уже определен файлом форматирования Windows PowerShell. Этот параметр необходимо использовать `prependPath` при выполнении командлета, и этот файл форматирования нельзя загрузить как модуль.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом файле форматирования показаны следующие XML-элементы:
 
@@ -136,7 +129,7 @@ DisplayName : Firewall Client Agent
 ServiceType : Win32OwnProcess
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Примеры файлов форматирования](./examples-of-formatting-files.md)
 

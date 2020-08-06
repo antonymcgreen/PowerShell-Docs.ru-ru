@@ -1,25 +1,18 @@
 ---
 title: Элемент PropertyName для Селектионкондитион элементов управления в конфигурации (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ec048408-e1c6-41ef-b39b-72f4c2dcf2ac
-caps.latest.revision: 6
-ms.openlocfilehash: b4b2440fdb7171d09fdc16ac7cc4f25ed1a4bb78
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7730951a840fcfcd8bf819fff5182049bd6b6c23
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362403"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773136"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-controls-for-configuration-format"></a>Элемент PropertyName для элемента SelectionCondition для элемента Controls для элемента Configuration (формат)
 
-Указывает свойство .NET, которое запускает условие. Если это свойство имеется или если оно имеет значение `true`, условие выполняется и используется запись. Этот элемент используется при определении общего элемента управления, который может использоваться всеми представлениями в файле форматирования.
+Указывает свойство .NET, которое запускает условие. При наличии этого свойства или при его вычислении `true` условие выполняется, и используется запись. Этот элемент используется при определении общего элемента управления, который может использоваться всеми представлениями в файле форматирования.
 
-Элемент Configuration (Format) управляет элементом контрольного элемента конфигурации (Format) элементов управления для элемента управления конфигурации (Format) ошибка customcontrol для элемента Control в конфигурации (Format) Кустоментриес для ошибка customcontrol для конфигурации ( Формат). элемент Кустоментри для ошибка customcontrol элементов управления для элемента конфигурации (Format) Ентриселектедби для Кустоментри для элементов управления для элемента конфигурации (Format) Селектионкондитион для Ентриселектедби для Кустоментри конфигурации ( Формат) элемент PropertyName для Селектионкондитион для Ентриселектедби для Листентри (Format)
+Элемент конфигурации (Format) контролирует элемент элемента управления конфигурации (Format) для элементов управления для элемента конфигурации (Format) ошибка customcontrol для элемента управления в элементе конфигурации (Format) Кустоментриес для ошибка customcontrol для элемента конфигурации (Format) Кустоментри для ошибка customcontrol для элементов управления для элемента конфигурации (Format) Ентриселектедби для Кустоментри для элементов управления для элемента конфигурации (Format) Селектионкондитион для Ентриселектедби для CustomEntry для элемента конфигурации (Format) PropertyName для SelectionCondition для EntrySelectedBy для ListEntry (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,32 +22,32 @@ ms.locfileid: "72362403"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `PropertyName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `PropertyName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Селектионкондитион для Ентриселектедби для элементов управления конфигурации (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)|Определяет условие, которое должно существовать для использования определения общего элемента управления.|
+|[Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)|Определяет условие, которое должно существовать для использования определения общего элемента управления.|
 
 ## <a name="text-value"></a>Текстовое значение
 
 Укажите имя свойства .NET.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Условие выбора должно указывать по крайней мере одно имя свойства или скрипт, но не может указывать и то, и другое. Дополнительные сведения о том, как можно использовать условия выбора, см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Селектионкондитион для Ентриселектедби для элементов управления конфигурации (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)
+[Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

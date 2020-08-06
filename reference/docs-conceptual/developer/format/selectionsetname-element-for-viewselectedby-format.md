@@ -1,19 +1,12 @@
 ---
 title: Элемент Селектионсетнаме для Виевселектедби (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8ab0f033-df09-4435-a8bd-76ec2d01f13b
-caps.latest.revision: 13
-ms.openlocfilehash: d1de2b30860bac80bf17508f40eec33c2794c4b2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f6410b463bcb00d2758849c2f7e13cd839277e50
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368263"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772609"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>Элемент SelectionSetName для элемента ViewSelectedBy (формат)
 
@@ -29,27 +22,27 @@ ms.locfileid: "72368263"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `SelectionSetName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `SelectionSetName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Виевселектедби (Format)](./viewselectedby-element-format.md)|Определяет объекты .NET, отображаемые представлением.|
+|[Элемент ViewSelectedBy (формат)](./viewselectedby-element-format.md)|Определяет объекты .NET, отображаемые представлением.|
 
 ## <a name="text-value"></a>Текстовое значение
 
-Укажите имя набора выбора, который определяется элементом `Name` для набора выбора.
+Укажите имя набора выбора, который определяется `Name` элементом для набора выбора.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Наборы выбора можно использовать при наличии набора связанных объектов, на которые необходимо создать ссылку, используя одно имя, например набор объектов, связанных через наследование. Дополнительные сведения об определении и ссылке на наборы выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
 
@@ -67,10 +60,10 @@ ms.locfileid: "72368263"
 </View>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Определение наборов выбора](./defining-selection-sets.md)
+[Определение наборов выделенных фрагментов](./defining-selection-sets.md)
 
-[Элемент Виевселектедби (Format)](./viewselectedby-element-format.md)
+[Элемент ViewSelectedBy (формат)](./viewselectedby-element-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

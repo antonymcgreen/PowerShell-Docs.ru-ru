@@ -1,19 +1,12 @@
 ---
 title: Пример Host01 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1fca30b1-13fe-48a2-b0dd-979c161177a6
-caps.latest.revision: 14
-ms.openlocfilehash: 9a4b7c842c6222fa2e9f1c14f37f45d7a5158107
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a2ef53d36697d5637dff3de8a286902984f3c5a1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361053"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772258"
 ---
 # <a name="host01-sample"></a>Пример Host01
 
@@ -25,7 +18,7 @@ ms.locfileid: "72361053"
 
  Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 - Создание пользовательского класса узла, производного от класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) .
 
@@ -308,4 +301,4 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также

@@ -1,25 +1,18 @@
 ---
 title: Примеры пространства выполнения | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c92a6d3d-8d34-4a76-bdc3-dea923d9858e
-caps.latest.revision: 17
-ms.openlocfilehash: e24d40746da91f60aaf2af655ddcadc88ab6a4db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f7c11101a570f89657f9ffc4d52fa6ebce3a91e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361003"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772218"
 ---
 # <a name="runspace-samples"></a>Примеры пространств выполнения
 
 В этом разделе содержится пример кода, демонстрирующий использование различных типов пространств выполнения для синхронного и асинхронного запуска команд. С помощью Microsoft Visual Studio можно создать консольное приложение, а затем скопировать код из разделов этого раздела в ведущее приложение.
 
-## <a name="in-this-section"></a>Содержание
+## <a name="in-this-section"></a>В этом разделе
 
 > [!NOTE]
 > Примеры ведущих приложений, которые создают пользовательские интерфейсы узлов, см. в разделе [примеры пользовательских узлов](./custom-host-samples.md).
@@ -32,9 +25,9 @@ ms.locfileid: "72361003"
 
  [Пример Runspace04](./runspace04-sample.md) В этом примере показано, как использовать класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для выполнения команд и перехвата ошибок, возникающих при выполнении команд. Выполняются две команды, и последняя получает недопустимый аргумент параметра. В результате объекты не возвращаются, и возникает ошибка завершения.
 
- [Пример Runspace05](./runspace05-sample.md) В этом примере показано, как добавить оснастку в объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы командлет оснастки был доступен при открытии пространства выполнения. Оснастка предоставляет командлет Get-proc (определяемый [образцом GetProcessSample01](../cmdlet/getprocesssample01-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Пример Runspace05](./runspace05-sample.md) В этом примере показано, как добавить оснастку в объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы командлет оснастки был доступен при открытии пространства выполнения. Оснастка предоставляет командлет Get-proc (определяемый [образцом GetProcessSample01](../cmdlet/getprocesssample01-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
- [Пример Runspace06](./runspace06-sample.md) В этом примере показано, как добавить модуль в объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы модуль загружался при открытии пространства выполнения. Модуль предоставляет командлет Get-proc (определяемый [образцом GetProcessSample02](../cmdlet/getprocesssample02-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Пример Runspace06](./runspace06-sample.md) В этом примере показано, как добавить модуль в [System.Management.Automation.Runspaces.Iniобъект тиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы модуль загружался при открытии пространства выполнения. Модуль предоставляет командлет Get-proc (определяемый [образцом GetProcessSample02](../cmdlet/getprocesssample02-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
  [Пример Runspace07](./runspace07-sample.md) В этом примере показано, как создать пространство выполнения, а затем использовать это пространство выполнения для синхронного выполнения двух командлетов с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
@@ -42,8 +35,8 @@ ms.locfileid: "72361003"
 
  [Пример Runspace09](./runspace09-sample.md) В этом примере показано, как добавить скрипт в конвейер объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) и как запустить скрипт в асинхронном режиме. События используются для обработки выходных данных скрипта.
 
- [Пример Runspace10](./runspace10-sample.md) В этом примере показано, как создать начальное состояние сеанса по умолчанию, как добавить командлет в [System. Management. Automation. пространствей. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), как создать пространство выполнения, которое использует исходное состояние сеанса, и как выполнить команду с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Пример Runspace10](./runspace10-sample.md) В этом примере показано, как создать начальное состояние сеанса по умолчанию, как добавить командлет в [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), как создать пространство выполнения, использующее исходное состояние сеанса, и как выполнить команду с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
  [Пример Runspace11](./runspace11-sample.md) В этом примере показано, как использовать класс [System. Management. Automation. проксикомманд](/dotnet/api/System.Management.Automation.ProxyCommand) для создания команды прокси, которая вызывает существующий командлет, но ограничит набор доступных параметров. Прокси-команда затем добавляется в начальное состояние сеанса, который используется для создания ограниченного пространства выполнения. Это означает, что пользователь может получить доступ к функциям командлета только с помощью прокси-команды.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также

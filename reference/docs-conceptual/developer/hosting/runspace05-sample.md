@@ -1,23 +1,16 @@
 ---
 title: Пример Runspace05 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1685cfc4-b32c-4bed-b221-e0c4482db955
-caps.latest.revision: 9
-ms.openlocfilehash: b640493bca81a0157bf5abffe3ab43b3a2832b01
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 2d274028d2357a26cd75cf70a033abbf907f5c4d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565263"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772167"
 ---
 # <a name="runspace05-sample"></a>Пример Runspace05
 
-В этом примере показано, как добавить оснастку в объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы командлет оснастки был доступен при открытии пространства выполнения. Оснастка предоставляет командлет Get-proc (определяемый [образцом GetProcessSample01](../cmdlet/getprocesssample01-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+В этом примере показано, как добавить оснастку в объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы командлет оснастки был доступен при открытии пространства выполнения. Оснастка предоставляет командлет Get-proc (определяемый [образцом GetProcessSample01](../cmdlet/getprocesssample01-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
 ## <a name="requirements"></a>Требования
 
@@ -27,11 +20,11 @@ ms.locfileid: "83565263"
 
 В этом образце демонстрируется следующее.
 
-- Создание объекта [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+- Создание объекта [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 
-- Добавление оснастки в объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+- Добавление оснастки в объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 
-- Создание объекта [System. Management. Automation. пространства выполнения](/dotnet/api/System.Management.Automation.Runspaces.Runspace) , использующего объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+- Создание объекта [System. Management. Automation. пространства выполнения](/dotnet/api/System.Management.Automation.Runspaces.Runspace) , использующего объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 
 - Создание объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) , использующего пространство выполнения.
 
@@ -43,7 +36,7 @@ ms.locfileid: "83565263"
 
 ## <a name="example"></a>Пример
 
-В этом примере создается пространство выполнения, в котором используется объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) для определения элементов, доступных при открытии пространства выполнения. В этом примере оснастка, которая определяет командлет Get-proc, добавляется в исходное состояние сеанса.
+В этом примере создается пространство выполнения, которое использует объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) для определения элементов, доступных при открытии пространства выполнения. В этом примере оснастка, которая определяет командлет Get-proc, добавляется в исходное состояние сеанса.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -127,6 +120,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

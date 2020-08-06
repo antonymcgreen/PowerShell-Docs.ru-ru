@@ -1,25 +1,18 @@
 ---
 title: Элемент ScriptBlock для Селектионкондитион для Ентриселектедби для ListControl (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4a1adad7-e864-4892-9d26-a6476a9698d2
-caps.latest.revision: 7
-ms.openlocfilehash: b65d953169f6daf15fb617ce4d0303cf4cb584ee
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 56bd04c9af74bdaa7a186a208fc15a67cb08b004
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368593"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772864"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
 
-Указывает скрипт, который запускает условие. При вычислении этого скрипта на `true`условие выполняется, и используется запись списка.
+Указывает скрипт, который запускает условие. При вычислении этого скрипта выполняется `true` условие, и используется запись списка.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент (формат) ListControl элемент (Format) Листентриес элемент (Format) Листентри элемент (Format) Ентриселектедби для Листентри (Format) Селектионкондитион элемент для Ентриселектедби для Листентри (Format) элемент ScriptBlock для Селектионкондитион для Ентриселектедби для Листентри (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ListControl элемент (Format) Листентриес элемент (Format) Листентри элемент (Format) Ентриселектедби для Листентри (Format) Селектионкондитион для EntrySelectedBy в ListEntry для SelectionCondition в EntrySelectedBy (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72368593"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ScriptBlock`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ScriptBlock` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,13 +42,13 @@ ms.locfileid: "72368593"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Условие выбора должно указывать по крайней мере один имя скрипта или свойства для вычисления, но не может одновременно указывать оба значения. (Дополнительные сведения о том, как можно использовать условия выбора, см. в разделе [Определение условий для использования записи или элемента представления](./defining-conditions-for-displaying-data.md).)
 
 Дополнительные сведения о других компонентах представления списка см. в разделе [представление списка](./creating-a-list-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Элемент Листентри (Format)](./listentry-element-for-listcontrol-format.md)
 

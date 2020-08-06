@@ -1,19 +1,12 @@
 ---
 title: Элемент TypeName для типов (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
-caps.latest.revision: 15
-ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 40fad73c66124d6c3b0d969b4268713a492c963a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368033"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772541"
 ---
 # <a name="typename-element-for-types-format"></a>Элемент TypeName для элемента Types (формат)
 
@@ -29,15 +22,15 @@ ms.locfileid: "72368033"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `TypeName`. В набор выбора необходимо добавить по крайней мере один элемент `TypeName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `TypeName` элемента. `TypeName`В набор выбора необходимо добавить хотя бы один элемент.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,15 +42,15 @@ ms.locfileid: "72368033"
 
 Укажите полное имя для типа .NET.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Наборы выбора можно использовать при наличии набора связанных объектов, на которые необходимо создать ссылку, используя одно имя, например набор объектов, связанных через наследование. При определении представлений можно указать набор объектов, используя имя набора вместо перечисления всех объектов в каждом представлении.
 
-Стандартные наборы выбора задаются по имени при определении представлений файла форматирования. В таких случаях `SelectionSetName` дочерний элемент элемента `ViewSelectedBy` для представления задает набор. Однако в разных записях представления также можно указать набор выбора, который применяется только к этой записи представления. Дополнительные сведения о наборах выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
+Стандартные наборы выбора задаются по имени при определении представлений файла форматирования. В таких случаях `SelectionSetName` дочерний элемент `ViewSelectedBy` элемента для представления задает набор. Однако в разных записях представления также можно указать набор выбора, который применяется только к этой записи представления. Дополнительные сведения о наборах выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан элемент `SelectionSet`, определяющий четыре типа .NET.
+В следующем примере показан `SelectionSet` элемент, определяющий четыре типа .NET.
 
 ```
 <SelectionSets>
@@ -73,14 +66,14 @@ ms.locfileid: "72368033"
 </SelectionSets>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Определение наборов выбора](./defining-selection-sets.md)
+[Определение наборов выделенных фрагментов](./defining-selection-sets.md)
 
-[Элемент набора выбора (Format)](./selectionset-element-format.md)
+[Элемент SelectionSet (формат)](./selectionset-element-format.md)
 
-[Элемент Селектионсетс (Format)](./selectionsets-element-format.md)
+[Элемент SelectionSets (формат)](./selectionsets-element-format.md)
 
 [Элемент Types (Format)](./types-element-for-selectionset-format.md)
 
-[Запись файла форматирования Windows PowerShell](./writing-a-powershell-formatting-file.md)
+[Написание файла форматирования Windows PowerShell](./writing-a-powershell-formatting-file.md)

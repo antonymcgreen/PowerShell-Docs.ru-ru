@@ -1,19 +1,12 @@
 ---
 title: Элемент Енумерабликспансионс (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 50c33892-2ade-44c2-906c-81e5f5ca21f2
-caps.latest.revision: 9
-ms.openlocfilehash: 1ecbda8a3b623757517019105e3b1ee46ccbb55c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2b536b1ab9b34b0089d0a38d3c5dc7a937176443
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363303"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774020"
 ---
 # <a name="enumerableexpansions-element-format"></a>Элемент EnumerableExpansions (формат)
 
@@ -31,28 +24,28 @@ ms.locfileid: "72363303"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `EnumerableExpansions`. Количество дочерних элементов, которые можно использовать, не ограничено.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `EnumerableExpansions` элемента. Количество дочерних элементов, которые можно использовать, не ограничено.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Енумерабликспансион (Format)](./enumerableexpansion-element-format.md)|Необязательный элемент.<br /><br /> Определяет конкретные объекты коллекции .NET, развернутые при их отображении в представлении.|
+|[Элемент EnumerableExpansion (формат)](./enumerableexpansion-element-format.md)|Необязательный элемент.<br /><br /> Определяет конкретные объекты коллекции .NET, развернутые при их отображении в представлении.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Дефаултсеттингс (Format)](./defaultsettings-element-format.md)|Определяет общие параметры, которые применяются ко всем представлениям файла форматирования.|
+|[Элемент DefaultSettings (формат)](./defaultsettings-element-format.md)|Определяет общие параметры, которые применяются ко всем представлениям файла форматирования.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Этот элемент используется для определения способа отображения объектов коллекции и объектов в коллекции. В этом случае объект коллекции ссылается на любой объект, поддерживающий интерфейс **System. Collections. ICollection** .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

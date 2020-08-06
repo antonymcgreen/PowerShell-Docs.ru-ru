@@ -1,25 +1,18 @@
 ---
 title: Элемент Селектионсетнаме для Ентриселектедби для Таблеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5dd0bd5d-f206-4cc6-a0f8-70700ee2c4b7
-caps.latest.revision: 8
-ms.openlocfilehash: 819906127e81355c45103ede85ef3608e1c1cfeb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e68aa74b201abf345e87411db6cb2787ddd4f72b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368323"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772694"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-tablecontrol-format"></a>Элемент SelectionSetName для элемента EntrySelectedBy для элемента TableControl (формат)
 
 Указывает набор типов .NET, которые использует эту запись табличного представления. Количество наборов выбора, которые можно указать для записи, не ограничено.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Ентриселектедби элемент (Format) Селектионсетнаме элемент для Ентриселектедби для Таблеровентри (формат)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) Таблеконтрол элемент (Format) Таблеровентриес элемент (Format) Таблеровентри элемент (Format) Ентриселектедби элемент (Format) Селектионсетнаме для EntrySelectedBy в TableRowEntry (Format)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,11 +26,11 @@ ms.locfileid: "72368323"
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,7 +42,7 @@ ms.locfileid: "72368323"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Наборы выбора обычно используются, если требуется определить группу объектов, используемых в нескольких представлениях. Например, может потребоваться создать табличное представление и представление списка для одного и того же набора объектов. Дополнительные сведения об определении наборов выбора см. [в разделе Определение наборов объектов для представления](./defining-selection-sets.md).
 
@@ -57,12 +50,12 @@ ms.locfileid: "72368323"
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Элемент Ентриселектедби (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)
 
 [Определение наборов объектов для представления](./defining-selection-sets.md)
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

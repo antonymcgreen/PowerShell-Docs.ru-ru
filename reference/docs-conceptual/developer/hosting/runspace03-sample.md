@@ -1,19 +1,12 @@
 ---
 title: Пример Runspace03 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 31df99d7-6954-4fdc-b6f5-06ecba094f43
-caps.latest.revision: 8
-ms.openlocfilehash: 980c75b07e1c35b293d00e6f2bca828499b3bd28
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d4fa3bca883fb8d78ca1bc8b0c0f9b70f304be06
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561024"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772184"
 ---
 # <a name="runspace03-sample"></a>Пример Runspace03
 
@@ -128,6 +121,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

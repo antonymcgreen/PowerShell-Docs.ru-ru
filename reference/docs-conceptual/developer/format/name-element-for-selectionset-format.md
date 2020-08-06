@@ -1,19 +1,12 @@
 ---
 title: Элемент Name для набора выбора (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 914917f7-0efc-4d1f-88bd-de714bedd98f
-caps.latest.revision: 15
-ms.openlocfilehash: 29dbdbd335511e4ca2706a625541554825838f23
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1fc33eeb87a6912ed6793629ab1969cd65b5f0c5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362673"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773306"
 ---
 # <a name="name-element-for-selectionset-format"></a>Элемент Name для элемента SelectionSet (формат)
 
@@ -29,33 +22,33 @@ ms.locfileid: "72362673"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `Name`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `Name` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент набора выбора (Format)](./selectionset-element-format.md)|Определяет один набор объектов .NET, на который может ссылаться имя набора.|
+|[Элемент SelectionSet (формат)](./selectionset-element-format.md)|Определяет один набор объектов .NET, на который может ссылаться имя набора.|
 
 ## <a name="text-value"></a>Текстовое значение
 
 Укажите имя для ссылки на набор выбора. Никаких ограничений на то, какие символы можно использовать, не существует.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-Указанное здесь имя используется в элементе `SelectionSetName`. Набор выбора, который может использоваться представлением, определением представления (представления могут иметь несколько определений) или при указании условия выбора. Дополнительные сведения о наборах выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
+Указанное здесь имя используется в `SelectionSetName` элементе. Набор выбора, который может использоваться представлением, определением представления (представления могут иметь несколько определений) или при указании условия выбора. Дополнительные сведения о наборах выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
 
 ## <a name="example"></a>Пример
 
-В этом примере показан элемент `SelectionSet`, определяющий четыре типа .NET. Имя набора выбора — "Филесистемтипес".
+В этом примере показан `SelectionSet` элемент, определяющий четыре типа .NET. Имя набора выбора — "Филесистемтипес".
 
 ```xml
 <SelectionSets>
@@ -71,10 +64,10 @@ ms.locfileid: "72362673"
 </SelectionSets>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Определение наборов выбора](./defining-selection-sets.md)
+[Определение наборов выделенных фрагментов](./defining-selection-sets.md)
 
-[Элемент набора выбора (Format)](./selectionset-element-format.md)
+[Элемент SelectionSet (формат)](./selectionset-element-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

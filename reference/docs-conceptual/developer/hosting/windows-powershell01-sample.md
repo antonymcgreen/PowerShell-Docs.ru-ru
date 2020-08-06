@@ -1,23 +1,16 @@
 ---
 title: Пример PowerShell01 для Windows | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f607a5ad-5372-4392-b2dc-ef3532fabd0f
-caps.latest.revision: 9
-ms.openlocfilehash: c82f0a123c190c778166e3648b46e97e6257a2b6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6e799f35c0c5e3820c6471b49c8b0d8c47b1c6b2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561007"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771946"
 ---
 # <a name="windows-powershell01-sample"></a>Пример Windows PowerShell01
 
-В этом примере показано, как использовать объект [System. Management. Automation.](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) пространствей Initialsessionstate для ограничения функциональности пространства выполнения. В выходных данных этого примера показано, как ограничить языковой режим пространства выполнения, как пометить командлет как частный, добавить и удалить командлеты и поставщики, добавить команду прокси-сервера и многое другое. Этот пример сосредоточен на том, как программным образом ограничить пространство выполнения. Альтернативные сценарии для ограниченного пространства выполнения включают команды $ExecutionContext. SessionState. Лангуажемоде и PSSessionConfiguration.
+В этом примере показано, как использовать объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) для ограничения функциональности пространства выполнения. В выходных данных этого примера показано, как ограничить языковой режим пространства выполнения, как пометить командлет как частный, добавить и удалить командлеты и поставщики, добавить команду прокси-сервера и многое другое. Этот пример сосредоточен на том, как программным образом ограничить пространство выполнения. Альтернативные сценарии для ограниченного пространства выполнения включают команды $ExecutionContext. SessionState. Лангуажемоде и PSSessionConfiguration.
 
 ## <a name="requirements"></a>Требования
 
@@ -27,17 +20,17 @@ ms.locfileid: "83561007"
 
 В этом образце демонстрируется следующее:
 
-- Ограничьте язык, задав свойство [System. Management. Automation. пространства. Initialsessionstate. лангуажемоде](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) .
+- Ограничьте язык, задав [System.Management.Automation.Runspaces.Iniтиалсессионстате. Свойство лангуажемоде](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) .
 
 - Добавление псевдонимов к начальному состоянию сеанса с помощью [System. Management. Automation. пространства. сессионстатеалиасентри? DisplayProperty = FullName](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) , объект.
 
 - Пометка команд как закрытых.
 
-- Удаление поставщиков из исходного состояния сеанса с помощью свойства [System. Management. Automation. пространства. Initialsessionstate. Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) .
+- Удаление поставщиков из начального состояния сеанса с помощью [System.Management.Automation.Runspaces.Iniтиалсессионстате. Свойство Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) .
 
-- Удаление команд из исходного состояния сеанса с помощью свойства [System. Management. Automation. пространства. Initialsessionstate. Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) .
+- Удаление команд из начального состояния сеанса с помощью свойства [System.Management.Automation.Runspaces.Iniтиалсессионстате. Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) .
 
-- Добавление команд и поставщиков в объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+- Добавление команд и поставщиков в объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 
 ## <a name="example"></a>Пример
 

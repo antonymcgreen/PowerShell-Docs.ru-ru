@@ -1,25 +1,18 @@
 ---
 title: Элемент Енумератеколлектион для ExpressionBinding для ошибка customcontrol для представления (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3182c0c5-ba43-4d00-b3e0-27f24d272b2f
-caps.latest.revision: 9
-ms.openlocfilehash: b0ed329600811206b8569b864032825818841479
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 91505ca2661c6bfd0dcb2bbdb26a645d237a7fb9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363233"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773935"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Элемент EnumerateCollection для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
 
 Указывает, что элементы коллекций отображаются. Этот элемент используется при определении пользовательского представления элемента управления.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент представления (Format) элемент ошибка customcontrol (Format) элемент Кустоментриес для ошибка customcontrol для элемента View (формат) Кустоментри для Кустоментриес для представления (Format) Кустомитем для Кустоментри для элемента ExpressionBinding представления (Format) для Кустомитем для ошибка customcontrol для элемента представления (Format) Енумератеколлектион для привязки выражения ошибка customcontrol для представления (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (формат) элемент представления (Format) ошибка customcontrol элемент (Format) Кустоментриес для ошибка customcontrol для элемента кустоментри представления (Format) кустоментриес для кустомитем для представления (Format) в кустоментри для ExpressionBinding для кустомитем для представления (формат) ошибка customcontrol для элемента for View (формат) EnumerateCollection.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72363233"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `EnumerateCollection`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `EnumerateCollection` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -45,9 +38,9 @@ ms.locfileid: "72363233"
 |-------------|-----------------|
 |[Элемент ExpressionBinding для Кустомитем (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|Определяет данные, отображаемые элементом управления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Элемент ExpressionBinding для Кустомитем (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)
 

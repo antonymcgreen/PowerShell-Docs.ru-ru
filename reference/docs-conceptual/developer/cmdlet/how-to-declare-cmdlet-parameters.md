@@ -1,19 +1,12 @@
 ---
 title: Как объявить параметры командлета | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0c0509cc-5a50-49ad-a74f-5527023d0270
-caps.latest.revision: 10
-ms.openlocfilehash: 80e3e27bcf72b078c192525a843a3b3afb306529
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 97e86a1eb715f149a8383a1a4529c00da4f0eba8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365683"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774394"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>Как объявить параметры командлета
 
@@ -21,7 +14,7 @@ ms.locfileid: "72365683"
 
 ## <a name="how-to-declare-a-named-parameter"></a>Как объявить именованный параметр
 
-- Определите открытое свойство, как показано в следующем коде. При добавлении атрибута параметра опустите ключевое слово `Position` из атрибута.
+- Определите открытое свойство, как показано в следующем коде. При добавлении атрибута параметра опустите `Position` ключевое слово из атрибута.
 
     ```csharp
     [Parameter()]
@@ -37,7 +30,7 @@ ms.locfileid: "72365683"
 
 ## <a name="how-to-declare-a-positional-parameter"></a>Как объявить Позиционированный параметр
 
-- Определите открытое свойство, как показано в следующем коде. При добавлении атрибута Parameter задайте для ключевого слова `Position` значение аргумента. Значение 0 указывает на первую точку.
+- Определите открытое свойство, как показано в следующем коде. При добавлении атрибута Parameter задайте `Position` для ключевого слова значение, равное положению аргумента. Значение 0 указывает на первую точку.
 
     ```csharp
     [Parameter(Position = 0)]
@@ -53,7 +46,7 @@ ms.locfileid: "72365683"
 
 ## <a name="how-to-declare-a-mandatory-parameter"></a>Как объявить обязательный параметр
 
-- Определите открытое свойство, как показано в следующем коде. При добавлении атрибута параметра задайте для ключевого слова `Mandatory` значение `true`.
+- Определите открытое свойство, как показано в следующем коде. При добавлении атрибута параметра задайте `Mandatory` для ключевого слова значение `true` .
 
     ```csharp
     [Parameter(Position = 0, Mandatory = true)]
@@ -69,7 +62,7 @@ ms.locfileid: "72365683"
 
 ## <a name="how-to-declare-an-optional-parameter"></a>Как объявить необязательный параметр
 
-- Определите открытое свойство, как показано в следующем коде. При добавлении атрибута Parameter опустите ключевое слово `Mandatory`.
+- Определите открытое свойство, как показано в следующем коде. При добавлении атрибута параметра опустите `Mandatory` ключевое слово.
 
     ```csharp
     [Parameter(Position = 0)]
@@ -114,12 +107,12 @@ ms.locfileid: "72365683"
 
 Дополнительные сведения об атрибуте Alias см. в разделе [объявление атрибута Alias](./alias-attribute-declaration.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[System. Management. Automation. переключатель](/dotnet/api/System.Management.Automation.SwitchParameter)
+[System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)
 
-[Объявление атрибута Parameter](./parameter-attribute-declaration.md)
+[Объявление атрибута параметра](./parameter-attribute-declaration.md)
 
-[Объявление атрибута Alias](./alias-attribute-declaration.md)
+[Объявление атрибута псевдонима](./alias-attribute-declaration.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
