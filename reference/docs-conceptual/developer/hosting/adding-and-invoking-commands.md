@@ -1,53 +1,46 @@
 ---
 title: Добавление и вызов команд | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 62be8432-28c1-4ca2-bcdb-d0350163fa8c
-caps.latest.revision: 5
-ms.openlocfilehash: f776f13fe743a3f5f67de0d94883e3f754040ffc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b51c4ae3fa5c5239e3c5c5e65bf7aa63c58c4da9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367643"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779800"
 ---
-# <a name="adding-and-invoking-commands"></a><span data-ttu-id="887f5-102">Добавление и вызов команд</span><span class="sxs-lookup"><span data-stu-id="887f5-102">Adding and invoking commands</span></span>
+# <a name="adding-and-invoking-commands"></a><span data-ttu-id="8aa50-102">Добавление и вызов команд</span><span class="sxs-lookup"><span data-stu-id="8aa50-102">Adding and invoking commands</span></span>
 
-<span data-ttu-id="887f5-103">После создания пространства выполнения можно добавить в конвейер Повершеллкоммандс и скрипты Windows, а затем вызывать конвейер синхронно или асинхронно.</span><span class="sxs-lookup"><span data-stu-id="887f5-103">After creating a runspace, you can add Windows PowerShellcommands and scripts to a pipeline, and then invoke the pipeline synchronously or asynchronously.</span></span>
+<span data-ttu-id="8aa50-103">После создания пространства выполнения можно добавить в конвейер Повершеллкоммандс и скрипты Windows, а затем вызывать конвейер синхронно или асинхронно.</span><span class="sxs-lookup"><span data-stu-id="8aa50-103">After creating a runspace, you can add Windows PowerShellcommands and scripts to a pipeline, and then invoke the pipeline synchronously or asynchronously.</span></span>
 
-## <a name="creating-a-pipeline"></a><span data-ttu-id="887f5-104">Создание конвейера</span><span class="sxs-lookup"><span data-stu-id="887f5-104">Creating a pipeline</span></span>
+## <a name="creating-a-pipeline"></a><span data-ttu-id="8aa50-104">Создание конвейера</span><span class="sxs-lookup"><span data-stu-id="8aa50-104">Creating a pipeline</span></span>
 
- <span data-ttu-id="887f5-105">Класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) предоставляет несколько методов для добавления команд, параметров и скриптов в конвейер.</span><span class="sxs-lookup"><span data-stu-id="887f5-105">The [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class provides several methods to add commands, parameters, and scripts to the pipeline.</span></span> <span data-ttu-id="887f5-106">Конвейер можно вызвать синхронно, вызвав перегрузку метода [System. Management. Automation. PowerShell. Invoke \*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) или асинхронно, вызвав перегрузку метода [System. Management. Automation. PowerShell. BeginInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) , а затем метод [System. Management. Automation. PowerShell. EndInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) .</span><span class="sxs-lookup"><span data-stu-id="887f5-106">You can invoke the pipeline synchronously by calling an overload of the [System.Management.Automation.Powershell.Invoke\*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) method, or asynchronously by calling an overload of the [System.Management.Automation.Powershell.Begininvoke\*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) and then the [System.Management.Automation.Powershell.Endinvoke\*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) method.</span></span>
+ <span data-ttu-id="8aa50-105">Класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) предоставляет несколько методов для добавления команд, параметров и скриптов в конвейер.</span><span class="sxs-lookup"><span data-stu-id="8aa50-105">The [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class provides several methods to add commands, parameters, and scripts to the pipeline.</span></span> <span data-ttu-id="8aa50-106">Конвейер можно вызвать синхронно, вызвав перегрузку метода [System. Management. Automation. PowerShell. Invoke \*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) или асинхронно, вызвав перегрузку метода [System. Management. Automation. PowerShell. BeginInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) , а затем метод [System. Management. Automation. PowerShell. EndInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) .</span><span class="sxs-lookup"><span data-stu-id="8aa50-106">You can invoke the pipeline synchronously by calling an overload of the [System.Management.Automation.Powershell.Invoke\*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) method, or asynchronously by calling an overload of the [System.Management.Automation.Powershell.Begininvoke\*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) and then the [System.Management.Automation.Powershell.Endinvoke\*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) method.</span></span>
 
-### <a name="addcommand"></a><span data-ttu-id="887f5-107">AddCommand</span><span class="sxs-lookup"><span data-stu-id="887f5-107">AddCommand</span></span>
+### <a name="addcommand"></a><span data-ttu-id="8aa50-107">AddCommand</span><span class="sxs-lookup"><span data-stu-id="8aa50-107">AddCommand</span></span>
 
-1. <span data-ttu-id="887f5-108">Создайте объект [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="887f5-108">Create a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+1. <span data-ttu-id="8aa50-108">Создайте объект [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="8aa50-108">Create a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
    ```csharp
    PowerShell ps = PowerShell.Create();
    ```
 
-2. <span data-ttu-id="887f5-109">Добавьте команду, которую требуется выполнить.</span><span class="sxs-lookup"><span data-stu-id="887f5-109">Add the command that you want to execute.</span></span>
+2. <span data-ttu-id="8aa50-109">Добавьте команду, которую требуется выполнить.</span><span class="sxs-lookup"><span data-stu-id="8aa50-109">Add the command that you want to execute.</span></span>
 
    ```csharp
    ps.AddCommand("Get-Process");
    ```
 
-3. <span data-ttu-id="887f5-110">Вызовите команду.</span><span class="sxs-lookup"><span data-stu-id="887f5-110">Invoke the command.</span></span>
+3. <span data-ttu-id="8aa50-110">Вызовите команду.</span><span class="sxs-lookup"><span data-stu-id="8aa50-110">Invoke the command.</span></span>
 
    ```csharp
    ps.Invoke();
    ```
 
- <span data-ttu-id="887f5-111">Если метод [System. Management. Automation. PowerShell. AddCommand \*](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) вызывается более одного раза перед вызовом метода [System. Management. Automation. PowerShell. Invoke \*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) , результат первой команды передается второму и т. д.</span><span class="sxs-lookup"><span data-stu-id="887f5-111">If you call the [System.Management.Automation.Powershell.Addcommand\*](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) method more than once before you call the [System.Management.Automation.Powershell.Invoke\*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) method, the result of the first command is piped to the second, and so on.</span></span> <span data-ttu-id="887f5-112">Если вы не хотите передавать результат предыдущей команды команде, добавьте ее, вызвав метод [System. Management. Automation. PowerShell. аддстатемент \*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) .</span><span class="sxs-lookup"><span data-stu-id="887f5-112">If you do not want to pipe the result of a previous command to a command, add it by calling the [System.Management.Automation.Powershell.Addstatement\*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) instead.</span></span>
+ <span data-ttu-id="8aa50-111">Если метод [System. Management. Automation. PowerShell. AddCommand \*](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) вызывается более одного раза перед вызовом метода [System. Management. Automation. PowerShell. Invoke \*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) , результат первой команды передается второму и т. д.</span><span class="sxs-lookup"><span data-stu-id="8aa50-111">If you call the [System.Management.Automation.Powershell.Addcommand\*](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) method more than once before you call the [System.Management.Automation.Powershell.Invoke\*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) method, the result of the first command is piped to the second, and so on.</span></span> <span data-ttu-id="8aa50-112">Если вы не хотите передавать результат предыдущей команды команде, добавьте ее, вызвав метод [System. Management. Automation. PowerShell. аддстатемент \*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) .</span><span class="sxs-lookup"><span data-stu-id="8aa50-112">If you do not want to pipe the result of a previous command to a command, add it by calling the [System.Management.Automation.Powershell.Addstatement\*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) instead.</span></span>
 
-### <a name="addparameter"></a><span data-ttu-id="887f5-113">аддпараметер</span><span class="sxs-lookup"><span data-stu-id="887f5-113">AddParameter</span></span>
+### <a name="addparameter"></a><span data-ttu-id="8aa50-113">аддпараметер</span><span class="sxs-lookup"><span data-stu-id="8aa50-113">AddParameter</span></span>
 
- <span data-ttu-id="887f5-114">В предыдущем примере выполняется одна команда без параметров.</span><span class="sxs-lookup"><span data-stu-id="887f5-114">The previous example executes a single command without any parameters.</span></span> <span data-ttu-id="887f5-115">Можно добавить параметры в команду с помощью метода [System. Management. Automation. пскомманд. аддпараметер \*.](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) например, следующий код возвращает список всех процессов с именем `PowerShell`, выполняющихся на компьютере.</span><span class="sxs-lookup"><span data-stu-id="887f5-115">You can add parameters to the command by using the [System.Management.Automation.Pscommand.Addparameter\*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) method For example, the following code gets a list of all of the processes that are named `PowerShell` running on the machine.</span></span>
+ <span data-ttu-id="8aa50-114">В предыдущем примере выполняется одна команда без параметров.</span><span class="sxs-lookup"><span data-stu-id="8aa50-114">The previous example executes a single command without any parameters.</span></span> <span data-ttu-id="8aa50-115">Можно добавить параметры в команду с помощью метода [System. Management. Automation. пскомманд. аддпараметер \*.](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) например, следующий код возвращает список всех процессов, именованных `PowerShell` на компьютере.</span><span class="sxs-lookup"><span data-stu-id="8aa50-115">You can add parameters to the command by using the [System.Management.Automation.Pscommand.Addparameter\*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) method For example, the following code gets a list of all of the processes that are named `PowerShell` running on the machine.</span></span>
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -55,7 +48,7 @@ PowerShell.Create().AddCommand("Get-Process")
                    .Invoke();
 ```
 
- <span data-ttu-id="887f5-116">Можно добавить дополнительные параметры путем многократного вызова [System. Management. Automation. пскомманд. аддпараметер \*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) .</span><span class="sxs-lookup"><span data-stu-id="887f5-116">You can add additional parameters by calling [System.Management.Automation.Pscommand.Addparameter\*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) repeatedly.</span></span>
+ <span data-ttu-id="8aa50-116">Можно добавить дополнительные параметры путем многократного вызова [System. Management. Automation. пскомманд. аддпараметер \*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) .</span><span class="sxs-lookup"><span data-stu-id="8aa50-116">You can add additional parameters by calling [System.Management.Automation.Pscommand.Addparameter\*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) repeatedly.</span></span>
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -64,7 +57,7 @@ PowerShell.Create().AddCommand("Get-Process")
                    .Invoke();
 ```
 
- <span data-ttu-id="887f5-117">Также можно добавить словарь имен и значений параметров, вызвав метод [System. Management. Automation. PowerShell. аддпараметерс \*](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) .</span><span class="sxs-lookup"><span data-stu-id="887f5-117">You can also add a dictionary of parameter names and values by calling the [System.Management.Automation.Powershell.Addparameters\*](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) method.</span></span>
+ <span data-ttu-id="8aa50-117">Также можно добавить словарь имен и значений параметров, вызвав метод [System. Management. Automation. PowerShell. аддпараметерс \*](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) .</span><span class="sxs-lookup"><span data-stu-id="8aa50-117">You can also add a dictionary of parameter names and values by calling the [System.Management.Automation.Powershell.Addparameters\*](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) method.</span></span>
 
 ```csharp
 IDictionary parameters = new Dictionary<String, String>();
@@ -77,9 +70,9 @@ PowerShell.Create().AddCommand("Get-Process")
 
 ```
 
-### <a name="addstatement"></a><span data-ttu-id="887f5-118">аддстатемент</span><span class="sxs-lookup"><span data-stu-id="887f5-118">AddStatement</span></span>
+### <a name="addstatement"></a><span data-ttu-id="8aa50-118">аддстатемент</span><span class="sxs-lookup"><span data-stu-id="8aa50-118">AddStatement</span></span>
 
- <span data-ttu-id="887f5-119">Пакетную обработку можно имитировать с помощью метода [System. Management. Automation. PowerShell. аддстатемент \*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , который добавляет дополнительный оператор в конец конвейера. следующий код получает список запущенных процессов с именем `PowerShell`, а затем получает список запущенных служб.</span><span class="sxs-lookup"><span data-stu-id="887f5-119">You can simulate batching by using the [System.Management.Automation.Powershell.Addstatement\*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) method, which adds an additional statement to the end of the pipeline The following code gets a list of running processes with the name `PowerShell`, and then gets the list of running services.</span></span>
+ <span data-ttu-id="8aa50-119">Пакетную обработку можно имитировать с помощью метода [System. Management. Automation. PowerShell. аддстатемент \*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , который добавляет дополнительный оператор в конец конвейера. следующий код возвращает список запущенных процессов с именем `PowerShell` , а затем получает список запущенных служб.</span><span class="sxs-lookup"><span data-stu-id="8aa50-119">You can simulate batching by using the [System.Management.Automation.Powershell.Addstatement\*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) method, which adds an additional statement to the end of the pipeline The following code gets a list of running processes with the name `PowerShell`, and then gets the list of running services.</span></span>
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -88,25 +81,25 @@ ps.AddStatement().AddCommand("Get-Service");
 ps.Invoke();
 ```
 
-### <a name="addscript"></a><span data-ttu-id="887f5-120">аддскрипт</span><span class="sxs-lookup"><span data-stu-id="887f5-120">AddScript</span></span>
+### <a name="addscript"></a><span data-ttu-id="8aa50-120">аддскрипт</span><span class="sxs-lookup"><span data-stu-id="8aa50-120">AddScript</span></span>
 
- <span data-ttu-id="887f5-121">Можно запустить существующий скрипт, вызвав метод [System. Management. Automation. PowerShell. аддскрипт \*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) .</span><span class="sxs-lookup"><span data-stu-id="887f5-121">You can run an existing script by calling the [System.Management.Automation.Powershell.Addscript\*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) method.</span></span> <span data-ttu-id="887f5-122">В следующем примере в конвейер добавляется скрипт и выполняется его выполнение.</span><span class="sxs-lookup"><span data-stu-id="887f5-122">The following example adds a script to the pipeline and runs it.</span></span> <span data-ttu-id="887f5-123">В этом примере предполагается, что в папке с именем `D:\PSScripts`уже есть скрипт с именем `MyScript.ps1`.</span><span class="sxs-lookup"><span data-stu-id="887f5-123">This example assumes there is already a script named `MyScript.ps1` in a folder named `D:\PSScripts`.</span></span>
+ <span data-ttu-id="8aa50-121">Можно запустить существующий скрипт, вызвав метод [System. Management. Automation. PowerShell. аддскрипт \*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) .</span><span class="sxs-lookup"><span data-stu-id="8aa50-121">You can run an existing script by calling the [System.Management.Automation.Powershell.Addscript\*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) method.</span></span> <span data-ttu-id="8aa50-122">В следующем примере в конвейер добавляется скрипт и выполняется его выполнение.</span><span class="sxs-lookup"><span data-stu-id="8aa50-122">The following example adds a script to the pipeline and runs it.</span></span> <span data-ttu-id="8aa50-123">В этом примере предполагается, что в папке уже есть скрипт с именем `MyScript.ps1` `D:\PSScripts` .</span><span class="sxs-lookup"><span data-stu-id="8aa50-123">This example assumes there is already a script named `MyScript.ps1` in a folder named `D:\PSScripts`.</span></span>
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
- <span data-ttu-id="887f5-124">Существует также версия метода [System. Management. Automation. PowerShell. аддскрипт \*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) , которая принимает логический параметр с именем `useLocalScope`.</span><span class="sxs-lookup"><span data-stu-id="887f5-124">There is also a version of the [System.Management.Automation.Powershell.Addscript\*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) method that takes a boolean parameter named `useLocalScope`.</span></span> <span data-ttu-id="887f5-125">Если этот параметр имеет значение `true`, сценарий выполняется в локальной области.</span><span class="sxs-lookup"><span data-stu-id="887f5-125">If this parameter is set to `true`, then the script is run in the local scope.</span></span> <span data-ttu-id="887f5-126">Следующий код запустит скрипт в локальной области.</span><span class="sxs-lookup"><span data-stu-id="887f5-126">The following code will run the script in the local scope.</span></span>
+ <span data-ttu-id="8aa50-124">Существует также версия метода [System. Management. Automation. PowerShell. аддскрипт \*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) , принимающая логический параметр с именем `useLocalScope` .</span><span class="sxs-lookup"><span data-stu-id="8aa50-124">There is also a version of the [System.Management.Automation.Powershell.Addscript\*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) method that takes a boolean parameter named `useLocalScope`.</span></span> <span data-ttu-id="8aa50-125">Если этот параметр имеет значение `true` , скрипт выполняется в локальной области.</span><span class="sxs-lookup"><span data-stu-id="8aa50-125">If this parameter is set to `true`, then the script is run in the local scope.</span></span> <span data-ttu-id="8aa50-126">Следующий код запустит скрипт в локальной области.</span><span class="sxs-lookup"><span data-stu-id="8aa50-126">The following code will run the script in the local scope.</span></span>
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 ```
 
-### <a name="invoking-a-pipeline-synchronously"></a><span data-ttu-id="887f5-127">Синхронный вызов конвейера</span><span class="sxs-lookup"><span data-stu-id="887f5-127">Invoking a pipeline synchronously</span></span>
+### <a name="invoking-a-pipeline-synchronously"></a><span data-ttu-id="8aa50-127">Синхронный вызов конвейера</span><span class="sxs-lookup"><span data-stu-id="8aa50-127">Invoking a pipeline synchronously</span></span>
 
- <span data-ttu-id="887f5-128">После добавления элементов в конвейер вы вызываете его.</span><span class="sxs-lookup"><span data-stu-id="887f5-128">After you add elements to the pipeline, you invoke it.</span></span> <span data-ttu-id="887f5-129">Для синхронного вызова конвейера вызывается перегрузка метода [System. Management. Automation. PowerShell. Invoke \*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) .</span><span class="sxs-lookup"><span data-stu-id="887f5-129">To invoke the pipeline synchronously, you call an overload of the [System.Management.Automation.Powershell.Invoke\*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) method.</span></span> <span data-ttu-id="887f5-130">В следующем примере показано, как синхронно вызвать конвейер.</span><span class="sxs-lookup"><span data-stu-id="887f5-130">The following example shows how to synchronously invoke a pipeline.</span></span>
+ <span data-ttu-id="8aa50-128">После добавления элементов в конвейер вы вызываете его.</span><span class="sxs-lookup"><span data-stu-id="8aa50-128">After you add elements to the pipeline, you invoke it.</span></span> <span data-ttu-id="8aa50-129">Для синхронного вызова конвейера вызывается перегрузка метода [System. Management. Automation. PowerShell. Invoke \*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) .</span><span class="sxs-lookup"><span data-stu-id="8aa50-129">To invoke the pipeline synchronously, you call an overload of the [System.Management.Automation.Powershell.Invoke\*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) method.</span></span> <span data-ttu-id="8aa50-130">В следующем примере показано, как синхронно вызвать конвейер.</span><span class="sxs-lookup"><span data-stu-id="8aa50-130">The following example shows how to synchronously invoke a pipeline.</span></span>
 
 ```csharp
 using System;
@@ -136,11 +129,11 @@ namespace HostPS1e
 }
 ```
 
-### <a name="invoking-a-pipeline-asynchronously"></a><span data-ttu-id="887f5-131">Асинхронный вызов конвейера</span><span class="sxs-lookup"><span data-stu-id="887f5-131">Invoking a pipeline asynchronously</span></span>
+### <a name="invoking-a-pipeline-asynchronously"></a><span data-ttu-id="8aa50-131">Асинхронный вызов конвейера</span><span class="sxs-lookup"><span data-stu-id="8aa50-131">Invoking a pipeline asynchronously</span></span>
 
- <span data-ttu-id="887f5-132">Асинхронный вызов конвейера вызывает перегрузку [System. Management. Automation. PowerShell. BeginInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) для создания объекта [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) и последующего вызова метода [System. Management. Automation. PowerShell. EndInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) .</span><span class="sxs-lookup"><span data-stu-id="887f5-132">You invoke a pipeline asynchronously by calling an overload of the [System.Management.Automation.Powershell.Begininvoke\*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) to create an [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) object, and then calling the [System.Management.Automation.Powershell.Endinvoke\*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) method.</span></span>
+ <span data-ttu-id="8aa50-132">Асинхронный вызов конвейера вызывает перегрузку [System. Management. Automation. PowerShell. BeginInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) для создания объекта [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) и последующего вызова метода [System. Management. Automation. PowerShell. EndInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) .</span><span class="sxs-lookup"><span data-stu-id="8aa50-132">You invoke a pipeline asynchronously by calling an overload of the [System.Management.Automation.Powershell.Begininvoke\*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) to create an [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) object, and then calling the [System.Management.Automation.Powershell.Endinvoke\*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) method.</span></span>
 
- <span data-ttu-id="887f5-133">В следующем примере показано, как вызвать конвейер асинхронно.</span><span class="sxs-lookup"><span data-stu-id="887f5-133">The following example shows how to invoke a pipeline asynchronously.</span></span>
+ <span data-ttu-id="8aa50-133">В следующем примере показано, как вызвать конвейер асинхронно.</span><span class="sxs-lookup"><span data-stu-id="8aa50-133">The following example shows how to invoke a pipeline asynchronously.</span></span>
 
 ```csharp
 using System;
@@ -182,8 +175,8 @@ namespace HostPS3
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="887f5-134">См. также:</span><span class="sxs-lookup"><span data-stu-id="887f5-134">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8aa50-134">См. также</span><span class="sxs-lookup"><span data-stu-id="8aa50-134">See Also</span></span>
 
- [<span data-ttu-id="887f5-135">Создание InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="887f5-135">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
+ [<span data-ttu-id="8aa50-135">Создание InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="8aa50-135">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
 
- [<span data-ttu-id="887f5-136">Создание ограниченного пространства выполнения</span><span class="sxs-lookup"><span data-stu-id="887f5-136">Creating a constrained runspace</span></span>](./creating-a-constrained-runspace.md)
+ [<span data-ttu-id="8aa50-136">Создание ограниченного пространства выполнения</span><span class="sxs-lookup"><span data-stu-id="8aa50-136">Creating a constrained runspace</span></span>](./creating-a-constrained-runspace.md)
