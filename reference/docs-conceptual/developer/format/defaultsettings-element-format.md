@@ -1,27 +1,20 @@
 ---
 title: Элемент Дефаултсеттингс (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 41c56499-ee20-4821-830a-478fdcc33f83
-caps.latest.revision: 11
-ms.openlocfilehash: bc95c62222eb2806f92499257a397c2e4ec5dbab
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7da7948fc0814e38a8f3910596e223470ec27d75
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363873"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787739"
 ---
-# <a name="defaultsettings-element-format"></a><span data-ttu-id="94433-102">Элемент DefaultSettings (формат)</span><span class="sxs-lookup"><span data-stu-id="94433-102">DefaultSettings Element (Format)</span></span>
+# <a name="defaultsettings-element-format"></a><span data-ttu-id="b9ae5-102">Элемент DefaultSettings (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-102">DefaultSettings Element (Format)</span></span>
 
-<span data-ttu-id="94433-103">Определяет общие параметры, которые применяются ко всем представлениям файла форматирования.</span><span class="sxs-lookup"><span data-stu-id="94433-103">Defines common settings that apply to all the views of the formatting file.</span></span> <span data-ttu-id="94433-104">К общим параметрам относятся отображение ошибок, перенос текста в таблицы, определение порядка развертывания коллекций и многое другое.</span><span class="sxs-lookup"><span data-stu-id="94433-104">Common settings include displaying errors, wrapping text in tables, defining how collections are expanded, and more.</span></span>
+<span data-ttu-id="b9ae5-103">Определяет общие параметры, которые применяются ко всем представлениям файла форматирования.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-103">Defines common settings that apply to all the views of the formatting file.</span></span> <span data-ttu-id="b9ae5-104">К общим параметрам относятся отображение ошибок, перенос текста в таблицы, определение порядка развертывания коллекций и многое другое.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-104">Common settings include displaying errors, wrapping text in tables, defining how collections are expanded, and more.</span></span>
 
-<span data-ttu-id="94433-105">Элемент Configuration (Format) Дефаултсеттингс (формат)</span><span class="sxs-lookup"><span data-stu-id="94433-105">Configuration Element (Format) DefaultSettings Element (Format)</span></span>
+<span data-ttu-id="b9ae5-105">Элемент Configuration (Format) Дефаултсеттингс (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-105">Configuration Element (Format) DefaultSettings Element (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="94433-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="94433-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b9ae5-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b9ae5-106">Syntax</span></span>
 
 ```xml
 <DefaultSettings>
@@ -33,44 +26,44 @@ ms.locfileid: "72363873"
 </DefaultSettings>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="94433-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="94433-107">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="b9ae5-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="b9ae5-107">Attributes and Elements</span></span>
 
-<span data-ttu-id="94433-108">В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `DefaultSettings`.</span><span class="sxs-lookup"><span data-stu-id="94433-108">The following sections describe attributes, child elements, and the parent element of the `DefaultSettings` element.</span></span>
+<span data-ttu-id="b9ae5-108">В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `DefaultSettings` элемента.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-108">The following sections describe attributes, child elements, and the parent element of the `DefaultSettings` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="94433-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="94433-109">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="b9ae5-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b9ae5-109">Attributes</span></span>
 
-<span data-ttu-id="94433-110">Нет.</span><span class="sxs-lookup"><span data-stu-id="94433-110">None.</span></span>
+<span data-ttu-id="b9ae5-110">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-110">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="94433-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="94433-111">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="b9ae5-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b9ae5-111">Child Elements</span></span>
 
-|<span data-ttu-id="94433-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="94433-112">Element</span></span>|<span data-ttu-id="94433-113">Описание</span><span class="sxs-lookup"><span data-stu-id="94433-113">Description</span></span>|
+|<span data-ttu-id="b9ae5-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="b9ae5-112">Element</span></span>|<span data-ttu-id="b9ae5-113">Описание</span><span class="sxs-lookup"><span data-stu-id="b9ae5-113">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="94433-114">Элемент DisplayError (Format)</span><span class="sxs-lookup"><span data-stu-id="94433-114">DisplayError Element (Format)</span></span>](./displayerror-element-format.md)|<span data-ttu-id="94433-115">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="94433-115">Optional element.</span></span><br /><br /> <span data-ttu-id="94433-116">Указывает, что строка #ERR отображается при возникновении ошибки при отображении фрагмента данных.</span><span class="sxs-lookup"><span data-stu-id="94433-116">Specifies that the string #ERR is displayed when an error occurs while displaying a piece of data.</span></span>|
-|[<span data-ttu-id="94433-117">Элемент Енумерабликспансионс (Format)</span><span class="sxs-lookup"><span data-stu-id="94433-117">EnumerableExpansions Element (Format)</span></span>](./enumerableexpansions-element-format.md)|<span data-ttu-id="94433-118">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="94433-118">Optional element.</span></span><br /><br /> <span data-ttu-id="94433-119">Определяет различные способы развертывания объектов .NET при их отображении в представлении.</span><span class="sxs-lookup"><span data-stu-id="94433-119">Defines the different ways that .NET objects are expanded when they are displayed in a view.</span></span>|
-|[<span data-ttu-id="94433-120">Пропертикаунтфортабле (формат)</span><span class="sxs-lookup"><span data-stu-id="94433-120">PropertyCountForTable (Format)</span></span>](./propertycountfortable-element-format.md)|<span data-ttu-id="94433-121">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="94433-121">Optional element.</span></span><br /><br /> <span data-ttu-id="94433-122">Указывает минимальное число свойств, которое должен иметь объект для отображения объекта в табличном представлении.</span><span class="sxs-lookup"><span data-stu-id="94433-122">Specifies the minimum number of properties that an object must have to display the object in a table view.</span></span>|
-|[<span data-ttu-id="94433-123">Элемент ShowError (Format)</span><span class="sxs-lookup"><span data-stu-id="94433-123">ShowError Element (Format)</span></span>](./showerror-element-format.md)|<span data-ttu-id="94433-124">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="94433-124">Optional element.</span></span><br /><br /> <span data-ttu-id="94433-125">Указывает, что полная запись об ошибке отображается при возникновении ошибки при отображении фрагмента данных.</span><span class="sxs-lookup"><span data-stu-id="94433-125">Specifies that the full error record is displayed when an error occurs while displaying a piece of data.</span></span>|
-|[<span data-ttu-id="94433-126">Элемент Враптаблес (Format)</span><span class="sxs-lookup"><span data-stu-id="94433-126">WrapTables Element (Format)</span></span>](./wraptables-element-format.md)|<span data-ttu-id="94433-127">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="94433-127">Optional element.</span></span><br /><br /> <span data-ttu-id="94433-128">Указывает, что данные в таблице перемещаются на следующую строку, если она не умещается в ширину столбца.</span><span class="sxs-lookup"><span data-stu-id="94433-128">Specifies that data in a table is moved to the next line if it does not fit into the width of the column.</span></span>|
+|[<span data-ttu-id="b9ae5-114">Элемент DisplayError (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-114">DisplayError Element (Format)</span></span>](./displayerror-element-format.md)|<span data-ttu-id="b9ae5-115">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-115">Optional element.</span></span><br /><br /> <span data-ttu-id="b9ae5-116">Указывает, что строка #ERR отображается при возникновении ошибки при отображении фрагмента данных.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-116">Specifies that the string #ERR is displayed when an error occurs while displaying a piece of data.</span></span>|
+|[<span data-ttu-id="b9ae5-117">Элемент EnumerableExpansions (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-117">EnumerableExpansions Element (Format)</span></span>](./enumerableexpansions-element-format.md)|<span data-ttu-id="b9ae5-118">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-118">Optional element.</span></span><br /><br /> <span data-ttu-id="b9ae5-119">Определяет различные способы развертывания объектов .NET при их отображении в представлении.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-119">Defines the different ways that .NET objects are expanded when they are displayed in a view.</span></span>|
+|[<span data-ttu-id="b9ae5-120">Пропертикаунтфортабле (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-120">PropertyCountForTable (Format)</span></span>](./propertycountfortable-element-format.md)|<span data-ttu-id="b9ae5-121">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-121">Optional element.</span></span><br /><br /> <span data-ttu-id="b9ae5-122">Указывает минимальное число свойств, которое должен иметь объект для отображения объекта в табличном представлении.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-122">Specifies the minimum number of properties that an object must have to display the object in a table view.</span></span>|
+|[<span data-ttu-id="b9ae5-123">Элемент ShowError (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-123">ShowError Element (Format)</span></span>](./showerror-element-format.md)|<span data-ttu-id="b9ae5-124">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-124">Optional element.</span></span><br /><br /> <span data-ttu-id="b9ae5-125">Указывает, что полная запись об ошибке отображается при возникновении ошибки при отображении фрагмента данных.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-125">Specifies that the full error record is displayed when an error occurs while displaying a piece of data.</span></span>|
+|[<span data-ttu-id="b9ae5-126">Элемент WrapTables (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-126">WrapTables Element (Format)</span></span>](./wraptables-element-format.md)|<span data-ttu-id="b9ae5-127">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-127">Optional element.</span></span><br /><br /> <span data-ttu-id="b9ae5-128">Указывает, что данные в таблице перемещаются на следующую строку, если она не умещается в ширину столбца.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-128">Specifies that data in a table is moved to the next line if it does not fit into the width of the column.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="94433-129">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="94433-129">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="b9ae5-129">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="b9ae5-129">Parent Elements</span></span>
 
-|<span data-ttu-id="94433-130">Элемент</span><span class="sxs-lookup"><span data-stu-id="94433-130">Element</span></span>|<span data-ttu-id="94433-131">Описание</span><span class="sxs-lookup"><span data-stu-id="94433-131">Description</span></span>|
+|<span data-ttu-id="b9ae5-130">Элемент</span><span class="sxs-lookup"><span data-stu-id="b9ae5-130">Element</span></span>|<span data-ttu-id="b9ae5-131">Описание</span><span class="sxs-lookup"><span data-stu-id="b9ae5-131">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="94433-132">Элемент Configuration</span><span class="sxs-lookup"><span data-stu-id="94433-132">Configuration Element</span></span>](./configuration-element-format.md)|<span data-ttu-id="94433-133">Представляет элемент верхнего уровня файла форматирования.</span><span class="sxs-lookup"><span data-stu-id="94433-133">Represents the top-level element of a formatting file.</span></span>|
+|[<span data-ttu-id="b9ae5-132">Элемент Configuration</span><span class="sxs-lookup"><span data-stu-id="b9ae5-132">Configuration Element</span></span>](./configuration-element-format.md)|<span data-ttu-id="b9ae5-133">Представляет элемент верхнего уровня файла форматирования.</span><span class="sxs-lookup"><span data-stu-id="b9ae5-133">Represents the top-level element of a formatting file.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="94433-134">Замечания</span><span class="sxs-lookup"><span data-stu-id="94433-134">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b9ae5-134">Примечания</span><span class="sxs-lookup"><span data-stu-id="b9ae5-134">Remarks</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="94433-135">См. также:</span><span class="sxs-lookup"><span data-stu-id="94433-135">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9ae5-135">См. также</span><span class="sxs-lookup"><span data-stu-id="b9ae5-135">See Also</span></span>
 
-[<span data-ttu-id="94433-136">Элемент Configuration</span><span class="sxs-lookup"><span data-stu-id="94433-136">Configuration Element</span></span>](./configuration-element-format.md)
+[<span data-ttu-id="b9ae5-136">Элемент Configuration</span><span class="sxs-lookup"><span data-stu-id="b9ae5-136">Configuration Element</span></span>](./configuration-element-format.md)
 
-[<span data-ttu-id="94433-137">Элемент DisplayError (Format)</span><span class="sxs-lookup"><span data-stu-id="94433-137">DisplayError Element (Format)</span></span>](./displayerror-element-format.md)
+[<span data-ttu-id="b9ae5-137">Элемент DisplayError (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-137">DisplayError Element (Format)</span></span>](./displayerror-element-format.md)
 
-[<span data-ttu-id="94433-138">Элемент Енумерабликспансионс (Format)</span><span class="sxs-lookup"><span data-stu-id="94433-138">EnumerableExpansions Element (Format)</span></span>](./enumerableexpansions-element-format.md)
+[<span data-ttu-id="b9ae5-138">Элемент EnumerableExpansions (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-138">EnumerableExpansions Element (Format)</span></span>](./enumerableexpansions-element-format.md)
 
-[<span data-ttu-id="94433-139">Пропертикаунтфортабле (формат)</span><span class="sxs-lookup"><span data-stu-id="94433-139">PropertyCountForTable (Format)</span></span>](./propertycountfortable-element-format.md)
+[<span data-ttu-id="b9ae5-139">Пропертикаунтфортабле (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-139">PropertyCountForTable (Format)</span></span>](./propertycountfortable-element-format.md)
 
-[<span data-ttu-id="94433-140">Элемент ShowError (Format)</span><span class="sxs-lookup"><span data-stu-id="94433-140">ShowError Element (Format)</span></span>](./showerror-element-format.md)
+[<span data-ttu-id="b9ae5-140">Элемент ShowError (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-140">ShowError Element (Format)</span></span>](./showerror-element-format.md)
 
-[<span data-ttu-id="94433-141">Элемент Враптаблес (Format)</span><span class="sxs-lookup"><span data-stu-id="94433-141">WrapTables Element (Format)</span></span>](./wraptables-element-format.md)
+[<span data-ttu-id="b9ae5-141">Элемент WrapTables (формат)</span><span class="sxs-lookup"><span data-stu-id="b9ae5-141">WrapTables Element (Format)</span></span>](./wraptables-element-format.md)
 
-[<span data-ttu-id="94433-142">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="94433-142">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="b9ae5-142">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="b9ae5-142">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)

@@ -1,68 +1,61 @@
 ---
 title: Элемент Кустомконтролнаме для ExpressionBinding элементов управления для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4b6ee11e-9086-41d2-afd3-42fb9f24da69
-caps.latest.revision: 7
-ms.openlocfilehash: bf1d57447f9018f1535af14466427aaeabc048f3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 871c6afd89db9360ea5012191b08863a9441f899
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369153"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786022"
 ---
-# <a name="customcontrolname-element-for-expressionbinding-for-controls-for-view-format"></a><span data-ttu-id="58ffd-102">Элемент CustomControlName для элемента ExpressionBinding для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="58ffd-102">CustomControlName Element for ExpressionBinding for Controls for View (Format)</span></span>
+# <a name="customcontrolname-element-for-expressionbinding-for-controls-for-view-format"></a><span data-ttu-id="22b2e-102">Элемент CustomControlName для элемента ExpressionBinding для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="22b2e-102">CustomControlName Element for ExpressionBinding for Controls for View (Format)</span></span>
 
-<span data-ttu-id="58ffd-103">Указывает имя общего элемента управления или элемента управления представления.</span><span class="sxs-lookup"><span data-stu-id="58ffd-103">Specifies the name of a common control or a view control.</span></span> <span data-ttu-id="58ffd-104">Этот элемент используется при определении элементов управления, которые могут использоваться представлением.</span><span class="sxs-lookup"><span data-stu-id="58ffd-104">This element is used when defining controls that can be used by a view.</span></span>
+<span data-ttu-id="22b2e-103">Указывает имя общего элемента управления или элемента управления представления.</span><span class="sxs-lookup"><span data-stu-id="22b2e-103">Specifies the name of a common control or a view control.</span></span> <span data-ttu-id="22b2e-104">Этот элемент используется при определении элементов управления, которые могут использоваться представлением.</span><span class="sxs-lookup"><span data-stu-id="22b2e-104">This element is used when defining controls that can be used by a view.</span></span>
 
-<span data-ttu-id="58ffd-105">Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет управляющий элемент (Format) элемент управления для элементов управления представления (Format) ошибка customcontrol для элементов управления элемента Кустоментриес представления (Format) для Ошибка customcontrol для элемента Кустоментри представления (Format) для Кустоментриес для элементов управления для представления (Format) Кустомитем элемента для Кустоментри для элементов управления для представления (Format) ExpressionBinding для Кустомитем для элементов управления представления (Format) Кустомконтролнаме Элемент для Експрессионбиндине элементов управления для представления (Format)</span><span class="sxs-lookup"><span data-stu-id="58ffd-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) Controls Element (Format) Control Element for Controls for View (Format) CustomControl Element for Control for Controls for View (Format) CustomEntries Element for CustomControl for View (Format) CustomEntry Element for CustomEntries for Controls for View (Format) CustomItem Element for CustomEntry for Controls for View (Format) ExpressionBinding Element for CustomItem for Controls for View (Format) CustomControlName Element for ExpressionBindine for Controls for View (Format)</span></span>
+<span data-ttu-id="22b2e-105">Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет элементом управления "элемент (Format)" для элементов управления в элементе "View" (Format) ошибка customcontrol для элемента управления элементов формат). элемент Кустоментри для Кустоментриес для элементов управления для элемента Кустомитем представления (Format) для Кустоментри для элементов управления для элемента "View" (формат) ExpressionBinding для Кустомитем для элементов управления для представления (Format) CustomControlName для ExpressionBindine элементов управления для представления (формат)</span><span class="sxs-lookup"><span data-stu-id="22b2e-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) Controls Element (Format) Control Element for Controls for View (Format) CustomControl Element for Control for Controls for View (Format) CustomEntries Element for CustomControl for View (Format) CustomEntry Element for CustomEntries for Controls for View (Format) CustomItem Element for CustomEntry for Controls for View (Format) ExpressionBinding Element for CustomItem for Controls for View (Format) CustomControlName Element for ExpressionBindine for Controls for View (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="58ffd-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="58ffd-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="22b2e-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="22b2e-106">Syntax</span></span>
 
 ```xml
 <CustomControlName>NameofCustomControl</CustomControlName>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="58ffd-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="58ffd-107">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="22b2e-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="22b2e-107">Attributes and Elements</span></span>
 
-<span data-ttu-id="58ffd-108">В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `CustomControlName`.</span><span class="sxs-lookup"><span data-stu-id="58ffd-108">The following sections describe attributes, child elements, and the parent element of the `CustomControlName` element.</span></span>
+<span data-ttu-id="22b2e-108">В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `CustomControlName` элемента.</span><span class="sxs-lookup"><span data-stu-id="22b2e-108">The following sections describe attributes, child elements, and the parent element of the `CustomControlName` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="58ffd-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="58ffd-109">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="22b2e-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="22b2e-109">Attributes</span></span>
 
-<span data-ttu-id="58ffd-110">Нет.</span><span class="sxs-lookup"><span data-stu-id="58ffd-110">None.</span></span>
+<span data-ttu-id="22b2e-110">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="22b2e-110">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="58ffd-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="58ffd-111">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="22b2e-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="22b2e-111">Child Elements</span></span>
 
-<span data-ttu-id="58ffd-112">Нет.</span><span class="sxs-lookup"><span data-stu-id="58ffd-112">None.</span></span>
+<span data-ttu-id="22b2e-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="22b2e-112">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="58ffd-113">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="58ffd-113">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="22b2e-113">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="22b2e-113">Parent Elements</span></span>
 
-|<span data-ttu-id="58ffd-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="58ffd-114">Element</span></span>|<span data-ttu-id="58ffd-115">Описание</span><span class="sxs-lookup"><span data-stu-id="58ffd-115">Description</span></span>|
+|<span data-ttu-id="22b2e-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="22b2e-114">Element</span></span>|<span data-ttu-id="22b2e-115">Описание</span><span class="sxs-lookup"><span data-stu-id="22b2e-115">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="58ffd-116">Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)</span><span class="sxs-lookup"><span data-stu-id="58ffd-116">ExpressionBinding Element for CustomItem for Controls for View (Format)</span></span>](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|<span data-ttu-id="58ffd-117">Определяет данные, отображаемые элементом управления.</span><span class="sxs-lookup"><span data-stu-id="58ffd-117">Defines the data that is displayed by the control.</span></span>|
+|[<span data-ttu-id="22b2e-116">Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="22b2e-116">ExpressionBinding Element for CustomItem for Controls for View (Format)</span></span>](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|<span data-ttu-id="22b2e-117">Определяет данные, отображаемые элементом управления.</span><span class="sxs-lookup"><span data-stu-id="22b2e-117">Defines the data that is displayed by the control.</span></span>|
 
-## <a name="text-value"></a><span data-ttu-id="58ffd-118">Текстовое значение</span><span class="sxs-lookup"><span data-stu-id="58ffd-118">Text Value</span></span>
+## <a name="text-value"></a><span data-ttu-id="22b2e-118">Текстовое значение</span><span class="sxs-lookup"><span data-stu-id="22b2e-118">Text Value</span></span>
 
-<span data-ttu-id="58ffd-119">Укажите имя элемента управления.</span><span class="sxs-lookup"><span data-stu-id="58ffd-119">Specify the name of the control.</span></span>
+<span data-ttu-id="22b2e-119">Укажите имя элемента управления.</span><span class="sxs-lookup"><span data-stu-id="22b2e-119">Specify the name of the control.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="58ffd-120">Замечания</span><span class="sxs-lookup"><span data-stu-id="58ffd-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="22b2e-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="22b2e-120">Remarks</span></span>
 
-<span data-ttu-id="58ffd-121">Можно создавать стандартные элементы управления, которые могут использоваться всеми представлениями файла форматирования, а также создавать элементы управления представления, которые могут использоваться в определенном представлении.</span><span class="sxs-lookup"><span data-stu-id="58ffd-121">You can create common controls that can be used by all the views of a formatting file, and you can create view controls that can be used by a specific view.</span></span> <span data-ttu-id="58ffd-122">Следующие элементы определяют имена этих элементов управления:</span><span class="sxs-lookup"><span data-stu-id="58ffd-122">The following elements specify the names of these controls:</span></span>
+<span data-ttu-id="22b2e-121">Можно создавать стандартные элементы управления, которые могут использоваться всеми представлениями файла форматирования, а также создавать элементы управления представления, которые могут использоваться в определенном представлении.</span><span class="sxs-lookup"><span data-stu-id="22b2e-121">You can create common controls that can be used by all the views of a formatting file, and you can create view controls that can be used by a specific view.</span></span> <span data-ttu-id="22b2e-122">Следующие элементы определяют имена этих элементов управления:</span><span class="sxs-lookup"><span data-stu-id="22b2e-122">The following elements specify the names of these controls:</span></span>
 
-- [<span data-ttu-id="58ffd-123">Элемент Name для элемента управления для элементов управления Configuration (Format)</span><span class="sxs-lookup"><span data-stu-id="58ffd-123">Name Element for Control for Controls for Configuration (Format)</span></span>](./name-element-for-control-for-controls-for-configuration-format.md)
+- [<span data-ttu-id="22b2e-123">Элемент Name для элемента Control для элемента Controls для элемента Configuration (формат)</span><span class="sxs-lookup"><span data-stu-id="22b2e-123">Name Element for Control for Controls for Configuration (Format)</span></span>](./name-element-for-control-for-controls-for-configuration-format.md)
 
-- [<span data-ttu-id="58ffd-124">Элемент Name для элемента управления для элементов управления в представлении (формат)</span><span class="sxs-lookup"><span data-stu-id="58ffd-124">Name Element for Control for Controls for View (Format)</span></span>](./name-element-for-control-for-controls-for-view-format.md)
+- [<span data-ttu-id="22b2e-124">Элемент Name для элемента Control для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="22b2e-124">Name Element for Control for Controls for View (Format)</span></span>](./name-element-for-control-for-controls-for-view-format.md)
 
-## <a name="see-also"></a><span data-ttu-id="58ffd-125">См. также:</span><span class="sxs-lookup"><span data-stu-id="58ffd-125">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22b2e-125">См. также</span><span class="sxs-lookup"><span data-stu-id="22b2e-125">See Also</span></span>
 
-[<span data-ttu-id="58ffd-126">Элемент Name для элемента управления для элементов управления Configuration (Format)</span><span class="sxs-lookup"><span data-stu-id="58ffd-126">Name Element for Control for Controls for Configuration (Format)</span></span>](./name-element-for-control-for-controls-for-configuration-format.md)
+[<span data-ttu-id="22b2e-126">Элемент Name для элемента Control для элемента Controls для элемента Configuration (формат)</span><span class="sxs-lookup"><span data-stu-id="22b2e-126">Name Element for Control for Controls for Configuration (Format)</span></span>](./name-element-for-control-for-controls-for-configuration-format.md)
 
-[<span data-ttu-id="58ffd-127">Элемент Name для элемента управления для элементов управления в представлении (формат)</span><span class="sxs-lookup"><span data-stu-id="58ffd-127">Name Element for Control for Controls for View (Format)</span></span>](./name-element-for-control-for-controls-for-view-format.md)
+[<span data-ttu-id="22b2e-127">Элемент Name для элемента Control для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="22b2e-127">Name Element for Control for Controls for View (Format)</span></span>](./name-element-for-control-for-controls-for-view-format.md)
 
-[<span data-ttu-id="58ffd-128">Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)</span><span class="sxs-lookup"><span data-stu-id="58ffd-128">ExpressionBinding Element for CustomItem for Controls for View (Format)</span></span>](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[<span data-ttu-id="22b2e-128">Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="22b2e-128">ExpressionBinding Element for CustomItem for Controls for View (Format)</span></span>](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
-[<span data-ttu-id="58ffd-129">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="58ffd-129">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="22b2e-129">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="22b2e-129">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
