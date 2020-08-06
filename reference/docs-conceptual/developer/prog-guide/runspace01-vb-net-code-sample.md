@@ -1,19 +1,12 @@
 ---
 title: Пример кода Runspace01 (VB.NET) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 12ee5382-95ba-41c7-8291-7f69a6f63514
-caps.latest.revision: 7
-ms.openlocfilehash: ce6bdec379a7ba9bf9b088c79a08ad5cef5da80b
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d40424283057b389d8a4aafeb8ddfa44284f3ba1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560310"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778652"
 ---
 # <a name="runspace01-vbnet-code-sample"></a>Пример кода Runspace01 (VB.NET)
 
@@ -71,6 +64,6 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace01.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace01.vb#L09-L53 "Runspace01.vb")] -->
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

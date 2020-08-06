@@ -1,19 +1,12 @@
 ---
 title: Общие сведения о поставщике Windows PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
-caps.latest.revision: 13
-ms.openlocfilehash: 9f1b94e722e59e707a26547949c661b5098d29e0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: c248f1c337e96a1b83cbeb5fb486147504777eb1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560956"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778223"
 ---
 # <a name="windows-powershell-provider-overview"></a>Общие сведения о поставщиках Windows PowerShell
 
@@ -39,7 +32,7 @@ ms.locfileid: "83560956"
 
 ### <a name="drive-qualified-paths"></a>Пути с указанием диска
 
-Путь к диску — это сочетание имени элемента, контейнера и вложенных элементов, в котором находится элемент, и диска Windows PowerShell, через который осуществляется доступ к элементу. (Диски определяются поставщиком, который используется для доступа к хранилищу данных. Этот путь начинается с имени диска, за которым следует двоеточие (:). Например: `get-childitem C:`
+Путь к диску — это сочетание имени элемента, контейнера и вложенных элементов, в котором находится элемент, и диска Windows PowerShell, через который осуществляется доступ к элементу. (Диски определяются поставщиком, который используется для доступа к хранилищу данных. Этот путь начинается с имени диска, за которым следует двоеточие (:). Пример: `get-childitem C:`
 
 ### <a name="provider-qualified-paths"></a>Пути, уточненные поставщиком
 
