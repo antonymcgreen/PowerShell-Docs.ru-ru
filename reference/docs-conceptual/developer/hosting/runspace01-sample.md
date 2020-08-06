@@ -1,41 +1,34 @@
 ---
 title: Пример Runspace01 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 42c1c59c-6da5-4cda-9562-e8059177fee1
-caps.latest.revision: 11
-ms.openlocfilehash: eec9c616fc6d5240db185f764a3ea2c8f9575d03
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1ac286512f3cb3b97a6b3179c9dd45f1fefe1ecf
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367423"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772201"
 ---
-# <a name="runspace01-sample"></a><span data-ttu-id="9f3d7-102">Пример Runspace01</span><span class="sxs-lookup"><span data-stu-id="9f3d7-102">Runspace01 Sample</span></span>
+# <a name="runspace01-sample"></a><span data-ttu-id="8ea0c-102">Пример Runspace01</span><span class="sxs-lookup"><span data-stu-id="8ea0c-102">Runspace01 Sample</span></span>
 
-<span data-ttu-id="9f3d7-103">В этом примере показано, как использовать класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для синхронного выполнения командлета [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) .</span><span class="sxs-lookup"><span data-stu-id="9f3d7-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously.</span></span> <span data-ttu-id="9f3d7-104">Командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) возвращает объекты [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) для каждого процесса, выполняемого на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="9f3d7-104">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer.</span></span> <span data-ttu-id="9f3d7-105">Значения свойств [System. Diagnostics. Process. ProcessName \*](/dotnet/api/System.Diagnostics.Process.ProcessName) и [System. Diagnostics. Process. HandleCount \*](/dotnet/api/System.Diagnostics.Process.Handlecount) затем извлекаются из возвращенных объектов и отображаются в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="9f3d7-105">The values of the [System.Diagnostics.Process.Processname\*](/dotnet/api/System.Diagnostics.Process.ProcessName) and [System.Diagnostics.Process.Handlecount\*](/dotnet/api/System.Diagnostics.Process.Handlecount) properties are then extracted from the returned objects and displayed in a console window.</span></span>
+<span data-ttu-id="8ea0c-103">В этом примере показано, как использовать класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для синхронного выполнения командлета [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) .</span><span class="sxs-lookup"><span data-stu-id="8ea0c-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously.</span></span> <span data-ttu-id="8ea0c-104">Командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) возвращает объекты [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) для каждого процесса, выполняемого на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="8ea0c-104">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer.</span></span> <span data-ttu-id="8ea0c-105">Значения свойств [System. Diagnostics. Process. ProcessName \*](/dotnet/api/System.Diagnostics.Process.ProcessName) и [System. Diagnostics. Process. HandleCount \*](/dotnet/api/System.Diagnostics.Process.Handlecount) затем извлекаются из возвращенных объектов и отображаются в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="8ea0c-105">The values of the [System.Diagnostics.Process.Processname\*](/dotnet/api/System.Diagnostics.Process.ProcessName) and [System.Diagnostics.Process.Handlecount\*](/dotnet/api/System.Diagnostics.Process.Handlecount) properties are then extracted from the returned objects and displayed in a console window.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="9f3d7-106">Требования</span><span class="sxs-lookup"><span data-stu-id="9f3d7-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="8ea0c-106">Требования</span><span class="sxs-lookup"><span data-stu-id="8ea0c-106">Requirements</span></span>
 
- <span data-ttu-id="9f3d7-107">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="9f3d7-107">This sample requires Windows PowerShell 2.0.</span></span>
+ <span data-ttu-id="8ea0c-107">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="8ea0c-107">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="9f3d7-108">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="9f3d7-108">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="8ea0c-108">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="8ea0c-108">Demonstrates</span></span>
 
-- <span data-ttu-id="9f3d7-109">Создание объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для выполнения команды.</span><span class="sxs-lookup"><span data-stu-id="9f3d7-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run a command.</span></span>
+- <span data-ttu-id="8ea0c-109">Создание объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для выполнения команды.</span><span class="sxs-lookup"><span data-stu-id="8ea0c-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run a command.</span></span>
 
-- <span data-ttu-id="9f3d7-110">Добавление команды в конвейер объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="9f3d7-110">Adding a command to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="8ea0c-110">Добавление команды в конвейер объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="8ea0c-110">Adding a command to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="9f3d7-111">Выполнение команды в синхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="9f3d7-111">Running the command synchronously.</span></span>
+- <span data-ttu-id="8ea0c-111">Выполнение команды в синхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="8ea0c-111">Running the command synchronously.</span></span>
 
-- <span data-ttu-id="9f3d7-112">Использование объектов [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) для извлечения свойств из объектов, возвращаемых командой.</span><span class="sxs-lookup"><span data-stu-id="9f3d7-112">Using [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects to extract properties from the objects returned by the command.</span></span>
+- <span data-ttu-id="8ea0c-112">Использование объектов [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) для извлечения свойств из объектов, возвращаемых командой.</span><span class="sxs-lookup"><span data-stu-id="8ea0c-112">Using [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects to extract properties from the objects returned by the command.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9f3d7-113">Пример</span><span class="sxs-lookup"><span data-stu-id="9f3d7-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8ea0c-113">Пример</span><span class="sxs-lookup"><span data-stu-id="8ea0c-113">Example</span></span>
 
- <span data-ttu-id="9f3d7-114">В этом примере командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) выполняется синхронно в пространстве выполнения по умолчанию, предоставляемом Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9f3d7-114">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously in the default runspace provided by Windows PowerShell.</span></span>
+ <span data-ttu-id="8ea0c-114">В этом примере командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) выполняется синхронно в пространстве выполнения по умолчанию, предоставляемом Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="8ea0c-114">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously in the default runspace provided by Windows PowerShell.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -92,4 +85,4 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9f3d7-115">См. также:</span><span class="sxs-lookup"><span data-stu-id="9f3d7-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ea0c-115">См. также</span><span class="sxs-lookup"><span data-stu-id="8ea0c-115">See Also</span></span>

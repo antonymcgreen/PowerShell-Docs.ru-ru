@@ -1,47 +1,40 @@
 ---
 title: Пример PowerShell01 для Windows | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f607a5ad-5372-4392-b2dc-ef3532fabd0f
-caps.latest.revision: 9
-ms.openlocfilehash: c82f0a123c190c778166e3648b46e97e6257a2b6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6e799f35c0c5e3820c6471b49c8b0d8c47b1c6b2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561007"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771946"
 ---
-# <a name="windows-powershell01-sample"></a><span data-ttu-id="e6545-102">Пример Windows PowerShell01</span><span class="sxs-lookup"><span data-stu-id="e6545-102">Windows PowerShell01 Sample</span></span>
+# <a name="windows-powershell01-sample"></a><span data-ttu-id="bdb85-102">Пример Windows PowerShell01</span><span class="sxs-lookup"><span data-stu-id="bdb85-102">Windows PowerShell01 Sample</span></span>
 
-<span data-ttu-id="e6545-103">В этом примере показано, как использовать объект [System. Management. Automation.](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) пространствей Initialsessionstate для ограничения функциональности пространства выполнения.</span><span class="sxs-lookup"><span data-stu-id="e6545-103">This sample shows how to use an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object to limit the functionality of a runspace.</span></span> <span data-ttu-id="e6545-104">В выходных данных этого примера показано, как ограничить языковой режим пространства выполнения, как пометить командлет как частный, добавить и удалить командлеты и поставщики, добавить команду прокси-сервера и многое другое.</span><span class="sxs-lookup"><span data-stu-id="e6545-104">The output of this sample demonstrates how to restrict the language mode of the runspace, how to mark a cmdlet as private, how to add and remove cmdlets and providers, how to add a proxy command, and more.</span></span> <span data-ttu-id="e6545-105">Этот пример сосредоточен на том, как программным образом ограничить пространство выполнения.</span><span class="sxs-lookup"><span data-stu-id="e6545-105">This sample concentrates on how to restrict the runspace programmatically.</span></span> <span data-ttu-id="e6545-106">Альтернативные сценарии для ограниченного пространства выполнения включают команды $ExecutionContext. SessionState. Лангуажемоде и PSSessionConfiguration.</span><span class="sxs-lookup"><span data-stu-id="e6545-106">Scripting alternatives to restricting the runspace include the $ExecutionContext.SessionState.LanguageMode and PSSessionConfiguration commands.</span></span>
+<span data-ttu-id="bdb85-103">В этом примере показано, как использовать объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) для ограничения функциональности пространства выполнения.</span><span class="sxs-lookup"><span data-stu-id="bdb85-103">This sample shows how to use an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object to limit the functionality of a runspace.</span></span> <span data-ttu-id="bdb85-104">В выходных данных этого примера показано, как ограничить языковой режим пространства выполнения, как пометить командлет как частный, добавить и удалить командлеты и поставщики, добавить команду прокси-сервера и многое другое.</span><span class="sxs-lookup"><span data-stu-id="bdb85-104">The output of this sample demonstrates how to restrict the language mode of the runspace, how to mark a cmdlet as private, how to add and remove cmdlets and providers, how to add a proxy command, and more.</span></span> <span data-ttu-id="bdb85-105">Этот пример сосредоточен на том, как программным образом ограничить пространство выполнения.</span><span class="sxs-lookup"><span data-stu-id="bdb85-105">This sample concentrates on how to restrict the runspace programmatically.</span></span> <span data-ttu-id="bdb85-106">Альтернативные сценарии для ограниченного пространства выполнения включают команды $ExecutionContext. SessionState. Лангуажемоде и PSSessionConfiguration.</span><span class="sxs-lookup"><span data-stu-id="bdb85-106">Scripting alternatives to restricting the runspace include the $ExecutionContext.SessionState.LanguageMode and PSSessionConfiguration commands.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="e6545-107">Требования</span><span class="sxs-lookup"><span data-stu-id="e6545-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="bdb85-107">Требования</span><span class="sxs-lookup"><span data-stu-id="bdb85-107">Requirements</span></span>
 
-<span data-ttu-id="e6545-108">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="e6545-108">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="bdb85-108">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="bdb85-108">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="e6545-109">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="e6545-109">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="bdb85-109">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="bdb85-109">Demonstrates</span></span>
 
-<span data-ttu-id="e6545-110">В этом образце демонстрируется следующее:</span><span class="sxs-lookup"><span data-stu-id="e6545-110">This sample demonstrates the following:</span></span>
+<span data-ttu-id="bdb85-110">В этом образце демонстрируется следующее:</span><span class="sxs-lookup"><span data-stu-id="bdb85-110">This sample demonstrates the following:</span></span>
 
-- <span data-ttu-id="e6545-111">Ограничьте язык, задав свойство [System. Management. Automation. пространства. Initialsessionstate. лангуажемоде](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) .</span><span class="sxs-lookup"><span data-stu-id="e6545-111">Restricting the language by setting the [System.Management.Automation.Runspaces.Initialsessionstate.Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) property.</span></span>
+- <span data-ttu-id="bdb85-111">Ограничьте язык, задав [System.Management.Automation.Runspaces.Iniтиалсессионстате. Свойство лангуажемоде](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) .</span><span class="sxs-lookup"><span data-stu-id="bdb85-111">Restricting the language by setting the [System.Management.Automation.Runspaces.Initialsessionstate.Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) property.</span></span>
 
-- <span data-ttu-id="e6545-112">Добавление псевдонимов к начальному состоянию сеанса с помощью [System. Management. Automation. пространства. сессионстатеалиасентри? DisplayProperty = FullName](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) , объект.</span><span class="sxs-lookup"><span data-stu-id="e6545-112">Adding aliases to the initial session state by using a [System.Management.Automation.Runspaces.Sessionstatealiasentry?Displayproperty=Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) object.</span></span>
+- <span data-ttu-id="bdb85-112">Добавление псевдонимов к начальному состоянию сеанса с помощью [System. Management. Automation. пространства. сессионстатеалиасентри? DisplayProperty = FullName](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) , объект.</span><span class="sxs-lookup"><span data-stu-id="bdb85-112">Adding aliases to the initial session state by using a [System.Management.Automation.Runspaces.Sessionstatealiasentry?Displayproperty=Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) object.</span></span>
 
-- <span data-ttu-id="e6545-113">Пометка команд как закрытых.</span><span class="sxs-lookup"><span data-stu-id="e6545-113">Marking commands as private.</span></span>
+- <span data-ttu-id="bdb85-113">Пометка команд как закрытых.</span><span class="sxs-lookup"><span data-stu-id="bdb85-113">Marking commands as private.</span></span>
 
-- <span data-ttu-id="e6545-114">Удаление поставщиков из исходного состояния сеанса с помощью свойства [System. Management. Automation. пространства. Initialsessionstate. Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) .</span><span class="sxs-lookup"><span data-stu-id="e6545-114">Removing providers from the initial session state by using the [System.Management.Automation.Runspaces.Initialsessionstate.Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) property.</span></span>
+- <span data-ttu-id="bdb85-114">Удаление поставщиков из начального состояния сеанса с помощью [System.Management.Automation.Runspaces.Iniтиалсессионстате. Свойство Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) .</span><span class="sxs-lookup"><span data-stu-id="bdb85-114">Removing providers from the initial session state by using the [System.Management.Automation.Runspaces.Initialsessionstate.Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) property.</span></span>
 
-- <span data-ttu-id="e6545-115">Удаление команд из исходного состояния сеанса с помощью свойства [System. Management. Automation. пространства. Initialsessionstate. Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) .</span><span class="sxs-lookup"><span data-stu-id="e6545-115">Removing commands from the initial session state by using the [System.Management.Automation.Runspaces.Initialsessionstate.Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) property.</span></span>
+- <span data-ttu-id="bdb85-115">Удаление команд из начального состояния сеанса с помощью свойства [System.Management.Automation.Runspaces.Iniтиалсессионстате. Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) .</span><span class="sxs-lookup"><span data-stu-id="bdb85-115">Removing commands from the initial session state by using the [System.Management.Automation.Runspaces.Initialsessionstate.Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) property.</span></span>
 
-- <span data-ttu-id="e6545-116">Добавление команд и поставщиков в объект [System. Management. Automation. пространства. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .</span><span class="sxs-lookup"><span data-stu-id="e6545-116">Adding commands and providers to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
+- <span data-ttu-id="bdb85-116">Добавление команд и поставщиков в объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .</span><span class="sxs-lookup"><span data-stu-id="bdb85-116">Adding commands and providers to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e6545-117">Пример</span><span class="sxs-lookup"><span data-stu-id="e6545-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="bdb85-117">Пример</span><span class="sxs-lookup"><span data-stu-id="bdb85-117">Example</span></span>
 
-<span data-ttu-id="e6545-118">В этом примере показано несколько способов ограничения функциональных возможностей пространства выполнения.</span><span class="sxs-lookup"><span data-stu-id="e6545-118">This sample shows several ways to limit the functionality of a runspace.</span></span>
+<span data-ttu-id="bdb85-118">В этом примере показано несколько способов ограничения функциональных возможностей пространства выполнения.</span><span class="sxs-lookup"><span data-stu-id="bdb85-118">This sample shows several ways to limit the functionality of a runspace.</span></span>
 
 ```csharp
 namespace Sample
@@ -257,6 +250,6 @@ namespace Sample
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e6545-119">См. также:</span><span class="sxs-lookup"><span data-stu-id="e6545-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bdb85-119">См. также:</span><span class="sxs-lookup"><span data-stu-id="bdb85-119">See Also</span></span>
 
-[<span data-ttu-id="e6545-120">Написание ведущего приложения Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="e6545-120">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="bdb85-120">Написание ведущего приложения Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="bdb85-120">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)

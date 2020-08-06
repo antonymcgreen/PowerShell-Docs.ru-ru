@@ -1,54 +1,47 @@
 ---
 title: Элемент новой строки для элементов управления Кустомитем для Configuration (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 57fcd7ba-44bb-403f-9747-5b429ccb70d0
-caps.latest.revision: 6
-ms.openlocfilehash: 58b6b6be0191ae3feec3d40b85a0de3699870902
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ff17484e368ad84d45935bf139e9a95bc293523e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362633"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773221"
 ---
-# <a name="newline-element-for-customitem-for-controls-for-configuration-format"></a><span data-ttu-id="4383d-102">Элемент NewLine для элемента CustomItem для элемента Controls для элемента Configuration (формат)</span><span class="sxs-lookup"><span data-stu-id="4383d-102">NewLine Element for CustomItem for Controls for Configuration (Format)</span></span>
+# <a name="newline-element-for-customitem-for-controls-for-configuration-format"></a><span data-ttu-id="131d0-102">Элемент NewLine для элемента CustomItem для элемента Controls для элемента Configuration (формат)</span><span class="sxs-lookup"><span data-stu-id="131d0-102">NewLine Element for CustomItem for Controls for Configuration (Format)</span></span>
 
-<span data-ttu-id="4383d-103">Добавляет пустую строку к отображению элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4383d-103">Adds a blank line to the display of the control.</span></span> <span data-ttu-id="4383d-104">Этот элемент используется при определении общего элемента управления, который может использоваться всеми представлениями в файле форматирования.</span><span class="sxs-lookup"><span data-stu-id="4383d-104">This element is used when defining a common control that can be used by all the views in the formatting file.</span></span>
+<span data-ttu-id="131d0-103">Добавляет пустую строку к отображению элемента управления.</span><span class="sxs-lookup"><span data-stu-id="131d0-103">Adds a blank line to the display of the control.</span></span> <span data-ttu-id="131d0-104">Этот элемент используется при определении общего элемента управления, который может использоваться всеми представлениями в файле форматирования.</span><span class="sxs-lookup"><span data-stu-id="131d0-104">This element is used when defining a common control that can be used by all the views in the formatting file.</span></span>
 
-<span data-ttu-id="4383d-105">Элемент Configuration (Format) управляет элементом контрольного элемента конфигурации (Format) элементов управления для элемента управления конфигурации (Format) ошибка customcontrol для элемента Control в конфигурации (Format) Кустоментриес для ошибка customcontrol для конфигурации ( Формат) элемент Кустоментри для ошибка customcontrol элементов управления для элемента конфигурации (Format) Кустомитем для Кустоментри для элементов управления для элемента новой строки конфигурации для Кустомитем для элементов управления конфигурации (Format)</span><span class="sxs-lookup"><span data-stu-id="4383d-105">Configuration Element (Format) Controls Element of Configuration (Format) Control Element for Controls for Configuration (Format) CustomControl Element for Control for Configuration (Format) CustomEntries Element for CustomControl for Configuration (Format) CustomEntry Element for CustomControl for Controls for Configuration (Format) CustomItem Element for CustomEntry for Controls for Configuration NewLine Element for CustomItem for Controls for Configuration (Format)</span></span>
+<span data-ttu-id="131d0-105">Элемент Configuration (Format) управляет элементом контрольного элемента конфигурации (Format) элементов управления для элемента управления Configuration (Format) ошибка customcontrol для элемента Control for Configuration (Format) Кустоментриес элемент для ошибка customcontrol для элемента конфигурации (Format) Кустоментри для ошибка customcontrol для элементов управления для элемента конфигурации (Format) Кустомитем для кустоментри для элементов управления для кустомитем для элементов управления конфигурации (Format).</span><span class="sxs-lookup"><span data-stu-id="131d0-105">Configuration Element (Format) Controls Element of Configuration (Format) Control Element for Controls for Configuration (Format) CustomControl Element for Control for Configuration (Format) CustomEntries Element for CustomControl for Configuration (Format) CustomEntry Element for CustomControl for Controls for Configuration (Format) CustomItem Element for CustomEntry for Controls for Configuration NewLine Element for CustomItem for Controls for Configuration (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="4383d-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4383d-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="131d0-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="131d0-106">Syntax</span></span>
 
 ```xml
 <NewLine/>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="4383d-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="4383d-107">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="131d0-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="131d0-107">Attributes and Elements</span></span>
 
-<span data-ttu-id="4383d-108">В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `NewLine`.</span><span class="sxs-lookup"><span data-stu-id="4383d-108">The following sections describe attributes, child elements, and the parent element of the `NewLine` element.</span></span>
+<span data-ttu-id="131d0-108">В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `NewLine` элемента.</span><span class="sxs-lookup"><span data-stu-id="131d0-108">The following sections describe attributes, child elements, and the parent element of the `NewLine` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="4383d-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="4383d-109">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="131d0-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="131d0-109">Attributes</span></span>
 
-<span data-ttu-id="4383d-110">Нет.</span><span class="sxs-lookup"><span data-stu-id="4383d-110">None.</span></span>
+<span data-ttu-id="131d0-110">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="131d0-110">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="4383d-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="4383d-111">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="131d0-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="131d0-111">Child Elements</span></span>
 
-<span data-ttu-id="4383d-112">Нет.</span><span class="sxs-lookup"><span data-stu-id="4383d-112">None.</span></span>
+<span data-ttu-id="131d0-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="131d0-112">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="4383d-113">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="4383d-113">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="131d0-113">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="131d0-113">Parent Elements</span></span>
 
-|<span data-ttu-id="4383d-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="4383d-114">Element</span></span>|<span data-ttu-id="4383d-115">Описание</span><span class="sxs-lookup"><span data-stu-id="4383d-115">Description</span></span>|
+|<span data-ttu-id="131d0-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="131d0-114">Element</span></span>|<span data-ttu-id="131d0-115">Описание</span><span class="sxs-lookup"><span data-stu-id="131d0-115">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="4383d-116">Элемент Кустомитем для Кустоментри элементов управления для конфигурации</span><span class="sxs-lookup"><span data-stu-id="4383d-116">CustomItem Element for CustomEntry for Controls for Configuration</span></span>](./customitem-element-for-customentry-for-controls-for-configuration-format.md)|<span data-ttu-id="4383d-117">Определяет элемент управления для представления пользовательского элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4383d-117">Defines a control for the custom control view.</span></span>|
+|[<span data-ttu-id="131d0-116">Элемент Кустомитем для Кустоментри элементов управления для конфигурации</span><span class="sxs-lookup"><span data-stu-id="131d0-116">CustomItem Element for CustomEntry for Controls for Configuration</span></span>](./customitem-element-for-customentry-for-controls-for-configuration-format.md)|<span data-ttu-id="131d0-117">Определяет элемент управления для представления пользовательского элемента управления.</span><span class="sxs-lookup"><span data-stu-id="131d0-117">Defines a control for the custom control view.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="4383d-118">Замечания</span><span class="sxs-lookup"><span data-stu-id="4383d-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="131d0-118">Примечания</span><span class="sxs-lookup"><span data-stu-id="131d0-118">Remarks</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4383d-119">См. также:</span><span class="sxs-lookup"><span data-stu-id="4383d-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="131d0-119">См. также</span><span class="sxs-lookup"><span data-stu-id="131d0-119">See Also</span></span>
 
-[<span data-ttu-id="4383d-120">Элемент Кустомитем для Кустоментри элементов управления для конфигурации</span><span class="sxs-lookup"><span data-stu-id="4383d-120">CustomItem Element for CustomEntry for Controls for Configuration</span></span>](./customitem-element-for-customentry-for-controls-for-configuration-format.md)
+[<span data-ttu-id="131d0-120">Элемент Кустомитем для Кустоментри элементов управления для конфигурации</span><span class="sxs-lookup"><span data-stu-id="131d0-120">CustomItem Element for CustomEntry for Controls for Configuration</span></span>](./customitem-element-for-customentry-for-controls-for-configuration-format.md)
 
-[<span data-ttu-id="4383d-121">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="4383d-121">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="131d0-121">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="131d0-121">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)

@@ -1,23 +1,16 @@
 ---
 title: Пример кода GetProc05 (VB.NET) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8dfc0f66-65ec-4141-9088-68e47dbe3908
-caps.latest.revision: 6
-ms.openlocfilehash: 8b94aafc0713e1784a28706b51a5a2e96b6dec69
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 1ef16e6f8090f049131792132e693b2019fa3e41
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557317"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771640"
 ---
-# <a name="getproc05-vbnet-sample-code"></a><span data-ttu-id="2ac3e-102">Пример кода GetProc05 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="2ac3e-102">GetProc05 (VB.NET) Sample Code</span></span>
+# <a name="getproc05-vbnet-sample-code"></a><span data-ttu-id="4e784-102">Пример кода GetProc05 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="4e784-102">GetProc05 (VB.NET) Sample Code</span></span>
 
-<span data-ttu-id="2ac3e-103">Ниже приведен полный код VB.NET для командлета GetProc05 Sample.</span><span class="sxs-lookup"><span data-stu-id="2ac3e-103">Here is the complete VB.NET code for the GetProc05 sample cmdlet.</span></span>
+<span data-ttu-id="4e784-103">Ниже приведен полный код VB.NET для командлета GetProc05 Sample.</span><span class="sxs-lookup"><span data-stu-id="4e784-103">Here is the complete VB.NET code for the GetProc05 sample cmdlet.</span></span>
 
 ```vb
 Imports System
@@ -434,6 +427,6 @@ End Namespace
 
 <!-- TODO!!!:  [!code-csharp[GetProcessSample01.vb](../../powershell-sdk-samples/SDK-2.0/vb/GetProcessSample01/GetProcessSample01.vb#L10-L419 "GetProcessSample01.cs")] -->
 
-## <a name="see-also"></a><span data-ttu-id="2ac3e-104">См. также:</span><span class="sxs-lookup"><span data-stu-id="2ac3e-104">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e784-104">См. также</span><span class="sxs-lookup"><span data-stu-id="4e784-104">See Also</span></span>
 
-[<span data-ttu-id="2ac3e-105">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="2ac3e-105">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="4e784-105">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="4e784-105">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
