@@ -1,19 +1,12 @@
 ---
 title: Основные понятия Windows PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 6/12/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3dd5608e-50b6-4c6a-aee3-dde0e86032bc
-caps.latest.revision: 7
-ms.openlocfilehash: 56545599f1f5e593045294ed645c79df20738159
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: a31c1df784b7b5f872c4647aece8fafa535db66b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563273"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786957"
 ---
 # <a name="windows-powershell-concepts"></a>Основные понятия Windows PowerShell
 
@@ -23,7 +16,7 @@ ms.locfileid: "83563273"
 |----------------|-----------------|
 |[about_Objects](/powershell/module/microsoft.powershell.core/about/about_objects)|Описание объектов PowerShell. Дополнительные сведения см. в разделе [о создании объектов](/powershell/module/microsoft.powershell.core/about/about_object_creation) .|
 |[Создание пространств выполнения](../hosting/creating-runspaces.md)|Операционные среды, в которых обрабатываются команды. Дополнительные сведения см. в разделе [пространство выполнения класса](/dotnet/api/system.management.automation.runspaces.runspace).|
-|[Расширение объектов выходных данных](../cmdlet/extending-output-objects.md)|Как расширять объекты PowerShell. Дополнительные сведения см. в разделе [About types. ps1xml.](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)|
+|[Расширение объектов выходных данных](../cmdlet/extending-output-objects.md)|Как расширять объекты PowerShell. Дополнительные сведения см. в разделе [About Types.ps1XML](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml) .|
 |[Регистрация командлетов](../cmdlet/registering-cmdlets.md)|Как сделать модули и оснастки доступными в PowerShell. Дополнительные сведения см. в разделе [модули и оснастки](../cmdlet/modules-and-snap-ins.md).|
 |[Запрос на подтверждение от командлетов](../cmdlet/requesting-confirmation-from-cmdlets.md)|Как командлеты и поставщики запрашивают отзыв от пользователя перед выполнением действия.|
 |[Класс Рунтимедефинедпараметер](/dotnet/api/system.management.automation.runtimedefinedparameter)|Объявления параметров среды выполнения.|
@@ -31,7 +24,7 @@ ms.locfileid: "83563273"
 |[Общие сведения о поставщиках Windows PowerShell](../provider/windows-powershell-provider-overview.md)|Общие сведения о поставщиках PowerShell, которые используются для доступа к хранилищам данных.|
 |[Написание справки по командлетам PowerShell](../help/writing-help-for-windows-powershell-cmdlets.md)|Написание справки по командлетам PowerShell.|
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Класс PowerShell](/dotnet/api/system.management.automation.powershell)
 

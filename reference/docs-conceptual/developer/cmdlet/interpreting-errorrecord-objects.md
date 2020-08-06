@@ -1,19 +1,12 @@
 ---
 title: Интерпретация объектов Ерроррекорд | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2a65b964-5bc6-4ade-a66b-b6afa7351ce7
-caps.latest.revision: 9
-ms.openlocfilehash: 32ebf2531237bfd1042310ccc4155193a58401fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 249fff7d14023806d75aeca40f4d9b7231e14311
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365423"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786600"
 ---
 # <a name="interpreting-errorrecord-objects"></a>Интерпретация объектов ErrorRecord
 
@@ -52,7 +45,7 @@ ms.locfileid: "72365423"
 
 Исключение, включенное в запись ошибки, предоставляется командлетом и доступно через свойство [System. Management. Automation. ерроррекорд. Exception *](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) объекта [System. Management. Automation. ерроррекорд](/dotnet/api/System.Management.Automation.ErrorRecord) .
 
-Ведущие приложения могут использовать ключевое слово `is`, чтобы указать, что исключение относится к определенному классу или производному классу. Лучше создать ветвь для типа исключения, как показано в следующем примере.
+Ведущие приложения могут использовать `is` ключевое слово, чтобы указать, что исключение относится к определенному классу или производному классу. Лучше создать ветвь для типа исключения, как показано в следующем примере.
 
 `if (MyNonTerminatingError.Exception is AccessDeniedException)`
 
@@ -78,7 +71,7 @@ ms.locfileid: "72365423"
 
 [System. Management. Automation. Ерроррекорд. TargetObject](/dotnet/api/System.Management.Automation.ErrorRecord.TargetObject)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [System. Management. Automation. Ерроррекорд](/dotnet/api/System.Management.Automation.ErrorRecord)
 
@@ -90,8 +83,8 @@ ms.locfileid: "72365423"
 
 [System. Management. Automation. командлет. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 
-[Добавление в командлет незавершающего сообщения об ошибках](./adding-non-terminating-error-reporting-to-your-cmdlet.md)
+[Добавление сообщения о непрерывающей ошибке в командлет](./adding-non-terminating-error-reporting-to-your-cmdlet.md)
 
-[Отчеты об ошибках Windows PowerShell](./error-reporting-concepts.md)
+[Отчеты об ошибках Windows PowerShell](./error-reporting-concepts.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

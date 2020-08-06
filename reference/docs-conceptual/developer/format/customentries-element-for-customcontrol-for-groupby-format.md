@@ -1,19 +1,12 @@
 ---
 title: Элемент Кустоментриес для ошибка customcontrol для GroupBy (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: af83c0f6-7fdd-4aa0-af12-efc62f632974
-caps.latest.revision: 7
-ms.openlocfilehash: f073142bf836ae892f161cf8c36ed16c35e311f5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2221d1bb94159697ff10466e4606d6d54e117e30
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364093"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785954"
 ---
 # <a name="customentries-element-for-customcontrol-for-groupby-format"></a>Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)
 
@@ -31,32 +24,32 @@ ms.locfileid: "72364093"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы элемента `CustomEntries`. Максимальное количество дочерних элементов, которое можно указать, не ограничено.
+В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы `CustomEntries` элемента. Максимальное количество дочерних элементов, которое можно указать, не ограничено.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Кустоментри для ошибка customcontrol для GroupBy (Format)](./customentry-element-for-customcontrol-for-groupby-format.md)|Обязательный элемент.<br /><br /> Предоставляет определение элемента управления.|
+|[Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)](./customentry-element-for-customcontrol-for-groupby-format.md)|Обязательный элемент.<br /><br /> Предоставляет определение элемента управления.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент ошибка customcontrol для GroupBy (Format)](./customcontrol-element-for-groupby-format.md)|Определяет пользовательский элемент управления, отображающий новую группу.|
+|[Элемент CustomControl для элемента GroupBy (формат)](./customcontrol-element-for-groupby-format.md)|Определяет пользовательский элемент управления, отображающий новую группу.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-В большинстве случаев элемент управления имеет только одно определение, которое указывается в одном элементе `CustomEntry`. Однако можно предоставить несколько определений, если вы хотите использовать один и тот же элемент управления для вывода различных групп. В таких случаях можно определить элемент `CustomEntry` для группы.
+В большинстве случаев элемент управления имеет только одно определение, которое указывается в одном `CustomEntry` элементе. Однако можно предоставить несколько определений, если вы хотите использовать один и тот же элемент управления для вывода различных групп. В таких случаях можно определить `CustomEntry` элемент для группы.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Кустоментри для Кустоментриес элементов управления для представления (формат)](./customentry-element-for-customentries-for-controls-for-view-format.md)
+[Элемент CustomEntry для элемента CustomEntries для элемента Controls для элемента View (формат)](./customentry-element-for-customentries-for-controls-for-view-format.md)
 
-[Элемент ошибка customcontrol для GroupBy (Format)](./customcontrol-element-for-groupby-format.md)
+[Элемент CustomControl для элемента GroupBy (формат)](./customcontrol-element-for-groupby-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

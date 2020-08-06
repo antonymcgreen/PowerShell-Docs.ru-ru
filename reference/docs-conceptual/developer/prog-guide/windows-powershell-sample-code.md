@@ -1,26 +1,19 @@
 ---
 title: Пример кода Windows PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1106829a-8ddc-454e-bbdd-ade15d4bffb4
-caps.latest.revision: 7
-ms.openlocfilehash: 76b4195eb33a1058109df8f6174a89708ba039d1
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 8dcbe6d8760d77666a8191ca78416ef63dfebdeb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563256"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786940"
 ---
 # <a name="windows-powershell-sample-code"></a>Пример кода Windows PowerShell
 
 Примеры® Windows PowerShell доступны в Windows SDK. В этом разделе содержится пример кода, который содержится в примерах Windows SDK.
 
 > [!NOTE]
-> При установке Windows SDK создается каталог **Samples** , в котором все примеры Windows PowerShell становятся доступными. Типичный каталог установки — **C:\Program Files\Microsoft SDKs\Windows\v6.0**. Запустите Windows PowerShell и введите **"CD самплес\сисмгмт\повершелл"** , чтобы перейти к каталогу примеров Windows PowerShell. В этом документе каталог примеров Windows PowerShell называется ** \<>примеров PowerShell **.
+> При установке Windows SDK создается каталог **Samples** , в котором все примеры Windows PowerShell становятся доступными. Типичный каталог установки — **C:\Program Files\Microsoft SDKs\Windows\v6.0**. Запустите Windows PowerShell и введите **"CD самплес\сисмгмт\повершелл"** , чтобы перейти к каталогу примеров Windows PowerShell. В этом документе каталог примеров Windows PowerShell называется **\<PowerShell Samples>** .
 
 ## <a name="sample-code-listing"></a>Пример листинга кода
 
@@ -50,7 +43,7 @@ ms.locfileid: "83563256"
 | [Примеры кода RunSpace09](./runspace09-code-sample.md)                             | Это исходный код для образца Runspace09, описанный в разделе [Создание консольного приложения, которое вызывает конвейер асинхронно](https://msdn.microsoft.com/198c1c94-2a06-457e-93ce-c0d910618e47).                                                                                        |
 | [Примеры кода RunSpace10](./runspace10-code-sample.md)                             | Это исходный код для образца Runspace10, который добавляет командлет в [System. Management. Automation. пространства. рунспацеконфигуратион](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) , а затем использует измененные сведения о конфигурации для создания пространства выполнения. |
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

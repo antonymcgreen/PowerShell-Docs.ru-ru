@@ -1,13 +1,12 @@
 ---
 title: Планирование заданий с помощью API Windows PowerShell
 ms.date: 09/13/2016
-ms.topic: article
-ms.openlocfilehash: 4e1d4ed6bffd858b92bf29b1dc6d8503454fafda
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 19962d3140b6e20164c378e63a317b888120e13b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359833"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786736"
 ---
 # <a name="scheduling-jobs-with-the-windows-powershell-api"></a>Планирование заданий с помощью API Windows PowerShell
 
@@ -33,7 +32,7 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 
 |Имя параметра|Описание|
 |---|---|
-|Название|Имя задания.|
+|Имя|Имя задания.|
 |скриптбокк|Блок сценария Windows PowerShell, который указывает, что делает задание.|
 |FilePath|Путь к файлу, содержащему блок сценариев Windows PowerShell, который указывает, что делает задание.|
 |инитиализатионскрипт|Блок сценария Windows PowerShell, который инициализирует задание.|

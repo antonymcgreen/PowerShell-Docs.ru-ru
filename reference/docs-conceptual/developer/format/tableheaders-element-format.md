@@ -1,19 +1,12 @@
 ---
 title: Элемент Таблехеадерс (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f9fa2b6f-b99a-42de-9779-44e9cb583f71
-caps.latest.revision: 15
-ms.openlocfilehash: bd44fcf4878c858afe81fb071ce72f627ac465dc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b3176cbe1316d5b30cb61831d9915a80389709a5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361823"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787433"
 ---
 # <a name="tableheaders-element-format"></a>Элемент TableHeaders (формат)
 
@@ -32,31 +25,31 @@ ms.locfileid: "72361823"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы элемента `TableHeaders`. Должен существовать дочерний элемент для каждого свойства объекта, который должен быть отображен. Сведения о заголовке столбца отображаются в том порядке, в котором указаны дочерние элементы.
+В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы `TableHeaders` элемента. Должен существовать дочерний элемент для каждого свойства объекта, который должен быть отображен. Сведения о заголовке столбца отображаются в том порядке, в котором указаны дочерние элементы.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Таблеколумнхеадер (Format)](./tablecolumnheader-element-format.md)|Необязательный элемент.<br /><br /> Определяет метку, ширину и выравнивание данных для столбца табличного представления.|
+|[Элемент TableColumnHeader (формат)](./tablecolumnheader-element-format.md)|Необязательный элемент.<br /><br /> Определяет метку, ширину и выравнивание данных для столбца табличного представления.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Таблеконтрол (Format)](./tablecontrol-element-format.md)|Определяет формат таблицы для представления.|
+|[Элемент TableControl (формат)](./tablecontrol-element-format.md)|Определяет формат таблицы для представления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
 ## <a name="example"></a>Пример
 
-В этом примере показан элемент `TableHeaders`, определяющий два заголовка столбцов.
+В этом примере показан `TableHeaders` элемент, определяющий два заголовка столбцов.
 
 ```xml
 <TableHeaders>
@@ -73,12 +66,12 @@ ms.locfileid: "72361823"
 </TableHeaders>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
-[Элемент Таблеколумнхеадер (Format)](./tablecolumnheader-element-format.md)
+[Элемент TableColumnHeader (формат)](./tablecolumnheader-element-format.md)
 
-[Элемент Таблеконтрол (Format)](./tablecontrol-element-format.md)
+[Элемент TableControl (формат)](./tablecontrol-element-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

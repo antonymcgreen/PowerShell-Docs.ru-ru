@@ -1,25 +1,18 @@
 ---
 title: Элемент Кустоментри для ошибка customcontrol для GroupBy (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2987cb45-f646-45d4-b81b-7871e77af36f
-caps.latest.revision: 5
-ms.openlocfilehash: dcf4f8b2bbd422067ffdf9b3b4972e279e91edf9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4df8e5b96868b3814c6d84fa329950bb5345ef6e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364063"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785920"
 ---
 # <a name="customentry-element-for-customcontrol-for-groupby-format"></a>Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)
 
 Предоставляет определение элемента управления. Этот элемент используется при определении того, как отображается новая группа объектов.
 
-Элемент конфигурации (Format) Виевдефинитионс элемент (Format) элемент представления (формат) элемент GroupBy для элемента Ошибка customcontrol представления (Format) для элемента Кустоментриес (Format) для ошибка customcontrol для элемента GroupBy (Format) Кустоментри для Ошибка customcontrol для GroupBy (Format)
+Элемент конфигурации (Format) Виевдефинитионс элемент (Format) элемент представления (формат) элемент GroupBy для элемента Ошибка customcontrol представления (Format) для элемента Кустоментриес для GroupBy (Format) Кустоментри для ошибка customcontrol для ошибка customcontrol для GroupBy (формат)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,33 +25,33 @@ ms.locfileid: "72364063"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы элемента `CustomEntry`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы `CustomEntry` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Ентриселектедби для Кустоментри для GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Необязательный элемент.<br /><br /> Определяет типы .NET, которые используют это определение элемента управления или условие, которое должно существовать, чтобы использовать это определение.|
-|[Элемент Кустомитем для Кустоментри для GroupBy (Format)](./customitem-element-for-customentry-for-groupby-format.md)|Обязательный элемент.<br /><br /> Определяет, как элемент управления отображает данные.|
+|[Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Необязательный элемент.<br /><br /> Определяет типы .NET, которые используют это определение элемента управления или условие, которое должно существовать, чтобы использовать это определение.|
+|[Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)](./customitem-element-for-customentry-for-groupby-format.md)|Обязательный элемент.<br /><br /> Определяет, как элемент управления отображает данные.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Кустоментриес для ошибка customcontrol для GroupBy (Format)](./customentries-element-for-customcontrol-for-groupby-format.md)|Предоставляет определения для элемента управления.|
+|[Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)](./customentries-element-for-customcontrol-for-groupby-format.md)|Предоставляет определения для элемента управления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Ентриселектедби для Кустоментри для GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)
+[Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)](./entryselectedby-element-for-customentry-for-groupby-format.md)
 
-[Элемент Кустомитем для Кустоментри для GroupBy (Format)](./customitem-element-for-customentry-for-groupby-format.md)
+[Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)](./customitem-element-for-customentry-for-groupby-format.md)
 
-[Элемент Кустоментриес для ошибка customcontrol для GroupBy (Format)](./customentries-element-for-customcontrol-for-groupby-format.md)
+[Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)](./customentries-element-for-customcontrol-for-groupby-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

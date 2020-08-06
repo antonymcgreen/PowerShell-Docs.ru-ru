@@ -1,23 +1,16 @@
 ---
 title: Пример StopProcessSample01 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
-caps.latest.revision: 9
-ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6d4737d0526a7d142b4a986986974bcbdc12ec7e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365303"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786464"
 ---
 # <a name="stopprocesssample01-sample"></a>Пример командлета StopProcessSample01
 
-В этом примере показано, как написать командлет, запрашивающий отзыв от пользователя перед попыткой его завершения, и как реализовать параметр `PassThru`, указывающий, что пользователь хочет, чтобы командлет возвращал объект. Этот командлет аналогичен командлету `Stop-Process`, предоставленному Windows PowerShell 2,0.
+В этом примере показано, как написать командлет, запрашивающий отзыв от пользователя перед попыткой его завершения, и как реализовать `PassThru` параметр, указывающий, что пользователь хочет, чтобы командлет возвращал объект. Этот командлет похож на командлет, `Stop-Process` предоставляемый Windows PowerShell 2,0.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 
@@ -51,7 +44,7 @@ ms.locfileid: "72365303"
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом образце демонстрируется следующее.
 
@@ -61,11 +54,11 @@ ms.locfileid: "72365303"
 
 - Вызов метода ShouldProcess для запроса подтверждения.
 
-- Реализация параметра `PassThru`, указывающего, хочет ли пользователь командлет вернуть объект. По умолчанию этот командлет не возвращает объект в конвейер.
+- Реализация `PassThru` параметра, указывающего, хочет ли пользователь командлет вернуть объект. По умолчанию этот командлет не возвращает объект в конвейер.
 
 ## <a name="example"></a>Пример
 
-В этом примере показано, как реализовать параметр `PassThru`, который указывает, что пользователь хочет, чтобы командлет возвращал объект, и как запросить отзывы пользователей по вызовам методов `ShouldProcess` и `ShouldContinue`.
+В этом примере показано, как реализовать `PassThru` параметр, который указывает, что пользователь хочет, чтобы командлет возвращал объект, и как запросить отзывы пользователей по вызовам `ShouldProcess` `ShouldContinue` методов и.
 
 ```csharp
 using System;
@@ -263,6 +256,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

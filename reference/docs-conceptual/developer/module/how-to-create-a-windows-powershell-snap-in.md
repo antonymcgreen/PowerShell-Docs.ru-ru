@@ -1,21 +1,14 @@
 ---
 title: Создание оснастки Windows PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - snap-ins [PowerShell SDK], examples
-ms.assetid: 71bd9b2c-5f2e-4aa8-b5fe-08c956540d37
-caps.latest.revision: 10
-ms.openlocfilehash: 43199544dc02ccae4b61053c30d6ed36576adfcf
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 4150ba582544d1daa4a898f0ff20b169c24a0ee0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811333"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787331"
 ---
 # <a name="how-to-create-a-windows-powershell-snap-in"></a>Как создать оснастку Windows PowerShell
 
@@ -33,7 +26,7 @@ ms.locfileid: "83811333"
 
 [Написание пользовательской оснастки Windows PowerShell. в](./writing-a-custom-windows-powershell-snap-in.md)этом примере показано, как создать пользовательскую оснастку, которая будет использоваться для регистрации определенного набора командлетов и поставщиков, которые могут существовать или отсутствовать в одной сборке.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [System. Management. Automation. PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn)
 

@@ -1,19 +1,12 @@
 ---
 title: Создание поставщика элементов | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 606c880c-6cf1-4ea6-8730-dbf137bfabff
-caps.latest.revision: 5
-ms.openlocfilehash: 12d2cb8c40c9fd6278bb964a6259d03167536195
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1df30e7af1b534756f797b9b5d4e29b689cbc782
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359883"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786770"
 ---
 # <a name="writing-an-item-provider"></a>Написание поставщика элемента
 
@@ -227,8 +220,8 @@ protected override bool IsValidPath(string path)
 
 ## <a name="see-also"></a>См. также:
 
-[Создание поставщика контейнера](./writing-a-container-provider.md)
+[Написание поставщика контейнера](./writing-a-container-provider.md)
 
-[Создание поставщика навигации](./writing-a-navigation-provider.md)
+[Написание поставщика навигации](./writing-a-navigation-provider.md)
 
-[Общие сведения о поставщике Windows PowerShell](./windows-powershell-provider-overview.md)
+[Общие сведения о поставщиках Windows PowerShell](./windows-powershell-provider-overview.md)

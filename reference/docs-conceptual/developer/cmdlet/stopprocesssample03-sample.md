@@ -1,23 +1,16 @@
 ---
 title: Пример StopProcessSample03 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 31298f1b-8b76-4637-8406-863f5ad27e53
-caps.latest.revision: 8
-ms.openlocfilehash: 91b56a78f878e0d9c0fc11e4b882399bdfb108ac
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 76a74c099a3c82cfb55e93e5b6173d728ac88b93
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369373"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787841"
 ---
 # <a name="stopprocesssample03-sample"></a>Пример командлета StopProcessSample03
 
-В этом примере показано, как написать командлет, параметры которого имеют псевдонимы, а параметры которых поддерживают символы-шаблоны. Этот командлет аналогичен командлету `Stop-Process`, предоставленному Windows PowerShell 2,0.
+В этом примере показано, как написать командлет, параметры которого имеют псевдонимы, а параметры которых поддерживают символы-шаблоны. Этот командлет похож на командлет, `Stop-Process` предоставляемый Windows PowerShell 2,0.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 
@@ -51,7 +44,7 @@ ms.locfileid: "72369373"
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом образце демонстрируется следующее.
 
@@ -350,6 +343,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 } // namespace Microsoft.Samples.PowerShell.Commands
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

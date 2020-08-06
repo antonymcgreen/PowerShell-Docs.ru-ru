@@ -1,25 +1,18 @@
 ---
 title: Элемент Кустомконтролнаме для ExpressionBinding элементов управления для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4b6ee11e-9086-41d2-afd3-42fb9f24da69
-caps.latest.revision: 7
-ms.openlocfilehash: bf1d57447f9018f1535af14466427aaeabc048f3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 871c6afd89db9360ea5012191b08863a9441f899
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369153"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786022"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-controls-for-view-format"></a>Элемент CustomControlName для элемента ExpressionBinding для элемента Controls для элемента View (формат)
 
 Указывает имя общего элемента управления или элемента управления представления. Этот элемент используется при определении элементов управления, которые могут использоваться представлением.
 
-Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет управляющий элемент (Format) элемент управления для элементов управления представления (Format) ошибка customcontrol для элементов управления элемента Кустоментриес представления (Format) для Ошибка customcontrol для элемента Кустоментри представления (Format) для Кустоментриес для элементов управления для представления (Format) Кустомитем элемента для Кустоментри для элементов управления для представления (Format) ExpressionBinding для Кустомитем для элементов управления представления (Format) Кустомконтролнаме Элемент для Експрессионбиндине элементов управления для представления (Format)
+Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет элементом управления "элемент (Format)" для элементов управления в элементе "View" (Format) ошибка customcontrol для элемента управления элементов формат). элемент Кустоментри для Кустоментриес для элементов управления для элемента Кустомитем представления (Format) для Кустоментри для элементов управления для элемента "View" (формат) ExpressionBinding для Кустомитем для элементов управления для представления (Format) CustomControlName для ExpressionBindine элементов управления для представления (формат)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,40 +22,40 @@ ms.locfileid: "72369153"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `CustomControlName`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `CustomControlName` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Определяет данные, отображаемые элементом управления.|
+|[Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Определяет данные, отображаемые элементом управления.|
 
 ## <a name="text-value"></a>Текстовое значение
 
 Укажите имя элемента управления.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Можно создавать стандартные элементы управления, которые могут использоваться всеми представлениями файла форматирования, а также создавать элементы управления представления, которые могут использоваться в определенном представлении. Следующие элементы определяют имена этих элементов управления:
 
-- [Элемент Name для элемента управления для элементов управления Configuration (Format)](./name-element-for-control-for-controls-for-configuration-format.md)
+- [Элемент Name для элемента Control для элемента Controls для элемента Configuration (формат)](./name-element-for-control-for-controls-for-configuration-format.md)
 
-- [Элемент Name для элемента управления для элементов управления в представлении (формат)](./name-element-for-control-for-controls-for-view-format.md)
+- [Элемент Name для элемента Control для элемента Controls для элемента View (формат)](./name-element-for-control-for-controls-for-view-format.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Name для элемента управления для элементов управления Configuration (Format)](./name-element-for-control-for-controls-for-configuration-format.md)
+[Элемент Name для элемента Control для элемента Controls для элемента Configuration (формат)](./name-element-for-control-for-controls-for-configuration-format.md)
 
-[Элемент Name для элемента управления для элементов управления в представлении (формат)](./name-element-for-control-for-controls-for-view-format.md)
+[Элемент Name для элемента Control для элемента Controls для элемента View (формат)](./name-element-for-control-for-controls-for-view-format.md)
 
-[Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

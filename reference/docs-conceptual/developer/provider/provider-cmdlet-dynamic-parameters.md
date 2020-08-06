@@ -1,19 +1,12 @@
 ---
 title: Динамические параметры командлета поставщика | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8f1069f7-8fa8-4622-9e2c-af29b0b961c2
-caps.latest.revision: 6
-ms.openlocfilehash: 9e70fbeaef61d04e66f16d06519742ff2f679df6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 4aaa5ee39e98de9a9925fc65cac3cc6c32d9c2bc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564246"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786821"
 ---
 # <a name="provider-cmdlet-dynamic-parameters"></a>Динамические параметры командлета поставщика
 
@@ -89,7 +82,7 @@ internal sealed class CertificateProviderDynamicParameters
 
 `New-ItemProperty`Командлет можно определить динамические параметры, активируемые `Path` `Name` `PropertyType` параметрами командлета,, и, `Value` `New-ItemProperty` путем реализации метода [System. Management. Automation. Provider. идинамикпропертикмдлетпровидер. невпропертидинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) .
 
-`New-PSDrive`Командлет можно определить динамические параметры, активируемые объектом [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) , возвращаемым `New-PSDrive` командлетом, путем реализации метода [System. Management. Automation. Provider. дривекмдлетпровидер. невдривединамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) .
+`New-PSDrive`Командлет можно определить динамические параметры, активируемые [System.Management.Automation.PSDным объектом ривеинфо](/dotnet/api/System.Management.Automation.PSDriveInfo) , возвращаемым `New-PSDrive` командлетом, путем реализации метода [System. Management. автоматизации. Provider. дривекмдлетпровидер. невдривединамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) .
 
 `Remove-Item`Можно определить динамические параметры, активируемые `Path` `Recurse` параметрами и `Remove-Item` командлета, реализовав метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. ремовеитемдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) .
 

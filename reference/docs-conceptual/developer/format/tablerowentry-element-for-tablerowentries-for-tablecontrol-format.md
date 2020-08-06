@@ -1,19 +1,12 @@
 ---
 title: Элемент Таблеровентри для Таблеровентриес для Таблеконтрол (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 18d86af7-7ff9-4968-81be-2caa61937d49
-caps.latest.revision: 10
-ms.openlocfilehash: 946ffb3fe857503c02b9000238a86775969abbd6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 83076ae5b2c48992ce5e621c65fc9937efb68b87
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361803"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787416"
 ---
 # <a name="tablerowentry-element-for-tablerowentries-for-tablecontrol-format"></a>Элемент TableRowEntry для элемента TableRowEntries для элемента TableControl (формат)
 
@@ -33,35 +26,35 @@ ms.locfileid: "72361803"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `TableRowEntry`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `TableRowEntry` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
 |[Элемент Ентриселектедби для Таблеровентри для Таблеконтрол (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Обязательный элемент.<br /><br /> Определяет объекты, значения свойств которых отображаются в строке.|
-|[Элемент Таблеколумнитемс для Таблеровентри для Таблеконтрол (Format)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|Обязательный элемент.<br /><br /> Определяет свойства или скрипты, значения которых отображаются.|
+|[Элемент TableColumnItems для элемента TableRowEntry для элемента TableControl (формат)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|Обязательный элемент.<br /><br /> Определяет свойства или скрипты, значения которых отображаются.|
 |[Элемент Wrap для Таблеровентри для Таблеконтрол (Format)](./wrap-element-for-tablerowentry-for-tablecontrol-format.md)|Необязательный элемент.<br /><br /> Указывает, что текст, превышающий ширину столбца, отображается на следующей строке.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Таблеровентриес для Таблеконтрол (Format)](./tablerowentries-element-for-tablecontrol-format.md)|Определяет строки таблицы.|
+|[Элемент TableRowEntries для элемента TableControl (формат)](./tablerowentries-element-for-tablecontrol-format.md)|Определяет строки таблицы.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-Необходимо указать один элемент `TableColumnItems` и один элемент `EntrySelectedBy`.
+`TableColumnItems`Необходимо указать один элемент и один `EntrySelectedBy` элемент.
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан элемент `TableRowEntry`, определяющий строку, в которой отображаются значения двух свойств объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
+В следующем примере показан `TableRowEntry` элемент, определяющий строку, в которой отображаются значения двух свойств объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <TableRowEntry>
@@ -79,15 +72,15 @@ ms.locfileid: "72361803"
 </TableRowEntry>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Создание табличного представления](./creating-a-table-view.md)
+[Создание представления таблицы](./creating-a-table-view.md)
 
 [Элемент Ентриселектедби для Таблеровентри для Таблеконтрол (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)
 
-[Элемент Таблеколумнитемс для Таблеровентри для Таблеконтрол (Format)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
+[Элемент TableColumnItems для элемента TableRowEntry для элемента TableControl (формат)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
 
-[Элемент Таблеровентриес для Таблеконтрол (Format)](./tablerowentries-element-for-tablecontrol-format.md)
+[Элемент TableRowEntries для элемента TableControl (формат)](./tablerowentries-element-for-tablecontrol-format.md)
 
 [Элемент Wrap для Таблеровентри для Таблеконтрол (Format)](./wrap-element-for-tablerowentry-for-tablecontrol-format.md)
 

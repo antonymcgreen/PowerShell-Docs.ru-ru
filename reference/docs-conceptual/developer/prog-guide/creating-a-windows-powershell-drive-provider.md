@@ -1,23 +1,16 @@
 ---
 title: Создание поставщика диска Windows PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - drive providers [PowerShell Programmer's Guide]
 - providers [PowerShell Programmer's Guide], drive provider
 - drives [PowerShell Programmer's Guide]
-ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
-caps.latest.revision: 6
-ms.openlocfilehash: 88be7cc6cc0ab54604bc9de71e0ae07c20457514
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 2a2178714ed548986fe1a1a4de8828e8e0a938cb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978463"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787195"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Создание поставщика дисков Windows PowerShell
 
@@ -44,7 +37,7 @@ ms.locfileid: "80978463"
 
 Все поставщики Windows PowerShell считаются без отслеживания состояния. Это означает, что поставщику дисков необходимо создать все сведения о состоянии, необходимые среде выполнения Windows PowerShell при вызове поставщика.
 
-Для этого поставщика дисков сведения о состоянии включают подключение к базе данных, которая хранится в составе сведений о диске. Ниже приведен код, который показывает, как эта информация хранится в объекте [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) , описывающем диск:
+Для этого поставщика дисков сведения о состоянии включают подключение к базе данных, которая хранится в составе сведений о диске. Ниже приведен код, который показывает, как эта информация хранится в объекте [System.Management.Automation.PSDривеинфо](/dotnet/api/System.Management.Automation.PSDriveInfo) , описывающем диск:
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="130-151":::
 
@@ -56,17 +49,17 @@ ms.locfileid: "80978463"
 
 Переопределение этого метода должно выполнять следующие действия:
 
-- Убедитесь, что член [System. Management. Automation. PSDriveinfo. root *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) существует и что можно установить подключение к хранилищу данных.
-- Создайте диск и заполните элемент Connection, чтобы обеспечить поддержку командлета `New-PSDrive`.
-- Проверьте объект [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) для предложенного диска.
-- Измените объект [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) , который описывает диск с любой необходимой информацией о производительности или надежности, или предоставьте дополнительные данные для вызывающих объектов с помощью диска.
-- Обработка сбоев с помощью метода [System. Management. Automation. Provider. кмдлетпровидер. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) и возврата `null`.
+- Убедитесь, что [System.Management.Automation.PSDривеинфо. Член root *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) существует и может быть установлено подключение к хранилищу данных.
+- Создайте диск и заполните член соединения, чтобы он поддерживал `New-PSDrive` командлет.
+- Проверьте объект [System.Management.Automation.PSDривеинфо](/dotnet/api/System.Management.Automation.PSDriveInfo) для предложенного диска.
+- Измените объект [System.Management.Automation.PSDривеинфо](/dotnet/api/System.Management.Automation.PSDriveInfo) , который описывает диск с любой необходимой информацией о производительности или надежности, или предоставьте дополнительные данные для вызывающих объектов с помощью диска.
+- Обработка сбоев с помощью метода [System. Management. Automation. Provider. кмдлетпровидер. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) и возврата `null` .
 
   Этот метод возвращает либо сведения о диске, которые были переданы методу, либо зависящую от поставщика версию этого метода.
 
 ## <a name="attaching-dynamic-parameters-to-newdrive"></a>Присоединение динамических параметров к Невдриве
 
-Для командлета `New-PSDrive`, поддерживаемого поставщиком дисков, могут потребоваться дополнительные параметры. Чтобы присоединить эти динамические параметры к командлету, поставщик реализует метод [System. Management. Automation. Provider. дривекмдлетпровидер. невдривединамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) . Этот метод возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
+Для `New-PSDrive` командлета, поддерживаемого поставщиком дисков, могут потребоваться дополнительные параметры. Чтобы присоединить эти динамические параметры к командлету, поставщик реализует метод [System. Management. Automation. Provider. дривекмдлетпровидер. невдривединамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) . Этот метод возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
 
 Этот метод не переопределяется этим поставщиком диска. Однако следующий код демонстрирует реализацию этого метода по умолчанию:
 
@@ -80,21 +73,21 @@ ms.locfileid: "80978463"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="91-116":::
 
-Если диск можно удалить, метод должен вернуть сведения, передаваемые в метод, с помощью параметра `drive`. Если диск не может быть удален, метод должен записать исключение, а затем возвратить `null`. Если поставщик не переопределяет этот метод, реализация по умолчанию этого метода просто возвращает сведения о диске, переданные в качестве входных данных.
+Если диск можно удалить, метод должен вернуть сведения, передаваемые в метод, с помощью `drive` параметра. Если диск не может быть удален, метод должен записать исключение, а затем вернуть значение `null` . Если поставщик не переопределяет этот метод, реализация по умолчанию этого метода просто возвращает сведения о диске, переданные в качестве входных данных.
 
 ## <a name="initializing-default-drives"></a>Инициализация дисков по умолчанию
 
-Поставщик дисков реализует метод [System. Management. Automation. Provider. дривекмдлетпровидер. инитиализедефаултдривес *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) для подключения дисков. Например, поставщик Active Directory может подключить диск для контекста именования по умолчанию, если компьютер присоединен к домену.
+Поставщик дисков реализует метод [System.Management.Automation.Provider.Drivecmdletprovider.Iniтиализедефаултдривес *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) для подключения дисков. Например, поставщик Active Directory может подключить диск для контекста именования по умолчанию, если компьютер присоединен к домену.
 
 Этот метод возвращает коллекцию сведений о инициализированных дисках или пустую коллекцию. Вызов этого метода выполняется после того, как среда выполнения Windows PowerShell вызывает метод [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) для инициализации поставщика.
 
-Этот поставщик дисков не переопределяет метод [System. Management. Automation. Provider. дривекмдлетпровидер. инитиализедефаултдривес *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) . Однако в следующем коде показана реализация по умолчанию, которая возвращает пустую коллекцию Drive:
+Этот поставщик дисков не переопределяет метод [System.Management.Automation.Provider.Drivecmdletprovider.Iniтиализедефаултдривес *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) . Однако в следующем коде показана реализация по умолчанию, которая возвращает пустую коллекцию Drive:
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderinitializedefaultdrives](Msh_samplestestcmdlets#testproviderinitializedefaultdrives)]  -->
 
 #### <a name="things-to-remember-about-implementing-initializedefaultdrives"></a>Вопросы, связанные с реализацией Инитиализедефаултдривес
 
-Все поставщики дисков должны подключить корневой диск, чтобы помочь пользователю с его обнаружением. Корневой диск может иметь список расположений, которые служат корнями для других подключенных дисков. Например, поставщик Active Directory может создать диск, содержащий список контекстов именования, находящихся в атрибутах `namingContext` в корневой распределенной системной среде (DSE). Это помогает пользователям обнаружить точки подключения для других дисков.
+Все поставщики дисков должны подключить корневой диск, чтобы помочь пользователю с его обнаружением. Корневой диск может иметь список расположений, которые служат корнями для других подключенных дисков. Например, поставщик Active Directory может создать диск, содержащий список контекстов именования, находящихся в `namingContext` атрибутах в корневой распределенной системной среде (DSE). Это помогает пользователям обнаружить точки подключения для других дисков.
 
 ## <a name="code-sample"></a>Образец кода
 
@@ -104,11 +97,11 @@ ms.locfileid: "80978463"
 
 Когда ваш поставщик Windows PowerShell зарегистрирован в Windows PowerShell, его можно протестировать, запустив в командной строке поддерживаемые командлеты, включая все командлеты, доступные при наследовании. Давайте протестируем пример поставщика дисков.
 
-1. Выполните командлет `Get-PSProvider`, чтобы получить список поставщиков, чтобы убедиться в наличии поставщика диска Акцессдб.
+1. Выполните `Get-PSProvider` командлет, чтобы получить список поставщиков, чтобы убедиться в наличии поставщика диска акцессдб.
 
-   **`Get-PSProvider` > PS**
+   **> PS`Get-PSProvider`**
 
-   Отобразятся следующие выходные данные:
+   Появится следующий результат:
 
    ```Output
    Name                 Capabilities                  Drives
@@ -121,7 +114,7 @@ ms.locfileid: "80978463"
    Registry             ShouldProcess                 {HKLM, HKCU}
    ```
 
-2. Убедитесь, что имя сервера базы данных (DSN) существует для базы данных, путем доступа к части **данных** **средств администрирования** для операционной системы. В таблице **пользовательское имя пользователя** дважды щелкните **база данных MS Access** и добавьте путь к диску `C:\ps\northwind.mdb`.
+2. Убедитесь, что имя сервера базы данных (DSN) существует для базы данных, путем доступа к части **данных** **средств администрирования** для операционной системы. В таблице **пользовательское имя пользователя** дважды щелкните **база данных MS Access** и добавьте путь к диску `C:\ps\northwind.mdb` .
 
 3. Создайте новый диск с помощью образца поставщика дисков:
 
@@ -129,7 +122,7 @@ ms.locfileid: "80978463"
    new-psdrive -name mydb -root c:\ps\northwind.mdb -psprovider AccessDb`
    ```
 
-   Отобразятся следующие выходные данные:
+   Появится следующий результат:
 
    ```Output
    Name     Provider     Root                   CurrentLocation
@@ -144,7 +137,7 @@ ms.locfileid: "80978463"
 
    **> PS ("Get-PSDrive MyDB"). подключение**
 
-   Отобразятся следующие выходные данные:
+   Появится следующий результат:
 
    ```Output
    ConnectionString  : Driver={Microsoft Access Driver (*.mdb)};DBQ=c:\ps\northwind.mdb
@@ -171,4 +164,4 @@ ms.locfileid: "80978463"
 
 [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md)
+[Создание базового поставщика Windows PowerShell](./creating-a-basic-windows-powershell-provider.md)

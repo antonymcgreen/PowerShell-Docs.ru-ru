@@ -1,19 +1,12 @@
 ---
 title: Пример кода AccessDbProviderSample03 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: af25b560-017a-4d53-a8c3-97c5ab66b9d4
-caps.latest.revision: 5
-ms.openlocfilehash: ee4a0cb6032361aecdf21ab7346521b4757f7030
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 6eddbec6369fd861a3a67bbbebe3d6f98c4bc164
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978565"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787297"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>Пример кода AccessDbProviderSample03
 
@@ -21,8 +14,8 @@ ms.locfileid: "80978565"
 Этот поставщик может управлять данными в хранилище данных.
 
 > [!NOTE]
-> Вы можете скачать C# исходный файл (AccessDBSampleProvider03.cs) для этого поставщика с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
-> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory. Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Исходный файл C# (AccessDBSampleProvider03.cs) для этого поставщика можно скачать с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Скачанные исходные файлы доступны в **\<PowerShell Samples>** каталоге. Дополнительные сведения о других реализациях поставщиков Windows PowerShell см. в разделе [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 ## <a name="code-sample"></a>Образец кода
 
@@ -997,8 +990,8 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="11-976":::
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

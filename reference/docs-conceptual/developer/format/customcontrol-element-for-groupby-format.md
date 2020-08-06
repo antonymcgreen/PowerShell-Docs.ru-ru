@@ -1,19 +1,12 @@
 ---
 title: Элемент ошибка customcontrol для GroupBy (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2472e256-8f4f-4288-8b67-a3300649dafa
-caps.latest.revision: 9
-ms.openlocfilehash: 2e84e770a345e272d4c5917b00afe7520840e1db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b8265e872d34ea5dbcedfaa1668d21df8c3b35eb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368963"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786073"
 ---
 # <a name="customcontrol-element-for-groupby-format"></a>Элемент CustomControl для элемента GroupBy (формат)
 
@@ -31,30 +24,30 @@ ms.locfileid: "72368963"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `CustomControl`. Можно указать любое количество дочерних элементов и перечислить их в любом порядке.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `CustomControl` элемента. Можно указать любое количество дочерних элементов и перечислить их в любом порядке.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Кустоментриес для ошибка customcontrol для GroupBy (Format)](./customentries-element-for-customcontrol-for-groupby-format.md)|Обязательный элемент.<br /><br /> Предоставляет определения для элемента управления.|
+|[Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)](./customentries-element-for-customcontrol-for-groupby-format.md)|Обязательный элемент.<br /><br /> Предоставляет определения для элемента управления.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент GroupBy для представления (формат)](./groupby-element-for-view-format.md)|Определяет, как Windows PowerShell отображает новую группу объектов.|
+|[Элемент GroupBy для элемента View (формат)](./groupby-element-for-view-format.md)|Определяет, как Windows PowerShell отображает новую группу объектов.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Кустоментриес для ошибка customcontrol для GroupBy (Format)](./customentries-element-for-customcontrol-for-groupby-format.md)
+[Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)](./customentries-element-for-customcontrol-for-groupby-format.md)
 
-[Элемент GroupBy для представления (формат)](./groupby-element-for-view-format.md)
+[Элемент GroupBy для элемента View (формат)](./groupby-element-for-view-format.md)
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

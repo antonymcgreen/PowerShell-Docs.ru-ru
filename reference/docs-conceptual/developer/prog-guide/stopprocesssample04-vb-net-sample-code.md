@@ -1,28 +1,21 @@
 ---
 title: Пример кода StopProcessSample04 (VB.NET) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 48019ceb-0aeb-4cd1-8b42-79f2c29c3e65
-caps.latest.revision: 5
-ms.openlocfilehash: 3e709f0897b0d77f4c5f12e1c042edd4e24b142a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5526bec79f3bb38f0de11680302a94699240a3d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417810"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786991"
 ---
 # <a name="stopprocesssample04-vbnet-sample-code"></a>Пример кода StopProcessSample04 (VB.NET)
 
-Ниже приведен полный пример кода VB.NET для командлета StopProc04 Sample. Это код для командлета `Stop-Process`, описанного в разделе [Добавление наборов параметров в командлет](../cmdlet/adding-parameter-sets-to-a-cmdlet.md). Командлет `Stop-Process` предназначен для завершения процессов, которые извлекаются с помощью командлета Get-proc (описывается в разделе [Создание первого командлета](../cmdlet/creating-a-cmdlet-without-parameters.md)).
+Ниже приведен полный пример кода VB.NET для командлета StopProc04 Sample. Это код `Stop-Process` командлета, описанный в разделе [Добавление наборов параметров в командлет](../cmdlet/adding-parameter-sets-to-a-cmdlet.md). `Stop-Process`Командлет предназначен для того, чтобы прерывать процессы, полученные с помощью командлета Get-proc (описывается в разделе [Создание первого командлета](../cmdlet/creating-a-cmdlet-without-parameters.md)).
 
 > [!NOTE]
 > Вы можете скачать исходный файл VB.NET (stopprocesssample04. vb) для командлета "прекращать-proc" с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> Скачанные исходные файлы доступны в **\<примеров PowerShell >** Directory.
+> Скачанные исходные файлы доступны в **\<PowerShell Samples>** каталоге.
 
 ```vb
 Imports System
@@ -477,8 +470,8 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[StopProcessSample04.vb](../../powershell-sdk-samples/SDK-2.0/vb/StopProcessSample04/StopProcessSample04.vb#L09-L456 "StopProcessSample04.vb")] -->
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Руководством программиста Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

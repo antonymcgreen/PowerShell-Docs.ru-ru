@@ -1,19 +1,12 @@
 ---
 title: Элемент ScriptBlock для GroupBy (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 30183927-6f0e-4717-b6f5-f07a6e134cfb
-caps.latest.revision: 6
-ms.openlocfilehash: 37a297228eb33ff75daf94a12635d42b52c6cc9f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e761e02a7910cd598449d564e827889162da9f25
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364933"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787688"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>Элемент ScriptBlock для элемента GroupBy (формат)
 
@@ -29,36 +22,36 @@ ms.locfileid: "72364933"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ScriptBlock`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ScriptBlock` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент GroupBy для представления (формат)](./groupby-element-for-view-format.md)|Определяет, как отображается группа объектов .NET.|
+|[Элемент GroupBy для элемента View (формат)](./groupby-element-for-view-format.md)|Определяет, как отображается группа объектов .NET.|
 
 ## <a name="text-value"></a>Текстовое значение
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 PowerShell запускает новую группу при каждом изменении значения этого сценария.
 
 Если этот элемент указан, нельзя указать элемент [PropertyName](propertyname-element-for-groupby-format.md) для запуска новой группы.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент PropertyName для GroupBy (Format)](propertyname-element-for-groupby-format.md)
+[Элемент PropertyName для элемента GroupBy (формат)](propertyname-element-for-groupby-format.md)
 
-[Элемент GroupBy для представления (формат)](groupby-element-for-view-format.md)
+[Элемент GroupBy для элемента View (формат)](groupby-element-for-view-format.md)
 
 [Написание файла форматирования PowerShell](writing-a-powershell-formatting-file.md)

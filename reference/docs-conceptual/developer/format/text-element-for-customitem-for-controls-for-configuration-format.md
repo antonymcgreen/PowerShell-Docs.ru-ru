@@ -1,25 +1,18 @@
 ---
 title: Текстовый элемент для Кустомитем элементов управления в конфигурации (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 87a4079e-602c-42de-9de5-9b59df986caa
-caps.latest.revision: 6
-ms.openlocfilehash: b45e96252672a872023a5eb698ffe22d677c5468
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d9f9687f9fb47f2085b25899193dda85b8fa068b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368143"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787399"
 ---
 # <a name="text-element-for-customitem-for-controls-for-configuration-format"></a>Элемент Text для элемента CustomItem для элемента Controls для элемента Configuration (формат)
 
 Задает текст, который добавляется в данные, отображаемые элементом управления, например метку, скобки для заключения данных, а также пробелы для отступа данных. Этот элемент используется при определении общего элемента управления, который может использоваться всеми представлениями в файле форматирования.
 
-Элемент Configuration (Format) управляет элементом контрольного элемента конфигурации (Format) элементов управления для элемента управления конфигурации (Format) ошибка customcontrol для элемента Control в конфигурации (Format) Кустоментриес для ошибка customcontrol для конфигурации ( Формат) элемент Кустоментри для ошибка customcontrol элементов управления для элемента конфигурации (Format) Кустомитем для Кустоментри для элементов управления для элемента Configuration Text для Кустомитем для элементов управления конфигурации (Format)
+Элемент Configuration (Format) управляет элементом контрольного элемента конфигурации (Format) элементов управления для элемента управления Configuration (Format) ошибка customcontrol для элемента Control for Configuration (Format) Кустоментриес элемент для ошибка customcontrol для элемента конфигурации (Format) Кустоментри для ошибка customcontrol для элементов управления для элемента конфигурации (Format) Кустомитем для кустоментри для элементов управления для элемента конфигурации кустомитем для элементов управления конфигурации (Format).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,15 +22,15 @@ ms.locfileid: "72368143"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `Text`.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `Text` элемента.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,9 +42,9 @@ ms.locfileid: "72368143"
 
 Укажите текст элемента управления для данных, которые требуется отобразить.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Элемент Кустомитем для Кустоментри элементов управления для конфигурации](./customitem-element-for-customentry-for-controls-for-configuration-format.md)
 

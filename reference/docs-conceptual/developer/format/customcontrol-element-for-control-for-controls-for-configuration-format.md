@@ -1,19 +1,12 @@
 ---
 title: Элемент ошибка customcontrol для элемента управления для элементов управления конфигурации (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d9d92a9e-c680-46ca-962e-e82452726953
-caps.latest.revision: 10
-ms.openlocfilehash: 1d72ce5b18e89bd81c7f81b27f4b8c60bed99764
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5aacf824421dfce19f1f495fc0a95e766cdbaf8b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368973"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786090"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-configuration-format"></a>Элемент CustomControl для элемента Control для элемента Controls для элемента Configuration (формат)
 
@@ -31,11 +24,11 @@ ms.locfileid: "72368973"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `CustomControl`. Этот элемент должен иметь по крайней мере один дочерний элемент. Максимальное количество дочерних элементов, которое можно указать, не ограничено.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `CustomControl` элемента. Этот элемент должен иметь по крайней мере один дочерний элемент. Максимальное количество дочерних элементов, которое можно указать, не ограничено.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -47,13 +40,13 @@ ms.locfileid: "72368973"
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Control для элементов управления конфигурации (Format)](./control-element-for-controls-for-configuration-format.md)|Определяет общий элемент управления, который может использоваться всеми представлениями файла форматирования и именем, используемым для ссылки на элемент управления.|
+|[Элемент Control для элемента Controls для элемента Configuration (формат)](./control-element-for-controls-for-configuration-format.md)|Определяет общий элемент управления, который может использоваться всеми представлениями файла форматирования и именем, используемым для ссылки на элемент управления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Control для элементов управления конфигурации (Format)](./control-element-for-controls-for-configuration-format.md)
+[Элемент Control для элемента Controls для элемента Configuration (формат)](./control-element-for-controls-for-configuration-format.md)
 
 [Элемент Кустоментриес для ошибка customcontrol конфигурации (Format)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)
 

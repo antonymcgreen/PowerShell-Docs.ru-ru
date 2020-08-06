@@ -1,19 +1,12 @@
 ---
 title: Поддержка транзакций | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4732e38c-b1a0-4de7-b6de-75dbde850488
-caps.latest.revision: 8
-ms.openlocfilehash: c5eea216efd8048aee5768c78c0b48617670f091
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6fda27394091195b589afef5ee53c6d3bec4efc0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365543"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786617"
 ---
 # <a name="how-to-support-transactions"></a>Как обеспечить поддержку транзакций
 
@@ -25,15 +18,15 @@ ms.locfileid: "72365543"
 ## <a name="to-support-transactions"></a>Для поддержки транзакций
 
 1. При объявлении атрибута командлета укажите, что командлет поддерживает транзакции.
-   Если командлет поддерживает транзакции, Windows PowerShell добавляет параметр `UseTransaction` в командлет при его запуске.
+   Если командлет поддерживает транзакции, Windows PowerShell добавляет `UseTransaction` параметр в командлет при его запуске.
 
     ```csharp
     [Cmdlet(VerbsCommunications.Send, "GreetingTx",
             SupportsTransactions=true )]
     ```
 
-2. В одном из методов обработки входных данных добавьте блок `if`, чтобы определить, доступна ли транзакция.
-   Если инструкция `if` разрешается в `true`, действия в этой инструкции могут выполняться в контексте текущей транзакции.
+2. В одном из методов обработки входных данных добавьте `if` блок, чтобы определить, доступна ли транзакция.
+   Если `if` инструкция разрешается в `true` , действия в этой инструкции могут выполняться в контексте текущей транзакции.
 
     ```csharp
     if (TransactionAvailable())
@@ -45,7 +38,7 @@ ms.locfileid: "72365543"
     }
     ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
 

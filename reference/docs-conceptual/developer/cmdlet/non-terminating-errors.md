@@ -1,19 +1,12 @@
 ---
 title: Устранимые ошибки | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 468dabd6-bfeb-448d-8e09-0996db516edd
-caps.latest.revision: 8
-ms.openlocfilehash: 5f804756e0e3e867832f15f50967fd6987f160a5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d74c248e6ef54151400b8060d76524e89d87352c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369603"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786566"
 ---
 # <a name="non-terminating-errors"></a>Непрерывающие ошибки
 
@@ -23,7 +16,7 @@ ms.locfileid: "72369603"
 
 Командлеты могут вызывать [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) в соответствии с их методами обработки ввода. Однако командлеты могут вызывать [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) только из потока, который вызвал метод обработки входных данных [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System.](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)Management. Automation. командлет. ProcessRecord или [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Не вызывайте [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) из другого потока. Вместо этого следует сообщать об ошибках обратно в основной поток.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 
@@ -33,6 +26,6 @@ ms.locfileid: "72369603"
 
 [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)
 
-[Записи об ошибках Windows PowerShell](./windows-powershell-error-records.md)
+[Записи об ошибках Windows PowerShell](./windows-powershell-error-records.md)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

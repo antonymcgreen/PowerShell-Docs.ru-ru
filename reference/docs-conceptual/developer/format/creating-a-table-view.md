@@ -1,19 +1,12 @@
 ---
 title: Создание представления таблицы | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
-caps.latest.revision: 23
-ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cbe81962a0f68d64506062898a8f21a1596cc29a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363413"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786158"
 ---
 # <a name="creating-a-table-view"></a>Создание представления таблицы
 
@@ -21,7 +14,7 @@ ms.locfileid: "72363413"
 
 ## <a name="a-table-view-display"></a>Отображение табличного представления
 
-В следующем примере показано, как Windows PowerShell отображает объект [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) , возвращаемый командлетом [Get-Service](/powershell/module/microsoft.powershell.management/get-service) . Для этого объекта в оболочке Windows PowerShell определено табличное представление, в котором отображается свойство `Status`, свойство `Name` (это свойство является свойством псевдонима для свойства `ServiceName`) и свойством `DisplayName`. Каждая строка в таблице представляет объект, возвращаемый командлетом.
+В следующем примере показано, как Windows PowerShell отображает объект [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) , возвращаемый командлетом [Get-Service](/powershell/module/microsoft.powershell.management/get-service) . Для этого объекта в Windows PowerShell определено табличное представление, в котором отображается `Status` свойство, `Name` свойство (это свойство является свойством псевдонима для `ServiceName` Свойства) и `DisplayName` свойство. Каждая строка в таблице представляет объект, возвращаемый командлетом.
 
 ```output
 Status   Name               DisplayName
@@ -215,7 +208,7 @@ Running  Appinfo            Application Information
 
 ## <a name="using-format-strings"></a>Использование строк формата
 
-Строки форматирования можно добавить в представление, чтобы дополнительно определить способ отображения данных. В следующем примере показано, как определить строку форматирования для значения свойства `StartTime`.
+Строки форматирования можно добавить в представление, чтобы дополнительно определить способ отображения данных. В следующем примере показано, как определить строку форматирования для значения `StartTime` Свойства.
 
 ```xml
 <TableColumnItem>
@@ -232,7 +225,7 @@ Running  Appinfo            Application Information
 
 - Элемент [FormatString](./label-element-for-listitem-for-listcontrol-format.md) задает шаблон формата, определяющий способ отображения значения свойства или скрипта.
 
-В следующем примере вызывается метод `ToString` для форматирования значения скрипта. Скрипты могут вызывать любой метод объекта. Таким образом, если объект имеет метод, например `ToString`, имеющий параметры форматирования, скрипт может вызвать этот метод для форматирования выходного значения скрипта.
+В следующем примере `ToString` метод вызывается для форматирования значения скрипта. Скрипты могут вызывать любой метод объекта. Таким образом, если у объекта есть метод, такой как `ToString` , имеющий параметры форматирования, скрипт может вызвать этот метод для форматирования выходного значения скрипта.
 
 ```xml
 <ListItem>
@@ -243,12 +236,12 @@ Running  Appinfo            Application Information
 </ListItem>
 ```
 
-Следующий XML-элемент можно использовать для вызова метода `ToString`:
+Для вызова метода можно использовать следующий XML-элемент `ToString` :
 
 - Элемент [таблеколумнитем](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) определяет свойство или скрипт, значение которого отображается в столбце строки. Для каждого столбца строки требуется элемент [таблеколумнитем](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) . Первая запись отображается в первом столбце, второй элемент во втором столбце и т. д.
 
 - Элемент [ScriptBlock](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md) указывает скрипт, значение которого отображается в строке. Необходимо указать либо скрипт, либо свойство, но нельзя указать и то, и другое.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

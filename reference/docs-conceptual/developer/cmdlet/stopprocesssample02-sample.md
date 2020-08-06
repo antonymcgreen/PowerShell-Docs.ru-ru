@@ -1,23 +1,16 @@
 ---
 title: Пример StopProcessSample02 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 213ca1a4-e9fe-4969-b7d0-2fca070c6142
-caps.latest.revision: 10
-ms.openlocfilehash: 594c06367baedd1f9bfdbfff9f0e072d579b4099
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bab32f5a2544905bd858bcecf5b0b2e2d127e642
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369383"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786447"
 ---
 # <a name="stopprocesssample02-sample"></a>Пример командлета StopProcessSample02
 
-В этом примере показано, как написать командлет, записывающий сообщения отладки (Вритедебуг), Verbose (Вритевербосе) и Warning (Вритеварнинг) при остановке процессов на локальном компьютере. Этот командлет аналогичен командлету `Stop-Process`, предоставленному Windows PowerShell 2,0.
+В этом примере показано, как написать командлет, записывающий сообщения отладки (Вритедебуг), Verbose (Вритевербосе) и Warning (Вритеварнинг) при остановке процессов на локальном компьютере. Этот командлет похож на командлет, `Stop-Process` предоставляемый Windows PowerShell 2,0.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 
@@ -53,7 +46,7 @@ ms.locfileid: "72369383"
 
 Для работы с этим образцом требуется Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Демонстрация
+## <a name="demonstrates"></a>Что демонстрирует
 
 В этом образце демонстрируется следующее.
 
@@ -69,7 +62,7 @@ ms.locfileid: "72369383"
 
 ## <a name="example"></a>Пример
 
-В этом примере показано, как создавать отладочные, подробные и предупреждающие сообщения с помощью методов `WriteDebug`, `WriteVerbose`и `WriteWarning`.
+В этом примере показано, как создавать отладочные, подробные и предупреждающие сообщения с помощью `WriteDebug` `WriteVerbose` методов, и `WriteWarning` .
 
 ```csharp
 using System;
@@ -310,6 +303,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

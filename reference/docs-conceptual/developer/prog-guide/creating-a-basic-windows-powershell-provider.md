@@ -1,22 +1,15 @@
 ---
 title: Создание базового поставщика Windows PowerShell | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - base provider [PowerShell Programmer's Guide]
 - providers [PowerShell Programmer's Guide], base provider
-ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
-caps.latest.revision: 7
-ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 16cadb6099bb4f315bacda4aea617b89f9af5626
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978514"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787229"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Создание базового поставщика Windows PowerShell
 
@@ -29,9 +22,9 @@ ms.locfileid: "80978514"
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Определение класса поставщика Windows PowerShell
 
-Первым шагом в создании поставщика Windows PowerShell является определение его класса .NET. Этот базовый поставщик определяет класс с именем `AccessDBProvider`, производный от базового класса [System. Management. Automation. Provider. кмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) .
+Первым шагом в создании поставщика Windows PowerShell является определение его класса .NET. Этот базовый поставщик определяет класс `AccessDBProvider` , производный от базового класса [System. Management. Automation. Provider. кмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) .
 
-Рекомендуется размещать классы поставщиков в `Providers` пространстве имен API, например XXX. PowerShell. Providers. Этот поставщик использует пространство имен `Microsoft.Samples.PowerShell.Provider`, в котором выполняются все примеры поставщика Windows PowerShell.
+Рекомендуется размещать классы поставщиков в `Providers` пространстве имен API, например XXX. PowerShell. Providers. Этот поставщик использует `Microsoft.Samples.PowerShell.Provider` пространство имен, в котором выполняются все примеры поставщика Windows PowerShell.
 
 > [!NOTE]
 > Класс для поставщика Windows PowerShell должен быть явно помечен как открытый. Классы, не помеченные как открытые, по умолчанию будут внутренними и не будут найдены средой выполнения Windows PowerShell.
@@ -85,13 +78,13 @@ ms.locfileid: "80978514"
 
 ## <a name="testing-the-windows-powershell-provider"></a>Тестирование поставщика Windows PowerShell
 
-После регистрации поставщика Windows PowerShell в Windows PowerShell можно протестировать его, запустив в командной строке поддерживаемые командлеты. Для этого базового поставщика запустите новую оболочку и используйте командлет `Get-PSProvider`, чтобы получить список поставщиков и убедиться в наличии поставщика Акцессдб.
+После регистрации поставщика Windows PowerShell в Windows PowerShell можно протестировать его, запустив в командной строке поддерживаемые командлеты. Для этого базового поставщика запустите новую оболочку и `Get-PSProvider` с помощью командлета извлеките список поставщиков и убедитесь в наличии поставщика акцессдб.
 
 ```powershell
 Get-PSProvider
 ```
 
-Отобразятся следующие выходные данные:
+Появится следующий результат:
 
 ```Output
 Name                 Capabilities                  Drives
@@ -108,4 +101,4 @@ Registry             ShouldProcess                 {HKLM, HKCU}
 
 [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
-[Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)
+[Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)

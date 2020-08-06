@@ -1,19 +1,12 @@
 ---
 title: Пример кода AccessDbProviderSample04 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f9374c4a-e499-4516-9eb6-107c59df98d9
-caps.latest.revision: 7
-ms.openlocfilehash: 60f0ed4e3d39ee93ab63023161d09a6c7b914798
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 05509c5b36475bcd3f91c9ab7413974994d668d6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978582"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787280"
 ---
 # <a name="accessdbprovidersample04-code-sample"></a>Пример кода AccessDbProviderSample04
 
@@ -24,6 +17,6 @@ ms.locfileid: "80978582"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="11-1635":::
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

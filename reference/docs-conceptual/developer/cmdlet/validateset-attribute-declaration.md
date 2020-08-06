@@ -1,23 +1,16 @@
 ---
 title: Объявление атрибута "Validate" | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attributes, ValidateSet
 - ValidateSet attribute, described
 - ValidateSet attribute
-ms.assetid: 4a6f97ab-45b2-4f3d-84d4-30acf8e074d0
-caps.latest.revision: 12
-ms.openlocfilehash: b036f39cd01ffe4b4ce7db9627cb6da0d5327190
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0b6833efb0ce8e9474e9d91049fd201fc845cbea
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364283"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787773"
 ---
 # <a name="validateset-attribute-declaration"></a>Объявление атрибута ValidateSet
 
@@ -34,16 +27,16 @@ ms.locfileid: "72364283"
 
 #### <a name="parameters"></a>Параметры
 
-требуется `ValidValues` ([System. String](/dotnet/api/System.String)). Указывает допустимые значения элементов параметров. В следующем примере показано, как указать один элемент или несколько элементов.
+`ValidValues`([System. String](/dotnet/api/System.String)) обязательный. Указывает допустимые значения элементов параметров. В следующем примере показано, как указать один элемент или несколько элементов.
 
 ```csharp
 [ValidateSetAttribute("Steve")]
 [ValidateSetAttribute("Steve","Mary")]
 ```
 
-`IgnoreCase` ([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. Значение по умолчанию `true` указывает, что регистр игнорируется. Значение `false` делает командлет с учетом регистра.
+`IgnoreCase`([System. Boolean](/dotnet/api/System.Boolean)) необязательный именованный параметр. Значение по умолчанию, равное `true` , указывает, что регистр игнорируется. Значение `false` делает командлет с учетом регистра.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 - Этот атрибут можно использовать только один раз для каждого параметра.
 
@@ -51,7 +44,7 @@ ms.locfileid: "72364283"
 
 - Атрибут Валидатесетаттрибуте определяется классом [System. Management. Automation. валидатесетаттрибуте](/dotnet/api/System.Management.Automation.ValidateSetAttribute) .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [System. Management. Automation. Валидатесетаттрибуте](/dotnet/api/System.Management.Automation.ValidateSetAttribute)
 

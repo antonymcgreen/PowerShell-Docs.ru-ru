@@ -1,19 +1,12 @@
 ---
 title: Создание настраиваемых элементов управления | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c3baa406-cd33-4420-be5a-07ef09d93480
-caps.latest.revision: 8
-ms.openlocfilehash: 3504ab1d974c55e9279172d0e851961474ccb926
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c36fa9b778e01501a3c88f735cdefdfbb04411a0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363383"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786124"
 ---
 # <a name="creating-custom-controls"></a>Создание пользовательских элементов управления
 
@@ -21,7 +14,7 @@ ms.locfileid: "72363383"
 
 ## <a name="custom-control-example"></a>Пример пользовательского элемента управления
 
-В следующем примере показан пользовательский элемент управления, определенный в файле Certificates. Format. ps1xml. Этот пользовательский элемент управления используется для разделения объектов [System. Management. Automation. Signature](/dotnet/api/System.Management.Automation.Signature) , отображаемых в табличном представлении.
+В следующем примере показан пользовательский элемент управления, определенный в Certificates.Format.ps1XML-файле. Этот пользовательский элемент управления используется для разделения объектов [System. Management. Automation. Signature](/dotnet/api/System.Management.Automation.Signature) , отображаемых в табличном представлении.
 
 ```xml
 <Controls>
@@ -51,6 +44,6 @@ ms.locfileid: "72363383"
 
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

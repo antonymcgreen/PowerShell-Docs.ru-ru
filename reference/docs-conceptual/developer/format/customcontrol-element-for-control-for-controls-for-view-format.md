@@ -1,19 +1,12 @@
 ---
 title: Элемент ошибка customcontrol для элементов управления для представления (формат) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: eee505c3-ff2c-4bfb-b48a-037ec34bce72
-caps.latest.revision: 8
-ms.openlocfilehash: a0c8548dd916a5b32a56462058858f887a9d5803
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2020725bf6afb086901e14a976abbdc04366869c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363373"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786107"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-view-format"></a>Элемент CustomControl для элемента Control для элемента Controls для элемента View (формат)
 
@@ -31,17 +24,17 @@ ms.locfileid: "72363373"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `CustomControl`. Необходимо указать только один дочерний элемент.
+В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `CustomControl` элемента. Необходимо указать только один дочерний элемент.
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет.
+Отсутствует.
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[Элемент Кустоментриес для ошибка customcontrol элементов управления для представления (формат)](./customentries-element-for-customcontrol-for-controls-for-view-format.md)|Обязательный элемент.<br /><br /> Предоставляет определения для элемента управления.|
+|[Элемент CustomEntries для элемента CustomControl для элемента Controls для элемента View (формат)](./customentries-element-for-customcontrol-for-controls-for-view-format.md)|Обязательный элемент.<br /><br /> Предоставляет определения для элемента управления.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -49,11 +42,11 @@ ms.locfileid: "72363373"
 |-------------|-----------------|
 |[Элемент Control для элементов управления для представления (формат)](./control-element-for-controls-for-view-format.md)|Определяет элемент управления, который может использоваться представлением, и имя, используемое для ссылки на элемент управления.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Элемент Кустоментриес для ошибка customcontrol для представления (Format)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)
+[Элемент CustomEntries для элемента CustomControl для элемента View (формат)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)
 
 [Элемент Control для элементов управления для представления (формат)](./control-element-for-controls-for-view-format.md)
 
