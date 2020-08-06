@@ -1,45 +1,38 @@
 ---
 title: Пример Runspace09 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f19f12c0-82e9-42f6-a7df-76c45b733855
-caps.latest.revision: 8
-ms.openlocfilehash: 49b03bcf1b049918b200d68cb2c6f7aff878db58
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6110fcb96af25f55682064c466ba2add6377902d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563313"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783149"
 ---
-# <a name="runspace09-sample"></a><span data-ttu-id="3781a-102">Пример Runspace09</span><span class="sxs-lookup"><span data-stu-id="3781a-102">Runspace09 Sample</span></span>
+# <a name="runspace09-sample"></a><span data-ttu-id="635c9-102">Пример Runspace09</span><span class="sxs-lookup"><span data-stu-id="635c9-102">Runspace09 Sample</span></span>
 
-<span data-ttu-id="3781a-103">В этом примере показано, как добавить скрипт в конвейер объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) и как запустить скрипт в асинхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="3781a-103">This sample shows how to add a script to the pipeline of a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object and how to run the script asynchronously.</span></span> <span data-ttu-id="3781a-104">События используются для обработки выходных данных скрипта.</span><span class="sxs-lookup"><span data-stu-id="3781a-104">Events are used to handle the output of the script.</span></span>
+<span data-ttu-id="635c9-103">В этом примере показано, как добавить скрипт в конвейер объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) и как запустить скрипт в асинхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="635c9-103">This sample shows how to add a script to the pipeline of a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object and how to run the script asynchronously.</span></span> <span data-ttu-id="635c9-104">События используются для обработки выходных данных скрипта.</span><span class="sxs-lookup"><span data-stu-id="635c9-104">Events are used to handle the output of the script.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="3781a-105">Требования</span><span class="sxs-lookup"><span data-stu-id="3781a-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="635c9-105">Требования</span><span class="sxs-lookup"><span data-stu-id="635c9-105">Requirements</span></span>
 
-<span data-ttu-id="3781a-106">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="3781a-106">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="635c9-106">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="635c9-106">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="3781a-107">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="3781a-107">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="635c9-107">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="635c9-107">Demonstrates</span></span>
 
-<span data-ttu-id="3781a-108">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="3781a-108">This sample demonstrates the following.</span></span>
+<span data-ttu-id="635c9-108">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="635c9-108">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="3781a-109">Создание объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) , использующего пространство выполнения.</span><span class="sxs-lookup"><span data-stu-id="3781a-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
+- <span data-ttu-id="635c9-109">Создание объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) , использующего пространство выполнения.</span><span class="sxs-lookup"><span data-stu-id="635c9-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
 
-- <span data-ttu-id="3781a-110">Добавление скрипта конвейера объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="3781a-110">Adding a script the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="635c9-110">Добавление скрипта конвейера объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="635c9-110">Adding a script the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="3781a-111">Использование метода [System. Management. Automation. PowerShell. BeginInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) для асинхронного запуска конвейера.</span><span class="sxs-lookup"><span data-stu-id="3781a-111">Using the [System.Management.Automation.Powershell.Begininvoke\*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) method to run the pipeline asynchronously.</span></span>
+- <span data-ttu-id="635c9-111">Использование метода [System. Management. Automation. PowerShell. BeginInvoke \*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) для асинхронного запуска конвейера.</span><span class="sxs-lookup"><span data-stu-id="635c9-111">Using the [System.Management.Automation.Powershell.Begininvoke\*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) method to run the pipeline asynchronously.</span></span>
 
-- <span data-ttu-id="3781a-112">Использование событий объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для обработки выходных данных скрипта.</span><span class="sxs-lookup"><span data-stu-id="3781a-112">Using the events of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to process the output of the script.</span></span>
+- <span data-ttu-id="635c9-112">Использование событий объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для обработки выходных данных скрипта.</span><span class="sxs-lookup"><span data-stu-id="635c9-112">Using the events of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to process the output of the script.</span></span>
 
-- <span data-ttu-id="3781a-113">Использование метода [System. Management. Automation. PowerShell. остановить \*](/dotnet/api/System.Management.Automation.PowerShell.Stop) для прерывания вызова конвейера.</span><span class="sxs-lookup"><span data-stu-id="3781a-113">Using the [System.Management.Automation.Powershell.Stop\*](/dotnet/api/System.Management.Automation.PowerShell.Stop) method to interrupt the invocation of the pipeline.</span></span>
+- <span data-ttu-id="635c9-113">Использование метода [System. Management. Automation. PowerShell. остановить \*](/dotnet/api/System.Management.Automation.PowerShell.Stop) для прерывания вызова конвейера.</span><span class="sxs-lookup"><span data-stu-id="635c9-113">Using the [System.Management.Automation.Powershell.Stop\*](/dotnet/api/System.Management.Automation.PowerShell.Stop) method to interrupt the invocation of the pipeline.</span></span>
 
-## <a name="example"></a><span data-ttu-id="3781a-114">Пример</span><span class="sxs-lookup"><span data-stu-id="3781a-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="635c9-114">Пример</span><span class="sxs-lookup"><span data-stu-id="635c9-114">Example</span></span>
 
-<span data-ttu-id="3781a-115">В этом примере выполняется запуск скрипта, который создает числа от 1 до 10 с задержками между ними.</span><span class="sxs-lookup"><span data-stu-id="3781a-115">This sample runs to run a script that generates the numbers from 1 to 10 with delays between each number.</span></span> <span data-ttu-id="3781a-116">Скрипт выполняется асинхронно, а для работы с выходными данными используются события.</span><span class="sxs-lookup"><span data-stu-id="3781a-116">The script is run asynchronously and events are used to handle the output.</span></span>
+<span data-ttu-id="635c9-115">В этом примере выполняется запуск скрипта, который создает числа от 1 до 10 с задержками между ними.</span><span class="sxs-lookup"><span data-stu-id="635c9-115">This sample runs to run a script that generates the numbers from 1 to 10 with delays between each number.</span></span> <span data-ttu-id="635c9-116">Скрипт выполняется асинхронно, а для работы с выходными данными используются события.</span><span class="sxs-lookup"><span data-stu-id="635c9-116">The script is run asynchronously and events are used to handle the output.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -148,6 +141,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="3781a-117">См. также:</span><span class="sxs-lookup"><span data-stu-id="3781a-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="635c9-117">См. также</span><span class="sxs-lookup"><span data-stu-id="635c9-117">See Also</span></span>
 
-[<span data-ttu-id="3781a-118">Написание ведущего приложения Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="3781a-118">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="635c9-118">Написание ведущего приложения Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="635c9-118">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)

@@ -1,43 +1,36 @@
 ---
 title: Пример RemoteRunspacePool01 | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: dffedd31-c10d-4e11-a9ee-4fdfe9a869e8
-caps.latest.revision: 8
-ms.openlocfilehash: 894c995474d4bf5b7fe11c1289c4500371c9dd43
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 77283008f1c6bce79cec60d426e3933508fced64
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367433"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783200"
 ---
-# <a name="remoterunspacepool01-sample"></a><span data-ttu-id="da84c-102">Пример RemoteRunspacePool01</span><span class="sxs-lookup"><span data-stu-id="da84c-102">RemoteRunspacePool01 Sample</span></span>
+# <a name="remoterunspacepool01-sample"></a><span data-ttu-id="1635f-102">Пример RemoteRunspacePool01</span><span class="sxs-lookup"><span data-stu-id="1635f-102">RemoteRunspacePool01 Sample</span></span>
 
-<span data-ttu-id="da84c-103">В этом примере показано, как создать пул удаленных пространств выполнения и как одновременно запустить несколько команд с помощью этого пула.</span><span class="sxs-lookup"><span data-stu-id="da84c-103">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
+<span data-ttu-id="1635f-103">В этом примере показано, как создать пул удаленных пространств выполнения и как одновременно запустить несколько команд с помощью этого пула.</span><span class="sxs-lookup"><span data-stu-id="1635f-103">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="da84c-104">Требования</span><span class="sxs-lookup"><span data-stu-id="da84c-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="1635f-104">Требования</span><span class="sxs-lookup"><span data-stu-id="1635f-104">Requirements</span></span>
 
- <span data-ttu-id="da84c-105">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="da84c-105">This sample requires Windows PowerShell 2.0.</span></span>
+ <span data-ttu-id="1635f-105">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="1635f-105">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="da84c-106">Демонстрация</span><span class="sxs-lookup"><span data-stu-id="da84c-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="1635f-106">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="1635f-106">Demonstrates</span></span>
 
-- <span data-ttu-id="da84c-107">Создание объекта [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="da84c-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="1635f-107">Создание объекта [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="1635f-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="da84c-108">Задание свойств [System. Management. Automation. пространства. рунспацеконнектионинфо. OperationTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) и [System. Management. Automation. пространства. рунспацеконнектионинфо. OpenTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) объекта [System. Management. Automation. пространства](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) выполнения. Wsmanconnectioninfo.</span><span class="sxs-lookup"><span data-stu-id="da84c-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="1635f-108">Задание свойств [System. Management. Automation. пространства. рунспацеконнектионинфо. OperationTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) и [System. Management. Automation. пространства. рунспацеконнектионинфо. OpenTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) объекта [System. Management. Automation. пространства](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) выполнения. Wsmanconnectioninfo.</span><span class="sxs-lookup"><span data-stu-id="1635f-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="da84c-109">Создание удаленного пространства выполнения, в котором для установления удаленного соединения используется объект [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="da84c-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
+- <span data-ttu-id="1635f-109">Создание удаленного пространства выполнения, в котором для установления удаленного соединения используется объект [System. Management. Automation. пространства. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="1635f-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
 
-- <span data-ttu-id="da84c-110">Параллельное выполнение командлетов [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Get-Service](/powershell/module/microsoft.powershell.management/get-service) с помощью удаленного пула пространства выполнения.</span><span class="sxs-lookup"><span data-stu-id="da84c-110">Running the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Get-Service](/powershell/module/microsoft.powershell.management/get-service) cmdlets concurrently by using the remote runspace pool.</span></span>
+- <span data-ttu-id="1635f-110">Параллельное выполнение командлетов [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Get-Service](/powershell/module/microsoft.powershell.management/get-service) с помощью удаленного пула пространства выполнения.</span><span class="sxs-lookup"><span data-stu-id="1635f-110">Running the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Get-Service](/powershell/module/microsoft.powershell.management/get-service) cmdlets concurrently by using the remote runspace pool.</span></span>
 
-- <span data-ttu-id="da84c-111">Закрытие удаленного пула пространства выполнения для освобождения удаленного подключения.</span><span class="sxs-lookup"><span data-stu-id="da84c-111">Closing the remote runspace pool to release the remote connection.</span></span>
+- <span data-ttu-id="1635f-111">Закрытие удаленного пула пространства выполнения для освобождения удаленного подключения.</span><span class="sxs-lookup"><span data-stu-id="1635f-111">Closing the remote runspace pool to release the remote connection.</span></span>
 
-## <a name="example"></a><span data-ttu-id="da84c-112">Пример</span><span class="sxs-lookup"><span data-stu-id="da84c-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1635f-112">Пример</span><span class="sxs-lookup"><span data-stu-id="1635f-112">Example</span></span>
 
- <span data-ttu-id="da84c-113">В этом примере показано, как создать пул удаленных пространств выполнения и как одновременно запустить несколько команд с помощью этого пула.</span><span class="sxs-lookup"><span data-stu-id="da84c-113">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
+ <span data-ttu-id="1635f-113">В этом примере показано, как создать пул удаленных пространств выполнения и как одновременно запустить несколько команд с помощью этого пула.</span><span class="sxs-lookup"><span data-stu-id="1635f-113">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
 
 ```csharp
 namespace Samples
@@ -132,4 +125,4 @@ namespace Samples
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="da84c-114">См. также:</span><span class="sxs-lookup"><span data-stu-id="da84c-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1635f-114">См. также</span><span class="sxs-lookup"><span data-stu-id="1635f-114">See Also</span></span>

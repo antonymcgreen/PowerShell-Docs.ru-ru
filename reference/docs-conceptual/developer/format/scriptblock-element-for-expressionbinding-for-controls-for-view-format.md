@@ -1,58 +1,51 @@
 ---
 title: Элемент ScriptBlock для ExpressionBinding элементов управления для представления (Format) | Документация Майкрософт
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2b51c937-909e-42af-9085-e224f3919bdf
-caps.latest.revision: 6
-ms.openlocfilehash: 532b8efdd3997d2cecaa7a006254d4a8793bbe01
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 42946ed9f3241912366192b2ab2fdfb8f8582d83
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362183"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785495"
 ---
-# <a name="scriptblock-element-for-expressionbinding-for-controls-for-view-format"></a><span data-ttu-id="f4bfb-102">Элемент ScriptBlock для элемента ExpressionBinding для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="f4bfb-102">ScriptBlock Element for ExpressionBinding for Controls for View (Format)</span></span>
+# <a name="scriptblock-element-for-expressionbinding-for-controls-for-view-format"></a><span data-ttu-id="8ce32-102">Элемент ScriptBlock для элемента ExpressionBinding для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="8ce32-102">ScriptBlock Element for ExpressionBinding for Controls for View (Format)</span></span>
 
-<span data-ttu-id="f4bfb-103">Задает скрипт, значение которого отображается элементом управления.</span><span class="sxs-lookup"><span data-stu-id="f4bfb-103">Specifies the script whose value is displayed by the control.</span></span> <span data-ttu-id="f4bfb-104">Этот элемент используется при определении элементов управления, которые могут использоваться представлением.</span><span class="sxs-lookup"><span data-stu-id="f4bfb-104">This element is used when defining controls that can be used by a view.</span></span>
+<span data-ttu-id="8ce32-103">Задает скрипт, значение которого отображается элементом управления.</span><span class="sxs-lookup"><span data-stu-id="8ce32-103">Specifies the script whose value is displayed by the control.</span></span> <span data-ttu-id="8ce32-104">Этот элемент используется при определении элементов управления, которые могут использоваться представлением.</span><span class="sxs-lookup"><span data-stu-id="8ce32-104">This element is used when defining controls that can be used by a view.</span></span>
 
-<span data-ttu-id="f4bfb-105">Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет управляющий элемент (Format) элемент управления для элементов управления представления (Format) ошибка customcontrol для элементов управления элемента Кустоментриес представления (Format) для Ошибка customcontrol для элемента Кустоментри представления (Format) для Кустоментриес для элементов управления для элемента Controls представления (Format) Кустомитем для Кустоментри для элементов управления для представления (Format) ExpressionBinding в кустомитем для элементов управления для представления (Format) ScriptBlock Элемент для ExpressionBinding элементов управления для представления (Format)</span><span class="sxs-lookup"><span data-stu-id="f4bfb-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) Controls Element (Format) Control Element for Controls for View (Format) CustomControl Element for Control for Controls for View (Format) CustomEntries Element for CustomControl for View (Format) CustomEntry Element for CustomEntries for Controls for View (Format) CustomItem Element for CustomEntry for Controls for View (Format) ExpressionBinding Element for CustomItem for Controls for View (Format) ScriptBlock Element for ExpressionBinding for Controls for View (Format)</span></span>
+<span data-ttu-id="8ce32-105">Элемент Configuration (Format) Виевдефинитионс элемент (формат) элемент представления (Format) управляет элементом управления "элемент (Format)" для элементов управления в элементе "View" (Format) ошибка customcontrol для элемента управления элементов формат). элемент Кустоментри для Кустоментриес для элементов управления для элемента Кустомитем представления (Format) для Кустоментри для элементов управления для элемента "View" (формат) ExpressionBinding для Кустомитем для элементов управления для представления (Format) элемент ScriptBlock для ExpressionBinding для элементов управления для представления (формат)</span><span class="sxs-lookup"><span data-stu-id="8ce32-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) Controls Element (Format) Control Element for Controls for View (Format) CustomControl Element for Control for Controls for View (Format) CustomEntries Element for CustomControl for View (Format) CustomEntry Element for CustomEntries for Controls for View (Format) CustomItem Element for CustomEntry for Controls for View (Format) ExpressionBinding Element for CustomItem for Controls for View (Format) ScriptBlock Element for ExpressionBinding for Controls for View (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f4bfb-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f4bfb-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8ce32-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8ce32-106">Syntax</span></span>
 
 ```xml
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="f4bfb-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="f4bfb-107">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="8ce32-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="8ce32-107">Attributes and Elements</span></span>
 
-<span data-ttu-id="f4bfb-108">В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент элемента `ScriptBlock`.</span><span class="sxs-lookup"><span data-stu-id="f4bfb-108">The following sections describe attributes, child elements, and the parent element of the `ScriptBlock` element.</span></span>
+<span data-ttu-id="8ce32-108">В следующих разделах описываются атрибуты, дочерние элементы и родительский элемент `ScriptBlock` элемента.</span><span class="sxs-lookup"><span data-stu-id="8ce32-108">The following sections describe attributes, child elements, and the parent element of the `ScriptBlock` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="f4bfb-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f4bfb-109">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="8ce32-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="8ce32-109">Attributes</span></span>
 
-<span data-ttu-id="f4bfb-110">Нет.</span><span class="sxs-lookup"><span data-stu-id="f4bfb-110">None.</span></span>
+<span data-ttu-id="8ce32-110">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="8ce32-110">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="f4bfb-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f4bfb-111">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="8ce32-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="8ce32-111">Child Elements</span></span>
 
-<span data-ttu-id="f4bfb-112">Нет.</span><span class="sxs-lookup"><span data-stu-id="f4bfb-112">None.</span></span>
+<span data-ttu-id="8ce32-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="8ce32-112">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="f4bfb-113">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="f4bfb-113">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="8ce32-113">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="8ce32-113">Parent Elements</span></span>
 
-|<span data-ttu-id="f4bfb-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="f4bfb-114">Element</span></span>|<span data-ttu-id="f4bfb-115">Описание</span><span class="sxs-lookup"><span data-stu-id="f4bfb-115">Description</span></span>|
+|<span data-ttu-id="8ce32-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="8ce32-114">Element</span></span>|<span data-ttu-id="8ce32-115">Описание</span><span class="sxs-lookup"><span data-stu-id="8ce32-115">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="f4bfb-116">Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)</span><span class="sxs-lookup"><span data-stu-id="f4bfb-116">ExpressionBinding Element for CustomItem for Controls for View (Format)</span></span>](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|<span data-ttu-id="f4bfb-117">Определяет данные, отображаемые элементом управления.</span><span class="sxs-lookup"><span data-stu-id="f4bfb-117">Defines the data that is displayed by the control.</span></span>|
+|[<span data-ttu-id="8ce32-116">Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="8ce32-116">ExpressionBinding Element for CustomItem for Controls for View (Format)</span></span>](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|<span data-ttu-id="8ce32-117">Определяет данные, отображаемые элементом управления.</span><span class="sxs-lookup"><span data-stu-id="8ce32-117">Defines the data that is displayed by the control.</span></span>|
 
-## <a name="text-value"></a><span data-ttu-id="f4bfb-118">Текстовое значение</span><span class="sxs-lookup"><span data-stu-id="f4bfb-118">Text Value</span></span>
+## <a name="text-value"></a><span data-ttu-id="8ce32-118">Текстовое значение</span><span class="sxs-lookup"><span data-stu-id="8ce32-118">Text Value</span></span>
 
-<span data-ttu-id="f4bfb-119">Укажите скрипт, значение которого отображается элементом управления.</span><span class="sxs-lookup"><span data-stu-id="f4bfb-119">Specify the script whose value is displayed by the control.</span></span>
+<span data-ttu-id="8ce32-119">Укажите скрипт, значение которого отображается элементом управления.</span><span class="sxs-lookup"><span data-stu-id="8ce32-119">Specify the script whose value is displayed by the control.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="f4bfb-120">Замечания</span><span class="sxs-lookup"><span data-stu-id="f4bfb-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8ce32-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="8ce32-120">Remarks</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f4bfb-121">См. также:</span><span class="sxs-lookup"><span data-stu-id="f4bfb-121">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ce32-121">См. также</span><span class="sxs-lookup"><span data-stu-id="8ce32-121">See Also</span></span>
 
-[<span data-ttu-id="f4bfb-122">Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат)</span><span class="sxs-lookup"><span data-stu-id="f4bfb-122">ExpressionBinding Element for CustomItem for Controls for View (Format)</span></span>](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[<span data-ttu-id="8ce32-122">Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)</span><span class="sxs-lookup"><span data-stu-id="8ce32-122">ExpressionBinding Element for CustomItem for Controls for View (Format)</span></span>](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
-[<span data-ttu-id="f4bfb-123">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="f4bfb-123">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="8ce32-123">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="8ce32-123">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
