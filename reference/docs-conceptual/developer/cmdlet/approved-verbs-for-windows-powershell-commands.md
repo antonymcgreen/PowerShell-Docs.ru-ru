@@ -5,12 +5,12 @@ helpviewer_keywords:
 - action names [PowerShell SDK]
 - verb names [PowerShell SDK]
 - cmdlets [PowerShell SDK], verb names
-ms.openlocfilehash: 1cdfed5727c0b93bd1d4008fd0d6c03c448c6aed
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: f065610b6e54c9a6a927948bc6b2ffe5a1671e0c
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782401"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162483"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Утвержденные команды для команд PowerShell
 
@@ -18,6 +18,14 @@ PowerShell использует пару глагол-существительн
 
 > [!NOTE]
 > PowerShell использует _команду_ термина для описания слова, которое подразумевает действие, даже если это слово не является стандартной командой на английском языке. Например, термин _New_ — это допустимое имя команды PowerShell, так как оно подразумевает действие, даже если оно не является глаголом на английском языке.
+
+<!--
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+-->
+
+Для каждой утвержденной команды определен соответствующий _префикс псевдонима_ .
+Этот префикс псевдонима обычно используется для именования псевдонимов команд, использующих эту команду.
+Например, префикс псевдонима для `Import` имеет значение `ip` и, соответственно, псевдоним для `Import-Module` имеет значение `ipmo` .  Это рекомендация, но не правило. в частности, это не нужно учитывать для псевдонимов команд, копируя хорошо известные команды из других сред.
 
 ## <a name="verb-naming-rules"></a>Правила именования команд
 
@@ -216,7 +224,7 @@ PowerShell использует класс [System. Management. Automation. ве
 |--------------------|------------|--------------|
 |[Используйте](/dotnet/api/System.Management.Automation.VerbsOther.Use) (u)|Использует или включает ресурс для чего-либо.||
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. Вербскоммон](/dotnet/api/System.Management.Automation.VerbsCommon)
 
