@@ -3,12 +3,12 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 description: Предоставляет механизм для управления локальными группами на целевом узле.
 title: Ресурс DSC GroupSet
-ms.openlocfilehash: 99b9cafdd4d799e18e1b9b1f08d7dd41ec435711
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 90e0c3f0e09c6a300988869265dfdb432ed5d217
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560344"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464201"
 ---
 # <a name="dsc-groupset-resource"></a>Ресурс DSC GroupSet
 
@@ -24,8 +24,6 @@ ms.locfileid: "83560344"
 Group [string] #ResourceName
 {
     GroupName = [string[]]
-    [ Members = [string[]] ]
-    [ Description = [string[]] ]
     [ MembersToInclude = [string[]] ]
     [ MembersToExclude = [string[]] ]
     [ Credential = [PSCredential] ]
@@ -41,7 +39,6 @@ Group [string] #ResourceName
 |---|---|
 |GroupName |Имена групп, для которых требуется обеспечить определенное состояние. |
 |Члены |Используйте это свойство для замены текущего членства в группе заданными участниками. Значение этого свойства хранится в массиве строк в формате `Domain\UserName`. Если вы задали это свойство в конфигурации, не используйте свойство **MembersToExclude** или **MembersToInclude**. Это приведет к ошибке. |
-|Описание |Описание группы. |
 |MembersToInclude |Это свойство используется для добавления участников в существующее членство в группе. Значение этого свойства хранится в массиве строк в формате `Domain\UserName`. Если вы задали это свойство в конфигурации, не используйте свойство **Members**. Это приведет к ошибке. |
 |MembersToExclude |Это свойство используется для удаления участников из существующего членства в группах. Значение этого свойства хранится в массиве строк в формате `Domain\UserName`. Если вы задали это свойство в конфигурации, не используйте свойство **Members**. Это приведет к ошибке. |
 |Учетные данные |Учетные данные, необходимые для доступа к удаленным ресурсам. Учетная запись должна иметь соответствующие разрешения Active Directory для добавления в группу любых нелокальных учетных записей; в противном случае произойдет ошибка. |
@@ -57,7 +54,7 @@ Group [string] #ResourceName
 > [!NOTE]
 > В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential**, разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
 
-## <a name="example-1-ensuring-groups-are-present"></a>Пример 1: проверка наличия групп
+## <a name="example-1-ensuring-groups-are-present"></a>Пример 1. Проверка наличия групп
 
 В приведенном ниже примере показано, как обеспечить существование двух групп: myGroup и myOtherGroup.
 

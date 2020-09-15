@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Метод GetConfigurationStatus
-ms.openlocfilehash: 83b30ba2612d962fcf2fa658d07d18fb2d91ccc7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c2c478151428052d656832fb4079f12d666a910d
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955021"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464062"
 ---
 # <a name="getconfigurationstatus-method"></a>Метод GetConfigurationStatus
 
@@ -24,9 +24,9 @@ uint32 GetConfigurationStatus(
 
 ## <a name="parameters"></a>Параметры
 
-*All* \[in\] **true**, если этот метод должен возвращать сведения обо всех запусках конфигурации на компьютере, включая применение конфигурации и проверку согласованности.
+**All** \[in\] **true**, если этот метод должен возвращать сведения обо всех запусках конфигурации на компьютере, включая применение конфигурации и проверку согласованности.
 
-*configurationStatus* \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_DSCConfigurationStatus**, который определяет параметры.
+**configurationStatus** \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_DSCConfigurationStatus**, который определяет параметры.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

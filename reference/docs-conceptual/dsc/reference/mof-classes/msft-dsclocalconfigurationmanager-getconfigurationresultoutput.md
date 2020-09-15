@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Метод GetConfigurationResultOutput
-ms.openlocfilehash: 480e710ce1a208253f0e664474c3e9bab296066a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9c81082c28b2ffcc329264d29784782deaa9779d
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953421"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464083"
 ---
 # <a name="getconfigurationresultoutput-method"></a>Метод GetConfigurationResultOutput
 
@@ -25,11 +25,11 @@ uint32 GetConfigurationResultOutput(
 
 ## <a name="parameters"></a>Параметры
 
-*jobId* \[in\] Идентификатор задания, для которого необходимо получить выходные данные.
+**jobId** \[in\] Идентификатор задания, для которого необходимо получить выходные данные.
 
-*resumeOutputBookmark* \[in\] Указывает, что выходные данные должны быть продолжением предыдущей закладки.
+**resumeOutputBookmark** \[in\] Указывает, что выходные данные должны быть продолжением предыдущей закладки.
 
-*output* \[out\] Выходные данные для указанного задания.
+**output** \[out\] Выходные данные для указанного задания.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

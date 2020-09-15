@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс WindowsFeature в DSC
-ms.openlocfilehash: 7f9b200b4d10aef6c8a3f76c497f4d60e8062cb5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b15b267c6898697816b386a381e5a6d59acd492a
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557403"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464117"
 ---
 # <a name="dsc-windowsfeature-resource"></a>Ресурс WindowsFeature в DSC
 
@@ -24,7 +24,6 @@ WindowsFeature [string] #ResourceName
     [ Credential = [PSCredential] ]
     [ IncludeAllSubFeature = [bool] ]
     [ LogPath = [string] ]
-    [ Source = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
     [ PsDscRunAsCredential = [PSCredential] ]
@@ -39,11 +38,10 @@ WindowsFeature [string] #ResourceName
 |Учетные данные |Указывает учетные данные для добавления или удаления роли или компонента. |
 |IncludeAllSubFeature |Присвойте этому свойству значение `$true` для синхронизации состояния всех необходимых дополнительных компонентов с состоянием компонента, указанного в свойстве **Name**. |
 |LogPath |Указывает путь к файлу журнала, в котором поставщик ресурсов должен вести журнал работы. |
-|Источник |Указывает расположение исходного файла для установки, если он необходим. |
 
 ## <a name="common-properties"></a>Общие свойства
 
-|Свойство |Description |
+|Свойство |Описание |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Указывает, добавляется или удаляется роль или компонент. Чтобы гарантировать, что роль или компонент добавлены, присвойте этому свойству значение **Present**. Чтобы гарантировать, что роль или компонент удалены, присвойте этому свойству значение **Absent**. Значение по умолчанию — **Present**. |

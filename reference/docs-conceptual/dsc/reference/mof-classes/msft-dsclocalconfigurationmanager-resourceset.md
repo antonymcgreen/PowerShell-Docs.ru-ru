@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Метод ResourceSet
-ms.openlocfilehash: 18364027b249e502e1f0b8802d9f3e031c7b07ce
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c015960b2a5ffca0d28b714d571aa616400555bd
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954961"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464063"
 ---
 # <a name="resourceset-method"></a>Метод ResourceSet
 
@@ -26,13 +26,13 @@ uint32 ResourceSet(
 
 ## <a name="parameters"></a>Параметры
 
-*ResourceType* \[in\] Имя вызываемого ресурса.
+**ResourceType** \[in\] Имя вызываемого ресурса.
 
-*ModuleName* \[in\] Имя модуля, содержащего вызываемый ресурс.
+**ModuleName** \[in\] Имя модуля, содержащего вызываемый ресурс.
 
-*resourceProperty* \[in\] Указывает имя свойства ресурса и его значение в хэш-таблице как ключ и значение соответственно. Используйте командлет [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) для обнаружения свойств ресурсов и их типов.
+**resourceProperty** \[in\] Указывает имя свойства ресурса и его значение в хэш-таблице как ключ и значение соответственно. Используйте командлет [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) для обнаружения свойств ресурсов и их типов.
 
-*RebootRequired* \[out\] В выходных данных это свойство имеет значение **true**, если целевой узел необходимо перезагрузить.
+**RebootRequired** \[out\] В выходных данных это свойство имеет значение **true**, если целевой узел необходимо перезагрузить.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
