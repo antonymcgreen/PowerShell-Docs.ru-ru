@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Опрашивающая служба DSC
-ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c4e725569db776fe0dbd5395b2f0f8b8e70cbbeb
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837483"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Опрашивающая служба Desired State Configuration
 
@@ -278,5 +278,5 @@ MOF-файл конфигурации необходимо сопоставит�
 - [Обзор Windows PowerShell Desired State Configuration](../overview/overview.md)
 - [Активированные конфигурации](enactingConfigurations.md)
 - [Использование сервера отчетов DSC](reportServer.md)
-- [[MS-DSCPM]: Desired State Configuration Pull Model Protocol](https://docs.microsoft.com/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9) (MS-DSCPM: Требуемое состояние конфигурации протокола с активным опросом сообщений)
-- [[MS-DSCPM]: Desired State Configuration Pull Model Protocol](https://docs.microsoft.com/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5) (MS-DSCPM: Требуемое состояние конфигурации протокола с активным опросом сообщений об ошибке)
+- [[MS-DSCPM]: Desired State Configuration Pull Model Protocol](/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9) (MS-DSCPM: Требуемое состояние конфигурации протокола с активным опросом сообщений)
+- [[MS-DSCPM]: Desired State Configuration Pull Model Protocol](/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5) (MS-DSCPM: Требуемое состояние конфигурации протокола с активным опросом сообщений об ошибке)

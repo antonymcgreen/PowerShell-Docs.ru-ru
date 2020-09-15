@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 keywords: powershell,командлет
 title: Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
-ms.openlocfilehash: ee1b5961f8528d44330345bc49368e61970861ca
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 36fa3f983dc2d8440dd3b87aefd92eb49c028dc9
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809770"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092122"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
 
@@ -75,7 +75,7 @@ ms.locfileid: "83809770"
 | **Запустить или продолжить**           | <kbd>F5</kbd>                                  | Область сценариев при отладке сценария |
 | **Шаг с заходом**              | <kbd>F11</kbd>                                 | Область сценариев при отладке сценария |
 | **Шаг с обходом**              | <kbd>F10</kbd>                                 | Область сценариев при отладке сценария |
-| **Шаг с выходом**               | <kbd>SHIFT</kbd>+<kbd><kbd>F11</kbd></kbd>     | Область сценариев при отладке сценария |
+| **Шаг с выходом**               | <kbd>SHIFT</kbd>+<kbd>F11</kbd>                | Область сценариев при отладке сценария |
 | **Отображение стека вызовов**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>  | Область сценариев при отладке сценария |
 | **Список точек останова**       | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>L</kbd>  | Область сценариев при отладке сценария |
 | **Переключить точку останова**      | <kbd>F9</kbd>                                  | Область сценариев при отладке сценария |

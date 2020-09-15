@@ -1,17 +1,18 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Запись ресурса DSC с одним экземпляром (рекомендуется)
-ms.openlocfilehash: 4d9e07c6aaa064f808a03d4252e8d352b82183ec
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: cd6048c0f8aeef7fb5458a5f0bfefef25169297c
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952821"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217616"
 ---
 # <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Запись ресурса DSC с одним экземпляром (рекомендуется)
 
->**Примечание.** Эта статья содержит рекомендации по определению ресурса DSC, допускающего всего один экземпляр в конфигурации. Сейчас встроенная функция DSC для этого отсутствует. Возможно, она появится в будущем.
+> [!NOTE]
+> Эта статья содержит рекомендации по определению ресурса DSC, допускающего всего один экземпляр в конфигурации. Сейчас встроенная функция DSC для этого отсутствует. Возможно, она появится в будущем.
 
 Существуют ситуации, когда требуется запретить многократное использование ресурса в конфигурации. Например, в предыдущей реализации ресурса [xTimeZone](https://github.com/PowerShell/xTimeZone) конфигурация могла вызывать ресурс несколько раз, задавая новое значение часового пояса в каждом блоке ресурсов.
 
@@ -48,8 +49,7 @@ Configuration SetTimeZone
 
 Это вызвано особенностями в работе ключей ресурсов DSC. Ресурс должен иметь по крайней мере одно свойство ключа. Экземпляр ресурса считается уникальным, если сочетание значений всех его свойств ключа является уникальным. В предыдущей реализации ресурс [xTimeZone](https://github.com/PowerShell/xTimeZone) имел только одно свойство — **TimeZone**, которое должно было быть ключом. По этой причине такая конфигурация, как приведенная выше, компилируется и выполняется без предупреждения. Каждый из блоков ресурсов **xTimeZone** считается уникальным. Это приводит к многократному применению конфигурации к узлу с циклическим изменением часового пояса вперед и назад.
 
-Чтобы гарантировать, что конфигурация может задать часовой пояс для целевого узла всего один раз, для ресурса было добавлено второе свойство — **IsSingleInstance**, которое стало свойством ключа.
-**IsSingleInstance** было ограничено единственным значением "Yes" с помощью **ValueMap**. Старая MOF-схема для ресурса:
+Чтобы гарантировать, что конфигурация может задать часовой пояс для целевого узла всего один раз, для ресурса было добавлено второе свойство — **IsSingleInstance**, которое стало свойством ключа. **IsSingleInstance** было ограничено единственным значением "Yes" с помощью **ValueMap**. Старая MOF-схема для ресурса:
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -122,7 +122,7 @@ function Set-TargetResource
     $CurrentTimeZone = Get-TimeZone
 
     Write-Verbose -Message "Replace the System Time Zone to $TimeZone"
-    
+
     try
     {
         if($CurrentTimeZone -ne $TimeZone)
@@ -204,7 +204,7 @@ Export-ModuleMember -Function *-TargetResource
 
 Кроме того, свойство **TimeZone** больше не является ключом. Теперь, если конфигурация дважды пытается задать часовой пояс (используя два разных блока **xTimeZone** с различными значениями **TimeZone**), при ее компиляции возникает ошибка.
 
-```powershell
+```Output
 Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and
 '[xTimeZone]TimeZoneExample2 (::22::10::xTimeZone)' in node 'CONTOSO-CLIENT'. Resources have identical key properties but there are differences in the
 following non-key properties: 'TimeZone'. Values 'Eastern Standard Time' don't match values 'Pacific Standard Time'. Please update these property

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/18/2019
+ms.date: 06/11/2020
 keywords: powershell,командлет
 title: Учебные ресурсы для PowerShell
-ms.openlocfilehash: 5681fd903b323ab3cf87dc212ba64dbfdf2d78e7
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: d9d2f77090a7da7a5bef0c6d0c2af80c3a07be46
+ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808441"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722853"
 ---
 # <a name="powershell-learning-resources"></a>Учебные ресурсы для PowerShell
 
@@ -23,7 +23,7 @@ ms.locfileid: "83808441"
 
 ## <a name="channel-9-videos"></a>Видео на Channel 9
 
-Channel 9 — это платформа для публикации наших видеоматериалов. На ней представлены сотни видеороликов о PowerShell. [Выполните поиск по запросу "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated), чтобы найти доступные видео.
+Channel 9 — это платформа для публикации наших видеоматериалов. На ней представлены сотни видеороликов о PowerShell. [Выполните поиск по запросу "PowerShell"](https://channel9.msdn.com/Tags/powershell), чтобы найти доступные видео.
 
 ### <a name="microsoft-virtual-academy"></a>Microsoft Virtual Academy
 

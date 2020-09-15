@@ -3,12 +3,12 @@ title: Руководство по стилю для документации P
 description: В этой статье приводятся стилевые рекомендации для написания документации по PowerShell.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b60ad9a4965e75cc5f68309604f1893e5757f351
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 32df641f7cafa2a5bfcf1bcbf94be594aa77c7d0
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690846"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837449"
 ---
 # <a name="powershell-docs-style-guide"></a>Руководство по стилю для документации PowerShell
 
@@ -240,7 +240,7 @@ Example:
 - `[about_Splatting](about_Splatting.md#splatting-with-arrays)`
 - `[custom key bindings](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings)`
 
-Дополнительные сведения см. в статье [Использование ссылок в документации](https://docs.microsoft.com/contribute/how-to-write-links).
+Дополнительные сведения см. в статье [Использование ссылок в документации](/contribute/how-to-write-links).
 
 ## <a name="formatting-command-syntax-elements"></a>Элементы синтаксиса команды форматирования
 

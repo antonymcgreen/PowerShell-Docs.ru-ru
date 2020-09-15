@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/14/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Метод ApplyConfiguration
-ms.openlocfilehash: 0425b9a7db37e421830ba37da8f5c0a4877a1b72
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: bec74ccd6f75448484adfd26bf8a4af4e224eb3f
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953461"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463845"
 ---
 # <a name="applyconfiguration-method"></a>Метод ApplyConfiguration
 
@@ -25,13 +25,15 @@ uint32 ApplyConfiguration(
 
 ## <a name="parameters"></a>Параметры
 
-*force* \[in\] Если параметр имеет значение **true**, текущая конфигурация применяется повторно даже при наличии конфигурации в состоянии ожидания.
+### <a name="force"></a>force
+
+Если параметр имеет значение **true**, текущая конфигурация применяется повторно даже при наличии конфигурации в состоянии ожидания.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Это статический метод.
 

@@ -2,12 +2,12 @@
 ms.date: 01/10/2020
 keywords: powershell,командлет
 title: Создание переносимых модулей
-ms.openlocfilehash: 124e6efadfd07b8c5214a5c0446b1589f7142388
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: a6b2f8b263e71b6c9dbd50900536cb5072597e71
+ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809620"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158128"
 ---
 # <a name="portable-modules"></a>Переносимые модули
 
@@ -130,15 +130,12 @@ Time Elapsed 00:00:05.40
 После создания модуля вы можете импортировать его и выполнить пример командлета.
 
 ```powershell
-ipmo .\bin\Debug\netstandard2.0\myModule.dll
+Import-Module .\bin\Debug\netstandard2.0\myModule.dll
 Test-SampleCmdlet -?
 Test-SampleCmdlet -FavoriteNumber 7 -FavoritePet Cat
 ```
 
 ```output
-PS C:\Users\Steve\myModule> ipmo .\bin\Debug\netstandard2.0\myModule.dll
-PS C:\Users\Steve\myModule> Test-SampleCmdlet -?
-
 NAME
     Test-SampleCmdlet
 
@@ -153,8 +150,6 @@ ALIASES
 REMARKS
     None
 
-
-PS C:\Users\Steve\myModule> Test-SampleCmdlet -FavoriteNumber 7 -FavoritePet Cat
 
 FavoriteNumber FavoritePet
 -------------- -----------
@@ -306,4 +301,4 @@ managed.dll folder
 [Коллекция PowerShell]: https://www.powershellgallery.com
 [.NET Portability Analyzer]: https://github.com/Microsoft/dotnet-apiport
 [CompatiblePSEditions]: /powershell/scripting/gallery/concepts/module-psedition-support
-[Каталог идентификаторов сред выполнения в .NET]: https://docs.microsoft.com/dotnet/core/rid-catalog
+[Каталог идентификаторов сред выполнения в .NET]: /dotnet/core/rid-catalog

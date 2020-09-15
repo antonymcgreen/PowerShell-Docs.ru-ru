@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
-ms.openlocfilehash: 47ed14cceed86e4dd04a8e0079af00f6a98988ea
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9ead635232930598634141369fd2cc299f0b1799
+ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76995462"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158196"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>Критические изменения в PowerShell 6.x
 
@@ -35,8 +35,8 @@ ms.locfileid: "76995462"
 
 Если нужно возобновить выполнение скрипта после перезагрузки операционной системы с помощью контрольных точек, рекомендуем использовать планировщик задач. Он позволит запустить скрипт при запуске ОС. Но скрипт должен поддерживать свое собственное состояние (например, сохранять его в файле).
 
-[workflow]: /powershell/scripting/components/workflows-guide
-[workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/
+[workflow]: /previous-versions/powershell/scripting/components/workflows-guide
+[workflow-foundation]: /dotnet/framework/windows-workflow-foundation/
 
 ### <a name="custom-snap-ins"></a>Настраиваемые оснастки
 
@@ -46,7 +46,7 @@ ms.locfileid: "76995462"
 
 В настоящее время это нарушает работу модулей `ActiveDirectory` и `DnsClient` в Windows и Windows Server.
 
-[snapin]: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pssnapins
+[snapin]: /powershell/module/microsoft.powershell.core/about/about_pssnapins
 
 ### <a name="wmi-v1-cmdlets"></a>Командлеты инструментария WMI версии 1
 
@@ -246,8 +246,8 @@ ms.locfileid: "76995462"
 
 Ранее при создании пространства выполнения PowerShell программными средствами с помощью API можно было использовать прежние версии [`RunspaceConfiguration`][runspaceconfig] или более новые версии [`InitialSessionState`][iss]. Это изменение удалило поддержку `RunspaceConfiguration`, и теперь поддерживается только `InitialSessionState`.
 
-[runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
-[iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
+[runspaceconfig]: /dotnet/api/system.management.automation.runspaces.runspaceconfiguration
+[iss]: /dotnet/api/system.management.automation.runspaces.initialsessionstate
 
 ### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923"></a>`CommandInvocationIntrinsics.InvokeScript` — привязка аргументов к `$input`, а не к `$args` [№ 4923](https://github.com/PowerShell/PowerShell/issues/4923)
 
