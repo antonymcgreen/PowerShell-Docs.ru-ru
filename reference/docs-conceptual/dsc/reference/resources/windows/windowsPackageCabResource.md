@@ -1,23 +1,23 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс DSC WindowsPackageCab
-ms.openlocfilehash: 1b1b8b6d065882400608d26a991318fec9ad5747
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 7205a454d100bb369fd6cf0c5ac419585c8bbe86
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563950"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464151"
 ---
-# <a name="dsc-windowspackagecab-resource"></a><span data-ttu-id="d614e-103">Ресурс DSC WindowsPackageCab</span><span class="sxs-lookup"><span data-stu-id="d614e-103">DSC WindowsPackageCab Resource</span></span>
+# <a name="dsc-windowspackagecab-resource"></a><span data-ttu-id="b00b1-103">Ресурс DSC WindowsPackageCab</span><span class="sxs-lookup"><span data-stu-id="b00b1-103">DSC WindowsPackageCab Resource</span></span>
 
-> <span data-ttu-id="d614e-104">Область применения: Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="d614e-104">Applies To: Windows PowerShell 5.1</span></span>
+> <span data-ttu-id="b00b1-104">Область применения: Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="b00b1-104">Applies To: Windows PowerShell 5.1</span></span>
 
-<span data-ttu-id="d614e-105">Ресурс **WindowsPackageCab** в службе настройки требуемого состояния Windows PowerShell (DSC) предоставляет механизм установки пакетов CAB-файлов Windows на целевом узле или их удаления.</span><span class="sxs-lookup"><span data-stu-id="d614e-105">The **WindowsPackageCab** resource in Windows PowerShell Desired State Configuration (DSC) provides a mechanism to install or uninstall Windows cabinet (.cab) packages on a target node.</span></span>
+<span data-ttu-id="b00b1-105">Ресурс **WindowsPackageCab** в службе настройки требуемого состояния Windows PowerShell (DSC) предоставляет механизм установки пакетов CAB-файлов Windows на целевом узле или их удаления.</span><span class="sxs-lookup"><span data-stu-id="b00b1-105">The **WindowsPackageCab** resource in Windows PowerShell Desired State Configuration (DSC) provides a mechanism to install or uninstall Windows cabinet (.cab) packages on a target node.</span></span>
 
-<span data-ttu-id="d614e-106">На целевом узле должен быть установлен модуль DISM PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d614e-106">The target node must have the DISM PowerShell module installed.</span></span> <span data-ttu-id="d614e-107">Дополнительные сведения см. в статье [Use DISM in Windows PowerShell](/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14) (Использование DISM в Windows PowerShell)</span><span class="sxs-lookup"><span data-stu-id="d614e-107">For information, see [Use DISM in Windows PowerShell](/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14).</span></span>
+<span data-ttu-id="b00b1-106">На целевом узле должен быть установлен модуль DISM PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b00b1-106">The target node must have the DISM PowerShell module installed.</span></span> <span data-ttu-id="b00b1-107">Дополнительные сведения см. в статье [Use DISM in Windows PowerShell](/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14) (Использование DISM в Windows PowerShell)</span><span class="sxs-lookup"><span data-stu-id="b00b1-107">For information, see [Use DISM in Windows PowerShell](/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d614e-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d614e-108">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b00b1-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b00b1-108">Syntax</span></span>
 
 ```Syntax
 {
@@ -30,25 +30,25 @@ ms.locfileid: "83563950"
 }
 ```
 
-## <a name="properties"></a><span data-ttu-id="d614e-109">Свойства</span><span class="sxs-lookup"><span data-stu-id="d614e-109">Properties</span></span>
+## <a name="properties"></a><span data-ttu-id="b00b1-109">Свойства</span><span class="sxs-lookup"><span data-stu-id="b00b1-109">Properties</span></span>
 
-|<span data-ttu-id="d614e-110">Свойство</span><span class="sxs-lookup"><span data-stu-id="d614e-110">Property</span></span> |<span data-ttu-id="d614e-111">Описание</span><span class="sxs-lookup"><span data-stu-id="d614e-111">Description</span></span> |
+|<span data-ttu-id="b00b1-110">Свойство</span><span class="sxs-lookup"><span data-stu-id="b00b1-110">Property</span></span> |<span data-ttu-id="b00b1-111">Описание</span><span class="sxs-lookup"><span data-stu-id="b00b1-111">Description</span></span> |
 |---|---|
-|<span data-ttu-id="d614e-112">Имя</span><span class="sxs-lookup"><span data-stu-id="d614e-112">Name</span></span> |<span data-ttu-id="d614e-113">Указывает имя пакета, для которого требуется обеспечить определенное состояние.</span><span class="sxs-lookup"><span data-stu-id="d614e-113">Indicates the name of the package for you want to ensure a specific state.</span></span> |
-|<span data-ttu-id="d614e-114">SourcePath</span><span class="sxs-lookup"><span data-stu-id="d614e-114">SourcePath</span></span> |<span data-ttu-id="d614e-115">Указывает путь к файлу пакета.</span><span class="sxs-lookup"><span data-stu-id="d614e-115">Indicates the path where the package resides.</span></span> |
-|<span data-ttu-id="d614e-116">LogPath</span><span class="sxs-lookup"><span data-stu-id="d614e-116">LogPath</span></span> |<span data-ttu-id="d614e-117">Указывает полный путь к папке, где нужно сохранить файл журнала для установки или удаления пакета.</span><span class="sxs-lookup"><span data-stu-id="d614e-117">Indicates the full path where you want the provider to save a log file to install or uninstall the package.</span></span> |
+|<span data-ttu-id="b00b1-112">Имя</span><span class="sxs-lookup"><span data-stu-id="b00b1-112">Name</span></span> |<span data-ttu-id="b00b1-113">Указывает имя пакета, для которого требуется обеспечить определенное состояние.</span><span class="sxs-lookup"><span data-stu-id="b00b1-113">Indicates the name of the package for you want to ensure a specific state.</span></span> |
+|<span data-ttu-id="b00b1-114">SourcePath</span><span class="sxs-lookup"><span data-stu-id="b00b1-114">SourcePath</span></span> |<span data-ttu-id="b00b1-115">Указывает путь к файлу пакета.</span><span class="sxs-lookup"><span data-stu-id="b00b1-115">Indicates the path where the package resides.</span></span> |
+|<span data-ttu-id="b00b1-116">LogPath</span><span class="sxs-lookup"><span data-stu-id="b00b1-116">LogPath</span></span> |<span data-ttu-id="b00b1-117">Указывает полный путь к папке, где нужно сохранить файл журнала для установки или удаления пакета.</span><span class="sxs-lookup"><span data-stu-id="b00b1-117">Indicates the full path where you want the provider to save a log file to install or uninstall the package.</span></span> |
 
-## <a name="common-properties"></a><span data-ttu-id="d614e-118">Общие свойства</span><span class="sxs-lookup"><span data-stu-id="d614e-118">Common properties</span></span>
+## <a name="common-properties"></a><span data-ttu-id="b00b1-118">Общие свойства</span><span class="sxs-lookup"><span data-stu-id="b00b1-118">Common properties</span></span>
 
-|<span data-ttu-id="d614e-119">Свойство</span><span class="sxs-lookup"><span data-stu-id="d614e-119">Property</span></span> |<span data-ttu-id="d614e-120">Описание</span><span class="sxs-lookup"><span data-stu-id="d614e-120">Description</span></span> |
+|<span data-ttu-id="b00b1-119">Свойство</span><span class="sxs-lookup"><span data-stu-id="b00b1-119">Property</span></span> |<span data-ttu-id="b00b1-120">Описание</span><span class="sxs-lookup"><span data-stu-id="b00b1-120">Description</span></span> |
 |---|---|
-|<span data-ttu-id="d614e-121">DependsOn</span><span class="sxs-lookup"><span data-stu-id="d614e-121">DependsOn</span></span> |<span data-ttu-id="d614e-122">Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса.</span><span class="sxs-lookup"><span data-stu-id="d614e-122">Indicates that the configuration of another resource must run before this resource is configured.</span></span> <span data-ttu-id="d614e-123">Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`.</span><span class="sxs-lookup"><span data-stu-id="d614e-123">For example, if the ID of the resource configuration script block that you want to run first is ResourceName and its type is ResourceType, the syntax for using this property is `DependsOn = "[ResourceType]ResourceName"`.</span></span> |
-|<span data-ttu-id="d614e-124">Ensure</span><span class="sxs-lookup"><span data-stu-id="d614e-124">Ensure</span></span> |<span data-ttu-id="d614e-125">Указывает, установлен ли пакет.</span><span class="sxs-lookup"><span data-stu-id="d614e-125">Indicates if the package is installed.</span></span> <span data-ttu-id="d614e-126">Если это свойство имеет значение **Absent**, пакет не устанавливается (а если он уже установлен, то удаляется).</span><span class="sxs-lookup"><span data-stu-id="d614e-126">Set this property to **Absent** to ensure the package is not installed (or uninstall the package if it is installed).</span></span> <span data-ttu-id="d614e-127">Если это свойство имеет значение **Present**, пакет устанавливается.</span><span class="sxs-lookup"><span data-stu-id="d614e-127">Set it to **Present** to ensure the package is installed.</span></span> <span data-ttu-id="d614e-128">Свойство **Ensure** является обязательным для ресурса **WindowsPackageCab**.</span><span class="sxs-lookup"><span data-stu-id="d614e-128">**Ensure** is a required property on the **WindowsPackageCab** resource.</span></span> |
-|<span data-ttu-id="d614e-129">PsDscRunAsCredential</span><span class="sxs-lookup"><span data-stu-id="d614e-129">PsDscRunAsCredential</span></span> |<span data-ttu-id="d614e-130">Задает учетные данные для выполнения всего ресурса от другого имени.</span><span class="sxs-lookup"><span data-stu-id="d614e-130">Sets the credential for running the entire resource as.</span></span> |
+|<span data-ttu-id="b00b1-121">DependsOn</span><span class="sxs-lookup"><span data-stu-id="b00b1-121">DependsOn</span></span> |<span data-ttu-id="b00b1-122">Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса.</span><span class="sxs-lookup"><span data-stu-id="b00b1-122">Indicates that the configuration of another resource must run before this resource is configured.</span></span> <span data-ttu-id="b00b1-123">Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`.</span><span class="sxs-lookup"><span data-stu-id="b00b1-123">For example, if the ID of the resource configuration script block that you want to run first is ResourceName and its type is ResourceType, the syntax for using this property is `DependsOn = "[ResourceType]ResourceName"`.</span></span> |
+|<span data-ttu-id="b00b1-124">Ensure</span><span class="sxs-lookup"><span data-stu-id="b00b1-124">Ensure</span></span> |<span data-ttu-id="b00b1-125">Указывает, установлен ли пакет.</span><span class="sxs-lookup"><span data-stu-id="b00b1-125">Indicates if the package is installed.</span></span> <span data-ttu-id="b00b1-126">Если это свойство имеет значение **Absent**, пакет не устанавливается (а если он уже установлен, то удаляется).</span><span class="sxs-lookup"><span data-stu-id="b00b1-126">Set this property to **Absent** to ensure the package is not installed (or uninstall the package if it is installed).</span></span> <span data-ttu-id="b00b1-127">Если это свойство имеет значение **Present**, пакет устанавливается.</span><span class="sxs-lookup"><span data-stu-id="b00b1-127">Set it to **Present** to ensure the package is installed.</span></span> <span data-ttu-id="b00b1-128">Свойство **Ensure** является обязательным для ресурса **WindowsPackageCab**.</span><span class="sxs-lookup"><span data-stu-id="b00b1-128">**Ensure** is a required property on the **WindowsPackageCab** resource.</span></span> |
+|<span data-ttu-id="b00b1-129">PsDscRunAsCredential</span><span class="sxs-lookup"><span data-stu-id="b00b1-129">PsDscRunAsCredential</span></span> |<span data-ttu-id="b00b1-130">Задает учетные данные для выполнения всего ресурса от другого имени.</span><span class="sxs-lookup"><span data-stu-id="b00b1-130">Sets the credential for running the entire resource as.</span></span> |
 
-## <a name="example"></a><span data-ttu-id="d614e-131">Пример</span><span class="sxs-lookup"><span data-stu-id="d614e-131">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b00b1-131">Пример</span><span class="sxs-lookup"><span data-stu-id="b00b1-131">Example</span></span>
 
-<span data-ttu-id="d614e-132">Ниже приведен пример конфигурации, которая принимает входные параметры и гарантирует, что CAB-файл, указанный в параметре `$Name`, установлен.</span><span class="sxs-lookup"><span data-stu-id="d614e-132">The following example configuration takes input parameters, and ensures that the .cab file specified by the `$Name` parameter is installed.</span></span>
+<span data-ttu-id="b00b1-132">Ниже приведен пример конфигурации, которая принимает входные параметры и гарантирует, что CAB-файл, указанный в параметре `$Name`, установлен.</span><span class="sxs-lookup"><span data-stu-id="b00b1-132">The following example configuration takes input parameters, and ensures that the .cab file specified by the `$Name` parameter is installed.</span></span>
 
 ```powershell
 Configuration Sample_WindowsPackageCab
