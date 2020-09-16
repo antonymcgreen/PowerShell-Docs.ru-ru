@@ -2,12 +2,12 @@
 ms.date: 08/15/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Начало работы с Desired State Configuration (DSC) для Windows
-ms.openlocfilehash: 2add2c936e60c0c9446bf4b398fbf7b4bd6407f7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 00e1cf545b19f054b4b1ff468c9f6ad94e5cef55
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75416163"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236328"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Начало работы с Desired State Configuration (DSC) для Windows
 
@@ -31,7 +31,7 @@ ms.locfileid: "75416163"
 
 ## <a name="installing-dsc"></a>Установка DSC
 
-Desired State Configuration в PowerShell входит в состав Windows и обновляется с помощью Windows Management Framework. Последняя версия — [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
+Desired State Configuration в PowerShell входит в состав Windows и обновляется с помощью Windows Management Framework. Последняя версия — [Windows Management Framework 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 > [!NOTE]
 > Для управления компьютером с помощью DSC не нужно включать компонент Windows Server "DSC-Service".

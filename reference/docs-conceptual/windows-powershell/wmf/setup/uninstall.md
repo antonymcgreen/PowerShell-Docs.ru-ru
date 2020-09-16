@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,установка
 title: Удаление WMF 5.0
-ms.openlocfilehash: f562a4a4506bfdede6b23bd186b80f40cc9e45ca
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: fa76bacb4b62025d0d2350b9a0e072068ca83ab1
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808680"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236311"
 ---
 # <a name="uninstallation-instructions"></a>Инструкции по удалению
 
 ## <a name="using-command-prompt"></a>Использование командной строки
 
-1. Откройте окно **Командная строка**.
-2. Запустите [Windows Update Standalone Launcher](https://support.microsoft.com/en-us/kb/934307) (Автономное средство запуска Центра обновления Windows), как показано ниже:
+1. Откройте **командную строку**.
+2. Запустите [Автономное средство запуска Центра обновления Windows](https://support.microsoft.com/kb/934307), как показано ниже:
 
 В Windows Server 2012 R2 и Windows 8.1:
 
@@ -36,7 +36,7 @@ wusa /uninstall /kb:3134760
 
 ## <a name="using-control-panel"></a>Использование панели управления
 
-1. Откройте **Панель управления**.
-2. Откройте **Программы** и выберите **Удаление программы**.
+1. Откройте **панель управления**.
+2. Откройте раздел **Программы** и выберите **Удаление программы**.
 3. Щелкните **Просмотр установленных обновлений**.
 4. Выберите **Windows Management Framework 5.0** в списке установленных обновлений. Это соответствует *KB3134758*, *KB3134759* или *KB3134760*. Щелкните **Удалить**.

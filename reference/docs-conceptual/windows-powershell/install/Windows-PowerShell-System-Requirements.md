@@ -2,12 +2,12 @@
 ms.date: 12/06/2019
 keywords: powershell,командлет
 title: Требования к системе для Windows PowerShell
-ms.openlocfilehash: 7c6e055cda8493651a7838b4ffc9a933032d9c0f
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 883da2f91c4a0b46e4bccbacd9933a52f8f476f6
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808510"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236090"
 ---
 # <a name="windows-powershell-system-requirements"></a>Требования к системе для Windows PowerShell
 
@@ -57,8 +57,8 @@ Windows PowerShell 4.0 выполняется в следующих верси�
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8.1                                 | Устанавливается по умолчанию                                                                                       |
 | Windows Server 2012 R2                      | Устанавливается по умолчанию                                                                                       |
-| Windows 7® с пакетом обновления 1 (SP1)              | Установите [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) |
-| Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) |
+| Windows 7® с пакетом обновления 1 (SP1)              | Установите [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
+| Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
 
 ### <a name="windows-powershell-30"></a>Windows PowerShell 3.0
 
@@ -68,9 +68,9 @@ Windows PowerShell 3.0 выполняется в следующих верси�
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8                                   | Устанавливается по умолчанию                                                                                       |
 | Windows Server 2012                         | Устанавливается по умолчанию                                                                                       |
-| Windows 7® с пакетом обновления 1 (SP1)              | Установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) |
-| Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) |
-| Windows Server 2008 с пакетом обновления 2 (SP2)     | Установите [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) |
+| Windows 7® с пакетом обновления 1 (SP1)              | Установите [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
+| Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
+| Windows Server 2008 с пакетом обновления 2 (SP2)     | Установите [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
 
 ## <a name="microsoft-net-framework-requirements"></a>Требования к Microsoft .NET Framework
 
@@ -88,7 +88,7 @@ Windows PowerShell 3.0 выполняется в следующих верси�
 |                     Версия                      |                                                     Ссылка                                                     |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | .NET Framework 4.5 (`dotNetFx45_Full_setup.exe`) | [Microsoft .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkID=242919)                               |
-| .NET Framework 4 (`dotNetFx40_Full_setup.exe`)   | [Microsoft .NET Framework 4 (веб-установщик)](https://www.microsoft.com/en-us/download/details.aspx?id=17851) |
+| .NET Framework 4 (`dotNetFx40_Full_setup.exe`)   | [Microsoft .NET Framework 4 (веб-установщик)](https://www.microsoft.com/download/details.aspx?id=17851) |
 
 ## <a name="windows-management-framework-40"></a>Windows Management Framework 4.0
 
