@@ -73,6 +73,8 @@
           href: learn/deep-dives/everything-about-null.md
         - name: 'Все, что вы хотели знать о ShouldProcess'
           href: learn/deep-dives/everything-about-shouldprocess.md
+        - name: Write-Progress при многопоточности
+          href: learn/deep-dives/write-progress-across-multiple-threads.md
     - name: Удаленное взаимодействие PowerShell
       items:
         - name: Just Enough Administration (JEA)
@@ -225,7 +227,7 @@
               href: windows-powershell/wmf/whats-new/bugfixes.md
             - name: Новые и обновленные командлеты
               href: windows-powershell/wmf/whats-new/new-updated-cmdlets.md
-            - name: Создание настраиваемых типов с помощью классов PowerShell
+            - name: Новые возможности языка в PowerShell 5.0
               href: windows-powershell/wmf/whats-new/class-overview.md
             - name: Усовершенствования консоли в WMF 5.1
               href: windows-powershell/wmf/whats-new/console-improvements.md
@@ -358,7 +360,7 @@
               href: dsc/resources/authoringResourceClass.md
             - name: Создание составных ресурсов в PowerShell
               href: dsc/resources/authoringResourceComposite.md
-            - name: 'Создание ресурсов на основе MOF на C#'
+            - name: Создание ресурсов на основе MOF на C#
               href: dsc/resources/authoringResourceMofCS.md
             - name: Использование конструктора ресурсов
               href: dsc/resources/authoringResourceMofDesigner.md
@@ -562,6 +564,8 @@
       href: community/hall-of-fame.md
     - name: Новые возможности в Документации Майкрософт
       items:
+        - name: "Третий квартал 2020\_года"
+          href: community/2020-Q3.md
         - name: Второй квартал 2020 года
           href: community/2020-Q2.md
         - name: Первый квартал 2020 года
@@ -626,7 +630,7 @@
           href: samples/managing-processes-with-process-cmdlets.md
         - name: Управление службами
           href: samples/managing-services.md
-        - name: Управление дисками Windows PowerShell
+        - name: Управление дисками PowerShell
           href: samples/managing-windows-powershell-drives.md
         - name: Работа с принтерами
           href: samples/working-with-printers.md
@@ -782,8 +786,14 @@
           href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: Создание переносимых модулей
       href: dev-cross-plat/writing-portable-modules.md
-    - name: Как создать двоичный модуль стандартной библиотеки
+    - name: "Создание справки по модулю с помощью\_PlatyPS"
+      href: dev-cross-plat/create-help-using-platyps.md
+    - name: Как создать двоичный модуль библиотеки Standard
       href: dev-cross-plat/create-standard-library-binary-module.md
+    - name: "Выбор пакета NuGet для проекта\_.NET"
+      href: dev-cross-plat/choosing-the-right-nuget-package.md
+    - name: Устранение конфликтов зависимостей в сборках модулей
+      href: dev-cross-plat/resolving-dependency-conflicts.md
     - name: Прежние версии пакета SDK для PowerShell
       items:
         - name: Обзор
@@ -794,11 +804,11 @@
           href: developer/windows-powershell-reference.md
         - name: What's New
           href: developer/windows-powershell-reference-whats-new.md
-        - name: Запись командлета Windows PowerShell
+        - name: "Написание командлета\_PowerShell"
           items:
             - name: Общие сведения о командлетах
               href: developer/cmdlet/cmdlet-overview.md
-            - name: "Основные понятия, связанные с командлетами Windows\_PowerShell"
+            - name: Основные понятия командлетов PowerShell
               href: developer/cmdlet/windows-powershell-cmdlet-concepts.md
               items:
                 - name: Рекомендации по разработке командлетов
@@ -812,7 +822,7 @@
                       href: developer/cmdlet/advisory-development-guidelines.md
                 - name: Объявление класса командлета
                   href: developer/cmdlet/cmdlet-class-declaration.md
-                - name: "Утвержденные глаголы для команд Windows\_PowerShell"
+                - name: "Утвержденные команды для\_PowerShell"
                   href: developer/cmdlet/approved-verbs-for-windows-powershell-commands.md
                 - name: Методы обработки входных данных командлета
                   href: developer/cmdlet/cmdlet-input-processing-methods.md
@@ -910,7 +920,7 @@
                       href: developer/cmdlet/users-requesting-confirmation.md
                     - name: Сообщения подтверждения
                       href: developer/cmdlet/confirmation-messages.md
-                - name: "Отчеты об ошибках Windows\_PowerShell"
+                - name: "Сообщение об ошибках\_PowerShell"
                   href: developer/cmdlet/windows-powershell-error-reporting.md
                   items:
                     - name: 'Основные понятия, связанные с отчетами об ошибках'
@@ -921,7 +931,7 @@
                       href: developer/cmdlet/non-terminating-errors.md
                     - name: Отображение сведений об ошибке
                       href: developer/cmdlet/displaying-error-information.md
-                    - name: "Записи об ошибках Windows\_PowerShell"
+                    - name: "Записи ошибок\_PowerShell"
                       href: developer/cmdlet/windows-powershell-error-records.md
                     - name: Интерпретация объектов ErrorRecord
                       href: developer/cmdlet/interpreting-errorrecord-objects.md
@@ -931,7 +941,7 @@
                   href: developer/cmdlet/invoking-cmdlets-and-scripts-within-a-cmdlet.md
                 - name: Наборы командлетов
                   href: developer/cmdlet/cmdlet-sets.md
-                - name: "Состояние сеанса Windows\_PowerShell"
+                - name: Состояние сеанса PowerShell
                   href: developer/cmdlet/windows-powershell-session-state.md
             - name: Примеры кода командлетов
               href: developer/cmdlet/examples-of-cmdlet-code.md
@@ -1022,11 +1032,11 @@
                   href: developer/cmdlet/stopprocesssample04-sample.md
                 - name: Пример командлета Events01
                   href: developer/cmdlet/events01-sample.md
-        - name: Написание модуля Windows PowerShell
+        - name: Написание модуля PowerShell
           items:
             - name: Обзор
               href: developer/module/writing-a-windows-powershell-module.md
-            - name: "Общие сведения о модулях Windows\_PowerShell"
+            - name: Общие сведения о модуле PowerShell
               href: developer/module/understanding-a-windows-powershell-module.md
             - name: Как написать модуль сценария PowerShell
               href: developer/module/how-to-write-a-powershell-script-module.md
@@ -1050,17 +1060,17 @@
                   items:
                     - name: Обзор
                       href: developer/module/how-to-create-a-windows-powershell-snap-in.md
-                    - name: "Написание оснастки Windows\_PowerShell"
+                    - name: Написание оснастки PowerShell
                       href: developer/module/writing-a-windows-powershell-snap-in.md
-                    - name: "Написание пользовательской оснастки Windows\_PowerShell"
+                    - name: Написание специализированной оснастки PowerShell
                       href: developer/module/writing-a-custom-windows-powershell-snap-in.md
             - name: Импорт модуля PowerShell
               href: developer/module/importing-a-powershell-module.md
-        - name: "Написание поставщика Windows\_PowerShell"
+        - name: Написание поставщика PowerShell
           items:
-            - name: "Краткое руководство по поставщикам Windows\_PowerShell"
+            - name: Краткое руководство по поставщикам PowerShell
               href: developer/provider/windows-powershell-provider-quickstart.md
-            - name: "Общие сведения о поставщиках Windows\_PowerShell"
+            - name: Общие сведения о поставщиках PowerShell
               href: developer/provider/windows-powershell-provider-overview.md
               items:
                 - name: Типы поставщиков
@@ -1092,9 +1102,9 @@
                   href: developer/provider/accessdbprovidersample05.md
                 - name: AccessDBProviderSample06
                   href: developer/provider/accessdbprovidersample06.md
-        - name: "Написание ведущего приложения Windows\_PowerShell"
+        - name: Написание ведущего приложения PowerShell
           items:
-            - name: "Краткое руководство по узлам Windows\_PowerShell"
+            - name: Краткое руководство по размещению PowerShell
               href: developer/hosting/windows-powershell-host-quickstart.md
             - name: Создание пространств выполнения
               href: developer/hosting/creating-runspaces.md
@@ -1114,12 +1124,12 @@
             - name: Примеры ведущих приложений
               href: developer/hosting/host-application-samples.md
               items:
-                - name: "Примеры API Windows\_PowerShell"
+                - name: Примеры API PowerShell
                   href: developer/hosting/windows-powershell-api-samples.md
                   items:
-                    - name: "Пример Windows\_PowerShell01"
+                    - name: Пример PowerShell01
                       href: developer/hosting/windows-powershell01-sample.md
-                    - name: "Пример Windows\_PowerShell02"
+                    - name: Пример PowerShell02
                       href: developer/hosting/windows-powershell02-sample.md
                 - name: Примеры пользовательских узлов
                   href: developer/hosting/custom-host-samples.md
@@ -1633,7 +1643,7 @@
                   href: developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
                 - name: Элемент WrapTables (формат)
                   href: developer/format/wraptables-element-format.md
-        - name: "Написание справки для Windows\_PowerShell"
+        - name: Написание справки для PowerShell
           items:
             - name: Обзор
               href: developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
@@ -1655,7 +1665,7 @@
                   href: developer/help/examples-of-comment-based-help.md
             - name: Написание разделов справки на основе XML для команд
               items:
-                - name: "Написание справки для командлетов Windows\_PowerShell"
+                - name: Написание справки для командлетов PowerShell
                   items:
                     - name: Обзор
                       href: developer/help/writing-help-for-windows-powershell-cmdlets.md
@@ -1679,9 +1689,10 @@
                       href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
                     - name: Как добавить связанные ссылки в раздел справки для командлета
                       href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
-                - name: "Написание справки для модулей Windows\_PowerShell"
-                  href: developer/module/writing-help-for-windows-powershell-modules.md
+                - name: Написание справки для модулей PowerShell
                   items:
+                    - name: Обзор
+                      href: developer/help/writing-help-for-windows-powershell-modules.md
                     - name: Указание имен для файлов справки
                       href: developer/help/naming-help-files.md
                     - name: Поддержка обновляемой справки
@@ -1719,93 +1730,55 @@
                               href: developer/help/how-to-test-updatable-help.md
                         - name: Поддержка справки в Интернете
                           href: developer/help/supporting-online-help.md
-                - name: "Написание справки для поставщиков Windows\_PowerShell"
+                - name: Написание справки для поставщиков PowerShell
                   items:
                     - name: Как добавить динамические параметры в раздел справки для поставщика
                       href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
                     - name: Как добавить раздел "См. также" в раздел справки для поставщика
                       href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
-        - name: Создание веб-службы управления OData
+        - name: "Расширенная система типов\_(ETS)"
           items:
-            - name: Обзор
-              href: developer/webservices/creating-a-management-odata-web-service.md
-            - name: Добавление ресурсов в веб-службу управления OData
-              href: developer/webservices/adding-resources-to-a-management-odata-web-service.md
-            - name: Реализация пользовательской авторизации для веб-службы управления OData
-              items:
-                - name: Обзор
-                  href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
-                - name: Настройка авторизации на основе ролей
-                  href: developer/webservices/configuring-role-based-authorization.md
-                - name: Схема конфигурации для авторизации на основе ролей
-                  href: developer/webservices/role-based-authorization-configuration-schema.md
-                - name: "Вызов командлетов Windows\_PowerShell в веб-службах управления OData"
-                  href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
-            - name: Реализация SessionConfiguration для веб-службы управления OData
-              href: developer/webservices/implementing-sessionconfiguration-for-a-management-odata-web-service.md
-            - name: Создание файла схемы MOF для веб-службы управления OData
-              href: developer/webservices/authoring-the-mof-schema-file-for-a-management-odata-web-service.md
-            - name: Создание файла схемы XML для веб-службы управления OData
-              href: developer/webservices/authoring-the-xml-schema-file-for-a-management-odata-web-service.md
-            - name: Создание файла Web.config для веб-службы управления OData
-              href: developer/webservices/authoring-the-web-config-file-for-a-management-odata-web-service.md
-            - name: Развертывание веб-службы управления OData
-              href: developer/webservices/deploying-a-management-odata-web-service.md
-            - name: Связывание сущностей управления OData
-              href: developer/webservices/associating-management-odata-entities.md
-            - name: "Управление файлами расширения схемы IIS\_OData"
-              items:
-                - name: Обзор
-                  href: developer/webservices/management-odata-iis-extension-schema-files.md
-                - name: Схема сопоставления ресурсов
-                  href: developer/webservices/resource-mapping-schema.md
-                - name: Общедоступная схема ресурсов
-                  href: developer/webservices/public-resource-schema.md
-        - name: Запись рабочего процесса Windows PowerShell
-          items:
-            - name: Обзор
-              href: developer/workflow/writing-a-windows-powershell-workflow.md
-            - name: "Добавление действий Windows\_PowerShell в инструментарий Visual\_Studio"
-              href: developer/workflow/adding-windows-powershell-activities-to-the-visual-studio-toolbox.md
-            - name: "Создание рабочего процесса с помощью действий Windows\_PowerShell"
-              href: developer/workflow/creating-a-workflow-with-windows-powershell-activities.md
-            - name: "Создание рабочего процесса с помощью сценария Windows\_PowerShell"
-              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
-            - name: "Импорт и вызов рабочего процесса Windows\_PowerShell"
-              href: developer/workflow/importing-and-invoking-a-windows-powershell-workflow.md
-            - name: "Создание действия рабочего процесса из командлета Windows\_PowerShell"
-              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
-            - name: "Планирование заданий с помощью API Windows\_PowerShell"
-              href: developer/workflow/scheduling-jobs-with-the-windows-powershell-api.md
-            - name: Общие параметры рабочего процесса
-              href: developer/workflow/common-workflow-parameters.md
+            - name: Обзор ETS
+              href: developer/ets/overview.md
+            - name: Элементы ETS
+              href: developer/ets/members.md
+            - name: Наборы элементов ETS
+              href: developer/ets/membersets.md
+            - name: Свойства ETS
+              href: developer/ets/properties.md
+            - name: Методы ETS
+              href: developer/ets/methods.md
+            - name: Преобразователи типов ETS
+              href: developer/ets/typeconverters.md
+            - name: "Ошибки и исключения в\_ETS"
+              href: developer/ets/errors-exceptions.md
         - name: "Руководство программиста по Windows\_PowerShell"
           href: developer/prog-guide/windows-powershell-programmer-s-guide.md
           items:
-            - name: "Как создать поставщика Windows\_PowerShell"
+            - name: Как создать поставщика PowerShell
               href: developer/prog-guide/how-to-create-a-windows-powershell-provider.md
               items:
-                - name: "Разработка поставщика Windows\_PowerShell"
+                - name: Разработка поставщика PowerShell
                   href: developer/prog-guide/designing-your-windows-powershell-provider.md
-                - name: "Создание базового поставщика Windows\_PowerShell"
+                - name: Создание базового поставщика PowerShell
                   href: developer/prog-guide/creating-a-basic-windows-powershell-provider.md
-                - name: "Создание поставщика дисков Windows\_PowerShell"
+                - name: Создание поставщика дисков PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-drive-provider.md
-                - name: "Создание поставщика элементов Windows\_PowerShell"
+                - name: Создание поставщика элементов PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-item-provider.md
-                - name: "Создание поставщика контейнеров Windows\_PowerShell"
+                - name: Создание поставщика контейнеров PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-container-provider.md
-                - name: "Создание поставщика навигации Windows\_PowerShell"
+                - name: Создание поставщика навигации PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-navigation-provider.md
-                - name: "Создание поставщика содержимого Windows\_PowerShell"
+                - name: Создание поставщика содержимого PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-content-provider.md
-                - name: "Создание поставщика свойств Windows\_PowerShell"
+                - name: Создание поставщика свойств PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-property-provider.md
             - name: Создание оболочки консоли
               href: developer/prog-guide/how-to-create-a-console-shell.md
-            - name: "Основные понятия Windows\_PowerShell"
+            - name: Основные понятия PowerShell
               href: developer/prog-guide/windows-powershell-concepts.md
-            - name: "Пример кода Windows\_PowerShell"
+            - name: Пример кода PowerShell
               href: developer/prog-guide/windows-powershell-sample-code.md
               items:
                 - name: Пример кода AccessDbProviderSample01
@@ -1823,68 +1796,68 @@
                 - name: Примеры кода GetProc01
                   href: developer/prog-guide/getproc01-code-samples.md
                   items:
-                    - name: 'Пример кода GetProc01 (C#)'
+                    - name: Пример кода GetProc01 (C#)
                       href: developer/prog-guide/getproc01-csharp-sample-code.md
                     - name: Пример кода GetProc01 (VB.NET)
                       href: developer/prog-guide/getproc01-vb-net-sample-code.md
                 - name: Примеры кода GetProc02
                   href: developer/prog-guide/getproc02-code-samples.md
                   items:
-                    - name: 'Пример кода GetProc02 (C#)'
+                    - name: Пример кода GetProc02 (C#)
                       href: developer/prog-guide/getproc02-csharp-sample-code.md
                     - name: Пример кода GetProc02 (VB.NET)
                       href: developer/prog-guide/getproc02-vb-net-sample-code.md
                 - name: Примеры кода GetProc03
                   href: developer/prog-guide/getproc03-code-samples.md
                   items:
-                    - name: 'Пример кода GetProc03 (C#)'
+                    - name: Пример кода GetProc03 (C#)
                       href: developer/prog-guide/getproc03-csharp-sample-code.md
                     - name: Пример кода GetProc03 (VB.NET)
                       href: developer/prog-guide/getproc03-vb-net-sample-code.md
                 - name: Примеры кода GetProc04
                   href: developer/prog-guide/getproc04-code-samples.md
                   items:
-                    - name: 'Пример кода GetProc04 (C#)'
+                    - name: Пример кода GetProc04 (C#)
                       href: developer/prog-guide/getproc04-csharp-sample-code.md
                     - name: Пример кода GetProc04 (VB.NET)
                       href: developer/prog-guide/getproc04-vb-net-sample-code.md
                 - name: Примеры кода GetProc05
                   href: developer/prog-guide/getproc05-code-samples.md
                   items:
-                    - name: 'Пример кода GetProc05 (C#)'
+                    - name: Пример кода GetProc05 (C#)
                       href: developer/prog-guide/getproc05-csharp-sample-code.md
                     - name: Пример кода GetProc05 (VB.NET)
                       href: developer/prog-guide/getproc05-vb-net-sample-code.md
                 - name: Примеры кода StopProc01
                   href: developer/prog-guide/stopproc01-code-samples.md
                   items:
-                    - name: 'Пример кода StopProc01 (C#)'
+                    - name: Пример кода StopProc01 (C#)
                       href: developer/prog-guide/stopproc01-csharp-sample-code.md
                 - name: Примеры кода StopProcessSample04
                   href: developer/prog-guide/stopprocesssample04-code-samples.md
                   items:
-                    - name: 'Пример кода StopProcessSample04 (C#)'
+                    - name: Пример кода StopProcessSample04 (C#)
                       href: developer/prog-guide/stopprocesssample04-csharp-sample-code.md
                     - name: Пример кода StopProcessSample04 (VB.NET)
                       href: developer/prog-guide/stopprocesssample04-vb-net-sample-code.md
                 - name: Примеры кода Runspace01
                   href: developer/prog-guide/runspace01-code-samples.md
                   items:
-                    - name: 'Пример кода Runspace01 (C#)'
+                    - name: Пример кода Runspace01 (C#)
                       href: developer/prog-guide/runspace01-csharp-code-sample.md
                     - name: Пример кода Runspace01 (VB.NET)
                       href: developer/prog-guide/runspace01-vb-net-code-sample.md
                 - name: Примеры кода Runspace02
                   href: developer/prog-guide/runspace02-code-samples.md
                   items:
-                    - name: 'Пример кода Runspace02 (C#)'
+                    - name: Пример кода Runspace02 (C#)
                       href: developer/prog-guide/runspace02-csharp-code-sample.md
                     - name: Пример кода Runspace02 (VB.NET)
                       href: developer/prog-guide/runspace02-vb-net-code-sample.md
                 - name: Примеры кода RunSpace03
                   href: developer/prog-guide/runspace03-code-samples.md
                   items:
-                    - name: 'Пример кода RunSpace03 (C#)'
+                    - name: Пример кода RunSpace03 (C#)
                       href: developer/prog-guide/runspace03-csharp-code-sample.md
                     - name: Пример кода RunSpace03 (VB.NET)
                       href: developer/prog-guide/runspace03-vb-net-code-sample.md

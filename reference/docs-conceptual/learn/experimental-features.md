@@ -1,13 +1,13 @@
 ---
-ms.date: 04/28/2020
+ms.date: 09/14/2020
 title: Использование экспериментальных функций в PowerShell
 description: Список доступных в настоящее время экспериментальных функций и их использование.
-ms.openlocfilehash: 72a4309d6eeede4cd2ff7c38ce8e99ce3ace30eb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 74623240bfb19022ae342a5d23e2ed4f455afa45
+ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809190"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574476"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Использование экспериментальных функций в PowerShell
 
@@ -24,22 +24,46 @@ ms.locfileid: "83809190"
 
 В этой статье описываются доступные экспериментальные функции и сведения об их использовании.
 
-|                            Имя                            |   6.2   |   7.0   | 7.1 (предварительная версия) |
-| ---------------------------------------------------------- | :-----: | :-----: | :-----------: |
-| PSTempDrive (основная фаза в PS 7.0 и выше)                        | &check; |         |               |
-| PSUseAbbreviationExpansion (основная фаза в PS 7.0 и выше)         | &check; |         |               |
-| PSCommandNotFoundSuggestion                                | &check; | &check; |    &check;    |
-| PSImplicitRemotingBatching                                 | &check; | &check; |    &check;    |
-| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; |    &check;    |
-| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; |    &check;    |
-| PSNullConditionalOperators                                 |         | &check; |    &check;    |
-| PSUnixFileStat (только не на базе Windows)                          |         | &check; |    &check;    |
-| PSNativePSPathResolution                                   |         |         |    &check;    |
-| PSCultureInvariantReplaceOperator                          |         |         |    &check;    |
+|                            Имя                            |   6.2   |   7.0   |   7.1   |
+| ---------------------------------------------------------- | :-----: | :-----: | :-----: |
+| PSTempDrive (основная фаза в PS 7.0 и выше)                        | &check; |         |         |
+| PSUseAbbreviationExpansion (основная фаза в PS 7.0 и выше)         | &check; |         |         |
+| PSCommandNotFoundSuggestion                                | &check; | &check; | &check; |
+| PSImplicitRemotingBatching                                 | &check; | &check; | &check; |
+| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; | &check; |
+| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
+| PSNullConditionalOperators (основная функция в версии PS 7.1 и более поздней)         |         | &check; |         |
+| PSUnixFileStat (только не на базе Windows)                          |         | &check; | &check; |
+| PSNativePSPathResolution (основная функция в версии PS 7.1 и более поздней)           |         |         |         |
+| PSCultureInvariantReplaceOperator                          |         |         | &check; |
+| PSNotApplyErrorActionToStderr                              |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
-Эта функция включает параметр **BreakAll** в командлетах `Debug-Runspace` и `Debug-Job`, чтобы пользователи могли принять решение, стоит ли PowerShell немедленно остановиться в текущем расположении при подключении отладчика.
+В PowerShell 7.0 эксперимент включает параметр **BreakAll** в командлетах `Debug-Runspace` и `Debug-Job`, чтобы пользователи могли решить, будет ли работа PowerShell в текущем расположении немедленно прервана при подключении отладчика.
+
+В PowerShell 7.1 этот эксперимент также добавляет параметр **Runspace** к командлетам `*-PSBreakpoint`.
+
+- `Disable-PSBreakpoint`
+- `Enable-PSBreakpoint`
+- `Get-PSBreakpoint`
+- `Remove-PSBreakpoint`
+- `Set-PSBreakpoint`
+
+Параметр **Runspace** указывает объекту **Runspace** взаимодействовать с точками останова в указанном пространстве выполнения.
+
+```powershell
+Start-Job -ScriptBlock {
+    Set-PSBreakpoint -Command Start-Sleep
+    Start-Sleep -Seconds 10
+}
+
+$runspace = Get-Runspace -Id 1
+
+$breakpoint = Get-PSBreakPoint -Runspace $runspace
+```
+
+В этом примере задание запускается с точкой останова, для которой настроена прерывание при выполнении `Set-PSBreakPoint`. Пространство выполнения хранится в переменной и передается команде `Get-PSBreakPoint` с параметром **Runspace**. Затем вы можете просмотреть точку останова в переменной `$breakpoint`.
 
 ## <a name="pscommandnotfoundsuggestion"></a>PSCommandNotFoundSuggestion
 
@@ -129,6 +153,17 @@ Milliseconds      : 209
 - Если путь не является PSDrive или `~` (в Windows), то нормализация пути не происходит.
 - Если путь указан в одинарных кавычках, он не разрешается и рассматривается в качестве литерала.
 
+> [!NOTE]
+> Эта функция вышла из экспериментального режима и является основной функцией в PowerShell 7.1 и более поздних версиях.
+
+## <a name="psnotapplyerroractiontostderr"></a>PSNotApplyErrorActionToStderr
+
+Если эта экспериментальная функция включена, записи ошибок, перенаправленные из собственных команд (например, при использовании операторов перенаправления, таких как `2>&1`), не записываются в переменную `$Error`, а привилегированная переменная `$ErrorActionPreference` не влияет на перенаправленные выходные данные.
+
+Многие собственные команды выполняют запись в `stderr` в качестве альтернативного потока для сохранения дополнительных сведений. Такое поведение может запутать пользователя при просмотре ошибок или же дополнительная выходная информация может быть утрачена для пользователя, если для `$ErrorActionPreference` настроено состояние, блокирующее вывод данных.
+
+Если собственная команда имеет ненулевой код завершения, для `$?` задается значение `$false`. Если код завершения равен нулю, для `$?` задается значение `$true`.
+
 ## <a name="psnullconditionaloperators"></a>PSNullConditionalOperators
 
 Эта функция вводит новые операторы для операторов доступа к членам, определяемого условием NULL: `?.` и `?[]`. Операторы доступа к членам, определяемого условием NULL, могут использоваться для скалярных типов и типов массивов. Возвращает значение члена, к которому был получен доступ, если переменная не равна значению NULL. Если значение переменной равно значению NULL, тогда возвращается NULL.
@@ -150,6 +185,9 @@ ${x}?.MyMethod()
 
 Так как PowerShell допускает `?` в качестве части имени переменной, когда операторы используются без пробела между именем переменной и оператором, требуется устранение неоднозначности. Чтобы устранить неоднозначность, переменные должны заключить имя переменной в скобки `{}`, например: `${x?}?.propertyName` или `${y}?[0]`.
 
+> [!NOTE]
+> Эта функция вышла из экспериментального режима и является основной функцией в PowerShell 7.1 и более поздних версиях.
+
 ## <a name="pstempdrive"></a>PSTempDrive
 
 Создает `TEMP:` PSDrive, сопоставленный с временным каталогом пользователя.
@@ -164,7 +202,7 @@ ${x}?.MyMethod()
 Результат `Get-ChildItem` должен выглядеть следующим образом.
 
 ```powershell
-PS> dir | select -first 4 -skip 5
+dir | select -first 4 -skip 5
 
 
     Directory: /Users/jimtru/src/github/forks/JamesWTruher/PowerShell-1
