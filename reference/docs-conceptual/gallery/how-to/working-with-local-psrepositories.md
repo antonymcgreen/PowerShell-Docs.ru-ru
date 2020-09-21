@@ -3,12 +3,12 @@ ms.date: 11/06/2018
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery,psget
 title: Работа с локальными репозиториями PowerShell
-ms.openlocfilehash: c1bd905674ae76a3badd3eff50780f0e1bb5fc64
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 421b73c141c7551224e2298f51464a19bc736d0e
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75415825"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837585"
 ---
 # <a name="working-with-private-powershellget-repositories"></a>Работа с частными репозиториями PowerShellGet
 
@@ -109,16 +109,16 @@ Register-PSRepository -Default
 
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
-Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'oy2bi4avlkjolp6bme6azdyssn6ps3iu7ib2qpiudrtbji'
+Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey $nuGetApiKey
 ```
+
+> [!IMPORTANT]
+> Чтобы обеспечить безопасность, ключи API не следует жестко программировать в скриптах. Используйте безопасную систему управления ключами. При выполнении команды вручную ключи API не должны передаваться как обычный текст, чтобы избежать записи в журнал. Для безопасной передачи значения ключа API можно использовать командлет `Read-Host`.
 
 ```powershell
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
-
-> [!IMPORTANT]
-> Чтобы обеспечить безопасность, ключи API не следует жестко программировать в скриптах. Используйте безопасную систему управления ключами.
 
 ### <a name="publishing-a-module-from-the-psgallery"></a>Публикация модуля из PSGallery
 
@@ -126,10 +126,10 @@ Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey
 
 - Укажите имя пакета.
 - Укажите NuGet в качестве поставщика.
-- Укажите расположение PSGallery в качестве источника (https://www.powershellgallery.com/api/v2) ).
+- Укажите расположение PSGallery в качестве источника (https://www.powershellgallery.com/api/v2)).
 - Укажите путь к вашему локальному репозиторию.
 
-Пример
+Пример.
 
 ```powershell
 # Publish from the PSGallery to your local Repository
@@ -179,18 +179,20 @@ Install-PowerShellGetOffline -LocalFolder 'F:\OfflinePowerShellGet'
 
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
-Publish-Module -Path 'F:\OfflinePowershellGet' -Repository LocalPsRepo -NuGetApiKey 'oy2bi4avlkjolp6bme6azdyssn6ps3iu7ib2qpiudrtbji'
+Publish-Module -Path 'F:\OfflinePowershellGet' -Repository LocalPsRepo -NuGetApiKey $nuGetApiKey
+```
 
+> [!IMPORTANT]
+> Чтобы обеспечить безопасность, ключи API не следует жестко программировать в скриптах. Используйте безопасную систему управления ключами. При выполнении команды вручную ключи API не должны передаваться как обычный текст, чтобы избежать записи в журнал. Для безопасной передачи значения ключа API можно использовать командлет `Read-Host`.
+
+```powershell
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'F:\OfflinePowerShellGet' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
 
 ## <a name="use-packaging-solutions-to-host-powershellget-repositories"></a>Использование решений упаковки для размещения репозиториев PowerShellGet
 
-Вы также можете использовать такие решения упаковки, как Azure Artifacts, для размещения частного или общедоступного репозитория PowerShellGet. Дополнительные сведения и инструкции см. в [документации по Azure Artifacts](https://docs.microsoft.com/azure/devops/artifacts/tutorials/private-powershell-library).
-
-> [!IMPORTANT]
-> Чтобы обеспечить безопасность, ключи API не следует жестко программировать в скриптах. Используйте безопасную систему управления ключами.
+Вы также можете использовать такие решения упаковки, как Azure Artifacts, для размещения частного или общедоступного репозитория PowerShellGet. Дополнительные сведения и инструкции см. в [документации по Azure Artifacts](/azure/devops/artifacts/tutorials/private-powershell-library).
 
 <!-- external links -->
 [OfflinePowerShellGetDeploy]: https://www.powershellgallery.com/packages/OfflinePowerShellGetDeploy/0.1.1

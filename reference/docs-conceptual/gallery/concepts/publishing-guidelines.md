@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: коллекции,powershell,командлет,psgallery
 description: Руководства для издателей
 title: Руководства и рекомендации для публикации коллекции PowerShell
-ms.openlocfilehash: 5ee33ba12475f9d3e5ceb3b31f37d9f2acc19d9e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c58b23b0021e0745ee690a78f7e42c821d59cdb0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500599"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777854"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Руководства и рекомендации для публикации коллекции PowerShell
 
@@ -128,7 +128,7 @@ Example: RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="
 - MacOS: пакеты, которые совместимы с операционной системой компьютеров Mac
 
 Отмеченный с помощью тегов пакет с совместимыми платформами будет включен в фильтры поиска в коллекции на панели результатов поиска слева. Если вы, отмечая пакет тегами, размещаете его на сайте GitHub, вы сможете воспользоваться преимуществами [экранирования совместимости коллекции PowerShell](https://img.shields.io/powershellgallery/p/:packageName.svg)
-![экранирование совместимости](media/publishing-guidelines/CosmosDB.svg).
+![пример экранирования совместимости](media/publishing-guidelines/CosmosDB.svg).
 
 ## <a name="include-tests"></a>Включение тестов
 

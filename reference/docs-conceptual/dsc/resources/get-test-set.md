@@ -1,21 +1,20 @@
 ---
-ms.date: 12/12/2018
+ms.date: 07/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Методы Get, Test, Set
-ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: f7b7e947a85832365a783e40c25a25bfaa9fff8d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278429"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771521"
 ---
 # <a name="get-test-set"></a>Методы Get, Test, Set
 
 >Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-![Получение, тестирования и настройка](media/get-test-set/get-test-set.png)
-
-Настройка требуемого состояния (DSC) PowerShell основана на процессе **получения**, **тестирования** и **настройки**. Во всех [ресурсах](resources.md) DSC содержатся методы выполнения каждой из этих операций. В [конфигурации](../configurations/configurations.md) необходимо определить блоки ресурсов, чтобы заполнить ключи, которые становятся параметрами для методов ресурса **Get**, **Test** и **Set**.
+Настройка требуемого состояния (DSC) PowerShell основана на процессе **получения**, **тестирования** и **настройки**. Во всех [ресурсах](resources.md) DSC содержатся методы выполнения каждой из этих операций.
+В [конфигурации](../configurations/configurations.md) необходимо определить блоки ресурсов, чтобы заполнить ключи, которые становятся параметрами для методов ресурса **Get**, **Test** и **Set**.
 
 Далее представлен синтаксис для блока ресурса **Service**. Ресурс **Service** настраивает службы Windows.
 
@@ -40,49 +39,49 @@ Service [String] #ResourceName
 Методы **Get**, **Test** и **Set** ресурса **Service** будут содержать блоки параметров, которые принимают эти значения.
 
 ```powershell
-    param
-    (
-        [parameter(Mandatory = $true)]
-        [ValidateNotNullOrEmpty()]
-        [System.String]
-        $Name,
+param
+(
+    [parameter(Mandatory = $true)]
+    [ValidateNotNullOrEmpty()]
+    [System.String]
+    $Name,
 
-        [System.String]
-        [ValidateSet("Automatic", "Manual", "Disabled")]
-        $StartupType,
+    [System.String]
+    [ValidateSet("Automatic", "Manual", "Disabled")]
+    $StartupType,
 
-        [System.String]
-        [ValidateSet("LocalSystem", "LocalService", "NetworkService")]
-        $BuiltInAccount,
+    [System.String]
+    [ValidateSet("LocalSystem", "LocalService", "NetworkService")]
+    $BuiltInAccount,
 
-        [System.Management.Automation.PSCredential]
-        [ValidateNotNull()]
-        $Credential,
+    [System.Management.Automation.PSCredential]
+    [ValidateNotNull()]
+    $Credential,
 
-        [System.String]
-        [ValidateSet("Running", "Stopped")]
-        $State="Running",
+    [System.String]
+    [ValidateSet("Running", "Stopped")]
+    $State="Running",
 
-        [System.String]
-        [ValidateNotNullOrEmpty()]
-        $DisplayName,
+    [System.String]
+    [ValidateNotNullOrEmpty()]
+    $DisplayName,
 
-        [System.String]
-        [ValidateNotNullOrEmpty()]
-        $Description,
+    [System.String]
+    [ValidateNotNullOrEmpty()]
+    $Description,
 
-        [System.String]
-        [ValidateNotNullOrEmpty()]
-        $Path,
+    [System.String]
+    [ValidateNotNullOrEmpty()]
+    $Path,
 
-        [System.String[]]
-        [ValidateNotNullOrEmpty()]
-        $Dependencies,
+    [System.String[]]
+    [ValidateNotNullOrEmpty()]
+    $Dependencies,
 
-        [System.String]
-        [ValidateSet("Present", "Absent")]
-        $Ensure="Present"
-    )
+    [System.String]
+    [ValidateSet("Present", "Absent")]
+    $Ensure="Present"
+)
 ```
 
 > [!NOTE]
@@ -104,7 +103,7 @@ Configuration TestConfig
 }
 ```
 
-Если скомпилировать вышеуказанную конфигурацию, значения, указанные для ключа, сохранятся в сгенерированном MOF-файле. Дополнительные сведения о [MOF-файле](/windows/desktop/wmisdk/managed-object-format--mof-).
+Если скомпилировать вышеуказанную конфигурацию, значения, указанные для ключа, сохранятся в сгенерированном файле `.mof`. Дополнительные сведения о [MOF-файле](/windows/desktop/wmisdk/managed-object-format--mof-).
 
 ```
 instance of MSFT_ServiceResource as $MSFT_ServiceResource1ref
@@ -121,13 +120,14 @@ ModuleVersion = "1.0";
 };
 ```
 
-При использовании этого кода [локальный диспетчер конфигураций](../managing-nodes/metaConfig.md) (LCM) считывает из MOF-файла значение "Spooler" и передает его в параметр `-Name` методов **Get**, **Test** и **Set** для экземпляра "MyService" ресурса **Service**.
+При использовании этого кода [локальный диспетчер конфигураций](../managing-nodes/metaConfig.md) (LCM) считывает из файла `.mof` значение Spooler и передает его в параметр **Name** методов **Get**, **Test** и **Set** для экземпляра MyService ресурса **Service**.
 
 ## <a name="get"></a>Получить
 
-Метод ресурса **Get** извлекает состояние ресурса, настроенное на целевом узле. Это состояние возвращается в виде [хэш-таблицы](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Ключами **хэш-таблицы** будут настраиваемые значения или параметры, принимаемые ресурсом.
+Метод ресурса **Get** извлекает состояние ресурса, настроенное на целевом узле. Это состояние возвращается в виде [хэш-таблицы](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
+Ключами **хэш-таблицы** будут настраиваемые значения или параметры, принимаемые ресурсом.
 
-Метод **Get** отображается непосредственно в командлете [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration). При вызове командлета `Get-DSCConfiguration` LCM запускает метод **Get** для каждого ресурса в текущей применяемой конфигурации. LCM использует значения ключей, хранящиеся в MOF-файле, в качестве параметров для каждого соответствующего экземпляра ресурса.
+Метод **Get** отображается непосредственно в командлете [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration). При вызове командлета `Get-DSCConfiguration` LCM запускает метод **Get** для каждого ресурса в текущей применяемой конфигурации. LCM использует значения ключей, хранящиеся в файле `.mof`, в качестве параметров для каждого соответствующего экземпляра ресурса.
 
 Ниже приведен пример выходных данных для ресурса **Service**, который настраивает службу Spooler.
 
@@ -177,10 +177,9 @@ Service [String] #ResourceName
 
 ## <a name="test"></a>Тест
 
-Метод ресурса **Test** определяет, соответствует ли сейчас целевой узел *требуемому состоянию* ресурса. Метод **Test** возвращает значение `$True` или `$False` только, чтобы указать, соответствует ли узел.
-При вызове командлета [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) LCM вызывает метод **Test** для каждого ресурса в текущей применяемой конфигурации. LCM использует значения ключей, хранящиеся в MOF-файле, в качестве параметров для каждого соответствующего экземпляра ресурса.
+Метод ресурса **Test** определяет, соответствует ли сейчас целевой узел _требуемому состоянию_ ресурса. Метод **Test** возвращает значение `$true` или `$false` только, чтобы указать, соответствует ли узел. При вызове командлета [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) LCM вызывает метод **Test** для каждого ресурса в текущей применяемой конфигурации. LCM использует значения ключей, хранящиеся в MOF-файле, в качестве параметров для каждого соответствующего экземпляра ресурса.
 
-Если в результате применения какого-либо отдельного метода **Test** ресурса возвращается значение `$False`, командлет `Test-DSCConfiguration` возвращает значение `$False`, указывая, что узел не соответствует текущему ресурсу. Если все методы **Test** ресурса возвращают значение `$True`, `Test-DSCConfiguration` возвращает значение `$True`, чтобы указать, что узел соответствует текущему ресурсу.
+Если в результате применения какого-либо отдельного метода **Test** ресурса возвращается значение `$false`, командлет `Test-DSCConfiguration` возвращает значение `$false`, указывая, что узел не соответствует текущему ресурсу. Если все методы **Test** ресурса возвращают значение `$true`, `Test-DSCConfiguration` возвращает значение `$true`, чтобы указать, что узел соответствует текущему ресурсу.
 
 ```powershell
 Test-DSCConfiguration
@@ -190,7 +189,7 @@ Test-DSCConfiguration
 True
 ```
 
-Начиная с PowerShell 5.0 добавлен параметр `-Detailed`. Если указать параметр `-Detailed`, это приведет к тому, что командлет `Test-DSCConfiguration` вернет объект, содержащий коллекции результатов для совместимых и несовместимых ресурсов.
+Начиная с PowerShell 5.0, был добавлен параметр **Detailed**. Если указать параметр **Detailed**, это приведет к тому, что командлет `Test-DSCConfiguration` вернет объект, содержащий коллекции результатов для совместимых и несовместимых ресурсов.
 
 ```powershell
 Test-DSCConfiguration -Detailed
@@ -206,9 +205,9 @@ localhost       {[Service]Spooler}                                            Tr
 
 ## <a name="set"></a>Присвойте параметру
 
-Метод **Set** ресурса пытается сделать узел совместимым с *требуемым состоянием* ресурса. Метод **Set** должен быть **идемпотентным**. Это означает, что при любом запуске **Set** всегда будет получен один и тот же результат без ошибок.  При запуске командлета [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration) LCM циклически перебирает каждый ресурс в текущей применяемой конфигурации. LCM извлекает значения ключей текущего экземпляра ресурса из MOF-файла и использует их как параметры метода **Test**. Если метод **Test** возвращает значение `$True`, узел соответствует текущему ресурсу, а метод **Set** не вызывается. Если **Test** возвращает значение `$False`, значит, узел не соответствует текущему ресурсу.  LCM передает значения ключей экземпляра ресурса в качестве параметров методу **Set** ресурса, восстанавливая соответствие узла.
+Метод **Set** ресурса пытается сделать узел совместимым с *требуемым состоянием* ресурса. Метод **Set** должен быть **идемпотентным**. Это означает, что при любом запуске **Set** всегда будет получен один и тот же результат без ошибок. При запуске командлета [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration) LCM циклически перебирает каждый ресурс в текущей применяемой конфигурации. LCM извлекает значения ключей текущего экземпляра ресурса из MOF-файла и использует их как параметры метода **Test**. Если метод **Test** возвращает значение `$true`, узел соответствует текущему ресурсу, а метод **Set** не вызывается. Если **Test** возвращает значение `$false`, значит, узел не соответствует текущему ресурсу. LCM передает значения ключей экземпляра ресурса в качестве параметров методу **Set** ресурса, восстанавливая соответствие узла.
 
-Указав параметры `-Verbose` и `-Wait`, можно наблюдать за ходом выполнения командлета `Start-DSCConfiguration`. В этом примере узел уже соответствует текущему ресурсу. Параметр `Verbose` в выходных данных указывает, что метод **Set** не вызывался.
+Указав параметры **Verbose** и **Wait**, можно наблюдать за ходом выполнения командлета `Start-DSCConfiguration`. В этом примере узел уже соответствует текущему ресурсу. Параметр `Verbose` в выходных данных указывает, что метод **Set** не вызывался.
 
 ```
 PS> Start-DSCConfiguration -Verbose -Wait -UseExisting
@@ -237,6 +236,6 @@ VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 
 ## <a name="see-also"></a>См. также раздел
 
-- [Обзор DSC службы автоматизации Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview).
+- [Обзор DSC службы автоматизации Azure](/azure/automation/automation-dsc-overview).
 - [Настройка опрашивающего SMB-сервера](../pull-server/pullServerSMB.md)
 - [Настройка опрашивающего клиента](../pull-server/pullClientConfigID.md)

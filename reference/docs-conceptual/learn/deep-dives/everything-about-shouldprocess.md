@@ -3,12 +3,12 @@ title: Все, что вы хотели знать о ShouldProcess
 description: ShouldProcess — важный компонент, который часто упускают из виду. Параметры WhatIf и Confirm упрощают добавление в функции.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 1d9110302a191b90bd11bdf742f77704a8c9d6f0
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 6bd4dbd5255203f2daf804163aa2a84d992d6697
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149487"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469741"
 ---
 # <a name="everything-you-wanted-to-know-about-shouldprocess"></a>Все, что вы хотели знать о ShouldProcess
 
@@ -481,7 +481,7 @@ if ($PSCmdlet.ShouldProcess('TARGET')){
 
 Если указать как `-Force`, так и `-WhatIf`, приоритет будет у `-WhatIf`. При таком подходе обработка `-WhatIf` сохраняется, так как `ShouldProcess` выполняется всегда.
 
-Не добавляйте проверку для значения `$Force` в инструкцию IF с методом `ShouldProcess`. Это неподходящий вариант для данного конкретного сценария, несмотря на то, что я продемонстрирую его в следующем разделе, посвященном `ShouldContinue`.
+Не добавляйте проверку для значения `$Force` в инструкции `if` с помощью метода `ShouldProcess`. Это неподходящий вариант для данного конкретного сценария, несмотря на то, что я продемонстрирую его в следующем разделе, посвященном `ShouldContinue`.
 
 ### <a name="shouldcontinue--force"></a>Параметр -Force метода ShouldContinue
 

@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 0f72fb5baf5b829142b18ed774261e9b3b66291b
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: e8938a5d36cd1c9c5a74eed1c22cd5d0e1a91966
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438025"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786753"
 ---
 # <a name="chapter-1---getting-started-with-powershell"></a>Глава 1. Начало работы с PowerShell
 
@@ -29,7 +29,7 @@ ms.locfileid: "84438025"
 
 Самый простой способ найти PowerShell в Windows 10 — ввести **PowerShell** в строке поиска, как показано на рис. 1-1.
 
-![Рис. 1-1](media/figure1-1.png)
+![Рис. 1-1. Поиск PowerShell в меню "Пуск"](media/figure1-1.png)
 
 Обратите внимание, что на рис. 1-1 показаны четыре разных ярлыка для PowerShell. Компьютер, используемый в демонстрационных целях в этой книге, работает под управлением 64-разрядной версии Windows 10, поэтому существует 64-разрядная версия консоли PowerShell и PowerShell ISE (интегрированной среды сценариев) и 32-разрядная версия каждой из них (обозначена суффиксом (x86) на ярлыках). Если вы работаете с 32-разрядной версией Windows 10, у вас будет только два ярлыка. У этих элементов нет суффикса (x86), но они являются 32-разрядными версиями. Если у вас установлена 64-разрядная операционная система, рекомендуется запускать 64-разрядную версию PowerShell, только если вас нет особой причины для запуска 32-разрядной версии.
 
@@ -41,7 +41,7 @@ ms.locfileid: "84438025"
 
 Я запустил консоль PowerShell, щелкнув ярлык Windows PowerShell, как показано на рис. 1-1.
 
-![Рис. 1-4](media/figure1-4.png)
+![Рис. 1-4. Заголовок окна PowerShell](media/figure1-4.png)
 
 Обратите внимание, что в строке заголовка консоли PowerShell указано "Windows PowerShell", как показано на рис. 1-4. Некоторые команды выполняются нормально, но PowerShell не поддерживает управление доступом пользователей (UAC). Это означает, что оболочка не может запрашивать повышение прав для задач, требующих утверждения администратором.
 Выдается следующее сообщение об ошибке.
@@ -66,7 +66,7 @@ At line:1 char:29
 
 Закройте PowerShell. Перезапустите консоль PowerShell, только на этот раз щелкните правой кнопкой мыши ярлык **Windows PowerShell** и выберите пункт **Запуск от имени администратора**, как показано на рис. 1-5.
 
-![Рис. 1-5](media/figure1-5.png)
+![Рис. 1-5. Контекстное меню "Запуск от имени администратора"](media/figure1-5.png)
 
 Если вы выполнили вход в Windows в качестве обычного пользователя, вам будет предложено ввести учетные данные. Я буду вводить учетные данные учетной записи пользователя, которая является пользователем домена и локальным администратором, как показано на рис. 1-6.
 
@@ -86,11 +86,11 @@ At line:1 char:29
 
 Щелкните правой кнопкой мыши ярлык PowerShell, который теперь закреплен на панели задач, и выберите пункт "Свойства", как показано на рис. 1-9.
 
-![Рис. 1-9](media/figure1-9.png)
+![Рис. 1-9. Управление учетными записями пользователей — ввод учетных данных](media/figure1-9.png)
 
 Щелкните "Дополнительно", как показано в первой части рис. 1-10, установите флажок "Запуск от имени администратора", как показано во второй части рис. 1-10, а затем дважды нажмите кнопку OK, чтобы принять изменения и выйти из обоих диалоговых окон.
 
-![Рис. 1-10](media/figure1-10.png)
+![Рис. 1-10. Заголовок окна "Администратор"](media/figure1-10.png)
 
 Вам больше никогда не придется беспокоиться о поиске PowerShell или о том, запущена ли оболочка от имени администратора или нет.
 
@@ -217,13 +217,15 @@ Start-Service -Name w32time
 Тем, кто хочет более подробно изучить темы, описанные в этой главе, рекомендуется ознакомиться со следующими разделами справки по PowerShell.
 
 - [about_Automatic_Variables][]
+- [about_Hash_Tables][]
 - [about_Execution_Policies][]
 
 В следующей главе вы узнаете о возможности обнаружения команд в PowerShell. Помимо прочих вопросов в ней будет рассматриваться обновление PowerShell, после которого разделы справки можно будет просматривать непосредственно в PowerShell, а не в Интернете.
 
 <!-- link references -->
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
-[about_Execution_Policies]: /powershell//powershell/module/microsoft.powershell.core/about/about_execution_policies
+[about_Hash_Tables]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
+[about_Execution_Policies]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
 [Обновление существующей версии Windows PowerShell]: /powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell
 [Installing Windows PowerShell]: /powershell/scripting/install/installing-powershell (Установка Windows PowerShell)
 [Запуск Windows PowerShell]: /powershell/scripting/windows-powershell/starting-windows-powershell

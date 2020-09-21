@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,установка
 title: Усовершенствования DSC в WMF 5.1
-ms.openlocfilehash: 78c15f453977384ba437b0bd69cd620eb1a29fbd
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 445d0f7bb54c6b21b6af26c4174f3d6422caf6dd
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809100"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771555"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Усовершенствования в настройке требуемого состояния (DSC) в WMF 5.1
 
@@ -345,12 +345,12 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
   Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
   ```
 
-  ![Ошибка "MOF-файл не подписан"](media/DSC-improvements/PushUnsignedMof.png)
+  ![Ошибка: отправлен неподписанный MOF-файл](media/DSC-improvements/PushUnsignedMof.png)
 
 - Подпишите файл конфигурации с помощью сертификата подписи кода.
 
-  ![Подписанный MOF-файл](media/DSC-improvements/SignMofFile.png)
+  ![Подписание MOF-файла](media/DSC-improvements/SignMofFile.png)
 
 - Попробуйте отправить подписанный MOF-файл.
 
-  ![PushSignedMofFile](media/DSC-improvements/PushSignedMof.png)
+  ![Отправка подписанного MOF-файла](media/DSC-improvements/PushSignedMof.png)

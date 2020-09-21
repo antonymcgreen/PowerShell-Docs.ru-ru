@@ -3,12 +3,12 @@ title: Все, что вы хотели знать об исключениях
 description: Обработка ошибок — это лишь часть процесса написания кода.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 3ecb1669fa8d58bc742d4e8e77051b3ace4452a0
-ms.sourcegitcommit: 4a40e3ea3601c02366be3495a5dcc7f4cac9f1ea
+ms.openlocfilehash: cd17ae6b5ded052c93923b648155a4dda8956b34
+ms.sourcegitcommit: 94c39b0d36b948d3a62707ae8a3be00efe606434
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84337188"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012567"
 ---
 # <a name="everything-you-wanted-to-know-about-exceptions"></a>Все, что вы хотели знать об исключениях
 
@@ -583,5 +583,5 @@ throw [System.Exception]::new('third')
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [Сообщество Reddit/r/PowerShell]: https://www.reddit.com/r/PowerShell/comments/64866o/kevmar_all_net_46_exceptions_list_for_use_with/
 [Большой список исключений .NET]: https://powershellexplained.com/2017-04-07-all-dotnet-exception-list
-[FileNotFoundException]: https://docs.microsoft.com/dotnet/api/System.IO.FileNotFoundException
-[Документация по .NET]: https://docs.microsoft.com/dotnet/api
+[FileNotFoundException]: /dotnet/api/System.IO.FileNotFoundException
+[Документация по .NET]: /dotnet/api

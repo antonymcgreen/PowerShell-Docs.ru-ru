@@ -2,12 +2,12 @@
 title: Использование Visual Studio Code для разработки в PowerShell
 description: Использование Visual Studio Code для разработки в PowerShell
 ms.date: 11/07/2019
-ms.openlocfilehash: b492e59f340f4cec92c177ad44bbab9dc95da5da
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 181746e7d3df2880223d1f15a0c8b99b324f5b98
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808860"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782537"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Использование Visual Studio Code для разработки в PowerShell
 
@@ -54,7 +54,7 @@ ms.locfileid: "83808860"
    1. На боковой панели открывается представление **Расширения**. Выберите расширение PowerShell корпорации Майкрософт.
       Откроется примерно следующий экран Visual Studio Code:
 
-      ![Visual Studio Code](media/using-vscode/vscode.png)
+      ![Visual Studio Code — обзор расширения PowerShell](media/using-vscode/vscode.png)
 
    1. Нажмите кнопку **Установить** для расширения PowerShell корпорации Майкрософт.
    1. После установки кнопка **Установить** изменяется на **Reload** (Перезагрузить). Нажмите кнопку **Reload** (Перезагрузить).
@@ -190,7 +190,7 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 
 Сначала откройте панель расширений и найдите `PowerShell`. Затем щелкните значок шестеренки и выберите команду **Install another version...** (Установить другую версию...).
 
-![Install another version... (Установить другую версию...)](media/using-vscode/install-another-version.png)
+![Пункт меню — "Установить другую версию..."](media/using-vscode/install-another-version.png)
 
 Затем выберите версию **2020.1.0**. Эта версия расширения — последняя версия, которую поддерживает Windows PowerShell версий 3 и 4. Обязательно добавьте следующий параметр, чтобы версия расширения не обновлялась автоматически:
 

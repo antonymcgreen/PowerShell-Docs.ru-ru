@@ -1,13 +1,13 @@
 ---
 title: Установка PowerShell в Linux
 description: Сведения об установке PowerShell в различных дистрибутивах Linux
-ms.date: 05/21/2020
-ms.openlocfilehash: 1f3526507f84c43fbe44235e9a44e43d7f3d3e37
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.date: 07/30/2020
+ms.openlocfilehash: ce69f75416eb326e38d42991a4ae85a3a7298c5d
+ms.sourcegitcommit: 79d430fe48ad77a058f42b6bc9955d21b657987e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84148469"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87441765"
 ---
 # <a name="installing-powershell-on-linux"></a>Установка PowerShell в Linux
 
@@ -59,6 +59,9 @@ ms.locfileid: "84148469"
 
 - Ubuntu 20.04
 
+> [!NOTE]
+> PowerShell поддерживает только дистрибутивы, поддерживаемые .NET. Список поддерживаемых дистрибутивов см. в [заметках о выпуске .NET Core][distros]. Если существует дистрибутив, поддерживаемый .NET, но не указанный здесь, запросите добавление поддержки для этого дистрибутива. Отправьте запрос, используя шаблон [запроса на поддержку дистрибутива][].
+
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 ### <a name="installation-via-package-repository---ubuntu-1604"></a>Установка с помощью репозитория пакетов — Ubuntu 16.04
@@ -88,12 +91,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Установка с помощью прямого скачивания — Ubuntu 16.04
 
-Скачайте пакет Debian `powershell-lts_7.0.1-1.ubuntu.16.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
+Скачайте пакет Debian `powershell-lts_7.0.3-1.ubuntu.16.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.1-1.ubuntu.16.04_amd64.deb
+sudo dpkg -i powershell-lts_7.0.3-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -138,12 +141,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>Установка с помощью прямого скачивания — Ubuntu 18.04
 
-Скачайте пакет Debian `powershell-lts_7.0.1-1.ubuntu.18.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
+Скачайте пакет Debian `powershell-lts_7.0.3-1.ubuntu.18.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.1-1.ubuntu.18.04_amd64.deb
+sudo dpkg -i powershell-lts_7.0.3-1.ubuntu.18.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -238,12 +241,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-9"></a>Установка с помощью прямого скачивания — Debian 9
 
-Скачайте пакет Debian `powershell-lts_7.0.1-1.debian.9_amd64.deb` со страницы [выпусками][] на компьютер с Debian.
+Скачайте пакет Debian `powershell-lts_7.0.3-1.debian.9_amd64.deb` со страницы [выпусками][] на компьютер с Debian.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.1-1.debian.9_amd64.deb
+sudo dpkg -i powershell-lts_7.0.3-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -283,7 +286,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-10"></a>Установка с помощью прямого скачивания — Debian 10
 
-Скачайте пакет tar.gz `powershell-7.0.1-linux-x64.tar.gz` на странице с [выпусками][] на компьютер с Debian.
+Скачайте пакет tar.gz `powershell-7.0.3-linux-x64.tar.gz` на странице с [выпусками][] на компьютер с Debian.
 
 Затем выполните в терминале следующие команды:
 
@@ -305,7 +308,7 @@ sudo apt-get install -y \
         curl
 
 # Download the powershell '.tar.gz' archive
-curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-7.0.1-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -330,7 +333,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>Установка с помощью прямого скачивания — Alpine 3.9 и 3.10
 
-Скачайте пакет tar.gz `powershell-7.0.1-linux-alpine-x64.tar.gz` на странице с [выпусками][] на компьютер с Alpine.
+Скачайте пакет tar.gz `powershell-7.0.3-linux-alpine-x64.tar.gz` на странице с [выпусками][] на компьютер с Alpine.
 
 Затем выполните в терминале следующие команды:
 
@@ -355,7 +358,7 @@ sudo apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache \
     lttng-ust
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-7.0.1-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -397,18 +400,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---centos-7"></a>Установка с помощью прямого скачивания — CentOS 7
 
-Используя [CentOS 7][], скачайте пакет RPM `powershell-lts-7.0.1-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с CentOS.
+Используя [CentOS 7][], скачайте пакет RPM `powershell-lts-7.0.3-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с CentOS.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo yum install powershell-lts-7.0.1-1.rhel.7.x86_64.rpm
+sudo yum install powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
 ```
 
 RPM можно установить без промежуточного скачивания:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-lts-7.0.1-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---centos-7"></a>Удаление — CentOS 7
@@ -440,18 +443,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>Установка с помощью прямого скачивания — Red Hat Enterprise Linux (RHEL) 7
 
-Скачайте пакет RPM `powershell-lts-7.0.1-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с Red Hat Enterprise Linux.
+Скачайте пакет RPM `powershell-lts-7.0.3-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с Red Hat Enterprise Linux.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo yum install powershell-lts-7.0.1-1.rhel.7.x86_64.rpm
+sudo yum install powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
 ```
 
 RPM можно установить без промежуточного скачивания:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-lts-7.0.1-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a>Удаление — Red Hat Enterprise Linux (RHEL) 7
@@ -469,7 +472,7 @@ sudo yum remove powershell
 zypper update && zypper --non-interactive install curl tar libicu52_1
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-7.0.1-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -494,7 +497,7 @@ pwsh
 zypper update && zypper --non-interactive install curl tar gzip libopenssl1_0_0 libicu60_2
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-7.0.1-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -552,20 +555,20 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-28-29-and-30"></a>Установка с помощью прямого скачивания — Fedora 28, 29 и 30
 
-Скачайте пакет RPM `powershell-7.0.1-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с Fedora.
+Скачайте пакет RPM `powershell-7.0.3-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с Fedora.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install powershell-7.0.1-1.rhel.7.x86_64.rpm
+sudo dnf install powershell-7.0.3-1.rhel.7.x86_64.rpm
 ```
 
 RPM можно установить без промежуточного скачивания:
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-7.0.1-1.rhel.7.x86_64.rpm
+sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---fedora-28-29-and-30"></a>Удаление — Fedora 28, 29 и 30
@@ -688,13 +691,13 @@ sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
 # Download and extract PowerShell
 
 # Grab the latest tar.gz
-wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-7.0.1-linux-arm32.tar.gz
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-arm32.tar.gz
 
 # Make folder to put powershell
 mkdir ~/powershell
 
 # Unpack the tar.gz file
-tar -xvf ./powershell-7.0.1-linux-arm32.tar.gz -C ~/powershell
+tar -xvf ./powershell-7.0.3-linux-arm32.tar.gz -C ~/powershell
 
 # Start PowerShell
 ~/powershell/pwsh
@@ -774,7 +777,7 @@ PowerShell создает переносимые двоичные файлы д�
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-7.0.1-linux-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -809,5 +812,12 @@ sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 
 PowerShell отвечает требованиям [спецификации каталога размещения файлов, связанных со средой настольной графической среды (X-сервера), стандартизированного XDG (X Desktop Group)][xdg-bds] в Linux.
 
+## <a name="installation-support"></a>Поддержка установки
+
+Корпорация Майкрософт поддерживает методы установки, изложенные в этом документе. В других источниках могут быть доступны другие методы установки. Хотя такие инструменты и методы могут работать, корпорация Майкрософт не поддерживает их.
+
+<!-- link references -->
 [выпусками]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+[distros]: https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md#linux
+[Запрос на поддержку дистрибутива]: https://github.com/PowerShell/PowerShell/issues/new?assignees=&labels=Distribution-Request&template=Distribution_Request.md&title=Distribution+Support+Request

@@ -1,14 +1,14 @@
 ---
 title: Все, что вы хотели знать о PSCustomObject
 description: PSCustomObject — это простое средство для создания структурированных данных.
-ms.date: 05/23/2020
+ms.date: 07/29/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: fbc8b5b6d2cfafaa75fa820f420762a1804074ac
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 9a5cab7e662ef89b6565a29079ce1d5a657f94d0
+ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149497"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410144"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>Все, что вы хотели знать о PSCustomObject
 
@@ -71,7 +71,7 @@ $myObject = New-Object -TypeName PSObject -Property $myHashtable
 
 ### <a name="saving-to-a-file"></a>Сохранение в папке
 
-Самый лучший способ сохранить хэш-таблицу в файл — использовать формат JSON. Вы можете импортировать ее обратно в `[PSCusomObject]`.
+Самый лучший способ сохранить хэш-таблицу в файл — использовать формат JSON. Вы можете импортировать ее обратно в `[PSCustomObject]`.
 
 ```powershell
 $myObject | ConvertTo-Json -depth 1- | Set-Content -Path $Path
@@ -139,7 +139,7 @@ $myObject.$property
 
 Я знаю, что выглядит это странно, но это работает.
 
-### <a name="convert-pscustomboject-into-a-hashtable"></a>Преобразование объекта pscustomboject в хэш-таблицу
+### <a name="convert-pscustombobject-into-a-hashtable"></a>Преобразование объекта PSCustombObject в хэш-таблицу
 
 В продолжение сделанного в последнем разделе можно динамически проанализировать свойства и создать из них хэш-таблицу.
 
@@ -254,6 +254,9 @@ $myObject = [PSCustomObject]@{
 ```
 
 Мне нравится то, как хорошо он соответствует языку. Теперь, когда у нас есть объект с правильным именем типа, мы можем сделать кое-что еще.
+
+> [!NOTE]
+> Можно также создавать пользовательские типы PowerShell с помощью классов PowerShell. Дополнительные сведения см. в [описании класса PowerShell](/powershell/module/Microsoft.PowerShell.Core/About/about_Classes).
 
 ## <a name="using-defaultpropertyset-the-long-way"></a>Использование DefaultPropertySet (длинный способ)
 

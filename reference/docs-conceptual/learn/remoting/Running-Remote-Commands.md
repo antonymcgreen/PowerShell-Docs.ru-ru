@@ -1,19 +1,19 @@
 ---
-ms.date: 08/14/2018
+ms.date: 08/21/2020
 keywords: powershell,командлет
 title: Выполнение удаленных команд
-ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ab6d464c31144349ee38cd01e82a2cf1470aaa95
+ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030316"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88799627"
 ---
 # <a name="running-remote-commands"></a>Выполнение удаленных команд
 
 Одна команда Windows PowerShell позволяет запускать команды на одном или сотнях компьютеров. Windows PowerShell поддерживает удаленное вычисление с помощью разных технологий, включая WMI, RPC и WS-Management.
 
-PowerShell Core поддерживает инструментарий WMI, WS-Management и удаленное взаимодействие через SSH. RPC больше не поддерживается.
+PowerShell Core поддерживает инструментарий WMI, WS-Management и удаленное взаимодействие через SSH. В PowerShell 6 RPC больше не поддерживается. В PowerShell 7 и более поздних версиях RPC поддерживается только в Windows.
 
 Дополнительные сведения об удаленном взаимодействии в PowerShell Core см. в следующих статьях:
 
@@ -55,8 +55,7 @@ Get-Command | where { $_.parameters.keys -contains "ComputerName" -and $_.parame
 
 ### <a name="start-an-interactive-session"></a>Запуск интерактивного сеанса
 
-Чтобы запустить интерактивный сеанс с одним удаленным компьютером, используйте командлет [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession).
-Например, чтобы запустить интерактивный сеанс с удаленным компьютером Server01, введите:
+Чтобы запустить интерактивный сеанс с одним удаленным компьютером, используйте командлет [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession). Например, чтобы запустить интерактивный сеанс с удаленным компьютером Server01, введите:
 
 ```powershell
 Enter-PSSession Server01
@@ -73,7 +72,7 @@ Exit-PSSession
 См. дополнительные сведения о командлетах Enter-PSSession и Exit-PSSession:
 
 - [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession)
-- [Exit-PSSession](/powershell/module/microsoft.powershell.core/exit-pssession)
+- [Exit-PSSession;](/powershell/module/microsoft.powershell.core/exit-pssession)
 
 ### <a name="run-a-remote-command"></a>Выполнение удаленной команды
 
@@ -132,13 +131,13 @@ Windows PowerShell включает поставщик WSMan. Поставщик
 
 См. дополнительные сведения о [поставщике WSMan](https://technet.microsoft.com/library/dd819476.aspx) и [командлетах WS-Management](/powershell/module/microsoft.powershell.core/about/about_ws-management_cmdlets) или введите команду `Get-Help wsman` в консоли Windows PowerShell.
 
-Дополнительные сведения см. в разделе:
+Дополнительные сведения можно найти в разделе
 
 - [Часто задаваемые вопросы об удаленном взаимодействии](https://technet.microsoft.com/library/dd315359.aspx)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
 - [Import-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
 
-Справку по ошибкам службы удаленного взаимодействия см. в статье [about_Remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx).
+Справку по ошибкам службы удаленного взаимодействия см. в разделе [about_Remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx).
 
 ## <a name="see-also"></a>См. также:
 

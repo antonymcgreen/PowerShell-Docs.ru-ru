@@ -3,12 +3,12 @@ ms.date: 09/10/2018
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Управление ключами API
-ms.openlocfilehash: 0f44a080415f1acf13680771b6e9db5b805f8f45
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c428689d065c63716db6bc546434623e9375f8ba
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278320"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777593"
 ---
 # <a name="managing-api-keys"></a>Управление ключами API
 
@@ -59,7 +59,7 @@ ms.locfileid: "78278320"
 
 Можно изменить некоторые параметры существующего ключа. Как уже отмечалось, нельзя изменить область безопасности для существующего ключа API или изменить срок его действия. На следующем снимке экрана показаны изменяемые параметры.
 
-![Получение нового значения ключа API](media/creating-APIkeys/PSGallery_EditAPIKey.png)
+![Изменение значения ключа API](media/creating-APIkeys/PSGallery_EditAPIKey.png)
 
 Чтобы изменить пакеты, управляемые с помощью ключа, можно выбрать отдельные пакеты в списке или изменить стандартную маску.
 

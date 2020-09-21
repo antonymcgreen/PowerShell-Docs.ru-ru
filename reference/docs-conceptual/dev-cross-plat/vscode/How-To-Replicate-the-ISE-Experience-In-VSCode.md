@@ -2,12 +2,12 @@
 title: Репликация функций интегрированной среды скриптов в Visual Studio Code
 description: Репликация функций интегрированной среды скриптов в Visual Studio Code
 ms.date: 08/06/2018
-ms.openlocfilehash: 899e1c393fd49b0659631b88d610e80ec885e69e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 6b0b8ce054695d6cc0fc578290c554e2dc1472bc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809600"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784628"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Репликация функций интегрированной среды скриптов в Visual Studio Code
 
@@ -25,7 +25,7 @@ ms.locfileid: "83809600"
 
 Эта команда автоматически применяет многие параметры, описанные в этом документе. Результат имеет следующий вид:
 
-![Режим ISE](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
+![Visual Studio Code в режиме ISE](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
 
 ## <a name="ise-mode-configuration-settings"></a>Параметры конфигурации режима ISE
 
@@ -122,7 +122,7 @@ ms.locfileid: "83809600"
 
 - На веб-сайте 4sysops доступна [замечательная статья][4sysops] о настройках VS Code, которые сделают интерфейс программы похожим на интегрированную среду скриптов.
 - [Отличная статья][mikefrobbins] о настройке VS Code, написанная Майком Ф. Роббинсом (Mike F. Robbins).
-- Еще одна [хорошая статья][learnpwsh] о настройке VS Code для работы с PowerShell на сайте Learn PowerShell.
+<!-- - Learn PowerShell has [an excellent write up][learnpwsh] setup for PowerShell. -->
 
 ## <a name="vs-code-tips"></a>Рекомендации по работе с Visual Studio Code
 
@@ -138,7 +138,7 @@ ms.locfileid: "83809600"
 
 ## <a name="more-settings"></a>Дополнительные параметры
 
-Если вы знаете, как еще можно упростить работу с VS Code для пользователей интегрированной среды скриптов, дополните эту статью. Если существует конфигурация совместимости, которую вы не можете включить, не медлите и [Отправить сообщение о проблеме][].
+Если вы знаете, как еще можно упростить работу с VS Code для пользователей интегрированной среды скриптов, дополните эту статью. Если существует конфигурация совместимости, которую вы не можете включить, не медлите и [создайте запрос][].
 
 Мы всегда рады содействию и запросам на включение внесенных изменений.
 

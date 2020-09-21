@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: Создание запросов Get-WinEvent с помощью FilterHashtable
-ms.openlocfilehash: 485b0cf05489d9add201c71c01fe2ed0c48db387
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 002d84515368663e0e807f48ffe883bd533be1d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563941"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786651"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Создание запросов Get-WinEvent с помощью FilterHashtable
 
@@ -97,7 +97,7 @@ Get-WinEvent -FilterHashtable @{
 
 Продолжайте выполнять сборку хэш-таблицы с использованием ключа **ProviderName**. **ProviderName** — это имя, отображаемое в поле **источника** в средстве **Просмотра событий Windows**. Например, **среда выполнения .NET** на следующем снимке экрана:
 
-![Изображение источников в средстве "Просмотр событий Windows".](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
+![Изображение источников в средстве "Просмотр событий Windows"](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
 Обновите хэш-таблицу и добавьте пару **ключ-значение** с ключом **ProviderName** и значением **.NET Runtime**.
 
@@ -127,7 +127,7 @@ Get-WinEvent -FilterHashtable @{
 Откройте средство **Просмотр событий Windows** и в окне **Действия** щелкните **Фильтровать текущий журнал**.
 В раскрывающемся меню **Ключевые слова** отображаются доступные ключевые слова, как показано на следующем снимке экрана:
 
-![Изображение ключевых слов средства "Просмотр событий Windows".](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
+![Изображение ключевых слов средства "Просмотр событий Windows"](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
 
 Используйте следующую команду для отображения имен свойств `StandardEventKeywords`.
 

@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: коллекции,powershell,командлет,psgallery
 title: Параметры учетной записи коллекции PowerShell
-ms.openlocfilehash: 7f67311b42123f247a00a9c7a5bf775685b64d48
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b71c7f0658c24ec2eeddb050e48b777a37c11917
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560463"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771793"
 ---
 # <a name="powershell-gallery-account-settings"></a>Параметры учетной записи коллекции PowerShell
 
@@ -36,7 +36,7 @@ ms.locfileid: "83560463"
 - Users can contact me through the PowerShell Gallery (Пользователи могут связываться со мной с помощью коллекции PowerShell)
 - Notify me when an item is pushed to the PowerShell Gallery using my account (Уведомлять об отправке пакета в коллекцию PowerShell с помощью моей учетной записи)
 
-![Изменение адреса электронной почты](media/managing-account/PSGallery_AccountEmailOptions.png)
+![Выбор параметров адреса электронной почты](media/managing-account/PSGallery_AccountEmailOptions.png)
 
 Как указано на странице, критически важные уведомления из коллекции PowerShell отключить невозможно.
 К ним относятся следующие объекты.
@@ -49,20 +49,20 @@ ms.locfileid: "83560463"
 
 Чтобы изменить учетную запись входа, необходимо выполнить вход с помощью текущей учетной записи. Выполните следующие действия для изменения учетной записи.
 
-![Параметры учетной записи](media/managing-account/PSGallery_LoginAccountSettings.png)
+![Изменение параметров учетной записи](media/managing-account/PSGallery_LoginAccountSettings.png)
 
 1. Щелкните **Изменить учетную запись**. Появится всплывающее окно объясняющее, что изменение учетной записи входа применяется ко всем случаям использования этой учетной записи в коллекции PowerShell. Ознакомьтесь с информацией и нажмите кнопку **ОК**, чтобы продолжить.
 
-   ![Параметры учетной записи](media/managing-account/PSGallery_LoginAccountChange-1.png)
+   ![Подтверждение изменения — OK/отмена](media/managing-account/PSGallery_LoginAccountChange-1.png)
 
 2. Затем вам будет предложено выполнить вход с помощью _новой учетной записи_.
 
-   ![Параметры учетной записи](media/managing-account/PSGallery_LoginAccountChange-2.png)
+   ![Войти с помощью новой учетной записи](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
 3. После нажатия кнопки **Далее** появится сообщение, информирующее о входе с использованием текущей учетной записи.
    Щелкните **Выйти и выполнить вход с использованием другой учетной записи**.
 
-   ![Параметры учетной записи](media/managing-account/PSGallery_LoginAccountChange-3.png)
+   ![Выйти и войти в другую учетную запись](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. Введите пароль новой учетной записи. После ввода пароля вы вернетесь на страницу параметров учетной записи, где отображается обновленная учетная запись.
 

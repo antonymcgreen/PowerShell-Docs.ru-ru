@@ -1,12 +1,12 @@
 ---
 title: Совместимость модулей PowerShell 7
 ms.date: 02/03/2020
-ms.openlocfilehash: 273e25e3b7cd48e09b63e50c34ed0b98a4e766f0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d618f9e55f5997bfd724a4e58bb94c348bd681ce
+ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565069"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722819"
 ---
 # <a name="powershell-7-module-compatibility"></a>Совместимость модулей PowerShell 7
 
@@ -69,13 +69,14 @@ Install-WindowsFeature -Name ActiveDirectory
 | Имя модуля                        | Состояние                               | Поддерживаемая ОС                       |
 | ---------------------------------- | ------------------------------------ | ---------------------------------- |
 | ActiveDirectory                    | Встроенная совместимость                  | Windows Server 1809 или более поздней версии с RSAT-AD-PowerShell<br>Windows 10 1809 или более поздней версии с Rsat.ActiveDirectory.DS-LDS.Tools |
+| ADDSDeployment                     | Работает с уровнем совместимости       |  Windows Server 2019 1809 или более поздней версии         |
 | ADFS                               | Проверка уровня совместимости не проводилась    |                                    |
 | AppBackgroundTask                  | Встроенная совместимость                  | Windows 10 1903 или более поздней версии                   |
 | AppLocker                          | Проверка уровня совместимости не проводилась    |                                    |
 | AppvClient                         | Проверка уровня совместимости не проводилась    |                                    |
 | Appx                               | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии |
 | AssignedAccess                     | Встроенная совместимость                  | Windows 10 1809 или более поздней версии                   |
-| BestPractices                      | Проверка уровня совместимости не проводилась    |                                    |
+| BestPractices                      | Не поддерживается уровнем совместимости |                                    |
 | BitLocker                          | Встроенная совместимость                  | Windows Server 1809 или более поздней версии с BitLocker<br>Windows 10 1809 или более поздней версии |
 | BitsTransfer                       | Встроенная совместимость                  | Windows Server 20H1<br>Windows 10 20H1 |
 | BootEventCollector                 | Проверка уровня совместимости не проводилась    |                                        |
@@ -83,7 +84,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | CimCmdlets                         | Встроенная совместимость                  | Встроен в PowerShell 7 |
 | ClusterAwareUpdating               | Проверка уровня совместимости не проводилась    |                         |
 | ConfigCI                           | Проверка уровня совместимости не проводилась    |                         |
-| Defender                           | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии  |
+| Защитник                           | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии  |
 | DeliveryOptimization               | Встроенная совместимость                  | Windows Server 1903 или более поздней версии<br>Windows 10 1903 или более поздней версии  |
 | DFSN                               | Встроенная совместимость                  | Windows Server 1809 или более поздней версии с FS-DFS-Namespace<br>Windows 10 1809 или более поздней версии с Rsat.FailoverCluster.Management.Tools |
 | DFSR                               | Проверка уровня совместимости не проводилась    |                                   |
@@ -148,7 +149,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | Подготовка                       | Проверка уровня совместимости не проводилась    |                                               |
 | PSDesiredStateConfiguration        | Частично                            | Встроен в PowerShell 7                       |
 | PSDiagnostics                      | Встроенная совместимость                  | Встроен в PowerShell 7                       |
-| PSScheduledJob                     | Не работает с уровнем совместимости | Встроен в PowerShell 5.1                     |
+| PSScheduledJob                     | Не поддерживается уровнем совместимости | Встроен в PowerShell 5.1                     |
 | PSWorkflow                         | Проверка уровня совместимости не проводилась    |                                               |
 | PSWorkflowUtility                  | Проверка уровня совместимости не проводилась    |                                               |
 | RemoteAccess                       | Проверка уровня совместимости не проводилась    |                                               |
@@ -156,7 +157,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | ScheduledTasks                     | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии      |
 | SecureBoot                         | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии      |
 | ServerCore                         | Проверка уровня совместимости не проводилась    |                                               |
-| ServerManager                      | Проверка уровня совместимости не проводилась    |                                               |
+| ServerManager                      | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии с Rsat.ServerManager.Tools<br>_См. примечания ниже_ |
 | ServerManagerTasks                 | Проверка уровня совместимости не проводилась    |                                               |
 | ShieldedVMDataFile                 | Встроенная совместимость                  | Windows Server 1903 или более поздней версии с RSAT-Shielded-VM-Tools<br>Windows 10 1903 или более поздней версии с Rsat.Shielded.VM.Tools |
 | ShieldedVMProvisioning             | Встроенная совместимость                  | Windows Server 1809 или более поздней версии с HostGuardian<br>Windows 10 1809 или более поздней версии с HostGuardian  |
@@ -167,7 +168,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | SMS                                | Проверка уровня совместимости не проводилась    |                                               |
 | SoftwareInventoryLogging           | Встроенная совместимость                  | Windows Server 1809 или более поздней версии                          |
 | StartLayout                        | Встроенная совместимость                  | Windows Server 1809 или более поздней версии с Desktop Experience<br>Windows 10 1809 или более поздней версии |
-| Память                            | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии      |
+| Служба хранилища                            | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии      |
 | StorageBusCache                    | Проверка уровня совместимости не проводилась    |                                               |
 | StorageMigrationService            | Проверка уровня совместимости не проводилась    |                                               |
 | StorageQOS                         | Встроенная совместимость                  | Windows Server 1809 или более поздней версии с RSAT-Clustering-PowerShell<br>Windows 10 1809 или более поздней версии с Rsat.FailoverCluster.Management.Tools |
@@ -178,7 +179,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | TroubleshootingPack                | Встроенная совместимость                  | Windows 10 1903 или более поздней версии                              |
 | TrustedPlatformModule              | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии      |
 | UEV                                | Встроенная совместимость                  | Windows Server ??будущая версия сервера с возможностями рабочего стола??<br>Windows 10 1903 или более поздней версии |
-| UpdateServices                     | Не работает с уровнем совместимости |                                               |
+| UpdateServices                     | Не поддерживается уровнем совместимости |                                               |
 | VpnClient                          | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии      |
 | Wdac                               | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии      |
 | WebAdministration                  | Проверка уровня совместимости не проводилась    |                                               |
@@ -189,3 +190,10 @@ Install-WindowsFeature -Name ActiveDirectory
 | WindowsServerBackup                | Встроенная совместимость                  | Windows Server 19H2 с Windows-Server-Backup |
 | WindowsUpdate                      | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии       |
 | WindowsUpdateProvider              | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии       |
+
+## <a name="notes"></a>Примечания
+
+### <a name="servermanager-module"></a>Модуль ServerManager
+
+У модуля есть незначительные проблемы с совместимостью с отформатированными выходными данными в PowerShell 7. Например, командлет `Get-WindowsFeature` возвращает соответствующий объект со всеми свойствами, но при форматировании отображения по умолчанию некоторые свойства выглядят пустыми. Фактические значения доступны в свойствах объекта с помощью `Select-Object` или прямого доступа к членам.
+

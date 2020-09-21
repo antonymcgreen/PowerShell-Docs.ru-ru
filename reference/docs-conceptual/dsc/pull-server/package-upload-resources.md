@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Упаковка и передача ресурсов на опрашиваемый сервер
-ms.openlocfilehash: 8aac343d7495ecda94ed76d1d97079397eecd65f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: d0e070b7aa43acbbbf087729d53f06dbc7e7734a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278513"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782894"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>Упаковка и передача ресурсов на опрашиваемый сервер
 
@@ -20,14 +20,14 @@ ms.locfileid: "78278513"
 
 ## <a name="package-resource-modules"></a>Модули ресурса Package
 
-Каждый ресурс, доступный пользователю для загрузки, должен храниться в ZIP-файле. В приведенном ниже примере показаны необходимые шаги с использованием ресурса [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0).
+Каждый ресурс, доступный клиенту для загрузки, должен храниться в файле `.zip`. В приведенном ниже примере показаны необходимые шаги с использованием ресурса [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0).
 
 > [!NOTE]
 > Если у вас есть клиенты, использующие PowerShell 4.0, вам потребуется расширить структуру папок ресурсов и удалить все папки версий. Дополнительные сведения см. в разделе [Несколько версий ресурса](../configurations/import-dscresource.md#multiple-resource-versions).
 
-Вы можете сжать каталог ресурсов, используя любую программу, сценарий или метод. В Windows вы можете *щелкнуть правой кнопкой мыши* каталог xPSDesiredStateConfiguration и выбрать "Отправить", а затем "Сжатая папка".
+Вы можете сжать каталог ресурсов, используя любую программу, сценарий или метод. В Windows щелкните каталог `xPSDesiredStateConfiguration` _правой кнопкой мыши_ и выберите **Отправить**, а затем — **Сжатая папка**.
 
-![Щелчок правой кнопкой мыши](media/package-upload-resources/right-click.gif)
+![Правый щелчок — "Отправить" — "Сжатая папка"](media/package-upload-resources/right-click.gif)
 
 ### <a name="naming-the-resource-archive"></a>Именование ресурса Archive
 
@@ -37,11 +37,11 @@ ms.locfileid: "78278513"
 {ModuleName}_{Version}.zip
 ```
 
-В приведенном выше примере xPSDesiredStateConfiguration.zip необходимо переименовать в xPSDesiredStateConfiguration_8.4.4.0.zip.
+В приведенном выше примере `xPSDesiredStateConfiguration.zip` необходимо переименовать в `xPSDesiredStateConfiguration_8.4.4.0.zip`.
 
 ### <a name="create-checksums"></a>Создание контрольных сумм
 
-После сжатия и переименования модуля Resource вам необходимо создать **контрольную сумму**.  **Контрольная сумма** используется LCM на клиенте, чтобы определить, был ли изменен ресурс и нужно ли его загрузить снова. Вы можете создать **контрольную сумму** с помощью командлета [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum), как показано в примере ниже.
+После сжатия и переименования модуля Resource вам необходимо создать **контрольную сумму**. **Контрольная сумма** используется LCM на клиенте, чтобы определить, был ли изменен ресурс и нужно ли его загрузить снова. Вы можете создать **контрольную сумму** с помощью командлета [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum), как показано в примере ниже.
 
 ```powershell
 New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip

@@ -1,20 +1,20 @@
 ---
-ms.date: 12/12/2018
+ms.date: 06/22/2020
 keywords: dsc,powershell,настройка,служба,установка
 title: Создание, компиляция и применение конфигурации
-ms.openlocfilehash: 11de1d4552bc9c438adf9e3dea2059834e11e10c
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 9acb2db882795d7150326fadb2964deb1105b2cc
+ms.sourcegitcommit: 7eea0885dd7ac90ab36e5664501438a292217f7f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808305"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295681"
 ---
 # <a name="write-compile-and-apply-a-configuration"></a>Создание, компиляция и применение конфигурации
 
 > Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-В этом упражнении демонстрируется создание и применение конфигурации Desired State Configuration (DSC).
-В следующем примере вы узнаете, как написать и применить очень простую конфигурацию. Конфигурация будет гарантировать, что файл "HelloWorld.txt" существует на локальном компьютере. В случае удаления файла DSC будет создавать его заново при очередном обновлении.
+В этом упражнении демонстрируется создание и применение конфигурации Desired State Configuration (DSC). В следующем примере вы узнаете, как написать и применить очень простую конфигурацию. Конфигурация будет гарантировать, что файл "HelloWorld.txt" существует на локальном компьютере.
+В случае удаления файла DSC будет создавать его заново при очередном обновлении.
 
 См. дополнительные сведения об особенностях работы с DSC в [обзоре платформы Desired State Configuration для разработчиков](../overview/overview.md).
 
@@ -34,10 +34,12 @@ Configuration HelloWorld {
     # Import the module that contains the File resource.
     Import-DscResource -ModuleName PsDesiredStateConfiguration
 
-    # The Node statement specifies which targets to compile MOF files for, when this configuration is executed.
+    # The Node statement specifies which targets to compile MOF files for, when
+    # this configuration is executed.
     Node 'localhost' {
 
-        # The File resource can ensure the state of files, or copy them from a source to a destination with persistent updates.
+        # The File resource can ensure the state of files, or copy them from a
+        # source to a destination with persistent updates.
         File HelloWorld {
             DestinationPath = "C:\Temp\HelloWorld.txt"
             Ensure = "Present"
@@ -47,8 +49,8 @@ Configuration HelloWorld {
 }
 ```
 
-> Важно! В более сложных сценариях, когда нужно импортировать несколько модулей, чтобы работать с множеством ресурсов DSC в одной конфигурации, обязательно помещайте каждый модуль в отдельную строку с помощью `Import-DscResource`.
-> Такое поведение проще поддерживать в системе управления версиями. Оно требуется при работе с DSC в Azure State Configuration.
+> [!IMPORTANT]
+> В более сложных сценариях, когда нужно импортировать несколько модулей, чтобы работать с множеством ресурсов DSC в одной конфигурации, обязательно помещайте каждый модуль в отдельную строку с помощью `Import-DscResource`. Такое поведение проще поддерживать в системе управления версиями. Оно требуется при работе с DSC в Azure State Configuration.
 >
 > ```powershell
 >  Configuration HelloWorld {
@@ -67,13 +69,10 @@ Configuration HelloWorld {
 
 ## <a name="compile-the-configuration"></a>Компиляция конфигурации
 
-Чтобы применить конфигурацию DSC к узлу, ее сначала нужно скомпилировать в MOF-файл.
-Выполнение конфигурации, как и функции, скомпилирует один MOF-файл для каждого узла, определенного в блоке `Node`.
-Чтобы запустить конфигурацию, необходимо *ввести по префиксу-точке* скрипт "HelloWorld.ps1" в текущей области.
-Дополнительные сведения см. в статье [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing).
+Чтобы применить конфигурацию DSC к узлу, ее сначала нужно скомпилировать в MOF-файл. Выполнение конфигурации, как и функции, скомпилирует один файл `.mof` для каждого узла, определенного в блоке `Node`. Чтобы запустить конфигурацию, необходимо _ввести по префиксу-точке_ скрипт `HelloWorld.ps1` в текущей области. Дополнительные сведения см. в статье [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing).
 
 <!-- markdownlint-disable MD038 -->
-*Введите по префиксу-точке* скрипт "HelloWorld.ps1", указав путь, где вы сохранили его, после `. ` (точка, пробел). Затем можно запустить конфигурацию, вызвав ее как функцию.
+_Введите по префиксу-точке_ скрипт `HelloWorld.ps1`, указав путь, где вы сохранили его, после `. ` (точка, пробел). Затем можно запустить конфигурацию, вызвав ее как функцию. Можно также вызвать функцию конфигурации в нижней части скрипта, чтобы не нужно было использовать префикс-точку.
 <!-- markdownlint-enable MD038 -->
 
 ```powershell
@@ -83,7 +82,7 @@ HelloWorld
 
 Будут созданы следующие выходные данные:
 
-```output
+```Output
 Directory: C:\Scripts\HelloWorld
 
 
@@ -96,10 +95,9 @@ Mode                LastWriteTime         Length Name
 
 Теперь, когда у вас есть скомпилированный MOF-файл, вы можете применить конфигурацию к целевому узлу (в нашем примере это локальный компьютер), вызвав командлет [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).
 
-Командлет `Start-DscConfiguration` сообщает [локальному диспетчеру конфигураций (LCM)](../managing-nodes/metaConfig.md) (ядру DSC) о необходимости применить конфигурацию.
-LCM вызывает ресурсы DSC для применения конфигурации.
+Командлет `Start-DscConfiguration` сообщает [локальному диспетчеру конфигураций (LCM)](../managing-nodes/metaConfig.md) (ядру DSC) о необходимости применить конфигурацию. LCM вызывает ресурсы DSC для применения конфигурации.
 
-Используйте приведенный ниже код для выполнения командлета `Start-DSCConfiguration`. Укажите путь к каталогу, где хранится "localhost.mof", в параметре `-Path`. Командлет `Start-DSCConfiguration` просматривает каталог, указанный для любых файлов вида "\<имя компьютера\>.mof". Командлет `Start-DSCConfiguration` пытается применить каждый MOF-файл, который найдет, к компьютеру, указанному в имени файла ("localhost", "server01", "dc-02" и т. д.).
+Используйте приведенный ниже код для выполнения командлета `Start-DSCConfiguration`. Укажите путь к каталогу, где хранится `localhost.mof`, в параметре **Path**. Командлет `Start-DSCConfiguration` просматривает каталог, указанный для любых файлов вида `<computername>.mof`. Командлет `Start-DSCConfiguration` пытается применить каждый файл `.mof`, который найдет, к `computername`, указанному в имени файла (localhost, server01, dc-02 и т. д.).
 
 > [!NOTE]
 > Если параметр `-Wait` не указан, `Start-DSCConfiguration` создает фоновое задание для выполнения операции. Указание параметра `-Verbose` позволяет наблюдать **подробные** результаты операции. И `-Wait`, и `-Verbose` — необязательные параметры.
@@ -110,17 +108,17 @@ Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
 
 ## <a name="test-the-configuration"></a>Тестирование конфигурации
 
-Когда командлет `Start-DSCConfiguration` будет завершен, вы увидите файл "HelloWorld.txt" в указанном месте. Можно проверить его содержимое с помощью командлета [Get-Content](/powershell/module/microsoft.powershell.management/get-content).
+Когда командлет `Start-DSCConfiguration` будет завершен, вы увидите файл `HelloWorld.txt` в указанном месте. Можно проверить его содержимое с помощью командлета [Get-Content](/powershell/module/microsoft.powershell.management/get-content).
 
-Вы также можете *протестировать* текущее состояние с помощью [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration).
+Вы также можете _протестировать_ текущее состояние с помощью [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration).
 
-Результат должен быть равен "True", если узел в настоящее время соответствует применяемой конфигурации.
+Результат должен быть равен `True`, если узел в настоящее время соответствует применяемой конфигурации.
 
 ```powershell
 Test-DSCConfiguration
 ```
 
-```output
+```Output
 True
 ```
 
@@ -128,7 +126,7 @@ True
 Get-Content -Path C:\Temp\HelloWorld.txt
 ```
 
-```output
+```Output
 Hello World from DSC!
 ```
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 02/28/2020
+ms.date: 07/23/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурсы DSC
-ms.openlocfilehash: bae08447763a3bdb6ee8fcdd4f8d49209a5de805
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 6ab831c9d423c6189951b43bfab92f800366ceca
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692202"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777925"
 ---
 # <a name="dsc-resources"></a>Ресурсы DSC
 
@@ -22,11 +22,11 @@ ms.locfileid: "83692202"
 Каждый ресурс содержит *схему, которая определяет синтаксис, используемый ресурсом при [конфигурации](../configurations/configurations.md).
 Схема ресурса может быть определена следующими способами.
 
-- Файл `Schema.Mof`. Большинство ресурсов определяют свою _схему_ в файле schema.mof с помощью [MOF](/windows/desktop/wmisdk/managed-object-format--mof-).
-- Файл `<Resource Name>.schema.psm1`. [Составные ресурсы](../configurations/compositeConfigs.md) определяют свою *схему* в файле `<ResourceName>.schema.psm1` с помощью [блока параметров](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
+- Файл `Schema.Mof`. Большинство ресурсов определяет свою _схему_ в файле `schema.mof` с помощью [MOF](/windows/desktop/wmisdk/managed-object-format--mof-).
+- Файл `<Resource Name>.schema.psm1`. [Составные ресурсы](../configurations/compositeConfigs.md) определяют свою _схему_ в файле `<ResourceName>.schema.psm1` с помощью [блока параметров](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
 - Файл `<Resource Name>.psm1`. Ресурсы DSC, основанные на классе, определяют свою _схему_ в описании класса. Элементы синтаксиса обозначаются как свойства класса. Дополнительные сведения см. в статье [About Classes and Desired State Configuration](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc) (О классах и настройке требуемого состояния).
 
-Чтобы получить синтаксис из ресурса DSC, используйте командлет [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) вместе с параметром `-Syntax`. Это похоже на использование командлета [Get-Command](/powershell/module/microsoft.powershell.core/get-command) с параметром `-Syntax` для получения синтаксиса командлета. В выходных данных будет показан шаблон, используемый в указанном блоке ресурса.
+Чтобы получить синтаксис из ресурса DSC, используйте командлет [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) с параметром **Syntax**. Это похоже на использование командлета [Get-Command](/powershell/module/microsoft.powershell.core/get-command) с параметром **Syntax** для получения синтаксиса командлета. В выходных данных будет показан шаблон, используемый в указанном блоке ресурса.
 
 ```powershell
 Get-DscResource -Syntax Service
@@ -54,6 +54,9 @@ Service [String] #ResourceName
     [State = [string]{ Running | Stopped }]
 }
 ```
+
+> [!NOTE]
+> В версиях PowerShell до 7.0 `Get-DscResource` не находит ресурсы DSC на основе класса.
 
 Блок ресурсов **Служба** внутри конфигурации может выглядеть следующим образом. Это необходимо, чтобы **убедиться**, что служба подсистемы печати работает.
 
@@ -104,9 +107,9 @@ Configuration TestConfig
 ```
 
 > [!NOTE]
-> Начиная с PowerShell 5.0, Intellisense была включена в DSC. Новая функция позволяет использовать клавиши <kbd>TAB</kbd> и <kbd>CTRL</kbd>+<kbd>ПРОБЕЛ</kbd> для автозаполнения имен ключей.
+> Начиная с PowerShell 5.0, технология IntelliSense включена в DSC. Новая функция позволяет использовать клавиши <kbd>TAB</kbd> и <kbd>CTRL</kbd>+<kbd>ПРОБЕЛ</kbd> для автозаполнения имен ключей.
 
-![Нажатие клавиши TAB для заполнения ресурса](media/resources/resource-tabcompletion.png)
+![Технология IntelliSense с использованием заполнения нажатием клавиши TAB](media/resources/resource-tabcompletion.png)
 
 ## <a name="types-of-resources"></a>Типы ресурсов
 

@@ -3,12 +3,12 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: gallery,powershell,psgallery
 title: Скачивание пакета вручную
-ms.openlocfilehash: e562f5b94b4d2caa7d31269a324e417d1a9e844a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 3e29437c4e35e47ab2028a7eea9f408daf1a59e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278730"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782860"
 ---
 # <a name="manual-package-download"></a>Скачивание пакета вручную
 
@@ -22,7 +22,7 @@ ms.locfileid: "78278730"
 
 На каждой странице находится ссылка для скачивания вручную, как показано ниже.
 
-![Скачивание вручную](media/manual-download/packagedisplaypagewithpseditions.png)
+![Страница отображения пакетов с параметрами установки](media/manual-download/packagedisplaypagewithpseditions.png)
 
 Чтобы скачать пакет вручную, щелкните ссылку **Скачать необработанный NUPKG-файл**. Копия пакета копируется в папку загрузки с именем `<name>.<version>.nupkg`.
 

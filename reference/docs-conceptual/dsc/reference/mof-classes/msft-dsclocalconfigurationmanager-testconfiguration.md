@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Метод TestConfiguration
-ms.openlocfilehash: 384134212e3b29b63dc045aee4b708c87c970302
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 0611c4d5543c49b879bef9b60cafdd0b055c9b86
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954871"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464304"
 ---
 # <a name="testconfiguration-method"></a>Метод TestConfiguration
 
@@ -26,13 +26,13 @@ uint32 TestConfiguration(
 
 ## <a name="parameters"></a>Параметры
 
-*configurationData* \[in\] Данные среды для конфигурации.
+**configurationData** \[in\]. Данные среды для конфигурации.
 
-*InDesiredState* \[out\] В выходных данных указывает, находится ли управляемый узел в состоянии, указанном в документе конфигурации.
+**InDesiredState** \[out\] В выходных данных указывает, находится ли управляемый узел в состоянии, указанном в документе конфигурации.
 
-*ResourcesInDesiredState* \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceInDesiredState**, определяющий ресурсы, которые находятся в нужном состоянии.
+**ResourcesInDesiredState** \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceInDesiredState**, определяющий ресурсы, которые находятся в нужном состоянии.
 
-*ResourcesNotInDesiredState* \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceNotInDesiredState**, определяющий ресурсы, которые не находятся в нужном состоянии.
+**ResourcesNotInDesiredState** \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceNotInDesiredState**, определяющий ресурсы, которые не находятся в нужном состоянии.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell 7.0
 description: Новые возможности и изменения в PowerShell 7.0
 ms.date: 03/04/2020
-ms.openlocfilehash: 313ed2b663262b57abd52bfc7378e1f4661dc03a
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: d52b536efd9d7a1f8e6b01a58952f08ca49016b1
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808407"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162466"
 ---
 # <a name="whats-new-in-powershell-70"></a>Новые возможности PowerShell 7.0
 
@@ -284,7 +284,7 @@ Get-ChildItem: Cannot find path 'C:\NotReal' because it does not exist
 ![Отображение ошибки скрипта](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
 В PowerShell 7 представление **ConciseView** используется по умолчанию. Ранее по умолчанию использовалось представление **NormalView**, и его можно выбрать с помощью переменной `$ErrorView`.
- 
+
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
 $ErrorView = 'ConciseView' # Sets the error view to ConciseView
@@ -357,11 +357,12 @@ $Env:POWERSHELL_UPDATECHECK = 'Default'
 
 Этот командлет вызывает ресурс DSC напрямую, не создавая документ конфигурации. С его помощью решения для управления конфигурацией могут управлять Windows или Linux посредством ресурсов DSC. Этот командлет также позволяет отлаживать ресурсы, когда модуль DSC работает с включенной отладкой.
 
-Эта команда вызывает метод **Set** ресурса с именем Log и задает свойство **Message**.
+Эта команда вызывает метод **Set** ресурса с именем **WindowsProcess** и предоставляет обязательные свойства **Path** и **Arguments** для запуска указанного процесса Windows.
 
 ```powershell
-Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
-  Message = 'Hello World'
+Invoke-DscResource -Name WindowsProcess -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
+  Path = 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
+  Arguments = ''
 }
 ```
 
@@ -518,7 +519,7 @@ Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration
 - Исправление проблем со стилем CodeFactor в фиксациях за последний месяц (№ 10591) (выражаем благодарность @iSazonov)
 - Исправлена опечатка в описании экспериментальной возможности PSTernaryOperator (№ 10586) (выражаем благодарность @bergmeister)
 - Значение перечисления ActionPreference.Suspend переведено в неподдерживаемое зарезервированное состояние; устранено ограничение на использование ActionPreference.Ignore в привилегированных переменных (№ 10317) (выражаем благодарность @KirkMunro)
-- Класс ArrayList заменен на List\<T> для повышения удобочитаемости и надежности кода без изменения функциональности (№ 10333). (Выражаем благодарность @iSazonov!)
+- Класс ArrayList заменен на List\<T> для повышения удобочитаемости и надежности кода без изменения функциональности (№ 10333) (выражаем благодарность @iSazonov)
 - Исправления стиля кода в TestConnectionCommand (№ 10439) (выражаем благодарность @vexx32)
 - Очистка AutomationEngine и удаление лишнего вызова метода SetSessionStateDrive (№ 10416) (выражаем благодарность @iSazonov)
 - Переименование атрибута ParameterSetName обратно в Delimiter для командлетов ConvertTo-Csv и ConvertFrom-Csv (№ 10425)

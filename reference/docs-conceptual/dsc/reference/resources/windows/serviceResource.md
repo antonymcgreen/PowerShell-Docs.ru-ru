@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурс Service в DSC
-ms.openlocfilehash: acd0710fb4b131876e3edece15b07cff8e9a8a9e
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: f936f58ffd00f84d8c6d5d41d93378eaa8db5879
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557011"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463590"
 ---
 # <a name="dsc-service-resource"></a>Ресурс Service в DSC
 
@@ -23,14 +23,18 @@ Service [string] #ResourceName
     Name = [string]
     [ BuiltInAccount = [string] { LocalService | LocalSystem | NetworkService }  ]
     [ Credential = [PSCredential] ]
+    [ StartupTimeout = [uint32]]
     [ StartupType = [string] { Automatic | Disabled | Manual }  ]
-    [ State = [string] { Running | Stopped }  ]
+    [ State = [string] { Ignore | Running | Stopped }  ]
+    [ Dependencies = [string[]] ]
     [ Description = [string] ]
+    [ DesktopInteract = [boolean]]
     [ DisplayName = [string] ]
     [ Path = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present } ]
     [ PsDscRunAsCredential = [PSCredential] ]
+    [ TerminateTimeout = [uint32] ]
 }
 ```
 
@@ -41,11 +45,15 @@ Service [string] #ResourceName
 |Имя |Указывает имя службы. Обратите внимание! Иногда оно отличается от отображаемого имени. Список служб и их текущее состояние можно получить с помощью командлета `Get-Service`. |
 |BuiltInAccount |Указывает учетную запись, используемую службой для входа. Допустимые значения этого свойства: **LocalService**, **LocalSystem** и **NetworkService**. |
 |Учетные данные |Указывает учетные данные для учетной записи, от имени которой будет запускаться служба. Это свойство нельзя использовать одновременно со свойством **BuiltinAccount**. |
+|StartupTimeout | Время ожидания выполнения службы в миллисекундах.|
 |StartupType |Указывает тип запуска службы. Допустимые значения этого свойства: **Automatic**, **Disabled** и **Manual**. |
 |Состояние |Указывает состояние, в котором должна находиться служба. Значения качества производительности: **Running** или **Stopped**. |
+|TerminateTimeout |Время ожидания остановки службы в миллисекундах.|
+|Зависимости | Массив имен зависимостей, которые должна иметь служба. |
 |Описание |Указывает описание целевой службы. |
+|DesktopInteract | Указывает, должна ли служба взаимодействовать с окном на рабочем столе. Для служб, не работающих в качестве LocalSystem, должно быть задано значение false.|
 |DisplayName |Указывает отображаемое имя целевой службы. |
-|путь |Указывает путь к двоичному файлу для новой службы. |
+|Путь |Указывает путь к двоичному файлу для новой службы. |
 
 ## <a name="common-properties"></a>Общие свойства
 

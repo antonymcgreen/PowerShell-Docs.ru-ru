@@ -3,12 +3,12 @@ title: Отправка запросов на вытягивание
 description: В этой статье описывается, как отправлять запросы на вытягивание в репозиторий PowerShell-Docs.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b56911dd4703530f31dd077a8d85ac131c82ee65
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 8b392a36c9469b83cf4f088c1799720a091434b4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690959"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782656"
 ---
 # <a name="how-to-submit-pull-requests"></a>Отправка запросов на вытягивание
 
@@ -56,9 +56,9 @@ Docs platform, so the values set in these 3 places will be ignored. Please remov
 Процесс происходит описанным ниже образом.
 
 1. Вы отправляете запрос на вытягивание.
-1. В GitHub в комментарии, в котором указывается состояние запроса на вытягивание, вы увидите состояние "checks" (проверки) для репозитория. Обратите внимание, что в этом примере включены две проверки: "Commit Validation" (Проверка фиксации) и OpenPublishing.Build:
+1. В GitHub в комментарии, в котором указывается состояние запроса на вытягивание, вы увидите состояние checks (проверки) для репозитория. Обратите внимание, что в этом примере включены две проверки: "Commit Validation" (Проверка фиксации) и OpenPublishing.Build:
 
-   ![некоторые проверки не пройдены](media/pull-requests/validation-failed.png)
+   ![состояние проверки — некоторые проверки не пройдены](media/pull-requests/validation-failed.png)
 
    Сборка может завершиться успешно, даже если проверка фиксации не пройдена.
 
@@ -66,7 +66,7 @@ Docs platform, so the values set in these 3 places will be ignored. Please remov
 1. На странице сведений вы увидите все проверки, которые не были пройдены, и информацию об устранении проблем.
 1. Когда проверка пройдена, к запросу на вытягивание добавляется следующий комментарий:
 
-   ![проверка сборки](media/pull-requests/build-validation.png)
+   ![Состояние проверки: успешно](media/pull-requests/build-validation.png)
 
 > [!NOTE]
 > Если вы являетесь внешним участником (не сотрудником корпорации Майкрософт), у вас нет доступа к подробным отчетам о сборке или ссылкам для предварительного просмотра.

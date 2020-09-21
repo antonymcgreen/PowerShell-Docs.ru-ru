@@ -1,16 +1,16 @@
 ---
-title: Все, что вы хотели знать об операторе IF
+title: Все, что вы хотели знать об операторе if
 description: Как и многие другие языки, PowerShell содержит операторы для условного исполнения кода в сценариях.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 6ffb70af694e80430d31991045b9fadc1a2cc3f0
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: b6bafb99bfb8ecd0152bae841e5c58d4c27ccd3e
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149527"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469758"
 ---
-# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>Все, что вы хотели знать об операторе IF
+# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>Все, что вы хотели знать об операторе `if`
 
 Как и многие другие языки, PowerShell содержит операторы для условного исполнения кода в сценариях. Одним из таких операторов является оператор [if][]. Сегодня мы более подробно поговорим об одной из важнейших команд в PowerShell.
 
@@ -22,7 +22,7 @@ ms.locfileid: "84149527"
 В сценариях часто требуется принимать решения и применять различные логики в зависимости от этих решений.
 Именно это имеется в виду под условным выполнением. У вас есть один оператор или значение для вычисления, а затем вы выполняете другой раздел кода на основе этого вычисления. Именно это и делает оператор `if`.
 
-## <a name="the-if-statement"></a>Оператор if
+## <a name="the-if-statement"></a>Инструкция `if`
 
 Ниже приведен простой пример оператора `if`.
 
@@ -533,7 +533,7 @@ else
 }
 ```
 
-Каждый блок сценария помещает в конвейер результаты выполнения команд или значение. Затем мы присваиваем результат оператора if переменной `$discount`. В этом примере можно так же легко присвоить эти значения переменной `$discount` непосредственно в каждом блоке ScriptBlock. Не сказал бы, что я часто использую эту возможность для оператора `if`, однако у меня есть пример недавнего использования.
+Каждый блок сценария помещает в конвейер результаты выполнения команд или значение. Затем мы присваиваем результат оператора `if` переменной `$discount`. В этом примере можно так же легко присвоить эти значения переменной `$discount` непосредственно в каждом блоке ScriptBlock. Не сказал бы, что я часто использую эту возможность для оператора `if`, однако у меня есть пример недавнего использования.
 
 ### <a name="array-inline"></a>Массив в строке
 
@@ -567,7 +567,7 @@ $snowSqlParam = @(
 
 ## <a name="simplify-complex-operations"></a>Упрощение сложных операций
 
-Вы неизбежно столкнетесь с такой ситуацией, когда необходимо проверить множество сравнений и для просмотра оператора if придется долго прокручивать экран вправо.
+Вы неизбежно столкнетесь с такой ситуацией, когда необходимо проверить множество сравнений и для просмотра оператора `If` придется долго прокручивать экран вправо.
 
 ```powershell
 $user = Get-ADUser -Identity $UserName
@@ -599,7 +599,7 @@ if ($null -ne $user -and
 
 ### <a name="pre-calculating-results"></a>Предварительное вычисление результатов
 
-Мы можем взять эту инструкцию из оператора if и просто проверить результат.
+Мы можем взять эту инструкцию из оператора `if` и просто проверить результат.
 
 ```powershell
 $needsSecureHomeDrive = $null -ne $user -and
@@ -691,11 +691,11 @@ if ( -not (Test-Path -Path $folder) )
 Оператор `if` очень простой, но именно он является основополагающим компонентом PowerShell. Вы будете очень часто его использовать практически в каждом созданном вами сценарии. Надеюсь, теперь вы лучше понимаете его работу, чем раньше.
 
 <!-- link references -->
-[Оригинал]: https://powershellexplained.com/2019-08-11-PowerShell-if-then-else-equals-operator/
+[Оригинал]: https://powershellexplained.com/2019-08-11-Powershell-if-then-else-equals-operator/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [if]: /powershell/module/microsoft.powershell.core/about/about_if (если);
-[побитовыми операторами]: https://powershellexplained.com/powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
+[побитовыми операторами]: /powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
 [множестве способов использования регулярных выражений]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression/
 [все, что вы хотели знать об исключениях]: everything-about-exceptions.md
 [всем, что необходимо знать о $null]: everything-about-null.md

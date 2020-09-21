@@ -3,12 +3,12 @@ title: Рассмотрение запросов на вытягивание
 description: В этой статье описывается, как команда PowerShell-Docs управляет запросами на вытягивание.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b9b37816dfdf38e4d8b7c2d66799164d0e97d257
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: af5280e91aa3744b6172dc3555df6989cb0ce1a2
+ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060389"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158179"
 ---
 # <a name="managing-pull-requests"></a>Управление запросами на вытягивание
 

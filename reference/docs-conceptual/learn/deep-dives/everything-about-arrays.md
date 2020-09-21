@@ -1,14 +1,14 @@
 ---
 title: Все, что вы хотели знать о массивах
 description: Массивы являются основополагающей функцией большинства языков программирования.
-ms.date: 05/23/2020
+ms.date: 07/07/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 5cab354a99b122401f8f8119de24e075cf9d21f8
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: e744878844a3cfd32d6124538a44a29ba90798ab
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149607"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092105"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>Все, что вы хотели знать о массивах
 
@@ -241,6 +241,8 @@ Three
 
 ```powershell
 PS> $data.GetUpperBound(0)
+3
+PS> $data[ $data.GetUpperBound(0) ]
 Three
 ```
 
@@ -586,7 +588,7 @@ True
 
 ### <a name="-in"></a>-in
 
-Если одно значение, которое вам нужно проверить, совпадает с одним или несколькими значениями, можно использовать оператор `-in`. Значение должно быть в левой, а массив — в правой части операции.
+Если одно значение, которое вам нужно проверить, совпадает с одним или несколькими значениями, можно использовать оператор `-in`. Значение должно быть в левой, а массив — в правой части оператора.
 
 ```powershell
 PS> $data = @('red','green','blue')
@@ -898,7 +900,7 @@ PS> $myList[-1]
 
 #### <a name="listpsobject"></a>List[PSObject]
 
-Можно получить список любого типа, но если вам неизвестен тип объектов, в качестве контейнера для них можно использовать `[List[PSObject]]`.
+Можно получить список любого типа, но, если вам неизвестен тип объектов, в качестве контейнера для них можно использовать `[List[PSObject]]`.
 
 ```powershell
 $list = [List[PSObject]]::new()

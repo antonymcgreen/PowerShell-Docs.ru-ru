@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Создание ресурса DSC в C#
-ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4652d5d99c32685e124f2cd1b718f973380ab16a
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417696"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217514"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Создание ресурса DSC в C\#
 
@@ -18,6 +18,7 @@ ms.locfileid: "74417696"
 Процесс создания схемы MOF и структуры папок, импорт и применения настраиваемого ресурса DSC (кроме реализации ресурса на языке C# в форме командлетов) соответствует описанию в статье [Написание пользовательских ресурсов DSC с использованием MOF](authoringResourceMOF.md).
 
 ## <a name="writing-a-cmdlet-based-resource"></a>Создание ресурса на основе командлетов
+
 В этом примере мы реализуем простой ресурс, управляющий текстовым файлом и его содержимым.
 
 ### <a name="writing-the-mof-schema"></a>Создание схемы MOF
@@ -35,6 +36,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 ```
 
 ### <a name="setting-up-the-visual-studio-project"></a>Настройка проекта Visual Studio
+
 #### <a name="setting-up-a-cmdlet-project"></a>Настройка проекта командлета
 
 1. Запустите Visual Studio.
@@ -46,11 +48,9 @@ class MSFT_XDemoFile : OMI_BaseResource
 
 ### <a name="writing-the-cmdlet-code"></a>Написание кода командлета
 
-Следующий код на языке C# реализует командлеты **Get-TargetResource**, **Set-TargetResource** и **Test-TargetResource**.
+Следующий код C# реализует командлеты `Get-TargetResource`, `Set-TargetResource` и `Test-TargetResource`.
 
 ```C#
-
-
 namespace cSharpDSCResourceExample
 {
     using System;
@@ -278,7 +278,11 @@ $env: psmodulepath (folder)
 ```
 
 ### <a name="see-also"></a>См. также:
+
 #### <a name="concepts"></a>Основные понятия
+
 [Написание пользовательских ресурсов DSC с использованием MOF](authoringResourceMOF.md)
+
 #### <a name="other-resources"></a>Другие ресурсы
+
 [Запись командлета Windows PowerShell](/powershell/scripting/developer/windows-powershell)

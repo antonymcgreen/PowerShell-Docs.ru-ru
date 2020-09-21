@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell Core 6.1
 description: Новые возможности и изменения в PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 070ecb871003487e2f1ff7b0d56c44c562acaaf8
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 7a50bc3a909df38d21a604399d590a2805359593
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565086"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837550"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Новые возможности PowerShell Core 6.1
 
@@ -34,9 +34,9 @@ ms.locfileid: "83565086"
 
 Благодаря пакету обеспечения совместимости Windows в PowerShell Core можно использовать **более 1900 командлетов, входящих в состав обновления Windows от 10 октября 2018 г. и Windows Server 2019**.
 
-## <a name="support-for-application-whitelisting"></a>Поддержка списков разрешенных приложений
+## <a name="support-for-application-allow-lists"></a>Поддержка списков разрешенных приложений
 
-В PowerShell Core 6.1 реализована та же поддержка, что и в Windows PowerShell 5.1, которая позволяет добавлять приложения в список разрешенных в [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) и [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control). Добавление приложений в список разрешенных обеспечивает более детализированное управление двоичными файлами, которые могут выполняться с помощью [ограниченного языкового режима](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) PowerShell.
+В PowerShell Core 6.1 реализована та же поддержка, что и в Windows PowerShell 5.1, которая позволяет добавлять приложения в список разрешенных в [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) и [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control). Добавление приложений в список разрешенных обеспечивает более детализированное управление двоичными файлами, которые могут выполняться с помощью [ограниченного языкового режима](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) PowerShell.
 
 ## <a name="performance-improvements"></a>Повышение производительности
 
@@ -88,9 +88,9 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 | Время (с)   | 0,259                  | 0,577               | 0.125                  |
 | Ускорение (%) | Недоступно                    | –122,8 %             | 78,3 % (51,7 % в WPS) |
 
-## <a name="check-system32-for-compatible-in-box-modules-on-windows"></a>Проверка `system32` на наличие совместимых встроенных модулей в Windows
+## <a name="check-system32-for-compatible-built-in-modules-on-windows"></a>Проверка `system32` на наличие совместимых встроенных модулей в Windows
 
-В обновлении 1809 Windows 10 и Windows Server 2019 мы обновили несколько готовых модулей PowerShell, и теперь они могут помечаться как совместимые с PowerShell Core.
+В обновлении 1809 Windows 10 и Windows Server 2019 мы обновили несколько встроенных модулей PowerShell, и теперь они могут помечаться как совместимые с PowerShell Core.
 
 При запуске PowerShell Core 6.1 будет автоматически включать `$windir\System32` как часть переменной среды `PSModulePath`. Однако она предоставляет модули в `Get-Module` и `Import-Module`, только если `CompatiblePSEdition` помечен как совместимый с `Core`.
 
@@ -197,7 +197,7 @@ Markdown — это стандарт для создания документо�
 
 [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) входит в состав PowerShell и Hyper-V и позволяет подключаться к виртуальной машине Hyper-V или контейнеру без сетевого соединения или других служб удаленного управления PowerShell.
 
-В прошлом для подключения PowerShell Direct использовался готовый экземпляр Windows PowerShell в контейнере. Теперь PowerShell Direct сначала пытается подключиться с помощью любого доступного `pwsh.exe` в переменной среды`PATH`. Если `pwsh.exe` недоступен, PowerShell Direct переключается на использование `powershell.exe`.
+В прошлом для подключения PowerShell Direct использовался встроенный экземпляр Windows PowerShell в контейнере. Теперь PowerShell Direct сначала пытается подключиться с помощью любого доступного `pwsh.exe` в переменной среды`PATH`. Если `pwsh.exe` недоступен, PowerShell Direct переключается на использование `powershell.exe`.
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting` теперь создает отдельные конечные точки удаленного взаимодействия для предварительных версий
 

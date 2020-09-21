@@ -3,12 +3,12 @@ title: Все, что вы хотели знать о хэш-таблицах
 description: Хэш-таблицы играют очень важную роль в PowerShell, поэтому будет полезно получить о них полное представление.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 336c32cca351cc7d87f3300364c075ba7bd8aaeb
-ms.sourcegitcommit: 0b9268e7b92fb76b47169b72e28de43e4bfe7fbf
+ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
+ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85353827"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Все, что вы хотели знать о хэш-таблицах
 
@@ -777,12 +777,13 @@ Name                           Value
 
 ```powershell
 $key = $ht.keys[0]
-$ht.$key
+$ht.$($key)
+a
 $ht[$key]
 a
 ```
 
-При использовании нотации доступа к элементам (`.`) ничего не возвращается. Но нотация индекса массива (`[]`) работает.
+Если ключ является массивом, необходимо заключить переменную `$key` в часть выражения, чтобы ее можно было использовать с нотацией доступа к членам (`.`). Или можно использовать нотацию индекса массива (`[]`).
 
 ## <a name="use-in-automatic-variables"></a>Использование в автоматических переменных
 
@@ -962,7 +963,7 @@ function Get-DeepClone
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [хэш-таблицах]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
 [массивах]: /powershell/module/microsoft.powershell.core/about/about_arrays
-[Если имеет значение производительность, протестируйте ее]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best%20Practices/Performance.md
+[Если имеет значение производительность, протестируйте ее]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [сплаттинг]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [PCSCustomObject]: everything-about-pscustomobject.md
 [JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8

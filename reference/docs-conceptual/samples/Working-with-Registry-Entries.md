@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Работа с записями реестра
-ms.openlocfilehash: c1fd6f57f13240eb2039f2d5756796678800aee0
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7f8ee87cebb8b220570bcb969445071a72a68526
+ms.sourcegitcommit: d3f78120bdc9096c72aa0dfdbdd91efaf254c738
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030729"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758488"
 ---
 # <a name="working-with-registry-entries"></a>Работа с записями реестра
 
@@ -111,7 +111,7 @@ DevicePath   : C:\WINDOWS\inf
 Эта команда возвращает стандартные свойства Windows PowerShell, а также свойство **DevicePath**.
 
 > [!NOTE]
-> Хотя `Get-ItemProperty` содержит параметры **Filter**, **Include** и **Exclude**, их нельзя использовать для фильтрации по имени свойства. Эти параметры относятся к разделам реестра (путям элементов), а не записям реестра. Записи реестра — это свойства элементов.
+> Хотя `Get-ItemProperty` содержит параметры **Filter**, **Include** и **Exclude**, их нельзя использовать для фильтрации по имени свойства. Эти параметры относятся в разделам реестра (путям элементов), а не к записям реестра (свойствам элементов).
 
 Другой вариант — использовать средство командной строки Reg.exe. Для получения справки по reg.exe введите `reg.exe /?` в командной строке. Чтобы найти запись DevicePath, используйте reg.exe, как показано в следующей команде:
 
@@ -196,7 +196,7 @@ PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 |DWord|Число, которое является допустимым UInt32|
 |ExpandString|Строка, которая может содержать динамически раскрывающиеся переменные среды|
 |MultiString|Многострочная строка|
-|String|Любое строковое значение|
+|Строка|Любое строковое значение|
 |QWord|8 байтов двоичных данных|
 
 > [!NOTE]
