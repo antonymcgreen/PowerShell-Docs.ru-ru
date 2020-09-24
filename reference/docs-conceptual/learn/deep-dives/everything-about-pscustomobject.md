@@ -3,12 +3,12 @@ title: Все, что вы хотели знать о PSCustomObject
 description: PSCustomObject — это простое средство для создания структурированных данных.
 ms.date: 07/29/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 9a5cab7e662ef89b6565a29079ce1d5a657f94d0
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+ms.openlocfilehash: 52620fd628d03f62db574210a2a5758c3bf29135
+ms.sourcegitcommit: a1886ba2cf35aebd650aafb3e5d7437c4e381781
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410144"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90804786"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>Все, что вы хотели знать о PSCustomObject
 
@@ -139,7 +139,7 @@ $myObject.$property
 
 Я знаю, что выглядит это странно, но это работает.
 
-### <a name="convert-pscustombobject-into-a-hashtable"></a>Преобразование объекта PSCustombObject в хэш-таблицу
+### <a name="convert-pscustomobject-into-a-hashtable"></a>Преобразование PSCustomObject в хэш-таблицу
 
 В продолжение сделанного в последнем разделе можно динамически проанализировать свойства и создать из них хэш-таблицу.
 
