@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell Core 6.1
 description: Новые возможности и изменения в PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 7a50bc3a909df38d21a604399d590a2805359593
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
+ms.openlocfilehash: 16159059285f89c2ddd85b506b0920f0aa8748ae
+ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837550"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90846921"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Новые возможности PowerShell Core 6.1
 
@@ -48,8 +48,8 @@ ms.locfileid: "85837550"
 Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Group-Object }
 ```
 
-|              | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1 |
-|--------------|------------------------|---------------------|---------------------|
+|    Метрика    | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1 |
+| ------------ | ---------------------- | ------------------- | ------------------- |
 | Время (с)   | 25,178                 | 19,653              | 6,641               |
 | Ускорение (%) | Недоступно                    | 21,9 %               | 66,2 %               |
 
@@ -59,8 +59,8 @@ Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Group-O
 Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Sort-Object }
 ```
 
-|              | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1 |
-|--------------|------------------------|---------------------|---------------------|
+|    Метрика    | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1 |
+| ------------ | ---------------------- | ------------------- | ------------------- |
 | Время (с)   | 12,170                 | 8,493               | 7,08                |
 | Ускорение (%) | Недоступно                    | 30,2 %               | 16,6 %               |
 
@@ -71,8 +71,8 @@ Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Sort-Ob
 Measure-Command {$a = Import-Csv foo.csv}
 ```
 
-|              | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1    |
-|--------------|------------------------|---------------------|------------------------|
+|    Метрика    | Windows PowerShell 5.1 | PowerShell Core 6.0 |  PowerShell Core 6.1   |
+| ------------ | ---------------------- | ------------------- | ---------------------- |
 | Время (с)   | 0,441                  | 1,069               | 0,268                  |
 | Ускорение (%) | Недоступно                    | –142,4 %             | 74,9 % (39,2 % в WPS) |
 
@@ -83,8 +83,8 @@ Measure-Command {$a = Import-Csv foo.csv}
 Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 ```
 
-|              | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1    |
-|--------------|------------------------|---------------------|------------------------|
+|    Метрика    | Windows PowerShell 5.1 | PowerShell Core 6.0 |  PowerShell Core 6.1   |
+| ------------ | ---------------------- | ------------------- | ---------------------- |
 | Время (с)   | 0,259                  | 0,577               | 0.125                  |
 | Ускорение (%) | Недоступно                    | –122,8 %             | 78,3 % (51,7 % в WPS) |
 
