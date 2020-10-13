@@ -1,247 +1,231 @@
 ---
-title: Утвержденные команды для команд PowerShell | Документация Майкрософт
+title: Утвержденные команды для PowerShell | Документация Майкрософт
 ms.date: 09/07/2018
 helpviewer_keywords:
 - action names [PowerShell SDK]
 - verb names [PowerShell SDK]
 - cmdlets [PowerShell SDK], verb names
-ms.openlocfilehash: f065610b6e54c9a6a927948bc6b2ffe5a1671e0c
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
-ms.translationtype: MT
+ms.openlocfilehash: 96ba7397f46bfcb7036f0242da1367c3df5d3de9
+ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162483"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91899862"
 ---
-# <a name="approved-verbs-for-powershell-commands"></a>Утвержденные команды для команд PowerShell
+# <a name="approved-verbs-for-powershell-commands"></a>Утвержденные команды для PowerShell
 
-PowerShell использует пару глагол-существительное для имен командлетов и производных классов Microsoft .NET Framework. Например, командлет, `Get-Command` предоставленный PowerShell, используется для получения всех команд, зарегистрированных в PowerShell. Глагол в имени определяет действие, выполняемое командлетом. Существительное в имени идентифицирует сущность, в которой выполняется действие.
+В PowerShell для имен командлетов и производных классов .NET используются пары из глагола и существительного.
+Глагол указывает на действие, выполняемое командлетом. Существительное указывает на объект, с которым выполняется действие. Например, командлет `Get-Command` извлекает все команды, зарегистрированные в PowerShell.
 
 > [!NOTE]
-> PowerShell использует _команду_ термина для описания слова, которое подразумевает действие, даже если это слово не является стандартной командой на английском языке. Например, термин _New_ — это допустимое имя команды PowerShell, так как оно подразумевает действие, даже если оно не является глаголом на английском языке.
+> PowerShell использует термин _глагол_ для обозначения слова, которое подразумевает действие, даже если это слово не является глаголом в лингвистическом смысле. Например, термин _New_ считается в PowerShell глаголом, так как подразумевает действие, хотя в переводе это слово означает "новый" и не является глаголом.
 
 <!--
 01234567890123456789012345678901234567890123456789012345678901234567890123456789
 -->
 
-Для каждой утвержденной команды определен соответствующий _префикс псевдонима_ .
-Этот префикс псевдонима обычно используется для именования псевдонимов команд, использующих эту команду.
-Например, префикс псевдонима для `Import` имеет значение `ip` и, соответственно, псевдоним для `Import-Module` имеет значение `ipmo` .  Это рекомендация, но не правило. в частности, это не нужно учитывать для псевдонимов команд, копируя хорошо известные команды из других сред.
+У каждой утвержденной команды есть соответствующий _префикс псевдонима_.
+Мы используем префикс псевдонима в псевдонимах для команд, использующих эту команду.
+Например, префикс псевдонима для `Import` — `ip`, а для `Import-Module` — `ipmo`.  Это рекомендация, а не правило. В частности, эту рекомендацию не нужно учитывать для псевдонимов команд, копирующих хорошо известные команды из других сред.
 
-## <a name="verb-naming-rules"></a>Правила именования команд
+## <a name="verb-naming-recommendations"></a>Рекомендации по именованию команд
 
-В следующем списке приведены рекомендации, которые следует учитывать при выборе команды для имени командлета.
+Следующие рекомендации помогут выбрать подходящую команду для командлета, чтобы обеспечить согласованность между создаваемыми вами командлетами, командлетами, предоставляемыми PowerShell, и командлетами, разработанными другими пользователями.
 
-- При указании команды рекомендуется использовать одно из стандартных названий глаголов, предоставляемых PowerShell (псевдонимы для этих предопределенных команд включены в приведенные ниже таблицы). При использовании предопределенной команды обеспечивается согласованность между создаваемыми командлетами, командлетами, предоставляемыми PowerShell, и командлетами, разработанными другими пользователями.
+- Используйте одно из стандартных имен команд, предоставленных PowerShell.
+- Используйте команду, чтобы описать общую область действия, и параметры для уточнения действия командлета.
+- Не используйте синоним утвержденной команды. Например, всегда используйте `Remove`, а не `Delete` или `Eliminate`.
+- Используйте команду только в той форме, которая указана в этом разделе. Например, используйте `Get`, но не `Getting` или `Gets`.
+- Не используйте следующие зарезервированные команды или псевдонимы. Язык PowerShell и лишь некоторые из его командлетов используют эти команды в исключительных обстоятельствах.
+    - ForEach (foreach)
+    - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f): упорядочивает объекты в указанной форме или макете
+    - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp): упорядочивает или связывает один или несколько ресурсов
+    - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (pi)
+    - Sort (sr)
+    - Tee (te)
+    - Where (wh)
 
-- Используйте предопределенные команды для описания общей области действия и используйте параметры для дальнейшего уточнения действия командлета.
+Полный список команд можно получить с помощью командлета `Get-Verb`.
 
-- Чтобы обеспечить согласованность между командлетами, не используйте синоним утвержденной команды.
-
-- Используйте только форму каждой команды, указанной в этом разделе. Например, используйте "Get", но не используйте "получить" или "получение".
-
-- Для глаголов используйте регистр языка Pascal. В стиле Pascal прописные буквы в каждом слове заменяются буквами, например ForEach.
-
-- Не используйте следующие зарезервированные глаголы или псевдонимы. Эти команды используются языком PowerShell или специальными командлетами, предоставляемыми PowerShell.
-  - ForEach (foreach)
-  - Формат (f)
-  - Группа (GP)
-  - Сортировка (SR)
-  - Tee (TE)
-  - Где (что такое)
-
-Полный список команд можно отобразить с помощью `Get-Verb` командлета.
-
-## <a name="similar-verbs-for-different-actions"></a>Аналогичные команды для различных действий
+## <a name="similar-verbs-for-different-actions"></a>Похожие команды для различных действий
 
 Следующие похожие команды представляют различные действия.
 
-### <a name="new-vs-set"></a>Новый и набор
+### <a name="new-vs-set"></a>New и Присвойте параметру
 
-`New`Команда используется для создания нового ресурса. `Set`Команда используется для изменения существующего ресурса, при необходимости создавая ресурс, если он не существует, например `Set-Variable` командлета.
+Чтобы создать новый ресурс, используйте команду `New`. Используйте команду `Set`, чтобы изменить существующий ресурс, при необходимости создав его, если он не существует, например командлет `Set-Variable`.
 
-### <a name="find-vs-search"></a>Поиск и поиск
+### <a name="find-vs-search"></a>Find и Поиск
 
-`Find`Команда используется для поиска объекта. `Search`Команда используется для создания ссылки на ресурс в контейнере.
+Используйте команду `Find` для поиска объекта. Используйте команду `Search`, чтобы создать ссылку на ресурс в контейнере.
 
-### <a name="get-vs-read"></a>Сравнение Get и Read
+### <a name="get-vs-read"></a>Get и Чтение
 
-`Get`Команда используется для получения ресурса, например файла. `Read`Команда используется для получения сведений из источника, например файла.
+Используйте команду `Get` для получения сведений о ресурсе (например, файле) или объекта, с помощью которого можно получить доступ к ресурсу в будущем. Используйте команду `Read`, чтобы открыть ресурс или извлечь сведения, содержащиеся в нем.
 
-### <a name="invoke-vs-start"></a>Вызов vs. Start
+### <a name="invoke-vs-start"></a>Invoke и Запуск
 
-`Invoke`Команда используется для выполнения операции, которая обычно является синхронной операцией, такой как выполнение команды. `Start`Команда используется для начала операции, которая обычно является асинхронной операцией, такой как запуск процесса.
+Используйте команду `Invoke` для выполнения синхронных операций, таких как выполнение команды и ожидание ее завершения. Для запуска асинхронных операций, таких как выполнение автономного процесса, используется команда `Start`.
 
-### <a name="ping-vs-test"></a>Сравнение проверки связи и тестирования
+### <a name="ping-vs-test"></a>Ping и Тест
 
-Используйте `Test` команду.
+Используйте команду `Test`.
 
-## <a name="common-verbs"></a>Общие глаголы
+## <a name="common-verbs"></a>Распространенные команды
 
-PowerShell использует класс перечисления [System. Management. Automation. вербскоммон](/dotnet/api/System.Management.Automation.VerbsCommon) для определения общих действий, которые могут применяться практически к любому командлету. В следующей таблице перечислены большинство определенных команд.
+PowerShell использует класс перечисления [System.Management.Automation.VerbsCommon](/dotnet/api/System.Management.Automation.VerbsCommon) для определения общих действий, которые могут применяться практически к любому командлету. В следующей таблице перечислено большинство определенных команд.
 
-|Команда (псевдоним)|Действие|Комментарии|
+|Команда (псевдоним)|Действие|Неподходящие синонимы|
 |--------------------|------------|--------------|
-|[Добавить](/dotnet/api/System.Management.Automation.VerbsCommon.Add) (a)|Добавляет ресурс в контейнер или прикрепляет элемент к другому элементу. Например, `Add-Content` командлет добавляет содержимое в файл. Эта команда объединяется с `Remove` .|Для этого действия не используйте глаголы, такие как добавление, присоединение, сцепление или вставка.|
-|[Clear](/dotnet/api/System.Management.Automation.VerbsCommon.Clear) (CL)|Удаляет все ресурсы из контейнера, но не удаляет контейнер. Например, `Clear-Content` командлет удаляет содержимое файла, но не удаляет его.|Для этого действия не следует использовать глаголы, такие как сброс, стирание, выпуск, снятие пометки, не заменять или аннулируются.|
-|[Закрыть](/dotnet/api/System.Management.Automation.VerbsCommon.Close) (CS)|Изменяет состояние ресурса, чтобы сделать его недоступным, недоступным или непригодным для использования. Эта команда сопряжена с`Open.`||
-|[Копирование](/dotnet/api/System.Management.Automation.VerbsCommon.Copy) (CP)|Копирует ресурс в другое имя или в другой контейнер. Например, `Copy-Item` командлет, который используется для доступа к сохраненным данным, копирует элемент из одного расположения в хранилище данных в другое расположение.|Для этого действия не используйте глаголы, такие как дублирование, клонирование, репликация или синхронизация.|
-|[Ввод](/dotnet/api/System.Management.Automation.VerbsCommon.Enter) (ET)|Указывает действие, которое позволяет пользователю перемещаться в ресурс. Например, `Enter-PSSession` командлет помещает пользователя в интерактивный сеанс. Эта команда объединяется с `Exit` .|Для этого действия не используйте глаголы, такие как push или INTO.|
-|[Выход](/dotnet/api/System.Management.Automation.VerbsCommon.Exit) (ex)|Задает текущий окружение или контекст для последнего использованного контекста. Например, `Exit-PSSession` командлет помещает пользователя в сеанс, который использовался для запуска интерактивного сеанса. Эта команда объединяется с `Enter` .|Для этого действия не используйте глаголы, такие как POP или out.|
-|[Поиск](/dotnet/api/System.Management.Automation.VerbsCommon.Find) (демон)|Ищет объект в контейнере, который является неизвестным, подразумеваемым, необязательным или указанным.||
-|[Формат](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f)|Упорядочивает объекты в указанной форме или макете.||
-|[Получение](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|Указывает действие, которое получает ресурс. Эта команда объединяется с `Set` .|Для этого действия не используйте такие команды, как Read, Open, Cat, Type, dir, получение, дамп, получение, проверка, поиск или поиск.|
-|[Скрыть](/dotnet/api/System.Management.Automation.VerbsCommon.Hide) (h)|Делает ресурс недоступным для обнаружения. Например, командлет, имя которого включает команду Hide, может скрывать службу от пользователя. Эта команда объединяется с `Show` .|Для этого действия не используйте глагол, например Block.|
-|[Соединение](/dotnet/api/System.Management.Automation.VerbsCommon.Join) (j)|Объединяет ресурсы в один ресурс. Например, `Join-Path` командлет объединяет путь с одним из его дочерних путей для создания одного пути. Эта команда объединяется с `Split` .|Для этого действия не используйте глаголы, такие как Combine, объединяйте, Connect или свяжите.|
-|[Lock](/dotnet/api/System.Management.Automation.VerbsCommon.Lock) (LK)|Защищает ресурс. Эта команда объединяется с `Unlock` .|Для этого действия не используйте команды, такие как restrict или Secure.|
-|[Переместить](/dotnet/api/System.Management.Automation.VerbsCommon.Move) (m)|Перемещает ресурс из одного расположения в другое. Например, `Move-Item` командлет перемещает элемент из одного расположения в хранилище данных в другое расположение.|Для этого действия не используйте глаголы, такие как перемещение, имя или миграция.|
-|[Создать](/dotnet/api/System.Management.Automation.VerbsCommon.New) (n)|Создает ресурс. ( `Set` Команда также может использоваться при создании ресурса, включающего данные, например `Set-Variable` командлет).|Для этого действия не используйте глаголы, такие как создание, создание, сборка, создание или выделение.|
-|[Open](/dotnet/api/System.Management.Automation.VerbsCommon.Open) (op)|Изменяет состояние ресурса, чтобы сделать его доступным, доступным или пригодным для использования. Эта команда объединяется с `Close` .||
-|[Optimize](/dotnet/api/System.Management.Automation.VerbsCommon.Optimize) (OM)|Повышает эффективность ресурса.||
-|[POP](/dotnet/api/System.Management.Automation.VerbsCommon.Pop) (POP)|Удаляет элемент из верхней части стека. Например, `Pop-Location` командлет изменяет текущее расположение на расположение, которое было недавно помещено в стек.||
-|[Push-уведомления](/dotnet/api/System.Management.Automation.VerbsCommon.Push) (PU)|Добавляет элемент в верхнюю часть стека. Например, `Push-Location` командлет помещает текущее расположение в стек.||
-|[Повтор](/dotnet/api/System.Management.Automation.VerbsCommon.Redo) (Re)|Сбрасывает ресурс в состояние, которое было отменено.||
-|[Удалить](/dotnet/api/System.Management.Automation.VerbsCommon.Remove) (r)|Удаляет ресурс из контейнера. Например, `Remove-Variable` командлет удаляет переменную и ее значение. Эта команда объединяется с `Add` .|Для этого действия не используйте глаголы, такие как Clear, Cut, Dispose, Discard или Erase.|
-|[Переименовать](/dotnet/api/System.Management.Automation.VerbsCommon.Rename) (RN)|Изменяет имя ресурса. Например, `Rename-Item` командлет, который используется для доступа к сохраненным данным, изменяет имя элемента в хранилище данных.|Для этого действия не используйте команду, например Change.|
-|[Сброс](/dotnet/api/System.Management.Automation.VerbsCommon.Reset) (RS)|Присваивает ресурсу исходное состояние.||
-|[Изменить размер](/dotnet/api/System.Management.Automation.VerbsCommon.Resize)(РЗ)|Изменяет размер ресурса.||
-|[Поиск](/dotnet/api/System.Management.Automation.VerbsCommon.Search) (SR)|Создает ссылку на ресурс в контейнере.|Для этого действия не используйте глаголы, такие как Find или найти.|
-|[SELECT](/dotnet/api/System.Management.Automation.VerbsCommon.Select) (SC)|Находит ресурс в контейнере. Например, `Select-String` командлет находит текст в строках и файлах.|Для этого действия не используйте глаголы, такие как Find или найти.|
-|[Наборы](/dotnet/api/System.Management.Automation.VerbsCommon.Set) (s)|Заменяет данные существующего ресурса или создает ресурс, содержащий некоторые данные. Например, `Set-Date` командлет изменяет системное время на локальном компьютере. ( `New` Команда может также использоваться для создания ресурса.) Эта команда объединяется с `Get` .|Для этого действия не следует использовать глаголы, такие как запись, сброс, назначение или Настройка.|
-|[Показать](/dotnet/api/System.Management.Automation.VerbsCommon.Show) (SH)|Делает ресурс видимым для пользователя. Эта команда объединяется с `Hide` .|Для этого действия не используйте глаголы, такие как отображение или создание.|
-|[Пропустить](/dotnet/api/System.Management.Automation.VerbsCommon.Skip) (SK)|Обходит один или несколько ресурсов или точек в последовательности.|Для этого действия не используйте глаголы, такие как обход или переход.|
-|[Split](/dotnet/api/System.Management.Automation.VerbsCommon.Split) (SL)|Разделяет части ресурса. Например, `Split-Path` командлет возвращает различные части пути. Эта команда объединяется с `Join` .|Для этого действия не используйте команду, такую как отдельно.|
-|[Шаг](/dotnet/api/System.Management.Automation.VerbsCommon.Step) (ST)|Перемещает к следующей точке или ресурсу в последовательности.||
-|[Коммутатор](/dotnet/api/System.Management.Automation.VerbsCommon.Switch) (SW)|Указывает действие, которое является альтернативным для двух ресурсов, например для изменения между двумя расположениями, обязанностями или состояниями.||
-|[Отмена](/dotnet/api/System.Management.Automation.VerbsCommon.Undo) (Отмена)|Задает для ресурса предыдущее состояние.||
-|[Разблокировать](/dotnet/api/System.Management.Automation.VerbsCommon.Unlock) (Великобритания)|Освобождает заблокированный ресурс. Эта команда объединяется с `Lock` .|Для этого действия не следует использовать глаголы, такие как выпуск, неограниченный или небезопасный.|
-|[Контрольные значения](/dotnet/api/System.Management.Automation.VerbsCommon.Watch) (WC)|Постоянно проверяет или отслеживает изменения в ресурсе.||
+|[Add](/dotnet/api/System.Management.Automation.VerbsCommon.Add) (a)|Добавляет ресурс в контейнер или прикрепляет один элемент к другому. Например, командлет `Add-Content` добавляет содержимое в файл. Эта команда образует пару с командой `Remove`.|Append, Attach, Concatenate, Insert|
+|[Clear](/dotnet/api/System.Management.Automation.VerbsCommon.Clear) (cl)|Удаляет все ресурсы из контейнера, но не удаляет сам контейнер. Например, командлет `Clear-Content` удаляет содержимое файла, но не удаляет файл.|Flush, Erase, Release, Unmark, Unset, Nullify|
+|[Close](/dotnet/api/System.Management.Automation.VerbsCommon.Close) (cs)|Изменяет состояние ресурса, чтобы сделать его недоступным или непригодным для использования. Эта команда образует пару с командой `Open.`.||
+|[Copy](/dotnet/api/System.Management.Automation.VerbsCommon.Copy) (cp)|Копирует ресурс в другое имя или другой контейнер. Например, командлет `Copy-Item` копирует элемент (такой, как файл) из одного расположения в хранилище данных в другое расположение.|Duplicate, Clone, Replicate, Sync|
+|[Enter](/dotnet/api/System.Management.Automation.VerbsCommon.Enter) (et)|Указывает действие, которое позволяет пользователю переместиться в ресурс. Например, командлет `Enter-PSSession` помещает пользователя в интерактивный сеанс. Эта команда образует пару с командой `Exit`.|Push, Into|
+|[Exit](/dotnet/api/System.Management.Automation.VerbsCommon.Exit) (ex)|Переходит к последнему использованному окружению или контексту. Например, командлет `Exit-PSSession` помещает пользователя в сеанс, который использовался для запуска интерактивного сеанса. Эта команда образует пару с командой `Enter`.|Pop, Out|
+|[Find](/dotnet/api/System.Management.Automation.VerbsCommon.Find) (fd)|Ищет в контейнере объект, который является неизвестным, подразумеваемым, необязательным или указанным.|Поиск|
+|[Get](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|Указывает действие, которое извлекает ресурс. Эта команда образует пару с командой `Set`.|Read, Open, Cat, Type, Dir, Obtain, Dump, Acquire, Examine, Find, Search|
+|[Hide](/dotnet/api/System.Management.Automation.VerbsCommon.Hide) (h)|Делает ресурс недоступным для обнаружения. Например, командлет, имя которого включает команду Hide, может скрывать службу от пользователя. Эта команда образует пару с командой `Show`.|Блокировать|
+|[Join](/dotnet/api/System.Management.Automation.VerbsCommon.Join) (j)|Объединяет ресурсы в один ресурс. Например, командлет `Join-Path` объединяет путь с одним из его дочерних путей для создания единого пути. Эта команда образует пару с командой `Split`.|Combine, Unite, Connect, Associate|
+|[Lock](/dotnet/api/System.Management.Automation.VerbsCommon.Lock) (lk)|Защищает ресурс. Эта команда образует пару с командой `Unlock`.|Restrict, Secure|
+|[Move](/dotnet/api/System.Management.Automation.VerbsCommon.Move) (m)|Перемещает ресурс из одного места в другое. Например, командлет `Move-Item` перемещает элемент из одного расположения в хранилище данных в другое расположение.|Transfer, Name, Migrate|
+|[New](/dotnet/api/System.Management.Automation.VerbsCommon.New) (n)|Создает ресурс. (Команда `Set` может также использоваться при создании ресурса, включающего данные, например командлет `Set-Variable`.)|Create, Generate, Build, Make, Allocate|
+|[Open](/dotnet/api/System.Management.Automation.VerbsCommon.Open) (op)|Изменяет состояние ресурса, чтобы сделать его доступным или пригодным для использования. Эта команда образует пару с командой `Close`.||
+|[Optimize](/dotnet/api/System.Management.Automation.VerbsCommon.Optimize) (om)|Повышает эффективность ресурса.||
+|[Pop](/dotnet/api/System.Management.Automation.VerbsCommon.Pop) (pop)|Удаляет элемент из верхней части стека. Например, командлет `Pop-Location` меняет текущее расположение на указанное в последней записи стека.||
+|[Push](/dotnet/api/System.Management.Automation.VerbsCommon.Push) (pu)|Добавляет элемент в верхнюю часть стека. Например, командлет `Push-Location` помещает текущее расположение в стек.||
+|[Redo](/dotnet/api/System.Management.Automation.VerbsCommon.Redo) (re)|Сбрасывает ресурс до состояния, которое было отменено.||
+|[Remove](/dotnet/api/System.Management.Automation.VerbsCommon.Remove) (r)|Удаляет ресурс из контейнера. Например, командлет `Remove-Variable` удаляет переменную и ее значение. Эта команда образует пару с командой `Add`.|Clear, Cut, Dispose, Discard, Erase|
+|[Rename](/dotnet/api/System.Management.Automation.VerbsCommon.Rename) (rn)|Изменяет имя ресурса. Например, командлет `Rename-Item`, используемый для доступа к сохраненным данным, изменяет имя элемента в хранилище данных.|Change|
+|[Reset](/dotnet/api/System.Management.Automation.VerbsCommon.Reset) (rs)|Присваивает ресурсу исходное состояние.||
+|[Resize](/dotnet/api/System.Management.Automation.VerbsCommon.Resize)(rz)|Изменяет размер ресурса.||
+|[Search](/dotnet/api/System.Management.Automation.VerbsCommon.Search) (sr)|Создает ссылку на ресурс в контейнере.|Find, Locate|
+|[Select](/dotnet/api/System.Management.Automation.VerbsCommon.Select) (sc)|Находит ресурс в контейнере. Например, командлет `Select-String` находит текст в строках и файлах.|Find, Locate|
+|[Set](/dotnet/api/System.Management.Automation.VerbsCommon.Set) (s)|Заменяет данные существующего ресурса или создает ресурс, содержащий некоторые данные. Например, командлет `Set-Date` изменяет системное время на локальном компьютере. (Для создания ресурса можно также использовать команду `New`.) Эта команда образует пару с командой `Get`.|Write, Reset, Assign, Configure|
+|[Show](/dotnet/api/System.Management.Automation.VerbsCommon.Show) (sh)|Делает ресурс видимым для пользователя. Эта команда образует пару с командой `Hide`.|Display, Produce|
+|[Skip](/dotnet/api/System.Management.Automation.VerbsCommon.Skip) (sk)|Обходит один или несколько ресурсов или точек в последовательности.|Bypass, Jump|
+|[Split](/dotnet/api/System.Management.Automation.VerbsCommon.Split) (sl)|Разделяет части ресурса. Например, командлет `Split-Path` возвращает различные части пути. Эта команда образует пару с командой `Join`.|Отдельные|
+|[Step](/dotnet/api/System.Management.Automation.VerbsCommon.Step) (st)|Переходит к следующей точке или ресурсу в последовательности.||
+|[Switch](/dotnet/api/System.Management.Automation.VerbsCommon.Switch) (sw)|Указывает действие, которое обозначает смену между двумя ресурсами, например переход между двумя расположениями, обязанностями или состояниями.||
+|[Undo](/dotnet/api/System.Management.Automation.VerbsCommon.Undo) (un)|Задает для ресурса предыдущее состояние.||
+|[Unlock](/dotnet/api/System.Management.Automation.VerbsCommon.Unlock) (uk)|Освобождает заблокированный ресурс. Эта команда образует пару с командой `Lock`.|Release, Unrestrict, Unsecure|
+|[Watch](/dotnet/api/System.Management.Automation.VerbsCommon.Watch) (wc)|Постоянно проверяет или отслеживает изменения в ресурсе.||
 
-## <a name="communications-verbs"></a>Команды связи
+## <a name="communications-verbs"></a>Команды для обмена данными
 
-PowerShell использует класс [System. Management. Automation. вербскоммуникатионс](/dotnet/api/System.Management.Automation.VerbsCommunications) для определения действий, которые применяются к обмену данными. В следующей таблице перечислены большинство определенных команд.
+PowerShell использует класс [System.Management.Automation.VerbsCommunications](/dotnet/api/System.Management.Automation.VerbsCommunications) для определения действий, которые применяются к обмену данными. В следующей таблице перечислено большинство определенных команд.
 
-|Команда (псевдоним)|Действие|Комментарии|
+|Команда (псевдоним)|Действие|Неподходящие синонимы|
 |--------------------|------------|--------------|
-|[Подключение](/dotnet/api/System.Management.Automation.VerbsCommunications.Connect) (CC)|Создает связь между источником и назначением. Эта команда объединяется с `Disconnect` .|Для этого действия не используйте глаголы, такие как JOIN или Telnet.|
-|[Отключение](/dotnet/api/System.Management.Automation.VerbsCommunications.Disconnect) (DC)|Разбивает связь между источником и назначением. Эта команда объединяется с `Connect` .|Для этого действия не используйте глаголы, такие как break или logoff.|
-|[Чтение](/dotnet/api/System.Management.Automation.VerbsCommunications.Read) (RD)|Получает сведения из источника. Эта команда объединяется с `Write` .|Для этого действия не используйте глаголы, такие как получение, запрос или получение.|
-|[Получение](/dotnet/api/System.Management.Automation.VerbsCommunications.Receive) (RC)|Принимает сведения, отправляемые из источника. Эта команда объединяется с `Send` .|Для этого действия не используйте команды, такие как чтение, принятие или просмотр.|
-|[Send](/dotnet/api/System.Management.Automation.VerbsCommunications.Send) (SD)|Доставляет данные в место назначения. Эта команда объединяется с `Receive` .|Для этого действия не используйте глаголы, такие как размещение, вещание, почта или Факс.|
-|[Write](/dotnet/api/System.Management.Automation.VerbsCommunications.Write) (WR)|Добавляет сведения в целевой объект. Эта команда объединяется с `Read` .|Для этого действия не используйте глаголы, такие как «вставить» или «печать».|
+|[Connect](/dotnet/api/System.Management.Automation.VerbsCommunications.Connect) (cc)|Создает связь между источником и назначением. Эта команда образует пару с командой `Disconnect`.|Join, Telnet|
+|[Disconnect](/dotnet/api/System.Management.Automation.VerbsCommunications.Disconnect) (dc)|Удаляет связь между источником и назначением. Эта команда образует пару с командой `Connect`.|Break, Logoff|
+|[Read](/dotnet/api/System.Management.Automation.VerbsCommunications.Read) (rd)|Получает сведения из источника. Эта команда образует пару с командой `Write`.|Acquire, Prompt, Get|
+|[Receive](/dotnet/api/System.Management.Automation.VerbsCommunications.Receive) (rc)|Принимает сведения, отправляемые из источника. Эта команда образует пару с командой `Send`.|Read, Accept, Peek|
+|[Send](/dotnet/api/System.Management.Automation.VerbsCommunications.Send) (sd)|Доставляет сведения в место назначения. Эта команда образует пару с командой `Receive`.|Put, Broadcast, Mail, Fax|
+|[Write](/dotnet/api/System.Management.Automation.VerbsCommunications.Write) (wr)|Добавляет сведения в целевой объект. Эта команда образует пару с командой `Read`.|Put, Print|
 
-## <a name="data-verbs"></a>Команды данных
+## <a name="data-verbs"></a>Команды для работы с данными
 
-PowerShell использует класс [System. Management. Automation. вербсдата](/dotnet/api/System.Management.Automation.VerbsData) для определения действий, которые применяются к обработке данных. В следующей таблице перечислены большинство определенных команд.
+PowerShell использует класс [System.Management.Automation.VerbsData](/dotnet/api/System.Management.Automation.VerbsData) для определения действий, которые применяются к обработке данных. В следующей таблице перечислено большинство определенных команд.
 
-|Имя глагола (псевдоним)|Действие|Комментарии|
+|Имя команды (псевдоним)|Действие|Неподходящие синонимы|
 |-------------------------|------------|--------------|
-|[Резервное копирование](/dotnet/api/System.Management.Automation.VerbsData.Backup) (BA)|Хранит данные путем репликации.|Для этого действия не используйте команды, такие как сохранение, запись, репликация или синхронизация.|
-|[Контрольная точка](/dotnet/api/System.Management.Automation.VerbsData.Checkpoint) (CH)|Создает моментальный снимок текущего состояния данных или его конфигурации.|Для этого действия не используйте глагол, например diff.|
-|[Сравнение](/dotnet/api/System.Management.Automation.VerbsData.Compare) (CR)|Оценивает данные из одного ресурса на данные из другого ресурса.|Для этого действия не используйте глагол, например diff.|
-|[Сжатие](/dotnet/api/System.Management.Automation.VerbsData.Compress) (cm)|Сжимает данные ресурса. Пары с `Expand` .|Для этого действия не используйте команду, такую как Compact.|
-|[Преобразовать](/dotnet/api/System.Management.Automation.VerbsData.Convert) (ОПС)|Изменяет данные из одного представления на другое, если командлет поддерживает двунаправленное преобразование или если командлет поддерживает преобразование между несколькими типами данных.|Для этого действия не используйте глаголы, такие как смена, изменение размера или ресамплинг.|
-|[ConvertFrom](/dotnet/api/System.Management.Automation.VerbsData.ConvertFrom) (CF)|Преобразует один первичный тип входных данных (командлет Существительное указывает входные данные) на один или несколько поддерживаемых типов вывода.|Для этого действия не используйте глаголы, такие как экспорт, вывод или выход.|
-|[ConvertTo](/dotnet/api/System.Management.Automation.VerbsData.ConvertTo) (CT)|Преобразует из одного или нескольких типов входных данных в первичный выходной тип (командлет Существительное указывает тип выходных данных).|Для этого действия не используйте глаголы, такие как импорт, вход или в.|
-|[Отключить](/dotnet/api/System.Management.Automation.VerbsData.Dismount) (DM)|Отсоединяет именованную сущность от расположения. Эта команда объединяется с `Mount` .|Для этого действия не используйте глаголы, такие как отключение или отмена связи.|
-|[Изменить](/dotnet/api/System.Management.Automation.VerbsData.Edit) (ED)|Изменяет существующие данные путем добавления или удаления содержимого.|Для этого действия не используйте глаголы, такие как изменение, обновление или изменение.|
-|[Развернуть](/dotnet/api/System.Management.Automation.VerbsData.Expand) (EN)|Восстанавливает данные ресурса, который был сжат в исходное состояние. Эта команда объединяется с `Compress` .|Для этого действия не используйте глаголы, такие как «развернуть» или «распаковать».|
-|[Экспорт](/dotnet/api/System.Management.Automation.VerbsData.Export) (EP)|Инкапсулирует первичный вход в постоянное хранилище данных, например файл, или в формат обмена. Эта команда объединяется с `Import` .|Для этого действия не используйте глаголы, такие как извлечение или резервное копирование.|
-|[Группа](/dotnet/api/System.Management.Automation.VerbsData.Group) (GP)|Упорядочивает или связывает один или несколько ресурсов.|Для этого действия не используйте глаголы, такие как агрегирование, упорядочение, сопоставление или сопоставление.|
-|[Импорт](/dotnet/api/System.Management.Automation.VerbsData.Import) (IP)|Создает ресурс на основе данных, хранящихся в постоянном хранилище данных (например, в файле) или в формате обмена. Например, `Import-CSV` командлет импортирует данные из файла с разделителями-запятыми (CSV) в объекты, которые могут использоваться другими командлетами. Эта команда объединяется с `Export` .|Для этого действия не используйте глаголы, такие как BulkLoad или Load.|
-|[Инициализировать](/dotnet/api/System.Management.Automation.VerbsData.Initialize) (в)|Подготавливает ресурс для использования и задает для него состояние по умолчанию.|Для этого действия не используйте глаголы, такие как erase, init, продлить, перестроение, повторная инициализация или установка.|
-|[Ограничение](/dotnet/api/System.Management.Automation.VerbsData.Limit) (l)|Применяет ограничения к ресурсу.|Для этого действия не используйте команду, например квоту.|
-|[Слияние](/dotnet/api/System.Management.Automation.VerbsData.Merge) (MG)|Создает один ресурс из нескольких ресурсов.|Для этого действия не используйте глаголы, такие как Combine или JOIN.|
-|[Подключение](/dotnet/api/System.Management.Automation.VerbsData.Mount) (MT)|Присоединяет именованную сущность к расположению. Эта команда объединяется с `Dismount` .|Для этого действия не используйте команду Connect.|
-|[Out](/dotnet/api/System.Management.Automation.VerbsData.Out) (o)|Отправляет данные из среды. Например, `Out-Printer` командлет отправляет данные на принтер.||
-|[Публикация](/dotnet/api/System.Management.Automation.VerbsData.Publish) (Pb)|Делает ресурс доступным для других пользователей. Эта команда объединяется с `Unpublish` .|Для этого действия не используйте глаголы, такие как развертывание, выпуск или установка.|
-|[Восстановление](/dotnet/api/System.Management.Automation.VerbsData.Restore) (RR)|Задает для ресурса предопределенное состояние, например состояние, заданное параметром `Checkpoint` . Например, `Restore-Computer` командлет запускает восстановление системы на локальном компьютере.|Для этого действия не используйте команды, такие как восстановление, возврат, отмена или исправление.|
-|[Сохранить](/dotnet/api/System.Management.Automation.VerbsData.Save) (ОКП)|Сохраняет данные, чтобы избежать потерь.||
-|[Синхронизация](/dotnet/api/System.Management.Automation.VerbsData.Sync) (SY)|Гарантирует, что два или больше ресурсов находятся в одном и том же состоянии.|Для этого действия не используйте глаголы, такие как репликация, приведение или сопоставление.|
-|[Отменить публикацию](/dotnet/api/System.Management.Automation.VerbsData.Unpublish) (UB)|Делает ресурс недоступным для других пользователей. Эта команда объединяется с `Publish` .|Для этого действия не используйте глаголы, такие как удаление, возврат или скрытие.|
-|[Обновление](/dotnet/api/System.Management.Automation.VerbsData.Update) (обновления)|Предоставляет обновленный ресурс для поддержания его состояния, точности, соответствия требованиям или совместимости. Например, `Update-FormatData` командлет обновляет и добавляет файлы форматирования в текущую консоль PowerShell.|Для этого действия не используйте глаголы, такие как обновление, обновление, повторное вычисление или повторная индексация.|
+|[Backup](/dotnet/api/System.Management.Automation.VerbsData.Backup) (ba)|Сохраняет данные путем репликации.|Save, Burn, Replicate, Sync|
+|[Checkpoint](/dotnet/api/System.Management.Automation.VerbsData.Checkpoint) (ch)|Создает моментальный снимок текущего состояния данных или их конфигурации.|Поиск различий|
+|[Compare](/dotnet/api/System.Management.Automation.VerbsData.Compare) (cr)|Сравнивает данные из одного ресурса с данными из другого.|Поиск различий|
+|[Compress](/dotnet/api/System.Management.Automation.VerbsData.Compress) (cm)|Сжимает данные ресурса. Образует пару с командой `Expand`.|Компактный|
+|[Convert](/dotnet/api/System.Management.Automation.VerbsData.Convert) (cv)|Изменяет данные из одного представления в другое, если командлет поддерживает двунаправленное преобразование или преобразование между несколькими типами данных.|Change, Resize, Resample|
+|[ConvertFrom](/dotnet/api/System.Management.Automation.VerbsData.ConvertFrom) (cf)|Преобразует один первичный тип входных данных (существительное в командлете указывает входные данные) в один или несколько поддерживаемых типов выходных данных.|Export, Output, Out|
+|[ConvertTo](/dotnet/api/System.Management.Automation.VerbsData.ConvertTo) (ct)|Преобразует один или несколько типов входных данных в основной тип выходных данных (существительное в командлете указывает тип выходных данных).|Import, Input, In|
+|[Dismount](/dotnet/api/System.Management.Automation.VerbsData.Dismount) (dm)|Отключает именованную сущность от расположения. Эта команда образует пару с командой `Mount`.|Unmount, Unlink|
+|[Edit](/dotnet/api/System.Management.Automation.VerbsData.Edit) (ed)|Изменяет существующие данные путем добавления или удаления содержимого.|Change, Update, Modify|
+|[Expand](/dotnet/api/System.Management.Automation.VerbsData.Expand) (en)|Восстанавливает сжатые данные ресурса до исходного состояния. Эта команда образует пару с командой `Compress`.|Explode, Uncompress|
+|[Export](/dotnet/api/System.Management.Automation.VerbsData.Export) (ep)|Инкапсулирует первичные входные данные в постоянное хранилище данных, например файл, или в формат обмена. Эта команда образует пару с командой `Import`.|Extract, Backup|
+|[Import](/dotnet/api/System.Management.Automation.VerbsData.Import) (ip)|Создает ресурс на основе данных, хранящихся в постоянном хранилище данных (например, в файле) или в формате обмена. Например, командлет `Import-CSV` импортирует данные из файла с разделителями-запятыми (CSV) в объекты, которые могут использоваться другими командлетами. Эта команда образует пару с командой `Export`.|BulkLoad, Load|
+|[Initialize](/dotnet/api/System.Management.Automation.VerbsData.Initialize) (in)|Подготавливает ресурс для использования и задает для него состояние по умолчанию.|Erase, Init, Renew, Rebuild, Reinitialize, Setup|
+|[Limit](/dotnet/api/System.Management.Automation.VerbsData.Limit) (l)|Применяет ограничения к ресурсу.|Quota|
+|[Merge](/dotnet/api/System.Management.Automation.VerbsData.Merge) (mg)|Создает один ресурс из нескольких.|Combine, Join|
+|[Mount](/dotnet/api/System.Management.Automation.VerbsData.Mount) (mt)|Подключает именованную сущность к расположению. Эта команда образует пару с командой `Dismount`.|Подключение|
+|[Out](/dotnet/api/System.Management.Automation.VerbsData.Out) (o)|Отправляет данные из среды. Например, командлет `Out-Printer` отправляет данные на принтер.||
+|[Publish](/dotnet/api/System.Management.Automation.VerbsData.Publish) (pb)|Делает ресурс доступным для других пользователей. Эта команда образует пару с командой `Unpublish`.|Deploy, Release, Install|
+|[Restore](/dotnet/api/System.Management.Automation.VerbsData.Restore) (rr)|Задает для ресурса предопределенное состояние, например состояние, заданное `Checkpoint`. Например, командлет `Restore-Computer` запускает восстановление системы на локальном компьютере.|Repair, Return, Undo, Fix|
+|[Save](/dotnet/api/System.Management.Automation.VerbsData.Save) (sv)|Сохраняет данные, чтобы избежать их потери.||
+|[Sync](/dotnet/api/System.Management.Automation.VerbsData.Sync) (sy)|Гарантирует, что два ресурса или более находятся в одном и том же состоянии.|Replicate, Coerce, Match|
+|[Unpublish](/dotnet/api/System.Management.Automation.VerbsData.Unpublish) (ub)|Делает ресурс недоступным для других пользователей. Эта команда образует пару с командой `Publish`.|Uninstall, Revert, Hide|
+|[Update](/dotnet/api/System.Management.Automation.VerbsData.Update) (ud)|Обеспечивает актуальность ресурса для поддержания его состояния, точности, согласованности или соответствия требованиям. Например, командлет `Update-FormatData` обновляет и добавляет файлы форматирования в текущую консоль PowerShell.|Refresh, Renew, Recalculate, Re-index|
 
 ## <a name="diagnostic-verbs"></a>Команды диагностики
 
-PowerShell использует класс [System. Management. Automation. вербсдиагностик](/dotnet/api/System.Management.Automation.VerbsDiagnostic) для определения действий, которые применяются к диагностике. В следующей таблице перечислены большинство определенных команд.
+PowerShell использует класс [System.Management.Automation.VerbsDiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic) для определения действий, которые применяются к обработке данных. В следующей таблице перечислено большинство определенных команд.
 
-|Команда (псевдоним)|Действие|Комментарии|
+|Команда (псевдоним)|Действие|Неподходящие синонимы|
 |--------------------|------------|--------------|
-|[Отладка](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Debug) (база данных)|Изучает ресурс для диагностики проблем в работе.|Для этого действия не используйте команду, например "Диагностика".|
-|[Мера](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Measure) (МС)|Определяет ресурсы, используемые указанной операцией, или получает статистику по ресурсу.|Для этого действия не используйте команды, такие как вычислить, определить или проанализировать.|
-|[Проверка связи](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (PI)|Используйте `Test` команду.||
-|[Восстановление](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Repair) (RP)|Восстанавливает ресурс в пригодном для использования состоянии.|Для этого действия не используйте глаголы, такие как Fix или RESTORE.|
-|[Разрешение](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Resolve) (RV)|Сопоставляет сокращенное представление ресурса с более полным представлением.|Для этого действия не используйте глаголы, такие как Expand или определить.|
-|[Test](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Test) (t)|Проверяет операцию или согласованность ресурса.|Для этого действия не используйте команды, такие как диагностика, анализ, остаточная_стоимость или проверка.|
-|[Трассировка](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Trace) (tr)|Отслеживает действия ресурса.|Для этого действия не используйте команды, такие как отслеживание, следование, проверка или изучение.|
+|[Debug](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Debug) (db)|Изучает ресурс для диагностики проблем в работе.|Диагностика|
+|[Measure](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Measure) (ms)|Определяет ресурсы, используемые указанной операцией, или получает статистику по ресурсу.|Calculate, Determine, Analyze|
+|[Repair](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Repair) (rp)|Восстанавливает ресурс в пригодном для использования состоянии.|Fix, Restore|
+|[Resolve](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Resolve) (rv)|Сопоставляет сокращенное представление ресурса с более полным представлением.|Expand, Determine|
+|[Test](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Test) (t)|Проверяет операцию или согласованность ресурса.|Diagnose, Analyze, Salvage, Verify|
+|[Trace](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Trace) (tr)|Отслеживает действия ресурса.|Track, Follow, Inspect, Dig|
 
 ## <a name="lifecycle-verbs"></a>Команды жизненного цикла
 
-PowerShell использует класс [System. Management. Automation. вербслифецикле](/dotnet/api/System.Management.Automation.VerbsLifeCycle) для определения действий, которые применяются к жизненному циклу ресурса. В следующей таблице перечислены большинство определенных команд.
+PowerShell использует класс [System.Management.Automation.VerbsLifeCycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle) для определения действий, которые применяются к жизненному циклу ресурса. В следующей таблице перечислено большинство определенных команд.
 
-|Команда (псевдоним)|Действие|Комментарии|
+|Команда (псевдоним)|Действие|Неподходящие синонимы|
 |--------------------|------------|--------------|
-|[Утвердить](/dotnet/api/System.Management.Automation.VerbsLifecycle.Approve) (AP)|Подтверждает или соглашается с состоянием ресурса или процесса.||
-|[Assert](/dotnet/api/System.Management.Automation.VerbsLifecycle.Assert) (AS)|Подтверждает состояние ресурса.|Для этого действия не используйте такую команду, как сертификация.|
-|[Сборка](/dotnet/api/System.Management.Automation.VerbsLifecycle.Build) (BD)|Создает артефакт (обычно двоичный или документ) из некоторого набора входных файлов (обычно это исходный код или декларативные документы).|Эта команда была добавлена в PowerShell V6|
-|[Завершено](/dotnet/api/system.management.automation.host.buffercelltype?view=powershellsdk-1.1.0) (CP)|Завершает операцию.||
-|[Подтверждение](/dotnet/api/System.Management.Automation.VerbsLifecycle.Confirm) (CN)|Подтверждает, проверяет или проверяет состояние ресурса или процесса.|Для этого действия не используйте глаголы, такие как подтверждение, согласие, сертификация, проверка или проверка.|
-|[Deny](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deny) (DN)|Отказывает, объекты, блоки или в противоположность состоянию ресурса или процесса.|Для этого действия не следует использовать глаголы, такие как блокировка, объект, отказ или отклонение.|
-|[Развертывание](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deploy) (DP)|Отправляет приложение, веб-сайт или решение на удаленный целевой объект [s] таким образом, чтобы потребитель этого решения мог получить к нему доступ после завершения развертывания.|Эта команда была добавлена в PowerShell V6|
-|[Отключить](/dotnet/api/System.Management.Automation.VerbsLifecycle.Disable) (d)|Настраивает ресурс в недоступном или неактивном состоянии. Например, `Disable-PSBreakpoint` командлет делает точку останова неактивной. Эта команда объединяется с `Enable` .|Для этого действия не используйте глаголы, такие как остановка или скрытие.|
-|[Включить](/dotnet/api/System.Management.Automation.VerbsLifecycle.Enable) (e)|Настраивает ресурс в доступном или активном состоянии. Например, `Enable-PSBreakpoint` командлет делает точку останова активной. Эта команда объединяется с `Disable` .|Для этого действия не используйте глаголы, такие как Start или Begin.|
-|[Установить](/dotnet/api/System.Management.Automation.VerbsLifecycle.Install) (имеет)|Помещает ресурс в расположение и при необходимости инициализирует его. Эта команда объединяется с `Uninstall` .|Для этого действия не используйте такую команду, как setup.|
-|[Вызов](/dotnet/api/System.Management.Automation.VerbsLifecycle.Invoke) (i)|Выполняет действие, например выполнение команды или метода.|Для этого действия не используйте глаголы, такие как Run или Start.|
-|[Регистрация](/dotnet/api/System.Management.Automation.VerbsLifecycle.Register) (RG)|Создает запись для ресурса в репозитории, например в базе данных. Эта команда объединяется с `Unregister` .||
-|[Запрос](/dotnet/api/System.Management.Automation.VerbsLifecycle.Request) (РК)|Запрашивает ресурс или запрашивает разрешения.||
-|[Перезапуск](/dotnet/api/System.Management.Automation.VerbsLifecycle.Restart) (RT)|Останавливает операцию и запускает ее снова. Например, `Restart-Service` командлет останавливает и запускает службу.|Для этого действия не используйте команду, такую как "перезапустить".|
-|[Резюме](/dotnet/api/System.Management.Automation.VerbsLifecycle.Resume) (ru)|Запускает приостановленную операцию. Например, `Resume-Service` командлет запускает приостановленную службу. Эта команда объединяется с `Suspend` .||
-|[Запуск](/dotnet/api/System.Management.Automation.VerbsLifecycle.Start) (SA)|Инициирует операцию. Например, `Start-Service` командлет запускает службу. Эта команда объединяется с `Stop` .|Для этого действия не используйте глаголы, такие как запуск, запуск или загрузка.|
-|[Останавливает](/dotnet/api/System.Management.Automation.VerbsLifecycle.Stop) (SP)|Прекращение действия. Эта команда объединяется с `Start` .|Для этого действия не используйте глаголы, такие как End, Kill, Terminate или Cancel.|
-|[Отправка](/dotnet/api/System.Management.Automation.VerbsLifecycle.Submit) (SB)|Представляет ресурс для утверждения.|Для этого действия не используйте глагол, например POST.|
-|[Приостановка](/dotnet/api/System.Management.Automation.VerbsLifecycle.Suspend) (СС)|Приостанавливает действие. Например, `Suspend-Service` командлет приостанавливает работу службы. Эта команда объединяется с `Resume` .|Для этого действия не используйте команду, например Pause.|
-|[Удаление](/dotnet/api/System.Management.Automation.VerbsLifecycle.Uninstall) (US)|Удаляет ресурс из указанного расположения. Эта команда объединяется с `Install` .||
-|[Отменить регистрацию](/dotnet/api/System.Management.Automation.VerbsLifecycle.Unregister) (на вашем компьютере)|Удаляет запись для ресурса из репозитория. Эта команда объединяется с `Register` .|Для этого действия не используйте глагол, например Remove.|
-|[Ожидание](/dotnet/api/System.Management.Automation.VerbsLifecycle.Wait) (w)|Приостанавливает операцию, пока не произойдет указанное событие. Например, `Wait-Job` командлет приостанавливает операции до тех пор, пока не завершится выполнение одного или нескольких фоновых заданий.|Для этого действия не используйте глаголы, такие как спящий режим или пауза.|
+|[Approve](/dotnet/api/System.Management.Automation.VerbsLifecycle.Approve) (ap)|Утверждает или одобряет состояние ресурса или процесса.||
+|[Assert](/dotnet/api/System.Management.Automation.VerbsLifecycle.Assert) (as)|Подтверждает состояние ресурса.|Certify|
+|[Build](/dotnet/api/System.Management.Automation.VerbsLifecycle.Build) (bd)|Создает артефакт (обычно двоичный код или документ) из набора входных файлов (обычно это исходный код или декларативные документы). Эта команда добавлена в PowerShell 6.||
+|[Complete](/dotnet/api/system.management.automation.host.buffercelltype?view=powershellsdk-1.1.0) (cp)|Завершает операцию.||
+|[Confirm](/dotnet/api/System.Management.Automation.VerbsLifecycle.Confirm) (cn)|Подтверждает или проверяет состояние ресурса или процесса.|Acknowledge, Agree, Certify, Validate, Verify|
+|[Deny](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deny) (dn)|Отклоняет объекты и блоки или препятствует состоянию ресурса или процесса.|Block, Object, Refuse, Reject|
+|[Deploy](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deploy) (dp)|Отправляет приложение, веб-сайт или решение на удаленный целевой объект таким образом, чтобы потребитель этого решения мог получить к нему доступ после завершения развертывания. Эта команда добавлена в PowerShell 6.||
+|[Disable](/dotnet/api/System.Management.Automation.VerbsLifecycle.Disable) (d)|Настраивает для ресурса недоступное или неактивное состояние. Например, командлет `Disable-PSBreakpoint` деактивирует точку останова. Эта команда образует пару с командой `Enable`.|Halt, Hide|
+|[Enable](/dotnet/api/System.Management.Automation.VerbsLifecycle.Enable) (e)|Настраивает для ресурса доступное или активное состояние. Например, командлет `Enable-PSBreakpoint` активирует точку останова. Эта команда образует пару с командой `Disable`.|Start, Begin|
+|[Install](/dotnet/api/System.Management.Automation.VerbsLifecycle.Install) (is)|Помещает ресурс в расположение и при необходимости инициализирует его. Эта команда образует пару с командой `Uninstall`.|Настройка|
+|[Invoke](/dotnet/api/System.Management.Automation.VerbsLifecycle.Invoke) (i)|Выполняет действие, например запуск команды или метода.|Run, Start|
+|[Register](/dotnet/api/System.Management.Automation.VerbsLifecycle.Register) (rg)|Создает запись для ресурса в репозитории, например в базе данных. Эта команда образует пару с командой `Unregister`.||
+|[Request](/dotnet/api/System.Management.Automation.VerbsLifecycle.Request) (rq)|Запрашивает ресурс или разрешения.||
+|[Restart](/dotnet/api/System.Management.Automation.VerbsLifecycle.Restart) (rt)|Останавливает операцию и запускает ее снова. Например, командлет `Restart-Service` останавливает, а затем запускает службу.|Перезапуск|
+|[Resume](/dotnet/api/System.Management.Automation.VerbsLifecycle.Resume) (ru)|Запускает приостановленную операцию. Например, командлет `Resume-Service` запускает приостановленную службу. Эта команда образует пару с командой `Suspend`.||
+|[Start](/dotnet/api/System.Management.Automation.VerbsLifecycle.Start) (sa)|Инициирует операцию. Например, командлет `Start-Service` запускает службу. Эта команда образует пару с командой `Stop`.|Launch, Initiate, Boot|
+|[Stop](/dotnet/api/System.Management.Automation.VerbsLifecycle.Stop) (sp)|Прекращение действия. Эта команда образует пару с командой `Start`.|End, Kill, Terminate, Cancel|
+|[Submit](/dotnet/api/System.Management.Automation.VerbsLifecycle.Submit) (sb)|Представляет ресурс для утверждения.|Опубликовать|
+|[Suspend](/dotnet/api/System.Management.Automation.VerbsLifecycle.Suspend) (ss)|Приостанавливает действие. Например, командлет `Suspend-Service` приостанавливает службу. Эта команда образует пару с командой `Resume`.|Пауза|
+|[Uninstall](/dotnet/api/System.Management.Automation.VerbsLifecycle.Uninstall) (us)|Удаляет ресурс из указанного расположения. Эта команда образует пару с командой `Install`.||
+|[Unregister](/dotnet/api/System.Management.Automation.VerbsLifecycle.Unregister) (ur)|Удаляет запись для ресурса из репозитория. Эта команда образует пару с командой `Register`.|Удалить|
+|[Wait](/dotnet/api/System.Management.Automation.VerbsLifecycle.Wait) (w)|Приостанавливает операцию, пока не произойдет указанное событие. Например, командлет `Wait-Job` приостанавливает операции до тех пор, пока не завершится выполнение одного или нескольких фоновых заданий.|Sleep, Pause|
 
 ## <a name="security-verbs"></a>Команды безопасности
 
-PowerShell использует класс [System. Management. Automation. вербссекурити](/dotnet/api/System.Management.Automation.VerbsSecurity) для определения действий, которые применяются к безопасности. В следующей таблице перечислены большинство определенных команд.
+PowerShell использует класс [System.Management.Automation.VerbsSecurity](/dotnet/api/System.Management.Automation.VerbsSecurity) для определения действий, которые применяются к безопасности. В следующей таблице перечислено большинство определенных команд.
 
-|Команда (псевдоним)|Действие|Комментарии|
+|Команда (псевдоним)|Действие|Неподходящие синонимы|
 |--------------------|------------|--------------|
-|[Block](/dotnet/api/System.Management.Automation.VerbsSecurity.Block) (BL)|Разрешает доступ к ресурсу. Эта команда объединяется с `Unblock` .|Для этого действия не используйте глаголы, такие как "запретить", "ограничить" или "запретить".|
-|[Grant](/dotnet/api/System.Management.Automation.VerbsSecurity.Grant) (GR)|Разрешает доступ к ресурсу. Эта команда объединяется с `Revoke` .|Для этого действия не используйте глаголы, такие как Allow или Enable.|
-|[Защита](/dotnet/api/System.Management.Automation.VerbsSecurity.Protect) (Пт)|Защищает ресурс от атак или потерь. Эта команда объединяется с `Unprotect` .|Для этого действия не используйте глаголы, такие как шифрование, защита или запечатывание.|
-|[REVOKE](/dotnet/api/System.Management.Automation.VerbsSecurity.Revoke) (ать)|Указывает действие, которое не разрешает доступ к ресурсу. Эта команда объединяется с `Grant` .|Для этого действия не используйте глаголы, такие как "Удалить" или "отключить".|
-|[Разблокировать](/dotnet/api/System.Management.Automation.VerbsSecurity.Unblock) (UL)|Удаляет ограничения для ресурса. Эта команда объединяется с `Block` .|Для этого действия не используйте глаголы, такие как Clear или Allow.|
-|[Снять защиту](/dotnet/api/System.Management.Automation.VerbsSecurity.Unprotect) (up)|Удаляет меры защиты из ресурса, который был добавлен, чтобы предотвратить атаку или потери. Эта команда объединяется с `Protect` .|Для этого действия не используйте глаголы, такие как расшифровка или распечатка.|
+|[Block](/dotnet/api/System.Management.Automation.VerbsSecurity.Block) (bl)|Ограничивает доступ к ресурсу. Эта команда образует пару с командой `Unblock`.|Prevent, Limit, Deny|
+|[Grant](/dotnet/api/System.Management.Automation.VerbsSecurity.Grant) (gr)|Разрешает доступ к ресурсу. Эта команда образует пару с командой `Revoke`.|Allow, Enable|
+|[Protect](/dotnet/api/System.Management.Automation.VerbsSecurity.Protect) (pt)|Защищает ресурс от атак или потери. Эта команда образует пару с командой `Unprotect`.|Encrypt, Safeguard, Seal|
+|[Revoke](/dotnet/api/System.Management.Automation.VerbsSecurity.Revoke) (rk)|Указывает действие, которое не разрешает доступ к ресурсу. Эта команда образует пару с командой `Grant`.|Remove, Disable|
+|[Unblock](/dotnet/api/System.Management.Automation.VerbsSecurity.Unblock) (ul)|Удаляет ограничения для ресурса. Эта команда образует пару с командой `Block`.|Clear, Allow|
+|[Unprotect](/dotnet/api/System.Management.Automation.VerbsSecurity.Unprotect) (up)|Удаляет меры защиты для ресурса, которые были добавлены, чтобы предотвратить атаку или потерю. Эта команда образует пару с командой `Protect`.|Decrypt, Unseal|
 
 ## <a name="other-verbs"></a>Другие команды
 
-PowerShell использует класс [System. Management. Automation. вербсосер](/dotnet/api/System.Management.Automation.VerbsOther) для определения канонических имен глаголов, которые не помещаются в конкретную категорию имени команды, например общие команды, связи, данные, жизненный цикл или команды безопасности.
+PowerShell использует класс [System.Management.Automation.VerbsOther](/dotnet/api/System.Management.Automation.VerbsOther) для определения канонических имен команд, которые не входят в конкретную категорию, например общих команд, обмена данными, обработки данных, жизненного цикла или безопасности.
 
-|Команда (псевдоним)|Действие|Комментарии|
+|Команда (псевдоним)|Действие|Неподходящие синонимы|
 |--------------------|------------|--------------|
-|[Используйте](/dotnet/api/System.Management.Automation.VerbsOther.Use) (u)|Использует или включает ресурс для чего-либо.||
+|[Use](/dotnet/api/System.Management.Automation.VerbsOther.Use) (u)|Использует или включает ресурс для чего-либо.||
 
 ## <a name="see-also"></a>См. также:
 
-[System. Management. Automation. Вербскоммон](/dotnet/api/System.Management.Automation.VerbsCommon)
-
-[System. Management. Automation. Вербскоммуникатионс](/dotnet/api/System.Management.Automation.VerbsCommunications)
-
-[System. Management. Automation. Вербсдата](/dotnet/api/System.Management.Automation.VerbsData)
-
-[System. Management. Automation. Вербсдиагностик](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
-
-[System. Management. Automation. Вербслифецикле](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
-
-[System. Management. Automation. Вербссекурити](/dotnet/api/System.Management.Automation.VerbsSecurity)
-
-[System. Management. Automation. Вербсосер](/dotnet/api/System.Management.Automation.VerbsOther)
-
-[Объявление командлета](./cmdlet-class-declaration.md)
-
-[Руководство программиста по Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md)
-
-[Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)
+- [System.Management.Automation.VerbsCommon](/dotnet/api/System.Management.Automation.VerbsCommon)
+- [System.Management.Automation.VerbsCommunications](/dotnet/api/System.Management.Automation.VerbsCommunications)
+- [System.Management.Automation.VerbsData](/dotnet/api/System.Management.Automation.VerbsData)
+- [System.Management.Automation.VerbsDiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
+- [System.Management.Automation.VerbsLifeCycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
+- [System.Management.Automation.VerbsSecurity](/dotnet/api/System.Management.Automation.VerbsSecurity)
+- [System.Management.Automation.VerbsOther](/dotnet/api/System.Management.Automation.VerbsOther)
+- [Объявление командлета](./cmdlet-class-declaration.md)
+- [Руководство программиста по Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md)
+- [Пакет SDK Windows PowerShell](../windows-powershell-reference.md)
