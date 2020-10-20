@@ -1,13 +1,13 @@
 ---
-ms.date: 09/14/2020
+ms.date: 10/15/2020
 title: Использование экспериментальных функций в PowerShell
 description: Список доступных в настоящее время экспериментальных функций и их использование.
-ms.openlocfilehash: 74623240bfb19022ae342a5d23e2ed4f455afa45
-ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
+ms.openlocfilehash: e98b1222755f3d4ffbd432af6b01d56f63307bb2
+ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574476"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156581"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Использование экспериментальных функций в PowerShell
 
@@ -34,9 +34,10 @@ ms.locfileid: "90574476"
 | PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
 | PSNullConditionalOperators (основная функция в версии PS 7.1 и более поздней)         |         | &check; |         |
 | PSUnixFileStat (только не на базе Windows)                          |         | &check; | &check; |
-| PSNativePSPathResolution (основная функция в версии PS 7.1 и более поздней)           |         |         |         |
+| PSNativePSPathResolution                                   |         |         | &check; |
 | PSCultureInvariantReplaceOperator                          |         |         | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; |
+| PSSubsystemPluginModel                                     |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
@@ -153,9 +154,6 @@ Milliseconds      : 209
 - Если путь не является PSDrive или `~` (в Windows), то нормализация пути не происходит.
 - Если путь указан в одинарных кавычках, он не разрешается и рассматривается в качестве литерала.
 
-> [!NOTE]
-> Эта функция вышла из экспериментального режима и является основной функцией в PowerShell 7.1 и более поздних версиях.
-
 ## <a name="psnotapplyerroractiontostderr"></a>PSNotApplyErrorActionToStderr
 
 Если эта экспериментальная функция включена, записи ошибок, перенаправленные из собственных команд (например, при использовании операторов перенаправления, таких как `2>&1`), не записываются в переменную `$Error`, а привилегированная переменная `$ErrorActionPreference` не влияет на перенаправленные выходные данные.
@@ -228,3 +226,11 @@ drwxr-xr-x jimtru    staff         11/8/2019 10:37         896 tools
 
 > [!NOTE]
 > Эта функция вышла из экспериментального режима и является основной функцией в PowerShell 7 и более поздних версиях.
+
+## <a name="pssubsystempluginmodel"></a>PSSubsystemPluginModel
+
+Эта функция включает модель подключаемого модуля подсистемы в PowerShell. Эта функция позволяет разделять компоненты `System.Management.Automation.dll` в отдельные подсистемы, находящиеся в их собственной сборке. Такое разделение сокращает объем дискового пространства ядра PowerShell и позволяет этим компонентам стать необязательными для минимальной установки PowerShell.
+
+В настоящее время поддерживается только подсистема **CommandPredictor**. Эта подсистема используется вместе с модулем PSReadLine для предоставления настраиваемых подключаемых модулей прогнозирования. В будущем **задание**, **CommandCompleter**, **удаленное взаимодействие** и другие компоненты можно будет разделить на сборки подсистемы за пределами `System.Management.Automation.dll`.
+
+Экспериментальная функция содержит новый командлет [Get-PSSubsystem](xref:Microsoft.PowerShell.Core.Get-PSSubsystem). Этот командлет доступен, только если функция включена. Этот командлет возвращает сведения о подсистемах, доступных в системе.
