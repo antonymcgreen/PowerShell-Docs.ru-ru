@@ -778,12 +778,14 @@
       items:
         - name: Использование Visual Studio Code
           href: dev-cross-plat/vscode/using-vscode.md
-        - name: Репликация функций интегрированной среды скриптов в Visual Studio Code
+        - name: "Аналоги функций интегрированной среды сценариев в VS\_Code"
           href: dev-cross-plat/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-        - name: Удаленные редактирование и отладка в Visual Studio Code
+        - name: "Удаленное редактирование и отладка в\_VS\_Code"
           href: dev-cross-plat/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
         - name: "Основные сведения о кодировке файлов в VS\_Code и PowerShell"
           href: dev-cross-plat/vscode/understanding-file-encoding.md
+        - name: "Отладка в VS\_Code скомпилированных командлетов"
+          href: dev-cross-plat/vscode/using-vscode-for-debugging-compiled-cmdlets.md
     - name: Создание переносимых модулей
       href: dev-cross-plat/writing-portable-modules.md
     - name: "Создание справки по модулю с помощью\_PlatyPS"
