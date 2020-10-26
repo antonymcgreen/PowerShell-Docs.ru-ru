@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,безопасность
 title: Регистрация конфигураций JEA
-ms.openlocfilehash: 7cc67e891bc14dd667c97e9a8b550b33b4c2b874
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Регистрация конечной точки JEA в системе делает конечную точку доступной пользователям и модулям автоматизации.
+ms.openlocfilehash: 6e7f8cdc1e7a666bddaa42034d70fcbcf55c1972
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706212"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499915"
 ---
 # <a name="registering-jea-configurations"></a>Регистрация конфигураций JEA
 
@@ -104,7 +105,7 @@ Configuration JEAMaintenance
 
 Затем эту конфигурацию можно применить в системе, [напрямую вызвав локальный диспетчер конфигураций](/powershell/scripting/dsc/managing-nodes/metaConfig) или обновив [конфигурацию опрашивающего сервера](/powershell/scripting/dsc/pull-server/pullServer).
 
-Ресурс DSC также позволяет заменить конечную точку удаленного взаимодействия по умолчанию **Microsoft.PowerShell**. При замене ресурс автоматически регистрирует резервную конечную точку с именем **Microsoft.PowerShell.Restricted**. Резервная конечная точка имеет ACL WinRM по умолчанию, который дает к ней доступ пользователям удаленного управления и локальным администраторам.
+Ресурс DSC также позволяет заменить конечную точку удаленного взаимодействия по умолчанию **Microsoft.PowerShell** . При замене ресурс автоматически регистрирует резервную конечную точку с именем **Microsoft.PowerShell.Restricted** . Резервная конечная точка имеет ACL WinRM по умолчанию, который дает к ней доступ пользователям удаленного управления и локальным администраторам.
 
 ## <a name="unregistering-jea-configurations"></a>Отмена регистрации конфигураций JEA
 

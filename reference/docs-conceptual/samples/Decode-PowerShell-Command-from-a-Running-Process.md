@@ -3,17 +3,18 @@ ms.date: 11/13/2018
 keywords: powershell,командлет
 title: Декодирование команды PowerShell из выполняемого процесса
 author: randomnote1
-ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье показано, как декодировать блок скрипта, который в данный момент выполняется процессом PowerShell.
+ms.openlocfilehash: 95b4b806665bf8137712ebb183329039bc1e1deb
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "66470968"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500493"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>Декодирование команды PowerShell из выполняемого процесса
 
 Иногда у вас может быть запущен процесс PowerShell, который потребляет большое количество ресурсов.
-Этот процесс может быть запущен в контексте задания [Планировщик заданий][] или задания [Агент SQL Server][]. Если запущено несколько процессов PowerShell, может быть трудно определить, какой процесс представляет проблему. В этой статье показано, как декодировать блок скрипта, который в данный момент выполняется процессом PowerShell.
+Этот процесс может быть запущен в контексте задания [планировщика задач][] или задания [агента SQL Server][]. Если запущено несколько процессов PowerShell, может быть трудно определить, какой процесс представляет проблему. В этой статье показано, как декодировать блок скрипта, который в данный момент выполняется процессом PowerShell.
 
 ## <a name="create-a-long-running-process"></a>Создание длительного процесса
 
@@ -81,7 +82,7 @@ $commandDetails[0]
 
 Теперь можно просмотреть декодированную команду, выбрав ее свойство.
 
-```output
+```Output
 ProcessId      : 8752
 EncodedCommand : IAAKAAoACgAgAAoAIAAgACAAIAAkAGkAIAA9ACAAMQAgAAoACgAKACAACgAgACAAIAAgAHcAaABpAGwAZQAgACgAIAAkAGkAIAAtAG
                  wAZQAgADEAMAAgACkAIAAKAAoACgAgAAoAIAAgACAAIAB7ACAACgAKAAoAIAAKACAAIAAgACAAIAAgACAAIABXAHIAaQB0AGUALQBP
