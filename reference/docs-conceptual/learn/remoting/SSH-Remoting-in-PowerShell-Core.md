@@ -1,13 +1,13 @@
 ---
 title: Удаленное взаимодействие с PowerShell через SSH
-description: Удаленное взаимодействие в PowerShell Core с помощью SSH
-ms.date: 07/23/2020
-ms.openlocfilehash: cc65db481fcedcafec16093dbf7e6af4975c73db
-ms.sourcegitcommit: 9dddf1d2e91ebcd347fcfb7bf6ef670d49a12ab7
+ms.date: 10/19/2020
+description: Описывается, как настроить протокол SSH для удаленного взаимодействия PowerShell.
+ms.openlocfilehash: c3373ac30fd915d42e8c9fb7f1eae348a2aee7f1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133475"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501343"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Удаленное взаимодействие с PowerShell через SSH
 
@@ -25,17 +25,17 @@ ms.locfileid: "87133475"
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-Чтобы создать удаленный сеанс, укажите целевой компьютер с помощью параметра **HostName** и имя пользователя с помощью параметра **UserName**. При интерактивном выполнении командлетов отображается запрос на ввод пароля. Вы также можете использовать проверку подлинности ключа SSH с помощью файла закрытого ключа с параметром **KeyFilePath**.
+Чтобы создать удаленный сеанс, укажите целевой компьютер с помощью параметра **HostName** и имя пользователя с помощью параметра **UserName** . При интерактивном выполнении командлетов отображается запрос на ввод пароля. Вы также можете использовать проверку подлинности ключа SSH с помощью файла закрытого ключа с параметром **KeyFilePath** . Способ создания ключей для проверки подлинности по протоколу SSH зависит от платформы.
 
 ## <a name="general-setup-information"></a>Общие сведения об установке
 
-PowerShell 6 или более поздней версии, и на всех компьютерах должен быть установлен SSH. Установите клиент (`ssh.exe`) и сервер (`sshd.exe`) SSH, чтобы осуществлять удаленное взаимодействие между компьютерами. Решение OpenSSH для Windows теперь доступно в Windows 10 сборки 1809 и Windows Server 2019. Дополнительные сведения см. в статье [Управление Windows через OpenSSH](/windows-server/administration/openssh/openssh_overview). В Linux нужно реализовать поддержку SSH (включая установку сервера sshd) в соответствии с используемой платформой. Также для поддержки удаленного взаимодействия по SSH нужно установить PowerShell с сайта GitHub. Для сервера SSH нужно настроить возможность создать подсистему SSH для размещения процесса PowerShell на удаленном компьютере. Также нужно активировать проверку подлинности на основе **пароля** или **ключа**.
+PowerShell 6 или более поздней версии, и на всех компьютерах должен быть установлен SSH. Установите клиент (`ssh.exe`) и сервер (`sshd.exe`) SSH, чтобы осуществлять удаленное взаимодействие между компьютерами. Решение OpenSSH для Windows теперь доступно в Windows 10 сборки 1809 и Windows Server 2019. Дополнительные сведения см. в статье [Управление Windows через OpenSSH](/windows-server/administration/openssh/openssh_overview). В Linux нужно реализовать поддержку SSH (включая установку сервера sshd) в соответствии с используемой платформой. Также для поддержки удаленного взаимодействия по SSH нужно установить PowerShell с сайта GitHub. Для сервера SSH нужно настроить возможность создать подсистему SSH для размещения процесса PowerShell на удаленном компьютере. Также нужно активировать проверку подлинности на основе **пароля** или **ключа** .
 
 ## <a name="set-up-on-a-windows-computer"></a>Настройка на компьютере с Windows
 
-1. Установите последнюю версию PowerShell, см. раздел [Установка PowerShell Core в Windows](../../install/installing-powershell-core-on-windows.md#msi).
+1. Установите последнюю версию PowerShell. Дополнительные сведения см. в статье [Установка PowerShell Core в Windows](../../install/installing-powershell-core-on-windows.md#msi).
 
-   Чтобы убедиться, что в PowerShell есть поддержка удаленного взаимодействия SSH, перечислите наборы параметров `New-PSSession`. Обратите внимание на наличие имен наборов параметров, начинающихся с **SSH**. К этим наборам параметров относятся параметры **SSH**.
+   Чтобы убедиться, что в PowerShell есть поддержка удаленного взаимодействия SSH, перечислите наборы параметров `New-PSSession`. Обратите внимание на наличие имен наборов параметров, начинающихся с **SSH** . К этим наборам параметров относятся параметры **SSH** .
 
    ```powershell
    (Get-Command New-PSSession).ParameterSets.Name
@@ -93,7 +93,7 @@ PowerShell 6 или более поздней версии, и на всех к
 
    Дополнительные сведения см. в статье [Управление ключами OpenSSH](/windows-server/administration/openssh/openssh_keymanagement).
 
-1. Перезапустите службу **sshd**.
+1. Перезапустите службу **sshd** .
 
    ```powershell
    Restart-Service sshd
@@ -119,6 +119,14 @@ PowerShell 6 или более поздней версии, и на всех к
    PasswordAuthentication yes
    ```
 
+   При необходимости включите проверку подлинности на основе ключа:
+
+   ```
+   PubkeyAuthentication yes
+   ```
+
+   Дополнительные сведения о создании ключей SSH в Ubuntu см. на странице справки по [ssh-keygen](http://manpages.ubuntu.com/manpages/xenial/man1/ssh-keygen.1.html).
+
    Добавьте запись подсистемы PowerShell:
 
    ```
@@ -134,15 +142,15 @@ PowerShell 6 или более поздней версии, и на всех к
    PubkeyAuthentication yes
    ```
 
-1. Перезапустите службу **sshd**.
+1. Перезапустите службу **ssh** .
 
    ```bash
-   sudo service sshd restart
+   sudo service ssh restart
    ```
 
 ## <a name="set-up-on-a-macos-computer"></a>Настройка на компьютере с macOS
 
-1. Установите последнюю версию PowerShell, см. раздел [Установка PowerShell Core в macOS](../../install/installing-powershell-core-on-macos.md).
+1. Установите последнюю версию PowerShell. Дополнительные сведения см. в статье [Установка PowerShell Core в macOS](../../install/installing-powershell-core-on-macos.md).
 
    Убедитесь, что удаленное взаимодействие SSH включено, выполните следующие действия:
 
@@ -153,7 +161,7 @@ PowerShell 6 или более поздней версии, и на всех к
 
 1. Измените файл `sshd_config` в расположении `/private/etc/ssh/sshd_config`.
 
-   Используйте текстовый редактор, например **nano**:
+   Используйте текстовый редактор, например **nano** :
 
    ```bash
    sudo nano /private/etc/ssh/sshd_config
@@ -180,7 +188,7 @@ PowerShell 6 или более поздней версии, и на всех к
    PubkeyAuthentication yes
    ```
 
-1. Перезапустите службу **sshd**.
+1. Перезапустите службу **sshd** .
 
    ```bash
    sudo launchctl stop com.openssh.sshd

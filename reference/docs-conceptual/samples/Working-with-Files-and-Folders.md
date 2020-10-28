@@ -2,20 +2,21 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Работа с файлами и папками
-ms.openlocfilehash: 8876ff70adbd10c9019f6d80ce7ad327f2932c74
-ms.sourcegitcommit: 08acbea14c69a347f2f46aafcb215a5233c7d830
+description: В этой статье описывается выполнение конкретных задач по управлению файлами и папками с помощью PowerShell.
+ms.openlocfilehash: c0c3abb082b05296daa480ac06bcbfa3a784e0c9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82691481"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500034"
 ---
 # <a name="working-with-files-and-folders"></a>Работа с файлами и папками
 
-Просмотр содержимого дисков Windows PowerShell и управление хранящимися на них элементами аналогично управлению файлами и папками на физических дисках Windows. В этом разделе мы обсудим выполнение конкретных задач по управлению файлами и папками с помощью PowerShell.
+Просмотр содержимого дисков Windows PowerShell и управление хранящимися на них элементами аналогично управлению файлами и папками на физических дисках Windows. В этой статье описывается выполнение конкретных задач по управлению файлами и папками с помощью PowerShell.
 
 ## <a name="listing-all-the-files-and-folders-within-a-folder"></a>Получение списка файлов и папок, содержащихся в папке
 
-Извлечь все элементы непосредственно из папки можно с помощью командлета `Get-ChildItem`. Для отображения скрытых и системных элементов добавьте необязательный параметр **Force**. Например, эта команда отображает непосредственное содержимое диска C Windows PowerShell (которое совпадает с содержимым физического диска C Windows):
+Извлечь все элементы непосредственно из папки можно с помощью командлета `Get-ChildItem`. Для отображения скрытых и системных элементов добавьте необязательный параметр **Force** . Например, эта команда отображает непосредственное содержимое диска C Windows PowerShell (которое совпадает с содержимым физического диска C Windows):
 
 ```powershell
 Get-ChildItem -Path C:\ -Force
@@ -27,7 +28,7 @@ Get-ChildItem -Path C:\ -Force
 Get-ChildItem -Path C:\ -Force -Recurse
 ```
 
-Командлет `Get-ChildItem` позволяет отфильтровать элементы с помощью параметров **Path**, **Filter**, **Include** и **Exclude**, но обычно осуществляется лишь фильтрация по имени. Сложную фильтрацию на основе других свойств элементов можно выполнить с помощью `Where-Object`.
+Командлет `Get-ChildItem` позволяет отфильтровать элементы с помощью параметров **Path** , **Filter** , **Include** и **Exclude** , но обычно осуществляется лишь фильтрация по имени. Сложную фильтрацию на основе других свойств элементов можно выполнить с помощью `Where-Object`.
 
 Следующая команда находит все исполняемые файлы в папке Program Files, которые были в последний раз изменены после 1 октября 2005 г. и размер которых не менее одного мегабайта и не более десяти мегабайт:
 
@@ -43,7 +44,7 @@ Get-ChildItem -Path $env:ProgramFiles -Recurse -Include *.exe | Where-Object -Fi
 Copy-Item -Path C:\boot.ini -Destination C:\boot.bak
 ```
 
-Если целевой файл уже существует, то попытка копирования завершается неудачей. Чтобы перезаписать имеющийся целевой файл, используйте параметр **Force**.
+Если целевой файл уже существует, то попытка копирования завершается неудачей. Чтобы перезаписать имеющийся целевой файл, используйте параметр **Force** .
 
 ```powershell
 Copy-Item -Path C:\boot.ini -Destination C:\boot.bak -Force
@@ -63,7 +64,7 @@ Copy-Item C:\temp\test1 -Recurse C:\temp\DeleteMe
 Copy-Item -Filter *.txt -Path c:\data -Recurse -Destination C:\temp\text
 ```
 
-Для копирования элементов файловой системы можно использовать и другие средства. В Windows PowerShell по-прежнему работают команды XCOPY, ROBOCOPY и такие COM-объекты, как **Scripting.FileSystemObject**. Например, можно воспользоваться COM-классом **Scripting.FileSystem** сервера сценариев Windows для создания резервной копии файла `C:\boot.ini` в файле `C:\boot.bak`:
+Для копирования элементов файловой системы можно использовать и другие средства. В Windows PowerShell по-прежнему работают команды XCOPY, ROBOCOPY и такие COM-объекты, как **Scripting.FileSystemObject** . Например, можно воспользоваться COM-классом **Scripting.FileSystem** сервера сценариев Windows для создания резервной копии файла `C:\boot.ini` в файле `C:\boot.bak`:
 
 ```powershell
 (New-Object -ComObject Scripting.FileSystemObject).CopyFile('C:\boot.ini', 'C:\boot.bak')
@@ -103,7 +104,7 @@ sure you want to continue?
 (default is "Y"):
 ```
 
-Если подтверждение для каждого вложенного элемента нежелательно, задайте параметр **Recurse**:
+Если подтверждение для каждого вложенного элемента нежелательно, задайте параметр **Recurse** :
 
 ```powershell
 Remove-Item -Path C:\temp\DeleteMe -Recurse

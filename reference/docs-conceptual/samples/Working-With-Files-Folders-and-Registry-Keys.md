@@ -2,16 +2,17 @@
 ms.date: 07/28/2020
 keywords: powershell,командлет
 title: Работа с файлами, папками и разделами реестра
-ms.openlocfilehash: 7ead5d0e82feb852845468fb3a012a0908a4ce75
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+description: В этой статье описывается, как работать с разделами реестра с помощью PowerShell.
+ms.openlocfilehash: 6f653c1fb409a238aa05658e89261a12e96f6fe1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410195"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499983"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Работа с файлами, папками и разделами реестра
 
-Windows PowerShell использует существительное **Item**, чтобы ссылаться на элементы, найденные на диске Windows PowerShell.
+Windows PowerShell использует существительное **Item** , чтобы ссылаться на элементы, найденные на диске Windows PowerShell.
 При работе с поставщиком FileSystem Windows PowerShell **Item** может быть файлом, папкой или диском Windows PowerShell. Создание списков элементов и работа с ними является критически важной задачей в большинстве административных учреждений, поэтому необходимо подробно обсудить ее.
 
 ## <a name="enumerating-files-folders-and-registry-keys-get-childitem"></a>Перечисление файлов, папок и разделов реестра (Get-ChildItem)
@@ -161,7 +162,7 @@ Get-ChildItem -Path C:\Windows\*.dll -Recurse -Exclude [a-y]*.dll
 
 Результаты не возвращены, так как подстановочный знак указан как часть пути. Хотя команда и была рекурсивной, командлет `Get-ChildItem` ограничил элементы до тех, которые находятся в папке Windows с именами, заканчивающимися на `.dll`.
 
-Чтобы указать рекурсивный поиск для файлов, имена которых соответствуют специальному шаблону, используйте параметр **Include**.
+Чтобы указать рекурсивный поиск для файлов, имена которых соответствуют специальному шаблону, используйте параметр **Include** .
 
 ```
 PS> Get-ChildItem -Path C:\Windows -Include *.dll -Recurse -Exclude [a-y]*.dll

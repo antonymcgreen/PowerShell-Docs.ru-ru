@@ -4,12 +4,13 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: eb23b048a50f10ea83d156c0499772b1be439336
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+description: В этой главе представлены понятия форматирования выходных данных, псевдонимов команд, поставщиков и операций сравнения.
+ms.openlocfilehash: efe70d2d220f8451e781603b6000c3553dda910c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438005"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501615"
 ---
 # <a name="chapter-5---formatting-aliases-providers-comparison"></a>Глава 5. Форматирование, псевдонимы, поставщики, сравнение
 
@@ -195,7 +196,7 @@ CommandType     Name                                               Version    So
 Alias           gm -> Get-Member
 ```
 
-Чтобы найти псевдонимы для команды, необходимо использовать параметр **Definition**.
+Чтобы найти псевдонимы для команды, необходимо использовать параметр **Definition** .
 
 ```powershell
 Get-Alias -Definition Get-Command, Get-Member
@@ -574,7 +575,7 @@ SQL Saturday - Baton Rouge
 SQL Sat - Baton Rouge
 ```
 
-При использовании методов для преобразования данных следует соблюдать осторожность, так как могут возникнуть непредвиденные проблемы, такие как непрохождение _турецкого теста_. Пример см. в статье блога [Using Pester to Test PowerShell Code with Other Cultures][]. Чтобы избежать проблем такого типа, рекомендуется по возможности использовать оператор вместо метода.
+При использовании методов для преобразования данных следует соблюдать осторожность, так как могут возникнуть непредвиденные проблемы, такие как непрохождение _турецкого теста_ . Пример см. в статье блога [Using Pester to Test PowerShell Code with Other Cultures][]. Чтобы избежать проблем такого типа, рекомендуется по возможности использовать оператор вместо метода.
 
 Несмотря на то что операторы сравнения можно использовать, как показано в предыдущих примерах, обычно я применяю их с командлетом `Where-Object` для выполнения фильтрации.
 

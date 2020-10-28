@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: История выпусков модулей и командлетов
-ms.openlocfilehash: 4cb69e9d53151a0a221654f76ad7eb5eeb8fa218
-ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
+description: В этой статье перечислены модули и командлеты, поставляемые с различными версиями PowerShell.
+ms.openlocfilehash: cefd84c5d3785d19670ee649f5af951d5975912c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83751328"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501666"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>История выпусков модулей и командлетов
 

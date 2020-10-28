@@ -1,12 +1,13 @@
 ---
 title: Совместимость модулей PowerShell 7
 ms.date: 02/03/2020
-ms.openlocfilehash: d618f9e55f5997bfd724a4e58bb94c348bd681ce
-ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
+description: В этой статье приведены сведения о состоянии PowerShell 7 с модулями PowerShell, опубликованными для других продуктов Майкрософт.
+ms.openlocfilehash: f845b33881c93fa076d97adf101f4f3e006df73b
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84722819"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501632"
 ---
 # <a name="powershell-7-module-compatibility"></a>Совместимость модулей PowerShell 7
 
@@ -24,7 +25,7 @@ ms.locfileid: "84722819"
 Install-WindowsFeature -Name ActiveDirectory
 ```
 
-В Windows 10 модули управления Windows доступны в виде **дополнительных компонентов Windows** или **возможностей Windows**. Приведенные ниже команды должны выполняться с повышенными привилегиями с помощью команды **Запуск от имени администратора**.
+В Windows 10 модули управления Windows доступны в виде **дополнительных компонентов Windows** или **возможностей Windows** . Приведенные ниже команды должны выполняться с повышенными привилегиями с помощью команды **Запуск от имени администратора** .
 
 - Дополнительные компоненты Windows
 

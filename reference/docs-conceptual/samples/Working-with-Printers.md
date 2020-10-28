@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,командлет
 title: Работа с принтерами
-ms.openlocfilehash: 1d6b9a57ec61f06af694757dc8017d50b4dd40fe
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье описывается, как управлять принтерами в Windows с помощью объектов WMI и COM-интерфейсов.
+ms.openlocfilehash: 2606753783043eeae8e9d461e56f0901149cb8e3
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78935214"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501088"
 ---
 # <a name="working-with-printers-in-windows"></a>Работа с принтерами в Windows
 
@@ -21,7 +22,7 @@ PowerShell можно использовать для управления пр�
 Get-CimInstance -Class Win32_Printer
 ```
 
-Список принтеров можно также вывести с помощью COM-объекта **WScript.Network**, который обычно используется в сценариях сервера сценариев Windows:
+Список принтеров можно также вывести с помощью COM-объекта **WScript.Network** , который обычно используется в сценариях сервера сценариев Windows:
 
 ```powershell
 (New-Object -ComObject WScript.Network).EnumPrinterConnections()
@@ -31,7 +32,7 @@ Get-CimInstance -Class Win32_Printer
 
 ## <a name="adding-a-network-printer"></a>Добавление сетевого принтера
 
-Чтобы добавить сетевой принтер, используйте **WScript.Network**:
+Чтобы добавить сетевой принтер, используйте **WScript.Network** :
 
 ```powershell
 (New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\Printserver01\Xerox5")
@@ -39,14 +40,14 @@ Get-CimInstance -Class Win32_Printer
 
 ## <a name="setting-a-default-printer"></a>Установка принтера по умолчанию
 
-Чтобы задать принтер по умолчанию с помощью инструментария WMI, найдите принтер в коллекции **Win32_Printer**, а затем вызовите метод **SetDefaultPrinter**.
+Чтобы задать принтер по умолчанию с помощью инструментария WMI, найдите принтер в коллекции **Win32_Printer** , а затем вызовите метод **SetDefaultPrinter** .
 
 ```powershell
 $printer = Get-CimInstance -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'"
 Invoke-CimMethod -InputObject $printer -MethodName SetDefaultPrinter
 ```
 
-**WScript.Network** немного проще в использовании, так как содержит метод **SetDefaultPrinter**, который принимает в качестве аргумента только имя принтера:
+**WScript.Network** немного проще в использовании, так как содержит метод **SetDefaultPrinter** , который принимает в качестве аргумента только имя принтера:
 
 ```powershell
 (New-Object -ComObject WScript.Network).SetDefaultPrinter('HP LaserJet 5Si')
@@ -54,7 +55,7 @@ Invoke-CimMethod -InputObject $printer -MethodName SetDefaultPrinter
 
 ## <a name="removing-a-printer-connection"></a>Удаление подключения принтера
 
-Чтобы удалить подключение принтера, используйте метод **WScript.Network RemovePrinterConnection**:
+Чтобы удалить подключение принтера, используйте метод **WScript.Network RemovePrinterConnection** :
 
 ```powershell
 (New-Object -ComObject WScript.Network).RemovePrinterConnection("\\Printserver01\Xerox5")

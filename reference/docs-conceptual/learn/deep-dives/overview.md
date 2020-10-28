@@ -1,12 +1,13 @@
 ---
 title: Подробные обзоры
 ms.date: 05/23/2020
-ms.openlocfilehash: 9ba687c81f5bdc64881fa78a6e4ebbe051320358
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+description: В разделе "Подробные обзоры" документации содержатся статьи с более подробными сведениями и примерами, чем в справочнике по командлетам.
+ms.openlocfilehash: da42df8ff4590d12be88132ebc98278821d4f9ee
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149407"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501071"
 ---
 # <a name="deep-dive-articles"></a>Подробные статьи
 

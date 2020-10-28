@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Выбор элементов из списка
-ms.openlocfilehash: 048bccd403e01e2290a8930a0faba30d4c7caa73
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье описывается, как создать элемент управления "Список" с помощью функций создания форм .NET Framework в Windows PowerShell.
+ms.openlocfilehash: cfd6110a9cfcc3cea891d68d8ce7be5b332a949a
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706178"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501054"
 ---
 # <a name="selecting-items-from-a-list-box"></a>Выбор элементов из списка
 
@@ -74,7 +75,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-Сценарий начинается с загрузки двух классов .NET Framework: **System.Drawing** и **System.Windows.Forms**. Затем вы запускаете новый экземпляр класса .NET Framework **System.Windows.Forms.Form**, предоставляющий пустую форму или окно, в которые можно добавить элементы управления.
+Сценарий начинается с загрузки двух классов .NET Framework: **System.Drawing** и **System.Windows.Forms** . Затем вы запускаете новый экземпляр класса .NET Framework **System.Windows.Forms.Form** , предоставляющий пустую форму или окно, в которые можно добавить элементы управления.
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms
@@ -85,10 +86,10 @@ Add-Type -AssemblyName System.Drawing
 
 - **Text.** Это будет заголовком окна.
 
-- **Size.** Это размер формы в пикселях. Предыдущий сценарий создает форму шириной 300 пикселей и высотой 200 пикселей.
+- **Size.** Это размер формы в пикселях. Предыдущий сценарий создает форму шириной 300 пикселей и высотой 200 пикселей.
 
 - **StartingPosition.** Для этого дополнительного свойства задается значение **CenterScreen** в предыдущем сценарии.
-  Если это свойство не добавлено, Windows выберет расположение после открытия формы. Если для **StartingPosition** задать значение **CenterScreen**, форма будет автоматически отображаться в центре экрана при загрузке.
+  Если это свойство не добавлено, Windows выберет расположение после открытия формы. Если для **StartingPosition** задать значение **CenterScreen** , форма будет автоматически отображаться в центре экрана при загрузке.
 
 ```powershell
 $form.Text = 'Select a Computer'
@@ -96,7 +97,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = 'CenterScreen'
 ```
 
-Далее создайте кнопку **OК** для формы. Укажите размер и поведение кнопки **ОК**. В этом примере кнопка расположена на 120 пикселей ниже верхней границы формы и на 75 пикселей правее левой границы. Высота кнопки — 23 пикселя, а длина — 75 пикселей. Сценарий использует предопределенные типы Windows Forms для определения поведения кнопок.
+Далее создайте кнопку **OК** для формы. Укажите размер и поведение кнопки **ОК** . В этом примере кнопка расположена на 120 пикселей ниже верхней границы формы и на 75 пикселей правее левой границы. Высота кнопки — 23 пикселя, а длина — 75 пикселей. Сценарий использует предопределенные типы Windows Forms для определения поведения кнопок.
 
 ```powershell
 $okButton = New-Object System.Windows.Forms.Button
@@ -108,7 +109,7 @@ $form.AcceptButton = $okButton
 $form.Controls.Add($okButton)
 ```
 
-Аналогичным образом создайте кнопку **Отмена**. Кнопка **Отмена** расположена на 120 пикселей ниже верхней границы и на 150 пикселей правее левой границы окна.
+Аналогичным образом создайте кнопку **Отмена** . Кнопка **Отмена** расположена на 120 пикселей ниже верхней границы и на 150 пикселей правее левой границы окна.
 
 ```powershell
 $cancelButton = New-Object System.Windows.Forms.Button
@@ -167,17 +168,17 @@ $form.Topmost = $true
 $result = $form.ShowDialog()
 ```
 
-Наконец, код внутри блока **If** указывает Windows, что следует делать с формой после того, как пользователь выберет параметр из списка и нажмет кнопку **ОК** или клавишу **ВВОД**.
+Наконец, код внутри блока **If** указывает Windows, что следует делать с формой после того, как пользователь выберет параметр из списка и нажмет кнопку **ОК** или клавишу **ВВОД** .
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 {
-    $x = $listBox.SelectedItem
-    $x
+    $x = $listBox.SelectedItem
+    $x
 }
 ```
 
 ## <a name="see-also"></a>См. также:
 
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates (WinFormsExampleUpdates от Дэйва Уайята)](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week: Selecting Items from a List Box](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10)) (Совет недели для Windows PowerShell: выбор элементов в списке)
+- [Windows PowerShell Tip of the Week: Selecting Items from a List Box (Совет недели для Windows PowerShell: выбор элементов из списка)](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))

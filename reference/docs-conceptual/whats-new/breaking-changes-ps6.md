@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Критические изменения в PowerShell Core 6.0
-ms.openlocfilehash: 9ead635232930598634141369fd2cc299f0b1799
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: В этой статье приведены различия между Windows PowerShell 5.1 и PowerShell 6.0.
+ms.openlocfilehash: 7ed6e811b9136cb1c35422a9d682ba2bfaa136a0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158196"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501700"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>Критические изменения в PowerShell 6.x
 
@@ -224,7 +225,7 @@ ms.locfileid: "86158196"
 
 При использовании HTTP содержимое, включая пароли, отправляется в виде открытого текста. В этом изменении такое поведение запрещено по умолчанию и возвращается ошибка, если учетные данные передаются небезопасным образом. Пользователи могут обойти это с помощью параметра `-AllowUnencryptedAuthentication`.
 
-## <a name="api-changes"></a>Изменения в API
+## <a name="api-changes"></a>Изменения API
 
 ### <a name="remove-addtypecommandbase-class-5407"></a>Удален класс `AddTypeCommandBase`[№ 5407](https://github.com/PowerShell/PowerShell/issues/5407)
 
@@ -279,7 +280,7 @@ ms.locfileid: "86158196"
 
 ### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036"></a>Выполнение скрипта PowerShell с параметром bool не работает [№ 4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-Ранее при использовании **powershell.exe** (теперь **pwsh.exe**) для выполнения скрипта PowerShell с параметром `-File` было невозможно передать значения `$true`/`$false` в качестве значений параметра. Была добавлена поддержка `$true`/`$false` в качестве анализируемых значений. Значения параметров также поддерживаются, так как в настоящий момент синтаксис документа не работает.
+Ранее при использовании **powershell.exe** (теперь **pwsh.exe** ) для выполнения скрипта PowerShell с параметром `-File` было невозможно передать значения `$true`/`$false` в качестве значений параметра. Была добавлена поддержка `$true`/`$false` в качестве анализируемых значений. Значения параметров также поддерживаются, так как в настоящий момент синтаксис документа не работает.
 
 ### <a name="remove-clrversion-property-from-psversiontable-4027"></a>Свойство `ClrVersion` удалено из `$PSVersionTable` [№ 4027](https://github.com/PowerShell/PowerShell/issues/4027)
 

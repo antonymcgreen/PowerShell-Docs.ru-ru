@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Работа с записями реестра
-ms.openlocfilehash: 7f8ee87cebb8b220570bcb969445071a72a68526
-ms.sourcegitcommit: d3f78120bdc9096c72aa0dfdbdd91efaf254c738
+description: В этой статье описывается, как работать с записями реестра с помощью PowerShell.
+ms.openlocfilehash: 65f8b4ed7b2f9af26bfd22f34577a4bd52f35e70
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758488"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501462"
 ---
 # <a name="working-with-registry-entries"></a>Работа с записями реестра
 
@@ -57,9 +58,9 @@ PF_AccessoriesName  : Accessories
 (default)           :
 ```
 
-Все свойства Windows PowerShell раздела имеют префиксы PS, например **PSPath**, **PSParentPath**, **PSChildName** и **PSProvider**.
+Все свойства Windows PowerShell раздела имеют префиксы PS, например **PSPath** , **PSParentPath** , **PSChildName** и **PSProvider** .
 
-Для создания ссылки на текущее расположение можно использовать нотацию `*.*`. `Set-Location` можно использовать для изменения значения на контейнер реестра **CurrentVersion**.
+Для создания ссылки на текущее расположение можно использовать нотацию `*.*`. `Set-Location` можно использовать для изменения значения на контейнер реестра **CurrentVersion** .
 
 ```powershell
 Set-Location -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
@@ -91,7 +92,7 @@ ProgramFilesDir     : C:\Program Files
 
 Если необходимо получить конкретную запись в разделе реестра, можно использовать один из нескольких возможных подходов. Этот пример получает значение **DevicePath** в `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion`.
 
-Вместе с `Get-ItemProperty` используйте параметр **Path**, чтобы указать имя раздела и параметр **Name**, а также имя записи **DevicePath**.
+Вместе с `Get-ItemProperty` используйте параметр **Path** , чтобы указать имя раздела и параметр **Name** , а также имя записи **DevicePath** .
 
 ```powershell
 Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion -Name DevicePath
@@ -108,10 +109,10 @@ PSProvider   : Microsoft.PowerShell.Core\Registry
 DevicePath   : C:\WINDOWS\inf
 ```
 
-Эта команда возвращает стандартные свойства Windows PowerShell, а также свойство **DevicePath**.
+Эта команда возвращает стандартные свойства Windows PowerShell, а также свойство **DevicePath** .
 
 > [!NOTE]
-> Хотя `Get-ItemProperty` содержит параметры **Filter**, **Include** и **Exclude**, их нельзя использовать для фильтрации по имени свойства. Эти параметры относятся в разделам реестра (путям элементов), а не к записям реестра (свойствам элементов).
+> Хотя `Get-ItemProperty` содержит параметры **Filter** , **Include** и **Exclude** , их нельзя использовать для фильтрации по имени свойства. Эти параметры относятся в разделам реестра (путям элементов), а не к записям реестра (свойствам элементов).
 
 Другой вариант — использовать средство командной строки Reg.exe. Для получения справки по reg.exe введите `reg.exe /?` в командной строке. Чтобы найти запись DevicePath, используйте reg.exe, как показано в следующей команде:
 
@@ -151,13 +152,13 @@ Set-ItemProperty -Path HKCU:\Environment -Name Path -Value $newpath
 ```
 
 > [!NOTE]
-> Хотя `Set-ItemProperty` содержит параметры **Filter**, **Include** и **Exclude**, их нельзя использовать для фильтрации по имени свойства. Эти параметры относятся в разделам реестра (путям элементов), а не к записям реестра (свойствам элементов).
+> Хотя `Set-ItemProperty` содержит параметры **Filter** , **Include** и **Exclude** , их нельзя использовать для фильтрации по имени свойства. Эти параметры относятся в разделам реестра (путям элементов), а не к записям реестра (свойствам элементов).
 
 Другой вариант — использовать средство командной строки Reg.exe. Для получения справки по reg.exe введите **reg.exe /?** .
 в командной строке.
 
 В следующем примере запись **Path** изменяется за счет удаления пути, добавленного в предыдущем примере.
-`Get-ItemProperty` по-прежнему используется для получения текущего значения, исключая анализ строки, возвращаемой `reg query`. Методы **SubString** и **LastIndexOf** используются для получения последнего добавленного пути в запись **Path**.
+`Get-ItemProperty` по-прежнему используется для получения текущего значения, исключая анализ строки, возвращаемой `reg query`. Методы **SubString** и **LastIndexOf** используются для получения последнего добавленного пути в запись **Path** .
 
 ```powershell
 $value = Get-ItemProperty -Path HKCU:\Environment -Name Path
@@ -171,7 +172,7 @@ The operation completed successfully.
 
 ## <a name="creating-new-registry-entries"></a>Создание новых записей реестра
 
-Чтобы добавить новую запись реестра с именем PowerShellPath в раздел **CurrentVersion**, используйте`New-ItemProperty` с путем к разделу, именем записи и значением записи. В этом примере используется значение переменной Windows PowerShell `$PSHome`, в которой хранится путь к каталогу установки Windows PowerShell.
+Чтобы добавить новую запись реестра с именем PowerShellPath в раздел **CurrentVersion** , используйте`New-ItemProperty` с путем к разделу, именем записи и значением записи. В этом примере используется значение переменной Windows PowerShell `$PSHome`, в которой хранится путь к каталогу установки Windows PowerShell.
 
 Вы можете добавить новую запись в раздел с помощью следующей команды, и команда также вернет сведения о новой записи:
 
@@ -200,7 +201,7 @@ PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 |QWord|8 байтов двоичных данных|
 
 > [!NOTE]
-> Запись реестра можно добавить в несколько расположений, указав массив значений для параметра **Path**:
+> Запись реестра можно добавить в несколько расположений, указав массив значений для параметра **Path** :
 
 ```powershell
 New-ItemProperty -Name PowerShellPath -PropertyType String -Value $PSHome `

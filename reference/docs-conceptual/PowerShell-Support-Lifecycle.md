@@ -1,20 +1,19 @@
 ---
 title: Жизненный цикл поддержки PowerShell Core
-description: Политики, распространяемые на поддержку PowerShell Core
+description: Сведения о политиках, распространяемых на поддержку PowerShell
 ms.date: 03/09/2020
-ms.openlocfilehash: 717fd5c4845835f314eaf7c3617d5123318da2dc
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: 1681df188d03a1115b13518fb88c21ebf79701d4
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236209"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501751"
 ---
 # <a name="powershell-support-lifecycle"></a>Жизненный цикл поддержки PowerShell
 
 PowerShell — это отдельный набор средств и компонентов, поставляемых, устанавливаемых и настраиваемых отдельно от Windows PowerShell. PowerShell не входит в состав соглашений о лицензировании Windows.
 
-PowerShell поддерживается в рамках традиционных соглашений о поддержке корпорации Майкрософт, включая [платную поддержку][], [соглашения Microsoft Enterprise][enterprise-agreement] и [Microsoft Software Assurance][assurance].
-Вы также можете оплатить [техническую поддержку][] по PowerShell, направив в службу поддержки запрос о своей проблеме.
+PowerShell поддерживается в рамках традиционных соглашений о поддержке корпорации Майкрософт, включая [платную поддержку][], [соглашения Microsoft Enterprise][enterprise-agreement] и [Microsoft Software Assurance][assurance]. Вы также можете оплатить [техническую поддержку][] по PowerShell, направив в службу поддержки запрос о своей проблеме.
 
 ## <a name="community-support"></a>Поддержка сообщества
 

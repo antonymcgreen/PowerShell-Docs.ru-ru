@@ -2,12 +2,13 @@
 ms.date: 07/29/2020
 keywords: powershell,командлет
 title: Использование документации по PowerShell
-ms.openlocfilehash: 1cfeb9eea564e7618062e1b8ada4948bd9e22969
-ms.sourcegitcommit: 9f9eb95bc859e9e0fed48101327a602b2ced351d
+description: В этой статье описывается, как использовать функции данного сайта, включая фильтрацию при поиске и выбор версий.
+ms.openlocfilehash: 32f0c613e10329cc4830386b744e766eeeab0187
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821535"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501122"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>Использование документации по PowerShell
 

@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,командлет
 title: Работа с программами установки программного обеспечения
-ms.openlocfilehash: f3023d8819d6cdcc9f55befcfedb21e6ff9d282c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье описывается, как использовать инструментарий WMI для управления программным обеспечением, установленным в Windows.
+ms.openlocfilehash: 3cf8e3c58e9f2814e2551b3602bd7b47b375aed8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996126"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500884"
 ---
 # <a name="working-with-software-installations"></a>Работа с программами установки программного обеспечения
 
@@ -33,7 +34,7 @@ Name             Caption                   Vendor                    Version    
 Microsoft .NET … Microsoft .NET Core Runt… Microsoft Corporation     16.84.26919   {BEB59D04-C6DD-4926-AFE…
 ```
 
-Чтобы отобразить все свойства объекта **Win32_Product**, используйте параметр **Properties** командлетов форматирования, например `Format-List` со значением `*` (все).
+Чтобы отобразить все свойства объекта **Win32_Product** , используйте параметр **Properties** командлетов форматирования, например `Format-List` со значением `*` (все).
 
 ```powershell
 Get-CimInstance -Class Win32_Product |
@@ -75,7 +76,7 @@ CimInstanceProperties : {Caption, Description, IdentifyingNumber, Name...}
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-Можно также использовать параметр `Get-CimInstance` **Filter**, чтобы выбрать только среду выполнения Microsoft .NET 2.0. Для значения параметра **Filter** используется синтаксис языка запросов WMI (WQL), а не синтаксис Windows PowerShell. Пример:
+Можно также использовать параметр `Get-CimInstance` **Filter** , чтобы выбрать только среду выполнения Microsoft .NET 2.0. Для значения параметра **Filter** используется синтаксис языка запросов WMI (WQL), а не синтаксис Windows PowerShell. Пример:
 
 ```powershell
 Get-CimInstance -Class Win32_Product -Filter "Name='Microsoft .NET Core Runtime - 2.1.5 (x64)'" |
@@ -199,13 +200,13 @@ Invoke-CimMethod -ClassName Win32_Product -MethodName Install -Arguments @{Packa
 
 ## <a name="removing-applications"></a>Удаление приложений
 
-Удаление пакета установщика Windows с помощью PowerShell работает примерно так же, как и установка пакета. Далее представлен пример, в котором пакет для удаления выбирается на основе имени. В некоторых случаях его может быть проще отфильтровать с помощью **IdentifyingNumber**:
+Удаление пакета установщика Windows с помощью PowerShell работает примерно так же, как и установка пакета. Далее представлен пример, в котором пакет для удаления выбирается на основе имени. В некоторых случаях его может быть проще отфильтровать с помощью **IdentifyingNumber** :
 
 ```powershell
 Get-CimInstance -Class Win32_Product -Filter "Name='ILMerge'" | Invoke-CimMethod -MethodName Uninstall
 ```
 
-Удаление других приложений не так просто, даже если оно выполняется локально. Строки удаления командной строки для этих приложений можно найти путем извлечения свойства **UninstallString**.
+Удаление других приложений не так просто, даже если оно выполняется локально. Строки удаления командной строки для этих приложений можно найти путем извлечения свойства **UninstallString** .
 Этот способ работает для приложений установщика Windows и более старых программ, отображающихся в разделе "Удаление":
 
 ```powershell

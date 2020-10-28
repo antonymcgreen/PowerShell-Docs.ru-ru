@@ -2,27 +2,22 @@
 title: Удаленное взаимодействие с WS-Management (WSMan) в PowerShell Core
 description: Удаленное взаимодействие в PowerShell Core с помощью WSMan
 ms.date: 08/06/2018
-ms.openlocfilehash: 7b090e1463808ab10758bbd417d52fcc16c31366
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: fdc4159279db28b8ee60bc0853e19512a1f9ec14
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564519"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501309"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>Удаленное взаимодействие с WS-Management (WSMan) в PowerShell Core
 
 ## <a name="instructions-to-create-a-remoting-endpoint"></a>Инструкции по созданию конечной точки удаленного взаимодействия
 
-Пакет PowerShell Core для Windows включает подключаемый модуль WinRM (`pwrshplugin.dll`) и сценарий установки (`Install-PowerShellRemoting.ps1`) в `$PSHome`.
-Эти файлы позволяют PowerShell принимать входящие удаленные подключения PowerShell, когда указана его конечная точка.
+Пакет PowerShell Core для Windows включает подключаемый модуль WinRM (`pwrshplugin.dll`) и сценарий установки (`Install-PowerShellRemoting.ps1`) в `$PSHome`. Эти файлы позволяют PowerShell принимать входящие удаленные подключения PowerShell, когда указана его конечная точка.
 
 ### <a name="motivation"></a>Причины для использования
 
-Установка PowerShell может устанавливать удаленные сеансы PowerShell с компьютерами, используя `New-PSSession` и `Enter-PSSession`.
-Чтобы включить прием входящих удаленных подключений PowerShell, пользователю нужно создать конечную точку удаленного взаимодействия WinRM.
-Это сценарий, требующий явного согласия, в котором пользователь запускает Install-PowerShellRemoting.ps1 для создания конечной точки WinRM.
-Сценарий установки — это временное решение, пока в `Enable-PSRemoting` не будет добавлена дополнительная функциональность для выполнения данной задачи.
-Дополнительные сведения см. в описании вопроса [1193](https://github.com/PowerShell/PowerShell/issues/1193).
+Установка PowerShell может устанавливать удаленные сеансы PowerShell с компьютерами, используя `New-PSSession` и `Enter-PSSession`. Чтобы включить прием входящих удаленных подключений PowerShell, пользователю нужно создать конечную точку удаленного взаимодействия WinRM. Это сценарий, требующий явного согласия, в котором пользователь запускает Install-PowerShellRemoting.ps1 для создания конечной точки WinRM. Сценарий установки — это временное решение, пока в `Enable-PSRemoting` не будет добавлена дополнительная функциональность для выполнения данной задачи. Дополнительные сведения см. в описании вопроса [1193](https://github.com/PowerShell/PowerShell/issues/1193).
 
 ### <a name="script-actions"></a>Элемент "Действия скрипта"
 
@@ -56,7 +51,8 @@ Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 .\Install-PowerShellRemoting.ps1 -PowerShellHome "C:\Program Files\PowerShell\6.0.0\"
 ```
 
-**Примечание**. Сценарий регистрации удаленного взаимодействия перезапускает WinRM, поэтому сразу после его запуска все существующие сеансы PSRP завершаются. Если запустить его во время удаленного сеанса, соединение будет разорвано.
+> [!NOTE]
+> Скрипт регистрации удаленного взаимодействия перезапускает WinRM. Все существующие сеансы PSRP завершаются сразу после его запуска. Если запустить скрипт во время удаленного сеанса, соединение будет разорвано.
 
 ## <a name="how-to-connect-to-the-new-endpoint"></a>Подключение к новой конечной точке
 

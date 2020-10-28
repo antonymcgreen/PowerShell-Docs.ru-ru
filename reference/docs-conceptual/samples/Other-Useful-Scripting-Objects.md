@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Другие полезные объекты для сценариев
-ms.openlocfilehash: 4f236246714b0608658bbd535851489912430336
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье описываются объекты, которые предоставляют дополнительные возможности написания сценариев в интегрированной среде сценариев Windows PowerShell.
+ms.openlocfilehash: c20daa0045bc07b1f21aafa42a80ce7c47ee7331
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71325145"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500272"
 ---
 # <a name="other-useful-scripting-objects"></a>Другие полезные объекты для сценариев
 
-Следующие объекты предоставляют дополнительные возможности создания сценариев в интегрированной среде сценариев Windows PowerShell. Они не являются частью иерархии **$psISE**.
+Следующие объекты предоставляют дополнительные возможности создания сценариев в интегрированной среде сценариев Windows PowerShell. Они не являются частью иерархии **$psISE** .
 
 ## <a name="useful-scripting-objects"></a>Полезные объекты для сценариев
 
@@ -39,7 +40,7 @@ $psUnsupportedConsoleApplications
 $psLocalHelp | Format-List
 ```
 
-```output
+```Output
 Key   : Add-Computer
 Value : WindowsPowerShellHelp.chm::/html/093f660c-b8d5-43cf-aa0c-54e5e54e76f9.htm
 
@@ -61,7 +62,7 @@ $psLocalHelp.Add("get-myNoun", "c:\MyFolder\MyHelpChm.chm::/html/0198854a-1298-5
 $psOnlineHelp | Format-List
 ```
 
-```output
+```Output
 Key   : Add-Computer
 Value : https://go.microsoft.com/fwlink/p/?LinkID=135194
 
@@ -77,4 +78,4 @@ $psOnlineHelp.Add("get-myNoun", "https://www.mydomain.com/MyNoun.html")
 
 ## <a name="see-also"></a>См. также:
 
-[Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](../components/ise/object-model/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+[Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell](../components/ise/object-model/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

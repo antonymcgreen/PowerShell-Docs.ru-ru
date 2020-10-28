@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Известные проблемы в PowerShell 6.0
-ms.openlocfilehash: e9550e3db53865cfc2713d1d80665cced6f0d47a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Это сводка известных проблем и ограничений в PowerShell 6.
+ms.openlocfilehash: 528315eff660167513045542227dce335355a7b8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996108"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501683"
 ---
 # <a name="known-issues-for-powershell-60"></a>Известные проблемы в PowerShell 6.0
 

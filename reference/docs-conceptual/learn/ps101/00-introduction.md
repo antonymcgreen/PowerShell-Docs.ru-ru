@@ -4,12 +4,13 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: c48340b2fa6141d207c3f7948063f81971183780
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+description: Это введение к книге PowerShell 101 (Основы PowerShell) Майка Ф. Роббинса (Mike F. Robbins).
+ms.openlocfilehash: d85590c2ef34c4e8b5cb7f2707bd9d6dd9b84b89
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438225"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501513"
 ---
 # <a name="introduction"></a>Введение
 
@@ -38,7 +39,7 @@ ms.locfileid: "84438225"
 
 ## <a name="about-the-author"></a>Об авторе
 
-Майк Роббинс — бывший Microsoft MVP, соавтор книг _Windows PowerShell TFM 4th Edition_ и _PowerShell Deep Dives_. Майк был решительным сторонником сообщества PowerShell, а сейчас является ведущим автором материалов по [Azure PowerShell][] в корпорации Майкрософт. Он ведет блоги на сайте [mikefrobbins.com][] и зарегистрирован в Twitter [@mikefrobbins][].
+Майк Роббинс — бывший Microsoft MVP, соавтор книг _Windows PowerShell TFM 4th Edition_ и _PowerShell Deep Dives_ . Майк был решительным сторонником сообщества PowerShell, а сейчас является ведущим автором материалов по [Azure PowerShell][] в корпорации Майкрософт. Он ведет блоги на сайте [mikefrobbins.com][] и зарегистрирован в Twitter [@mikefrobbins][].
 
 ## <a name="lab-environment"></a>Лабораторная среда
 
