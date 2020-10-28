@@ -1,43 +1,43 @@
 ---
-ms.date: 01/10/2020
+ms.date: 10/21/2020
 keywords: powershell,командлет
 title: Создание переносимых модулей
-ms.openlocfilehash: a6b2f8b263e71b6c9dbd50900536cb5072597e71
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: В этой статье объясняется, как создать новые модули или обновить существующие так, чтобы они работали на платформах, поддерживаемых PowerShell.
+ms.openlocfilehash: 6d5c36263c3c6d1219f963cea2e94ae92b07e863
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158128"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500799"
 ---
-# <a name="portable-modules"></a><span data-ttu-id="3bfa7-103">Переносимые модули</span><span class="sxs-lookup"><span data-stu-id="3bfa7-103">Portable Modules</span></span>
+# <a name="portable-modules"></a><span data-ttu-id="ec12b-104">Переносимые модули</span><span class="sxs-lookup"><span data-stu-id="ec12b-104">Portable Modules</span></span>
 
-<span data-ttu-id="3bfa7-104">Средство Windows PowerShell написано для [.NET Framework][], в то время как PowerShell Core написано для [.NET Core][].</span><span class="sxs-lookup"><span data-stu-id="3bfa7-104">Windows PowerShell is written for [.NET Framework][] while PowerShell Core is written for [.NET Core][].</span></span> <span data-ttu-id="3bfa7-105">Переносимые модули — это модули, которые работают как в Windows PowerShell, так и в PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-105">Portable modules are modules that work in both Windows PowerShell and PowerShell Core.</span></span> <span data-ttu-id="3bfa7-106">Хотя .NET Framework и .NET Core обладают высокой совместимостью, между ними есть различия касательно доступных API-интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-106">While .NET Framework and .NET Core are highly compatible, there are differences in the available APIs between the two.</span></span> <span data-ttu-id="3bfa7-107">Существуют также различия в API-интерфейсах, доступных в Windows PowerShell и PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-107">There are also differences in the APIs available in Windows PowerShell and PowerShell Core.</span></span> <span data-ttu-id="3bfa7-108">В модулях, которые предназначены для использования в обеих средах, должны учитываться эти различия.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-108">Modules intended to be used in both environments need to be aware of these differences.</span></span>
+<span data-ttu-id="ec12b-105">Средство Windows PowerShell написано для [.NET Framework][], в то время как PowerShell Core написано для [.NET Core][].</span><span class="sxs-lookup"><span data-stu-id="ec12b-105">Windows PowerShell is written for [.NET Framework][] while PowerShell Core is written for [.NET Core][].</span></span> <span data-ttu-id="ec12b-106">Переносимые модули — это модули, которые работают как в Windows PowerShell, так и в PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="ec12b-106">Portable modules are modules that work in both Windows PowerShell and PowerShell Core.</span></span> <span data-ttu-id="ec12b-107">Хотя .NET Framework и .NET Core обладают высокой совместимостью, между ними есть различия касательно доступных API-интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="ec12b-107">While .NET Framework and .NET Core are highly compatible, there are differences in the available APIs between the two.</span></span> <span data-ttu-id="ec12b-108">Существуют также различия в API-интерфейсах, доступных в Windows PowerShell и PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="ec12b-108">There are also differences in the APIs available in Windows PowerShell and PowerShell Core.</span></span> <span data-ttu-id="ec12b-109">В модулях, которые предназначены для использования в обеих средах, должны учитываться эти различия.</span><span class="sxs-lookup"><span data-stu-id="ec12b-109">Modules intended to be used in both environments need to be aware of these differences.</span></span>
 
-## <a name="porting-an-existing-module"></a><span data-ttu-id="3bfa7-109">Перенос существующего модуля</span><span class="sxs-lookup"><span data-stu-id="3bfa7-109">Porting an Existing Module</span></span>
+## <a name="porting-an-existing-module"></a><span data-ttu-id="ec12b-110">Перенос существующего модуля</span><span class="sxs-lookup"><span data-stu-id="ec12b-110">Porting an existing module</span></span>
 
-### <a name="porting-a-pssnapin"></a><span data-ttu-id="3bfa7-110">Перенос оснастки PSSnapIn</span><span class="sxs-lookup"><span data-stu-id="3bfa7-110">Porting a PSSnapIn</span></span>
+### <a name="porting-a-pssnapin"></a><span data-ttu-id="ec12b-111">Перенос оснастки PSSnapIn</span><span class="sxs-lookup"><span data-stu-id="ec12b-111">Porting a PSSnapIn</span></span>
 
-<span data-ttu-id="3bfa7-111">Оснастки PowerShell ([SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins)) не поддерживаются в PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-111">PowerShell [SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) aren't supported in PowerShell Core.</span></span> <span data-ttu-id="3bfa7-112">Тем не менее PSSnapIn можно легко преобразовать в модуль PowerShell.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-112">However, it's trivial to convert a PSSnapIn to a PowerShell module.</span></span> <span data-ttu-id="3bfa7-113">Как правило, регистрационный код PSSnapIn находится в одном исходном файле класса, который наследуется от [PSSnapIn][].</span><span class="sxs-lookup"><span data-stu-id="3bfa7-113">Typically, the PSSnapIn registration code is in a single source file of a class that derives from [PSSnapIn][].</span></span>
-<span data-ttu-id="3bfa7-114">Удалите этот исходный файл из сборки, так как он больше не нужен.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-114">Remove this source file from the build; it's no longer needed.</span></span>
+<span data-ttu-id="ec12b-112">Оснастки PowerShell ([SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins)) не поддерживаются в PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="ec12b-112">PowerShell [SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) aren't supported in PowerShell Core.</span></span> <span data-ttu-id="ec12b-113">Тем не менее PSSnapIn можно легко преобразовать в модуль PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ec12b-113">However, it's trivial to convert a PSSnapIn to a PowerShell module.</span></span> <span data-ttu-id="ec12b-114">Как правило, регистрационный код PSSnapIn находится в одном исходном файле класса, который наследуется от [PSSnapIn][].</span><span class="sxs-lookup"><span data-stu-id="ec12b-114">Typically, the PSSnapIn registration code is in a single source file of a class that derives from [PSSnapIn][].</span></span> <span data-ttu-id="ec12b-115">Удалите этот исходный файл из сборки, так как он больше не нужен.</span><span class="sxs-lookup"><span data-stu-id="ec12b-115">Remove this source file from the build; it's no longer needed.</span></span>
 
-<span data-ttu-id="3bfa7-115">Чтобы создать манифест модуля, который заменяет необходимость в регистрационном коде PSSnapIn, используйте командлет [New-ModuleManifest][].</span><span class="sxs-lookup"><span data-stu-id="3bfa7-115">Use [New-ModuleManifest][] to create a new module manifest that replaces the need for the PSSnapIn registration code.</span></span> <span data-ttu-id="3bfa7-116">Некоторые значения из **PSSnapIn** (например, **Description**) можно повторно использовать в манифесте модуля.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-116">Some of the values from the **PSSnapIn** (such as **Description**) can be reused within the module manifest.</span></span>
+<span data-ttu-id="ec12b-116">Чтобы создать манифест модуля, который заменяет необходимость в регистрационном коде PSSnapIn, используйте командлет [New-ModuleManifest][].</span><span class="sxs-lookup"><span data-stu-id="ec12b-116">Use [New-ModuleManifest][] to create a new module manifest that replaces the need for the PSSnapIn registration code.</span></span> <span data-ttu-id="ec12b-117">Некоторые значения из **PSSnapIn** (например, **Description** ) можно повторно использовать в манифесте модуля.</span><span class="sxs-lookup"><span data-stu-id="ec12b-117">Some of the values from the **PSSnapIn** (such as **Description** ) can be reused within the module manifest.</span></span>
 
-<span data-ttu-id="3bfa7-117">Для свойства **RootModule** в манифесте модуля должно быть указано имя сборки (DLL), реализующей командлеты.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-117">The **RootModule** property in the module manifest should be set to the name of the assembly (dll) implementing the cmdlets.</span></span>
+<span data-ttu-id="ec12b-118">Для свойства **RootModule** в манифесте модуля должно быть указано имя сборки (DLL), реализующей командлеты.</span><span class="sxs-lookup"><span data-stu-id="ec12b-118">The **RootModule** property in the module manifest should be set to the name of the assembly (dll) implementing the cmdlets.</span></span>
 
-### <a name="the-net-portability-analyzer-aka-apiport"></a><span data-ttu-id="3bfa7-118">Средство .NET Portability Analyzer (оно же APIPort)</span><span class="sxs-lookup"><span data-stu-id="3bfa7-118">The .NET Portability Analyzer (aka APIPort)</span></span>
+### <a name="the-net-portability-analyzer-aka-apiport"></a><span data-ttu-id="ec12b-119">Средство .NET Portability Analyzer (оно же APIPort)</span><span class="sxs-lookup"><span data-stu-id="ec12b-119">The .NET Portability Analyzer (aka APIPort)</span></span>
 
-<span data-ttu-id="3bfa7-119">Чтобы перенести модули, написанные для Windows PowerShell, для работы с PowerShell Core, используйте [.NET Portability Analyzer][].</span><span class="sxs-lookup"><span data-stu-id="3bfa7-119">To port modules written for Windows PowerShell to work with PowerShell Core, start with the [.NET Portability Analyzer][].</span></span> <span data-ttu-id="3bfa7-120">Запустите это средство для вашей скомпилированной сборки, чтобы определить совместимость используемых в модуле интерфейсов API .NET с .NET Framework, .NET Core и другими средами выполнения .NET.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-120">Run this tool against your compiled assembly to determine if the .NET APIs used in the module are compatible with .NET Framework, .NET Core, and other .NET runtimes.</span></span> <span data-ttu-id="3bfa7-121">Средство предлагает альтернативные API-интерфейсы, если они существуют.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-121">The tool suggests alternate APIs if they exist.</span></span> <span data-ttu-id="3bfa7-122">В противном случае вам может потребоваться добавить [Проверки среды выполнения][] и ограничить возможности, недоступные в определенных средах выполнения.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-122">Otherwise, you may need to add [runtime checks][] and restrict capabilities not available in specific runtimes.</span></span>
+<span data-ttu-id="ec12b-120">Чтобы перенести модули, написанные для Windows PowerShell, для работы с PowerShell Core, используйте [.NET Portability Analyzer][].</span><span class="sxs-lookup"><span data-stu-id="ec12b-120">To port modules written for Windows PowerShell to work with PowerShell Core, start with the [.NET Portability Analyzer][].</span></span> <span data-ttu-id="ec12b-121">Запустите это средство для вашей скомпилированной сборки, чтобы определить совместимость используемых в модуле интерфейсов API .NET с .NET Framework, .NET Core и другими средами выполнения .NET.</span><span class="sxs-lookup"><span data-stu-id="ec12b-121">Run this tool against your compiled assembly to determine if the .NET APIs used in the module are compatible with .NET Framework, .NET Core, and other .NET runtimes.</span></span> <span data-ttu-id="ec12b-122">Средство предлагает альтернативные API-интерфейсы, если они существуют.</span><span class="sxs-lookup"><span data-stu-id="ec12b-122">The tool suggests alternate APIs if they exist.</span></span> <span data-ttu-id="ec12b-123">В противном случае вам может потребоваться добавить [проверки сред выполнения][] и ограничить возможности, недоступные в определенных средах выполнения.</span><span class="sxs-lookup"><span data-stu-id="ec12b-123">Otherwise, you may need to add [runtime checks][] and restrict capabilities not available in specific runtimes.</span></span>
 
-## <a name="creating-a-new-module"></a><span data-ttu-id="3bfa7-123">Создание модуля</span><span class="sxs-lookup"><span data-stu-id="3bfa7-123">Creating a New Module</span></span>
+## <a name="creating-a-new-module"></a><span data-ttu-id="ec12b-124">Создание модуля</span><span class="sxs-lookup"><span data-stu-id="ec12b-124">Creating a new module</span></span>
 
-<span data-ttu-id="3bfa7-124">При создании модуля рекомендуется использовать [Интерфейс командной строки.NET][].</span><span class="sxs-lookup"><span data-stu-id="3bfa7-124">If creating a new module, the recommendation is to use the [.NET CLI][].</span></span>
+<span data-ttu-id="ec12b-125">При создании модуля рекомендуется использовать [интерфейс командной строки .NET][].</span><span class="sxs-lookup"><span data-stu-id="ec12b-125">If creating a new module, the recommendation is to use the [.NET CLI][].</span></span>
 
-### <a name="installing-the-powershell-standard-module-template"></a><span data-ttu-id="3bfa7-125">Установка шаблона стандартного модуля PowerShell</span><span class="sxs-lookup"><span data-stu-id="3bfa7-125">Installing the PowerShell Standard Module Template</span></span>
+### <a name="installing-the-powershell-standard-module-template"></a><span data-ttu-id="ec12b-126">Установка шаблона стандартного модуля PowerShell</span><span class="sxs-lookup"><span data-stu-id="ec12b-126">Installing the PowerShell Standard module template</span></span>
 
-<span data-ttu-id="3bfa7-126">После установки интерфейса командной строки .NET установите библиотеку шаблонов, чтобы создать простой модуль PowerShell.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-126">Once the .NET CLI is installed, install a template library to generate a simple PowerShell module.</span></span>
-<span data-ttu-id="3bfa7-127">Модуль будет совместим с Windows PowerShell, PowerShell Core, Windows, Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-127">The module will be compatible with Windows PowerShell, PowerShell Core, Windows, Linux, and macOS.</span></span>
+<span data-ttu-id="ec12b-127">После установки интерфейса командной строки .NET установите библиотеку шаблонов, чтобы создать простой модуль PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ec12b-127">Once the .NET CLI is installed, install a template library to generate a simple PowerShell module.</span></span>
+<span data-ttu-id="ec12b-128">Модуль будет совместим с Windows PowerShell, PowerShell Core, Windows, Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="ec12b-128">The module will be compatible with Windows PowerShell, PowerShell Core, Windows, Linux, and macOS.</span></span>
 
-<span data-ttu-id="3bfa7-128">В следующем примере показана установка шаблона:</span><span class="sxs-lookup"><span data-stu-id="3bfa7-128">The following example shows how to install the template:</span></span>
+<span data-ttu-id="ec12b-129">В следующем примере показана установка шаблона:</span><span class="sxs-lookup"><span data-stu-id="ec12b-129">The following example shows how to install the template:</span></span>
 
 ```powershell
 dotnet new -i Microsoft.PowerShell.Standard.Module.Template
@@ -65,17 +65,17 @@ Options:
   -lang, --language   Filters templates based on language and specifies the language of the template to create.
 
 
-Templates                                         Short Name         Language          Tags
-----------------------------------------------------------------------------------------------------------------------------
-Console Application                               console            [C#], F#, VB      Common/Console
-Class library                                     classlib           [C#], F#, VB      Common/Library
-PowerShell Standard Module                        psmodule           [C#]              Library/PowerShell/Module
+Templates                        Short Name         Language          Tags
+-----------------------------------------------------------------------------------------------
+Console Application              console            [C#], F#, VB      Common/Console
+Class library                    classlib           [C#], F#, VB      Common/Library
+PowerShell Standard Module       psmodule           [C#]              Library/PowerShell/Module
 ...
 ```
 
-### <a name="creating-a-new-module-project"></a><span data-ttu-id="3bfa7-129">Создание проекта модуля</span><span class="sxs-lookup"><span data-stu-id="3bfa7-129">Creating a New Module Project</span></span>
+### <a name="creating-a-new-module-project"></a><span data-ttu-id="ec12b-130">Создание проекта модуля</span><span class="sxs-lookup"><span data-stu-id="ec12b-130">Creating a new module project</span></span>
 
-<span data-ttu-id="3bfa7-130">После установки шаблона можно создать проект модуля PowerShell с использованием этого шаблона.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-130">After the template is installed, you can create a new PowerShell module project using that template.</span></span> <span data-ttu-id="3bfa7-131">У нас пример модуля называется myModule.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-131">In this example, the sample module is called 'myModule'.</span></span>
+<span data-ttu-id="ec12b-131">После установки шаблона можно создать проект модуля PowerShell с использованием этого шаблона.</span><span class="sxs-lookup"><span data-stu-id="ec12b-131">After the template is installed, you can create a new PowerShell module project using that template.</span></span> <span data-ttu-id="ec12b-132">У нас пример модуля называется myModule.</span><span class="sxs-lookup"><span data-stu-id="ec12b-132">In this example, the sample module is called 'myModule'.</span></span>
 
 ```
 PS> mkdir myModule
@@ -102,9 +102,9 @@ Running 'dotnet restore' on C:\Users\Steve\myModule\myModule.csproj...
 Restore succeeded.
 ```
 
-### <a name="building-the-module"></a><span data-ttu-id="3bfa7-132">Создание модуля</span><span class="sxs-lookup"><span data-stu-id="3bfa7-132">Building the Module</span></span>
+### <a name="building-the-module"></a><span data-ttu-id="ec12b-133">Сборка модуля</span><span class="sxs-lookup"><span data-stu-id="ec12b-133">Building the module</span></span>
 
-<span data-ttu-id="3bfa7-133">Используйте стандартные команды интерфейса командной строки .NET для создания проекта.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-133">Use standard .NET CLI commands to build the project.</span></span>
+<span data-ttu-id="ec12b-134">Используйте стандартные команды интерфейса командной строки .NET для создания проекта.</span><span class="sxs-lookup"><span data-stu-id="ec12b-134">Use standard .NET CLI commands to build the project.</span></span>
 
 ```powershell
 dotnet build
@@ -125,9 +125,9 @@ Build succeeded.
 Time Elapsed 00:00:05.40
 ```
 
-### <a name="testing-the-module"></a><span data-ttu-id="3bfa7-134">Тестирование модуля</span><span class="sxs-lookup"><span data-stu-id="3bfa7-134">Testing the Module</span></span>
+### <a name="testing-the-module"></a><span data-ttu-id="ec12b-135">Тестирование модуля</span><span class="sxs-lookup"><span data-stu-id="ec12b-135">Testing the module</span></span>
 
-<span data-ttu-id="3bfa7-135">После создания модуля вы можете импортировать его и выполнить пример командлета.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-135">After building the module, you can import it and execute the sample cmdlet.</span></span>
+<span data-ttu-id="ec12b-136">После создания модуля вы можете импортировать его и выполнить пример командлета.</span><span class="sxs-lookup"><span data-stu-id="ec12b-136">After building the module, you can import it and execute the sample cmdlet.</span></span>
 
 ```powershell
 Import-Module .\bin\Debug\netstandard2.0\myModule.dll
@@ -156,54 +156,60 @@ FavoriteNumber FavoritePet
              7 Cat
 ```
 
-<span data-ttu-id="3bfa7-136">В следующих разделах подробно описаны некоторые технологии, используемые этим шаблоном.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-136">The following sections describe in detail some of the technologies used by this template.</span></span>
+### <a name="debugging-the-module"></a><span data-ttu-id="ec12b-137">Отладка модуля</span><span class="sxs-lookup"><span data-stu-id="ec12b-137">Debugging the module</span></span>
 
-## <a name="net-standard-library"></a><span data-ttu-id="3bfa7-137">Библиотека .NET Standard</span><span class="sxs-lookup"><span data-stu-id="3bfa7-137">.NET Standard Library</span></span>
+<span data-ttu-id="ec12b-138">Инструкции по настройке Visual Studio Code для отладки модуля см. в статье [Использование Visual Studio Code для отладки скомпилированных командлетов][].</span><span class="sxs-lookup"><span data-stu-id="ec12b-138">For a guide on setting up Visual Studio Code to debug the module, see [Using Visual Studio Code for debugging compiled cmdlets][].</span></span>
 
-<span data-ttu-id="3bfa7-138">[.NET Standard][] — это формальная спецификация API-интерфейсов .NET, доступных во всех реализациях .NET.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-138">[.NET Standard][] is a formal specification of .NET APIs that are available in all .NET implementations.</span></span> <span data-ttu-id="3bfa7-139">Управляемый код, предназначенный для .NET Standard, работает с версиями .NET Framework и .NET Core, совместимыми с этой версией .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-139">Managed code targeting .NET Standard works with the .NET Framework and .NET Core versions that are compatible with that version of the .NET Standard.</span></span>
+## <a name="supporting-technologies"></a><span data-ttu-id="ec12b-139">Вспомогательные технологии</span><span class="sxs-lookup"><span data-stu-id="ec12b-139">Supporting technologies</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="3bfa7-140">Хотя API-интерфейс может существовать в .NET Standard, реализация API в .NET Core во время выполнения может вызывать исключение `PlatformNotSupportedException`, поэтому для проверки совместимости с Windows PowerShell и PowerShell Core рекомендуется выполнить тестирование вашего модуля в обеих средах.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-140">Although an API may exist in .NET Standard, the API implementation in .NET Core may throw a `PlatformNotSupportedException` at runtime, so to verify compatibility with Windows PowerShell and PowerShell Core, the best practice is to run tests for your module within both environments.</span></span>
-> <span data-ttu-id="3bfa7-141">Если ваш модуль должен быть кроссплатформенным, запустите также тестирование в Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-141">Also run tests on Linux and macOS if your module is intended to be cross-platform.</span></span>
+<span data-ttu-id="ec12b-140">В следующих разделах подробно описаны некоторые технологии, используемые этим шаблоном.</span><span class="sxs-lookup"><span data-stu-id="ec12b-140">The following sections describe in detail some of the technologies used by this template.</span></span>
 
-<span data-ttu-id="3bfa7-142">Нацеленность на .NET Standard гарантирует, что по мере развития модуля несовместимые API-интерфейсы не будут случайно введены в модуль.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-142">Targeting .NET Standard helps ensure that, as the module evolves, incompatible APIs don't accidentally get introduced into the module.</span></span> <span data-ttu-id="3bfa7-143">Несовместимости обнаруживаются во время компиляции, а не во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-143">Incompatibilities are discovered at compile time instead of runtime.</span></span>
+### <a name="net-standard-library"></a><span data-ttu-id="ec12b-141">Библиотека .NET Standard</span><span class="sxs-lookup"><span data-stu-id="ec12b-141">.NET Standard Library</span></span>
 
-<span data-ttu-id="3bfa7-144">Однако для работы модуля как с Windows PowerShell, так и с PowerShell Core не требуется указывать платформу .NET Standard как целевую, если используются совместимые API-интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-144">However, it isn't required to target .NET Standard for a module to work with both Windows PowerShell and PowerShell Core, as long as you use compatible APIs.</span></span> <span data-ttu-id="3bfa7-145">Промежуточный язык (IL) совместим с двумя средами выполнения.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-145">The Intermediate Language (IL) is compatible between the two runtimes.</span></span> <span data-ttu-id="3bfa7-146">Вы можете указать как целевую версию .NET Framework 4.6.1, которая совместима с .NET Standard 2.0.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-146">You can target .NET Framework 4.6.1, which is compatible with .NET Standard 2.0.</span></span> <span data-ttu-id="3bfa7-147">Если вы не используете API-интерфейсы за пределами. NET Standard 2.0, тогда ваш модуль будет работать с PowerShell Core 6 без повторной компиляции.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-147">If you don't use APIs outside of .NET Standard 2.0, then your module works with PowerShell Core 6 without recompilation.</span></span>
-
-## <a name="powershell-standard-library"></a><span data-ttu-id="3bfa7-148">Библиотека PowerShell Standard</span><span class="sxs-lookup"><span data-stu-id="3bfa7-148">PowerShell Standard Library</span></span>
-
-<span data-ttu-id="3bfa7-149">[PowerShell Standard][] — это формальная спецификация API-интерфейсов PowerShell, доступная во всех версиях PowerShell, которые больше версии этого стандарта или соответствуют ей.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-149">The [PowerShell Standard][] library is a formal specification of PowerShell APIs available in all PowerShell versions greater than or equal to the version of that standard.</span></span>
-
-<span data-ttu-id="3bfa7-150">Например, [PowerShell Standard 5.1][] совместима как с Windows PowerShell 5.1, так и с PowerShell Core 6.0 или более поздней версией.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-150">For example, [PowerShell Standard 5.1][] is compatible with both Windows PowerShell 5.1 and PowerShell Core 6.0 or newer.</span></span>
-
-<span data-ttu-id="3bfa7-151">Мы советуем вам скомпилировать свой модуль с помощью библиотеки PowerShell Standard.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-151">We recommend you compile your module using PowerShell Standard Library.</span></span> <span data-ttu-id="3bfa7-152">Библиотека гарантирует, что API-интерфейсы будут доступны и реализованы как в Windows PowerShell, так и в PowerShell Core 6.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-152">The library ensures the APIs are available and implemented in both Windows PowerShell and PowerShell Core 6.</span></span>
-<span data-ttu-id="3bfa7-153">PowerShell Standard предназначена для постоянной совместимости с новыми версиями.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-153">PowerShell Standard is intended to always be forwards-compatible.</span></span> <span data-ttu-id="3bfa7-154">Модуль, созданный с использованием библиотеки PowerShell Standard 5.1, всегда будет совместим с будущими версиями PowerShell.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-154">A module built using PowerShell Standard Library 5.1 will always be compatible with future versions of PowerShell.</span></span>
-
-## <a name="module-manifest"></a><span data-ttu-id="3bfa7-155">Манифест модуля</span><span class="sxs-lookup"><span data-stu-id="3bfa7-155">Module Manifest</span></span>
-
-### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a><span data-ttu-id="3bfa7-156">Указание на совместимость с Windows PowerShell и PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="3bfa7-156">Indicating Compatibility With Windows PowerShell and PowerShell Core</span></span>
-
-<span data-ttu-id="3bfa7-157">После проверки работы модуля с Windows PowerShell и с PowerShell Core манифест модуля должен явно указывать совместимость с помощью свойства [CompatiblePSEditions][].</span><span class="sxs-lookup"><span data-stu-id="3bfa7-157">After validating that your module works with both Windows PowerShell and PowerShell Core, the module manifest should explicitly indicate compatibility by using the [CompatiblePSEditions][] property.</span></span> <span data-ttu-id="3bfa7-158">Значение `Desktop` означает, что модуль совместим с Windows PowerShell, а значение `Core` указывает на совместимость с PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-158">A value of `Desktop` means that the module is compatible with Windows PowerShell, while a value of `Core` means that the module is compatible with PowerShell Core.</span></span> <span data-ttu-id="3bfa7-159">Наличие обоих значений (`Desktop` и `Core`) означает, что модуль совместим как с Windows PowerShell, так и с PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-159">Including both `Desktop` and `Core` means that the module is compatible with both Windows PowerShell and PowerShell Core.</span></span>
+<span data-ttu-id="ec12b-142">[.NET Standard][] — это формальная спецификация API-интерфейсов .NET, доступных во всех реализациях .NET.</span><span class="sxs-lookup"><span data-stu-id="ec12b-142">[.NET Standard][] is a formal specification of .NET APIs that are available in all .NET implementations.</span></span> <span data-ttu-id="ec12b-143">Управляемый код, предназначенный для .NET Standard, работает с версиями .NET Framework и .NET Core, совместимыми с этой версией .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="ec12b-143">Managed code targeting .NET Standard works with the .NET Framework and .NET Core versions that are compatible with that version of the .NET Standard.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="3bfa7-160">`Core` необязательно означает, что модуль совместим с Windows, Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-160">`Core` does not automatically mean that the module is compatible with Windows, Linux, and macOS.</span></span>
-> <span data-ttu-id="3bfa7-161">Свойство **CompatiblePSEditions** впервые появилось в PowerShell версии 5.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-161">The **CompatiblePSEditions** property was introduced in PowerShell v5.</span></span> <span data-ttu-id="3bfa7-162">Манифесты модуля, которые используют свойство **CompatiblePSEditions**, не будут загружаться в версиях, предшествующих PowerShell версии 5.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-162">Module manifests that use the **CompatiblePSEditions** property fail to load in versions prior to PowerShell v5.</span></span>
+> <span data-ttu-id="ec12b-144">Хотя API-интерфейс может существовать в .NET Standard, реализация API в .NET Core во время выполнения может вызывать исключение `PlatformNotSupportedException`, поэтому для проверки совместимости с Windows PowerShell и PowerShell Core рекомендуется выполнить тестирование вашего модуля в обеих средах.</span><span class="sxs-lookup"><span data-stu-id="ec12b-144">Although an API may exist in .NET Standard, the API implementation in .NET Core may throw a `PlatformNotSupportedException` at runtime, so to verify compatibility with Windows PowerShell and PowerShell Core, the best practice is to run tests for your module within both environments.</span></span>
+> <span data-ttu-id="ec12b-145">Если ваш модуль должен быть кроссплатформенным, запустите также тестирование в Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="ec12b-145">Also run tests on Linux and macOS if your module is intended to be cross-platform.</span></span>
 
-### <a name="indicating-os-compatibility"></a><span data-ttu-id="3bfa7-163">Указание на совместимость с ОС</span><span class="sxs-lookup"><span data-stu-id="3bfa7-163">Indicating OS Compatibility</span></span>
+<span data-ttu-id="ec12b-146">Нацеленность на .NET Standard гарантирует, что по мере развития модуля несовместимые API-интерфейсы не будут случайно введены в модуль.</span><span class="sxs-lookup"><span data-stu-id="ec12b-146">Targeting .NET Standard helps ensure that, as the module evolves, incompatible APIs don't accidentally get introduced into the module.</span></span> <span data-ttu-id="ec12b-147">Несовместимости обнаруживаются во время компиляции, а не во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="ec12b-147">Incompatibilities are discovered at compile time instead of runtime.</span></span>
 
-<span data-ttu-id="3bfa7-164">Сначала убедитесь, что ваш модуль работает в Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-164">First, validate that your module works on Linux and macOS.</span></span> <span data-ttu-id="3bfa7-165">Далее укажите совместимость с этими операционными системами в манифесте модуля.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-165">Next, indicate compatibility with those operating systems in the module manifest.</span></span> <span data-ttu-id="3bfa7-166">В результате пользователям будет проще искать ваш модуль для требуемых операционных систем, когда он будет опубликован в [Коллекция PowerShell][].</span><span class="sxs-lookup"><span data-stu-id="3bfa7-166">This makes it easier for users to find your module for their operating system when published to the [PowerShell Gallery][].</span></span>
+<span data-ttu-id="ec12b-148">Однако для работы модуля как с Windows PowerShell, так и с PowerShell Core не требуется указывать платформу .NET Standard как целевую, если используются совместимые API-интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="ec12b-148">However, it isn't required to target .NET Standard for a module to work with both Windows PowerShell and PowerShell Core, as long as you use compatible APIs.</span></span> <span data-ttu-id="ec12b-149">Промежуточный язык (IL) совместим с двумя средами выполнения.</span><span class="sxs-lookup"><span data-stu-id="ec12b-149">The Intermediate Language (IL) is compatible between the two runtimes.</span></span> <span data-ttu-id="ec12b-150">Вы можете указать как целевую версию .NET Framework 4.6.1, которая совместима с .NET Standard 2.0.</span><span class="sxs-lookup"><span data-stu-id="ec12b-150">You can target .NET Framework 4.6.1, which is compatible with .NET Standard 2.0.</span></span> <span data-ttu-id="ec12b-151">Если вы не используете API-интерфейсы за пределами. NET Standard 2.0, тогда ваш модуль будет работать с PowerShell Core 6 без повторной компиляции.</span><span class="sxs-lookup"><span data-stu-id="ec12b-151">If you don't use APIs outside of .NET Standard 2.0, then your module works with PowerShell Core 6 without recompilation.</span></span>
 
-<span data-ttu-id="3bfa7-167">В манифесте модуля у свойства `PrivateData` есть вложенное свойство `PSData`.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-167">Within the module manifest, the `PrivateData` property has a `PSData` sub-property.</span></span> <span data-ttu-id="3bfa7-168">Необязательное свойство `Tags` раздела `PSData` принимает массив значений, которые отображаются в коллекции PowerShell.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-168">The optional `Tags` property of `PSData` takes an array of values that show up in PowerShell Gallery.</span></span> <span data-ttu-id="3bfa7-169">Коллекция PowerShell поддерживает следующие значения совместимости:</span><span class="sxs-lookup"><span data-stu-id="3bfa7-169">The PowerShell Gallery supports the following compatibility values:</span></span>
+### <a name="powershell-standard-library"></a><span data-ttu-id="ec12b-152">Библиотека PowerShell Standard</span><span class="sxs-lookup"><span data-stu-id="ec12b-152">PowerShell Standard Library</span></span>
 
-| <span data-ttu-id="3bfa7-170">Тег</span><span class="sxs-lookup"><span data-stu-id="3bfa7-170">Tag</span></span>               | <span data-ttu-id="3bfa7-171">Description</span><span class="sxs-lookup"><span data-stu-id="3bfa7-171">Description</span></span>                                |
+<span data-ttu-id="ec12b-153">[Библиотека PowerShell Standard][] — это формальная спецификация API-интерфейсов PowerShell, доступная во всех версиях PowerShell, которые больше версии этого стандарта или соответствуют ей.</span><span class="sxs-lookup"><span data-stu-id="ec12b-153">The [PowerShell Standard][] library is a formal specification of PowerShell APIs available in all PowerShell versions greater than or equal to the version of that standard.</span></span>
+
+<span data-ttu-id="ec12b-154">Например, [PowerShell Standard 5.1][] совместима как с Windows PowerShell 5.1, так и с PowerShell Core 6.0 или более поздней версией.</span><span class="sxs-lookup"><span data-stu-id="ec12b-154">For example, [PowerShell Standard 5.1][] is compatible with both Windows PowerShell 5.1 and PowerShell Core 6.0 or newer.</span></span>
+
+<span data-ttu-id="ec12b-155">Мы советуем вам скомпилировать свой модуль с помощью библиотеки PowerShell Standard.</span><span class="sxs-lookup"><span data-stu-id="ec12b-155">We recommend you compile your module using PowerShell Standard Library.</span></span> <span data-ttu-id="ec12b-156">Библиотека гарантирует, что API-интерфейсы будут доступны и реализованы как в Windows PowerShell, так и в PowerShell Core 6.</span><span class="sxs-lookup"><span data-stu-id="ec12b-156">The library ensures the APIs are available and implemented in both Windows PowerShell and PowerShell Core 6.</span></span>
+<span data-ttu-id="ec12b-157">PowerShell Standard предназначена для постоянной совместимости с новыми версиями.</span><span class="sxs-lookup"><span data-stu-id="ec12b-157">PowerShell Standard is intended to always be forwards-compatible.</span></span> <span data-ttu-id="ec12b-158">Модуль, созданный с использованием библиотеки PowerShell Standard 5.1, всегда будет совместим с будущими версиями PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ec12b-158">A module built using PowerShell Standard Library 5.1 will always be compatible with future versions of PowerShell.</span></span>
+
+### <a name="module-manifest"></a><span data-ttu-id="ec12b-159">Манифест модуля</span><span class="sxs-lookup"><span data-stu-id="ec12b-159">Module Manifest</span></span>
+
+#### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a><span data-ttu-id="ec12b-160">Указание на совместимость с Windows PowerShell и PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="ec12b-160">Indicating Compatibility With Windows PowerShell and PowerShell Core</span></span>
+
+<span data-ttu-id="ec12b-161">После проверки работы модуля с Windows PowerShell и с PowerShell Core манифест модуля должен явно указывать совместимость с помощью свойства [CompatiblePSEditions][].</span><span class="sxs-lookup"><span data-stu-id="ec12b-161">After validating that your module works with both Windows PowerShell and PowerShell Core, the module manifest should explicitly indicate compatibility by using the [CompatiblePSEditions][] property.</span></span> <span data-ttu-id="ec12b-162">Значение `Desktop` означает, что модуль совместим с Windows PowerShell, а значение `Core` указывает на совместимость с PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="ec12b-162">A value of `Desktop` means that the module is compatible with Windows PowerShell, while a value of `Core` means that the module is compatible with PowerShell Core.</span></span> <span data-ttu-id="ec12b-163">Наличие обоих значений (`Desktop` и `Core`) означает, что модуль совместим как с Windows PowerShell, так и с PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="ec12b-163">Including both `Desktop` and `Core` means that the module is compatible with both Windows PowerShell and PowerShell Core.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="ec12b-164">`Core` необязательно означает, что модуль совместим с Windows, Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="ec12b-164">`Core` does not automatically mean that the module is compatible with Windows, Linux, and macOS.</span></span>
+> <span data-ttu-id="ec12b-165">Свойство **CompatiblePSEditions** впервые появилось в PowerShell версии 5.</span><span class="sxs-lookup"><span data-stu-id="ec12b-165">The **CompatiblePSEditions** property was introduced in PowerShell v5.</span></span> <span data-ttu-id="ec12b-166">Манифесты модуля, которые используют свойство **CompatiblePSEditions** , не будут загружаться в версиях, предшествующих PowerShell версии 5.</span><span class="sxs-lookup"><span data-stu-id="ec12b-166">Module manifests that use the **CompatiblePSEditions** property fail to load in versions prior to PowerShell v5.</span></span>
+
+### <a name="indicating-os-compatibility"></a><span data-ttu-id="ec12b-167">Указание на совместимость с ОС</span><span class="sxs-lookup"><span data-stu-id="ec12b-167">Indicating OS Compatibility</span></span>
+
+<span data-ttu-id="ec12b-168">Сначала убедитесь, что ваш модуль работает в Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="ec12b-168">First, validate that your module works on Linux and macOS.</span></span> <span data-ttu-id="ec12b-169">Далее укажите совместимость с этими операционными системами в манифесте модуля.</span><span class="sxs-lookup"><span data-stu-id="ec12b-169">Next, indicate compatibility with those operating systems in the module manifest.</span></span> <span data-ttu-id="ec12b-170">В результате пользователям будет проще искать ваш модуль для требуемых операционных систем, когда он будет опубликован в [коллекции PowerShell][].</span><span class="sxs-lookup"><span data-stu-id="ec12b-170">This makes it easier for users to find your module for their operating system when published to the [PowerShell Gallery][].</span></span>
+
+<span data-ttu-id="ec12b-171">В манифесте модуля у свойства `PrivateData` есть вложенное свойство `PSData`.</span><span class="sxs-lookup"><span data-stu-id="ec12b-171">Within the module manifest, the `PrivateData` property has a `PSData` sub-property.</span></span> <span data-ttu-id="ec12b-172">Необязательное свойство `Tags` раздела `PSData` принимает массив значений, которые отображаются в коллекции PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ec12b-172">The optional `Tags` property of `PSData` takes an array of values that show up in PowerShell Gallery.</span></span> <span data-ttu-id="ec12b-173">Коллекция PowerShell поддерживает следующие значения совместимости:</span><span class="sxs-lookup"><span data-stu-id="ec12b-173">The PowerShell Gallery supports the following compatibility values:</span></span>
+
+| <span data-ttu-id="ec12b-174">Тег</span><span class="sxs-lookup"><span data-stu-id="ec12b-174">Tag</span></span>               | <span data-ttu-id="ec12b-175">Описание</span><span class="sxs-lookup"><span data-stu-id="ec12b-175">Description</span></span>                                |
 |-------------------|--------------------------------------------|
-| <span data-ttu-id="3bfa7-172">PSEdition_Core</span><span class="sxs-lookup"><span data-stu-id="3bfa7-172">PSEdition_Core</span></span>    | <span data-ttu-id="3bfa7-173">Совместимость с PowerShell Core 6</span><span class="sxs-lookup"><span data-stu-id="3bfa7-173">Compatible with PowerShell Core 6</span></span>          |
-| <span data-ttu-id="3bfa7-174">PSEdition_Desktop</span><span class="sxs-lookup"><span data-stu-id="3bfa7-174">PSEdition_Desktop</span></span> | <span data-ttu-id="3bfa7-175">Совместимость с Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="3bfa7-175">Compatible with Windows PowerShell</span></span>         |
-| <span data-ttu-id="3bfa7-176">Windows</span><span class="sxs-lookup"><span data-stu-id="3bfa7-176">Windows</span></span>           | <span data-ttu-id="3bfa7-177">Совместимость с Windows</span><span class="sxs-lookup"><span data-stu-id="3bfa7-177">Compatible with Windows</span></span>                    |
-| <span data-ttu-id="3bfa7-178">Linux</span><span class="sxs-lookup"><span data-stu-id="3bfa7-178">Linux</span></span>             | <span data-ttu-id="3bfa7-179">Совместимость с Linux (любой дистрибутив)</span><span class="sxs-lookup"><span data-stu-id="3bfa7-179">Compatible with Linux (no specific distro)</span></span> |
-| <span data-ttu-id="3bfa7-180">macOS</span><span class="sxs-lookup"><span data-stu-id="3bfa7-180">macOS</span></span>             | <span data-ttu-id="3bfa7-181">Совместимость с macOS</span><span class="sxs-lookup"><span data-stu-id="3bfa7-181">Compatible with macOS</span></span>                      |
+| <span data-ttu-id="ec12b-176">PSEdition_Core</span><span class="sxs-lookup"><span data-stu-id="ec12b-176">PSEdition_Core</span></span>    | <span data-ttu-id="ec12b-177">Совместимость с PowerShell Core 6</span><span class="sxs-lookup"><span data-stu-id="ec12b-177">Compatible with PowerShell Core 6</span></span>          |
+| <span data-ttu-id="ec12b-178">PSEdition_Desktop</span><span class="sxs-lookup"><span data-stu-id="ec12b-178">PSEdition_Desktop</span></span> | <span data-ttu-id="ec12b-179">Совместимость с Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="ec12b-179">Compatible with Windows PowerShell</span></span>         |
+| <span data-ttu-id="ec12b-180">Windows</span><span class="sxs-lookup"><span data-stu-id="ec12b-180">Windows</span></span>           | <span data-ttu-id="ec12b-181">Совместимость с Windows</span><span class="sxs-lookup"><span data-stu-id="ec12b-181">Compatible with Windows</span></span>                    |
+| <span data-ttu-id="ec12b-182">Linux</span><span class="sxs-lookup"><span data-stu-id="ec12b-182">Linux</span></span>             | <span data-ttu-id="ec12b-183">Совместимость с Linux (любой дистрибутив)</span><span class="sxs-lookup"><span data-stu-id="ec12b-183">Compatible with Linux (no specific distro)</span></span> |
+| <span data-ttu-id="ec12b-184">macOS</span><span class="sxs-lookup"><span data-stu-id="ec12b-184">macOS</span></span>             | <span data-ttu-id="ec12b-185">Совместимость с macOS</span><span class="sxs-lookup"><span data-stu-id="ec12b-185">Compatible with macOS</span></span>                      |
 
-<span data-ttu-id="3bfa7-182">Пример</span><span class="sxs-lookup"><span data-stu-id="3bfa7-182">Example:</span></span>
+<span data-ttu-id="ec12b-186">Пример.</span><span class="sxs-lookup"><span data-stu-id="ec12b-186">Example:</span></span>
 
 ```powershell
 @{
@@ -249,43 +255,43 @@ FavoriteNumber FavoritePet
 }
 ```
 
-## <a name="dependency-on-native-libraries"></a><span data-ttu-id="3bfa7-183">Зависимость от собственных библиотек</span><span class="sxs-lookup"><span data-stu-id="3bfa7-183">Dependency on Native Libraries</span></span>
+### <a name="dependency-on-native-libraries"></a><span data-ttu-id="ec12b-187">Зависимость от собственных библиотек</span><span class="sxs-lookup"><span data-stu-id="ec12b-187">Dependency on Native Libraries</span></span>
 
-<span data-ttu-id="3bfa7-184">Модули, предназначенные для использования в разных операционных системах или архитектурах процессоров, могут зависеть от управляемой библиотеки, которая в свою очередь зависит от некоторых собственных библиотек.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-184">Modules intended for use across different operating systems or processor architectures may depend on a managed library that itself depends on some native libraries.</span></span>
+<span data-ttu-id="ec12b-188">Модули, предназначенные для использования в разных операционных системах или архитектурах процессоров, могут зависеть от управляемой библиотеки, которая в свою очередь зависит от некоторых собственных библиотек.</span><span class="sxs-lookup"><span data-stu-id="ec12b-188">Modules intended for use across different operating systems or processor architectures may depend on a managed library that itself depends on some native libraries.</span></span>
 
-<span data-ttu-id="3bfa7-185">До выпуска PowerShell 7 нужно было применять пользовательский код для загрузки соответствующей собственной библиотеки, чтобы управляемая библиотека могла найти ее.</span><span class="sxs-lookup"><span data-stu-id="3bfa7-185">Prior to PowerShell 7, one would have to have custom code to load the appropriate native dll so that the managed library can find it correctly.</span></span>
+<span data-ttu-id="ec12b-189">До выпуска PowerShell 7 нужно было применять пользовательский код для загрузки соответствующей собственной библиотеки, чтобы управляемая библиотека могла найти ее.</span><span class="sxs-lookup"><span data-stu-id="ec12b-189">Prior to PowerShell 7, one would have to have custom code to load the appropriate native dll so that the managed library can find it correctly.</span></span>
 
-<span data-ttu-id="3bfa7-186">Но в PowerShell 7 поиск собственных двоичных файлов для загрузки выполняется во вложенных папках в расположении управляемой библиотеки в соответствии с нотацией для [Каталог идентификаторов сред выполнения в .NET][].</span><span class="sxs-lookup"><span data-stu-id="3bfa7-186">With PowerShell 7, native binaries to load are searched in sub-folders within the managed library's location following a subset of the [.NET RID Catalog][] notation.</span></span>
+<span data-ttu-id="ec12b-190">Но в PowerShell 7 поиск собственных двоичных файлов для загрузки выполняется во вложенных папках в расположении управляемой библиотеки в соответствии с нотацией для [каталога идентификаторов сред выполнения в .NET][].</span><span class="sxs-lookup"><span data-stu-id="ec12b-190">With PowerShell 7, native binaries to load are searched in sub-folders within the managed library's location following a subset of the [.NET RID Catalog][] notation.</span></span>
 
 ```
 managed.dll folder
-                |
-                |--- 'win-x64' folder
-                |       |--- native.dll
-                |
-                |--- 'win-x86' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm64' folder
-                |       |--- native.dll
-                |
-                |--- 'linux-x64' folder
-                |       |--- native.so
-                |
-                |--- 'linux-x86' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm64' folder
-                |       |--- native.so
-                |
-                |--- 'osx-x64' folder
-                |       |--- native.dylib
+    |
+    |--- 'win-x64' folder
+    |       |--- native.dll
+    |
+    |--- 'win-x86' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm64' folder
+    |       |--- native.dll
+    |
+    |--- 'linux-x64' folder
+    |       |--- native.so
+    |
+    |--- 'linux-x86' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm64' folder
+    |       |--- native.so
+    |
+    |--- 'osx-x64' folder
+    |       |--- native.dylib
 ```
 
 <!-- reference links -->
@@ -297,6 +303,8 @@ managed.dll folder
 [runtime checks]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
 [Интерфейс командной строки.NET]: /dotnet/core/tools/?tabs=netcore2x
 [.NET CLI]: /dotnet/core/tools/?tabs=netcore2x
+[Использование Visual Studio Code для отладки скомпилированных командлетов]: vscode/using-vscode-for-debugging-compiled-cmdlets.md
+[Using Visual Studio Code for debugging compiled cmdlets]: vscode/using-vscode-for-debugging-compiled-cmdlets.md
 [.NET Standard]: /dotnet/standard/net-standard
 [PowerShell Standard]: https://github.com/PowerShell/PowerShellStandard
 [PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0

@@ -1,41 +1,41 @@
 ---
 title: Удаленное взаимодействие с PowerShell через SSH
-description: Удаленное взаимодействие в PowerShell Core с помощью SSH
-ms.date: 07/23/2020
-ms.openlocfilehash: cc65db481fcedcafec16093dbf7e6af4975c73db
-ms.sourcegitcommit: 9dddf1d2e91ebcd347fcfb7bf6ef670d49a12ab7
+ms.date: 10/19/2020
+description: Описывается, как настроить протокол SSH для удаленного взаимодействия PowerShell.
+ms.openlocfilehash: c3373ac30fd915d42e8c9fb7f1eae348a2aee7f1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133475"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501343"
 ---
-# <a name="powershell-remoting-over-ssh"></a><span data-ttu-id="eadef-103">Удаленное взаимодействие с PowerShell через SSH</span><span class="sxs-lookup"><span data-stu-id="eadef-103">PowerShell remoting over SSH</span></span>
+# <a name="powershell-remoting-over-ssh"></a><span data-ttu-id="d1c47-103">Удаленное взаимодействие с PowerShell через SSH</span><span class="sxs-lookup"><span data-stu-id="d1c47-103">PowerShell remoting over SSH</span></span>
 
-## <a name="overview"></a><span data-ttu-id="eadef-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="eadef-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="d1c47-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="d1c47-104">Overview</span></span>
 
-<span data-ttu-id="eadef-105">Функция удаленного взаимодействия PowerShell обычно использует WinRM для согласования соединения и передачи данных.</span><span class="sxs-lookup"><span data-stu-id="eadef-105">PowerShell remoting normally uses WinRM for connection negotiation and data transport.</span></span> <span data-ttu-id="eadef-106">Теперь протокол SSH доступен на платформах Linux и Windows, что позволяет осуществлять многоплатформенное удаленное взаимодействие с PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eadef-106">SSH is now available for Linux and Windows platforms and allows true multiplatform PowerShell remoting.</span></span>
+<span data-ttu-id="d1c47-105">Функция удаленного взаимодействия PowerShell обычно использует WinRM для согласования соединения и передачи данных.</span><span class="sxs-lookup"><span data-stu-id="d1c47-105">PowerShell remoting normally uses WinRM for connection negotiation and data transport.</span></span> <span data-ttu-id="d1c47-106">Теперь протокол SSH доступен на платформах Linux и Windows, что позволяет осуществлять многоплатформенное удаленное взаимодействие с PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d1c47-106">SSH is now available for Linux and Windows platforms and allows true multiplatform PowerShell remoting.</span></span>
 
-<span data-ttu-id="eadef-107">Служба удаленного управления Windows обеспечивает надежную модель поддержки удаленных сеансов PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eadef-107">WinRM provides a robust hosting model for PowerShell remote sessions.</span></span> <span data-ttu-id="eadef-108">Удаленное взаимодействие по протоколу SSH сейчас не поддерживает настройку удаленных конечных точек и функцию JEA (Just Enough Administration).</span><span class="sxs-lookup"><span data-stu-id="eadef-108">SSH-based remoting doesn't currently support remote endpoint configuration and Just Enough Administration (JEA).</span></span>
+<span data-ttu-id="d1c47-107">Служба удаленного управления Windows обеспечивает надежную модель поддержки удаленных сеансов PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d1c47-107">WinRM provides a robust hosting model for PowerShell remote sessions.</span></span> <span data-ttu-id="d1c47-108">Удаленное взаимодействие по протоколу SSH сейчас не поддерживает настройку удаленных конечных точек и функцию JEA (Just Enough Administration).</span><span class="sxs-lookup"><span data-stu-id="d1c47-108">SSH-based remoting doesn't currently support remote endpoint configuration and Just Enough Administration (JEA).</span></span>
 
-<span data-ttu-id="eadef-109">Удаленное взаимодействие по SSH позволяет осуществлять базовое удаленное взаимодействие между компьютерами с Windows и Linux в рамках сеансов PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eadef-109">SSH remoting lets you do basic PowerShell session remoting between Windows and Linux computers.</span></span> <span data-ttu-id="eadef-110">Функция удаленного взаимодействия по SSH создает хост-процесс PowerShell на целевом компьютере в качестве подсистемы SSH.</span><span class="sxs-lookup"><span data-stu-id="eadef-110">SSH remoting creates a PowerShell host process on the target computer as an SSH subsystem.</span></span> <span data-ttu-id="eadef-111">Со временем для поддержки настройки удаленных конечных точек и функции JEA мы реализуем общую модель размещения, похожую на службе удаленного управления Windows.</span><span class="sxs-lookup"><span data-stu-id="eadef-111">Eventually we'll implement a general hosting model, similar to WinRM, to support endpoint configuration and JEA.</span></span>
+<span data-ttu-id="d1c47-109">Удаленное взаимодействие по SSH позволяет осуществлять базовое удаленное взаимодействие между компьютерами с Windows и Linux в рамках сеансов PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d1c47-109">SSH remoting lets you do basic PowerShell session remoting between Windows and Linux computers.</span></span> <span data-ttu-id="d1c47-110">Функция удаленного взаимодействия по SSH создает хост-процесс PowerShell на целевом компьютере в качестве подсистемы SSH.</span><span class="sxs-lookup"><span data-stu-id="d1c47-110">SSH remoting creates a PowerShell host process on the target computer as an SSH subsystem.</span></span> <span data-ttu-id="d1c47-111">Со временем для поддержки настройки удаленных конечных точек и функции JEA мы реализуем общую модель размещения, похожую на службе удаленного управления Windows.</span><span class="sxs-lookup"><span data-stu-id="d1c47-111">Eventually we'll implement a general hosting model, similar to WinRM, to support endpoint configuration and JEA.</span></span>
 
-<span data-ttu-id="eadef-112">Командлеты `New-PSSession`, `Enter-PSSession` и `Invoke-Command` теперь имеют набор новых параметров для поддержки этой возможности удаленного взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="eadef-112">The `New-PSSession`, `Enter-PSSession`, and `Invoke-Command` cmdlets now have a new parameter set to support this new remoting connection.</span></span>
+<span data-ttu-id="d1c47-112">Командлеты `New-PSSession`, `Enter-PSSession` и `Invoke-Command` теперь имеют набор новых параметров для поддержки этой возможности удаленного взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="d1c47-112">The `New-PSSession`, `Enter-PSSession`, and `Invoke-Command` cmdlets now have a new parameter set to support this new remoting connection.</span></span>
 
 ```
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-<span data-ttu-id="eadef-113">Чтобы создать удаленный сеанс, укажите целевой компьютер с помощью параметра **HostName** и имя пользователя с помощью параметра **UserName**.</span><span class="sxs-lookup"><span data-stu-id="eadef-113">To create a remote session, you specify the target computer with the **HostName** parameter and provide the user name with **UserName**.</span></span> <span data-ttu-id="eadef-114">При интерактивном выполнении командлетов отображается запрос на ввод пароля.</span><span class="sxs-lookup"><span data-stu-id="eadef-114">When running the cmdlets interactively, you're prompted for a password.</span></span> <span data-ttu-id="eadef-115">Вы также можете использовать проверку подлинности ключа SSH с помощью файла закрытого ключа с параметром **KeyFilePath**.</span><span class="sxs-lookup"><span data-stu-id="eadef-115">You can also, use SSH key authentication using a private key file with the **KeyFilePath** parameter.</span></span>
+<span data-ttu-id="d1c47-113">Чтобы создать удаленный сеанс, укажите целевой компьютер с помощью параметра **HostName** и имя пользователя с помощью параметра **UserName** .</span><span class="sxs-lookup"><span data-stu-id="d1c47-113">To create a remote session, you specify the target computer with the **HostName** parameter and provide the user name with **UserName** .</span></span> <span data-ttu-id="d1c47-114">При интерактивном выполнении командлетов отображается запрос на ввод пароля.</span><span class="sxs-lookup"><span data-stu-id="d1c47-114">When running the cmdlets interactively, you're prompted for a password.</span></span> <span data-ttu-id="d1c47-115">Вы также можете использовать проверку подлинности ключа SSH с помощью файла закрытого ключа с параметром **KeyFilePath** .</span><span class="sxs-lookup"><span data-stu-id="d1c47-115">You can also use SSH key authentication using a private key file with the **KeyFilePath** parameter.</span></span> <span data-ttu-id="d1c47-116">Способ создания ключей для проверки подлинности по протоколу SSH зависит от платформы.</span><span class="sxs-lookup"><span data-stu-id="d1c47-116">Creating keys for SSH authentication varies by platform.</span></span>
 
-## <a name="general-setup-information"></a><span data-ttu-id="eadef-116">Общие сведения об установке</span><span class="sxs-lookup"><span data-stu-id="eadef-116">General setup information</span></span>
+## <a name="general-setup-information"></a><span data-ttu-id="d1c47-117">Общие сведения об установке</span><span class="sxs-lookup"><span data-stu-id="d1c47-117">General setup information</span></span>
 
-<span data-ttu-id="eadef-117">PowerShell 6 или более поздней версии, и на всех компьютерах должен быть установлен SSH.</span><span class="sxs-lookup"><span data-stu-id="eadef-117">PowerShell 6 or higher, and SSH must be installed on all computers.</span></span> <span data-ttu-id="eadef-118">Установите клиент (`ssh.exe`) и сервер (`sshd.exe`) SSH, чтобы осуществлять удаленное взаимодействие между компьютерами.</span><span class="sxs-lookup"><span data-stu-id="eadef-118">Install both the SSH client (`ssh.exe`) and server (`sshd.exe`) so that you can remote to and from the computers.</span></span> <span data-ttu-id="eadef-119">Решение OpenSSH для Windows теперь доступно в Windows 10 сборки 1809 и Windows Server 2019.</span><span class="sxs-lookup"><span data-stu-id="eadef-119">OpenSSH for Windows is now available in Windows 10 build 1809 and Windows Server 2019.</span></span> <span data-ttu-id="eadef-120">Дополнительные сведения см. в статье [Управление Windows через OpenSSH](/windows-server/administration/openssh/openssh_overview).</span><span class="sxs-lookup"><span data-stu-id="eadef-120">For more information, see [Manage Windows with OpenSSH](/windows-server/administration/openssh/openssh_overview).</span></span> <span data-ttu-id="eadef-121">В Linux нужно реализовать поддержку SSH (включая установку сервера sshd) в соответствии с используемой платформой.</span><span class="sxs-lookup"><span data-stu-id="eadef-121">For Linux, install SSH, including sshd server, that's appropriate for your platform.</span></span> <span data-ttu-id="eadef-122">Также для поддержки удаленного взаимодействия по SSH нужно установить PowerShell с сайта GitHub.</span><span class="sxs-lookup"><span data-stu-id="eadef-122">You also need to install PowerShell from GitHub to get the SSH remoting feature.</span></span> <span data-ttu-id="eadef-123">Для сервера SSH нужно настроить возможность создать подсистему SSH для размещения процесса PowerShell на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="eadef-123">The SSH server must be configured to create an SSH subsystem to host a PowerShell process on the remote computer.</span></span> <span data-ttu-id="eadef-124">Также нужно активировать проверку подлинности на основе **пароля** или **ключа**.</span><span class="sxs-lookup"><span data-stu-id="eadef-124">And, you must enable **password** or **key-based** authentication.</span></span>
+<span data-ttu-id="d1c47-118">PowerShell 6 или более поздней версии, и на всех компьютерах должен быть установлен SSH.</span><span class="sxs-lookup"><span data-stu-id="d1c47-118">PowerShell 6 or higher, and SSH must be installed on all computers.</span></span> <span data-ttu-id="d1c47-119">Установите клиент (`ssh.exe`) и сервер (`sshd.exe`) SSH, чтобы осуществлять удаленное взаимодействие между компьютерами.</span><span class="sxs-lookup"><span data-stu-id="d1c47-119">Install both the SSH client (`ssh.exe`) and server (`sshd.exe`) so that you can remote to and from the computers.</span></span> <span data-ttu-id="d1c47-120">Решение OpenSSH для Windows теперь доступно в Windows 10 сборки 1809 и Windows Server 2019.</span><span class="sxs-lookup"><span data-stu-id="d1c47-120">OpenSSH for Windows is now available in Windows 10 build 1809 and Windows Server 2019.</span></span> <span data-ttu-id="d1c47-121">Дополнительные сведения см. в статье [Управление Windows через OpenSSH](/windows-server/administration/openssh/openssh_overview).</span><span class="sxs-lookup"><span data-stu-id="d1c47-121">For more information, see [Manage Windows with OpenSSH](/windows-server/administration/openssh/openssh_overview).</span></span> <span data-ttu-id="d1c47-122">В Linux нужно реализовать поддержку SSH (включая установку сервера sshd) в соответствии с используемой платформой.</span><span class="sxs-lookup"><span data-stu-id="d1c47-122">For Linux, install SSH, including sshd server, that's appropriate for your platform.</span></span> <span data-ttu-id="d1c47-123">Также для поддержки удаленного взаимодействия по SSH нужно установить PowerShell с сайта GitHub.</span><span class="sxs-lookup"><span data-stu-id="d1c47-123">You also need to install PowerShell from GitHub to get the SSH remoting feature.</span></span> <span data-ttu-id="d1c47-124">Для сервера SSH нужно настроить возможность создать подсистему SSH для размещения процесса PowerShell на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="d1c47-124">The SSH server must be configured to create an SSH subsystem to host a PowerShell process on the remote computer.</span></span> <span data-ttu-id="d1c47-125">Также нужно активировать проверку подлинности на основе **пароля** или **ключа** .</span><span class="sxs-lookup"><span data-stu-id="d1c47-125">And, you must enable **password** or **key-based** authentication.</span></span>
 
-## <a name="set-up-on-a-windows-computer"></a><span data-ttu-id="eadef-125">Настройка на компьютере с Windows</span><span class="sxs-lookup"><span data-stu-id="eadef-125">Set up on a Windows computer</span></span>
+## <a name="set-up-on-a-windows-computer"></a><span data-ttu-id="d1c47-126">Настройка на компьютере с Windows</span><span class="sxs-lookup"><span data-stu-id="d1c47-126">Set up on a Windows computer</span></span>
 
-1. <span data-ttu-id="eadef-126">Установите последнюю версию PowerShell, см. раздел [Установка PowerShell Core в Windows](../../install/installing-powershell-core-on-windows.md#msi).</span><span class="sxs-lookup"><span data-stu-id="eadef-126">Install the latest version of PowerShell, see [Installing PowerShell Core on Windows](../../install/installing-powershell-core-on-windows.md#msi).</span></span>
+1. <span data-ttu-id="d1c47-127">Установите последнюю версию PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d1c47-127">Install the latest version of PowerShell.</span></span> <span data-ttu-id="d1c47-128">Дополнительные сведения см. в статье [Установка PowerShell Core в Windows](../../install/installing-powershell-core-on-windows.md#msi).</span><span class="sxs-lookup"><span data-stu-id="d1c47-128">For more information, see [Installing PowerShell Core on Windows](../../install/installing-powershell-core-on-windows.md#msi).</span></span>
 
-   <span data-ttu-id="eadef-127">Чтобы убедиться, что в PowerShell есть поддержка удаленного взаимодействия SSH, перечислите наборы параметров `New-PSSession`.</span><span class="sxs-lookup"><span data-stu-id="eadef-127">You can confirm that PowerShell has SSH remoting support by listing the `New-PSSession` parameter sets.</span></span> <span data-ttu-id="eadef-128">Обратите внимание на наличие имен наборов параметров, начинающихся с **SSH**.</span><span class="sxs-lookup"><span data-stu-id="eadef-128">You'll notice there are parameter set names that begin with **SSH**.</span></span> <span data-ttu-id="eadef-129">К этим наборам параметров относятся параметры **SSH**.</span><span class="sxs-lookup"><span data-stu-id="eadef-129">Those parameter sets include **SSH** parameters.</span></span>
+   <span data-ttu-id="d1c47-129">Чтобы убедиться, что в PowerShell есть поддержка удаленного взаимодействия SSH, перечислите наборы параметров `New-PSSession`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-129">You can confirm that PowerShell has SSH remoting support by listing the `New-PSSession` parameter sets.</span></span> <span data-ttu-id="d1c47-130">Обратите внимание на наличие имен наборов параметров, начинающихся с **SSH** .</span><span class="sxs-lookup"><span data-stu-id="d1c47-130">You'll notice there are parameter set names that begin with **SSH** .</span></span> <span data-ttu-id="d1c47-131">К этим наборам параметров относятся параметры **SSH** .</span><span class="sxs-lookup"><span data-stu-id="d1c47-131">Those parameter sets include **SSH** parameters.</span></span>
 
    ```powershell
    (Get-Command New-PSSession).ParameterSets.Name
@@ -48,31 +48,31 @@ ms.locfileid: "87133475"
    SSHHostHashParam
    ```
 
-1. <span data-ttu-id="eadef-130">Установите последнюю версию Win32 OpenSSH.</span><span class="sxs-lookup"><span data-stu-id="eadef-130">Install the latest Win32 OpenSSH.</span></span> <span data-ttu-id="eadef-131">Инструкции по установке см. в разделе [Начало работы с OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).</span><span class="sxs-lookup"><span data-stu-id="eadef-131">For installation instructions, see [Getting started with OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).</span></span>
+1. <span data-ttu-id="d1c47-132">Установите последнюю версию Win32 OpenSSH.</span><span class="sxs-lookup"><span data-stu-id="d1c47-132">Install the latest Win32 OpenSSH.</span></span> <span data-ttu-id="d1c47-133">Инструкции по установке см. в разделе [Начало работы с OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).</span><span class="sxs-lookup"><span data-stu-id="d1c47-133">For installation instructions, see [Getting started with OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="eadef-132">Если вы хотите задать PowerShell в качестве оболочки по умолчанию для OpenSSH, см. раздел [Настройка Windows для OpenSSH](/windows-server/administration/openssh/openssh_server_configuration).</span><span class="sxs-lookup"><span data-stu-id="eadef-132">If you want to set PowerShell as the default shell for OpenSSH, see [Configuring Windows for OpenSSH](/windows-server/administration/openssh/openssh_server_configuration).</span></span>
+   > <span data-ttu-id="d1c47-134">Если вы хотите задать PowerShell в качестве оболочки по умолчанию для OpenSSH, см. раздел [Настройка Windows для OpenSSH](/windows-server/administration/openssh/openssh_server_configuration).</span><span class="sxs-lookup"><span data-stu-id="d1c47-134">If you want to set PowerShell as the default shell for OpenSSH, see [Configuring Windows for OpenSSH](/windows-server/administration/openssh/openssh_server_configuration).</span></span>
 
-1. <span data-ttu-id="eadef-133">Измените файл `sshd_config`, расположенный в `$env:ProgramData\ssh`.</span><span class="sxs-lookup"><span data-stu-id="eadef-133">Edit the `sshd_config` file located at `$env:ProgramData\ssh`.</span></span>
+1. <span data-ttu-id="d1c47-135">Измените файл `sshd_config`, расположенный в `$env:ProgramData\ssh`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-135">Edit the `sshd_config` file located at `$env:ProgramData\ssh`.</span></span>
 
-   <span data-ttu-id="eadef-134">Включите проверку подлинности с помощью пароля:</span><span class="sxs-lookup"><span data-stu-id="eadef-134">Make sure password authentication is enabled:</span></span>
+   <span data-ttu-id="d1c47-136">Включите проверку подлинности с помощью пароля:</span><span class="sxs-lookup"><span data-stu-id="d1c47-136">Make sure password authentication is enabled:</span></span>
 
    ```
    PasswordAuthentication yes
    ```
 
-   <span data-ttu-id="eadef-135">Создайте подсистему SSH, в которой размещается процесс PowerShell на удаленном компьютере:</span><span class="sxs-lookup"><span data-stu-id="eadef-135">Create the SSH subsystem that hosts a PowerShell process on the remote computer:</span></span>
+   <span data-ttu-id="d1c47-137">Создайте подсистему SSH, в которой размещается процесс PowerShell на удаленном компьютере:</span><span class="sxs-lookup"><span data-stu-id="d1c47-137">Create the SSH subsystem that hosts a PowerShell process on the remote computer:</span></span>
 
    ```
    Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo
    ```
 
    > [!NOTE]
-   > <span data-ttu-id="eadef-136">Расположение исполняемого файла PowerShell по умолчанию — `c:/progra~1/powershell/7/pwsh.exe`.</span><span class="sxs-lookup"><span data-stu-id="eadef-136">The default location of the PowerShell executable is `c:/progra~1/powershell/7/pwsh.exe`.</span></span> <span data-ttu-id="eadef-137">Расположение может различаться в зависимости от способа установки PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eadef-137">The location can vary depending on how you installed PowerShell.</span></span>
+   > <span data-ttu-id="d1c47-138">Расположение исполняемого файла PowerShell по умолчанию — `c:/progra~1/powershell/7/pwsh.exe`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-138">The default location of the PowerShell executable is `c:/progra~1/powershell/7/pwsh.exe`.</span></span> <span data-ttu-id="d1c47-139">Расположение может различаться в зависимости от способа установки PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d1c47-139">The location can vary depending on how you installed PowerShell.</span></span>
    >
-   > <span data-ttu-id="eadef-138">Необходимо использовать краткое имя 8.3 для всех путей к файлам, содержащим пробелы.</span><span class="sxs-lookup"><span data-stu-id="eadef-138">You must use the 8.3 short name for any file paths that contain spaces.</span></span> <span data-ttu-id="eadef-139">В OpenSSH для Windows обнаружена ошибка, блокирующая работу пробелов в путях к исполняемым файлам подсистемы.</span><span class="sxs-lookup"><span data-stu-id="eadef-139">There's a bug in OpenSSH for Windows that prevents spaces from working in subsystem executable paths.</span></span> <span data-ttu-id="eadef-140">См. дополнительные сведения на [сайте GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).</span><span class="sxs-lookup"><span data-stu-id="eadef-140">For more information, see this [GitHub issue](https://github.com/PowerShell/Win32-OpenSSH/issues/784).</span></span>
+   > <span data-ttu-id="d1c47-140">Необходимо использовать краткое имя 8.3 для всех путей к файлам, содержащим пробелы.</span><span class="sxs-lookup"><span data-stu-id="d1c47-140">You must use the 8.3 short name for any file paths that contain spaces.</span></span> <span data-ttu-id="d1c47-141">В OpenSSH для Windows обнаружена ошибка, блокирующая работу пробелов в путях к исполняемым файлам подсистемы.</span><span class="sxs-lookup"><span data-stu-id="d1c47-141">There's a bug in OpenSSH for Windows that prevents spaces from working in subsystem executable paths.</span></span> <span data-ttu-id="d1c47-142">См. дополнительные сведения на [сайте GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).</span><span class="sxs-lookup"><span data-stu-id="d1c47-142">For more information, see this [GitHub issue](https://github.com/PowerShell/Win32-OpenSSH/issues/784).</span></span>
    >
-   > <span data-ttu-id="eadef-141">Обычно краткое имя 8.3 для папки `Program Files` в Windows — это `Progra~1`.</span><span class="sxs-lookup"><span data-stu-id="eadef-141">The 8.3 short name for the `Program Files` folder in Windows is usually `Progra~1`.</span></span> <span data-ttu-id="eadef-142">Тем не менее для проверки можно использовать следующую команду:</span><span class="sxs-lookup"><span data-stu-id="eadef-142">However, you can use the following command to make sure:</span></span>
+   > <span data-ttu-id="d1c47-143">Обычно краткое имя 8.3 для папки `Program Files` в Windows — это `Progra~1`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-143">The 8.3 short name for the `Program Files` folder in Windows is usually `Progra~1`.</span></span> <span data-ttu-id="d1c47-144">Тем не менее для проверки можно использовать следующую команду:</span><span class="sxs-lookup"><span data-stu-id="d1c47-144">However, you can use the following command to make sure:</span></span>
    >
    > ```powershell
    > Get-CimInstance Win32_Directory -Filter 'Name="C:\\Program Files"' |
@@ -85,118 +85,126 @@ ms.locfileid: "87133475"
    > c:\progra~1
    > ```
 
-   <span data-ttu-id="eadef-143">При необходимости включите проверку подлинности на основе ключа:</span><span class="sxs-lookup"><span data-stu-id="eadef-143">Optionally, enable key authentication:</span></span>
+   <span data-ttu-id="d1c47-145">При необходимости включите проверку подлинности на основе ключа:</span><span class="sxs-lookup"><span data-stu-id="d1c47-145">Optionally, enable key authentication:</span></span>
 
    ```
    PubkeyAuthentication yes
    ```
 
-   <span data-ttu-id="eadef-144">Дополнительные сведения см. в статье [Управление ключами OpenSSH](/windows-server/administration/openssh/openssh_keymanagement).</span><span class="sxs-lookup"><span data-stu-id="eadef-144">For more information, see [Managing OpenSSH Keys](/windows-server/administration/openssh/openssh_keymanagement).</span></span>
+   <span data-ttu-id="d1c47-146">Дополнительные сведения см. в статье [Управление ключами OpenSSH](/windows-server/administration/openssh/openssh_keymanagement).</span><span class="sxs-lookup"><span data-stu-id="d1c47-146">For more information, see [Managing OpenSSH Keys](/windows-server/administration/openssh/openssh_keymanagement).</span></span>
 
-1. <span data-ttu-id="eadef-145">Перезапустите службу **sshd**.</span><span class="sxs-lookup"><span data-stu-id="eadef-145">Restart the **sshd** service.</span></span>
+1. <span data-ttu-id="d1c47-147">Перезапустите службу **sshd** .</span><span class="sxs-lookup"><span data-stu-id="d1c47-147">Restart the **sshd** service.</span></span>
 
    ```powershell
    Restart-Service sshd
    ```
 
-1. <span data-ttu-id="eadef-146">Добавьте путь установки OpenSSH в свою переменную среды Path.</span><span class="sxs-lookup"><span data-stu-id="eadef-146">Add the path where OpenSSH is installed to your Path environment variable.</span></span> <span data-ttu-id="eadef-147">Например, `C:\Program Files\OpenSSH\`.</span><span class="sxs-lookup"><span data-stu-id="eadef-147">For example, `C:\Program Files\OpenSSH\`.</span></span> <span data-ttu-id="eadef-148">Это позволит найти файл `ssh.exe`.</span><span class="sxs-lookup"><span data-stu-id="eadef-148">This entry allows for the `ssh.exe` to be found.</span></span>
+1. <span data-ttu-id="d1c47-148">Добавьте путь установки OpenSSH в свою переменную среды Path.</span><span class="sxs-lookup"><span data-stu-id="d1c47-148">Add the path where OpenSSH is installed to your Path environment variable.</span></span> <span data-ttu-id="d1c47-149">Например, `C:\Program Files\OpenSSH\`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-149">For example, `C:\Program Files\OpenSSH\`.</span></span> <span data-ttu-id="d1c47-150">Это позволит найти файл `ssh.exe`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-150">This entry allows for the `ssh.exe` to be found.</span></span>
 
-## <a name="set-up-on-an-ubuntu-1604-linux-computer"></a><span data-ttu-id="eadef-149">Настройка на компьютере с Ubuntu 16.04 Linux</span><span class="sxs-lookup"><span data-stu-id="eadef-149">Set up on an Ubuntu 16.04 Linux computer</span></span>
+## <a name="set-up-on-an-ubuntu-1604-linux-computer"></a><span data-ttu-id="d1c47-151">Настройка на компьютере с Ubuntu 16.04 Linux</span><span class="sxs-lookup"><span data-stu-id="d1c47-151">Set up on an Ubuntu 16.04 Linux computer</span></span>
 
-1. <span data-ttu-id="eadef-150">Установите последнюю версию PowerShell, см. раздел [Установка PowerShell Core в Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604).</span><span class="sxs-lookup"><span data-stu-id="eadef-150">Install the latest version of PowerShell, see [Installing PowerShell Core on Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604).</span></span>
-1. <span data-ttu-id="eadef-151">Установите [сервер OpenSSH для Ubuntu](https://help.ubuntu.com/lts/serverguide/openssh-server.html).</span><span class="sxs-lookup"><span data-stu-id="eadef-151">Install [Ubuntu OpenSSH Server](https://help.ubuntu.com/lts/serverguide/openssh-server.html).</span></span>
+1. <span data-ttu-id="d1c47-152">Установите последнюю версию PowerShell, см. раздел [Установка PowerShell Core в Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604).</span><span class="sxs-lookup"><span data-stu-id="d1c47-152">Install the latest version of PowerShell, see [Installing PowerShell Core on Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604).</span></span>
+1. <span data-ttu-id="d1c47-153">Установите [сервер OpenSSH для Ubuntu](https://help.ubuntu.com/lts/serverguide/openssh-server.html).</span><span class="sxs-lookup"><span data-stu-id="d1c47-153">Install [Ubuntu OpenSSH Server](https://help.ubuntu.com/lts/serverguide/openssh-server.html).</span></span>
 
    ```bash
    sudo apt install openssh-client
    sudo apt install openssh-server
    ```
 
-1. <span data-ttu-id="eadef-152">Измените файл `sshd_config` в расположении `/etc/ssh`.</span><span class="sxs-lookup"><span data-stu-id="eadef-152">Edit the `sshd_config` file at location `/etc/ssh`.</span></span>
+1. <span data-ttu-id="d1c47-154">Измените файл `sshd_config` в расположении `/etc/ssh`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-154">Edit the `sshd_config` file at location `/etc/ssh`.</span></span>
 
-   <span data-ttu-id="eadef-153">Включите проверку подлинности с помощью пароля:</span><span class="sxs-lookup"><span data-stu-id="eadef-153">Make sure password authentication is enabled:</span></span>
+   <span data-ttu-id="d1c47-155">Включите проверку подлинности с помощью пароля:</span><span class="sxs-lookup"><span data-stu-id="d1c47-155">Make sure password authentication is enabled:</span></span>
 
    ```
    PasswordAuthentication yes
    ```
 
-   <span data-ttu-id="eadef-154">Добавьте запись подсистемы PowerShell:</span><span class="sxs-lookup"><span data-stu-id="eadef-154">Add a PowerShell subsystem entry:</span></span>
+   <span data-ttu-id="d1c47-156">При необходимости включите проверку подлинности на основе ключа:</span><span class="sxs-lookup"><span data-stu-id="d1c47-156">Optionally, enable key authentication:</span></span>
+
+   ```
+   PubkeyAuthentication yes
+   ```
+
+   <span data-ttu-id="d1c47-157">Дополнительные сведения о создании ключей SSH в Ubuntu см. на странице справки по [ssh-keygen](http://manpages.ubuntu.com/manpages/xenial/man1/ssh-keygen.1.html).</span><span class="sxs-lookup"><span data-stu-id="d1c47-157">For more information about creating SSH keys on Ubuntu, see the manpage for [ssh-keygen](http://manpages.ubuntu.com/manpages/xenial/man1/ssh-keygen.1.html).</span></span>
+
+   <span data-ttu-id="d1c47-158">Добавьте запись подсистемы PowerShell:</span><span class="sxs-lookup"><span data-stu-id="d1c47-158">Add a PowerShell subsystem entry:</span></span>
 
    ```
    Subsystem powershell /usr/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
-   > <span data-ttu-id="eadef-155">Расположение исполняемого файла PowerShell по умолчанию — `/usr/bin/pwsh`.</span><span class="sxs-lookup"><span data-stu-id="eadef-155">The default location of the PowerShell executable is `/usr/bin/pwsh`.</span></span> <span data-ttu-id="eadef-156">Расположение может различаться в зависимости от способа установки PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eadef-156">The location can vary depending on how you installed PowerShell.</span></span>
+   > <span data-ttu-id="d1c47-159">Расположение исполняемого файла PowerShell по умолчанию — `/usr/bin/pwsh`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-159">The default location of the PowerShell executable is `/usr/bin/pwsh`.</span></span> <span data-ttu-id="d1c47-160">Расположение может различаться в зависимости от способа установки PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d1c47-160">The location can vary depending on how you installed PowerShell.</span></span>
 
-   <span data-ttu-id="eadef-157">При необходимости включите проверку подлинности на основе ключа:</span><span class="sxs-lookup"><span data-stu-id="eadef-157">Optionally, enable key authentication:</span></span>
+   <span data-ttu-id="d1c47-161">При необходимости включите проверку подлинности на основе ключа:</span><span class="sxs-lookup"><span data-stu-id="d1c47-161">Optionally, enable key authentication:</span></span>
 
    ```
    PubkeyAuthentication yes
    ```
 
-1. <span data-ttu-id="eadef-158">Перезапустите службу **sshd**.</span><span class="sxs-lookup"><span data-stu-id="eadef-158">Restart the **sshd** service.</span></span>
+1. <span data-ttu-id="d1c47-162">Перезапустите службу **ssh** .</span><span class="sxs-lookup"><span data-stu-id="d1c47-162">Restart the **ssh** service.</span></span>
 
    ```bash
-   sudo service sshd restart
+   sudo service ssh restart
    ```
 
-## <a name="set-up-on-a-macos-computer"></a><span data-ttu-id="eadef-159">Настройка на компьютере с macOS</span><span class="sxs-lookup"><span data-stu-id="eadef-159">Set up on a macOS computer</span></span>
+## <a name="set-up-on-a-macos-computer"></a><span data-ttu-id="d1c47-163">Настройка на компьютере с macOS</span><span class="sxs-lookup"><span data-stu-id="d1c47-163">Set up on a macOS computer</span></span>
 
-1. <span data-ttu-id="eadef-160">Установите последнюю версию PowerShell, см. раздел [Установка PowerShell Core в macOS](../../install/installing-powershell-core-on-macos.md).</span><span class="sxs-lookup"><span data-stu-id="eadef-160">Install the latest version of PowerShell, see [Installing PowerShell Core on macOS](../../install/installing-powershell-core-on-macos.md).</span></span>
+1. <span data-ttu-id="d1c47-164">Установите последнюю версию PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d1c47-164">Install the latest version of PowerShell.</span></span> <span data-ttu-id="d1c47-165">Дополнительные сведения см. в статье [Установка PowerShell Core в macOS](../../install/installing-powershell-core-on-macos.md).</span><span class="sxs-lookup"><span data-stu-id="d1c47-165">For more information, [Installing PowerShell Core on macOS](../../install/installing-powershell-core-on-macos.md).</span></span>
 
-   <span data-ttu-id="eadef-161">Убедитесь, что удаленное взаимодействие SSH включено, выполните следующие действия:</span><span class="sxs-lookup"><span data-stu-id="eadef-161">Make sure SSH Remoting is enabled by following these steps:</span></span>
+   <span data-ttu-id="d1c47-166">Убедитесь, что удаленное взаимодействие SSH включено, выполните следующие действия:</span><span class="sxs-lookup"><span data-stu-id="d1c47-166">Make sure SSH Remoting is enabled by following these steps:</span></span>
 
-   1. <span data-ttu-id="eadef-162">Откройте среду `System Preferences`.</span><span class="sxs-lookup"><span data-stu-id="eadef-162">Open `System Preferences`.</span></span>
-   1. <span data-ttu-id="eadef-163">Щелкните `Sharing`.</span><span class="sxs-lookup"><span data-stu-id="eadef-163">Click on `Sharing`.</span></span>
-   1. <span data-ttu-id="eadef-164">Установите флажок `Remote Login`, чтобы задать `Remote Login: On`.</span><span class="sxs-lookup"><span data-stu-id="eadef-164">Check `Remote Login` to set `Remote Login: On`.</span></span>
-   1. <span data-ttu-id="eadef-165">Разрешите доступ соответствующим пользователям.</span><span class="sxs-lookup"><span data-stu-id="eadef-165">Allow access to the appropriate users.</span></span>
+   1. <span data-ttu-id="d1c47-167">Откройте среду `System Preferences`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-167">Open `System Preferences`.</span></span>
+   1. <span data-ttu-id="d1c47-168">Щелкните `Sharing`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-168">Click on `Sharing`.</span></span>
+   1. <span data-ttu-id="d1c47-169">Установите флажок `Remote Login`, чтобы задать `Remote Login: On`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-169">Check `Remote Login` to set `Remote Login: On`.</span></span>
+   1. <span data-ttu-id="d1c47-170">Разрешите доступ соответствующим пользователям.</span><span class="sxs-lookup"><span data-stu-id="d1c47-170">Allow access to the appropriate users.</span></span>
 
-1. <span data-ttu-id="eadef-166">Измените файл `sshd_config` в расположении `/private/etc/ssh/sshd_config`.</span><span class="sxs-lookup"><span data-stu-id="eadef-166">Edit the `sshd_config` file at location `/private/etc/ssh/sshd_config`.</span></span>
+1. <span data-ttu-id="d1c47-171">Измените файл `sshd_config` в расположении `/private/etc/ssh/sshd_config`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-171">Edit the `sshd_config` file at location `/private/etc/ssh/sshd_config`.</span></span>
 
-   <span data-ttu-id="eadef-167">Используйте текстовый редактор, например **nano**:</span><span class="sxs-lookup"><span data-stu-id="eadef-167">Use a text editor such as **nano**:</span></span>
+   <span data-ttu-id="d1c47-172">Используйте текстовый редактор, например **nano** :</span><span class="sxs-lookup"><span data-stu-id="d1c47-172">Use a text editor such as **nano** :</span></span>
 
    ```bash
    sudo nano /private/etc/ssh/sshd_config
    ```
 
-   <span data-ttu-id="eadef-168">Включите проверку подлинности с помощью пароля:</span><span class="sxs-lookup"><span data-stu-id="eadef-168">Make sure password authentication is enabled:</span></span>
+   <span data-ttu-id="d1c47-173">Включите проверку подлинности с помощью пароля:</span><span class="sxs-lookup"><span data-stu-id="d1c47-173">Make sure password authentication is enabled:</span></span>
 
    ```
    PasswordAuthentication yes
    ```
 
-   <span data-ttu-id="eadef-169">Добавьте запись подсистемы PowerShell:</span><span class="sxs-lookup"><span data-stu-id="eadef-169">Add a PowerShell subsystem entry:</span></span>
+   <span data-ttu-id="d1c47-174">Добавьте запись подсистемы PowerShell:</span><span class="sxs-lookup"><span data-stu-id="d1c47-174">Add a PowerShell subsystem entry:</span></span>
 
    ```
    Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
-   > <span data-ttu-id="eadef-170">Расположение исполняемого файла PowerShell по умолчанию — `/usr/local/bin/pwsh`.</span><span class="sxs-lookup"><span data-stu-id="eadef-170">The default location of the PowerShell executable is `/usr/local/bin/pwsh`.</span></span> <span data-ttu-id="eadef-171">Расположение может различаться в зависимости от способа установки PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eadef-171">The location can vary depending on how you installed PowerShell.</span></span>
+   > <span data-ttu-id="d1c47-175">Расположение исполняемого файла PowerShell по умолчанию — `/usr/local/bin/pwsh`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-175">The default location of the PowerShell executable is `/usr/local/bin/pwsh`.</span></span> <span data-ttu-id="d1c47-176">Расположение может различаться в зависимости от способа установки PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d1c47-176">The location can vary depending on how you installed PowerShell.</span></span>
 
-   <span data-ttu-id="eadef-172">При необходимости включите проверку подлинности на основе ключа:</span><span class="sxs-lookup"><span data-stu-id="eadef-172">Optionally, enable key authentication:</span></span>
+   <span data-ttu-id="d1c47-177">При необходимости включите проверку подлинности на основе ключа:</span><span class="sxs-lookup"><span data-stu-id="d1c47-177">Optionally, enable key authentication:</span></span>
 
    ```
    PubkeyAuthentication yes
    ```
 
-1. <span data-ttu-id="eadef-173">Перезапустите службу **sshd**.</span><span class="sxs-lookup"><span data-stu-id="eadef-173">Restart the **sshd** service.</span></span>
+1. <span data-ttu-id="d1c47-178">Перезапустите службу **sshd** .</span><span class="sxs-lookup"><span data-stu-id="d1c47-178">Restart the **sshd** service.</span></span>
 
    ```bash
    sudo launchctl stop com.openssh.sshd
    sudo launchctl start com.openssh.sshd
    ```
 
-## <a name="authentication"></a><span data-ttu-id="eadef-174">Аутентификация</span><span class="sxs-lookup"><span data-stu-id="eadef-174">Authentication</span></span>
+## <a name="authentication"></a><span data-ttu-id="d1c47-179">Аутентификация</span><span class="sxs-lookup"><span data-stu-id="d1c47-179">Authentication</span></span>
 
-<span data-ttu-id="eadef-175">При удаленном взаимодействии с PowerShell через SSH используется обмен данными для проверки подлинности между клиентом SSH и службой SSH. Схемы проверки подлинности в его рамках не реализуются.</span><span class="sxs-lookup"><span data-stu-id="eadef-175">PowerShell remoting over SSH relies on the authentication exchange between the SSH client and SSH service and doesn't implement any authentication schemes itself.</span></span> <span data-ttu-id="eadef-176">Это означает, что любые настроенные схемы проверки подлинности, включая многофакторную проверку подлинности, обрабатываются протоколом SSH независимо от PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eadef-176">The result is that any configured authentication schemes including multi-factor authentication are handled by SSH and independent of PowerShell.</span></span> <span data-ttu-id="eadef-177">Например, в службе SSH можно настроить обязательное применение проверки подлинности на основе открытых ключей, а также разовых паролей для усиления безопасности.</span><span class="sxs-lookup"><span data-stu-id="eadef-177">For example, you can configure the SSH service to require public key authentication and a one-time password for added security.</span></span> <span data-ttu-id="eadef-178">Настройка многофакторной проверки подлинности выходит за рамки настоящего документа.</span><span class="sxs-lookup"><span data-stu-id="eadef-178">Configuration of multi-factor authentication is outside the scope of this documentation.</span></span> <span data-ttu-id="eadef-179">Сведения о том, как правильно настроить многофакторную проверку подлинности и проверить ее работу вне PowerShell, прежде чем пытаться использовать ее для удаленного взаимодействия с PowerShell, см. в документации по SSH.</span><span class="sxs-lookup"><span data-stu-id="eadef-179">Refer to documentation for SSH on how to correctly configure multi-factor authentication and validate it works outside of PowerShell before attempting to use it with PowerShell remoting.</span></span>
+<span data-ttu-id="d1c47-180">При удаленном взаимодействии с PowerShell через SSH используется обмен данными для проверки подлинности между клиентом SSH и службой SSH. Схемы проверки подлинности в его рамках не реализуются.</span><span class="sxs-lookup"><span data-stu-id="d1c47-180">PowerShell remoting over SSH relies on the authentication exchange between the SSH client and SSH service and doesn't implement any authentication schemes itself.</span></span> <span data-ttu-id="d1c47-181">Это означает, что любые настроенные схемы проверки подлинности, включая многофакторную проверку подлинности, обрабатываются протоколом SSH независимо от PowerShell.</span><span class="sxs-lookup"><span data-stu-id="d1c47-181">The result is that any configured authentication schemes including multi-factor authentication are handled by SSH and independent of PowerShell.</span></span> <span data-ttu-id="d1c47-182">Например, в службе SSH можно настроить обязательное применение проверки подлинности на основе открытых ключей, а также разовых паролей для усиления безопасности.</span><span class="sxs-lookup"><span data-stu-id="d1c47-182">For example, you can configure the SSH service to require public key authentication and a one-time password for added security.</span></span> <span data-ttu-id="d1c47-183">Настройка многофакторной проверки подлинности выходит за рамки настоящего документа.</span><span class="sxs-lookup"><span data-stu-id="d1c47-183">Configuration of multi-factor authentication is outside the scope of this documentation.</span></span> <span data-ttu-id="d1c47-184">Сведения о том, как правильно настроить многофакторную проверку подлинности и проверить ее работу вне PowerShell, прежде чем пытаться использовать ее для удаленного взаимодействия с PowerShell, см. в документации по SSH.</span><span class="sxs-lookup"><span data-stu-id="d1c47-184">Refer to documentation for SSH on how to correctly configure multi-factor authentication and validate it works outside of PowerShell before attempting to use it with PowerShell remoting.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="eadef-180">Пользователи сохраняют те же привилегии в удаленных сеансах.</span><span class="sxs-lookup"><span data-stu-id="eadef-180">Users retain the same privileges in remote sessions.</span></span> <span data-ttu-id="eadef-181">Это означает, что администраторы имеют доступ к оболочке с повышенными правами, а обычные пользователи — нет.</span><span class="sxs-lookup"><span data-stu-id="eadef-181">Meaning, Administrators have access to an elevated shell, and normal users will not.</span></span>
+> <span data-ttu-id="d1c47-185">Пользователи сохраняют те же привилегии в удаленных сеансах.</span><span class="sxs-lookup"><span data-stu-id="d1c47-185">Users retain the same privileges in remote sessions.</span></span> <span data-ttu-id="d1c47-186">Это означает, что администраторы имеют доступ к оболочке с повышенными правами, а обычные пользователи — нет.</span><span class="sxs-lookup"><span data-stu-id="d1c47-186">Meaning, Administrators have access to an elevated shell, and normal users will not.</span></span>
 
-## <a name="powershell-remoting-example"></a><span data-ttu-id="eadef-182">Пример удаленного взаимодействия PowerShell</span><span class="sxs-lookup"><span data-stu-id="eadef-182">PowerShell remoting example</span></span>
+## <a name="powershell-remoting-example"></a><span data-ttu-id="d1c47-187">Пример удаленного взаимодействия PowerShell</span><span class="sxs-lookup"><span data-stu-id="d1c47-187">PowerShell remoting example</span></span>
 
-<span data-ttu-id="eadef-183">Проще всего проверить удаленное взаимодействие на одном компьютере.</span><span class="sxs-lookup"><span data-stu-id="eadef-183">The easiest way to test remoting is to try it on a single computer.</span></span> <span data-ttu-id="eadef-184">В этом примере мы создадим удаленный сеанс с одним и тем же компьютером Linux.</span><span class="sxs-lookup"><span data-stu-id="eadef-184">In this example, we create a remote session back to the same Linux computer.</span></span> <span data-ttu-id="eadef-185">Командлеты PowerShell мы выполняем в интерактивном режиме, поэтому мы увидим запрос от SSH на проверку удаленного компьютера, а также запрос на ввод пароля.</span><span class="sxs-lookup"><span data-stu-id="eadef-185">We're using PowerShell cmdlets interactively so we see prompts from SSH asking to verify the host computer and prompting for a password.</span></span> <span data-ttu-id="eadef-186">Чтобы убедиться, что удаленное взаимодействие работает, те же операции можно выполнить на компьютере Windows.</span><span class="sxs-lookup"><span data-stu-id="eadef-186">You can do the same thing on a Windows computer to ensure remoting is working.</span></span> <span data-ttu-id="eadef-187">Затем установите удаленное подключение между компьютерами, изменив имя узла.</span><span class="sxs-lookup"><span data-stu-id="eadef-187">Then, remote between computers by changing the host name.</span></span>
+<span data-ttu-id="d1c47-188">Проще всего проверить удаленное взаимодействие на одном компьютере.</span><span class="sxs-lookup"><span data-stu-id="d1c47-188">The easiest way to test remoting is to try it on a single computer.</span></span> <span data-ttu-id="d1c47-189">В этом примере мы создадим удаленный сеанс с одним и тем же компьютером Linux.</span><span class="sxs-lookup"><span data-stu-id="d1c47-189">In this example, we create a remote session back to the same Linux computer.</span></span> <span data-ttu-id="d1c47-190">Командлеты PowerShell мы выполняем в интерактивном режиме, поэтому мы увидим запрос от SSH на проверку удаленного компьютера, а также запрос на ввод пароля.</span><span class="sxs-lookup"><span data-stu-id="d1c47-190">We're using PowerShell cmdlets interactively so we see prompts from SSH asking to verify the host computer and prompting for a password.</span></span> <span data-ttu-id="d1c47-191">Чтобы убедиться, что удаленное взаимодействие работает, те же операции можно выполнить на компьютере Windows.</span><span class="sxs-lookup"><span data-stu-id="d1c47-191">You can do the same thing on a Windows computer to ensure remoting is working.</span></span> <span data-ttu-id="d1c47-192">Затем установите удаленное подключение между компьютерами, изменив имя узла.</span><span class="sxs-lookup"><span data-stu-id="d1c47-192">Then, remote between computers by changing the host name.</span></span>
 
 ```powershell
 # Linux to Linux
@@ -320,24 +328,24 @@ GitCommitId                    v6.0.0-alpha.17
 [WinVM2]: PS C:\Users\PSRemoteUser\Documents>
 ```
 
-### <a name="limitations"></a><span data-ttu-id="eadef-188">Ограничения</span><span class="sxs-lookup"><span data-stu-id="eadef-188">Limitations</span></span>
+### <a name="limitations"></a><span data-ttu-id="d1c47-193">Ограничения</span><span class="sxs-lookup"><span data-stu-id="d1c47-193">Limitations</span></span>
 
-- <span data-ttu-id="eadef-189">Команда **sudo** не работает в рамках сеанса удаленного взаимодействия с компьютером Linux.</span><span class="sxs-lookup"><span data-stu-id="eadef-189">The **sudo** command doesn't work in a remote session to a Linux computer.</span></span>
+- <span data-ttu-id="d1c47-194">Команда **sudo** не работает в рамках сеанса удаленного взаимодействия с компьютером Linux.</span><span class="sxs-lookup"><span data-stu-id="d1c47-194">The **sudo** command doesn't work in a remote session to a Linux computer.</span></span>
 
-- <span data-ttu-id="eadef-190">PSRemoting через SSH не поддерживает профили и не имеет доступа к `$PROFILE`.</span><span class="sxs-lookup"><span data-stu-id="eadef-190">PSRemoting over SSH does not support Profiles and does not have access to `$PROFILE`.</span></span> <span data-ttu-id="eadef-191">После входа в сеанс можно загрузить профиль с помощью вызова с точкой, указав полный путь к профилю.</span><span class="sxs-lookup"><span data-stu-id="eadef-191">Once in a session, you can load a profile by dot sourcing the profile with the full filepath.</span></span> <span data-ttu-id="eadef-192">Это не связано с профилями SSH.</span><span class="sxs-lookup"><span data-stu-id="eadef-192">This is not related to SSH profiles.</span></span> <span data-ttu-id="eadef-193">Вы можете настроить SSH-сервер для использования PowerShell в качестве оболочки по умолчанию и для загрузки профиля через SSH.</span><span class="sxs-lookup"><span data-stu-id="eadef-193">You can configure the SSH server to use PowerShell as the default shell and to load a profile through SSH.</span></span> <span data-ttu-id="eadef-194">Дополнительные сведения см. в документации по SSH.</span><span class="sxs-lookup"><span data-stu-id="eadef-194">See the SSH documentation for more information.</span></span>
+- <span data-ttu-id="d1c47-195">PSRemoting через SSH не поддерживает профили и не имеет доступа к `$PROFILE`.</span><span class="sxs-lookup"><span data-stu-id="d1c47-195">PSRemoting over SSH does not support Profiles and does not have access to `$PROFILE`.</span></span> <span data-ttu-id="d1c47-196">После входа в сеанс можно загрузить профиль с помощью вызова с точкой, указав полный путь к профилю.</span><span class="sxs-lookup"><span data-stu-id="d1c47-196">Once in a session, you can load a profile by dot sourcing the profile with the full filepath.</span></span> <span data-ttu-id="d1c47-197">Это не связано с профилями SSH.</span><span class="sxs-lookup"><span data-stu-id="d1c47-197">This is not related to SSH profiles.</span></span> <span data-ttu-id="d1c47-198">Вы можете настроить SSH-сервер для использования PowerShell в качестве оболочки по умолчанию и для загрузки профиля через SSH.</span><span class="sxs-lookup"><span data-stu-id="d1c47-198">You can configure the SSH server to use PowerShell as the default shell and to load a profile through SSH.</span></span> <span data-ttu-id="d1c47-199">Дополнительные сведения см. в документации по SSH.</span><span class="sxs-lookup"><span data-stu-id="d1c47-199">See the SSH documentation for more information.</span></span>
 
-- <span data-ttu-id="eadef-195">До PowerShell 7.1 удаленное взаимодействие по SSH не поддерживало удаленные сеансы со вторым прыжком.</span><span class="sxs-lookup"><span data-stu-id="eadef-195">Prior to PowerShell 7.1, remoting over SSH did not support second-hop remote sessions.</span></span> <span data-ttu-id="eadef-196">Эта возможность была ограничена сеансами через WinRM.</span><span class="sxs-lookup"><span data-stu-id="eadef-196">This capability was limited to sessions using WinRM.</span></span> <span data-ttu-id="eadef-197">PowerShell 7.1 позволяет `Enter-PSSession` и `Enter-PSHostProcess` работать в любом интерактивном удаленном сеансе.</span><span class="sxs-lookup"><span data-stu-id="eadef-197">PowerShell 7.1 allows `Enter-PSSession` and `Enter-PSHostProcess` to work from within any interactive remote session.</span></span>
+- <span data-ttu-id="d1c47-200">До PowerShell 7.1 удаленное взаимодействие по SSH не поддерживало удаленные сеансы со вторым прыжком.</span><span class="sxs-lookup"><span data-stu-id="d1c47-200">Prior to PowerShell 7.1, remoting over SSH did not support second-hop remote sessions.</span></span> <span data-ttu-id="d1c47-201">Эта возможность была ограничена сеансами через WinRM.</span><span class="sxs-lookup"><span data-stu-id="d1c47-201">This capability was limited to sessions using WinRM.</span></span> <span data-ttu-id="d1c47-202">PowerShell 7.1 позволяет `Enter-PSSession` и `Enter-PSHostProcess` работать в любом интерактивном удаленном сеансе.</span><span class="sxs-lookup"><span data-stu-id="d1c47-202">PowerShell 7.1 allows `Enter-PSSession` and `Enter-PSHostProcess` to work from within any interactive remote session.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="eadef-198">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="eadef-198">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1c47-203">См. также раздел</span><span class="sxs-lookup"><span data-stu-id="d1c47-203">See also</span></span>
 
-[<span data-ttu-id="eadef-199">Установка PowerShell Core в Linux</span><span class="sxs-lookup"><span data-stu-id="eadef-199">Installing PowerShell Core on Linux</span></span>](../../install/installing-powershell-core-on-linux.md#ubuntu-1604)
+[<span data-ttu-id="d1c47-204">Установка PowerShell Core в Linux</span><span class="sxs-lookup"><span data-stu-id="d1c47-204">Installing PowerShell Core on Linux</span></span>](../../install/installing-powershell-core-on-linux.md#ubuntu-1604)
 
-[<span data-ttu-id="eadef-200">Установка PowerShell Core в macOS</span><span class="sxs-lookup"><span data-stu-id="eadef-200">Installing PowerShell Core on macOS</span></span>](../../install/installing-powershell-core-on-macos.md)
+[<span data-ttu-id="d1c47-205">Установка PowerShell Core в macOS</span><span class="sxs-lookup"><span data-stu-id="d1c47-205">Installing PowerShell Core on macOS</span></span>](../../install/installing-powershell-core-on-macos.md)
 
-[<span data-ttu-id="eadef-201">Установка PowerShell Core в Windows</span><span class="sxs-lookup"><span data-stu-id="eadef-201">Installing PowerShell Core on Windows</span></span>](../../install/installing-powershell-core-on-windows.md#msi)
+[<span data-ttu-id="d1c47-206">Установка PowerShell Core в Windows</span><span class="sxs-lookup"><span data-stu-id="d1c47-206">Installing PowerShell Core on Windows</span></span>](../../install/installing-powershell-core-on-windows.md#msi)
 
-[<span data-ttu-id="eadef-202">Управление Windows с помощью OpenSSH</span><span class="sxs-lookup"><span data-stu-id="eadef-202">Manage Windows with OpenSSH</span></span>](/windows-server/administration/openssh/openssh_overview)
+[<span data-ttu-id="d1c47-207">Управление Windows с помощью OpenSSH</span><span class="sxs-lookup"><span data-stu-id="d1c47-207">Manage Windows with OpenSSH</span></span>](/windows-server/administration/openssh/openssh_overview)
 
-[<span data-ttu-id="eadef-203">Управление ключами OpenSSH</span><span class="sxs-lookup"><span data-stu-id="eadef-203">Managing OpenSSH Keys</span></span>](/windows-server/administration/openssh/openssh_keymanagement)
+[<span data-ttu-id="d1c47-208">Управление ключами OpenSSH</span><span class="sxs-lookup"><span data-stu-id="d1c47-208">Managing OpenSSH Keys</span></span>](/windows-server/administration/openssh/openssh_keymanagement)
 
-[<span data-ttu-id="eadef-204">Ubuntu SSH</span><span class="sxs-lookup"><span data-stu-id="eadef-204">Ubuntu SSH</span></span>](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
+[<span data-ttu-id="d1c47-209">Ubuntu SSH</span><span class="sxs-lookup"><span data-stu-id="d1c47-209">Ubuntu SSH</span></span>](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
