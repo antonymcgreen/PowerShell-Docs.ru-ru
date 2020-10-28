@@ -720,8 +720,6 @@
               href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
             - name: Обращение к владельцам пакетов
               href: gallery/how-to/working-with-packages/contacting-package-owners.md
-            - name: Отправка отзывов через социальные сети или комментарии
-              href: gallery/how-to/working-with-packages/social-media-feedback.md
         - name: Управление профилем учетной записи
           items:
             - name: Параметры учетной записи коллекции PowerShell
