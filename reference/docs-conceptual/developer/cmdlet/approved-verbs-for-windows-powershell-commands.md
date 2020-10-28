@@ -1,16 +1,14 @@
 ---
-title: Утвержденные команды для PowerShell | Документация Майкрософт
 ms.date: 09/07/2018
-helpviewer_keywords:
-- action names [PowerShell SDK]
-- verb names [PowerShell SDK]
-- cmdlets [PowerShell SDK], verb names
-ms.openlocfilehash: 96ba7397f46bfcb7036f0242da1367c3df5d3de9
-ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
+ms.topic: reference
+title: Утвержденные команды для PowerShell
+description: Утвержденные команды для PowerShell
+ms.openlocfilehash: 237355ba9729cfe16c335b39f19ab20e40999457
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91899862"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655824"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Утвержденные команды для PowerShell
 
@@ -24,7 +22,7 @@ ms.locfileid: "91899862"
 01234567890123456789012345678901234567890123456789012345678901234567890123456789
 -->
 
-У каждой утвержденной команды есть соответствующий _префикс псевдонима_.
+У каждой утвержденной команды есть соответствующий _префикс псевдонима_ .
 Мы используем префикс псевдонима в псевдонимах для команд, использующих эту команду.
 Например, префикс псевдонима для `Import` — `ip`, а для `Import-Module` — `ipmo`.  Это рекомендация, а не правило. В частности, эту рекомендацию не нужно учитывать для псевдонимов команд, копирующих хорошо известные команды из других сред.
 
