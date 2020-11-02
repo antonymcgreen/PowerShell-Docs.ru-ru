@@ -1,13 +1,14 @@
 ---
 ms.date: 07/15/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Ресурс PackageManagementSource DSC
-ms.openlocfilehash: b24558574f192347aace5a809d57385e01d9acb3
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Ресурс PackageManagementSource DSC
+ms.openlocfilehash: 495b6548ef86f639e93b914ec8bd8ea7818ff8dd
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463896"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142860"
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>Ресурс PackageManagementSource DSC
 
@@ -18,6 +19,8 @@ ms.locfileid: "86463896"
 
 > [!IMPORTANT]
 > Указанные ниже сведения о свойствах относятся к модулю **PackageManagement** версии 1.1.7.0 и новее.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,7 +45,7 @@ PackageManagementSource [String] #ResourceName
 |Имя |Указывает имя источника пакета, который будет зарегистрирован в системе или регистрация которого будет отменена. |
 |ProviderName |Указывает имя поставщика OneGet, с помощью которого вы можете взаимодействовать с источником пакета. |
 |SourceLocation |Указывает URI источника пакета. |
-|InstallationPolicy |Используется поставщиками, такими как встроенный поставщик NuGet. Определяет, доверяете ли вы источнику пакета. Одно из двух значений: **Untrusted** или **Trusted**. |
+|InstallationPolicy |Используется поставщиками, такими как встроенный поставщик NuGet. Определяет, доверяете ли вы источнику пакета. Одно из двух значений: **Untrusted** или **Trusted** . |
 |SourceCredential |Предоставляет доступ к пакету в удаленном источнике. |
 
 ## <a name="common-properties"></a>Общие свойства
@@ -50,15 +53,15 @@ PackageManagementSource [String] #ResourceName
 |Свойство |Описание |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Определяет, будет ли зарегистрирован источник пакета или его регистрация будет отменена. Значение по умолчанию — **Present**. |
+|Ensure |Определяет, будет ли зарегистрирован источник пакета или его регистрация будет отменена. Значение по умолчанию — **Present** . |
 |PsDscRunAsCredential |Задает учетные данные для выполнения всего ресурса от другого имени. |
 
 > [!NOTE]
-> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential**, разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
+> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential** , разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
 
 ## <a name="example"></a>Пример
 
-В этом примере регистрируется источник пакета `https://nuget.org` с помощью ресурса DSC **PackageManagementSource**.
+В этом примере регистрируется источник пакета `https://nuget.org` с помощью ресурса DSC **PackageManagementSource** .
 
 ```powershell
 Configuration PackageManagementSourceTest

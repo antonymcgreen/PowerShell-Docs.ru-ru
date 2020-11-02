@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Ресурс nxGroup в DSC для Linux
-ms.openlocfilehash: f196c74b94ec27818d58b59d1e489facd8ab0a65
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Ресурс nxGroup в DSC для Linux
+ms.openlocfilehash: 3544bee763c0a4456002f9a02fde38de5d4fb65c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464440"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664256"
 ---
 # <a name="dsc-for-linux-nxgroup-resource"></a>Ресурс nxGroup в DSC для Linux
 
@@ -43,7 +44,7 @@ nxGroup <string> #ResourceName
 |Свойство |Description |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Определяет, нужно ли проверять существование группы. Чтобы гарантировать, что группа существует, укажите для этого свойства значение **Present**. Чтобы гарантировать, что группа не существует, укажите для этого свойства значение **Absent**. Значение по умолчанию — **Present**. |
+|Ensure |Определяет, нужно ли проверять существование группы. Чтобы гарантировать, что группа существует, укажите для этого свойства значение **Present** . Чтобы гарантировать, что группа не существует, укажите для этого свойства значение **Absent** . Значение по умолчанию — **Present** . |
 
 ## <a name="example"></a>Пример
 

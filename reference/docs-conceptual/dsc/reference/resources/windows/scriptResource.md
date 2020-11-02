@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Ресурс Script в DSC
-ms.openlocfilehash: 9b89981c17e87b3681c6416c7dee44a75c432ea1
-ms.sourcegitcommit: eb6a7c01e6385809656ac828b9211683e0b1a6fe
+description: Ресурс Script в DSC
+ms.openlocfilehash: f404bf3137caa9f57ad56034895cb15c8944ec07
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89041135"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142979"
 ---
 # <a name="dsc-script-resource"></a>Ресурс Script в DSC
 
@@ -15,6 +16,8 @@ ms.locfileid: "89041135"
 
 Ресурс `Script` в DSC Windows PowerShell предоставляет механизм запуска блоков сценариев на целевых узлах. Ресурс `Script` использует свойства `GetScript`
 `SetScript` и `TestScript`, которые содержат блоки скрипта, определяемые вами для выполнения соответствующих операций DSC.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,7 +53,7 @@ Script [string] #ResourceName
 | PsDscRunAsCredential | Задает учетные данные для выполнения всего ресурса от другого имени.                                           |
 
 > [!NOTE]
-> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential**, разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
+> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential** , разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
 
 ### <a name="additional-information"></a>Дополнительные сведения
 
@@ -141,7 +144,7 @@ Configuration ScriptTest
 ### <a name="example-3-utilizing-parameters-in-a-script-resource"></a>Пример 3. Использование параметров в ресурсе Script
 
 В этом примере осуществляется доступ к параметрам из ресурса Script с использованием области `using`.
-Обратите внимание, что аналогичным образом можно получить доступ к **ConfigurationData**. Как и в примере 2, ожидается сохраненная версия в локальном файле на целевом узле. Можно настроить как локальный путь к файлу, так и версию, что позволяет отделить код от данных конфигурации.
+Обратите внимание, что аналогичным образом можно получить доступ к **ConfigurationData** . Как и в примере 2, ожидается сохраненная версия в локальном файле на целевом узле. Можно настроить как локальный путь к файлу, так и версию, что позволяет отделить код от данных конфигурации.
 
 ```powershell
 Configuration ScriptTest

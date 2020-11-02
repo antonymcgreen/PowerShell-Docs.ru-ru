@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Ресурс DSC WindowsPackageCab
-ms.openlocfilehash: 7205a454d100bb369fd6cf0c5ac419585c8bbe86
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Ресурс DSC WindowsPackageCab
+ms.openlocfilehash: 3ac10eb2a7da502b8cac23ab8bfee869a4e26fd3
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464151"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143030"
 ---
 # <a name="dsc-windowspackagecab-resource"></a>Ресурс DSC WindowsPackageCab
 
@@ -16,6 +17,8 @@ ms.locfileid: "86464151"
 Ресурс **WindowsPackageCab** в службе настройки требуемого состояния Windows PowerShell (DSC) предоставляет механизм установки пакетов CAB-файлов Windows на целевом узле или их удаления.
 
 На целевом узле должен быть установлен модуль DISM PowerShell. Дополнительные сведения см. в статье [Use DISM in Windows PowerShell](/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14) (Использование DISM в Windows PowerShell)
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,7 +46,7 @@ ms.locfileid: "86464151"
 |Свойство |Описание |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Указывает, установлен ли пакет. Если это свойство имеет значение **Absent**, пакет не устанавливается (а если он уже установлен, то удаляется). Если это свойство имеет значение **Present**, пакет устанавливается. Свойство **Ensure** является обязательным для ресурса **WindowsPackageCab**. |
+|Ensure |Указывает, установлен ли пакет. Если это свойство имеет значение **Absent** , пакет не устанавливается (а если он уже установлен, то удаляется). Если это свойство имеет значение **Present** , пакет устанавливается. Свойство **Ensure** является обязательным для ресурса **WindowsPackageCab** . |
 |PsDscRunAsCredential |Задает учетные данные для выполнения всего ресурса от другого имени. |
 
 ## <a name="example"></a>Пример

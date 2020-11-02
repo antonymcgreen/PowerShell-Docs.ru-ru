@@ -1,17 +1,17 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell,командлет
 title: Объект PowerShellTabCollection
-ms.openlocfilehash: 0aad885afd3ba3ae3b00f5c11d2c62a9ff303798
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Объект коллекции PowerShellTabCollection — это коллекция объектов PowerShellTab. Каждый объект PowerShellTab функционирует как отдельная среда выполнения.
+ms.openlocfilehash: 60f8001f096b50bd8433a5685f1f70a350f07f61
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808570"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658275"
 ---
 # <a name="the-powershelltabcollection-object"></a>Объект PowerShellTabCollection
 
-Объект коллекции **PowerShellTabCollection** — это коллекция объектов **PowerShellTab**. Каждый объект **PowerShellTab** функционирует как отдельная среда выполнения. Он является экземпляром класса Microsoft.PowerShell.Host.ISE.PowerShellTabs. Примером является объект `$psISE.PowerShellTabs`.
+Объект коллекции **PowerShellTabCollection**  — это коллекция объектов **PowerShellTab** . Каждый объект **PowerShellTab** функционирует как отдельная среда выполнения. Он является экземпляром класса Microsoft.PowerShell.Host.ISE.PowerShellTabs. Примером является объект `$psISE.PowerShellTabs`.
 
 ## <a name="methods"></a>Методы
 
@@ -30,9 +30,9 @@ $newTab.DisplayName = 'Brand New Tab'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Удаляет вкладку, которая указана параметром **psTab**.
+Удаляет вкладку, которая указана параметром **psTab** .
 
-**psTab** — удаляемая вкладка PowerShell.
+**psTab**  — удаляемая вкладка PowerShell.
 
 ```powershell
 $newTab = $psISE.PowerShellTabs.Add()
@@ -46,9 +46,9 @@ $psISE.PowerShellTabs.Remove($newTab)
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Выбирает вкладку PowerShell, которая задается параметром **psTab**, чтобы сделать ее активной вкладкой PowerShell.
+Выбирает вкладку PowerShell, которая задается параметром **psTab** , чтобы сделать ее активной вкладкой PowerShell.
 
-**psTab** — выбираемая вкладка PowerShell.
+**psTab**  — выбираемая вкладка PowerShell.
 
 ```powershell
 # Save the current tab in a variable and rename it
@@ -61,8 +61,8 @@ $newTab.DisplayName = 'Brand New Tab'
 $psISE.PowerShellTabs.SelectedPowerShellTab = $oldTab
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Объект PowerShellTab](The-PowerShellTab-Object.md)
-- [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Иерархия объектной модели интегрированной среды скриптов](The-ISE-Object-Model-Hierarchy.md)

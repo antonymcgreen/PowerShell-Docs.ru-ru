@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Ресурс DSC WaitForAll
-ms.openlocfilehash: a0cf553af96ecc3df4968581f8f393b72fc3dabf
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Ресурс DSC WaitForAll
+ms.openlocfilehash: a477584cf97a56815bda9973cb2befc9b71d14d1
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464372"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143115"
 ---
 # <a name="dsc-waitforall-resource"></a>Ресурс DSC WaitForAll
 
@@ -15,10 +16,12 @@ ms.locfileid: "86464372"
 
 Ресурс настройки требуемого состояния **WaitForAll** можно использовать в блоке узла в [конфигурации DSC](../../../configurations/configurations.md) для определения зависимостей от конфигураций на других узлах.
 
-Этот ресурс выполняется успешно, если ресурс, указанный свойством **ResourceName**, находится в требуемом состоянии на всех целевых узлах, определенных в свойстве **NodeName**.
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
+Этот ресурс выполняется успешно, если ресурс, указанный свойством **ResourceName** , находится в требуемом состоянии на всех целевых узлах, определенных в свойстве **NodeName** .
 
 > [!NOTE]
-> Ресурс **WaitForAll** использует удаленное управление Windows, чтобы проверить состояние других узлов. Дополнительные сведения о требованиях к безопасности и портах для WinRM см. в разделе [Вопросы обеспечения безопасности удаленного взаимодействия PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
+> Ресурс **WaitForAll** использует удаленное управление Windows, чтобы проверить состояние других узлов. Дополнительные сведения о требованиях к безопасности и портах для WinRM см. в разделе [Вопросы обеспечения безопасности удаленного взаимодействия PowerShell](/powershell/scripting/learn/remoting/winrmsecurity).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -53,7 +56,7 @@ WaitForAll [string] #ResourceName
 |PsDscRunAsCredential |Задает учетные данные для выполнения всего ресурса от другого имени. |
 
 > [!NOTE]
-> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential**, разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
+> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential** , разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
 
 ## <a name="example"></a>Пример
 

@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Ресурс User в DSC
-ms.openlocfilehash: 340fce45a2074930ae14ca1aaeef7eff78531916
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Ресурс User в DSC
+ms.openlocfilehash: b14f8d434ef3e1eb220fe7b0b18a011014c9ae6c
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463777"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142606"
 ---
 # <a name="dsc-user-resource"></a>Ресурс User в DSC
 
 > Область применения: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Ресурс **User** в DSC Windows PowerShell предоставляет механизм управления локальными учетными записями на целевом узле.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -52,11 +55,11 @@ User [string] #ResourceName
 |Свойство |Description |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Указывает, существует ли учетная запись. Присвойте этому свойству значение **Present**, чтобы гарантировать, что учетная запись существует, и **Absent** в противном случае. Значение по умолчанию — **Present**. |
+|Ensure |Указывает, существует ли учетная запись. Присвойте этому свойству значение **Present** , чтобы гарантировать, что учетная запись существует, и **Absent** в противном случае. Значение по умолчанию — **Present** . |
 |PsDscRunAsCredential |Задает учетные данные для выполнения всего ресурса от другого имени. |
 
 > [!NOTE]
-> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential**, разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
+> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential** , разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
 
 ## <a name="example"></a>Пример
 

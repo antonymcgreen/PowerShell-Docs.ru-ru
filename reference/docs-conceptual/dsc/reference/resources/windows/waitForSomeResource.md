@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Ресурс DSC WaitForSome
-ms.openlocfilehash: ea2618fbb77dd24a0c73fd9357e87862da514b66
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Ресурс DSC WaitForSome
+ms.openlocfilehash: bc9c3df2b476e7046ccfe6257acc1d1641e7594b
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464389"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143098"
 ---
 # <a name="dsc-waitforsome-resource"></a>Ресурс DSC WaitForSome
 
@@ -15,10 +16,12 @@ ms.locfileid: "86464389"
 
 Ресурс настройки требуемого состояния **WaitForSome** можно использовать в блоке узла в [конфигурации DSC](../../../configurations/configurations.md) для определения зависимостей от конфигураций на других узлах.
 
-Ресурс выполняется успешно, если ресурс, указанный свойством **ResourceName**, находится в требуемом состоянии на минимальном числе узлов (определяется свойством **NodeCount**), заданных свойством **NodeName**.
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
+Ресурс выполняется успешно, если ресурс, указанный свойством **ResourceName** , находится в требуемом состоянии на минимальном числе узлов (определяется свойством **NodeCount** ), заданных свойством **NodeName** .
 
 > [!NOTE]
-> Ресурс **WaitForSome** использует удаленное управление Windows, чтобы проверить состояние других узлов. Дополнительные сведения о требованиях к безопасности и портах для WinRM см. в разделе [Вопросы обеспечения безопасности удаленного взаимодействия PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
+> Ресурс **WaitForSome** использует удаленное управление Windows, чтобы проверить состояние других узлов. Дополнительные сведения о требованиях к безопасности и портах для WinRM см. в разделе [Вопросы обеспечения безопасности удаленного взаимодействия PowerShell](/powershell/scripting/learn/remoting/winrmsecurity).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -55,7 +58,7 @@ WaitForSome [String] #ResourceName
 |PsDscRunAsCredential |Задает учетные данные для выполнения всего ресурса от другого имени. |
 
 > [!NOTE]
-> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential**, разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
+> В WMF 5.0 было добавлено общее свойство **PsDscRunAsCredential** , разрешающее запуск любого ресурса DSC в контексте других учетных данных. Дополнительные сведения см. в разделе [Использование учетных данных с ресурсами DSC](../../../configurations/runasuser.md).
 
 ## <a name="example"></a>Пример
 

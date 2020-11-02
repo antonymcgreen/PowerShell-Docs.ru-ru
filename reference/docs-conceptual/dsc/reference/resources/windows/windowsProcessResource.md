@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Ресурс WindowsProcess в DSC
-ms.openlocfilehash: a1f8840a5894049efd27c5d213a66363cd8dbebc
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Ресурс WindowsProcess в DSC
+ms.openlocfilehash: 3076e9cb857b78953c164253351b23e7da9b40c6
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464134"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143013"
 ---
 # <a name="dsc-windowsprocess-resource"></a>Ресурс WindowsProcess в DSC
 
 > Область применения: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Ресурс **WindowsProcess** в DSC Windows PowerShell предоставляет механизм настройки процессов на целевом узле.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,5 +53,5 @@ WindowsProcess [string] #ResourceName
 |Свойство |Description |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Указывает, существует ли процесс. Чтобы гарантировать, что процесс существует, укажите для этого свойства значение **Present**. В противном случае укажите значение **Absent**. Значение по умолчанию — **Present**. |
+|Ensure |Указывает, существует ли процесс. Чтобы гарантировать, что процесс существует, укажите для этого свойства значение **Present** . В противном случае укажите значение **Absent** . Значение по умолчанию — **Present** . |
 |PsDscRunAsCredential |Задает учетные данные для выполнения всего ресурса от другого имени. |

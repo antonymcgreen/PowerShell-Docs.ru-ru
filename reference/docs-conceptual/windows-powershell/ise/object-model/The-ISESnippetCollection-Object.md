@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,командлет
 title: Объект ISESnippetCollection
-ms.openlocfilehash: 6cdc43dd1d82e94f66122d7f7b313c02e755fed7
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Объект ISESnippetCollection — это коллекция объектов ISESnippet. Коллекция файлов, с которой связан объект PowerShellTab, является членом этого класса.
+ms.openlocfilehash: e6170ddf72d5ead840aa3015d4de1dcb21dbfeff
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808580"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655970"
 ---
 # <a name="the-isesnippetcollection-object"></a>Объект ISESnippetCollection
 
-Объект **ISESnippetCollection** — это коллекция объектов **ISESnippet**. Коллекция файлов, с которой связан объект **PowerShellTab**, является членом этого класса. Примером является коллекция `$psISE.CurrentPowerShellTab.Files`.
+Объект **ISESnippetCollection**  — это коллекция объектов **ISESnippet** . Коллекция файлов, с которой связан объект **PowerShellTab** , является членом этого класса. Примером является коллекция `$psISE.CurrentPowerShellTab.Files`.
 
 ## <a name="methods"></a>Методы
 
@@ -21,15 +21,15 @@ ms.locfileid: "83808580"
 
 Скачивает файл `.snippets.ps1xml`, содержащий определяемые пользователем фрагменты кода. Для создания фрагментов кода проще всего использовать командлет `New-IseSnippet`, который автоматически сохраняет фрагменты в папке профиля, чтобы загружать их при каждом запуске интегрированной среды сценариев Windows PowerShell.
 
-**FilePathName** — строка. Путь к файлу с расширением SNIPPETS.PS1XML и его имя. В нем содержатся определения фрагментов.
+**FilePathName**  — строка. Путь к файлу с расширением SNIPPETS.PS1XML и его имя. В нем содержатся определения фрагментов.
 
 ```powershell
 # Loads a custom snippet file into the current PowerShell tab.
 $SnipFile = Join-Path ( Split-Path $profile) 'Snippets\MySnips.snippets.ps1xml' $psISE.CurrentPowerShellTab.Snippets.Add($SnipPath)
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Объект ISESnippet](The-ISESnippetObject.md)
-- [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Иерархия объектной модели интегрированной среды скриптов](The-ISE-Object-Model-Hierarchy.md)

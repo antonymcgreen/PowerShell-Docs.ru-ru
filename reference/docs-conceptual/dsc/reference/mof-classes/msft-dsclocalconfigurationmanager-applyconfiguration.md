@@ -1,13 +1,14 @@
 ---
 ms.date: 07/14/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Метод ApplyConfiguration
-ms.openlocfilehash: bec74ccd6f75448484adfd26bf8a4af4e224eb3f
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Метод ApplyConfiguration
+ms.openlocfilehash: aa99221b33d39c3ecc70156a11eaee10b540e2dc
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463845"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664268"
 ---
 # <a name="applyconfiguration-method"></a>Метод ApplyConfiguration
 
@@ -19,7 +20,7 @@ ms.locfileid: "86463845"
 
 ```mof
 uint32 ApplyConfiguration(
-  [in] boolean force
+  [in] boolean force
 );
 ```
 
@@ -27,13 +28,13 @@ uint32 ApplyConfiguration(
 
 ### <a name="force"></a>force
 
-Если параметр имеет значение **true**, текущая конфигурация применяется повторно даже при наличии конфигурации в состоянии ожидания.
+Если параметр имеет значение **true** , текущая конфигурация применяется повторно даже при наличии конфигурации в состоянии ожидания.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Возвращает нуль в случае успешного выполнения; в противном случае возвращает код ошибки.
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
 Это статический метод.
 
@@ -41,7 +42,7 @@ uint32 ApplyConfiguration(
 
 **MOF-файл:** DscCore.mof
 
-**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Пространство имен** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также раздел
 

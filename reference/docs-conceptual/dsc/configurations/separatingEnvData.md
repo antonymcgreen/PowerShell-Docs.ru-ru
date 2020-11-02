@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Разделение данных конфигурации и данных среды
-ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Отделение данных, используемых в конфигурации DSC, от самой конфигурации с помощью данных конфигурации может быть полезным. Это позволит использовать одну конфигурацию для нескольких сред.
+ms.openlocfilehash: 84ca4e4945a36111d23116524fd8f98c04e16d32
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954441"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645073"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Разделение данных конфигурации и данных среды
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Отделение данных, используемых в конфигурации DSC, от самой конфигурации с помощью данных конфигурации может быть полезным.
-Это позволит использовать одну конфигурацию для нескольких сред.
+Отделение данных, используемых в конфигурации DSC, от самой конфигурации с помощью данных конфигурации может быть полезным. Это позволит использовать одну конфигурацию для нескольких сред.
 
 Например, при разработке приложения можно использовать одну и ту же конфигурацию для среды разработки и для рабочей среды и указать данные для каждой среды с помощью данных конфигурации.
 
@@ -26,20 +26,19 @@ ms.locfileid: "71954441"
 
 ## <a name="a-simple-example"></a>Простой пример
 
-Чтобы увидеть, как это работает, рассмотрим очень простой пример.
-Мы создадим одну конфигурацию, в соответствии с которой на некоторых узлах будет находиться **IIS**, а на других узлах — **Hyper-V**:
+Чтобы увидеть, как это работает, рассмотрим очень простой пример. Мы создадим одну конфигурацию, в соответствии с которой на некоторых узлах будет находиться **IIS** , а на других узлах — **Hyper-V** :
 
 ```powershell
 Configuration MyDscConfiguration {
 
-    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
+  Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
     {
-        WindowsFeature IISInstall {
-            Ensure = 'Present'
-            Name   = 'Web-Server'
-        }
+  WindowsFeature IISInstall {
+    Ensure = 'Present'
+    Name   = 'Web-Server'
+  }
 
-    }
+ }
     Node $AllNodes.Where{$_.Role -eq "VMHost"}.NodeName
     {
         WindowsFeature HyperVInstall {
@@ -102,7 +101,7 @@ Mode                LastWriteTime         Length Name
             SQLServerName   = "MySQLServer"
             SqlSource       = "C:\Software\Sql"
             DotNetSrc       = "C:\Software\sxs"
-        WebSiteName     = "New website"
+            WebSiteName     = "New website"
         },
 
         @{
@@ -129,13 +128,11 @@ Mode                LastWriteTime         Length Name
 
 ### <a name="configuration-script-file"></a>Файл сценария конфигурации
 
-Теперь в конфигурации, определенной в файле `.ps1`, отфильтруем узлы, определенные в файле `DevProdEnvData.psd1`, по их роли (`MSSQL`, `Dev` или и то и другое) и настроим их соответствующим образом.
-В среде разработки службы IIS и SQL Server установлены на одном узле, а в рабочей среде на двух различных узлах.
-Содержимое сайта также различно, как указано в свойствах `SiteContents`.
+Теперь в конфигурации, определенной в файле `.ps1`, отфильтруем узлы, определенные в файле `DevProdEnvData.psd1`, по их роли (`MSSQL`, `Dev` или и то и другое) и настроим их соответствующим образом. В среде разработки службы IIS и SQL Server установлены на одном узле, а в рабочей среде на двух различных узлах. Содержимое сайта также различно, как указано в свойствах `SiteContents`.
 
 В конце сценария конфигурации мы вызываем конфигурацию (компилируем ее в документ MOF), передав `DevProdEnvData.psd1` в качестве параметра `$ConfigurationData`.
 
->**Примечание**. Эта конфигурация требует, чтобы модули `xSqlPs` и `xWebAdministration` были установлены на целевом узле.
+> **Примечание** . Эта конфигурация требует, чтобы модули `xSqlPs` и `xWebAdministration` были установлены на целевом узле.
 
 Давайте определим конфигурацию в файле с именем `MyWebApp.ps1`:
 
@@ -229,7 +226,7 @@ Configuration MyWebApp
 MyWebApp -ConfigurationData DevProdEnvData.psd1
 ```
 
-При запуске этой конфигурации создаются три MOF-файла (по одному для каждой именованной записи в массиве **AllNodes**):
+При запуске этой конфигурации создаются три MOF-файла (по одному для каждой именованной записи в массиве **AllNodes** ):
 
 ```
     Directory: C:\DscTests\MyWebApp
@@ -244,75 +241,70 @@ Mode                LastWriteTime         Length Name
 
 ## <a name="using-non-node-data"></a>Использование данных, отличных от данных узла
 
-Можно добавить дополнительные ключи в хэш-таблицу **ConfigurationData** для данных, не относящихся к узлу.
-Следующая конфигурация обеспечивает наличие двух веб-сайтов.
-Данные для каждого веб-сайта определяются в массиве **AllNodes**.
-Файл `Config.xml` используется для обоих веб-сайтов, поэтому мы определим его в дополнительном ключе с именем `NonNodeData`.
-Обратите внимание, что можно создавать столько дополнительных ключей, сколько потребуется, и присваивать им любые имена.
-`NonNodeData` не является зарезервированным словом — это просто выбранное нами имя для дополнительного ключа.
+Можно добавить дополнительные ключи в хэш-таблицу **ConfigurationData** для данных, не относящихся к узлу. Следующая конфигурация обеспечивает наличие двух веб-сайтов. Данные для каждого веб-сайта определяются в массиве **AllNodes** . Файл `Config.xml` используется для обоих веб-сайтов, поэтому мы определим его в дополнительном ключе с именем `NonNodeData`. Обратите внимание, что можно создавать столько дополнительных ключей, сколько потребуется, и присваивать им любые имена. `NonNodeData` не является зарезервированным словом — это просто выбранное нами имя для дополнительного ключа.
 
-Доступ к дополнительным ключам можно получить с помощью специальной переменной **$ConfigurationData**.
-В этом примере доступ к `ConfigFileContents` осуществляется с помощью строки
+Доступ к дополнительным ключам можно получить с помощью специальной переменной **$ConfigurationData** . В этом примере доступ к `ConfigFileContents` осуществляется с помощью строки
+
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
  ```
- в блоке ресурса `File`.
 
+ в блоке ресурса `File`.
 
 ```powershell
 $MyData =
 @{
-    AllNodes =
-    @(
-        @{
-            NodeName           = "*"
-            LogPath            = "C:\Logs"
-        },
+    AllNodes =
+    @(
+        @{
+            NodeName           = "*"
+            LogPath            = "C:\Logs"
+        },
 
-        @{
-            NodeName = "VM-1"
-            SiteContents = "C:\Site1"
-            SiteName = "Website1"
-        },
+        @{
+            NodeName = "VM-1"
+            SiteContents = "C:\Site1"
+            SiteName = "Website1"
+        },
 
 
-        @{
-            NodeName = "VM-2"
-            SiteContents = "C:\Site2"
-            SiteName = "Website2"
-        }
-    );
+        @{
+            NodeName = "VM-2"
+            SiteContents = "C:\Site2"
+            SiteName = "Website2"
+        }
+    );
 
-    NonNodeData =
-    @{
-        ConfigFileContents = (Get-Content C:\Template\Config.xml)
-     }
+    NonNodeData =
+    @{
+        ConfigFileContents = (Get-Content C:\Template\Config.xml)
+     }
 }
 
 configuration WebsiteConfig
 {
-    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
+    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
 
-    node $AllNodes.NodeName
-    {
-        xWebsite Site
-        {
-            Name         = $Node.SiteName
-            PhysicalPath = $Node.SiteContents
-            Ensure       = "Present"
-        }
+    node $AllNodes.NodeName
+    {
+        xWebsite Site
+        {
+            Name         = $Node.SiteName
+            PhysicalPath = $Node.SiteContents
+            Ensure       = "Present"
+        }
 
-        File ConfigFile
-        {
-            DestinationPath = $Node.SiteContents + "\\config.xml"
-            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
-        }
-    }
+        File ConfigFile
+        {
+            DestinationPath = $Node.SiteContents + "\\config.xml"
+            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
+        }
+    }
 }
 ```
 
+## <a name="see-also"></a>См. также
 
-## <a name="see-also"></a>См. также:
 - [Использование данных конфигурации](configData.md)
 - [Параметры учетных данных в данных конфигурации](configDataCredentials.md)
 - [Конфигурации DSC](configurations.md)

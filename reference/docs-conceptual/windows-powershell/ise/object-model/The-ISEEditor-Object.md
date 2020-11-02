@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,командлет
 title: Объект ISEEditor
-ms.openlocfilehash: cb63acebc1a8bb9fa6cc07199088ae0d5441bc91
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Объект ISEEditor является экземпляром класса Microsoft.PowerShell.Host.ISE.ISEEditor. Область консоли — это объект ISEEditor.
+ms.openlocfilehash: ffcb6e35e1160beab6efb29cc84847fa9ffd012b
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809700"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654064"
 ---
 # <a name="the-iseeditor-object"></a>Объект ISEEditor
 
-Объект **ISEEditor** является экземпляром класса Microsoft.PowerShell.Host.ISE.ISEEditor. Область консоли — это объект **ISEEditor**. Каждый объект [ISEFile](The-ISEFile-Object.md) имеет связанный объект **ISEEditor**. В следующих разделах перечислены методы и свойства объекта **ISEEditor**.
+Объект **ISEEditor** является экземпляром класса Microsoft.PowerShell.Host.ISE.ISEEditor. Область консоли — это объект **ISEEditor** . Каждый объект [ISEFile](The-ISEFile-Object.md) имеет связанный объект **ISEEditor** . В следующих разделах перечислены методы и свойства объекта **ISEEditor** .
 
 ## <a name="methods"></a>Методы
 
@@ -30,9 +30,9 @@ $psISE.CurrentPowerShellTab.ConsolePane.Clear()
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Прокручивает редактор таким образом, чтобы отображалась строка, соответствующая значению параметра **lineNumber**. Метод создает исключение, если указанный номер строки находится за пределами диапазона 1, последнего номера строки, который определяет допустимые номера строк.
+Прокручивает редактор таким образом, чтобы отображалась строка, соответствующая значению параметра **lineNumber** . Метод создает исключение, если указанный номер строки находится за пределами диапазона 1, последнего номера строки, который определяет допустимые номера строк.
 
-**lineNumber** — номер строки, которая будет отображена.
+**lineNumber** . Номер строки, которая будет отображена.
 
 ```powershell
 # Scrolls the text in the Script pane so that the fifth line is in view.
@@ -56,9 +56,9 @@ $psISE.CurrentPowerShellTab.ConsolePane.Focus()
 
 Получает длину строки (в виде целого числа) по указанному номеру строки.
 
-**lineNumber** — номер строки, длину которой необходимо получить.
+**lineNumber**  — номер строки, длину которой необходимо получить.
 
-**Возвращаемое значение** — длина строки с указанным номером.
+**Возвращаемое значение**  — длина строки с указанным номером.
 
 ```powershell
 # Gets the length of the first line in the text of the Command pane.
@@ -90,7 +90,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GoToMatch()
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Выделяет текст в области, определяемой параметрами **startLine**, **startColumn**, **endLine** и **endColumn**.
+Выделяет текст в области, определяемой параметрами **startLine** , **startColumn** , **endLine** и **endColumn** .
 
 **startLine** — целое число. Строка, в которой начинается выделение.
 
@@ -206,7 +206,7 @@ $psISE.CurrentFile.Editor.LineCount
 
 См. [пример сценария](#scripting-example) далее в этом разделе.
 
-### <a name="text"></a>текст
+### <a name="text"></a>Текст
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
@@ -243,9 +243,9 @@ $myEditor.Clear()
 $myEditor.InsertText($selection.ToLower())
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Объект ISEFile](The-ISEFile-Object.md)
 - [Объект PowerShellTab](The-PowerShellTab-Object.md)
-- [Назначение объектной модели скриптов интегрированной среды скриптов Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [Назначение объектной модели сценариев интегрированной среды сценариев Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Иерархия объектной модели интегрированной среды скриптов](The-ISE-Object-Model-Hierarchy.md)

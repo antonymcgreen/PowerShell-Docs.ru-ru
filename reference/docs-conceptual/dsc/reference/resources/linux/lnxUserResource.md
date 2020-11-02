@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Ресурс nxUser в DSC для Linux
-ms.openlocfilehash: 30c9d4efb5bcbce9f18652b6f34e9a1b060cece4
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Ресурс nxUser в DSC для Linux
+ms.openlocfilehash: 298caa8f5ea6d4587f9782a02d0544147ee33e84
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463913"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667391"
 ---
 # <a name="dsc-for-linux-nxuser-resource"></a>Ресурс nxUser в DSC для Linux
 
@@ -49,7 +50,7 @@ nxUser <string> #ResourceName
 |Свойство |Description |
 |---|---|
 |DependsOn |Указывает, что перед настройкой этого ресурса необходимо запустить настройку другого ресурса. Например, если идентификатор первого запускаемого блока сценария для конфигурации ресурса — ResourceName, а его тип — ResourceType, то синтаксис использования этого свойства таков: `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Указывает, существует ли учетная запись. Присвойте этому свойству значение **Present**, чтобы гарантировать, что учетная запись существует, и **Absent** в противном случае. |
+|Ensure |Указывает, существует ли учетная запись. Присвойте этому свойству значение **Present** , чтобы гарантировать, что учетная запись существует, и **Absent** в противном случае. |
 
 ## <a name="example"></a>Пример
 
