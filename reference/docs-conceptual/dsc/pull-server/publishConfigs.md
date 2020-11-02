@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Публикация на опрашиваемом сервере с помощью идентификаторов конфигурации (v4/v5)
-ms.openlocfilehash: 99c5b89e7d556fa72eaa6a3ba1654936f96a0b9d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье показано, как передать ресурсы, чтобы они были доступны для загрузки, и настроить клиенты, чтобы ресурсы загружались автоматически.
+ms.openlocfilehash: 20e12e3cac6b6e4a86563576f4a915429b18aadb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500749"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646841"
 ---
 # <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>Публикация на опрашиваемом сервере с помощью идентификаторов конфигурации (v4/v5)
 
@@ -37,7 +38,7 @@ GenericConfig
 
 ## <a name="renaming-the-mof-file"></a>Переименование MOF-файла
 
-Конфигурации файлов `.mof` можно хранить на опрашиваемом сервере, указывая параметр **ConfigurationName** или **ConfigurationID**. В зависимости от того, как вы планируете настроить опрашиваемые клиенты, можно выбрать раздел ниже, чтобы корректно переименовать скомпилированные файлы `.mof`.
+Конфигурации файлов `.mof` можно хранить на опрашиваемом сервере, указывая параметр **ConfigurationName** или **ConfigurationID** . В зависимости от того, как вы планируете настроить опрашиваемые клиенты, можно выбрать раздел ниже, чтобы корректно переименовать скомпилированные файлы `.mof`.
 
 ### <a name="configuration-ids-guid"></a>Идентификаторы конфигурации (GUID)
 
@@ -89,7 +90,7 @@ New-DscChecksum -Path '.\' -Force
 
 ### <a name="on-a-dsc-http-pull-server"></a>На опрашиваемом HTTP-сервере DSC
 
-Когда вы настраиваете опрашиваемый HTTP-сервер, как описано в статье [Опрашивающая служба Desired State Configuration](pullServer.md), вы указываете ключи для **ModulePath** и **ConfigurationPath**. Ключ **ModulePath** указывает, где должны храниться упакованные файлы модуля `.zip`. Ключ **ConfigurationPath** указывает, где должны храниться все файлы `.mof` и файлы `.checksum`.
+Когда вы настраиваете опрашиваемый HTTP-сервер, как описано в статье [Опрашивающая служба Desired State Configuration](pullServer.md), вы указываете ключи для **ModulePath** и **ConfigurationPath** . Ключ **ModulePath** указывает, где должны храниться упакованные файлы модуля `.zip`. Ключ **ConfigurationPath** указывает, где должны храниться все файлы `.mof` и файлы `.checksum`.
 
 ```powershell
     xDscWebService PSDSCPullServer
@@ -104,8 +105,8 @@ New-DscChecksum -Path '.\' -Force
 
 ### <a name="on-an-smb-share"></a>В общей папке SMB
 
-При настройке опрашивающего клиента для использования общей папки SMB укажите **ConfigurationRepositoryShare**.
-Все файлы `.mof` и файлы `.checksum` следует хранить в каталоге **SourcePath** из блока **ConfigurationRepositoryShare**.
+При настройке опрашивающего клиента для использования общей папки SMB укажите **ConfigurationRepositoryShare** .
+Все файлы `.mof` и файлы `.checksum` следует хранить в каталоге **SourcePath** из блока **ConfigurationRepositoryShare** .
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer

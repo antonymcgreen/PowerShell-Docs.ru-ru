@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,командлет
 title: Объект ISEAddOnToolCollection
-ms.openlocfilehash: e07a47169381307b50ac190165307c926b4ad94e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Объект ISEAddOnToolCollection — это коллекция объектов **ISEAddOnTool** .
+ms.openlocfilehash: ba08ffd82a7ff2fa469540a5ea542abee8d4dc82
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809720"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658305"
 ---
 # <a name="the-iseaddontoolcollection-object"></a>Объект ISEAddOnToolCollection
 
-Объект **ISEAddOnToolCollection** — это коллекция объектов **ISEAddOnTool**. Примером является объект `$psISE.CurrentPowerShellTab.VerticalAddOnTools`.
+Объект **ISEAddOnToolCollection**  — это коллекция объектов **ISEAddOnTool** . Примером является объект `$psISE.CurrentPowerShellTab.VerticalAddOnTools`.
 
 ## <a name="methods"></a>Методы
 
@@ -21,9 +21,9 @@ ms.locfileid: "83809720"
 
 Добавляет новую надстройку в коллекцию. Метод возвращает добавленную надстройку. Перед выполнением этой команды необходимо установить надстройку на локальном компьютере и загрузить сборку.
 
-**Name** — строка. Задает отображаемое имя надстройки, добавляемой в интегрированную среду скриптов Windows PowerShell.
+**Name**  — строка. Задает отображаемое имя надстройки, добавляемой в интегрированную среду скриптов Windows PowerShell.
 
-**ControlType** — тип. Определяет добавляемый элемент управления.
+**ControlType**  — тип. Определяет добавляемый элемент управления.
 
 **\[IsVisible\]**  — необязательный логический параметр. Если задано значение `$true`, надстройка сразу же отображается в связанной области инструментов.
 
@@ -39,7 +39,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
 Удаляет указанную надстройку из коллекции.
 
-**Item** — Microsoft.PowerShell.Host.ISE.ISEAddOnTool. Указывает объект, удаляемый из интегрированной среды скриптов Windows PowerShell.
+**Item**  — Microsoft.PowerShell.Host.ISE.ISEAddOnTool. Указывает объект, удаляемый из интегрированной среды скриптов Windows PowerShell.
 
 ```powershell
 # Load a DLL with an add-on and then add it to the ISE
@@ -51,9 +51,9 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
-Выбирает вкладку PowerShell, указанную параметром **psTab**.
+Выбирает вкладку PowerShell, указанную параметром **psTab** .
 
-**psTab** — Microsoft.PowerShell.Host.ISE.PowerShellTab. Выбираемая вкладка PowerShell.
+**psTab**  — Microsoft.PowerShell.Host.ISE.PowerShellTab. Выбираемая вкладка PowerShell.
 
 ```powershell
 $newTab = $psISE.PowerShellTabs.Add()
@@ -65,9 +65,9 @@ $newTab.DisplayName = 'Brand New Tab'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
-Удаляет вкладку PowerShell, указанную параметром **psTab**.
+Удаляет вкладку PowerShell, указанную параметром **psTab** .
 
-**psTab** — Microsoft.PowerShell.Host.ISE.PowerShellTab. Удаляемая вкладка PowerShell.
+**psTab**  — Microsoft.PowerShell.Host.ISE.PowerShellTab. Удаляемая вкладка PowerShell.
 
 ```powershell
 $newTab = $psISE.PowerShellTabs.Add()

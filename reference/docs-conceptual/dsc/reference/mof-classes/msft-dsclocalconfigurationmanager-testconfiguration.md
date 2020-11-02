@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Метод TestConfiguration
-ms.openlocfilehash: 0611c4d5543c49b879bef9b60cafdd0b055c9b86
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Метод TestConfiguration
+ms.openlocfilehash: ed26fcad2286ca753fb4b1845b8c6ad0741d491b
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464304"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648930"
 ---
 # <a name="testconfiguration-method"></a>Метод TestConfiguration
 
@@ -17,10 +18,10 @@ ms.locfileid: "86464304"
 
 ```mof
 uint32 TestConfiguration(
-  [in]  uint8                          configurationData[],
-  [out] boolean                        InDesiredState,
-  [out] MSFT_ResourceInDesiredState    ResourcesInDesiredState[],
-  [out] MSFT_ResourceNotInDesiredState ResourcesNotInDesiredState[]
+  [in]  uint8                          configurationData[],
+  [out] boolean                        InDesiredState,
+  [out] MSFT_ResourceInDesiredState    ResourcesInDesiredState[],
+  [out] MSFT_ResourceNotInDesiredState ResourcesNotInDesiredState[]
 );
 ```
 
@@ -30,9 +31,9 @@ uint32 TestConfiguration(
 
 **InDesiredState** \[out\] В выходных данных указывает, находится ли управляемый узел в состоянии, указанном в документе конфигурации.
 
-**ResourcesInDesiredState** \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceInDesiredState**, определяющий ресурсы, которые находятся в нужном состоянии.
+**ResourcesInDesiredState** \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceInDesiredState** , определяющий ресурсы, которые находятся в нужном состоянии.
 
-**ResourcesNotInDesiredState** \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceNotInDesiredState**, определяющий ресурсы, которые не находятся в нужном состоянии.
+**ResourcesNotInDesiredState** \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_ResourceNotInDesiredState** , определяющий ресурсы, которые не находятся в нужном состоянии.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -46,7 +47,7 @@ uint32 TestConfiguration(
 
 **MOF-файл:** DscCore.mof
 
-**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Пространство имен** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также раздел
 

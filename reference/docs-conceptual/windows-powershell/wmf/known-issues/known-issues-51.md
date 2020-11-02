@@ -1,14 +1,14 @@
 ---
 ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: wmf,powershell,установка
 title: Известные проблемы в WMF 5.1
-ms.openlocfilehash: 4f4c85e1f4984d9e91ea74ba65fdbf7188c5c7ab
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Известные проблемы в WMF 5.1
+ms.openlocfilehash: 7d27bc570108a0ae1470ae06f5bdf5fcd7849d16
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808710"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663320"
 ---
 # <a name="known-issues-in-wmf-51"></a>Известные проблемы в WMF 5.1
 
@@ -20,7 +20,7 @@ ms.locfileid: "83808710"
 
 В этом выпуске существует две проблемы, которые следует иметь в виду при использовании Pester на сервере Nano.
 
-- Запуск тестов для самого Pester может привести к некоторым ошибкам из-за различий между FULL CLR и CORE CLR. В частности, метод **Validate** недоступен для типа **XmlDocument**. Известно, что шесть проверок схемы журналов вывода NUnit завершаются сбоем.
+- Запуск тестов для самого Pester может привести к некоторым ошибкам из-за различий между FULL CLR и CORE CLR. В частности, метод **Validate** недоступен для типа **XmlDocument** . Известно, что шесть проверок схемы журналов вывода NUnit завершаются сбоем.
 - Один из тестов покрытия кода завершается неудачно из-за того, что ресурс DSC **WindowsFeature** не существует на сервере Nano. Тем не менее эти ошибки обычно носят информационный характер, и их можно спокойно пропустить.
 
 ## <a name="operation-validation"></a>Проверка операций

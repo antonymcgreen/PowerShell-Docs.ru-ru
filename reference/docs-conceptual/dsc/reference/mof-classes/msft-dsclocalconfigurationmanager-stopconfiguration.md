@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Метод StopConfiguration
-ms.openlocfilehash: 76e50c98b09dca86983320918c6899082580672a
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Метод StopConfiguration
+ms.openlocfilehash: 854c0dbe8554c08413735a5a7bc872776e0b0a6c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463709"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644622"
 ---
 # <a name="stopconfiguration-method"></a>Метод StopConfiguration
 
@@ -17,7 +18,7 @@ ms.locfileid: "86463709"
 
 ```mof
 uint32 StopConfiguration(
-  [in] boolean force
+  [in] boolean force
 );
 ```
 
@@ -37,7 +38,7 @@ uint32 StopConfiguration(
 
 **MOF-файл:** DscCore.mof
 
-**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Пространство имен** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также раздел
 

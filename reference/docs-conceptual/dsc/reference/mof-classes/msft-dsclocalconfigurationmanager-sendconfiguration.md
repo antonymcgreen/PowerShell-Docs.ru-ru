@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Метод SendConfiguration
-ms.openlocfilehash: afd6e8d7acc969df16fad1d0ba15c9fe0b1a26fd
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Метод SendConfiguration
+ms.openlocfilehash: 3939a76ab6672b49559847b0ef1408f1c7be6d0c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463947"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650561"
 ---
 # <a name="sendconfiguration-method"></a>Метод SendConfiguration
 
@@ -17,8 +18,8 @@ ms.locfileid: "86463947"
 
 ```mof
 uint32 SendConfiguration(
-  [in] uint8   ConfigurationData[],
-  [in] boolean force
+  [in] uint8   ConfigurationData[],
+  [in] boolean force
 );
 ```
 
@@ -40,7 +41,7 @@ uint32 SendConfiguration(
 
 **MOF-файл:** DscCore.mof
 
-**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Пространство имен** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также раздел
 

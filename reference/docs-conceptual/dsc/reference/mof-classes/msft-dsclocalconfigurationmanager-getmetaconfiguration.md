@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Метод GetMetaConfiguration
-ms.openlocfilehash: 5111cb3b15e0fba0bf71b412580efdd3cd95b2dc
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Метод GetMetaConfiguration
+ms.openlocfilehash: deca6b8ec342a34543bbe0e1fabbc2a740a88feb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463981"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644726"
 ---
 # <a name="getmetaconfiguration-method"></a>Метод GetMetaConfiguration
 
@@ -17,13 +18,13 @@ ms.locfileid: "86463981"
 
 ```mof
 uint32 GetMetaConfiguration(
-  [out] MSFT_DSCMetaConfiguration MetaConfiguration
+  [out] MSFT_DSCMetaConfiguration MetaConfiguration
 );
 ```
 
 ## <a name="parameters"></a>Параметры
 
-**MetaConfiguration** \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_DSCMetaConfiguration**, который определяет параметры.
+**MetaConfiguration** \[out\] Выходные данные содержат встроенный экземпляр класса **MSFT_DSCMetaConfiguration** , который определяет параметры.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -37,7 +38,7 @@ uint32 GetMetaConfiguration(
 
 **MOF-файл:** DscCore.mof
 
-**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Пространство имен** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также раздел
 

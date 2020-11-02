@@ -2,12 +2,13 @@
 ms.date: 10/13/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Обзор платформы Desired State Configuration для инженеров
-ms.openlocfilehash: dbed274d5333c216970247b88d2a0956025e969d
-ms.sourcegitcommit: a5e945e0889d0635b7af767d80d6a13bc5526269
+description: В этом документе, предназначенном для групп разработки и эксплуатации, описаны преимущества использования платформы Desired State Configuration (DSC) в PowerShell.
+ms.openlocfilehash: c98295d0e78f4dc89e5df429e3c1de9a0c024054
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82584502"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646933"
 ---
 # <a name="desired-state-configuration-overview-for-engineers"></a>Обзор платформы Desired State Configuration для инженеров
 
@@ -67,7 +68,7 @@ else
 }
 ```
 
-Это более сложный скрипт с множеством выражений логики и обработкой ошибок. Он сложнее, так как на этот раз вы указываете не что нужно сделать, а _как это сделать_.
+Это более сложный скрипт с множеством выражений логики и обработкой ошибок. Он сложнее, так как на этот раз вы указываете не что нужно сделать, а _как это сделать_ .
 
 DSC позволяет указать, что нужно сделать, абстрагируясь от базовой логики.
 

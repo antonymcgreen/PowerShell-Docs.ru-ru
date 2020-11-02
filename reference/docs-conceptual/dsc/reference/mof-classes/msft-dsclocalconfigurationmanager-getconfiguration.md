@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Метод GetConfiguration
-ms.openlocfilehash: 989aeef4cd9aa5d55741b48c8565c657c4b6512c
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Метод GetConfiguration
+ms.openlocfilehash: a49f810bd227142c8c3ae4de45f69450400e4e8c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463828"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650878"
 ---
 # <a name="getconfiguration-method"></a>Метод GetConfiguration
 
@@ -17,8 +18,8 @@ ms.locfileid: "86463828"
 
 ```mof
 uint32 GetConfiguration(
-  [in]  uint8            configurationData[],
-  [out] OMI_BaseResource configurations[]
+  [in]  uint8            configurationData[],
+  [out] OMI_BaseResource configurations[]
 );
 ```
 
@@ -40,7 +41,7 @@ uint32 GetConfiguration(
 
 **MOF-файл:** DscCore.mof
 
-**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Пространство имен** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также раздел
 

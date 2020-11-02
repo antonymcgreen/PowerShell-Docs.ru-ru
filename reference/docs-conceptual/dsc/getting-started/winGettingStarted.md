@@ -2,17 +2,17 @@
 ms.date: 08/15/2019
 keywords: dsc,powershell,конфигурация,установка
 title: Начало работы с Desired State Configuration (DSC) для Windows
-ms.openlocfilehash: 00e1cf545b19f054b4b1ff468c9f6ad94e5cef55
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: В этом разделе объясняется, как приступить к работе с Desired State Configuration (DSC) в PowerShell для Windows.
+ms.openlocfilehash: 2b9ddba2023a3933e3ad70d7bfee798ff07f0484
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236328"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662813"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Начало работы с Desired State Configuration (DSC) для Windows
 
-В этом разделе объясняется, как приступить к работе с Desired State Configuration (DSC) в PowerShell для Windows.
-Общие сведения о службе настройки требуемого состояния см. в разделе [Начало работы со службой настройки требуемого состояния Windows PowerShell](../overview/overview.md).
+В этом разделе объясняется, как приступить к работе с Desired State Configuration (DSC) в PowerShell для Windows. Общие сведения о службе настройки требуемого состояния см. в разделе [Начало работы со службой настройки требуемого состояния Windows PowerShell](../overview/overview.md).
 
 ## <a name="supported-windows-operation-system-versions"></a>Поддерживаемые версии операционной системы Windows
 
@@ -115,8 +115,7 @@ Remove-DscConfigurationDocument -Stage Current -Verbose
 
 #### <a name="configure-settings-in-local-configuration-manager"></a>Настройка параметров в локальном диспетчере конфигураций
 
-Примените MOF-файл метаконфигурации к компьютеру с помощью командлета [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager).
-При этом потребуется указать путь к соответствующему MOF-файлу метаконфигурации.
+Примените MOF-файл метаконфигурации к компьютеру с помощью командлета [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager). При этом потребуется указать путь к соответствующему MOF-файлу метаконфигурации.
 
 ```powershell
 Set-DSCLocalConfigurationManager -Path 'c:\metaconfig\localhost.meta.mof' -Verbose

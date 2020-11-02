@@ -1,13 +1,13 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,командлет
 title: Использование области консоли в интегрированной среде сценариев Windows PowerShell
-ms.openlocfilehash: f0ef07e410ed494f5732eab360c4e050c9c09a7f
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Использование области консоли в интегрированной среде сценариев Windows PowerShell
+ms.openlocfilehash: 7f6d3f5a3e4e596beb0d5c0bc395e3e7bf39906d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808730"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663669"
 ---
 # <a name="how-to-use-the-console-pane-in-the-windows-powershell-ise"></a>Использование области консоли в интегрированной среде сценариев Windows PowerShell
 

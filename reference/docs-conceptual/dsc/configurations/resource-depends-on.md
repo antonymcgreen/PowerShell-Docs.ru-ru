@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Использование зависимостей ресурсов с DependsOn
-ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: По мере роста вашей конфигурации можно использовать ключ `DependsOn`, чтобы изменить порядок применения ресурсов, указав, что ресурс зависит от другого ресурса.
+ms.openlocfilehash: 18f19a3606834ede0737213930e6af0e251225ab
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954481"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645105"
 ---
 # <a name="resource-dependencies-using-dependson"></a>Использование зависимостей ресурсов с DependsOn
 

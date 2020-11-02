@@ -1,12 +1,13 @@
 ---
 ms.date: 07/29/2020
 title: Новые возможности языка в PowerShell 5.0
-ms.openlocfilehash: dada39c4121a810c7ce87a642f232934152104e5
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+description: В PowerShell 5.0 появилась возможность определения классов и других определяемых пользователем типов с использованием формального синтаксиса и семантики, как и в других объектно-ориентированных языках программирования.
+ms.openlocfilehash: 31ff54ba6f2800a0680c1a2db3832ca97246973d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410178"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663306"
 ---
 # <a name="new-language-features-in-powershell-50"></a>Новые возможности языка в PowerShell 5.0
 
@@ -57,11 +58,11 @@ enum OtherEnum { Max = [SomeEnum]::Max + 1 }
 
 ### <a name="import-dscresource"></a>Import-DscResource
 
-Теперь `Import-DscResource` — это динамическое ключевое слово. PowerShell анализирует корневой модуль указанного модуля, выполняя поиск классов, которые содержат атрибут **DscResource**.
+Теперь `Import-DscResource` — это динамическое ключевое слово. PowerShell анализирует корневой модуль указанного модуля, выполняя поиск классов, которые содержат атрибут **DscResource** .
 
 ### <a name="implementingassembly"></a>ImplementingAssembly
 
-В **ModuleInfo** добавлено новое поле **ImplementingAssembly**. Ему присваивается динамическая сборка, созданная для модуля сценариев, если скрипт определяет классы, или загруженная сборка для двоичных модулей. Оно не задано, когда **ModuleType** имеет значение **Manifest**.
+В **ModuleInfo** добавлено новое поле **ImplementingAssembly** . Ему присваивается динамическая сборка, созданная для модуля сценариев, если скрипт определяет классы, или загруженная сборка для двоичных модулей. Оно не задано, когда **ModuleType** имеет значение **Manifest** .
 
 Отражение поля **ImplementingAssembly** обнаруживает ресурсы в модуле. Это означает, что можно обнаруживать ресурсы, созданные в PowerShell или в любых других управляемых языках.
 
