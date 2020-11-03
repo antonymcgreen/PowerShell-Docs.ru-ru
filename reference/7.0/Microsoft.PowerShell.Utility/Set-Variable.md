@@ -4,15 +4,15 @@ keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 06/09/2017
-online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-variable?view=powershell-5.1&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-variable?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Variable
-ms.openlocfilehash: 2041d40803aac1afafad2a0855aa39ebba9ad814
+ms.openlocfilehash: 876129fc8df9a78df257bf95220fc6587e68b9a2
 ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239865"
+ms.locfileid: "93239845"
 ---
 # Set-Variable
 
