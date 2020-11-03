@@ -1,0 +1,162 @@
+---
+external help file: Microsoft.PowerShell.Utility-help.xml
+keywords: powershell,командлет
+Locale: en-US
+Module Name: Microsoft.PowerShell.Utility
+ms.date: 06/09/2017
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-sddlstring?view=powershell-5.1&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: ConvertFrom-SddlString
+ms.openlocfilehash: 128a86312f424eaf9dcfb6cdc97ebd3e148c7886
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "93230569"
+---
+# ConvertFrom-SddlString
+
+## Краткий обзор
+
+Преобразует строку SDDL в пользовательский объект.
+
+## SYNTAX
+
+```
+ConvertFrom-SddlString [-Sddl] <String> [-Type <Object>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+`ConvertFrom-SddlString`Командлет преобразует строку языка определения дескрипторов безопасности в пользовательский объект **PSCustomObject** со следующими свойствами: owner, Group, дискретионарякл, системакл и равдескриптор.
+
+Свойства Owner, Group, Дискретионарякл и Системакл содержат доступное для чтения текстовое представление прав доступа, указанных в строке SDDL.
+
+Этот командлет появился в PowerShell 5,0.
+
+## Примеры
+
+### Пример 1. Преобразование SDDL прав доступа файловой системы в PSCustomObject
+
+```powershell
+$acl = Get-Acl -Path C:\Windows
+ConvertFrom-SddlString -Sddl $acl.Sddl
+```
+
+Первая команда использует `Get-Acl` командлет для получения дескриптора безопасности для папки C:\Windows и сохраняет его в переменной.
+
+Вторая команда использует `ConvertFrom-SddlString` командлет для получения текстового представления строки SDDL, содержащейся в свойстве SDDL объекта, представляющего дескриптор безопасности.
+
+### Пример 2. Преобразование SDDL для прав доступа к реестру в PSCustomObject
+
+```powershell
+$acl = Get-Acl HKLM:\SOFTWARE\Microsoft\
+ConvertFrom-SddlString -Sddl $acl.Sddl -Type RegistryRights
+```
+
+Первая команда использует `Get-Acl` командлет для получения дескриптора безопасности для ключа HKLM: \ софтваре\микрософт\ и сохраняет его в переменной.
+
+Вторая команда использует `ConvertFrom-SddlString` командлет для получения текстового представления строки SDDL, содержащейся в свойстве SDDL объекта, представляющего дескриптор безопасности.
+
+Он использует `-Type` параметр, чтобы указать, что строка SDDL представляет дескриптор безопасности реестра.
+
+### Пример 3. Преобразование SDDL для прав доступа к реестру в PSCustomObject с помощью ConvertFrom-SddlString с параметром и без него `-Type`
+
+```powershell
+$acl = Get-Acl -Path HKLM:\SOFTWARE\Microsoft\
+
+ConvertFrom-SddlString -Sddl $acl.Sddl | Foreach-Object {$_.DiscretionaryAcl[0]}
+
+BUILTIN\Administrators: AccessAllowed (ChangePermissions, CreateDirectories, Delete, ExecuteKey, FullControl, GenericExecute, GenericWrite, ListDirectory, ReadExtendedAttributes, ReadPermissions, TakeOwnership, Traverse, WriteData, WriteExtendedAttributes, WriteKey)
+
+ConvertFrom-SddlString -Sddl $acl.Sddl -Type RegistryRights | Foreach-Object {$_.DiscretionaryAcl[0]}
+
+BUILTIN\Administrators: AccessAllowed (ChangePermissions, CreateLink, CreateSubKey, Delete, EnumerateSubKeys, ExecuteKey, FullControl, GenericExecute, GenericWrite, Notify, QueryValues, ReadPermissions, SetValue, TakeOwnership, WriteKey)
+```
+
+Первая команда использует `Get-Acl` командлет для получения дескриптора безопасности для ключа HKLM: \ софтваре\микрософт\ и сохраняет его в переменной.
+
+Вторая команда использует `ConvertFrom-SddlString` командлет для получения текстового представления строки SDDL, содержащейся в свойстве SDDL объекта, представляющего дескриптор безопасности.
+
+Он не использует `-Type` параметр, поэтому отображаются права доступа для файловой системы.
+
+Третья команда использует `ConvertFrom-SddlString` командлет с `-Type` параметром, поэтому возвращенные права доступа предназначены для реестра.
+
+### Пример 4. Преобразование SDDL Active Directory прав доступа в PSCustomObject
+
+```powershell
+$user = [ADSI]"LDAP://CN=username,CN=Users,DC=domain,DC=com"
+ConvertFrom-SddlString $user.psbase.ObjectSecurity.Sddl -Type ActiveDirectoryRights
+```
+
+Первая команда использует интерфейсы служб Active Directory (ADSI) для получения объекта пользователя и сохраняет его в переменной.
+
+Вторая команда использует `ConvertFrom-SddlString` командлет для получения текстового представления строки SDDL, содержащейся в свойстве SDDL объекта, представляющего дескриптор безопасности.
+
+Он использует `-Type` параметр, чтобы указать, что строка SDDL представляет Active Directory дескрипторе безопасности.
+
+## PARAMETERS
+
+### — SDDL
+
+Указывает строку, представляющую дескриптор безопасности в синтаксисе SDDL.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Type
+
+Указывает тип прав, которые представляет строка SDDL.
+
+Допустимые значения для этого параметра:
+
+- филесистемригхтс
+- RegistryRights
+- активедиректориригхтс
+- мутексригхтс
+- семафореригхтс
+- криптокэйригхтс
+- евентваисандлеригхтс
+
+По умолчанию командлет использует права файловой системы.
+
+Криптокэйригхтс и Активедиректориригхтс не поддерживаются в PowerShell Core.
+
+```yaml
+Type: System.Object
+Parameter Sets: (All)
+Aliases:
+Accepted values: FileSystemRights, RegistryRights, ActiveDirectoryRights, MutexRights, SemaphoreRights, CryptoKeyRights, EventWaitHandleRights
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### Общие параметры
+Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable. См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## Входные данные
+
+### System.String
+
+Строку SDDL можно передать в `ConvertFrom-SddlString` .
+
+## Выходные данные
+
+## ПРИМЕЧАНИЯ
+
+## Связанные ссылки
+
+[Язык определения дескрипторов безопасности](/windows/win32/secauthz/security-descriptor-definition-language)
