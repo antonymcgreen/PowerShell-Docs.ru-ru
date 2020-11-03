@@ -75,6 +75,8 @@
           href: learn/deep-dives/everything-about-shouldprocess.md
         - name: Write-Progress при многопоточности
           href: learn/deep-dives/write-progress-across-multiple-threads.md
+        - name: Добавление поддержки учетных данных в функции PowerShell
+          href: learn/deep-dives/add-credentials-to-powershell-functions.md
     - name: Удаленное взаимодействие PowerShell
       items:
         - name: Just Enough Administration (JEA)
@@ -564,6 +566,8 @@
       href: community/hall-of-fame.md
     - name: Новые возможности в Документации Майкрософт
       items:
+        - name: 2020-Q4
+          href: community/2020-Q4.md
         - name: "Третий квартал 2020\_года"
           href: community/2020-Q3.md
         - name: Второй квартал 2020 года
