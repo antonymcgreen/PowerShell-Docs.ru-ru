@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 03/28/2019
+ms.date: 11/01/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Culture
-ms.openlocfilehash: 00f27b6b50c2c34be21e1c6f6bbef186243660aa
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 1f4b18899c3c62eefe1beab212ad1143fed402be
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93229022"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239975"
 ---
 # Get-Culture
 
@@ -41,25 +41,29 @@ Get-Culture [-ListAvailable] [<CommonParameters>]
 
 ## DESCRIPTION
 
-`Get-Culture`Командлет возвращает сведения о текущих параметрах языка и региональных параметров.
-Сюда входят сведения о текущих языковых настройках, например раскладке клавиатуры, и формате отображения элементов, например чисел, валют и дат.
+`Get-Culture`Командлет возвращает сведения о текущих параметрах языка и региональных параметров. Сюда входят сведения о текущих языковых настройках, например раскладке клавиатуры, и формате отображения элементов, например чисел, валют и дат.
 
-Можно также использовать `Get-UICulture` командлет, который получает текущий язык и региональные параметры пользовательского интерфейса в системе, и командлет [Set-Culture](/powershell/module/international/set-culture?view=win10-ps) в международном модуле.
-Язык и региональные параметры пользовательского интерфейса определяют, какие текстовые строки используются для элементов пользовательского интерфейса, например меню и сообщений.
+Можно также использовать `Get-UICulture` командлет, который получает текущий язык и региональные параметры пользовательского интерфейса в системе, и командлет [Set-Culture](/powershell/module/international/set-culture) в международном модуле. Язык и региональные параметры пользовательского интерфейса определяют, какие текстовые строки используются для элементов пользовательского интерфейса, например меню и сообщений.
 
 ## Примеры
 
 ### Пример 1. получение параметров культуры
 
+```powershell
+Get-Culture
 ```
-PS C:\> Get-Culture
+
+```Output
+LCID             Name             DisplayName
+----             ----             -----------
+1033             en-US            English (United States)
 ```
 
 Эта команда отображает сведения о региональных настройках компьютера.
 
 ### Пример 2. форматирование свойств объекта Culture
 
-```
+```powershell
 PS C:\> $C = Get-Culture
 PS C:\> $C | Format-List -Property *
 Parent                         : en
@@ -82,14 +86,18 @@ DateTimeFormat                 : System.Globalization.DateTimeFormatInfo
 Calendar                       : System.Globalization.GregorianCalendar
 OptionalCalendars              : {System.Globalization.GregorianCalendar, System.Globalization.GregorianCalendar}
 UseUserOverride                : True
-IsReadOnly                     : False PS C:\> $C.Calendar
+IsReadOnly                     : False
+
+PS C:\> $C.Calendar
 MinSupportedDateTime : 1/1/0001 12:00:00 AM
 MaxSupportedDateTime : 12/31/9999 11:59:59 PM
 AlgorithmType        : SolarCalendar
 CalendarType         : Localized
 Eras                 : {1}
 TwoDigitYearMax      : 2029
-IsReadOnly           : False PS C:\> $C.DateTimeFormat
+IsReadOnly           : False
+
+PS C:\> $C.DateTimeFormat
 AMDesignator                     : AM
 Calendar                         : System.Globalization.GregorianCalendar
 DateSeparator                    : /
@@ -115,43 +123,39 @@ MonthNames                       : {January, February, March, April...}
 IsReadOnly                       : False
 NativeCalendarName               : Gregorian Calendar
 AbbreviatedMonthGenitiveNames    : {Jan, Feb, Mar, Apr...}
-MonthGenitiveNames               : {January, February, March, April...} PS C:\> $C.DateTimeFormat.FirstDayOfWeek
+MonthGenitiveNames               : {January, February, March, April...}
+
+PS C:\> $C.DateTimeFormat.FirstDayOfWeek
 Sunday
 ```
 
-В этом примере показано значительное количество данных в объекте языка и региональных параметров.
-Показано, как отобразить свойства и подсвойства объекта.
+В этом примере показано значительное количество данных в объекте языка и региональных параметров. Показано, как отобразить свойства и подсвойства объекта.
 
-Первая команда использует командлет **Get-Culture** для получения текущих настроек языка и региональных параметров на компьютере.
-Он сохраняет полученный объект языка и региональных параметров в переменной $C.
+Первая команда использует `Get-Culture` командлет для получения текущих настроек языка и региональных параметров на компьютере.
+Он сохраняет результирующий объект языка и региональных параметров в `$C` переменной.
 
-Вторая команда отображает все свойства объекта языка и региональных параметров.
-Для отправки объекта языка и региональных параметров в командлет используется конвейерный оператор (|) `$C` `Format-List` .
-Он использует параметр **Property** для вывода всех \* свойств объекта ().
-Эту команду можно сократить на `$c | fl *` .
+Вторая команда отображает все свойства объекта языка и региональных параметров. Он использует оператор конвейера ( `|` ) для отправки объекта языка и региональных параметров в `$C` `Format-List` командлет. Он использует параметр **Property** для вывода всех `*` свойств объекта (). Эту команду можно сократить на `$c | fl *` .
 
-Оставшиеся команды просматривают свойства объекта языка и региональных параметров, используя нотацию с точкой, чтобы отобразить значения свойств объекта.
-Можно использовать эту нотацию для отображения значения любого свойства объекта.
+Оставшиеся команды просматривают свойства объекта языка и региональных параметров, используя нотацию с точкой, чтобы отобразить значения свойств объекта. Можно использовать эту нотацию для отображения значения любого свойства объекта.
 
 Третья команда использует точечную нотацию для вывода значения свойства **Calendar** объекта Culture.
 
 Четвертая команда использует точечную нотацию для вывода значения свойства **дататимеформат** объекта Culture.
 
-У многих свойств объекта тоже есть свойства.
-Пятая команда использует точечную нотацию для вывода значения свойства **FirstDayOfWeek** свойства **DateTimeFormat** .
+У многих свойств объекта тоже есть свойства. Пятая команда использует точечную нотацию для вывода значения свойства **FirstDayOfWeek** свойства **DateTimeFormat** .
 
 ### Пример 3. получение определенного языка и региональных параметров
 
-Получите объект CultureInfo для английского языка в США.
+Получение объекта CultureInfo для французского языка в Франции.
 
 ```powershell
-Get-Culture -Name en-US
+Get-Culture -Name fr-FR
 ```
 
-```output
+```Output
 LCID             Name             DisplayName
 ----             ----             -----------
-1033             en-US            English (United States)
+1036             fr-FR            French (France)
 ```
 
 ## PARAMETERS
@@ -232,6 +236,6 @@ Accept wildcard characters: False
 
 ## Связанные ссылки
 
-[Set-Culture](/powershell/module/international/set-culture?view=win10-ps)
+[Set-Culture](/powershell/module/international/set-culture)
 
 [Get-UICulture](Get-UICulture.md)

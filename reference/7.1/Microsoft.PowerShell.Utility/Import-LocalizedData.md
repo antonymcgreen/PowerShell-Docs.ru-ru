@@ -4,15 +4,15 @@ keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 06/09/2017
-online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-localizeddata?view=powershell-6&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-localizeddata?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-LocalizedData
-ms.openlocfilehash: 08f959d38fc8ab861934f9a93004e67c649d9786
+ms.openlocfilehash: d19279133a42e3aea17f02348e44aec161ba5a23
 ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/03/2020
-ms.locfileid: "93240005"
+ms.locfileid: "93239995"
 ---
 # Import-LocalizedData
 
@@ -306,3 +306,4 @@ Accept wildcard characters: False
 [Write-Host](Write-Host.md)
 
 [Import-PowerShellDataFile](Import-PowerShellDataFile.md)
+
