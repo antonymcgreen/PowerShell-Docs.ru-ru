@@ -1,21 +1,22 @@
 ---
 title: Установка PowerShell Core в ARM
 description: Установка PowerShell Core в системах на основе ARM
-ms.date: 08/06/2018
-ms.openlocfilehash: d59fa943d3e24ea70da85793021f11537b3b879e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.date: 10/30/2020
+ms.openlocfilehash: 843c90c1a00ba96eedbb7f86ce89f372c51f6880
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80977460"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142775"
 ---
-# <a name="powershell-core-on-arm"></a><span data-ttu-id="f5522-103">PowerShell Core для ARM</span><span class="sxs-lookup"><span data-stu-id="f5522-103">PowerShell Core on ARM</span></span>
+# <a name="powershell-core-on-arm"></a><span data-ttu-id="b8e4c-103">PowerShell Core для ARM</span><span class="sxs-lookup"><span data-stu-id="b8e4c-103">PowerShell Core on ARM</span></span>
 
-<span data-ttu-id="f5522-104">Сейчас PowerShell Core работает на некоторых устройствах ARM, включая устройства ARM32 и ARM64 с Windows 10 и Raspbian.</span><span class="sxs-lookup"><span data-stu-id="f5522-104">Today, PowerShell Core works on some ARM devices, including Windows 10 ARM32/ARM64 and Raspbian.</span></span>
-<span data-ttu-id="f5522-105">PowerShell Core для ARM является экспериментальным выпуском, который не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f5522-105">PowerShell Core for ARM is an experimental release that is unsupported.</span></span>
+<span data-ttu-id="b8e4c-104">Поддержка PowerShell в системах ARM основана на [политике жизненного цикла поддерживаемых ОС .NET Core](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).</span><span class="sxs-lookup"><span data-stu-id="b8e4c-104">Support of PowerShell on ARM is based on the [.NET Core Supported OS Lifecycle Policy](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).</span></span>
+<span data-ttu-id="b8e4c-105">PowerShell поддерживается на платформе, поддерживаемой в рамках такой политики.</span><span class="sxs-lookup"><span data-stu-id="b8e4c-105">PowerShell is supported on the platform supported under this policy.</span></span>
 
-<span data-ttu-id="f5522-106">См. сведения об установке этих экспериментальных сборок в наших руководствах по установке [Windows 10 IoT Корпоративная](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-enterprise),[Windows 10 IoT Базовая](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-core) и [Raspbian](installing-powershell-core-on-linux.md#raspbian).</span><span class="sxs-lookup"><span data-stu-id="f5522-106">For more information on installing these experimental builds, see the installation instructions for [Windows 10 IoT Enterprise](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-enterprise),[Windows 10 IoT Core](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-core) and [Raspbian](installing-powershell-core-on-linux.md#raspbian).</span></span>
+<span data-ttu-id="b8e4c-106">Инструкции по установке см. в следующих статьях:</span><span class="sxs-lookup"><span data-stu-id="b8e4c-106">For installation instructions, see the following articles:</span></span>
 
-<span data-ttu-id="f5522-107">Дополнительные сведения будут доступны по мере расширения поддержки для ARM64.</span><span class="sxs-lookup"><span data-stu-id="f5522-107">More information will be available here as our ARM64 story progresses.</span></span>
-
-<span data-ttu-id="f5522-108">Оставайтесь на связи!</span><span class="sxs-lookup"><span data-stu-id="f5522-108">Stay tuned!</span></span>
+- [<span data-ttu-id="b8e4c-107">Windows 10 на архитектуре ARM</span><span class="sxs-lookup"><span data-stu-id="b8e4c-107">Windows 10 on ARM</span></span>](installing-powershell-core-on-windows.md#installing-the-zip-package)
+- [<span data-ttu-id="b8e4c-108">Windows 10 IoT Корпоративная</span><span class="sxs-lookup"><span data-stu-id="b8e4c-108">Windows 10 IoT Enterprise</span></span>](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-enterprise)
+- [<span data-ttu-id="b8e4c-109">Windows 10 IoT Базовая</span><span class="sxs-lookup"><span data-stu-id="b8e4c-109">Windows 10 IoT Core</span></span>](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-core)
+- [<span data-ttu-id="b8e4c-110">Raspbian</span><span class="sxs-lookup"><span data-stu-id="b8e4c-110">Raspbian</span></span>](installing-powershell-core-on-linux.md#raspbian)
