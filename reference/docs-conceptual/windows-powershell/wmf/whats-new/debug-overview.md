@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,установка
 title: Усовершенствования отладки сценариев PowerShell
-ms.openlocfilehash: f1771a451ba671da2371fcfc95374e6131573ddc
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 5.0 добавляет новые функции отладки в Windows PowerShell.
+ms.openlocfilehash: 5703343e1b85024931638e8b04a09f7208ea123c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808950"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646733"
 ---
 # <a name="improvements-in-powershell-script-debugging"></a>Усовершенствования отладки сценариев PowerShell
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: коллекции,powershell,командлет,psgallery
-title: Функция FileList в коллекции
-ms.openlocfilehash: 5f372c943c73fa8e1014657394e40eaedef5d045
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+title: Как использовать функцию FileList в коллекции
+description: Как использовать функцию FileList в коллекции
+ms.openlocfilehash: 45e39cb3f2620228be9ad16c2bb697f23642195d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328245"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662264"
 ---
 # <a name="filelist-feature-in-the-gallery"></a>Функция FileList в коллекции
 
@@ -18,6 +17,7 @@ ms.locfileid: "71328245"
 
 ## <a name="where-to-find-filelist"></a>Где находится FileList
 
-На странице каждого отдельного пакета есть раздел FileList и ссылка **Показать**. Щелкните ссылку "Показать". Откроется полный список элементов, содержащихся в пакете.
+На странице каждого отдельного пакета есть раздел FileList и ссылка **Показать**.
+Щелкните ссылку "Показать". Откроется полный список элементов, содержащихся в пакете.
 
 Каждый поддерживаемый тип файлов отображается как гиперссылка, щелкнув которую вы перейдете на новую страницу, где содержимое файла будет показано с выделением синтаксиса PowerShell. Щелкнув заголовок или версию пакета, отображаемые в верхней части экрана, вы вернетесь на страницу сведений о пакете.

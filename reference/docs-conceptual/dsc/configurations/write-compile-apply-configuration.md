@@ -2,12 +2,13 @@
 ms.date: 06/22/2020
 keywords: dsc,powershell,настройка,служба,установка
 title: Создание, компиляция и применение конфигурации
-ms.openlocfilehash: 9acb2db882795d7150326fadb2964deb1105b2cc
-ms.sourcegitcommit: 7eea0885dd7ac90ab36e5664501438a292217f7f
+description: В этом упражнении демонстрируется весь процесс создания и применения конфигурации DSC. В следующем примере вы узнаете, как написать и применить очень простую конфигурацию.
+ms.openlocfilehash: f173fe0dc6cd73e2b49bb8c44a9ee1a53eab475f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295681"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645039"
 ---
 # <a name="write-compile-and-apply-a-configuration"></a>Создание, компиляция и применение конфигурации
 
@@ -69,7 +70,7 @@ Configuration HelloWorld {
 
 ## <a name="compile-the-configuration"></a>Компиляция конфигурации
 
-Чтобы применить конфигурацию DSC к узлу, ее сначала нужно скомпилировать в MOF-файл. Выполнение конфигурации, как и функции, скомпилирует один файл `.mof` для каждого узла, определенного в блоке `Node`. Чтобы запустить конфигурацию, необходимо _ввести по префиксу-точке_ скрипт `HelloWorld.ps1` в текущей области. Дополнительные сведения см. в статье [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing).
+Чтобы применить конфигурацию DSC к узлу, ее сначала нужно скомпилировать в MOF-файл. Выполнение конфигурации, как и функции, скомпилирует один файл `.mof` для каждого узла, определенного в блоке `Node`. Чтобы запустить конфигурацию, необходимо _ввести по префиксу-точке_ скрипт `HelloWorld.ps1` в текущей области. Дополнительные сведения см. в статье [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing).
 
 <!-- markdownlint-disable MD038 -->
 _Введите по префиксу-точке_ скрипт `HelloWorld.ps1`, указав путь, где вы сохранили его, после `. ` (точка, пробел). Затем можно запустить конфигурацию, вызвав ее как функцию. Можно также вызвать функцию конфигурации в нижней части скрипта, чтобы не нужно было использовать префикс-точку.

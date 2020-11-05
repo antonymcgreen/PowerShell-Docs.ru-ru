@@ -1,18 +1,17 @@
 ---
 ms.date: 06/12/2017
-contributor: Farehar
-keywords: gallery,powershell,psgallery
 title: Запрос на принятие условий лицензии
-ms.openlocfilehash: 4b293ea693062cf9717fa4ca913c3eb9abaf7014
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Как просмотреть лицензию пакета на странице сведений об элементах
+ms.openlocfilehash: 0d8a9ed671f7993726bc3fa41d11159b366e5a28
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278668"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662302"
 ---
 # <a name="require-license-acceptance"></a>Запрос на принятие условий лицензии
 
-На странице сведений об элементах модулей, для использования которых требуется принять условия лицензии, отображается соответствующий текст. Лицензию для модуля можно просмотреть, щелкнув ссылку View License.txt.
+На странице сведений об элементах модулей, для использования которых требуется принять условия лицензии, отображается соответствующий текст. Лицензию для модуля можно просмотреть, щелкнув ссылку **View License.txt**.
 
 ![Запрос на принятие условий лицензии](media/packages-that-require-license-acceptance/RequireLicenseAcceptance.png)
 

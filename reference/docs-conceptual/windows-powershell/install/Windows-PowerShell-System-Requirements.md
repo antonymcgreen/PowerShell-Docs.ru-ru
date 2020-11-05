@@ -2,18 +2,19 @@
 ms.date: 12/06/2019
 keywords: powershell,командлет
 title: Требования к системе для Windows PowerShell
-ms.openlocfilehash: 883da2f91c4a0b46e4bccbacd9933a52f8f476f6
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: В этой статье перечислены требования к системе для Windows PowerShell 3.0, Windows PowerShell 4.0, Windows PowerShell 5.0 и Windows PowerShell 5.1.
+ms.openlocfilehash: a82c0b1d6bf53e4a97db8414050a122ae5b7745d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236090"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663826"
 ---
 # <a name="windows-powershell-system-requirements"></a>Требования к системе для Windows PowerShell
 
 В этой статье перечислены требования к системе для Windows PowerShell 3.0, Windows PowerShell 4.0, Windows PowerShell 5.0 и Windows PowerShell 5.1. А также специальные функции, такие как интегрированная среда сценариев Windows PowerShell (ISE), команды модели CIM и рабочие процессы.
 
-Windows® 8.1 и Windows Server® 2012 R2 включают все необходимые программы. Эта статья предназначена для пользователей более ранних версий Windows.
+Windows&reg; 8.1 и Windows Server&reg; 2012 R2 включают все необходимые программы. Эта статья предназначена для пользователей более ранних версий Windows.
 
 ## <a name="operating-system-requirements"></a>Требования к операционной системе
 
@@ -57,8 +58,8 @@ Windows PowerShell 4.0 выполняется в следующих верси�
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8.1                                 | Устанавливается по умолчанию                                                                                       |
 | Windows Server 2012 R2                      | Устанавливается по умолчанию                                                                                       |
-| Windows 7® с пакетом обновления 1 (SP1)              | Установите [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
-| Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
+| Windows&reg; 7 с пакетом обновления 1 (SP1)              | Установите [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
+| Windows Server&reg; 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
 
 ### <a name="windows-powershell-30"></a>Windows PowerShell 3.0
 
@@ -68,8 +69,8 @@ Windows PowerShell 3.0 выполняется в следующих верси�
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8                                   | Устанавливается по умолчанию                                                                                       |
 | Windows Server 2012                         | Устанавливается по умолчанию                                                                                       |
-| Windows 7® с пакетом обновления 1 (SP1)              | Установите [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
-| Windows Server® 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
+| Windows&reg; 7 с пакетом обновления 1 (SP1)              | Установите [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
+| Windows Server&reg; 2008 R2 с пакетом обновления 1 (SP1) | Установите [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
 | Windows Server 2008 с пакетом обновления 2 (SP2)     | Установите [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
 
 ## <a name="microsoft-net-framework-requirements"></a>Требования к Microsoft .NET Framework
@@ -137,7 +138,7 @@ Windows PowerShell 4.0 предназначен для обратной сов�
 
 Windows PowerShell 2.0, Windows PowerShell 3.0 и Windows PowerShell 4.0 выполняются в среде предустановки Windows (Windows PE). Однако не поддерживаются следующие командлеты.
 
-- Командлеты фоновой интеллектуальной службы передачи (BITS). Дополнительные сведения см. в статье [BitsTransfer](/powershell/module/bitstransfer/?view=win10-ps).
+- Командлеты фоновой интеллектуальной службы передачи (BITS). Дополнительные сведения см. в статье [BitsTransfer](/powershell/module/bitstransfer/).
 - [Get-EventLog](/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
 - [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
 - [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help)

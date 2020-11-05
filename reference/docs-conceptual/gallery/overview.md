@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: коллекции,powershell,командлет,psgallery,psget
 title: Коллекция PowerShell
-ms.openlocfilehash: e489d2dd4db087b53eb07d2a8793c8f586c9b210
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Коллекция PowerShell — это центральный репозиторий для хранения модулей, скриптов PowerShell и ресурсов DSC.
+ms.openlocfilehash: 1aa3d351e71211259cac4e6d6f0ebd68c0df6ff1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500561"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662123"
 ---
 # <a name="the-powershell-gallery"></a>Коллекция PowerShell
 
@@ -23,7 +22,7 @@ ms.locfileid: "80500561"
 
 Для установки пакетов из коллекции требуется последняя версия модуля PowerShellGet. Полные инструкции по установке см. в разделе [Установка PowerShellGet](installing-psget.md).
 
-Дополнительные сведения об использовании команд PowerShellGet при работе с коллекцией см. в статье [Начало работы](getting-started.md). Вы также можете запустить командлет *Update-Help -Module PowerShellGet*, чтобы установить локальную справку по этим командам.
+Дополнительные сведения об использовании команд PowerShellGet при работе с коллекцией см. в статье [Начало работы](getting-started.md). Вы также можете запустить командлет *Update-Help -Module PowerShellGet* , чтобы установить локальную справку по этим командам.
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
@@ -31,7 +30,7 @@ ms.locfileid: "80500561"
 
 Для **PowerShellGet** требуется .NET Framework 4.5 или более поздней версии. Установить .NET Framework 4.5 или более поздней версии можно [отсюда](https://msdn.microsoft.com/library/5a4x27ek.aspx).
 
-Так как **PowerShell Core** является кроссплатформенным решением, которое работает в Windows, Linux и MacOS, это также означает поддержку **PowerShellGet** в этих системах. Полный список систем, поддерживаемых **PowerShell Core**, см. в руководстве по [установке PowerShell](/powershell/scripting/install/installing-powershell).
+Так как **PowerShell Core** является кроссплатформенным решением, которое работает в Windows, Linux и MacOS, это также означает поддержку **PowerShellGet** в этих системах. Полный список систем, поддерживаемых **PowerShell Core** , см. в руководстве по [установке PowerShell](/powershell/scripting/install/installing-powershell).
 
 Много модулей, размещенных в коллекции, поддерживают различные ОС и имеют дополнительные требования.
 Дополнительные сведения см. в документации по модулям.

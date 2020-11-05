@@ -2,12 +2,13 @@
 ms.date: 07/09/2019
 keywords: DSC,объект групповой политики,powershell,настройка,установка
 title: Краткое руководство. Преобразование групповой политики в DSC
-ms.openlocfilehash: 852710f261ea1d57228c05d4093c1d78584e0ca5
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: В этом кратком руководстве описываются шаги для преобразования групповой политики Windows в конфигурацию DSC.
+ms.openlocfilehash: b67f6dd2cf6c91d90fa6ac5b6367f9efc7f40ee0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236243"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644688"
 ---
 # <a name="quickstart-convert-group-policy-into-dsc"></a>Краткое руководство. Преобразование групповой политики в DSC
 
@@ -16,7 +17,7 @@ ms.locfileid: "89236243"
 Конфигурацию DSC можно создать из групповой политики или базовых показателей Центра безопасности Azure. Модуль [BaselineManagement](https://www.powershellgallery.com/packages/BaselineManagement) содержит следующие команды для выполнения этих задач.
 
 - `ConvertFrom-GPO` — преобразование групповых политик, которые хранятся в виде файлов. Можно также указать каталог, содержащий несколько политик, которые будут объединены в одну конфигурацию.
-  - Чтобы экспортировать групповые политики в вашей среде, используйте командлет [Backup-GPO](/powershell/module/grouppolicy/backup-gpo?view=win10-ps) или следуйте инструкциям в статье [Экспорт объекта групповой политики в файл](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file).
+  - Чтобы экспортировать групповые политики в вашей среде, используйте командлет [Backup-GPO](/powershell/module/grouppolicy/backup-gpo) или следуйте инструкциям в статье [Экспорт объекта групповой политики в файл](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file).
 - `ConvertFrom-SCM` — преобразование базовых показателей Security Compliance Manager, которые хранятся в виде `.xml`-файлов.
 - `ConvertFrom-ASC` — преобразование базовых показателей Центра безопасности Azure, которые хранятся в виде `.json`-файлов.
 - `Merge-GPOs` — преобразование групповой политики, которая применена на конечном компьютере.

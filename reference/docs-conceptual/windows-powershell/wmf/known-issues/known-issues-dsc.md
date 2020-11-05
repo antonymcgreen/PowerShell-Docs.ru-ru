@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,установка
 title: Известные проблемы и ограничения настройки требуемого состояния (DSC)
-ms.openlocfilehash: a76c5bb336804c5b384e6b6ba6a705c6049ef7fb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Известные проблемы и ограничения DSC в Windows PowerShell 5.x
+ms.openlocfilehash: 1163ed9e130430f6bbca98405a8993bb054dd1a8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808700"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662055"
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Известные проблемы и ограничения настройки требуемого состояния (DSC)
 
@@ -44,7 +44,7 @@ mofcomp $env:windir\system32\wbem\DscCoreConfProv.mof
 
 ## <a name="lcm-can-go-into-an-unstable-state-while-using-get-dscconfiguration-in-debugmode"></a>LCM может перейти в нестабильное состояние при использовании Get-DscConfiguration в DebugMode
 
-Когда LCM находится в режиме DebugMode, нажатие клавиш CTRL+C для остановки обработки `Get-DscConfiguration` может привести к переключению LCM в нестабильное состояние, в котором не работает большинство командлетов DSC.
+Когда LCM работает в режиме DebugMode, нажатие клавиш CTRL+C для остановки обработки `Get-DscConfiguration` может привести к переключению LCM в нестабильное состояние, в котором не работает большинство командлетов DSC.
 
 **Решение.** Не нажимайте клавиши CTRL+C во время отладки командлета `Get-DscConfiguration`.
 
@@ -56,7 +56,7 @@ mofcomp $env:windir\system32\wbem\DscCoreConfProv.mof
 
 ## <a name="no-verbose-error-messages-are-shown-in-debugmode"></a>В DebugMode не отображаются подробные сообщения об ошибках
 
-Когда LCM находится в режиме **DebugMode**, не отображаются подробные сообщения об ошибках из ресурсов DSC.
+Когда LCM находится в режиме **DebugMode** , не отображаются подробные сообщения об ошибках из ресурсов DSC.
 
 **Решение.** Отключите **DebugMode** для просмотра подробных сообщений из ресурсов.
 
@@ -68,7 +68,7 @@ mofcomp $env:windir\system32\wbem\DscCoreConfProv.mof
 
 ## <a name="get-dscconfigurationstatus-returns-pull-cycle-operations-as-type-consistency"></a>Get-DscConfigurationStatus возвращает операции цикла извлечения с типом **Consistency**
 
-Когда узел переведен в режим обновления PULL, для каждой выполненной операции извлечения командлет `Get-DscConfigurationStatus` сообщает тип операции, как **Consistency**, а не *Initial*.
+Когда узел переведен в режим обновления PULL, для каждой выполненной операции извлечения командлет `Get-DscConfigurationStatus` сообщает тип операции, как **Consistency** , а не *Initial*.
 
 **Решение.** Нет.
 
@@ -178,7 +178,7 @@ At C:\Windows\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
     + FullyQualifiedErrorId : PSInvalidOperationException,ImportClassResourcesFromModule
 ```
 
-**Решение.** Импортируйте требуемую версию, определив объект **ModuleSpecification** параметра **ModuleName** с ключом **RequiredVersion**, указанным следующим образом:
+**Решение.** Импортируйте требуемую версию, определив объект **ModuleSpecification** параметра **ModuleName** с ключом **RequiredVersion** , указанным следующим образом:
 
 ```powershell
 Import-DscResource -ModuleName @{ModuleName='MyModuleName';RequiredVersion='1.2'}

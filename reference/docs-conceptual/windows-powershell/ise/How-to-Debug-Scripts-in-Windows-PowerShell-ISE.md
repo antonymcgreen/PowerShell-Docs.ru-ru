@@ -1,13 +1,13 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,командлет
 title: Отладка сценариев в интегрированной среде сценариев Windows PowerShell
-ms.openlocfilehash: 6fbe340cbff832b5d0e2a5515ef432cec574a3c1
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: В этой статье описывается, как отлаживать скрипты на локальном компьютере визуальными инструментами отладки Windows PowerShell ISE.
+ms.openlocfilehash: c2e45e3b165e16c9dcd6852550d13fc2426986fa
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809350"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663798"
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Отладка сценариев в интегрированной среде сценариев Windows PowerShell
 

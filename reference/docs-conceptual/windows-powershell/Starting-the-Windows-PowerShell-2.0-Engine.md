@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Использование подсистемы Windows PowerShell 2.0
-ms.openlocfilehash: c5ac92159d63e5669643908016186ed32dfb46db
-ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
+description: Обработчик Windows PowerShell 2.0 предназначен для использования только в том случае, если выполнение существующего скрипта или существующей основной программы невозможно, так как запуск основных программ, написанных для Windows PowerShell 2.0 и скомпилированных с помощью CLR 2.0, невозможен без модификации.
+ms.openlocfilehash: 214b87b7314f31974801bb07f98ddea3b68008f0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216028"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664003"
 ---
 # <a name="using-the-windows-powershell-20-engine"></a>Использование подсистемы Windows PowerShell 2.0
 
@@ -40,7 +41,7 @@ PowerShell.exe -Version 2
 
 ## <a name="how-to-start-a-remote-session-with-the-windows-powershell-20-engine"></a>Запуск удаленного сеанса с помощью подсистемы Windows PowerShell 2.0
 
-Чтобы запустить подсистему Windows PowerShell 2.0 в удаленном сеансе, создайте конфигурацию сеанса (которая также называется _конечной точкой_) на удаленном компьютере, которая загружает подсистему Windows PowerShell 2.0. Конфигурация сеанса сохраняется на удаленном компьютере; любой авторизованный пользователь может использовать ее для создания сеансов на основе Windows PowerShell 2.0.
+Чтобы запустить подсистему Windows PowerShell 2.0 в удаленном сеансе, создайте конфигурацию сеанса (которая также называется _конечной точкой_ ) на удаленном компьютере, которая загружает подсистему Windows PowerShell 2.0. Конфигурация сеанса сохраняется на удаленном компьютере; любой авторизованный пользователь может использовать ее для создания сеансов на основе Windows PowerShell 2.0.
 
 Это сложная задача, которая обычно выполняется системным администратором.
 

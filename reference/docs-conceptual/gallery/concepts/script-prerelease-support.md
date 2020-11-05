@@ -1,14 +1,14 @@
 ---
 ms.date: 10/17/2017
-contributor: keithb
-keywords: коллекция,powershell,командлет,psget
 title: Предварительные версии сценариев
-ms.openlocfilehash: c0198c2f575d2c004949ccebab49d93ce54716be
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Модуль PowerShellGet предоставляет поддержку для назначения тегов скриптам с версией, превышающей 1.0.0, в качестве предварительного выпуска с использованием семантического управления версиями.
+ms.openlocfilehash: e9873a69148fd80553e566b31c7455a4ecaee5ce
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328485"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661466"
+---
 ---
 # <a name="prerelease-versions-of-scripts"></a>Предварительные версии сценариев
 
@@ -61,7 +61,7 @@ ms.locfileid: "71328485"
 Единственным исключением является команда Get-InstalledScript и в некоторых случаях команда Uninstall-Script.
 
 - Команда Get-InstalledScript всегда автоматически отображает информацию о предварительных версиях в строке версии при ее наличии.
-- Если **номер версии не указан**, то по умолчанию команда Uninstall-Script удалит самую последнюю версию сценария. Такое поведение команды осталось неизменным. Если предварительная версия указана с помощью `-RequiredVersion`, необходимо также указать `-AllowPrerelease`.
+- Если **номер версии не указан** , то по умолчанию команда Uninstall-Script удалит самую последнюю версию сценария. Такое поведение команды осталось неизменным. Если предварительная версия указана с помощью `-RequiredVersion`, необходимо также указать `-AllowPrerelease`.
 
 ## <a name="examples"></a>Примеры
 

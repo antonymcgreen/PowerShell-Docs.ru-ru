@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Обновление узлов на опрашиваемом сервере
-ms.openlocfilehash: fa59a2f6574db2dbc96621be4326f1d5a55e5de9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье описывается, как обновить управляемые узлы DSC с опрашиваемого сервера.
+ms.openlocfilehash: 7256a0e1fdfaa8e56150c4f7299640bc95b82cee
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500662"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656763"
 ---
 # <a name="update-nodes-from-a-pull-server"></a>Обновление узлов на опрашиваемом сервере
 
@@ -36,6 +37,6 @@ Invoke-CimMethod -CimSession $cimSession -Namespace 'root/microsoft/windows/desi
 $cimSession | Remove-CimSession
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [PerformRequiredConfigurationChecks](../reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)

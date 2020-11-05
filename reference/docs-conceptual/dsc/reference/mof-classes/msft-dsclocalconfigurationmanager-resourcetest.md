@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,конфигурация,установка
+ms.topic: reference
 title: Метод ResourceTest
-ms.openlocfilehash: 7ef65227342091cb2a5063aaf95a2780d217f85a
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Метод ResourceTest
+ms.openlocfilehash: cbac53ea96a59ec92fa840f75cd264a3125b965a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463811"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650678"
 ---
 # <a name="resourcetest-method"></a>Метод ResourceTest
 
@@ -17,10 +18,10 @@ ms.locfileid: "86463811"
 
 ```mof
 uint32 ResourceTest(
-  [in]  string  ResourceType,
-  [in]  string  ModuleName,
-  [in]  uint8   resourceProperty[],
-  [out] boolean InDesiredState
+  [in]  string  ResourceType,
+  [in]  string  ModuleName,
+  [in]  uint8   resourceProperty[],
+  [out] boolean InDesiredState
 );
 ```
 
@@ -30,9 +31,9 @@ uint32 ResourceTest(
 
 **ModuleName** \[in\] Имя модуля, содержащего вызываемый ресурс.
 
-***resourceProperty** \[in\]. Указывает имя свойства ресурса и его значение в хэш-таблице как ключ и значение соответственно. Используйте командлет [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) для обнаружения свойств ресурсов и их типов.
+**_resourceProperty_* \[in\]. Указывает имя свойства ресурса и его значение в хэш-таблице как ключ и значение соответственно. Используйте командлет [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) для обнаружения свойств ресурсов и их типов.
 
-*InDesiredState** \[out\]. В выходных данных это свойство имеет значение **true**, если целевой узел находится в нужном состоянии.
+*InDesiredState** \[out\]. В выходных данных это свойство имеет значение **true** , если целевой узел находится в нужном состоянии.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -46,7 +47,7 @@ uint32 ResourceTest(
 
 **MOF-файл:** DscCore.mof
 
-**Пространство имен**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Пространство имен** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>См. также раздел
 

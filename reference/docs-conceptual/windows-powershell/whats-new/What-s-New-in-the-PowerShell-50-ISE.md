@@ -2,12 +2,13 @@
 ms.date: 09/06/2019
 keywords: powershell,командлет
 title: Новые возможности интегрированной среды сценариев PowerShell 5.0
-ms.openlocfilehash: 1f5d32d583165ff8ead0a95b1c882386cf654326
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: В этой статье описаны новые и обновленные функции, представленные в версии 5.0 интегрированной среды сценариев (ISE) Windows PowerShell.
+ms.openlocfilehash: 75d37d0dafe381c84898ac48343336cd525d2dd1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809140"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660827"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Новые возможности интегрированной среды сценариев Windows PowerShell 5.0
 
@@ -46,7 +47,7 @@ IntelliSense — это средство для автоматического 
 
 > Добавлен в интегрированной среде сценариев 3.0
 
-*Фрагменты* — это короткие участки кода Windows PowerShell, которые можно легко вставить в сценарии, создаваемые в интегрированной среде сценариев Windows PowerShell. Интегрированная среда сценариев Windows PowerShell включает стандартный набор фрагментов. При работе в интегрированной среде сценариев Windows PowerShell можно добавлять фрагменты кода с помощью командлета `New-Snippet`.
+*Фрагменты*  — это короткие участки кода Windows PowerShell, которые можно легко вставить в сценарии, создаваемые в интегрированной среде сценариев Windows PowerShell. Интегрированная среда сценариев Windows PowerShell включает стандартный набор фрагментов. При работе в интегрированной среде сценариев Windows PowerShell можно добавлять фрагменты кода с помощью командлета `New-Snippet`.
 
 **Какой эффект дает это изменение?**
 

@@ -1,17 +1,17 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,командлет
 title: Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
-ms.openlocfilehash: 36fa3f983dc2d8440dd3b87aefd92eb49c028dc9
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+description: В этой статье приведен список сочетаний клавиш, используемых в PowerShell ISE.
+ms.openlocfilehash: b7749f49d3ac2923b097e2ab94488263436980bd
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092122"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663452"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Сочетания клавиш для интегрированной среды сценариев Windows PowerShell
 
-Используйте следующие сочетания клавиш для выполнения действий в интегрированной среде скриптов Windows PowerShell®. Интегрированная среда сценариев Windows PowerShell доступна в серверных и клиентских операционных системах Windows, но ее можно установить и в некоторых старых операционных системах Windows в составе [скачиваемого пакета Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881).
+Используйте следующие сочетания клавиш для выполнения действий в интегрированной среде скриптов Windows PowerShell&reg;. Интегрированная среда сценариев Windows PowerShell доступна в серверных и клиентских операционных системах Windows, но ее можно установить и в некоторых старых операционных системах Windows в составе [скачиваемого пакета Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881).
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Сочетания клавиш для редактирования текста
 

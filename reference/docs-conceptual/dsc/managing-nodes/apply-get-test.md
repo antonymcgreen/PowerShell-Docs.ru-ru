@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Применение, получение и тестирование конфигураций на узле
-ms.openlocfilehash: 41f8d2d75d3dd9621de615e7999c2690cb8ce44a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этом руководстве будет показано, как работать с конфигурациями на целевом узле.
+ms.openlocfilehash: 6bc9262bc0e2ce8eea7b85bd46ecc0c0a691276d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953841"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92651023"
 ---
 # <a name="apply-get-and-test-configurations-on-a-node"></a>Применение, получение и тестирование конфигураций на узле
 
@@ -38,14 +39,14 @@ Sample -OutputPath "C:\Temp\"
 
 Компиляция этой конфигурации даст два MOF-файла.
 
-```output
+```Output
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
 -a----       11/27/2018   7:29 AM     2.13KB localhost.mof
 -a----       11/27/2018   7:29 AM     2.13KB server02.mof
 ```
 
-Чтобы применить конфигурацию, используйте командлет [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). Параметр `-Path` указывает каталог, в котором находятся MOF-файлы. Если не указано `-Computername`, `Start-DSCConfiguration` попытается применить каждую конфигурацию к имени компьютера, указанному в имени MOF-файла (\<имя_компьютера\>.mof). Укажите `-Verbose` для `Start-DSCConfiguration`, чтобы увидеть более подробные выходные данные.
+Чтобы применить конфигурацию, используйте командлет [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). Параметр `-Path` указывает каталог, в котором находятся MOF-файлы. Если не указано `-Computername`, `Start-DSCConfiguration` попытается применить каждую конфигурацию к имени компьютера, указанному в имени MOF-файла (`<computername>.mof`). Укажите `-Verbose` для `Start-DSCConfiguration`, чтобы увидеть более подробные выходные данные.
 
 ```powershell
 Start-DSCConfiguration -Path C:\Temp\ -Verbose
@@ -53,7 +54,7 @@ Start-DSCConfiguration -Path C:\Temp\ -Verbose
 
 Если `-Wait` не указано, вы увидите одно созданное задание. Созданное задание будет иметь по одному **ChildJob** для каждого MOF-файла, обработанного `Start-DSCConfiguration`.
 
-```output
+```Output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 45     Job45           Configuratio... Running       True            localhost,server02   Start-DSCConfiguration...
@@ -72,22 +73,23 @@ $job = Get-Job
 $job.ChildJobs
 ```
 
-```output
+```Output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 49     Job49           Configuratio... Completed     True            localhost            Start-DSCConfiguration...
 50     Job50           Configuratio... Completed     True            server02             Start-DSCConfiguration...
 ```
 
-Чтобы просмотреть выходные данные **Подробных сведений**, используйте следующие команды для просмотра потока **Подробных сведений** для каждого **ChildJob**. Дополнительные сведения о заданиях PowerShell см. в разделе [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
+Чтобы просмотреть выходные данные **Подробных сведений** , используйте следующие команды для просмотра потока **Подробных сведений** для каждого **ChildJob**. Дополнительные сведения о заданиях PowerShell см. в разделе [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 
 ```powershell
 # View the verbose output of the localhost job using array indexing.
 $job.ChildJobs[0].Verbose
 ```
 
-```output
-Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+```Output
+Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,
+'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
 An LCM method call arrived from computer SERVER01 with user sid S-1-5-21-124525095-708259637-1543119021-1282804.
 [SERVER01]: LCM:  [ Start  Set      ]
 [SERVER01]: LCM:  [ Start  Resource ]  [[File]SampleFile]
@@ -109,7 +111,8 @@ Start-DSCConfiguration -UseExisting -Verbose -Wait
 
 ## <a name="test-a-configuration"></a>Проверка конфигурации
 
-Текущую конфигурацию можно проверить, используя [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration). `Test-DSCConfiguration` возвращает `True`, если узел соответствует, и `False`, если это не так.
+Текущую конфигурацию можно проверить, используя [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration).
+`Test-DSCConfiguration` возвращает `True`, если узел соответствует, и `False`, если это не так.
 
 ```powershell
 Test-DSCConfiguration
@@ -133,7 +136,7 @@ Get-DSCConfiguration
 
 В случае успешного применения выходные данные нашего примера конфигурации будут выглядеть таким образом.
 
-```output
+```Output
 ConfigurationName    : Sample
 DependsOn            :
 ModuleName           : PSDesiredStateConfiguration
@@ -162,13 +165,13 @@ CimClassName         : MSFT_FileDirectoryConfiguration
 
 ## <a name="get-configuration-status"></a>Получение статуса конфигурации
 
-Начиная с PowerShell 5.0, командлет [Get-DSCConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus) позволяет просматривать историю примененных к узлу конфигураций. PowerShell DSC отслеживает последние конфигурации (в количестве {{N}}), примененные в режиме **Push** или **Pull**. Это включает в себя любые проверки *согласованности*, выполненные LCM. По умолчанию `Get-DSCConfigurationStatus` показывает только последнюю запись истории.
+Начиная с PowerShell 5.0, командлет [Get-DSCConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus) позволяет просматривать историю примененных к узлу конфигураций. PowerShell DSC отслеживает последние конфигурации (в количестве {{N}}), примененные в режиме **Push** или **Pull**. Это включает в себя любые проверки *согласованности* , выполненные LCM. По умолчанию `Get-DSCConfigurationStatus` показывает только последнюю запись истории.
 
 ```powershell
 Get-DSCConfigurationStatus
 ```
 
-```output
+```Output
 Status     StartDate                 Type            Mode  RebootRequested      NumberOfResources
 ------     ---------                 ----            ----  ---------------      -----------------
 Success    11/27/2018 7:18:40 AM     Consistency     PUSH  False                1
@@ -183,7 +186,7 @@ Success    11/27/2018 7:18:40 AM     Consistency     PUSH  False                
 Get-DSCConfigurationStatus -All
 ```
 
-```output
+```Output
 Status     StartDate                 Type            Mode  RebootRequested      NumberOfResources
 ------     ---------                 ----            ----  ---------------      -----------------
 Success    11/27/2018 7:18:40 AM     Consistency     PUSH  False                1
@@ -200,7 +203,7 @@ Success    11/27/2018 6:03:44 AM     Consistency     PUSH  False                
 
 ## <a name="manage-configuration-documents"></a>Управление документами конфигурации
 
-LCM управляет конфигурацией узла, работая с **документами конфигурации**. Эти MOF-файлы находятся в каталоге "C:\Windows\System32\Configuration".
+LCM управляет конфигурацией узла, работая с **документами конфигурации**. Такие файлы ".mof" хранятся в каталоге `C:\Windows\System32\Configuration`.
 
 Начиная с PowerShell 5.0, [Remove-DSCConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument) позволяет вам удалять MOF-файлы, чтобы остановить будущие проверки согласованности или удалить конфигурацию, в которой возникают ошибки при применении. Параметр `-Stage` позволяет указать, какой MOF-файл вы хотите удалить.
 
@@ -221,4 +224,4 @@ Publish-DscConfiguration -Path '$home\WebServer' -ComputerName "ContosoWebServer
 
 ## <a name="see-also"></a>См. также раздел
 
-- [Получение, тестирование и настройка](../resources/get-test-set.md)
+- [Получение, тестирования и настройка](../resources/get-test-set.md)

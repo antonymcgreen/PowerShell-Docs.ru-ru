@@ -1,14 +1,13 @@
 ---
 ms.date: 09/26/2017
-contributor: keithb
-keywords: коллекция,powershell,командлет,psget
 title: Предварительные версии модулей
-ms.openlocfilehash: eced067dd21082de0db653daf3b838217154f1dd
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Модуль PowerShellGet предоставляет поддержку для назначения тегов модулям с версией, превышающей 1.0.0, в качестве предварительного выпуска с использованием семантического управления версиями.
+ms.openlocfilehash: f794722f0a89f98f8f445ecd45dad9d3d2d7f3cb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328145"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661529"
 ---
 # <a name="prerelease-module-versions"></a>Предварительные версии модулей
 
@@ -68,7 +67,7 @@ ms.locfileid: "71328145"
 Единственным исключением является команда Get-InstalledModule и в некоторых случаях команда Uninstall-Module.
 
 - Команда Get-InstalledModule всегда автоматически показывает информацию о предварительных версиях в строке версии для модулей.
-- Если __номер версии не указан__, то по умолчанию команда Uninstall-Module удалит самую последнюю версию модуля. Такое поведение команды осталось неизменным. Если в параметре -RequiredVersion указана предварительная версия, то необходимо будет также указать флаг -AllowPrerelease.
+- Если __номер версии не указан__ , то по умолчанию команда Uninstall-Module удалит самую последнюю версию модуля. Такое поведение команды осталось неизменным. Если в параметре -RequiredVersion указана предварительная версия, то необходимо будет также указать флаг -AllowPrerelease.
 
 ## <a name="examples"></a>Примеры
 

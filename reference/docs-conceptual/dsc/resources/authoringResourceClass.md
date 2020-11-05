@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Написание пользовательских ресурсов DSC с использованием классов PowerShell
-ms.openlocfilehash: b7f6d3135cb1da7ade106f8a4cc41e3afb7306af
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: В этой статье описывается, как создать простой ресурс, который управляет файлом по указанному пути.
+ms.openlocfilehash: 72a828795c29e10ff66f164b8871b0fea7a1e0a8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217565"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667323"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Написание пользовательских ресурсов DSC с использованием классов PowerShell
 
@@ -17,7 +18,7 @@ ms.locfileid: "86217565"
 
 В ресурсе DSC на основе класса схема определяется как свойства класса, которые можно изменить с помощью атрибутов, указав тип свойства. Ресурс реализуется с помощью методов `Get()` , `Set()` и `Test()` , эквивалентных функциям `Get-TargetResource`, `Set-TargetResource` и `Test-TargetResource` в ресурсе сценария.
 
-В этом разделе мы создадим простой ресурс с именем **FileResource**, управляющий файлом по указанному пути.
+С помощью инструкций из этой статьи мы создадим простой ресурс с именем **FileResource** , который управляет файлом по указанному пути.
 
 Дополнительные сведения о ресурсах DSC см. в статье [Создание настраиваемых ресурсов для настройки требуемого состояния Windows PowerShell](authoringResource.md).
 
@@ -488,7 +489,7 @@ Start-DscConfiguration -Wait -Force Test
 - Конфигурации `NotSupported`, которые вызывают этот ресурс, не могут использовать **PsDscRunAsCredential**.
 - `Default` аналогичен `Optional`.
 
-Например, используйте следующий атрибут, чтобы указать, что настраиваемый ресурс не поддерживает использование **PsDscRunAsCredential**:
+Например, используйте следующий атрибут, чтобы указать, что настраиваемый ресурс не поддерживает использование **PsDscRunAsCredential** :
 
 ```powershell
 [DscResource(RunAsCredential=NotSupported)]

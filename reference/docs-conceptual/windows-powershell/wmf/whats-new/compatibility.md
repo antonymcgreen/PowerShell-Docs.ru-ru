@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,установка
 title: Состояние совместимости продуктов
-ms.openlocfilehash: c740b2560162ecdab40daac2f9ae36c29811ac13
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: В этой статье приводится программное обеспечение, совместимое с WMF 5.1.
+ms.openlocfilehash: 5610c668059b07f7c2f6e832b6ed1bd2eb9719b2
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809000"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660660"
 ---
 # <a name="product-compatibility-status"></a>Состояние совместимости продуктов
 
@@ -24,7 +23,7 @@ Windows Management Framework 5.1 **можно запускать** в систе
 > [!NOTE]
 > Совместимость Skype для бизнеса Server 2015 с WMF 5.1 протестирована только с Windows Server 2012 R2.
 
-## <a name="not-tested"></a>Не протестировано
+## <a name="not-tested"></a>Не тестировалось
 
 Работа Windows Management Framework 5.1 **не тестировалась** в системах, в которых выполняются следующие серверные приложения:
 

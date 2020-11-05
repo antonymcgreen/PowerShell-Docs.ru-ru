@@ -2,18 +2,20 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Написание пользовательских ресурсов DSC с использованием MOF
-ms.openlocfilehash: ba857fa504bfd84accfd7f260b1fff1228db40ba
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: В этой статье определена схема для настраиваемого ресурса DSC в файле MOF и описана реализаций ресурса в файле скрипта PowerShell.
+ms.openlocfilehash: e79a37699c468b2c55c307c96f1c193a2c1595b3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217531"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667187"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Написание пользовательских ресурсов DSC с использованием MOF
 
 > Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-В этом разделе мы определим схему для настраиваемого ресурса настройки требуемого состояния (DSC) Windows PowerShell в MOF-файле и реализуем этот ресурс в файле сценария Windows PowerShell. Этот ресурс применяется для создания и обслуживания веб-сайтов.
+С помощью инструкций из этой статьи мы определим схему для настраиваемого ресурса Desired State Configuration (DSC) Windows PowerShell в MOF-файле и реализуем этот ресурс в файле скрипта Windows PowerShell.
+Этот ресурс применяется для создания и обслуживания веб-сайтов.
 
 ## <a name="creating-the-mof-schema"></a>Создание схемы MOF
 
@@ -68,8 +70,7 @@ class Demo_IISWebsite : OMI_BaseResource
 
 ### <a name="writing-the-resource-script"></a>Создание сценария ресурсов
 
-Сценарий ресурса реализует логику ресурса. В этот модуль необходимо включить три функции: `Get-TargetResource`, `Set-TargetResource` и `Test-TargetResource`. Все три функции должны принимать набор параметров, идентичный набору свойств, заданных в схеме MOF для вашего ресурса. В этом документе такой набор свойств называется "свойства ресурса". Сохраните эти три функции в файл с именем `<ResourceName>.psm1`.
-В следующем примере функции сохраняются в файл с именем `Demo_IISWebsite.psm1`.
+Сценарий ресурса реализует логику ресурса. В этот модуль необходимо включить три функции: `Get-TargetResource`, `Set-TargetResource` и `Test-TargetResource`. Все три функции должны принимать набор параметров, идентичный набору свойств, заданных в схеме MOF для вашего ресурса. В этом документе такой набор свойств называется "свойства ресурса". Сохраните эти три функции в файл с именем `<ResourceName>.psm1`. В следующем примере функции сохраняются в файл с именем `Demo_IISWebsite.psm1`.
 
 > [!NOTE]
 > Многократное выполнение одного и того же сценария настройки для ресурса не вызывает ошибок, а состояние ресурса остается таким же, как при однократном выполнении. Для этого функции `Get-TargetResource` и `Test-TargetResource` не должны изменять ресурс, а вызов функции `Set-TargetResource` с одними и теми же параметрами больше одного раза подряд должен быть эквивалентен однократному вызову этой функции.
@@ -77,7 +78,8 @@ class Demo_IISWebsite : OMI_BaseResource
 В реализации функции `Get-TargetResource` используйте значения свойств основных ресурсов, предоставляемых в качестве параметров, для проверки состояния указанного экземпляра ресурса. Эта функция должна возвращать хэш-таблицу со списком всех свойств ресурса в виде ключей и фактических значений этих свойств в виде соответствующих значений. Пример кода:
 
 ```powershell
-# DSC uses the Get-TargetResource function to fetch the status of the resource instance specified in the parameters for the target machine
+# DSC uses the Get-TargetResource function to fetch the status of the resource instance
+# specified in the parameters for the target machine
 function Get-TargetResource
 {
     param
@@ -105,8 +107,11 @@ function Get-TargetResource
 
         $getTargetResourceResult = $null;
 
-        <# Insert logic that uses the mandatory parameter values to get the website and assign it to a variable called $Website #>
-        <# Set $ensureResult to "Present" if the requested website exists and to "Absent" otherwise #>
+        <#
+          Insert logic that uses the mandatory parameter values to get the website and
+          assign it to a variable called $Website
+          Set $ensureResult to "Present" if the requested website exists and to "Absent" otherwise
+        #>
 
         # Add all Website properties to the hash table
         # This simple example assumes that $Website is not null
@@ -161,10 +166,14 @@ function Set-TargetResource
         [string[]]$Protocol
     )
 
-    <# If Ensure is set to "Present" and the website specified in the mandatory input parameters does not exist, then create it using the specified parameter values #>
-    <# Else, if Ensure is set to "Present" and the website does exist, then update its properties to match the values provided in the non-mandatory parameter values #>
-    <# Else, if Ensure is set to "Absent" and the website does not exist, then do nothing #>
-    <# Else, if Ensure is set to "Absent" and the website does exist, then delete the website #>
+    <#
+        If Ensure is set to "Present" and the website specified in the mandatory input parameters
+          does not exist, then create it using the specified parameter values
+        Else, if Ensure is set to "Present" and the website does exist, then update its properties
+          to match the values provided in the non-mandatory parameter values
+        Else, if Ensure is set to "Absent" and the website does not exist, then do nothing
+        Else, if Ensure is set to "Absent" and the website does exist, then delete the website
+    #>
 }
 ```
 
@@ -208,18 +217,19 @@ function Test-TargetResource
     # Get the current state
     $currentState = Get-TargetResource -Ensure $Ensure -Name $Name -PhysicalPath $PhysicalPath -State $State -ApplicationPool $ApplicationPool -BindingInfo $BindingInfo -Protocol $Protocol
 
-    #Write-Verbose "Use this cmdlet to deliver information about command processing."
+    # Write-Verbose "Use this cmdlet to deliver information about command processing."
 
-    #Write-Debug "Use this cmdlet to write debug information while troubleshooting."
+    # Write-Debug "Use this cmdlet to write debug information while troubleshooting."
 
-    #Include logic to
+    # Include logic to
     $result = [System.Boolean]
-    #Add logic to test whether the website is present and its status matches the supplied parameter values. If it does, return true. If it does not, return false.
+    # Add logic to test whether the website is present and its status matches the supplied
+    # parameter values. If it does, return true. If it does not, return false.
     $result
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > Чтобы упростить отладку, используйте в реализации трех предыдущих функций командлет `Write-Verbose`. Он записывает текст в поток подробных сообщений. По умолчанию поток подробных сообщений не отображается, однако его можно вывести на экран, изменив значение переменной **$VerbosePreference** или применив в командлетах DSC параметр **Verbose** со значением new.
 
 ### <a name="creating-the-module-manifest"></a>Создание манифеста модуля
@@ -307,4 +317,4 @@ $global:DSCMachineStatus = 1
 ```
 
 Чтобы LCM перезапустил узел, флаг **RebootNodeIfNeeded** необходимо задать как `$true`.
-Параметр **ActionAfterReboot** также должен быть равен **ContinueConfiguration**; это значение используется по умолчанию. Дополнительные сведения о настройке LCM см. в разделе [Настройка локального диспетчера конфигураций](../managing-nodes/metaConfig.md) или [Настройка локального диспетчера конфигураций (версия 4)](../managing-nodes/metaConfig4.md).
+Параметр **ActionAfterReboot** также должен быть равен **ContinueConfiguration** ; это значение используется по умолчанию. Дополнительные сведения о настройке LCM см. в разделе [Настройка локального диспетчера конфигураций](../managing-nodes/metaConfig.md) или [Настройка локального диспетчера конфигураций (версия 4)](../managing-nodes/metaConfig4.md).

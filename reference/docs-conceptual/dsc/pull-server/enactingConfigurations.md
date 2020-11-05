@@ -2,12 +2,13 @@
 ms.date: 10/16/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Применение конфигураций
-ms.openlocfilehash: 1437521471d95fd80dc6a6cec62a0b75df4224ec
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 'Существует два способа применения конфигураций DSC PowerShell: в режиме принудительной отправки и в режиме опроса.'
+ms.openlocfilehash: 466eb43cd266ceb4ae81cc997a7b338e041f8a15
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783081"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661730"
 ---
 # <a name="enacting-configurations"></a>Применение конфигураций
 

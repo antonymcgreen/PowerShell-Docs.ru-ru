@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Упаковка и передача ресурсов на опрашиваемый сервер
-ms.openlocfilehash: d0e070b7aa43acbbbf087729d53f06dbc7e7734a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: В этой статье описывается, как передать ресурсы на опрашиваемый сервер таким образом, чтобы их могли скачать конфигурации на узлах, управляемых DSC.
+ms.openlocfilehash: a19d04346a0ae546cfcaf70701fde870d3839f65
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782894"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661688"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>Упаковка и передача ресурсов на опрашиваемый сервер
 
@@ -25,7 +26,7 @@ ms.locfileid: "87782894"
 > [!NOTE]
 > Если у вас есть клиенты, использующие PowerShell 4.0, вам потребуется расширить структуру папок ресурсов и удалить все папки версий. Дополнительные сведения см. в разделе [Несколько версий ресурса](../configurations/import-dscresource.md#multiple-resource-versions).
 
-Вы можете сжать каталог ресурсов, используя любую программу, сценарий или метод. В Windows щелкните каталог `xPSDesiredStateConfiguration` _правой кнопкой мыши_ и выберите **Отправить**, а затем — **Сжатая папка**.
+Вы можете сжать каталог ресурсов, используя любую программу, сценарий или метод. В Windows щелкните каталог `xPSDesiredStateConfiguration` _правой кнопкой мыши_ и выберите **Отправить** , а затем — **Сжатая папка**.
 
 ![Правый щелчок — "Отправить" — "Сжатая папка"](media/package-upload-resources/right-click.gif)
 
@@ -68,7 +69,7 @@ New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip
 
 #### <a name="on-an-smb-share"></a>В общей папке SMB
 
-Если при настройке своего клиента — получателя данных вы указали **ResourceRepositoryShare**, храните архивы и контрольные суммы в каталоге **SourcePath** в блоке **ResourceRepositoryShare**.
+Если при настройке своего клиента — получателя данных вы указали **ResourceRepositoryShare** , храните архивы и контрольные суммы в каталоге **SourcePath** в блоке **ResourceRepositoryShare**.
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer
@@ -82,7 +83,7 @@ ResourceRepositoryShare SMBResourceServer
 }
 ```
 
-Если при настройке своего клиента — получателя данных вы указали только **ConfigurationRepositoryShare**, храните архивы и контрольные суммы в каталоге **SourcePath** в блоке **ConfigurationRepositoryShare**.
+Если при настройке своего клиента — получателя данных вы указали только **ConfigurationRepositoryShare** , храните архивы и контрольные суммы в каталоге **SourcePath** в блоке **ConfigurationRepositoryShare**.
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer

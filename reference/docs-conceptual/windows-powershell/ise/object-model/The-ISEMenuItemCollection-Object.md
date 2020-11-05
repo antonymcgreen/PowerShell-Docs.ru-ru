@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,командлет
 title: Объект ISEMenuItemCollection
-ms.openlocfilehash: 39e8547c9b19ba323d4b224a46eda416542b2807
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Объект ISEMenuItemCollection  — это коллекция объектов ISEMenuItem.
+ms.openlocfilehash: cd86768d13b1326a8f35c44f0391ab60669cee4f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809590"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655996"
 ---
 # <a name="the-isemenuitemcollection-object"></a>Объект ISEMenuItemCollection
 
-Объект **ISEMenuItemCollection**  — это коллекция объектов **ISEMenuItem**. Он представляет собой экземпляр класса **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection**. Примером является объект `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`, используемый для настройки меню **Надстройка** (Add-On) в интегрированной среде скриптов Windows PowerShell® (ISE).
+Объект **ISEMenuItemCollection**   — это коллекция объектов **ISEMenuItem**. Он представляет собой экземпляр класса **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection**. Примером является объект `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`, используемый для настройки меню **Add-On** (Надстройка) в интегрированной среде скриптов Windows PowerShell&reg; (ISE).
 
 ## <a name="method"></a>Метод
 
@@ -21,13 +21,13 @@ ms.locfileid: "83809590"
 
 Добавляет пункт меню в коллекцию.
 
-**DisplayName** — отображаемое имя добавляемого меню.
+**DisplayName**  — отображаемое имя добавляемого меню.
 
-**Action** — объект **System.Management.Automation.ScriptBlock**, указывающий действие, связанное с этим пунктом меню.
+**Action**  — объект **System.Management.Automation.ScriptBlock** , указывающий действие, связанное с этим пунктом меню.
 
-**Shortcut** — сочетание клавиш для действия.
+**Shortcut**  — сочетание клавиш для действия.
 
-**Returns** — объект **ISEMenuItem**, который только что был добавлен.
+**Returns**  — объект **ISEMenuItem** , который только что был добавлен.
 
 ```powershell
 # Create an Add-ons menu with an fast access key and a shortcut.

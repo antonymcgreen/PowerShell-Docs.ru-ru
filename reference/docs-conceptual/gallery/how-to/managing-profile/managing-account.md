@@ -1,14 +1,13 @@
 ---
 ms.date: 09/05/2018
-contributor: JKeithB
-keywords: коллекции,powershell,командлет,psgallery
 title: Параметры учетной записи коллекции PowerShell
-ms.openlocfilehash: b71c7f0658c24ec2eeddb050e48b777a37c11917
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: В этой статье описываются настройки профиль учетной записи в коллекции PowerShell.
+ms.openlocfilehash: ab0e09aae6fea26ac6d85a35e30c8d06f31b121a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771793"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662746"
 ---
 # <a name="powershell-gallery-account-settings"></a>Параметры учетной записи коллекции PowerShell
 
@@ -51,7 +50,7 @@ ms.locfileid: "87771793"
 
 ![Изменение параметров учетной записи](media/managing-account/PSGallery_LoginAccountSettings.png)
 
-1. Щелкните **Изменить учетную запись**. Появится всплывающее окно объясняющее, что изменение учетной записи входа применяется ко всем случаям использования этой учетной записи в коллекции PowerShell. Ознакомьтесь с информацией и нажмите кнопку **ОК**, чтобы продолжить.
+1. Щелкните **Изменить учетную запись**. Появится всплывающее окно объясняющее, что изменение учетной записи входа применяется ко всем случаям использования этой учетной записи в коллекции PowerShell. Ознакомьтесь с информацией и нажмите кнопку **ОК** , чтобы продолжить.
 
    ![Подтверждение изменения — OK/отмена](media/managing-account/PSGallery_LoginAccountChange-1.png)
 

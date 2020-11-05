@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,установка
 title: Усовершенствования DSC в WMF 5.1
-ms.openlocfilehash: 445d0f7bb54c6b21b6af26c4174f3d6422caf6dd
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: В этой статье приведены сведения об улучшениях в Desired State Configuration (DSC), которые включены в WMF 5.1.
+ms.openlocfilehash: 564cf0e8321b6b2b2e5d856acd4d3644d6566100
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771555"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667287"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Усовершенствования в настройке требуемого состояния (DSC) в WMF 5.1
 
@@ -149,7 +148,7 @@ ms.locfileid: "87771555"
 
 Добавлена поддержка использования параметра [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser) с [составными](/powershell/scripting/dsc/resources/authoringresourcecomposite) ресурсами DSC.
 
-Теперь можно указать значение параметра **PsDscRunAsCredential** при использовании составных ресурсов в конфигурации. Если значение задано, все ресурсы, включенные в составной ресурс, будут запущены от имени этого пользователя. Если составной ресурс вызывает другой составной ресурс, то все такие ресурсы также будут запущены от имени этого пользователя. Учетные данные запуска от имени распространяются на любой уровень иерархии составных ресурсов. Если для одного из ресурсов, входящих в составной ресурс, указано собственное значение параметра **PsDscRunAsCredential**, при компиляции конфигурации возникает ошибка слияния.
+Теперь можно указать значение параметра **PsDscRunAsCredential** при использовании составных ресурсов в конфигурации. Если значение задано, все ресурсы, включенные в составной ресурс, будут запущены от имени этого пользователя. Если составной ресурс вызывает другой составной ресурс, то все такие ресурсы также будут запущены от имени этого пользователя. Учетные данные запуска от имени распространяются на любой уровень иерархии составных ресурсов. Если для одного из ресурсов, входящих в составной ресурс, указано собственное значение параметра **PsDscRunAsCredential** , при компиляции конфигурации возникает ошибка слияния.
 
 В этом примере показано, как использовать этот параметр с составным ресурсом [WindowsFeatureSet](/powershell/scripting/dsc/reference/resources/windows/windowsfeaturesetresource), включенным в модуль PSDesiredStateConfiguration.
 

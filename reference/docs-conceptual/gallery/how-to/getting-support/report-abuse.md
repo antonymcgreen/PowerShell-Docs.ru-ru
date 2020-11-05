@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: коллекции,powershell,командлет,psgallery
-title: Сообщение о нарушении
-ms.openlocfilehash: 70e599a26c6f04312ed7fc188047721bf96fefe2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+title: Как сообщить о злоупотреблении в коллекции PowerShell
+description: Как сообщить о злоупотреблении в коллекции PowerShell
+ms.openlocfilehash: 0959e66776d1fdaa2778b8157ea689f5f189a1f3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328315"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661086"
 ---
 # <a name="report-abuse"></a>Сообщение о нарушении
 

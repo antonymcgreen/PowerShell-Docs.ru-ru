@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,командлет
 title: Объект ISEFile
-ms.openlocfilehash: 1069e46aa586b8df2050129194a909b90f77b745
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Объект ISEFile представляет файл в Windows PowerShell ISE.
+ms.openlocfilehash: 0de19c45bde7e5629d5721635150d3b0915aaa7d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809890"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662126"
 ---
 # <a name="the-isefile-object"></a>Объект ISEFile
 
-Объект **ISEFile** представляет файл в интегрированной среде скриптов (ISE) Windows PowerShell®. Он является экземпляром класса **Microsoft.PowerShell.Host.ISE.ISEFile**. В этом разделе перечислены его члены (методы и свойства). Объект `$psISE.CurrentFile` и все файлы в коллекции "Файлы" на вкладке PowerShell являются экземплярами класса \*\***Microsoft.PowerShell.Host.ISE.ISEFile**.
+Объект **ISEFile** представляет файл в интегрированной среде скриптов (ISE) Windows PowerShell&reg;. Он является экземпляром класса **Microsoft.PowerShell.Host.ISE.ISEFile**. В этом разделе перечислены его члены (методы и свойства). Объект `$psISE.CurrentFile` и все файлы в коллекции "Файлы" на вкладке PowerShell являются экземплярами класса \*\***Microsoft.PowerShell.Host.ISE.ISEFile**.
 
 ## <a name="methods"></a>Методы
 
@@ -25,7 +25,7 @@ ms.locfileid: "83809890"
 
 ### <a name="exceptions"></a>Исключения
 
-- **System.IO.IOException**: не удалось сохранить файл.
+- **System.IO.IOException** : не удалось сохранить файл.
 
 ```powershell
 # Save the file using the default encoding (UTF8)
@@ -51,9 +51,9 @@ $myfile.Encoding
 
 ### <a name="exceptions"></a>Исключения
 
-- **System.ArgumentNullException**: параметр **filename** имеет значение NULL.
-- **System.ArgumentException**: параметр **filename** пуст.
-- **System.IO.IOException**: не удалось сохранить файл.
+- **System.ArgumentNullException** : параметр **filename** имеет значение NULL.
+- **System.ArgumentException** : параметр **filename** пуст.
+- **System.IO.IOException** : не удалось сохранить файл.
 
 ```powershell
 # Save the file with a full path and name.

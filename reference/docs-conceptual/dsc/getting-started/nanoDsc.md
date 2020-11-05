@@ -2,18 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Использование DSC на сервере Nano Server
-ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC — это дополнительный пакет, который можно установить при создании VHD для Windows Nano Server.
+ms.openlocfilehash: 18585323359abd85515d4db194dae4adbad7c3d8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953861"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647075"
 ---
 # <a name="using-dsc-on-nano-server"></a>Использование DSC на сервере Nano Server
 
 > Область применения: Windows PowerShell 5.0
 
-**DSC для Nano Server** — это дополнительный пакет в папке `NanoServer\Packages` носителей Windows Server 2016. Пакет можно установить при создании виртуального жесткого диска для сервера Nano Server, указав значение **Microsoft-NanoServer-DSC-Package** для параметра **Packages** функции **New-NanoServerImage**. Например, при создании виртуального жесткого диска для виртуальной машины команда будет выглядеть следующим образом.
+**DSC для Nano Server**  — это дополнительный пакет в папке `NanoServer\Packages` носителей Windows Server 2016. Пакет можно установить при создании виртуального жесткого диска для сервера Nano Server, указав значение **Microsoft-NanoServer-DSC-Package** для параметра **Packages** функции **New-NanoServerImage**. Например, при создании виртуального жесткого диска для виртуальной машины команда будет выглядеть следующим образом.
 
 ```powershell
 New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1 -Packages Microsoft-NanoServer-DSC-Package
@@ -44,7 +45,7 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
 - [Get-DscConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus)
 - [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource)
-- [Find-DscResource](/powershell/module/powershellget/find-dscresource?view=powershell-6)
+- [Find-DscResource](/powershell/module/powershellget/find-dscresource)
 - [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)
 - [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum)
 
@@ -80,34 +81,38 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 
 - Полнофункциональные ресурсы.
 
-- **Архив**
-- **Среда**
-- **Файл**
-- **Журнал**
-- **ProcessSet**
-- **Реестр**
-- **Скрипт**
-- **WindowsPackageCab**
-- **WindowsProcess**
-- **WaitForAll** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))
-- **WaitForAny** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))
-- **WaitForSome** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))
+  - **Архив**
+  - **Среда**
+  - **Файл**
+  - **Журнал**
+  - **ProcessSet**
+  - **Реестр**
+  - **Сценарий**
+  - **WindowsPackageCab**
+  - **WindowsProcess**
+  - **WaitForAll** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))
+  - **WaitForAny** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))
+  - **WaitForSome** (см. раздел [Указание межузловых зависимостей](../configurations/crossNodeDependencies.md))
 
 - Ресурсы, функциональность которых не полная.
-- **Группирование**
-- **GroupSet**
 
-  **Проблема**. Приведенные выше ресурсы не работают, если определенный экземпляр вызывается дважды (дважды запускается одна и та же конфигурация).
+  - **Группа**
+  - **GroupSet**
 
-- **Служба**
-- **ServiceSet**
+    **Проблема**. Приведенные выше ресурсы не работают, если определенный экземпляр вызывается дважды (дважды запускается одна и та же конфигурация).
 
-  **Проблема**. Работает только для запуска или остановки службы (атрибут status). Не работает при попытке изменить другие атрибуты службы, например startuptype, credentials, description и т. д. Возникает ошибка такого вида.
+  - **Служба**
+  - **ServiceSet**
 
-  *Не удается найти тип [management.managementobject]: убедитесь в том, что сборка, содержащая этот тип, загружена.*
+    **Проблема**. Работает только для запуска или остановки службы (атрибут status). Не работает при попытке изменить другие атрибуты службы, например startuptype, credentials, description и т. д. Возникает ошибка такого вида.
+
+    ```
+    Cannot find type [management.managementobject]: verify that the assembly containing this type is loaded.
+    ```
 
 - Нефункционирующие ресурсы.
-- **Пользователь**
+
+  - **Пользователь**
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Функции DSC, недоступные на сервере Nano Server
 

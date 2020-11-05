@@ -2,19 +2,20 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 4.0
-ms.openlocfilehash: 9259c624c8725f7d76f61e9ad7caa42e1bfa308c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье описывается, как настроить опрашиваемый клиент с использованием идентификаторов конфигураций в PowerShell 4.0.
+ms.openlocfilehash: 2a3d7b79f29030620cddc2b2131cb4432e41e4eb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955151"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92649011"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>Настройка опрашивающего клиента с помощью идентификаторов конфигурации в PowerShell 4.0
 
->Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
+>Область применения: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> Опрашивающий сервер (компонент Windows *служба DSC*) — поддерживаемый компонент Windows Server, но реализация новых функций и возможностей для него не планируется. Рекомендуется начать перенос управляемых клиентов на [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (включает возможности опрашивающего сервера в Windows Server) или на одно из решений сообщества, указанных [в следующем списке](pullserver.md#community-solutions-for-pull-service).
+> Опрашивающий сервер (компонент Windows *служба DSC* ) — поддерживаемый компонент Windows Server, но реализация новых функций и возможностей для него не планируется. Рекомендуется начать перенос управляемых клиентов на [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (включает возможности опрашивающего сервера в Windows Server) или на одно из решений сообщества, указанных [в следующем списке](pullserver.md#community-solutions-for-pull-service).
 
 Перед настройкой опрашивающего клиента необходимо настроить опрашиваемый сервер. Хотя этот порядок необязателен, он помогает устранять неполадки и гарантировать, что регистрация пройдет успешно. Чтобы настроить опрашиваемый сервер, можно воспользоваться следующими руководствами:
 
@@ -25,9 +26,9 @@ ms.locfileid: "71955151"
 
 ## <a name="configure-the-pull-client-lcm"></a>Настройка LCM опрашивающего клиента
 
-После запуска любого из примеров ниже будет создана новая выходная папка **PullClientConfigID**, в которую будет помещен MOF-файл метаконфигурации. В этом случае MOF-файл метаконфигурации будет называться `localhost.meta.mof`.
+После запуска любого из примеров ниже будет создана новая выходная папка **PullClientConfigID** , в которую будет помещен MOF-файл метаконфигурации. В этом случае MOF-файл метаконфигурации будет называться `localhost.meta.mof`.
 
-Чтобы применить конфигурацию, вызовите командлет **Set-DscLocalConfigurationManager**, в параметре **Path** которого задано расположение MOF-файла метаконфигурации. Пример:
+Чтобы применить конфигурацию, вызовите командлет **Set-DscLocalConfigurationManager** , в параметре **Path** которого задано расположение MOF-файла метаконфигурации. Пример:
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigId –Verbose.
@@ -35,9 +36,9 @@ Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientC
 
 ## <a name="configuration-id"></a>Идентификатор конфигурации
 
-В следующих примерах свойство **ConfigurationID** LCM заносится в значение **GUID**, которое было создано специально для этой цели. Идентификатор **ConfigurationID** — это то, что LCM использует для поиска соответствующей конфигурации на опрашивающем сервере. MOF-файл конфигурации на опрашивающем сервере должен иметь имя `ConfigurationID.mof`, где *ConfigurationID* является значением свойства **ConfigurationID** LCM целевого узла. Дополнительные сведения см. в разделе [Публикация конфигураций на опрашиваемом сервере (версии 4 и 5)](publishConfigs.md).
+В следующих примерах свойство **ConfigurationID** LCM заносится в значение **GUID** , которое было создано специально для этой цели. Идентификатор **ConfigurationID**  — это то, что LCM использует для поиска соответствующей конфигурации на опрашивающем сервере. MOF-файл конфигурации на опрашивающем сервере должен иметь имя `ConfigurationID.mof`, где *ConfigurationID* является значением свойства **ConfigurationID** LCM целевого узла. Дополнительные сведения см. в разделе [Публикация конфигураций на опрашиваемом сервере (версии 4 и 5)](publishConfigs.md).
 
-Можно создать случайный **GUID**, как показано в следующем примере.
+Можно создать случайный **GUID** , как показано в следующем примере.
 
 ```powershell
 [System.Guid]::NewGuid()
@@ -49,7 +50,7 @@ Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientC
 
 ## <a name="http-dsc-pull-server"></a>Опрашиваемый сервер DSC HTTP
 
-Если опрашиваемый сервер настроен как веб-служба, задайте параметру **DownloadManagerName** значение **WebDownloadManager**. Для параметра **WebDownloadManager** необходимо указать значение **ServerUrl** для ключа **DownloadManagerCustomData**. Можно также указать значение для **AllowUnsecureConnection**, как показано в приведенном ниже примере. Следующий сценарий настраивает LCM для опроса конфигураций с сервера PullServer.
+Если опрашиваемый сервер настроен как веб-служба, задайте параметру **DownloadManagerName** значение **WebDownloadManager**. Для параметра **WebDownloadManager** необходимо указать значение **ServerUrl** для ключа **DownloadManagerCustomData**. Можно также указать значение для **AllowUnsecureConnection** , как показано в приведенном ниже примере. Следующий сценарий настраивает LCM для опроса конфигураций с сервера PullServer.
 
 ```powershell
 Configuration PullClientConfigId
@@ -71,7 +72,7 @@ PullClientConfigId -Output "."
 
 ## <a name="smb-share"></a>Общий ресурс SMB
 
-Если опрашиваемый сервер настроен как файловый ресурс SMB, а не веб-служба, укажите **DownloadManagerName** для **DscFileDownloadManager**, а не **WebDownLoadManager**. Для параметра **DscFileDownloadManager** необходимо указать свойство **SourcePath** в разделе **DownloadManagerCustomData**. Следующий сценарий настраивает LCM для опроса конфигураций из общего ресурса SMB "SmbDscShare" на сервере "CONTOSO-SERVER".
+Если опрашиваемый сервер настроен как файловый ресурс SMB, а не веб-служба, укажите **DownloadManagerName** для **DscFileDownloadManager** , а не **WebDownLoadManager**. Для параметра **DscFileDownloadManager** необходимо указать свойство **SourcePath** в разделе **DownloadManagerCustomData**. Следующий сценарий настраивает LCM для опроса конфигураций из общего ресурса SMB "SmbDscShare" на сервере "CONTOSO-SERVER".
 
 ```powershell
 Configuration PullClientConfigId
@@ -95,10 +96,10 @@ PullClientConfigId -Output "."
 
 После настройки опрашивающего клиента можно воспользоваться следующими руководствами для выполнения дальнейших шагов:
 
-- [Публикация конфигураций на опрашиваемом сервере (версии 4 и 5)](publishConfigs.md)
+- [Публикация конфигураций на опрашиваемом сервере (версия 4 и 5)](publishConfigs.md)
 - [Упаковка и передача ресурсов на опрашиваемый сервер (версия 4)](package-upload-resources.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Опрашивающая служба Desired State Configuration](pullServer.md)
 - [Настройка опрашиваемого SMB-сервера DSC](pullServerSMB.md)

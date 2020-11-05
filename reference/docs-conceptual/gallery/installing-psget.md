@@ -1,14 +1,13 @@
 ---
 ms.date: 09/19/2019
-contributor: manikb
-keywords: коллекция,powershell,командлет,psget
 title: Установка PowerShellGet
-ms.openlocfilehash: 4a10699be9ff2b64e5848c6749bdd3dedf55e3c7
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
+description: В этой статье описывается, как установить модуль PowerShellGet в разных версиях PowerShell.
+ms.openlocfilehash: 06ec331446849784bb8464912fbce0e5a940823f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162517"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662151"
 ---
 # <a name="installing-powershellget"></a>Установка PowerShellGet
 
@@ -56,7 +55,7 @@ Exit
 #### <a name="preparatory-step-on-computers-running-powershell-30"></a>Подготовительные действия на компьютерах с PowerShell 3.0
 
 Инструкции, приведенные в разделах ниже, устанавливают модули в каталоге `$env:ProgramFiles\WindowsPowerShell\Modules`.
-В PowerShell 3.0 этот каталог отсутствует в `$env:PSModulePath` по умолчанию, поэтому его необходимо добавить, чтобы модули загружались автоматически. 
+В PowerShell 3.0 этот каталог отсутствует в `$env:PSModulePath` по умолчанию, поэтому его необходимо добавить, чтобы модули загружались автоматически.
 
 Откройте сеанс Windows PowerShell с повышенными привилегиями и выполните в нем следующую команду (действие будет заметно в будущих сеансах).
 
@@ -70,7 +69,7 @@ Exit
 
 #### <a name="computers-with-the-packagemanagement-preview-installed"></a>Компьютеры с установленной предварительной версией PackageManagement
 
-> [!NOTE] 
+> [!NOTE]
 > Предварительная версия PackageManagement была загружаемым компонентом, который обеспечивал доступность PowerShellGet для PowerShell версий 3 и 4, но сейчас он недоступен.
 > Чтобы проверить, установлен ли он на данном компьютере, выполните `Get-Module -ListAvailable PowerShellGet`.
 
@@ -85,7 +84,7 @@ Exit
 1. Снова откройте консоль PowerShell с повышенными привилегиями, а затем выполните следующую команду.
 
    ```powershell
-   'PowerShellGet', 'PackageManagement' | % { 
+   'PowerShellGet', 'PackageManagement' | % {
      $targetDir = "$env:ProgramFiles\WindowsPowerShell\Modules\$_"
      Remove-Item $targetDir\* -Recurse -Force
      Copy-Item C:\LocalFolder\$_\*\* $targetDir\ -Recurse -Force
@@ -102,8 +101,8 @@ Exit
    Save-Module -Name PowerShellGet -Path C:\LocalFolder -Repository PSGallery
    ```
 
-1. Скопируйте соответствующую вложенную папку `<version>` в папках **PowerShellGet** и **PackageManagement** на компьютер, на котором не установлен **PowerShellGet**, в папки `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` и `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\` соответственно (требуется сеанс с повышенными правами).
-   
+1. Скопируйте соответствующую вложенную папку `<version>` в папках **PowerShellGet** и **PackageManagement** на компьютер, на котором не установлен **PowerShellGet** , в папки `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` и `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\` соответственно (требуется сеанс с повышенными правами).
+
 1. Например, если у вас есть доступ к папке загрузки на другом компьютере (скажем, `ws1`), с целевого компьютера по UNC-пути (допустим, `\\ws1\C$\LocalFolder`) откройте консоль PowerShell с повышенными правами и выполните следующую команду.
 
    ```powershell

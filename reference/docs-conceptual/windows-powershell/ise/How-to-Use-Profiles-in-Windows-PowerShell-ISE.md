@@ -1,17 +1,17 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,командлет
 title: Использование профилей в интегрированной среде сценариев Windows PowerShell
-ms.openlocfilehash: da7dc2f234ad0c2968fbb213e9e57da875f456e4
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: В этой статье описывается, как использовать профили в Windows PowerShell ISE.
+ms.openlocfilehash: e677a4aaa3b2b8b76f289b0797aaa75c80c2b370
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808820"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663756"
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Использование профилей в интегрированной среде сценариев Windows PowerShell
 
-В этой статье объясняется, как использовать профили в интегрированной среде скриптов Windows PowerShell®. Перед выполнением задач из этого раздела рекомендуется ознакомиться со статьей [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles) либо в области консоли ввести `Get-Help about_Profiles` и нажать клавишу <kbd>ВВОД</kbd>.
+В этой статье описывается, как использовать профили в интегрированной среде скриптов Windows PowerShell&reg;. Перед выполнением задач из этого раздела рекомендуется ознакомиться со статьей [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles) либо в области консоли ввести `Get-Help about_Profiles` и нажать клавишу <kbd>ВВОД</kbd>.
 
 Профиль — это сценарий интегрированной среды сценариев Windows PowerShell, который выполняется автоматически при запуске нового сеанса.
 Можно создать один или несколько профилей Windows PowerShell для интегрированной среды сценариев Windows PowerShell и использовать их для настройки среды Windows PowerShell для интегрированной среды сценариев Windows PowerShell, подготавливая ее к работе с помощью переменных, псевдонимов, функций, а также настроек цветов и шрифтов, которые должны быть доступны. Профиль затрагивает каждый запускаемый сеанс интегрированной среды сценариев Windows PowerShell.
@@ -19,7 +19,7 @@ ms.locfileid: "83808820"
 > [!NOTE]
 > Политика выполнения Windows PowerShell определяет, можно ли запускать сценарии и загружать профиль.
 > Политика выполнения по умолчанию (Restricted) запрещает выполнение всех сценариев, включая профили.
-> При использовании политики "Restricted" загрузить профиль нельзя. Дополнительные сведения о политике выполнения см. в статье [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+> При использовании политики Restricted загрузить профиль нельзя. Дополнительные сведения о политике выполнения см. в статье [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 ## <a name="selecting-a-profile-to-use-in-the-windows-powershell-ise"></a>Выбор профиля для использования в интегрированной среде сценариев Windows PowerShell
 
@@ -29,7 +29,7 @@ ms.locfileid: "83808820"
 
 - Если для запуска Windows PowerShell используется только интегрированная среда сценариев Windows PowerShell, сохраните все элементы в одном из профилей интегрированной среды сценариев, таком как **CurrentUserCurrentHost** или **AllUsersCurrentHost** для интегрированной среды сценариев Windows PowerShell.
 
-- Если для запуска Windows PowerShell используется несколько основных программ, сохраните свои функции, псевдонимы, переменные и команды в профиле, затрагивающем все основные программы, таком как CurrentUserAllHosts или **AllUsersAllHosts**, и сохраните функции интегрированной среды сценариев, такие как настройки цветов и шрифтов, в профиле **CurrentUserCurrentHost** или **AllUsersCurrentHost** для интегрированной среды сценариев Windows PowerShell.
+- Если для запуска Windows PowerShell используется несколько основных программ, сохраните свои функции, псевдонимы, переменные и команды в профиле, затрагивающем все основные программы, таком как CurrentUserAllHosts или **AllUsersAllHosts** , и сохраните функции интегрированной среды сценариев, такие как настройки цветов и шрифтов, в профиле **CurrentUserCurrentHost** или **AllUsersCurrentHost** для интегрированной среды сценариев Windows PowerShell.
 
 Ниже указаны профили, которые можно создать и использовать в интегрированной среде сценариев Windows PowerShell. Каждый профиль сохраняется по собственному пути.
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 12/11/2018
-contributor: JKeithB, SydneyhSmith
-keywords: коллекции,powershell,командлет,psgallery
 title: Пакеты с совместимыми выпусками PowerShell или операционных систем
-ms.openlocfilehash: fce1383fa604a555a40b050ce92c5cc45ca7054c
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: В этой статье описывается, как выполнять поиск в коллекции PowerShell по совместимости с указанием платформы или выпуска.
+ms.openlocfilehash: 9806c09c85febfd74bb69adf3d294fb4f559ff23
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691454"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661251"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>Пакеты с совместимыми выпусками PowerShell или операционных систем
 
@@ -41,9 +40,8 @@ ms.locfileid: "83691454"
 ![Результаты поиска элементов, совместимых с Desktop PSEdition](media/searching-by-compatibility/searchresultswithpseditionsdesktop.PNG)
 
 ### <a name="search-for-packages-to-find-compatible-editions-using-powershell"></a>Поиск совместимых выпусков среди пакетов с помощью PowerShell
-Можно указать теги для фильтрации выпуска PowerShell и операционной системы.
-Используйте командлет `Find-Package` с параметром `-Tag`, чтобы указать выпуск (и ОС), который вы используете.
-Пример:
+
+Можно указать теги для фильтрации выпуска PowerShell и операционной системы. Используйте командлет `Find-Package` с параметром `-Tag`, чтобы указать выпуск (и ОС), который вы используете. Пример:
 
 ```powershell
 # Find modules compatible with PowerShell Core:

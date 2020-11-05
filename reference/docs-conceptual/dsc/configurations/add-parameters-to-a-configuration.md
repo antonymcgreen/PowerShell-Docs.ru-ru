@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,resource,gallery,setup
 title: Добавление параметров в конфигурацию
-ms.openlocfilehash: 9aa4c746042e89d7767e1b326233dcca1e5c4c24
-ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
+description: Конфигурации могут быть параметризованы. Так они становятся более динамичными на основе данных, вводимых пользователем.
+ms.openlocfilehash: aea230d34994a7b20076559c44990abe554d5395
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141404"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656809"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Добавление параметров в конфигурацию
 
@@ -36,13 +37,13 @@ Configuration TestConfig
 
 В отличие от функции, атрибут [CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) не добавляет функциональных возможностей. Помимо [общих параметров](/powershell/module/microsoft.powershell.core/about/about_commonparameters), конфигурации могут также использовать следующие встроенные параметры, не требуя их определения пользователем.
 
-|        Параметр        |                                         Description                                          |
+|        Параметр        |                                         Описание                                          |
 | ----------------------- | -------------------------------------------------------------------------------------------- |
 | `-InstanceName`         | Используется при определении [составных конфигураций](compositeconfigs.md)                             |
 | `-DependsOn`            | Используется при определении [составных конфигураций](compositeconfigs.md)                             |
 | `-PSDSCRunAsCredential` | Используется при определении [составных конфигураций](compositeconfigs.md)                             |
 | `-ConfigurationData`    | Используется для передачи структурированных [данных конфигурации](configData.md), применяемых в конфигурации. |
-| `-OutputPath`           | Используется, чтобы указать, где будет скомпилирован файл \<имя_компьютера\>.mof.                      |
+| `-OutputPath`           | Используется, чтобы указать, где будет скомпилирован файл \<computername\>.mof.                      |
 
 ## <a name="adding-your-own-parameters-to-configurations"></a>Добавление собственных параметров в конфигурации
 
@@ -178,7 +179,7 @@ $ServiceName
 $ServiceName
 ```
 
-Для параметра `$State` мы бы хотели запретить пользователю указывать значения за пределами предопределенного набора (например, Running, Stopped). Атрибут `ValidationSet*` будет запрещать пользователю указывать значения за пределами определенного набора (например, Running, Stopped). В следующем примере добавляется атрибут `ValidationSet` для параметра `$State`. Так как мы не хотим изменять параметр `$State` на **обязательный**, нам нужно будет добавить для него значение по умолчанию.
+Для параметра `$State` мы бы хотели запретить пользователю указывать значения за пределами предопределенного набора (например, Running, Stopped). Атрибут `ValidationSet*` будет запрещать пользователю указывать значения за пределами определенного набора (например, Running, Stopped). В следующем примере добавляется атрибут `ValidationSet` для параметра `$State`. Так как мы не хотим изменять параметр `$State` на **обязательный** , нам нужно будет добавить для него значение по умолчанию.
 
 ```powershell
 [ValidateSet("Running", "Stopped")]

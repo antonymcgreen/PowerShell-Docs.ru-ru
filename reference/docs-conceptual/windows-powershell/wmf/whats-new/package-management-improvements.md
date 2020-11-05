@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,установка
 title: Усовершенствования в управлении пакетами в WMF 5.1
-ms.openlocfilehash: 59f76562f4d0e9ef5f50ff94f04f2eb540d39f18
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Windows PowerShell 5.1 включает обновленные командлеты для управления пакетами.
+ms.openlocfilehash: 572ebd1f0aa3cf09579e13c3ea52ae3e979e421f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809300"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663195"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>Усовершенствования в управлении пакетами в WMF 5.1
 

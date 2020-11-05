@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: коллекции,powershell,командлет,psgallery
 title: Приступая к работе с коллекцией PowerShell
-ms.openlocfilehash: bae0af144e6f520142e7eaea3dd0e1039976dae4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье рассказывается, как начать работу с использованием коллекции PowerShell и командлетов PowerShellGet.
+ms.openlocfilehash: 02d84c64e39245b2a16c03029982796a74301bd6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81219699"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661418"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Начало работы с коллекцией PowerShell
 
@@ -32,9 +31,9 @@ PowerShell Gallery — это репозиторий пакета, которы
 - DscResource
 - RoleCapability
 - Get-Help
-- Filter
+- Фильтр
 
-Если вас интересуют только определенные ресурсы DSC в коллекции, выполните командлет [Find-DscResource][]. Командлет Find-DscResource возвращает сведения о ресурсах DSC, содержащихся в коллекции. Поскольку ресурсы DSC всегда являются частью модуля, вам по-прежнему потребуется выполнить командлет [Install-Module][], чтобы установить их.
+Если вас интересуют только определенные ресурсы DSC в коллекции, выполните командлет [Find-DscResource][]. Командлет Find-DscResource возвращает сведения о ресурсах DSC, содержащихся в коллекции. Так как ресурсы DSC всегда являются частью модуля, вам по-прежнему потребуется выполнить командлет [Install-Module][], чтобы установить их.
 
 ## <a name="learning-about-packages-in-the-powershell-gallery"></a>Изучение пакетов в коллекции PowerShell
 
@@ -42,7 +41,7 @@ PowerShell Gallery — это репозиторий пакета, которы
 
 Если вы нашли пакет, который, по вашему мнению, опубликован с нарушениями, щелкните **Сообщить о нарушении** на странице этого пакета.
 
-При использовании командлетов [Find-Module][] или [Find-Script][] эти данные можно доступны в возвращенном объекте PSGetModuleInfo. Например, при выполнении `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member` возвращаются сведения о модуле PSReadLine, содержащемся в коллекции.
+При использовании командлетов [Find-Module][] или [Find-Script][] эти данные можно просмотреть в возвращенном объекте PSGetModuleInfo. Например, при выполнении `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member` возвращаются сведения о модуле PSReadLine, содержащемся в коллекции.
 
 ## <a name="downloading-packages-from-the-powershell-gallery"></a>Скачивание пакетов из коллекции PowerShell
 
@@ -63,14 +62,14 @@ PowerShell Gallery — это репозиторий пакета, которы
 Командлет [Install-Module][] устанавливает модуль в `$env:ProgramFiles\WindowsPowerShell\Modules` по умолчанию.
 Для выполнения этой операции необходима учетная запись администратора. При добавлении параметра `-Scope CurrentUser` модуль будет установлен в каталог `$env:USERPROFILE\Documents\WindowsPowerShell\Modules`.
 
-Командлет [Install-Script][] по умолчанию устанавливает скрипт в каталог `$env:ProgramFiles\WindowsPowerShell\Scripts`.
+[Install-Script][] по умолчанию устанавливает скрипт в каталог `$env:ProgramFiles\WindowsPowerShell\Scripts`.
 Для выполнения этой операции необходима учетная запись администратора. При добавлении параметра `-Scope CurrentUser` скрипт будет установлен в каталог `$env:USERPROFILE\Documents\WindowsPowerShell\Scripts`.
 
 По умолчанию командлеты [Install-Module][] и [Install-Script][] устанавливают последнюю версию пакета. Чтобы установить более раннюю версию пакета, добавьте параметр `-RequiredVersion`.
 
 ### <a name="deploy"></a>Развертывание
 
-Чтобы развернуть пакет из коллекции PowerShell в службе автоматизации Azure, щелкните **Служба автоматизации Azure**, а затем **Deploy to Azure Automation** (Развернуть в службе автоматизации Azure) на странице сведений о пакете. После этого вы будете перенаправлены на портал управления Azure, на который нужно войти с использованием учетных данных учетной записи Azure. Обратите внимание, что развертывание пакетов с зависимостями приводит к развертыванию всех зависимостей в службе автоматизации Azure. Кнопку "Развернуть в службе автоматизации Azure" можно отключить, добавив тег **AzureAutomationNotSupported** в метаданные пакета.
+Чтобы развернуть пакет из коллекции PowerShell в службе автоматизации Azure, щелкните **Служба автоматизации Azure** , а затем **Deploy to Azure Automation** (Развернуть в службе автоматизации Azure) на странице сведений о пакете. После этого вы будете перенаправлены на портал управления Azure, на который нужно войти с использованием учетных данных учетной записи Azure. Обратите внимание, что развертывание пакетов с зависимостями приводит к развертыванию всех зависимостей в службе автоматизации Azure. Кнопку "Развернуть в службе автоматизации Azure" можно отключить, добавив тег **AzureAutomationNotSupported** в метаданные пакета.
 
 Дополнительные сведения о службе автоматизации Azure см. в [соответствующей](/azure/automation) документации.
 

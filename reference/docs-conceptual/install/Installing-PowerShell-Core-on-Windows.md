@@ -1,13 +1,13 @@
 ---
 title: Установка PowerShell в Windows
 description: Сведения об установке PowerShell в Windows
-ms.date: 09/14/2020
-ms.openlocfilehash: 8f1b60ef6bfef5c2434b0affabb5e0e7af392b96
-ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
+ms.date: 10/30/2020
+ms.openlocfilehash: 1b341b496cef34a2a98afeac9d24f0a51e8dbda0
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574459"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142792"
 ---
 # <a name="installing-powershell-on-windows"></a>Установка PowerShell в Windows
 
@@ -95,7 +95,16 @@ Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />Установка ZIP-пакета
 
-Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell. При установке ZIP-архив не проверяется на соответствие требованиям, как при установке MSI-пакетов. Скачайте ZIP-архив со страницы [выпуски][releases]. В зависимости от способа загрузки файла может потребоваться разблокировать файл с помощью командлета `Unblock-File`. Распакуйте содержимое в выбранное расположение и запустите `pwsh.exe`. Для правильного удаленного взаимодействия с помощью WSMan необходимо обеспечить соответствие [предварительным требованиям](#prerequisites).
+Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell. Скачайте один из следующих ZIP-архивов на странице с [выпусками][releases].
+
+- PowerShell-7.0.3-win-x64.zip
+- PowerShell-7.0.3-win-x86.zip
+- PowerShell-7.0.3-win-arm64.zip
+- PowerShell-7.0.3-win-arm32.zip
+
+В зависимости от способа загрузки файла может потребоваться разблокировать файл с помощью командлета `Unblock-File`. Распакуйте содержимое в выбранное расположение и запустите `pwsh.exe`. В отличие от установки пакетов MSI при установке ZIP-архива не выполняется проверка соответствия предварительным требованиям. Для правильного удаленного взаимодействия с помощью WSMan необходимо обеспечить соответствие [предварительным требованиям](#prerequisites).
+
+Используйте этот метод для установки версии PowerShell на основе ARM на таких компьютерах, как Microsoft Surface Pro X. Чтобы получить оптимальные результаты, устанавливайте PowerShell в папку `$env:ProgramFiles\PowerShell\7`.
 
 ## <a name="deploying-on-windows-10-iot-enterprise"></a>Развертывание в Windows 10 IoT Корпоративная
 
@@ -132,26 +141,25 @@ Windows 10 IoT Корпоративная поставляется со сре
    # Be sure to use the -PowerShellHome parameter otherwise it'll try to create a new
    # endpoint with Windows PowerShell 5.1
    .\Install-PowerShellRemoting.ps1 -PowerShellHome .
-   # You'll get an error message and will be disconnected from the device because it has to restart WinRM
+   # You'll get an error message and will be disconnected from the device because
+   # it has to restart WinRM
    ```
 
 1. Подключение к конечной точке PowerShell 7 на устройстве
 
    ```powershell
-   # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
+   # Be sure to use the -Configuration parameter. If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.<version>
    ```
 
 ## <a name="deploying-on-windows-10-iot-core"></a>Развертывание в Windows 10 IoT Базовая
 
-Windows PowerShell добавляется в Windows 10 IoT Базовая, если вы включаете функцию *IOT_POWERSHELL*, которую можно использовать для развертывания PowerShell 7.
-Действия, описанные выше для Windows 10 IoT Корпоративная, могут быть выполнены и для центра Интернета вещей.
+Windows PowerShell добавляется в Windows 10 IoT Базовая, если вы включаете функцию _IOT_POWERSHELL_ , которую можно использовать для развертывания PowerShell 7. Действия, описанные выше для Windows 10 IoT Корпоративная, могут быть выполнены и для центра Интернета вещей.
 
-Чтобы добавить последнюю версию PowerShell в образ для доставки, используйте команду [Import-PSCoreRelease](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/IoTCoreImaging/Docs/Import-PSCoreRelease.md#Import-PSCoreRelease), чтобы включить пакет в рабочую область и добавить *OPENSRC_POWERSHELL* в образ.
+Чтобы добавить последнюю версию PowerShell в образ для доставки, используйте команду [Import-PSCoreRelease][] для включения пакета в рабочую область и добавления _OPENSRC_POWERSHELL_ в образ.
 
 > [!NOTE]
-> В архитектуре ARM64 Windows PowerShell не добавляется при включении *IOT_POWERSHELL*. Поэтому установка на основе ZIP-файла не поддерживается.
-> Для добавления в образ используйте команду Import-PSCoreRelease.
+> В архитектуре ARM64 Windows PowerShell не добавляется при включении _IOT_POWERSHELL_. Поэтому установка на основе ZIP-файла не поддерживается. Для добавления в образ используйте команду `Import-PSCoreRelease`.
 
 ## <a name="deploying-on-nano-server"></a>Развертывание на Nano Server
 
@@ -169,7 +177,7 @@ Windows PowerShell добавляется в Windows 10 IoT Базовая, ес
 1. С помощью любой служебной программы ZIP распакуйте пакет в каталог, находящийся внутри подключенного образа Nano Server.
 1. Отключите образ и загрузите его.
 1. Подключитесь к встроенному экземпляру Windows PowerShell.
-1. Следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра](../learn/remoting/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
+1. Следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра][].
 
 ### <a name="online-deployment-of-powershell"></a>Автономное PowerShell в сети
 
@@ -200,7 +208,7 @@ Windows PowerShell добавляется в Windows 10 IoT Базовая, ес
   Expand-Archive -Path C:\powershell-<version>-win-x64.zip -DestinationPath "C:\PowerShell_<version>"
   ```
 
-- Если вам требуется удаленное взаимодействие на основе WSMan, следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра](../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
+- Если вам требуется удаленное взаимодействие на основе WSMan, следуйте инструкциям, чтобы создать конечную точку удаленного взаимодействия с помощью [методики использования другого экземпляра][].
 
 ## <a name="install-as-a-net-global-tool"></a>Установка в качестве глобального средства .NET
 
@@ -218,7 +226,7 @@ dotnet tool install --global PowerShell
 
 > [!NOTE]
 > В настоящее время инструмент `winget` предоставляется в предварительной версии. Сейчас доступны не все запланированные функции.
-> Параметры и функции этого инструмента могут быть изменены. Не используйте этот метод в сценарии развертывания в рабочей среде. Список системных требований и инструкции по установке см. в документации по [winget].
+> Не используйте этот метод в сценарии развертывания в рабочей среде. Список системных требований и инструкции по установке см. в документации по [winget].
 
 Для установки PowerShell с помощью опубликованных пакетов `winget` можно использовать следующие команды:
 
@@ -249,6 +257,10 @@ PowerShell поддерживает протокол удаленного вза
 - [Удаленное взаимодействие через SSH в PowerShell Core][ssh-remoting]
 - [Удаленное взаимодействие через WSMan в PowerShell Core][wsman-remoting]
 
+## <a name="upgrading-an-existing-installation"></a>Обновление существующей установки
+
+Для получения оптимального результата при обновлении используйте тот же метод установки, который вы использовали при первой установке PowerShell. При использовании разных методов установки PowerShell устанавливается в разные расположения. Если вы не знаете, как была выполнена установка PowerShell, вы можете сравнить расположение установки со сведениями о пакетах из этой статьи. Если установка выполнена с помощью пакета MSI, эти сведения будут отображаться в разделе **Программы и компоненты** Панели управления.
+
 ## <a name="installation-support"></a>Поддержка установки
 
 Корпорация Майкрософт поддерживает методы установки, изложенные в этом документе. В других источниках могут быть доступны другие методы установки. Хотя такие инструменты и методы могут работать, корпорация Майкрософт не поддерживает их.
@@ -260,3 +272,5 @@ PowerShell поддерживает протокол удаленного вза
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
 [winget]: /windows/package-manager/winget
+["еще один метод экземпляра"]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register
+[Import-PSCoreRelease]: https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/IoTCoreImaging/Docs/Import-PSCoreRelease.md#Import-PSCoreRelease

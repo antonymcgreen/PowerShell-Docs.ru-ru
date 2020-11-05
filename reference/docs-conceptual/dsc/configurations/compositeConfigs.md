@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,конфигурация,установка
 title: Вложение конфигураций
-ms.openlocfilehash: e74c0fe1d7f7b198c2d6f796c0bf120eb0ec21d9
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+description: DSC позволяет создавать составные конфигурации путем вложения конфигурации в другую конфигурацию.
+ms.openlocfilehash: d7a81cb9673126e92e9185aacf19c5c7c17da8ca
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564019"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667425"
 ---
 # <a name="nesting-dsc-configurations"></a>Вложение конфигураций DSC
 
@@ -49,10 +50,10 @@ Configuration NestedFileConfig
 }
 ```
 
-В этом примере `FileConfig` принимает два обязательных параметра — **CopyFrom** и **CopyTo**, — которые используются как значения для свойств **SourcePath** и **DestinationPath** в блоке ресурсов `File`. Конфигурация `NestedConfig` вызывает конфигурацию `FileConfig`, как будто это ресурс. Свойства в блоке ресурсов `NestedConfig` (**CopyFrom** и **CopyTo**) — параметры конфигурации `FileConfig`.
+В этом примере `FileConfig` принимает два обязательных параметра — **CopyFrom** и **CopyTo** , — которые используются как значения для свойств **SourcePath** и **DestinationPath** в блоке ресурсов `File`. Конфигурация `NestedConfig` вызывает конфигурацию `FileConfig`, как будто это ресурс. Свойства в блоке ресурсов `NestedConfig` ( **CopyFrom** и **CopyTo** ) — параметры конфигурации `FileConfig`.
 
 Сейчас DSC не поддерживает вложенные конфигурации во вложенных конфигурациях. Допускается только один уровень вложенности конфигурации.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Составные ресурсы: использование DSC как ресурса](../resources/authoringResourceComposite.md)

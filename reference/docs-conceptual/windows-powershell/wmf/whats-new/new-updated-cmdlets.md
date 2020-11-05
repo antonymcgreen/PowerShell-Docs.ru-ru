@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,установка
 title: Новые и обновленные командлеты
-ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Windows PowerShell 5.1 включает множество новых или обновленных командлетов.
+ms.openlocfilehash: bdfbe5a263864a172aefb0aa5731f59b95ab43ca
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809120"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663220"
 ---
 # <a name="new-and-updated-cmdlets"></a>Новые и обновленные командлеты
 
@@ -41,7 +41,7 @@ ms.locfileid: "83809120"
 
 Командлеты Cryptographic Message Syntax поддерживают шифрование и расшифровку содержимого с помощью стандартного формата IETF для криптографической защиты сообщений, задокументированного в [RFC5652](https://tools.ietf.org/html/rfc5652.html).
 
-Стандарт шифрования CMS реализует шифрование с открытым ключом, при котором ключи, используемые для шифрования содержимого (*открытый ключ*) и для его расшифровки (*закрытый ключ*), существуют отдельно.
+Стандарт шифрования CMS реализует шифрование с открытым ключом, при котором ключи, используемые для шифрования содержимого ( *открытый ключ* ) и для его расшифровки ( *закрытый ключ* ), существуют отдельно.
 
 Открытый ключ можно свободно распространять, так как он не относится к конфиденциальным сведениям. Любое содержимое, зашифрованное с помощью открытого ключа, можно расшифровать только с помощью закрытого ключа. Дополнительные сведения см. на странице о [шифровании с открытым ключом](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
@@ -102,11 +102,11 @@ ProductVersion    : 10.0.17763.1
 
 ## <a name="get-childitem-has--depth-parameter"></a>Get-ChildItem получает параметр -Depth
 
-Теперь `Get-ChildItem` имеет параметр **Depth**, используемый вместе с **Recurse** для ограничения рекурсии:
+Теперь `Get-ChildItem` имеет параметр **Depth** , используемый вместе с **Recurse** для ограничения рекурсии:
 
 ## <a name="modules-support-for-declaring-version-ranges-1-etc"></a>Поддержка модулей для объявления диапазонов версий (1.* и т. д.)
 
-Теперь вы можете сочетать **MinimumVersion** и **MaximumVersion**, чтобы импортировать модуль из определенного диапазона. Параметры также поддерживают подстановочные знаки.
+Теперь вы можете сочетать **MinimumVersion** и **MaximumVersion** , чтобы импортировать модуль из определенного диапазона. Параметры также поддерживают подстановочные знаки.
 
 ```powershell
 Import-Module psreadline -Verbose -MinimumVersion 1.0 -MaximumVersion 1.2.*
@@ -138,7 +138,7 @@ e19d6ea5-3cc2-4db9-8095-0cdaed5a703d
 
 ## <a name="nonewline-parameter"></a>Параметр NoNewLine
 
-Теперь для `Out-File`, `Add-Content` и `Set-Content` есть новый параметр **NoNewline**, который пропускает новую строку после выходных данных. Пример:
+Теперь для `Out-File`, `Add-Content` и `Set-Content` есть новый параметр **NoNewline** , который пропускает новую строку после выходных данных. Пример:
 
 ```powershell
 "This is " | Out-File -FilePath Example.txt -NoNewline
@@ -208,7 +208,7 @@ New-Item -ItemType Junction -Path C:\Temp\MyJunctionDir -Value $pshome
 
 ### <a name="get-childitem"></a>Get-ChildItem
 
-`Get-ChildItem` теперь отображает "l" в свойстве **Mode**, указывающем на файл или каталог символьной ссылки.
+`Get-ChildItem` теперь отображает "l" в свойстве **Mode** , указывающем на файл или каталог символьной ссылки.
 
 ```powershell
 Get-ChildItem C:\Temp | sort LastWriteTime -Descending
@@ -234,7 +234,7 @@ Remove-Item C:\Temp\MySymLinkFile.txt
 Remove-Item C:\Temp\MySymLinkDir
 ```
 
-Используйте параметр **Force**, чтобы удалить файлы в целевом каталоге и символьную ссылку.
+Используйте параметр **Force** , чтобы удалить файлы в целевом каталоге и символьную ссылку.
 
 ```powershell
 Remove-Item C:\Temp\MySymLinkDir -Force
@@ -297,7 +297,7 @@ Export-ODataEndpointProxy -Uri $uri -OutputModule $generatedProxyModuleDir -Forc
 
 В следующем примере мы получаем данные о самом популярном продукте и записываем выходные данные в переменную `$infoStream`.
 
-Указав параметр **IncludeTotalResponseCount**, мы получаем общее число всех записей **Product**, доступных на сервере.
+Указав параметр **IncludeTotalResponseCount** , мы получаем общее число всех записей **Product** , доступных на сервере.
 
 ```powershell
 Import-Module $generatedProxyModuleDir -Force
@@ -318,7 +318,7 @@ while($skipCount -le $additionalInfo['odata.count'])
 }
 ```
 
-Созданные командлеты прокси-сервера поддерживают параметр **Select**, используемый в качестве фильтра, чтобы получить только свойства записей, необходимые клиенту. Это уменьшает объем передаваемых по сети данных, так как фильтрация выполняется на стороне сервера.
+Созданные командлеты прокси-сервера поддерживают параметр **Select** , используемый в качестве фильтра, чтобы получить только свойства записей, необходимые клиенту. Это уменьшает объем передаваемых по сети данных, так как фильтрация выполняется на стороне сервера.
 
 ```powershell
 Get-Product -Top 2 -AllowUnsecureConnection -AllowAdditionalData -Select Name

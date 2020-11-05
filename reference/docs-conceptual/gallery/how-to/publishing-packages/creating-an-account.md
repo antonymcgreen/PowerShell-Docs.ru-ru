@@ -1,21 +1,20 @@
 ---
 ms.date: 09/11/2018
-contributor: JKeithB
-keywords: коллекции,powershell,командлет,psgallery
 title: Создание учетной записи коллекции PowerShell
-ms.openlocfilehash: f43d7e65bb8bf9a9bbdda9790cc622786377fa38
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: В этой статье описываются требования к учетной записи пользователя для работы с коллекцией PowerShell.
+ms.openlocfilehash: 24c7531e61128415a284d1b438b43f3af0d1053a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278792"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662611"
 ---
 # <a name="creating-a-powershell-gallery-account"></a>Создание учетной записи коллекции PowerShell
 
 Перед публикацией чего-либо в коллекцию PowerShell необходимо создать учетную запись коллекции PowerShell.
 Учетные записи коллекции PowerShell должны быть связаны с учетной записью входа с поддержкой электронной почты. Эта учетная запись может быть учетной записью Azure Active Directory или идентификатором Майкрософт, таким как учетная запись электронной почты outlook.com или hotmail.com.
 
-Чтобы создать учетную запись коллекции PowerShell, перейдите на веб-сайт по адресу [https://PowerShellGallery.com](https://PowerShellGallery.com) и выберите пункт **Войти**, как показано на следующем рисунке.
+Чтобы создать учетную запись коллекции PowerShell, перейдите на веб-сайт по адресу [https://PowerShellGallery.com](https://PowerShellGallery.com) и выберите пункт **Войти** , как показано на следующем рисунке.
 
 ![Регистрация новой учетной записи](media/creating-an-account/CreateAccount-Register.png)
 

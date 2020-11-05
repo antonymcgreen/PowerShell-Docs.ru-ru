@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Контрольный список для создания ресурсов
-ms.openlocfilehash: f21e2e8563880e0c10cf50b044e9c56ca09fe0fa
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: В этой статье приведен контрольный список рекомендаций, которые следует соблюдать при создании ресурса DSC.
+ms.openlocfilehash: 5b618511f730c80104620c84e693c13ae4f536ac
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217650"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656342"
 ---
 # <a name="resource-authoring-checklist"></a>Контрольный список для создания ресурсов
 

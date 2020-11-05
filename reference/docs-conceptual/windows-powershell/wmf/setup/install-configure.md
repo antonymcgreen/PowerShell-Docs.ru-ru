@@ -1,15 +1,13 @@
 ---
 ms.date: 06/10/2020
-ms.topic: conceptual
-keywords: wmf,powershell,установка
-contributor: keithb
 title: Установка и настройка WMF 5.1
-ms.openlocfilehash: 9e0b4b6ed387b0a0d7fcf62a913677986d70de92
-ms.sourcegitcommit: 4a283fe5419f47102e6c1de7060880a934842ee9
+description: В этой статье описывается, как установить WMF 5.1 и необходимые компоненты.
+ms.openlocfilehash: 0e076bfab684b6c83d62d236eea3bbd7ab2ad411
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84671399"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660837"
 ---
 # <a name="install-and-configure-wmf-51"></a>Установка и настройка WMF 5.1
 
@@ -65,8 +63,8 @@ ms.locfileid: "84671399"
 
    `Install-WMF5.1.ps1` принимает следующие параметры для упрощения автоматизации установки в Windows Server 2008 R2 и Windows 7:
 
-   - **AcceptEula**: если этот параметр включен, условия EULA принимаются автоматически и не будут отображены.
-   - **AllowRestart**: этот параметр можно использовать, только если указан параметр AcceptEula. Если этот параметр включен и после установки WMF 5.1 требуется перезагрузка, она будет выполнена без запроса сразу после завершения установки.
+   - **AcceptEula** : если этот параметр включен, условия EULA принимаются автоматически и не будут отображены.
+   - **AllowRestart** : этот параметр можно использовать, только если указан параметр AcceptEula. Если этот параметр включен и после установки WMF 5.1 требуется перезагрузка, она будет выполнена без запроса сразу после завершения установки.
 
 ## <a name="winrm-dependency"></a>Зависимость от WinRM
 

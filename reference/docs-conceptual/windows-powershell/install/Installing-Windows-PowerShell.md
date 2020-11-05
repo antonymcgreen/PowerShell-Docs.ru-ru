@@ -1,13 +1,13 @@
 ---
 ms.date: 08/09/2017
-keywords: powershell, cmdlet, командлет, download, скачать, install, установить, setup, установка, windows 10, windows 8.1, windows 8.0, windows 7
 title: Установка Windows PowerShell
-ms.openlocfilehash: 26675eb0b213818eaa72e148f0814545ee9f960e
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: В этой статье описывается, как установить Windows PowerShell в различных версиях Windows.
+ms.openlocfilehash: 04e6d791e6895dd50825c58c905ff9cf8fa86ca8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236226"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663984"
 ---
 # <a name="installing-windows-powershell"></a>Установка Windows PowerShell
 
@@ -39,13 +39,13 @@ Windows PowerShell установлен по умолчанию в каждой 
 
 ## <a name="finding-powershell-in-windows-server-versions"></a>Поиск PowerShell в версиях Windows Server
 
-Начиная с Windows Server 2008 R2, операционную систему Windows можно установить без графического пользовательского интерфейса (GUI). Выпуски Windows Server без GUI называются выпусками **Core**, а выпуски с GUI — **Desktop**.
+Начиная с Windows Server 2008 R2, операционную систему Windows можно установить без графического пользовательского интерфейса (GUI). Выпуски Windows Server без GUI называются выпусками **Core** , а выпуски с GUI — **Desktop**.
 
 ### <a name="windows-server-core-editions"></a>Выпуски Windows Server Core
 
 Во всех выпусках Core при входе на сервер открывается окно командной строки Windows.
 
-Введите `powershell` и нажмите клавишу **ВВОД**, чтобы запустить PowerShell в сеансе командной строки. Введите `exit`, чтобы завершить сеанс PowerShell и вернуться к командной строке.
+Введите `powershell` и нажмите клавишу **ВВОД** , чтобы запустить PowerShell в сеансе командной строки. Введите `exit`, чтобы завершить сеанс PowerShell и вернуться к командной строке.
 
 ### <a name="windows-server-desktop-editions"></a>Выпуски Windows Server Desktop
 
@@ -75,7 +75,7 @@ Windows PowerShell установлен по умолчанию в каждой 
 
 ## <a name="need-azure-powershell"></a>Необходимость Azure PowerShell
 
-Если вы ищете **Azure PowerShell**, можно начать с раздела [Общие сведения об Azure PowerShell](/powershell/azure/overview).
+Если вы ищете **Azure PowerShell** , можно начать с раздела [Общие сведения об Azure PowerShell](/powershell/azure/overview).
 
 Либо вам нужен раздел [Установка и настройка Azure PowerShell](/powershell/azure/install-az-ps)
 

@@ -1,16 +1,15 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: коллекции,powershell,командлет,psgallery
 title: Часто задаваемые вопросы по коллекции PowerShell
-ms.openlocfilehash: 29f930cf552abec8acbbf02f5570c6ac0a14066d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: Часто задаваемые вопросы о коллекции PowerShell
+ms.openlocfilehash: 045db04d49e0c65f807fef254a17bf20bb877ff6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777818"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654162"
 ---
-# <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
+# <a name="frequently-asked-questions-about-the-powershell-gallery"></a>Часто задаваемые вопросы о коллекции PowerShell
 
 ## <a name="what-is-a-powershell-module"></a>Что такое модуль PowerShell?
 
@@ -65,7 +64,7 @@ ms.locfileid: "87777818"
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>Как создать правильно сформированный манифест модуля?
 
-Самый простой способ создать манифест модуля — выполнить командлет [New-ModuleManifest][]. В PowerShell 5.0 или более поздней версии командлет New-ModuleManifest создает правильно сформированный манифест модуля с пустыми полями для нужных метаданных, такими как **ProjectUri**, **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный манифест в качестве примера правильного формата.
+Самый простой способ создать манифест модуля — выполнить командлет [New-ModuleManifest][]. В PowerShell 5.0 или более поздней версии командлет New-ModuleManifest создает правильно сформированный манифест модуля с пустыми полями для нужных метаданных, такими как **ProjectUri** , **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный манифест в качестве примера правильного формата.
 
 Чтобы убедиться, что все необходимые поля метаданных заполнены правильно, используйте командлет [Test-ModuleManifest][].
 
@@ -94,7 +93,7 @@ ms.locfileid: "87777818"
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>Как создать правильно сформированный файл сценария?
 
-Самый простой способ создать правильно сформированный файл сценария — выполнить командлет [New-ScriptFileInfo][]. В PowerShell 5.0 командлет New-ScriptFileInfo создает правильно сформированный файл сценария с пустыми полями для нужных метаданных, такими как **ProjectUri**, **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный файл сценария в качестве примера правильного формата.
+Самый простой способ создать правильно сформированный файл сценария — выполнить командлет [New-ScriptFileInfo][]. В PowerShell 5.0 командлет New-ScriptFileInfo создает правильно сформированный файл сценария с пустыми полями для нужных метаданных, такими как **ProjectUri** , **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный файл сценария в качестве примера правильного формата.
 
 Чтобы убедиться, что все необходимые поля метаданных заполнены правильно, используйте командлет [Test-ScriptFileInfo][].
 

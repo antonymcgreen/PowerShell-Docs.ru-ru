@@ -2,18 +2,19 @@
 ms.date: 08/11/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Прямой вызов методов ресурсов DSC
-ms.openlocfilehash: 029a278c938e414820e172b85fac3cb3ad4b4afa
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
+description: Командлет Invoke-DscResource можно использовать для вызова функций или методов ресурса DSC. Этот командлет могут использовать сторонние разработчики, которым требуется использовать ресурсы DSC. Кроме того, он удобен для разработки ресурсов.
+ms.openlocfilehash: 5ccf0f589b60cef4ec197d1e0a583af9ed60d5e7
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162500"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650991"
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Прямой вызов методов ресурсов DSC
 
->Область применения: Windows PowerShell 5.0
+> Область применения: Windows PowerShell 5.0
 
-Командлет [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource) можно использовать для прямого вызова функций или методов ресурса DSC (функций `Get-TargetResource`, `Set-TargetResource` и `Test-TargetResource` ресурса на основе MOF-файла или методов **Get**, **Set** и **Test** ресурса на основе класса). Этот командлет могут использовать сторонние разработчики, которым требуется использовать ресурсы DSC, кроме того, он удобен для разработки ресурсов.
+Командлет [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource) можно использовать для прямого вызова функций или методов ресурса DSC (функций `Get-TargetResource`, `Set-TargetResource` и `Test-TargetResource` ресурса на основе MOF-файла или методов **Get** , **Set** и **Test** ресурса на основе класса). Этот командлет могут использовать сторонние разработчики, которым требуется использовать ресурсы DSC, кроме того, он удобен для разработки ресурсов.
 
 > [!NOTE]
 > В PowerShell 7.0 и более поздних версий `Invoke-DscResource` больше не поддерживает вызов ресурсов DSC WMI. Сюда входят ресурсы **файл** и **журнал** в **PSDesiredStateConfiguration**.
@@ -51,7 +52,7 @@ $result = Invoke-DscResource -Name File -Method Get -Property @{
 $result.ItemValue | fl
 ```
 
->[!NOTE]
+> [!NOTE]
 > Прямой вызов методов составного ресурса не поддерживается. Вместо этого вызывайте методы базовых ресурсов, входящих в составной ресурс.
 
 ## <a name="see-also"></a>См. также:
