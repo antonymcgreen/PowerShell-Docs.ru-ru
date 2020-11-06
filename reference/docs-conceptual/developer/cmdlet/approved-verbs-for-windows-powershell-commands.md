@@ -3,12 +3,12 @@ ms.date: 09/07/2018
 ms.topic: reference
 title: Утвержденные команды для PowerShell
 description: Утвержденные команды для PowerShell
-ms.openlocfilehash: 237355ba9729cfe16c335b39f19ab20e40999457
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: fc1ff989ae86862e0f9cc24d8bcba2ff02ef68cc
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92655824"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355108"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Утвержденные команды для PowerShell
 
@@ -18,13 +18,7 @@ ms.locfileid: "92655824"
 > [!NOTE]
 > PowerShell использует термин _глагол_ для обозначения слова, которое подразумевает действие, даже если это слово не является глаголом в лингвистическом смысле. Например, термин _New_ считается в PowerShell глаголом, так как подразумевает действие, хотя в переводе это слово означает "новый" и не является глаголом.
 
-<!--
-01234567890123456789012345678901234567890123456789012345678901234567890123456789
--->
-
-У каждой утвержденной команды есть соответствующий _префикс псевдонима_ .
-Мы используем префикс псевдонима в псевдонимах для команд, использующих эту команду.
-Например, префикс псевдонима для `Import` — `ip`, а для `Import-Module` — `ipmo`.  Это рекомендация, а не правило. В частности, эту рекомендацию не нужно учитывать для псевдонимов команд, копирующих хорошо известные команды из других сред.
+У каждой утвержденной команды есть соответствующий _префикс псевдонима_. Мы используем префикс псевдонима в псевдонимах для команд, использующих эту команду. Например, префикс псевдонима для `Import` — `ip`, а для `Import-Module` — `ipmo`. Это рекомендация, а не правило. В частности, эту рекомендацию не нужно учитывать для псевдонимов команд, копирующих хорошо известные команды из других сред.
 
 ## <a name="verb-naming-recommendations"></a>Рекомендации по именованию команд
 
@@ -35,13 +29,13 @@ ms.locfileid: "92655824"
 - Не используйте синоним утвержденной команды. Например, всегда используйте `Remove`, а не `Delete` или `Eliminate`.
 - Используйте команду только в той форме, которая указана в этом разделе. Например, используйте `Get`, но не `Getting` или `Gets`.
 - Не используйте следующие зарезервированные команды или псевдонимы. Язык PowerShell и лишь некоторые из его командлетов используют эти команды в исключительных обстоятельствах.
-    - ForEach (foreach)
-    - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f): упорядочивает объекты в указанной форме или макете
-    - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp): упорядочивает или связывает один или несколько ресурсов
-    - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (pi)
-    - Sort (sr)
-    - Tee (te)
-    - Where (wh)
+  - ForEach (foreach)
+  - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f): упорядочивает объекты в указанной форме или макете
+  - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp): упорядочивает или связывает один или несколько ресурсов
+  - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (pi)
+  - Sort (sr)
+  - Tee (te)
+  - Where (wh)
 
 Полный список команд можно получить с помощью командлета `Get-Verb`.
 
@@ -174,7 +168,7 @@ PowerShell использует класс [System.Management.Automation.VerbsLi
 |[Approve](/dotnet/api/System.Management.Automation.VerbsLifecycle.Approve) (ap)|Утверждает или одобряет состояние ресурса или процесса.||
 |[Assert](/dotnet/api/System.Management.Automation.VerbsLifecycle.Assert) (as)|Подтверждает состояние ресурса.|Certify|
 |[Build](/dotnet/api/System.Management.Automation.VerbsLifecycle.Build) (bd)|Создает артефакт (обычно двоичный код или документ) из набора входных файлов (обычно это исходный код или декларативные документы). Эта команда добавлена в PowerShell 6.||
-|[Complete](/dotnet/api/system.management.automation.host.buffercelltype?view=powershellsdk-1.1.0) (cp)|Завершает операцию.||
+|[Complete](/dotnet/api/system.management.automation.host.buffercelltype) (cp)|Завершает операцию.||
 |[Confirm](/dotnet/api/System.Management.Automation.VerbsLifecycle.Confirm) (cn)|Подтверждает или проверяет состояние ресурса или процесса.|Acknowledge, Agree, Certify, Validate, Verify|
 |[Deny](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deny) (dn)|Отклоняет объекты и блоки или препятствует состоянию ресурса или процесса.|Block, Object, Refuse, Reject|
 |[Deploy](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deploy) (dp)|Отправляет приложение, веб-сайт или решение на удаленный целевой объект таким образом, чтобы потребитель этого решения мог получить к нему доступ после завершения развертывания. Эта команда добавлена в PowerShell 6.||

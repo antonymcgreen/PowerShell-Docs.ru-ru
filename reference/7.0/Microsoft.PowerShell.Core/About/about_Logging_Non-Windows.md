@@ -6,17 +6,16 @@ ms.date: 03/30/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_non-windows?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Logging_Non — Windows
-ms.openlocfilehash: 48f5177ed72c676056422307fa3915be9415952e
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: e1d46acb7dbe85e6c83df3bdcfb355c91a3c2e25
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231762"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354530"
 ---
 # <a name="about-logging-non-windows"></a>Сведения о ведении журнала, не относящемся к Windows
 
 ## <a name="short-description"></a>Краткое описание
-
 PowerShell регистрирует внутренние операции из подсистемы, поставщиков и командлетов.
 
 ## <a name="long-description"></a>Подробное описание
@@ -79,7 +78,7 @@ TIMESTAMP MACHINENAME powershell[PID]: (COMMITID:TID:CID)
    -rw-r--r-- 1 root root   67 Nov 28 12:51 40-powershell.conf
    ```
 
-1. Задайте для свойства владение значение **root** .
+1. Задайте для свойства владение значение **root**.
 
    ```
    chown root:root /etc/rsyslog.d/40-powershell.conf
@@ -96,7 +95,7 @@ TIMESTAMP MACHINENAME powershell[PID]: (COMMITID:TID:CID)
 Самый простой способ просмотра выходных данных журнала PowerShell в macOS — использовать **консольное** приложение.
 
 1. Найдите **консольное** приложение и запустите его.
-1. Выберите имя компьютера в разделе **устройства** .
+1. Выберите имя компьютера в разделе **устройства**.
 1. В поле **поиска** введите `pwsh` для основного двоичного файла PowerShell.
 1. Измените фильтр поиска с `Any` на `Process` .
 1. Выполните операции.
@@ -201,7 +200,7 @@ log show --info --start "2018-04-05 09:00:00" --predicate "process = 'pwsh'"
 
 Свойства для настройки ведения журнала PowerShell перечислены в следующей таблице. Значения, отмеченные звездочкой (например `Operational*` ,), указывают значение по умолчанию, если в файле не указано значение.
 
-|Свойство   |Значения        |Описание                                  |
+|Свойство.   |Значения        |Описание                                  |
 |-----------|--------------|---------------------------------------------|
 |`LogIdentity`|(имя строки) |Имя, используемое при ведении журнала. По умолчанию  |
 |           |оболочк   |идентификатором является PowerShell. Это значение может быть|
@@ -230,7 +229,7 @@ log show --info --start "2018-04-05 09:00:00" --predicate "process = 'pwsh'"
 |           |Сеанс       |                                             |
 |           |манажедплугин |                                             |
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 Сведения о **syslog** и **rsyslog. conf** для Linux см. на локальных страницах компьютера Linux `man` .
 

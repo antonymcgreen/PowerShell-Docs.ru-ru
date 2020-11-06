@@ -1,23 +1,22 @@
 ---
-description: PowerShell регистрирует внутренние операции из подсистемы, поставщиков и командлетов.
+description: PowerShell регистрирует внутренние операции из подсистемы, поставщиков и командлетов в журнале событий Windows.
 keywords: powershell
 Locale: en-US
 ms.date: 03/30/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Logging — Windows
-ms.openlocfilehash: e4f6134d4e9e7445233dea223e0a381e45bfb8e2
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 08b2ad8ecd3451f7cb24600b37fad19cd7fc8161
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231418"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354821"
 ---
 # <a name="about-logging-windows"></a>Сведения о окнах ведения журнала
 
 ## <a name="short-description"></a>Краткое описание
-
-PowerShell регистрирует внутренние операции из подсистемы, поставщиков и командлетов.
+PowerShell регистрирует внутренние операции из подсистемы, поставщиков и командлетов в журнале событий Windows.
 
 ## <a name="long-description"></a>Подробное описание
 
@@ -32,14 +31,14 @@ PowerShell регистрирует сведения об операциях Pow
 
 Если включено ведение журнала блокировки сценариев, PowerShell регистрирует в журнале следующие события `PowerShellCore/Operational` :
 
-|Поле| Значение|
-|-|-|
-|EventId|`4104` / `0x1008`|
-|Канал|`Operational`|
-|Level|`Verbose`|
-|Код операции|`Create`|
-|Задача|`CommandStart`|
-|Ключевое слово|`Runspace`|
+|  Поле  |       Значение       |
+| ------- | ----------------- |
+| EventId | `4104` / `0x1008` |
+| Channel | `Operational`     |
+| Level   | `Verbose`         |
+| Код операции  | `Create`          |
+| Задача    | `CommandStart`    |
+| Ключевое слово | `Runspace`        |
 
 ### <a name="registering-the-powershell-event-provider-on-windows"></a>Регистрация поставщика событий PowerShell в Windows
 
@@ -134,7 +133,7 @@ Get-WinEvent Microsoft-Windows-PowerShell/Operational |
   Where-Object Id -eq 4104 | Unprotect-CmsMessage
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [about_Logging_Non — Windows](about_Logging_Non-Windows.md)
 

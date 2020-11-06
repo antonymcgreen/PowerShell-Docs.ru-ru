@@ -5,12 +5,12 @@ ms.date: 04/09/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_numeric_literals?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: О числовых литералах
-ms.openlocfilehash: 62f00ae9f3643724808146134fd03b6f01c29bce
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: dc1a55dbec1f0de99e06011645e6884b37480233
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93233009"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354835"
 ---
 # <a name="about-numeric-literals"></a>О числовых литералах
 
@@ -154,7 +154,7 @@ PS> [bigint]'111111111111111111111111111111111111111111111111111111'
 
 Следующая таблица содержит несколько примеров числовых литералов и перечисляет их тип и значение.
 
-|  Число  |  Тип   |    Значение     |
+|  Число  |  Type   |    Значение     |
 | -------: | ------- | -----------: |
 |      100 | Int32   |          100 |
 |     100D | Decimal |          100 |
@@ -210,4 +210,4 @@ Int32
 Первые два примера работают без заключения литерального значения в круглые скобки, так как средство синтаксического анализа PowerShell может определить, где заканчивается числовой литерал, и запустить метод **GetType** .
 
 <!-- reference links -->
-[bigint]: /dotnet/api/system.numerics.biginteger?view=netcore-2.2
+[bigint]: /dotnet/api/system.numerics.biginteger

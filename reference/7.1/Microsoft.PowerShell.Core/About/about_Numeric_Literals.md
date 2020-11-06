@@ -5,12 +5,12 @@ ms.date: 04/12/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_numeric_literals?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: О числовых литералах
-ms.openlocfilehash: 25518b80f87c90c59829bb575b059f0efcadd566
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 19ed71c2571a6cd343adf622a8cf71d6e5589aff
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232721"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354989"
 ---
 # <a name="about-numeric-literals"></a>О числовых литералах
 
@@ -141,7 +141,7 @@ PowerShell поддерживает следующие ускорители ти
 
 Следующая таблица содержит несколько примеров числовых литералов и перечисляет их тип и значение.
 
-|   Число    |    Тип    |    Значение     |
+|   Число    |    Type    |    Значение     |
 | ----------: | ---------- | -----------: |
 |         100 | Int32      |          100 |
 |        100u | UInt32     |          100 |
@@ -179,7 +179,7 @@ PowerShell поддерживает следующие ускорители ти
 PowerShell 7,1 интерпретирует это как `-1` `[int16]` тип.
 
 Предваряющий литерал с помощью `0` будет обходить это и обрабатываться как неподписанные.
-Например: `0b011111111`. Это может быть необходимо при работе с литералами в `[bigint]` диапазоне, так как `u` `n` суффиксы и не могут быть объединены.
+Например, введите `0b011111111`. Это может быть необходимо при работе с литералами в `[bigint]` диапазоне, так как `u` `n` суффиксы и не могут быть объединены.
 
 Можно также инвертировать двоичные и шестнадцатеричные литералы с помощью `-` префикса. Это может привести к положительному числу, так как разрешены биты знаков.
 
@@ -295,4 +295,4 @@ PS> 111111111111111111111111111111111111111111111111111111n
 Кроме того, значения между `[ulong]::MaxValue` и `[decimal]::MaxValue` должны быть отмечены с помощью десятичного суффикса `D` для обеспечения точности. Без суффикса эти значения анализируются `[Double]` с использованием режима реального анализа.
 
 <!-- reference links -->
-[bigint]: /dotnet/api/system.numerics.biginteger?view=netcore-2.2
+[bigint]: /dotnet/api/system.numerics.biginteger
