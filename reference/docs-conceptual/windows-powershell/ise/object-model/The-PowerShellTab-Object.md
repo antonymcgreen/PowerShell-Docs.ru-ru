@@ -1,13 +1,13 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell,командлет
 title: Объект PowerShellTab
-ms.openlocfilehash: 55e3678a8285f0ec7e8131d98c87478216c26f37
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Объект PowerShellTab представляет среду выполнения Windows PowerShell.
+ms.openlocfilehash: ac89875e408a41a92d7e3d1a83a849466296c3c6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809560"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663399"
 ---
 # <a name="the-powershelltab-object"></a>Объект PowerShellTab
 
@@ -39,7 +39,7 @@ $psISE.PowerShellTabs[1].Invoke({dir})
 Выполняет заданный сценарий на вкладке PowerShell.
 
 > [!NOTE]
-> Этот метод работает только для других вкладок PowerShell, но не для вкладки PowerShell, с которой он выполняется. Выполняется блок сценария, и любое значение, возвращаемое при выполнении сценария, возвращается в среду выполнения, из которой вызывается команда. Если время выполнения команды превышает значение времени ожидания, заданное параметром **millesecondsTimeout**, команда завершается ошибкой с исключением "Время ожидания операции истекло".
+> Этот метод работает только для других вкладок PowerShell, но не для вкладки PowerShell, с которой он выполняется. Выполняется блок сценария, и любое значение, возвращаемое при выполнении сценария, возвращается в среду выполнения, из которой вызывается команда. Если время выполнения команды превышает значение времени ожидания, заданное параметром **millesecondsTimeout** , команда завершается ошибкой с исключением "Время ожидания операции истекло".
 
 **Script** — System.Management.Automation.ScriptBlock или строка. Блок сценария для запуска.
 
