@@ -7,12 +7,12 @@ ms.date: 10/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-printer?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-Printer
-ms.openlocfilehash: 69d78550d68457c92deb3e4d690483bf742544b0
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bc16c7129dff2f2982d1756d5642d86481cd573d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93229349"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344360"
 ---
 # Out-Printer
 
@@ -117,6 +117,8 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+Этот командлет доступен только на платформах Windows.
+
 Командлеты, содержащие `Out` команду, не отформатируют объекты. Они просто отображают их и отправляют в указанное место назначения. При отправке неформатированного объекта в `Out` командлет командлет отправляет его в командлет форматирования перед отображением.
 
 `Out-Printer` отправляет данные на принтер, но не выдает выходные объекты в конвейер. При передаче выходных данных `Out-Printer` в в `Get-Member` `Get-Member` сообщает о том, что объекты не указаны.
@@ -126,4 +128,3 @@ Accept wildcard characters: False
 [Out-File](Out-File.md)
 
 [Out-String](Out-String.md)
-

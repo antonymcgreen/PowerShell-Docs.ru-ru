@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-Command
-ms.openlocfilehash: 976a9ba6047d79bc1ac6225896c7285702daf38a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e6995da1e9ff2a1678c5703b79223481533bc9a5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225746"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346162"
 ---
 # Show-Command
 
@@ -40,7 +40,7 @@ Show-Command [[-Name] <String>] [-Height <Double>] [-Width <Double>] [-NoCommonP
 
 В интегрированной среде сценариев (ISE) PowerShell `Show-Command` по умолчанию отображается вариант окна. Сведения об использовании этого командного окна см. в разделах справки PowerShell ISE.
 
-Этот командлет был повторно введен в PowerShell 7. 
+Этот командлет был повторно введен в PowerShell 7.
 
 Поскольку для этого командлета требуется пользовательский интерфейс, он не работает на Windows Server Core или Windows Nano Server. Этот командлет доступен только в системах Windows, поддерживающих Рабочий стол Windows.
 
@@ -271,6 +271,8 @@ Accept wildcard characters: False
 При использовании параметра **PassThru** `Show-Command` возвращает командную строку. При использовании параметра **еррорпопуп** `Show-Command` возвращает выходные данные команды (любой объект). В противном случае не `Show-Command` создает никаких выходных данных.
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 `Show-Command` не работает в удаленных сеансах.
 

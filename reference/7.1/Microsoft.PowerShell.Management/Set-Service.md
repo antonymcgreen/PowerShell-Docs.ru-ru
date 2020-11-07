@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Service
-ms.openlocfilehash: 9881dccb78aab973cc6031e28308bbdd27b4da57
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: cf9c44fecde650ab0b4747aea5910da49638f297
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93229602"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344326"
 ---
 # Set-Service
 
@@ -39,7 +39,7 @@ Set-Service [-InputObject] <ServiceController> [-DisplayName <String>] [-Credent
 
 ## DESCRIPTION
 
-`Set-Service`Командлет изменяет свойства службы, такие как **Status** , **Description** , **DisplayName** и **StartupType** . `Set-Service` может запускать, останавливать, приостанавливать или прирывать работу службы. Чтобы указать службу, введите ее имя службы или отправьте объект службы. Или отправьте имя службы или объект службы по конвейеру в `Set-Service` .
+`Set-Service`Командлет изменяет свойства службы, такие как **Status** , **Description** , **DisplayName** и **StartupType**. `Set-Service` может запускать, останавливать, приостанавливать или прирывать работу службы. Чтобы указать службу, введите ее имя службы или отправьте объект службы. Или отправьте имя службы или объект службы по конвейеру в `Set-Service` .
 
 ## Примеры
 
@@ -51,7 +51,7 @@ Set-Service [-InputObject] <ServiceController> [-DisplayName <String>] [-Credent
 Set-Service -Name LanmanWorkstation -DisplayName "LanMan Workstation"
 ```
 
-`Set-Service` использует параметр **Name** для указания имени службы **LanmanWorkstation** . Параметр **DisplayName** указывает новое отображаемое имя, **рабочую станцию LanMan** .
+`Set-Service` использует параметр **Name** для указания имени службы **LanmanWorkstation**. Параметр **DisplayName** указывает новое отображаемое имя, **рабочую станцию LanMan**.
 
 ### Пример 2. изменение типа запуска служб
 
@@ -117,7 +117,7 @@ Status   Name               DisplayName
 Running  WinRM              Windows Remote Management (WS-Manag...
 ```
 
-`Set-Service` использует параметр **Name** для указания службы, **WinRM** . Параметр **Status** использует значение **выполняется** для запуска службы. Параметр **PassThru** выводит объект **ServiceController** , отображающий результаты.
+`Set-Service` использует параметр **Name** для указания службы, **WinRM**. Параметр **Status** использует значение **выполняется** для запуска службы. Параметр **PassThru** выводит объект **ServiceController** , отображающий результаты.
 
 ### Пример 5. Приостановка службы
 
@@ -138,7 +138,7 @@ $S = Get-Service -Name Schedule
 Set-Service -InputObject $S -Status Stopped
 ```
 
-`Get-Service` использует параметр **Name** для указания службы, **Schedule** . Объект хранится в переменной `$S` . `Set-Service` использует параметр **InputObject** и указывает хранимый объект `$S` . Параметр **Status** задает **остановку** службы.
+`Get-Service` использует параметр **Name** для указания службы, **Schedule**. Объект хранится в переменной `$S` . `Set-Service` использует параметр **InputObject** и указывает хранимый объект `$S` . Параметр **Status** задает **остановку** службы.
 
 ### Пример 7. Завершение службы в удаленной системе
 
@@ -352,9 +352,9 @@ Accept wildcard characters: False
 
 Для этого параметра допустимы следующие значения:
 
-- **Приостановлено** . приостанавливает службу.
-- **Работает** . запускает службу.
-- **Остановлена** . останавливает службу.
+- **Приостановлено**. приостанавливает службу.
+- **Работает**. запускает службу.
+- **Остановлена**. останавливает службу.
 
 ```yaml
 Type: System.String
@@ -419,6 +419,8 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+Этот командлет доступен только на платформах Windows.
+
 `Set-Service` требуются повышенные разрешения. Используйте команду **Запуск от имени администратора** .
 
 `Set-Service` может управлять только службами, если у текущего пользователя есть разрешения на управление службами. Если команда работает неправильно, возможно, у вас нет необходимых разрешений.
@@ -442,4 +444,3 @@ Accept wildcard characters: False
 [Suspend-Service](Suspend-Service.md)
 
 [Remove-Service](Remove-Service.md)
-

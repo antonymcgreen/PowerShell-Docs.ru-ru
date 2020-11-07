@@ -7,12 +7,12 @@ ms.date: 03/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-acl?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Acl
-ms.openlocfilehash: 018a1da2a3fd40a95d378a563cacd68a734d9cd6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: be190b4cb0c18bdbf6a868f9116ea9bcdba441c3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93229221"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345006"
 ---
 # Get-Acl
 
@@ -240,6 +240,8 @@ Accept wildcard characters: False
 `Get-Acl` Возвращает объект, представляющий списки ACL, которые он получает. Тип объекта зависит от типа списка ACL.
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 По умолчанию `Get-Acl` отображает путь PowerShell к ресурсу ( `<provider>::<resource-path>` ), владельцу ресурса и «доступ», список (массив) записей управления доступом в списке управления доступом на уровне пользователей (DACL) для ресурса. Список DACL контролируется владельцем ресурса.
 

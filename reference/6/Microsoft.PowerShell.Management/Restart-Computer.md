@@ -7,12 +7,12 @@ ms.date: 6/17/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-computer?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-Computer
-ms.openlocfilehash: f55e69dab0075c3ca759c1408a7276fc6fbc8888
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 2d5df7926ab65f45a4d56d84b1f25919bcdb8c41
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93229973"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345210"
 ---
 # Restart-Computer
 
@@ -63,7 +63,7 @@ Restart-Computer -ComputerName Server01, Server02, localhost
 Get-Content -Path C:\Domain01.txt | Restart-Computer
 ```
 
-`Get-Content` использует параметр **path** для получения списка имен компьютеров из текстового файла **Domain01.txt** . Имена компьютеров отправляются по конвейеру. `Restart-Computer` перезапускает каждый компьютер.
+`Get-Content` использует параметр **path** для получения списка имен компьютеров из текстового файла **Domain01.txt**. Имена компьютеров отправляются по конвейеру. `Restart-Computer` перезапускает каждый компьютер.
 
 ### Пример 4. принудительный перезапуск компьютеров, перечисленных в текстовом файле
 
@@ -75,7 +75,7 @@ $Creds = Get-Credential
 Restart-Computer -ComputerName $Names -Credential $Creds -Force
 ```
 
-`Get-Content` использует параметр **path** для получения списка имен компьютеров из текстового файла **Domain01.txt** . Имена компьютеров хранятся в переменной `$Names` . `Get-Credential` запрашивает имя пользователя и пароль и сохраняет значения в переменной `$Creds` . `Restart-Computer` использует параметры **ComputerName** и **Credential** с их переменными. Параметр **Force** приводит к немедленному перезапуску каждого компьютера.
+`Get-Content` использует параметр **path** для получения списка имен компьютеров из текстового файла **Domain01.txt**. Имена компьютеров хранятся в переменной `$Names` . `Get-Credential` запрашивает имя пользователя и пароль и сохраняет значения в переменной `$Creds` . `Restart-Computer` использует параметры **ComputerName** и **Credential** с их переменными. Параметр **Force** приводит к немедленному перезапуску каждого компьютера.
 
 ### Пример 6. перезапуск удаленного компьютера и ожидание PowerShell
 
@@ -85,7 +85,7 @@ Restart-Computer -ComputerName $Names -Credential $Creds -Force
 Restart-Computer -ComputerName Server01 -Wait -For PowerShell -Timeout 300 -Delay 2
 ```
 
-`Restart-Computer` использует параметр **ComputerName** для указания **Server01** . Параметр **Wait** ожидает завершения перезапуска. **Для** указывает, что PowerShell может выполнять команды на удаленном компьютере. Параметр **timeout** задает время ожидания в пять минут. Параметр **delay** запрашивает удаленный компьютер каждые две секунды, чтобы определить, перезапущен ли он.
+`Restart-Computer` использует параметр **ComputerName** для указания **Server01**. Параметр **Wait** ожидает завершения перезапуска. **Для** указывает, что PowerShell может выполнять команды на удаленном компьютере. Параметр **timeout** задает время ожидания в пять минут. Параметр **delay** запрашивает удаленный компьютер каждые две секунды, чтобы определить, перезапущен ли он.
 
 ### Пример 7. перезагрузка компьютера с помощью Всманаусентикатион
 
@@ -96,8 +96,8 @@ Restart-Computer -ComputerName Server01 -Wait -For PowerShell -Timeout 300 -Dela
 Restart-Computer -ComputerName Server01 -WsmanAuthentication Kerberos
 ```
 
-`Restart-Computer` использует параметр **ComputerName** для указания удаленного компьютера **Server01** .
-Параметр **всманаусентикатион** указывает метод проверки подлинности **Kerberos** .
+`Restart-Computer` использует параметр **ComputerName** для указания удаленного компьютера **Server01**.
+Параметр **всманаусентикатион** указывает метод проверки подлинности **Kerberos**.
 
 ## PARAMETERS
 
@@ -326,8 +326,10 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+Этот командлет доступен только на платформах Windows.
+
 - `Restart-Computer` работает только на компьютерах под управлением Windows и требует от WinRM и инструментария WMI для завершения работы системы, включая локальную систему.
-- `Restart-Computer` использует [метод Win32Shutdown](/windows/desktop/CIMWin32Prov/win32shutdown-method-in-class-win32-operatingsystem) класса [WIN32_OPERATINGSYSTEM](/windows/desktop/CIMWin32Prov/win32-operatingsystem) инструментарий управления Windows (WMI) (WMI).  Для этого метода требуется, чтобы для учетной записи пользователя, используемой для перезагрузки компьютера, была включена привилегия **сешутдовнпривилеже** .
+- `Restart-Computer` использует [метод Win32Shutdown](/windows/desktop/CIMWin32Prov/win32shutdown-method-in-class-win32-operatingsystem) класса [WIN32_OPERATINGSYSTEM](/windows/desktop/CIMWin32Prov/win32-operatingsystem) инструментарий управления Windows (WMI) (WMI). Для этого метода требуется, чтобы для учетной записи пользователя, используемой для перезагрузки компьютера, была включена привилегия **сешутдовнпривилеже** .
 
 ## Связанные ссылки
 

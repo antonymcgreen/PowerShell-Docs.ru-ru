@@ -7,12 +7,12 @@ ms.date: 5/1/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Computer
-ms.openlocfilehash: e2d4f321609a386c6795949a4a706323b4889f69
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 54624058b57b88b820391cc5afba638aa39ff873
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228717"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345244"
 ---
 # Rename-Computer
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 При вводе имени пользователя этот командлет запрашивает пароль.
 
-Чтобы указать учетную запись пользователя, имеющую разрешение на подключение к компьютеру, который задается параметром **ComputerName** , используйте параметр **LocalCredential** .
+Чтобы указать учетную запись пользователя, имеющую разрешение на подключение к компьютеру, который задается параметром **ComputerName** , используйте параметр **LocalCredential**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -122,13 +122,13 @@ Accept wildcard characters: False
 
 ### -Локалкредентиал
 
-Указывает учетную запись пользователя, имеющую разрешение на подключение к компьютеру, заданному параметром **ComputerName** . По умолчанию используется текущий пользователь.
+Указывает учетную запись пользователя, имеющую разрешение на подключение к компьютеру, заданному параметром **ComputerName**. По умолчанию используется текущий пользователь.
 
 Введите имя пользователя, например `User01` или `Domain01\User01` , или введите объект **PSCredential** , например, созданный `Get-Credential` командлетом.
 
 При вводе имени пользователя этот командлет запрашивает пароль.
 
-Чтобы указать учетную запись, имеющую разрешение на подключение к домену, используйте параметр **DomainCredential** .
+Чтобы указать учетную запись, имеющую разрешение на подключение к домену, используйте параметр **DomainCredential**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 - **Kerberos**
 - **Новое**
 
-Значение по умолчанию ― **Default** .
+Значение по умолчанию ― **Default**.
 
 Дополнительные сведения о значениях этого параметра см. в разделе [AuthenticationMechanism enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
@@ -271,8 +271,7 @@ Accept wildcard characters: False
 
 ### Нет
 
-Этот командлет не имеет параметров, которые принимают входные данные по значению.
-Тем не менее в этот командлет можно передавать значения свойств **ComputerName** и **NewName** объектов.
+Этот командлет не имеет параметров, которые принимают входные данные по значению. Тем не менее в этот командлет можно передавать значения свойств **ComputerName** и **NewName** объектов.
 
 ## Выходные данные
 
@@ -282,6 +281,8 @@ Accept wildcard characters: False
 В противном случае не возвращает никаких выходных данных.
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 ## Связанные ссылки
 

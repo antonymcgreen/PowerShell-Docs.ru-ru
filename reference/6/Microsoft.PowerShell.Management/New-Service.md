@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 04a2d18b9d663f612e8819c1d81bbfe490f4931a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: aadb0d53ad180ba1e88d31e5d008c6090ae0c9b3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227238"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345237"
 ---
 # New-Service
 
@@ -167,8 +167,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Указывает имя службы.
-Этот параметр обязателен.
+Указывает имя службы. Этот параметр обязателен.
 
 ```yaml
 Type: System.String
@@ -226,8 +225,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Показывает, что произойдет при запуске командлета.
-Командлет не выполняется.
+Показывает, что произойдет при запуске командлета. Командлет не выполняется.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -259,7 +257,9 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-Чтобы запустить этот командлет в Windows Vista и более поздних версиях операционной системы Windows, запустите PowerShell с помощью команды Запуск от имени администратора.
+Этот командлет доступен только на платформах Windows.
+
+Чтобы запустить этот командлет, запустите PowerShell с помощью команды **Запуск от имени администратора** .
 
 ## Связанные ссылки
 

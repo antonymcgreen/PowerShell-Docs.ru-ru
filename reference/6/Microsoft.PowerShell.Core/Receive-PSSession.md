@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: 266c12224ee579add22715f47a9047d400fab255
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: d40c6074c792ed8d5e094a3e9c1b3784a1c7670d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93229874"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345465"
 ---
 # Receive-PSSession
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 Указывает механизм, используемый для проверки подлинности учетных данных пользователя в команде для повторного подключения к отключенному сеансу. Допустимые значения для этого параметра:
 
 - По умолчанию
-- Базовый
+- Basic
 - CredSSP
 - Digest (дайджест)
 - Kerberos
@@ -758,6 +758,8 @@ Accept wildcard characters: False
 Этот командлет возвращает результаты команд, которые выполнялись в отключенном сеансе, если таковые имеются. Если значение или значение по умолчанию параметра для **целевого объекта** задано как Job, `Receive-PSSession` возвращает объект задания. В противном случае возвращаются объекты, представляющие результаты выполнения этой команды.
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 `Receive-PSSession` Возвращает результаты только из сеансов, которые были отключены. Только сеансы, подключенные к или завершенные на компьютерах, на которых выполняется PowerShell 3,0 или более поздней версии, могут быть отключены и повторно подключены.
 

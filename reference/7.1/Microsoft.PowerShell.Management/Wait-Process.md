@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/wait-process?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Wait-Process
-ms.openlocfilehash: bff2b77523613d526c7153cc970d5e188e759c18
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2d991ec8e992d98425cf72f7e63e0f7f6e2089c0
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93226730"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345754"
 ---
 # Wait-Process
 
@@ -183,9 +183,9 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-* Этот командлет использует метод **ваитфорексит** класса System. Diagnostics. Process. Дополнительные сведения об этом методе см. в пакете SDK для Microsoft .NET Framework.
+Командлет поддерживается только на платформах Windows.
 
-*
+Этот командлет использует метод **ваитфорексит** класса **System. Diagnostics. Process** .
 
 ## Связанные ссылки
 
@@ -198,4 +198,3 @@ Accept wildcard characters: False
 [Stop-Process](Stop-Process.md)
 
 [Wait-Process](Wait-Process.md)
-

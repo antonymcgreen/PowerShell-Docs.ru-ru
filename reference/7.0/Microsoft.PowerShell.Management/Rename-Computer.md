@@ -7,12 +7,12 @@ ms.date: 5/1/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Computer
-ms.openlocfilehash: aeffc496e78a447af828737980429a91a74b5a6b
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 2fc21594a4765a0901f61dba7b7f1a79f3259886
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225537"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346145"
 ---
 # Rename-Computer
 
@@ -271,8 +271,7 @@ Accept wildcard characters: False
 
 ### Нет
 
-Этот командлет не имеет параметров, которые принимают входные данные по значению.
-Тем не менее в этот командлет можно передавать значения свойств **ComputerName** и **NewName** объектов.
+Этот командлет не имеет параметров, которые принимают входные данные по значению. Тем не менее в этот командлет можно передавать значения свойств **ComputerName** и **NewName** объектов.
 
 ## Выходные данные
 
@@ -282,6 +281,8 @@ Accept wildcard characters: False
 В противном случае не возвращает никаких выходных данных.
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 ## Связанные ссылки
 

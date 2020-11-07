@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/stop-computer?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Computer
-ms.openlocfilehash: e7732c1eb243c0a4737c3f08a413fd20bbf2bf38
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 8c6d70622f48183ed2f6bcd4526c305c70fe6eb2
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93229970"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345091"
 ---
 # Stop-Computer
 
@@ -175,11 +175,11 @@ Accept wildcard characters: False
 
 ### -Всманаусентикатион
 
-Указывает механизм, используемый для проверки подлинности учетных данных пользователя, когда этот командлет использует протокол WSMan. Значение по умолчанию ― **Default** .
+Указывает механизм, используемый для проверки подлинности учетных данных пользователя, когда этот командлет использует протокол WSMan. Значение по умолчанию ― **Default**.
 
 Допустимые значения для этого параметра:
 
-- Базовый
+- Basic
 - CredSSP
 - По умолчанию
 - Digest (дайджест)
@@ -237,6 +237,8 @@ Accept wildcard characters: False
 ### Нет
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 Этот командлет работает только в Windows и использует метод **Win32Shutdown** класса WMI **Win32_OperatingSystem** . Для этого метода требуется, чтобы для учетной записи пользователя, используемой для перезагрузки компьютера, была включена привилегия **сешутдовнпривилеже** .
 
