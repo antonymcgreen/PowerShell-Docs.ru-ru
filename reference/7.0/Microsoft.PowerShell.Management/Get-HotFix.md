@@ -7,43 +7,43 @@ ms.date: 05/20/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-hotfix?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-HotFix
-ms.openlocfilehash: 355257d0e403143d6983886de592d491241c6253
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 277dd2678b54c9e708d09f6ca27d82ab9afd4c1c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93226902"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347624"
 ---
-# <span data-ttu-id="af8f7-103">Get-HotFix</span><span class="sxs-lookup"><span data-stu-id="af8f7-103">Get-HotFix</span></span>
+# <span data-ttu-id="f184c-103">Get-HotFix</span><span class="sxs-lookup"><span data-stu-id="f184c-103">Get-HotFix</span></span>
 
-## <span data-ttu-id="af8f7-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="af8f7-104">SYNOPSIS</span></span>
-<span data-ttu-id="af8f7-105">Возвращает исправления, установленные на локальных или удаленных компьютерах.</span><span class="sxs-lookup"><span data-stu-id="af8f7-105">Gets the hotfixes that are installed on local or remote computers.</span></span>
+## <span data-ttu-id="f184c-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="f184c-104">SYNOPSIS</span></span>
+<span data-ttu-id="f184c-105">Возвращает исправления, установленные на локальных или удаленных компьютерах.</span><span class="sxs-lookup"><span data-stu-id="f184c-105">Gets the hotfixes that are installed on local or remote computers.</span></span>
 
-## <span data-ttu-id="af8f7-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="af8f7-106">SYNTAX</span></span>
+## <span data-ttu-id="f184c-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="f184c-106">SYNTAX</span></span>
 
-### <span data-ttu-id="af8f7-107">Default (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="af8f7-107">Default (Default)</span></span>
+### <span data-ttu-id="f184c-107">Default (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="f184c-107">Default (Default)</span></span>
 
 ```
 Get-HotFix [[-Id] <String[]>] [-ComputerName <String[]>] [-Credential <PSCredential>]
 [<CommonParameters>]
 ```
 
-### <span data-ttu-id="af8f7-108">Описание</span><span class="sxs-lookup"><span data-stu-id="af8f7-108">Description</span></span>
+### <span data-ttu-id="f184c-108">Description</span><span class="sxs-lookup"><span data-stu-id="f184c-108">Description</span></span>
 
 ```
 Get-HotFix [-Description <String[]>] [-ComputerName <String[]>] [-Credential <PSCredential>]
 [<CommonParameters>]
 ```
 
-## <span data-ttu-id="af8f7-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="af8f7-109">DESCRIPTION</span></span>
+## <span data-ttu-id="f184c-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="f184c-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="af8f7-110">`Get-Hotfix`Командлет получает исправления или обновления, установленные на локальном компьютере или на указанных удаленных компьютерах.</span><span class="sxs-lookup"><span data-stu-id="af8f7-110">The `Get-Hotfix` cmdlet gets hotfixes, or updates, that are installed on the local computer or specified remote computers.</span></span> <span data-ttu-id="af8f7-111">Обновления могут устанавливаться Центр обновления Windows, Центр обновления Майкрософт, Windows Server Update Services или вручную.</span><span class="sxs-lookup"><span data-stu-id="af8f7-111">The updates can be installed by Windows Update, Microsoft Update, Windows Server Update Services, or manually installed.</span></span>
+<span data-ttu-id="f184c-110">`Get-Hotfix`Командлет получает исправления или обновления, установленные на локальном компьютере или на указанных удаленных компьютерах.</span><span class="sxs-lookup"><span data-stu-id="f184c-110">The `Get-Hotfix` cmdlet gets hotfixes, or updates, that are installed on the local computer or specified remote computers.</span></span> <span data-ttu-id="f184c-111">Обновления могут устанавливаться Центр обновления Windows, Центр обновления Майкрософт, Windows Server Update Services или вручную.</span><span class="sxs-lookup"><span data-stu-id="f184c-111">The updates can be installed by Windows Update, Microsoft Update, Windows Server Update Services, or manually installed.</span></span>
 
-## <span data-ttu-id="af8f7-112">Примеры</span><span class="sxs-lookup"><span data-stu-id="af8f7-112">EXAMPLES</span></span>
+## <span data-ttu-id="f184c-112">Примеры</span><span class="sxs-lookup"><span data-stu-id="f184c-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="af8f7-113">Пример 1. получение всех исправлений на локальном компьютере</span><span class="sxs-lookup"><span data-stu-id="af8f7-113">Example 1: Get all hotfixes on the local computer</span></span>
+### <span data-ttu-id="f184c-113">Пример 1. получение всех исправлений на локальном компьютере</span><span class="sxs-lookup"><span data-stu-id="f184c-113">Example 1: Get all hotfixes on the local computer</span></span>
 
-<span data-ttu-id="af8f7-114">`Get-Hotfix`Командлет возвращает все исправления, установленные на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="af8f7-114">The `Get-Hotfix` cmdlet gets all hotfixes installed on the local computer.</span></span>
+<span data-ttu-id="f184c-114">`Get-Hotfix`Командлет возвращает все исправления, установленные на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="f184c-114">The `Get-Hotfix` cmdlet gets all hotfixes installed on the local computer.</span></span>
 
 ```powershell
 Get-HotFix
@@ -57,19 +57,19 @@ Server01       Security Update  KB4470788     NT AUTHORITY\SYSTEM  1/22/2019 00:
 Server01       Update           KB4480056     NT AUTHORITY\SYSTEM  1/24/2019 00:00:00
 ```
 
-### <span data-ttu-id="af8f7-115">Пример 2. получение исправлений с нескольких компьютеров, отфильтрованных по строке</span><span class="sxs-lookup"><span data-stu-id="af8f7-115">Example 2: Get hotfixes from multiple computers filtered by a string</span></span>
+### <span data-ttu-id="f184c-115">Пример 2. получение исправлений с нескольких компьютеров, отфильтрованных по строке</span><span class="sxs-lookup"><span data-stu-id="f184c-115">Example 2: Get hotfixes from multiple computers filtered by a string</span></span>
 
-<span data-ttu-id="af8f7-116">`Get-Hotfix`Команда использует параметры для получения исправлений, установленных на удаленных компьютерах.</span><span class="sxs-lookup"><span data-stu-id="af8f7-116">The `Get-Hotfix` command uses parameters to get hotfixes installed on remote computers.</span></span> <span data-ttu-id="af8f7-117">Результаты фильтруются по указанной строке описания.</span><span class="sxs-lookup"><span data-stu-id="af8f7-117">The results are filtered by a specified description string.</span></span>
+<span data-ttu-id="f184c-116">`Get-Hotfix`Команда использует параметры для получения исправлений, установленных на удаленных компьютерах.</span><span class="sxs-lookup"><span data-stu-id="f184c-116">The `Get-Hotfix` command uses parameters to get hotfixes installed on remote computers.</span></span> <span data-ttu-id="f184c-117">Результаты фильтруются по указанной строке описания.</span><span class="sxs-lookup"><span data-stu-id="f184c-117">The results are filtered by a specified description string.</span></span>
 
 ```
 PS> Get-HotFix -Description Security* -ComputerName Server01, Server02 -Credential Domain01\admin01
 ```
 
-<span data-ttu-id="af8f7-118">`Get-Hotfix` фильтрует выходные данные с помощью параметра **Description** и строки **безопасности** , включающей `*` подстановочный знак звездочки ().</span><span class="sxs-lookup"><span data-stu-id="af8f7-118">`Get-Hotfix` filters the output with the **Description** parameter and the string **Security** that includes the asterisk (`*`) wildcard.</span></span> <span data-ttu-id="af8f7-119">Параметр **ComputerName** включает строку имен удаленных компьютеров с разделителями-запятыми.</span><span class="sxs-lookup"><span data-stu-id="af8f7-119">The **ComputerName** parameter includes a comma-separated string of remote computer names.</span></span> <span data-ttu-id="af8f7-120">Параметр **Credential** указывает учетную запись пользователя, имеющую разрешение на доступ к удаленным компьютерам и командам выполнения.</span><span class="sxs-lookup"><span data-stu-id="af8f7-120">The **Credential** parameter specifies a user account that has permission to access the remote computers and run commands.</span></span>
+<span data-ttu-id="f184c-118">`Get-Hotfix` фильтрует выходные данные с помощью параметра **Description** и строки **безопасности** , включающей `*` подстановочный знак звездочки ().</span><span class="sxs-lookup"><span data-stu-id="f184c-118">`Get-Hotfix` filters the output with the **Description** parameter and the string **Security** that includes the asterisk (`*`) wildcard.</span></span> <span data-ttu-id="f184c-119">Параметр **ComputerName** включает строку имен удаленных компьютеров с разделителями-запятыми.</span><span class="sxs-lookup"><span data-stu-id="f184c-119">The **ComputerName** parameter includes a comma-separated string of remote computer names.</span></span> <span data-ttu-id="f184c-120">Параметр **Credential** указывает учетную запись пользователя, имеющую разрешение на доступ к удаленным компьютерам и командам выполнения.</span><span class="sxs-lookup"><span data-stu-id="f184c-120">The **Credential** parameter specifies a user account that has permission to access the remote computers and run commands.</span></span>
 
-### <span data-ttu-id="af8f7-121">Пример 3. Проверка установки обновления и запись имен компьютеров в файл</span><span class="sxs-lookup"><span data-stu-id="af8f7-121">Example 3: Verify if an update is installed and write computer names to a file</span></span>
+### <span data-ttu-id="f184c-121">Пример 3. Проверка установки обновления и запись имен компьютеров в файл</span><span class="sxs-lookup"><span data-stu-id="f184c-121">Example 3: Verify if an update is installed and write computer names to a file</span></span>
 
-<span data-ttu-id="af8f7-122">Команды в этом примере проверяют, установлено ли конкретное обновление.</span><span class="sxs-lookup"><span data-stu-id="af8f7-122">The commands in this example verify whether a particular update installed.</span></span> <span data-ttu-id="af8f7-123">Если обновление не установлено, имя компьютера записывается в текстовый файл.</span><span class="sxs-lookup"><span data-stu-id="af8f7-123">If the update isn't installed, the computer name is written to a text file.</span></span>
+<span data-ttu-id="f184c-122">Команды в этом примере проверяют, установлено ли конкретное обновление.</span><span class="sxs-lookup"><span data-stu-id="f184c-122">The commands in this example verify whether a particular update installed.</span></span> <span data-ttu-id="f184c-123">Если обновление не установлено, имя компьютера записывается в текстовый файл.</span><span class="sxs-lookup"><span data-stu-id="f184c-123">If the update isn't installed, the computer name is written to a text file.</span></span>
 
 ```
 PS> $A = Get-Content -Path ./Servers.txt
@@ -77,27 +77,27 @@ PS> $A | ForEach-Object { if (!(Get-HotFix -Id KB957095 -ComputerName $_))
          { Add-Content $_ -Path ./Missing-KB957095.txt }}
 ```
 
-<span data-ttu-id="af8f7-124">`$A`Переменная содержит имена компьютеров, полученные `Get-Content` из текстового файла.</span><span class="sxs-lookup"><span data-stu-id="af8f7-124">The `$A` variable contains computer names that were obtained by `Get-Content` from a text file.</span></span> <span data-ttu-id="af8f7-125">Объекты в `$A` отправляются по конвейеру в `ForEach-Object` .</span><span class="sxs-lookup"><span data-stu-id="af8f7-125">The objects in `$A` are sent down the pipeline to `ForEach-Object`.</span></span> <span data-ttu-id="af8f7-126">`if`Оператор использует `Get-Hotfix` командлет с параметром **ID** и конкретным идентификатором для каждого имени компьютера.</span><span class="sxs-lookup"><span data-stu-id="af8f7-126">An `if` statement uses the `Get-Hotfix` cmdlet with the **Id** parameter and a specific Id number for each computer name.</span></span> <span data-ttu-id="af8f7-127">Если на компьютере не установлен указанный идентификатор исправления, `Add-Content` командлет записывает имя компьютера в файл.</span><span class="sxs-lookup"><span data-stu-id="af8f7-127">If a computer doesn't have the specified hotfix Id installed, the `Add-Content` cmdlet writes the computer name to a file.</span></span>
+<span data-ttu-id="f184c-124">`$A`Переменная содержит имена компьютеров, полученные `Get-Content` из текстового файла.</span><span class="sxs-lookup"><span data-stu-id="f184c-124">The `$A` variable contains computer names that were obtained by `Get-Content` from a text file.</span></span> <span data-ttu-id="f184c-125">Объекты в `$A` отправляются по конвейеру в `ForEach-Object` .</span><span class="sxs-lookup"><span data-stu-id="f184c-125">The objects in `$A` are sent down the pipeline to `ForEach-Object`.</span></span> <span data-ttu-id="f184c-126">`if`Оператор использует `Get-Hotfix` командлет с параметром **ID** и конкретным идентификатором для каждого имени компьютера.</span><span class="sxs-lookup"><span data-stu-id="f184c-126">An `if` statement uses the `Get-Hotfix` cmdlet with the **Id** parameter and a specific Id number for each computer name.</span></span> <span data-ttu-id="f184c-127">Если на компьютере не установлен указанный идентификатор исправления, `Add-Content` командлет записывает имя компьютера в файл.</span><span class="sxs-lookup"><span data-stu-id="f184c-127">If a computer doesn't have the specified hotfix Id installed, the `Add-Content` cmdlet writes the computer name to a file.</span></span>
 
-### <span data-ttu-id="af8f7-128">Пример 4. Получение последнего исправления на локальном компьютере</span><span class="sxs-lookup"><span data-stu-id="af8f7-128">Example 4: Get the most recent hotfix on the local computer</span></span>
+### <span data-ttu-id="f184c-128">Пример 4. Получение последнего исправления на локальном компьютере</span><span class="sxs-lookup"><span data-stu-id="f184c-128">Example 4: Get the most recent hotfix on the local computer</span></span>
 
-<span data-ttu-id="af8f7-129">В этом примере возвращается последнее исправление, установленное на компьютере.</span><span class="sxs-lookup"><span data-stu-id="af8f7-129">This example gets the most recent hotfix installed on a computer.</span></span>
+<span data-ttu-id="f184c-129">В этом примере возвращается последнее исправление, установленное на компьютере.</span><span class="sxs-lookup"><span data-stu-id="f184c-129">This example gets the most recent hotfix installed on a computer.</span></span>
 
 ```powershell
 (Get-HotFix | Sort-Object -Property InstalledOn)[-1]
 ```
 
-<span data-ttu-id="af8f7-130">`Get-Hotfix` отправляет объекты по конвейеру в `Sort-Object` командлет.</span><span class="sxs-lookup"><span data-stu-id="af8f7-130">`Get-Hotfix` sends the objects down the pipeline to the `Sort-Object` cmdlet.</span></span> <span data-ttu-id="af8f7-131">`Sort-Object` Сортирует объекты по возрастанию и использует параметр **Property** для вычисления каждой **установить** даты.</span><span class="sxs-lookup"><span data-stu-id="af8f7-131">`Sort-Object` sorts objects by ascending order and uses the **Property** parameter to evaluate each **InstalledOn** date.</span></span> <span data-ttu-id="af8f7-132">В нотации массива `[-1]` выбирается последнее установленное исправление.</span><span class="sxs-lookup"><span data-stu-id="af8f7-132">The array notation `[-1]` selects the most recent installed hotfix.</span></span>
+<span data-ttu-id="f184c-130">`Get-Hotfix` отправляет объекты по конвейеру в `Sort-Object` командлет.</span><span class="sxs-lookup"><span data-stu-id="f184c-130">`Get-Hotfix` sends the objects down the pipeline to the `Sort-Object` cmdlet.</span></span> <span data-ttu-id="f184c-131">`Sort-Object` Сортирует объекты по возрастанию и использует параметр **Property** для вычисления каждой **установить** даты.</span><span class="sxs-lookup"><span data-stu-id="f184c-131">`Sort-Object` sorts objects by ascending order and uses the **Property** parameter to evaluate each **InstalledOn** date.</span></span> <span data-ttu-id="f184c-132">В нотации массива `[-1]` выбирается последнее установленное исправление.</span><span class="sxs-lookup"><span data-stu-id="f184c-132">The array notation `[-1]` selects the most recent installed hotfix.</span></span>
 
-## <span data-ttu-id="af8f7-133">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="af8f7-133">PARAMETERS</span></span>
+## <span data-ttu-id="f184c-133">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="f184c-133">PARAMETERS</span></span>
 
-### <span data-ttu-id="af8f7-134">-ComputerName</span><span class="sxs-lookup"><span data-stu-id="af8f7-134">-ComputerName</span></span>
+### <span data-ttu-id="f184c-134">-ComputerName</span><span class="sxs-lookup"><span data-stu-id="f184c-134">-ComputerName</span></span>
 
-<span data-ttu-id="af8f7-135">Указывает удаленный компьютер.</span><span class="sxs-lookup"><span data-stu-id="af8f7-135">Specifies a remote computer.</span></span> <span data-ttu-id="af8f7-136">Введите имя NetBIOS, IP-адрес или полное доменное имя (FQDN) удаленного компьютера.</span><span class="sxs-lookup"><span data-stu-id="af8f7-136">Type the NetBIOS name, an Internet Protocol (IP) address, or a fully qualified domain name (FQDN) of a remote computer.</span></span>
+<span data-ttu-id="f184c-135">Указывает удаленный компьютер.</span><span class="sxs-lookup"><span data-stu-id="f184c-135">Specifies a remote computer.</span></span> <span data-ttu-id="f184c-136">Введите имя NetBIOS, IP-адрес или полное доменное имя (FQDN) удаленного компьютера.</span><span class="sxs-lookup"><span data-stu-id="f184c-136">Type the NetBIOS name, an Internet Protocol (IP) address, or a fully qualified domain name (FQDN) of a remote computer.</span></span>
 
-<span data-ttu-id="af8f7-137">Если параметр **ComputerName** не указан, `Get-Hotfix` выполняется на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="af8f7-137">When the **ComputerName** parameter isn't specified, `Get-Hotfix` runs on the local computer.</span></span>
+<span data-ttu-id="f184c-137">Если параметр **ComputerName** не указан, `Get-Hotfix` выполняется на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="f184c-137">When the **ComputerName** parameter isn't specified, `Get-Hotfix` runs on the local computer.</span></span>
 
-<span data-ttu-id="af8f7-138">Параметр **ComputerName** не зависит от удаленного взаимодействия Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="af8f7-138">The **ComputerName** parameter doesn't rely on Windows PowerShell remoting.</span></span> <span data-ttu-id="af8f7-139">Если компьютер не настроен для выполнения удаленных команд, используйте параметр **ComputerName** .</span><span class="sxs-lookup"><span data-stu-id="af8f7-139">If your computer isn't configured to run remote commands, use the **ComputerName** parameter.</span></span>
+<span data-ttu-id="f184c-138">Параметр **ComputerName** не зависит от удаленного взаимодействия Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="f184c-138">The **ComputerName** parameter doesn't rely on Windows PowerShell remoting.</span></span> <span data-ttu-id="f184c-139">Если компьютер не настроен для выполнения удаленных команд, используйте параметр **ComputerName** .</span><span class="sxs-lookup"><span data-stu-id="f184c-139">If your computer isn't configured to run remote commands, use the **ComputerName** parameter.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -111,16 +111,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="af8f7-140">-Credential</span><span class="sxs-lookup"><span data-stu-id="af8f7-140">-Credential</span></span>
+### <span data-ttu-id="f184c-140">-Credential</span><span class="sxs-lookup"><span data-stu-id="f184c-140">-Credential</span></span>
 
-<span data-ttu-id="af8f7-141">Указывает учетную запись пользователя, имеющую разрешение на доступ к компьютеру и выполнение команд.</span><span class="sxs-lookup"><span data-stu-id="af8f7-141">Specifies a user account that has permission to access the computer and run commands.</span></span> <span data-ttu-id="af8f7-142">Значение по умолчанию — текущий пользователь.</span><span class="sxs-lookup"><span data-stu-id="af8f7-142">The default is the current user</span></span>
+<span data-ttu-id="f184c-141">Указывает учетную запись пользователя, имеющую разрешение на доступ к компьютеру и выполнение команд.</span><span class="sxs-lookup"><span data-stu-id="f184c-141">Specifies a user account that has permission to access the computer and run commands.</span></span> <span data-ttu-id="f184c-142">Значение по умолчанию — текущий пользователь.</span><span class="sxs-lookup"><span data-stu-id="f184c-142">The default is the current user</span></span>
 
-<span data-ttu-id="af8f7-143">Введите имя пользователя, например **User01** или **Domain01\User01** , либо введите объект **PSCredential** , созданный `Get-Credential` командлетом.</span><span class="sxs-lookup"><span data-stu-id="af8f7-143">Type a user name, such as **User01** or **Domain01\User01** , or enter a **PSCredential** object generated by the `Get-Credential` cmdlet.</span></span> <span data-ttu-id="af8f7-144">Если ввести имя пользователя, будет предложено ввести пароль.</span><span class="sxs-lookup"><span data-stu-id="af8f7-144">If you type a user name, you're prompted to enter the password.</span></span>
+<span data-ttu-id="f184c-143">Введите имя пользователя, например **User01** или **Domain01\User01** , либо введите объект **PSCredential** , созданный `Get-Credential` командлетом.</span><span class="sxs-lookup"><span data-stu-id="f184c-143">Type a user name, such as **User01** or **Domain01\User01** , or enter a **PSCredential** object generated by the `Get-Credential` cmdlet.</span></span> <span data-ttu-id="f184c-144">Если ввести имя пользователя, будет предложено ввести пароль.</span><span class="sxs-lookup"><span data-stu-id="f184c-144">If you type a user name, you're prompted to enter the password.</span></span>
 
-<span data-ttu-id="af8f7-145">Учетные данные хранятся в объекте [PSCredential](/dotnet/api/system.management.automation.pscredential) , а пароль хранится в качестве [SecureString](/dotnet/api/system.security.securestring).</span><span class="sxs-lookup"><span data-stu-id="af8f7-145">Credentials are stored in a [PSCredential](/dotnet/api/system.management.automation.pscredential) object and the password is stored as a [SecureString](/dotnet/api/system.security.securestring).</span></span>
+<span data-ttu-id="f184c-145">Учетные данные хранятся в объекте [PSCredential](/dotnet/api/system.management.automation.pscredential) , а пароль хранится в качестве [SecureString](/dotnet/api/system.security.securestring).</span><span class="sxs-lookup"><span data-stu-id="f184c-145">Credentials are stored in a [PSCredential](/dotnet/api/system.management.automation.pscredential) object and the password is stored as a [SecureString](/dotnet/api/system.security.securestring).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="af8f7-146">Дополнительные сведения о защите данных **SecureString** см. в разделе [насколько безопасным является SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span><span class="sxs-lookup"><span data-stu-id="af8f7-146">For more information about **SecureString** data protection, see [How secure is SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span></span>
+> <span data-ttu-id="f184c-146">Дополнительные сведения о защите данных **SecureString** см. в разделе [насколько безопасным является SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span><span class="sxs-lookup"><span data-stu-id="f184c-146">For more information about **SecureString** data protection, see [How secure is SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -134,9 +134,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="af8f7-147">-Description</span><span class="sxs-lookup"><span data-stu-id="af8f7-147">-Description</span></span>
+### <span data-ttu-id="f184c-147">-Description</span><span class="sxs-lookup"><span data-stu-id="f184c-147">-Description</span></span>
 
-<span data-ttu-id="af8f7-148">`Get-HotFix` использует параметр **Description** для указания типов исправлений.</span><span class="sxs-lookup"><span data-stu-id="af8f7-148">`Get-HotFix` uses the **Description** parameter to specify hotfix types.</span></span> <span data-ttu-id="af8f7-149">Разрешено использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="af8f7-149">Wildcards are permitted.</span></span>
+<span data-ttu-id="f184c-148">`Get-HotFix` использует параметр **Description** для указания типов исправлений.</span><span class="sxs-lookup"><span data-stu-id="f184c-148">`Get-HotFix` uses the **Description** parameter to specify hotfix types.</span></span> <span data-ttu-id="f184c-149">Разрешено использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="f184c-149">Wildcards are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -150,9 +150,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="af8f7-150">-Id</span><span class="sxs-lookup"><span data-stu-id="af8f7-150">-Id</span></span>
+### <span data-ttu-id="f184c-150">-Id</span><span class="sxs-lookup"><span data-stu-id="f184c-150">-Id</span></span>
 
-<span data-ttu-id="af8f7-151">Фильтрует `Get-HotFix` результаты для конкретных идентификаторов исправлений.</span><span class="sxs-lookup"><span data-stu-id="af8f7-151">Filters the `Get-HotFix` results for specific hotfix Ids.</span></span> <span data-ttu-id="af8f7-152">Подстановочные знаки не принимаются.</span><span class="sxs-lookup"><span data-stu-id="af8f7-152">Wildcards aren't accepted.</span></span>
+<span data-ttu-id="f184c-151">Фильтрует `Get-HotFix` результаты для конкретных идентификаторов исправлений.</span><span class="sxs-lookup"><span data-stu-id="f184c-151">Filters the `Get-HotFix` results for specific hotfix Ids.</span></span> <span data-ttu-id="f184c-152">Подстановочные знаки не принимаются.</span><span class="sxs-lookup"><span data-stu-id="f184c-152">Wildcards aren't accepted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -166,34 +166,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="af8f7-153">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="af8f7-153">CommonParameters</span></span>
+### <span data-ttu-id="f184c-153">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="f184c-153">CommonParameters</span></span>
 
-<span data-ttu-id="af8f7-154">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="af8f7-154">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="af8f7-155">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="af8f7-155">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="f184c-154">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="f184c-154">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="f184c-155">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="f184c-155">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="af8f7-156">Входные данные</span><span class="sxs-lookup"><span data-stu-id="af8f7-156">INPUTS</span></span>
+## <span data-ttu-id="f184c-156">Входные данные</span><span class="sxs-lookup"><span data-stu-id="f184c-156">INPUTS</span></span>
 
-### <span data-ttu-id="af8f7-157">Строка</span><span class="sxs-lookup"><span data-stu-id="af8f7-157">String</span></span>
+### <span data-ttu-id="f184c-157">Строка</span><span class="sxs-lookup"><span data-stu-id="f184c-157">String</span></span>
 
-<span data-ttu-id="af8f7-158">Одно или несколько имен компьютеров можно передать в командлет Get-HotFix по конвейеру.</span><span class="sxs-lookup"><span data-stu-id="af8f7-158">You can pipe one or more computer names to Get-HotFix.</span></span>
+<span data-ttu-id="f184c-158">Одно или несколько имен компьютеров можно передать в командлет Get-HotFix по конвейеру.</span><span class="sxs-lookup"><span data-stu-id="f184c-158">You can pipe one or more computer names to Get-HotFix.</span></span>
 
-## <span data-ttu-id="af8f7-159">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="af8f7-159">OUTPUTS</span></span>
+## <span data-ttu-id="f184c-159">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="f184c-159">OUTPUTS</span></span>
 
-### <span data-ttu-id="af8f7-160">System. Management. ManagementObject # root\CIMV2\ Win32_QuickFixEngineering</span><span class="sxs-lookup"><span data-stu-id="af8f7-160">System.Management.ManagementObject#root\CIMV2\Win32_QuickFixEngineering</span></span>
+### <span data-ttu-id="f184c-160">System. Management. ManagementObject # root\CIMV2\ Win32_QuickFixEngineering</span><span class="sxs-lookup"><span data-stu-id="f184c-160">System.Management.ManagementObject#root\CIMV2\Win32_QuickFixEngineering</span></span>
 
-<span data-ttu-id="af8f7-161">`Get-HotFix` Возвращает объекты, представляющие исправления на компьютере.</span><span class="sxs-lookup"><span data-stu-id="af8f7-161">`Get-HotFix` returns objects that represent the hotfixes on the computer.</span></span>
+<span data-ttu-id="f184c-161">`Get-HotFix` Возвращает объекты, представляющие исправления на компьютере.</span><span class="sxs-lookup"><span data-stu-id="f184c-161">`Get-HotFix` returns objects that represent the hotfixes on the computer.</span></span>
 
-## <span data-ttu-id="af8f7-162">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="af8f7-162">NOTES</span></span>
+## <span data-ttu-id="f184c-162">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="f184c-162">NOTES</span></span>
 
-<span data-ttu-id="af8f7-163">[Класс WMI](/windows/desktop/WmiSdk/retrieving-a-class) **Win32_QuickFixEngineering** представляет небольшое обновление на уровне системы, которое обычно называется обновлением QFE, которое применяется к текущей операционной системе.</span><span class="sxs-lookup"><span data-stu-id="af8f7-163">The **Win32_QuickFixEngineering** [WMI class](/windows/desktop/WmiSdk/retrieving-a-class) represents a small system-wide update, commonly referred to as a quick-fix engineering (QFE) update, applied to the current operating system.</span></span> <span data-ttu-id="af8f7-164">Этот класс возвращает только обновления, предоставляемые компонентом обслуживания на основе компонентов (CBS).</span><span class="sxs-lookup"><span data-stu-id="af8f7-164">This class returns only the updates supplied by Component Based Servicing (CBS).</span></span> <span data-ttu-id="af8f7-165">Эти обновления не перечислены в реестре.</span><span class="sxs-lookup"><span data-stu-id="af8f7-165">These updates are not listed in the registry.</span></span> <span data-ttu-id="af8f7-166">Обновления, предоставляемые Microsoft установщик Windows (MSI) или [Центр обновления Windows](https://update.microsoft.com) сайте, не возвращаются **Win32_QuickFixEngineering**.</span><span class="sxs-lookup"><span data-stu-id="af8f7-166">Updates supplied by Microsoft Windows Installer (MSI) or the [Windows Update](https://update.microsoft.com) site are not returned by **Win32_QuickFixEngineering**.</span></span> <span data-ttu-id="af8f7-167">Дополнительные сведения см. в разделе [класс Win32_QuickFixEngineering](/windows/desktop/CIMWin32Prov/win32-quickfixengineering).</span><span class="sxs-lookup"><span data-stu-id="af8f7-167">For more information, see [Win32_QuickFixEngineering class](/windows/desktop/CIMWin32Prov/win32-quickfixengineering).</span></span>
+<span data-ttu-id="f184c-163">Этот командлет доступен только на платформах Windows.</span><span class="sxs-lookup"><span data-stu-id="f184c-163">This cmdlet is only available on Windows platforms.</span></span>
 
-<span data-ttu-id="af8f7-168">`Get-HotFix`Выходные данные могут отличаться в разных операционных системах.</span><span class="sxs-lookup"><span data-stu-id="af8f7-168">The `Get-HotFix` output might vary on different operating systems.</span></span>
+<span data-ttu-id="f184c-164">[Класс WMI](/windows/desktop/WmiSdk/retrieving-a-class) **Win32_QuickFixEngineering** представляет небольшое обновление на уровне системы, которое обычно называется обновлением QFE, которое применяется к текущей операционной системе.</span><span class="sxs-lookup"><span data-stu-id="f184c-164">The **Win32_QuickFixEngineering** [WMI class](/windows/desktop/WmiSdk/retrieving-a-class) represents a small system-wide update, commonly referred to as a quick-fix engineering (QFE) update, applied to the current operating system.</span></span> <span data-ttu-id="f184c-165">Этот класс возвращает только обновления, предоставляемые компонентом обслуживания на основе компонентов (CBS).</span><span class="sxs-lookup"><span data-stu-id="f184c-165">This class returns only the updates supplied by Component Based Servicing (CBS).</span></span> <span data-ttu-id="f184c-166">Эти обновления не перечислены в реестре.</span><span class="sxs-lookup"><span data-stu-id="f184c-166">These updates are not listed in the registry.</span></span> <span data-ttu-id="f184c-167">Обновления, предоставляемые Microsoft установщик Windows (MSI) или [Центр обновления Windows](https://update.microsoft.com) сайте, не возвращаются **Win32_QuickFixEngineering**.</span><span class="sxs-lookup"><span data-stu-id="f184c-167">Updates supplied by Microsoft Windows Installer (MSI) or the [Windows Update](https://update.microsoft.com) site are not returned by **Win32_QuickFixEngineering**.</span></span> <span data-ttu-id="f184c-168">Дополнительные сведения см. в разделе [класс Win32_QuickFixEngineering](/windows/desktop/CIMWin32Prov/win32-quickfixengineering).</span><span class="sxs-lookup"><span data-stu-id="f184c-168">For more information, see [Win32_QuickFixEngineering class](/windows/desktop/CIMWin32Prov/win32-quickfixengineering).</span></span>
 
-## <span data-ttu-id="af8f7-169">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="af8f7-169">RELATED LINKS</span></span>
+<span data-ttu-id="f184c-169">`Get-HotFix`Выходные данные могут отличаться в разных операционных системах.</span><span class="sxs-lookup"><span data-stu-id="f184c-169">The `Get-HotFix` output might vary on different operating systems.</span></span>
 
-[<span data-ttu-id="af8f7-170">about_Arrays</span><span class="sxs-lookup"><span data-stu-id="af8f7-170">about_Arrays</span></span>](../Microsoft.PowerShell.Core/About/about_Arrays.md)
+## <span data-ttu-id="f184c-170">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="f184c-170">RELATED LINKS</span></span>
 
-[<span data-ttu-id="af8f7-171">Add-Content</span><span class="sxs-lookup"><span data-stu-id="af8f7-171">Add-Content</span></span>](Add-Content.md)
+[<span data-ttu-id="f184c-171">about_Arrays</span><span class="sxs-lookup"><span data-stu-id="f184c-171">about_Arrays</span></span>](../Microsoft.PowerShell.Core/About/about_Arrays.md)
 
-[<span data-ttu-id="af8f7-172">Get-Credential</span><span class="sxs-lookup"><span data-stu-id="af8f7-172">Get-Credential</span></span>](../Microsoft.PowerShell.Security/Get-Credential.md)
+[<span data-ttu-id="f184c-172">Add-Content</span><span class="sxs-lookup"><span data-stu-id="f184c-172">Add-Content</span></span>](Add-Content.md)
 
-[<span data-ttu-id="af8f7-173">Класс Win32_QuickFixEngineering</span><span class="sxs-lookup"><span data-stu-id="af8f7-173">Win32_QuickFixEngineering class</span></span>](/windows/desktop/CIMWin32Prov/win32-quickfixengineering)
+[<span data-ttu-id="f184c-173">Get-Credential</span><span class="sxs-lookup"><span data-stu-id="f184c-173">Get-Credential</span></span>](../Microsoft.PowerShell.Security/Get-Credential.md)
+
+[<span data-ttu-id="f184c-174">Класс Win32_QuickFixEngineering</span><span class="sxs-lookup"><span data-stu-id="f184c-174">Win32_QuickFixEngineering class</span></span>](/windows/desktop/CIMWin32Prov/win32-quickfixengineering)
