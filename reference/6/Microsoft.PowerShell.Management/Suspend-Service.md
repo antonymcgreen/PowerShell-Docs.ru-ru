@@ -7,93 +7,84 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/suspend-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-Service
-ms.openlocfilehash: 6e9fd5dd7a5736ef95976cb5195dd1d210d81651
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5e4037c4ba8947f8efb438103f2bfd47eb05d1f5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93226785"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343747"
 ---
-# <span data-ttu-id="3647b-103">Suspend-Service</span><span class="sxs-lookup"><span data-stu-id="3647b-103">Suspend-Service</span></span>
+# <span data-ttu-id="9e6f9-103">Suspend-Service</span><span class="sxs-lookup"><span data-stu-id="9e6f9-103">Suspend-Service</span></span>
 
-## <span data-ttu-id="3647b-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="3647b-104">SYNOPSIS</span></span>
-<span data-ttu-id="3647b-105">Приостанавливает одну или несколько запущенных служб.</span><span class="sxs-lookup"><span data-stu-id="3647b-105">Suspends (pauses) one or more running services.</span></span>
+## <span data-ttu-id="9e6f9-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="9e6f9-104">SYNOPSIS</span></span>
+<span data-ttu-id="9e6f9-105">Приостанавливает одну или несколько запущенных служб.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-105">Suspends (pauses) one or more running services.</span></span>
 
-## <span data-ttu-id="3647b-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="3647b-106">SYNTAX</span></span>
+## <span data-ttu-id="9e6f9-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="9e6f9-106">SYNTAX</span></span>
 
-### <span data-ttu-id="3647b-107">InputObject (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="3647b-107">InputObject (Default)</span></span>
+### <span data-ttu-id="9e6f9-107">InputObject (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="9e6f9-107">InputObject (Default)</span></span>
 
 ```
 Suspend-Service [-InputObject] <ServiceController[]> [-PassThru] [-Include <String[]>] [-Exclude <String[]>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="3647b-108">По умолчанию</span><span class="sxs-lookup"><span data-stu-id="3647b-108">Default</span></span>
+### <span data-ttu-id="9e6f9-108">По умолчанию</span><span class="sxs-lookup"><span data-stu-id="9e6f9-108">Default</span></span>
 
 ```
 Suspend-Service [-Name] <String[]> [-PassThru] [-Include <String[]>] [-Exclude <String[]>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="3647b-109">DisplayName</span><span class="sxs-lookup"><span data-stu-id="3647b-109">DisplayName</span></span>
+### <span data-ttu-id="9e6f9-109">DisplayName</span><span class="sxs-lookup"><span data-stu-id="9e6f9-109">DisplayName</span></span>
 
 ```
 Suspend-Service [-PassThru] -DisplayName <String[]> [-Include <String[]>] [-Exclude <String[]>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="3647b-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="3647b-110">DESCRIPTION</span></span>
+## <span data-ttu-id="9e6f9-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="9e6f9-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="3647b-111">Командлет **Suspend-Service** отправляет сообщение о приостановке в контроллер служб Windows для каждой из указанных служб.</span><span class="sxs-lookup"><span data-stu-id="3647b-111">The **Suspend-Service** cmdlet sends a suspend message to the Windows Service Controller for each of the specified services.</span></span>
-<span data-ttu-id="3647b-112">При приостановке служба все еще выполняется, но ее действие останавливается до возобновления, например с помощью командлета использовании Resume-Service.</span><span class="sxs-lookup"><span data-stu-id="3647b-112">While suspended, the service is still running, but its action is stopped until resumed, such as by usingthe Resume-Service cmdlet.</span></span>
-<span data-ttu-id="3647b-113">Службы можно указать по именам служб или отображаемым именам, либо можно использовать параметр *InputObject* для передачи объекта службы, представляющего службы, которые необходимо приостановить.</span><span class="sxs-lookup"><span data-stu-id="3647b-113">You can specify the services by their service names or display names, or you can use the *InputObject* parameter to pass a service object that represents the services that you want to suspend.</span></span>
+<span data-ttu-id="9e6f9-111">`Suspend-Service`Командлет отправляет сообщение о приостановке в контроллер служб Windows для каждой из указанных служб.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-111">The `Suspend-Service` cmdlet sends a suspend message to the Windows Service Controller for each of the specified services.</span></span> <span data-ttu-id="9e6f9-112">При приостановке служба все еще выполняется, но ее действие останавливается до возобновления, например `Resume-Service` командлетом использовании.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-112">While suspended, the service is still running, but its action is stopped until resumed, such as by usingthe `Resume-Service` cmdlet.</span></span> <span data-ttu-id="9e6f9-113">Службы можно указать по именам служб или отображаемым именам, либо можно использовать параметр **InputObject** для передачи объекта службы, представляющего службы, которые необходимо приостановить.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-113">You can specify the services by their service names or display names, or you can use the **InputObject** parameter to pass a service object that represents the services that you want to suspend.</span></span>
 
-## <span data-ttu-id="3647b-114">Примеры</span><span class="sxs-lookup"><span data-stu-id="3647b-114">EXAMPLES</span></span>
+## <span data-ttu-id="9e6f9-114">Примеры</span><span class="sxs-lookup"><span data-stu-id="9e6f9-114">EXAMPLES</span></span>
 
-### <span data-ttu-id="3647b-115">Пример 1. Приостановка службы</span><span class="sxs-lookup"><span data-stu-id="3647b-115">Example 1: Suspend a service</span></span>
+### <span data-ttu-id="9e6f9-115">Пример 1. Приостановка службы</span><span class="sxs-lookup"><span data-stu-id="9e6f9-115">Example 1: Suspend a service</span></span>
 
 ```
 PS C:\> Suspend-Service -DisplayName "Telnet"
 ```
 
-<span data-ttu-id="3647b-116">Эта команда приостанавливает службу Telnet (Tlntsvr) на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="3647b-116">This command suspends the Telnet service (Tlntsvr) service on the local computer.</span></span>
+<span data-ttu-id="9e6f9-116">Эта команда приостанавливает службу Telnet (Tlntsvr) на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-116">This command suspends the Telnet service (Tlntsvr) service on the local computer.</span></span>
 
-### <span data-ttu-id="3647b-117">Пример 2. Отображение того, что произойдет при приостановке служб</span><span class="sxs-lookup"><span data-stu-id="3647b-117">Example 2: Display what would happen if you suspend services</span></span>
+### <span data-ttu-id="9e6f9-117">Пример 2. Отображение того, что произойдет при приостановке служб</span><span class="sxs-lookup"><span data-stu-id="9e6f9-117">Example 2: Display what would happen if you suspend services</span></span>
 
 ```
 PS C:\> Suspend-Service -Name lanman* -WhatIf
 ```
 
-<span data-ttu-id="3647b-118">Эта команда сообщает, что произойдет, если вы приостановили службы с именем службы, которое начинается с LanMan.</span><span class="sxs-lookup"><span data-stu-id="3647b-118">This command tells what would happen if you suspended the services that have a service name that starts with lanman.</span></span>
-<span data-ttu-id="3647b-119">Чтобы приостановить службы, выполните команду без параметра *WhatIf* .</span><span class="sxs-lookup"><span data-stu-id="3647b-119">To suspend the services, rerun the command without the *WhatIf* parameter.</span></span>
+<span data-ttu-id="9e6f9-118">Эта команда сообщает, что произойдет, если вы приостановили службы с именем службы, которое начинается с LanMan.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-118">This command tells what would happen if you suspended the services that have a service name that starts with lanman.</span></span> <span data-ttu-id="9e6f9-119">Чтобы приостановить службы, выполните команду без параметра **WhatIf** .</span><span class="sxs-lookup"><span data-stu-id="9e6f9-119">To suspend the services, rerun the command without the **WhatIf** parameter.</span></span>
 
-### <span data-ttu-id="3647b-120">Пример 3. получение и приостановка службы</span><span class="sxs-lookup"><span data-stu-id="3647b-120">Example 3: Get and suspend a service</span></span>
+### <span data-ttu-id="9e6f9-120">Пример 3. получение и приостановка службы</span><span class="sxs-lookup"><span data-stu-id="9e6f9-120">Example 3: Get and suspend a service</span></span>
 
 ```
 PS C:\> Get-Service schedule | Suspend-Service
 ```
 
-<span data-ttu-id="3647b-121">Эта команда использует командлет **Get-Service** для получения объекта, представляющего планировщик задач (расписание) службы на компьютере.</span><span class="sxs-lookup"><span data-stu-id="3647b-121">This command uses the **Get-Service** cmdlet to get an object that represents the Task Scheduler (Schedule) service on the computer.</span></span>
-<span data-ttu-id="3647b-122">Оператор конвейера (|) передает результат в **Suspend-Service** , который приостанавливает работу службы.</span><span class="sxs-lookup"><span data-stu-id="3647b-122">The pipeline operator (|) passes the result to **Suspend-Service** , which suspends the service.</span></span>
+<span data-ttu-id="9e6f9-121">Эта команда использует `Get-Service` командлет для получения объекта, представляющего планировщик задач (расписание) службы на компьютере.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-121">This command uses the `Get-Service` cmdlet to get an object that represents the Task Scheduler (Schedule) service on the computer.</span></span> <span data-ttu-id="9e6f9-122">Оператор конвейера ( `|` ) передает результат в `Suspend-Service` , который приостанавливает работу службы.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-122">The pipeline operator (`|`) passes the result to `Suspend-Service`, which suspends the service.</span></span>
 
-### <span data-ttu-id="3647b-123">Пример 4. Приостановка всех служб, которые могут быть приостановлены</span><span class="sxs-lookup"><span data-stu-id="3647b-123">Example 4: Suspend all services that can be suspended</span></span>
+### <span data-ttu-id="9e6f9-123">Пример 4. Приостановка всех служб, которые могут быть приостановлены</span><span class="sxs-lookup"><span data-stu-id="9e6f9-123">Example 4: Suspend all services that can be suspended</span></span>
 
 ```
 PS C:\> Get-Service | Where-Object {$_.CanPauseAndContinue -eq "True"} | Suspend-Service -Confirm
 ```
 
-<span data-ttu-id="3647b-124">Эта команда приостанавливает все службы на компьютере, которые можно приостановить.</span><span class="sxs-lookup"><span data-stu-id="3647b-124">This command suspends all of the services on the computer that can be suspended.</span></span>
-<span data-ttu-id="3647b-125">Он использует **Get-Service** для получения объектов, представляющих службы на компьютере.</span><span class="sxs-lookup"><span data-stu-id="3647b-125">It uses **Get-Service** to get objects that represent the services on the computer.</span></span>
-<span data-ttu-id="3647b-126">Оператор конвейера передает результаты в командлет Where-Object, который выбирает только службы со значением $True для свойства **CanPauseAndContinue** .</span><span class="sxs-lookup"><span data-stu-id="3647b-126">The pipeline operator passes the results to the Where-Object cmdlet, which selects only the services that have a value of $True for the **CanPauseAndContinue** property.</span></span>
-<span data-ttu-id="3647b-127">Другой оператор конвейера передает результаты в **Suspend-Service**.</span><span class="sxs-lookup"><span data-stu-id="3647b-127">Another pipeline operator passes the results to **Suspend-Service**.</span></span>
-<span data-ttu-id="3647b-128">Параметр *Confirm* запрашивает подтверждение перед приостановкой каждой службы.</span><span class="sxs-lookup"><span data-stu-id="3647b-128">The *Confirm* parameter prompts you for confirmation before suspending each of the services.</span></span>
+<span data-ttu-id="9e6f9-124">Эта команда приостанавливает все службы на компьютере, которые можно приостановить.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-124">This command suspends all of the services on the computer that can be suspended.</span></span> <span data-ttu-id="9e6f9-125">Он использует `Get-Service` для получения объектов, представляющих службы на компьютере.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-125">It uses `Get-Service` to get objects that represent the services on the computer.</span></span> <span data-ttu-id="9e6f9-126">Оператор конвейера передает результаты в `Where-Object` командлет, который выбирает только те службы, значение которых равно `$True` свойству **CanPauseAndContinue** .</span><span class="sxs-lookup"><span data-stu-id="9e6f9-126">The pipeline operator passes the results to the `Where-Object` cmdlet, which selects only the services that have a value of `$True` for the **CanPauseAndContinue** property.</span></span> <span data-ttu-id="9e6f9-127">Другой оператор конвейера передает результаты в `Suspend-Service` .</span><span class="sxs-lookup"><span data-stu-id="9e6f9-127">Another pipeline operator passes the results to `Suspend-Service`.</span></span> <span data-ttu-id="9e6f9-128">Параметр **Confirm** запрашивает подтверждение перед приостановкой каждой службы.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-128">The **Confirm** parameter prompts you for confirmation before suspending each of the services.</span></span>
 
-## <span data-ttu-id="3647b-129">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="3647b-129">PARAMETERS</span></span>
+## <span data-ttu-id="9e6f9-129">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="9e6f9-129">PARAMETERS</span></span>
 
-### <span data-ttu-id="3647b-130">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="3647b-130">-DisplayName</span></span>
+### <span data-ttu-id="9e6f9-130">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="9e6f9-130">-DisplayName</span></span>
 
-<span data-ttu-id="3647b-131">Указывает отображаемые имена приостанавливаемых служб.</span><span class="sxs-lookup"><span data-stu-id="3647b-131">Specifies the display names of the services to be suspended.</span></span>
-<span data-ttu-id="3647b-132">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="3647b-132">Wildcard characters are permitted.</span></span>
+<span data-ttu-id="9e6f9-131">Указывает отображаемые имена приостанавливаемых служб.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-131">Specifies the display names of the services to be suspended.</span></span> <span data-ttu-id="9e6f9-132">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-132">Wildcard characters are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -107,12 +98,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="3647b-133">-Exclude</span><span class="sxs-lookup"><span data-stu-id="3647b-133">-Exclude</span></span>
+### <span data-ttu-id="9e6f9-133">-Exclude</span><span class="sxs-lookup"><span data-stu-id="9e6f9-133">-Exclude</span></span>
 
-<span data-ttu-id="3647b-134">Указывает службы, исключаемые из указанных служб.</span><span class="sxs-lookup"><span data-stu-id="3647b-134">Specifies services to omit from the specified services.</span></span>
-<span data-ttu-id="3647b-135">Значение этого параметра определяет параметр *Name* .</span><span class="sxs-lookup"><span data-stu-id="3647b-135">The value of this parameter qualifies the *Name* parameter.</span></span>
-<span data-ttu-id="3647b-136">Введите часть имени или шаблон, например "s\*".</span><span class="sxs-lookup"><span data-stu-id="3647b-136">Enter a name element or pattern, such as "s\*".</span></span>
-<span data-ttu-id="3647b-137">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="3647b-137">Wildcard characters are permitted.</span></span>
+<span data-ttu-id="9e6f9-134">Указывает службы, исключаемые из указанных служб.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-134">Specifies services to omit from the specified services.</span></span> <span data-ttu-id="9e6f9-135">Значение этого параметра определяет параметр **Name** .</span><span class="sxs-lookup"><span data-stu-id="9e6f9-135">The value of this parameter qualifies the **Name** parameter.</span></span> <span data-ttu-id="9e6f9-136">Введите часть имени или шаблон, например "s\*".</span><span class="sxs-lookup"><span data-stu-id="9e6f9-136">Enter a name element or pattern, such as "s\*".</span></span> <span data-ttu-id="9e6f9-137">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-137">Wildcard characters are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -126,12 +114,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="3647b-138">-Include</span><span class="sxs-lookup"><span data-stu-id="3647b-138">-Include</span></span>
+### <span data-ttu-id="9e6f9-138">-Include</span><span class="sxs-lookup"><span data-stu-id="9e6f9-138">-Include</span></span>
 
-<span data-ttu-id="3647b-139">Указывает службы для приостановки.</span><span class="sxs-lookup"><span data-stu-id="3647b-139">Specifies services to suspend.</span></span>
-<span data-ttu-id="3647b-140">Значение этого параметра определяет параметр *Name* .</span><span class="sxs-lookup"><span data-stu-id="3647b-140">The value of this parameter qualifies the *Name* parameter.</span></span>
-<span data-ttu-id="3647b-141">Введите часть имени или шаблон, например "s\*".</span><span class="sxs-lookup"><span data-stu-id="3647b-141">Enter a name element or pattern, such as "s\*".</span></span>
-<span data-ttu-id="3647b-142">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="3647b-142">Wildcard characters are permitted.</span></span>
+<span data-ttu-id="9e6f9-139">Указывает службы для приостановки.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-139">Specifies services to suspend.</span></span> <span data-ttu-id="9e6f9-140">Значение этого параметра определяет параметр **Name** .</span><span class="sxs-lookup"><span data-stu-id="9e6f9-140">The value of this parameter qualifies the **Name** parameter.</span></span> <span data-ttu-id="9e6f9-141">Введите часть имени или шаблон, например "s\*".</span><span class="sxs-lookup"><span data-stu-id="9e6f9-141">Enter a name element or pattern, such as "s\*".</span></span> <span data-ttu-id="9e6f9-142">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-142">Wildcard characters are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -145,10 +130,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="3647b-143">-InputObject</span><span class="sxs-lookup"><span data-stu-id="3647b-143">-InputObject</span></span>
+### <span data-ttu-id="9e6f9-143">-InputObject</span><span class="sxs-lookup"><span data-stu-id="9e6f9-143">-InputObject</span></span>
 
-<span data-ttu-id="3647b-144">Указывает объекты **ServiceController** , представляющие службы для приостановки.</span><span class="sxs-lookup"><span data-stu-id="3647b-144">Specifies **ServiceController** objects that represent the services to suspend.</span></span>
-<span data-ttu-id="3647b-145">Введите переменную, которая содержит объекты, или команду или выражение, которое возвращает объекты.</span><span class="sxs-lookup"><span data-stu-id="3647b-145">Enter a variable that contains the objects, or type a command or expression that gets the objects.</span></span>
+<span data-ttu-id="9e6f9-144">Указывает объекты **ServiceController** , представляющие службы для приостановки.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-144">Specifies **ServiceController** objects that represent the services to suspend.</span></span> <span data-ttu-id="9e6f9-145">Введите переменную, которая содержит объекты, или команду или выражение, которое возвращает объекты.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-145">Enter a variable that contains the objects, or type a command or expression that gets the objects.</span></span>
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -162,13 +146,11 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3647b-146">-Name</span><span class="sxs-lookup"><span data-stu-id="3647b-146">-Name</span></span>
+### <span data-ttu-id="9e6f9-146">-Name</span><span class="sxs-lookup"><span data-stu-id="9e6f9-146">-Name</span></span>
 
-<span data-ttu-id="3647b-147">Указывает имена служб для приостановки.</span><span class="sxs-lookup"><span data-stu-id="3647b-147">Specifies the service names of the services to suspend.</span></span>
-<span data-ttu-id="3647b-148">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="3647b-148">Wildcard characters are permitted.</span></span>
+<span data-ttu-id="9e6f9-147">Указывает имена служб для приостановки.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-147">Specifies the service names of the services to suspend.</span></span> <span data-ttu-id="9e6f9-148">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-148">Wildcard characters are permitted.</span></span>
 
-<span data-ttu-id="3647b-149">Имя параметра является необязательным.</span><span class="sxs-lookup"><span data-stu-id="3647b-149">The parameter name is optional.</span></span>
-<span data-ttu-id="3647b-150">Можно использовать *имя* или его псевдоним, *ServiceName* , или можно опустить имя параметра.</span><span class="sxs-lookup"><span data-stu-id="3647b-150">You can use *Name* or its alias, *ServiceName* , or you can omit the parameter name.</span></span>
+<span data-ttu-id="9e6f9-149">Имя параметра является необязательным.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-149">The parameter name is optional.</span></span> <span data-ttu-id="9e6f9-150">Можно использовать **имя** или его псевдоним, **ServiceName** , или можно опустить имя параметра.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-150">You can use **Name** or its alias, **ServiceName** , or you can omit the parameter name.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -182,10 +164,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="3647b-151">-PassThru</span><span class="sxs-lookup"><span data-stu-id="3647b-151">-PassThru</span></span>
+### <span data-ttu-id="9e6f9-151">-PassThru</span><span class="sxs-lookup"><span data-stu-id="9e6f9-151">-PassThru</span></span>
 
-<span data-ttu-id="3647b-152">Возвращает объект, представляющий элемент, с которым вы работаете.</span><span class="sxs-lookup"><span data-stu-id="3647b-152">Returns an object representing the item with which you are working.</span></span>
-<span data-ttu-id="3647b-153">По умолчанию этот командлет не создает выходные данные.</span><span class="sxs-lookup"><span data-stu-id="3647b-153">By default, this cmdlet does not generate any output.</span></span>
+<span data-ttu-id="9e6f9-152">Возвращает объект, представляющий элемент, с которым вы работаете.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-152">Returns an object representing the item with which you are working.</span></span> <span data-ttu-id="9e6f9-153">По умолчанию этот командлет не создает выходные данные.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-153">By default, this cmdlet does not generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -199,9 +180,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3647b-154">-Confirm</span><span class="sxs-lookup"><span data-stu-id="3647b-154">-Confirm</span></span>
+### <span data-ttu-id="9e6f9-154">-Confirm</span><span class="sxs-lookup"><span data-stu-id="9e6f9-154">-Confirm</span></span>
 
-<span data-ttu-id="3647b-155">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="3647b-155">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="9e6f9-155">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-155">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -215,10 +196,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3647b-156">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="3647b-156">-WhatIf</span></span>
+### <span data-ttu-id="9e6f9-156">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="9e6f9-156">-WhatIf</span></span>
 
-<span data-ttu-id="3647b-157">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="3647b-157">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="3647b-158">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="3647b-158">The cmdlet is not run.</span></span>
+<span data-ttu-id="9e6f9-157">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-157">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="9e6f9-158">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-158">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -232,43 +213,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3647b-159">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="3647b-159">CommonParameters</span></span>
+### <span data-ttu-id="9e6f9-159">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="9e6f9-159">CommonParameters</span></span>
 
-<span data-ttu-id="3647b-160">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="3647b-160">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3647b-161">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="3647b-161">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="9e6f9-160">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-160">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="9e6f9-161">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="9e6f9-161">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="3647b-162">Входные данные</span><span class="sxs-lookup"><span data-stu-id="3647b-162">INPUTS</span></span>
+## <span data-ttu-id="9e6f9-162">Входные данные</span><span class="sxs-lookup"><span data-stu-id="9e6f9-162">INPUTS</span></span>
 
-### <span data-ttu-id="3647b-163">System.ServiceProcess.ServiceController, System.String</span><span class="sxs-lookup"><span data-stu-id="3647b-163">System.ServiceProcess.ServiceController, System.String</span></span>
+### <span data-ttu-id="9e6f9-163">System.ServiceProcess.ServiceController, System.String</span><span class="sxs-lookup"><span data-stu-id="9e6f9-163">System.ServiceProcess.ServiceController, System.String</span></span>
 
-<span data-ttu-id="3647b-164">В командлет можно передать по конвейеру объект службы или строку, содержащую имя службы.</span><span class="sxs-lookup"><span data-stu-id="3647b-164">You can pipe a service object or a string that contains a service name to this cmdlet.</span></span>
+<span data-ttu-id="9e6f9-164">В командлет можно передать по конвейеру объект службы или строку, содержащую имя службы.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-164">You can pipe a service object or a string that contains a service name to this cmdlet.</span></span>
 
-## <span data-ttu-id="3647b-165">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="3647b-165">OUTPUTS</span></span>
+## <span data-ttu-id="9e6f9-165">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="9e6f9-165">OUTPUTS</span></span>
 
-### <span data-ttu-id="3647b-166">Нет или System.ServiceProcess.ServiceController</span><span class="sxs-lookup"><span data-stu-id="3647b-166">None, System.ServiceProcess.ServiceController</span></span>
+### <span data-ttu-id="9e6f9-166">Нет или System.ServiceProcess.ServiceController</span><span class="sxs-lookup"><span data-stu-id="9e6f9-166">None, System.ServiceProcess.ServiceController</span></span>
 
-<span data-ttu-id="3647b-167">Этот командлет создает объект **System. ServiceProcess. ServiceController** , представляющий службу, если указан параметр *PassThru* .</span><span class="sxs-lookup"><span data-stu-id="3647b-167">This cmdlet generates a **System.ServiceProcess.ServiceController** object that represents the service, if you specify the *PassThru* parameter.</span></span>
-<span data-ttu-id="3647b-168">В противном случае командлет не формирует никаких выходных данных.</span><span class="sxs-lookup"><span data-stu-id="3647b-168">Otherwise, this cmdlet does not generate any output.</span></span>
+<span data-ttu-id="9e6f9-167">Этот командлет создает объект **System. ServiceProcess. ServiceController** , представляющий службу, если указан параметр **PassThru** .</span><span class="sxs-lookup"><span data-stu-id="9e6f9-167">This cmdlet generates a **System.ServiceProcess.ServiceController** object that represents the service, if you specify the **PassThru** parameter.</span></span> <span data-ttu-id="9e6f9-168">В противном случае командлет не формирует никаких выходных данных.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-168">Otherwise, this cmdlet does not generate any output.</span></span>
 
-## <span data-ttu-id="3647b-169">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="3647b-169">NOTES</span></span>
+## <span data-ttu-id="9e6f9-169">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="9e6f9-169">NOTES</span></span>
 
-* <span data-ttu-id="3647b-170">**Suspend-Service** может управлять службами, только если у текущего пользователя есть разрешение на это.</span><span class="sxs-lookup"><span data-stu-id="3647b-170">**Suspend-Service** can control services only when the current user has permission to do this.</span></span> <span data-ttu-id="3647b-171">Если команда работает неправильно, возможно, у вас нет необходимых разрешений.</span><span class="sxs-lookup"><span data-stu-id="3647b-171">If a command does not work correctly, you might not have the required permissions.</span></span>
-* <span data-ttu-id="3647b-172">**Suspend-Service** может приостановить только службы, которые поддерживают приостановку и возобновление работы.</span><span class="sxs-lookup"><span data-stu-id="3647b-172">**Suspend-Service** can suspend only services that support being suspended and resumed.</span></span> <span data-ttu-id="3647b-173">Чтобы определить, можно ли приостановить конкретную службу, используйте командлет Get-Service вместе со свойством **CanPauseAndContinue** .</span><span class="sxs-lookup"><span data-stu-id="3647b-173">To determine whether a particular service can be suspended, use the Get-Service cmdlet together with the **CanPauseAndContinue** property.</span></span> <span data-ttu-id="3647b-174">Например, `Get-Service wmi | Format-List Name, CanPauseAndContinue`.</span><span class="sxs-lookup"><span data-stu-id="3647b-174">For example, `Get-Service wmi | Format-List Name, CanPauseAndContinue`.</span></span> <span data-ttu-id="3647b-175">Чтобы найти все службы на компьютере, которые можно приостановить, введите `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}` .</span><span class="sxs-lookup"><span data-stu-id="3647b-175">To find all services on the computer that can be suspended, type `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}`.</span></span>
-* <span data-ttu-id="3647b-176">Чтобы найти имена службы и отображаемые имена служб в системе, введите **Get-Service**.</span><span class="sxs-lookup"><span data-stu-id="3647b-176">To find the service names and display names of the services on your system, type **Get-Service**.</span></span> <span data-ttu-id="3647b-177">Имена служб отображаются в столбце **имя** , а отображаемые имена отображаются в столбце **DisplayName** .</span><span class="sxs-lookup"><span data-stu-id="3647b-177">The service names appear in the **Name** column, and the display names appear in the **DisplayName** column.</span></span>
+<span data-ttu-id="9e6f9-170">Этот командлет доступен только на платформах Windows.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-170">This cmdlet is only available on Windows platforms.</span></span>
 
-## <span data-ttu-id="3647b-178">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="3647b-178">RELATED LINKS</span></span>
+- <span data-ttu-id="9e6f9-171">`Suspend-Service` может управлять службами, только если у текущего пользователя есть разрешение на это.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-171">`Suspend-Service` can control services only when the current user has permission to do this.</span></span> <span data-ttu-id="9e6f9-172">Если команда работает неправильно, возможно, у вас нет необходимых разрешений.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-172">If a command does not work correctly, you might not have the required permissions.</span></span>
+- <span data-ttu-id="9e6f9-173">`Suspend-Service` может приостанавливать только службы, которые поддерживают приостановку и возобновление работы.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-173">`Suspend-Service` can suspend only services that support being suspended and resumed.</span></span> <span data-ttu-id="9e6f9-174">Чтобы определить, можно ли приостановить конкретную службу, используйте `Get-Service` командлет вместе со свойством **CanPauseAndContinue** .</span><span class="sxs-lookup"><span data-stu-id="9e6f9-174">To determine whether a particular service can be suspended, use the `Get-Service` cmdlet together with the **CanPauseAndContinue** property.</span></span> <span data-ttu-id="9e6f9-175">Например, `Get-Service wmi | Format-List Name, CanPauseAndContinue`.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-175">For example, `Get-Service wmi | Format-List Name, CanPauseAndContinue`.</span></span> <span data-ttu-id="9e6f9-176">Чтобы найти все службы на компьютере, которые можно приостановить, введите `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}` .</span><span class="sxs-lookup"><span data-stu-id="9e6f9-176">To find all services on the computer that can be suspended, type `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}`.</span></span>
+- <span data-ttu-id="9e6f9-177">Чтобы найти имена служб и отображаемые имена в системе, введите `Get-Service`.</span><span class="sxs-lookup"><span data-stu-id="9e6f9-177">To find the service names and display names of the services on your system, type `Get-Service`.</span></span>
+  <span data-ttu-id="9e6f9-178">Имена служб отображаются в столбце **имя** , а отображаемые имена отображаются в столбце **DisplayName** .</span><span class="sxs-lookup"><span data-stu-id="9e6f9-178">The service names appear in the **Name** column, and the display names appear in the **DisplayName** column.</span></span>
 
-[<span data-ttu-id="3647b-179">Get-Service</span><span class="sxs-lookup"><span data-stu-id="3647b-179">Get-Service</span></span>](Get-Service.md)
+## <span data-ttu-id="9e6f9-179">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="9e6f9-179">RELATED LINKS</span></span>
 
-[<span data-ttu-id="3647b-180">New-Service</span><span class="sxs-lookup"><span data-stu-id="3647b-180">New-Service</span></span>](New-Service.md)
+[<span data-ttu-id="9e6f9-180">Get-Service</span><span class="sxs-lookup"><span data-stu-id="9e6f9-180">Get-Service</span></span>](Get-Service.md)
 
-[<span data-ttu-id="3647b-181">Restart-Service</span><span class="sxs-lookup"><span data-stu-id="3647b-181">Restart-Service</span></span>](Restart-Service.md)
+[<span data-ttu-id="9e6f9-181">New-Service</span><span class="sxs-lookup"><span data-stu-id="9e6f9-181">New-Service</span></span>](New-Service.md)
 
-[<span data-ttu-id="3647b-182">Resume-Service</span><span class="sxs-lookup"><span data-stu-id="3647b-182">Resume-Service</span></span>](Resume-Service.md)
+[<span data-ttu-id="9e6f9-182">Restart-Service</span><span class="sxs-lookup"><span data-stu-id="9e6f9-182">Restart-Service</span></span>](Restart-Service.md)
 
-[<span data-ttu-id="3647b-183">Set-Service</span><span class="sxs-lookup"><span data-stu-id="3647b-183">Set-Service</span></span>](Set-Service.md)
+[<span data-ttu-id="9e6f9-183">Resume-Service</span><span class="sxs-lookup"><span data-stu-id="9e6f9-183">Resume-Service</span></span>](Resume-Service.md)
 
-[<span data-ttu-id="3647b-184">Start-Service</span><span class="sxs-lookup"><span data-stu-id="3647b-184">Start-Service</span></span>](Start-Service.md)
+[<span data-ttu-id="9e6f9-184">Set-Service</span><span class="sxs-lookup"><span data-stu-id="9e6f9-184">Set-Service</span></span>](Set-Service.md)
 
-[<span data-ttu-id="3647b-185">Stop-Service</span><span class="sxs-lookup"><span data-stu-id="3647b-185">Stop-Service</span></span>](Stop-Service.md)
+[<span data-ttu-id="9e6f9-185">Start-Service</span><span class="sxs-lookup"><span data-stu-id="9e6f9-185">Start-Service</span></span>](Start-Service.md)
 
-[<span data-ttu-id="3647b-186">Remove-Service</span><span class="sxs-lookup"><span data-stu-id="3647b-186">Remove-Service</span></span>](Remove-Service.md)
+[<span data-ttu-id="9e6f9-186">Stop-Service</span><span class="sxs-lookup"><span data-stu-id="9e6f9-186">Stop-Service</span></span>](Stop-Service.md)
+
+[<span data-ttu-id="9e6f9-187">Remove-Service</span><span class="sxs-lookup"><span data-stu-id="9e6f9-187">Remove-Service</span></span>](Remove-Service.md)

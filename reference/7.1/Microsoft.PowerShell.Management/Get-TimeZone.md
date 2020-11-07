@@ -7,54 +7,54 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-timezone?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-TimeZone
-ms.openlocfilehash: 6e0ed432713cabc4db23f3b070a3e925639a60fb
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 973aa99e8194d98a289b822b8232de0ed6d0405b
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93226485"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342881"
 ---
-# <span data-ttu-id="582fc-103">Get-TimeZone</span><span class="sxs-lookup"><span data-stu-id="582fc-103">Get-TimeZone</span></span>
+# <span data-ttu-id="eed4e-103">Get-TimeZone</span><span class="sxs-lookup"><span data-stu-id="eed4e-103">Get-TimeZone</span></span>
 
-## <span data-ttu-id="582fc-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="582fc-104">SYNOPSIS</span></span>
-<span data-ttu-id="582fc-105">Возвращает текущий часовой пояс или список доступных часовых поясов.</span><span class="sxs-lookup"><span data-stu-id="582fc-105">Gets the current time zone or a list of available time zones.</span></span>
+## <span data-ttu-id="eed4e-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="eed4e-104">SYNOPSIS</span></span>
+<span data-ttu-id="eed4e-105">Возвращает текущий часовой пояс или список доступных часовых поясов.</span><span class="sxs-lookup"><span data-stu-id="eed4e-105">Gets the current time zone or a list of available time zones.</span></span>
 
-## <span data-ttu-id="582fc-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="582fc-106">SYNTAX</span></span>
+## <span data-ttu-id="eed4e-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="eed4e-106">SYNTAX</span></span>
 
-### <span data-ttu-id="582fc-107">Имя (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="582fc-107">Name (Default)</span></span>
+### <span data-ttu-id="eed4e-107">Имя (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="eed4e-107">Name (Default)</span></span>
 
 ```
 Get-TimeZone [[-Name] <String[]>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="582fc-108">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="582fc-108">Id</span></span>
+### <span data-ttu-id="eed4e-108">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="eed4e-108">Id</span></span>
 
 ```
 Get-TimeZone -Id <String[]> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="582fc-109">ListAvailable</span><span class="sxs-lookup"><span data-stu-id="582fc-109">ListAvailable</span></span>
+### <span data-ttu-id="eed4e-109">ListAvailable</span><span class="sxs-lookup"><span data-stu-id="eed4e-109">ListAvailable</span></span>
 
 ```
 Get-TimeZone [-ListAvailable] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="582fc-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="582fc-110">DESCRIPTION</span></span>
+## <span data-ttu-id="eed4e-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="eed4e-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="582fc-111">Командлет **Get-TimeZone** получает текущий часовой пояс или список доступных часовых поясов.</span><span class="sxs-lookup"><span data-stu-id="582fc-111">The **Get-TimeZone** cmdlet gets the current time zone or a list of available time zones.</span></span>
+<span data-ttu-id="eed4e-111">Командлет **Get-TimeZone** получает текущий часовой пояс или список доступных часовых поясов.</span><span class="sxs-lookup"><span data-stu-id="eed4e-111">The **Get-TimeZone** cmdlet gets the current time zone or a list of available time zones.</span></span>
 
-## <span data-ttu-id="582fc-112">Примеры</span><span class="sxs-lookup"><span data-stu-id="582fc-112">EXAMPLES</span></span>
+## <span data-ttu-id="eed4e-112">Примеры</span><span class="sxs-lookup"><span data-stu-id="eed4e-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="582fc-113">Пример 1. Получение текущего часового пояса</span><span class="sxs-lookup"><span data-stu-id="582fc-113">Example 1: Get the current time zone</span></span>
+### <span data-ttu-id="eed4e-113">Пример 1. Получение текущего часового пояса</span><span class="sxs-lookup"><span data-stu-id="eed4e-113">Example 1: Get the current time zone</span></span>
 
 ```
 PS C:\> Get-TimeZone
 Pacific Standard Time
 ```
 
-<span data-ttu-id="582fc-114">Эта команда возвращает текущий часовой пояс.</span><span class="sxs-lookup"><span data-stu-id="582fc-114">This command gets the current time zone.</span></span>
+<span data-ttu-id="eed4e-114">Эта команда возвращает текущий часовой пояс.</span><span class="sxs-lookup"><span data-stu-id="eed4e-114">This command gets the current time zone.</span></span>
 
-### <span data-ttu-id="582fc-115">Пример 2. получение часовых поясов, соответствующих указанной строке</span><span class="sxs-lookup"><span data-stu-id="582fc-115">Example 2: Get time zones that match a specified string</span></span>
+### <span data-ttu-id="eed4e-115">Пример 2. получение часовых поясов, соответствующих указанной строке</span><span class="sxs-lookup"><span data-stu-id="eed4e-115">Example 2: Get time zones that match a specified string</span></span>
 
 ```
 PS C:\> Get-TimeZone -Name "*pac*"
@@ -73,21 +73,21 @@ West Pacific Standard Time
 Central Pacific Standard Time
 ```
 
-<span data-ttu-id="582fc-116">Эта команда возвращает все часовые пояса, соответствующие указанному подстановочному знаку.</span><span class="sxs-lookup"><span data-stu-id="582fc-116">This command gets all time zones that match the specified wildcard.</span></span>
+<span data-ttu-id="eed4e-116">Эта команда возвращает все часовые пояса, соответствующие указанному подстановочному знаку.</span><span class="sxs-lookup"><span data-stu-id="eed4e-116">This command gets all time zones that match the specified wildcard.</span></span>
 
-### <span data-ttu-id="582fc-117">Пример 3. получение всех доступных часовых поясов</span><span class="sxs-lookup"><span data-stu-id="582fc-117">Example 3: Get all available time zones</span></span>
+### <span data-ttu-id="eed4e-117">Пример 3. получение всех доступных часовых поясов</span><span class="sxs-lookup"><span data-stu-id="eed4e-117">Example 3: Get all available time zones</span></span>
 
 ```
 PS C:\> Get-TimeZone -ListAvailable
 ```
 
-<span data-ttu-id="582fc-118">Эта команда возвращает все доступные часовые пояса.</span><span class="sxs-lookup"><span data-stu-id="582fc-118">This command gets all available time zones.</span></span>
+<span data-ttu-id="eed4e-118">Эта команда возвращает все доступные часовые пояса.</span><span class="sxs-lookup"><span data-stu-id="eed4e-118">This command gets all available time zones.</span></span>
 
-## <span data-ttu-id="582fc-119">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="582fc-119">PARAMETERS</span></span>
+## <span data-ttu-id="eed4e-119">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="eed4e-119">PARAMETERS</span></span>
 
-### <span data-ttu-id="582fc-120">-Id</span><span class="sxs-lookup"><span data-stu-id="582fc-120">-Id</span></span>
+### <span data-ttu-id="eed4e-120">-Id</span><span class="sxs-lookup"><span data-stu-id="eed4e-120">-Id</span></span>
 
-<span data-ttu-id="582fc-121">Указывает в виде массива строк идентификатор или идентификаторы часовых поясов, которые получает этот командлет.</span><span class="sxs-lookup"><span data-stu-id="582fc-121">Specifies, as a string array, the ID or IDs of the time zones that this cmdlet gets.</span></span>
+<span data-ttu-id="eed4e-121">Указывает в виде массива строк идентификатор или идентификаторы часовых поясов, которые получает этот командлет.</span><span class="sxs-lookup"><span data-stu-id="eed4e-121">Specifies, as a string array, the ID or IDs of the time zones that this cmdlet gets.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -101,9 +101,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="582fc-122">-ListAvailable</span><span class="sxs-lookup"><span data-stu-id="582fc-122">-ListAvailable</span></span>
+### <span data-ttu-id="eed4e-122">-ListAvailable</span><span class="sxs-lookup"><span data-stu-id="eed4e-122">-ListAvailable</span></span>
 
-<span data-ttu-id="582fc-123">Указывает, что этот командлет получает все доступные часовые пояса.</span><span class="sxs-lookup"><span data-stu-id="582fc-123">Indicates that this cmdlet gets all available time zones.</span></span>
+<span data-ttu-id="eed4e-123">Указывает, что этот командлет получает все доступные часовые пояса.</span><span class="sxs-lookup"><span data-stu-id="eed4e-123">Indicates that this cmdlet gets all available time zones.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -117,9 +117,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="582fc-124">-Name</span><span class="sxs-lookup"><span data-stu-id="582fc-124">-Name</span></span>
+### <span data-ttu-id="eed4e-124">-Name</span><span class="sxs-lookup"><span data-stu-id="eed4e-124">-Name</span></span>
 
-<span data-ttu-id="582fc-125">Указывает в виде массива строк имя или имена часовых поясов, которые получает этот командлет.</span><span class="sxs-lookup"><span data-stu-id="582fc-125">Specifies, as a string array, the name or names of the time zones that this cmdlet gets.</span></span>
+<span data-ttu-id="eed4e-125">Указывает в виде массива строк имя или имена часовых поясов, которые получает этот командлет.</span><span class="sxs-lookup"><span data-stu-id="eed4e-125">Specifies, as a string array, the name or names of the time zones that this cmdlet gets.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -133,21 +133,22 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="582fc-126">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="582fc-126">CommonParameters</span></span>
+### <span data-ttu-id="eed4e-126">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="eed4e-126">CommonParameters</span></span>
 
-<span data-ttu-id="582fc-127">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="582fc-127">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="582fc-128">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="582fc-128">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="eed4e-127">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="eed4e-127">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="eed4e-128">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="eed4e-128">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="582fc-129">Входные данные</span><span class="sxs-lookup"><span data-stu-id="582fc-129">INPUTS</span></span>
+## <span data-ttu-id="eed4e-129">Входные данные</span><span class="sxs-lookup"><span data-stu-id="eed4e-129">INPUTS</span></span>
 
-### <span data-ttu-id="582fc-130">System.String[]</span><span class="sxs-lookup"><span data-stu-id="582fc-130">System.String[]</span></span>
+### <span data-ttu-id="eed4e-130">System.String[]</span><span class="sxs-lookup"><span data-stu-id="eed4e-130">System.String[]</span></span>
 
-## <span data-ttu-id="582fc-131">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="582fc-131">OUTPUTS</span></span>
+## <span data-ttu-id="eed4e-131">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="eed4e-131">OUTPUTS</span></span>
 
-### <span data-ttu-id="582fc-132">System. TimeZoneInfo []</span><span class="sxs-lookup"><span data-stu-id="582fc-132">System.TimeZoneInfo[]</span></span>
+### <span data-ttu-id="eed4e-132">System. TimeZoneInfo []</span><span class="sxs-lookup"><span data-stu-id="eed4e-132">System.TimeZoneInfo[]</span></span>
 
-## <span data-ttu-id="582fc-133">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="582fc-133">NOTES</span></span>
+## <span data-ttu-id="eed4e-133">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="eed4e-133">NOTES</span></span>
 
-## <span data-ttu-id="582fc-134">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="582fc-134">RELATED LINKS</span></span>
+<span data-ttu-id="eed4e-134">Этот командлет доступен только на платформах Windows.</span><span class="sxs-lookup"><span data-stu-id="eed4e-134">This cmdlet is only available on Windows platforms.</span></span>
 
-[<span data-ttu-id="582fc-135">Set-TimeZone</span><span class="sxs-lookup"><span data-stu-id="582fc-135">Set-TimeZone</span></span>](Set-TimeZone.md)
+## <span data-ttu-id="eed4e-135">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="eed4e-135">RELATED LINKS</span></span>
 
+[<span data-ttu-id="eed4e-136">Set-TimeZone</span><span class="sxs-lookup"><span data-stu-id="eed4e-136">Set-TimeZone</span></span>](Set-TimeZone.md)
