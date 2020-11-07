@@ -7,12 +7,12 @@ ms.date: 09/21/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-clipboard?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Clipboard
-ms.openlocfilehash: da1df360d7c471d925bd2f57f5258ecb2d60e631
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 5fce0c872871006dd760ee8df2fb692faaa1aab9
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239985"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342371"
 ---
 # Get-Clipboard
 
@@ -30,7 +30,7 @@ Get-Clipboard [-Raw] [<CommonParameters>]
 `Get-Clipboard`Командлет получает содержимое буфера обмена в виде текста. Несколько строк текста возвращаются в виде массива строк, аналогичного `Get-Content` .
 
 > [!NOTE]
-> В Linux для этого командлета требуется, `xclip` чтобы программа была в пути.
+> В Linux для этого командлета требуется, `xclip` чтобы программа была в пути. Этот командлет не поддерживается в macOS.
 
 ## Примеры
 
@@ -79,4 +79,3 @@ Accept wildcard characters: False
 ## Связанные ссылки
 
 [Set-Clipboard](Set-Clipboard.md)
-

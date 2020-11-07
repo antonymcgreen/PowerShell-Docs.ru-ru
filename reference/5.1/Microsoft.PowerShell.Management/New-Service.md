@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 3249ce91a63417f2790997d37e2420c6fcb374d8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5647f9bfa909cba9740e7be17f262b6be0e5c8e9
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227966"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342932"
 ---
 # New-Service
 
@@ -177,8 +177,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Указывает имя службы.
-Этот параметр обязателен.
+Указывает имя службы. Этот параметр обязателен.
 
 ```yaml
 Type: System.String
@@ -203,7 +202,7 @@ Accept wildcard characters: False
 - **Загрузка** — указывает, что служба является драйвером устройства, запущенным загрузчиком системы. Это значение допустимо только для драйверов устройств.
 - **Система** — указывает, что служба является драйвером устройства, запущенным функцией "иоинитсистем ()". Это значение допустимо только для драйверов устройств.
 
- Значение по умолчанию — **Automatic** .
+ Значение по умолчанию — **Automatic**.
 
 ```yaml
 Type: System.ServiceProcess.ServiceStartMode
@@ -236,8 +235,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Показывает, что произойдет при запуске командлета.
-Командлет не выполняется.
+Показывает, что произойдет при запуске командлета. Командлет не выполняется.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -269,7 +267,7 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-Чтобы запустить этот командлет в Windows Vista и более поздних версиях операционной системы Windows, запустите PowerShell с помощью команды Запуск от имени администратора.
+Чтобы запустить этот командлет, запустите PowerShell с помощью команды **Запуск от имени администратора** .
 
 Чтобы удалить службу, используйте Sc.exe или `Get-CimInstance` командлет, чтобы получить объект **Win32_Service** , представляющий службу, а затем используйте метод **Delete** для удаления службы. Объект, который `Get-Service` возвращает, не имеет метода Delete.
 

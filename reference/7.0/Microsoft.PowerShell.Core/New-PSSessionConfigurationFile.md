@@ -7,12 +7,12 @@ ms.date: 06/24/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionconfigurationfile?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionConfigurationFile
-ms.openlocfilehash: 4f326fcfb2c2af6816ae7cc58f12699e748f163a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: f2d5613b97e784fc9e1096d3687c156a77d21908
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226002"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343102"
 ---
 # New-PSSessionConfigurationFile
 
@@ -951,6 +951,8 @@ Accept wildcard characters: True
 Этот командлет не формирует никаких выходных данных.
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 - Параметры, такие как **VisibleCmdlets** и **VisibleProviders** , не импортируют элементы в сеанс. Вместо этого они отбирают элементы, импортированные в сеанс. Например, если значение параметра **VisibleProviders** является поставщиком сертификата, но в параметре **ModulesToImport** не указан модуль **Microsoft. PowerShell. Security** , который содержит поставщик сертификата, то поставщик сертификата не отображается в сеансе.
 - `New-PSSessionConfigurationFile` создает файл конфигурации сеанса с расширением имени файла pssc в пути, указанном в параметре **path** . При использовании файла конфигурации сеанса для создания конфигурации сеанса `Register-PSSessionConfiguration` командлет копирует файл конфигурации и сохраняет активную копию файла в подкаталоге **сессионконфиг** `$PSHOME` каталога.

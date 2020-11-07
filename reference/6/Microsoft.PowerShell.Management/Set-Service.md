@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Service
-ms.openlocfilehash: ad1fd47291cbe8977bd2f2ada4981589714c93a3
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: a5c156dcf83b3c60123b0bdde002c8657081602e
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93226794"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343765"
 ---
 # Set-Service
 
@@ -391,6 +391,8 @@ Accept wildcard characters: False
 По умолчанию `Set-Service` не возвращает никаких объектов. Используйте параметр **PassThru** для вывода объекта **ServiceController** .
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 `Set-Service` требуются повышенные разрешения. Используйте команду **Запуск от имени администратора** .
 

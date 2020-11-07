@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-PSSession
-ms.openlocfilehash: c0eed3d571cfb243c3f0ba4d0a4b7ddfaf4f04fb
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 41f278541d1375697ccb95504b7d7b1d28027786
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93229905"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344071"
 ---
 # Disconnect-PSSession
 
@@ -29,7 +29,7 @@ Disconnect-PSSession [-Session] <PSSession[]> [-IdleTimeoutSec <Int32>]
  [<CommonParameters>]
 ```
 
-### name
+### Имя
 
 ```
 Disconnect-PSSession [-IdleTimeoutSec <Int32>] [-OutputBufferingMode <OutputBufferingMode>]
@@ -443,6 +443,8 @@ Accept wildcard characters: False
 `Disconnect-PSSession` Возвращает объект, представляющий сеанс, который он отключил.
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 - `Disconnect-PSSession`Командлет работает, только если на локальном и удаленном компьютерах работает PowerShell 3,0 или более поздней версии.
 - При использовании `Disconnect-PSSession` командлета в отключенном сеансе команда не оказывает влияния на сеанс и не создает ошибок.

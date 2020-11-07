@@ -7,17 +7,16 @@ ms.date: 11/02/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/test-filecatalog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-FileCatalog
-ms.openlocfilehash: 128405fdbcf0c1d059287191850ffdca53278ec1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 8f5e11fca51bf92386c19a77fa9a66503b2d47a5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227765"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343255"
 ---
 # Test-FileCatalog
 
 ## Краткий обзор
-
 `Test-FileCatalog` проверяет, совпадают ли хэши, содержащиеся в файле каталога (. cat), с хэшами реальных файлов, чтобы проверить их подлинность.
 
 Этот командлет поддерживается только в Windows.
@@ -31,10 +30,7 @@ Test-FileCatalog [-Detailed] [-FilesToSkip <String[]>] [-CatalogFilePath] <Strin
 
 ## DESCRIPTION
 
-`Test-FileCatalog` проверяет подлинность файлов, сравнивая хэши файлов каталога (. cat) с хэшами фактических файлов на диске.
-Если обнаруживает несоответствия, возвращается состояние ValidationFailed. Все эти данные можно получить с помощью параметра -Detailed.
-Он также отображает состояние подписывания каталога в свойстве Signature, которое эквивалентно вызову `Get-AuthenticodeSignature` командлета для файла каталога.
-Также можно исключить любые файлы из проверки, указав их в параметре -FilesToSkip.
+`Test-FileCatalog` проверяет подлинность файлов, сравнивая хэши файлов каталога (. cat) с хэшами фактических файлов на диске. Если обнаруживает несоответствия, возвращается состояние ValidationFailed. Все эти данные можно получить с помощью параметра -Detailed. Он также отображает состояние подписывания каталога в свойстве Signature, которое эквивалентно вызову `Get-AuthenticodeSignature` командлета для файла каталога. Также можно исключить любые файлы из проверки, указав их в параметре -FilesToSkip.
 
 Этот командлет поддерживается только в Windows.
 
@@ -154,8 +150,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Показывает, что произойдет при запуске командлета.
-Командлет не выполняется.
+Показывает, что произойдет при запуске командлета. Командлет не выполняется.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

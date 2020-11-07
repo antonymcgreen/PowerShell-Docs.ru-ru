@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-authenticodesignature?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AuthenticodeSignature
-ms.openlocfilehash: 49dda60cbe0e9233f89061c7240e52ae33e87b11
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 351d666efad82d48d6d0390f98b472316602db1d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228718"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343714"
 ---
 # Get-AuthenticodeSignature
 
@@ -166,6 +166,8 @@ Accept wildcard characters: False
 `Get-AuthenticodeSignature` Возвращает объект подписи для каждой сигнатуры, которую он получает.
 
 ## ПРИМЕЧАНИЯ
+
+Этот командлет доступен только на платформах Windows.
 
 Сведения о подписях Authenticode в PowerShell см. в разделе [about_Signing](../Microsoft.PowerShell.Core/About/about_Signing.md).
 

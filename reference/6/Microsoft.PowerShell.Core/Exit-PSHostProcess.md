@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 11/06/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/exit-pshostprocess?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Exit-PSHostProcess
-ms.openlocfilehash: 0f076d21ce590b4f1d3eb5b06e891d753dbea638
-ms.sourcegitcommit: 2e497178126b2b33a169ff04c31e251e0b59e89b
+ms.openlocfilehash: 1734758d34e89020f579fffa217cef58eb222736
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "93209106"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344054"
 ---
 # Exit-PSHostProcess
 
@@ -27,7 +27,7 @@ Exit-PSHostProcess [<CommonParameters>]
 
 ## DESCRIPTION
 
-Командлет **Exit-PSHostProcess** закрывает интерактивный сеанс с локальным процессом, который был открыт, выполняя командлет Enter-PSHostProcess. При завершении отладки или устранении неполадок скрипта, выполняемого в процессе, запускается командлет **Exit-PSHostProcess** из процесса.
+`Exit-PSHostProcess`Командлет закрывает интерактивный сеанс с локальным процессом, который был открыт путем запуска `Enter-PSHostProcess` командлета. `Exit-PSHostProcess`Командлет запускается из процесса, когда завершается Отладка или устранение неполадок в скрипте, который выполняется в процессе. Начиная с PowerShell 6,2 Этот командлет поддерживается на платформах, отличных от Windows.
 
 ## Примеры
 
@@ -38,8 +38,8 @@ Exit-PSHostProcess [<CommonParameters>]
 PS>
 ```
 
-В этом примере вы работали в активном процессе для отладки сценария, выполняющегося в пространстве выполнения процесса, как описано в разделе Ввод-PSHostProcess. После ввода команды **Exit** для выхода из отладчика выполните командлет **Exit-PSHostProcess** , чтобы закрыть интерактивный сеанс с процессом.
-Командлет закрывает сеанс в процессе и возвращает вас в строку PS C: \\ \> Prompt.
+В этом примере вы работали в активном процессе для отладки сценария, выполняющегося в пространстве выполнения процесса, как описано в разделе `Enter-PSHostProcess` . После ввода `exit` команды для выхода из отладчика выполните `Exit-PSHostProcess` командлет, чтобы закрыть интерактивный сеанс с процессом.
+Командлет закрывает сеанс в процессе и возвращает вас в `PS C:\>` командную строку.
 
 ## PARAMETERS
 
