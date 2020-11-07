@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/remove-event?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Event
-ms.openlocfilehash: 2730e413a79b2af5355cd2ece7c1e8a6d219d708
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 0dd55280d2d010a151945065d0fcf4f032c980ad
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225810"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346757"
 ---
 # Remove-Event
 
@@ -34,10 +34,10 @@ Remove-Event [-EventIdentifier] <Int32> [-WhatIf] [-Confirm] [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Командлет **Remove-Event** удаляет события из очереди событий в текущем сеансе.
 
-Этот командлет удаляет только те события, которые в данный момент находятся в очереди.
-Для отмены регистрации событий или подписки воспользуйтесь командлетом Unregister-Event.
+`Remove-Event`Командлет удаляет события из очереди событий в текущем сеансе.
+
+Этот командлет удаляет только те события, которые в данный момент находятся в очереди. Чтобы отменить регистрацию событий или отказаться от подписки, используйте `Unregister-Event` командлет.
 
 ## Примеры
 
@@ -68,8 +68,8 @@ PS C:\> Get-Event | Remove-Event
 ## PARAMETERS
 
 ### -EventIdentifier
-Указывает идентификатор события, для которого удаляется командлет.
-В каждой команде требуется параметр *EventIdentifier* или *SourceIdentifier* .
+
+Указывает идентификатор события, для которого удаляется командлет. В каждой команде требуется параметр **EventIdentifier** или **SourceIdentifier** .
 
 ```yaml
 Type: System.Int32
@@ -84,9 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceIdentifier
-Указывает идентификатор источника, из которого этот командлет удаляет события.
-Использовать подстановочные знаки запрещено.
-В каждой команде требуется параметр *EventIdentifier* или *SourceIdentifier* .
+
+Указывает идентификатор источника, из которого этот командлет удаляет события. Использовать подстановочные знаки запрещено. В каждой команде требуется параметр **EventIdentifier** или **SourceIdentifier** .
 
 ```yaml
 Type: System.String
@@ -101,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Запрос подтверждения перед выполнением командлета.
 
 ```yaml
@@ -116,8 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Показывает, что произойдет при запуске командлета.
-Командлет не выполняется.
+
+Показывает, что произойдет при запуске командлета. Командлет не выполняется.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -132,23 +132,26 @@ Accept wildcard characters: False
 ```
 
 ### Общие параметры
+
 Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable. См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## Входные данные
 
 ### System. Management. Automation. PSEventArgs
-События можно передавать из Get-Event в **Remove-Event** .
+
+Можно передать события из `Get-Event` в `Remove-Event` .
 
 ## Выходные данные
 
 ### Нет
+
 Этот командлет не формирует никаких выходных данных.
 
 ## ПРИМЕЧАНИЯ
 
-* События, подписки на события и очередь событий существуют только в текущем сеансе. Если закрыть текущий сеанс, очередь событий удаляется, а подписка на событие отменяется.
+На платформах Linux и macOS нет доступных источников событий.
 
-*
+События, подписки на события и очередь событий существуют только в текущем сеансе. Если закрыть текущий сеанс, очередь событий удаляется, а подписка на событие отменяется.
 
 ## Связанные ссылки
 

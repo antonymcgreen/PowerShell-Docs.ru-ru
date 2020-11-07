@@ -7,12 +7,12 @@ ms.date: 02/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/register-engineevent?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-EngineEvent
-ms.openlocfilehash: 26a8ef5bfb9fd520fabc836ca1e5da40558e0e8a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: cff52e9a321428cde31977f6d91e2d1047faa2ee
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225817"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346859"
 ---
 # Register-EngineEvent
 
@@ -28,7 +28,7 @@ Register-EngineEvent [-SourceIdentifier] <String> [[-Action] <ScriptBlock>] [-Me
 
 ## DESCRIPTION
 
-`Register-EngineEvent`Командлет подписывается на события, созданные подсистемой PowerShell и `New-Event` командлетом. Для задания события используйте параметр **SourceIdentifier** .
+`Register-EngineEvent`Командлет подписывается на события, созданные подсистемой PowerShell и `New-Event` командлетом. Для задания события используйте параметр **SourceIdentifier**.
 
 С помощью этого командлета можно подписываться на события обработчика **выхода** и события, создаваемые `New-Event` командлетом. Эти события автоматически добавляются в очередь событий сеанса без оформления подписки. Однако создание подписки позволяет перенаправлять события, задавать действия для реагирования на них, а также отменять подписку.
 
@@ -64,7 +64,7 @@ Register-EngineEvent -SourceIdentifier PowerShell.Exiting -SupportEvent -Action 
 
 ### Пример 3. Создание и подписка на определяемое пользователем событие
 
-В этом примере создается подписка на события из источника **мевентсаурце** . Это произвольный источник, который мы будем использовать для отслеживания хода выполнения задания. `Register-EngineEvent` используется для создания подписки. Блок скрипта для параметра **Action** записывает данные события в текстовый файл.
+В этом примере создается подписка на события из источника **мевентсаурце**. Это произвольный источник, который мы будем использовать для отслеживания хода выполнения задания. `Register-EngineEvent` используется для создания подписки. Блок скрипта для параметра **Action** записывает данные события в текстовый файл.
 
 ```powershell
 Register-EngineEvent -SourceIdentifier MyEventSource -Action {
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 Значение этого параметра отображается в значении свойства **SourceIdentifier** объекта подписчика, а также всех объектов событий, связанных с этой подпиской.
 
-Значение зависит от источника события. Это может быть произвольное значение, которое вы создали для использования с `New-Event` командлетом. Обработчик PowerShell поддерживает значения **EngineEvent** **PowerShell. Exit** и **PowerShell. OnIdle** .
+Значение зависит от источника события. Это может быть произвольное значение, которое вы создали для использования с `New-Event` командлетом. Обработчик PowerShell поддерживает значения **EngineEvent** **PowerShell. Exit** и **PowerShell. OnIdle**.
 
 ```yaml
 Type: System.String
@@ -256,6 +256,8 @@ Accept wildcard characters: False
 При использовании параметра **Action** `Register-EngineEvent` возвращает объект **System. Management. Automation. PSEventJob** . В противном случае командлет не формирует никаких выходных данных.
 
 ## ПРИМЕЧАНИЯ
+
+На платформах Linux и macOS нет доступных источников событий.
 
 События, подписки на события и очередь событий существуют только в текущем сеансе. Если закрыть текущий сеанс, очередь событий удаляется, а подписка на событие отменяется.
 

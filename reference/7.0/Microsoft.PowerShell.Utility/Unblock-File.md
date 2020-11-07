@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/unblock-file?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unblock-File
-ms.openlocfilehash: 353469a02a1580df6c9b238ca8db4ddb46cd18f1
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 47d69cbe8d8542b5954d3e4a585735f7d0050715
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226354"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347726"
 ---
 # Unblock-File
 
@@ -35,13 +35,11 @@ Unblock-File -LiteralPath <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## DESCRIPTION
 
-Командлет **Unblock-File** позволяет открывать файлы, загруженные из Интернета.
-Он разблокирует файлы скриптов PowerShell, загруженные из Интернета, чтобы их можно было запустить даже в том случае, если политика выполнения PowerShell **RemoteSigned**.
-По умолчанию эти файлы блокируются для защиты компьютера от ненадежных файлов.
+`Unblock-File`Командлет позволяет открывать файлы, загруженные из Интернета. Он разблокирует файлы скриптов PowerShell, загруженные из Интернета, чтобы их можно было запустить даже в том случае, если политика выполнения PowerShell **RemoteSigned**. По умолчанию эти файлы блокируются для защиты компьютера от ненадежных файлов.
 
-Перед использованием командлета **Unblock-File** просмотрите файл и его источник и убедитесь, что его открытие не нарушит безопасность.
+Перед использованием `Unblock-File` командлета проверьте файл и его источник и убедитесь, что он является надежным для открытия.
 
-На внутреннем уровне командлет **Unblock-File** удаляет дополнительный поток данных Zone.Identifier, который имеет значение "3", указывающее на загрузку из Интернета.
+На внутреннем уровне `Unblock-File` командлет удаляет зону. идентификатор альтернативного потока данных, который имеет значение 3, чтобы указать, что он был загружен из Интернета.
 
 Дополнительные сведения о политиках выполнения PowerShell см. в разделе [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).
 
@@ -51,25 +49,31 @@ Unblock-File -LiteralPath <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ### Пример 1. Разблокировка файла
 
+Эта команда разблокирует файл PowerShellTips.chm.
+
 ```
 PS C:\> Unblock-File -Path C:\Users\User01\Documents\Downloads\PowerShellTips.chm
 ```
 
-Эта команда разблокирует файл PowerShellTips.chm.
-
 ### Пример 2. Разблокировка нескольких файлов
+
+Эта команда разблокирует все файлы в `C:\Downloads` каталоге, имена которых содержат "PowerShell". Не выполняйте подобную команду, пока не убедитесь в безопасности всех файлов.
 
 ```
 PS C:\> dir C:\Downloads\*PowerShell* | Unblock-File
 ```
 
-Эта команда разблокирует все файлы в каталоге C:\Downloads, имена которых содержат PowerShell.
-Не выполняйте подобную команду, пока не убедитесь в безопасности всех файлов.
-
 ### Пример 3. скрипты поиска и разблокировки
 
+Эта команда показывает, как найти и разблокировать скрипты PowerShell.
+
+Первая команда использует параметр **Stream** командлета *Get-Item* для получения файлов с помощью потока зоны. identifier.
+
+Вторая команда показывает, что происходит при запуске заблокированного скрипта в сеансе PowerShell, в котором политика выполнения — **RemoteSigned**. Политика RemoteSigned запрещает выполнение сценариев, загруженных из Интернета, если они не имеют цифровой подписи.
+
+Третья команда использует командлет, `Unblock-File` чтобы разблокировать скрипт, чтобы он мог выполняться в сеансе.
+
 ```
-The first command uses the *Stream* parameter of the Get-Item cmdlet get files with the Zone.Identifier stream.Although you could pipe the output directly to the **Unblock-File** cmdlet (Get-Item * -Stream "Zone.Identifier" -ErrorAction SilentlyContinue | ForEach {Unblock-File $_.FileName}), it is prudent to review the file and confirm that it is safe before unblocking.
 PS C:\> Get-Item * -Stream "Zone.Identifier" -ErrorAction SilentlyContinue
    FileName: C:\ps-test\Start-ActivityTracker.ps1
 
@@ -77,7 +81,6 @@ Stream                   Length
 ------                   ------
 Zone.Identifier              26
 
-The second command shows what happens when you run a blocked script in a PowerShell session in which the execution policy is **RemoteSigned**. The RemoteSigned policy prevents you from running scripts that are downloaded from the Internet unless they are digitally signed.
 PS C:\> C:\ps-test\Start-ActivityTracker.ps1
 c:\ps-test\Start-ActivityTracker.ps1 : File c:\ps-test\Start-ActivityTracker.ps1 cannot
 be loaded. The file c:\ps-test\Start-ActivityTracker.ps1 is not digitally signed. The script
@@ -89,20 +92,14 @@ At line:1 char:1
     + CategoryInfo          : SecurityError: (:) [], PSSecurityException
     + FullyQualifiedErrorId : UnauthorizedAccess
 
-The third command uses the **Unblock-File** cmdlet to unblock the script so it can run in the session.
 PS C:\> Get-Item C:\ps-test\Start-ActivityTracker.ps1 | Unblock-File
 ```
-
-Эта команда показывает, как найти и разблокировать скрипты PowerShell.
 
 ## PARAMETERS
 
 ### -LiteralPath
-Указывает файлы для разблокирования.
-В отличие от параметра *Path* , значение параметра *LiteralPath* используется в точности так, как вводится.
-Никакие символы не интерпретируются как знаки подстановки.
-Если путь содержит escape-символы, заключите его в одинарные кавычки.
-Одинарные кавычки указывают PowerShell не интерпретировать какие-либо символы как escape-последовательности.
+
+Указывает файлы для разблокирования. В отличие от параметра **Path** , значение параметра **LiteralPath** используется в точности так, как вводится. Никакие символы не интерпретируются как знаки подстановки. Если путь содержит escape-символы, заключите его в одинарные кавычки. Одинарные кавычки указывают PowerShell не интерпретировать какие-либо символы как escape-последовательности.
 
 ```yaml
 Type: System.String[]
@@ -117,8 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Указывает файлы для разблокирования.
-Поддерживаются подстановочные знаки.
+
+Указывает файлы для разблокирования. Поддерживаются подстановочные знаки.
 
 ```yaml
 Type: System.String[]
@@ -150,8 +147,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Показывает, что произойдет при запуске командлета.
-Командлет не выполняется.
+Показывает, что произойдет при запуске командлета. Командлет не выполняется.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -173,7 +169,7 @@ Accept wildcard characters: False
 
 ### System.String
 
-В **Unblock-File** можно передать путь к файлу.
+Путь к файлу можно передать по конвейеру `Unblock-File` .
 
 ## Выходные данные
 

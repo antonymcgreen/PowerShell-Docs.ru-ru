@@ -7,12 +7,12 @@ ms.date: 3/22/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ExecutionPolicy
-ms.openlocfilehash: d33961d9c0b1980d84d35a33c45d965e84231914
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 347ffa733068d4e7f4896eb18358c7a852c88d0a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93229413"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347284"
 ---
 # Get-ExecutionPolicy
 
@@ -76,7 +76,7 @@ MachinePolicy       Undefined
  LocalMachine    RemoteSigned
 ```
 
-`Set-ExecutionPolicy`Командлет использует параметр **ExecutionPolicy** для указания политики **RemoteSigned** . Параметр **Scope** задает значение области по умолчанию — **LocalMachine** . Чтобы просмотреть параметры политики выполнения, используйте `Get-ExecutionPolicy` командлет с параметром **List** .
+`Set-ExecutionPolicy`Командлет использует параметр **ExecutionPolicy** для указания политики **RemoteSigned** . Параметр **Scope** задает значение области по умолчанию — **LocalMachine**. Чтобы просмотреть параметры политики выполнения, используйте `Get-ExecutionPolicy` командлет с параметром **List** .
 
 ### Пример 3. получение действующей политики выполнения
 
@@ -98,7 +98,7 @@ PS> Get-ExecutionPolicy
 AllSigned
 ```
 
-`Get-ExecutionPolicy`Командлет использует параметр **List** для вывода политики выполнения каждой области. `Get-ExecutionPolicy`Командлет выполняется без параметра для вывода действующей политики выполнения **AllSigned** .
+`Get-ExecutionPolicy`Командлет использует параметр **List** для вывода политики выполнения каждой области. `Get-ExecutionPolicy`Командлет выполняется без параметра для вывода действующей политики выполнения **AllSigned**.
 
 ### Пример 4. Разблокировка скрипта для его запуска без изменения политики выполнения
 
@@ -136,7 +136,7 @@ PS> .\Start-ActivityTracker.ps1
 Task 1:
 ```
 
-`Set-ExecutionPolicy`Использует параметр **ExecutionPolicy** для указания политики **RemoteSigned** . Политика задается для области по умолчанию, **LocalMachine** .
+`Set-ExecutionPolicy`Использует параметр **ExecutionPolicy** для указания политики **RemoteSigned** . Политика задается для области по умолчанию, **LocalMachine**.
 
 `Get-ExecutionPolicy`Командлет показывает, что **RemoteSigned** является действующей политикой выполнения для текущего сеанса PowerShell.
 
@@ -144,7 +144,7 @@ Task 1:
 
 В этом примере код скрипта был проверен и проверен как надежный для выполнения. `Unblock-File`Командлет использует параметр **path** , чтобы разблокировать скрипт.
 
-Чтобы убедиться, что `Unblock-File` Политика выполнения не изменилась, `Get-ExecutionPolicy` отображает действующую политику выполнения **RemoteSigned** .
+Чтобы убедиться, что `Unblock-File` Политика выполнения не изменилась, `Get-ExecutionPolicy` отображает действующую политику выполнения **RemoteSigned**.
 
 Скрипт **Start-ActivityTracker.ps1** выполняется из текущего каталога. Сценарий начинает выполняться, так как он был разблокирован `Unblock-File` командлетом.
 
@@ -172,11 +172,11 @@ Accept wildcard characters: False
 
 Действующая политика выполнения определяется порядком приоритета следующим образом.
 
-- **Мачинеполици** . Задается групповая политика для всех пользователей компьютера.
-- **UserPolicy** . Задается групповая политика для текущего пользователя компьютера.
-- **Процесс** . Влияет только на текущий сеанс PowerShell.
-- **CurrentUser** . Влияет только на текущего пользователя.
-- **Хранилище LocalMachine** . Область по умолчанию, влияющая на всех пользователей компьютера.
+- **Мачинеполици**. Задается групповая политика для всех пользователей компьютера.
+- **UserPolicy**. Задается групповая политика для текущего пользователя компьютера.
+- **Процесс**. Влияет только на текущий сеанс PowerShell.
+- **CurrentUser**. Влияет только на текущего пользователя.
+- **Хранилище LocalMachine**. Область по умолчанию, влияющая на всех пользователей компьютера.
 
 ```yaml
 Type: Microsoft.PowerShell.ExecutionPolicyScope
@@ -205,6 +205,8 @@ Accept wildcard characters: False
 
 ### Microsoft.PowerShell.ExecutionPolicy
 
+Командлет всегда возвращает **неограниченное** значение на платформах Linux и macOS.
+
 ## ПРИМЕЧАНИЯ
 
 Политика выполнения является частью стратегии безопасности PowerShell. Политики выполнения определяют, можно ли загружать файлы конфигурации, например профиль PowerShell, или выполнять сценарии. И, если перед запуском скрипты должны иметь цифровую подпись.
@@ -220,4 +222,3 @@ Accept wildcard characters: False
 [Set-AuthenticodeSignature](Set-AuthenticodeSignature.md)
 
 [Set-ExecutionPolicy](Set-ExecutionPolicy.md)
-

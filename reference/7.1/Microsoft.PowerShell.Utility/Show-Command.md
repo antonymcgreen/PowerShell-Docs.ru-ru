@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-Command
-ms.openlocfilehash: 86253a8a0bd02a60980cc3655af7bb961acf88ac
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: b5758fdb9fc3e8f604b24fb9c64cad3f95047ec3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93226546"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347777"
 ---
 # Show-Command
 
@@ -40,7 +40,7 @@ Show-Command [[-Name] <String>] [-Height <Double>] [-Width <Double>] [-NoCommonP
 
 В интегрированной среде сценариев (ISE) PowerShell `Show-Command` по умолчанию отображается вариант окна. Сведения об использовании этого командного окна см. в разделах справки PowerShell ISE.
 
-Этот командлет был повторно введен в PowerShell 7. 
+Этот командлет был повторно введен в PowerShell 7.
 
 Поскольку для этого командлета требуется пользовательский интерфейс, он не работает на Windows Server Core или Windows Nano Server. Этот командлет доступен только в системах Windows, поддерживающих Рабочий стол Windows.
 
@@ -272,7 +272,8 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+Этот командлет доступен только на платформах Windows.
+
 `Show-Command` не работает в удаленных сеансах.
 
 ## Связанные ссылки
-
