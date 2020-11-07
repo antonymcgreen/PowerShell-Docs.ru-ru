@@ -7,19 +7,19 @@ ms.date: 5/1/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Computer
-ms.openlocfilehash: aeffc496e78a447af828737980429a91a74b5a6b
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 2fc21594a4765a0901f61dba7b7f1a79f3259886
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225537"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346145"
 ---
-# <span data-ttu-id="2abae-103">Rename-Computer</span><span class="sxs-lookup"><span data-stu-id="2abae-103">Rename-Computer</span></span>
+# <span data-ttu-id="7eed2-103">Rename-Computer</span><span class="sxs-lookup"><span data-stu-id="7eed2-103">Rename-Computer</span></span>
 
-## <span data-ttu-id="2abae-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="2abae-104">SYNOPSIS</span></span>
-<span data-ttu-id="2abae-105">Переименовывает компьютер.</span><span class="sxs-lookup"><span data-stu-id="2abae-105">Renames a computer.</span></span>
+## <span data-ttu-id="7eed2-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="7eed2-104">SYNOPSIS</span></span>
+<span data-ttu-id="7eed2-105">Переименовывает компьютер.</span><span class="sxs-lookup"><span data-stu-id="7eed2-105">Renames a computer.</span></span>
 
-## <span data-ttu-id="2abae-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="2abae-106">SYNTAX</span></span>
+## <span data-ttu-id="7eed2-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="7eed2-106">SYNTAX</span></span>
 
 ```
 Rename-Computer [-ComputerName <String>] [-PassThru] [-DomainCredential <PSCredential>]
@@ -27,47 +27,47 @@ Rename-Computer [-ComputerName <String>] [-PassThru] [-DomainCredential <PSCrede
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="2abae-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="2abae-107">DESCRIPTION</span></span>
+## <span data-ttu-id="7eed2-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="7eed2-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="2abae-108">`Rename-Computer`Командлет переименовывает локальный компьютер или удаленный компьютер.</span><span class="sxs-lookup"><span data-stu-id="2abae-108">The `Rename-Computer` cmdlet renames the local computer or a remote computer.</span></span>
-<span data-ttu-id="2abae-109">Он переименовывает один компьютер в каждой команде.</span><span class="sxs-lookup"><span data-stu-id="2abae-109">It renames one computer in each command.</span></span>
+<span data-ttu-id="7eed2-108">`Rename-Computer`Командлет переименовывает локальный компьютер или удаленный компьютер.</span><span class="sxs-lookup"><span data-stu-id="7eed2-108">The `Rename-Computer` cmdlet renames the local computer or a remote computer.</span></span>
+<span data-ttu-id="7eed2-109">Он переименовывает один компьютер в каждой команде.</span><span class="sxs-lookup"><span data-stu-id="7eed2-109">It renames one computer in each command.</span></span>
 
-<span data-ttu-id="2abae-110">Этот командлет впервые появился в Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="2abae-110">This cmdlet was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="7eed2-110">Этот командлет впервые появился в Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="7eed2-110">This cmdlet was introduced in Windows PowerShell 3.0.</span></span>
 
-## <span data-ttu-id="2abae-111">Примеры</span><span class="sxs-lookup"><span data-stu-id="2abae-111">EXAMPLES</span></span>
+## <span data-ttu-id="7eed2-111">Примеры</span><span class="sxs-lookup"><span data-stu-id="7eed2-111">EXAMPLES</span></span>
 
-### <span data-ttu-id="2abae-112">Пример 1. Переименование локального компьютера</span><span class="sxs-lookup"><span data-stu-id="2abae-112">Example 1: Rename the local computer</span></span>
+### <span data-ttu-id="7eed2-112">Пример 1. Переименование локального компьютера</span><span class="sxs-lookup"><span data-stu-id="7eed2-112">Example 1: Rename the local computer</span></span>
 
-<span data-ttu-id="2abae-113">Эта команда переименовывает локальный компьютер в `Server044` , а затем перезапускает его, чтобы сделать изменение эффективным.</span><span class="sxs-lookup"><span data-stu-id="2abae-113">This command renames the local computer to `Server044` and then restarts it to make the change effective.</span></span>
+<span data-ttu-id="7eed2-113">Эта команда переименовывает локальный компьютер в `Server044` , а затем перезапускает его, чтобы сделать изменение эффективным.</span><span class="sxs-lookup"><span data-stu-id="7eed2-113">This command renames the local computer to `Server044` and then restarts it to make the change effective.</span></span>
 
 ```powershell
 Rename-Computer -NewName "Server044" -DomainCredential Domain01\Admin01 -Restart
 ```
 
-### <span data-ttu-id="2abae-114">Пример 2. Переименование удаленного компьютера</span><span class="sxs-lookup"><span data-stu-id="2abae-114">Example 2: Rename a remote computer</span></span>
+### <span data-ttu-id="7eed2-114">Пример 2. Переименование удаленного компьютера</span><span class="sxs-lookup"><span data-stu-id="7eed2-114">Example 2: Rename a remote computer</span></span>
 
-<span data-ttu-id="2abae-115">Эта команда переименовывает `Srv01` компьютер в `Server001` .</span><span class="sxs-lookup"><span data-stu-id="2abae-115">This command renames the `Srv01` computer to `Server001`.</span></span> <span data-ttu-id="2abae-116">Компьютер не перезагружается.</span><span class="sxs-lookup"><span data-stu-id="2abae-116">The computer is not restarted.</span></span>
+<span data-ttu-id="7eed2-115">Эта команда переименовывает `Srv01` компьютер в `Server001` .</span><span class="sxs-lookup"><span data-stu-id="7eed2-115">This command renames the `Srv01` computer to `Server001`.</span></span> <span data-ttu-id="7eed2-116">Компьютер не перезагружается.</span><span class="sxs-lookup"><span data-stu-id="7eed2-116">The computer is not restarted.</span></span>
 
-<span data-ttu-id="2abae-117">Параметр **домаинкредентиал** указывает учетные данные пользователя, имеющего разрешение на переименование компьютеров в домене.</span><span class="sxs-lookup"><span data-stu-id="2abae-117">The **DomainCredential** parameter specifies the credentials of a user who has permission to rename computers in the domain.</span></span>
+<span data-ttu-id="7eed2-117">Параметр **домаинкредентиал** указывает учетные данные пользователя, имеющего разрешение на переименование компьютеров в домене.</span><span class="sxs-lookup"><span data-stu-id="7eed2-117">The **DomainCredential** parameter specifies the credentials of a user who has permission to rename computers in the domain.</span></span>
 
-<span data-ttu-id="2abae-118">Параметр **Force** подавляет вывод запроса на подтверждение.</span><span class="sxs-lookup"><span data-stu-id="2abae-118">The **Force** parameter suppresses the confirmation prompt.</span></span>
+<span data-ttu-id="7eed2-118">Параметр **Force** подавляет вывод запроса на подтверждение.</span><span class="sxs-lookup"><span data-stu-id="7eed2-118">The **Force** parameter suppresses the confirmation prompt.</span></span>
 
 ```powershell
 Rename-Computer -ComputerName "Srv01" -NewName "Server001" -DomainCredential Domain01\Admin01 -Force
 ```
 
-## <span data-ttu-id="2abae-119">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2abae-119">PARAMETERS</span></span>
+## <span data-ttu-id="7eed2-119">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="7eed2-119">PARAMETERS</span></span>
 
-### <span data-ttu-id="2abae-120">-ComputerName</span><span class="sxs-lookup"><span data-stu-id="2abae-120">-ComputerName</span></span>
+### <span data-ttu-id="7eed2-120">-ComputerName</span><span class="sxs-lookup"><span data-stu-id="7eed2-120">-ComputerName</span></span>
 
-<span data-ttu-id="2abae-121">Переименовывает указанный удаленный компьютер.</span><span class="sxs-lookup"><span data-stu-id="2abae-121">Renames the specified remote computer.</span></span>
-<span data-ttu-id="2abae-122">По умолчанию это локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="2abae-122">The default is the local computer.</span></span>
+<span data-ttu-id="7eed2-121">Переименовывает указанный удаленный компьютер.</span><span class="sxs-lookup"><span data-stu-id="7eed2-121">Renames the specified remote computer.</span></span>
+<span data-ttu-id="7eed2-122">По умолчанию это локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="7eed2-122">The default is the local computer.</span></span>
 
-<span data-ttu-id="2abae-123">Введите имя NetBIOS, IP-адрес или полное доменное имя удаленного компьютера.</span><span class="sxs-lookup"><span data-stu-id="2abae-123">Type the NetBIOS name, an IP address, or a fully qualified domain name of a remote computer.</span></span>
-<span data-ttu-id="2abae-124">Чтобы указать локальный компьютер, введите имя компьютера, точку ( `.` ) или `localhost` .</span><span class="sxs-lookup"><span data-stu-id="2abae-124">To specify the local computer, type the computer name, a dot (`.`), or `localhost`.</span></span>
+<span data-ttu-id="7eed2-123">Введите имя NetBIOS, IP-адрес или полное доменное имя удаленного компьютера.</span><span class="sxs-lookup"><span data-stu-id="7eed2-123">Type the NetBIOS name, an IP address, or a fully qualified domain name of a remote computer.</span></span>
+<span data-ttu-id="7eed2-124">Чтобы указать локальный компьютер, введите имя компьютера, точку ( `.` ) или `localhost` .</span><span class="sxs-lookup"><span data-stu-id="7eed2-124">To specify the local computer, type the computer name, a dot (`.`), or `localhost`.</span></span>
 
-<span data-ttu-id="2abae-125">Этот параметр не зависит от удаленного взаимодействия PowerShell.</span><span class="sxs-lookup"><span data-stu-id="2abae-125">This parameter does not rely on PowerShell remoting.</span></span>
-<span data-ttu-id="2abae-126">Параметр **ComputerName** можно использовать, `Rename-Computer` даже если компьютер не настроен для выполнения удаленных команд.</span><span class="sxs-lookup"><span data-stu-id="2abae-126">You can use the **ComputerName** parameter of `Rename-Computer` even if your computer is not configured to run remote commands.</span></span>
+<span data-ttu-id="7eed2-125">Этот параметр не зависит от удаленного взаимодействия PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7eed2-125">This parameter does not rely on PowerShell remoting.</span></span>
+<span data-ttu-id="7eed2-126">Параметр **ComputerName** можно использовать, `Rename-Computer` даже если компьютер не настроен для выполнения удаленных команд.</span><span class="sxs-lookup"><span data-stu-id="7eed2-126">You can use the **ComputerName** parameter of `Rename-Computer` even if your computer is not configured to run remote commands.</span></span>
 
 ```yaml
 Type: System.String
@@ -81,16 +81,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2abae-127">-Домаинкредентиал</span><span class="sxs-lookup"><span data-stu-id="2abae-127">-DomainCredential</span></span>
+### <span data-ttu-id="7eed2-127">-Домаинкредентиал</span><span class="sxs-lookup"><span data-stu-id="7eed2-127">-DomainCredential</span></span>
 
-<span data-ttu-id="2abae-128">Указывает учетную запись пользователя, имеющую разрешение на подключение к домену.</span><span class="sxs-lookup"><span data-stu-id="2abae-128">Specifies a user account that has permission to connect to the domain.</span></span>
-<span data-ttu-id="2abae-129">Для переименования компьютера, присоединенного к домену, необходимо явно указать учетные данные.</span><span class="sxs-lookup"><span data-stu-id="2abae-129">Explicit credentials are required to rename a computer that is joined to a domain.</span></span>
+<span data-ttu-id="7eed2-128">Указывает учетную запись пользователя, имеющую разрешение на подключение к домену.</span><span class="sxs-lookup"><span data-stu-id="7eed2-128">Specifies a user account that has permission to connect to the domain.</span></span>
+<span data-ttu-id="7eed2-129">Для переименования компьютера, присоединенного к домену, необходимо явно указать учетные данные.</span><span class="sxs-lookup"><span data-stu-id="7eed2-129">Explicit credentials are required to rename a computer that is joined to a domain.</span></span>
 
-<span data-ttu-id="2abae-130">Введите имя пользователя, например `User01` или `Domain01\User01` , или введите объект **PSCredential** , например, созданный `Get-Credential` командлетом.</span><span class="sxs-lookup"><span data-stu-id="2abae-130">Type a user name, such as `User01` or `Domain01\User01`, or enter a **PSCredential** object, such as one generated by the `Get-Credential` cmdlet.</span></span>
+<span data-ttu-id="7eed2-130">Введите имя пользователя, например `User01` или `Domain01\User01` , или введите объект **PSCredential** , например, созданный `Get-Credential` командлетом.</span><span class="sxs-lookup"><span data-stu-id="7eed2-130">Type a user name, such as `User01` or `Domain01\User01`, or enter a **PSCredential** object, such as one generated by the `Get-Credential` cmdlet.</span></span>
 
-<span data-ttu-id="2abae-131">При вводе имени пользователя этот командлет запрашивает пароль.</span><span class="sxs-lookup"><span data-stu-id="2abae-131">If you type a user name, this cmdlet prompts you for a password.</span></span>
+<span data-ttu-id="7eed2-131">При вводе имени пользователя этот командлет запрашивает пароль.</span><span class="sxs-lookup"><span data-stu-id="7eed2-131">If you type a user name, this cmdlet prompts you for a password.</span></span>
 
-<span data-ttu-id="2abae-132">Чтобы указать учетную запись пользователя, имеющую разрешение на подключение к компьютеру, который задается параметром **ComputerName** , используйте параметр **LocalCredential**.</span><span class="sxs-lookup"><span data-stu-id="2abae-132">To specify a user account that has permission to connect to the computer that is specified by the **ComputerName** parameter, use the **LocalCredential** parameter.</span></span>
+<span data-ttu-id="7eed2-132">Чтобы указать учетную запись пользователя, имеющую разрешение на подключение к компьютеру, который задается параметром **ComputerName** , используйте параметр **LocalCredential**.</span><span class="sxs-lookup"><span data-stu-id="7eed2-132">To specify a user account that has permission to connect to the computer that is specified by the **ComputerName** parameter, use the **LocalCredential** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -104,9 +104,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2abae-133">-Force</span><span class="sxs-lookup"><span data-stu-id="2abae-133">-Force</span></span>
+### <span data-ttu-id="7eed2-133">-Force</span><span class="sxs-lookup"><span data-stu-id="7eed2-133">-Force</span></span>
 
-<span data-ttu-id="2abae-134">Принудительное выполнение команды без запроса на подтверждение пользователем.</span><span class="sxs-lookup"><span data-stu-id="2abae-134">Forces the command to run without asking for user confirmation.</span></span>
+<span data-ttu-id="7eed2-134">Принудительное выполнение команды без запроса на подтверждение пользователем.</span><span class="sxs-lookup"><span data-stu-id="7eed2-134">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -120,15 +120,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2abae-135">-Локалкредентиал</span><span class="sxs-lookup"><span data-stu-id="2abae-135">-LocalCredential</span></span>
+### <span data-ttu-id="7eed2-135">-Локалкредентиал</span><span class="sxs-lookup"><span data-stu-id="7eed2-135">-LocalCredential</span></span>
 
-<span data-ttu-id="2abae-136">Указывает учетную запись пользователя, имеющую разрешение на подключение к компьютеру, заданному параметром **ComputerName**.</span><span class="sxs-lookup"><span data-stu-id="2abae-136">Specifies a user account that has permission to connect to the computer specified by the **ComputerName** parameter.</span></span> <span data-ttu-id="2abae-137">По умолчанию используется текущий пользователь.</span><span class="sxs-lookup"><span data-stu-id="2abae-137">The default is the current user.</span></span>
+<span data-ttu-id="7eed2-136">Указывает учетную запись пользователя, имеющую разрешение на подключение к компьютеру, заданному параметром **ComputerName**.</span><span class="sxs-lookup"><span data-stu-id="7eed2-136">Specifies a user account that has permission to connect to the computer specified by the **ComputerName** parameter.</span></span> <span data-ttu-id="7eed2-137">По умолчанию используется текущий пользователь.</span><span class="sxs-lookup"><span data-stu-id="7eed2-137">The default is the current user.</span></span>
 
-<span data-ttu-id="2abae-138">Введите имя пользователя, например `User01` или `Domain01\User01` , или введите объект **PSCredential** , например, созданный `Get-Credential` командлетом.</span><span class="sxs-lookup"><span data-stu-id="2abae-138">Type a user name, such as `User01` or `Domain01\User01`, or enter a **PSCredential** object, such as one generated by the `Get-Credential` cmdlet.</span></span>
+<span data-ttu-id="7eed2-138">Введите имя пользователя, например `User01` или `Domain01\User01` , или введите объект **PSCredential** , например, созданный `Get-Credential` командлетом.</span><span class="sxs-lookup"><span data-stu-id="7eed2-138">Type a user name, such as `User01` or `Domain01\User01`, or enter a **PSCredential** object, such as one generated by the `Get-Credential` cmdlet.</span></span>
 
-<span data-ttu-id="2abae-139">При вводе имени пользователя этот командлет запрашивает пароль.</span><span class="sxs-lookup"><span data-stu-id="2abae-139">If you type a user name, this cmdlet prompts you for a password.</span></span>
+<span data-ttu-id="7eed2-139">При вводе имени пользователя этот командлет запрашивает пароль.</span><span class="sxs-lookup"><span data-stu-id="7eed2-139">If you type a user name, this cmdlet prompts you for a password.</span></span>
 
-<span data-ttu-id="2abae-140">Чтобы указать учетную запись, имеющую разрешение на подключение к домену, используйте параметр **DomainCredential**.</span><span class="sxs-lookup"><span data-stu-id="2abae-140">To specify a user account that has permission to connect to the domain, use the **DomainCredential** parameter.</span></span>
+<span data-ttu-id="7eed2-140">Чтобы указать учетную запись, имеющую разрешение на подключение к домену, используйте параметр **DomainCredential**.</span><span class="sxs-lookup"><span data-stu-id="7eed2-140">To specify a user account that has permission to connect to the domain, use the **DomainCredential** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -142,12 +142,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2abae-141">-NewName</span><span class="sxs-lookup"><span data-stu-id="2abae-141">-NewName</span></span>
+### <span data-ttu-id="7eed2-141">-NewName</span><span class="sxs-lookup"><span data-stu-id="7eed2-141">-NewName</span></span>
 
-<span data-ttu-id="2abae-142">Задает новое имя для компьютера.</span><span class="sxs-lookup"><span data-stu-id="2abae-142">Specifies a new name for the computer.</span></span>
-<span data-ttu-id="2abae-143">Этот параметр обязателен.</span><span class="sxs-lookup"><span data-stu-id="2abae-143">This parameter is required.</span></span>
+<span data-ttu-id="7eed2-142">Задает новое имя для компьютера.</span><span class="sxs-lookup"><span data-stu-id="7eed2-142">Specifies a new name for the computer.</span></span>
+<span data-ttu-id="7eed2-143">Этот параметр обязателен.</span><span class="sxs-lookup"><span data-stu-id="7eed2-143">This parameter is required.</span></span>
 
-<span data-ttu-id="2abae-144">Стандартные имена могут содержать буквы ( `a-z` ), ( `A-Z` ), цифры ( `0-9` ) и дефисы ( `-` ), но без пробелов и точек ( `.` ).</span><span class="sxs-lookup"><span data-stu-id="2abae-144">Standard names may contain letters (`a-z`), (`A-Z`), numbers (`0-9`), and hyphens (`-`), but no spaces or periods (`.`).</span></span> <span data-ttu-id="2abae-145">Имя не может состоять только из цифр и может содержать не более 63 символов.</span><span class="sxs-lookup"><span data-stu-id="2abae-145">The name may not consist entirely of digits, and may not be longer than 63 characters</span></span>
+<span data-ttu-id="7eed2-144">Стандартные имена могут содержать буквы ( `a-z` ), ( `A-Z` ), цифры ( `0-9` ) и дефисы ( `-` ), но без пробелов и точек ( `.` ).</span><span class="sxs-lookup"><span data-stu-id="7eed2-144">Standard names may contain letters (`a-z`), (`A-Z`), numbers (`0-9`), and hyphens (`-`), but no spaces or periods (`.`).</span></span> <span data-ttu-id="7eed2-145">Имя не может состоять только из цифр и может содержать не более 63 символов.</span><span class="sxs-lookup"><span data-stu-id="7eed2-145">The name may not consist entirely of digits, and may not be longer than 63 characters</span></span>
 
 ```yaml
 Type: System.String
@@ -161,27 +161,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2abae-146">-PassThru</span><span class="sxs-lookup"><span data-stu-id="2abae-146">-PassThru</span></span>
+### <span data-ttu-id="7eed2-146">-PassThru</span><span class="sxs-lookup"><span data-stu-id="7eed2-146">-PassThru</span></span>
 
-<span data-ttu-id="2abae-147">Возвращает результаты выполнения команды.</span><span class="sxs-lookup"><span data-stu-id="2abae-147">Returns the results of the command.</span></span>
-<span data-ttu-id="2abae-148">В противном случае командлет не формирует никаких выходных данных.</span><span class="sxs-lookup"><span data-stu-id="2abae-148">Otherwise, this cmdlet does not generate any output.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="2abae-149">-Restart</span><span class="sxs-lookup"><span data-stu-id="2abae-149">-Restart</span></span>
-
-<span data-ttu-id="2abae-150">Указывает, что этот командлет перезапускает переименованный компьютер.</span><span class="sxs-lookup"><span data-stu-id="2abae-150">Indicates that this cmdlet restarts the computer that was renamed.</span></span>
-<span data-ttu-id="2abae-151">Чтобы изменения вступили в силу, часто требуется перезагрузка.</span><span class="sxs-lookup"><span data-stu-id="2abae-151">A restart is often required to make the change effective.</span></span>
+<span data-ttu-id="7eed2-147">Возвращает результаты выполнения команды.</span><span class="sxs-lookup"><span data-stu-id="7eed2-147">Returns the results of the command.</span></span>
+<span data-ttu-id="7eed2-148">В противном случае командлет не формирует никаких выходных данных.</span><span class="sxs-lookup"><span data-stu-id="7eed2-148">Otherwise, this cmdlet does not generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -195,27 +178,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2abae-152">-Всманаусентикатион</span><span class="sxs-lookup"><span data-stu-id="2abae-152">-WsmanAuthentication</span></span>
+### <span data-ttu-id="7eed2-149">-Restart</span><span class="sxs-lookup"><span data-stu-id="7eed2-149">-Restart</span></span>
 
-<span data-ttu-id="2abae-153">Указывает механизм, используемый для проверки подлинности учетных данных пользователя, когда этот командлет использует протокол WSMan.</span><span class="sxs-lookup"><span data-stu-id="2abae-153">Specifies the mechanism that is used to authenticate the user credentials when this cmdlet uses the WSMan protocol.</span></span> <span data-ttu-id="2abae-154">Допустимые значения для этого параметра:</span><span class="sxs-lookup"><span data-stu-id="2abae-154">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="7eed2-150">Указывает, что этот командлет перезапускает переименованный компьютер.</span><span class="sxs-lookup"><span data-stu-id="7eed2-150">Indicates that this cmdlet restarts the computer that was renamed.</span></span>
+<span data-ttu-id="7eed2-151">Чтобы изменения вступили в силу, часто требуется перезагрузка.</span><span class="sxs-lookup"><span data-stu-id="7eed2-151">A restart is often required to make the change effective.</span></span>
 
-- <span data-ttu-id="2abae-155">**Основной**</span><span class="sxs-lookup"><span data-stu-id="2abae-155">**Basic**</span></span>
-- <span data-ttu-id="2abae-156">**CredSSP**</span><span class="sxs-lookup"><span data-stu-id="2abae-156">**CredSSP**</span></span>
-- <span data-ttu-id="2abae-157">**Default**</span><span class="sxs-lookup"><span data-stu-id="2abae-157">**Default**</span></span>
-- <span data-ttu-id="2abae-158">**Digest** (дайджест)</span><span class="sxs-lookup"><span data-stu-id="2abae-158">**Digest**</span></span>
-- <span data-ttu-id="2abae-159">**Kerberos**</span><span class="sxs-lookup"><span data-stu-id="2abae-159">**Kerberos**</span></span>
-- <span data-ttu-id="2abae-160">**Новое**</span><span class="sxs-lookup"><span data-stu-id="2abae-160">**Negotiate**</span></span>
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-<span data-ttu-id="2abae-161">Значение по умолчанию ― **Default**.</span><span class="sxs-lookup"><span data-stu-id="2abae-161">The default value is **Default**.</span></span>
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-<span data-ttu-id="2abae-162">Дополнительные сведения о значениях этого параметра см. в разделе [AuthenticationMechanism enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).</span><span class="sxs-lookup"><span data-stu-id="2abae-162">For more information about the values of this parameter, see [AuthenticationMechanism Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).</span></span>
+### <span data-ttu-id="7eed2-152">-Всманаусентикатион</span><span class="sxs-lookup"><span data-stu-id="7eed2-152">-WsmanAuthentication</span></span>
+
+<span data-ttu-id="7eed2-153">Указывает механизм, используемый для проверки подлинности учетных данных пользователя, когда этот командлет использует протокол WSMan.</span><span class="sxs-lookup"><span data-stu-id="7eed2-153">Specifies the mechanism that is used to authenticate the user credentials when this cmdlet uses the WSMan protocol.</span></span> <span data-ttu-id="7eed2-154">Допустимые значения для этого параметра:</span><span class="sxs-lookup"><span data-stu-id="7eed2-154">The acceptable values for this parameter are:</span></span>
+
+- <span data-ttu-id="7eed2-155">**Основной**</span><span class="sxs-lookup"><span data-stu-id="7eed2-155">**Basic**</span></span>
+- <span data-ttu-id="7eed2-156">**CredSSP**</span><span class="sxs-lookup"><span data-stu-id="7eed2-156">**CredSSP**</span></span>
+- <span data-ttu-id="7eed2-157">**Default**</span><span class="sxs-lookup"><span data-stu-id="7eed2-157">**Default**</span></span>
+- <span data-ttu-id="7eed2-158">**Digest** (дайджест)</span><span class="sxs-lookup"><span data-stu-id="7eed2-158">**Digest**</span></span>
+- <span data-ttu-id="7eed2-159">**Kerberos**</span><span class="sxs-lookup"><span data-stu-id="7eed2-159">**Kerberos**</span></span>
+- <span data-ttu-id="7eed2-160">**Новое**</span><span class="sxs-lookup"><span data-stu-id="7eed2-160">**Negotiate**</span></span>
+
+<span data-ttu-id="7eed2-161">Значение по умолчанию ― **Default**.</span><span class="sxs-lookup"><span data-stu-id="7eed2-161">The default value is **Default**.</span></span>
+
+<span data-ttu-id="7eed2-162">Дополнительные сведения о значениях этого параметра см. в разделе [AuthenticationMechanism enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).</span><span class="sxs-lookup"><span data-stu-id="7eed2-162">For more information about the values of this parameter, see [AuthenticationMechanism Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="2abae-163">Проверка подлинности с помощью поставщика службы безопасности учетных данных (CredSSP), в которой учетные данные пользователя передаются на удаленный компьютер для проверки подлинности, предназначена для команд, требующих проверки подлинности в нескольких ресурсах, таких как доступ к удаленной сетевой папке.</span><span class="sxs-lookup"><span data-stu-id="2abae-163">Credential Security Service Provider (CredSSP) authentication, in which the user credentials are passed to a remote computer to be authenticated, is designed for commands that require authentication on more than one resource, such as accessing a remote network share.</span></span>
-> <span data-ttu-id="2abae-164">Этот механизм повышает риск безопасности удаленной операции.</span><span class="sxs-lookup"><span data-stu-id="2abae-164">This mechanism increases the security risk of the remote operation.</span></span>
-> <span data-ttu-id="2abae-165">Если удаленный компьютер скомпрометирован, передаваемые ему учетные данные можно использовать для управления > сетевого сеанса.</span><span class="sxs-lookup"><span data-stu-id="2abae-165">If the remote computer is compromised, the credentials that are passed to it can be used to control > the network session.</span></span>
+> <span data-ttu-id="7eed2-163">Проверка подлинности с помощью поставщика службы безопасности учетных данных (CredSSP), в которой учетные данные пользователя передаются на удаленный компьютер для проверки подлинности, предназначена для команд, требующих проверки подлинности в нескольких ресурсах, таких как доступ к удаленной сетевой папке.</span><span class="sxs-lookup"><span data-stu-id="7eed2-163">Credential Security Service Provider (CredSSP) authentication, in which the user credentials are passed to a remote computer to be authenticated, is designed for commands that require authentication on more than one resource, such as accessing a remote network share.</span></span>
+> <span data-ttu-id="7eed2-164">Этот механизм повышает риск безопасности удаленной операции.</span><span class="sxs-lookup"><span data-stu-id="7eed2-164">This mechanism increases the security risk of the remote operation.</span></span>
+> <span data-ttu-id="7eed2-165">Если удаленный компьютер скомпрометирован, передаваемые ему учетные данные можно использовать для управления > сетевого сеанса.</span><span class="sxs-lookup"><span data-stu-id="7eed2-165">If the remote computer is compromised, the credentials that are passed to it can be used to control > the network session.</span></span>
 
-<span data-ttu-id="2abae-166">Этот параметр впервые появился в Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="2abae-166">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="7eed2-166">Этот параметр впервые появился в Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="7eed2-166">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.String
@@ -230,9 +230,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2abae-167">-Confirm</span><span class="sxs-lookup"><span data-stu-id="2abae-167">-Confirm</span></span>
+### <span data-ttu-id="7eed2-167">-Confirm</span><span class="sxs-lookup"><span data-stu-id="7eed2-167">-Confirm</span></span>
 
-<span data-ttu-id="2abae-168">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="2abae-168">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="7eed2-168">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="7eed2-168">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -246,10 +246,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2abae-169">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="2abae-169">-WhatIf</span></span>
+### <span data-ttu-id="7eed2-169">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="7eed2-169">-WhatIf</span></span>
 
-<span data-ttu-id="2abae-170">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="2abae-170">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="2abae-171">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="2abae-171">The cmdlet is not run.</span></span>
+<span data-ttu-id="7eed2-170">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="7eed2-170">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="7eed2-171">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="7eed2-171">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -263,28 +263,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2abae-172">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="2abae-172">CommonParameters</span></span>
+### <span data-ttu-id="7eed2-172">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="7eed2-172">CommonParameters</span></span>
 
-<span data-ttu-id="2abae-173">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2abae-173">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2abae-174">См. сведения в разделе [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="2abae-174">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
+<span data-ttu-id="7eed2-173">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7eed2-173">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7eed2-174">См. сведения в разделе [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="7eed2-174">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
 
-## <span data-ttu-id="2abae-175">Входные данные</span><span class="sxs-lookup"><span data-stu-id="2abae-175">INPUTS</span></span>
+## <span data-ttu-id="7eed2-175">Входные данные</span><span class="sxs-lookup"><span data-stu-id="7eed2-175">INPUTS</span></span>
 
-### <span data-ttu-id="2abae-176">Нет</span><span class="sxs-lookup"><span data-stu-id="2abae-176">None</span></span>
+### <span data-ttu-id="7eed2-176">Нет</span><span class="sxs-lookup"><span data-stu-id="7eed2-176">None</span></span>
 
-<span data-ttu-id="2abae-177">Этот командлет не имеет параметров, которые принимают входные данные по значению.</span><span class="sxs-lookup"><span data-stu-id="2abae-177">This cmdlet does not have parameters that take input by value.</span></span>
-<span data-ttu-id="2abae-178">Тем не менее в этот командлет можно передавать значения свойств **ComputerName** и **NewName** объектов.</span><span class="sxs-lookup"><span data-stu-id="2abae-178">However, you can pipe the values of the **ComputerName** and **NewName** properties of objects to this cmdlet.</span></span>
+<span data-ttu-id="7eed2-177">Этот командлет не имеет параметров, которые принимают входные данные по значению.</span><span class="sxs-lookup"><span data-stu-id="7eed2-177">This cmdlet does not have parameters that take input by value.</span></span> <span data-ttu-id="7eed2-178">Тем не менее в этот командлет можно передавать значения свойств **ComputerName** и **NewName** объектов.</span><span class="sxs-lookup"><span data-stu-id="7eed2-178">However, you can pipe the values of the **ComputerName** and **NewName** properties of objects to this cmdlet.</span></span>
 
-## <span data-ttu-id="2abae-179">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="2abae-179">OUTPUTS</span></span>
+## <span data-ttu-id="7eed2-179">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="7eed2-179">OUTPUTS</span></span>
 
-### <span data-ttu-id="2abae-180">Microsoft. PowerShell. Commands. Компутерчанжеинфо</span><span class="sxs-lookup"><span data-stu-id="2abae-180">Microsoft.PowerShell.Commands.ComputerChangeInfo</span></span>
+### <span data-ttu-id="7eed2-180">Microsoft. PowerShell. Commands. Компутерчанжеинфо</span><span class="sxs-lookup"><span data-stu-id="7eed2-180">Microsoft.PowerShell.Commands.ComputerChangeInfo</span></span>
 
-<span data-ttu-id="2abae-181">Этот командлет возвращает объект **компутерчанжеинфо** , если указан параметр **PassThru** .</span><span class="sxs-lookup"><span data-stu-id="2abae-181">This cmdlet returns a **ComputerChangeInfo** object, if you specify the **PassThru** parameter.</span></span>
-<span data-ttu-id="2abae-182">В противном случае не возвращает никаких выходных данных.</span><span class="sxs-lookup"><span data-stu-id="2abae-182">Otherwise, it does not return any output.</span></span>
+<span data-ttu-id="7eed2-181">Этот командлет возвращает объект **компутерчанжеинфо** , если указан параметр **PassThru** .</span><span class="sxs-lookup"><span data-stu-id="7eed2-181">This cmdlet returns a **ComputerChangeInfo** object, if you specify the **PassThru** parameter.</span></span>
+<span data-ttu-id="7eed2-182">В противном случае не возвращает никаких выходных данных.</span><span class="sxs-lookup"><span data-stu-id="7eed2-182">Otherwise, it does not return any output.</span></span>
 
-## <span data-ttu-id="2abae-183">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="2abae-183">NOTES</span></span>
+## <span data-ttu-id="7eed2-183">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="7eed2-183">NOTES</span></span>
 
-## <span data-ttu-id="2abae-184">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="2abae-184">RELATED LINKS</span></span>
+<span data-ttu-id="7eed2-184">Этот командлет доступен только на платформах Windows.</span><span class="sxs-lookup"><span data-stu-id="7eed2-184">This cmdlet is only available on Windows platforms.</span></span>
 
-[<span data-ttu-id="2abae-185">Restart-Computer</span><span class="sxs-lookup"><span data-stu-id="2abae-185">Restart-Computer</span></span>](Restart-Computer.md)
+## <span data-ttu-id="7eed2-185">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="7eed2-185">RELATED LINKS</span></span>
 
-[<span data-ttu-id="2abae-186">Stop-Computer</span><span class="sxs-lookup"><span data-stu-id="2abae-186">Stop-Computer</span></span>](Stop-Computer.md)
+[<span data-ttu-id="7eed2-186">Restart-Computer</span><span class="sxs-lookup"><span data-stu-id="7eed2-186">Restart-Computer</span></span>](Restart-Computer.md)
+
+[<span data-ttu-id="7eed2-187">Stop-Computer</span><span class="sxs-lookup"><span data-stu-id="7eed2-187">Stop-Computer</span></span>](Stop-Computer.md)

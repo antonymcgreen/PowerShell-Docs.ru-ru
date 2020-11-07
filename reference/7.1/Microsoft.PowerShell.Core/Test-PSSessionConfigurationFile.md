@@ -7,37 +7,37 @@ ms.date: 03/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/test-pssessionconfigurationfile?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-PSSessionConfigurationFile
-ms.openlocfilehash: 625611246ea5a07fba16ecb86a2c8c48345d9ea5
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6786210fb2b89102c6193c755168af4264fae58c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93226998"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345805"
 ---
-# <span data-ttu-id="edb45-103">Test-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="edb45-103">Test-PSSessionConfigurationFile</span></span>
+# <span data-ttu-id="8fbcf-103">Test-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="8fbcf-103">Test-PSSessionConfigurationFile</span></span>
 
-## <span data-ttu-id="edb45-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="edb45-104">SYNOPSIS</span></span>
-<span data-ttu-id="edb45-105">Проверяет ключи и значения в файле конфигурации сеанса.</span><span class="sxs-lookup"><span data-stu-id="edb45-105">Verifies the keys and values in a session configuration file.</span></span>
+## <span data-ttu-id="8fbcf-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="8fbcf-104">SYNOPSIS</span></span>
+<span data-ttu-id="8fbcf-105">Проверяет ключи и значения в файле конфигурации сеанса.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-105">Verifies the keys and values in a session configuration file.</span></span>
 
-## <span data-ttu-id="edb45-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="edb45-106">SYNTAX</span></span>
+## <span data-ttu-id="8fbcf-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8fbcf-106">SYNTAX</span></span>
 
 ```
 Test-PSSessionConfigurationFile [-Path] <String> [<CommonParameters>]
 ```
 
-## <span data-ttu-id="edb45-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="edb45-107">DESCRIPTION</span></span>
+## <span data-ttu-id="8fbcf-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="8fbcf-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="edb45-108">Этот командлет проверяет, что файл конфигурации сеанса содержит допустимые ключи, а значения имеют правильный тип.</span><span class="sxs-lookup"><span data-stu-id="edb45-108">This cmdlet verifies that a session configuration file contains valid keys and the values are of the correct type.</span></span> <span data-ttu-id="edb45-109">Для перечисляемых значений командлет проверяет правильность указанных значений.</span><span class="sxs-lookup"><span data-stu-id="edb45-109">For enumerated values, the cmdlet verifies that the specified values are valid.</span></span>
+<span data-ttu-id="8fbcf-108">Этот командлет проверяет, что файл конфигурации сеанса содержит допустимые ключи, а значения имеют правильный тип.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-108">This cmdlet verifies that a session configuration file contains valid keys and the values are of the correct type.</span></span> <span data-ttu-id="8fbcf-109">Для перечисляемых значений командлет проверяет правильность указанных значений.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-109">For enumerated values, the cmdlet verifies that the specified values are valid.</span></span>
 
-<span data-ttu-id="edb45-110">Командлет возвращает значение, `$True` Если файл проходит все тесты, а `$False` Если нет.</span><span class="sxs-lookup"><span data-stu-id="edb45-110">The cmdlet returns `$True` if the file passes all tests and `$False` if it does not.</span></span> <span data-ttu-id="edb45-111">Чтобы найти ошибки, используйте параметр **verbose** .</span><span class="sxs-lookup"><span data-stu-id="edb45-111">To find any errors, use the **Verbose** parameter.</span></span>
+<span data-ttu-id="8fbcf-110">Командлет возвращает значение, `$True` Если файл проходит все тесты, а `$False` Если нет.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-110">The cmdlet returns `$True` if the file passes all tests and `$False` if it does not.</span></span> <span data-ttu-id="8fbcf-111">Чтобы найти ошибки, используйте параметр **verbose** .</span><span class="sxs-lookup"><span data-stu-id="8fbcf-111">To find any errors, use the **Verbose** parameter.</span></span>
 
-<span data-ttu-id="edb45-112">`Test-PSSessionConfigurationFile` проверяет файлы конфигурации сеанса, например созданные `New-PSSessionConfigurationFile` командлетом.</span><span class="sxs-lookup"><span data-stu-id="edb45-112">`Test-PSSessionConfigurationFile` verifies the session configuration files, such as those created by the `New-PSSessionConfigurationFile` cmdlet.</span></span> <span data-ttu-id="edb45-113">Сведения о конфигурациях сеансов см. в разделе [about_Session_Configurations](About/about_Session_Configurations.md).</span><span class="sxs-lookup"><span data-stu-id="edb45-113">For information about session configurations, see [about_Session_Configurations](About/about_Session_Configurations.md).</span></span> <span data-ttu-id="edb45-114">Дополнительные сведения о файлах конфигурации сеансов см. в разделе [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md).</span><span class="sxs-lookup"><span data-stu-id="edb45-114">For information about session configuration files, see [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md).</span></span>
+<span data-ttu-id="8fbcf-112">`Test-PSSessionConfigurationFile` проверяет файлы конфигурации сеанса, например созданные `New-PSSessionConfigurationFile` командлетом.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-112">`Test-PSSessionConfigurationFile` verifies the session configuration files, such as those created by the `New-PSSessionConfigurationFile` cmdlet.</span></span> <span data-ttu-id="8fbcf-113">Сведения о конфигурациях сеансов см. в разделе [about_Session_Configurations](About/about_Session_Configurations.md).</span><span class="sxs-lookup"><span data-stu-id="8fbcf-113">For information about session configurations, see [about_Session_Configurations](About/about_Session_Configurations.md).</span></span> <span data-ttu-id="8fbcf-114">Дополнительные сведения о файлах конфигурации сеансов см. в разделе [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md).</span><span class="sxs-lookup"><span data-stu-id="8fbcf-114">For information about session configuration files, see [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md).</span></span>
 
-<span data-ttu-id="edb45-115">Этот командлет появился в PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="edb45-115">This cmdlet was introduced in PowerShell 3.0.</span></span>
+<span data-ttu-id="8fbcf-115">Этот командлет появился в PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-115">This cmdlet was introduced in PowerShell 3.0.</span></span>
 
-## <span data-ttu-id="edb45-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="edb45-116">EXAMPLES</span></span>
+## <span data-ttu-id="8fbcf-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="8fbcf-116">EXAMPLES</span></span>
 
-### <span data-ttu-id="edb45-117">Пример 1. Тестирование файла конфигурации сеанса</span><span class="sxs-lookup"><span data-stu-id="edb45-117">Example 1: Test a session configuration file</span></span>
+### <span data-ttu-id="8fbcf-117">Пример 1. Тестирование файла конфигурации сеанса</span><span class="sxs-lookup"><span data-stu-id="8fbcf-117">Example 1: Test a session configuration file</span></span>
 
 ```powershell
 Test-PSSessionConfigurationFile -Path "FullLanguage.pssc"
@@ -47,18 +47,18 @@ Test-PSSessionConfigurationFile -Path "FullLanguage.pssc"
 True
 ```
 
-### <span data-ttu-id="edb45-118">Пример 2. Тестирование файла конфигурации сеанса конфигурации сеанса</span><span class="sxs-lookup"><span data-stu-id="edb45-118">Example 2: Test the session configuration file of a session configuration</span></span>
+### <span data-ttu-id="8fbcf-118">Пример 2. Тестирование файла конфигурации сеанса конфигурации сеанса</span><span class="sxs-lookup"><span data-stu-id="8fbcf-118">Example 2: Test the session configuration file of a session configuration</span></span>
 
-<span data-ttu-id="edb45-119">В этом примере мы протестируем файл конфигурации, используемый в конфигурации **ограниченного** сеанса.</span><span class="sxs-lookup"><span data-stu-id="edb45-119">In this example, we test the configuration file used in the **Restricted** session configuration.</span></span>
-<span data-ttu-id="edb45-120">Значение параметра **path** является результатом выполнения `Get-PSSessionConfiguration` команды, которая получает **ограниченную** конфигурацию сеанса.</span><span class="sxs-lookup"><span data-stu-id="edb45-120">The value of the **Path** parameter is the result of the `Get-PSSessionConfiguration` command that gets the **Restricted** session configuration.</span></span> <span data-ttu-id="edb45-121">Путь к файлу конфигурации сеанса хранится в значении свойства **конфигфилепас** конфигурации сеанса.</span><span class="sxs-lookup"><span data-stu-id="edb45-121">The path of the session configuration file is stored in the value of the **ConfigFilePath** property of the session configuration.</span></span>
+<span data-ttu-id="8fbcf-119">В этом примере мы протестируем файл конфигурации, используемый в конфигурации **ограниченного** сеанса.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-119">In this example, we test the configuration file used in the **Restricted** session configuration.</span></span>
+<span data-ttu-id="8fbcf-120">Значение параметра **path** является результатом выполнения `Get-PSSessionConfiguration` команды, которая получает **ограниченную** конфигурацию сеанса.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-120">The value of the **Path** parameter is the result of the `Get-PSSessionConfiguration` command that gets the **Restricted** session configuration.</span></span> <span data-ttu-id="8fbcf-121">Путь к файлу конфигурации сеанса хранится в значении свойства **конфигфилепас** конфигурации сеанса.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-121">The path of the session configuration file is stored in the value of the **ConfigFilePath** property of the session configuration.</span></span>
 
 ```powershell
 Test-PSSessionConfigurationFile -Path (Get-PSSessionConfiguration -Name Restricted).ConfigFilePath
 ```
 
-### <span data-ttu-id="edb45-122">Пример 3. Тестирование файлов конфигурации всех сеансов</span><span class="sxs-lookup"><span data-stu-id="edb45-122">Example 3: Test all session configuration files</span></span>
+### <span data-ttu-id="8fbcf-122">Пример 3. Тестирование файлов конфигурации всех сеансов</span><span class="sxs-lookup"><span data-stu-id="8fbcf-122">Example 3: Test all session configuration files</span></span>
 
-<span data-ttu-id="edb45-123">В этом примере функция проверяет все файлы конфигурации сеанса на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="edb45-123">The function in this example tests all session configuration files on the local computer.</span></span> <span data-ttu-id="edb45-124">Функция использует `Get-PSSessionConfiguration` командлет для получения всех конфигураций сеанса.</span><span class="sxs-lookup"><span data-stu-id="edb45-124">The function uses the `Get-PSSessionConfiguration` cmdlet to get all session configurations.</span></span> <span data-ttu-id="edb45-125">В коде внутри `ForEach-Object` цикла отображается путь к файлу и проверяется каждая из конфигураций сеанса.</span><span class="sxs-lookup"><span data-stu-id="edb45-125">The code inside the `ForEach-Object` loop displays the file path and tests each of the session configurations.</span></span>
+<span data-ttu-id="8fbcf-123">В этом примере функция проверяет все файлы конфигурации сеанса на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-123">The function in this example tests all session configuration files on the local computer.</span></span> <span data-ttu-id="8fbcf-124">Функция использует `Get-PSSessionConfiguration` командлет для получения всех конфигураций сеанса.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-124">The function uses the `Get-PSSessionConfiguration` cmdlet to get all session configurations.</span></span> <span data-ttu-id="8fbcf-125">В коде внутри `ForEach-Object` цикла отображается путь к файлу и проверяется каждая из конфигураций сеанса.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-125">The code inside the `ForEach-Object` loop displays the file path and tests each of the session configurations.</span></span>
 
 ```powershell
 function Test-AllConfigFiles
@@ -88,15 +88,15 @@ C:\WINDOWS\System32\WindowsPowerShell\v1.0\SessionConfig\RRS_3fb29420-2c87-46e5-
 True
 ```
 
-<span data-ttu-id="edb45-126">Свойство **конфигфилепас** конфигурации сеанса содержит путь к файлу конфигурации сеанса, который используется в конфигурации сеанса, если таковой имеется.</span><span class="sxs-lookup"><span data-stu-id="edb45-126">The **ConfigFilePath** property of a session configuration contains the path of the session configuration file that is used in the session configuration, if any.</span></span>
+<span data-ttu-id="8fbcf-126">Свойство **конфигфилепас** конфигурации сеанса содержит путь к файлу конфигурации сеанса, который используется в конфигурации сеанса, если таковой имеется.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-126">The **ConfigFilePath** property of a session configuration contains the path of the session configuration file that is used in the session configuration, if any.</span></span>
 
-<span data-ttu-id="edb45-127">Если значение свойства **ConfigFilePath** заполнено (значение true), команда получает (печатает) значение свойства **ConfigFilePath**.</span><span class="sxs-lookup"><span data-stu-id="edb45-127">If the value of the **ConfigFilePath** property is populated (is true), the command gets (prints) the **ConfigFilePath** property value.</span></span> <span data-ttu-id="edb45-128">Затем он использует `Test-PSSessionConfigurationFile` командлет для проверки файла в значении **конфигфилепас** .</span><span class="sxs-lookup"><span data-stu-id="edb45-128">Then it uses the `Test-PSSessionConfigurationFile` cmdlet to test the file in the **ConfigFilePath** value.</span></span> <span data-ttu-id="edb45-129">Параметр **Verbose** возвращает ошибку файла, если файл не проходит проверку.</span><span class="sxs-lookup"><span data-stu-id="edb45-129">The **Verbose** parameter returns the file error when the file fails the test.</span></span>
+<span data-ttu-id="8fbcf-127">Если значение свойства **ConfigFilePath** заполнено (значение true), команда получает (печатает) значение свойства **ConfigFilePath**.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-127">If the value of the **ConfigFilePath** property is populated (is true), the command gets (prints) the **ConfigFilePath** property value.</span></span> <span data-ttu-id="8fbcf-128">Затем он использует `Test-PSSessionConfigurationFile` командлет для проверки файла в значении **конфигфилепас** .</span><span class="sxs-lookup"><span data-stu-id="8fbcf-128">Then it uses the `Test-PSSessionConfigurationFile` cmdlet to test the file in the **ConfigFilePath** value.</span></span> <span data-ttu-id="8fbcf-129">Параметр **Verbose** возвращает ошибку файла, если файл не проходит проверку.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-129">The **Verbose** parameter returns the file error when the file fails the test.</span></span>
 
-## <span data-ttu-id="edb45-130">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="edb45-130">PARAMETERS</span></span>
+## <span data-ttu-id="8fbcf-130">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8fbcf-130">PARAMETERS</span></span>
 
-### <span data-ttu-id="edb45-131">-Path</span><span class="sxs-lookup"><span data-stu-id="edb45-131">-Path</span></span>
+### <span data-ttu-id="8fbcf-131">-Path</span><span class="sxs-lookup"><span data-stu-id="8fbcf-131">-Path</span></span>
 
-<span data-ttu-id="edb45-132">Указывает путь и имя файла конфигурации сеанса (. pssc).</span><span class="sxs-lookup"><span data-stu-id="edb45-132">Specifies the path and filename of a session configuration file (.pssc).</span></span> <span data-ttu-id="edb45-133">Если опустить путь, по умолчанию используется текущая папка.</span><span class="sxs-lookup"><span data-stu-id="edb45-133">If you omit the path, the default is the current folder.</span></span> <span data-ttu-id="edb45-134">Подстановочные знаки поддерживаются, но они должны разрешаться в один файл.</span><span class="sxs-lookup"><span data-stu-id="edb45-134">Wildcard characters are supported, but they must resolve to a single file.</span></span> <span data-ttu-id="edb45-135">Путь к файлу конфигурации сеанса также можно передать в `Test-PSSessionConfigurationFile` .</span><span class="sxs-lookup"><span data-stu-id="edb45-135">You can also pipe a session configuration file path to `Test-PSSessionConfigurationFile`.</span></span>
+<span data-ttu-id="8fbcf-132">Указывает путь и имя файла конфигурации сеанса (. pssc).</span><span class="sxs-lookup"><span data-stu-id="8fbcf-132">Specifies the path and filename of a session configuration file (.pssc).</span></span> <span data-ttu-id="8fbcf-133">Если опустить путь, по умолчанию используется текущая папка.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-133">If you omit the path, the default is the current folder.</span></span> <span data-ttu-id="8fbcf-134">Подстановочные знаки поддерживаются, но они должны разрешаться в один файл.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-134">Wildcard characters are supported, but they must resolve to a single file.</span></span> <span data-ttu-id="8fbcf-135">Путь к файлу конфигурации сеанса также можно передать в `Test-PSSessionConfigurationFile` .</span><span class="sxs-lookup"><span data-stu-id="8fbcf-135">You can also pipe a session configuration file path to `Test-PSSessionConfigurationFile`.</span></span>
 
 ```yaml
 Type: System.String
@@ -110,45 +110,46 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="edb45-136">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="edb45-136">CommonParameters</span></span>
+### <span data-ttu-id="8fbcf-136">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="8fbcf-136">CommonParameters</span></span>
 
-<span data-ttu-id="edb45-137">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="edb45-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="edb45-138">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="edb45-138">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="8fbcf-137">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8fbcf-138">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="8fbcf-138">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="edb45-139">Входные данные</span><span class="sxs-lookup"><span data-stu-id="edb45-139">INPUTS</span></span>
+## <span data-ttu-id="8fbcf-139">Входные данные</span><span class="sxs-lookup"><span data-stu-id="8fbcf-139">INPUTS</span></span>
 
-### <span data-ttu-id="edb45-140">System.String</span><span class="sxs-lookup"><span data-stu-id="edb45-140">System.String</span></span>
+### <span data-ttu-id="8fbcf-140">System.String</span><span class="sxs-lookup"><span data-stu-id="8fbcf-140">System.String</span></span>
 
-<span data-ttu-id="edb45-141">Путь к файлу конфигурации сеанса можно передать в `Test-PSSessionConfigurationFile` .</span><span class="sxs-lookup"><span data-stu-id="edb45-141">You can pipe a session configuration file path to `Test-PSSessionConfigurationFile`.</span></span>
+<span data-ttu-id="8fbcf-141">Путь к файлу конфигурации сеанса можно передать в `Test-PSSessionConfigurationFile` .</span><span class="sxs-lookup"><span data-stu-id="8fbcf-141">You can pipe a session configuration file path to `Test-PSSessionConfigurationFile`.</span></span>
 
-## <span data-ttu-id="edb45-142">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="edb45-142">OUTPUTS</span></span>
+## <span data-ttu-id="8fbcf-142">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="8fbcf-142">OUTPUTS</span></span>
 
-### <span data-ttu-id="edb45-143">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="edb45-143">System.Boolean</span></span>
+### <span data-ttu-id="8fbcf-143">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="8fbcf-143">System.Boolean</span></span>
 
-## <span data-ttu-id="edb45-144">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="edb45-144">NOTES</span></span>
+## <span data-ttu-id="8fbcf-144">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="8fbcf-144">NOTES</span></span>
 
-## <span data-ttu-id="edb45-145">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="edb45-145">RELATED LINKS</span></span>
+<span data-ttu-id="8fbcf-145">Этот командлет доступен только на платформах Windows.</span><span class="sxs-lookup"><span data-stu-id="8fbcf-145">This cmdlet is only available on Windows platforms.</span></span>
 
-[<span data-ttu-id="edb45-146">Disable-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="edb45-146">Disable-PSSessionConfiguration</span></span>](Disable-PSSessionConfiguration.md)
+## <span data-ttu-id="8fbcf-146">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="8fbcf-146">RELATED LINKS</span></span>
 
-[<span data-ttu-id="edb45-147">Enable-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="edb45-147">Enable-PSSessionConfiguration</span></span>](Enable-PSSessionConfiguration.md)
+[<span data-ttu-id="8fbcf-147">Disable-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8fbcf-147">Disable-PSSessionConfiguration</span></span>](Disable-PSSessionConfiguration.md)
 
-[<span data-ttu-id="edb45-148">Get-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="edb45-148">Get-PSSessionConfiguration</span></span>](Get-PSSessionConfiguration.md)
+[<span data-ttu-id="8fbcf-148">Enable-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8fbcf-148">Enable-PSSessionConfiguration</span></span>](Enable-PSSessionConfiguration.md)
 
-[<span data-ttu-id="edb45-149">New-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="edb45-149">New-PSSessionConfigurationFile</span></span>](New-PSSessionConfigurationFile.md)
+[<span data-ttu-id="8fbcf-149">Get-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8fbcf-149">Get-PSSessionConfiguration</span></span>](Get-PSSessionConfiguration.md)
 
-[<span data-ttu-id="edb45-150">New-PSSessionOption</span><span class="sxs-lookup"><span data-stu-id="edb45-150">New-PSSessionOption</span></span>](New-PSSessionOption.md)
+[<span data-ttu-id="8fbcf-150">New-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="8fbcf-150">New-PSSessionConfigurationFile</span></span>](New-PSSessionConfigurationFile.md)
 
-[<span data-ttu-id="edb45-151">Register-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="edb45-151">Register-PSSessionConfiguration</span></span>](Register-PSSessionConfiguration.md)
+[<span data-ttu-id="8fbcf-151">New-PSSessionOption</span><span class="sxs-lookup"><span data-stu-id="8fbcf-151">New-PSSessionOption</span></span>](New-PSSessionOption.md)
 
-[<span data-ttu-id="edb45-152">Set-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="edb45-152">Set-PSSessionConfiguration</span></span>](Set-PSSessionConfiguration.md)
+[<span data-ttu-id="8fbcf-152">Register-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8fbcf-152">Register-PSSessionConfiguration</span></span>](Register-PSSessionConfiguration.md)
 
-[<span data-ttu-id="edb45-153">Test-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="edb45-153">Test-PSSessionConfigurationFile</span></span>](Test-PSSessionConfigurationFile.md)
+[<span data-ttu-id="8fbcf-153">Set-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8fbcf-153">Set-PSSessionConfiguration</span></span>](Set-PSSessionConfiguration.md)
 
-[<span data-ttu-id="edb45-154">Unregister-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="edb45-154">Unregister-PSSessionConfiguration</span></span>](Unregister-PSSessionConfiguration.md)
+[<span data-ttu-id="8fbcf-154">Test-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="8fbcf-154">Test-PSSessionConfigurationFile</span></span>](Test-PSSessionConfigurationFile.md)
 
-[<span data-ttu-id="edb45-155">Поставщик WSMan</span><span class="sxs-lookup"><span data-stu-id="edb45-155">WSMan Provider</span></span>](../Microsoft.WsMan.Management/About/about_WSMan_Provider.md)
+[<span data-ttu-id="8fbcf-155">Unregister-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8fbcf-155">Unregister-PSSessionConfiguration</span></span>](Unregister-PSSessionConfiguration.md)
 
-[<span data-ttu-id="edb45-156">about_Session_Configurations</span><span class="sxs-lookup"><span data-stu-id="edb45-156">about_Session_Configurations</span></span>](About/about_Session_Configurations.md)
+[<span data-ttu-id="8fbcf-156">Поставщик WSMan</span><span class="sxs-lookup"><span data-stu-id="8fbcf-156">WSMan Provider</span></span>](../Microsoft.WsMan.Management/About/about_WSMan_Provider.md)
 
-[<span data-ttu-id="edb45-157">about_Session_Configuration_Files</span><span class="sxs-lookup"><span data-stu-id="edb45-157">about_Session_Configuration_Files</span></span>](About/about_Session_Configuration_Files.md)
+[<span data-ttu-id="8fbcf-157">about_Session_Configurations</span><span class="sxs-lookup"><span data-stu-id="8fbcf-157">about_Session_Configurations</span></span>](About/about_Session_Configurations.md)
 
+[<span data-ttu-id="8fbcf-158">about_Session_Configuration_Files</span><span class="sxs-lookup"><span data-stu-id="8fbcf-158">about_Session_Configuration_Files</span></span>](About/about_Session_Configuration_Files.md)

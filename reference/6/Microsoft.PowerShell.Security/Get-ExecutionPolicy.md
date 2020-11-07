@@ -7,39 +7,39 @@ ms.date: 3/22/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ExecutionPolicy
-ms.openlocfilehash: a846c3605c4adf469b12bfadaa3f90e585558dea
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f798aaef7032db450a13d79589eb7dd0ca762cd6
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93229133"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344836"
 ---
-# <span data-ttu-id="453cf-103">Get-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="453cf-103">Get-ExecutionPolicy</span></span>
+# <span data-ttu-id="1a832-103">Get-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="1a832-103">Get-ExecutionPolicy</span></span>
 
-## <span data-ttu-id="453cf-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="453cf-104">SYNOPSIS</span></span>
-<span data-ttu-id="453cf-105">Получает политики выполнения для текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="453cf-105">Gets the execution policies for the current session.</span></span>
+## <span data-ttu-id="1a832-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="1a832-104">SYNOPSIS</span></span>
+<span data-ttu-id="1a832-105">Получает политики выполнения для текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="1a832-105">Gets the execution policies for the current session.</span></span>
 
-## <span data-ttu-id="453cf-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="453cf-106">SYNTAX</span></span>
+## <span data-ttu-id="1a832-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="1a832-106">SYNTAX</span></span>
 
-### <span data-ttu-id="453cf-107">Все</span><span class="sxs-lookup"><span data-stu-id="453cf-107">All</span></span>
+### <span data-ttu-id="1a832-107">Все</span><span class="sxs-lookup"><span data-stu-id="1a832-107">All</span></span>
 
 ```
 Get-ExecutionPolicy [[-Scope] <ExecutionPolicyScope>] [-List] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="453cf-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="453cf-108">DESCRIPTION</span></span>
+## <span data-ttu-id="1a832-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="1a832-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="453cf-109">Чтобы отобразить политики выполнения для каждой области в порядке приоритета, используйте `Get-ExecutionPolicy -List` .</span><span class="sxs-lookup"><span data-stu-id="453cf-109">To display the execution policies for each scope in the order of precedence, use `Get-ExecutionPolicy -List`.</span></span> <span data-ttu-id="453cf-110">Чтобы просмотреть действующую политику выполнения для сеанса PowerShell, используйте параметр `Get-ExecutionPolicy` без параметров.</span><span class="sxs-lookup"><span data-stu-id="453cf-110">To see the effective execution policy for your PowerShell session use `Get-ExecutionPolicy` with no parameters.</span></span>
+<span data-ttu-id="1a832-109">Чтобы отобразить политики выполнения для каждой области в порядке приоритета, используйте `Get-ExecutionPolicy -List` .</span><span class="sxs-lookup"><span data-stu-id="1a832-109">To display the execution policies for each scope in the order of precedence, use `Get-ExecutionPolicy -List`.</span></span> <span data-ttu-id="1a832-110">Чтобы просмотреть действующую политику выполнения для сеанса PowerShell, используйте параметр `Get-ExecutionPolicy` без параметров.</span><span class="sxs-lookup"><span data-stu-id="1a832-110">To see the effective execution policy for your PowerShell session use `Get-ExecutionPolicy` with no parameters.</span></span>
 
-<span data-ttu-id="453cf-111">Действующая политика выполнения определяется политиками выполнения, которые задаются `Set-ExecutionPolicy` параметрами и групповая политика.</span><span class="sxs-lookup"><span data-stu-id="453cf-111">The effective execution policy is determined by execution policies that are set by `Set-ExecutionPolicy` and Group Policy settings.</span></span>
+<span data-ttu-id="1a832-111">Действующая политика выполнения определяется политиками выполнения, которые задаются `Set-ExecutionPolicy` параметрами и групповая политика.</span><span class="sxs-lookup"><span data-stu-id="1a832-111">The effective execution policy is determined by execution policies that are set by `Set-ExecutionPolicy` and Group Policy settings.</span></span>
 
-<span data-ttu-id="453cf-112">Подробнее см. в разделе [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).</span><span class="sxs-lookup"><span data-stu-id="453cf-112">For more information, see [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).</span></span>
+<span data-ttu-id="1a832-112">Подробнее см. в разделе [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).</span><span class="sxs-lookup"><span data-stu-id="1a832-112">For more information, see [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).</span></span>
 
-## <span data-ttu-id="453cf-113">Примеры</span><span class="sxs-lookup"><span data-stu-id="453cf-113">EXAMPLES</span></span>
+## <span data-ttu-id="1a832-113">Примеры</span><span class="sxs-lookup"><span data-stu-id="1a832-113">EXAMPLES</span></span>
 
-### <span data-ttu-id="453cf-114">Пример 1. получение всех политик выполнения</span><span class="sxs-lookup"><span data-stu-id="453cf-114">Example 1: Get all execution policies</span></span>
+### <span data-ttu-id="1a832-114">Пример 1. получение всех политик выполнения</span><span class="sxs-lookup"><span data-stu-id="1a832-114">Example 1: Get all execution policies</span></span>
 
-<span data-ttu-id="453cf-115">Эта команда отображает политики выполнения для каждой области в порядке приоритета.</span><span class="sxs-lookup"><span data-stu-id="453cf-115">This command displays the execution policies for each scope in the order of precedence.</span></span>
+<span data-ttu-id="1a832-115">Эта команда отображает политики выполнения для каждой области в порядке приоритета.</span><span class="sxs-lookup"><span data-stu-id="1a832-115">This command displays the execution policies for each scope in the order of precedence.</span></span>
 
 ```powershell
 Get-ExecutionPolicy -List
@@ -55,11 +55,11 @@ CurrentUser    AllSigned
 LocalMachine   Undefined
 ```
 
-<span data-ttu-id="453cf-116">`Get-ExecutionPolicy`Командлет использует параметр **List** для вывода политики выполнения каждой области.</span><span class="sxs-lookup"><span data-stu-id="453cf-116">The `Get-ExecutionPolicy` cmdlet uses the **List** parameter to display each scope's execution policy.</span></span>
+<span data-ttu-id="1a832-116">`Get-ExecutionPolicy`Командлет использует параметр **List** для вывода политики выполнения каждой области.</span><span class="sxs-lookup"><span data-stu-id="1a832-116">The `Get-ExecutionPolicy` cmdlet uses the **List** parameter to display each scope's execution policy.</span></span>
 
-### <span data-ttu-id="453cf-117">Пример 2. Настройка политики выполнения</span><span class="sxs-lookup"><span data-stu-id="453cf-117">Example 2: Set an execution policy</span></span>
+### <span data-ttu-id="1a832-117">Пример 2. Настройка политики выполнения</span><span class="sxs-lookup"><span data-stu-id="1a832-117">Example 2: Set an execution policy</span></span>
 
-<span data-ttu-id="453cf-118">В этом примере показано, как задать политику выполнения для локального компьютера.</span><span class="sxs-lookup"><span data-stu-id="453cf-118">This example shows how to set an execution policy for the local computer.</span></span>
+<span data-ttu-id="1a832-118">В этом примере показано, как задать политику выполнения для локального компьютера.</span><span class="sxs-lookup"><span data-stu-id="1a832-118">This example shows how to set an execution policy for the local computer.</span></span>
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
@@ -76,11 +76,11 @@ MachinePolicy       Undefined
  LocalMachine    RemoteSigned
 ```
 
-<span data-ttu-id="453cf-119">`Set-ExecutionPolicy`Командлет использует параметр **ExecutionPolicy** для указания политики **RemoteSigned** .</span><span class="sxs-lookup"><span data-stu-id="453cf-119">The `Set-ExecutionPolicy` cmdlet uses the **ExecutionPolicy** parameter to specify the **RemoteSigned** policy.</span></span> <span data-ttu-id="453cf-120">Параметр **Scope** задает значение области по умолчанию — **LocalMachine** .</span><span class="sxs-lookup"><span data-stu-id="453cf-120">The **Scope** parameter specifies the default scope value, **LocalMachine** .</span></span> <span data-ttu-id="453cf-121">Чтобы просмотреть параметры политики выполнения, используйте `Get-ExecutionPolicy` командлет с параметром **List** .</span><span class="sxs-lookup"><span data-stu-id="453cf-121">To view the execution policy settings, use the `Get-ExecutionPolicy` cmdlet with the **List** parameter.</span></span>
+<span data-ttu-id="1a832-119">`Set-ExecutionPolicy`Командлет использует параметр **ExecutionPolicy** для указания политики **RemoteSigned** .</span><span class="sxs-lookup"><span data-stu-id="1a832-119">The `Set-ExecutionPolicy` cmdlet uses the **ExecutionPolicy** parameter to specify the **RemoteSigned** policy.</span></span> <span data-ttu-id="1a832-120">Параметр **Scope** задает значение области по умолчанию — **LocalMachine**.</span><span class="sxs-lookup"><span data-stu-id="1a832-120">The **Scope** parameter specifies the default scope value, **LocalMachine**.</span></span> <span data-ttu-id="1a832-121">Чтобы просмотреть параметры политики выполнения, используйте `Get-ExecutionPolicy` командлет с параметром **List** .</span><span class="sxs-lookup"><span data-stu-id="1a832-121">To view the execution policy settings, use the `Get-ExecutionPolicy` cmdlet with the **List** parameter.</span></span>
 
-### <span data-ttu-id="453cf-122">Пример 3. получение действующей политики выполнения</span><span class="sxs-lookup"><span data-stu-id="453cf-122">Example 3: Get the effective execution policy</span></span>
+### <span data-ttu-id="1a832-122">Пример 3. получение действующей политики выполнения</span><span class="sxs-lookup"><span data-stu-id="1a832-122">Example 3: Get the effective execution policy</span></span>
 
-<span data-ttu-id="453cf-123">В этом примере показано, как отобразить действующую политику выполнения для сеанса PowerShell.</span><span class="sxs-lookup"><span data-stu-id="453cf-123">This example shows how to display the effective execution policy for a PowerShell session.</span></span>
+<span data-ttu-id="1a832-123">В этом примере показано, как отобразить действующую политику выполнения для сеанса PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1a832-123">This example shows how to display the effective execution policy for a PowerShell session.</span></span>
 
 ```
 PS> Get-ExecutionPolicy -List
@@ -98,13 +98,13 @@ PS> Get-ExecutionPolicy
 AllSigned
 ```
 
-<span data-ttu-id="453cf-124">`Get-ExecutionPolicy`Командлет использует параметр **List** для вывода политики выполнения каждой области.</span><span class="sxs-lookup"><span data-stu-id="453cf-124">The `Get-ExecutionPolicy` cmdlet uses the **List** parameter to display each scope's execution policy.</span></span> <span data-ttu-id="453cf-125">`Get-ExecutionPolicy`Командлет выполняется без параметра для вывода действующей политики выполнения **AllSigned** .</span><span class="sxs-lookup"><span data-stu-id="453cf-125">The `Get-ExecutionPolicy` cmdlet is run without a parameter to display the effective execution policy, **AllSigned** .</span></span>
+<span data-ttu-id="1a832-124">`Get-ExecutionPolicy`Командлет использует параметр **List** для вывода политики выполнения каждой области.</span><span class="sxs-lookup"><span data-stu-id="1a832-124">The `Get-ExecutionPolicy` cmdlet uses the **List** parameter to display each scope's execution policy.</span></span> <span data-ttu-id="1a832-125">`Get-ExecutionPolicy`Командлет выполняется без параметра для вывода действующей политики выполнения **AllSigned**.</span><span class="sxs-lookup"><span data-stu-id="1a832-125">The `Get-ExecutionPolicy` cmdlet is run without a parameter to display the effective execution policy, **AllSigned**.</span></span>
 
-### <span data-ttu-id="453cf-126">Пример 4. Разблокировка скрипта для его запуска без изменения политики выполнения</span><span class="sxs-lookup"><span data-stu-id="453cf-126">Example 4: Unblock a script to run it without changing the execution policy</span></span>
+### <span data-ttu-id="1a832-126">Пример 4. Разблокировка скрипта для его запуска без изменения политики выполнения</span><span class="sxs-lookup"><span data-stu-id="1a832-126">Example 4: Unblock a script to run it without changing the execution policy</span></span>
 
-<span data-ttu-id="453cf-127">В этом примере показано, как политика выполнения **RemoteSigned** не позволяет выполнять неподписанные сценарии.</span><span class="sxs-lookup"><span data-stu-id="453cf-127">This example shows how the **RemoteSigned** execution policy prevents you from running unsigned scripts.</span></span>
+<span data-ttu-id="1a832-127">В этом примере показано, как политика выполнения **RemoteSigned** не позволяет выполнять неподписанные сценарии.</span><span class="sxs-lookup"><span data-stu-id="1a832-127">This example shows how the **RemoteSigned** execution policy prevents you from running unsigned scripts.</span></span>
 
-<span data-ttu-id="453cf-128">**Перед** использованием командлета рекомендуется прочитать код скрипта и проверить его безопасность `Unblock-File` .</span><span class="sxs-lookup"><span data-stu-id="453cf-128">A best practice is to read the script's code and verify it's safe **before** using the `Unblock-File` cmdlet.</span></span> <span data-ttu-id="453cf-129">`Unblock-File`Командлет разблокирует скрипты для их запуска, но не изменяет политику выполнения.</span><span class="sxs-lookup"><span data-stu-id="453cf-129">The `Unblock-File` cmdlet unblocks scripts so they can run, but doesn't change the execution policy.</span></span>
+<span data-ttu-id="1a832-128">**Перед** использованием командлета рекомендуется прочитать код скрипта и проверить его безопасность `Unblock-File` .</span><span class="sxs-lookup"><span data-stu-id="1a832-128">A best practice is to read the script's code and verify it's safe **before** using the `Unblock-File` cmdlet.</span></span> <span data-ttu-id="1a832-129">`Unblock-File`Командлет разблокирует скрипты для их запуска, но не изменяет политику выполнения.</span><span class="sxs-lookup"><span data-stu-id="1a832-129">The `Unblock-File` cmdlet unblocks scripts so they can run, but doesn't change the execution policy.</span></span>
 
 ```
 PS> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
@@ -136,23 +136,23 @@ PS> .\Start-ActivityTracker.ps1
 Task 1:
 ```
 
-<span data-ttu-id="453cf-130">`Set-ExecutionPolicy`Использует параметр **ExecutionPolicy** для указания политики **RemoteSigned** .</span><span class="sxs-lookup"><span data-stu-id="453cf-130">The `Set-ExecutionPolicy` uses the **ExecutionPolicy** parameter to specify the **RemoteSigned** policy.</span></span> <span data-ttu-id="453cf-131">Политика задается для области по умолчанию, **LocalMachine** .</span><span class="sxs-lookup"><span data-stu-id="453cf-131">The policy is set for the default scope, **LocalMachine** .</span></span>
+<span data-ttu-id="1a832-130">`Set-ExecutionPolicy`Использует параметр **ExecutionPolicy** для указания политики **RemoteSigned** .</span><span class="sxs-lookup"><span data-stu-id="1a832-130">The `Set-ExecutionPolicy` uses the **ExecutionPolicy** parameter to specify the **RemoteSigned** policy.</span></span> <span data-ttu-id="1a832-131">Политика задается для области по умолчанию, **LocalMachine**.</span><span class="sxs-lookup"><span data-stu-id="1a832-131">The policy is set for the default scope, **LocalMachine**.</span></span>
 
-<span data-ttu-id="453cf-132">`Get-ExecutionPolicy`Командлет показывает, что **RemoteSigned** является действующей политикой выполнения для текущего сеанса PowerShell.</span><span class="sxs-lookup"><span data-stu-id="453cf-132">The `Get-ExecutionPolicy` cmdlet shows that **RemoteSigned** is the effective execution policy for the current PowerShell session.</span></span>
+<span data-ttu-id="1a832-132">`Get-ExecutionPolicy`Командлет показывает, что **RemoteSigned** является действующей политикой выполнения для текущего сеанса PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1a832-132">The `Get-ExecutionPolicy` cmdlet shows that **RemoteSigned** is the effective execution policy for the current PowerShell session.</span></span>
 
-<span data-ttu-id="453cf-133">Скрипт **Start-ActivityTracker.ps1** выполняется из текущего каталога.</span><span class="sxs-lookup"><span data-stu-id="453cf-133">The **Start-ActivityTracker.ps1** script is executed from the current directory.</span></span> <span data-ttu-id="453cf-134">Сценарий заблокирован **RemoteSigned** , так как сценарий не имеет цифровой подписи.</span><span class="sxs-lookup"><span data-stu-id="453cf-134">The script is blocked by **RemoteSigned** because the script isn't digitally signed.</span></span>
+<span data-ttu-id="1a832-133">Скрипт **Start-ActivityTracker.ps1** выполняется из текущего каталога.</span><span class="sxs-lookup"><span data-stu-id="1a832-133">The **Start-ActivityTracker.ps1** script is executed from the current directory.</span></span> <span data-ttu-id="1a832-134">Сценарий заблокирован **RemoteSigned** , так как сценарий не имеет цифровой подписи.</span><span class="sxs-lookup"><span data-stu-id="1a832-134">The script is blocked by **RemoteSigned** because the script isn't digitally signed.</span></span>
 
-<span data-ttu-id="453cf-135">В этом примере код скрипта был проверен и проверен как надежный для выполнения.</span><span class="sxs-lookup"><span data-stu-id="453cf-135">For this example, the script's code was reviewed and verified as safe to run.</span></span> <span data-ttu-id="453cf-136">`Unblock-File`Командлет использует параметр **path** , чтобы разблокировать скрипт.</span><span class="sxs-lookup"><span data-stu-id="453cf-136">The `Unblock-File` cmdlet uses the **Path** parameter to unblock the script.</span></span>
+<span data-ttu-id="1a832-135">В этом примере код скрипта был проверен и проверен как надежный для выполнения.</span><span class="sxs-lookup"><span data-stu-id="1a832-135">For this example, the script's code was reviewed and verified as safe to run.</span></span> <span data-ttu-id="1a832-136">`Unblock-File`Командлет использует параметр **path** , чтобы разблокировать скрипт.</span><span class="sxs-lookup"><span data-stu-id="1a832-136">The `Unblock-File` cmdlet uses the **Path** parameter to unblock the script.</span></span>
 
-<span data-ttu-id="453cf-137">Чтобы убедиться, что `Unblock-File` Политика выполнения не изменилась, `Get-ExecutionPolicy` отображает действующую политику выполнения **RemoteSigned** .</span><span class="sxs-lookup"><span data-stu-id="453cf-137">To verify that `Unblock-File` didn't change the execution policy, `Get-ExecutionPolicy` displays the effective execution policy, **RemoteSigned** .</span></span>
+<span data-ttu-id="1a832-137">Чтобы убедиться, что `Unblock-File` Политика выполнения не изменилась, `Get-ExecutionPolicy` отображает действующую политику выполнения **RemoteSigned**.</span><span class="sxs-lookup"><span data-stu-id="1a832-137">To verify that `Unblock-File` didn't change the execution policy, `Get-ExecutionPolicy` displays the effective execution policy, **RemoteSigned**.</span></span>
 
-<span data-ttu-id="453cf-138">Скрипт **Start-ActivityTracker.ps1** выполняется из текущего каталога.</span><span class="sxs-lookup"><span data-stu-id="453cf-138">The script, **Start-ActivityTracker.ps1** is executed from the current directory.</span></span> <span data-ttu-id="453cf-139">Сценарий начинает выполняться, так как он был разблокирован `Unblock-File` командлетом.</span><span class="sxs-lookup"><span data-stu-id="453cf-139">The script begins to run because it was unblocked by the `Unblock-File` cmdlet.</span></span>
+<span data-ttu-id="1a832-138">Скрипт **Start-ActivityTracker.ps1** выполняется из текущего каталога.</span><span class="sxs-lookup"><span data-stu-id="1a832-138">The script, **Start-ActivityTracker.ps1** is executed from the current directory.</span></span> <span data-ttu-id="1a832-139">Сценарий начинает выполняться, так как он был разблокирован `Unblock-File` командлетом.</span><span class="sxs-lookup"><span data-stu-id="1a832-139">The script begins to run because it was unblocked by the `Unblock-File` cmdlet.</span></span>
 
-## <span data-ttu-id="453cf-140">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="453cf-140">PARAMETERS</span></span>
+## <span data-ttu-id="1a832-140">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="1a832-140">PARAMETERS</span></span>
 
-### <span data-ttu-id="453cf-141">-List</span><span class="sxs-lookup"><span data-stu-id="453cf-141">-List</span></span>
+### <span data-ttu-id="1a832-141">-List</span><span class="sxs-lookup"><span data-stu-id="1a832-141">-List</span></span>
 
-<span data-ttu-id="453cf-142">Получает все значения политики выполнения для сеанса, перечисленные в порядке приоритетности,</span><span class="sxs-lookup"><span data-stu-id="453cf-142">Gets all execution policy values for the session listed in precedence order.</span></span> <span data-ttu-id="453cf-143">По умолчанию `Get-ExecutionPolicy` получает только действующую политику выполнения.</span><span class="sxs-lookup"><span data-stu-id="453cf-143">By default, `Get-ExecutionPolicy` gets only the effective execution policy.</span></span>
+<span data-ttu-id="1a832-142">Получает все значения политики выполнения для сеанса, перечисленные в порядке приоритетности,</span><span class="sxs-lookup"><span data-stu-id="1a832-142">Gets all execution policy values for the session listed in precedence order.</span></span> <span data-ttu-id="1a832-143">По умолчанию `Get-ExecutionPolicy` получает только действующую политику выполнения.</span><span class="sxs-lookup"><span data-stu-id="1a832-143">By default, `Get-ExecutionPolicy` gets only the effective execution policy.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -166,17 +166,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="453cf-144">-Scope</span><span class="sxs-lookup"><span data-stu-id="453cf-144">-Scope</span></span>
+### <span data-ttu-id="1a832-144">-Scope</span><span class="sxs-lookup"><span data-stu-id="1a832-144">-Scope</span></span>
 
-<span data-ttu-id="453cf-145">Указывает область, на которую влияет политика выполнения.</span><span class="sxs-lookup"><span data-stu-id="453cf-145">Specifies the scope that is affected by an execution policy.</span></span>
+<span data-ttu-id="1a832-145">Указывает область, на которую влияет политика выполнения.</span><span class="sxs-lookup"><span data-stu-id="1a832-145">Specifies the scope that is affected by an execution policy.</span></span>
 
-<span data-ttu-id="453cf-146">Действующая политика выполнения определяется порядком приоритета следующим образом.</span><span class="sxs-lookup"><span data-stu-id="453cf-146">The effective execution policy is determined by the order of precedence as follows:</span></span>
+<span data-ttu-id="1a832-146">Действующая политика выполнения определяется порядком приоритета следующим образом.</span><span class="sxs-lookup"><span data-stu-id="1a832-146">The effective execution policy is determined by the order of precedence as follows:</span></span>
 
-- <span data-ttu-id="453cf-147">**Мачинеполици** .</span><span class="sxs-lookup"><span data-stu-id="453cf-147">**MachinePolicy** .</span></span> <span data-ttu-id="453cf-148">Задается групповая политика для всех пользователей компьютера.</span><span class="sxs-lookup"><span data-stu-id="453cf-148">Set by a Group Policy for all users of the computer.</span></span>
-- <span data-ttu-id="453cf-149">**UserPolicy** .</span><span class="sxs-lookup"><span data-stu-id="453cf-149">**UserPolicy** .</span></span> <span data-ttu-id="453cf-150">Задается групповая политика для текущего пользователя компьютера.</span><span class="sxs-lookup"><span data-stu-id="453cf-150">Set by a Group Policy for the current user of the computer.</span></span>
-- <span data-ttu-id="453cf-151">**Процесс** .</span><span class="sxs-lookup"><span data-stu-id="453cf-151">**Process** .</span></span> <span data-ttu-id="453cf-152">Влияет только на текущий сеанс PowerShell.</span><span class="sxs-lookup"><span data-stu-id="453cf-152">Affects only the current PowerShell session.</span></span>
-- <span data-ttu-id="453cf-153">**CurrentUser** .</span><span class="sxs-lookup"><span data-stu-id="453cf-153">**CurrentUser** .</span></span> <span data-ttu-id="453cf-154">Влияет только на текущего пользователя.</span><span class="sxs-lookup"><span data-stu-id="453cf-154">Affects only the current user.</span></span>
-- <span data-ttu-id="453cf-155">**Хранилище LocalMachine** .</span><span class="sxs-lookup"><span data-stu-id="453cf-155">**LocalMachine** .</span></span> <span data-ttu-id="453cf-156">Область по умолчанию, влияющая на всех пользователей компьютера.</span><span class="sxs-lookup"><span data-stu-id="453cf-156">Default scope that affects all users of the computer.</span></span>
+- <span data-ttu-id="1a832-147">**Мачинеполици**.</span><span class="sxs-lookup"><span data-stu-id="1a832-147">**MachinePolicy**.</span></span> <span data-ttu-id="1a832-148">Задается групповая политика для всех пользователей компьютера.</span><span class="sxs-lookup"><span data-stu-id="1a832-148">Set by a Group Policy for all users of the computer.</span></span>
+- <span data-ttu-id="1a832-149">**UserPolicy**.</span><span class="sxs-lookup"><span data-stu-id="1a832-149">**UserPolicy**.</span></span> <span data-ttu-id="1a832-150">Задается групповая политика для текущего пользователя компьютера.</span><span class="sxs-lookup"><span data-stu-id="1a832-150">Set by a Group Policy for the current user of the computer.</span></span>
+- <span data-ttu-id="1a832-151">**Процесс**.</span><span class="sxs-lookup"><span data-stu-id="1a832-151">**Process**.</span></span> <span data-ttu-id="1a832-152">Влияет только на текущий сеанс PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1a832-152">Affects only the current PowerShell session.</span></span>
+- <span data-ttu-id="1a832-153">**CurrentUser**.</span><span class="sxs-lookup"><span data-stu-id="1a832-153">**CurrentUser**.</span></span> <span data-ttu-id="1a832-154">Влияет только на текущего пользователя.</span><span class="sxs-lookup"><span data-stu-id="1a832-154">Affects only the current user.</span></span>
+- <span data-ttu-id="1a832-155">**Хранилище LocalMachine**.</span><span class="sxs-lookup"><span data-stu-id="1a832-155">**LocalMachine**.</span></span> <span data-ttu-id="1a832-156">Область по умолчанию, влияющая на всех пользователей компьютера.</span><span class="sxs-lookup"><span data-stu-id="1a832-156">Default scope that affects all users of the computer.</span></span>
 
 ```yaml
 Type: Microsoft.PowerShell.ExecutionPolicyScope
@@ -191,32 +191,34 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="453cf-157">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="453cf-157">CommonParameters</span></span>
+### <span data-ttu-id="1a832-157">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="1a832-157">CommonParameters</span></span>
 
-<span data-ttu-id="453cf-158">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="453cf-158">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="453cf-159">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="453cf-159">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="1a832-158">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="1a832-158">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="1a832-159">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="1a832-159">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="453cf-160">Входные данные</span><span class="sxs-lookup"><span data-stu-id="453cf-160">INPUTS</span></span>
+## <span data-ttu-id="1a832-160">Входные данные</span><span class="sxs-lookup"><span data-stu-id="1a832-160">INPUTS</span></span>
 
-### <span data-ttu-id="453cf-161">Нет</span><span class="sxs-lookup"><span data-stu-id="453cf-161">None</span></span>
+### <span data-ttu-id="1a832-161">Нет</span><span class="sxs-lookup"><span data-stu-id="1a832-161">None</span></span>
 
-<span data-ttu-id="453cf-162">`Get-ExecutionPolicy` не принимает входные данные из конвейера.</span><span class="sxs-lookup"><span data-stu-id="453cf-162">`Get-ExecutionPolicy` doesn't accept input from the pipeline.</span></span>
+<span data-ttu-id="1a832-162">`Get-ExecutionPolicy` не принимает входные данные из конвейера.</span><span class="sxs-lookup"><span data-stu-id="1a832-162">`Get-ExecutionPolicy` doesn't accept input from the pipeline.</span></span>
 
-## <span data-ttu-id="453cf-163">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="453cf-163">OUTPUTS</span></span>
+## <span data-ttu-id="1a832-163">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="1a832-163">OUTPUTS</span></span>
 
-### <span data-ttu-id="453cf-164">Microsoft.PowerShell.ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="453cf-164">Microsoft.PowerShell.ExecutionPolicy</span></span>
+### <span data-ttu-id="1a832-164">Microsoft.PowerShell.ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="1a832-164">Microsoft.PowerShell.ExecutionPolicy</span></span>
 
-## <span data-ttu-id="453cf-165">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="453cf-165">NOTES</span></span>
+<span data-ttu-id="1a832-165">Командлет всегда возвращает **неограниченное** значение на платформах Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="1a832-165">The cmdlet always returns **Unrestricted** on Linux and macOS platforms.</span></span>
 
-<span data-ttu-id="453cf-166">Политика выполнения является частью стратегии безопасности PowerShell.</span><span class="sxs-lookup"><span data-stu-id="453cf-166">An execution policy is part of the PowerShell security strategy.</span></span> <span data-ttu-id="453cf-167">Политики выполнения определяют, можно ли загружать файлы конфигурации, например профиль PowerShell, или выполнять сценарии.</span><span class="sxs-lookup"><span data-stu-id="453cf-167">Execution policies determine whether you can load configuration files, such as your PowerShell profile, or run scripts.</span></span> <span data-ttu-id="453cf-168">И, если перед запуском скрипты должны иметь цифровую подпись.</span><span class="sxs-lookup"><span data-stu-id="453cf-168">And, whether scripts must be digitally signed before they are run.</span></span>
+## <span data-ttu-id="1a832-166">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="1a832-166">NOTES</span></span>
 
-## <span data-ttu-id="453cf-169">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="453cf-169">RELATED LINKS</span></span>
+<span data-ttu-id="1a832-167">Политика выполнения является частью стратегии безопасности PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1a832-167">An execution policy is part of the PowerShell security strategy.</span></span> <span data-ttu-id="1a832-168">Политики выполнения определяют, можно ли загружать файлы конфигурации, например профиль PowerShell, или выполнять сценарии.</span><span class="sxs-lookup"><span data-stu-id="1a832-168">Execution policies determine whether you can load configuration files, such as your PowerShell profile, or run scripts.</span></span> <span data-ttu-id="1a832-169">И, если перед запуском скрипты должны иметь цифровую подпись.</span><span class="sxs-lookup"><span data-stu-id="1a832-169">And, whether scripts must be digitally signed before they are run.</span></span>
 
-[<span data-ttu-id="453cf-170">about_Execution_Policies</span><span class="sxs-lookup"><span data-stu-id="453cf-170">about_Execution_Policies</span></span>](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md)
+## <span data-ttu-id="1a832-170">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="1a832-170">RELATED LINKS</span></span>
 
-[<span data-ttu-id="453cf-171">about_Group_Policy_Settings</span><span class="sxs-lookup"><span data-stu-id="453cf-171">about_Group_Policy_Settings</span></span>](../Microsoft.PowerShell.Core/About/about_Group_Policy_Settings.md)
+[<span data-ttu-id="1a832-171">about_Execution_Policies</span><span class="sxs-lookup"><span data-stu-id="1a832-171">about_Execution_Policies</span></span>](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md)
 
-[<span data-ttu-id="453cf-172">Get-AuthenticodeSignature</span><span class="sxs-lookup"><span data-stu-id="453cf-172">Get-AuthenticodeSignature</span></span>](Get-AuthenticodeSignature.md)
+[<span data-ttu-id="1a832-172">about_Group_Policy_Settings</span><span class="sxs-lookup"><span data-stu-id="1a832-172">about_Group_Policy_Settings</span></span>](../Microsoft.PowerShell.Core/About/about_Group_Policy_Settings.md)
 
-[<span data-ttu-id="453cf-173">Set-AuthenticodeSignature</span><span class="sxs-lookup"><span data-stu-id="453cf-173">Set-AuthenticodeSignature</span></span>](Set-AuthenticodeSignature.md)
+[<span data-ttu-id="1a832-173">Get-AuthenticodeSignature</span><span class="sxs-lookup"><span data-stu-id="1a832-173">Get-AuthenticodeSignature</span></span>](Get-AuthenticodeSignature.md)
 
-[<span data-ttu-id="453cf-174">Set-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="453cf-174">Set-ExecutionPolicy</span></span>](Set-ExecutionPolicy.md)
+[<span data-ttu-id="1a832-174">Set-AuthenticodeSignature</span><span class="sxs-lookup"><span data-stu-id="1a832-174">Set-AuthenticodeSignature</span></span>](Set-AuthenticodeSignature.md)
+
+[<span data-ttu-id="1a832-175">Set-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="1a832-175">Set-ExecutionPolicy</span></span>](Set-ExecutionPolicy.md)
