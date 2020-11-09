@@ -3,12 +3,12 @@ title: Добавление поддержки учетных данных в ф
 description: Узнайте, как добавлять параметры учетных данных в скрипты, функции и командлеты PowerShell.
 ms.date: 10/29/2020
 ms.custom: contributor-JoshDuffney
-ms.openlocfilehash: fb85d47121dc106ae04742254f418e2c727f6157
-ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
+ms.openlocfilehash: 3e4a3f41ccbca1cf97f2e96fd60f22d89be7bc5a
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93143169"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354632"
 ---
 # <a name="add-credential-support-to-powershell-functions"></a>Добавление поддержки учетных данных в функции PowerShell
 
@@ -292,7 +292,7 @@ Get-AllSQLDatabases -SQLServer SQL01 -Credential $Credential
 [BetterCredentials]: https://www.powershellgallery.com/packages/BetterCredentials/
 [Хранилище ключей Azure]: https://azure.microsoft.com/services/key-vault/
 [Проект Vault]: https://www.vaultproject.io/
-[Сплаттинг параметров в расширенные функции]: http://duffney.io/Splatting-Parameters-Within-AdvancedFunctions
+[Сплаттинг параметров в расширенные функции]: https://duffney.io/Splatting-Parameters-Within-AdvancedFunctions
 [Автоматизация с помощью Jenkins и PowerShell в Windows — часть 2]: https://hodgkins.io/automating-with-jenkins-and-powershell-on-windows-part-2
 [PSCredential]: /dotnet/api/system.management.automation.pscredential
 [The Pester Book]: https://leanpub.com/the-pester-book

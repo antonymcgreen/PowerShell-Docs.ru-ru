@@ -3,12 +3,12 @@ title: Все, что вы когда-либо хотели знать об ин
 description: Инструкция switch в PowerShell обеспечивает возможности, которых нет в других языках.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 685a5691599408a0d54ca99bf383bcd7702322a6
-ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
+ms.openlocfilehash: c2e77aa5fb36d04fec1bc86f751291205120c729
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86469724"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355125"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>Все, что вы когда-либо хотели знать об инструкции switch
 
@@ -657,9 +657,14 @@ Show-Animation
 
 Когда инструкция `switch` обрабатывает значения, она создает перечислитель и вызывает его `$switch`. Это автоматически созданная PowerShell переменная, с которой можно работать напрямую.
 
-Я узнал о ней здесь: [/u/frmadsen](https://www.reddit.com/user/frmadsen),
+```powershell
+$a = 1, 2, 3, 4
 
-<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="8f6edbf1-abc6-4513-971e-ccd1d202889d" data-embed-created="2018-12-25T22:05:33.986Z">а также из <a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">комментария</a> в обсуждении <a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">Что нужно знать будущим ИТ-специалистам, чтобы овладеть PowerShell?</a>.</div><script async src="https://www.redditstatic.com/comment-embed.js"></script>
+switch($a) {
+    1 { [void]$switch.MoveNext(); $switch.Current }
+    3 { [void]$switch.MoveNext(); $switch.Current }
+}
+```
 
 Получаем такие результаты:
 

@@ -3,12 +3,12 @@ title: Все, что вы хотели знать о хэш-таблицах
 description: Хэш-таблицы играют очень важную роль в PowerShell, поэтому будет полезно получить о них полное представление.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
-ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
+ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85353827"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354428"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Все, что вы хотели знать о хэш-таблицах
 
@@ -23,7 +23,7 @@ ms.locfileid: "85353827"
 
 ## <a name="what-is-an-array"></a>Что такое массив?
 
-Прежде чем перейти к определению **хэш-таблицы**, нужно сначала рассказать о [массивах][]. В рамках этого обсуждения массив понимается как список или коллекция значений или объектов.
+Прежде чем перейти к определению **хэш-таблицы** , нужно сначала рассказать о [массивах][]. В рамках этого обсуждения массив понимается как список или коллекция значений или объектов.
 
 ```powershell
 $array = @(1,2,3,5,7,11)
@@ -684,7 +684,7 @@ $people = Get-Content -Path $path -Raw | ConvertFrom-JSON
 }
 ```
 
-Используйте параметр **Depth**, чтобы обеспечить развертывание всех вложенных хэш-таблиц.
+Используйте параметр **Depth** , чтобы обеспечить развертывание всех вложенных хэш-таблиц.
 
 ```powershell
 @{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json -Depth 3
@@ -722,7 +722,7 @@ Name      Value
 a         b
 ```
 
-В PowerShell 6.2 добавлен параметр **Depth** для `ConvertFrom-Json`. Значение по умолчанию для параметра **Depth** — 1024.
+В PowerShell 6.2 добавлен параметр **Depth** для `ConvertFrom-Json`. Значение по умолчанию для параметра **Depth**  — 1024.
 
 ### <a name="reading-directly-from-a-file"></a>Чтение непосредственно из файла
 
@@ -966,7 +966,7 @@ function Get-DeepClone
 [Если имеет значение производительность, протестируйте ее]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [сплаттинг]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [PCSCustomObject]: everything-about-pscustomobject.md
-[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8
+[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8&preserve-view=true
 [PSBoundParameters]: https://tommymaynard.com/the-psboundparameters-automatic-variable-2016/
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
 [Автоматические значения по умолчанию]: https://www.simple-talk.com/sysadmin/PowerShell/PowerShell-time-saver-automatic-defaults/
