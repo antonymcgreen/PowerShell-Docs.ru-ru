@@ -7,94 +7,94 @@ ms.date: 4/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-date?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Date
-ms.openlocfilehash: 5999dfbba27a8eedbc054edee3ca2b1061dd2adc
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: a1d15dfcbafba2d3f4853b6bcc59e787a022a3ed
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225622"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390156"
 ---
-# <span data-ttu-id="ffc16-103">Set-Date</span><span class="sxs-lookup"><span data-stu-id="ffc16-103">Set-Date</span></span>
+# <span data-ttu-id="d9472-103">Set-Date</span><span class="sxs-lookup"><span data-stu-id="d9472-103">Set-Date</span></span>
 
-## <span data-ttu-id="ffc16-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="ffc16-104">SYNOPSIS</span></span>
-<span data-ttu-id="ffc16-105">Меняет системное время компьютера на указанное.</span><span class="sxs-lookup"><span data-stu-id="ffc16-105">Changes the system time on the computer to a time that you specify.</span></span>
+## <span data-ttu-id="d9472-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="d9472-104">SYNOPSIS</span></span>
+<span data-ttu-id="d9472-105">Меняет системное время компьютера на указанное.</span><span class="sxs-lookup"><span data-stu-id="d9472-105">Changes the system time on the computer to a time that you specify.</span></span>
 
-## <span data-ttu-id="ffc16-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="ffc16-106">SYNTAX</span></span>
+## <span data-ttu-id="d9472-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="d9472-106">SYNTAX</span></span>
 
-### <span data-ttu-id="ffc16-107">Дата (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="ffc16-107">Date (Default)</span></span>
+### <span data-ttu-id="d9472-107">Дата (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="d9472-107">Date (Default)</span></span>
 
 ```
 Set-Date [-Date] <DateTime> [-DisplayHint <DisplayHintType>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="ffc16-108">Adjust</span><span class="sxs-lookup"><span data-stu-id="ffc16-108">Adjust</span></span>
+### <span data-ttu-id="d9472-108">Adjust</span><span class="sxs-lookup"><span data-stu-id="d9472-108">Adjust</span></span>
 
 ```
 Set-Date [-Adjust] <TimeSpan> [-DisplayHint <DisplayHintType>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="ffc16-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="ffc16-109">DESCRIPTION</span></span>
+## <span data-ttu-id="d9472-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="d9472-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="ffc16-110">`Set-Date`Командлет изменяет системную дату и время на компьютере на указанную дату и время.</span><span class="sxs-lookup"><span data-stu-id="ffc16-110">The `Set-Date` cmdlet changes the system date and time on the computer to a date and time that you specify.</span></span>
-<span data-ttu-id="ffc16-111">Можно указать новую дату и (или) время, введя строку или передав объект **DateTime** или **TimeSpan** в `Set-Date` .</span><span class="sxs-lookup"><span data-stu-id="ffc16-111">You can specify a new date and/or time by typing a string or by passing a **DateTime** or **TimeSpan** object to `Set-Date`.</span></span> <span data-ttu-id="ffc16-112">Чтобы указать новую дату или время, используйте параметр **Date** .</span><span class="sxs-lookup"><span data-stu-id="ffc16-112">To specify a new date or time, use the **Date** parameter.</span></span>
-<span data-ttu-id="ffc16-113">Чтобы задать интервал изменения, используйте параметр **корректировки** .</span><span class="sxs-lookup"><span data-stu-id="ffc16-113">To specify a change interval, use the **Adjust** parameter.</span></span>
+<span data-ttu-id="d9472-110">`Set-Date`Командлет изменяет системную дату и время на компьютере на указанную дату и время.</span><span class="sxs-lookup"><span data-stu-id="d9472-110">The `Set-Date` cmdlet changes the system date and time on the computer to a date and time that you specify.</span></span>
+<span data-ttu-id="d9472-111">Можно указать новую дату и (или) время, введя строку или передав объект **DateTime** или **TimeSpan** в `Set-Date` .</span><span class="sxs-lookup"><span data-stu-id="d9472-111">You can specify a new date and/or time by typing a string or by passing a **DateTime** or **TimeSpan** object to `Set-Date`.</span></span> <span data-ttu-id="d9472-112">Чтобы указать новую дату или время, используйте параметр **Date** .</span><span class="sxs-lookup"><span data-stu-id="d9472-112">To specify a new date or time, use the **Date** parameter.</span></span>
+<span data-ttu-id="d9472-113">Чтобы задать интервал изменения, используйте параметр **корректировки** .</span><span class="sxs-lookup"><span data-stu-id="d9472-113">To specify a change interval, use the **Adjust** parameter.</span></span>
 
-## <span data-ttu-id="ffc16-114">Примеры</span><span class="sxs-lookup"><span data-stu-id="ffc16-114">EXAMPLES</span></span>
+## <span data-ttu-id="d9472-114">Примеры</span><span class="sxs-lookup"><span data-stu-id="d9472-114">EXAMPLES</span></span>
 
-### <span data-ttu-id="ffc16-115">Пример 1. Добавление трех дней к системной дате</span><span class="sxs-lookup"><span data-stu-id="ffc16-115">Example 1: Add three days to the system date</span></span>
+### <span data-ttu-id="d9472-115">Пример 1. Добавление трех дней к системной дате</span><span class="sxs-lookup"><span data-stu-id="d9472-115">Example 1: Add three days to the system date</span></span>
 
-<span data-ttu-id="ffc16-116">Эта команда добавляет к текущей системной дате три дня.</span><span class="sxs-lookup"><span data-stu-id="ffc16-116">This command adds three days to the current system date.</span></span>
-<span data-ttu-id="ffc16-117">На время она не влияет.</span><span class="sxs-lookup"><span data-stu-id="ffc16-117">It does not affect the time.</span></span>
-<span data-ttu-id="ffc16-118">Команда использует параметр **Date** для указания даты.</span><span class="sxs-lookup"><span data-stu-id="ffc16-118">The command uses the **Date** parameter to specify the date.</span></span>
+<span data-ttu-id="d9472-116">Эта команда добавляет к текущей системной дате три дня.</span><span class="sxs-lookup"><span data-stu-id="d9472-116">This command adds three days to the current system date.</span></span>
+<span data-ttu-id="d9472-117">На время она не влияет.</span><span class="sxs-lookup"><span data-stu-id="d9472-117">It does not affect the time.</span></span>
+<span data-ttu-id="d9472-118">Команда использует параметр **Date** для указания даты.</span><span class="sxs-lookup"><span data-stu-id="d9472-118">The command uses the **Date** parameter to specify the date.</span></span>
 
-<span data-ttu-id="ffc16-119">`Get-Date`Командлет возвращает текущую дату в виде объекта **DateTime** .</span><span class="sxs-lookup"><span data-stu-id="ffc16-119">The `Get-Date` cmdlet returns the current date as a **DateTime** object.</span></span> <span data-ttu-id="ffc16-120">Метод **AddDays** объекта **DateTime** добавляет указанное число дней (3) к текущему объекту **DateTime** .</span><span class="sxs-lookup"><span data-stu-id="ffc16-120">The **DateTime** object's **AddDays** method adds a specified number of days (3) to the current **DateTime** object.</span></span>
+<span data-ttu-id="d9472-119">`Get-Date`Командлет возвращает текущую дату в виде объекта **DateTime** .</span><span class="sxs-lookup"><span data-stu-id="d9472-119">The `Get-Date` cmdlet returns the current date as a **DateTime** object.</span></span> <span data-ttu-id="d9472-120">Метод **AddDays** объекта **DateTime** добавляет указанное число дней (3) к текущему объекту **DateTime** .</span><span class="sxs-lookup"><span data-stu-id="d9472-120">The **DateTime** object's **AddDays** method adds a specified number of days (3) to the current **DateTime** object.</span></span>
 
 ```powershell
 Set-Date -Date (Get-Date).AddDays(3)
 ```
 
-### <span data-ttu-id="ffc16-121">Пример 2. Настройка системных часов назад через 10 минут</span><span class="sxs-lookup"><span data-stu-id="ffc16-121">Example 2: Set the system clock back 10 minutes</span></span>
+### <span data-ttu-id="d9472-121">Пример 2. Настройка системных часов назад через 10 минут</span><span class="sxs-lookup"><span data-stu-id="d9472-121">Example 2: Set the system clock back 10 minutes</span></span>
 
-<span data-ttu-id="ffc16-122">В этом примере текущее системное время устанавливается на 10 минут.</span><span class="sxs-lookup"><span data-stu-id="ffc16-122">This example sets the current system time back by 10 minutes.</span></span>
+<span data-ttu-id="d9472-122">В этом примере текущее системное время устанавливается на 10 минут.</span><span class="sxs-lookup"><span data-stu-id="d9472-122">This example sets the current system time back by 10 minutes.</span></span>
 
-<span data-ttu-id="ffc16-123">Параметр " **изменить** " позволяет указать интервал изменения (не более десяти минут) в стандартном формате времени для языкового стандарта.</span><span class="sxs-lookup"><span data-stu-id="ffc16-123">The **Adjust** parameter allows you to specify an interval of change (minus ten minutes) in the standard time format for the locale.</span></span>
+<span data-ttu-id="d9472-123">Параметр " **изменить** " позволяет указать интервал изменения (не более десяти минут) в стандартном формате времени для языкового стандарта.</span><span class="sxs-lookup"><span data-stu-id="d9472-123">The **Adjust** parameter allows you to specify an interval of change (minus ten minutes) in the standard time format for the locale.</span></span>
 
-<span data-ttu-id="ffc16-124">Параметр **дисплайхинт** указывает PowerShell отображать только время, но не влияет на объект **DateTime** , `Set-Date` возвращающий значение.</span><span class="sxs-lookup"><span data-stu-id="ffc16-124">The **DisplayHint** parameter tells PowerShell to display only the time, but it does not affect the **DateTime** object that `Set-Date` returns.</span></span>
+<span data-ttu-id="d9472-124">Параметр **дисплайхинт** указывает PowerShell отображать только время, но не влияет на объект **DateTime** , `Set-Date` возвращающий значение.</span><span class="sxs-lookup"><span data-stu-id="d9472-124">The **DisplayHint** parameter tells PowerShell to display only the time, but it does not affect the **DateTime** object that `Set-Date` returns.</span></span>
 
 ```powershell
 Set-Date -Adjust -0:10:0 -DisplayHint Time
 ```
 
-### <span data-ttu-id="ffc16-125">Пример 3. Установка значения переменной даты и времени</span><span class="sxs-lookup"><span data-stu-id="ffc16-125">Example 3: Set the date and time to a variable value</span></span>
+### <span data-ttu-id="d9472-125">Пример 3. Установка значения переменной даты и времени</span><span class="sxs-lookup"><span data-stu-id="d9472-125">Example 3: Set the date and time to a variable value</span></span>
 
-<span data-ttu-id="ffc16-126">Эти команды изменяют системную дату и время на локальном компьютере на дату и время, сохраненные в переменной `$T` .</span><span class="sxs-lookup"><span data-stu-id="ffc16-126">These commands change the system date and time on local computer to the date and time saved in the variable `$T`.</span></span> <span data-ttu-id="ffc16-127">Первая команда получает дату и сохраняет ее в `$T` .</span><span class="sxs-lookup"><span data-stu-id="ffc16-127">The first command gets the date and stores it in `$T`.</span></span>
+<span data-ttu-id="d9472-126">Эти команды изменяют системную дату и время на локальном компьютере на дату и время, сохраненные в переменной `$T` .</span><span class="sxs-lookup"><span data-stu-id="d9472-126">These commands change the system date and time on local computer to the date and time saved in the variable `$T`.</span></span> <span data-ttu-id="d9472-127">Первая команда получает дату и сохраняет ее в `$T` .</span><span class="sxs-lookup"><span data-stu-id="d9472-127">The first command gets the date and stores it in `$T`.</span></span>
 
-<span data-ttu-id="ffc16-128">Вторая команда использует параметр **Date** для передачи объекта **DateTime** в `$T` `Set-Date` командлет.</span><span class="sxs-lookup"><span data-stu-id="ffc16-128">The second command uses the **Date** parameter to pass the **DateTime** object in `$T` to the `Set-Date` cmdlet.</span></span>
+<span data-ttu-id="d9472-128">Вторая команда использует параметр **Date** для передачи объекта **DateTime** в `$T` `Set-Date` командлет.</span><span class="sxs-lookup"><span data-stu-id="d9472-128">The second command uses the **Date** parameter to pass the **DateTime** object in `$T` to the `Set-Date` cmdlet.</span></span>
 
 ```powershell
 $T = Get-Date
 Set-Date -Date $T
 ```
 
-### <span data-ttu-id="ffc16-129">Пример 4. Добавление в системные часы 90 минут</span><span class="sxs-lookup"><span data-stu-id="ffc16-129">Example 4: Add 90 minutes to the system clock</span></span>
+### <span data-ttu-id="d9472-129">Пример 4. Добавление в системные часы 90 минут</span><span class="sxs-lookup"><span data-stu-id="d9472-129">Example 4: Add 90 minutes to the system clock</span></span>
 
-<span data-ttu-id="ffc16-130">Эти команды переводят системное время на локальном компьютере на 90 минут вперед.</span><span class="sxs-lookup"><span data-stu-id="ffc16-130">These commands advance the system time on the local computer by 90 minutes.</span></span>
+<span data-ttu-id="d9472-130">Эти команды переводят системное время на локальном компьютере на 90 минут вперед.</span><span class="sxs-lookup"><span data-stu-id="d9472-130">These commands advance the system time on the local computer by 90 minutes.</span></span>
 
-<span data-ttu-id="ffc16-131">Первая команда использует `New-TimeSpan` командлет для создания объекта **TimeSpan** с интервалом в 90 минут и сохраняет его в `$90mins` переменной.</span><span class="sxs-lookup"><span data-stu-id="ffc16-131">The first command uses the `New-TimeSpan` cmdlet to create a **TimeSpan** object with a 90-minute interval, and saves it in the `$90mins` variable.</span></span>
+<span data-ttu-id="d9472-131">Первая команда использует `New-TimeSpan` командлет для создания объекта **TimeSpan** с интервалом в 90 минут и сохраняет его в `$90mins` переменной.</span><span class="sxs-lookup"><span data-stu-id="d9472-131">The first command uses the `New-TimeSpan` cmdlet to create a **TimeSpan** object with a 90-minute interval, and saves it in the `$90mins` variable.</span></span>
 
-<span data-ttu-id="ffc16-132">Вторая команда использует параметр **корректировки** `Set-Date` для для настройки даты по значению объекта **TimeSpan** в `$90mins` переменной.</span><span class="sxs-lookup"><span data-stu-id="ffc16-132">The second command uses the **Adjust** parameter of `Set-Date` to adjust the date by the value of the **TimeSpan** object in the `$90mins` variable.</span></span>
+<span data-ttu-id="d9472-132">Вторая команда использует параметр **корректировки** `Set-Date` для для настройки даты по значению объекта **TimeSpan** в `$90mins` переменной.</span><span class="sxs-lookup"><span data-stu-id="d9472-132">The second command uses the **Adjust** parameter of `Set-Date` to adjust the date by the value of the **TimeSpan** object in the `$90mins` variable.</span></span>
 
 ```powershell
 $90mins = New-TimeSpan -Minutes 90
 Set-Date -Adjust $90mins
 ```
 
-## <span data-ttu-id="ffc16-133">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="ffc16-133">PARAMETERS</span></span>
+## <span data-ttu-id="d9472-133">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="d9472-133">PARAMETERS</span></span>
 
-### <span data-ttu-id="ffc16-134">— Настройка</span><span class="sxs-lookup"><span data-stu-id="ffc16-134">-Adjust</span></span>
+### <span data-ttu-id="d9472-134">— Настройка</span><span class="sxs-lookup"><span data-stu-id="d9472-134">-Adjust</span></span>
 
-<span data-ttu-id="ffc16-135">Задает значение, которое этот командлет добавляет или вычитает из текущей даты и времени.</span><span class="sxs-lookup"><span data-stu-id="ffc16-135">Specifies the value for which this cmdlet adds or subtracts from the current date and time.</span></span>
-<span data-ttu-id="ffc16-136">можно ввести корректировку в стандартном формате даты и времени для языкового стандарта или использовать параметр " **изменить** " для передачи объекта **TimeSpan** из `New-TimeSpan` в `Set-Date` .</span><span class="sxs-lookup"><span data-stu-id="ffc16-136">can type an adjustment in standard date and time format for your locale or use the **Adjust** parameter to pass a **TimeSpan** object from `New-TimeSpan` to `Set-Date`.</span></span>
+<span data-ttu-id="d9472-135">Задает значение, которое этот командлет добавляет или вычитает из текущей даты и времени.</span><span class="sxs-lookup"><span data-stu-id="d9472-135">Specifies the value for which this cmdlet adds or subtracts from the current date and time.</span></span>
+<span data-ttu-id="d9472-136">можно ввести корректировку в стандартном формате даты и времени для языкового стандарта или использовать параметр " **изменить** " для передачи объекта **TimeSpan** из `New-TimeSpan` в `Set-Date` .</span><span class="sxs-lookup"><span data-stu-id="d9472-136">can type an adjustment in standard date and time format for your locale or use the **Adjust** parameter to pass a **TimeSpan** object from `New-TimeSpan` to `Set-Date`.</span></span>
 
 ```yaml
 Type: System.TimeSpan
@@ -108,12 +108,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ffc16-137">-Date</span><span class="sxs-lookup"><span data-stu-id="ffc16-137">-Date</span></span>
+### <span data-ttu-id="d9472-137">-Date</span><span class="sxs-lookup"><span data-stu-id="d9472-137">-Date</span></span>
 
-<span data-ttu-id="ffc16-138">Устанавливает указанные значения даты и времени.</span><span class="sxs-lookup"><span data-stu-id="ffc16-138">Changes the date and time to the specified values.</span></span>
-<span data-ttu-id="ffc16-139">Можно ввести новую дату в кратком формате даты, а время — в стандартном формате времени для используемого языкового стандарта.</span><span class="sxs-lookup"><span data-stu-id="ffc16-139">You can type a new date in the short date format and a time in the standard time format for your locale.</span></span> <span data-ttu-id="ffc16-140">Или можно передать объект **DateTime** из `Get-Date` .</span><span class="sxs-lookup"><span data-stu-id="ffc16-140">Or, you can pass a **DateTime** object from `Get-Date`.</span></span>
+<span data-ttu-id="d9472-138">Устанавливает указанные значения даты и времени.</span><span class="sxs-lookup"><span data-stu-id="d9472-138">Changes the date and time to the specified values.</span></span>
+<span data-ttu-id="d9472-139">Можно ввести новую дату в кратком формате даты, а время — в стандартном формате времени для используемого языкового стандарта.</span><span class="sxs-lookup"><span data-stu-id="d9472-139">You can type a new date in the short date format and a time in the standard time format for your locale.</span></span> <span data-ttu-id="d9472-140">Или можно передать объект **DateTime** из `Get-Date` .</span><span class="sxs-lookup"><span data-stu-id="d9472-140">Or, you can pass a **DateTime** object from `Get-Date`.</span></span>
 
-<span data-ttu-id="ffc16-141">Если указать дату, но не время, `Set-Date` то изменяет время на полночь на указанную дату.</span><span class="sxs-lookup"><span data-stu-id="ffc16-141">If you specify a date, but not a time, `Set-Date` changes the time to midnight on the specified date.</span></span> <span data-ttu-id="ffc16-142">Если указано только время, дата не изменяется.</span><span class="sxs-lookup"><span data-stu-id="ffc16-142">If you specify only a time, it does not change the date.</span></span>
+<span data-ttu-id="d9472-141">Если указать дату, но не время, `Set-Date` то изменяет время на полночь на указанную дату.</span><span class="sxs-lookup"><span data-stu-id="d9472-141">If you specify a date, but not a time, `Set-Date` changes the time to midnight on the specified date.</span></span> <span data-ttu-id="d9472-142">Если указано только время, дата не изменяется.</span><span class="sxs-lookup"><span data-stu-id="d9472-142">If you specify only a time, it does not change the date.</span></span>
 
 ```yaml
 Type: System.DateTime
@@ -127,19 +127,16 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ffc16-143">-DisplayHint</span><span class="sxs-lookup"><span data-stu-id="ffc16-143">-DisplayHint</span></span>
+### <span data-ttu-id="d9472-143">-DisplayHint</span><span class="sxs-lookup"><span data-stu-id="d9472-143">-DisplayHint</span></span>
 
-<span data-ttu-id="ffc16-144">Указывает, какие элементы даты и времени отображаются. Допустимые значения для этого параметра:</span><span class="sxs-lookup"><span data-stu-id="ffc16-144">Specifies which elements of the date and time are displayed.The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="d9472-144">Указывает, какие элементы даты и времени отображаются. Допустимые значения для этого параметра:</span><span class="sxs-lookup"><span data-stu-id="d9472-144">Specifies which elements of the date and time are displayed.The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="ffc16-145">дата.</span><span class="sxs-lookup"><span data-stu-id="ffc16-145">Date.</span></span>
-  <span data-ttu-id="ffc16-146">Отображает только дату.</span><span class="sxs-lookup"><span data-stu-id="ffc16-146">displays only the date.</span></span>
-- <span data-ttu-id="ffc16-147">Время.</span><span class="sxs-lookup"><span data-stu-id="ffc16-147">Time.</span></span>
-  <span data-ttu-id="ffc16-148">Отображает только время.</span><span class="sxs-lookup"><span data-stu-id="ffc16-148">displays only the time.</span></span>
-- <span data-ttu-id="ffc16-149">DateTime.</span><span class="sxs-lookup"><span data-stu-id="ffc16-149">DateTime.</span></span>
-  <span data-ttu-id="ffc16-150">Отображает дату и время.</span><span class="sxs-lookup"><span data-stu-id="ffc16-150">displays the date and time.</span></span>
+- <span data-ttu-id="d9472-145">**Дата** — отображает только дату.</span><span class="sxs-lookup"><span data-stu-id="d9472-145">**Date** - displays only the date.</span></span>
+- <span data-ttu-id="d9472-146">**Время** — отображает только время.</span><span class="sxs-lookup"><span data-stu-id="d9472-146">**Time** - displays only the time.</span></span>
+- <span data-ttu-id="d9472-147">**DateTime** — отображает дату и время.</span><span class="sxs-lookup"><span data-stu-id="d9472-147">**DateTime** - displays the date and time.</span></span>
 
-<span data-ttu-id="ffc16-151">Этот параметр влияет только на отображаемые значения</span><span class="sxs-lookup"><span data-stu-id="ffc16-151">This parameter affects only the display.</span></span>
-<span data-ttu-id="ffc16-152">Он не влияет на объект **DateTime** , который `Get-Date` получает.</span><span class="sxs-lookup"><span data-stu-id="ffc16-152">It does not affect the **DateTime** object that `Get-Date` retrieves.</span></span>
+<span data-ttu-id="d9472-148">Этот параметр влияет только на отображаемые значения</span><span class="sxs-lookup"><span data-stu-id="d9472-148">This parameter affects only the display.</span></span>
+<span data-ttu-id="d9472-149">Он не влияет на объект **DateTime** , который `Get-Date` получает.</span><span class="sxs-lookup"><span data-stu-id="d9472-149">It does not affect the **DateTime** object that `Get-Date` retrieves.</span></span>
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.DisplayHintType
@@ -154,9 +151,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ffc16-153">-Confirm</span><span class="sxs-lookup"><span data-stu-id="ffc16-153">-Confirm</span></span>
+### <span data-ttu-id="d9472-150">-Confirm</span><span class="sxs-lookup"><span data-stu-id="d9472-150">-Confirm</span></span>
 
-<span data-ttu-id="ffc16-154">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="ffc16-154">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="d9472-151">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="d9472-151">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -170,10 +167,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ffc16-155">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="ffc16-155">-WhatIf</span></span>
+### <span data-ttu-id="d9472-152">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="d9472-152">-WhatIf</span></span>
 
-<span data-ttu-id="ffc16-156">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="ffc16-156">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="ffc16-157">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="ffc16-157">The cmdlet is not run.</span></span>
+<span data-ttu-id="d9472-153">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="d9472-153">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="d9472-154">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="d9472-154">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -187,31 +184,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ffc16-158">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="ffc16-158">CommonParameters</span></span>
+### <span data-ttu-id="d9472-155">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="d9472-155">CommonParameters</span></span>
 
-<span data-ttu-id="ffc16-159">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="ffc16-159">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="ffc16-160">См. сведения в разделе [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="ffc16-160">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
+<span data-ttu-id="d9472-156">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d9472-156">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d9472-157">См. сведения в разделе [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="d9472-157">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
 
-## <span data-ttu-id="ffc16-161">Входные данные</span><span class="sxs-lookup"><span data-stu-id="ffc16-161">INPUTS</span></span>
+## <span data-ttu-id="d9472-158">Входные данные</span><span class="sxs-lookup"><span data-stu-id="d9472-158">INPUTS</span></span>
 
-### <span data-ttu-id="ffc16-162">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="ffc16-162">System.DateTime</span></span>
+### <span data-ttu-id="d9472-159">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="d9472-159">System.DateTime</span></span>
 
-<span data-ttu-id="ffc16-163">Дату можно передать в `Set-Date` .</span><span class="sxs-lookup"><span data-stu-id="ffc16-163">You can pipe a date to `Set-Date`.</span></span>
+<span data-ttu-id="d9472-160">Дату можно передать в `Set-Date` .</span><span class="sxs-lookup"><span data-stu-id="d9472-160">You can pipe a date to `Set-Date`.</span></span>
 
-## <span data-ttu-id="ffc16-164">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="ffc16-164">OUTPUTS</span></span>
+## <span data-ttu-id="d9472-161">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="d9472-161">OUTPUTS</span></span>
 
-### <span data-ttu-id="ffc16-165">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="ffc16-165">System.DateTime</span></span>
+### <span data-ttu-id="d9472-162">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="d9472-162">System.DateTime</span></span>
 
-<span data-ttu-id="ffc16-166">`Set-Date` Возвращает объект, представляющий заданную дату.</span><span class="sxs-lookup"><span data-stu-id="ffc16-166">`Set-Date` returns an object that represents the date that it set.</span></span>
+<span data-ttu-id="d9472-163">`Set-Date` Возвращает объект, представляющий заданную дату.</span><span class="sxs-lookup"><span data-stu-id="d9472-163">`Set-Date` returns an object that represents the date that it set.</span></span>
 
-## <span data-ttu-id="ffc16-167">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="ffc16-167">NOTES</span></span>
+## <span data-ttu-id="d9472-164">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="d9472-164">NOTES</span></span>
 
-- <span data-ttu-id="ffc16-168">Используйте этот командлет с осторожностью при изменении даты и времени на компьютере.</span><span class="sxs-lookup"><span data-stu-id="ffc16-168">Use this cmdlet cautiously when changing the date and time on the computer.</span></span> <span data-ttu-id="ffc16-169">Из-за изменения даты или времени компьютер может не получать системные события и обновления, которые запускаются в определенный день или момент времени.</span><span class="sxs-lookup"><span data-stu-id="ffc16-169">The change might prevent the computer from receiving system-wide events and updates that are triggered by a date or time.</span></span> <span data-ttu-id="ffc16-170">Используйте параметры **WhatIf** и **Confirm** , чтобы избежать ошибок.</span><span class="sxs-lookup"><span data-stu-id="ffc16-170">Use the **WhatIf** and **Confirm** parameters to avoid errors.</span></span>
-- <span data-ttu-id="ffc16-171">Вы можете использовать стандартные методы .NET с объектами **DateTime** и **TimeSpan** , которые используются с `Set-Date` , например **AddDays** , **аддмонсс** и **фромфилетиме**.</span><span class="sxs-lookup"><span data-stu-id="ffc16-171">You can use standard .NET methods with the **DateTime** and **TimeSpan** objects used with `Set-Date`, such as **AddDays** , **AddMonths** , and **FromFileTime**.</span></span> <span data-ttu-id="ffc16-172">Дополнительные сведения см. в разделе [методы DateTime](/dotnet/api/system.datetime) и</span><span class="sxs-lookup"><span data-stu-id="ffc16-172">For more information, see [DateTime Methods](/dotnet/api/system.datetime) and</span></span>
+- <span data-ttu-id="d9472-165">Используйте этот командлет с осторожностью при изменении даты и времени на компьютере.</span><span class="sxs-lookup"><span data-stu-id="d9472-165">Use this cmdlet cautiously when changing the date and time on the computer.</span></span> <span data-ttu-id="d9472-166">Из-за изменения даты или времени компьютер может не получать системные события и обновления, которые запускаются в определенный день или момент времени.</span><span class="sxs-lookup"><span data-stu-id="d9472-166">The change might prevent the computer from receiving system-wide events and updates that are triggered by a date or time.</span></span> <span data-ttu-id="d9472-167">Используйте параметры **WhatIf** и **Confirm** , чтобы избежать ошибок.</span><span class="sxs-lookup"><span data-stu-id="d9472-167">Use the **WhatIf** and **Confirm** parameters to avoid errors.</span></span>
+- <span data-ttu-id="d9472-168">Вы можете использовать стандартные методы .NET с объектами **DateTime** и **TimeSpan** , которые используются с `Set-Date` , например **AddDays** , **аддмонсс** и **фромфилетиме**.</span><span class="sxs-lookup"><span data-stu-id="d9472-168">You can use standard .NET methods with the **DateTime** and **TimeSpan** objects used with `Set-Date`, such as **AddDays** , **AddMonths** , and **FromFileTime**.</span></span> <span data-ttu-id="d9472-169">Дополнительные сведения см. в разделе [методы DateTime](/dotnet/api/system.datetime) и</span><span class="sxs-lookup"><span data-stu-id="d9472-169">For more information, see [DateTime Methods](/dotnet/api/system.datetime) and</span></span>
 
-  <span data-ttu-id="ffc16-173">[Методы TimeSpan](/dotnet/api/system.timespan) в библиотеке MSDN.</span><span class="sxs-lookup"><span data-stu-id="ffc16-173">[TimeSpan Methods](/dotnet/api/system.timespan) in the MSDN library.</span></span>
+  <span data-ttu-id="d9472-170">[Методы TimeSpan](/dotnet/api/system.timespan) в пакете SDK для .NET.</span><span class="sxs-lookup"><span data-stu-id="d9472-170">[TimeSpan Methods](/dotnet/api/system.timespan) in the .NET SDK.</span></span>
 
-## <span data-ttu-id="ffc16-174">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="ffc16-174">RELATED LINKS</span></span>
+## <span data-ttu-id="d9472-171">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="d9472-171">RELATED LINKS</span></span>
 
-[<span data-ttu-id="ffc16-175">Get-Дата</span><span class="sxs-lookup"><span data-stu-id="ffc16-175">Get-Date</span></span>](Get-Date.md)
+[<span data-ttu-id="d9472-172">Get-Дата</span><span class="sxs-lookup"><span data-stu-id="d9472-172">Get-Date</span></span>](Get-Date.md)
 
-[<span data-ttu-id="ffc16-176">New-TimeSpan</span><span class="sxs-lookup"><span data-stu-id="ffc16-176">New-TimeSpan</span></span>](New-TimeSpan.md)
+[<span data-ttu-id="d9472-173">New-TimeSpan</span><span class="sxs-lookup"><span data-stu-id="d9472-173">New-TimeSpan</span></span>](New-TimeSpan.md)

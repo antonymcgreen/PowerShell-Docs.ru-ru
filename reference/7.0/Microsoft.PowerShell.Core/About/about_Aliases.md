@@ -6,133 +6,133 @@ ms.date: 11/27/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Aliases
-ms.openlocfilehash: 409e6b01f32c5a6f60ac4b450ff08998caf1084a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: e160f1e11ec94142b04aca1dfc27eb24c4148f9b
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232233"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390751"
 ---
-# <a name="about-aliases"></a><span data-ttu-id="9841a-104">About Aliases (О псевдонимах)</span><span class="sxs-lookup"><span data-stu-id="9841a-104">About Aliases</span></span>
+# <a name="about-aliases"></a><span data-ttu-id="61642-104">About Aliases (О псевдонимах)</span><span class="sxs-lookup"><span data-stu-id="61642-104">About Aliases</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="9841a-105">КРАТКОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="9841a-105">SHORT DESCRIPTION</span></span>
-<span data-ttu-id="9841a-106">Описание использования альтернативных имен для командлетов и команд в PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9841a-106">Describes how to use alternate names for cmdlets and commands in PowerShell.</span></span>
+## <a name="short-description"></a><span data-ttu-id="61642-105">КРАТКОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="61642-105">SHORT DESCRIPTION</span></span>
+<span data-ttu-id="61642-106">Описание использования альтернативных имен для командлетов и команд в PowerShell.</span><span class="sxs-lookup"><span data-stu-id="61642-106">Describes how to use alternate names for cmdlets and commands in PowerShell.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="9841a-107">ПОДРОБНОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="9841a-107">LONG DESCRIPTION</span></span>
+## <a name="long-description"></a><span data-ttu-id="61642-107">ПОДРОБНОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="61642-107">LONG DESCRIPTION</span></span>
 
-<span data-ttu-id="9841a-108">Псевдоним — это альтернативное имя или псевдоним для командлета или для элемента Command, например функции, скрипта, файла или исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="9841a-108">An alias is an alternate name or nickname for a cmdlet or for a command element, such as a function, script, file, or executable file.</span></span> <span data-ttu-id="9841a-109">Вместо имени команды в командах PowerShell можно использовать псевдоним.</span><span class="sxs-lookup"><span data-stu-id="9841a-109">You can use the alias instead of the command name in any PowerShell commands.</span></span>
+<span data-ttu-id="61642-108">Псевдоним — это альтернативное имя или псевдоним для командлета или для элемента Command, например функции, скрипта, файла или исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="61642-108">An alias is an alternate name or nickname for a cmdlet or for a command element, such as a function, script, file, or executable file.</span></span> <span data-ttu-id="61642-109">Вместо имени команды в командах PowerShell можно использовать псевдоним.</span><span class="sxs-lookup"><span data-stu-id="61642-109">You can use the alias instead of the command name in any PowerShell commands.</span></span>
 
-<span data-ttu-id="9841a-110">Чтобы создать псевдоним, используйте командлет New-Alias.</span><span class="sxs-lookup"><span data-stu-id="9841a-110">To create an alias, use the New-Alias cmdlet.</span></span> <span data-ttu-id="9841a-111">Например, следующая команда создает псевдоним "газов" для `Get-AuthenticodeSignature` командлета:</span><span class="sxs-lookup"><span data-stu-id="9841a-111">For example, the following command creates the "gas" alias for the `Get-AuthenticodeSignature` cmdlet:</span></span>
+<span data-ttu-id="61642-110">Чтобы создать псевдоним, используйте командлет New-Alias.</span><span class="sxs-lookup"><span data-stu-id="61642-110">To create an alias, use the New-Alias cmdlet.</span></span> <span data-ttu-id="61642-111">Например, следующая команда создает псевдоним "газов" для `Get-AuthenticodeSignature` командлета:</span><span class="sxs-lookup"><span data-stu-id="61642-111">For example, the following command creates the "gas" alias for the `Get-AuthenticodeSignature` cmdlet:</span></span>
 
 ```powershell
 New-Alias -Name gas -Value Get-AuthenticodeSignature
 ```
 
-<span data-ttu-id="9841a-112">После создания псевдонима для имени командлета можно использовать псевдоним вместо имени командлета.</span><span class="sxs-lookup"><span data-stu-id="9841a-112">After you create the alias for the cmdlet name, you can use the alias instead of the cmdlet name.</span></span> <span data-ttu-id="9841a-113">Например, чтобы получить подпись Authenticode для файла SqlScript.ps1, введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-113">For example, to get the Authenticode signature for the SqlScript.ps1 file, type:</span></span>
+<span data-ttu-id="61642-112">После создания псевдонима для имени командлета можно использовать псевдоним вместо имени командлета.</span><span class="sxs-lookup"><span data-stu-id="61642-112">After you create the alias for the cmdlet name, you can use the alias instead of the cmdlet name.</span></span> <span data-ttu-id="61642-113">Например, чтобы получить подпись Authenticode для файла SqlScript.ps1, введите:</span><span class="sxs-lookup"><span data-stu-id="61642-113">For example, to get the Authenticode signature for the SqlScript.ps1 file, type:</span></span>
 
 ```powershell
 Get-AuthenticodeSignature SqlScript.ps1
 ```
 
-<span data-ttu-id="9841a-114">Или введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-114">Or, type:</span></span>
+<span data-ttu-id="61642-114">Или введите:</span><span class="sxs-lookup"><span data-stu-id="61642-114">Or, type:</span></span>
 
 ```powershell
 gas SqlScript.ps1
 ```
 
-<span data-ttu-id="9841a-115">При создании слова "Word" в качестве псевдонима для Microsoft Office Word можно ввести "Word" вместо следующего:</span><span class="sxs-lookup"><span data-stu-id="9841a-115">If you create "word" as the alias for Microsoft Office Word, you can type "word" instead of the following:</span></span>
+<span data-ttu-id="61642-115">При создании слова "Word" в качестве псевдонима для Microsoft Office Word можно ввести "Word" вместо следующего:</span><span class="sxs-lookup"><span data-stu-id="61642-115">If you create "word" as the alias for Microsoft Office Word, you can type "word" instead of the following:</span></span>
 
 ```powershell
 "C:\Program Files\Microsoft Office\Office11\Winword.exe"
 ```
 
-## <a name="built-in-aliases"></a><span data-ttu-id="9841a-116">ВСТРОЕННЫЕ ПСЕВДОНИМЫ</span><span class="sxs-lookup"><span data-stu-id="9841a-116">BUILT-IN ALIASES</span></span>
+## <a name="built-in-aliases"></a><span data-ttu-id="61642-116">ВСТРОЕННЫЕ ПСЕВДОНИМЫ</span><span class="sxs-lookup"><span data-stu-id="61642-116">BUILT-IN ALIASES</span></span>
 
-<span data-ttu-id="9841a-117">PowerShell включает набор встроенных псевдонимов, включая "CD" и "chdir" для командлета Set-Location, а также "ls" и "Dir" для командлета Get-ChildItem.</span><span class="sxs-lookup"><span data-stu-id="9841a-117">PowerShell includes a set of built-in aliases, including "cd" and "chdir" for the Set-Location cmdlet, and "ls" and "dir" for the Get-ChildItem cmdlet.</span></span>
+<span data-ttu-id="61642-117">PowerShell включает набор встроенных псевдонимов, включая "CD" и "chdir" для командлета Set-Location, а также "ls" и "Dir" для командлета Get-ChildItem.</span><span class="sxs-lookup"><span data-stu-id="61642-117">PowerShell includes a set of built-in aliases, including "cd" and "chdir" for the Set-Location cmdlet, and "ls" and "dir" for the Get-ChildItem cmdlet.</span></span>
 
-<span data-ttu-id="9841a-118">Чтобы получить все псевдонимы на компьютере, включая встроенные псевдонимы, введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-118">To get all the aliases on the computer, including the built-in aliases, type:</span></span>
+<span data-ttu-id="61642-118">Чтобы получить все псевдонимы на компьютере, включая встроенные псевдонимы, введите:</span><span class="sxs-lookup"><span data-stu-id="61642-118">To get all the aliases on the computer, including the built-in aliases, type:</span></span>
 
 ```powershell
 Get-Alias
 ```
 
-## <a name="alias-cmdlets"></a><span data-ttu-id="9841a-119">КОМАНДЛЕТЫ ALIAS</span><span class="sxs-lookup"><span data-stu-id="9841a-119">ALIAS CMDLETS</span></span>
+## <a name="alias-cmdlets"></a><span data-ttu-id="61642-119">КОМАНДЛЕТЫ ALIAS</span><span class="sxs-lookup"><span data-stu-id="61642-119">ALIAS CMDLETS</span></span>
 
-<span data-ttu-id="9841a-120">PowerShell включает следующие командлеты, предназначенные для работы с псевдонимами:</span><span class="sxs-lookup"><span data-stu-id="9841a-120">PowerShell includes the following cmdlets, which are designed for working with aliases:</span></span>
+<span data-ttu-id="61642-120">PowerShell включает следующие командлеты, предназначенные для работы с псевдонимами:</span><span class="sxs-lookup"><span data-stu-id="61642-120">PowerShell includes the following cmdlets, which are designed for working with aliases:</span></span>
 
-- <span data-ttu-id="9841a-121">`Get-Alias` — Получает все псевдонимы в текущем сеансе.</span><span class="sxs-lookup"><span data-stu-id="9841a-121">`Get-Alias` - Gets all the aliases in the current session.</span></span>
-- <span data-ttu-id="9841a-122">`New-Alias` — Создает новый псевдоним.</span><span class="sxs-lookup"><span data-stu-id="9841a-122">`New-Alias` - Creates a new alias.</span></span>
-- <span data-ttu-id="9841a-123">`Set-Alias` — Создает или изменяет псевдоним.</span><span class="sxs-lookup"><span data-stu-id="9841a-123">`Set-Alias` - Creates or changes an alias.</span></span>
-- <span data-ttu-id="9841a-124">`Export-Alias` — Экспортирует один или несколько псевдонимов в файл.</span><span class="sxs-lookup"><span data-stu-id="9841a-124">`Export-Alias` - Exports one or more aliases to a file.</span></span>
-- <span data-ttu-id="9841a-125">`Import-Alias` — Импортирует файл псевдонима в PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9841a-125">`Import-Alias` - Imports an alias file into PowerShell.</span></span>
+- <span data-ttu-id="61642-121">`Get-Alias` — Получает все псевдонимы в текущем сеансе.</span><span class="sxs-lookup"><span data-stu-id="61642-121">`Get-Alias` - Gets all the aliases in the current session.</span></span>
+- <span data-ttu-id="61642-122">`New-Alias` — Создает новый псевдоним.</span><span class="sxs-lookup"><span data-stu-id="61642-122">`New-Alias` - Creates a new alias.</span></span>
+- <span data-ttu-id="61642-123">`Set-Alias` — Создает или изменяет псевдоним.</span><span class="sxs-lookup"><span data-stu-id="61642-123">`Set-Alias` - Creates or changes an alias.</span></span>
+- <span data-ttu-id="61642-124">`Export-Alias` — Экспортирует один или несколько псевдонимов в файл.</span><span class="sxs-lookup"><span data-stu-id="61642-124">`Export-Alias` - Exports one or more aliases to a file.</span></span>
+- <span data-ttu-id="61642-125">`Import-Alias` — Импортирует файл псевдонима в PowerShell.</span><span class="sxs-lookup"><span data-stu-id="61642-125">`Import-Alias` - Imports an alias file into PowerShell.</span></span>
 
-<span data-ttu-id="9841a-126">Для получения подробных сведений о командлетах введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-126">For detailed information about the cmdlets, type:</span></span>
+<span data-ttu-id="61642-126">Для получения подробных сведений о командлетах введите:</span><span class="sxs-lookup"><span data-stu-id="61642-126">For detailed information about the cmdlets, type:</span></span>
 
 ```powershell
 Get-Help <cmdlet-Name> -Detailed
 ```
 
-<span data-ttu-id="9841a-127">Например, введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-127">For example, type:</span></span>
+<span data-ttu-id="61642-127">Например, введите:</span><span class="sxs-lookup"><span data-stu-id="61642-127">For example, type:</span></span>
 
 ```powershell
 Get-Help Export-Alias -Detailed
 ```
 
-## <a name="creating-an-alias"></a><span data-ttu-id="9841a-128">СОЗДАНИЕ ПСЕВДОНИМА</span><span class="sxs-lookup"><span data-stu-id="9841a-128">CREATING AN ALIAS</span></span>
+## <a name="creating-an-alias"></a><span data-ttu-id="61642-128">СОЗДАНИЕ ПСЕВДОНИМА</span><span class="sxs-lookup"><span data-stu-id="61642-128">CREATING AN ALIAS</span></span>
 
-<span data-ttu-id="9841a-129">Чтобы создать новый псевдоним, используйте командлет New-Alias.</span><span class="sxs-lookup"><span data-stu-id="9841a-129">To create a new alias, use the New-Alias cmdlet.</span></span> <span data-ttu-id="9841a-130">Например, чтобы создать псевдоним "GH" для Get-Help, введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-130">For example, to create the "gh" alias for Get-Help, type:</span></span>
+<span data-ttu-id="61642-129">Чтобы создать новый псевдоним, используйте командлет New-Alias.</span><span class="sxs-lookup"><span data-stu-id="61642-129">To create a new alias, use the New-Alias cmdlet.</span></span> <span data-ttu-id="61642-130">Например, чтобы создать псевдоним "GH" для Get-Help, введите:</span><span class="sxs-lookup"><span data-stu-id="61642-130">For example, to create the "gh" alias for Get-Help, type:</span></span>
 
 ```powershell
 New-Alias -Name gh -Value Get-Help
 ```
 
-<span data-ttu-id="9841a-131">Псевдоним можно использовать в командах так же, как и полное имя командлета, и можно использовать псевдоним с параметрами.</span><span class="sxs-lookup"><span data-stu-id="9841a-131">You can use the alias in commands, just as you would use the full cmdlet name, and you can use the alias with parameters.</span></span>
+<span data-ttu-id="61642-131">Псевдоним можно использовать в командах так же, как и полное имя командлета, и можно использовать псевдоним с параметрами.</span><span class="sxs-lookup"><span data-stu-id="61642-131">You can use the alias in commands, just as you would use the full cmdlet name, and you can use the alias with parameters.</span></span>
 
-<span data-ttu-id="9841a-132">Например, чтобы получить подробную справку по командлету Get-WmiObject, введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-132">For example, to get detailed Help for the Get-WmiObject cmdlet, type:</span></span>
+<span data-ttu-id="61642-132">Например, чтобы получить подробную справку по командлету Get-WmiObject, введите:</span><span class="sxs-lookup"><span data-stu-id="61642-132">For example, to get detailed Help for the Get-WmiObject cmdlet, type:</span></span>
 
 ```powershell
 Get-Help Get-WmiObject -Detailed
 ```
 
-<span data-ttu-id="9841a-133">Или введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-133">Or, type:</span></span>
+<span data-ttu-id="61642-133">Или введите:</span><span class="sxs-lookup"><span data-stu-id="61642-133">Or, type:</span></span>
 
 ```powershell
 gh Get-WmiObject -Detailed
 ```
 
-## <a name="saving-aliases"></a><span data-ttu-id="9841a-134">СОХРАНЕНИЕ ПСЕВДОНИМОВ</span><span class="sxs-lookup"><span data-stu-id="9841a-134">SAVING ALIASES</span></span>
+## <a name="saving-aliases"></a><span data-ttu-id="61642-134">СОХРАНЕНИЕ ПСЕВДОНИМОВ</span><span class="sxs-lookup"><span data-stu-id="61642-134">SAVING ALIASES</span></span>
 
-<span data-ttu-id="9841a-135">Создаваемые псевдонимы сохраняются только в текущем сеансе.</span><span class="sxs-lookup"><span data-stu-id="9841a-135">The aliases that you create are saved only in the current session.</span></span> <span data-ttu-id="9841a-136">Чтобы использовать псевдонимы в другом сеансе, добавьте псевдоним в профиль PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9841a-136">To use the aliases in a different session, add the alias to your PowerShell profile.</span></span> <span data-ttu-id="9841a-137">Или используйте командлет Export-Alias, чтобы сохранить псевдонимы в файл.</span><span class="sxs-lookup"><span data-stu-id="9841a-137">Or, use the Export-Alias cmdlet to save the aliases to a file.</span></span>
+<span data-ttu-id="61642-135">Создаваемые псевдонимы сохраняются только в текущем сеансе.</span><span class="sxs-lookup"><span data-stu-id="61642-135">The aliases that you create are saved only in the current session.</span></span> <span data-ttu-id="61642-136">Чтобы использовать псевдонимы в другом сеансе, добавьте псевдоним в профиль PowerShell.</span><span class="sxs-lookup"><span data-stu-id="61642-136">To use the aliases in a different session, add the alias to your PowerShell profile.</span></span> <span data-ttu-id="61642-137">Или используйте командлет Export-Alias, чтобы сохранить псевдонимы в файл.</span><span class="sxs-lookup"><span data-stu-id="61642-137">Or, use the Export-Alias cmdlet to save the aliases to a file.</span></span>
 
-<span data-ttu-id="9841a-138">Чтобы получить дополнительные сведения, введите: </span><span class="sxs-lookup"><span data-stu-id="9841a-138">For more information, type:</span></span>
+<span data-ttu-id="61642-138">Чтобы получить дополнительные сведения, введите: </span><span class="sxs-lookup"><span data-stu-id="61642-138">For more information, type:</span></span>
 
 ```powershell
 Get-Help about_Profiles
 ```
 
-## <a name="getting-aliases"></a><span data-ttu-id="9841a-139">ПОЛУЧЕНИЕ ПСЕВДОНИМОВ</span><span class="sxs-lookup"><span data-stu-id="9841a-139">GETTING ALIASES</span></span>
+## <a name="getting-aliases"></a><span data-ttu-id="61642-139">ПОЛУЧЕНИЕ ПСЕВДОНИМОВ</span><span class="sxs-lookup"><span data-stu-id="61642-139">GETTING ALIASES</span></span>
 
-<span data-ttu-id="9841a-140">Чтобы получить все псевдонимы в текущем сеансе, включая встроенные псевдонимы, псевдонимы в профилях PowerShell и псевдонимы, созданные в текущем сеансе, введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-140">To get all the aliases in the current session, including the built-in aliases, the aliases in your PowerShell profiles, and the aliases that you have created in the current session, type:</span></span>
+<span data-ttu-id="61642-140">Чтобы получить все псевдонимы в текущем сеансе, включая встроенные псевдонимы, псевдонимы в профилях PowerShell и псевдонимы, созданные в текущем сеансе, введите:</span><span class="sxs-lookup"><span data-stu-id="61642-140">To get all the aliases in the current session, including the built-in aliases, the aliases in your PowerShell profiles, and the aliases that you have created in the current session, type:</span></span>
 
 ```powershell
 Get-Alias
 ```
 
-<span data-ttu-id="9841a-141">Чтобы получить конкретные псевдонимы, используйте параметр Name командлета Get-Alias.</span><span class="sxs-lookup"><span data-stu-id="9841a-141">To get particular aliases, use the Name parameter of the Get-Alias cmdlet.</span></span> <span data-ttu-id="9841a-142">Например, чтобы получить псевдонимы, начинающиеся с "p", введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-142">For example, to get aliases that begin with "p", type:</span></span>
+<span data-ttu-id="61642-141">Чтобы получить конкретные псевдонимы, используйте параметр Name командлета Get-Alias.</span><span class="sxs-lookup"><span data-stu-id="61642-141">To get particular aliases, use the Name parameter of the Get-Alias cmdlet.</span></span> <span data-ttu-id="61642-142">Например, чтобы получить псевдонимы, начинающиеся с "p", введите:</span><span class="sxs-lookup"><span data-stu-id="61642-142">For example, to get aliases that begin with "p", type:</span></span>
 
 ```powershell
 Get-Alias -Name p*
 ```
 
-<span data-ttu-id="9841a-143">Чтобы получить псевдонимы для определенного элемента, используйте параметр определения.</span><span class="sxs-lookup"><span data-stu-id="9841a-143">To get the aliases for a particular item, use the Definition parameter.</span></span> <span data-ttu-id="9841a-144">Например, чтобы получить псевдонимы для типа командлета Get-ChildItem:</span><span class="sxs-lookup"><span data-stu-id="9841a-144">For example, to get the aliases for the Get-ChildItem cmdlet type:</span></span>
+<span data-ttu-id="61642-143">Чтобы получить псевдонимы для определенного элемента, используйте параметр определения.</span><span class="sxs-lookup"><span data-stu-id="61642-143">To get the aliases for a particular item, use the Definition parameter.</span></span> <span data-ttu-id="61642-144">Например, чтобы получить псевдонимы для типа командлета Get-ChildItem:</span><span class="sxs-lookup"><span data-stu-id="61642-144">For example, to get the aliases for the Get-ChildItem cmdlet type:</span></span>
 
 ```powershell
 Get-Alias -Definition Get-ChildItem
 ```
 
-### <a name="get-alias-output"></a><span data-ttu-id="9841a-145">ПОЛУЧЕНИЕ ВЫХОДНОГО ПСЕВДОНИМА</span><span class="sxs-lookup"><span data-stu-id="9841a-145">GET-ALIAS OUTPUT</span></span>
+### <a name="get-alias-output"></a><span data-ttu-id="61642-145">ПОЛУЧЕНИЕ ВЫХОДНОГО ПСЕВДОНИМА</span><span class="sxs-lookup"><span data-stu-id="61642-145">GET-ALIAS OUTPUT</span></span>
 
-<span data-ttu-id="9841a-146">Get-Alias возвращает только один тип объекта — объект AliasInfo (System. Management. Automation. AliasInfo).</span><span class="sxs-lookup"><span data-stu-id="9841a-146">Get-Alias returns only one type of object, an AliasInfo object (System.Management.Automation.AliasInfo).</span></span> <span data-ttu-id="9841a-147">Имена псевдонимов, которые не содержат дефис, например "CD", отображаются в следующем формате:</span><span class="sxs-lookup"><span data-stu-id="9841a-147">The name of aliases that don't include a hyphen, such as "cd" are displayed in the following format:</span></span>
+<span data-ttu-id="61642-146">Get-Alias возвращает только один тип объекта — объект AliasInfo (System. Management. Automation. AliasInfo).</span><span class="sxs-lookup"><span data-stu-id="61642-146">Get-Alias returns only one type of object, an AliasInfo object (System.Management.Automation.AliasInfo).</span></span> <span data-ttu-id="61642-147">Имена псевдонимов, которые не содержат дефис, например "CD", отображаются в следующем формате:</span><span class="sxs-lookup"><span data-stu-id="61642-147">The name of aliases that don't include a hyphen, such as "cd" are displayed in the following format:</span></span>
 
 ```powershell
 Get-Alias ac
@@ -144,94 +144,94 @@ CommandType     Name                    Version    Source
 Alias           ac -> Add-Content
 ```
 
-<span data-ttu-id="9841a-148">Это позволяет быстро и легко получить необходимую информацию.</span><span class="sxs-lookup"><span data-stu-id="9841a-148">This makes it very quick and easy to get the information that you need.</span></span>
+<span data-ttu-id="61642-148">Это позволяет быстро и легко получить необходимую информацию.</span><span class="sxs-lookup"><span data-stu-id="61642-148">This makes it very quick and easy to get the information that you need.</span></span>
 
-<span data-ttu-id="9841a-149">Формат имени псевдонима со стрелками не используется для псевдонимов, содержащих дефис.</span><span class="sxs-lookup"><span data-stu-id="9841a-149">The arrow-based alias name format is not used for aliases that include a hyphen.</span></span> <span data-ttu-id="9841a-150">Они, скорее всего, являются предпочтительными заменяемыми именами для командлетов и функций, а не стандартных сокращений или псевдонимов, и автор может не потребовать от них очевидного.</span><span class="sxs-lookup"><span data-stu-id="9841a-150">These are likely to be preferred substitute names for cmdlets and functions, instead of typical abbreviations or nicknames, and the author might not want them to be as evident.</span></span>
+<span data-ttu-id="61642-149">Формат имени псевдонима со стрелками не используется для псевдонимов, содержащих дефис.</span><span class="sxs-lookup"><span data-stu-id="61642-149">The arrow-based alias name format is not used for aliases that include a hyphen.</span></span> <span data-ttu-id="61642-150">Они, скорее всего, являются предпочтительными заменяемыми именами для командлетов и функций, а не стандартных сокращений или псевдонимов, и автор может не потребовать от них очевидного.</span><span class="sxs-lookup"><span data-stu-id="61642-150">These are likely to be preferred substitute names for cmdlets and functions, instead of typical abbreviations or nicknames, and the author might not want them to be as evident.</span></span>
 
-## <a name="alternate-names-for-commands-with-parameters"></a><span data-ttu-id="9841a-151">АЛЬТЕРНАТИВНЫЕ ИМЕНА ДЛЯ КОМАНД С ПАРАМЕТРАМИ</span><span class="sxs-lookup"><span data-stu-id="9841a-151">ALTERNATE NAMES FOR COMMANDS WITH PARAMETERS</span></span>
+## <a name="alternate-names-for-commands-with-parameters"></a><span data-ttu-id="61642-151">АЛЬТЕРНАТИВНЫЕ ИМЕНА ДЛЯ КОМАНД С ПАРАМЕТРАМИ</span><span class="sxs-lookup"><span data-stu-id="61642-151">ALTERNATE NAMES FOR COMMANDS WITH PARAMETERS</span></span>
 
-<span data-ttu-id="9841a-152">Можно назначить псевдоним командлету, сценарию, функции или исполняемому файлу.</span><span class="sxs-lookup"><span data-stu-id="9841a-152">You can assign an alias to a cmdlet, script, function, or executable file.</span></span> <span data-ttu-id="9841a-153">Нельзя назначить псевдоним для команды и ее параметров.</span><span class="sxs-lookup"><span data-stu-id="9841a-153">You cannot assign an alias to a command and its parameters.</span></span> <span data-ttu-id="9841a-154">Например, можно присвоить `Get-Eventlog` командлету псевдоним, но нельзя присвоить `Get-Eventlog -LogName System` команде псевдоним.</span><span class="sxs-lookup"><span data-stu-id="9841a-154">For example, you can assign an alias to the `Get-Eventlog` cmdlet, but you cannot assign an alias to the `Get-Eventlog -LogName System` command.</span></span>
+<span data-ttu-id="61642-152">Можно назначить псевдоним командлету, сценарию, функции или исполняемому файлу.</span><span class="sxs-lookup"><span data-stu-id="61642-152">You can assign an alias to a cmdlet, script, function, or executable file.</span></span> <span data-ttu-id="61642-153">Нельзя назначить псевдоним для команды и ее параметров.</span><span class="sxs-lookup"><span data-stu-id="61642-153">You cannot assign an alias to a command and its parameters.</span></span> <span data-ttu-id="61642-154">Например, можно присвоить `Get-Eventlog` командлету псевдоним, но нельзя присвоить `Get-Eventlog -LogName System` команде псевдоним.</span><span class="sxs-lookup"><span data-stu-id="61642-154">For example, you can assign an alias to the `Get-Eventlog` cmdlet, but you cannot assign an alias to the `Get-Eventlog -LogName System` command.</span></span>
 
-<span data-ttu-id="9841a-155">Можно создать функцию, которая включает команду.</span><span class="sxs-lookup"><span data-stu-id="9841a-155">You can create a function that includes the command.</span></span> <span data-ttu-id="9841a-156">Чтобы создать функцию, введите слово "Function", за которым следует имя функции.</span><span class="sxs-lookup"><span data-stu-id="9841a-156">To create a function, type the word "function" followed by a name for the function.</span></span> <span data-ttu-id="9841a-157">Введите команду и заключите ее в фигурные скобки ( {} ).</span><span class="sxs-lookup"><span data-stu-id="9841a-157">Type the command, and enclose it in braces ({}).</span></span>
+<span data-ttu-id="61642-155">Можно создать функцию, которая включает команду.</span><span class="sxs-lookup"><span data-stu-id="61642-155">You can create a function that includes the command.</span></span> <span data-ttu-id="61642-156">Чтобы создать функцию, введите слово "Function", за которым следует имя функции.</span><span class="sxs-lookup"><span data-stu-id="61642-156">To create a function, type the word "function" followed by a name for the function.</span></span> <span data-ttu-id="61642-157">Введите команду и заключите ее в фигурные скобки ( {} ).</span><span class="sxs-lookup"><span data-stu-id="61642-157">Type the command, and enclose it in braces ({}).</span></span>
 
-<span data-ttu-id="9841a-158">Например, следующая команда создает функцию syslog.</span><span class="sxs-lookup"><span data-stu-id="9841a-158">For example, the following command creates the syslog function.</span></span> <span data-ttu-id="9841a-159">Эта функция представляет `Get-Eventlog -LogName System` команду:</span><span class="sxs-lookup"><span data-stu-id="9841a-159">This function represents the `Get-Eventlog -LogName System` command:</span></span>
+<span data-ttu-id="61642-158">Например, следующая команда создает функцию syslog.</span><span class="sxs-lookup"><span data-stu-id="61642-158">For example, the following command creates the syslog function.</span></span> <span data-ttu-id="61642-159">Эта функция представляет `Get-Eventlog -LogName System` команду:</span><span class="sxs-lookup"><span data-stu-id="61642-159">This function represents the `Get-Eventlog -LogName System` command:</span></span>
 
 ```powershell
 function Get-SystemEventlog {Get-Eventlog -LogName System}
 Set-Alias -Name syslog -Value Get-SystemEventlog
 ```
 
-<span data-ttu-id="9841a-160">Теперь можно ввести "syslog" вместо команды.</span><span class="sxs-lookup"><span data-stu-id="9841a-160">You can now type "syslog" instead of the command.</span></span> <span data-ttu-id="9841a-161">И можно создавать псевдонимы для новой функции.</span><span class="sxs-lookup"><span data-stu-id="9841a-161">And, you can create aliases for the new function.</span></span>
+<span data-ttu-id="61642-160">Теперь можно ввести "syslog" вместо команды.</span><span class="sxs-lookup"><span data-stu-id="61642-160">You can now type "syslog" instead of the command.</span></span> <span data-ttu-id="61642-161">И можно создавать псевдонимы для новой функции.</span><span class="sxs-lookup"><span data-stu-id="61642-161">And, you can create aliases for the new function.</span></span>
 
-<span data-ttu-id="9841a-162">Для получения дополнительных сведений о функциях введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-162">For more information about functions, type:</span></span>
+<span data-ttu-id="61642-162">Для получения дополнительных сведений о функциях введите:</span><span class="sxs-lookup"><span data-stu-id="61642-162">For more information about functions, type:</span></span>
 
 ```powershell
 Get-Help about_Functions
 ```
 
-## <a name="alias-objects"></a><span data-ttu-id="9841a-163">ПСЕВДОНИМЫ ОБЪЕКТОВ</span><span class="sxs-lookup"><span data-stu-id="9841a-163">ALIAS OBJECTS</span></span>
+## <a name="alias-objects"></a><span data-ttu-id="61642-163">ПСЕВДОНИМЫ ОБЪЕКТОВ</span><span class="sxs-lookup"><span data-stu-id="61642-163">ALIAS OBJECTS</span></span>
 
-<span data-ttu-id="9841a-164">Псевдонимы PowerShell представлены объектами, которые являются экземплярами класса System. Management. Automation. AliasInfo.</span><span class="sxs-lookup"><span data-stu-id="9841a-164">PowerShell aliases are represented by objects that are instances of the System.Management.Automation.AliasInfo class.</span></span> <span data-ttu-id="9841a-165">Дополнительные сведения об этом типе объектов см. в разделе [класс AliasInfo][aliasinfo] в библиотеке Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="9841a-165">For more information about this type of object, see [AliasInfo Class][aliasinfo] in the Microsoft Developer Network (MSDN) library.</span></span>
+<span data-ttu-id="61642-164">Псевдонимы PowerShell представлены объектами, которые являются экземплярами класса System. Management. Automation. AliasInfo.</span><span class="sxs-lookup"><span data-stu-id="61642-164">PowerShell aliases are represented by objects that are instances of the System.Management.Automation.AliasInfo class.</span></span> <span data-ttu-id="61642-165">Дополнительные сведения об этом типе объектов см. в разделе [класс AliasInfo][aliasinfo] в пакете SDK для PowerShell.</span><span class="sxs-lookup"><span data-stu-id="61642-165">For more information about this type of object, see [AliasInfo Class][aliasinfo] in the PowerShell SDK.</span></span>
 
-<span data-ttu-id="9841a-166">Чтобы просмотреть свойства и методы объектов псевдонима, получите псевдонимы.</span><span class="sxs-lookup"><span data-stu-id="9841a-166">To view the properties and methods of the alias objects, get the aliases.</span></span>
-<span data-ttu-id="9841a-167">Затем передаем их в командлет Get-Member.</span><span class="sxs-lookup"><span data-stu-id="9841a-167">Then, pipe them to the Get-Member cmdlet.</span></span> <span data-ttu-id="9841a-168">Пример:</span><span class="sxs-lookup"><span data-stu-id="9841a-168">For example:</span></span>
+<span data-ttu-id="61642-166">Чтобы просмотреть свойства и методы объектов псевдонима, получите псевдонимы.</span><span class="sxs-lookup"><span data-stu-id="61642-166">To view the properties and methods of the alias objects, get the aliases.</span></span>
+<span data-ttu-id="61642-167">Затем передаем их в командлет Get-Member.</span><span class="sxs-lookup"><span data-stu-id="61642-167">Then, pipe them to the Get-Member cmdlet.</span></span> <span data-ttu-id="61642-168">Пример:</span><span class="sxs-lookup"><span data-stu-id="61642-168">For example:</span></span>
 
 ```powershell
 Get-Alias | Get-Member
 ```
 
-<span data-ttu-id="9841a-169">Чтобы просмотреть значения свойств определенного псевдонима, например `dir` псевдонима, получите псевдоним.</span><span class="sxs-lookup"><span data-stu-id="9841a-169">To view the values of the properties of a specific alias, such as the `dir` alias, get the alias.</span></span> <span data-ttu-id="9841a-170">Затем передаем его в командлет Format-List.</span><span class="sxs-lookup"><span data-stu-id="9841a-170">Then, pipe it to the Format-List cmdlet.</span></span> <span data-ttu-id="9841a-171">Например, следующая команда возвращает псевдоним Dir.</span><span class="sxs-lookup"><span data-stu-id="9841a-171">For example, the following command gets the "dir" alias.</span></span> <span data-ttu-id="9841a-172">Затем команда передает псевдоним в командлет Format-List.</span><span class="sxs-lookup"><span data-stu-id="9841a-172">Next, the command pipes the alias to the Format-List cmdlet.</span></span> <span data-ttu-id="9841a-173">Затем команда использует параметр Property объекта Format-List с подстановочным знаком ( \* ) для вывода всех свойств `dir` псевдонима.</span><span class="sxs-lookup"><span data-stu-id="9841a-173">Then, the command uses the Property parameter of Format-List with a wildcard character (\*) to display all the properties of the `dir` alias.</span></span> <span data-ttu-id="9841a-174">Следующая команда выполняет следующие задачи:</span><span class="sxs-lookup"><span data-stu-id="9841a-174">The following command performs these tasks:</span></span>
+<span data-ttu-id="61642-169">Чтобы просмотреть значения свойств определенного псевдонима, например `dir` псевдонима, получите псевдоним.</span><span class="sxs-lookup"><span data-stu-id="61642-169">To view the values of the properties of a specific alias, such as the `dir` alias, get the alias.</span></span> <span data-ttu-id="61642-170">Затем передаем его в командлет Format-List.</span><span class="sxs-lookup"><span data-stu-id="61642-170">Then, pipe it to the Format-List cmdlet.</span></span> <span data-ttu-id="61642-171">Например, следующая команда возвращает псевдоним Dir.</span><span class="sxs-lookup"><span data-stu-id="61642-171">For example, the following command gets the "dir" alias.</span></span> <span data-ttu-id="61642-172">Затем команда передает псевдоним в командлет Format-List.</span><span class="sxs-lookup"><span data-stu-id="61642-172">Next, the command pipes the alias to the Format-List cmdlet.</span></span> <span data-ttu-id="61642-173">Затем команда использует параметр Property объекта Format-List с подстановочным знаком ( \* ) для вывода всех свойств `dir` псевдонима.</span><span class="sxs-lookup"><span data-stu-id="61642-173">Then, the command uses the Property parameter of Format-List with a wildcard character (\*) to display all the properties of the `dir` alias.</span></span> <span data-ttu-id="61642-174">Следующая команда выполняет следующие задачи:</span><span class="sxs-lookup"><span data-stu-id="61642-174">The following command performs these tasks:</span></span>
 
 ```powershell
 Get-Alias -Name dir | Format-List -Property *
 ```
 
-## <a name="powershell-alias-provider"></a><span data-ttu-id="9841a-175">Поставщик ПСЕВДОНИМов PowerShell</span><span class="sxs-lookup"><span data-stu-id="9841a-175">PowerShell ALIAS PROVIDER</span></span>
+## <a name="powershell-alias-provider"></a><span data-ttu-id="61642-175">Поставщик ПСЕВДОНИМов PowerShell</span><span class="sxs-lookup"><span data-stu-id="61642-175">PowerShell ALIAS PROVIDER</span></span>
 
-<span data-ttu-id="9841a-176">В PowerShell имеется поставщик псевдонимов.</span><span class="sxs-lookup"><span data-stu-id="9841a-176">PowerShell includes the Alias provider.</span></span> <span data-ttu-id="9841a-177">Поставщик псевдонимов позволяет просматривать псевдонимы в PowerShell, как будто они находятся на диске файловой системы.</span><span class="sxs-lookup"><span data-stu-id="9841a-177">The Alias provider lets you view the aliases in PowerShell as though they were on a file system drive.</span></span>
+<span data-ttu-id="61642-176">В PowerShell имеется поставщик псевдонимов.</span><span class="sxs-lookup"><span data-stu-id="61642-176">PowerShell includes the Alias provider.</span></span> <span data-ttu-id="61642-177">Поставщик псевдонимов позволяет просматривать псевдонимы в PowerShell, как будто они находятся на диске файловой системы.</span><span class="sxs-lookup"><span data-stu-id="61642-177">The Alias provider lets you view the aliases in PowerShell as though they were on a file system drive.</span></span>
 
-<span data-ttu-id="9841a-178">Поставщик псевдонимов предоставляет диск Alias:.</span><span class="sxs-lookup"><span data-stu-id="9841a-178">The Alias provider exposes the Alias: drive.</span></span> <span data-ttu-id="9841a-179">Чтобы войти в диск Alias:, введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-179">To go into the Alias: drive, type:</span></span>
+<span data-ttu-id="61642-178">Поставщик псевдонимов предоставляет диск Alias:.</span><span class="sxs-lookup"><span data-stu-id="61642-178">The Alias provider exposes the Alias: drive.</span></span> <span data-ttu-id="61642-179">Чтобы войти в диск Alias:, введите:</span><span class="sxs-lookup"><span data-stu-id="61642-179">To go into the Alias: drive, type:</span></span>
 
 ```powershell
 Set-Location Alias:
 ```
 
-<span data-ttu-id="9841a-180">Чтобы просмотреть содержимое диска, введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-180">To view the contents of the drive, type:</span></span>
+<span data-ttu-id="61642-180">Чтобы просмотреть содержимое диска, введите:</span><span class="sxs-lookup"><span data-stu-id="61642-180">To view the contents of the drive, type:</span></span>
 
 ```powershell
 Get-ChildItem
 ```
 
-<span data-ttu-id="9841a-181">Чтобы просмотреть содержимое диска с другого диска PowerShell, Начните путь с имени диска.</span><span class="sxs-lookup"><span data-stu-id="9841a-181">To view the contents of the drive from another PowerShell drive, begin the path with the drive name.</span></span> <span data-ttu-id="9841a-182">Добавьте двоеточие (:).</span><span class="sxs-lookup"><span data-stu-id="9841a-182">Include the colon (:).</span></span> <span data-ttu-id="9841a-183">Пример:</span><span class="sxs-lookup"><span data-stu-id="9841a-183">For example:</span></span>
+<span data-ttu-id="61642-181">Чтобы просмотреть содержимое диска с другого диска PowerShell, Начните путь с имени диска.</span><span class="sxs-lookup"><span data-stu-id="61642-181">To view the contents of the drive from another PowerShell drive, begin the path with the drive name.</span></span> <span data-ttu-id="61642-182">Добавьте двоеточие (:).</span><span class="sxs-lookup"><span data-stu-id="61642-182">Include the colon (:).</span></span> <span data-ttu-id="61642-183">Пример:</span><span class="sxs-lookup"><span data-stu-id="61642-183">For example:</span></span>
 
 ```powershell
 Get-ChildItem -Path Alias:
 ```
 
-<span data-ttu-id="9841a-184">Чтобы получить сведения о конкретном псевдониме, введите имя диска и псевдоним.</span><span class="sxs-lookup"><span data-stu-id="9841a-184">To get information about a particular alias, type the drive name and the alias name.</span></span> <span data-ttu-id="9841a-185">Или введите шаблон имени.</span><span class="sxs-lookup"><span data-stu-id="9841a-185">Or, type a name pattern.</span></span> <span data-ttu-id="9841a-186">Например, чтобы получить все псевдонимы, начинающиеся с "p", введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-186">For example, to get all the aliases that begin with "p", type:</span></span>
+<span data-ttu-id="61642-184">Чтобы получить сведения о конкретном псевдониме, введите имя диска и псевдоним.</span><span class="sxs-lookup"><span data-stu-id="61642-184">To get information about a particular alias, type the drive name and the alias name.</span></span> <span data-ttu-id="61642-185">Или введите шаблон имени.</span><span class="sxs-lookup"><span data-stu-id="61642-185">Or, type a name pattern.</span></span> <span data-ttu-id="61642-186">Например, чтобы получить все псевдонимы, начинающиеся с "p", введите:</span><span class="sxs-lookup"><span data-stu-id="61642-186">For example, to get all the aliases that begin with "p", type:</span></span>
 
 ```powershell
 Get-ChildItem -Path Alias:p*
 ```
 
-<span data-ttu-id="9841a-187">Для получения дополнительных сведений о поставщике псевдонимов PowerShell введите:</span><span class="sxs-lookup"><span data-stu-id="9841a-187">For more information about the PowerShell Alias provider, type:</span></span>
+<span data-ttu-id="61642-187">Для получения дополнительных сведений о поставщике псевдонимов PowerShell введите:</span><span class="sxs-lookup"><span data-stu-id="61642-187">For more information about the PowerShell Alias provider, type:</span></span>
 
 ```powershell
 Get-Help Alias
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9841a-188">СМ. ТАКЖЕ</span><span class="sxs-lookup"><span data-stu-id="9841a-188">SEE ALSO</span></span>
+## <a name="see-also"></a><span data-ttu-id="61642-188">СМ. ТАКЖЕ</span><span class="sxs-lookup"><span data-stu-id="61642-188">SEE ALSO</span></span>
 
-- [<span data-ttu-id="9841a-189">New-Alias</span><span class="sxs-lookup"><span data-stu-id="9841a-189">New-Alias</span></span>](xref:Microsoft.PowerShell.Utility.New-Alias)
-- [<span data-ttu-id="9841a-190">Get-Alias</span><span class="sxs-lookup"><span data-stu-id="9841a-190">Get-Alias</span></span>](xref:Microsoft.PowerShell.Utility.Get-Alias)
-- [<span data-ttu-id="9841a-191">Set-Alias</span><span class="sxs-lookup"><span data-stu-id="9841a-191">Set-Alias</span></span>](xref:Microsoft.PowerShell.Utility.Set-Alias)
-- [<span data-ttu-id="9841a-192">Export-Alias</span><span class="sxs-lookup"><span data-stu-id="9841a-192">Export-Alias</span></span>](xref:Microsoft.PowerShell.Utility.Export-Alias)
-- [<span data-ttu-id="9841a-193">Import-Alias</span><span class="sxs-lookup"><span data-stu-id="9841a-193">Import-Alias</span></span>](xref:Microsoft.PowerShell.Utility.Import-Alias)
-- [<span data-ttu-id="9841a-194">Get-PSProvider</span><span class="sxs-lookup"><span data-stu-id="9841a-194">Get-PSProvider</span></span>](xref:Microsoft.PowerShell.Management.Get-PSProvider)
-- [<span data-ttu-id="9841a-195">Get-PSDrive</span><span class="sxs-lookup"><span data-stu-id="9841a-195">Get-PSDrive</span></span>](xref:Microsoft.PowerShell.Management.Get-PSDrive)
-- [<span data-ttu-id="9841a-196">about_functions</span><span class="sxs-lookup"><span data-stu-id="9841a-196">about_functions</span></span>](about_functions.md)
-- [<span data-ttu-id="9841a-197">about_profiles</span><span class="sxs-lookup"><span data-stu-id="9841a-197">about_profiles</span></span>](about_profiles.md)
-- [<span data-ttu-id="9841a-198">about_providers</span><span class="sxs-lookup"><span data-stu-id="9841a-198">about_providers</span></span>](about_providers.md)
+- [<span data-ttu-id="61642-189">New-Alias</span><span class="sxs-lookup"><span data-stu-id="61642-189">New-Alias</span></span>](xref:Microsoft.PowerShell.Utility.New-Alias)
+- [<span data-ttu-id="61642-190">Get-Alias</span><span class="sxs-lookup"><span data-stu-id="61642-190">Get-Alias</span></span>](xref:Microsoft.PowerShell.Utility.Get-Alias)
+- [<span data-ttu-id="61642-191">Set-Alias</span><span class="sxs-lookup"><span data-stu-id="61642-191">Set-Alias</span></span>](xref:Microsoft.PowerShell.Utility.Set-Alias)
+- [<span data-ttu-id="61642-192">Export-Alias</span><span class="sxs-lookup"><span data-stu-id="61642-192">Export-Alias</span></span>](xref:Microsoft.PowerShell.Utility.Export-Alias)
+- [<span data-ttu-id="61642-193">Import-Alias</span><span class="sxs-lookup"><span data-stu-id="61642-193">Import-Alias</span></span>](xref:Microsoft.PowerShell.Utility.Import-Alias)
+- [<span data-ttu-id="61642-194">Get-PSProvider</span><span class="sxs-lookup"><span data-stu-id="61642-194">Get-PSProvider</span></span>](xref:Microsoft.PowerShell.Management.Get-PSProvider)
+- [<span data-ttu-id="61642-195">Get-PSDrive</span><span class="sxs-lookup"><span data-stu-id="61642-195">Get-PSDrive</span></span>](xref:Microsoft.PowerShell.Management.Get-PSDrive)
+- [<span data-ttu-id="61642-196">about_functions</span><span class="sxs-lookup"><span data-stu-id="61642-196">about_functions</span></span>](about_functions.md)
+- [<span data-ttu-id="61642-197">about_profiles</span><span class="sxs-lookup"><span data-stu-id="61642-197">about_profiles</span></span>](about_profiles.md)
+- [<span data-ttu-id="61642-198">about_providers</span><span class="sxs-lookup"><span data-stu-id="61642-198">about_providers</span></span>](about_providers.md)
 
 <!-- External links -->
 [aliasinfo]: /dotnet/api/system.management.automation.aliasinfo
