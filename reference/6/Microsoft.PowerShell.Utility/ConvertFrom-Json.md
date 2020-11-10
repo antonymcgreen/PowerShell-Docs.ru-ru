@@ -7,12 +7,12 @@ ms.date: 10/19/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertFrom-Json
-ms.openlocfilehash: 50372f0b938a1f8b051ec799ecfa94498b72dbc5
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 0cf439651d3382ce5abf3e5de4812df92cb8492d
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93233005"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389850"
 ---
 # ConvertFrom-Json
 
@@ -27,7 +27,7 @@ ConvertFrom-Json [-InputObject] <String> [-AsHashtable] [-Depth <Int32>] [<Commo
 
 ## DESCRIPTION
 
-`ConvertFrom-Json`Командлет преобразует строку в формате нотация объектов JavaScript (JSON) в пользовательский объект **PSCustomObject** , имеющий свойство для каждого поля в строке JSON. Формат JSON обычно используется на веб-сайтах для текстового представления объектов. Стандарт JSON не запрещает использование, которое запрещено **PSCustomObject** . Например, если строка JSON содержит дублирующиеся ключи, этот командлет использует только последний ключ. См. Другие примеры ниже.
+`ConvertFrom-Json`Командлет преобразует строку в формате нотация объектов JavaScript (JSON) в пользовательский объект **PSCustomObject** , имеющий свойство для каждого поля в строке JSON. Формат JSON обычно используется на веб-сайтах для текстового представления объектов. Стандарт JSON не запрещает использование, которое запрещено **PSCustomObject**. Например, если строка JSON содержит дублирующиеся ключи, этот командлет использует только последний ключ. См. Другие примеры ниже.
 
 Чтобы создать строку JSON из любого объекта, используйте `ConvertTo-Json` командлет.
 
@@ -40,7 +40,7 @@ ConvertFrom-Json [-InputObject] <String> [-AsHashtable] [-Depth <Int32>] [<Commo
 
 ### Пример 1. преобразование объекта DateTime в объект JSON
 
-Эта команда использует `ConvertTo-Json` `ConvertFrom-Json` командлеты и для преобразования объекта **DateTime** из `Get-Date` командлета в объект JSON и затем в **PSCustomObject** .
+Эта команда использует `ConvertTo-Json` `ConvertFrom-Json` командлеты и для преобразования объекта **DateTime** из `Get-Date` командлета в объект JSON и затем в **PSCustomObject**.
 
 ```powershell
 Get-Date | Select-Object -Property * | ConvertTo-Json | ConvertFrom-Json

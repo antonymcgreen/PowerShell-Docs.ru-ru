@@ -7,12 +7,12 @@ ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: 9827c4e2ca56c90528726378290a9ca04fe54d00
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+ms.openlocfilehash: 5bc474883029f59eda199a5d93ef8a229c0f887e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "93229657"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389221"
 ---
 # Export-PSSession
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -CommandName
 
-Экспортирует только команды с указанными именами или шаблонами имен. Разрешено использовать подстановочные знаки. Используйте **CommandName** или его псевдоним, **имя** .
+Экспортирует только команды с указанными именами или шаблонами имен. Разрешено использовать подстановочные знаки. Используйте **CommandName** или его псевдоним, **имя**.
 
 По умолчанию `Export-PSSession` экспортирует все команды из PSSession, за исключением команд, имена которых совпадают с именами команд в текущем сеансе. Это предотвращает скрытие и замену команд в текущем сеансе командами. Чтобы экспортировать все команды, даже те, которые скрывают или заменяют другие команды, используйте параметр **AllowClobber** .
 
@@ -201,7 +201,7 @@ Accept wildcard characters: True
 
 ### -CommandType
 
-Экспортирует только указанные типы объектов команд. Используйте параметр **CommandType** или его псевдоним **Type** .
+Экспортирует только указанные типы объектов команд. Используйте параметр **CommandType** или его псевдоним **Type**.
 
 Для этого параметра допустимы следующие значения:
 
@@ -213,7 +213,7 @@ Accept wildcard characters: True
 - Екстерналскрипт. Все PS1-файлы в путях, указанных в переменной среды PATH ( `$env:path` ).
 - Фильтр и функция. Все функции PowerShell.
 - Скрипт. блоки скриптов в текущем сеансе.
-- Процессов. Рабочий процесс PowerShell. Дополнительные сведения см. в разделе [about_Workflows](/powershell/module/psworkflow/about/about_workflows?view=powershell-5.1).
+- Процессов. Рабочий процесс PowerShell. Дополнительные сведения см. в разделе [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows.md).
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -299,16 +299,14 @@ Accept wildcard characters: False
 
 ### -FullyQualifiedModule
 
-Указывает модули с именами, указанными в форме объектов **ModuleSpecification** .
-См. раздел "Примечания" [конструктора ModuleSpecification (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
+Указывает модули с именами, указанными в форме объектов **ModuleSpecification** . См. раздел "Примечания" [конструктора ModuleSpecification (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
 
 Например, параметр **FullyQualifiedModule** принимает имя модуля, указанное в одном из следующих форматов:
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
-
-Параметры **ModuleName** и **ModuleVersion** обязательны, а **Guid**  — нет. Нельзя указать параметр **FullyQualifiedModule** в той же команде, что и параметр **module** ; два параметра являются взаимоисключающими.
+Параметры **ModuleName** и **ModuleVersion** обязательны, а **Guid**  — нет. Нельзя указать параметр **FullyQualifiedModule** в той же команде, что и параметр **module** . два параметра являются взаимоисключающими.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ModuleSpecification[]

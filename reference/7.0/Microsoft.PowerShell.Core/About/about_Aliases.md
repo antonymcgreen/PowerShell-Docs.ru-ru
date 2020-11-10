@@ -6,12 +6,12 @@ ms.date: 11/27/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Aliases
-ms.openlocfilehash: 409e6b01f32c5a6f60ac4b450ff08998caf1084a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: e160f1e11ec94142b04aca1dfc27eb24c4148f9b
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232233"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390751"
 ---
 # <a name="about-aliases"></a>About Aliases (О псевдонимах)
 
@@ -171,7 +171,7 @@ Get-Help about_Functions
 
 ## <a name="alias-objects"></a>ПСЕВДОНИМЫ ОБЪЕКТОВ
 
-Псевдонимы PowerShell представлены объектами, которые являются экземплярами класса System. Management. Automation. AliasInfo. Дополнительные сведения об этом типе объектов см. в разделе [класс AliasInfo][aliasinfo] в библиотеке Microsoft Developer Network (MSDN).
+Псевдонимы PowerShell представлены объектами, которые являются экземплярами класса System. Management. Automation. AliasInfo. Дополнительные сведения об этом типе объектов см. в разделе [класс AliasInfo][aliasinfo] в пакете SDK для PowerShell.
 
 Чтобы просмотреть свойства и методы объектов псевдонима, получите псевдонимы.
 Затем передаем их в командлет Get-Member. Пример:

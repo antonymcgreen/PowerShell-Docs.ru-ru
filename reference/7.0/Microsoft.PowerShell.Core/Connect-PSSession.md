@@ -7,12 +7,12 @@ ms.date: 11/06/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/connect-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Connect-PSSession
-ms.openlocfilehash: 3d38ac38fb06f3dd414e9549ea4f279e47b2aff8
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 568fee4f17f44e7bbafe17137ff125cadbd2dd96
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94347369"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391057"
 ---
 # Connect-PSSession
 
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 
 Значение по умолчанию — Default.
 
-Дополнительные сведения о значениях этого параметра см. в разделе [перечисление AuthenticationMechanism](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) в библиотеке MSDN.
+Дополнительные сведения о значениях этого параметра см. в разделе [AuthenticationMechanism enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 > [!CAUTION]
 > Аутентификация CredSSP, в рамках которой учетные данные пользователя передаются на удаленный компьютер для проверки, предназначена для команд, требующих аутентификацию нескольких ресурсов, например для доступа к удаленной сетевой папке. Этот механизм повышает риск безопасности удаленной операции. Если удаленный компьютер скомпрометирован, учетные данные, передаваемые ему, могут использоваться для управления сетевым сеансом.
@@ -610,9 +610,9 @@ Accept wildcard characters: False
 
   Если свойство **Availability** имеет значение None, подключиться к сеансу можно. Значение занято указывает, что невозможно подключиться к сеансу **PSSession** , так как он подключен к другому сеансу.
 
-  Дополнительные сведения о значениях свойства **State** в сеансах см. в разделе [перечисление РУНСПАЦЕСТАТЕ](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate) в библиотеке MSDN.
+  Дополнительные сведения о значениях свойства **State** в сеансах см. в разделе [рунспацестате enumeration](/dotnet/api/system.management.automation.runspaces.runspacestate).
 
-  Дополнительные сведения о значениях свойства **доступность** сеансов см. в разделе [перечисление РУНСПАЦЕАВАИЛАБИЛИТИ](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability) в библиотеке MSDN.
+  Дополнительные сведения о значениях свойства **Availability** сеансов см. в разделе [рунспацеаваилабилити enumeration](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 - Нельзя изменить значение времени ожидания простоя **сеанса PSSession** при подключении к **сеансу PSSession**. Параметр **SessionOption** `Connect-PSSession` принимает объект **SessionOption** , имеющий значение **IdleTimeout** . Однако значение **IdleTimeout** объекта **SessionOption** и значение **IdleTimeout** `$PSSessionOption` переменной не учитывается при соединении с **PSSession**.
 

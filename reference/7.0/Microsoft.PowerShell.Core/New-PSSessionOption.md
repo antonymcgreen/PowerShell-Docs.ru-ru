@@ -7,12 +7,12 @@ ms.date: 02/07/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionOption
-ms.openlocfilehash: 3a9336fedece67c2c84532f226cec01de14cbb2a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 6002003b413cede3cbdb0eeeb40646facb566f61
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226001"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389765"
 ---
 # New-PSSessionOption
 
@@ -532,7 +532,7 @@ Accept wildcard characters: False
 
 По умолчанию используется None.
 
-Сведения о значениях этого параметра см. в разделе [Проксякцесстипе enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Сведения о значениях этого параметра см. в разделе [Проксякцесстипе enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype).
 
 ```yaml
 Type: System.Management.Automation.Remoting.ProxyAccessType
@@ -551,7 +551,7 @@ Accept wildcard characters: False
 
 Задает метод аутентификации, используемый для разрешения прокси-сервера. Допустимые значения для этого параметра: **Basic** , **Digest** и **Negotiate**. Значение по умолчанию — **Negotiate**.
 
-Дополнительные сведения о значениях этого параметра см. в разделе [AuthenticationMechanism enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Дополнительные сведения о значениях этого параметра см. в разделе [AuthenticationMechanism enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 ```yaml
 Type: System.Management.Automation.Runspaces.AuthenticationMechanism
