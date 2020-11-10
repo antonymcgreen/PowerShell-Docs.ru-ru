@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: b0177a00bbbf93659775ee94f7d4898a99f570f3
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 5c7783cb6f865aead9aae7ae0df77d9ee2db7b16
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94345584"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391363"
 ---
 # Receive-PSSession
 
@@ -789,7 +789,7 @@ Accept wildcard characters: False
 - Значение свойства **State** определяется текущим сеансом. Значение disconnected означает, что **сеанс PSSession** не подключен к текущему сеансу. Однако это не означает, что **сеанс PSSession** отключен от всех сеансов. Он может быть подключен к другому сеансу.
   Определить возможность подключения или повторного подключения к сеансу позволяет свойство **Availability**.
 - Если свойство **Availability** имеет значение None, подключиться к сеансу можно. Значение занято указывает, что невозможно подключиться к сеансу **PSSession** , так как он подключен к другому сеансу.
-- Дополнительные сведения о значениях свойства **State** в сеансах см. в разделе [РУНСПАЦЕСТАТЕ](/dotnet/api/system.management.automation.runspaces.runspacestate) в библиотеке MSDN.
+- Дополнительные сведения о значениях свойства **State** в сеансах см. в разделе [рунспацестате](/dotnet/api/system.management.automation.runspaces.runspacestate).
 - Дополнительные сведения о значениях свойства **Availability** сеансов см. в разделе [рунспацеаваилабилити](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 ## Связанные ссылки

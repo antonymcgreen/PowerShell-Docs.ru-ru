@@ -6,12 +6,12 @@ ms.date: 11/28/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Hash_Tables
-ms.openlocfilehash: 0c4c54ea0ac017f0238ea5766c3489a1918d8fdd
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 26d5aad01833bc564ad65f2dcd141c7f57042431
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231113"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391397"
 ---
 # <a name="about-hash-tables"></a>О хэш-таблицах
 
@@ -245,20 +245,20 @@ Remove(Key)
 $hash.Remove("Time")
 ```
 
-Вы можете использовать все свойства и методы объектов Hashtable в PowerShell, включая Contains, Clear, Clone и CopyTo. Дополнительные сведения об объектах Hashtable см. в разделе "System. Collections. Hashtable" на сайте MSDN.
+Вы можете использовать все свойства и методы объектов Hashtable в PowerShell, включая Contains, Clear, Clone и CopyTo. Дополнительные сведения об объектах Hashtable см. в разделе [System. Collections. Hashtable](/dotnet/api/system.collections.hashtable).
 
 ### <a name="object-types-in-hashtables"></a>Типы объектов в хэш-таблицах
 
 Ключи и значения в хэш-таблице могут иметь любой тип объекта .NET, а одна хэш-таблица может иметь ключи и значения нескольких типов.
 
-Следующая инструкция создает хэш-таблицу строк имени процесса и значения объекта Process и сохраняет их в \$ переменной p.
+Следующая инструкция создает хэш-таблицу строк имени процесса и значения объекта Process и сохраняет их в `$p` переменной.
 
 ```powershell
 $p = @{"PowerShell" = (Get-Process PowerShell);
 "Notepad" = (Get-Process notepad)}
 ```
 
-Можно отобразить хэш-таблицу в \$ p и использовать свойства Key-Name для вывода значений.
+Можно отобразить хэш-таблицу в `$p` и использовать свойства Key-Name для вывода значений.
 
 ```powershell
 C:\PS> $p
@@ -279,7 +279,7 @@ C:\PS> $p.keys | foreach {$p.$_.handles}
 251
 ```
 
-Ключи в хэш-таблице могут также иметь любой тип .NET. Следующая инструкция добавляет пару "ключ-значение" в хэш-таблицу в \$ переменной p. Ключ — это объект службы, представляющий службу WinRM, а значение — Текущее состояние службы.
+Ключи в хэш-таблице могут также иметь любой тип .NET. Следующая инструкция добавляет пару "ключ-значение" в хэш-таблицу в `$p` переменной. Ключ — это объект службы, представляющий службу WinRM, а значение — Текущее состояние службы.
 
 ```powershell
 C:\PS> $p = $p + @{(Get-Service WinRM) = ((Get-Service WinRM).Status)}
@@ -308,7 +308,7 @@ C:\PS> $p.keys | foreach {$_.name}
 winrm
 ```
 
-Ключи и значения в хэш-таблице также могут быть объектами Hashtable. Следующая инструкция добавляет пару "ключ-значение" в хэш-таблицу в \$ переменной p, в которой ключ является строкой, Hash2, а значение — хэш-таблицей с тремя парами "ключ-значение".
+Ключи и значения в хэш-таблице также могут быть объектами Hashtable. Следующая инструкция добавляет пару "ключ-значение" в хэш-таблицу в `$p` переменной, в которой ключ является строкой, Hash2, а значение — хэш-таблицей с тремя парами "ключ-значение".
 
 ```powershell
 C:\PS> $p = $p + @{"Hash2"= @{a=1; b=2; c=3}}
@@ -344,7 +344,7 @@ C:\PS> $p.Hash2.b
 
 Хотя хэш-таблицу нельзя отсортировать, можно использовать метод GetEnumerator хэш-таблиц для перечисления ключей и значений, а затем использовать командлет Sort-Object для сортировки перечисленных значений для вывода.
 
-Например, приведенные ниже команды перечисляют ключи и значения в хэш-таблице в \$ переменной p, а затем сортируют эти ключи в алфавитном порядке.
+Например, следующие команды перечисляют ключи и значения в хэш-таблице в `$p` переменной, а затем сортируют эти ключи в алфавитном порядке.
 
 ```powershell
 C:\PS> $p.GetEnumerator() | Sort-Object -Property key
@@ -432,4 +432,3 @@ Msg1                           Type "Windows".
 [Import-LocalizedData](xref:Microsoft.PowerShell.Utility.Import-LocalizedData)
 
 [System.Collections.Hashtable](/dotnet/api/system.collections.hashtable)
-
