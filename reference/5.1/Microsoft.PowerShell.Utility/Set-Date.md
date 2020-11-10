@@ -7,12 +7,12 @@ ms.date: 4/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-date?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Date
-ms.openlocfilehash: c3cc162fdb8b3d04236f2186438fa14b8a0b42b3
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 36e49d36ffe7e4000926cf821767dfb158efcf46
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227514"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387980"
 ---
 # Set-Date
 
@@ -131,12 +131,9 @@ Accept wildcard characters: False
 
 Указывает, какие элементы даты и времени отображаются. Допустимые значения для этого параметра:
 
-- **Дата** .
-  Отображает только дату.
-- **Время** .
-  Отображает только время.
-- **Дата и время** .
-  Отображает дату и время.
+- **Дата** — отображает только дату.
+- **Время** — отображает только время.
+- **DateTime** — отображает дату и время.
 
 Этот параметр влияет только на отображаемые значения
 Он не влияет на объект **DateTime** , который `Get-Date` получает.
@@ -206,9 +203,9 @@ Accept wildcard characters: False
 ## ПРИМЕЧАНИЯ
 
 - Используйте этот командлет с осторожностью при изменении даты и времени на компьютере. Из-за изменения даты или времени компьютер может не получать системные события и обновления, которые запускаются в определенный день или момент времени. Используйте параметры **WhatIf** и **Confirm** , чтобы избежать ошибок.
-- Вы можете использовать стандартные методы .NET с объектами **DateTime** и **TimeSpan** , которые используются с `Set-Date` , например **AddDays** , **аддмонсс** и **фромфилетиме** . Дополнительные сведения см. в разделе [методы DateTime](/dotnet/api/system.datetime) и
+- Вы можете использовать стандартные методы .NET с объектами **DateTime** и **TimeSpan** , которые используются с `Set-Date` , например **AddDays** , **аддмонсс** и **фромфилетиме**. Дополнительные сведения см. в разделе [методы DateTime](/dotnet/api/system.datetime) и
 
-  [Методы TimeSpan](/dotnet/api/system.timespan) в библиотеке MSDN.
+  [Методы TimeSpan](/dotnet/api/system.timespan) в пакете SDK для .NET.
 
 ## Связанные ссылки
 

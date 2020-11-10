@@ -7,12 +7,12 @@ ms.date: 02/07/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionOption
-ms.openlocfilehash: 10f086c3fc2090681f669d481eb880d81ea9d245
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 07879656c2c92ee366b68ce34815a9fbdff9cb83
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228869"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387470"
 ---
 # New-PSSessionOption
 
@@ -216,7 +216,7 @@ Invoke-Command -Session $s {
 Just testing.
 ```
 
-Первая команда создает хэш-таблицу с двумя ключами, **группой** и **использованием** . Команда сохраняет хэш-таблицу в `$team` переменной. Дополнительные сведения о хэш-таблицах см. [здесь](about/about_Hash_Tables.md).
+Первая команда создает хэш-таблицу с двумя ключами, **группой** и **использованием**. Команда сохраняет хэш-таблицу в `$team` переменной. Дополнительные сведения о хэш-таблицах см. [здесь](about/about_Hash_Tables.md).
 
 Затем `New-PSSessionOption` командлет, использующий параметр **аппликатионаргументс** , создает объект параметра сеанса, сохраненный в `$team` переменной. При `New-PSSessionOption` создании объекта параметра сеанса он автоматически преобразует хэш-таблицу в значение параметра **аппликатионаргументс** в словарь примитива, чтобы данные могли быть надежно переданы в удаленный сеанс.
 
@@ -495,7 +495,7 @@ Accept wildcard characters: False
 
 Определяет порядок управления выходным потоком команды в отключенных сеансах при заполнении .
 
-Если в сеансе или его конфигурации не задан режим буферизации выходных данных, используется значение по умолчанию **Block** . Пользователи также могут изменять режим буферизации выходных данных при отключении сеанса.
+Если в сеансе или его конфигурации не задан режим буферизации выходных данных, используется значение по умолчанию **Block**. Пользователи также могут изменять режим буферизации выходных данных при отключении сеанса.
 
 Если этот параметр не задан, значение параметра **аутпутбуфферингмоде** объекта параметра Session не равно None. Значение **Block** или **Drop** переопределяет параметр режим буферизации выходных данных, заданный в конфигурации сеанса. Допустимые значения для этого параметра:
 
@@ -532,7 +532,7 @@ Accept wildcard characters: False
 
 По умолчанию используется None.
 
-Сведения о значениях этого параметра см. в разделе [Проксякцесстипе enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Сведения о значениях этого параметра см. в разделе [Проксякцесстипе enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype).
 
 ```yaml
 Type: System.Management.Automation.Remoting.ProxyAccessType
@@ -549,9 +549,9 @@ Accept wildcard characters: False
 
 ### -Проксяусентикатион
 
-Задает метод аутентификации, используемый для разрешения прокси-сервера. Допустимые значения для этого параметра: **Basic** , **Digest** и **Negotiate** . Значение по умолчанию — **Negotiate** .
+Задает метод аутентификации, используемый для разрешения прокси-сервера. Допустимые значения для этого параметра: **Basic** , **Digest** и **Negotiate**. Значение по умолчанию — **Negotiate**.
 
-Дополнительные сведения о значениях этого параметра см. в разделе [AuthenticationMechanism enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Дополнительные сведения о значениях этого параметра см. в разделе [AuthenticationMechanism enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 ```yaml
 Type: System.Management.Automation.Runspaces.AuthenticationMechanism

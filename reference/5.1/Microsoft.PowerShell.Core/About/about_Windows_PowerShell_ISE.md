@@ -6,12 +6,12 @@ ms.date: 01/03/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_windows_powershell_ise?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Windows_PowerShell_ISE
-ms.openlocfilehash: ec99dec9ea5012b41c10a56a688b23a6fa2c9dd8
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: ff543024d7c62c70217eeaf3ded192a5a24c4757
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232249"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388847"
 ---
 # <a name="about-windows-powershell-ise"></a>О интегрированной среде сценариев Windows PowerShell
 
@@ -121,7 +121,7 @@ cls
 Так как интегрированная среда сценариев Windows PowerShell требует пользовательского интерфейса, она не работает в установках Server Core Windows Server. Однако при добавлении функции интегрированной среды сценариев Windows PowerShell установка автоматически преобразуется в сервер с помощью графического пользовательского интерфейса.
 
 Интегрированная среда сценариев Windows PowerShell основана на Windows Presentation Foundation (WPF).
-Если графические элементы интегрированной среды сценариев Windows PowerShell неправильно отображаются в системе, эту проблему можно устранить, добавив или изменив параметры отрисовки графики "отключить аппаратное ускорение WPF" в системе. Дополнительные сведения см. в разделе [параметры реестра для отрисовки графики](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings) в библиотеке MSDN.
+Если графические элементы интегрированной среды сценариев Windows PowerShell неправильно отображаются в системе, эту проблему можно устранить, добавив или изменив параметры отрисовки графики "отключить аппаратное ускорение WPF" в системе. Более подробную информацию см. в разделе [Настройки реестра графической отрисовки](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings).
 
 ## <a name="see-also"></a>СМ. ТАКЖЕ
 

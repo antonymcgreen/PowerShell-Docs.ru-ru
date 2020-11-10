@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/select-xml?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Select-Xml
-ms.openlocfilehash: eb5684ed281b3ba05629528bb12b44577f8c050a
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 7e3d02dedb9f7809a8f8e1c657987fef8ec38fa9
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93229741"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387997"
 ---
 # Select-Xml
 
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-* XPath — это стандартный язык, предназначенный для определения частей XML-документа. Дополнительные сведения о языке XPath см. в разделах [Справочник по XPath](https://msdn.microsoft.com/library/ms256115) и фильтры выбора в [выборе событий](https://msdn.microsoft.com/library/aa385231) в библиотеке MSDN.
+XPath — это стандартный язык, предназначенный для определения частей XML-документа. Дополнительные сведения о языке XPath см. в разделах [Справочник по XPath](/dotnet/standard/data/xml/select-nodes-using-xpath-navigation) и фильтры выбора в разделе [Выбор событий](/previous-versions//aa385231(v=vs.85)).
 
 ## Связанные ссылки
 

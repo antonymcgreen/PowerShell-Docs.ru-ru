@@ -7,12 +7,12 @@ ms.date: 04/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: ff1b709b363684e27a1f4eb8fdeada2d5ae1d588
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 5aa9b9967ec6a79a569c9f0e7ca93db9e9e4d5b6
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226182"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387045"
 ---
 # Export-PSSession
 
@@ -213,7 +213,7 @@ Accept wildcard characters: True
 - Екстерналскрипт. Все PS1-файлы в путях, указанных в переменной среды PATH ( `$env:path` ).
 - Фильтр и функция. Все функции PowerShell.
 - Скрипт. блоки скриптов в текущем сеансе.
-- Процессов. Рабочий процесс PowerShell. Дополнительные сведения см. в разделе [about_Workflows](/powershell/module/psworkflow/about/about_workflows?view=powershell-5.1).
+- Процессов. Рабочий процесс PowerShell. Дополнительные сведения см. в разделе [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows).
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -243,7 +243,6 @@ Accept wildcard characters: False
 - `utf8BOM`: Кодирует в формате UTF-8 с меткой порядка байтов (BOM)
 - `utf8NoBOM`: Кодирует в формате UTF-8 без метки порядка байтов (BOM)
 - `utf32`: Кодируется в формате UTF-32.
-
 
 Начиная с PowerShell 6,2, параметр **кодировки** также разрешает числовые идентификаторы зарегистрированных кодовых страниц (например `-Encoding 1251` ,) или строковых имен зарегистрированных кодовых страниц (например `-Encoding "windows-1251"` ,). Дополнительные сведения см. в документации .NET по [кодированию. codepage](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2).
 
@@ -300,16 +299,14 @@ Accept wildcard characters: False
 
 ### -FullyQualifiedModule
 
-Указывает модули с именами, указанными в форме объектов **ModuleSpecification** .
-См. раздел "Примечания" [конструктора ModuleSpecification (Hashtable)](https://msdn.microsoft.com/library/jj136290).
+Указывает модули с именами, указанными в форме объектов **ModuleSpecification** . См. раздел "Примечания" [конструктора ModuleSpecification (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
 
 Например, параметр **FullyQualifiedModule** принимает имя модуля, указанное в одном из следующих форматов:
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
-
-Параметры **ModuleName** и **ModuleVersion** обязательны, а **Guid**  — нет. Нельзя указать параметр **FullyQualifiedModule** в той же команде, что и параметр **module** ; два параметра являются взаимоисключающими.
+Параметры **ModuleName** и **ModuleVersion** обязательны, а **Guid**  — нет. Нельзя указать параметр **FullyQualifiedModule** в той же команде, что и параметр **module** . два параметра являются взаимоисключающими.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ModuleSpecification[]

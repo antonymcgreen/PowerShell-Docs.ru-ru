@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PSSession
-ms.openlocfilehash: 9d4b683764677288b73ebf801cebbf0aedd8898c
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: cee14ce93af87d33b4d9d9665c3ef5aaa2aec1d5
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93229889"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387453"
 ---
 # Get-PSSession
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 Допустимые значения для этого параметра:
 
 - По умолчанию
-- Базовый
+- Basic
 - CredSSP
 - Digest (дайджест)
 - Kerberos
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 
 Значение по умолчанию — Default.
 
-Дополнительные сведения о значениях этого параметра см. в разделе [перечисление AuthenticationMechanism](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) в библиотеке MSDN.
+Дополнительные сведения о значениях этого параметра см. в разделе [AuthenticationMechanism enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 ВНИМАНИЕ! проверка подлинности поставщика поддержки безопасности учетных данных (CredSSP), в которой учетные данные пользователя передаются на удаленный компьютер для проверки подлинности, предназначена для команд, требующих проверки подлинности в нескольких ресурсах, таких как доступ к удаленной сетевой папке. Этот механизм повышает риск безопасности удаленной операции. Если удаленный компьютер скомпрометирован, учетные данные, передаваемые ему, могут использоваться для управления сетевым сеансом.
 
@@ -693,9 +693,9 @@ Accept wildcard characters: False
 
 Если свойство **Availability** имеет значение **None** , подключиться к сеансу можно. Значение **занято** указывает, что невозможно подключиться к сеансу **PSSession** , так как он подключен к другому сеансу.
 
-Дополнительные сведения о значениях свойства **State** в сеансах см. в разделе [рунспацестате enumeration](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate).
+Дополнительные сведения о значениях свойства **State** в сеансах см. в разделе [рунспацестате enumeration](/dotnet/api/system.management.automation.runspaces.runspacestate).
 
-Дополнительные сведения о значениях свойства **Availability** сеансов см. в разделе [рунспацеаваилабилити enumeration](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability).
+Дополнительные сведения о значениях свойства **Availability** сеансов см. в разделе [рунспацеаваилабилити enumeration](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 ## Связанные ссылки
 

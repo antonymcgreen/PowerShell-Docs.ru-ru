@@ -6,12 +6,12 @@ ms.date: 2/27/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Functions
-ms.openlocfilehash: f033bc36bf67a9d01e3f238645b83df7d75c6963
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: e028ba5f29568c9eb962ee482087ac69a42e84b1
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232038"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94386923"
 ---
 # <a name="about-functions"></a>О функциях
 
@@ -486,9 +486,9 @@ Get-Help Get-MyDisks
 
   Чтобы связать функцию с разделом справки на основе XML, используйте `.ExternalHelp` ключевое слово справки на основе комментариев. Без этого ключевого слова `Get-Help` не удается найти раздел справки по функциям и вызовы для `Get-Help` функции, возвращающие только автоматически созданную справку.
 
-  Дополнительные сведения о `ExternalHelp` ключевом слове см. в разделе [about_Comment_Based_Help](about_Comment_Based_Help.md). Дополнительные сведения о справке на основе XML см. в разделе [как написать справку по командлетам](https://go.microsoft.com/fwlink/?LinkID=123415) в библиотеке MSDN.
+  Дополнительные сведения о `ExternalHelp` ключевом слове см. в разделе [about_Comment_Based_Help](about_Comment_Based_Help.md). Дополнительные сведения о справке на основе XML см. [в разделе как написать справку по командлетам](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 

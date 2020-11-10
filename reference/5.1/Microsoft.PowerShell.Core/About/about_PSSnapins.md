@@ -6,12 +6,12 @@ ms.date: 01/03/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pssnapins?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PSSnapins
-ms.openlocfilehash: cc22f8de0b9d8a55dcfa12f3b47f3852d891e67b
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 494b3275e4fe8a3aacdc358317950542962957cf
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231997"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388898"
 ---
 # <a name="about-pssnapins"></a>О PSSnapin
 
@@ -57,7 +57,7 @@ Get-Command -Module <snap-in_name>
 
 Оснастка Windows PowerShell — это программа, написанная на языке .NET Framework, который компилируется в DLL-файл. Чтобы использовать поставщики и командлеты в оснастке, необходимо сначала зарегистрировать оснастку (добавить ее в реестр).
 
-В большинство оснасток входит программа установки (exe-или MSI-файл), которая регистрирует файл. dll. Однако если вы получаете оснастку в виде DLL-файла, вы можете зарегистрировать ее в системе. Дополнительные сведения см. в разделе [Регистрация командлетов, поставщиков и ведущих приложений](https://go.microsoft.com/fwlink/?LinkID=143619) в библиотеке MSDN.
+В большинство оснасток входит программа установки (exe-или MSI-файл), которая регистрирует файл. dll. Однако если вы получаете оснастку в виде DLL-файла, вы можете зарегистрировать ее в системе. Дополнительные сведения см. [в разделе Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
 
 Чтобы получить все зарегистрированные оснастки в системе или убедиться, что оснастка зарегистрирована, введите:
 

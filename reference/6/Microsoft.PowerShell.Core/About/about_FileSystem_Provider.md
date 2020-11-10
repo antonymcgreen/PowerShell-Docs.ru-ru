@@ -6,23 +6,24 @@ ms.date: 10/18/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Поставщик FileSystem
-ms.openlocfilehash: 24c30e311ba43842e759e884424ce3abfb92aae7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 3464dbcbc1a7f357cdbc5368dc7a1e4d21f5ed5e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231497"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387613"
 ---
 # <a name="filesystem-provider"></a>Поставщик FileSystem
 
 ## <a name="provider-name"></a>Имя поставщика
+
 FileSystem
 
 ## <a name="drives"></a>Диски
 
 `C:`, `D:` ...
 
-## <a name="capabilities"></a>Характеристики
+## <a name="capabilities"></a>Возможности
 
 **Filter** , **ShouldProcess**
 
@@ -205,7 +206,7 @@ $e[0]
 Get-Acl -Path test.txt | Format-List -Property *
 ```
 
-Чтобы получить дополнительные сведения об этом объекте, передайте команду в командлет [Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member) по конвейеру. Или см. раздел "класс[FileSecurity](/dotnet/api/system.security.accesscontrol.filesecurity) " в библиотеке MSDN (сеть разработчиков Microsoft Developer).
+Чтобы получить дополнительные сведения об этом объекте, передайте команду в командлет [Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member) по конвейеру. Или см. раздел класс [FileSecurity](/dotnet/api/system.security.accesscontrol.filesecurity) .
 
 ### <a name="modify-the-acl-for-a-file"></a>Изменение ACL для файла
 
@@ -367,7 +368,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 > [!NOTE]
 > В настоящее время, если значение `-Delimiter` параметра является пустой строкой, командлет [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) не возвращает ничего.
-> Это известная проблема. Чтобы принудительно применить командлет [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) для возврата всего файла в виде единой неразделенной строки, введите значение, которое не существует в файле.
+> Это известная проблема Чтобы принудительно применить командлет [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) для возврата всего файла в виде единой неразделенной строки, введите значение, которое не существует в файле.
 
 #### <a name="cmdlets-supported"></a>Поддерживаемые командлеты
 
@@ -394,7 +395,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 - **Архив**
 - **Compressed**
 - **Устройство**
-- **Каталог**
+- **Каталоги**
 - **Зашифрована**
 - **Скрыта**
 - **Обычный**
@@ -558,6 +559,6 @@ Get-Help Get-ChildItem
 Get-Help Get-ChildItem -Path c:
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [about_Providers](../About/about_Providers.md)

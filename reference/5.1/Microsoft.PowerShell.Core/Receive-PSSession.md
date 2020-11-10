@@ -7,12 +7,12 @@ Module Name: Microsoft.PowerShell.Core
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: 39501e0992ba10ae3638dd5178f2913001b5cd32
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: a1492c1c334feb4df5635b5bfaf435c0815f80ab
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93229770"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388592"
 ---
 # Receive-PSSession
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 Указывает механизм, используемый для проверки подлинности учетных данных пользователя в команде для повторного подключения к отключенному сеансу. Допустимые значения для этого параметра:
 
 - По умолчанию
-- Базовый
+- Basic
 - CredSSP
 - Digest (дайджест)
 - Kerberos
@@ -787,7 +787,7 @@ Accept wildcard characters: False
 - Значение свойства **State** определяется текущим сеансом. Значение disconnected означает, что **сеанс PSSession** не подключен к текущему сеансу. Однако это не означает, что **сеанс PSSession** отключен от всех сеансов. Он может быть подключен к другому сеансу.
   Определить возможность подключения или повторного подключения к сеансу позволяет свойство **Availability**.
 - Если свойство **Availability** имеет значение None, подключиться к сеансу можно. Значение занято указывает, что невозможно подключиться к сеансу **PSSession** , так как он подключен к другому сеансу.
-- Дополнительные сведения о значениях свойства **State** в сеансах см. в разделе [РУНСПАЦЕСТАТЕ](/dotnet/api/system.management.automation.runspaces.runspacestate) в библиотеке MSDN.
+- Дополнительные сведения о значениях свойства **State** в сеансах см. в разделе [рунспацестате](/dotnet/api/system.management.automation.runspaces.runspacestate).
 - Дополнительные сведения о значениях свойства **Availability** сеансов см. в разделе [рунспацеаваилабилити](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 ## Связанные ссылки

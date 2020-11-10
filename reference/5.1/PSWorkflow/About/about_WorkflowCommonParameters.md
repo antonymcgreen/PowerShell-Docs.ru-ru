@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psworkflow/about/about_workflowcommonparameters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_WorkflowCommonParameters
-ms.openlocfilehash: 386200475c1dab9735921edd60abbde20ee354c4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: c371666d4f58386848e7ef715b7c804dc1e8f28e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231593"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387793"
 ---
 # <a name="about-workflowcommonparameters"></a>О Воркфловкоммонпараметерс
 
@@ -79,7 +79,7 @@ ms.locfileid: "93231593"
 
 Значение по умолчанию ― **Default**.
 
-Сведения о значениях этого параметра см. в описании `System.Management.Automation.Runspaces.AuthenticationMechanism` перечисления в MSDN.
+Сведения о значениях этого параметра см. в описании `System.Management.Automation.Runspaces.AuthenticationMechanism` перечисления в пакете SDK для PowerShell.
 
 > [!WARNING]
 > Проверка подлинности CredSSP, при применении которой учетные данные пользователя передаются на удаленный компьютер, предназначена для команд, требующих проверки подлинности для нескольких ресурсов, например для доступа к удаленной сетевой папке. Этот механизм повышает риск безопасности удаленной операции. Если удаленный компьютер скомпрометирован, учетные данные, передаваемые ему, могут использоваться для управления сетевым сеансом.
@@ -91,13 +91,13 @@ ms.locfileid: "93231593"
 
 Допустимые значения:
 
-|name |Описание |
+|Имя |Описание |
 |---------|---------|
 |**Без изменений** | уровень проверки подлинности совпадает с предыдущей командой. |
 |**Default** | Проверка подлинности Windows. |
 |**None** | Проверка подлинности COM не используется.   |
 |**Подключить** | Проверка подлинности COM на уровне подключения.|
-|**Вызов** | Проверка подлинности COM на уровне вызова.   |
+|**Call** | Проверка подлинности COM на уровне вызова.   |
 |**Пакетов** | Проверка подлинности COM на уровне пакета.|
 |**паккетинтегрити** | Проверка подлинности COM на уровне целостности пакета.  |
 |**паккетприваци** | Проверка подлинности COM на уровне конфиденциальности пакета. |

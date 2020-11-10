@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/write-eventlog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Write-EventLog
-ms.openlocfilehash: cae34c4cf942d9aa4abb9a2d716ef9854f70de2e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4044453cb46b407344619f1edd3227213bf67250
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227813"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388252"
 ---
 # Write-EventLog
 
@@ -27,12 +27,11 @@ Write-EventLog [-LogName] <String> [-Source] <String> [[-EntryType] <EventLogEnt
 ```
 
 ## DESCRIPTION
-Командлет **Write-EventLog** записывает событие в журнал событий.
+`Write-EventLog`Командлет записывает событие в журнал событий.
 
 Чтобы событие было записано в журнал событий, он должен существовать на компьютере и иметь зарегистрированный источник.
 
-Командлеты, содержащие существительное в **EventLog** (командлеты **EventLog** ), работают только в классических журналах событий.
-Для получения событий из журналов, использующих технологию журнала событий Windows в Windows Vista и более поздних версиях операционной системы Windows, используйте командлет Get-WinEvent.
+Командлеты, содержащие существительное в **EventLog** (командлеты **EventLog** ), работают только в классических журналах событий. Для получения событий из журналов, использующих технологию журнала событий Windows в Windows Vista и более поздних версиях операционной системы Windows, используйте `Get-WinEvent` командлет.
 
 ## Примеры
 
@@ -55,8 +54,8 @@ PS C:\> Write-EventLog -ComputerName "Server01" -LogName Application -Source "My
 ## PARAMETERS
 
 ### -Category
-Указывает категорию задач для события.
-Введите целочисленное значение, связанное со строками в файле сообщений категорий для журнала событий.
+
+Указывает категорию задач для события. Введите целочисленное значение, связанное со строками в файле сообщений категорий для журнала событий.
 
 ```yaml
 Type: System.Int16
@@ -71,13 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Указывает удаленный компьютер.
-По умолчанию это локальный компьютер.
+
+Указывает удаленный компьютер. По умолчанию это локальный компьютер.
 
 Введите имя NetBIOS, IP-адрес или полное доменное имя удаленного компьютера.
 
-Этот параметр не зависит от удаленного взаимодействия Windows PowerShell.
-Параметр *ComputerName* командлета Get-EventLog можно использовать, даже если компьютер не настроен для выполнения удаленных команд.
+Этот параметр не зависит от удаленного взаимодействия Windows PowerShell. Параметр **ComputerName** командлета можно использовать, `Get-EventLog` даже если компьютер не настроен для выполнения удаленных команд.
 
 ```yaml
 Type: System.String
@@ -92,11 +90,10 @@ Accept wildcard characters: False
 ```
 
 ### -EntryType
-Указывает тип записи события.
-Допустимые значения для этого параметра: Error, Warning, Information, SuccessAudit и FailureAudit.
-По умолчанию используется значение Information.
 
-Описание значений см. в разделе [перечисление евентложентритипе](https://go.microsoft.com/fwlink/?LinkId=143599) в библиотеке MSDN.
+Указывает тип записи события. Допустимые значения для этого параметра: Error, Warning, Information, SuccessAudit и FailureAudit. По умолчанию используется значение Information.
+
+Описание значений см. в разделе [Евентложентритипе enumeration](/dotnet/api/system.diagnostics.eventlogentrytype).
 
 ```yaml
 Type: System.Diagnostics.EventLogEntryType
@@ -112,9 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-Указывает идентификатор события.
-Этот параметр обязателен.
-Максимальное значение для параметра *EventID* — 65535.
+
+Указывает идентификатор события. Этот параметр обязателен. Максимальное значение для параметра **EventID** — 65535.
 
 ```yaml
 Type: System.Int32
@@ -129,10 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -LogName
-Указывает имя журнала, в который записывается событие.
-Введите имя журнала.
-Имя журнала — это значение свойства **log** , а не **LogDisplayName** .
-Подстановочные знаки не допускаются.
+
+Указывает имя журнала, в который записывается событие. Введите имя журнала. Имя журнала — это значение свойства **log** , а не **LogDisplayName**. Подстановочные знаки не допускаются.
 Этот параметр обязателен.
 
 ```yaml
@@ -148,8 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -Message
-Определяет сообщение о событии.
-Этот параметр обязателен.
+
+Определяет сообщение о событии. Этот параметр обязателен.
 
 ```yaml
 Type: System.String
@@ -164,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawData
+
 Указывает двоичные данные, связанные с событием, в байтах.
 
 ```yaml
@@ -179,6 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
+
 Указывает источник события (обычно имя приложения, которое записывает события в журнал).
 
 ```yaml
@@ -194,6 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### Общие параметры
+
 Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable. См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## Входные данные
@@ -208,9 +205,7 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-* Чтобы использовать **Write-EventLog** , запустите Windows PowerShell с помощью команды Запуск от имени администратора.
-
-*
+Для использования `Write-EventLog` запустите Windows PowerShell с помощью команды Запуск от имени администратора.
 
 ## Связанные ссылки
 

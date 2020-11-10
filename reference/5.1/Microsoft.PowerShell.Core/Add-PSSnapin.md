@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/add-pssnapin?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-PSSnapin
-ms.openlocfilehash: 5adba912d91369250ee9891ee2bb2ca0f8cba796
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: a21c2974fd66a9b02929752ae487c8995579b8a7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93226726"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388830"
 ---
 # Add-PSSnapin
 
@@ -136,15 +136,15 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-* Начиная с Windows PowerShell 3.0, основные команды, включенные в Windows PowerShell, упаковываются в модули. В Windows PowerShell 2,0 и в ведущих программах, которые создают сеансы предыдущих версий в более поздних версиях Windows PowerShell, основные команды упаковываются в оснастки (PSSnapin). Исключением является **Microsoft. PowerShell. Core** , который всегда является оснасткой. Кроме того, удаленные сеансы, например, запущенные командлетом New-PSSession, являются сеансами предыдущих версий, включающими основные оснастки.
+- Начиная с Windows PowerShell 3.0, основные команды, включенные в Windows PowerShell, упаковываются в модули. В Windows PowerShell 2,0 и в ведущих программах, которые создают сеансы предыдущих версий в более поздних версиях Windows PowerShell, основные команды упаковываются в оснастки (PSSnapin). Исключением является **Microsoft. PowerShell. Core** , который всегда является оснасткой. Кроме того, удаленные сеансы, например, запущенные командлетом New-PSSession, являются сеансами предыдущих версий, включающими основные оснастки.
 
-  Дополнительные сведения о методе **CreateDefault2** , который создает сеансы более новых версий с основными модулями, см. в разделе [метод CREATEDEFAULT2](https://msdn.microsoft.com/library/system.management.automation.runspaces.initialsessionstate.createdefault2) в библиотеке MSDN.
+  Дополнительные сведения о методе **CreateDefault2** , который создает сеансы нового стиля с основными модулями, см. в разделе [метод CreateDefault2](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2#System_Management_Automation_Runspaces_InitialSessionState_CreateDefault2).
 
-* Дополнительные сведения об оснастках см. в разделе [about_PSSnapins](About/about_PSSnapins.md) и [Создание оснастки Windows PowerShell](/powershell/scripting/developer/cmdlet/how-to-create-a-windows-powershell-snap-in).
-* `Add-PSSnapin` добавляет оснастку только в текущий сеанс. Чтобы оснастка добавлялась во все сеансы Windows PowerShell, вставьте эту команду в профиль Windows PowerShell. Дополнительные сведения см. в разделе about_Profiles.
-* Можно добавить любую оснастку, зарегистрированную с помощью служебной программы установки Microsoft .NET Framework. Дополнительные сведения см. [в разделе Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
-* Чтобы получить список оснасток, зарегистрированных на компьютере, введите `Get-PSSnapin -Registered` .
-* Перед добавлением оснастки `Add-PSSnapin` проверяет версию оснастки, чтобы убедиться, что она совместима с текущей версией Windows PowerShell. Если оснастка не проходит проверку версии, Windows PowerShell сообщает об ошибке.
+- Дополнительные сведения об оснастках см. в разделе [about_PSSnapins](About/about_PSSnapins.md) и [Создание оснастки Windows PowerShell](/powershell/scripting/developer/cmdlet/how-to-create-a-windows-powershell-snap-in).
+- `Add-PSSnapin` добавляет оснастку только в текущий сеанс. Чтобы оснастка добавлялась во все сеансы Windows PowerShell, вставьте эту команду в профиль Windows PowerShell. Дополнительные сведения см. в разделе about_Profiles.
+- Можно добавить любую оснастку, зарегистрированную с помощью служебной программы установки Microsoft .NET Framework. Дополнительные сведения см. [в разделе Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
+- Чтобы получить список оснасток, зарегистрированных на компьютере, введите `Get-PSSnapin -Registered` .
+- Перед добавлением оснастки `Add-PSSnapin` проверяет версию оснастки, чтобы убедиться, что она совместима с текущей версией Windows PowerShell. Если оснастка не проходит проверку версии, Windows PowerShell сообщает об ошибке.
 
 ## Связанные ссылки
 

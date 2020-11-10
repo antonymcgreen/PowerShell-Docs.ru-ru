@@ -6,12 +6,12 @@ ms.date: 07/23/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_desiredstateconfiguration?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_DesiredStateConfiguration
-ms.openlocfilehash: 2f043104c67078b98355b3e54171a8993e534837
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 5d088934ffc953ad19be401bce72f6287f0fde07
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93233109"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387028"
 ---
 # <a name="about_desiredstateconfiguration"></a>about_DesiredStateConfiguration
 
@@ -27,12 +27,12 @@ DSC предоставляет набор расширений языка PowerS
 
 DSC представлен в PowerShell 4,0.
 
-Подробные сведения о DSC см. в статье [Обзор настройки требуемого состояния PowerShell](/powershell/scripting/dsc/overview/overview) в библиотеке TechNet.
+Подробные сведения о DSC см. в статье [Общие сведения о настройке требуемого состояния PowerShell](/powershell/scripting/dsc/overview/overview).
 
 ## <a name="developing-dsc-resources-with-classes"></a>РАЗРАБОТКА РЕСУРСОВ DSC С ПОМОЩЬЮ КЛАССОВ
 
 Начиная с PowerShell 5,0 можно разрабатывать ресурсы DSC с помощью классов.
-Дополнительные сведения см. в статьях [about_Classes](about_Classes.md)и [запись пользовательского ресурса DSC с помощью классов PowerShell](/previous-versions//dn948461(v=technet.10)) в Microsoft TechNet.
+Дополнительные сведения см. в статьях [about_Classes](about_Classes.md)и [запись пользовательского ресурса DSC с помощью классов PowerShell](/powershell/scripting/dsc/resources/authoringresourceclass).
 
 ## <a name="using-dsc"></a>ИСПОЛЬЗОВАНИЕ DSC
 
@@ -102,16 +102,16 @@ Test-DscConfiguration -CimSession $session
 
 В скриптах конфигурации можно использовать следующие встроенные ресурсы:
 
-|name                  |Свойства                                         |
+|Имя                  |Свойства                                         |
 |----------------------|---------------------------------------------------|
 |Файл                  |{DestinationPath, атрибуты, контрольная сумма, содержимое...}|
 |Архив               |{Назначение, путь, контрольная сумма, учетные данные...}       |
 |Среда           |{Name, DependsOn, убедитесь, что путь...}                 |
-|Group                 |{GroupName, Credential, DependsOn, описание...} |
+|Группа                 |{GroupName, Credential, DependsOn, описание...} |
 |Журнал                   |{Message, DependsOn, PsDscRunAsCredential}         |
 |Пакет               |{Name, Path, ProductId, arguments...}              |
 |Реестр              |{Key, ValueName, DependsOn, убедитесь, что...}             |
-|Сценарий                |{Надстрочный, SetScript, TestScript, Credential...}  |
+|Скрипт                |{Надстрочный, SetScript, TestScript, Credential...}  |
 |Служба               |{Name, Буилтинаккаунт, Credentials, DEPENDENCIES...}|
 |Пользователь                  |{UserName, DependsOn, описание, отключено...}    |
 |WaitForAll            |{NodeName, ResourceName, DependsOn, Псдскрунаск...}|

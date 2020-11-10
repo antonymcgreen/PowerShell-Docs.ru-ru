@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psworkflow/about/about_activitycommonparameters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_ActivityCommonParameters
-ms.openlocfilehash: b745bf17e4ae26156042ecdc25211830177bc692
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 93fdcdb9c5afe0b73e843baf2474ec7d3f96a6cf
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231622"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387810"
 ---
 # <a name="about-activitycommonparameters"></a>О Активитикоммонпараметерс
 
@@ -150,7 +150,7 @@ Workflow Test-Workflow
 
 Указывает механизм, используемый для проверки подлинности учетных данных пользователя при подключении к конечным компьютерам. Допустимые значения: Default, Basic, Credssp, Digest, Kerberos, Negotiate и NegotiateWithImplicitCredential. Значение по умолчанию — Default. Этот общий параметр действия также является общим параметром рабочего процесса.
 
-Сведения о значениях этого параметра см. в описании перечисления **System.Management.Automation.Runspaces.AuthenticationMechanism** в библиотеке MSDN.
+Сведения о значениях этого параметра см. в описании перечисления **System. Management. Automation. пространства. AuthenticationMechanism** в пакете SDK для PowerShell.
 
 > [!WARNING]
 > Проверка подлинности CredSSP, при применении которой учетные данные пользователя передаются на удаленный компьютер, предназначена для команд, требующих проверки подлинности для нескольких ресурсов, например для доступа к удаленной сетевой папке. Этот механизм повышает риск безопасности удаленной операции. Если удаленный компьютер скомпрометирован, учетные данные, передаваемые ему, могут использоваться для управления сетевым сеансом.
