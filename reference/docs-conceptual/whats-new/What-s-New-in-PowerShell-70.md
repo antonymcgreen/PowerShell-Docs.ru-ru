@@ -2,12 +2,12 @@
 title: Новые возможности PowerShell 7.0
 description: Новые возможности и изменения в PowerShell 7.0
 ms.date: 03/04/2020
-ms.openlocfilehash: d52b536efd9d7a1f8e6b01a58952f08ca49016b1
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
+ms.openlocfilehash: 3a5a1aaa0bd9dd1e0df7d6f5e6021678ed21dce4
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162466"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355278"
 ---
 # <a name="whats-new-in-powershell-70"></a>Новые возможности PowerShell 7.0
 
@@ -42,14 +42,14 @@ PowerShell 7 в настоящее время поддерживает след
 
 Кроме того, PowerShell 7.0 поддерживает выпуски Debian и Ubuntu для ARM32 и ARM64, а также Alpine Linux для ARM64.
 
-Обратитесь к инструкциям по установке для вашей операционной системы: [Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7), [macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7) или [Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7).
+Обратитесь к инструкциям по установке для вашей операционной системы: [Windows](/powershell/scripting/install/installing-powershell-core-on-windows), [macOS](/powershell/scripting/install/installing-powershell-core-on-macos) или [Linux](/powershell/scripting/install/installing-powershell-core-on-linux).
 
 Сообщество также предоставило пакеты для [Arch](https://aur.archlinux.org/packages/powershell/) и Kali Linux, хотя они не поддерживаются официально.
 
 > [!NOTE]
-> В настоящее время Debian 10 и CentOS 8 не поддерживают удаленное взаимодействие WinRM. Подробные сведения о настройке удаленного взаимодействия на основе SSH см. в статье [Удаленное взаимодействие с PowerShell через SSH](/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7).
+> В настоящее время Debian 10 и CentOS 8 не поддерживают удаленное взаимодействие WinRM. Подробные сведения о настройке удаленного взаимодействия на основе SSH см. в статье [Удаленное взаимодействие с PowerShell через SSH](/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core).
 
-Более актуальные сведения о поддерживаемых операционных системах и жизненном цикле поддержки см. в статье [Жизненный цикл поддержки PowerShell](/powershell/scripting/powershell-support-lifecycle?view=powershell-7).
+Более актуальные сведения о поддерживаемых операционных системах и жизненном цикле поддержки см. в статье [Жизненный цикл поддержки PowerShell](/powershell/scripting/powershell-support-lifecycle).
 
 ## <a name="running-powershell-7"></a>Запуск PowerShell 7
 
@@ -72,7 +72,7 @@ PowerShell 7 устанавливается в каталог отдельно 
 
 Выпуск PowerShell 7.0 знаменует переход на .NET Core 3.1, благодаря чему обеспечивается значительно более полная обратная совместимость с существующими модулями Windows PowerShell. Это относится ко многим модулям в Windows, которым требуются возможности графического пользовательского интерфейса, таким как `Out-GridView` и `Show-Command`, а также ко многим модулям управления ролями, поставляемым с Windows.
 
-В Windows для командлета `Import-Module` добавлен новый параметр **UseWindowsPowerShell**. Он создает модуль прокси в PowerShell 7, который использует локальный процесс Windows PowerShell для неявного выполнения командлетов, содержащихся в этом модуле. Дополнительные сведения см. в статье [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7).
+В Windows для командлета `Import-Module` добавлен новый параметр **UseWindowsPowerShell**. Он создает модуль прокси в PowerShell 7, который использует локальный процесс Windows PowerShell для неявного выполнения командлетов, содержащихся в этом модуле. Дополнительные сведения см. в статье [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7&preserve-view=true).
 
 Дополнительные сведения о модулях Майкрософт, работающих с PowerShell 7.0, см. в [таблице совместимости модулей](https://aka.ms/PSModuleCompat).
 
@@ -102,7 +102,7 @@ $logEntries.Count
 
 Используйте переменную `$_` для представления текущего входного объекта в блоке скрипта. Используйте область `$using:` для передачи ссылок на переменные в выполняемый блок скрипта.
 
-См. дополнительные сведения о командлете [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7).
+См. дополнительные сведения о командлете [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7&preserve-view=true).
 
 ## <a name="ternary-operator"></a>Тернарный оператор
 
@@ -126,11 +126,11 @@ $message = (Test-Path $path) ? "Path exists" : "Path not found"
 
 В этом примере, если путь существует, выводится сообщение **Path exists** (Путь существует). Если путь не существует, выводится сообщение **Path not found** (Путь не найден).
 
-Дополнительные сведения см. в статье об [операторе If](/powershell/module/microsoft.powershell.core/about/about_if?view=powershell-7).
+Дополнительные сведения см. в статье об [операторе If](/powershell/module/microsoft.powershell.core/about/about_if).
 
 ## <a name="pipeline-chain-operators"></a>Операторы сцепления конвейеров
 
-В PowerShell 7 реализованы операторы `&&` и `||` для условного сцепления конвейеров. Они называются в PowerShell операторами сцепления конвейеров и похожи на списки И и ИЛИ в таких оболочках, как **Bash** и **Zsh**, а также на символы условной обработки в командной оболочке Windows Shell (**cmd.exe**).
+В PowerShell 7 реализованы операторы `&&` и `||` для условного сцепления конвейеров. Они называются в PowerShell операторами сцепления конвейеров и похожи на списки И и ИЛИ в таких оболочках, как **Bash** и **Zsh** , а также на символы условной обработки в командной оболочке Windows Shell ( **cmd.exe** ).
 
 Оператор `&&` выполняет конвейер в правой части, если конвейер в левой части был выполнен успешно. И наоборот, оператор `||` выполняет конвейер в правой части, если конвейер в левой части не удалось выполнить.
 
@@ -179,7 +179,7 @@ Write-Error 'Bad'
 Second
 ```
 
-См. дополнительные сведения об [операторах сцепления конвейеров](/powershell/module/microsoft.powershell.core/about/about_pipeline_chain_operators?view=powershell-7).
+См. дополнительные сведения об [операторах сцепления конвейеров](/powershell/module/microsoft.powershell.core/about/about_pipeline_chain_operators?view=powershell-7&preserve-view=true).
 
 ## <a name="null-coalescing-assignment-and-conditional-operators"></a>Операторы объединения со значением NULL, присваивания значения NULL и условные операторы со значением NULL
 
@@ -226,14 +226,14 @@ $todaysDate ??= (Get-Date).ToShortDateString()
 ### <a name="null-conditional-member-access-operators--and--experimental"></a>Операторы доступа к членам, определяемого условием NULL: ?. и ?[] (экспериментальная функция)
 
 > [!NOTE]
-> Это экспериментальная функция под названием **PSNullConditionalOperators**. См. дополнительные сведения об [экспериментальных функциях](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7).
+> Это экспериментальная функция под названием **PSNullConditionalOperators**. Дополнительные сведения: [Использование экспериментальных функций](/powershell/scripting/learn/experimental-features).
 
 Условный оператор со значением NULL разрешает доступ к операнду, являющемуся членом (`?.`) или элементом (`?[]`), только если значение операнда отлично от NULL. В противном случае он возвращает значение NULL.
 
 > [!NOTE]
 > Так как в PowerShell символ `?` может быть частью имени переменной, для использования этих операторов требуется формальное указание имени переменной. Поэтому имена переменных необходимо заключать в фигурные скобки `{}`, например `${a}`, в том числе если имена содержат символ `?`: `${a?}`.
 
-В следующем примере возвращается значение свойства члена **Status**:
+В следующем примере возвращается значение свойства члена **Status** :
 
 ```powershell
 $Service = Get-Service -Name 'bits'
@@ -241,7 +241,7 @@ ${Service}?.status
 Stopped
 ```
 
-В следующем примере возвращается значение NULL без попытки доступа к элементу **Status**:
+В следующем примере возвращается значение NULL без попытки доступа к элементу **Status** :
 
 ```powershell
 $service = $Null
@@ -263,7 +263,7 @@ $a = $null
 ${a}?[0]
 ```
 
-См. дополнительные сведения об [операторах](/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7).
+См. дополнительные сведения об [операторах](/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&preserve-view=true).
 
 ## <a name="new-view-conciseview-and-cmdlet-get-error"></a>Новое представление ConciseView и командлет Get-Error
 
@@ -283,7 +283,7 @@ Get-ChildItem: Cannot find path 'C:\NotReal' because it does not exist
 
 ![Отображение ошибки скрипта](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
-В PowerShell 7 представление **ConciseView** используется по умолчанию. Ранее по умолчанию использовалось представление **NormalView**, и его можно выбрать с помощью переменной `$ErrorView`.
+В PowerShell 7 представление **ConciseView** используется по умолчанию. Ранее по умолчанию использовалось представление **NormalView** , и его можно выбрать с помощью переменной `$ErrorView`.
 
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
@@ -291,7 +291,7 @@ $ErrorView = 'ConciseView' # Sets the error view to ConciseView
 ```
 
 > [!NOTE]
-> В `$Host.PrivateData` добавлено новое свойство **ErrorAccentColor**, позволяющее изменять контрастный цвет сообщения об ошибке.
+> В `$Host.PrivateData` добавлено новое свойство **ErrorAccentColor** , позволяющее изменять контрастный цвет сообщения об ошибке.
 
 Новый командлет `Get-Error` позволяет при необходимости получить полную ошибку со всеми подробными сведениями.
 По умолчанию этот командлет выводит полные сведения, включая внутренние исключения, о последней произошедшей ошибке.
@@ -305,13 +305,13 @@ $ErrorView = 'ConciseView' # Sets the error view to ConciseView
 $Error | Get-Error
 ```
 
-Командлет `Get-Error` поддерживает параметр **Newest**, позволяющий указывать, сколько ошибок из текущего сеанса нужно вывести.
+Командлет `Get-Error` поддерживает параметр **Newest** , позволяющий указывать, сколько ошибок из текущего сеанса нужно вывести.
 
 ```powershell
 Get-Error -Newest 3 # Displays the lst three errors that occurred in the session
 ```
 
-См. дополнительные сведения о командлете [Get-Error](/powershell/module/microsoft.powershell.utility/get-error?view=powershell-7).
+См. дополнительные сведения о командлете [Get-Error](/powershell/module/microsoft.powershell.utility/get-error?view=powershell-7&preserve-view=true).
 
 ## <a name="new-version-notification"></a>Уведомление о новой версии
 
@@ -325,11 +325,11 @@ Get-Error -Newest 3 # Displays the lst three errors that occurred in the session
 
 Настроить уведомления об обновлениях можно с помощью переменной среды `$Env:POWERSHELL_UPDATECHECK`. Поддерживаются следующие значения.
 
-- **Default** — равносильно не заданной переменной `$Env:POWERSHELL_UPDATECHECK`.
+- **Default**  — равносильно не заданной переменной `$Env:POWERSHELL_UPDATECHECK`.
   - В общедоступных выпусках выводятся уведомления об обновлениях для общедоступных выпусков.
   - В предварительных выпусках и релизах-кандидатах выводятся уведомления об обновлениях для общедоступных и предварительных выпусков.
-- **Off** — отключает функцию уведомлений об обновлениях.
-- **LTS** — выводятся уведомления об обновлениях только для общедоступных выпусков ветви Long Term Servicing Branch (LTS).
+- **Off**  — отключает функцию уведомлений об обновлениях.
+- **LTS**  — выводятся уведомления об обновлениях только для общедоступных выпусков ветви Long Term Servicing Branch (LTS).
 
 > [!NOTE]
 > Пока переменная среды `$Env:POWERSHELL_UPDATECHECK` не будет задана впервые, она не существует.
@@ -346,12 +346,12 @@ $Env:POWERSHELL_UPDATECHECK = 'LTS'
 $Env:POWERSHELL_UPDATECHECK = 'Default'
 ```
 
-См. дополнительные сведения об [уведомлениях об обновлениях](/powershell/module/microsoft.powershell.core/about/about_update_notifications?view=powershell-7).
+См. дополнительные сведения об [уведомлениях об обновлениях](/powershell/module/microsoft.powershell.core/about/about_update_notifications).
 
 ## <a name="new-dsc-resource-support-with-invoke-dscresource-experimental"></a>Поддержка ресурса DSC посредством Invoke-DSCResource (экспериментальная функция)
 
 > [!NOTE]
-> Это экспериментальная функция под названием **PSDesiredStateConfiguration.InvokeDscResource**. См. дополнительные сведения об [экспериментальных функциях](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7).
+> Это экспериментальная функция под названием **PSDesiredStateConfiguration.InvokeDscResource**. Дополнительные сведения: [Использование экспериментальных функций](/powershell/scripting/learn/experimental-features).
 
 Командлет `Invoke-DscResource` выполняет метод указанного ресурса Desired State Configuration (DSC) среды PowerShell.
 
@@ -366,7 +366,7 @@ Invoke-DscResource -Name WindowsProcess -Method Set -ModuleName PSDesiredStateCo
 }
 ```
 
-См. дополнительные сведения о командлете [Invoke-DSCResource](/powershell/module/psdesiredstateconfiguration/invoke-dscresource?view=powershell-7).
+См. дополнительные сведения о командлете [Invoke-DSCResource](/powershell/module/psdesiredstateconfiguration/invoke-dscresource?view=powershell-7&preserve-view=true).
 
 ## <a name="breaking-changes-and-improvements"></a>Критические изменения и улучшения
 

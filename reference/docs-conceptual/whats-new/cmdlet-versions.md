@@ -3,22 +3,23 @@ ms.date: 02/03/2020
 keywords: powershell,core
 title: История выпусков модулей и командлетов
 description: В этой статье перечислены модули и командлеты, поставляемые с различными версиями PowerShell.
-ms.openlocfilehash: cefd84c5d3785d19670ee649f5af951d5975912c
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 43ea0cde106e9f0aafe9c18726589f931724b35f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501666"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342864"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>История выпусков модулей и командлетов
 
 В этой статье перечислены модули и командлеты, поставляемые с различными версиями PowerShell. Это сводка сведений, найденных в заметках о выпуске. Более подробные сведения можно найти в заметках о выпуске:
 
-- [Новые возможности PowerShell Core 6.2](what-s-new-in-powershell-core-62.md)
-- [Новые возможности PowerShell Core 6.1](what-s-new-in-powershell-core-61.md)
-- [Новые возможности PowerShell Core 6.0](what-s-new-in-powershell-core-60.md)
-- [Критические изменения в PowerShell Core 6.0](breaking-changes-ps6.md)
-- [Известные проблемы в PowerShell Core 6.0](known-issues-ps6.md)
+- [Новые возможности PowerShell 7.0](what-s-new-in-powershell-70.md)
+- [Новые возможности PowerShell 6.2](what-s-new-in-powershell-core-62.md)
+- [Новые возможности PowerShell 6.1](what-s-new-in-powershell-core-61.md)
+- [Новые возможности PowerShell 6.0](what-s-new-in-powershell-core-60.md)
+- [Критические изменения в PowerShell 6.0](breaking-changes-ps6.md)
+- [Известные проблемы в PowerShell 6.0](known-issues-ps6.md)
 
 Это выполняемая работа. Помогите нам сохранить эту информацию в актуальном состоянии.
 
@@ -216,7 +217,7 @@ ms.locfileid: "92501666"
 | Enable-ComputerRestore        | &check; |         |         |         | Только Windows                     |
 | Get-ChildItem                 | &check; | &check; | &check; | &check; |                                  |
 | Get-Clipboard                 | &check; |         | &check; | &check; | Не поддерживается в macOS.           |
-| Get-ComputerInfo              | &check; | &check; | &check; | &check; |                                  |
+| Get-ComputerInfo              | &check; | &check; | &check; | &check; | Только Windows                     |
 | Get-ComputerRestorePoint      | &check; |         |         |         | Только Windows                     |
 | Get-Content                   | &check; | &check; | &check; | &check; |                                  |
 | Get-ControlPanelItem          | &check; |         |         |         | Только Windows                     |
@@ -230,7 +231,7 @@ ms.locfileid: "92501666"
 | Get-PSDrive                   | &check; | &check; | &check; | &check; |                                  |
 | Get-PSProvider                | &check; | &check; | &check; | &check; |                                  |
 | Get-Service                   | &check; | &check; | &check; | &check; | Только Windows                     |
-| Get-TimeZone                  | &check; | &check; | &check; | &check; |                                  |
+| Get-TimeZone                  | &check; | &check; | &check; | &check; | Только Windows                     |
 | Get-Transaction               | &check; |         |         |         | Только Windows                     |
 | Get-WmiObject                 | &check; |         |         |         | Только Windows                     |
 | Invoke-Item                   | &check; | &check; | &check; | &check; |                                  |
@@ -255,7 +256,7 @@ ms.locfileid: "92501666"
 | Remove-PSDrive                | &check; | &check; | &check; | &check; |                                  |
 | Remove-Service                |         | &check; | &check; | &check; | Только Windows                     |
 | Remove-WmiObject              | &check; |         |         |         | Только Windows                     |
-| Rename-Computer               | &check; | &check; | &check; | &check; |                                  |
+| Rename-Computer               | &check; | &check; | &check; | &check; | Только Windows                     |
 | Rename-Item                   | &check; | &check; | &check; | &check; |                                  |
 | Rename-ItemProperty           | &check; | &check; | &check; | &check; |                                  |
 | Reset-ComputerMachinePassword | &check; |         |         |         | Только Windows                     |
@@ -270,7 +271,7 @@ ms.locfileid: "92501666"
 | Set-ItemProperty              | &check; | &check; | &check; | &check; |                                  |
 | Set-Location                  | &check; | &check; | &check; | &check; |                                  |
 | Set-Service                   | &check; | &check; | &check; | &check; | Только Windows                     |
-| Set-TimeZone                  | &check; | &check; | &check; | &check; |                                  |
+| Set-TimeZone                  | &check; | &check; | &check; | &check; | Только Windows                     |
 | Set-WmiInstance               | &check; |         |         |         | Только Windows                     |
 | Show-ControlPanelItem         | &check; |         |         |         | Только Windows                     |
 | Show-EventLog                 | &check; |         |         |         | Только Windows                     |
@@ -334,7 +335,7 @@ ms.locfileid: "92501666"
 | ConvertFrom-Csv           | &check; | &check; | &check; | &check; |                                           |
 | ConvertFrom-Json          | &check; | &check; | &check; | &check; |                                           |
 | ConvertFrom-Markdown      |         |   6.1   | &check; | &check; |                                           |
-| ConvertFrom-SddlString    | &check; | &check; | &check; | &check; |                                           |
+| ConvertFrom-SddlString    | &check; | &check; | &check; | &check; | Только Windows                              |
 | ConvertFrom-String        | &check; |         |         |         |                                           |
 | ConvertFrom-StringData    | &check; | &check; | &check; | &check; |                                           |
 | Convert-String            | &check; |         |         |         |                                           |
@@ -379,7 +380,7 @@ ms.locfileid: "92501666"
 | Get-Unique                | &check; | &check; | &check; | &check; |                                           |
 | Get-Uptime                |         | &check; | &check; | &check; |                                           |
 | Get-Variable              | &check; | &check; | &check; | &check; |                                           |
-| Get-Verb                  |         | &check; | &check; | &check; |                                           |
+| Get-Verb                  |         | &check; | &check; | &check; | Перенесено из Microsoft.PowerShelll.Core     |
 | Group-Object              | &check; | &check; | &check; | &check; |                                           |
 | Import-Alias              | &check; | &check; | &check; | &check; |                                           |
 | Import-Clixml             | &check; | &check; | &check; | &check; |                                           |
@@ -402,7 +403,7 @@ ms.locfileid: "92501666"
 | New-Variable              | &check; | &check; | &check; | &check; |                                           |
 | Out-File                  | &check; | &check; | &check; | &check; |                                           |
 | Out-GridView              | &check; |         | &check; | &check; | Только Windows                              |
-| Out-Printer               | &check; |         | &check; | &check; |                                           |
+| Out-Printer               | &check; |         | &check; | &check; | Только Windows                              |
 | Out-String                | &check; | &check; | &check; | &check; |                                           |
 | Read-Host                 | &check; | &check; | &check; | &check; |                                           |
 | Register-EngineEvent      | &check; | &check; | &check; | &check; | Нет доступных источников событий в Linux и macOS |
@@ -422,7 +423,7 @@ ms.locfileid: "92501666"
 | Set-PSBreakpoint          | &check; | &check; | &check; | &check; |                                           |
 | Set-TraceSource           | &check; | &check; | &check; | &check; |                                           |
 | Set-Variable              | &check; | &check; | &check; | &check; |                                           |
-| Show-Command              | &check; |         | &check; | &check; |                                           |
+| Show-Command              | &check; |         | &check; | &check; | Только Windows                              |
 | Show-Markdown             |         |   6.1   | &check; | &check; |                                           |
 | Sort-Object               | &check; | &check; | &check; | &check; |                                           |
 | Start-Sleep               | &check; | &check; | &check; | &check; |                                           |

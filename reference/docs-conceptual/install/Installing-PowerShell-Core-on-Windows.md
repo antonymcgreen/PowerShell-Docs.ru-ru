@@ -2,12 +2,12 @@
 title: Установка PowerShell в Windows
 description: Сведения об установке PowerShell в Windows
 ms.date: 10/30/2020
-ms.openlocfilehash: 1b341b496cef34a2a98afeac9d24f0a51e8dbda0
-ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
+ms.openlocfilehash: 825c9066d0a4e4734b9255514520b32f0876ecea
+ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93142792"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93296369"
 ---
 # <a name="installing-powershell-on-windows"></a>Установка PowerShell в Windows
 
@@ -24,7 +24,7 @@ ms.locfileid: "93142792"
 
 ## <a name="download-the-installer-package"></a>Скачивание скрипта установщика
 
-Чтобы установить PowerShell в Windows, скачайте установочный пакет со страницы [выпусков][releases] GitHub. Прокрутите страницу вниз до раздела **ресурсов**. Раздел **ресурсов** может быть свернут. В таком случае щелкните его, чтобы развернуть.
+Чтобы установить PowerShell в Windows скачайте [актуальный][] пакет установки с GitHub. Также доступна актуальная предварительная версия на странице [выпуски][]. Прокрутите страницу вниз до раздела **ресурсов**. Раздел **ресурсов** может быть свернут. В таком случае щелкните его, чтобы развернуть.
 
 ## <a name="installing-the-msi-package"></a><a id="msi" />Установка пакета MSI
 
@@ -83,7 +83,7 @@ msiexec.exe /package PowerShell-7.0.3-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_ME
 > [!NOTE]
 > В настоящее время пакет MSIX не поддерживается официально. Но мы будем и дальше работать над этим продуктом, используемым только для внутреннего тестирования.
 
-Чтобы вручную установить пакет MSIX на клиент Windows 10, скачайте пакет MSIX на странице GitHub с [выпусками][releases]. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
+Чтобы вручную установить пакет MSIX на клиенте Windows 10, скачайте пакет MSIX на странице [выпуски][выпуски] в GitHub. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
 
 MSIX-файл выглядит примерно так: `PowerShell-<version>-win-<os-arch>.msix`
 
@@ -95,7 +95,7 @@ Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />Установка ZIP-пакета
 
-Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell. Скачайте один из следующих ZIP-архивов на странице с [выпусками][releases].
+Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell. Скачайте один из следующих ZIP-архивов на странице [выпуски][выпуски].
 
 - PowerShell-7.0.3-win-x64.zip
 - PowerShell-7.0.3-win-x86.zip
@@ -267,7 +267,8 @@ PowerShell поддерживает протокол удаленного вза
 
 <!-- link references -->
 
-[releases]: https://github.com/PowerShell/PowerShell/releases
+[выпусками]: https://github.com/PowerShell/PowerShell/releases
+[Актуальная]: https://github.com/PowerShell/PowerShell/releases/latest
 [ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell

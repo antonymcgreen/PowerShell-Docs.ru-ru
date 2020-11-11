@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: f46b14e44c32ce31b4da1a14580fe03564bf9946
-ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
+ms.openlocfilehash: d94024926a8ff8c33df08b4a8b58e9f8b0430f9b
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91899269"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239885"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Правила поведения при работе с открытым кодом, принятые в проектах корпорации Майкрософт
+
+> Обновлено: 02.11.2020
 
 В рамках этого проекта действуют [правила поведения в отношении продуктов с открытым исходным кодом Майкрософт](https://opensource.microsoft.com/codeofconduct/). Дополнительные сведения:[вопросы и ответы по правилам поведения](https://opensource.microsoft.com/codeofconduct/faq/). С любыми другими вопросами или комментариями обращайтесь по адресу[opencode@microsoft.com](mailto:opencode@microsoft.com).
 
