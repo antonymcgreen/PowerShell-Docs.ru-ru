@@ -2,16 +2,16 @@
 description: Описывает, как переменные хранят значения, которые можно использовать в PowerShell.
 keywords: powershell,командлет
 Locale: en-US
-ms.date: 03/19/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Variables
-ms.openlocfilehash: 910d09d0606c10679df342092e8fbc3ecb068ecf
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: e1eee80740d1f59ab9a96122c09ba81ef99d35cc
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231753"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483043"
 ---
 # <a name="about-variables"></a>О переменных
 
@@ -216,7 +216,7 @@ $PROFILE
 C:\Users\User01\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
 
-В этом примере показаны две команды, которые могут открыть профиль PowerShell в **notepad.exe** . В примере с символами двойной кавычки ( `"` ) используется значение переменной.
+В этом примере показаны две команды, которые могут открыть профиль PowerShell в **notepad.exe**. В примере с символами двойной кавычки ( `"` ) используется значение переменной.
 
 ```powershell
 notepad $PROFILE
@@ -250,7 +250,7 @@ Use the $PROFILE variable.
 
 Буквенно-цифровые имена переменных могут содержать следующие символы:
 
-- Символы Юникода из следующих категорий: **Lu** , **LL** , **lt** , **LM** , **with** или **ND** .
+- Символы Юникода из следующих категорий: **Lu** , **LL** , **lt** , **LM** , **with** или **ND**.
 - Символ подчеркивания ( `_` ).
 - Символ вопросительного `?` знака ().
 
@@ -332,7 +332,7 @@ $Global:Computers = "Server01"
 $VerbosePreference = "Continue"
 ```
 
-Эту команду можно добавить в профиль PowerShell, открыв `$PROFILE` файл в текстовом редакторе, например **notepad.exe** . Дополнительные сведения о профилях PowerShell см. в разделе [about_Profiles](about_Profiles.md).
+Эту команду можно добавить в профиль PowerShell, открыв `$PROFILE` файл в текстовом редакторе, например **notepad.exe**. Дополнительные сведения о профилях PowerShell см. в разделе [about_Profiles](about_Profiles.md).
 
 ## <a name="the-variable-drive"></a>Переменная: диск
 
@@ -403,7 +403,7 @@ Get-Help <cmdlet-name>
 | `Remove-Variable` | Удаляет переменную и ее значение.          |
 | `Set-Variable`    | Изменяет значение переменной.           |
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 

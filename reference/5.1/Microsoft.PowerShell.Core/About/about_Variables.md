@@ -2,16 +2,16 @@
 description: Описывает, как переменные хранят значения, которые можно использовать в PowerShell.
 keywords: powershell,командлет
 Locale: en-US
-ms.date: 03/19/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Variables
-ms.openlocfilehash: 59a611cf49635f0391d3f3cc18bcf6d06a688638
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 588bcb9eb4a0c27775e9b335d4604b76a3219cbd
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232273"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483013"
 ---
 # <a name="about-variables"></a>О переменных
 
@@ -403,7 +403,7 @@ Get-Help <cmdlet-name>
 | `Remove-Variable` | Удаляет переменную и ее значение.          |
 | `Set-Variable`    | Изменяет значение переменной.           |
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 

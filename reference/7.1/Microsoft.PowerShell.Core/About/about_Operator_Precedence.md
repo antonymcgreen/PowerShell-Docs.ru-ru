@@ -2,16 +2,16 @@
 description: Перечисляет операторы PowerShell в порядке очередности.
 keywords: powershell,командлет
 Locale: en-US
-ms.date: 10/08/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operator_precedence?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operator_Precedence
-ms.openlocfilehash: d8b0b3f339739186825b5cb041adba5e06e5d702
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 6de44dd24d0b1b1826c94d838cca11f0cef6b7f2
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232134"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483219"
 ---
 # <a name="about-operator-precedence"></a>О приоритете операторов
 
@@ -32,7 +32,7 @@ ms.locfileid: "93232134"
 
 |         OPERATOR         |           ISREFERENCE            |
 | ------------------------ | ------------------------------ |
-| `$() @() ()`             | [about_Operators][]            |
+| `$() @() () @{}`         | [about_Operators][]            |
 | `. ?.` (доступ к членам)   | [about_Operators][]            |
 | `::` статически            | [about_Operators][]            |
 | `[0] ?[0]` (Оператор Index) | [about_Operators][]         |

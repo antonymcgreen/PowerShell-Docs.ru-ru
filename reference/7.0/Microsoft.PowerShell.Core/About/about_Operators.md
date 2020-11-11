@@ -2,16 +2,16 @@
 description: Описание операторов, поддерживаемых PowerShell.
 keywords: powershell,командлет
 Locale: en-US
-ms.date: 10/28/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: d442a64be77934cef4636e905c098d9630451b8f
-ms.sourcegitcommit: c1e4739f5d52282fb05a8cff92b0f5d10e2edac1
+ms.openlocfilehash: 736ca53ff4992ea430ec89ad1795dcf278b0da41
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93233317"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483134"
 ---
 # <a name="about-operators"></a>Об операторах
 
@@ -117,6 +117,11 @@ Folder list: Program Files, Program Files (x86), Users, Windows
 ```powershell
 @(Get-CimInstance win32_logicalDisk)
 ```
+
+#### <a name="hash-table-literal-syntax-"></a>Синтаксис литерала хэш-таблицы `@{}`
+
+Как и часть выражения массива, этот синтаксис используется для объявления хэш-таблицы.
+Дополнительные сведения см. в разделе [about_Hash_Tables](about_Hash_Tables.md).
 
 #### <a name="call-operator-"></a>Оператор Call `&`
 
@@ -498,8 +503,6 @@ $todaysDate ??= (Get-Date).ToShortDateString()
 
 Условный оператор NULL применяет к `?.` операнду доступ к элементу,, или к нему, `?[]` только если этот операнд принимает значение, отличное от NULL; в противном случае возвращается значение null.
 
-Так как в PowerShell символ `?` может быть частью имени переменной, для использования этих операторов требуется формальное указание имени переменной. Поэтому имена переменных необходимо заключать в фигурные скобки `{}`, например `${a}`, в том числе если имена содержат символ `?`: `${a?}`.
-
 В следующем примере возвращается значение **пропнаме** .
 
 ```powershell
@@ -536,7 +539,12 @@ $a = $null
 ${a}?[0]
 ```
 
-## <a name="see-also"></a>См. также статью
+> [!NOTE]
+> Так как в PowerShell символ `?` может быть частью имени переменной, для использования этих операторов требуется формальное указание имени переменной. Поэтому имена переменных необходимо заключать в фигурные скобки `{}`, например `${a}`, в том числе если имена содержат символ `?`: `${a?}`.
+>
+> Синтаксис имени переменной `${<name>}` не должен путать с `$()` оператором части выражения. Дополнительные сведения см. в разделе Имя переменной в [about_Variables](about_Variables.md#Variable-names-that-include-special-characters).
+
+## <a name="see-also"></a>См. также раздел
 
 [about_Arithmetic_Operators](about_Arithmetic_Operators.md)
 
