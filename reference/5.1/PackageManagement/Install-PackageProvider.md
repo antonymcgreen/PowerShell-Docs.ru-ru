@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/install-packageprovider?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-PackageProvider
-ms.openlocfilehash: 4e6940b655622444f0ac6c8f01cd7e77f854b109
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: eb8cedd8275e9d8ea092a508c542464b8021878e
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227309"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524439"
 ---
 # Install-PackageProvider
 
@@ -39,77 +39,64 @@ Install-PackageProvider [-Scope <String>] [-InputObject] <SoftwareIdentity[]> [-
 ```
 
 ## DESCRIPTION
-Командлет **Install-PackageProvider** устанавливает соответствующие поставщики Управление пакетами, доступные в источниках пакетов, зарегистрированных с помощью **PowerShellGet**.
-По умолчанию сюда входят модули, доступные в коллекция PowerShell Windows с тегом **PackageManagement** .
-Поставщик Управление пакетами **PowerShellGet** используется для поиска поставщиков в этих репозиториях.
+
+`Install-PackageProvider`Командлет устанавливает соответствующие поставщики Управление пакетами, доступные в источниках пакетов, зарегистрированных с помощью **PowerShellGet**. По умолчанию сюда входят модули, доступные в коллекция PowerShell Windows с тегом **PackageManagement** . Поставщик Управление пакетами **PowerShellGet** используется для поиска поставщиков в этих репозиториях.
 
 Этот командлет также устанавливает соответствующие поставщики Управление пакетами, доступные с помощью приложения начальной загрузки Управление пакетами.
 
-Этот командлет также устанавливает соответствующие поставщики Управление пакетами, доступные в хранилище больших двоичных объектов Azure Управление пакетами.
-Используйте поставщик загрузчика, чтобы найти и установить их.
+Этот командлет также устанавливает соответствующие поставщики Управление пакетами, доступные в хранилище больших двоичных объектов Azure Управление пакетами. Используйте поставщик загрузчика, чтобы найти и установить их.
 
-Для первого выполнения PackageManagement требуется подключение к Интернету для загрузки поставщика пакетов NuGet.
-Однако если компьютер не подключен к Интернету и необходимо использовать поставщик NuGet или PowerShellGet, его можно загрузить на другой компьютер и скопировать на целевой компьютер.
-Для этого сделайте следующее.
+Для первого выполнения PackageManagement требуется подключение к Интернету для загрузки поставщика пакетов NuGet. Однако если компьютер не подключен к Интернету и необходимо использовать поставщик NuGet или PowerShellGet, его можно загрузить на другой компьютер и скопировать на целевой компьютер. Для этого сделайте следующее.
 
-1.
-Выполните команду `Install-PackageProvider -Name NuGet -RequiredVersion 2.8.5.201 -Force` , чтобы установить поставщик с компьютера с подключением к Интернету.
-
-2.
-После установки можно найти поставщика, установленного в `$env:ProgramFiles\PackageManagement\ReferenceAssemblies\\\<ProviderName\>\\\<ProviderVersion\>` или `$env:LOCALAPPDATA\PackageManagement\ProviderAssemblies\\\<ProviderName\>\\\<ProviderVersion\>` .
-
-3.
-Поместите \<ProviderName\> папку, которая в данном случае является папкой NuGet, в соответствующее расположение на целевом компьютере.
-Если целевой компьютер является Nano Server, необходимо выполнить команду **Install-PackageProvider** с Nano Server, чтобы скачать правильные двоичные файлы NuGet.
-
-4.
-Перезапустите PowerShell для автоматической загрузки поставщика пакетов.
-Кроме того, можно выполнить команду, `Get-PackageProvider -ListAvailable` чтобы вывести список всех поставщиков пакетов, доступных на компьютере.
-Затем используйте `Import-PackageProvider -Name NuGet -RequiredVersion 2.8.5.201` для импорта поставщика в текущий сеанс Windows PowerShell.
+1. Выполните команду `Install-PackageProvider -Name NuGet -RequiredVersion 2.8.5.201 -Force` , чтобы установить поставщик с компьютера с подключением к Интернету.
+1. После установки можно найти поставщика, установленного в `$env:ProgramFiles\PackageManagement\ReferenceAssemblies\<ProviderName>\<ProviderVersion>` или `$env:LOCALAPPDATA\PackageManagement\ProviderAssemblies\<ProviderName>\<ProviderVersion>` .
+1. Поместите `<ProviderName>` папку, которая в данном случае является папкой NuGet, в соответствующее расположение на целевом компьютере. Если целевой компьютер является Nano Server, необходимо запустить `Install-PackageProvider` с Nano Server, чтобы скачать правильные двоичные файлы NuGet.
+1. Перезапустите PowerShell для автоматической загрузки поставщика пакетов. Кроме того, можно выполнить команду, `Get-PackageProvider -ListAvailable` чтобы вывести список всех поставщиков пакетов, доступных на компьютере.
+   Затем используйте `Import-PackageProvider -Name NuGet -RequiredVersion 2.8.5.201` для импорта поставщика в текущий сеанс Windows PowerShell.
 
 ## Примеры
 
 ### Пример 1. Установка поставщика пакетов из коллекция PowerShell
 
-```
-PS C:\> Install-PackageProvider -Name "Gistprovider" -Verbose
-```
+Эта команда устанавливает поставщик пакетов GistProvider из коллекция PowerShell.
 
-Эта команда устанавливает Gistprovider из коллекция PowerShell.
+```powershell
+Install-PackageProvider -Name "GistProvider" -Verbose
+```
 
 ### Пример 2. Установка указанной версии поставщика пакетов
-
-```
-PS C:\> Find-PackageProvider -Name "Nuget" -AllVersions
-PS C:\> Install-PackageProvider -Name "Nuget" -RequiredVersion "2.8.5.216" -Force
-```
 
 В этом примере устанавливается указанная версия поставщика пакетов NuGet.
 
 Первая команда находит все версии поставщика пакетов с именем NuGet.
 Вторая команда устанавливает указанную версию поставщика пакетов NuGet.
 
+```powershell
+Find-PackageProvider -Name "NuGet" -AllVersions
+Install-PackageProvider -Name "NuGet" -RequiredVersion "2.8.5.216" -Force
+```
+
 ### Пример 3. Поиск поставщика и его установка
 
-```
-PS C:\> Find-PackageProvider -Name "Gistprovider" | Install-PackageProvider -Verbose
-```
+В этом примере используется `Find-PackageProvider` и конвейер для поиска поставщика и его установки.
 
-Эта команда использует **Find-PackageProvider** и конвейер для поиска и установки поставщика реестра.
+```powershell
+Find-PackageProvider -Name "GistProvider" | Install-PackageProvider -Verbose
+```
 
 ### Пример 4. Установка поставщика в папку модуля текущего пользователя
 
-```
-PS C:\> Install-PackageProvider -Name Gistprovider -Verbose -Scope CurrentUser
-```
+Эта команда устанавливает поставщик пакетов, чтобы `$env:LOCALAPPDATA\PackageManagement\ProviderAssemblies` только текущий пользователь мог его использовать.
 
-Эта команда устанавливает поставщик пакетов в $env: LOCALAPPDATA\PackageManagement\ProviderAssemblies, чтобы только текущий пользователь мог его использовать.
+```powershell
+Install-PackageProvider -Name GistProvider -Verbose -Scope CurrentUser
+```
 
 ## PARAMETERS
 
 ### -AllVersions
-Указывает, что этот командлет устанавливает все доступные версии поставщика пакетов.
-По умолчанию командлет **Install-PackageProvider** Возвращает максимальную доступную версию.
+
+Указывает, что этот командлет устанавливает все доступные версии поставщика пакетов. По умолчанию `Install-PackageProvider` возвращает только самую новую доступную версию.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -124,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Указывает учетную запись пользователя, имеющую разрешение на установку поставщиков пакетов.
 
 ```yaml
@@ -139,8 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Указывает, что этот командлет принудительно выполняет все действия с этим командлетом, который можно принудительно применить.
-Сейчас это означает, что параметр *Force* действует так же, как параметр *форцебутстрап* .
+
+Указывает, что этот командлет принудительно выполняет все действия с этим командлетом, который можно принудительно применить. Сейчас это означает, что параметр **Force** действует так же, как параметр **форцебутстрап** .
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -155,6 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceBootstrap
+
 Указывает, что этот командлет автоматически устанавливает поставщик пакетов.
 
 ```yaml
@@ -170,8 +159,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Указывает объект **софтвареидентити** .
-Используйте командлет **Find-PackageProvider** , чтобы получить объект **софтвареидентити** для передачи в **Install-PackageProvider**.
+
+Указывает объект **софтвареидентити** . Используйте `Find-PackageProvider` командлет, чтобы получить объект **софтвареидентити** для передачи в `Install-PackageProvider` .
 
 ```yaml
 Type: Microsoft.PackageManagement.Packaging.SoftwareIdentity[]
@@ -186,8 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumVersion
-Указывает максимально допустимую версию поставщика пакета, который требуется установить.
-Если этот параметр не добавлен, командлет **Install-PackageProvider** устанавливает самую новую доступную версию поставщика.
+
+Указывает максимально допустимую версию поставщика пакета, который требуется установить. Если этот параметр не добавлен, `Install-PackageProvider` устанавливает самую новую доступную версию поставщика.
 
 ```yaml
 Type: System.String
@@ -202,8 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumVersion
-Указывает минимально допустимую версию поставщика пакета, который требуется установить.
-Если этот параметр не указан, командлет **Install-PackageProvider** устанавливает самую новую доступную версию пакета, которая также удовлетворяет всем требованиям, указанным в параметре *MaximumVersion* .
+
+Указывает минимально допустимую версию поставщика пакета, который требуется установить. Если этот параметр не добавлен, `Install-PackageProvider` устанавливает самую новую версию пакета, которая также удовлетворяет всем требованиям, указанным в параметре *MaximumVersion* .
 
 ```yaml
 Type: System.String
@@ -218,8 +207,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Указывает одно или несколько имен модулей поставщика пакетов.
-Несколько имен пакетов следует разделять запятыми.
+
+Указывает одно или несколько имен модулей поставщика пакетов. Несколько имен пакетов следует разделять запятыми.
 Подстановочные знаки не поддерживаются.
 
 ```yaml
@@ -235,6 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### Прокси-сервер
+
 Указывает прокси-сервер для запроса, а не напрямуюе подключение к Интернет-ресурсу.
 
 ```yaml
@@ -250,6 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
+
 Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy**.
 
 ```yaml
@@ -265,8 +256,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredVersion
-Указывает точную разрешенную версию поставщика пакета, который требуется установить.
-Если этот параметр не указан, командлет **Install-PackageProvider** устанавливает самую новую доступную версию поставщика, которая также соответствует максимальной версии, указанной в параметре *MaximumVersion* .
+
+Указывает точную разрешенную версию поставщика пакета, который требуется установить. Если этот параметр не добавлен, `Install-PackageProvider` устанавливает самую новую доступную версию поставщика, которая также соответствует максимальной версии, заданной параметром **MaximumVersion** .
 
 ```yaml
 Type: System.String
@@ -281,14 +272,13 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Указывает область установки поставщика.
-Допустимые значения для этого параметра: **ALLUSERS** и **CurrentUser**.
 
-Область **ALLUSERS** устанавливает поставщиков в расположение, доступное всем пользователям компьютера.
-По умолчанию это **$env:P рограмфилес\паккажеманажемент\провидерассемблиес.**
+Указывает область установки поставщика. Допустимые значения для этого параметра:
 
-В области **CurrentUser** устанавливаются поставщики в расположении, где они доступны только текущему пользователю.
-По умолчанию это **$env: локалаппдата\паккажеманажемент\провидерассемблиес.**
+- **ALLUSERS** — устанавливает поставщиков в расположение, доступное всем пользователям компьютера.
+  По умолчанию это **$env:P рограмфилес\паккажеманажемент\провидерассемблиес.**
+
+- **CurrentUser** — устанавливает поставщики в расположении, где они доступны только текущему пользователю. По умолчанию это **$env: локалаппдата\паккажеманажемент\провидерассемблиес.**
 
 ```yaml
 Type: System.String
@@ -304,8 +294,8 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-Указывает один или несколько источников пакетов.
-Используйте командлет Get-PackageSource, чтобы получить список доступных источников пакетов.
+
+Указывает один или несколько источников пакетов. Используйте `Get-PackageSource` командлет, чтобы получить список доступных источников пакетов.
 
 ```yaml
 Type: System.String[]
@@ -320,6 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Запрос подтверждения перед выполнением командлета.
 
 ```yaml
@@ -335,8 +326,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Показывает, что произойдет при запуске командлета.
-Командлет не выполняется.
+
+Показывает, что произойдет при запуске командлета. Командлет не выполняется.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -351,13 +342,14 @@ Accept wildcard characters: False
 ```
 
 ### Общие параметры
+
 Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable. См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## Входные данные
 
 ### Microsoft. PackageManagement. Packaging. Софтвареидентити
-Объект **софтвареидентити** можно передать в этот командлет по конвейеру.
-Используйте Find-PackageProvider, чтобы получить объект **софтвареидентити** , который можно направить в **Install-PackageProvider**.
+
+Объект **софтвареидентити** можно передать в этот командлет по конвейеру. Используйте `Find-PackageProvider` для получения объекта **софтвареидентити** , в который можно направить `Install-PackageProvider` .
 
 ## Выходные данные
 
