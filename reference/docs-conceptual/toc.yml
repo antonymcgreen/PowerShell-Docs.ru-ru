@@ -55,24 +55,26 @@
       items:
         - name: Обзор
           href: learn/deep-dives/overview.md
-        - name: 'Все, что вы хотели знать о массивах'
-          href: learn/deep-dives/everything-about-arrays.md
-        - name: 'Все, что вы хотели знать о хэш-таблицах'
-          href: learn/deep-dives/everything-about-hashtable.md
-        - name: 'Все, что вы хотели знать о PSCustomObject'
-          href: learn/deep-dives/everything-about-pscustomobject.md
-        - name: 'Все, что вы хотели знать о строках подстановки'
-          href: learn/deep-dives/everything-about-string-substitutions.md
-        - name: 'Все, что вы хотели знать о выражении if/then/else'
-          href: learn/deep-dives/everything-about-if.md
-        - name: 'Все, что вы хотели знать о switch'
-          href: learn/deep-dives/everything-about-switch.md
-        - name: 'Все, что вы хотели знать об исключениях'
-          href: learn/deep-dives/everything-about-exceptions.md
-        - name: 'Все, что вы хотели знать о $null'
-          href: learn/deep-dives/everything-about-null.md
-        - name: 'Все, что вы хотели знать о ShouldProcess'
-          href: learn/deep-dives/everything-about-shouldprocess.md
+        - name: 'Все, что вы хотели знать о…'
+          items:
+            - name: 'Все, что вы хотели знать о массивах'
+              href: learn/deep-dives/everything-about-arrays.md
+            - name: 'Все, что вы хотели знать о хэш-таблицах'
+              href: learn/deep-dives/everything-about-hashtable.md
+            - name: 'Все, что вы хотели знать о PSCustomObject'
+              href: learn/deep-dives/everything-about-pscustomobject.md
+            - name: 'Все, что вы хотели знать о строках подстановки'
+              href: learn/deep-dives/everything-about-string-substitutions.md
+            - name: 'Все, что вы хотели знать о выражении if/then/else'
+              href: learn/deep-dives/everything-about-if.md
+            - name: 'Все, что вы хотели знать о switch'
+              href: learn/deep-dives/everything-about-switch.md
+            - name: 'Все, что вы хотели знать об исключениях'
+              href: learn/deep-dives/everything-about-exceptions.md
+            - name: 'Все, что вы хотели знать о $null'
+              href: learn/deep-dives/everything-about-null.md
+            - name: 'Все, что вы хотели знать о ShouldProcess'
+              href: learn/deep-dives/everything-about-shouldprocess.md
         - name: Write-Progress при многопоточности
           href: learn/deep-dives/write-progress-across-multiple-threads.md
         - name: Добавление поддержки учетных данных в функции PowerShell
@@ -120,6 +122,8 @@
   items:
     - name: "Новые возможности PowerShell\_7.x"
       items:
+        - name: "Новые возможности PowerShell\_7.1"
+          href: whats-new/what-s-new-in-powershell-71.md
         - name: "Новые возможности PowerShell\_7.0"
           href: whats-new/what-s-new-in-powershell-70.md
     - name: "Новые возможности в PowerShell Core\_6.x"
