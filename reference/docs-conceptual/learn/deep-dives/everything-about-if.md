@@ -694,7 +694,7 @@ if ( -not (Test-Path -Path $folder) )
 [Оригинал]: https://powershellexplained.com/2019-08-11-Powershell-if-then-else-equals-operator/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
-[if]: /powershell/module/microsoft.powershell.core/about/about_if (если);
+[if]: /powershell/module/microsoft.powershell.core/about/about_if
 [побитовыми операторами]: /powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
 [множестве способов использования регулярных выражений]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression/
 [все, что вы хотели знать об исключениях]: everything-about-exceptions.md
