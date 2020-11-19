@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: ca48f3020fa306f8a24328bd18648d5954c48a94
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: 9554c0b4d3932b7371201f7b08c8b9d26a567f5e
+ms.sourcegitcommit: e85e56d6614cbd30e01965a5cf03fb3f5ca78103
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438205"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94589143"
 ---
 # <a name="chapter-9---functions"></a>Глава 9. Функции
 
@@ -22,7 +22,7 @@ ms.locfileid: "84438205"
 
 ## <a name="naming"></a>Именование
 
-При именовании функций в PowerShell используйте имя [Регистр Pascal][] с утвержденным глаголом и существительным в единственном числе. Кроме того, перед существительным рекомендуется добавить префикс. Например: `<ApprovedVerb>-<Prefix><SingularNoun>`.
+При именовании функций в PowerShell используйте имя в [Регистр Pascal][] с утвержденным глаголом и существительным в единственном числе. Кроме того, перед существительным рекомендуется добавить префикс. Например: `<ApprovedVerb>-<Prefix><SingularNoun>`.
 
 В PowerShell есть конкретный список утвержденных глаголов, которые можно получить, выполнив `Get-Verb`.
 
@@ -783,7 +783,7 @@ function Get-MrAutoStoppedService {
 - [about_Functions_Advanced][]
 - [about_Try_Catch_Finally][]
 - [about_Comment_Based_Help][]
-- [Video: PowerShell Toolmaking with Advanced Functions and Script Modules (Видео. Создание инструментов PowerShell с помощью расширенных функций и модулей сценариев)][]
+- [Видео: создание инструментов PowerShell с помощью расширенных функций и модулей сценариев][]
 
 <!-- link references -->
 [about_Functions]: /powershell/module/microsoft.powershell.core/about/about_functions
@@ -793,4 +793,5 @@ function Get-MrAutoStoppedService {
 [about_Functions_Advanced]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced
 [about_Try_Catch_Finally]: /powershell/module/microsoft.powershell.core/about/about_try_catch_finally
 [about_Comment_Based_Help]: /powershell/module/microsoft.powershell.core/about/about_comment_based_help
-[Video: PowerShell Toolmaking with Advanced Functions and Script Modules (Видео. Создание инструментов PowerShell с помощью расширенных функций и модулей сценариев)]: https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/) [Pascal case (Регистр Pascal)]: /dotnet/standard/design-guidelines/capitalization-conventionss
+[Видео: создание инструментов PowerShell с помощью расширенных функций и модулей сценариев]: https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/
+[Регистр Pascal]: /dotnet/standard/design-guidelines/capitalization-conventions
