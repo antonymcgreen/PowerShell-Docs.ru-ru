@@ -1,12 +1,14 @@
 ---
-title: Элемент ошибка customcontrol для элемента управления для элементов управления конфигурации (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 5aacf824421dfce19f1f495fc0a95e766cdbaf8b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент CustomControl для элемента Control для элемента Controls для элемента Configuration (формат)
+description: Элемент CustomControl для элемента Control для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 631995c6a50c0f020cb2e991cfbf58a09a75cc72
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786090"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650003"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-configuration-format"></a>Элемент CustomControl для элемента Control для элемента Controls для элемента Configuration (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87786090"
 |-------------|-----------------|
 |[Элемент Control для элемента Controls для элемента Configuration (формат)](./control-element-for-controls-for-configuration-format.md)|Определяет общий элемент управления, который может использоваться всеми представлениями файла форматирования и именем, используемым для ссылки на элемент управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Control для элемента Controls для элемента Configuration (формат)](./control-element-for-controls-for-configuration-format.md)
 

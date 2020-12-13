@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для Ентриселектедби для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 5e7b73db5aa597d96141454008c5c58b1827df24
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента EntrySelectedBy для ListControl (формат)
+description: Элемент TypeName для элемента EntrySelectedBy для ListControl (формат)
+ms.openlocfilehash: 6fc5a2385fde3140abbc984e3da6a4dda483b2a8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780225"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645657"
 ---
 # <a name="typename-element-for-entryselectedby-for-listcontrol-format"></a>Элемент TypeName для элемента EntrySelectedBy для ListControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87780225"
 
 Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Каждая запись списка должна иметь по крайней мере одно определенное имя типа, набор выбора или условие выбора.
 
@@ -61,7 +63,7 @@ ms.locfileid: "87780225"
 </ListEntry>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления списка](./creating-a-list-view.md)
 

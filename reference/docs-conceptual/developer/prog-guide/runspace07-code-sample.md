@@ -1,12 +1,14 @@
 ---
-title: Пример кода RunSpace07 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 615bb237d26bf3a314ea7fb21e983ba2b000d105
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры кода RunSpace07
+description: Примеры кода RunSpace07
+ms.openlocfilehash: 6e8c9f48a6e9c5a642ecf93bca8a85003b3cfbf8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784713"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647402"
 ---
 # <a name="runspace07-code-sample"></a>Примеры кода RunSpace07
 
@@ -21,7 +23,7 @@ ms.locfileid: "87784713"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/Runspace07/Runspace07.cs" range="11-108":::
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

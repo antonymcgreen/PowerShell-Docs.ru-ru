@@ -1,12 +1,14 @@
 ---
-title: Элемент Types для набора выбора (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 9978daefb3e97ab131774ca4dff633dde6b4dfbf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Types для элемента SelectionSet (формат)
+description: Элемент Types для элемента SelectionSet (формат)
+ms.openlocfilehash: ff3c24e7f52f862dc416b88d50983196ce907012
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772524"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645453"
 ---
 # <a name="types-element-for-selectionset-format"></a>Элемент Types для элемента SelectionSet (формат)
 
@@ -43,7 +45,7 @@ ms.locfileid: "87772524"
 |-------------|-----------------|
 |[Элемент SelectionSet (формат)](./selectionset-element-format.md)|Определяет набор объектов .NET, на которые может ссылаться имя набора.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Объекты, определенные этим элементом, составляют набор выбора, который может использоваться представлением, определением представления (представления могут иметь несколько определений) или при указании условия выбора.  Дополнительные сведения о наборах выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
 
@@ -65,7 +67,7 @@ ms.locfileid: "87772524"
 </SelectionSets>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Определение наборов объектов](./defining-selection-sets.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионкондитион для Ентриселектедби для Таблеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4a829f9daef22c4b3fd6b21dfb3af2f8539bdeb3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
+description: Элемент SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
+ms.openlocfilehash: 22f304615c6433ffb67f3b4046b645d0c37be8a4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780293"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645770"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-tablecontrol-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87780293"
 |-------------|-----------------|
 |[Элемент Ентриселектедби для Таблеровентри (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Определяет типы .NET, которые используют эту запись таблицы, или условие, которое должно существовать для использования этой записи.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Каждая запись списка должна иметь по крайней мере одно определенное имя типа, набор выбора или условие выбора.
 
@@ -62,7 +64,7 @@ ms.locfileid: "87780293"
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

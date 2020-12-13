@@ -1,12 +1,14 @@
 ---
-title: Как добавить динамические параметры в раздел справки для поставщика
 ms.date: 09/13/2016
-ms.openlocfilehash: ddf964292ee7bf477767a2ca17c717aef84bad51
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Как добавить динамические параметры в раздел справки для поставщика
+description: Как добавить динамические параметры в раздел справки для поставщика
+ms.openlocfilehash: 9542538cfacf5fb293ca8d1350b80fb250c71ac6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893464"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649641"
 ---
 # <a name="how-to-add-dynamic-parameters-to-a-provider-help-topic"></a>Как добавить динамические параметры в раздел справки для поставщика
 

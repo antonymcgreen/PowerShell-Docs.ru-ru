@@ -1,26 +1,25 @@
 ---
-title: Создание командлета без параметров | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmers Guide], creating
-- cmdlets [PowerShell Programmers Guide], basic cmdlet
-ms.openlocfilehash: a14d25660d596ebd12cd7d74b607eab6ac9fd1be
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание командлета без параметров
+description: Создание командлета без параметров
+ms.openlocfilehash: 5df27ac4c1f6dfcc3e7596d93f8db0f97aae71c1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784390"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646550"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Создание командлета без параметров
 
-В этом разделе описывается создание командлета, который получает сведения с локального компьютера без использования параметров, а затем записывает сведения в конвейер. Описываемый здесь командлет является командлетом Get-proc, который получает сведения о процессах локального компьютера, а затем отображает эти сведения в командной строке.
+В этом разделе описывается создание командлета, который получает сведения с локального компьютера без использования параметров, а затем записывает сведения в конвейер. Описываемый здесь командлет является командлетом Get-Proc, который получает сведения о процессах локального компьютера, а затем отображает эти сведения в командной строке.
 
 > [!NOTE]
 > Имейте в виду, что при написании командлетов ссылочные сборки® Windows PowerShell загружаются на диск (по умолчанию — C:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0). Они не устанавливаются в глобальный кэш сборок (GAC).
 
 ## <a name="naming-the-cmdlet"></a>Присвоение имени командлету
 
-Имя командлета состоит из глагола, указывающего действие, которое выполняет командлет, и существительное, которое указывает элементы, с которыми работает командлет. Так как этот пример командлета Get-proc извлекает объекты обработки, он использует команду Get, определенную перечислением [System. Management. Automation. вербскоммон](/dotnet/api/System.Management.Automation.VerbsCommon) , и существительное "proc", чтобы указать, что командлет работает с элементами процесса.
+Имя командлета состоит из глагола, указывающего действие, которое выполняет командлет, и существительное, которое указывает элементы, с которыми работает командлет. Поскольку этот пример Get-Proc командлет извлекает объекты обработки, он использует команду Get, определенную перечислением [System. Management. Automation. вербскоммон](/dotnet/api/System.Management.Automation.VerbsCommon) , и существительное "proc", чтобы указать, что командлет работает над элементами процесса.
 
 При именовании командлетов не используйте следующие символы: #, () {} [] &-/\ $;: "" <> &#124; ? @ ` .
 
@@ -34,7 +33,7 @@ ms.locfileid: "87784390"
 
 ## <a name="defining-the-cmdlet-class"></a>Определение класса командлета
 
-После выбора имени командлета определите класс .NET для реализации командлета. Ниже приведено определение класса для этого примера командлета Get-proc:
+После выбора имени командлета определите класс .NET для реализации командлета. Ниже приведено определение класса для этого примера Get-Proc командлета:
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "Proc")]
@@ -47,12 +46,12 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-Обратите внимание, что предыдущий для определения класса атрибут [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) с синтаксисом `[Cmdlet(verb, noun, ...)]` используется для определения этого класса в качестве командлета. Это единственный обязательный атрибут для всех командлетов, позволяющий среде выполнения Windows PowerShell правильно вызывать их. При необходимости можно задать ключевые слова атрибутов для дальнейшего объявления класса. Обратите внимание, что объявление атрибута для нашего примера класса Жетпроккомманд объявляет только имена существительных и глаголов для командлета Get-proc.
+Обратите внимание, что предыдущий для определения класса атрибут [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) с синтаксисом `[Cmdlet(verb, noun, ...)]` используется для определения этого класса в качестве командлета. Это единственный обязательный атрибут для всех командлетов, позволяющий среде выполнения Windows PowerShell правильно вызывать их. При необходимости можно задать ключевые слова атрибутов для дальнейшего объявления класса. Обратите внимание, что объявление атрибута для нашего примера класса Жетпроккомманд объявляет только имена существительных и глаголов для командлета Get-Proc.
 
 > [!NOTE]
 > Ключевые слова, которые можно задать для всех классов атрибутов Windows PowerShell, соответствуют свойствам класса Attribute.
 
-При именовании класса командлета рекомендуется отразить имя командлета в имени класса. Для этого используйте форму "Вербнаункомманд" и замените "verb" и "существительное" на глагол и существительное, используемые в имени командлета. Как показано в предыдущем определении класса, пример командлета Get-proc определяет класс с именем Жетпроккомманд, производный от базового класса [System. Management. Automation. командлет](/dotnet/api/System.Management.Automation.Cmdlet) .
+При именовании класса командлета рекомендуется отразить имя командлета в имени класса. Для этого используйте форму "Вербнаункомманд" и замените "verb" и "существительное" на глагол и существительное, используемые в имени командлета. Как показано в предыдущем определении класса, командлет Sample Get-Proc определяет класс с именем Жетпроккомманд, который является производным от базового класса [System. Management. Automation. командлет](/dotnet/api/System.Management.Automation.Cmdlet) .
 
 > [!IMPORTANT]
 > Если вы хотите определить командлет, который напрямую обращается к среде выполнения Windows PowerShell, класс .NET должен быть производным от базового класса [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) . Дополнительные сведения об этом классе см. [в разделе Создание командлета, определяющего наборы параметров](./adding-parameter-sets-to-a-cmdlet.md).
@@ -75,7 +74,7 @@ Windows PowerShell использует пространство имен [Micro
 
 Если командлет не принимает входные данные конвейера, он должен переопределить метод [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Имейте в виду, что этот метод часто используется вместо [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , если командлет не может работать с одним элементом за раз, как в случае с командлетом Sort.
 
-Поскольку этот пример командлета Get-proc должен получать входные данные конвейера, он переопределяет метод [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) и использует реализации по умолчанию для [System. Management. Automation. командлета. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) и [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). Переопределение [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) извлекает процессы и записывает их в командную строку с помощью метода [System. Management. Automation. командлета. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) .
+Поскольку этот пример Get-Proc командлет должен получить входные данные конвейера, он переопределяет метод [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) и использует реализации по умолчанию для [System. Management. Automation. командлета. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) и [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). Переопределение [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) извлекает процессы и записывает их в командную строку с помощью метода [System. Management. Automation. командлета. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) .
 
 ```csharp
 protected override void ProcessRecord()
@@ -136,7 +135,7 @@ Windows PowerShell передает сведения между командле
 
 ## <a name="testing-the-cmdlet"></a>Тестирование командлета
 
-Если командлет зарегистрирован в Windows PowerShell, его можно проверить, запустив его в командной строке. Код для нашего примера командлета Get-proc небольшой, но он по-прежнему использует среду выполнения Windows PowerShell и существующий объект .NET, что достаточно для того, чтобы сделать его полезным. Давайте протестируем ее, чтобы лучше понять, что может сделать Get-proc и как можно использовать его выходные данные. Дополнительные сведения об использовании командлетов из командной строки см. в [Начало работы с помощью Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+Если командлет зарегистрирован в Windows PowerShell, его можно проверить, запустив его в командной строке. Код для нашего примера командлета Get-Proc небольшой, но он по-прежнему использует среду выполнения Windows PowerShell и существующий объект .NET, что достаточно для того, чтобы сделать его полезным. Давайте протестируем ее, чтобы лучше понять, что может сделать Get-Proc и как можно использовать его выходные данные. Дополнительные сведения об использовании командлетов из командной строки см. в [Начало работы с помощью Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
 1. Запустите Windows PowerShell и получите текущие процессы, запущенные на компьютере.
 
@@ -247,7 +246,7 @@ Windows PowerShell передает сведения между командле
     ...
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание командлета для обработки входных данных командной строки](./adding-parameters-that-process-command-line-input.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Пользователи, запрашивающие подтверждение | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6f0effb35a110f33248a582fab874e3ab95c7df4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Запрос на подтверждение от пользователей
+description: Запрос на подтверждение от пользователей
+ms.openlocfilehash: 58dbe27635ca38886b728f585fec063645b3597e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786345"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646305"
 ---
 # <a name="users-requesting-confirmation"></a>Запрос на подтверждение от пользователей
 
@@ -18,7 +20,7 @@ ms.locfileid: "87786345"
 
 Если `Confirm` параметр имеет значение false или `"-Confirm:$false` указан, то вызов [System. Management. Automation. командлет. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) запрашивает подтверждение от пользователя, а `$ConfirmPreference` переменная оболочки игнорируется.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 - Для командлетов и поставщиков, которые указывают `SupportsShouldProcess` , но не могут `ConfirmImpact` обрабатывать эти действия как действия "среднего влияния" и не запрашиваются по умолчанию. Их уровень влияния меньше значения по умолчанию для `$ConfirmPreference` привилегированной переменной.
 

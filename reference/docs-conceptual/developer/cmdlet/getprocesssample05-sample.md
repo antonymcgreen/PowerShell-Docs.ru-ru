@@ -1,16 +1,18 @@
 ---
-title: Пример GetProcessSample05 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 2332d260c6f470d435234c847a59e59fe56f809a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример командлета GetProcessSample05
+description: Пример командлета GetProcessSample05
+ms.openlocfilehash: d4bfaf52b00bb68cf11d8bbebf72487472d73f6e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784203"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646507"
 ---
 # <a name="getprocesssample05-sample"></a>Пример командлета GetProcessSample05
 
-В этом примере показана полная версия командлета Get-proc.
+В этом примере показана полная версия командлета Get-Proc.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 

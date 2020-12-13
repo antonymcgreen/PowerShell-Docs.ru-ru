@@ -1,15 +1,14 @@
 ---
-title: Создание базового поставщика Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- base provider [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], base provider
-ms.openlocfilehash: 16cadb6099bb4f315bacda4aea617b89f9af5626
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание базового поставщика Windows PowerShell
+description: Создание базового поставщика Windows PowerShell
+ms.openlocfilehash: 03b5784fd063b5457fc64d92a32e286e3bf9cce4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787229"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647506"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Создание базового поставщика Windows PowerShell
 
@@ -40,7 +39,7 @@ ms.locfileid: "87787229"
 > [!NOTE]
 > Полное имя поставщика Windows PowerShell содержит имя сборки и другие атрибуты, определенные Windows PowerShell при регистрации поставщика.
 
-## <a name="defining-provider-specific-state-information"></a>Определение сведений о состоянии, зависящем от поставщика
+## <a name="defining-provider-specific-state-information"></a>Определение сведений о состоянии Provider-Specific
 
 Базовый класс [System. Management. Automation. Provider. кмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) и все производные классы считаются без отслеживания состояния, так как среда выполнения Windows PowerShell создает экземпляры поставщика только по мере необходимости. Таким образом, если поставщику требуется полное управление и обслуживание состояния для данных конкретного поставщика, он должен наследовать класс от класса [System. Management. Automation. провидеринфо](/dotnet/api/System.Management.Automation.ProviderInfo) . Производный класс должен определить элементы, необходимые для поддержания состояния, чтобы обеспечить доступ к данным, зависящим от поставщика, когда среда выполнения Windows PowerShell вызывает метод [System. Management. Automation. Provider. кмдлетпровидер. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) для инициализации поставщика.
 
@@ -84,7 +83,7 @@ ms.locfileid: "87787229"
 Get-PSProvider
 ```
 
-Появится следующий результат:
+Отображаются следующие результаты:
 
 ```Output
 Name                 Capabilities                  Drives

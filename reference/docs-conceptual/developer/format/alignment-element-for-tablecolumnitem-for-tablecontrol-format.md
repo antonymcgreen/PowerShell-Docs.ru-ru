@@ -1,12 +1,14 @@
 ---
-title: Элемент Alignment для Таблеколумнитем для Таблеконтрол (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: baa858b7c15b5afcc7f6087e8a9eace8d8fb67bb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Alignment для TableColumnItem для TableControl (формат)
+description: Элемент Alignment для TableColumnItem для TableControl (формат)
+ms.openlocfilehash: d2bb81ff894cad44e16212891faffd22ee627383
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783914"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646121"
 ---
 # <a name="alignment-element-for-tablecolumnitem-for-tablecontrol-format"></a>Элемент Alignment для TableColumnItem для TableControl (формат)
 
@@ -48,11 +50,11 @@ ms.locfileid: "87783914"
 
 Центрирование центров данных, отображаемых в столбце.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [табличное представление](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Табличное представление](./creating-a-table-view.md)
 

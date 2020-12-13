@@ -1,12 +1,14 @@
 ---
-title: Элемент Кустоментри для ошибка customcontrol для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4df8e5b96868b3814c6d84fa329950bb5345ef6e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)
+description: Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)
+ms.openlocfilehash: 0df2ff9c15308939e6d2552f51e2961bdabc59fb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785920"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646065"
 ---
 # <a name="customentry-element-for-customcontrol-for-groupby-format"></a>Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)
 
@@ -44,9 +46,9 @@ ms.locfileid: "87785920"
 |-------------|-----------------|
 |[Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)](./customentries-element-for-customcontrol-for-groupby-format.md)|Предоставляет определения для элемента управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)](./entryselectedby-element-for-customentry-for-groupby-format.md)
 

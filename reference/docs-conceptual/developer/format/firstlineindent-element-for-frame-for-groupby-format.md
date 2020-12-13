@@ -1,12 +1,14 @@
 ---
-title: Элемент Фирстлинеиндент для Frame для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: def5b4e9ca98a15edbb36675ca506e886de567dc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент FirstLineIndent для элемента Frame для элемента GroupBy (формат)
+description: Элемент FirstLineIndent для элемента Frame для элемента GroupBy (формат)
+ms.openlocfilehash: 391a6f338e264fd9fdd1948ded74bf022cb114d1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781670"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645797"
 ---
 # <a name="firstlineindent-element-for-frame-for-groupby-format"></a>Элемент FirstLineIndent для элемента Frame для элемента GroupBy (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87781670"
 
 Укажите число символов, на которое необходимо сдвинуть первую строку данных.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если этот элемент указан, нельзя указать элемент [фирстлинехангинг](./firstlinehanging-element-for-frame-for-groupby-format.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент FirstLineHanging для элемента Frame для элемента GroupBy (формат)](./firstlinehanging-element-for-frame-for-groupby-format.md)
 

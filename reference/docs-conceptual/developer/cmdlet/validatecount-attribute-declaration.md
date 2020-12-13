@@ -1,16 +1,14 @@
 ---
-title: Объявление атрибута Валидатекаунт | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidateCount
-- ValidateCount attribute, described
-- ValidateCount attribute
-ms.openlocfilehash: c013a354ee339bd14508fe30549673bc79d5c616
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Объявление атрибута ValidateCount
+description: Объявление атрибута ValidateCount
+ms.openlocfilehash: 6acdd02a10ecc1bc2be0e6be88cf2f42a3673eb8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786328"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646265"
 ---
 # <a name="validatecount-attribute-declaration"></a>Объявление атрибута ValidateCount
 
@@ -24,11 +22,11 @@ ms.locfileid: "87786328"
 
 #### <a name="parameters"></a>Параметры
 
-`MinLength`([System. Int32][]) обязательный. Указывает минимальное число аргументов.
+`MinLength` ([System. Int32][]) обязательный. Указывает минимальное число аргументов.
 
 `MaxLength`([System. Int32][]) обязательный. Указывает максимальное число аргументов.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 - Дополнительные сведения об объявлении этого атрибута см. в разделе [проверка числа аргументов][].
 
@@ -42,7 +40,7 @@ ms.locfileid: "87786328"
 
 - Атрибут Валидатекаунт определяется классом [System. Management. Automation. валидатекаунтаттрибуте][] .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. Валидатекаунтаттрибуте][]
 

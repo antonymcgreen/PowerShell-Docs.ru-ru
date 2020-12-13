@@ -1,12 +1,14 @@
 ---
-title: Элемент DisplayError (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 5d46c2fbd48f592db5ba1b33eb6cead8dc1c4698
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент DisplayError (формат)
+description: Элемент DisplayError (формат)
+ms.openlocfilehash: fb54df86a3558263687a8c417870495b7066f563
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774292"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649921"
 ---
 # <a name="displayerror-element-format"></a>Элемент DisplayError (формат)
 
@@ -38,11 +40,11 @@ ms.locfileid: "87774292"
 |-------------|-----------------|
 |[Элемент DefaultSettings (формат)](./defaultsettings-element-format.md)|Определяет общие параметры, которые применяются ко всем представлениям файла форматирования.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 По умолчанию при возникновении ошибки при попытке отобразить фрагмент данных расположение данных остается пустым. Если этот элемент имеет значение true, будет отображена строка #ERR.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент DefaultSettings (формат)](./defaultsettings-element-format.md)
 

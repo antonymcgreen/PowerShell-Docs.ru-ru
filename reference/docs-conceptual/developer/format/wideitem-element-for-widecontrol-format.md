@@ -1,12 +1,14 @@
 ---
-title: Элемент Видеитем для Видеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6b2f7c97978c20350caeec894589c5995ae7ccc4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент WideItem для WideControl (формат)
+description: Элемент WideItem для WideControl (формат)
+ms.openlocfilehash: b9c416bbe3befcd689b8a2c0b72a8ff1301b9659
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779902"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647797"
 ---
 # <a name="wideitem-element-for-widecontrol-format"></a>Элемент WideItem для WideControl (формат)
 
@@ -46,7 +48,7 @@ ms.locfileid: "87779902"
 |-------------|-----------------|
 |[Элемент Видинтри (Format)](./wideentry-element-for-widecontrol-format.md)|Предоставляет определение расширенного представления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах расширенного представления см. в разделе [широкие представления](./creating-a-wide-view.md).
 
@@ -64,7 +66,7 @@ ms.locfileid: "87779902"
 
 Полный пример расширенного представления см. в разделе [широкие представления (базовый)](./wide-view-basic.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент FormatString для элемента WideItem для элемента WideControl (формат)](./formatstring-element-for-wideitem-for-widecontrol-format.md)
 

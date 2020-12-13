@@ -1,16 +1,14 @@
 ---
-title: Объявление атрибута ValidatePattern | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidatePattern
-- ValidatePattern attribute, described
-- ValidatePattern attribute
-ms.openlocfilehash: 713fa7a46a8eeefdbfd679a5e8436285fac085f8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Объявление атрибута ValidatePattern
+description: Объявление атрибута ValidatePattern
+ms.openlocfilehash: 364f63d2c52563eaefe64bcbb2bbae511bccb074
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787807"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646173"
 ---
 # <a name="validatepattern-attribute-declaration"></a>Объявление атрибута ValidatePattern
 
@@ -27,11 +25,11 @@ ms.locfileid: "87787807"
 
 #### <a name="parameters"></a>Параметры
 
-`RegexString`([System. String](/dotnet/api/System.String)) обязательный. Задает регулярное выражение, которое проверяет аргумент параметра.
+`RegexString` ([System. String](/dotnet/api/System.String)) обязательный. Задает регулярное выражение, которое проверяет аргумент параметра.
 
 Параметры ([System. Text. RegularExpressions. RegexOptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions)) необязательный именованный параметр. Задает побитовое сочетание флагов [System. Text. RegularExpressions. RegexOptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions) , задающих параметры регулярных выражений.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 - Этот атрибут можно использовать только один раз для каждого параметра.
 
@@ -41,7 +39,7 @@ ms.locfileid: "87787807"
 
 - Атрибут ValidatePattern определяется классом [System. Management. Automation. валидатепаттернаттрибуте](/dotnet/api/System.Management.Automation.ValidatePatternAttribute) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. Валидатепаттернаттрибуте](/dotnet/api/System.Management.Automation.ValidatePatternAttribute)
 

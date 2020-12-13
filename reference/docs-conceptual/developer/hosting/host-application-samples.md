@@ -1,20 +1,22 @@
 ---
-title: Примеры ведущих приложений | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 260f813c8c8c8f699c6af209d64ad71f18c91c7a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры ведущих приложений
+description: Примеры ведущих приложений
+ms.openlocfilehash: eee5fd2952cfbd1e577b9d0d79cbc956efc602d8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772286"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649276"
 ---
 # <a name="host-application-samples"></a>Примеры ведущих приложений
 
 В этом разделе содержится пример кода, который предоставляется в пакете SDK для Windows PowerShell 2,0.
 
- Полный пример кода можно скопировать из подразделов этого раздела или использовать исходные файлы, установленные вместе с пакетом SDK. [Пакет средств разработки программного обеспечения (SDK) для Windows PowerShell 2,0](https://www.microsoft.com/download/details.aspx?id=2560) предоставляет файлы Readme, исходные файлы и файлы проектов Visual Studio для каждого примера.
+ Полный пример кода можно скопировать из подразделов этого раздела или использовать исходные файлы, установленные вместе с пакетом SDK. [Пакет средств разработки программного обеспечения (пакет SDK) для Windows PowerShell 2.0](https://www.microsoft.com/download/details.aspx?id=2560) содержит файлы сведений, исходные файлы и файлы проектов Visual Studio для каждого примера.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
  [Примеры API PowerShell](./windows-powershell-api-samples.md) В этом разделе содержится пример кода, в котором показано, как создавать пространства выполнения, ограничивающие функциональные возможности, и как асинхронно выполнять команды с помощью пула пространства выполнение для предоставления пространств.
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент Хидетаблехеадерс (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 529a3ebbbc1be17131c17e537311c2c041326393
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент HideTableHeaders (формат)
+description: Элемент HideTableHeaders (формат)
+ms.openlocfilehash: fefd296757ba190151f1ce592e6609c5f3f070e2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781364"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648133"
 ---
 # <a name="hidetableheaders-element-format"></a>Элемент HideTableHeaders (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87781364"
 
 Укажите `true` , чтобы скрыть заголовки таблицы.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

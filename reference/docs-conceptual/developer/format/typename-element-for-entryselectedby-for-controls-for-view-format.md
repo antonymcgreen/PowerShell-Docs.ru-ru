@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для Ентриселектедби элементов управления для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6eaa4f80a18c91ca351657fd40a8cac6f688c22f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента EntrySelectedBy для элемента Controls для элемента View (формат)
+description: Элемент TypeName для элемента EntrySelectedBy для элемента Controls для элемента View (формат)
+ms.openlocfilehash: 03a70b0c6c71910932f1d032c94c602cef8ab964
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783336"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647886"
 ---
 # <a name="typename-element-for-entryselectedby-for-controls-for-view-format"></a>Элемент TypeName для элемента EntrySelectedBy для элемента Controls для элемента View (формат)
 
@@ -43,9 +45,9 @@ ms.locfileid: "87783336"
 
 Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент EntrySelectedBy для элемента CustomEntry для элемента Controls для элемента View (формат)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)
 

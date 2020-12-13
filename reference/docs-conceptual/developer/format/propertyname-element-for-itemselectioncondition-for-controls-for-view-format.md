@@ -1,12 +1,14 @@
 ---
-title: Элемент PropertyName для Итемселектионкондитион элементов управления в представлении (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c6517b8f63e0511ce071926ac3ac39ba82e7ed21
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент PropertyName для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)
+description: Элемент PropertyName для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)
+ms.openlocfilehash: 9fb7a21e19338dbf59dab14291e1b02736835040
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783489"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645821"
 ---
 # <a name="propertyname-element-for-itemselectioncondition-for-controls-for-view-format"></a>Элемент PropertyName для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87783489"
 
 Укажите имя свойства .NET, которое запускает условие.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если этот элемент используется, нельзя указать элемент [ScriptBlock](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md) при определении условия выбора.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ScriptBlock для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md)
 

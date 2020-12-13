@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионсетнаме для Ентриселектедби для элементов управления конфигурации (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 72072d8d13e6ca22afdb9bca2e0237d29ba0594f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionSetName для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)
+description: Элемент SelectionSetName для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: b775aa8a3184aa3ebcbda17a8e3191c69d67a700
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787569"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645729"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format"></a>Элемент SelectionSetName для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)
 
@@ -27,7 +29,7 @@ ms.locfileid: "87787569"
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет
+None
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -43,13 +45,13 @@ ms.locfileid: "87787569"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Для каждого определения элемента управления должно быть определено по крайней мере одно имя типа, набор выбора или условие выбора.
 
 Наборы выбора обычно используются, если требуется определить группу объектов, используемых в нескольких представлениях. Дополнительные сведения об определении наборов выбора см. в разделе [Определение наборов выбора](./defining-selection-sets.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент EntrySelectedBy для элемента CustomEntry для элемента Controls для элемента Configuration (формат)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)
 

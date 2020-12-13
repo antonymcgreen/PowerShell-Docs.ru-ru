@@ -1,12 +1,14 @@
 ---
-title: Элемент Итемселектионкондитион для ExpressionBinding элементов управления для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e8e3ea64fd947fbb2b98c410ac08533f386c9505
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+description: Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+ms.openlocfilehash: adbe747bdb4f6c1d180e5b630247de0fd3d72b85
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781211"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648054"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format"></a>Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента Controls для элемента View (формат)
 
@@ -44,11 +46,11 @@ ms.locfileid: "87781211"
 |-------------|-----------------|
 |[Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Определяет данные, отображаемые элементом управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Можно указать одно имя свойства или скрипт для этого условия, но не указывать оба значения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент PropertyName для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md)
 

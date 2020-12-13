@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионкондитион для Ентриселектедби для Енумерабликспансион (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: d5858145e092dc962174a776889a4f62db366d71
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+description: Элемент SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+ms.openlocfilehash: 3ecf7fde99b9ee66a153eea416792f351ff62af3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785342"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647927"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87785342"
 |-------------|-----------------|
 |[Элемент EntrySelectedBy для элемента EnumerableExpansion (формат)](./entryselectedby-element-for-enumerableexpansion-format.md)|Определяет, какие объекты коллекции .NET разворачиваются этим определением.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Каждое определение должно иметь по крайней мере одно определенное имя типа, набор выбора или условие выбора.
 
@@ -62,7 +64,7 @@ ms.locfileid: "87785342"
 
 Дополнительные сведения о других компонентах расширенного представления см. в разделе [широкие представления](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md)
 

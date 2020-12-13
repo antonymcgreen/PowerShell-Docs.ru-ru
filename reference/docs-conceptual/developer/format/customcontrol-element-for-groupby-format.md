@@ -1,12 +1,14 @@
 ---
-title: Элемент ошибка customcontrol для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: b8265e872d34ea5dbcedfaa1668d21df8c3b35eb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент CustomControl для элемента GroupBy (формат)
+description: Элемент CustomControl для элемента GroupBy (формат)
+ms.openlocfilehash: 633cfcbd10206dc8d7fb4bc1d0092f19aa5bde7c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786073"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646098"
 ---
 # <a name="customcontrol-element-for-groupby-format"></a>Элемент CustomControl для элемента GroupBy (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87786073"
 |-------------|-----------------|
 |[Элемент GroupBy для элемента View (формат)](./groupby-element-for-view-format.md)|Определяет, как Windows PowerShell отображает новую группу объектов.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)](./customentries-element-for-customcontrol-for-groupby-format.md)
 

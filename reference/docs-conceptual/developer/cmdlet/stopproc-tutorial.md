@@ -1,16 +1,18 @@
 ---
-title: Учебник по Стоппрок | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e298c729b7ac59141638052d19b95ab77aa25cd6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Руководство по StopProc
+description: Руководство по StopProc
+ms.openlocfilehash: 95229ee3c4905d295bd6991fe8ccf8c9840c3cdd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786481"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646423"
 ---
 # <a name="stopproc-tutorial"></a>Руководство по StopProc
 
-В этом разделе приводится руководство по созданию командлета "останавливает- [обработать](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) ", который очень похож на командлет, предоставляемый Windows PowerShell. В этом учебнике содержатся фрагменты кода, иллюстрирующие реализацию командлетов и объяснение кода.
+В этом разделе приводится руководство по созданию командлета Stop-Proc, который очень похож [на командлет,](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) предоставляемый Windows PowerShell. В этом учебнике содержатся фрагменты кода, иллюстрирующие реализацию командлетов и объяснение кода.
 
 ## <a name="topics-in-this-tutorial"></a>Подразделы этого руководства
 
@@ -24,7 +26,7 @@ ms.locfileid: "87786481"
 
 [Добавление наборов параметров в командлеты](./adding-parameter-sets-to-a-cmdlet.md) В этом разделе описывается добавление наборов параметров в командлет. Наборы параметров позволяют командлету взаимодействовать по-разному в зависимости от того, какие параметры задаются пользователем.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание командлета, который изменяет систему](./creating-a-cmdlet-that-modifies-the-system.md)
 

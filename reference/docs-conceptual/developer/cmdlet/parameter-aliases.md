@@ -1,12 +1,14 @@
 ---
-title: Псевдонимы параметров | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e320eeb4d2ab91acf2116fdc817a50e93c82aead
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Псевдонимы параметров
+description: Псевдонимы параметров
+ms.openlocfilehash: 0895e2c4df3a149ae75a9741fb65134a8e1122c1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781993"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648517"
 ---
 # <a name="parameter-aliases"></a>Псевдонимы параметров
 
@@ -41,7 +43,7 @@ public string UserName
 private string userName;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Общие имена параметров](./common-parameter-names.md)
 

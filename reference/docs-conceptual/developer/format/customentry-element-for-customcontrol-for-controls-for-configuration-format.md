@@ -1,12 +1,14 @@
 ---
-title: Элемент Кустоментри для ошибка customcontrol для элементов управления конфигурации (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 8b9d18bbb1abce8135f4c27418ad54a1736eb5a6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент CustomEntry для элемента CustomControl для элемента Controls для элемента Configuration (формат)
+description: Элемент CustomEntry для элемента CustomControl для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 3967be86a1d6c12c7215ef19d50bac9fafd5ad6d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785937"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648276"
 ---
 # <a name="customentry-element-for-customcontrol-for-controls-for-configuration-format"></a>Элемент CustomEntry для элемента CustomControl для элемента Controls для элемента Configuration (формат)
 
@@ -45,11 +47,11 @@ ms.locfileid: "87785937"
 |-------------|-----------------|
 |[Элемент Кустоментриес для ошибка customcontrol конфигурации (Format)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)|Предоставляет определения общего элемента управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 В большинстве случаев для каждого общего пользовательского элемента управления требуется только одно определение, но существует несколько определений, если вы хотите использовать один и тот же элемент управления для вывода различных объектов .NET. В таких случаях можно указать отдельное определение для каждого объекта или набора объектов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Кустоментриес для ошибка customcontrol конфигурации (Format)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)
 

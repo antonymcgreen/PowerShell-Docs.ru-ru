@@ -1,12 +1,14 @@
 ---
-title: Параметры количества | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 7ff6562380bb6336b08879b31d8d9fed47bfb6a7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Параметры количества
+description: Параметры количества
+ms.openlocfilehash: 3f7c23eec34a709b1f2d59f611c93909b20f4124
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781823"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650297"
 ---
 # <a name="quantity-parameters"></a>Параметры количества
 
@@ -20,7 +22,7 @@ ms.locfileid: "87781823"
 |**Count**<br>Тип данных: Int64|Реализуйте этот параметр, чтобы пользователь мог указать число.|
 |**Область**<br>Тип данных: ключевое слово|Реализуйте этот параметр, чтобы пользователь мог указать область действия.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Параметры командлета](./cmdlet-parameters.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент ColumnNumber для Видеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 5f151bb0e629efcebe6295cdcae6cebcbbb1b39b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ColumnNumber для WideControl (формат)
+description: Элемент ColumnNumber для WideControl (формат)
+ms.openlocfilehash: 1ddbbfbd5b53065afcc6c1326d6abf1fadedc67b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783863"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648402"
 ---
 # <a name="columnnumber-element-for-widecontrol-format"></a>Элемент ColumnNumber для WideControl (формат)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87783863"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Description|
+|Элемент|Описание|
 |-------------|-----------------|
 |[Элемент WideControl (формат)](./widecontrol-element-format.md)|Определяет для представления широкий формат списка (одно значение).|
 
@@ -42,7 +44,7 @@ ms.locfileid: "87783863"
 
 Укажите положительное целое значение.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 При определении широкого представления можно добавить `AutoSize` элемент или `ColumnNumber` элемент, но нельзя добавить оба элемента.
 

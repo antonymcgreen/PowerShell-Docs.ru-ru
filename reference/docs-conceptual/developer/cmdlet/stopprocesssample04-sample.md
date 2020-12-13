@@ -1,12 +1,14 @@
 ---
-title: Пример StopProcessSample04 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: a256d29b9e0be878d805a82ddf5a538461d283d6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример командлета StopProcessSample04
+description: Пример командлета StopProcessSample04
+ms.openlocfilehash: 65588b4d60034d1e6a1e17441a4a640caaacdce8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786430"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650133"
 ---
 # <a name="stopprocesssample04-sample"></a>Пример командлета StopProcessSample04
 
@@ -60,7 +62,7 @@ ms.locfileid: "87786430"
 
 ## <a name="example"></a>Пример
 
-В следующем коде показана реализация командлета "останавливает-proc", который объявляет наборы параметров, задает набор параметров по умолчанию и может принимать входной объект.
+В следующем коде показана реализация командлета Stop-Proc, который объявляет наборы параметров, задает набор параметров по умолчанию и может принимать входной объект.
 
 В этом примере показан входной объект, способы объявления наборов параметров и указания набора параметров по умолчанию для использования.
 

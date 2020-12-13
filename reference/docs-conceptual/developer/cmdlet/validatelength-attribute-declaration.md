@@ -1,16 +1,14 @@
 ---
-title: Объявление атрибута Валидателенгс | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateLength attribute, described
-- attributes, ValidateLength
-- ValidateLength attribute
-ms.openlocfilehash: 7145dde55e79eeea6e3ceb91dfc1c93043a8857c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Объявление атрибута ValidateLength
+description: Объявление атрибута ValidateLength
+ms.openlocfilehash: b35fe24c6fc44aaca6a39d819d6e3fc2d8a2cade
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786311"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646182"
 ---
 # <a name="validatelength-attribute-declaration"></a>Объявление атрибута ValidateLength
 
@@ -24,11 +22,11 @@ ms.locfileid: "87786311"
 
 #### <a name="parameters"></a>Параметры
 
-`MinLength`([System. Int32](/dotnet/api/System.Int32)) обязательный. Указывает минимальное допустимое число символов.
+`MinLength` ([System. Int32](/dotnet/api/System.Int32)) обязательный. Указывает минимальное допустимое число символов.
 
-`MaxLength`([System. Int32](/dotnet/api/System.Int32)) обязательный. Указывает максимально допустимое число символов.
+`MaxLength` ([System. Int32](/dotnet/api/System.Int32)) обязательный. Указывает максимально допустимое число символов.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 - Дополнительные сведения об объявлении этого атрибута см. в разделе [как объявлять правила проверки входных данных](./how-to-validate-parameter-input.md).
 
@@ -44,7 +42,7 @@ ms.locfileid: "87786311"
 
 - Атрибут Валидателенгс определяется классом [System. Management. Automation. валидателенгсаттрибуте](/dotnet/api/System.Management.Automation.ValidateLengthAttribute) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. Валидателенгсаттрибуте](/dotnet/api/System.Management.Automation.ValidateLengthAttribute)
 

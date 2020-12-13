@@ -1,12 +1,14 @@
 ---
-title: Учебники по написанию командлетов | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 991cceef2b1d18c0cdaad4f092c4affb5c632b0e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Руководства по написанию командлетов
+description: Руководства по написанию командлетов
+ms.openlocfilehash: 7ec20b845f8547d346c3777bd52984337d37b83a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784016"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646377"
 ---
 # <a name="tutorials-for-writing-cmdlets"></a>Руководства по написанию командлетов
 
@@ -15,7 +17,7 @@ ms.locfileid: "87784016"
 > [!IMPORTANT]
 > Сведения о том, кому нужны примеры кода с меньшим описанием, см. в разделе [примеры командлетов](./cmdlet-samples.md).
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Учебник по INPROC](./getproc-tutorial.md) . в этом учебнике описывается определение класса командлета и Добавление базовых функций, таких как добавление параметров и сообщения об ошибках. Командлет, описанный в этом руководстве, очень похож на командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) , предоставляемый Windows PowerShell.
 
@@ -23,7 +25,7 @@ ms.locfileid: "87784016"
 
 [Учебник по селектстр](./selectstr-tutorial.md) . в этом учебнике описывается, как определить командлет, обращающийся к хранилищу данных. Описанный здесь командлет выполняет ту же задачу, что и командлет [Select-String](/powershell/module/microsoft.powershell.utility/select-string) , предоставляемый Windows PowerShell.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководство по GetProc](./getproc-tutorial.md)
 

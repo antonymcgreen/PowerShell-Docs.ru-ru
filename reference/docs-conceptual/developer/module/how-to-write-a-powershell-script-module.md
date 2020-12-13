@@ -1,12 +1,14 @@
 ---
-title: Написание модуля скрипта PowerShell | Документация Майкрософт
 ms.date: 11/21/2019
-ms.openlocfilehash: dc387909a9e55df9f1846b02755e284c408f7dc6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как написать модуль сценария PowerShell
+description: Как написать модуль сценария PowerShell
+ms.openlocfilehash: c44b09a915501fb10773ab11cf13136d5035ba69
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784900"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649142"
 ---
 # <a name="how-to-write-a-powershell-script-module"></a>Как написать модуль сценария PowerShell
 
@@ -80,9 +82,9 @@ ms.locfileid: "87784900"
 7. Чтобы удалить модуль из активной службы в текущем сеансе PowerShell, используйте [Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module).
 
    > [!NOTE]
-   > `Remove-Module`Удаление модуля из текущего сеанса PowerShell, но не удаление модуля или файлов модуля.
+   > `Remove-Module` Удаление модуля из текущего сеанса PowerShell, но не удаление модуля или файлов модуля.
 
-## <a name="show-calendar-code-example"></a>Пример кода для показа календаря
+## <a name="show-calendar-code-example"></a>Пример кода Show-Calendar
 
 В следующем примере представлен модуль скрипта, содержащий одну функцию с именем `Show-Calendar` . Эта функция отображает визуальное представление календаря. Образец содержит строки справки PowerShell для кратких сведений, описания, значений параметров и кода. При импорте модуля `Export-ModuleMember` команда обеспечивает `Show-Calendar` экспорт функции в качестве члена модуля.
 

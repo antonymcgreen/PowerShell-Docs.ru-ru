@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для Ентриселектедби для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e62762cf142bd2d20b21ad8f4249285bd3679280
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента EntrySelectedBy для элемента GroupBy (формат)
+description: Элемент TypeName для элемента EntrySelectedBy для элемента GroupBy (формат)
+ms.openlocfilehash: 07cc92e9c501aa0eb2d219e416851be0fcd80f47
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780273"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645704"
 ---
 # <a name="typename-element-for-entryselectedby-for-groupby-format"></a>Элемент TypeName для элемента EntrySelectedBy для элемента GroupBy (формат)
 
@@ -42,13 +44,13 @@ ms.locfileid: "87780273"
 
 Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Для каждого определения элемента управления должно быть определено по крайней мере одно имя типа, набор выбора или условие выбора.
 
 Дополнительные сведения о компонентах представления пользовательского элемента управления см. в разделе [Создание пользовательских элементов управления](./creating-custom-controls.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание пользовательских элементов управления](./creating-custom-controls.md)
 

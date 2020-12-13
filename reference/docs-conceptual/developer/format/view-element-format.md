@@ -1,12 +1,14 @@
 ---
-title: View, элемент (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c0c6fa373cfca3a55a62f201e1eabc6a1e308ef7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент View (формат)
+description: Элемент View (формат)
+ms.openlocfilehash: 6fed1304d94339cc90b6ae53e06483c08d937c12
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785036"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649748"
 ---
 # <a name="view-element-format"></a>Элемент View (формат)
 
@@ -56,7 +58,7 @@ ms.locfileid: "87785036"
 |-------------|-----------------|
 |[Элемент ViewDefinitions (формат)](./viewdefinitions-element-format.md)|Определяет представления, используемые для отображения объектов.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах различных представлений и пользовательских элементов управления см. в следующих разделах:
 
@@ -85,7 +87,7 @@ ms.locfileid: "87785036"
 
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ViewDefinitions (формат)](./viewdefinitions-element-format.md)
 

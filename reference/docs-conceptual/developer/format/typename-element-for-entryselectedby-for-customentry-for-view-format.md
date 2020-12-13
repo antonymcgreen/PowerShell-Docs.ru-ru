@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для Ентриселектедби для Кустоментри для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: f8dc2c808e6eb3d6a7873cdbddc936b95d94c541
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента EntrySelectedBy для элемента CustomEntry для элемента View (формат)
+description: Элемент TypeName для элемента EntrySelectedBy для элемента CustomEntry для элемента View (формат)
+ms.openlocfilehash: 72bb88bccc2bbd62f7ed160b820cf9169cb69341
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785104"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645751"
 ---
 # <a name="typename-element-for-entryselectedby-for-customentry-for-view-format"></a>Элемент TypeName для элемента EntrySelectedBy для элемента CustomEntry для элемента View (формат)
 
@@ -42,13 +44,13 @@ ms.locfileid: "87785104"
 
 Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Для каждого определения представления пользовательского элемента управления должно быть определено по крайней мере одно имя типа, набор выбора или условие выбора.
 
 Дополнительные сведения о компонентах представления пользовательского элемента управления см. в разделе [Создание пользовательских элементов управления](./creating-custom-controls.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание пользовательских элементов управления](./creating-custom-controls.md)
 

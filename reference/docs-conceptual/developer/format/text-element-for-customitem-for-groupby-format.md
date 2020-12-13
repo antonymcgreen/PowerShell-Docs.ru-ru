@@ -1,12 +1,14 @@
 ---
-title: Текстовый элемент для Кустомитем для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 811dc3a6f83f93513bd8380a7c3b66a813fe7801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Text для элемента CustomItem для элемента GroupBy (формат)
+description: Элемент Text для элемента CustomItem для элемента GroupBy (формат)
+ms.openlocfilehash: 4c8158c9c8e77044732e473f57291194280f4e79
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783370"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649757"
 ---
 # <a name="text-element-for-customitem-for-groupby-format"></a>Элемент Text для элемента CustomItem для элемента GroupBy (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87783370"
 
 Укажите текст элемента управления для данных, которые требуется отобразить.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)](./customitem-element-for-customentry-for-groupby-format.md)
 

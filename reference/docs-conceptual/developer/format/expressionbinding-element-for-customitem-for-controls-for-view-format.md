@@ -1,12 +1,14 @@
 ---
-title: Элемент ExpressionBinding для Кустомитем элементов управления для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6760bf17be58411948ecb3437bf18bce40073954
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)
+description: Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)
+ms.openlocfilehash: da87bb26d21dcb051871e67997cc3fba7ce73c74
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773816"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649894"
 ---
 # <a name="expressionbinding-element-for-customitem-for-controls-for-view-format"></a>Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)
 
@@ -52,9 +54,9 @@ ms.locfileid: "87773816"
 |-------------|-----------------|
 |[Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента View (формат)](./customitem-element-for-customentry-for-controls-for-view-format.md)|Определяет, какие данные отображаются элементом управления и как они отображаются.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента View (формат)](./customitem-element-for-customentry-for-controls-for-view-format.md)
 

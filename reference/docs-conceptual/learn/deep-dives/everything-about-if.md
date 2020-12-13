@@ -4,10 +4,10 @@ description: Как и многие другие языки, PowerShell соде
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: b6bafb99bfb8ecd0152bae841e5c58d4c27ccd3e
-ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "86469758"
 ---
 # <a name="everything-you-wanted-to-know-about-the-if-statement"></a>Все, что вы хотели знать об операторе `if`
@@ -694,7 +694,7 @@ if ( -not (Test-Path -Path $folder) )
 [Оригинал]: https://powershellexplained.com/2019-08-11-Powershell-if-then-else-equals-operator/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
-[if]: /powershell/module/microsoft.powershell.core/about/about_if
+[if]: /powershell/module/microsoft.powershell.core/about/about_if (если);
 [побитовыми операторами]: /powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
 [множестве способов использования регулярных выражений]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression/
 [все, что вы хотели знать об исключениях]: everything-about-exceptions.md

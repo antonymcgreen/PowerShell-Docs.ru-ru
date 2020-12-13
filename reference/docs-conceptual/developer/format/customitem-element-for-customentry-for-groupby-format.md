@@ -1,12 +1,14 @@
 ---
-title: Элемент Кустомитем для Кустоментри для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e8086c5330b6644f83316ad4ae33c33ba40d9eee
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)
+description: Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)
+ms.openlocfilehash: 5db23ad4dad5bd66ea64b9c6e91b8224a4aa4eca
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783727"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645984"
 ---
 # <a name="customitem-element-for-customentry-for-groupby-format"></a>Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)
 
@@ -35,7 +37,7 @@ ms.locfileid: "87783727"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-|Элемент|Description|
+|Элемент|Описание|
 |-------------|-----------------|
 |[Элемент ExpressionBinding для элемента CustomItem для элемента GroupBy (формат)](./expressionbinding-element-for-customitem-for-groupby-format.md)|Необязательный элемент.<br /><br /> Определяет данные, отображаемые элементом управления.|
 |[Элемент Frame для элемента CustomItem для элемента GroupBy (формат)](./frame-element-for-customitem-for-groupby-format.md)|Необязательный элемент.<br /><br /> Определяет, какие данные отображаются в представлении пользовательского элемента управления и как они отображаются.|
@@ -44,11 +46,11 @@ ms.locfileid: "87783727"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Description|
+|Элемент|Описание|
 |-------------|-----------------|
 |[Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)](./customentry-element-for-customcontrol-for-groupby-format.md)|Предоставляет определение представления пользовательского элемента управления.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 ## <a name="see-also"></a>См. также:
 

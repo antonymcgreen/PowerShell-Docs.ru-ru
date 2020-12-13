@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионкондитион для Ентриселектедби для элементов управления конфигурации (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 748aa1aa0ba603a44334d9401e9e2c0e68f14e03
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)
+description: Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: ce00cdf868a3075875043aeb59f2cb8a17d049a9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783421"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645783"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента Configuration (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87783421"
 |-------------|-----------------|
 |[Элемент EntrySelectedBy для элемента CustomEntry для элемента Controls для элемента Configuration (формат)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)|Определяет типы .NET, которые используют эту запись определения общего элемента управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 При определении условия выбора необходимо следовать приведенным ниже рекомендациям.
 
@@ -58,7 +60,7 @@ ms.locfileid: "87783421"
 
 Дополнительные сведения о том, как можно использовать условия выбора, см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент PropertyName для элемента SelectionCondition для элемента Controls для элемента Configuration (формат)](./propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md)
 

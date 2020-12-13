@@ -3,10 +3,10 @@ title: Отображение хода выполнения при многоп�
 description: Использование Write-Progress для нескольких потоков с помощью Foreach-Object -Parallel
 ms.date: 08/02/2020
 ms.openlocfilehash: 909fc1bbdeded8845b1955e3384fb55db7173030
-ms.sourcegitcommit: 640646992955116def23d16dd12c221857d37b68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "89410848"
 ---
 # <a name="writing-progress-across-multiple-threads-with-foreach-parallel"></a>Запись хода выполнения для нескольких потоков с помощью Foreach Parallel

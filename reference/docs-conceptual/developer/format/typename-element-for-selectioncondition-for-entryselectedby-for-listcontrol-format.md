@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для Селектионкондитион для Ентриселектедби для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: bc58d630e65b316f9223bf3c529f928358e38ebc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
+description: Элемент TypeName для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
+ms.openlocfilehash: 2e8246e3ef2cba38824d8f8004acfffc3236df13
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787381"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645558"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>Элемент TypeName для элемента SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
 
@@ -42,13 +44,13 @@ ms.locfileid: "87787381"
 
 Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Условие выбора может указывать любое количество типов .NET или наборов выбора, но не может одновременно указывать оба типа. Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
 Дополнительные сведения о других компонентах представления списка см. [в разделе Создание представления списка](./creating-a-list-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления списка](./creating-a-list-view.md)
 

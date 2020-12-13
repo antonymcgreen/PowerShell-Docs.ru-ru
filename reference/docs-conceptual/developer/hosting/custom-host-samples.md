@@ -1,18 +1,20 @@
 ---
-title: Примеры настраиваемого узла | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6a10d3da6d8bf93986a3f5b029fdae3afb23a903
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры пользовательских узлов
+description: Примеры пользовательских узлов
+ms.openlocfilehash: 939b9f5d6bbc3ccf1ac95343e897ecffef0a2f42
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779528"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649316"
 ---
 # <a name="custom-host-samples"></a>Примеры пользовательских узлов
 
 В этом разделе содержится пример кода для написания пользовательского узла. С помощью Microsoft Visual Studio можно создать консольное приложение, а затем скопировать код из разделов этого раздела в ведущее приложение.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
  [Пример Host01](./host01-sample.md) В этом примере показано, как реализовать ведущее приложение, которое использует базовый пользовательский узел.
 

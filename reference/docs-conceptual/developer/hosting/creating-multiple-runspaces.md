@@ -1,12 +1,14 @@
 ---
-title: Создание нескольких пространств выполнения | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 1047492d2b859ae14ddd279e25e5e1dff0013820
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание нескольких пространств выполнения
+description: Создание нескольких пространств выполнения
+ms.openlocfilehash: 2dc9cc0397178d679a4d418b7b19fb0895a4e1b7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779633"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649402"
 ---
 # <a name="creating-multiple-runspaces"></a>Создание нескольких пространств выполнения
 
@@ -72,6 +74,6 @@ namespace HostRunspacePool
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [Создание InitialSessionState](./creating-an-initialsessionstate.md)

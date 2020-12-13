@@ -1,12 +1,14 @@
 ---
-title: Как создать XML-файл HelpInfo
 ms.date: 09/13/2016
-ms.openlocfilehash: e395746e51309477bbcbff51b4591de3f73ce0db
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Как создать XML-файл HelpInfo
+description: Как создать XML-файл HelpInfo
+ms.openlocfilehash: d5a24306aa6488fdefad0b7b1ea9e2978a93a7b5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893311"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647712"
 ---
 # <a name="how-to-create-a-helpinfo-xml-file"></a>Как создать XML-файл HelpInfo
 
@@ -32,6 +34,6 @@ XML-файл HelpInfo является основным источником с�
 
 - [Как задать номера версий XML-файла HelpInfo](./how-to-set-helpinfo-xml-version-numbers.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Поддержка обновляемой справки](./supporting-updatable-help.md)
