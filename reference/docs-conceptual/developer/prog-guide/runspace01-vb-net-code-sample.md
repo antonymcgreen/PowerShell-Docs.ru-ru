@@ -1,18 +1,20 @@
 ---
-title: Пример кода Runspace01 (VB.NET) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: d40424283057b389d8a4aafeb8ddfa44284f3ba1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример кода Runspace01 (VB.NET)
+description: Пример кода Runspace01 (VB.NET)
+ms.openlocfilehash: 69211662c166c40e6e99e287083f7bd53f9f536f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778652"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653849"
 ---
-# <a name="runspace01-vbnet-code-sample"></a><span data-ttu-id="e0cfa-102">Пример кода Runspace01 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="e0cfa-102">Runspace01 (VB.NET) Code Sample</span></span>
+# <a name="runspace01-vbnet-code-sample"></a><span data-ttu-id="b459e-103">Пример кода Runspace01 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="b459e-103">Runspace01 (VB.NET) Code Sample</span></span>
 
-<span data-ttu-id="e0cfa-103">Ниже приведены примеры кода для пространства выполнения, описанного в разделе [Создание консольного приложения, выполняющего указанную команду](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span><span class="sxs-lookup"><span data-stu-id="e0cfa-103">Here are the code samples for the runspace described in [Creating a Console Application That Runs a Specified Command](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span></span> <span data-ttu-id="e0cfa-104">Для этого приложение вызывает пространство выполнения, а затем вызывает команду.</span><span class="sxs-lookup"><span data-stu-id="e0cfa-104">To do this, the application invokes a runspace, and then invokes a command.</span></span> <span data-ttu-id="e0cfa-105">(Обратите внимание, что это приложение не указывает сведения о конфигурации пространства выполнения и не создает конвейер явным образом.) Вызываемая команда является `Get-Process` командлетом.</span><span class="sxs-lookup"><span data-stu-id="e0cfa-105">(Note that this application does not specify runspace configuration information, nor does it explicitly create a pipeline.) The command that is invoked is the `Get-Process` cmdlet.</span></span>
+<span data-ttu-id="b459e-104">Ниже приведены примеры кода для пространства выполнения, описанного в разделе [Создание консольного приложения, выполняющего указанную команду](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span><span class="sxs-lookup"><span data-stu-id="b459e-104">Here are the code samples for the runspace described in [Creating a Console Application That Runs a Specified Command](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span></span> <span data-ttu-id="b459e-105">Для этого приложение вызывает пространство выполнения, а затем вызывает команду.</span><span class="sxs-lookup"><span data-stu-id="b459e-105">To do this, the application invokes a runspace, and then invokes a command.</span></span> <span data-ttu-id="b459e-106">(Обратите внимание, что это приложение не указывает сведения о конфигурации пространства выполнения и не создает конвейер явным образом.) Вызываемая команда является `Get-Process` командлетом.</span><span class="sxs-lookup"><span data-stu-id="b459e-106">(Note that this application does not specify runspace configuration information, nor does it explicitly create a pipeline.) The command that is invoked is the `Get-Process` cmdlet.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="e0cfa-106">Образец кода</span><span class="sxs-lookup"><span data-stu-id="e0cfa-106">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="b459e-107">Образец кода</span><span class="sxs-lookup"><span data-stu-id="b459e-107">Code Sample</span></span>
 
 ```vb
 Imports System
@@ -64,6 +66,6 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace01.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace01.vb#L09-L53 "Runspace01.vb")] -->
 
-## <a name="see-also"></a><span data-ttu-id="e0cfa-107">См. также</span><span class="sxs-lookup"><span data-stu-id="e0cfa-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b459e-108">См. также:</span><span class="sxs-lookup"><span data-stu-id="b459e-108">See Also</span></span>
 
-[<span data-ttu-id="e0cfa-108">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="e0cfa-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="b459e-109">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="b459e-109">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)

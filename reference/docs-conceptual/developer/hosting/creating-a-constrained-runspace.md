@@ -1,26 +1,28 @@
 ---
-title: Создание ограниченного пространства выполнения | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание ограниченного пространства выполнения
+description: Создание ограниченного пространства выполнения
+ms.openlocfilehash: 53fee3cc7d8625425bc6a73196aee9eee7f17ed6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779817"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651165"
 ---
-# <a name="creating-a-constrained-runspace"></a><span data-ttu-id="88c41-102">Создание ограниченного пространства выполнения</span><span class="sxs-lookup"><span data-stu-id="88c41-102">Creating a constrained runspace</span></span>
+# <a name="creating-a-constrained-runspace"></a><span data-ttu-id="2d42c-103">Создание ограниченного пространства выполнения</span><span class="sxs-lookup"><span data-stu-id="2d42c-103">Creating a constrained runspace</span></span>
 
-<span data-ttu-id="88c41-103">В целях повышения производительности или безопасности может потребоваться ограничить команды Windows PowerShell, доступные для ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="88c41-103">For performance or security reasons, you might want to restrict the Windows PowerShell commands available to your host application.</span></span> <span data-ttu-id="88c41-104">Чтобы сделать это, создайте пустую [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , вызвав [System.Management.Automation.Runspaces.Iniтиалсессионстате. Создайте метод \*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) , а затем добавьте только те команды, которые должны быть доступны.</span><span class="sxs-lookup"><span data-stu-id="88c41-104">To do this you create an empty [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) by calling the [System.Management.Automation.Runspaces.Initialsessionstate.Create\*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) method, and then add only the commands you want available.</span></span>
+<span data-ttu-id="2d42c-104">В целях повышения производительности или безопасности может потребоваться ограничить команды Windows PowerShell, доступные для ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="2d42c-104">For performance or security reasons, you might want to restrict the Windows PowerShell commands available to your host application.</span></span> <span data-ttu-id="2d42c-105">Чтобы сделать это, создайте пустую [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , вызвав [System.Management.Automation.Runspaces.Iniтиалсессионстате. Создайте метод \*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) , а затем добавьте только те команды, которые должны быть доступны.</span><span class="sxs-lookup"><span data-stu-id="2d42c-105">To do this you create an empty [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) by calling the [System.Management.Automation.Runspaces.Initialsessionstate.Create\*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) method, and then add only the commands you want available.</span></span>
 
- <span data-ttu-id="88c41-105">Использование пространства выполнения, которое загружает только указанные команды, обеспечивает значительно повышенную производительность.</span><span class="sxs-lookup"><span data-stu-id="88c41-105">Using a runspace that loads only the commands that you specify provides significantly improved performance.</span></span>
+ <span data-ttu-id="2d42c-106">Использование пространства выполнения, которое загружает только указанные команды, обеспечивает значительно повышенную производительность.</span><span class="sxs-lookup"><span data-stu-id="2d42c-106">Using a runspace that loads only the commands that you specify provides significantly improved performance.</span></span>
 
- <span data-ttu-id="88c41-106">Методы класса [System. Management. Automation. пространства выполнения. сессионстатекмдлетентри](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) используются для определения командлетов для начального состояния сеанса.</span><span class="sxs-lookup"><span data-stu-id="88c41-106">You use the methods of the [System.Management.Automation.Runspaces.Sessionstatecmdletentry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) class to define cmdlets for the initial session state.</span></span>
+ <span data-ttu-id="2d42c-107">Методы класса [System. Management. Automation. пространства выполнения. сессионстатекмдлетентри](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) используются для определения командлетов для начального состояния сеанса.</span><span class="sxs-lookup"><span data-stu-id="2d42c-107">You use the methods of the [System.Management.Automation.Runspaces.Sessionstatecmdletentry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) class to define cmdlets for the initial session state.</span></span>
 
- <span data-ttu-id="88c41-107">Команды также можно сделать закрытыми.</span><span class="sxs-lookup"><span data-stu-id="88c41-107">You can also make commands private.</span></span> <span data-ttu-id="88c41-108">Частные команды могут использоваться ведущим приложением, но не пользователями приложения.</span><span class="sxs-lookup"><span data-stu-id="88c41-108">Private commands can be used by the host application, but not by users of the application.</span></span>
+ <span data-ttu-id="2d42c-108">Команды также можно сделать закрытыми.</span><span class="sxs-lookup"><span data-stu-id="2d42c-108">You can also make commands private.</span></span> <span data-ttu-id="2d42c-109">Частные команды могут использоваться ведущим приложением, но не пользователями приложения.</span><span class="sxs-lookup"><span data-stu-id="2d42c-109">Private commands can be used by the host application, but not by users of the application.</span></span>
 
-## <a name="adding-commands-to-an-empty-runspace"></a><span data-ttu-id="88c41-109">Добавление команд в пустое пространство выполнения</span><span class="sxs-lookup"><span data-stu-id="88c41-109">Adding commands to an empty runspace</span></span>
+## <a name="adding-commands-to-an-empty-runspace"></a><span data-ttu-id="2d42c-110">Добавление команд в пустое пространство выполнения</span><span class="sxs-lookup"><span data-stu-id="2d42c-110">Adding commands to an empty runspace</span></span>
 
- <span data-ttu-id="88c41-110">В следующем примере показано, как создать пустой InitialSessionState и добавить в него команды.</span><span class="sxs-lookup"><span data-stu-id="88c41-110">The following example demonstrates how to create an empty InitialSessionState and add commands to it.</span></span>
+ <span data-ttu-id="2d42c-111">В следующем примере показано, как создать пустой InitialSessionState и добавить в него команды.</span><span class="sxs-lookup"><span data-stu-id="2d42c-111">The following example demonstrates how to create an empty InitialSessionState and add commands to it.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -100,9 +102,9 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="making-commands-private"></a><span data-ttu-id="88c41-111">Создание закрытых команд</span><span class="sxs-lookup"><span data-stu-id="88c41-111">Making commands private</span></span>
+## <a name="making-commands-private"></a><span data-ttu-id="2d42c-112">Создание закрытых команд</span><span class="sxs-lookup"><span data-stu-id="2d42c-112">Making commands private</span></span>
 
- <span data-ttu-id="88c41-112">Можно также сделать команду закрытой, установив свойство [System. Management. Automation. Commandinfo. Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) в значение [System. Management. Automation. сессионстатинтривисибилити](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **Private**.</span><span class="sxs-lookup"><span data-stu-id="88c41-112">You can also make a command private, by setting it's [System.Management.Automation.Commandinfo.Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) property to [System.Management.Automation.SessionStateEntryVisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **Private**.</span></span> <span data-ttu-id="88c41-113">Ведущее приложение и другие команды могут вызывать эту команду, но пользователь приложения не может.</span><span class="sxs-lookup"><span data-stu-id="88c41-113">The host application and other commands can call that command, but the user of the application cannot.</span></span> <span data-ttu-id="88c41-114">В следующем примере команда [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) является закрытой.</span><span class="sxs-lookup"><span data-stu-id="88c41-114">In the following example, the [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) command is private.</span></span>
+ <span data-ttu-id="2d42c-113">Можно также сделать команду закрытой, установив свойство [System. Management. Automation. Commandinfo. Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) в значение [System. Management. Automation. сессионстатинтривисибилити](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **Private**.</span><span class="sxs-lookup"><span data-stu-id="2d42c-113">You can also make a command private, by setting it's [System.Management.Automation.Commandinfo.Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) property to [System.Management.Automation.SessionStateEntryVisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **Private**.</span></span> <span data-ttu-id="2d42c-114">Ведущее приложение и другие команды могут вызывать эту команду, но пользователь приложения не может.</span><span class="sxs-lookup"><span data-stu-id="2d42c-114">The host application and other commands can call that command, but the user of the application cannot.</span></span> <span data-ttu-id="2d42c-115">В следующем примере команда [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) является закрытой.</span><span class="sxs-lookup"><span data-stu-id="2d42c-115">In the following example, the [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) command is private.</span></span>
 
 ```csharp
 defaultSessionState = InitialSessionState.CreateDefault();
@@ -113,6 +115,6 @@ this.runspace = RunspaceFactory.CreateRunspace(defaultSessionState);
 this.runspace.Open();
 ```
 
-## <a name="see-also"></a><span data-ttu-id="88c41-115">См. также</span><span class="sxs-lookup"><span data-stu-id="88c41-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d42c-116">См. также:</span><span class="sxs-lookup"><span data-stu-id="2d42c-116">See Also</span></span>
 
- [<span data-ttu-id="88c41-116">Создание InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="88c41-116">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
+ [<span data-ttu-id="2d42c-117">Создание InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="2d42c-117">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)

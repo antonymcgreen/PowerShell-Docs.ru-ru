@@ -1,68 +1,70 @@
 ---
-title: Пример GetProcessSample04 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4858c44302f7315625be02dd0dc1d335b9c3f158
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример командлета GetProcessSample04
+description: Пример командлета GetProcessSample04
+ms.openlocfilehash: 4b2b7f7ed5fd87711d0d7872caaf75d453de4832
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774428"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652728"
 ---
-# <a name="getprocesssample04-sample"></a><span data-ttu-id="c5069-102">Пример командлета GetProcessSample04</span><span class="sxs-lookup"><span data-stu-id="c5069-102">GetProcessSample04 Sample</span></span>
+# <a name="getprocesssample04-sample"></a><span data-ttu-id="ef4cb-103">Пример командлета GetProcessSample04</span><span class="sxs-lookup"><span data-stu-id="ef4cb-103">GetProcessSample04 Sample</span></span>
 
-<span data-ttu-id="c5069-103">В этом примере показано, как реализовать командлет, который получает процессы на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="c5069-103">This sample shows how to implement a cmdlet that retrieves the processes on the local computer.</span></span> <span data-ttu-id="c5069-104">Она создает неустранимую ошибку в случае возникновения ошибки при получении процесса.</span><span class="sxs-lookup"><span data-stu-id="c5069-104">It generates a nonterminating error if an error occurs while retrieving a process.</span></span> <span data-ttu-id="c5069-105">Этот командлет является упрощенной версией `Get-Process` командлета, предоставляемого Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="c5069-105">This cmdlet is a simplified version of the `Get-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="ef4cb-104">В этом примере показано, как реализовать командлет, который получает процессы на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-104">This sample shows how to implement a cmdlet that retrieves the processes on the local computer.</span></span> <span data-ttu-id="ef4cb-105">Он создает неустранимую ошибку, если при получении процесса возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-105">It generates a nonterminating error if an error occurs while retrieving a process.</span></span> <span data-ttu-id="ef4cb-106">Этот командлет является упрощенной версией `Get-Process` командлета, предоставляемого Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-106">This cmdlet is a simplified version of the `Get-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
 
-## <a name="how-to-build-the-sample-using-visual-studio"></a><span data-ttu-id="c5069-106">Как создать пример с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c5069-106">How to build the sample using Visual Studio.</span></span>
+## <a name="how-to-build-the-sample-using-visual-studio"></a><span data-ttu-id="ef4cb-107">Как создать пример с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-107">How to build the sample using Visual Studio.</span></span>
 
-1. <span data-ttu-id="c5069-107">С установленным пакетом SDK для Windows PowerShell 2,0 перейдите в папку GetProcessSample04</span><span class="sxs-lookup"><span data-stu-id="c5069-107">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample04 folder.</span></span> <span data-ttu-id="c5069-108">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample04.</span><span class="sxs-lookup"><span data-stu-id="c5069-108">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample04.</span></span>
+1. <span data-ttu-id="ef4cb-108">С установленным пакетом SDK для Windows PowerShell 2,0 перейдите в папку GetProcessSample04</span><span class="sxs-lookup"><span data-stu-id="ef4cb-108">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample04 folder.</span></span> <span data-ttu-id="ef4cb-109">Расположение по умолчанию — C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample04.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-109">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample04.</span></span>
 
-2. <span data-ttu-id="c5069-109">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="c5069-109">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="c5069-110">Откроется пример проекта в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c5069-110">This opens the sample project in Visual Studio.</span></span>
+2. <span data-ttu-id="ef4cb-110">Дважды щелкните значок файла решения (SLN).</span><span class="sxs-lookup"><span data-stu-id="ef4cb-110">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="ef4cb-111">Откроется пример проекта в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-111">This opens the sample project in Visual Studio.</span></span>
 
-3. <span data-ttu-id="c5069-111">В меню **Построение** выберите команду **Построить решение**.</span><span class="sxs-lookup"><span data-stu-id="c5069-111">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="ef4cb-112">В меню **Построение** выберите команду **Построить решение**.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-112">In the **Build** menu, select **Build Solution**.</span></span>
 
-    <span data-ttu-id="c5069-112">Библиотека для образца будет построена в папках \bin или \bin\Debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c5069-112">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+    <span data-ttu-id="ef4cb-113">Библиотека для образца будет построена в папках \bin или \bin\Debug по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-113">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="c5069-113">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="c5069-113">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="ef4cb-114">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="ef4cb-114">How to run the sample</span></span>
 
-1. <span data-ttu-id="c5069-114">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="c5069-114">Create the following module folder:</span></span>
+1. <span data-ttu-id="ef4cb-115">Создайте следующую папку модуля:</span><span class="sxs-lookup"><span data-stu-id="ef4cb-115">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/GetProcessSample04`
 
-2. <span data-ttu-id="c5069-115">Скопируйте пример сборки в папку Module.</span><span class="sxs-lookup"><span data-stu-id="c5069-115">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="ef4cb-116">Скопируйте пример сборки в папку Module.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-116">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="c5069-116">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c5069-116">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="ef4cb-117">Запустите Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-117">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="c5069-117">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="c5069-117">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="ef4cb-118">Выполните следующую команду, чтобы загрузить сборку в Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="ef4cb-118">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
     `Import-module getprossessample04`
 
-5. <span data-ttu-id="c5069-118">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="c5069-118">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="ef4cb-119">Выполните следующую команду, чтобы запустить командлет:</span><span class="sxs-lookup"><span data-stu-id="ef4cb-119">Run the following command to run the cmdlet:</span></span>
 
     `get-proc`
 
-## <a name="requirements"></a><span data-ttu-id="c5069-119">Требования</span><span class="sxs-lookup"><span data-stu-id="c5069-119">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="ef4cb-120">Требования</span><span class="sxs-lookup"><span data-stu-id="ef4cb-120">Requirements</span></span>
 
-<span data-ttu-id="c5069-120">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="c5069-120">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="ef4cb-121">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-121">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="c5069-121">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="c5069-121">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="ef4cb-122">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="ef4cb-122">Demonstrates</span></span>
 
-<span data-ttu-id="c5069-122">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="c5069-122">This sample demonstrates the following.</span></span>
+<span data-ttu-id="ef4cb-123">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-123">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="c5069-123">Объявление класса командлета с помощью атрибута командлета.</span><span class="sxs-lookup"><span data-stu-id="c5069-123">Declaring a cmdlet class using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="ef4cb-124">Объявление класса командлета с помощью атрибута командлета.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-124">Declaring a cmdlet class using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="c5069-124">Объявление параметра командлета с помощью атрибута Parameter.</span><span class="sxs-lookup"><span data-stu-id="c5069-124">Declaring a cmdlet parameter using the Parameter attribute.</span></span>
+- <span data-ttu-id="ef4cb-125">Объявление параметра командлета с помощью атрибута Parameter.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-125">Declaring a cmdlet parameter using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="c5069-125">Указание расположения параметра.</span><span class="sxs-lookup"><span data-stu-id="c5069-125">Specifying the position of the parameter.</span></span>
+- <span data-ttu-id="ef4cb-126">Указание расположения параметра.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-126">Specifying the position of the parameter.</span></span>
 
-- <span data-ttu-id="c5069-126">Указание того, что параметр принимает входные данные из конвейера.</span><span class="sxs-lookup"><span data-stu-id="c5069-126">Specifying that the parameter takes input from the pipeline.</span></span> <span data-ttu-id="c5069-127">Входные данные могут быть взяты из объекта или значения из свойства объекта, имя свойства которого совпадает с именем параметра.</span><span class="sxs-lookup"><span data-stu-id="c5069-127">The input can be taken from an object or a value from a property of an object whose property name is the same as the parameter name.</span></span>
+- <span data-ttu-id="ef4cb-127">Указание того, что параметр принимает входные данные из конвейера.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-127">Specifying that the parameter takes input from the pipeline.</span></span> <span data-ttu-id="ef4cb-128">Входные данные могут быть взяты из объекта или значения из свойства объекта, имя свойства которого совпадает с именем параметра.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-128">The input can be taken from an object or a value from a property of an object whose property name is the same as the parameter name.</span></span>
 
-- <span data-ttu-id="c5069-128">Объявление атрибута проверки для входных параметров.</span><span class="sxs-lookup"><span data-stu-id="c5069-128">Declaring a validation attribute for the parameter input.</span></span>
+- <span data-ttu-id="ef4cb-129">Объявление атрибута проверки для входных параметров.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-129">Declaring a validation attribute for the parameter input.</span></span>
 
-- <span data-ttu-id="c5069-129">Перехват незавершающей ошибки и запись сообщения об ошибке в поток ошибок.</span><span class="sxs-lookup"><span data-stu-id="c5069-129">Trapping a nonterminating error and writing an error message to the error stream.</span></span>
+- <span data-ttu-id="ef4cb-130">Перехват незавершающей ошибки и запись сообщения об ошибке в поток ошибок.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-130">Trapping a nonterminating error and writing an error message to the error stream.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c5069-130">Пример</span><span class="sxs-lookup"><span data-stu-id="c5069-130">Example</span></span>
+## <a name="example"></a><span data-ttu-id="ef4cb-131">Пример</span><span class="sxs-lookup"><span data-stu-id="ef4cb-131">Example</span></span>
 
-<span data-ttu-id="c5069-131">В этом примере показано, как создать командлет, который обрабатывает неустранимые ошибки и записывает сообщения об ошибках в поток ошибок.</span><span class="sxs-lookup"><span data-stu-id="c5069-131">This sample shows how to create a cmdlet that handles nonterminating errors and writes error messages to the error stream.</span></span>
+<span data-ttu-id="ef4cb-132">В этом примере показано, как создать командлет, который обрабатывает неустранимые ошибки и записывает сообщения об ошибках в поток ошибок.</span><span class="sxs-lookup"><span data-stu-id="ef4cb-132">This sample shows how to create a cmdlet that handles nonterminating errors and writes error messages to the error stream.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands
@@ -155,6 +157,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c5069-132">См. также</span><span class="sxs-lookup"><span data-stu-id="c5069-132">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef4cb-133">См. также</span><span class="sxs-lookup"><span data-stu-id="ef4cb-133">See Also</span></span>
 
-[<span data-ttu-id="c5069-133">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="c5069-133">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="ef4cb-134">Запись командлета Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="ef4cb-134">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
