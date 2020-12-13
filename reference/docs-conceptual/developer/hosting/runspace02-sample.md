@@ -1,36 +1,38 @@
 ---
-title: Пример Runspace02 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 7a2dce436aceb1d8744377c37671a66398614851
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Runspace02
+description: Пример Runspace02
+ms.openlocfilehash: 0206e1a80f3e5488fd2dd5628985756a5ca343c8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784968"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657893"
 ---
-# <a name="runspace02-sample"></a><span data-ttu-id="aebbf-102">Пример Runspace02</span><span class="sxs-lookup"><span data-stu-id="aebbf-102">Runspace02 Sample</span></span>
+# <a name="runspace02-sample"></a><span data-ttu-id="cb395-103">Пример Runspace02</span><span class="sxs-lookup"><span data-stu-id="cb395-103">Runspace02 Sample</span></span>
 
-<span data-ttu-id="aebbf-103">В этом примере показано, как использовать класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для синхронного выполнения командлетов [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) .</span><span class="sxs-lookup"><span data-stu-id="aebbf-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets synchronously.</span></span> <span data-ttu-id="aebbf-104">Командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) возвращает объекты [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) для каждого процесса, выполняемого на локальном компьютере, и `Sort-Object` сортирует объекты на основе их свойства [System.Diagnostics.Process.ID \*](/dotnet/api/System.Diagnostics.Process.Id) .</span><span class="sxs-lookup"><span data-stu-id="aebbf-104">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer, and the `Sort-Object` sorts the objects based on their [System.Diagnostics.Process.Id\*](/dotnet/api/System.Diagnostics.Process.Id) property.</span></span> <span data-ttu-id="aebbf-105">Результаты этих команд отображаются с помощью элемента управления [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) .</span><span class="sxs-lookup"><span data-stu-id="aebbf-105">The results of these commands is displayed by using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control.</span></span>
+<span data-ttu-id="cb395-104">В этом примере показано, как использовать класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для синхронного выполнения командлетов [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) .</span><span class="sxs-lookup"><span data-stu-id="cb395-104">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets synchronously.</span></span> <span data-ttu-id="cb395-105">Командлет [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) возвращает объекты [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) для каждого процесса, выполняемого на локальном компьютере, и `Sort-Object` сортирует объекты на основе их свойства [System.Diagnostics.Process.ID \*](/dotnet/api/System.Diagnostics.Process.Id) .</span><span class="sxs-lookup"><span data-stu-id="cb395-105">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer, and the `Sort-Object` sorts the objects based on their [System.Diagnostics.Process.Id\*](/dotnet/api/System.Diagnostics.Process.Id) property.</span></span> <span data-ttu-id="cb395-106">Результаты этих команд отображаются с помощью элемента управления [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) .</span><span class="sxs-lookup"><span data-stu-id="cb395-106">The results of these commands is displayed by using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="aebbf-106">Требования</span><span class="sxs-lookup"><span data-stu-id="aebbf-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="cb395-107">Требования</span><span class="sxs-lookup"><span data-stu-id="cb395-107">Requirements</span></span>
 
-<span data-ttu-id="aebbf-107">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="aebbf-107">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="cb395-108">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="cb395-108">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="aebbf-108">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="aebbf-108">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="cb395-109">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="cb395-109">Demonstrates</span></span>
 
-<span data-ttu-id="aebbf-109">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="aebbf-109">This sample demonstrates the following.</span></span>
+<span data-ttu-id="cb395-110">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="cb395-110">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="aebbf-110">Создание объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для выполнения команд.</span><span class="sxs-lookup"><span data-stu-id="aebbf-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run commands.</span></span>
+- <span data-ttu-id="cb395-111">Создание объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для выполнения команд.</span><span class="sxs-lookup"><span data-stu-id="cb395-111">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run commands.</span></span>
 
-- <span data-ttu-id="aebbf-111">Добавление команд в конвейер объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="aebbf-111">Adding commands to the pipeline of [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="cb395-112">Добавление команд в конвейер объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="cb395-112">Adding commands to the pipeline of [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="aebbf-112">Выполнение команд в синхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="aebbf-112">Running the commands synchronously.</span></span>
+- <span data-ttu-id="cb395-113">Выполнение команд в синхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="cb395-113">Running the commands synchronously.</span></span>
 
-- <span data-ttu-id="aebbf-113">Использование элемента управления [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) для вывода выходных данных команд в Windows Forms приложении.</span><span class="sxs-lookup"><span data-stu-id="aebbf-113">Using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control to display the output of the commands in a Windows Forms application.</span></span>
+- <span data-ttu-id="cb395-114">Использование элемента управления [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) для вывода выходных данных команд в Windows Forms приложении.</span><span class="sxs-lookup"><span data-stu-id="cb395-114">Using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control to display the output of the commands in a Windows Forms application.</span></span>
 
-## <a name="example"></a><span data-ttu-id="aebbf-114">Пример</span><span class="sxs-lookup"><span data-stu-id="aebbf-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cb395-115">Пример</span><span class="sxs-lookup"><span data-stu-id="cb395-115">Example</span></span>
 
-<span data-ttu-id="aebbf-115">В этом примере командлеты [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) синхронно выполняются в пространстве выполнения по умолчанию, предоставляемом Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="aebbf-115">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets synchronously in the default runspace provided by Windows PowerShell.</span></span> <span data-ttu-id="aebbf-116">Выходные данные отображаются в форме с помощью элемента управления [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) .</span><span class="sxs-lookup"><span data-stu-id="aebbf-116">The output is displayed in a form using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control.</span></span>
+<span data-ttu-id="cb395-116">В этом примере командлеты [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) синхронно выполняются в пространстве выполнения по умолчанию, предоставляемом Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="cb395-116">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets synchronously in the default runspace provided by Windows PowerShell.</span></span> <span data-ttu-id="cb395-117">Выходные данные отображаются в форме с помощью элемента управления [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) .</span><span class="sxs-lookup"><span data-stu-id="cb395-117">The output is displayed in a form using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -107,6 +109,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="aebbf-117">См. также</span><span class="sxs-lookup"><span data-stu-id="aebbf-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb395-118">См. также:</span><span class="sxs-lookup"><span data-stu-id="cb395-118">See Also</span></span>
 
-[<span data-ttu-id="aebbf-118">Написание ведущего приложения Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="aebbf-118">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="cb395-119">Написание ведущего приложения Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="cb395-119">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)

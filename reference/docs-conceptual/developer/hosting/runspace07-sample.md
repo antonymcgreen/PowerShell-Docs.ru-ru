@@ -1,38 +1,40 @@
 ---
-title: Пример Runspace07 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c7cca58a67e522a0e0fb1d362a60c0ca94953f3e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Runspace07
+description: Пример Runspace07
+ms.openlocfilehash: 4356f33a1d962a0a6c5ca1ebb8c3e4c579463022
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783183"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657657"
 ---
-# <a name="runspace07-sample"></a><span data-ttu-id="cd47c-102">Пример Runspace07</span><span class="sxs-lookup"><span data-stu-id="cd47c-102">Runspace07 Sample</span></span>
+# <a name="runspace07-sample"></a><span data-ttu-id="bf0ea-103">Пример Runspace07</span><span class="sxs-lookup"><span data-stu-id="bf0ea-103">Runspace07 Sample</span></span>
 
-<span data-ttu-id="cd47c-103">В этом примере показано, как создать пространство выполнения, а затем использовать это пространство выполнения для синхронного выполнения двух командлетов с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="cd47c-103">This sample shows how to create a runspace, and then use that runspace to run two cmdlets synchronously by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+<span data-ttu-id="bf0ea-104">В этом примере показано, как создать пространство выполнения, а затем использовать это пространство выполнения для синхронного выполнения двух командлетов с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="bf0ea-104">This sample shows how to create a runspace, and then use that runspace to run two cmdlets synchronously by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="cd47c-104">Требования</span><span class="sxs-lookup"><span data-stu-id="cd47c-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="bf0ea-105">Требования</span><span class="sxs-lookup"><span data-stu-id="bf0ea-105">Requirements</span></span>
 
-<span data-ttu-id="cd47c-105">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="cd47c-105">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="bf0ea-106">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="bf0ea-106">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="cd47c-106">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="cd47c-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="bf0ea-107">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="bf0ea-107">Demonstrates</span></span>
 
-<span data-ttu-id="cd47c-107">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="cd47c-107">This sample demonstrates the following.</span></span>
+<span data-ttu-id="bf0ea-108">В этом образце демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="bf0ea-108">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="cd47c-108">Создание объекта [System. Management. Automation. пространства выполнения](/dotnet/api/System.Management.Automation.Runspaces.Runspace) с помощью класса [System. Management. Automation. пространства. рунспацефактори](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) .</span><span class="sxs-lookup"><span data-stu-id="cd47c-108">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object by using the [System.Management.Automation.Runspaces.Runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) class.</span></span>
+- <span data-ttu-id="bf0ea-109">Создание объекта [System. Management. Automation. пространства выполнения](/dotnet/api/System.Management.Automation.Runspaces.Runspace) с помощью класса [System. Management. Automation. пространства. рунспацефактори](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) .</span><span class="sxs-lookup"><span data-stu-id="bf0ea-109">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object by using the [System.Management.Automation.Runspaces.Runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) class.</span></span>
 
-- <span data-ttu-id="cd47c-109">Создание объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) , использующего пространство выполнения.</span><span class="sxs-lookup"><span data-stu-id="cd47c-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
+- <span data-ttu-id="bf0ea-110">Создание объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) , использующего пространство выполнения.</span><span class="sxs-lookup"><span data-stu-id="bf0ea-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
 
-- <span data-ttu-id="cd47c-110">Добавление командлетов в конвейер объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="cd47c-110">Adding cmdlets to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="bf0ea-111">Добавление командлетов в конвейер объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="bf0ea-111">Adding cmdlets to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="cd47c-111">Выполнение командлетов в синхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="cd47c-111">Running the cmdlets synchronously.</span></span>
+- <span data-ttu-id="bf0ea-112">Выполнение командлетов в синхронном режиме.</span><span class="sxs-lookup"><span data-stu-id="bf0ea-112">Running the cmdlets synchronously.</span></span>
 
-- <span data-ttu-id="cd47c-112">Извлечение свойств из объектов [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) , возвращаемых командой.</span><span class="sxs-lookup"><span data-stu-id="cd47c-112">Extracting properties from the [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
+- <span data-ttu-id="bf0ea-113">Извлечение свойств из объектов [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) , возвращаемых командой.</span><span class="sxs-lookup"><span data-stu-id="bf0ea-113">Extracting properties from the [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
 
-## <a name="example"></a><span data-ttu-id="cd47c-113">Пример</span><span class="sxs-lookup"><span data-stu-id="cd47c-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="bf0ea-114">Пример</span><span class="sxs-lookup"><span data-stu-id="bf0ea-114">Example</span></span>
 
-<span data-ttu-id="cd47c-114">В этом примере создается пространство выполнения, которое используется объектом [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) для выполнения командлетов [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) .</span><span class="sxs-lookup"><span data-stu-id="cd47c-114">This sample creates a runspace that used by a [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) object to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) cmdlets.</span></span>
+<span data-ttu-id="bf0ea-115">В этом примере создается пространство выполнения, которое используется объектом [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) для выполнения командлетов [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) и [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) .</span><span class="sxs-lookup"><span data-stu-id="bf0ea-115">This sample creates a runspace that used by a [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) object to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) cmdlets.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -135,6 +137,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="cd47c-115">См. также</span><span class="sxs-lookup"><span data-stu-id="cd47c-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf0ea-116">См. также:</span><span class="sxs-lookup"><span data-stu-id="bf0ea-116">See Also</span></span>
 
-[<span data-ttu-id="cd47c-116">Написание ведущего приложения Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="cd47c-116">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="bf0ea-117">Написание ведущего приложения Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="bf0ea-117">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
