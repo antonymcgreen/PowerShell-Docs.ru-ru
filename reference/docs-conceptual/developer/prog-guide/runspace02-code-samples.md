@@ -1,24 +1,26 @@
 ---
-title: Примеры кода Runspace02 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: ff05fcff16d2890c90f645886de4513f9f8dedbe
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры кода Runspace02
+description: Примеры кода Runspace02
+ms.openlocfilehash: d12c162b9cfabf0fba0f3128af2ee3100db3b300
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778469"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667490"
 ---
-# <a name="runspace02-code-samples"></a><span data-ttu-id="65bdd-102">Примеры кода Runspace02</span><span class="sxs-lookup"><span data-stu-id="65bdd-102">Runspace02 Code Samples</span></span>
+# <a name="runspace02-code-samples"></a><span data-ttu-id="dee7f-103">Примеры кода Runspace02</span><span class="sxs-lookup"><span data-stu-id="dee7f-103">Runspace02 Code Samples</span></span>
 
-<span data-ttu-id="65bdd-103">Ниже приведен исходный код для примера Runspace02.</span><span class="sxs-lookup"><span data-stu-id="65bdd-103">Here is the source code for the Runspace02 sample.</span></span> <span data-ttu-id="65bdd-104">В этом примере используется класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) для `Get-Process` синхронного выполнения командлета.</span><span class="sxs-lookup"><span data-stu-id="65bdd-104">This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute the `Get-Process` cmdlet synchronously.</span></span> <span data-ttu-id="65bdd-105">Windows Forms и привязка данных используются для вывода результатов в элементе управления DataGridView.</span><span class="sxs-lookup"><span data-stu-id="65bdd-105">Windows Forms and data binding are then used to display the results in a DataGridView control.</span></span>
+<span data-ttu-id="dee7f-104">Ниже приведен исходный код для примера Runspace02.</span><span class="sxs-lookup"><span data-stu-id="dee7f-104">Here is the source code for the Runspace02 sample.</span></span> <span data-ttu-id="dee7f-105">В этом примере используется класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) для `Get-Process` синхронного выполнения командлета.</span><span class="sxs-lookup"><span data-stu-id="dee7f-105">This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute the `Get-Process` cmdlet synchronously.</span></span> <span data-ttu-id="dee7f-106">Windows Forms и привязка данных используются для вывода результатов в элементе управления DataGridView.</span><span class="sxs-lookup"><span data-stu-id="dee7f-106">Windows Forms and data binding are then used to display the results in a DataGridView control.</span></span>
 
-<span data-ttu-id="65bdd-106">Полный пример кода см. в следующих разделах.</span><span class="sxs-lookup"><span data-stu-id="65bdd-106">For complete sample code, see the following topics.</span></span>
+<span data-ttu-id="dee7f-107">Полный пример кода см. в следующих разделах.</span><span class="sxs-lookup"><span data-stu-id="dee7f-107">For complete sample code, see the following topics.</span></span>
 
-|<span data-ttu-id="65bdd-107">Язык</span><span class="sxs-lookup"><span data-stu-id="65bdd-107">Language</span></span>|<span data-ttu-id="65bdd-108">Раздел</span><span class="sxs-lookup"><span data-stu-id="65bdd-108">Topic</span></span>|
+|<span data-ttu-id="dee7f-108">Язык</span><span class="sxs-lookup"><span data-stu-id="dee7f-108">Language</span></span>|<span data-ttu-id="dee7f-109">Раздел</span><span class="sxs-lookup"><span data-stu-id="dee7f-109">Topic</span></span>|
 |--------------|-----------|
-|<span data-ttu-id="65bdd-109">C#</span><span class="sxs-lookup"><span data-stu-id="65bdd-109">C#</span></span>|[<span data-ttu-id="65bdd-110">Пример кода Runspace02 (C#)</span><span class="sxs-lookup"><span data-stu-id="65bdd-110">Runspace02 (C#) Code Sample</span></span>](./runspace02-csharp-code-sample.md)|
-|<span data-ttu-id="65bdd-111">VB.NET</span><span class="sxs-lookup"><span data-stu-id="65bdd-111">VB.NET</span></span>|[<span data-ttu-id="65bdd-112">Пример кода Runspace02 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="65bdd-112">Runspace02 (VB.NET) Code Sample</span></span>](./runspace02-vb-net-code-sample.md)|
+|<span data-ttu-id="dee7f-110">C#</span><span class="sxs-lookup"><span data-stu-id="dee7f-110">C#</span></span>|[<span data-ttu-id="dee7f-111">Пример кода Runspace02 (C#)</span><span class="sxs-lookup"><span data-stu-id="dee7f-111">Runspace02 (C#) Code Sample</span></span>](./runspace02-csharp-code-sample.md)|
+|<span data-ttu-id="dee7f-112">VB.NET</span><span class="sxs-lookup"><span data-stu-id="dee7f-112">VB.NET</span></span>|[<span data-ttu-id="dee7f-113">Пример кода Runspace02 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="dee7f-113">Runspace02 (VB.NET) Code Sample</span></span>](./runspace02-vb-net-code-sample.md)|
 
-## <a name="see-also"></a><span data-ttu-id="65bdd-113">См. также</span><span class="sxs-lookup"><span data-stu-id="65bdd-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dee7f-114">См. также:</span><span class="sxs-lookup"><span data-stu-id="dee7f-114">See Also</span></span>
 
-[<span data-ttu-id="65bdd-114">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="65bdd-114">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="dee7f-115">Пакет SDK для Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="dee7f-115">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)

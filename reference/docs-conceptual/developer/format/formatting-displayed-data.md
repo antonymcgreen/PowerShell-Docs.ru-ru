@@ -1,20 +1,22 @@
 ---
-title: Форматирование отображаемых данных | Документация Майкрософт
 ms.date: 09/12/2016
-ms.openlocfilehash: 97d23b3079b2779e518b6b6d2f2ac0c5e9d1f3a3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Форматирование отображаемых данных
+description: Форматирование отображаемых данных
+ms.openlocfilehash: 40f6b3b4fa36062ee0bad3f197ad159f571445c8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781517"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667867"
 ---
-# <a name="formatting-displayed-data"></a><span data-ttu-id="4f456-102">Форматирование отображаемых данных</span><span class="sxs-lookup"><span data-stu-id="4f456-102">Formatting Displayed Data</span></span>
+# <a name="formatting-displayed-data"></a><span data-ttu-id="4eda3-103">Форматирование отображаемых данных</span><span class="sxs-lookup"><span data-stu-id="4eda3-103">Formatting Displayed Data</span></span>
 
-<span data-ttu-id="4f456-103">Можно указать способ отображения отдельных точек данных в списке, таблице или расширенном представлении.</span><span class="sxs-lookup"><span data-stu-id="4f456-103">You can specify how the individual data points in your List, Table, or Wide view are displayed.</span></span> <span data-ttu-id="4f456-104">Элемент можно использовать `FormatString` при определении элементов представления, или же элемент можно использовать `ScriptBlock` для вызова `FormatString` метода для данных.</span><span class="sxs-lookup"><span data-stu-id="4f456-104">You can use the `FormatString` element when defining the items of your view, or you can use the `ScriptBlock` element to call the `FormatString` method on the data.</span></span>
+<span data-ttu-id="4eda3-104">Можно указать способ отображения отдельных точек данных в списке, таблице или расширенном представлении.</span><span class="sxs-lookup"><span data-stu-id="4eda3-104">You can specify how the individual data points in your List, Table, or Wide view are displayed.</span></span> <span data-ttu-id="4eda3-105">Элемент можно использовать `FormatString` при определении элементов представления, или же элемент можно использовать `ScriptBlock` для вызова `FormatString` метода для данных.</span><span class="sxs-lookup"><span data-stu-id="4eda3-105">You can use the `FormatString` element when defining the items of your view, or you can use the `ScriptBlock` element to call the `FormatString` method on the data.</span></span>
 
-## <a name="using-the-formatstring-element"></a><span data-ttu-id="4f456-105">Использование элемента FormatString</span><span class="sxs-lookup"><span data-stu-id="4f456-105">Using the FormatString Element</span></span>
+## <a name="using-the-formatstring-element"></a><span data-ttu-id="4eda3-106">Использование элемента FormatString</span><span class="sxs-lookup"><span data-stu-id="4eda3-106">Using the FormatString Element</span></span>
 
-<span data-ttu-id="4f456-106">В следующем примере значение `TotalProcessorTime` свойства объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) форматируется с помощью элемента FormatString.</span><span class="sxs-lookup"><span data-stu-id="4f456-106">In the following example the value of the `TotalProcessorTime` property of the [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) object is formatted using the FormatString element.</span></span> <span data-ttu-id="4f456-107">`TotalProcessorTime`свойство</span><span class="sxs-lookup"><span data-stu-id="4f456-107">the `TotalProcessorTime` property</span></span>
+<span data-ttu-id="4eda3-107">В следующем примере значение `TotalProcessorTime` свойства объекта [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) форматируется с помощью элемента FormatString.</span><span class="sxs-lookup"><span data-stu-id="4eda3-107">In the following example the value of the `TotalProcessorTime` property of the [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) object is formatted using the FormatString element.</span></span> <span data-ttu-id="4eda3-108">`TotalProcessorTime`свойство</span><span class="sxs-lookup"><span data-stu-id="4eda3-108">the `TotalProcessorTime` property</span></span>
 
 ```
 <TableColumnItem>
