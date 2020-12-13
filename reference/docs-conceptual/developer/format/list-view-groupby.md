@@ -1,12 +1,14 @@
 ---
-title: Представление списка (GroupBy) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 7956d13e196454a3f6da185e9be74f9d3cb8ef63
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Представление списка (с группировкой)
+description: Представление списка (с группировкой)
+ms.openlocfilehash: e039c38d1e4e93f65a508fe60aaaf35c64ebe2ed
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773408"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666626"
 ---
 # <a name="list-view-groupby"></a>Представление списка (с группировкой)
 
@@ -129,7 +131,7 @@ DisplayName : Firewall Client Agent
 ServiceType : Win32OwnProcess
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Примеры файлов форматирования](./examples-of-formatting-files.md)
 

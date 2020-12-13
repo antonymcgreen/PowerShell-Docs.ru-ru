@@ -1,12 +1,14 @@
 ---
-title: Элемент Controls для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 26b7e73afd465b1be9632cd71a75e4be6cc4aeca
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Controls для элемента View (формат)
+description: Элемент Controls для элемента View (формат)
+ms.openlocfilehash: 0e41f9ad35a0c45b615251417198a47bc7feb760
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786175"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668071"
 ---
 # <a name="controls-element-for-view-format"></a>Элемент Controls для элемента View (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87786175"
 |-------------|-----------------|
 |[Элемент View (формат)](./view-element-format.md)|Определяет представление, используемое для отображения элементов одного или нескольких объектов .NET.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Control (Format)](./control-element-for-controls-for-view-format.md)
 

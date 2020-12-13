@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для Итемсеклектионкондитион для элементов управления Configuration (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: f44b1a7f059fa5f41c19eed93762b61eda5110e8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента ItemSeclectionCondition для элемента Controls для элемента Configuration (формат)
+description: Элемент ScriptBlock для элемента ItemSeclectionCondition для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 853130da4489e571d7f4026a8d65d029d1889f9b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772898"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665228"
 ---
 # <a name="scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format"></a>Элемент ScriptBlock для элемента ItemSeclectionCondition для элемента Controls для элемента Configuration (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87772898"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если используется этот элемент, нельзя указать элемент [PropertyName](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) при определении условия выбора.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент PropertyName для элемента ItemSeclectionCondition для элемента Controls для элемента Configuration (формат)](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md)
 

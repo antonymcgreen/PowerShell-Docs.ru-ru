@@ -1,12 +1,14 @@
 ---
-title: Общие имена параметров | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: d0939cfa5bf90ec55f0c0afcdeff56223d9dc78d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Общие имена параметров
+description: Общие имена параметров
+ms.openlocfilehash: cf39dd3b04660076718336857d79d55c3784ccd1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782231"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668224"
 ---
 # <a name="common-parameter-names"></a>Общие имена параметров
 
@@ -67,7 +69,7 @@ ms.locfileid: "87782231"
 
 Этот параметр указывает переменную, в которой можно сохранять предупреждающие сообщения. Чтобы добавить к этой переменной, используйте +*имя_переменной* вместо очистки и задания переменной.
 
-## <a name="risk-mitigation-parameters"></a>Параметры защиты от риска
+## <a name="risk-mitigation-parameters"></a>Параметры Risk-Mitigation
 
 Следующие параметры добавляются в командлеты, которые запрашивают подтверждение перед выполнением действия. Дополнительные сведения о запросах на подтверждение см. в разделе [запрос подтверждения](./requesting-confirmation-from-cmdlets.md). Эти параметры определяются классом [System. Management. Automation. internal. шаулдпроцесспараметерс](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) .
 

@@ -1,14 +1,14 @@
 ---
-title: Проверка числа аргументов | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateCount attribute, example
-ms.openlocfilehash: e7c0eb364a6975cec089b984c2100d476631a12d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как проверить количество аргументов
+description: Как проверить количество аргументов
+ms.openlocfilehash: 46a32d61138fb50bceea98171f76749c9d96734d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782129"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666949"
 ---
 # <a name="how-to-validate-an-argument-count"></a>Как проверить количество аргументов
 
@@ -35,7 +35,7 @@ ms.locfileid: "87782129"
 
 Дополнительные сведения об объявлении этого атрибута см. в разделе [объявление атрибута валидатекаунт](./validatecount-attribute-declaration.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Объявление атрибута ValidateCount](./validatecount-attribute-declaration.md)
 

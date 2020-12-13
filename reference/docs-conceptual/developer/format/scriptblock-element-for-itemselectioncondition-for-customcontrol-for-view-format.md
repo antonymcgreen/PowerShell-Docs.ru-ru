@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для Итемселектионкондитион для ошибка customcontrol для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 31873e886af04f8eedaf859af1d6bc1d5bcfdbf7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента CustomControl для элемента View (формат)
+description: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента CustomControl для элемента View (формат)
+ms.openlocfilehash: d762f400f5bb52af314093079fe94223c56d3f31
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772881"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665122"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format"></a>Элемент ScriptBlock для элемента ItemSelectionCondition для элемента CustomControl для элемента View (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87772881"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если используется этот элемент, нельзя указать элемент [PropertyName](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) при определении условия выбора.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент PropertyName для элемента ItemSelectionCondition для элемента CustomControl для элемента View (формат)](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md)
 

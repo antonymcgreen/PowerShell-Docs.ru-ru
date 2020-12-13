@@ -1,12 +1,14 @@
 ---
-title: Элемент FormatString для ListItem для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 9ec73aa1c2e8180258722627e30344de4e67bda5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент FormatString для элемента ListItem для элемента ListControl (формат)
+description: Элемент FormatString для элемента ListItem для элемента ListControl (формат)
+ms.openlocfilehash: 1c16da92928ea632241942f4f2c63390c4fea706
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781585"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667918"
 ---
 # <a name="formatstring-element-for-listitem-for-listcontrol--format"></a>Элемент FormatString для элемента ListItem для элемента ListControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87781585"
 
 Укажите шаблон, используемый для форматирования данных. Например, этот шаблон можно использовать для форматирования значения любого свойства типа [System. TimeSpan](/dotnet/api/System.TimeSpan): {0: MMM} {0: DD} {0: HH}: {0: mm}.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Строки формата можно использовать при создании табличных представлений, представлений списков, расширенных представлений или пользовательских представлений. Дополнительные сведения о форматировании значения, отображаемого в представлении, см. в разделе [Форматирование отображаемых данных](./formatting-displayed-data.md).
 
@@ -59,7 +61,7 @@ ms.locfileid: "87781585"
 </ListItem>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления списка](./creating-a-list-view.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент Ригхтиндент для Frame для элементов управления конфигурации (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: edd299f4a39a8f2f55385b750b530de50ffff203
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент RightIndent для элемента Frame для элемента Controls для элемента Configuration (формат)
+description: Элемент RightIndent для элемента Frame для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 99a3653fb744df9b17bbc60b75d4d3932c672106
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773000"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665555"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-configuration-format"></a>Элемент RightIndent для элемента Frame для элемента Controls для элемента Configuration (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87773000"
 
 Укажите число символов, на которое нужно сдвинуть данные справа.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Frame для элемента CustomItem для элемента Controls для элемента Configuration (формат)](./frame-element-for-customitem-for-controls-for-configuration-format.md)
 

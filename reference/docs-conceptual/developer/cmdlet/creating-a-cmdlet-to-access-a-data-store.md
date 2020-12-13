@@ -1,18 +1,20 @@
 ---
-title: Создание командлета для доступа к хранилищу данных
 ms.date: 09/13/2016
-ms.openlocfilehash: a595805a820c355937e581f0e00fa2a9a9fc3df0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание командлета для доступа к хранилищу данных
+description: Создание командлета для доступа к хранилищу данных
+ms.openlocfilehash: d6ae4779a96b0789f11952a1d66bb96a394c3211
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782146"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668190"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Создание командлета для доступа к хранилищу данных
 
 В этом разделе описывается создание командлета, который обращается к сохраненным данным с помощью поставщика Windows PowerShell. Этот тип командлета использует инфраструктуру поставщика Windows PowerShell в среде выполнения Windows PowerShell и, следовательно, класс командлета должен быть производным от базового класса [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) .
 
-Описанный здесь командлет Select-str может нахождение и выбор строк в файле или объекте. Шаблоны, используемые для указания строки, можно указать явно с помощью `Path` параметра командлета или неявно с помощью `Script` параметра.
+Описанный здесь командлет Select-Str может нахождение и выбор строк в файле или объекте. Шаблоны, используемые для указания строки, можно указать явно с помощью `Path` параметра командлета или неявно с помощью `Script` параметра.
 
 Командлет предназначен для использования любого поставщика Windows PowerShell, производного от класса [System. Management. Automation. Provider. иконтенткмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider). Например, командлет может указать поставщика FileSystem или поставщика переменных, предоставляемых Windows PowerShell. Дополнительные сведения о поставщиках Абаутвиндовс PowerShell см. в статье [Разработка поставщика Windows PowerShell](../prog-guide/designing-your-windows-powershell-provider.md).
 
@@ -22,7 +24,7 @@ ms.locfileid: "87782146"
 
 Класс .NET для этого командлета должен быть производным от базового класса [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) , так как он обеспечивает поддержку, необходимую среде выполнения Windows PowerShell для предоставления инфраструктуры поставщика Windows PowerShell. Обратите внимание, что этот командлет также использует классы .NET Framework регулярных выражений, такие как [System. Text. RegularExpressions. Regex](/dotnet/api/System.Text.RegularExpressions.Regex).
 
-Следующий код является определением класса для этого командлета Select-str.
+Следующий код является определением класса для этого командлета Select-Str.
 
 ```csharp
 [Cmdlet(VerbsCommon.Select, "Str", DefaultParameterSetName="PatternParameterSet")]
@@ -170,7 +172,7 @@ internal WildcardPattern[] include = null;
 
 ### <a name="declaring-parameter-sets"></a>Объявление наборов параметров
 
-Этот командлет использует два набора параметров ( `ScriptParameterSet` и `PatternParameterSet` , который является значением по умолчанию) в качестве имен двух наборов параметров, используемых в доступе к данным. `PatternParameterSet`параметр является набором параметров по умолчанию и используется при `Pattern` указании параметра. `ScriptParameterSet`используется, когда пользователь указывает альтернативный механизм поиска через `Script` параметр. Дополнительные сведения о наборах параметров см. [в разделе Добавление наборов параметров в командлет](./adding-parameter-sets-to-a-cmdlet.md).
+Этот командлет использует два набора параметров ( `ScriptParameterSet` и `PatternParameterSet` , который является значением по умолчанию) в качестве имен двух наборов параметров, используемых в доступе к данным. `PatternParameterSet` параметр является набором параметров по умолчанию и используется при `Pattern` указании параметра. `ScriptParameterSet` используется, когда пользователь указывает альтернативный механизм поиска через `Script` параметр. Дополнительные сведения о наборах параметров см. [в разделе Добавление наборов параметров в командлет](./adding-parameter-sets-to-a-cmdlet.md).
 
 ## <a name="overriding-input-processing-methods"></a>Переопределение методов обработки входных данных
 
@@ -368,11 +370,11 @@ protected override void ProcessRecord()
 
 Командлет должен открыть поставщик, указанный в пути Windows PowerShell, чтобы он мог получить доступ к данным. Объект [System. Management. Automation. sessionState](/dotnet/api/System.Management.Automation.SessionState) для пространства выполнения используется для доступа к поставщику, а свойство [System. Management. Automation. PSCmdlet. инвокепровидер *](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) командлета используется для открытия поставщика. Доступ к содержимому предоставляется путем получения объекта [System. Management. Automation. провидеринтринсикс](/dotnet/api/System.Management.Automation.ProviderIntrinsics) для открытого поставщика.
 
-В этом примере командлет Select-Str использует свойство [System. Management. Automation. провидеринтринсикс. Content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) для предоставления содержимого для просмотра. Затем он может вызвать метод [System. Management. Automation. контенткмдлетпровидеринтринсикс. DataReader *](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) , передав необходимый путь Windows PowerShell.
+Этот пример Select-Str командлет использует свойство [System. Management. Automation. провидеринтринсикс. Content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) для предоставления содержимого для просмотра. Затем он может вызвать метод [System. Management. Automation. контенткмдлетпровидеринтринсикс. DataReader *](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) , передав необходимый путь Windows PowerShell.
 
 ## <a name="code-sample"></a>Образец кода
 
-В следующем коде показана реализация этой версии командлета Select-str. Обратите внимание, что этот код включает класс командлета, закрытые методы, используемые командлетом, и код оснастки Windows PowerShell, используемый для регистрации командлета. Дополнительные сведения о регистрации командлета см. [в разделе Создание командлета](#defining-the-cmdlet-class).
+В следующем коде показана реализация этой версии этого командлета Select-Str. Обратите внимание, что этот код включает класс командлета, закрытые методы, используемые командлетом, и код оснастки Windows PowerShell, используемый для регистрации командлета. Дополнительные сведения о регистрации командлета см. [в разделе Создание командлета](#defining-the-cmdlet-class).
 
 ```csharp
 //
@@ -1087,7 +1089,7 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="testing-the-cmdlet"></a>Тестирование командлета
 
-Если командлет зарегистрирован в Windows PowerShell, его можно проверить, запустив его в командной строке. Для проверки примера командлета Select-str можно использовать следующую процедуру.
+Если командлет зарегистрирован в Windows PowerShell, его можно проверить, запустив его в командной строке. Для проверки примера Select-Str командлета можно использовать следующую процедуру.
 
 1. Запустите Windows PowerShell и в файле Notes найдите вхождения строк с выражением «.NET». Обратите внимание, что кавычки вокруг имени пути необходимы только в том случае, если путь состоит из нескольких слов.
 
@@ -1205,7 +1207,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     Pattern      :
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание командлета Windows PowerShell](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент Name для элемента управления для элементов управления Configuration (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 3d45ba98b909ebee18e01d2b6985a48906ce39d9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Name для элемента Control для элемента Controls для элемента Configuration (формат)
+description: Элемент Name для элемента Control для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 0c1c83f827482886ca742f2c0174e8383f87fb52
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783540"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666507"
 ---
 # <a name="name-element-for-control-for-controls-for-configuration-format"></a>Элемент Name для элемента Control для элемента Controls для элемента Configuration (формат)
 
@@ -43,7 +45,7 @@ ms.locfileid: "87783540"
 
 Укажите имя, используемое для ссылки на этот элемент управления.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Указанное здесь имя можно использовать в следующих элементах для ссылки на этот элемент управления.
 
@@ -53,7 +55,7 @@ ms.locfileid: "87783540"
 
 - При создании элемента управления, который может использоваться представлением, этот элемент управления может быть задан следующим элементом: [ExpressionBinding для кустомитем для элементов управления в представлении (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Control для элемента Controls для элемента Configuration (формат)](./control-element-for-controls-for-configuration-format.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для ExpressionBinding элементов управления для представления (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 42946ed9f3241912366192b2ab2fdfb8f8582d83
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+description: Элемент ScriptBlock для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+ms.openlocfilehash: a68d6ecd4a9e1ff1d614d32325e99831be88e516
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785495"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665300"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-controls-for-view-format"></a>Элемент ScriptBlock для элемента ExpressionBinding для элемента Controls для элемента View (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87785495"
 
 Укажите скрипт, значение которого отображается элементом управления.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 

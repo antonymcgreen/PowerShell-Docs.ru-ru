@@ -1,12 +1,14 @@
 ---
-title: Элемент Итемселектионкондитион для ListItem для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: f5c388928668e03b96923130fb5849f637548f12
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ItemSelectionCondition для элемента ListItem для элемента ListControl (формат)
+description: Элемент ItemSelectionCondition для элемента ListItem для элемента ListControl (формат)
+ms.openlocfilehash: 13d925da10c2386123983d52b109c03a0c3c63ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783625"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667816"
 ---
 # <a name="itemselectioncondition-element-for-listitem-for-listcontrol-format"></a>Элемент ItemSelectionCondition для элемента ListItem для элемента ListControl (формат)
 
@@ -44,11 +46,11 @@ ms.locfileid: "87783625"
 |-------------|-----------------|
 |[Элемент ListItem для элемента ListItems для элемента ListControl (формат)](./listitem-element-for-listitems-for-listcontrol-format.md)|Определяет свойство или скрипт, значение которого отображается в строке представления списка.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Можно указать одно имя свойства или скрипт для этого условия, но не указывать оба значения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ListItem для элемента ListItems для элемента ListControl (формат)](./listitem-element-for-listitems-for-listcontrol-format.md)
 

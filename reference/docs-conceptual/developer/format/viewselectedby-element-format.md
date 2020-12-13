@@ -1,12 +1,14 @@
 ---
-title: Элемент Виевселектедби (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c8704c1504c6e24c9cac6bc8bc25e92a0d9110cc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ViewSelectedBy (формат)
+description: Элемент ViewSelectedBy (формат)
+ms.openlocfilehash: ac3c7de299b3009a067a476a024c6a6fcb5dce02
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785019"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667714"
 ---
 # <a name="viewselectedby-element-format"></a>Элемент ViewSelectedBy (формат)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87785019"
 |-------------|-----------------|
 |[Элемент View (формат)](./view-element-format.md)|Определяет представление, в котором отображается один или несколько объектов .NET.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения об использовании этого элемента в различных представлениях см. в разделе [компоненты табличного](./creating-a-table-view.md)представления, [Компоненты представления списка](./creating-a-list-view.md), [компоненты расширенного представления](./creating-a-wide-view.md)и [компоненты пользовательского элемента управления](./creating-custom-controls.md).
 
@@ -64,7 +66,7 @@ ms.locfileid: "87785019"
 </View>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления списка](./creating-a-list-view.md)
 

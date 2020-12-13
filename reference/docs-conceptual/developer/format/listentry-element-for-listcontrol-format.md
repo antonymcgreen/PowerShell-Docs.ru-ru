@@ -1,12 +1,14 @@
 ---
-title: Элемент Листентри для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: d98f0b5215eea7668f866d2733214ade79d748f1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ListEntry для элемента ListControl (формат)
+description: Элемент ListEntry для элемента ListControl (формат)
+ms.openlocfilehash: 96ae5fcdd837d2491d6c7ff6a375fef1d83ae3e9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785699"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666575"
 ---
 # <a name="listentry-element-for-listcontrol-format"></a>Элемент ListEntry для элемента ListControl (формат)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87785699"
 |-------------|-----------------|
 |[Элемент Листентриес (Format)](./listentries-element-for-listcontrol-format.md)|Предоставляет определения представления списка.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Представление списка — это формат списка, который отображает значения свойств или значения скриптов для каждого объекта. Дополнительные сведения о представлениях списков см. [в разделе Создание представления списка](./creating-a-list-view.md).
 
@@ -68,7 +70,7 @@ ms.locfileid: "87785699"
 </View>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления списка](./creating-a-list-view.md)
 

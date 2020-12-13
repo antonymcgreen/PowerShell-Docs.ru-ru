@@ -1,12 +1,14 @@
 ---
-title: Элемент PropertyName для ListItem для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 9ee466d7f73e53b129f8d46f49a21549683bb32c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент PropertyName для элемента ListItem для элемента ListControl (формат)
+description: Элемент PropertyName для элемента ListItem для элемента ListControl (формат)
+ms.openlocfilehash: 30cd48f9549e1a091776cd5f8395e1a71314ea1b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780837"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665980"
 ---
 # <a name="propertyname-element-for-listitem-for-listcontrol-format"></a>Элемент PropertyName для элемента ListItem для элемента ListControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87780837"
 
 Укажите имя свойства, значение которого отображается.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если этот элемент указан, нельзя указать элемент [ScriptBlock](./scriptblock-element-for-listitem-for-listcontrol-format.md) .
 
@@ -60,7 +62,7 @@ ListItem>
 
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ScriptBlock для элемента ListItem для элемента ListControl (формат)](./scriptblock-element-for-listitem-for-listcontrol-format.md)
 

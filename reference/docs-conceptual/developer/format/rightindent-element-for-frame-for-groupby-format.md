@@ -1,12 +1,14 @@
 ---
-title: Элемент Ригхтиндент для Frame для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e1d451c2a6f0e3e0a122589efc32f2b55b430e6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент RightIndent для элемента Frame для элемента GroupBy (формат)
+description: Элемент RightIndent для элемента Frame для элемента GroupBy (формат)
+ms.openlocfilehash: 9a2734eee3d4c3c27fa6fa7db7ce47fa126304a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785529"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665538"
 ---
 # <a name="rightindent-element-for-frame-for-groupby-format"></a>Элемент RightIndent для элемента Frame для элемента GroupBy (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87785529"
 
 Укажите число символов, на которое нужно сдвинуть данные справа.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Frame для элемента CustomItem для элемента GroupBy (формат)](./frame-element-for-customitem-for-groupby-format.md)
 

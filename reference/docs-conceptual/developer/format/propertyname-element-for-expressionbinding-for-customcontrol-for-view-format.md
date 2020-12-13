@@ -1,12 +1,14 @@
 ---
-title: Элемент PropertyName для ExpressionBinding для ошибка customcontrol в представлении (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: a4e835f19d88048441076d7fd0bbb1982fbf5ee7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент PropertyName для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
+description: Элемент PropertyName для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
+ms.openlocfilehash: c5bb3d22aef66c9c9810f053114bf1f85b070148
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773187"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666167"
 ---
 # <a name="propertyname-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Элемент PropertyName для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87773187"
 
 Укажите имя свойства .NET, значение которого отображается элементом управления.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ExpressionBinding для элемента CustomItem для элемента CustomControl для элемента View (формат)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)
 

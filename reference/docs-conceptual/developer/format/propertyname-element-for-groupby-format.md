@@ -1,12 +1,14 @@
 ---
-title: Элемент PropertyName для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e83ebd49e4f3087c817b3cc8772889dbe85113aa
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент PropertyName для элемента GroupBy (формат)
+description: Элемент PropertyName для элемента GroupBy (формат)
+ms.openlocfilehash: 44351c46ff2386f967644fef4f423b3858dc1619
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785614"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666150"
 ---
 # <a name="propertyname-element-for-groupby-format"></a>Элемент PropertyName для элемента GroupBy (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87785614"
 
 Укажите имя свойства .NET.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Windows PowerShell запускает новую группу при каждом изменении значения этого свойства.
 
@@ -62,7 +64,7 @@ Windows PowerShell запускает новую группу при каждо�
 
 Пример полного файла форматирования, включающего этот элемент, см. в разделе [широкие представления (GroupBy)](./wide-view-groupby.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент GroupBy для элемента View (формат)](./groupby-element-for-view-format.md)
 

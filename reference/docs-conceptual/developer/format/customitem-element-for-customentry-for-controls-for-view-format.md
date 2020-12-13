@@ -1,12 +1,14 @@
 ---
-title: Элемент Кустомитем для Кустоментри элементов управления для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 747ea14e7118be62ebee00e7d80af2dccb5c8353
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента View (формат)
+description: Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента View (формат)
+ms.openlocfilehash: 67bff97c27cfedf046b17eea438efcd66ae2ee4a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785852"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666762"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-view-format"></a>Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента View (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87785852"
 |-------------|-----------------|
 |[Элемент CustomEntry для элемента CustomEntries для элемента Controls для элемента View (формат)](./customentry-element-for-customentries-for-controls-for-view-format.md)|Предоставляет определение элемента управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 При указании дочерних элементов `CustomItem` элемента учитывайте следующее:
 
@@ -58,7 +60,7 @@ ms.locfileid: "87785852"
 
 - В каждой последовательности не существует максимального ограничения на количество `ExpressionBinding` элементов, которые можно использовать.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 

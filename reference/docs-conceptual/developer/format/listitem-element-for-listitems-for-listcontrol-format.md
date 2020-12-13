@@ -1,12 +1,14 @@
 ---
-title: Элемент ListItem для элементов ListItem для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e72a887e8bd1f93bacb663e3079eeaec34bdfa51
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ListItem для элемента ListItems для элемента ListControl (формат)
+description: Элемент ListItem для элемента ListItems для элемента ListControl (формат)
+ms.openlocfilehash: 999491b7851aa4fa21667ad376d7e9853500ca08
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785682"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666558"
 ---
 # <a name="listitem-element-for-listitems-for-listcontrol-format"></a>Элемент ListItem для элемента ListItems для элемента ListControl (формат)
 
@@ -32,7 +34,7 @@ ms.locfileid: "87785682"
 
 ### <a name="attributes"></a>Атрибуты
 
-Нет
+None
 
 ### <a name="child-elements"></a>Дочерние элементы
 
@@ -50,7 +52,7 @@ ms.locfileid: "87785682"
 |-------------|-----------------|
 |[Элемент ListItems для элемента управления "список" (формат)](./listitems-element-for-listentry-for-listcontrol-format.md)|Определяет свойства и скрипты, значения которых отображаются в представлении списка.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах представления списка см. [в разделе Создание представления списка](./creating-a-list-view.md).
 
@@ -76,7 +78,7 @@ ms.locfileid: "87785682"
 
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ListItems (формат)](./listitems-element-for-listentry-for-listcontrol-format.md)
 

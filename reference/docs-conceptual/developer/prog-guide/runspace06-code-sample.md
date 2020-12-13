@@ -1,12 +1,14 @@
 ---
-title: Пример кода RunSpace06 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c8767ac8dc3a3d9253c2a53a4754d9bd54304abb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры кода RunSpace06
+description: Примеры кода RunSpace06
+ms.openlocfilehash: 627fa2be51721dd8bfdd63fabdd2e6f286d593be
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784730"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667489"
 ---
 # <a name="runspace06-code-sample"></a>Примеры кода RunSpace06
 
@@ -21,7 +23,7 @@ ms.locfileid: "87784730"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/Runspace06/Runspace06.cs" range="11-85":::
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

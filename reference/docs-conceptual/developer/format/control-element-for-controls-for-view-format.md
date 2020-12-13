@@ -1,12 +1,14 @@
 ---
-title: Элемент Control для элементов управления для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 13ea2f09aec7fea8e5460197f133b5f5219cd369
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Control для элемента Controls для элемента View (формат)
+description: Элемент Control для элемента Controls для элемента View (формат)
+ms.openlocfilehash: c48b8b7ecaebfde5e6ed2123b837d92561551766
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783812"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668088"
 ---
 # <a name="control-element-for-controls-for-view--format"></a>Элемент Control для элемента Controls для элемента View (формат)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87783812"
 |-------------|-----------------|
 |[Элемент Controls (Format)](./controls-element-for-view-format.md)|Определяет элементы управления представления, которые могут использоваться в определенном представлении.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Этот элемент управления может быть задан следующими элементами:
 
@@ -56,7 +58,7 @@ ms.locfileid: "87783812"
 
 - [Элемент CustomControlName для элемента GroupBy (формат)](./customcontrolname-element-for-groupby-format.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент CustomControl для элемента Control для элемента Controls для элемента View (формат)](./customcontrol-element-for-control-for-controls-for-view-format.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Загрузка и экспорт данных форматирования | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: b449b280ccee561679d58f2f2a8b467c83150766
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Загрузка и экспорт данных форматирования
+description: Загрузка и экспорт данных форматирования
+ms.openlocfilehash: 38857526801051bf6d31d300d5be1a3fd2c80391
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781126"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666524"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>Загрузка и экспорт данных форматирования
 
@@ -28,9 +30,9 @@ ms.locfileid: "87781126"
 
 ## <a name="storing-your-formatting-file"></a>Сохранение файла форматирования
 
-Нет необходимости в том, где хранятся файлы форматирования на диске. Однако настоятельно рекомендуется хранить их в следующей папке:`user\documents\windowspowershell\`
+Нет необходимости в том, где хранятся файлы форматирования на диске. Однако настоятельно рекомендуется хранить их в следующей папке: `user\documents\windowspowershell\`
 
-#### <a name="loading-a-format-file-using-import-formatdata"></a>Загрузка файла форматирования с помощью команды Import-FormatData
+#### <a name="loading-a-format-file-using-import-formatdata"></a>Загрузка файла форматирования с помощью Import-FormatData
 
 1. Сохраните файл форматирования на диске.
 

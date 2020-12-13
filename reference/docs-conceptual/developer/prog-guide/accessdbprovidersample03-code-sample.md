@@ -1,12 +1,14 @@
 ---
-title: Пример кода AccessDbProviderSample03 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6eddbec6369fd861a3a67bbbebe3d6f98c4bc164
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример кода AccessDbProviderSample03
+description: Пример кода AccessDbProviderSample03
+ms.openlocfilehash: 2a8ae91a96fc9d2f123709480234296c2d75392b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787297"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667561"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>Пример кода AccessDbProviderSample03
 
@@ -990,7 +992,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="11-976":::
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

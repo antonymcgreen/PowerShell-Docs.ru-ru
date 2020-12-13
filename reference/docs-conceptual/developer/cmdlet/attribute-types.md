@@ -1,12 +1,14 @@
 ---
-title: Типы атрибутов | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 96fdd38ba10eb748ab0762f0c910463dd472494d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Типы атрибутов
+description: Типы атрибутов
+ms.openlocfilehash: 65640f2f8449887dedb9fae137eb16b6252f1d57
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782384"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667119"
 ---
 # <a name="attribute-types"></a>Типы атрибутов
 
@@ -60,6 +62,6 @@ ms.locfileid: "87782384"
 Задает набор допустимых значений для аргумента параметра командлета.
 Дополнительные сведения см. в разделе [объявление атрибута "Validate](./validateset-attribute-declaration.md)".
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

@@ -1,12 +1,14 @@
 ---
-title: Элемент Лефтиндент для Frame для элементов управления конфигурации (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 8de21173780047cb8af6bb76ea51c092b38d30a9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент LeftIndent для элемента Frame для элемента Controls для элемента Configuration (формат)
+description: Элемент LeftIndent для элемента Frame для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 9a6b2832b8c06d4217e743a2a13958b883959b57
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783591"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667782"
 ---
 # <a name="leftindent-element-for-frame-for-controls-for-configuration-format"></a>Элемент LeftIndent для элемента Frame для элемента Controls для элемента Configuration (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87783591"
 
 Укажите число символов, которые необходимо сдвинуть слева.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Frame для элемента CustomItem для элемента Controls для элемента Configuration (формат)](./frame-element-for-customitem-for-controls-for-configuration-format.md)
 

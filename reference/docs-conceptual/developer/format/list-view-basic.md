@@ -1,12 +1,14 @@
 ---
-title: Представление списка (основное) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 74ff8f6eee0a9358c123455aa00736a11e7f085d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Представление списка (базовое)
+description: Представление списка (базовое)
+ms.openlocfilehash: d80ac9c6143b976d8bc13e2b184e4f5a2f8a37ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783557"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666643"
 ---
 # <a name="list-view-basic"></a>Представление списка (базовое)
 
@@ -120,7 +122,7 @@ Status      : Running
 ServiceType : Win32OwnProcess
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Примеры файлов форматирования](./examples-of-formatting-files.md)
 

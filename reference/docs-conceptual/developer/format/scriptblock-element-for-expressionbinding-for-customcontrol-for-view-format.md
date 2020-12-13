@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для ExpressionBinding для ошибка customcontrol для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: de8dc60ac92d92b85c88f222db0d8e237cd5c858
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
+description: Элемент ScriptBlock для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
+ms.openlocfilehash: 343f4e8621b52f9c268b725a89c97746599ef14a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785478"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665312"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Элемент ScriptBlock для элемента ExpressionBinding для элемента CustomControl для элемента View (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87785478"
 
 Укажите скрипт, значение которого отображается элементом управления.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ExpressionBinding для элемента CustomItem для элемента CustomControl для элемента View (формат)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)
 

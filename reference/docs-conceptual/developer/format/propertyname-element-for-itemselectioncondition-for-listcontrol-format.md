@@ -1,12 +1,14 @@
 ---
-title: Элемент PropertyName для Итемселектионкондитион для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 8bdbb05326f7ff5ccffa46215631a5c954080dc1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент PropertyName для элемента ItemSelectionCondition для элемента ListControl (формат)
+description: Элемент PropertyName для элемента ItemSelectionCondition для элемента ListControl (формат)
+ms.openlocfilehash: c515efe70afdb1c1186c0a07fe1f52dc49ad57b9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780871"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665997"
 ---
 # <a name="propertyname-element-for-itemselectioncondition-for-listcontrol-format"></a>Элемент PropertyName для элемента ItemSelectionCondition для элемента ListControl (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87780871"
 
 Укажите имя свойства, значение которого отображается.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если этот элемент используется, нельзя указать элемент [ScriptBlock](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md) при определении условия выбора.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ScriptBlock для Итемселектионкондитион для Листиконтрол (Format)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)
 

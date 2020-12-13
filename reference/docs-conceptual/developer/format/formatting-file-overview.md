@@ -1,12 +1,14 @@
 ---
-title: Общие сведения о файле форматирования | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: efdd3eed15c5f3c88636fcbe7a39f6c6cfb20ced
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Общие сведения о файлах форматирования
+description: Общие сведения о файлах форматирования
+ms.openlocfilehash: b86119c304c895ec08ac67de693b3a052bc7a2a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773510"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667833"
 ---
 # <a name="formatting-file-overview"></a>Общие сведения о файлах форматирования
 
@@ -146,7 +148,7 @@ PowerShell использует данные в этих файлах форма
 
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления списка](./creating-a-list-view.md)
 

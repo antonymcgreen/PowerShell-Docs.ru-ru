@@ -1,12 +1,14 @@
 ---
-title: Поддержка заданий | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 7ae4e6c118965c73ba6b3d4d38b1bd3171d2b3da
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как обеспечить поддержку заданий
+description: Как обеспечить поддержку заданий
+ms.openlocfilehash: d755093e941aa660032f8d283cb43ba5eeec8c4b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786634"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666983"
 ---
 # <a name="how-to-support-jobs"></a>Как обеспечить поддержку заданий
 

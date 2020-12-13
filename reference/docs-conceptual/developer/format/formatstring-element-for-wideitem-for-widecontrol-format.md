@@ -1,12 +1,14 @@
 ---
-title: Элемент FormatString для Видеитем для Видеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4f1f0826a1cebb1526858875df640baac9d4ce48
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент FormatString для элемента WideItem для элемента WideControl (формат)
+description: Элемент FormatString для элемента WideItem для элемента WideControl (формат)
+ms.openlocfilehash: f67a18e3ec4f1323e7f9be8904db518c679d53e5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781534"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667884"
 ---
 # <a name="formatstring-element-for-wideitem-for-widecontrol-format"></a>Элемент FormatString для элемента WideItem для элемента WideControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87781534"
 
 Укажите шаблон, используемый для форматирования данных. Например, этот шаблон можно использовать для форматирования значения любого свойства типа [System. TimeSpan](/dotnet/api/System.TimeSpan): {0: MMM} {0: DD} {0: HH}: {0: mm}.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Строки формата можно использовать при создании табличных представлений, представлений списков, расширенных представлений или пользовательских представлений. Дополнительные сведения о форматировании значения, отображаемого в представлении, см. в разделе [Форматирование отображаемых данных](./formatting-displayed-data.md).
 
@@ -59,7 +61,7 @@ ms.locfileid: "87781534"
 </WideItem>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание широкого представления](./creating-a-wide-view.md)
 

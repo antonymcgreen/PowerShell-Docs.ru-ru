@@ -1,12 +1,14 @@
 ---
-title: Объявление наборов параметров | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e6d06a9a78356693fe7a338dc5c9207044b23441
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как объявить наборы параметров
+description: Как объявить наборы параметров
+ms.openlocfilehash: bd4d504a9fe6c7f7626901c49bc08851244f0995
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784169"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667068"
 ---
 # <a name="how-to-declare-parameter-sets"></a>Как объявить наборы параметров
 
@@ -56,7 +58,7 @@ ms.locfileid: "87784169"
    private string sharedParam;
    ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Наборы параметров командлета](./cmdlet-parameter-sets.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент PropertyName для ExpressionBinding элементов управления в конфигурации (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: f4343eeb157a1e3fc94a43c610ca5bdc94a5f667
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент PropertyName для элемента ExpressionBinding для элемента Controls для элемента Configuration (формат)
+description: Элемент PropertyName для элемента ExpressionBinding для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 1deb49c92a9457d8e1032c1ce698d7d9488edd8e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780919"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666252"
 ---
 # <a name="propertyname-element-for-expressionbinding-for-controls-for-configuration-format"></a>Элемент PropertyName для элемента ExpressionBinding для элемента Controls для элемента Configuration (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87780919"
 
 Укажите имя свойства .NET, значение которого отображается элементом управления.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента Configuration (формат)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)
 

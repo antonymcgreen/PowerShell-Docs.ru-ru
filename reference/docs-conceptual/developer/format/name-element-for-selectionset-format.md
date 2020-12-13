@@ -1,12 +1,14 @@
 ---
-title: Элемент Name для набора выбора (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 1fc33eeb87a6912ed6793629ab1969cd65b5f0c5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Name для элемента SelectionSet (формат)
+description: Элемент Name для элемента SelectionSet (формат)
+ms.openlocfilehash: 98c13be6ea352055231fbdb3a60f0eb508f661b8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773306"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666470"
 ---
 # <a name="name-element-for-selectionset-format"></a>Элемент Name для элемента SelectionSet (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87773306"
 
 Укажите имя для ссылки на набор выбора. Никаких ограничений на то, какие символы можно использовать, не существует.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Указанное здесь имя используется в `SelectionSetName` элементе. Набор выбора, который может использоваться представлением, определением представления (представления могут иметь несколько определений) или при указании условия выбора. Дополнительные сведения о наборах выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
 
@@ -64,7 +66,7 @@ ms.locfileid: "87773306"
 </SelectionSets>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Определение наборов выделенных фрагментов](./defining-selection-sets.md)
 

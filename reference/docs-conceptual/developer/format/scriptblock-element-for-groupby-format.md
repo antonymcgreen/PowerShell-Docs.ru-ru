@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e761e02a7910cd598449d564e827889162da9f25
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента GroupBy (формат)
+description: Элемент ScriptBlock для элемента GroupBy (формат)
+ms.openlocfilehash: 117cbef93889046626741449886a1caaa39815cb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787688"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665247"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>Элемент ScriptBlock для элемента GroupBy (формат)
 
@@ -42,13 +44,13 @@ ms.locfileid: "87787688"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 PowerShell запускает новую группу при каждом изменении значения этого сценария.
 
 Если этот элемент указан, нельзя указать элемент [PropertyName](propertyname-element-for-groupby-format.md) для запуска новой группы.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент PropertyName для элемента GroupBy (формат)](propertyname-element-for-groupby-format.md)
 

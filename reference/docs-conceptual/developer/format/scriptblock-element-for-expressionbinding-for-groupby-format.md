@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для ExpressionBinding для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 24268e871e6bc66ad235113b262c60208e74b61c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента ExpressionBinding для элемента GroupBy (формат)
+description: Элемент ScriptBlock для элемента ExpressionBinding для элемента GroupBy (формат)
+ms.openlocfilehash: db946a4c2fca7543d98f0859a2c102c829aa0e04
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772932"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665258"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-groupby-format"></a>Элемент ScriptBlock для элемента ExpressionBinding для элемента GroupBy (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87772932"
 
 Укажите скрипт, значение которого отображается элементом управления.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ExpressionBinding для элемента CustomItem для элемента GroupBy (формат)](./expressionbinding-element-for-customitem-for-groupby-format.md)
 

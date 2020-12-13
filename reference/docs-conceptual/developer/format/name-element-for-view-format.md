@@ -1,12 +1,14 @@
 ---
-title: Элемент Name для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 670b089f850fa4b39b7b100ca1e1ce45b05ea72d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Name для элемента View (формат)
+description: Элемент Name для элемента View (формат)
+ms.openlocfilehash: 5781bcdf7a0e1eb5e9c7e97bb6acc0a383dc0262
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773238"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666469"
 ---
 # <a name="name-element-for-view-format"></a>Элемент Name для элемента View (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87773238"
 
 Укажите уникальное понятное имя для представления. Это имя может включать ссылку на тип представления (например, представление таблицы или представление списка), какой объект или набор объектов использует представление, какая команда возвращает объекты или их сочетание.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о различных типах представлений см. в следующих разделах: [представление таблицы](./creating-a-table-view.md), [представление списка](./creating-a-list-view.md), [Расширенное представление](./creating-a-wide-view.md)и [пользовательское представление](./creating-custom-controls.md).
 
@@ -61,7 +63,7 @@ ms.locfileid: "87773238"
 
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления списка](./creating-a-list-view.md)
 

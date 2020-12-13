@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для Итемселектионкондитион для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 38dc952bfadd6aed24bae8cbef05adcd22e61dd4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента ListControl (формат)
+description: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента ListControl (формат)
+ms.openlocfilehash: 1e518f898e0e1e62ca64f9897b1323cc6dd89ae9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787637"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665053"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-listcontrol-format"></a>Элемент ScriptBlock для элемента ItemSelectionCondition для элемента ListControl (формат)
 
@@ -42,10 +44,10 @@ ms.locfileid: "87787637"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если используется этот элемент, нельзя указать `PropertyName` элемент при определении условия выбора.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

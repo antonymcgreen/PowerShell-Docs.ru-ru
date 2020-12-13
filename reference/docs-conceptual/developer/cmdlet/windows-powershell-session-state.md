@@ -1,15 +1,14 @@
 ---
-title: Состояние сеанса Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Cmdlets [PowerShell], session state
-- session state [PowerShell]
-ms.openlocfilehash: 7436e3ebd0e099ead81f9fea01a0a2994b982213
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Состояние сеанса Windows PowerShell
+description: Состояние сеанса Windows PowerShell
+ms.openlocfilehash: 51de92f1f392f708cf49c7ccb4a6808fd628076c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783948"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668139"
 ---
 # <a name="windows-powershell-session-state"></a>Состояние сеанса Windows PowerShell
 
@@ -21,7 +20,7 @@ ms.locfileid: "87783948"
 
 Состояния сеанса модуля создаются всякий раз, когда модуль или один из его вложенных модулей импортируется в сеанс. Когда модуль экспортирует элемент, например командлет, функцию или скрипт, в глобальное состояние сеанса в сеансе добавляется ссылка на этот элемент. Однако при выполнении элемента он выполняется в состоянии сеанса модуля.
 
-## <a name="session-state-data"></a>Данные состояния сеанса
+## <a name="session-state-data"></a>Session-State данных
 
 Данные состояния сеанса могут быть открытыми или закрытыми. Общедоступные данные доступны для вызовов извне состояния сеанса, в то время как закрытые данные доступны только для вызовов в состоянии сеанса. Например, модуль может иметь закрытую функцию, которая может быть вызвана только модулем или внутренним экспортируемым открытым элементом. Это похоже на закрытый и открытый члены типа .NET Framework.
 
@@ -37,11 +36,11 @@ ms.locfileid: "87783948"
 
 - Сведения о переменной состояния сеанса
 
-## <a name="accessing-session-state-data-within-cmdlets"></a>Доступ к данным состояния сеанса в командлетах
+## <a name="accessing-session-state-data-within-cmdlets"></a>Доступ к данным Session-State в командлетах
 
 Командлеты могут обращаться к данным состояния сеанса непрямо через свойство [System. Management. Automation. PSCmdlet. sessionState *](/dotnet/api/System.Management.Automation.PSCmdlet.SessionState) класса командлета или напрямую через класс [System. Management. Automation. sessionState](/dotnet/api/System.Management.Automation.SessionState) . Класс [System. Management. Automation. sessionState](/dotnet/api/System.Management.Automation.SessionState) предоставляет свойства, которые можно использовать для анализа различных типов данных состояния сеанса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. PSCmdlet. sessionState](/dotnet/api/System.Management.Automation.PSCmdlet.SessionState)
 
@@ -51,4 +50,4 @@ ms.locfileid: "87783948"
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
 
-[Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)
+[Пакет SDK Windows PowerShell](../windows-powershell-reference.md)

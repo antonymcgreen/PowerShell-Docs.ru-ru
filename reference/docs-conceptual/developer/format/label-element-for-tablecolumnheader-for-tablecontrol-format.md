@@ -1,12 +1,14 @@
 ---
-title: Элемент Label для Таблеколумнхеадер для Таблеконтрол (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: b7b1d6825d3bca0e36b230415d19c2ac48377a46
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Label для элемента TableColumnHeader для элемента TableControl (формат)
+description: Элемент Label для элемента TableColumnHeader для элемента TableControl (формат)
+ms.openlocfilehash: fe4c209903c04e683b44e2bdcbf381adb6874ace
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785750"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667799"
 ---
 # <a name="label-element-for-tablecolumnheader-for-tablecontrol-format"></a>Элемент Label для элемента TableColumnHeader для элемента TableControl (формат)
 
@@ -43,7 +45,7 @@ ms.locfileid: "87785750"
 
 Укажите текст, отображаемый в верхней части столбца таблицы. Для метки столбца нет ограниченных символов.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если метка не указана, то используется имя свойства, значение которого отображается в строках.
 
@@ -61,7 +63,7 @@ ms.locfileid: "87785750"
 </TableColumnHeader>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

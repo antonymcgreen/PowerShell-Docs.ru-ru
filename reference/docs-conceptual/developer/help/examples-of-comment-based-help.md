@@ -1,18 +1,20 @@
 ---
-title: Примеры справки на основе комментариев
 ms.date: 09/12/2016
-ms.openlocfilehash: fe5d054c84952367a4e7c2d5d9e32551a4e5c3a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры справки на основе комментариев
+description: Примеры справки на основе комментариев
+ms.openlocfilehash: 35fe9103a261483c56af629f620dbd6b3c642e68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772303"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667646"
 ---
 # <a name="examples-of-comment-based-help"></a>Примеры справки на основе комментариев
 
 Этот раздел содержит пример, демонстрирующий использование справки на основе комментариев для скриптов и функций.
 
-## <a name="example-1-comment-based-help-for-a-function"></a>Пример 1. Справка на основе комментариев для функции
+## <a name="example-1-comment-based-help-for-a-function"></a>Пример 1. Comment-Based справки по функции
 
  Следующий пример функции включает в себя справку на основе комментариев.
 
@@ -134,7 +136,7 @@ C:\PS> get-help add-extension -full
             Set-Item
 ```
 
-## <a name="example-2-comment-based-help-for-a-script"></a>Пример 2. Справка на основе комментариев для сценария
+## <a name="example-2-comment-based-help-for-a-script"></a>Пример 2. Comment-Based справки по сценарию
 
 Следующий пример функции включает в себя справку на основе комментариев.
 
@@ -275,7 +277,7 @@ function Add-Extension
     #>
 ```
 
-Результаты совпадают с результатами примера 1. `Get-Help`интерпретирует описания параметров так, как если бы они были снабжены `.Parameter` ключевым словом.
+Результаты совпадают с результатами примера 1. `Get-Help` интерпретирует описания параметров так, как если бы они были снабжены `.Parameter` ключевым словом.
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>Пример 4. перенаправление в XML-файл
 
@@ -304,7 +306,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>Пример 5. перенаправление на другой раздел справки
 
-Следующий код является выдержкой из начала встроенной `Help` функции в PowerShell, которая отображает один экран текста справки за раз. Поскольку раздел справки для командлета Get-Help описывает функцию Help, функция Help использует `.ForwardHelpTargetName` `.ForwardHelpCategory` Ключевые слова и для перенаправления пользователя в раздел справки по командлету Get-Help.
+Следующий код является выдержкой из начала встроенной `Help` функции в PowerShell, которая отображает один экран текста справки за раз. Поскольку в разделе справки для командлета Get-Help описана функция справки, функция Help использует `.ForwardHelpTargetName` `.ForwardHelpCategory` Ключевые слова и для перенаправления пользователя в раздел справки по командлету Get-Help.
 
 ```powershell
 function help

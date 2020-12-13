@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для Итемселектионкондитион элементов управления для представления (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 74b3e23005f595c4c550320849cac5b196e9d479
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)
+description: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)
+ms.openlocfilehash: c005215f7b7984541806d2f5de47372d536787ff
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787671"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665186"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-controls-for-view-format"></a>Элемент ScriptBlock для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87787671"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если используется этот элемент, нельзя указать элемент [PropertyName](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md) при определении условия выбора.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент PropertyName для элемента ItemSelectionCondition для элемента Controls для элемента View (формат)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md)
 

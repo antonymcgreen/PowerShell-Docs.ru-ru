@@ -1,12 +1,14 @@
 ---
-title: Элемент ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 0173b9797bffcca74f1a32903686f771366ebb1b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ListControl (формат)
+description: Элемент ListControl (формат)
+ms.openlocfilehash: cd5687ac8e94e2245d1ae2de8b2206185e5b8ca4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785733"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666592"
 ---
 # <a name="listcontrol-element-format"></a>Элемент ListControl (формат)
 
@@ -43,7 +45,7 @@ ms.locfileid: "87785733"
 |-------------|-----------------|
 |[Элемент View (формат)](./view-element-format.md)|Определяет представление, используемое для отображения элементов одного или нескольких объектов.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о создании представления списка см. в разделе [Создание представления списка](./creating-a-list-view.md).
 
@@ -65,7 +67,7 @@ ms.locfileid: "87785733"
 </View>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент View (формат)](./view-element-format.md)
 

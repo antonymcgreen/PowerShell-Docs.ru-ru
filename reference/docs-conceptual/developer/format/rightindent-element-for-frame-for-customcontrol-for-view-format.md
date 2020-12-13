@@ -1,12 +1,14 @@
 ---
-title: Элемент Ригхтиндент для Frame для ошибка customcontrol представления (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6c35215673d118da68274ec91c8294e90879372f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент RightIndent для элемента Frame для элемента CustomControl для элемента View (формат)
+description: Элемент RightIndent для элемента Frame для элемента CustomControl для элемента View (формат)
+ms.openlocfilehash: 7be87d05dab6de23fc9f66b76655cc4996114818
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780395"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665490"
 ---
 # <a name="rightindent-element-for-frame-for-customcontrol-for-view-format"></a>Элемент RightIndent для элемента Frame для элемента CustomControl для элемента View (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87780395"
 
 Укажите число символов, на которое нужно сдвинуть данные справа.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Frame для элемента CustomItem для элемента CustomControl для элемента View (формат)](./frame-element-for-customitem-for-customcontrol-for-view-format.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент FormatString для Таблеколумнитем для Таблеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 848583e697d0ab7bd5b017c14c47aba3c51a3c17
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент FormatString для элемента TableColumnItem для элемента TableControl (формат)
+description: Элемент FormatString для элемента TableColumnItem для элемента TableControl (формат)
+ms.openlocfilehash: 3d386e61ac321c05e0b298019c2298f76b391b21
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781551"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667901"
 ---
 # <a name="formatstring-element-for-tablecolumnitem-for-tablecontrol-format"></a>Элемент FormatString для элемента TableColumnItem для элемента TableControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87781551"
 
 Укажите шаблон, используемый для форматирования данных. Например, этот шаблон можно использовать для форматирования значения любого свойства типа [System. TimeSpan](/dotnet/api/System.TimeSpan): {0: MMM} {0: DD} {0: HH}: {0: mm}.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Строки формата можно использовать при создании табличных представлений, представлений списков, расширенных представлений или пользовательских представлений. Дополнительные сведения о форматировании значения, отображаемого в представлении, см. в разделе [Форматирование отображаемых данных](./formatting-displayed-data.md).
 
@@ -59,7 +61,7 @@ ms.locfileid: "87781551"
 </TableColumnItem>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

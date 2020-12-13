@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для Виевселектедби (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e9a391565c3e66041dd9a340455dccfce9ce929b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента ViewSelectedBy (формат)
+description: Элемент TypeName для элемента ViewSelectedBy (формат)
+ms.openlocfilehash: 62edc2fe4b4c1c5f1b17dd2f8b0943f28ff5dfb7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780038"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667731"
 ---
 # <a name="typename-element-for-viewselectedby-format"></a>Элемент TypeName для элемента ViewSelectedBy (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87780038"
 
 Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения об использовании этого элемента в различных представлениях см. в статьях [Создание табличного представления](./creating-a-table-view.md), [Создание представления списка](./creating-a-list-view.md), [Создание расширенного представления](./creating-a-wide-view.md)и [пользовательские компоненты представления](./creating-custom-controls.md).
 
@@ -60,7 +62,7 @@ ms.locfileid: "87780038"
 </View>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления списка](./creating-a-list-view.md)
 

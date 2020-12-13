@@ -1,12 +1,14 @@
 ---
-title: Элемент PropertyName для Селектионкондитион элементов управления в представлении (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 251fc129896cfa4a6255330e23854b014675ac5f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент PropertyName для элемента SelectionCondition для элемента Controls для элемента View (формат)
+description: Элемент PropertyName для элемента SelectionCondition для элемента Controls для элемента View (формат)
+ms.openlocfilehash: 7783e5a9b7f8ec3d3077d87778e9f77ffe858a7f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780820"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665878"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-controls-for-view-format"></a>Элемент PropertyName для элемента SelectionCondition для элемента Controls для элемента View (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87780820"
 
 Укажите имя свойства .NET.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Условие выбора должно указывать по крайней мере одно имя свойства или скрипт, но не может указывать и то, и другое. Дополнительные сведения о том, как можно использовать условия выбора, см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента View (формат)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Как объявить параметры командлета | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 97e86a1eb715f149a8383a1a4529c00da4f0eba8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как объявить параметры командлета
+description: Как объявить параметры командлета
+ms.openlocfilehash: ed53f9788c9afb142b137e08966dff33551b9d0f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774394"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667102"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>Как объявить параметры командлета
 
@@ -107,7 +109,7 @@ ms.locfileid: "87774394"
 
 Дополнительные сведения об атрибуте Alias см. в разделе [объявление атрибута Alias](./alias-attribute-declaration.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент Name для элементов управления для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 109f3a40606dbe82322decf0c69d2367c75175f6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Name для элемента Control для элемента Controls для элемента View (формат)
+description: Элемент Name для элемента Control для элемента Controls для элемента View (формат)
+ms.openlocfilehash: 52b7170777a35596767c34f2d58106dfa6479567
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781092"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666490"
 ---
 # <a name="name-element-for-control-for-controls-for-view-format"></a>Элемент Name для элемента Control для элемента Controls для элемента View (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87781092"
 
 Укажите имя, используемое для ссылки на элемент управления.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Указанное здесь имя можно использовать в следующих элементах для ссылки на этот элемент управления.
 
@@ -50,7 +52,7 @@ ms.locfileid: "87781092"
 
 - При создании другого элемента управления, который может использоваться представлением, этот элемент управления может быть задан следующим элементом: [ExpressionBinding для кустомитем для элементов управления в представлении (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент GroupBy для элемента View (формат)](./groupby-element-for-view-format.md)
 

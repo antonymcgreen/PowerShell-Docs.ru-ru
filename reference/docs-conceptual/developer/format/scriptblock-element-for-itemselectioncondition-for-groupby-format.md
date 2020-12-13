@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для Итемселектионкондитион для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 7738b180f328c7360275058cdb9dea01df6ea285
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента GroupBy (формат)
+description: Элемент ScriptBlock для элемента ItemSelectionCondition для элемента GroupBy (формат)
+ms.openlocfilehash: fe366fa31b93e8d69409cc49c3fe2c350d4d06d9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787654"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665091"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-groupby-format"></a>Элемент ScriptBlock для элемента ItemSelectionCondition для элемента GroupBy (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87787654"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если используется этот элемент, нельзя указать элемент [PropertyName](./propertyname-element-for-itemselectioncondition-for-groupby-format.md) при определении условия выбора.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента GroupBy (формат)](./itemselectioncondition-element-for-expressionbinding-for-groupby-format.md)
 

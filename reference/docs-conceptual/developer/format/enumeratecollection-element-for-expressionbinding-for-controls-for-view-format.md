@@ -1,12 +1,14 @@
 ---
-title: Элемент Енумератеколлектион для ExpressionBinding элементов управления для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 72c4528b79569f5065ea87696d1a08e501219ede
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент EnumerateCollection для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+description: Элемент EnumerateCollection для элемента ExpressionBinding для элемента Controls для элемента View (формат)
+ms.openlocfilehash: c7b15ee701252b310f79d272452f6ffd1c62d268
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773952"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668003"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-controls-for-view-format"></a>Элемент EnumerateCollection для элемента ExpressionBinding для элемента Controls для элемента View (формат)
 
@@ -38,9 +40,9 @@ ms.locfileid: "87773952"
 |-------------|-----------------|
 |[Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Определяет данные, отображаемые элементом управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент ExpressionBinding для элемента CustomItem для элемента Controls для элемента View (формат)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 

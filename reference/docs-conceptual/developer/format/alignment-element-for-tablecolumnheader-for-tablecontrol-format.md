@@ -1,12 +1,14 @@
 ---
-title: Элемент Alignment для Таблеколумнхеадер для Таблеконтрол (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 1bf395b84af90d725c14b2f0ef569f72b5fcc613
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Alignment для TableColumnHeader для TableControl (формат)
+description: Элемент Alignment для TableColumnHeader для TableControl (формат)
+ms.openlocfilehash: cf8b90c12c28951283b5870186e2c88d427318a5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783931"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666830"
 ---
 # <a name="alignment-element-for-tablecolumnheader-for-tablecontrol-format"></a>Элемент Alignment для TableColumnHeader для TableControl (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87783931"
 
 Центрирование центров данных, отображаемых в столбце.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
@@ -64,7 +66,7 @@ ms.locfileid: "87783931"
 </TableColumnHeader>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 
