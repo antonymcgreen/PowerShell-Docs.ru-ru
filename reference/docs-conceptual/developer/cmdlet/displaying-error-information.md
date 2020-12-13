@@ -1,12 +1,14 @@
 ---
-title: Отображение сведений об ошибках | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e542110e9c35a74c5d4c112b0a831f7f8ad9242e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Отображение сведений об ошибке
+description: Отображение сведений об ошибке
+ms.openlocfilehash: 37a3adb91d0e616a5c7f27bcab866f8da139f969
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774581"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653060"
 ---
 # <a name="displaying-error-information"></a>Отображение сведений об ошибке
 
@@ -29,7 +31,7 @@ CloseError: (System.ServiceProcess.ServiceController:ServiceController) [stop-se
 
 Дополнительные сведения о категориях ошибок см. в разделе [записи об ошибках Windows PowerShell](./windows-powershell-error-records.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Записи об ошибках Windows PowerShell](./windows-powershell-error-records.md)
 

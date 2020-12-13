@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионсетнаме для Селектионкондитион для ошибка customcontrol для представления (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c7fdd92475ba24d27e61371d1c6b54fa1a55647c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionSetName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)
+description: Элемент SelectionSetName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)
+ms.openlocfilehash: 839032048739e529057d7066fb3bc6aa2fbc5037
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787518"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651615"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>Элемент SelectionSetName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)
 
@@ -42,13 +44,13 @@ ms.locfileid: "87787518"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Наборы выбора — это распространенные группы объектов .NET, которые могут использоваться любым представлением, определяемым файлом форматирования. Дополнительные сведения о создании и ссылке на наборы выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
 
 Условие выбора может указывать набор выбора или тип .NET, но не может одновременно указывать оба значения. Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Селектионкондитион для Ентриселектедби для ошибка customcontrol для представления (Format)](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
 

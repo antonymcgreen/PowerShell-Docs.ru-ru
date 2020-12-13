@@ -1,16 +1,18 @@
 ---
-title: Пример GetProcessSample04 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4858c44302f7315625be02dd0dc1d335b9c3f158
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример командлета GetProcessSample04
+description: Пример командлета GetProcessSample04
+ms.openlocfilehash: 4b2b7f7ed5fd87711d0d7872caaf75d453de4832
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774428"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652728"
 ---
 # <a name="getprocesssample04-sample"></a>Пример командлета GetProcessSample04
 
-В этом примере показано, как реализовать командлет, который получает процессы на локальном компьютере. Она создает неустранимую ошибку в случае возникновения ошибки при получении процесса. Этот командлет является упрощенной версией `Get-Process` командлета, предоставляемого Windows PowerShell 2,0.
+В этом примере показано, как реализовать командлет, который получает процессы на локальном компьютере. Он создает неустранимую ошибку, если при получении процесса возникает ошибка. Этот командлет является упрощенной версией `Get-Process` командлета, предоставляемого Windows PowerShell 2,0.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 

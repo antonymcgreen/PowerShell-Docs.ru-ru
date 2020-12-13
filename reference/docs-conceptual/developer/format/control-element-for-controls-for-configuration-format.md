@@ -1,12 +1,14 @@
 ---
-title: Элемент Control для элементов управления Configuration (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 9447efac84cff3cc33468aeebc97a8bdd6137518
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Control для элемента Controls для элемента Configuration (формат)
+description: Элемент Control для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 43424de025cb89d81533e973abd7c39c09533747
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783829"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655662"
 ---
 # <a name="control-element-for-controls-for-configuration-format"></a>Элемент Control для элемента Controls для элемента Configuration (формат)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87783829"
 |-------------|-----------------|
 |[Элемент управления в конфигурации (формат)](./controls-element-for-configuration-format.md)|Определяет общие элементы управления, которые могут использоваться всеми представлениями файла форматирования или другими элементами управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 На имя, присвоенное этому элементу управления, можно ссылаться в следующих элементах:
 
@@ -52,7 +54,7 @@ ms.locfileid: "87783829"
 
 - [Элемент GroupBy для представления (формат)](./groupby-element-for-view-format.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент управления в конфигурации (формат)](./controls-element-for-configuration-format.md)
 

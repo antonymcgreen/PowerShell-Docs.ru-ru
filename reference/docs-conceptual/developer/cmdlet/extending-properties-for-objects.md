@@ -1,12 +1,14 @@
 ---
-title: Расширение свойств объектов | Документация Майкрософт
 ms.date: 08/21/2019
-ms.openlocfilehash: acd20c7e2b6ef84a9c932538eb8e167d68c8a660
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Расширение свойств для объектов
+description: Расширение свойств для объектов
+ms.openlocfilehash: 37803d9fd87319204565c2abde62f269744481b9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784305"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652893"
 ---
 # <a name="extending-properties-for-objects"></a>Расширение свойств для объектов
 
@@ -96,9 +98,9 @@ ms.locfileid: "87784305"
 
 Набор свойств определяет группу расширенных свойств, на которые может ссылаться имя набора.
 Например, параметр свойства [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) 
- **Property** может указывать конкретный набор свойств для отображения. Если задан набор свойств, отображаются только те свойства, которые принадлежат набору.
+  может указывать конкретный набор свойств для отображения. Если задан набор свойств, отображаются только те свойства, которые принадлежат набору.
 
-Количество наборов свойств, которые могут быть определены для объекта, не ограничено. Однако наборы свойств, используемые для определения свойств экрана по умолчанию для объекта, должны быть указаны в наборе элементов **псстандардмемберс** . В `Types.ps1xml` файле типов имена наборов свойств по умолчанию включают **дефаултдисплайпроперти**, **дефаултдисплайпропертисет**и **дефаулткэйпропертисет**. Все дополнительные наборы свойств, добавляемые в набор элементов **псстандардмемберс** , игнорируются.
+Количество наборов свойств, которые могут быть определены для объекта, не ограничено. Однако наборы свойств, используемые для определения свойств экрана по умолчанию для объекта, должны быть указаны в наборе элементов **псстандардмемберс** . В `Types.ps1xml` файле типов имена наборов свойств по умолчанию включают **дефаултдисплайпроперти**, **дефаултдисплайпропертисет** и **дефаулткэйпропертисет**. Все дополнительные наборы свойств, добавляемые в набор элементов **псстандардмемберс** , игнорируются.
 
 В следующем примере набор свойств **дефаултдисплайпропертисет** добавляется в набор элементов **псстандардмемберс** типа [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) . Элемент набора [свойств](/dotnet/api/system.management.automation.pspropertyset) определяет группу свойств. Элемент [Name](/dotnet/api/system.management.automation.psmemberinfo.name) указывает имя набора свойств. И элемент [референцедпропертиес](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) указывает свойства набора. Можно также добавить `PropertySet` элемент в элементы элемента [Type](/dotnet/api/system.management.automation.pstypename) .
 
@@ -123,10 +125,10 @@ ms.locfileid: "87784305"
 </Type>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Сведения о Types.ps1XML](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)
 
-[System. Management. Automation](/dotnet/api/System.Management.Automation)
+[System.Management.Automation](/dotnet/api/System.Management.Automation)
 
 [Запись командлета Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

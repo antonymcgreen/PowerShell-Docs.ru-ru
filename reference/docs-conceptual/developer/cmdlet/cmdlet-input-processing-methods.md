@@ -1,14 +1,14 @@
 ---
-title: Методы обработки входных данных командлета | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- virtual methods (PowerShell SDK]
-ms.openlocfilehash: e69c5a366b2d74ddd92c844bda0b1e3a65539c10
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Методы обработки входных данных командлета
+description: Методы обработки входных данных командлета
+ms.openlocfilehash: e1a7b58517d6285250edbf16d14810388c242218
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784458"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653393"
 ---
 # <a name="cmdlet-input-processing-methods"></a>Методы обработки входных данных командлета
 
@@ -69,7 +69,7 @@ protected override void EndProcessing()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)
 
@@ -81,4 +81,4 @@ protected override void EndProcessing()
 
 [System.IDisposable](/dotnet/api/System.IDisposable)
 
-[Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)
+[Пакет SDK Windows PowerShell](../windows-powershell-reference.md)

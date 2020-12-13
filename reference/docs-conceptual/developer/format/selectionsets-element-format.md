@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионсетс (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 718b08e02220f285ef215fdca727492fd4407466
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionSets (формат)
+description: Элемент SelectionSets (формат)
+ms.openlocfilehash: e5c928dfb82bc6963b4a87aef9ec06d34cacfdcb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785206"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654922"
 ---
 # <a name="selectionsets-element-format"></a>Элемент SelectionSets (формат)
 
@@ -42,15 +44,15 @@ ms.locfileid: "87785206"
 |-------------|-----------------|
 |[Элемент Configuration](./configuration-element-format.md)|Представляет элемент верхнего уровня файла форматирования.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Наборы выбора можно использовать при наличии набора связанных объектов, на которые необходимо создать ссылку, используя одно имя, например набор объектов, связанных через наследование. При определении представлений можно указать набор объектов, используя имя набора вместо перечисления всех объектов в каждом представлении.
 
 Стандартные наборы выбора задаются по имени при определении представлений файла форматирования или определений представлений. В таких случаях `SelectionSetName` дочерний элемент `ViewSelectedBy` `EntrySelectedBy` элементов и указывает используемый набор. Дополнительные сведения о наборах выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Элемент Configuration](./configuration-element-format.md)
+[Элемент настройки](./configuration-element-format.md)
 
 [Определение наборов выделенных фрагментов](./defining-selection-sets.md)
 

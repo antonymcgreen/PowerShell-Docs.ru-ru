@@ -1,12 +1,14 @@
 ---
-title: Создание ограниченного пространства выполнения | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание ограниченного пространства выполнения
+description: Создание ограниченного пространства выполнения
+ms.openlocfilehash: 53fee3cc7d8625425bc6a73196aee9eee7f17ed6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779817"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651165"
 ---
 # <a name="creating-a-constrained-runspace"></a>Создание ограниченного пространства выполнения
 
@@ -113,6 +115,6 @@ this.runspace = RunspaceFactory.CreateRunspace(defaultSessionState);
 this.runspace.Open();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [Создание InitialSessionState](./creating-an-initialsessionstate.md)

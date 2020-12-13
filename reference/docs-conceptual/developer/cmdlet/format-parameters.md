@@ -1,12 +1,14 @@
 ---
-title: Параметры формата | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c8e031f62aa8bcb0e9d5b900b2eace7187b1f3dd
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Параметры форматирования
+description: Параметры форматирования
+ms.openlocfilehash: 5f970683fedc71b208ff6becad761d94611a91a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784288"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652825"
 ---
 # <a name="format-parameters"></a>Параметры форматирования
 
@@ -21,7 +23,7 @@ ms.locfileid: "87784288"
 |**ShortName**<br>Тип данных: переключатель|Реализуйте этот параметр, чтобы при указании параметра поддерживались короткие имена.|
 |**Width**<br>Тип данных: Int32|Реализуйте этот параметр, чтобы пользователь мог указать ширину выходного устройства.|
 |**оборачивание;**<br>Тип данных: переключатель|Реализуйте этот параметр, чтобы при указании параметра поддерживался перенос текста.|
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Параметры командлета](./cmdlet-parameters.md)
 

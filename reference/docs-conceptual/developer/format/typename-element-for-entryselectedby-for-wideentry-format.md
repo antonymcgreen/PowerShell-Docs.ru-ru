@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для Ентриселектедби для Видинтри (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 9af443067467f590df824b28636f57b807a4fc94
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента EntrySelectedBy для WideEntry (формат)
+description: Элемент TypeName для элемента EntrySelectedBy для WideEntry (формат)
+ms.openlocfilehash: 2e0facd6ff7c6fec96dabf488449a8502429bcff
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780191"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654794"
 ---
 # <a name="typename-element-for-entryselectedby-for-wideentry-format"></a>Элемент TypeName для элемента EntrySelectedBy для WideEntry (формат)
 
@@ -42,13 +44,13 @@ ms.locfileid: "87780191"
 
 Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Каждая широкая запись должна указывать один или несколько типов .NET, набор выбора или условие выбора, которое должно существовать для использования определения.
 
 Дополнительные сведения о других компонентах расширенного представления см. [в разделе Создание расширенного представления](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание широкого представления](./creating-a-wide-view.md)
 

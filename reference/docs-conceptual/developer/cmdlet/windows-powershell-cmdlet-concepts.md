@@ -1,18 +1,20 @@
 ---
-title: Основные понятия о командлетах Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 8c5462bbebd1be536b83854ca260592b841035fe
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Основные понятия, связанные с командлетами Windows PowerShell
+description: Основные понятия, связанные с командлетами Windows PowerShell
+ms.openlocfilehash: da34d3d229f6d57ee22d84fc024b31eb2ee27ba3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787756"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652524"
 ---
 # <a name="windows-powershell-cmdlet-concepts"></a>Основные понятия, связанные с командлетами Windows PowerShell
 
 В этом разделе описывается работа командлетов.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 Этот раздел содержит следующие темы.
 

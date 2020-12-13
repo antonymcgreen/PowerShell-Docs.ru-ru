@@ -1,12 +1,14 @@
 ---
-title: Пример кода RunSpace03 (C#) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: df34652f60ed85b13739a04485cf6622cf924872
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример кода RunSpace03 (C#)
+description: Пример кода RunSpace03 (C#)
+ms.openlocfilehash: cdb08811de13f8bbf5cd91fcbef552c78594b788
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784798"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653843"
 ---
 # <a name="runspace03-c-code-sample"></a>Пример кода RunSpace03 (C#)
 
@@ -20,7 +22,7 @@ ms.locfileid: "87784798"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/Runspace03/Runspace03.cs" range="11-88":::
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

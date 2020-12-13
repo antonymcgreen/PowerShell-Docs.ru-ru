@@ -1,12 +1,14 @@
 ---
-title: Создание расширенного представления | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 0cf6a35201c47e4b12dd160191570eccec3427ef
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание широкого представления
+description: Создание широкого представления
+ms.openlocfilehash: 4230ef91a3612e962b2773b12e8016df6f760eae
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786141"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655597"
 ---
 # <a name="creating-a-wide-view"></a>Создание широкого представления
 
@@ -249,7 +251,7 @@ View>
 
 - Элемент [ScriptBlock](./scriptblock-element-for-wideitem-for-widecontrol-format.md) (не показан) задает скрипт, значение которого отображается в представлении. Необходимо указать либо скрипт, либо свойство, но нельзя указать и то, и другое.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Широкое представление (базовое)](./wide-view-basic.md)
 

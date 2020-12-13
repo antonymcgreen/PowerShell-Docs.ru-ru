@@ -1,12 +1,14 @@
 ---
-title: Общие сведения о командлетах
 ms.date: 06/11/2020
-ms.openlocfilehash: 576df03f35dff80479d1fce18cf4306c9219d42f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Общие сведения о командлетах
+description: Общие сведения о командлетах
+ms.openlocfilehash: ed3082e1a821bb9643ea2eef13b7348eb48488e4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784407"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653231"
 ---
 # <a name="cmdlet-overview"></a>Общие сведения о командлетах
 
@@ -15,7 +17,7 @@ ms.locfileid: "87784407"
 ## <a name="cmdlets"></a>Командлеты
 
 Командлеты выполняют действие и обычно возвращают объект Microsoft .NET в следующую команду в конвейере. Командлет — это одна команда, которая участвует в семантике конвейера PowerShell.
-Сюда входят двоичные (C#) командлеты, расширенные функции скриптов, CDXML и рабочие процессы.
+Сюда входят двоичные командлеты (C#), расширенные функции скриптов, CDXML и рабочие процессы.
 
 В этой документации по пакету SDK описывается создание двоичных командлетов, написанных на языке C#. Дополнительные сведения о командлетах на основе сценариев см. в следующих статьях:
 
@@ -113,10 +115,10 @@ PowerShell использует пару имен глагол-и-существ
 
 Дополнительные сведения о рекомендациях по написанию командлетов см. в разделе [рекомендации по разработке командлетов](./cmdlet-development-guidelines.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Основные понятия о командлетах PowerShell](./windows-powershell-cmdlet-concepts.md)
+[Основные понятия командлетов PowerShell](./windows-powershell-cmdlet-concepts.md)
 
-[Написание командлета PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Написание командлета PowerShell](./writing-a-windows-powershell-cmdlet.md)
 
 [Пакет SDK для PowerShell](../windows-powershell-reference.md)

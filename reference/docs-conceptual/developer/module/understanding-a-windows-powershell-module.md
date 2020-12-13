@@ -1,12 +1,14 @@
 ---
-title: Основные сведения о модуле Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 9308ad0fd41aa67ffa8510ae7a3c9cd6a13f4220
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Общие сведения о модулях Windows PowerShell
+description: Общие сведения о модулях Windows PowerShell
+ms.openlocfilehash: 882e9db59dc1bc8570676d1da7ce84c808d076e8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779239"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651150"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Общие сведения о модулях Windows PowerShell
 
@@ -84,7 +86,7 @@ ms.locfileid: "87779239"
 
 - Динамические модули, создаваемые `New-Module` командлетом, могут называться с помощью `Name` параметра командлета.
 
-- Модули, импортированные из объектов сборки с помощью команды ** `Import-Module` -Assembly** , именуются в соответствии со следующим синтаксисом: `"dynamic_code_module_" + assembly.GetName()` .
+- Модули, импортированные из объектов сборки с помощью команды **`Import-Module` -Assembly** , именуются в соответствии со следующим синтаксисом: `"dynamic_code_module_" + assembly.GetName()` .
 
   Дополнительные сведения см. в статьях [Установка модуля PowerShell](./installing-a-powershell-module.md) и [изменение пути установки PSModulePath](./modifying-the-psmodulepath-installation-path.md).
 
@@ -110,6 +112,6 @@ $PSScriptRoot эта переменная содержит каталог, из 
 
 $env:P Смодулепас эта переменная среды содержит список каталогов, в которых хранятся модули Windows PowerShell. Windows PowerShell использует значение этой переменной при автоматическом импорте модулей и обновлении разделов справки для модулей.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание модуля Windows PowerShell](./writing-a-windows-powershell-module.md)

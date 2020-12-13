@@ -1,14 +1,14 @@
 ---
-title: Разработка поставщика Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- providers [PowerShell Programmer's Guide], designing
-ms.openlocfilehash: dec6c71a2d7bbe5636f96dc140e701213d6f6487
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Разработка поставщика Windows PowerShell
+description: Разработка поставщика Windows PowerShell
+ms.openlocfilehash: 89e1fa9cfc0a2e5928a358aad4244c8e9152fe1a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778925"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654540"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Разработка поставщика Windows PowerShell
 
@@ -20,19 +20,19 @@ ms.locfileid: "87778925"
 
 Дополнительные сведения о путях Windows PowerShell см. в статье как работает Windows PowerShell.
 
-### <a name="defining-a-drive-qualified-path"></a>Определение пути с указанием диска
+### <a name="defining-a-drive-qualified-path"></a>Определение пути Drive-Qualified
 
 Чтобы разрешить пользователю доступ к данным, расположенным на физическом диске, поставщик Windows PowerShell должен поддерживать путь, определенный диском. Этот путь начинается с имени диска, за которым следует двоеточие (:), например мидриве: \ абк\бар.
 
-### <a name="defining-a-provider-qualified-path"></a>Определение пути, уточненного поставщиком
+### <a name="defining-a-provider-qualified-path"></a>Определение пути Provider-Qualified
 
 Чтобы разрешить среде выполнения Windows PowerShell инициализировать и деинициализировать поставщик, поставщик Windows PowerShell должен поддерживать путь, определенный поставщиком. Например, файл FileSystem:: \\ \ункшаре\абк\бар является квалифицированным поставщиком для поставщика FileSystem, предоставляемого Windows PowerShell.
 
-### <a name="defining-a-provider-direct-path"></a>Определение прямого пути к поставщику
+### <a name="defining-a-provider-direct-path"></a>Определение пути Provider-Direct
 
 Чтобы разрешить удаленный доступ к поставщику Windows PowerShell, он должен поддерживать прямой путь поставщика для передачи непосредственно поставщику Windows PowerShell для текущего расположения. Например, в реестре поставщик Windows PowerShell может использовать \\ \сервер\регкэйпас в качестве прямого пути поставщика.
 
-### <a name="defining-a-provider-internal-path"></a>Определение внутреннего пути поставщика
+### <a name="defining-a-provider-internal-path"></a>Определение пути Provider-Internal
 
 Чтобы предоставить командлету поставщика доступ к данным с помощью интерфейсов API, отличных от Windows PowerShell, поставщик Windows PowerShell должен поддерживать внутренний путь поставщика. Этот путь указывается после "::" в пути, уточненном поставщиком. Например, внутренний путь поставщика для файловой системы Windows PowerShell Provider — \\ \ункшаре\абк\бар.
 
@@ -101,7 +101,7 @@ Windows PowerShell предоставляет ряд базовых классо
 
 |    Командлет    |                                                                      Определение                                                                      |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Объединить-Path | Объединяет два пути в один путь с помощью разделителя, зависящего от поставщика, между путями. Этот командлет осуществляет потоковую передачу строк.                               |
+| Combine-Path | Объединяет два пути в один путь с помощью разделителя, зависящего от поставщика, между путями. Этот командлет осуществляет потоковую передачу строк.                               |
 | `Move-Item`  | Перемещает элементы в указанное место. Этот командлет не передает выходной объект через конвейер, если не `PassThru` указан параметр. |
 
 Связанный командлет — это базовый командлет Parse-Path, предоставляемый Windows PowerShell. Этот командлет можно использовать для синтаксического анализа пути Windows PowerShell для поддержки `Parent` параметра. Он создает потоковую строку родительского пути.
@@ -156,7 +156,7 @@ Windows PowerShell предоставляет ряд базовых классо
 | `Get-Acl` | Извлекает сведения, содержащиеся в списке управления доступом (ACL), который является частью дескриптора безопасности, используемого для защиты ресурсов операционной системы, например файла или объекта.                                                                                                                                                                                                                                      |
 | `Set-Acl` | Задает сведения для ACL. Он представлен в виде экземпляра [System. Security. AccessControl. обжектсекурити](/dotnet/api/System.Security.AccessControl.ObjectSecurity) для элементов, указанных для указанного пути. Этот командлет может задавать сведения о файлах, ключах и подразделах в реестре или любом другом элементе поставщика, если поставщик Windows PowerShell поддерживает настройку сведений о безопасности. |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 

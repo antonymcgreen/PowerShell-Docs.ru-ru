@@ -1,14 +1,16 @@
 ---
-title: Создание справки по модулям PowerShell
 ms.date: 04/10/2020
-ms.openlocfilehash: 115ea3f3c5941e74ed6ddbc8480d4a21576bc5c6
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Написание справки для модулей PowerShell
+description: Написание справки для модулей PowerShell
+ms.openlocfilehash: 3bef45c0dd8a7e63bc419bb3e5a7a1783810105b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893073"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654659"
 ---
-# <a name="writing-help-for-powershell-modules"></a>Создание справки по модулям PowerShell
+# <a name="writing-help-for-powershell-modules"></a>Написание справки для модулей PowerShell
 
 Модули PowerShell могут включать разделы справки о модуле и о членах модуля, таких как командлеты, поставщики, функции и скрипты. `Get-Help`Командлет выводит разделы справки по модулям в том же формате, в котором отображается справка для других элементов PowerShell, а пользователи используют стандартные `Get-Help` команды для получения разделов справки.
 
@@ -107,7 +109,7 @@ ms.locfileid: "86893073"
 
 Дополнительные сведения см. в разделе [поддержка справки в Интернете](./supporting-online-help.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание модуля PowerShell](../module/writing-a-windows-powershell-module.md)
 

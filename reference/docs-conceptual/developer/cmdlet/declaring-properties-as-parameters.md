@@ -1,12 +1,14 @@
 ---
-title: Объявление свойств как параметров | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 63113f541df534b1f720ceb06e14b5031f2311b2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Объявление свойств в качестве параметров
+description: Объявление свойств в качестве параметров
+ms.openlocfilehash: ade7928e2ca277da8bbd1a5e04997bd1d05f1e5d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774649"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653157"
 ---
 # <a name="declaring-properties-as-parameters"></a>Объявление свойств в качестве параметров
 
@@ -38,7 +40,7 @@ private string userName;
 
 Windows PowerShell также предоставляет набор общих параметров, которые автоматически доступны для каждого командлета. Дополнительные сведения об этих параметрах и их псевдонимах см. в разделе [Общие параметры командлета](./common-parameter-names.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Общие параметры командлета](./common-parameter-names.md)
 

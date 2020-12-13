@@ -1,18 +1,20 @@
 ---
-title: Примеры поставщиков | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 9eb8eb64bbe585ebd8024c0215853ff04a5c3e54
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры поставщиков
+description: Примеры поставщиков
+ms.openlocfilehash: e6b1e8ce603092a3fd9dd44d7be428587544466b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778440"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651127"
 ---
 # <a name="provider-samples"></a>Примеры поставщиков
 
 В этом разделе приводятся примеры поставщиков, обращающихся к базе данных Microsoft Access. Эти примеры включают классы поставщиков, производные от всех базовых классов поставщиков.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 Этот раздел содержит следующие подразделы:
 
@@ -28,6 +30,6 @@ ms.locfileid: "87778440"
 
 [AccessDBProviderSample06](./accessdbprovidersample06.md) В этом примере показано, как перезаписывать методы содержимого для поддержки вызовов к `Clear-Content` `Get-Content` `Set-Content` командлетам, и. Эти методы должны быть реализованы, когда пользователю требуется управлять содержимым элементов в хранилище данных. Класс поставщика в этом примере является производным от класса [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) и реализует интерфейс [System. Management. Automation. Provider. иконтенткмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание поставщика Windows PowerShell](./writing-a-windows-powershell-provider.md)

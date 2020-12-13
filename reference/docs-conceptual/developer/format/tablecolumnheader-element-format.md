@@ -1,12 +1,14 @@
 ---
-title: Элемент Таблеколумнхеадер (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6296aea5c567663b1c3c0a2cf0a57b21aa5394de
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TableColumnHeader (формат)
+description: Элемент TableColumnHeader (формат)
+ms.openlocfilehash: 30368512875b7c5c4cf3c686f3d09540dea1bd26
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785189"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651533"
 ---
 # <a name="tablecolumnheader-element-format"></a>Элемент TableColumnHeader (формат)
 
@@ -46,7 +48,7 @@ ms.locfileid: "87785189"
 |-------------|-----------------|
 |[Элемент TableHeaders (формат)](./tableheaders-element-format.md)|Определяет столбцы табличного представления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Укажите заголовок для каждого столбца таблицы. Столбцы отображаются в том порядке, в котором `TableColumnHeader` определены элементы.
 
@@ -73,7 +75,7 @@ ms.locfileid: "87785189"
 </TableHeaders>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Alignment для TableColumnHeader для TableControl (формат)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
 

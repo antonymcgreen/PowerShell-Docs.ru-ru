@@ -1,12 +1,14 @@
 ---
-title: Элемент Ентриселектедби для Енумерабликспансион (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 031bf10cfb1aed2c737fdd53fa4f20f025351d40
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент EntrySelectedBy для элемента EnumerableExpansion (формат)
+description: Элемент EntrySelectedBy для элемента EnumerableExpansion (формат)
+ms.openlocfilehash: 8b2fff2d0b14d0622d0be2c5af3a95194c733a73
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783676"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652330"
 ---
 # <a name="entryselectedby-element-for-enumerableexpansion-format"></a>Элемент EntrySelectedBy для элемента EnumerableExpansion (формат)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87783676"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-|Элемент|Description|
+|Элемент|Описание|
 |-------------|-----------------|
 |[Элемент SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Определяет условие, которое должно существовать для расширения объектов коллекции этого определения.|
 |[Элемент SelectionSetName для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)](./selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format.md)|Необязательный элемент.<br /><br /> Задает набор типов .NET, использующих это определение того, как разворачиваются объекты коллекции.|
@@ -42,11 +44,11 @@ ms.locfileid: "87783676"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Description|
+|Элемент|Описание|
 |-------------|-----------------|
 |[Элемент EnumerableExpansion (формат)](./enumerableexpansion-element-format.md)|Определяет, каким способом развертываются определенные объекты коллекции .NET, когда они отображаются в представлении.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Необходимо указать по крайней мере один тип, набор выбора или условие выбора для записи определения. Максимальное количество дочерних элементов, которое можно использовать, не ограничено.
 

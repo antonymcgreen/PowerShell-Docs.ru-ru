@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионсетнаме для Ентриселектедби для Таблеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e68aa74b201abf345e87411db6cb2787ddd4f72b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionSetName для элемента EntrySelectedBy для элемента TableControl (формат)
+description: Элемент SelectionSetName для элемента EntrySelectedBy для элемента TableControl (формат)
+ms.openlocfilehash: a5a395f718d0e1a2d7f33d120ce4fd2ff787cc34
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772694"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651773"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-tablecontrol-format"></a>Элемент SelectionSetName для элемента EntrySelectedBy для элемента TableControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87772694"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Наборы выбора обычно используются, если требуется определить группу объектов, используемых в нескольких представлениях. Например, может потребоваться создать табличное представление и представление списка для одного и того же набора объектов. Дополнительные сведения об определении наборов выбора см. [в разделе Определение наборов объектов для представления](./defining-selection-sets.md).
 
@@ -50,7 +52,7 @@ ms.locfileid: "87772694"
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Ентриселектедби (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)
 

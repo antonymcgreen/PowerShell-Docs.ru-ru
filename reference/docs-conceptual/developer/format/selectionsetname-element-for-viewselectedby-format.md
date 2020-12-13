@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионсетнаме для Виевселектедби (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: f6410b463bcb00d2758849c2f7e13cd839277e50
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionSetName для элемента ViewSelectedBy (формат)
+description: Элемент SelectionSetName для элемента ViewSelectedBy (формат)
+ms.openlocfilehash: a1a1816761715a138bcb3c2bd4cb9dbbb2f9cb92
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772609"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654903"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>Элемент SelectionSetName для элемента ViewSelectedBy (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87772609"
 
 Укажите имя набора выбора, который определяется `Name` элементом для набора выбора.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Наборы выбора можно использовать при наличии набора связанных объектов, на которые необходимо создать ссылку, используя одно имя, например набор объектов, связанных через наследование. Дополнительные сведения об определении и ссылке на наборы выбора см. в разделе [Определение наборов объектов](./defining-selection-sets.md).
 
@@ -60,7 +62,7 @@ ms.locfileid: "87772609"
 </View>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Определение наборов выделенных фрагментов](./defining-selection-sets.md)
 

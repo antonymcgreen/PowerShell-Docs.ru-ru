@@ -1,12 +1,14 @@
 ---
-title: Устранимые ошибки | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: d74c248e6ef54151400b8060d76524e89d87352c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Непрерывающие ошибки
+description: Непрерывающие ошибки
+ms.openlocfilehash: d23642103e005c6d3a6168b317b11f40001b6bbe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786566"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655739"
 ---
 # <a name="non-terminating-errors"></a>Непрерывающие ошибки
 
@@ -16,7 +18,7 @@ ms.locfileid: "87786566"
 
 Командлеты могут вызывать [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) в соответствии с их методами обработки ввода. Однако командлеты могут вызывать [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) только из потока, который вызвал метод обработки входных данных [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System.](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)Management. Automation. командлет. ProcessRecord или [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Не вызывайте [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) из другого потока. Вместо этого следует сообщать об ошибках обратно в основной поток.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 

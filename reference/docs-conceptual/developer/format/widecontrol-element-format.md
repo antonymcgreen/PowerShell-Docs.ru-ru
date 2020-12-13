@@ -1,12 +1,14 @@
 ---
-title: Элемент Видеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: b6f19cf94dcb440eeaf53547db407287e5462520
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент WideControl (формат)
+description: Элемент WideControl (формат)
+ms.openlocfilehash: f88e1ce18f87e5e47de473298b3ecf070b71c192
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784985"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651277"
 ---
 # <a name="widecontrol-element-format"></a>Элемент WideControl (формат)
 
@@ -46,7 +48,7 @@ ms.locfileid: "87784985"
 |-------------|-----------------|
 |[Элемент View (формат)](./view-element-format.md)|Определяет представление, используемое для отображения одного или нескольких объектов .NET.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 При определении расширенного представления можно добавить `AutoSize` элемент или, `ColumnNumber` но нельзя добавить оба.
 
@@ -72,7 +74,7 @@ ms.locfileid: "87784985"
 
 Полный пример расширенного представления см. в разделе [широкие представления (базовый)](./wide-view-basic.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент AutoSize для Видеконтрол (Format)](./autosize-element-for-widecontrol-format.md)
 

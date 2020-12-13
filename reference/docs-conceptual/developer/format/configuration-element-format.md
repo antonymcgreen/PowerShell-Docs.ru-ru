@@ -1,12 +1,14 @@
 ---
-title: Элемент Configuration (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 90be02f8e27c0bd391e01da1a08ecd8eeb29b84c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Configuration (формат)
+description: Элемент Configuration (формат)
+ms.openlocfilehash: 0524736d40dd7a7acb0b6fb61d1438b75672c240
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783846"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655694"
 ---
 # <a name="configuration-element-format"></a>Элемент Configuration (формат)
 
@@ -36,7 +38,7 @@ ms.locfileid: "87783846"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-|Элемент|Description|
+|Элемент|Описание|
 |-------------|-----------------|
 |[Элемент Controls для элемента Configuration (формат)](./controls-element-for-configuration-format.md)|Необязательный элемент.<br /><br /> Определяет общие элементы управления, которые могут использоваться всеми представлениями файла форматирования.|
 |[Элемент DefaultSettings (формат)](./defaultsettings-element-format.md)|Необязательный элемент.<br /><br /> Определяет общие параметры, которые применяются ко всем представлениям файла форматирования.|

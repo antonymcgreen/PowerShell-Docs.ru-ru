@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионкондитион для Ентриселектедби для ListControl (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 29626b181f21d168e1ebf973e01afeb411d9ef54
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
+description: Элемент SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
+ms.openlocfilehash: e93499691dd0046265e43abd26497b2974546083
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772779"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655103"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента ListControl (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87772779"
 |-------------|-----------------|
 |[Элемент Ентриселектедби для Таблеровентри (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Определяет типы .NET, которые используют эту запись таблицы, или условие, которое должно существовать для использования этой записи.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Лвхен вы определяете условие выбора, применяются следующие требования.
 
@@ -60,7 +62,7 @@ ms.locfileid: "87772779"
 
 Дополнительные сведения о других компонентах представления списка см. в разделе [Создание представления списка](./creating-a-list-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления списка](./creating-a-list-view.md)
 

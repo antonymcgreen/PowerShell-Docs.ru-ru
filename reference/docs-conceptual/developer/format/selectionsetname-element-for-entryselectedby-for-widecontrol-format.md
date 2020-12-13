@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионсетнаме для Ентриселектедби для Видеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 546225b0619ebec83d04a7e27bbc298ffef0a14d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionSetName для элемента EntrySelectedBy для элемента WideControl (формат)
+description: Элемент SelectionSetName для элемента EntrySelectedBy для элемента WideControl (формат)
+ms.openlocfilehash: bf6a44bb733421f36a9140d0ec10e61aedfbda6a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785257"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651699"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-widecontrol-format"></a>Элемент SelectionSetName для элемента EntrySelectedBy для элемента WideControl (формат)
 
@@ -43,7 +45,7 @@ ms.locfileid: "87785257"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Каждое определение должно содержать одно имя типа, набор выбора или условие выбора.
 
@@ -51,7 +53,7 @@ ms.locfileid: "87785257"
 
 Дополнительные сведения о других компонентах расширенного представления см. [в разделе Создание расширенного представления](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание широкого представления](./creating-a-wide-view.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Атрибуты в коде командлета | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 1f92e329d304754d5596cef0c95dc597aca3a538
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Атрибуты в коде командлета
+description: Атрибуты в коде командлета
+ms.openlocfilehash: 296bb8bcb06ef660e97dc792d1ecf596cc7c2930
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774921"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653657"
 ---
 # <a name="attributes-in-cmdlet-code"></a>Атрибуты в коде командлета
 
@@ -23,7 +25,7 @@ public class GetProcCommand : Cmdlet
 
 Дополнительные сведения о различных атрибутах, которые могут быть объявлены в командлетах, см. в разделе [типы атрибутов](./attribute-types.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Типы атрибутов](./attribute-types.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Видинтри (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 44c88ce75ae485e1c48ceb08bfd12f739a632996
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента WideEntry (формат)
+description: Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента WideEntry (формат)
+ms.openlocfilehash: c6466e3ac6e1f194df9172468d26448f9630da6a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787450"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655010"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format"></a>Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента WideEntry (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87787450"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Условие выбора может указывать набор выбора или тип .NET, но не может одновременно указывать оба значения. Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
@@ -50,7 +52,7 @@ ms.locfileid: "87787450"
 
 Дополнительные сведения о других компонентах расширенного представления см. [в разделе Создание расширенного представления](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание широкого представления](./creating-a-wide-view.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Расширение выходных объектов | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 48f4f2996159d84257ad72d499e3a796aeaa9116
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Расширение объектов выходных данных
+description: Расширение объектов выходных данных
+ms.openlocfilehash: 9fea476e3032002bd206609313581cc6373dfddc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784322"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652901"
 ---
 # <a name="extending-output-objects"></a>Расширение объектов выходных данных
 
@@ -89,7 +91,7 @@ PS> (1, 2, 3, 4).Length
 
 Файлы типов должны иметь цифровую подпись, чтобы предотвратить незаконное изменение, так как XML может включать блоки сценариев. Дополнительные сведения о добавлении цифровых подписей см. в разделе [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Определение свойств по умолчанию для объектов](./extending-properties-for-objects.md)
 

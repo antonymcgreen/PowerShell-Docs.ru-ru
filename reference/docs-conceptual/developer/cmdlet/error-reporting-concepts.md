@@ -1,17 +1,14 @@
 ---
-title: Основные понятия отчетов об ошибках | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- non-terminating errors [PowerShell SDK]
-- errors [PowerShell SDK], described
-- terminating errors [PowerShell SDK]
-- errors [PowerShell SDK]
-ms.openlocfilehash: ff010bbe1a87daa351ec13ed249ffc899781a8c3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Основные понятия, связанные с отчетами об ошибках
+description: Основные понятия, связанные с отчетами об ошибках
+ms.openlocfilehash: 353e628c63667a2db010556b2ed9169809b742f4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774513"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653044"
 ---
 # <a name="error-reporting-concepts"></a>Основные понятия, связанные с отчетами об ошибках
 
@@ -31,7 +28,7 @@ Windows PowerShell предоставляет два механизма для �
 
 - Ошибка — это Неустранимая ошибка, если она связана с определенным входным объектом или подмножеством входных объектов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. командлет. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 

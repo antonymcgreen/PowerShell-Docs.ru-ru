@@ -1,12 +1,14 @@
 ---
-title: Как создавать и отправлять CAB-файлы
 ms.date: 09/13/2016
-ms.openlocfilehash: 247ed70ba206d70be01155653efbe887bf603f53
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Как создавать и отправлять CAB-файлы
+description: Как создавать и отправлять CAB-файлы
+ms.openlocfilehash: bdcf534f48cff27b403d82440ad4ec6a3212b67d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893039"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653884"
 ---
 # <a name="how-to-create-and-upload-cab-files"></a>Как создавать и отправлять CAB-файлы
 

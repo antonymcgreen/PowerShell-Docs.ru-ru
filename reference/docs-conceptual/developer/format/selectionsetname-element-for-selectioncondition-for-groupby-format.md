@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионсетнаме для Селектионкондитион для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6d0263aa335287f20be5b94a8eb65696d06d82a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionSetName для элемента SelectionCondition для элемента GroupBy (формат)
+description: Элемент SelectionSetName для элемента SelectionCondition для элемента GroupBy (формат)
+ms.openlocfilehash: a4f28c1caba3790718b99f63659cb0cbed8def16
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772626"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654991"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-groupby-format"></a>Элемент SelectionSetName для элемента SelectionCondition для элемента GroupBy (формат)
 
@@ -42,13 +44,13 @@ ms.locfileid: "87772626"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Наборы выбора — это распространенные группы объектов .NET, которые могут использоваться любым представлением, определяемым файлом форматирования. Дополнительные сведения о создании и ссылке на наборы выбора см. в разделе [Определение наборов выбора](./defining-selection-sets.md).
 
 Если этот элемент указан, нельзя указать элемент [TypeName](./typename-element-for-selectioncondition-for-groupby-format.md) . Дополнительные сведения об определении условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент TypeName для элемента SelectionCondition для элемента GroupBy (формат)](./typename-element-for-selectioncondition-for-groupby-format.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент Кустомконтролнаме для ExpressionBinding для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 06e612b25accf81467108ca48500943153efd575
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент CustomControlName для элемента ExpressionBinding для GroupBy (формат)
+description: Элемент CustomControlName для элемента ExpressionBinding для GroupBy (формат)
+ms.openlocfilehash: bb7dbd449137628da1794628c5a7d7e10158dd46
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786005"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655429"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-groupby-format"></a>Элемент CustomControlName для элемента ExpressionBinding для GroupBy (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87786005"
 
 Укажите имя элемента управления.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Можно создавать стандартные элементы управления, которые могут использоваться всеми представлениями файла форматирования, а также создавать элементы управления представления, которые могут использоваться в определенном представлении. Следующие элементы определяют имена этих элементов управления:
 
@@ -50,7 +52,7 @@ ms.locfileid: "87786005"
 
 - [Элемент Name для элемента Control для элемента Controls для элемента View (формат)](./name-element-for-control-for-controls-for-view-format.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Name для элемента Control для элемента Controls для элемента Configuration (формат)](./name-element-for-control-for-controls-for-configuration-format.md)
 

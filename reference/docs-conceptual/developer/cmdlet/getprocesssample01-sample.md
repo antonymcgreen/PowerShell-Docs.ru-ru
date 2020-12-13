@@ -1,12 +1,14 @@
 ---
-title: Пример GetProcessSample01 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 84956fbafdd58623ca4f332efc940fb93b421c6e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример командлета GetProcessSample01
+description: Пример командлета GetProcessSample01
+ms.openlocfilehash: 159c277d17a8551d2b5c52377a230babacafc9ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784254"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652772"
 ---
 # <a name="getprocesssample01-sample"></a>Пример командлета GetProcessSample01
 

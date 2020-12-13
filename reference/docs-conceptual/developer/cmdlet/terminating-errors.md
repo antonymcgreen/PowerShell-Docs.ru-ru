@@ -1,12 +1,14 @@
 ---
-title: Прерывание ошибок | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 272e6cdd9a1da3cfd2e4f730f6aeb27577948278
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Прерывающие ошибки
+description: Прерывающие ошибки
+ms.openlocfilehash: b7c9b949a654f10a0421ea69dfe955c8dfb5627e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786396"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652553"
 ---
 # <a name="terminating-errors"></a>Прерывающие ошибки
 
@@ -24,7 +26,7 @@ ms.locfileid: "87786396"
 
 Командлет может вызвать исключение в реализации метода [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)или [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Любое исключение, вызванное этими методами (за исключением нескольких серьезных ошибок, которые останавливают узел Windows PowerShell), интерпретируется как завершающая ошибка, которая останавливает конвейер, но не Windows PowerShell в целом. (Это относится только к основному потоку командлета. Неперехваченные исключения в потоках, порожденных командлетом, в общем случае, приостановка работы узла Windows PowerShell.) Рекомендуется использовать [System. Management. Automation. командлет. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) вместо создания исключения, поскольку запись об ошибке предоставляет дополнительные сведения о состоянии ошибки, что полезно для конечного пользователя. Командлеты должны учитывать рекомендации управляемого кода для перехвата и обработки всех исключений ( `catch (Exception e)` ). Преобразование исключений известных и ожидаемых типов в записи об ошибках.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)
 

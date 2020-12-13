@@ -1,15 +1,14 @@
 ---
-title: Объявление класса командлета | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell SDK], declaring
-- declaring cmdlets [PowerShell SDK]
-ms.openlocfilehash: 96ce8144795346b6f46878ee6163ce69cdb1799a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Объявление класса командлета
+description: Объявление класса командлета
+ms.openlocfilehash: 854b0a4ca9f6c87c4fad3b71ee726beade585e02
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784509"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653499"
 ---
 # <a name="cmdlet-class-declaration"></a>Объявление класса командлета
 
@@ -19,7 +18,7 @@ ms.locfileid: "87784509"
 > [!NOTE]
 > Атрибут **командлета** определяется классом [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) . Свойства этого класса соответствуют параметрам объявления, которые используются при объявлении атрибута.
 
-## <a name="nouns"></a>Существительные
+## <a name="nouns"></a>существительные;
 
 Существительное командлет задает ресурсы, с которыми работает командлет. Существительное отличает командлеты от других командлетов.
 
@@ -49,7 +48,7 @@ ms.locfileid: "87784509"
 
 При именовании командлетов используйте регистр символов в стиле Pascal. Например, `Get-Item` `Get-ItemProperty` командлеты и показывают правильный способ использования прописных букв при именовании командлетов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute)
 

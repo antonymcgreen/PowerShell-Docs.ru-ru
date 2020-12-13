@@ -1,12 +1,14 @@
 ---
-title: Элемент Итемселектионкондитион для ExpressionBinding для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: a9b74f1882efc578f7d9ab27b8cd2f8a52833ab8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента GroupBy (формат)
+description: Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента GroupBy (формат)
+ms.openlocfilehash: 92120ace5ed316fbfbf1d51422071c27d5a604cf
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773442"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651990"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-groupby-format"></a>Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента GroupBy (формат)
 
@@ -44,11 +46,11 @@ ms.locfileid: "87773442"
 |-------------|-----------------|
 |[Элемент ExpressionBinding для элемента CustomItem для элемента GroupBy (формат)](./expressionbinding-element-for-customitem-for-groupby-format.md)|Определяет данные, отображаемые элементом управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Можно указать одно имя свойства или скрипт для этого условия, но не указывать оба значения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)
 

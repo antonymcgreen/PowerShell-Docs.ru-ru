@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионсетнаме для Селектионкондитион для Ентриселектедби для Таблеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: db751c40b22db52985bc7cd9f8f4296a64a523f0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
+description: Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
+ms.openlocfilehash: 2fb09e27eef1ce5d6e864c72edb595817d91f729
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787467"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655037"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>Элемент SelectionSetName для элемента SelectionCondition для элемента EntrySelectedBy для элемента TableControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87787467"
 
 Укажите имя набора выбора.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Условие выбора может указывать набор выбора или тип .NET, но не может одновременно указывать оба значения. Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
@@ -50,7 +52,7 @@ ms.locfileid: "87787467"
 
 Дополнительные сведения о других компонентах расширенного представления см. [в разделе Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Создание файла форматирования (.format.ps1XML) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: abdbd4e15b0c4cb1dafcde087d24ed5792c86c3d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как создать файл форматирования (.format.ps1xml)
+description: Как создать файл форматирования (.format.ps1xml)
+ms.openlocfilehash: 5bbc1ba40bfccf13636abc0f0751938aa724b761
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781262"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651994"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>Как создать файл форматирования (.format.ps1xml)
 
@@ -33,10 +35,10 @@ ms.locfileid: "87781262"
 
    - `<ViewDefinitions></ViewDefinitions>`Теги определяют `ViewDefinitions` узел. Все представления определяются в этом узле.
 
-3. Сохраните файл в папку установки Windows PowerShell, в папку модуля или во вложенную папку папки Module. При сохранении файла используйте следующий формат имени: `MyFile.format.ps1xml` . Файлы форматирования должны использовать `.format.ps1xml` расширение.
+3. Сохраните файл в папку установки Windows PowerShell, в папку модуля или во вложенную папку папки Module. При сохранении файла используйте следующий формат имени:  `MyFile.format.ps1xml` . Файлы форматирования должны использовать `.format.ps1xml` расширение.
 
    Теперь все готово к добавлению представлений в файл форматирования. Количество представлений, которые могут быть определены в файле форматирования, не ограничено. Можно добавить одно представление для каждого объекта, несколько представлений для одного и того же объекта или одно представление, используемое несколькими объектами.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание файла форматирования и типов Windows PowerShell](./writing-a-powershell-formatting-file.md)

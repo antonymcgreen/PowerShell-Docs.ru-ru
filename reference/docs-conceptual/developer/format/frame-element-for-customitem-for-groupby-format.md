@@ -1,12 +1,14 @@
 ---
-title: Элемент Frame для Кустомитем для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 1568236ff7b6142f7e41be70a3ae5e28307cf790
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Frame для элемента CustomItem для элемента GroupBy (формат)
+description: Элемент Frame для элемента CustomItem для элемента GroupBy (формат)
+ms.openlocfilehash: 86b51766974ebfcae06583ade237a77c6db92866
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785767"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652176"
 ---
 # <a name="frame-element-for-customitem-for-groupby-format"></a>Элемент Frame для элемента CustomItem для элемента GroupBy (формат)
 
@@ -50,11 +52,11 @@ ms.locfileid: "87785767"
 |-------------|-----------------|
 |[Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)](./customitem-element-for-customentry-for-groupby-format.md)|Определяет, какие данные отображаются элементом управления и как они отображаются.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Нельзя указывать элементы [фирстлинехангинг](./firstlinehanging-element-for-frame-for-groupby-format.md) и [фирстлинеиндент](./firstlineindent-element-for-frame-for-groupby-format.md) в одном и том же `Frame` элементе.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент FirstLineHanging для элемента Frame для элемента GroupBy (формат)](./firstlinehanging-element-for-frame-for-groupby-format.md)
 

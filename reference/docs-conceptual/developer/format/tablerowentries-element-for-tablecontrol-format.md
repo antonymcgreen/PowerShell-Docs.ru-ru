@@ -1,12 +1,14 @@
 ---
-title: Элемент Таблеровентриес для Таблеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4cc5d354df3e552e181a95148caa020f0041db92
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TableRowEntries для элемента TableControl (формат)
+description: Элемент TableRowEntries для элемента TableControl (формат)
+ms.openlocfilehash: 1df63e645234da8276c7ccc5af34e81a56475e43
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785121"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651478"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>Элемент TableRowEntries для элемента TableControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87785121"
 |-------------|-----------------|
 |[Элемент TableControl (формат)](./tablecontrol-element-format.md)|Определяет формат таблицы для представления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Необходимо указать один или несколько `TableRowEntry` элементов для табличного представления. Максимальное ограничение количества `TableRowEntry` элементов, которое можно добавить, не ограничено.
 
@@ -71,7 +73,7 @@ ms.locfileid: "87785121"
 
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

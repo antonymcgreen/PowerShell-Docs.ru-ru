@@ -1,12 +1,14 @@
 ---
-title: Элемент Frame для Кустомитем для ошибка customcontrol для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4864ea1a865f77c9de6e495d7e8296e81c19b366
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Frame для элемента CustomItem для элемента CustomControl для элемента View (формат)
+description: Элемент Frame для элемента CustomItem для элемента CustomControl для элемента View (формат)
+ms.openlocfilehash: 1ffe071bb6c4f590e4c79803a3faff2108c7b636
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781449"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652180"
 ---
 # <a name="frame-element-for-customitem-for-customcontrol-for-view-format"></a>Элемент Frame для элемента CustomItem для элемента CustomControl для элемента View (формат)
 
@@ -36,7 +38,7 @@ ms.locfileid: "87781449"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-|Элемент|Description|
+|Элемент|Описание|
 |-------------|-----------------|
 |`CustomItem Element`|Обязательный элемент|
 |[Фирстлинехангинг, элемент](./firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md)|Необязательный элемент.<br /><br /> Указывает, сколько знаков первая строка данных смещается влево.|
@@ -46,11 +48,11 @@ ms.locfileid: "87781449"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Description|
+|Элемент|Описание|
 |-------------|-----------------|
 |[Элемент Кустомитем для Кустоментри для представления (Format)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|Определяет, какие данные отображаются элементом управления и как они отображаются.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Нельзя указывать элементы [фирстлинехангинг](./firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md) и [фирстлинеиндент](./firstlineindent-element-for-frame-for-customcontrol-for-view-format.md) в одном и том же `Frame` элементе.
 

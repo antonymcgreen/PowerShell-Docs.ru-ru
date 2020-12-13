@@ -1,12 +1,14 @@
 ---
-title: AccessDBProviderSample01 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 50ec218e8d0fe6b2be5c8ac00956f72c6723f84a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: AccessDBProviderSample01
+description: AccessDBProviderSample01
+ms.openlocfilehash: 8bdfa3ad492935a22ce06846294c02961cab2c65
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786923"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653747"
 ---
 # <a name="accessdbprovidersample01"></a>AccessDBProviderSample01
 
@@ -35,7 +37,7 @@ ms.locfileid: "87786923"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs" range="11-30":::
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. Provider. Итемкмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент Frame для Кустомитем элементов управления в конфигурации (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: fa435b8d6b868d2d7c94b7926321d94edc2ec290
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Frame для элемента CustomItem для элемента Controls для элемента Configuration (формат)
+description: Элемент Frame для элемента CustomItem для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 85d095b9b0c25b68b2353bce56b85333aff91b98
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781483"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652247"
 ---
 # <a name="frame-element-for-customitem-for-controls-for-configuration-format"></a>Элемент Frame для элемента CustomItem для элемента Controls для элемента Configuration (формат)
 
@@ -50,11 +52,11 @@ ms.locfileid: "87781483"
 |-------------|-----------------|
 |[Элемент Кустомитем для Кустоментри элементов управления для конфигурации](./customitem-element-for-customentry-for-controls-for-configuration-format.md)|Определяет, какие данные отображаются элементом управления и как они отображаются.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Нельзя указывать элементы [фирстлинехангинг](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md) и [фирстлинеиндент](./firstlineindent-element-for-frame-for-controls-for-configuration-format.md) в одном и том же `Frame` элементе.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент FirstLineHanging для элемента Frame для элемента Controls для элемента Configuration (формат)](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md)
 

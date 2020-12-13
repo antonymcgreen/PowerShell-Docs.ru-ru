@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионкондитион для Ентриселектедби для Видеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4115ad1ee8729ea4fc16bc19698018d2f4ed9be1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionCondition для элемента EntrySelectedBy для элемента WideControl (формат)
+description: Элемент SelectionCondition для элемента EntrySelectedBy для элемента WideControl (формат)
+ms.openlocfilehash: 8c51ca72edc6ad174dc289c61a8987e8f9495d19
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772711"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655110"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-widecontrol-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента WideControl (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87772711"
 |-------------|-----------------|
 |[Элемент EntrySelectedBy для элемента WideEntry (формат)](./entryselectedby-element-for-wideentry-format.md)|Определяет типы .NET, которые используют эту расширенную запись или условие, которое должно существовать для использования этой записи.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Для каждой широкой записи должно быть определено по крайней мере одно имя типа, набор выбора или условие выбора.
 
@@ -62,7 +64,7 @@ ms.locfileid: "87772711"
 
 Дополнительные сведения о других компонентах расширенного представления см. [в разделе Создание расширенного представления](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание широкого представления](./creating-a-wide-view.md)
 

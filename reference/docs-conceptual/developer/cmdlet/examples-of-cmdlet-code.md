@@ -1,12 +1,14 @@
 ---
-title: Примеры кода командлета | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 2d2597d3d3f64cae1c1494eb2f05873f6feae5e0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры кода командлетов
+description: Примеры кода командлетов
+ms.openlocfilehash: 91dd2019300504697ad9a7a0c155a04600d09c58
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784339"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652920"
 ---
 # <a name="examples-of-cmdlet-code"></a>Примеры кода командлетов
 
@@ -15,7 +17,7 @@ ms.locfileid: "87784339"
 > [!IMPORTANT]
 > Пошаговые инструкции по написанию командлетов см. в [руководствах по написанию командлетов](./tutorials-for-writing-cmdlets.md).
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Написание простого командлета](./how-to-write-a-simple-cmdlet.md) В этом примере показана базовая структура кода командлета.
 

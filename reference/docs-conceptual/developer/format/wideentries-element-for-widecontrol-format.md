@@ -1,12 +1,14 @@
 ---
-title: Элемент Видинтриес для Видеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 74383b288c945008c1d7b5119363a166c04802ae
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент WideEntries для WideControl (формат)
+description: Элемент WideEntries для WideControl (формат)
+ms.openlocfilehash: 567b8acdd0d2e8d5daaef2c31b4fe4ce38c23a47
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785053"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651243"
 ---
 # <a name="wideentries-element-for-widecontrol-format"></a>Элемент WideEntries для WideControl (формат)
 
@@ -43,7 +45,7 @@ ms.locfileid: "87785053"
 |-------------|-----------------|
 |[Элемент WideControl (формат)](./widecontrol-element-format.md)|Определяет для представления широкий формат списка (одно значение).|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Расширенное представление — это формат списка, который отображает одно значение свойства или значение скрипта для каждого объекта. Дополнительные сведения о компонентах широкого представления см. в разделе [широкие компоненты представления](./creating-a-wide-view.md).
 
@@ -63,7 +65,7 @@ ms.locfileid: "87785053"
 
 Полный пример расширенного представления см. в разделе [широкие представления (базовый)](./wide-view-basic.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание широкого представления](./creating-a-wide-view.md)
 

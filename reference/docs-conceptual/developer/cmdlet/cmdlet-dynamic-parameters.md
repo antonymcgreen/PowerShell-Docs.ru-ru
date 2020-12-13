@@ -1,12 +1,14 @@
 ---
-title: Динамические параметры командлета | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: f44f71326d4711242c754c332a151dd997721595
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Динамические параметры командлетов
+description: Динамические параметры командлетов
+ms.openlocfilehash: b44dda2354e8b689e419c7bf4deefadfc4edcb07
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782367"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653426"
 ---
 # <a name="cmdlet-dynamic-parameters"></a>Динамические параметры командлета
 
@@ -65,7 +67,7 @@ At line:1 char:37
 [System. Management. Automation. идинамикпараметерс. жетдинамикпараметерс](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters).
 Этот метод извлекает объект, содержащий определения динамических параметров.
 
-Пример:
+Например:
 
 ```csharp
  public object GetDynamicParameters()
@@ -102,7 +104,7 @@ public class SendGreetingCommandDynamicParameters
 
 Полный пример командлета, поддерживающего динамические параметры, см. [в разделе Объявление динамических параметров](./how-to-declare-dynamic-parameters.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [System. Management. Automation. Идинамикпараметерс](/dotnet/api/System.Management.Automation.IDynamicParameters)
 

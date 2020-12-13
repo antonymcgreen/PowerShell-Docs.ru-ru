@@ -1,12 +1,14 @@
 ---
-title: Элемент Кустомконтролнаме для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4e3102f12cd37fa72a2de1bf1db5d1f82db31222
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент CustomControlName для элемента GroupBy (формат)
+description: Элемент CustomControlName для элемента GroupBy (формат)
+ms.openlocfilehash: 03664fe4d5559312e2720a3892493c90c15f7501
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783744"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655426"
 ---
 # <a name="customcontrolname-element-for-groupby-format"></a>Элемент CustomControlName для элемента GroupBy (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87783744"
 
 Укажите имя пользовательского элемента управления, используемого для вывода новой группы.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Можно создавать стандартные элементы управления, которые могут использоваться всеми представлениями файла форматирования, а также создавать элементы управления представления, которые могут использоваться в определенном представлении. Следующие элементы определяют имена этих настраиваемых элементов управления:
 
@@ -50,7 +52,7 @@ ms.locfileid: "87783744"
 
 - [Элемент Name для элемента Control для элемента Controls для элемента View (формат)](./name-element-for-control-for-controls-for-view-format.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент GroupBy для элемента View (формат)](./groupby-element-for-view-format.md)
 

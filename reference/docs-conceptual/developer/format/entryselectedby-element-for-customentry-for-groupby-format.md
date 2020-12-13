@@ -1,12 +1,14 @@
 ---
-title: Элемент Ентриселектедби для Кустоментри для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 75a0f42e7722b54791a873200a35c8fcbbd665b1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)
+description: Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)
+ms.openlocfilehash: 5af4abe081ca268699d281a1b586a584107b9a83
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774139"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652351"
 ---
 # <a name="entryselectedby-element-for-customentry-for-groupby-format"></a>Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)
 
@@ -46,11 +48,11 @@ ms.locfileid: "87774139"
 |-------------|-----------------|
 |[Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)](./customentry-element-for-customcontrol-for-groupby-format.md)|Предоставляет определение элемента управления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Условия выбора используются для определения условия, которое должно существовать для использования определения, например, если у объекта есть определенное свойство или если определенное значение или скрипт свойства не равны `true` . Дополнительные сведения об условиях выбора см. в разделе [Определение условий для, когда используется запись или элемент представления](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент SelectionCondition для элемента EntrySelectedBy для элемента GroupBy (формат)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)
 

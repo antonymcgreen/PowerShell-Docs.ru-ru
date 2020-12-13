@@ -1,12 +1,14 @@
 ---
-title: Элемент ExpressionBinding для Кустомитем для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 5b0017e487aab4ffcbf901cd44aad9b275b22832
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ExpressionBinding для элемента CustomItem для элемента GroupBy (формат)
+description: Элемент ExpressionBinding для элемента CustomItem для элемента GroupBy (формат)
+ms.openlocfilehash: 742d9f081a674dc3ee4c84d600933aaf57b2aa6b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773731"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655298"
 ---
 # <a name="expressionbinding-element-for-customitem-for-groupby-format"></a>Элемент ExpressionBinding для элемента CustomItem для элемента GroupBy (формат)
 
@@ -52,7 +54,7 @@ ms.locfileid: "87773731"
 |-------------|-----------------|
 |[Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)](./customitem-element-for-customentry-for-groupby-format.md)|Определяет, какие данные отображаются в представлении пользовательского элемента управления и как они отображаются.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент CustomControlName для элемента ExpressionBinding для GroupBy (формат)](./customcontrolname-element-for-expressionbinding-for-groupby-format.md)
 

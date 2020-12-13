@@ -1,14 +1,14 @@
 ---
-title: Проверка набора аргументов | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateSet attribute, example
-ms.openlocfilehash: 6173f1380583f5b27e2b188990a5ea041f447c57
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как проверить набор аргументов
+description: Как проверить набор аргументов
+ms.openlocfilehash: 50ec0a48277893584d896e14ad6aa843682a28cc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782010"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650368"
 ---
 # <a name="how-to-validate-an-argument-set"></a>Как проверить набор аргументов
 
@@ -35,7 +35,7 @@ ms.locfileid: "87782010"
 
 Дополнительные сведения об объявлении этого атрибута см. в разделе [Проверка объявления атрибута](./validateset-attribute-declaration.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. Валидатесетаттрибуте](/dotnet/api/System.Management.Automation.ValidateSetAttribute)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для Ентриселектедби для Енумерабликспансион (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 670aeb0986b07c8b7834a9f4f9510f1757a62186
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+description: Элемент TypeName для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+ms.openlocfilehash: 7c1195717ae0963ace3e02f0ae2ae7c34f69078a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785087"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654827"
 ---
 # <a name="typename-element-for-entryselectedby-for-enumerableexpansion-format"></a>Элемент TypeName для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
 
@@ -43,9 +45,9 @@ ms.locfileid: "87785087"
 
 Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент EntrySelectedBy для элемента EnumerableExpansion (формат)](./entryselectedby-element-for-enumerableexpansion-format.md)
 

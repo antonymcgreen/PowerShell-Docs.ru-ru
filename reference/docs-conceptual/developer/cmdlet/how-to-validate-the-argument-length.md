@@ -1,14 +1,14 @@
 ---
-title: Проверка длины аргумента | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateLength attribute, example
-ms.openlocfilehash: aa0545def6d9628f6b41090a425f0c5af25f6ad7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как проверить длину аргумента
+description: Как проверить длину аргумента
+ms.openlocfilehash: 460aedbe6847033f976cb7bf70b6c77ac5a3a3c9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784084"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652629"
 ---
 # <a name="how-to-validate-the-argument-length"></a>Как проверить длину аргумента
 
@@ -34,7 +34,7 @@ ms.locfileid: "87784084"
 
 Дополнительные сведения об объявлении этого атрибута см. в разделе [объявление атрибута валидателенгс](./validatelength-attribute-declaration.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Объявление атрибута ValidateLength](./validatelength-attribute-declaration.md)
 

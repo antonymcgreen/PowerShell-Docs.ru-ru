@@ -1,12 +1,14 @@
 ---
-title: Пример кода RunSpace09 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: fc5d8d4d182cca6bfc42d63c68a14a7a5e5f9c97
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры кода RunSpace09
+description: Примеры кода RunSpace09
+ms.openlocfilehash: 52ebfa5dcfd6c12d2ded78a41a6090caa5087149
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784679"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654192"
 ---
 # <a name="runspace09-code-sample"></a>Примеры кода RunSpace09
 
@@ -17,6 +19,6 @@ ms.locfileid: "87784679"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/Runspace09/Runspace09.cs" range="11-113":::
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

@@ -1,12 +1,14 @@
 ---
-title: Элемент Frame для элемента управления Кустомитем для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 5ade36c183a026cb9001a2abbe91d31638a87108
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Frame для элемента CustomItem для элемента Controls для элемента View (формат)
+description: Элемент Frame для элемента CustomItem для элемента Controls для элемента View (формат)
+ms.openlocfilehash: 6f26e19a6894ac213b924108a56cb80f9ffd1143
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773459"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652198"
 ---
 # <a name="frame-element-for-customitem-for-controls-for-view-format"></a>Элемент Frame для элемента CustomItem для элемента Controls для элемента View (формат)
 
@@ -50,11 +52,11 @@ ms.locfileid: "87773459"
 |-------------|-----------------|
 |[Элемент CustomItem для элемента CustomEntry для элемента Controls для элемента View (формат)](./customitem-element-for-customentry-for-controls-for-view-format.md)|Определяет, какие данные отображаются элементом управления и как они отображаются.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Нельзя указывать элементы [фирстлинехангинг](./firstlinehanging-element-for-frame-for-controls-for-view-format.md) и [фирстлинеиндент](./firstlineindent-element-for-frame-for-controls-for-view-format.md) в одном и том же `Frame` элементе.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Фирстлинехангинг рамки элементов управления представления (формат)](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)
 
