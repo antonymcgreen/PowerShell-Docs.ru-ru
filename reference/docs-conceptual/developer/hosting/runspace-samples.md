@@ -1,18 +1,20 @@
 ---
-title: Примеры пространства выполнения | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: f7c11101a570f89657f9ffc4d52fa6ebce3a91e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры пространств выполнения
+description: Примеры пространств выполнения
+ms.openlocfilehash: 0171622f3ade3b341bc226f14398d6d293262f0c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772218"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657943"
 ---
 # <a name="runspace-samples"></a>Примеры пространств выполнения
 
 В этом разделе содержится пример кода, демонстрирующий использование различных типов пространств выполнения для синхронного и асинхронного запуска команд. С помощью Microsoft Visual Studio можно создать консольное приложение, а затем скопировать код из разделов этого раздела в ведущее приложение.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 > [!NOTE]
 > Примеры ведущих приложений, которые создают пользовательские интерфейсы узлов, см. в разделе [примеры пользовательских узлов](./custom-host-samples.md).
@@ -25,9 +27,9 @@ ms.locfileid: "87772218"
 
  [Пример Runspace04](./runspace04-sample.md) В этом примере показано, как использовать класс [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) для выполнения команд и перехвата ошибок, возникающих при выполнении команд. Выполняются две команды, и последняя получает недопустимый аргумент параметра. В результате объекты не возвращаются, и возникает ошибка завершения.
 
- [Пример Runspace05](./runspace05-sample.md) В этом примере показано, как добавить оснастку в объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы командлет оснастки был доступен при открытии пространства выполнения. Оснастка предоставляет командлет Get-proc (определяемый [образцом GetProcessSample01](../cmdlet/getprocesssample01-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Пример Runspace05](./runspace05-sample.md) В этом примере показано, как добавить оснастку в объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы командлет оснастки был доступен при открытии пространства выполнения. Оснастка предоставляет Get-Procный командлет (определяемый [образцом GetProcessSample01](../cmdlet/getprocesssample01-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
- [Пример Runspace06](./runspace06-sample.md) В этом примере показано, как добавить модуль в [System.Management.Automation.Runspaces.Iniобъект тиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы модуль загружался при открытии пространства выполнения. Модуль предоставляет командлет Get-proc (определяемый [образцом GetProcessSample02](../cmdlet/getprocesssample02-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Пример Runspace06](./runspace06-sample.md) В этом примере показано, как добавить модуль в [System.Management.Automation.Runspaces.Iniобъект тиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , чтобы модуль загружался при открытии пространства выполнения. Модуль предоставляет Get-Procный командлет (определяемый [образцом GetProcessSample02](../cmdlet/getprocesssample02-sample.md)), который выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
  [Пример Runspace07](./runspace07-sample.md) В этом примере показано, как создать пространство выполнения, а затем использовать это пространство выполнения для синхронного выполнения двух командлетов с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 

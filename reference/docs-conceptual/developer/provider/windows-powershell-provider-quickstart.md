@@ -1,12 +1,14 @@
 ---
-title: Краткое руководство по поставщику Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 048812d1a4765b2ff0069698615453f91ee95409
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Краткое руководство по поставщикам Windows PowerShell
+description: Краткое руководство по поставщикам Windows PowerShell
+ms.openlocfilehash: f0fe0ad60e9d10efd505cda60af995c597226b92
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783132"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664346"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Краткое руководство по поставщикам Windows PowerShell
 
@@ -28,9 +30,9 @@ ms.locfileid: "87783132"
 
 1. Добавьте сборку System. Management. Automation в качестве ссылки на проект.
 
-2. Щелкните **проект > свойства акцессдбпровидерсампле > Отладка**. В меню **Запуск проекта**выберите пункт **запустить внешнюю программу**и перейдите к исполняемому файлу Windows PowerShell (обычно это c:\Windows\System32\WindowsPowerShell\v1.0 \\.powershell.exe).
+2. Щелкните **проект > свойства акцессдбпровидерсампле > Отладка**. В меню **Запуск проекта** выберите пункт **запустить внешнюю программу** и перейдите к исполняемому файлу Windows PowerShell (обычно это c:\Windows\System32\WindowsPowerShell\v1.0 \\.powershell.exe).
 
-3. В разделе **Параметры запуска**введите следующий текст в поле **аргументы командной строки** :`-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
+3. В разделе **Параметры запуска** введите следующий текст в поле **аргументы командной строки** : `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
 ### <a name="declaring-the-provider-class"></a>Объявление класса поставщика
 

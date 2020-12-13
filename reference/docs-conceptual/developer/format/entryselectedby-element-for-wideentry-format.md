@@ -1,12 +1,14 @@
 ---
-title: Элемент Ентриселектедби для Видинтри (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: ba0a776839c39d753d12859335388c5326639fd4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент EntrySelectedBy для элемента WideEntry (формат)
+description: Элемент EntrySelectedBy для элемента WideEntry (формат)
+ms.openlocfilehash: 246a1967300ab0551f376c4799deac275068308c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774088"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660238"
 ---
 # <a name="entryselectedby-element-for-wideentry-format"></a>Элемент EntrySelectedBy для элемента WideEntry (формат)
 
@@ -46,7 +48,7 @@ ms.locfileid: "87774088"
 |-------------|-----------------|
 |[Элемент Видинтри (Format)](./wideentry-element-for-widecontrol-format.md)|Предоставляет определение расширенного представления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Необходимо указать по крайней мере один тип, набор выбора или условие выбора для расширенного определения представления. Максимальное количество дочерних элементов, которое можно использовать, не ограничено.
 
@@ -54,7 +56,7 @@ ms.locfileid: "87774088"
 
 Дополнительные сведения о других компонентах расширенного представления см. [в разделе Создание расширенного представления](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Видинтри (Format)](./wideentry-element-for-widecontrol-format.md)
 

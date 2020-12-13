@@ -1,12 +1,14 @@
 ---
-title: Пример Runspace10 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4d858c432c6221f2347f6de664d1e4ee299f5801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Runspace10
+description: Пример Runspace10
+ms.openlocfilehash: fd58cea553e6b830a56df7edfa7901d39f46a06c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784951"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657574"
 ---
 # <a name="runspace10-sample"></a>Пример Runspace10
 
@@ -34,7 +36,7 @@ ms.locfileid: "87784951"
 
 ## <a name="example"></a>Пример
 
-В этом примере создается пространство выполнения, которое использует объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) для определения элементов, доступных при открытии пространства выполнения. В этом примере командлет Get-proc (определенный ведущим приложением) добавляется в исходное состояние сеанса, а командлет выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+В этом примере создается пространство выполнения, которое использует объект [System.Management.Automation.Runspaces.Iniтиалсессионстате](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) для определения элементов, доступных при открытии пространства выполнения. В этом примере командлет Get-Proc (определенный ведущим приложением) добавляется в исходное состояние сеанса, а командлет выполняется синхронно с помощью объекта [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -148,6 +150,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

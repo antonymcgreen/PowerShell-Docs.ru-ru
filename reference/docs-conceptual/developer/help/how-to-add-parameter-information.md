@@ -1,12 +1,14 @@
 ---
-title: Как добавить сведения о параметрах
 ms.date: 09/12/2016
-ms.openlocfilehash: 15d0194a1d5449c65977703faf245e449d75d176
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Как добавить сведения о параметрах
+description: Как добавить сведения о параметрах
+ms.openlocfilehash: 8f4fc46ef256a77b058df4ba506124f80732cb39
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893396"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663059"
 ---
 # <a name="how-to-add-parameter-information"></a>Как добавить сведения о параметрах
 

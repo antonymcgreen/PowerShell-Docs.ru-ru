@@ -1,12 +1,14 @@
 ---
-title: Типы параметров командлета | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e704aae6e23568be9935e228752f652929863a98
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Типы параметров командлета
+description: Типы параметров командлета
+ms.openlocfilehash: 8daaa3c778396e06a826de3b93e0610c51160fb4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786379"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660477"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Типы параметров командлета
 

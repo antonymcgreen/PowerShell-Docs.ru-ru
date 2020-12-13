@@ -1,12 +1,14 @@
 ---
-title: Примеры кода GetProc05 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 66758028bc964912495d636af90947101dd37923
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Примеры кода GetProc05
+description: Примеры кода GetProc05
+ms.openlocfilehash: 1280048aeec35512f1e6061bdf58919d83a461cd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778719"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92661850"
 ---
 # <a name="getproc05-code-samples"></a>Примеры кода GetProc05
 
@@ -17,6 +19,6 @@ ms.locfileid: "87778719"
 |C#|[Пример кода GetProc05 (C#)](./getproc05-csharp-sample-code.md)|
 |VB.NET|[Пример кода GetProc05 (VB.NET)](./getproc05-vb-net-sample-code.md)|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)

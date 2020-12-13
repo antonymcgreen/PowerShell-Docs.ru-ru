@@ -1,12 +1,14 @@
 ---
-title: Элемент Таблеколумнитем для Таблеколумнитемс для Таблеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: beadf771f02519394d799a03db374050e3302321
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TableColumnItem для элемента TableColumnItems для элемента TableControl (формат)
+description: Элемент TableColumnItem для элемента TableColumnItems для элемента TableControl (формат)
+ms.openlocfilehash: 8ef5158c9bb9f074d5c58190d4d3b20c10c83744
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785172"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659855"
 ---
 # <a name="tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format"></a>Элемент TableColumnItem для элемента TableColumnItems для элемента TableControl (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87785172"
 |-------------|-----------------|
 |[Элемент Таблеколумнитемс для Таблеконтролентри для Таблеконтрол (Format)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|Определяет свойства или скрипты, значения которых отображаются в строке.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Можно указать свойство объекта или скрипта в каждом столбце строки. Если дочерние элементы не указаны, элемент является заполнителем и данные не отображаются.
 
@@ -66,7 +68,7 @@ ms.locfileid: "87785172"
 
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

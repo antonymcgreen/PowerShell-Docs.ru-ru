@@ -1,12 +1,14 @@
 ---
-title: Элемент Wrap для Таблеровентри для Таблеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 1ef1f6133f9e5e7da685933cfe90d39a0519ff44
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Wrap для элемента TableRowEntry для элемента TableControl (формат)
+description: Элемент Wrap для элемента TableRowEntry для элемента TableControl (формат)
+ms.openlocfilehash: 1937427c9869c3d301faef0bc8ccea42eb0e7365
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779885"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659550"
 ---
 # <a name="wrap-element-for-tablerowentry-for-tablecontrol--format"></a>Элемент Wrap для элемента TableRowEntry для элемента TableControl (формат)
 
@@ -38,11 +40,11 @@ ms.locfileid: "87779885"
 |-------------|-----------------|
 |[Элемент TableRowEntry для элемента TableRowEntries для элемента TableControl (формат)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Определяет данные, отображаемые в строке таблицы.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

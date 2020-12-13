@@ -1,12 +1,14 @@
 ---
-title: Как добавить связанные ссылки в раздел справки для командлета
 ms.date: 09/12/2016
-ms.openlocfilehash: 7557b3856d8470434070dd286cd7e30c9ba015c5
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Как добавить связанные ссылки в раздел справки для командлета
+description: Как добавить связанные ссылки в раздел справки для командлета
+ms.openlocfilehash: 7f1baefea69310bdf835c52461f8d3f49c4d94e8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893379"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92662001"
 ---
 # <a name="how-to-add-related-links-to-a-cmdlet-help-topic"></a>Как добавить связанные ссылки в раздел справки для командлета
 

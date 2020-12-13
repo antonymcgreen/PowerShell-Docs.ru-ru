@@ -1,12 +1,14 @@
 ---
-title: Элемент Лефтиндент для Frame для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4bf848047a01ff61183fb6b3ec5d540ab22b50c9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент LeftIndent для элемента Frame для элемента GroupBy (формат)
+description: Элемент LeftIndent для элемента Frame для элемента GroupBy (формат)
+ms.openlocfilehash: e662a59311bbc8bd66d35087d857067db1c9b2d9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781160"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659983"
 ---
 # <a name="leftindent-element-for-frame-for-groupby-format"></a>Элемент LeftIndent для элемента Frame для элемента GroupBy (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87781160"
 
 Укажите число символов, которые необходимо сдвинуть слева.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Frame для элемента CustomItem для элемента GroupBy (формат)](./frame-element-for-customitem-for-groupby-format.md)
 

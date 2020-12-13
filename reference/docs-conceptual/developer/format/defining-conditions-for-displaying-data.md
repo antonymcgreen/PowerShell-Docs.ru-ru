@@ -1,12 +1,14 @@
 ---
-title: Определение условий для отображения данных | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 13de078e681708b02e378b2c7d531032b2ffdc05
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Определение условий для отображения данных
+description: Определение условий для отображения данных
+ms.openlocfilehash: 9a8b7a618da8c64de978c13b527435a2d7793677
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774343"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660322"
 ---
 # <a name="defining-conditions-for-displaying-data"></a>Определение условий для отображения данных
 
@@ -92,6 +94,6 @@ ms.locfileid: "87774343"
 
   - [Элемент ItemSelectionCondition для элемента ExpressionBinding для элемента CustomControl (формат)](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание файла форматирования PowerShell](./writing-a-powershell-formatting-file.md)

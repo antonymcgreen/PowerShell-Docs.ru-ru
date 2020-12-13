@@ -1,19 +1,21 @@
 ---
-title: Пример кода GetProc04 (VB.NET) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 63fbbb2d6bef4634bf72d4b0f9e429de9ed9deca
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример кода GetProc04 (VB.NET)
+description: Пример кода GetProc04 (VB.NET)
+ms.openlocfilehash: c46a374ab9d77f343b5ac6f45be1711eaec6dd75
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771878"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659232"
 ---
 # <a name="getproc04-vbnet-sample-code"></a>Пример кода GetProc04 (VB.NET)
 
 В следующем коде показана реализация `Get-Process` командлета, который сообщает о неустранимых ошибках. Эта реализация вызывает метод [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) для сообщения об устранимых ошибках.
 
 > [!NOTE]
-> Исходный файл C# (getprov04.cs) для этого командлета Get-proc можно скачать с помощью пакета средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Вы можете скачать исходный файл C# (getprov04.cs) для этого командлета Get-Proc, используя пакет средств разработки программного обеспечения Microsoft Windows для компонентов среды выполнения Windows Vista и .NET Framework 3,0. Инструкции по загрузке см. в статье [Установка Windows PowerShell и Загрузка пакета SDK для Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
 > Скачанные исходные файлы доступны в **\<PowerShell Samples>** каталоге.
 
@@ -21,7 +23,7 @@ ms.locfileid: "87771878"
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesgetproc04#GetProc04vball](Msh_samplesgetproc04#GetProc04vball)]  -->
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

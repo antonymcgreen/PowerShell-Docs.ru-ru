@@ -1,12 +1,14 @@
 ---
-title: Пример PowerShell01 для Windows | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e799f35c0c5e3820c6471b49c8b0d8c47b1c6b2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Windows PowerShell01
+description: Пример Windows PowerShell01
+ms.openlocfilehash: 70ae67bfc2da9d3cc085ecb42de9cef4b163418d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771946"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657379"
 ---
 # <a name="windows-powershell01-sample"></a>Пример Windows PowerShell01
 

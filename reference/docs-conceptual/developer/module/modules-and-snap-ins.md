@@ -1,12 +1,14 @@
 ---
-title: Модули и оснастки | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 07cdc55fd6d1462130f1a81deb30056623a525e6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Модули и оснастки
+description: Модули и оснастки
+ms.openlocfilehash: de4ff1de9a29b78d7783fe7ed0265f5516db1fb4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787314"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658688"
 ---
 # <a name="modules-and-snap-ins"></a>Модули и оснастки
 
@@ -20,7 +22,7 @@ ms.locfileid: "87787314"
 
 - Оснастки могут использоваться только для добавления командлетов и поставщиков в сеанс.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание модуля Windows PowerShell](writing-a-windows-powershell-module.md)
 

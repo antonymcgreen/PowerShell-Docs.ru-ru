@@ -1,16 +1,14 @@
 ---
-title: Объявление атрибута Валидатеранже | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateRange, described
-- ValidateRange attribute
-- attributes, ValidateRange
-ms.openlocfilehash: 9aeaa6f03c170389ff61a058b505dbcf74df6958
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Объявление атрибута ValidateRange
+description: Объявление атрибута ValidateRange
+ms.openlocfilehash: 1fec9d1bd36cd21b7f0f23bf6d72338d276dce91
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787790"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660604"
 ---
 # <a name="validaterange-attribute-declaration"></a>Объявление атрибута ValidateRange
 
@@ -24,11 +22,11 @@ ms.locfileid: "87787790"
 
 #### <a name="parameters"></a>Параметры
 
-`MinRange`Требуется ([System. Object](/dotnet/api/system.object)). Указывает минимальное допустимое значение.
+`MinRange` Требуется ([System. Object](/dotnet/api/system.object)). Указывает минимальное допустимое значение.
 
-`MaxRange`Требуется ([System. Object](/dotnet/api/system.object)). Указывает максимально допустимое значение.
+`MaxRange` Требуется ([System. Object](/dotnet/api/system.object)). Указывает максимально допустимое значение.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 - Среда выполнения Windows PowerShell создает ошибку создания, если значение `MinRange` параметра больше значения `MaxRange` параметра.
 
@@ -40,7 +38,7 @@ ms.locfileid: "87787790"
 
 - Атрибут Валидатеранже определяется классом [System. Management. Automation. валидатеранжеаттрибуте](/dotnet/api/System.Management.Automation.ValidateRangeAttribute) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. Валидатеранжеаттрибуте](/dotnet/api/System.Management.Automation.ValidateRangeAttribute)
 

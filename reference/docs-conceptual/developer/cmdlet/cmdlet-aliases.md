@@ -1,12 +1,14 @@
 ---
-title: Псевдонимы командлетов | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: fed4055f09e01c5f3fa87584d48551918606f4eb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Псевдонимы командлета
+description: Псевдонимы командлета
+ms.openlocfilehash: 734553a9911aef256df563afa6abcdb23d7a62e6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784543"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660788"
 ---
 # <a name="cmdlet-aliases"></a>Псевдонимы командлета
 

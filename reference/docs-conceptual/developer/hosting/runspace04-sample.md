@@ -1,12 +1,14 @@
 ---
-title: Пример Runspace04 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 73f48c797a4ce9bf4bc78ff34abb5efa41cda121
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Runspace04
+description: Пример Runspace04
+ms.openlocfilehash: 5a2e1137963e02def419bb924c63b0d651b0fdfa
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779511"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657751"
 ---
 # <a name="runspace04-sample"></a>Пример Runspace04
 
@@ -116,6 +118,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

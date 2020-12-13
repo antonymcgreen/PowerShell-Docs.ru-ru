@@ -1,12 +1,14 @@
 ---
-title: Пример PowerShell02 для Windows | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: a82366a88addb08e186eede79e621d90d915c50f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Windows PowerShell02
+description: Пример Windows PowerShell02
+ms.openlocfilehash: 61dedd72d93d4000edf9a12f12bbb49fbaeb9f3c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779392"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657356"
 ---
 # <a name="windows-powershell02-sample"></a>Пример Windows PowerShell02
 
@@ -32,6 +34,6 @@ ms.locfileid: "87779392"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/PowerShell02/PowerShell02.cs" range="11-96":::
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание ведущего приложения Windows PowerShell](./writing-a-windows-powershell-host-application.md)

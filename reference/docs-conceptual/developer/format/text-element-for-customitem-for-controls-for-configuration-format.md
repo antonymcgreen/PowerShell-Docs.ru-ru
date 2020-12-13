@@ -1,12 +1,14 @@
 ---
-title: Текстовый элемент для Кустомитем элементов управления в конфигурации (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: d9f9687f9fb47f2085b25899193dda85b8fa068b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Text для элемента CustomItem для элемента Controls для элемента Configuration (формат)
+description: Элемент Text для элемента CustomItem для элемента Controls для элемента Configuration (формат)
+ms.openlocfilehash: 9ea70ade8e86d8278ee95bd4d93dfa5ba9d8160b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787399"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664719"
 ---
 # <a name="text-element-for-customitem-for-controls-for-configuration-format"></a>Элемент Text для элемента CustomItem для элемента Controls для элемента Configuration (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87787399"
 
 Укажите текст элемента управления для данных, которые требуется отобразить.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Кустомитем для Кустоментри элементов управления для конфигурации](./customitem-element-for-customentry-for-controls-for-configuration-format.md)
 

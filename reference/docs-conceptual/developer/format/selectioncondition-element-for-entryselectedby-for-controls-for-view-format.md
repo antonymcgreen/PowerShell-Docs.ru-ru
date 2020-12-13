@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионкондитион для Ентриселектедби элементов управления для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 1c14b2638249bdbfe25f7a96e917d66ea10ed239
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента View (формат)
+description: Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента View (формат)
+ms.openlocfilehash: 16b048e73195b3d6168724714ff223851dc1b20b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787586"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664853"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-controls-for-view-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента Controls для элемента View (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87787586"
 |-------------|-----------------|
 |[Элемент EntrySelectedBy для элемента CustomEntry для элемента Controls для элемента View (формат)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)|Определяет типы .NET, которые используют это определение элемента управления или условие, которое должно существовать, чтобы использовать это определение.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 При определении условия выбора применяются следующие требования.
 
@@ -58,7 +60,7 @@ ms.locfileid: "87787586"
 
 Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент PropertyName для элемента SelectionCondition для элемента Controls для элемента View (формат)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md)
 

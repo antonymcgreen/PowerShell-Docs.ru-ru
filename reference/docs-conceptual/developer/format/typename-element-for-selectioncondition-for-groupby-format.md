@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для Селектионкондитион для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: ea1e0cb50c3a749f6c26d13fff4b001240ce6b95
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента SelectionCondition для элемента GroupBy (формат)
+description: Элемент TypeName для элемента SelectionCondition для элемента GroupBy (формат)
+ms.openlocfilehash: 096d2355e113a7e44cc6ae31ea23efc3f01080a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772558"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664640"
 ---
 # <a name="typename-element-for-selectioncondition-for-groupby-format"></a>Элемент TypeName для элемента SelectionCondition для элемента GroupBy (формат)
 
@@ -43,11 +45,11 @@ ms.locfileid: "87772558"
 
 Укажите полное имя типа .NET, например `System.IO.DirectoryInfo` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если этот элемент указан, нельзя указать `SelectionSetName` элемент. Дополнительные сведения об определении условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент SelectionCondition для элемента EntrySelectedBy для элемента GroupBy (формат)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Создание файла справки по командлетам | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 7ab0404e5d0122a64483883e6e2d4760dfa5038d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как создать файл справки командлета
+description: Как создать файл справки командлета
+ms.openlocfilehash: 40259c8f9496b10380805a78f3711aed6f1bf2e5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779834"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659084"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>Как создать файл справки командлета
 
@@ -80,7 +82,7 @@ ms.locfileid: "87779834"
 </command:command>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [Добавление имени командлета и кратких обзоров](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
 

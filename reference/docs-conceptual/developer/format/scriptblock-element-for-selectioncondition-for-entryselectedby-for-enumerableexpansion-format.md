@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для Селектионкондитион для Ентриселектедби для Енумерабликспансион (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 71fd969fd3e5c0a4e39762c9a026982a8ca2a9d1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+description: Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
+ms.openlocfilehash: bd72a9bc914ea6543d8dab768b5e20e9a580ada7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785376"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664904"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format"></a>Элемент ScriptBlock для элемента SelectionCondition для элемента EntrySelectedBy для элемента EnumerableExpansion (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87785376"
 
 Укажите оцениваемый скрипт.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Условие выбора должно указывать по крайней мере одно имя скрипта или свойства для вычисления, но не может одновременно указывать оба значения. Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md)
 

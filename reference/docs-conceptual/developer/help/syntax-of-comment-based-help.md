@@ -1,12 +1,14 @@
 ---
-title: Синтаксис справки на основе комментариев
 ms.date: 09/12/2016
-ms.openlocfilehash: 950afecc39f9d27207f77547679faab700481458
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Синтаксис справки на основе комментариев
+description: Синтаксис справки на основе комментариев
+ms.openlocfilehash: 3866f25b40fc970e8d219af6f423b7a25f5b875c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893226"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659516"
 ---
 # <a name="syntax-of-comment-based-help"></a>Синтаксис справки на основе комментариев
 

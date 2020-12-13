@@ -1,12 +1,14 @@
 ---
-title: Написание разделов справки на основе комментариев
 ms.date: 09/13/2016
-ms.openlocfilehash: f29a30d27eba2b84883c4c2bd3cee68349c94e19
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Написание разделов справки на основе комментариев
+description: Написание разделов справки на основе комментариев
+ms.openlocfilehash: 11bbadfde27a74bde29d336b91516939e7265b3b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893107"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658808"
 ---
 # <a name="writing-comment-based-help-topics"></a>Написание разделов справки на основе комментариев
 
@@ -16,12 +18,12 @@ ms.locfileid: "86893107"
 
  Также можно писать разделы справки на основе XML для сценариев и функций и использовать ключевые слова комментариев справки для перенаправления пользователей в разделы на основе XML или в другие разделы.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
- [Синтаксис справки на основе комментариев](./syntax-of-comment-based-help.md) Описывает синтаксис справки на основе комментариев.
+ [Синтаксис справки по Comment-Based](./syntax-of-comment-based-help.md) Описывает синтаксис справки на основе комментариев.
 
  [Ключевые слова справки на основе комментариев](./comment-based-help-keywords.md) Список ключевых слов в справке на основе комментариев.
 
- [Размещение справки на основе комментариев в функциях](./placing-comment-based-help-in-functions.md) Показывает, куда поместить справку на основе комментариев для функции.
+ [Размещение справки Comment-Based в функциях](./placing-comment-based-help-in-functions.md) Показывает, куда поместить справку на основе комментариев для функции.
 
- [Размещение справки на основе комментариев в скриптах](./placing-comment-based-help-in-scripts.md) Показывает, куда поместить справку на основе комментариев для скрипта.
+ [Размещение справки Comment-Based в скриптах](./placing-comment-based-help-in-scripts.md) Показывает, куда поместить справку на основе комментариев для скрипта.

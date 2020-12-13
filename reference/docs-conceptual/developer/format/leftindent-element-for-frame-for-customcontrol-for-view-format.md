@@ -1,12 +1,14 @@
 ---
-title: Элемент Лефтиндент для Frame для ошибка customcontrol представления (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c11002f92a35ca34a7d2c6aa26924d846076b001
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент LeftIndent для элемента Frame для элемента CustomControl для элемента View (формат)
+description: Элемент LeftIndent для элемента Frame для элемента CustomControl для элемента View (формат)
+ms.openlocfilehash: d3253544c3b4c7f9214222010bfab519564b64fd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783574"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660050"
 ---
 # <a name="leftindent-element-for-frame-for-customcontrol-for-view-format"></a>Элемент LeftIndent для элемента Frame для элемента CustomControl для элемента View (формат)
 
@@ -42,9 +44,9 @@ ms.locfileid: "87783574"
 
 Укажите число символов, которые необходимо сдвинуть слева.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Frame для элемента CustomItem для элемента CustomControl для элемента View (формат)](./frame-element-for-customitem-for-customcontrol-for-view-format.md)
 

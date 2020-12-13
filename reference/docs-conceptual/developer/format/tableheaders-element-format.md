@@ -1,12 +1,14 @@
 ---
-title: Элемент Таблехеадерс (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: b3176cbe1316d5b30cb61831d9915a80389709a5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TableHeaders (формат)
+description: Элемент TableHeaders (формат)
+ms.openlocfilehash: 5ac4dccae746c167ebf95add9f3d18030a2b3a99
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787433"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659817"
 ---
 # <a name="tableheaders-element-format"></a>Элемент TableHeaders (формат)
 
@@ -43,7 +45,7 @@ ms.locfileid: "87787433"
 |-------------|-----------------|
 |[Элемент TableControl (формат)](./tablecontrol-element-format.md)|Определяет формат таблицы для представления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
@@ -66,7 +68,7 @@ ms.locfileid: "87787433"
 </TableHeaders>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

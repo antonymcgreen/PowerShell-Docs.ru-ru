@@ -1,16 +1,14 @@
 ---
-title: Создание поставщика диска Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- drive providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], drive provider
-- drives [PowerShell Programmer's Guide]
-ms.openlocfilehash: 2a2178714ed548986fe1a1a4de8828e8e0a938cb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание поставщика дисков Windows PowerShell
+description: Создание поставщика дисков Windows PowerShell
+ms.openlocfilehash: 639518fce27d941b7529b091364c5905c91a5c0c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787195"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663034"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Создание поставщика дисков Windows PowerShell
 
@@ -99,9 +97,9 @@ ms.locfileid: "87787195"
 
 1. Выполните `Get-PSProvider` командлет, чтобы получить список поставщиков, чтобы убедиться в наличии поставщика диска акцессдб.
 
-   **> PS`Get-PSProvider`**
+   **> PS `Get-PSProvider`**
 
-   Появится следующий результат:
+   Отображаются следующие результаты:
 
    ```Output
    Name                 Capabilities                  Drives
@@ -122,7 +120,7 @@ ms.locfileid: "87787195"
    new-psdrive -name mydb -root c:\ps\northwind.mdb -psprovider AccessDb`
    ```
 
-   Появится следующий результат:
+   Отображаются следующие результаты:
 
    ```Output
    Name     Provider     Root                   CurrentLocation
@@ -130,14 +128,14 @@ ms.locfileid: "87787195"
    mydb     AccessDB     c:\ps\northwind.mdb
    ```
 
-4. Проверьте подключение. Так как подключение определено как член диска, его можно проверить с помощью командлета Get-Пддриве.
+4. Проверьте подключение. Так как подключение определено как член диска, его можно проверить с помощью командлета Get-PDDrive.
 
    > [!NOTE]
    > Пользователь еще не может взаимодействовать с поставщиком как диск, так как поставщику требуются функциональные возможности контейнера для этого взаимодействия. Дополнительные сведения см. [в разделе Создание поставщика контейнера Windows PowerShell](./creating-a-windows-powershell-container-provider.md).
 
    **> PS ("Get-PSDrive MyDB"). подключение**
 
-   Появится следующий результат:
+   Отображаются следующие результаты:
 
    ```Output
    ConnectionString  : Driver={Microsoft Access Driver (*.mdb)};DBQ=c:\ps\northwind.mdb

@@ -1,12 +1,14 @@
 ---
-title: Элемент Width для Таблеколумнхеадер для Таблеконтрол (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: e9540d3d351041ad7cb98a21bb360ebea7eca117
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент Width для элемента TableColumnHeader для элемента TableControl (формат)
+description: Элемент Width для элемента TableColumnHeader для элемента TableControl (формат)
+ms.openlocfilehash: bde84f1d33b3d6b3b8c4462f870f978611cb434b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779919"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658250"
 ---
 # <a name="width-element-for-tablecolumnheader-for-tablecontrol-format"></a>Элемент Width для элемента TableColumnHeader для элемента TableControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87779919"
 
 Когда это возможно, укажите ширину (в символах), превышающую длину отображаемых значений свойств.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
@@ -58,7 +60,7 @@ ms.locfileid: "87779919"
 </TableColumnHeader>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

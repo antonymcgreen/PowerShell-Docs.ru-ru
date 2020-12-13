@@ -1,12 +1,14 @@
 ---
-title: Пример GetProcessSample03 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 09df93792ab611e167279bc35755d8d6c28e7cf3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример командлета GetProcessSample03
+description: Пример командлета GetProcessSample03
+ms.openlocfilehash: 7827247238f3dad2018b55e396b73d1fa434eb97
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784220"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660715"
 ---
 # <a name="getprocesssample03-sample"></a>Пример командлета GetProcessSample03
 
@@ -60,7 +62,7 @@ ms.locfileid: "87784220"
 
 ## <a name="example"></a>Пример
 
-В этом примере показана реализация командлета Get-proc, который содержит `Name` параметр, который принимает входные данные из конвейера.
+В этом примере показана реализация командлета Get-Proc, который содержит `Name` параметр, который принимает входные данные из конвейера.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands

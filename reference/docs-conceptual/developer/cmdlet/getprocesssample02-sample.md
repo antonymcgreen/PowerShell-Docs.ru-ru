@@ -1,12 +1,14 @@
 ---
-title: Пример GetProcessSample02 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: fa10774508b70f4aab4546cf4d6fbe8978032f1b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример командлета GetProcessSample02
+description: Пример командлета GetProcessSample02
+ms.openlocfilehash: a0f43806b707359cb454817341f2c4972033c46a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784237"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660518"
 ---
 # <a name="getprocesssample02-sample"></a>Пример командлета GetProcessSample02
 
@@ -58,7 +60,7 @@ ms.locfileid: "87784237"
 
 ## <a name="example"></a>Пример
 
-В этом примере показана реализация командлета Get-proc, который содержит `Name` параметр.
+В этом примере показана реализация командлета Get-Proc, который содержит `Name` параметр.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands

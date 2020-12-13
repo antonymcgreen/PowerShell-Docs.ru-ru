@@ -1,18 +1,20 @@
 ---
-title: Размещение справки на основе комментариев в функциях
 ms.date: 09/12/2016
-ms.openlocfilehash: c7a8f8db6c71fa2ef12aaa4df0f78815626ec8d6
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Размещение справки на основе комментариев в функциях
+description: Размещение справки на основе комментариев в функциях
+ms.openlocfilehash: 3bd72f0c71d8f6ad54c43c99f044423c072fdeeb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893209"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658208"
 ---
 # <a name="placing-comment-based-help-in-functions"></a>Размещение справки на основе комментариев в функциях
 
 В этом разделе объясняется, куда поместить справку на основе комментариев для функции, чтобы командлет привязывает `Get-Help` раздел справки на основе комментариев с правильной функцией.
 
-## <a name="where-to-place-comment-based-help-for-a-function"></a>Размещение справки на основе комментариев для функции
+## <a name="where-to-place-comment-based-help-for-a-function"></a>Размещение Comment-Based справки по функции
 
 - В начале тела функции.
 

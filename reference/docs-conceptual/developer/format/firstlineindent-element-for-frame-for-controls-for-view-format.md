@@ -1,12 +1,14 @@
 ---
-title: Элемент Фирстлинеиндент для элемента управления Frame для представления (формат) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: d3927be2cdce24b65b4d94dfb17ae57a1b47270c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент FirstLineIndent для элемента Frame для элемента Controls для элемента View (формат)
+description: Элемент FirstLineIndent для элемента Frame для элемента Controls для элемента View (формат)
+ms.openlocfilehash: 425cd9ccafb2cbe36f238177fc73923da048f924
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773527"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660144"
 ---
 # <a name="firstlineindent-element-for-frame-for-controls-for-view-format"></a>Элемент FirstLineIndent для элемента Frame для элемента Controls для элемента View (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87773527"
 
 Укажите число символов, на которое необходимо сдвинуть первую строку данных.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Если этот элемент указан, нельзя указать элемент [фирстлинехангинг](./firstlinehanging-element-for-frame-for-controls-for-view-format.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент FirstLineHanging для элемента Frame для элемента Controls для элемента View (формат)](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)
 

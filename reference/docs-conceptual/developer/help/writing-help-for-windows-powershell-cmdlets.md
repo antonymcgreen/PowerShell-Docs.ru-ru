@@ -1,14 +1,16 @@
 ---
-title: Написание справки по командлетам PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: 4e1070e90cf3ed83c1d97a3b620e00f65d09989e
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Написание справки для командлетов PowerShell
+description: Написание справки для командлетов PowerShell
+ms.openlocfilehash: b1deaa5998dbc54add93764db785d57afcc0a779
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893090"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658101"
 ---
-# <a name="writing-help-for-powershell-cmdlets"></a>Написание справки по командлетам PowerShell
+# <a name="writing-help-for-powershell-cmdlets"></a>Написание справки для командлетов PowerShell
 
 Командлеты PowerShell могут быть полезными, но если в разделах справки не ясно объясняется, что делает командлет и как его использовать, командлет может не использовать или, что еще хуже, может привести к невозможности разочарования пользователей. Формат файлов справки по командлетам на основе XML повышает согласованность, но для получения отличной справки требуется гораздо больше.
 
@@ -42,7 +44,7 @@ ms.locfileid: "86893090"
 
 ### <a name="use-conventional-syntax"></a>Использовать стандартный синтаксис
 
-Используйте стандартный формат Backus-Наура, который часто используется для справки командной строки Windows и UNIX.
+Используйте стандартный формат Backus-Naur, который часто используется для справки командной строки Windows и UNIX.
 
 ### <a name="use-microsoft-net-types-for-parameter-values"></a>Использование типов Microsoft .NET для значений параметров
 
@@ -64,7 +66,7 @@ ms.locfileid: "86893090"
 
 Протестируйте справку так же, как при тестировании кода. Ваши друзья и коллеги читают содержимое справки и предоставляют отзывы. Вы также можете запросить отзывы из групп новостей.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [Как создать файл справки командлета](./how-to-create-the-cmdlet-help-file.md)
 

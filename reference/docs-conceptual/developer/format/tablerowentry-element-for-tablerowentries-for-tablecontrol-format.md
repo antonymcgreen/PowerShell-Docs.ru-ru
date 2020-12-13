@@ -1,12 +1,14 @@
 ---
-title: Элемент Таблеровентри для Таблеровентриес для Таблеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 83076ae5b2c48992ce5e621c65fc9937efb68b87
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TableRowEntry для элемента TableRowEntries для элемента TableControl (формат)
+description: Элемент TableRowEntry для элемента TableRowEntries для элемента TableControl (формат)
+ms.openlocfilehash: 60d64b7c14b40e87825ada36e19f52a66fe8b6cb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787416"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659771"
 ---
 # <a name="tablerowentry-element-for-tablerowentries-for-tablecontrol-format"></a>Элемент TableRowEntry для элемента TableRowEntries для элемента TableControl (формат)
 
@@ -46,7 +48,7 @@ ms.locfileid: "87787416"
 |-------------|-----------------|
 |[Элемент TableRowEntries для элемента TableControl (формат)](./tablerowentries-element-for-tablecontrol-format.md)|Определяет строки таблицы.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 `TableColumnItems`Необходимо указать один элемент и один `EntrySelectedBy` элемент.
 
@@ -72,7 +74,7 @@ ms.locfileid: "87787416"
 </TableRowEntry>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Элемент ScriptBlock для Видеитем для Видеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: be649d6de0d2dfa6bad14f2d7476cced9cd6cb6d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ScriptBlock для WideItem для WideControl (формат)
+description: Элемент ScriptBlock для WideItem для WideControl (формат)
+ms.openlocfilehash: 68e47926e5e6b846c8a0a3dbc16d1f0d59f11dee
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787603"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659869"
 ---
 # <a name="scriptblock-element-for-wideitem-for-widecontrol-format"></a>Элемент ScriptBlock для WideItem для WideControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87787603"
 
 Укажите скрипт, значение которого отображается.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах широкого представления см. в разделе [Создание расширенного представления](./creating-a-wide-view.md).
 
@@ -56,7 +58,7 @@ ms.locfileid: "87787603"
 </WideItem>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Видеитем (Format)](./wideitem-element-for-widecontrol-format.md)
 

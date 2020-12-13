@@ -1,23 +1,25 @@
 ---
-title: Импорт модуля PowerShell | Документация Майкрософт
 ms.date: 02/03/2020
-ms.openlocfilehash: 8cd1938d0a7b49b4a594753d8ce5ebe60625025d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Импорт модуля PowerShell
+description: Импорт модуля PowerShell
+ms.openlocfilehash: 688509c0943a9a0289e75b80543f278e16cfedfe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784883"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658792"
 ---
 # <a name="importing-a-powershell-module"></a>Импорт модуля PowerShell
 
 После установки модуля в системе может потребоваться импортировать модуль. Импорт — это процесс, который загружает модуль в активную память, чтобы пользователь мог получить доступ к этому модулю в сеансе PowerShell. В PowerShell 2,0 можно импортировать недавно установленный модуль PowerShell с помощью вызова командлета [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) . В PowerShell 3,0 PowerShell может неявно импортировать модуль, когда пользователь вызывает одну из функций или командлетов в модуле. Обратите внимание, что в обеих версиях предполагается, что модуль устанавливается в расположение, где PowerShell может его найти. Дополнительные сведения см. [в разделе Установка модуля PowerShell](./installing-a-powershell-module.md).
 Манифест модуля можно использовать для ограничения экспортируемых частей модуля, и можно использовать параметры `Import-Module` вызова, чтобы ограничить импортируемые части.
 
-## <a name="importing-a-snap-in-powershell-10"></a>Импорт оснастки (PowerShell 1,0)
+## <a name="importing-a-snap-in-powershell-10"></a>Импорт Snap-In (PowerShell 1,0)
 
 Модули не существовали в PowerShell 1,0. вместо этого необходимо было зарегистрировать и использовать оснастки. Однако мы не рекомендуем использовать эту технологию на этом этапе, так как модули обычно проще устанавливать и импортировать. Дополнительные сведения см. в разделе [Создание оснастки Windows PowerShell](../cmdlet/how-to-create-a-windows-powershell-snap-in.md).
 
-## <a name="importing-a-module-with-import-module-powershell-20"></a>Импорт модуля с помощью Import-Module (PowerShell 2,0)
+## <a name="importing-a-module-with-import-module-powershell-20"></a>Импорт модуля с Import-Module (PowerShell 2,0)
 
 Для импорта модулей в PowerShell 2,0 используется командлет [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) с соответствующим именем. При запуске этого командлета Windows PowerShell ищет указанный модуль в каталогах, указанных в `PSModulePath` переменной. При обнаружении указанного каталога Windows PowerShell ищет файлы в следующем порядке: файлы манифеста модуля (. PSD1), файлы модулей скриптов (. PSM1), двоичные файлы модулей (. dll). Дополнительные сведения о добавлении каталогов в поиск см. в разделе [изменение пути установки PSModulePath](./modifying-the-psmodulepath-installation-path.md).
 В следующем примере кода показано, как импортировать модуль:
@@ -32,7 +34,7 @@ Import-Module myModule
 Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 ```
 
-Можно также использовать параметр, `-Verbose` чтобы определить, что экспортируется из модуля и что импортируется в активную память. Экспорт и импорт ограничивают содержимое, доступное пользователю. разница заключается в том, кто управляет видимостью. По сути, экспорты управляются кодом внутри модуля. В отличие от этого, управление импортом осуществляется с помощью `Import-Module` вызова. Дополнительные сведения см. в разделе **запрещение импортируемых элементов**ниже.
+Можно также использовать параметр, `-Verbose` чтобы определить, что экспортируется из модуля и что импортируется в активную память. Экспорт и импорт ограничивают содержимое, доступное пользователю. разница заключается в том, кто управляет видимостью. По сути, экспорты управляются кодом внутри модуля. В отличие от этого, управление импортом осуществляется с помощью `Import-Module` вызова. Дополнительные сведения см. в разделе **запрещение импортируемых элементов** ниже.
 
 ## <a name="implicitly-importing-a-module-powershell-30"></a>Неявный импорт модуля (PowerShell 3,0)
 
@@ -72,6 +74,6 @@ Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 
 - **Псевдоним**. Этот параметр позволяет ограничивать экспортируемые псевдонимы (если вы используете манифест модуля, см. раздел алиасестоекспорт).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание модуля Windows PowerShell](./writing-a-windows-powershell-module.md)

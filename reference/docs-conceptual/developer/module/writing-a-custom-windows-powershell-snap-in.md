@@ -1,15 +1,14 @@
 ---
-title: Написание пользовательской оснастки Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], custom PSSnapin example
-- cmdlets [PowerShell SDK], specified in snap-ins
-ms.openlocfilehash: 3672dcc2e962b6795888ab5be3d461380e379315
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Написание пользовательской оснастки Windows PowerShell
+description: Написание пользовательской оснастки Windows PowerShell
+ms.openlocfilehash: e79c0c3db583fa0add9287745e97958a71360592
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779222"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659540"
 ---
 # <a name="writing-a-custom-windows-powershell-snap-in"></a>Написание пользовательской оснастки Windows PowerShell
 
@@ -24,7 +23,7 @@ ms.locfileid: "87779222"
 
    В этом примере имя класса — «Кустомпсснапинтест».
 
-3. Добавьте открытое свойство для имени оснастки (обязательно). При именовании оснасток не используйте следующие символы: `#` , `.` , `,` ,, `(` `)` , `{` , `}` , `[` , `]` , `&` , `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` ,,,,,,,,,,,,,,`*`
+3. Добавьте открытое свойство для имени оснастки (обязательно). При именовании оснасток не используйте следующие символы: `#` , `.` , `,` ,, `(` `)` , `{` , `}` , `[` , `]` , `&` , `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` ,,,,,,,,,,,,,, `*`
 
    В этом примере имя оснастки — «Кустомпсснапинтест».
 
@@ -44,7 +43,7 @@ ms.locfileid: "87779222"
 
    В этом примере ресурсом поставщика является:
 
-   > Кустомпсснапинтест, это пользовательская оснастка Windows PowerShell, которая включает командлеты Test-HelloWorld и Test-Кустомснапинтест.
+   > Кустомпсснапинтест, это пользовательская оснастка Windows PowerShell, которая включает Test-HelloWorld и Test-CustomSnapinTest командлеты».
 
 8. Укажите командлеты, принадлежащие к пользовательской оснастке (необязательно), с помощью класса [System. Management. Automation. пространства. кмдлетконфигуратионентри](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry) . Добавляемые здесь сведения включают имя командлета, его тип .NET и имя файла справки командлета (формат имени файла справки командлета должен быть `name.dll-help.xml` ).
 
@@ -209,8 +208,8 @@ public class CustomPSSnapinTest : CustomPSSnapIn
 
 Дополнительные сведения о регистрации оснасток см. в разделе [Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85)) [руководства программиста Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85))
 
-[Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)
+[Пакет SDK Windows PowerShell](../windows-powershell-reference.md)

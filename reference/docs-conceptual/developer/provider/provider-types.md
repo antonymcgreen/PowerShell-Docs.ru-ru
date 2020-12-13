@@ -1,12 +1,14 @@
 ---
-title: Типы поставщиков | Документация Майкрософт
 ms.date: 08/21/2019
-ms.openlocfilehash: 03b6b2d02d603632399ea455c2832742e0964d62
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Типы поставщиков
+description: Типы поставщиков
+ms.openlocfilehash: 9d3b458d7647a297fcda086db3540a0c15c576db
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778256"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92661760"
 ---
 # <a name="provider-types"></a>Типы поставщиков
 
@@ -112,7 +114,7 @@ ms.locfileid: "87778256"
 ## <a name="property-enabled-providers"></a>Поставщики с поддержкой свойств
 
 Поставщики с поддержкой свойств позволяют пользователю управлять свойствами элементов в хранилище данных.
-Чтобы создать поставщик с поддержкой свойств, класс поставщика должен реализовать методы интерфейсов [System. Management. Automation. Provider. ипропертикмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) и [System. Management. Automation. Provider. идинамикпропертикмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) . В большинстве случаев для поддержки командлета поставщика необходимо переписать метод, который вызывает обработчик PowerShell для вызова командлета, например `ClearProperty` метод для командлета Clear-Property, и при необходимости можно переписать второй метод, например `ClearPropertyDynamicParameters` , для добавления динамических параметров к командлету.
+Чтобы создать поставщик с поддержкой свойств, класс поставщика должен реализовать методы интерфейсов [System. Management. Automation. Provider. ипропертикмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) и [System. Management. Automation. Provider. идинамикпропертикмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) . В большинстве случаев для поддержки командлета поставщика необходимо переписать метод, который вызывает обработчик PowerShell для вызова командлета, например `ClearProperty` метод для командлета Clear-Property, и при необходимости можно перезаписать второй метод, например `ClearPropertyDynamicParameters` , для добавления динамических параметров к командлету.
 
 Интерфейс **System. Management. Automation. Provider. ипропертикмдлетпровидер** определяет следующие методы реализации конкретных командлетов поставщика:
 
@@ -134,7 +136,7 @@ ms.locfileid: "87778256"
 
 - Методы [System. Management. Automation. Provider. идинамикпропертикмдлетпровидер. ренамепроперти](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenameProperty) и [System. Management. Automation. Provider. идинамикпропертикмдлетпровидер. ренамепропертидинамикпараметерс](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenamePropertyDynamicParameters) определяют, как поставщик поддерживает этот `Rename-ItemProperty` командлет. Этот командлет позволяет пользователю изменить имя свойства.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)
 

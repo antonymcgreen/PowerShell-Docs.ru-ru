@@ -1,12 +1,14 @@
 ---
-title: Пример Runspace01 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 1ac286512f3cb3b97a6b3179c9dd45f1fefe1ecf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Runspace01
+description: Пример Runspace01
+ms.openlocfilehash: f47f79dd507db258119016353dc5a72d110d9252
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772201"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657919"
 ---
 # <a name="runspace01-sample"></a>Пример Runspace01
 

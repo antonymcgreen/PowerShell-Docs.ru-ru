@@ -1,12 +1,14 @@
 ---
-title: Написание двоичного модуля PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 92395bd6b8be1bd3741888eb3716d62f0253e213
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как написать бинарный модуль PowerShell
+description: Как написать бинарный модуль PowerShell
+ms.openlocfilehash: 1d5cea474ac418f78cc782360b7c23b7614d6669
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779273"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663072"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>Как написать бинарный модуль PowerShell
 
@@ -82,6 +84,6 @@ ms.locfileid: "87779273"
 Чтобы импортировать файлы форматирования и типы, необходимо создать манифест модуля.
 См. раздел Создание [манифеста модуля PowerShell](how-to-write-a-powershell-module-manifest.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание модуля Windows PowerShell](./writing-a-windows-powershell-module.md)

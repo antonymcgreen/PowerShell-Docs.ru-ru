@@ -1,18 +1,20 @@
 ---
-title: Регистрация командлетов | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 75853a818b119fbd3335e2fe3889f8ab006cc355
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Регистрация командлетов
+description: Регистрация командлетов
+ms.openlocfilehash: 4b48aae4bdd358ec39f482f4a1bd29ed0295cbde
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779256"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664536"
 ---
 # <a name="registering-cmdlets"></a>Регистрация командлетов
 
 В подразделах этого раздела описываются модули и оснастки, а также использование модулей и оснасток для обеспечения доступности командлетов в сеансе Windows PowerShell.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Модули и оснастки](./modules-and-snap-ins.md) Описывает различия между регистрацией командлетов с помощью модулей и оснасток.
 

@@ -1,12 +1,14 @@
 ---
-title: Пример кода RunSpace04 (VB.NET) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 853e3d223843fb39b2e6a08a21d041a5e696ce2c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример кода RunSpace04 (VB.NET)
+description: Пример кода RunSpace04 (VB.NET)
+ms.openlocfilehash: 16d46eb4b4f2c1bc6d32b35c29a5d638beba6e24
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784764"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657005"
 ---
 # <a name="runspace04--vbnet-code-sample"></a>Пример кода RunSpace04 (VB.NET)
 
@@ -108,7 +110,7 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace04.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace04.vb#L09-L92 "Runspace04.vb")] -->
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

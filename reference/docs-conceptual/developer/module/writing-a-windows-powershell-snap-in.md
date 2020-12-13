@@ -1,14 +1,14 @@
 ---
-title: Создание оснастки Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], PSSnapin example
-ms.openlocfilehash: 02603c54fb9852a8b78ecf68e3ee387d1fd418fc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Написание оснастки Windows PowerShell
+description: Написание оснастки Windows PowerShell
+ms.openlocfilehash: f658c2fa1211bfb77d2e8edd3999ce7f92df13bb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779106"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659443"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Написание оснастки Windows PowerShell
 
@@ -24,7 +24,7 @@ ms.locfileid: "87779106"
 
     В этом примере имя класса — «GetProcPSSnapIn01».
 
-3. Добавьте открытое свойство для имени оснастки (обязательно). При именовании оснасток не используйте следующие символы: `#` , `.` , `,` ,, `(` `)` , `{` , `}` , `[` , `]` , `&` , `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` ,,,,,,,,,,,,,,`*`
+3. Добавьте открытое свойство для имени оснастки (обязательно). При именовании оснасток не используйте следующие символы: `#` , `.` , `,` ,, `(` `)` , `{` , `}` , `[` , `]` , `&` , `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` ,,,,,,,,,,,,,, `*`
 
     В этом примере имя оснастки — «GetProcPSSnapIn01».
 
@@ -46,7 +46,7 @@ ms.locfileid: "87779106"
 
 ## <a name="example"></a>Пример
 
-В этом примере показано, как создать оснастку Windows PowerShell, которая может использоваться для регистрации командлета Get-proc в оболочке Windows PowerShell. Имейте в виду, что в этом примере полная сборка будет содержать только класс оснастки GetProcPSSnapIn01 и `Get-Proc` класс командлета.
+В этом примере показано, как создать оснастку Windows PowerShell, которая может использоваться для регистрации командлета Get-Proc в оболочке Windows PowerShell. Имейте в виду, что в этом примере полная сборка будет содержать только класс оснастки GetProcPSSnapIn01 и `Get-Proc` класс командлета.
 
 ```csharp
 [RunInstaller(true)]
@@ -119,8 +119,8 @@ public class GetProcPSSnapIn01 : PSSnapIn
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions/ms714644(v=vs.85))
 
-[Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)
+[Пакет SDK Windows PowerShell](../windows-powershell-reference.md)

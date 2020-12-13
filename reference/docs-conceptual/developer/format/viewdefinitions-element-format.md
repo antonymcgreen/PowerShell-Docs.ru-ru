@@ -1,12 +1,14 @@
 ---
-title: Элемент Виевдефинитионс (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: a108c4f8b03e3dec3905181b390aee2c82ab0028
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент ViewDefinitions (формат)
+description: Элемент ViewDefinitions (формат)
+ms.openlocfilehash: fceef0e5ec91e8c59a7b2b90fd31ca422ff0c94d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772490"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664581"
 ---
 # <a name="viewdefinitions-element-format"></a>Элемент ViewDefinitions (формат)
 
@@ -43,7 +45,7 @@ ms.locfileid: "87772490"
 |-------------|-----------------|
 |[Элемент Configuration (формат)](./configuration-element-format.md)|Представляет элемент верхнего уровня файла форматирования.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах различных типов представлений см. в следующих разделах:
 
@@ -72,7 +74,7 @@ ms.locfileid: "87772490"
 </Configuration>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент Configuration (формат)](./configuration-element-format.md)
 

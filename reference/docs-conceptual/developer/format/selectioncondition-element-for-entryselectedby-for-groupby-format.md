@@ -1,12 +1,14 @@
 ---
-title: Элемент Селектионкондитион для Ентриселектедби для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 0930d8076c314c12cac6cdfa2b33716b7efeb6a9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент SelectionCondition для элемента EntrySelectedBy для элемента GroupBy (формат)
+description: Элемент SelectionCondition для элемента EntrySelectedBy для элемента GroupBy (формат)
+ms.openlocfilehash: 14c293b6bc6d6accc201de35be9219349079801d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772847"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664746"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-groupby-format"></a>Элемент SelectionCondition для элемента EntrySelectedBy для элемента GroupBy (формат)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87772847"
 |-------------|-----------------|
 |[Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Определяет типы .NET, которые используют это определение элемента управления или условие, которое должно существовать, чтобы использовать это определение.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 При определении условия выбора применяются следующие требования.
 
@@ -58,7 +60,7 @@ ms.locfileid: "87772847"
 
 Дополнительные сведения об использовании условий выбора см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент PropertyName для элемента SelectionCondition для элемента CustomControl для элемента View (формат)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 

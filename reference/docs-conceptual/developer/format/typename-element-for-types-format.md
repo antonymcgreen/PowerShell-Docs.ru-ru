@@ -1,12 +1,14 @@
 ---
-title: Элемент TypeName для типов (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 40fad73c66124d6c3b0d969b4268713a492c963a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент TypeName для элемента Types (формат)
+description: Элемент TypeName для элемента Types (формат)
+ms.openlocfilehash: c656b8e7e5877b72ff2164e5b417857273cada61
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772541"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664621"
 ---
 # <a name="typename-element-for-types-format"></a>Элемент TypeName для элемента Types (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87772541"
 
 Укажите полное имя для типа .NET.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Наборы выбора можно использовать при наличии набора связанных объектов, на которые необходимо создать ссылку, используя одно имя, например набор объектов, связанных через наследование. При определении представлений можно указать набор объектов, используя имя набора вместо перечисления всех объектов в каждом представлении.
 
@@ -66,7 +68,7 @@ ms.locfileid: "87772541"
 </SelectionSets>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Определение наборов выделенных фрагментов](./defining-selection-sets.md)
 

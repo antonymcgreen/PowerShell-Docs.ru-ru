@@ -1,14 +1,14 @@
 ---
-title: Создание оснастки Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], examples
-ms.openlocfilehash: 4150ba582544d1daa4a898f0ff20b169c24a0ee0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Как создать оснастку Windows PowerShell
+description: Как создать оснастку Windows PowerShell
+ms.openlocfilehash: 29394ebcd2f7c4a547aabcb88685ff494b2c381d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787331"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657271"
 ---
 # <a name="how-to-create-a-windows-powershell-snap-in"></a>Как создать оснастку Windows PowerShell
 
@@ -26,7 +26,7 @@ ms.locfileid: "87787331"
 
 [Написание пользовательской оснастки Windows PowerShell. в](./writing-a-custom-windows-powershell-snap-in.md)этом примере показано, как создать пользовательскую оснастку, которая будет использоваться для регистрации определенного набора командлетов и поставщиков, которые могут существовать или отсутствовать в одной сборке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn)
 
@@ -34,4 +34,4 @@ ms.locfileid: "87787331"
 
 [Регистрация командлетов](./registering-cmdlets.md)
 
-[Пакет SDK оболочки Windows PowerShell](../windows-powershell-reference.md)
+[Пакет SDK Windows PowerShell](../windows-powershell-reference.md)

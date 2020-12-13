@@ -1,12 +1,14 @@
 ---
-title: Создание поставщика навигации Windows PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c9714c396a023516cd1c409e598d61bb6cda3ce
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание поставщика навигации Windows PowerShell
+description: Создание поставщика навигации Windows PowerShell
+ms.openlocfilehash: 73d4971fb91acaef9e1f20226e7b9b883730e394
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778979"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658668"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Создание поставщика навигации Windows PowerShell
 
@@ -273,7 +275,7 @@ ms.locfileid: "87778979"
    ReportsTo       : 2
    ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
