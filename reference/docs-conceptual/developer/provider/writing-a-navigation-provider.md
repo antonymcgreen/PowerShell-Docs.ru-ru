@@ -1,12 +1,14 @@
 ---
-title: Создание поставщика навигации | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 2fd27314a2b8547a15dd1bb72aa8f970d40b18cc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Написание поставщика навигации
+description: Написание поставщика навигации
+ms.openlocfilehash: 3123672d3365c97714557bd0e72a6e444ac228a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786787"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355227"
 ---
 # <a name="writing-a-navigation-provider"></a>Написание поставщика навигации
 
@@ -18,7 +20,7 @@ ms.locfileid: "87786787"
 
 ## <a name="implementing-navigation-methods"></a>Реализация методов навигации
 
-Класс [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) реализует методы, поддерживающие вложенные контейнеры, относительные пути и перемещение элементов. Полный список этих методов см. в разделе [методы NavigationCmdletProvider](/dotnet/api/system.management.automation.provider.navigationcmdletprovider?view=pscore-6.2.0#methods).
+Класс [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) реализует методы, поддерживающие вложенные контейнеры, относительные пути и перемещение элементов. Полный список этих методов см. в разделе [методы NavigationCmdletProvider](/dotnet/api/system.management.automation.provider.navigationcmdletprovider#methods).
 
 > [!NOTE]
 > В этом разделе содержатся сведения в [кратком руководстве поставщика Windows PowerShell](./windows-powershell-provider-quickstart.md). В этом разделе не рассматриваются основные сведения о настройке проекта поставщика или реализации методов, унаследованных от класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) , который создает и удаляет диски. В этом разделе также не рассматривается реализация методов, предоставляемых классами [System. Management. Automation. Provider. итемкмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) или [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) . Пример реализации командлетов элементов см. в разделе [написание поставщика элементов](./writing-an-item-provider.md). Пример реализации командлетов контейнеров см. в разделе [написание поставщика контейнера](./writing-a-container-provider.md).
@@ -291,7 +293,7 @@ protected override void MoveItem(string path, string destination)
        }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание поставщика контейнера](./writing-a-container-provider.md)
 

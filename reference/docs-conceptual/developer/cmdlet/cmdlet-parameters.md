@@ -1,26 +1,20 @@
 ---
-title: Параметры командлета | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- optional parameters [PowerShell SDK]
-- aliases [PowerShell SDK]
-- parameter sets [PowerShell SDK]
-- parameters [PowerShell SDK]
-- mandatory parameters [PowerShell SDK]
-- positional parameters [PowerShell SDK]
-- cmdlets [PowerShell SDK], parameters
-ms.openlocfilehash: 98b1d5fd0e7ffbf2d4d161f1bed73fb96a737bd4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Параметры командлета
+description: Параметры командлета
+ms.openlocfilehash: 1ab495cb674f6b2cd769c3f64d899aec67704216
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774768"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668275"
 ---
 # <a name="cmdlet-parameters"></a>Параметры командлета
 
 Параметры командлета предоставляют механизм, позволяющий командлету принимать входные данные. Параметры могут принимать входные данные непосредственно из командной строки или из объектов, передаваемых в командлет через конвейер, аргументы (также называемые *значениями*) этих параметров могут указывать входные данные, принимаемые командлетом, то, как командлет должен выполнять свои действия и данные, возвращаемые командлетом в конвейер.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Объявление свойств как параметров](./declaring-properties-as-parameters.md) Предоставляет основные сведения, которые необходимо понимать перед объявлением параметров командлета.
 
@@ -46,7 +40,7 @@ ms.locfileid: "87774768"
 
 [Как проверить входные параметры](./how-to-validate-parameter-input.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Объявление атрибута параметра](./parameter-attribute-declaration.md)
 

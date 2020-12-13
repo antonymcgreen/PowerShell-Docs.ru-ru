@@ -1,29 +1,26 @@
 ---
-title: Пример Events01 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c7b0f759ca6f3c078649a462eac1713e8214a237
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример командлета Events01
+description: Пример командлета Events01
+ms.openlocfilehash: ed8b7903537504609602e27693351847d322f904
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774463"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390411"
 ---
 # <a name="events01-sample"></a>Пример командлета Events01
 
-В этом примере показано, как создать командлет, позволяющий пользователю регистрироваться для событий, вызванных [System. IO. FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).
-С помощью этого командлета пользователи могут регистрировать действие для выполнения при создании файла в определенном каталоге.
-Этот пример является производным от базового класса [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) .
+В этом примере показано, как создать командлет, позволяющий пользователю регистрироваться для событий, вызванных [System. IO. FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher). С помощью этого командлета пользователи могут регистрировать действие для выполнения при создании файла в определенном каталоге. Этот пример является производным от базового класса [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) .
 
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>Как создать пример с помощью Visual Studio.
 
-1. С установленным пакетом SDK для Windows PowerShell 2,0 перейдите в папку Events01
-   Расположение по умолчанию: `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.
+1. С установленным пакетом SDK для Windows PowerShell 2,0 перейдите в папку Events01 Расположение по умолчанию: `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.
 
-2. Дважды щелкните значок файла решения (SLN).
-   Откроется пример проекта в Microsoft Visual Studio.
+2. Дважды щелкните значок файла решения (SLN). Откроется пример проекта в Microsoft Visual Studio.
 
-3. В меню **Построение** выберите команду **Построить решение**.
-   Библиотека для образца будет построена в папках по умолчанию `\bin` или `\bin\debug` .
+3. В меню **Построение** выберите команду **Построить решение**. Библиотека для образца будет построена в папках по умолчанию `\bin` или `\bin\debug` .
 
 ### <a name="how-to-run-the-sample"></a>Запуск примера
 
@@ -41,7 +38,7 @@ ms.locfileid: "87774463"
     import-module events01
     ```
 
-5. Используйте командлет Register-Филесистемевент, чтобы зарегистрировать действие, которое будет записывать сообщение при создании файла в каталоге TEMP.
+5. Используйте командлет Register-FileSystemEvent, чтобы зарегистрировать действие, которое будет записывать сообщение при создании файла в каталоге TEMP.
 
     ```powershell
     Register-FileSystemEvent $env:temp Created -filter "*.txt" -action { Write-Host "A file was created in the TEMP directory" }
@@ -76,8 +73,7 @@ A file was created in the TEMP directory
 
 ### <a name="how-to-write-a-cmdlet-for-event-registration"></a>Написание командлета для регистрации событий
 
-Командлет является производным от класса [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , который обеспечивает поддержку параметров, общих для `Register-*Event` командлетов.
-Командлеты, производные от [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , должны определять свои конкретные параметры и переопределять `GetSourceObject` `GetSourceObjectEventName` абстрактные методы.
+Командлет является производным от класса [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , который обеспечивает поддержку параметров, общих для `Register-*Event` командлетов. Командлеты, производные от [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , должны определять свои конкретные параметры и переопределять `GetSourceObject` `GetSourceObjectEventName` абстрактные методы.
 
 ## <a name="example"></a>Пример
 
@@ -122,7 +118,7 @@ namespace Sample
         /// Gets or sets the name of the event to which the cmdlet registers.
         /// <para>
         /// Currently System.IO.FileSystemWatcher exposes 6 events: Changed, Created,
-        /// Deleted, Disposed, Error, and Renamed. Check the MSDN documentation of
+        /// Deleted, Disposed, Error, and Renamed. Check the documentation of
         /// FileSystemWatcher for details on each event.
         /// </para>
         /// </summary>

@@ -1,12 +1,14 @@
 ---
-title: Создание поставщика контейнера | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: da91f18226d6e6c236c6a6e469db0f692af48abf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Написание поставщика контейнера
+description: Написание поставщика контейнера
+ms.openlocfilehash: 17ec3e11258ee77a8e569df1af3a0e9bcd9798b6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786804"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93354938"
 ---
 # <a name="writing-a-container-provider"></a>Написание поставщика контейнера
 
@@ -18,7 +20,7 @@ ms.locfileid: "87786804"
 
 ## <a name="implementing-container-methods"></a>Реализация методов контейнера
 
-Класс [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) реализует методы, которые поддерживают контейнеры, а также создают, копируют и удаляют элементы. Полный список этих методов см. в разделе [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider?view=pscore-6.2.0#methods).
+Класс [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) реализует методы, которые поддерживают контейнеры, а также создают, копируют и удаляют элементы. Полный список этих методов см. в разделе [System. Management. Automation. Provider. контаинеркмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider#methods).
 
 > [!NOTE]
 > В этом разделе содержатся сведения в [кратком руководстве поставщика Windows PowerShell](./windows-powershell-provider-quickstart.md). В этом разделе не рассматриваются основные сведения о настройке проекта поставщика или реализации методов, унаследованных от класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) , который создает и удаляет диски. В этом разделе также не рассматривается реализация методов, предоставляемых классом [System. Management. Automation. Provider. итемкмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) . Пример реализации командлетов элементов см. в разделе [написание поставщика элементов](./writing-an-item-provider.md).
@@ -531,9 +533,10 @@ protected override void RemoveItem(string path, bool recurse)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Обычный поставщик реального мира способен перемещать элементы из одного пути в другой на диске. Пример поставщика, поддерживающего перемещение элементов, см. в разделе [написание поставщика навигации](./writing-a-navigation-provider.md).
+Обычный поставщик реального мира способен перемещать элементы из одного пути в другой на диске.
+Пример поставщика, поддерживающего перемещение элементов, см. в разделе [написание поставщика навигации](./writing-a-navigation-provider.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание поставщика навигации](./writing-a-navigation-provider.md)
 

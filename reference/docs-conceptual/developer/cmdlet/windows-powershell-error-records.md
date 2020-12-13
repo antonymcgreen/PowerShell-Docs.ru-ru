@@ -1,17 +1,14 @@
 ---
-title: Записи об ошибках Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- error category [PowerShell SDK]
-- error identifier [PowerShell SDK]
-- error records [PowerShell SDK]
-- error category string [PowerShell SDK]
-ms.openlocfilehash: 52243916adf18b4f3a1e00f1fb4199c2619946e9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Записи об ошибках Windows PowerShell
+description: Записи об ошибках Windows PowerShell
+ms.openlocfilehash: 899acf08508b1469b7ec3985d5665367fc2c1531
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783982"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355601"
 ---
 # <a name="windows-powershell-error-records"></a>Записи об ошибках Windows PowerShell
 
@@ -25,7 +22,8 @@ ms.locfileid: "87783982"
 
 - Идентификатор ошибки, предоставляющий целевой указатель, который может использоваться в целях диагностики и сценариях Windows PowerShell для обработки определенных условий ошибок с определенными обработчиками ошибок. Каждая запись об ошибке должна содержать идентификатор ошибки (см. Идентификатор ошибки).
 
-- Категория ошибок, которая предоставляет общее обозначение, которое можно использовать в целях диагностики. Каждая запись об ошибке должна указывать категорию ошибок (см. раздел Категория ошибок).
+- Категория ошибок, которая предоставляет общее обозначение, которое можно использовать в целях диагностики.
+  Каждая запись об ошибке должна указывать категорию ошибок (см. раздел Категория ошибок).
 
 - Необязательное сообщение об ошибке замены и рекомендуемое действие (см. сообщение об ошибке замены).
 
@@ -53,9 +51,10 @@ ms.locfileid: "87783982"
 
 ## <a name="error-category"></a>Категория ошибки
 
-При создании записи об ошибке укажите категорию ошибки с помощью одной из констант, определенных перечислением [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) . Windows PowerShell использует категорию ошибок для вывода сведений об ошибках, когда пользователь присваивает `$ErrorView` переменной значение `"CategoryView"` .
+При создании записи об ошибке укажите категорию ошибки с помощью одной из констант, определенных перечислением [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) . Windows PowerShell использует категорию ошибок для вывода сведений об ошибках, когда пользователь присваивает `$ErrorView` переменной значение `"CategoryView"` .
 
-Старайтесь не использовать константу [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) **NotSpecified** . Если у вас есть какие-либо сведения об ошибке или об операции, вызвавшей ошибку, выберите категорию, которая лучше описывает ошибку или операцию, даже если категория не является идеальным соответствием.
+Старайтесь не использовать константу [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) 
+ **NotSpecified** . Если у вас есть какие-либо сведения об ошибке или об операции, вызвавшей ошибку, выберите категорию, которая лучше описывает ошибку или операцию, даже если категория не является идеальным соответствием.
 
 Информация, отображаемая Windows PowerShell, называется строкой представления категории и строится на основе свойств класса [System. Management. Automation. ерроркатегоринфо](/dotnet/api/System.Management.Automation.ErrorCategoryInfo) . (Доступ к этому классу осуществляется через свойство Error [System. Management. Automation. ерроррекорд. CategoryInfo](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo) .)
 
@@ -65,9 +64,10 @@ ms.locfileid: "87783982"
 
 В следующем списке описаны отображаемые сведения.
 
-- Category: константа [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) , определяемая Windows PowerShell.
+- Category: константа [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) , определяемая Windows PowerShell.
 
-- TargetName: по умолчанию имя объекта, обрабатываемого командлетом при возникновении ошибки. Или другая строка, определяемая командлетом.
+- TargetName: по умолчанию имя объекта, обрабатываемого командлетом при возникновении ошибки.
+  Или другая строка, определяемая командлетом.
 
 - TargetType: по умолчанию это тип целевого объекта. Или другая строка, определяемая командлетом.
 
@@ -81,9 +81,9 @@ ms.locfileid: "87783982"
 
 Заменяющее сообщение предоставляется объектом [System. Management. Automation. ErrorDetails](/dotnet/api/System.Management.Automation.ErrorDetails) . Используйте один из следующих конструкторов этого объекта, так как они предоставляют дополнительные сведения о локализации, которые могут использоваться Windows PowerShell.
 
-- [ErrorDetails (командлет, строка, строка, объект [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Management_Automation_Cmdlet_System_String_System_String_System_Object___). Используйте этот конструктор, если строка шаблона является строкой ресурса в той же сборке, в которой реализуется командлет, или если требуется загрузить строку шаблона с помощью переопределения метода [System. Management. Automation. командлета. жетресаурцестринг](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) .
+- [ErrorDetails (командлет, строка, строка, объект [])](/dotnet/api/system.management.automation.errordetails.-ctor#System_Management_Automation_ErrorDetails__ctor_System_Management_Automation_Cmdlet_System_String_System_String_System_Object___). Используйте этот конструктор, если строка шаблона является строкой ресурса в той же сборке, в которой реализуется командлет, или если требуется загрузить строку шаблона с помощью переопределения метода [System. Management. Automation. командлета. жетресаурцестринг](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) .
 
-- [ErrorDetails (сборка, строка, строка, объект [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Reflection_Assembly_System_String_System_String_System_Object___): Используйте этот конструктор, если строка шаблона находится в другой сборке и вы не загрузили ее с помощью переопределения [System. Management. Automation. командлета. жетресаурцестринг](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString).
+- [ErrorDetails (сборка, строка, строка, объект [])](/dotnet/api/system.management.automation.errordetails.-ctor#System_Management_Automation_ErrorDetails__ctor_System_Reflection_Assembly_System_String_System_String_System_Object___): Используйте этот конструктор, если строка шаблона находится в другой сборке и вы не загрузили ее с помощью переопределения [System. Management. Automation. командлета. жетресаурцестринг](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString).
 
 Сообщение о замене должно соответствовать .NET Framework правилам проектирования для написания сообщений об исключениях с небольшими различиями. Рекомендации о том, что сообщения об исключениях должны быть написаны для разработчиков. Эти замещающие сообщения должны быть написаны для пользователя командлета.
 
@@ -97,13 +97,13 @@ ms.locfileid: "87783982"
 
 Если командлет использует [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) или [System. Management. Automation. командлет. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) для передачи записи об ошибке, Windows PowerShell автоматически добавляет сведения, описывающие команду, которая была вызвана при возникновении ошибки. Эта информация предоставляется объектом [System. Management. Automation. инвокатионинфо](/dotnet/api/System.Management.Automation.InvocationInfo) , который содержит имя командлета, который был вызван командой, самой командой, а также сведения о конвейере или скрипте. Это свойство доступно только для чтения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [System. Management. Automation. командлет. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 
 [System. Management. Automation. командлет. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 
-[System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0)
+[System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory)
 
 [System. Management. Automation. Ерроркатегоринфо](/dotnet/api/System.Management.Automation.ErrorCategoryInfo)
 

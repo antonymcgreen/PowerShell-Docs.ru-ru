@@ -1,12 +1,14 @@
 ---
-title: Как добавить возвращаемые значения в раздел справки для командлета
 ms.date: 09/12/2016
-ms.openlocfilehash: c164556cd06b332d04857987360c98f740a150b5
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Как добавить возвращаемые значения в раздел справки для командлета
+description: Как добавить возвращаемые значения в раздел справки для командлета
+ms.openlocfilehash: 8c556821a257451a320916231cb20fc82e75ebb4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893362"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94389748"
 ---
 # <a name="how-to-add-return-values-to-a-cmdlet-help-topic"></a>Как добавить возвращаемые значения в раздел справки для командлета
 
@@ -47,7 +49,7 @@ ms.locfileid: "86893362"
   <command:returnValue>
     <dev:type>
       <maml:name> System.DateTime </maml:name>
-      <maml:uri>  https://msdn.microsoft.com/library/system.datetime.aspx </maml:uri>
+      <maml:uri>  https://docs.microsoft.com/dotnet/api/system.datetime </maml:uri>
       <maml:description/>
     </dev:type>
     <maml:description>

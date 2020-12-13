@@ -1,15 +1,14 @@
 ---
-title: Создание поставщика свойств Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- property providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], property provider
-ms.openlocfilehash: e8ef92629fe036154cdd2f0facbe0cbe8add7533
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание поставщика свойств Windows PowerShell
+description: Создание поставщика свойств Windows PowerShell
+ms.openlocfilehash: 5370624afa784598ca784b201f7e7345eb958ff9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778942"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390921"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Создание поставщика свойств Windows PowerShell
 
@@ -82,7 +81,7 @@ ms.locfileid: "87778942"
 
   После вызова метода [System. Management. Automation. Provider. кмдлетпровидер. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) возвращает `true` , если возможно потенциально опасное изменение системы, метод [System. Management. Automation. Provider. ипропертикмдлетпровидер. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) должен вызвать метод [System. Management. Automation. Provider. кмдлетпровидер. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Этот метод отправляет пользователю сообщение с подтверждением, чтобы разрешить дополнительный отзыв, чтобы указать, что операция должна быть продолжена.
 
-## <a name="attaching-dynamic-parameters-for-the-set-itemproperty-cmdlet"></a>Присоединение динамических параметров к командлету Set-ItemProperty
+## <a name="attaching-dynamic-parameters-for-the-set-itemproperty-cmdlet"></a>Присоединение динамических параметров для командлета Set-ItemProperty
 
 `Set-ItemProperty`Командлету могут потребоваться дополнительные параметры, заданные динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик свойств Windows PowerShell должен реализовать метод [System. Management. Automation. Provider. ипропертикмдлетпровидер. сетпропертидинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters) . Этот метод возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) . `null`Значение может быть возвращено, если не нужно добавлять динамические параметры.
 
@@ -121,14 +120,14 @@ ms.locfileid: "87778942"
 
 ## <a name="building-the-windows-powershell-provider"></a>Создание поставщика Windows PowerShell
 
-См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+См. раздел [Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85)).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [поставщик Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
 [Разработка поставщика Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Расширение типов объектов и форматирование](https://msdn.microsoft.com/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Расширение типов объектов и форматирование](/previous-versions//ms714665(v=vs.85))
 
-[Регистрация командлетов, поставщиков и ведущих приложений](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Регистрация командлетов, поставщиков и ведущих приложений](/previous-versions//ms714644(v=vs.85))

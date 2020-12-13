@@ -1,25 +1,27 @@
 ---
-title: Пакет SDK Windows PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: 0501f511499bc5de35fad5d7798f0d16e2d3b36b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пакет SDK Windows PowerShell
+description: Пакет SDK Windows PowerShell
+ms.openlocfilehash: 751ccb02741db0ea63df1768dec4a19c5fa9ce92
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786668"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390207"
 ---
 # <a name="windows-powershell"></a>Windows PowerShell
 
 Обновлено: 8 июля 2013
 
-Windows PowerShell® — это оболочка командной строки на основе задач, а также язык сценариев, предназначенный специально для системного администрирования. На основе .NET Framework Windows PowerShell® помогает ИТ-специалистам и опытным пользователям управлять и автоматизировать администрирование операционной системы Windows и приложений, работающих под управлением Windows.
+Windows PowerShell &reg; — это оболочка командной строки на основе задач и язык сценариев, разработанный специально для администрирования системы. Windows PowerShell, основанный на .NET Framework, &reg; помогает ИТ-специалистам и опытным пользователям управлять и автоматизировать администрирование операционной системы Windows и приложений, работающих под управлением Windows.
 
 Опубликованные здесь документы написаны в основном для разработчиков командлетов, поставщиков и ведущих приложений, которым требуются справочные сведения об API, предоставляемых Windows PowerShell.
 Однако системные администраторы также могут найти информацию, предоставленную этими документами.
 
 Основные сведения, необходимые для начала работы с Windows PowerShell, см. в разделе начало работы with Windows PowerShell.
 
-## <a name="windows-powershell-documents-on-msdn"></a>Документы Windows PowerShell на сайте MSDN
+## <a name="windows-powershell-documents"></a>Документы Windows PowerShell
 
 - [Установка пакета SDK для Windows PowerShell](./installing-the-windows-powershell-sdk.md) Содержит сведения о том, как установить пакет SDK для Windows PowerShell.
 

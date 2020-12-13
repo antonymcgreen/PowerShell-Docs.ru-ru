@@ -6,12 +6,12 @@ ms.date: 09/09/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Language_Modes
-ms.openlocfilehash: c560101dd70c94c131e3ca9d8e9958d3a278de40
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 2cf232fd170ee9175f40693579cca60f69ccbcdd
+ms.sourcegitcommit: fb1a4bc4b249afd3513663de2e1ba3025d63467e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231770"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94625743"
 ---
 # <a name="about-language-modes"></a>Сведения о языковых режимах
 
@@ -128,7 +128,7 @@ PowerShell поддерживает следующие языковые режи
 - byte
 - char
 - кмдлетбиндингаттрибуте
-- Дата и время
+- Дата/время
 - Decimal
 - DirectoryEntry
 - DirectorySearcher
@@ -199,13 +199,6 @@ ConstrainedLanguage
 При выполнении `$ExecutionContext.SessionState.LanguageMode` команды в сеансе на языке PowerShell возвращает сообщение об ошибке скриптсноталловед.
 
 - Скриптсноталловед: синтаксис не поддерживается этим пространством выполнения. Это может быть вызвано тем, что он находится в неязыковом режиме.
-
-## <a name="keywords"></a>СЛОВАМИ
-
-- about_ConstrainedLanguage
-- about_FullLanguage
-- about_NoLanguage
-- about_RestrictedLanguage
 
 ## <a name="see-also"></a>СМ. ТАКЖЕ
 

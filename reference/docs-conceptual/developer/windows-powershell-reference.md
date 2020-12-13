@@ -1,14 +1,14 @@
 ---
-title: Справочник по Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Windows PowerShell SDK
-ms.openlocfilehash: 1c1a3a4de2df2043fe12cad6a69b7bc36ab9d3d7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Справочник по Windows PowerShell
+description: Справочник по Windows PowerShell
+ms.openlocfilehash: 9c1547ac5ec5134c99aa9213e6aaca1af8d5b3e9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786685"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390241"
 ---
 # <a name="windows-powershell-reference"></a>Справочник по Windows PowerShell
 
@@ -30,7 +30,7 @@ Windows PowerShell позволяет системному администра�
 
 [Написание командлета Windows PowerShell](./cmdlet/writing-a-windows-powershell-cmdlet.md) Содержит сведения и примеры кода для руководителей программ, которые разрабатывают командлеты и для разработчиков, реализующих код командлетов.
 
-[Блог группы разработчиков Windows PowerShell](https://blogs.msdn.microsoft.com/PowerShell/) Лучший ресурс для обучения и совместной работы с другими пользователями Windows PowerShell. Прочитайте блог группы разработчиков Windows PowerShell, а затем присоединитесь к форуму пользователей Windows PowerShell (Microsoft. public. Windows. PowerShell).
+[Блог группы разработчиков Windows PowerShell](https://devblogs.microsoft.com/powershell/) Лучший ресурс для обучения и совместной работы с другими пользователями Windows PowerShell. Прочитайте блог группы разработчиков Windows PowerShell, а затем присоединитесь к форуму пользователей Windows PowerShell (Microsoft. public. Windows. PowerShell).
 Используйте Windows Live Search для поиска других блогов и материалов по Windows PowerShell. Затем, когда вы разрабатываете свой опыт, вы сможете бесплатно вносить свои идеи.
 
 [Обозреватель модулей PowerShell](/powershell/module/) Содержит последние версии разделов справки по командной строке.

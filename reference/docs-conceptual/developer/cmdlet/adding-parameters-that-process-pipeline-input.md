@@ -1,27 +1,26 @@
 ---
-title: Добавление параметров, обрабатывающих входные данные конвейера | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmer's Guide], pipeline input
-- parameters [PowerShell Programmer's Guide], pipeline input
-ms.openlocfilehash: a678df30a13086b317d5680ee0fbc4d3c3391235
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Добавление параметров для обработки входных данных конвейера
+description: Добавление параметров для обработки входных данных конвейера
+ms.openlocfilehash: b150d5be93207d9c010a6d2d4de901b4526f1d79
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784560"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668360"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Добавление параметров для обработки входных данных конвейера
 
-Один источник входных данных для командлета — это объект в конвейере, исходящий из вышестоящего командлета. В этом разделе описывается, как добавить параметр в командлет Get-proc (описывается в разделе [Создание первого командлета](./creating-a-cmdlet-without-parameters.md)), чтобы командлет мог обрабатывать объекты конвейера.
+Один источник входных данных для командлета — это объект в конвейере, исходящий из вышестоящего командлета. В этом разделе описано, как добавить параметр в командлет Get-Proc (описанный в разделе [Создание первого командлета](./creating-a-cmdlet-without-parameters.md)), чтобы командлет мог обрабатывать объекты конвейера.
 
-Этот командлет Get-proc использует `Name` параметр, который принимает входные данные из объекта конвейера, извлекает сведения о процессе с локального компьютера на основе заданных имен, а затем отображает сведения о процессах в командной строке.
+Этот командлет Get-Proc использует `Name` параметр, который принимает входные данные из объекта конвейера, извлекает сведения о процессе с локального компьютера на основе заданных имен, а затем отображает сведения о процессах в командной строке.
 
 ## <a name="defining-the-cmdlet-class"></a>Определение класса командлета
 
 Первым шагом при создании командлета всегда является присвоение имени командлета и объявление класса .NET, реализующего командлет. Этот командлет извлекает сведения о процессе, поэтому выбранное здесь имя команды — Get. (Практически любой командлет, который способен получить информацию, может обрабатывать входные данные командной строки.) Дополнительные сведения о утвержденных командах командлетов см. в разделе [имена глаголов командлетов](./approved-verbs-for-windows-powershell-commands.md).
 
-Ниже приведено определение для командлета Get-proc. Подробные сведения об этом определении приведены в [создании первого командлета](./creating-a-cmdlet-without-parameters.md).
+Ниже приведено определение для этого командлета Get-Proc. Подробные сведения об этом определении приведены в [создании первого командлета](./creating-a-cmdlet-without-parameters.md).
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -36,12 +35,12 @@ Public Class GetProcCommand
 
 ## <a name="defining-input-from-the-pipeline"></a>Определение входных данных из конвейера
 
-В этом разделе описывается, как определить входные данные из конвейера для командлета. Этот командлет Get-proc определяет свойство, представляющее `Name` параметр, как описано в разделе [Добавление параметров, обрабатывающих вход командной строки](./adding-parameters-that-process-command-line-input.md).
+В этом разделе описывается, как определить входные данные из конвейера для командлета. Этот командлет Get-Proc определяет свойство, представляющее `Name` параметр, как описано в разделе [Добавление параметров, обрабатывающих вход командной строки](./adding-parameters-that-process-command-line-input.md).
 (Общие сведения об объявлении параметров см. в этом разделе.)
 
 Однако если командлету необходимо обработать входные данные конвейера, он должен быть привязан к входным значениям среды выполнения Windows PowerShell. Для этого необходимо добавить `ValueFromPipeline` ключевое слово или добавить `ValueFromPipelineByProperty` ключевое слово в объявление атрибута [System. Management. Automation. параметераттрибуте](/dotnet/api/System.Management.Automation.ParameterAttribute) . Укажите `ValueFromPipeline` ключевое слово, если командлет обращается к полному входному объекту. Укажите, `ValueFromPipelineByProperty` Если командлет обращается только к свойству объекта.
 
-Ниже приведено объявление параметра для `Name` параметра командлета Get-proc, принимающего входные данные конвейера.
+Ниже приведено объявление параметра для `Name` параметра этого Get-Proc командлета, который принимает входные данные конвейера.
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs" range="35-44":::
 
@@ -71,7 +70,7 @@ End Property
 
 Если командлет обрабатывает входные данные конвейера, необходимо переопределить соответствующие методы обработки входных данных. Основные методы обработки ввода представлены при [создании первого командлета](./creating-a-cmdlet-without-parameters.md).
 
-Этот командлет Get-proc переопределяет метод [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) для управления `Name` входными параметрами, предоставленными пользователем или сценарием. Этот метод получит процессы для каждого запрошенного имени процесса или всех процессов, если имя не указано. Обратите внимание, что в [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)вызов [WriteObject (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) является механизмом вывода для отправки выходных объектов в конвейер. Второй параметр этого вызова, `enumerateCollection` ,, имеет значение, чтобы `true` сообщить среде выполнения Windows PowerShell о необходимости перечисления массива объектов процессов и записывать в командную строку один процесс.
+Этот командлет Get-Proc переопределяет метод [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) для управления `Name` входными параметрами, предоставленными пользователем или сценарием. Этот метод получит процессы для каждого запрошенного имени процесса или всех процессов, если имя не указано. Обратите внимание, что в [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)вызов [WriteObject (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) является механизмом вывода для отправки выходных объектов в конвейер. Второй параметр этого вызова, `enumerateCollection` ,, имеет значение, чтобы `true` сообщить среде выполнения Windows PowerShell о необходимости перечисления массива объектов процессов и записывать в командную строку один процесс.
 
 ```csharp
 protected override void ProcessRecord()
@@ -168,7 +167,7 @@ Windows PowerShell передает сведения между командле
       726      21  25872   16652    138   22.09  3860  iexplore
   ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Добавление параметров, обрабатывающих вход командной строки](./adding-parameters-that-process-command-line-input.md)
 

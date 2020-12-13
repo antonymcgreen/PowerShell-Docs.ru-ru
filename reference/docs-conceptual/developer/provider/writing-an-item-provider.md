@@ -1,12 +1,14 @@
 ---
-title: Создание поставщика элементов | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 1df30e7af1b534756f797b9b5d4e29b689cbc782
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Написание поставщика элемента
+description: Написание поставщика элемента
+ms.openlocfilehash: f70c6ee50277988c4e3b7c255dc4548bc30319dd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786770"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355210"
 ---
 # <a name="writing-an-item-provider"></a>Написание поставщика элемента
 
@@ -18,7 +20,13 @@ ms.locfileid: "87786770"
 
 ## <a name="implementing-item-methods"></a>Реализация методов элементов
 
-Класс [System. Management. Automation. Provider. итемкмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) предоставляет несколько методов, которые можно использовать для доступа к элементам в хранилище данных и управления ими. Полный список этих методов см. в разделе [методы итемкмдлетпровидер](/dotnet/api/system.management.automation.provider.itemcmdletprovider?view=pscore-6.2.0#methods). В этом примере мы реализуем четыре из этих методов. [System. Management. Automation. Provider. итемкмдлетпровидер. DataItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) получает элемент по указанному пути. [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) задает значение указанного элемента. [System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) проверяет, существует ли элемент по указанному пути. [System. Management. Automation. Provider. итемкмдлетпровидер. исвалидпас *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) проверяет путь, сопоставляемый с расположением в хранилище данных.
+Класс [System. Management. Automation. Provider. итемкмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) предоставляет несколько методов, которые можно использовать для доступа к элементам в хранилище данных и управления ими.
+Полный список этих методов см. в разделе [методы итемкмдлетпровидер](/dotnet/api/system.management.automation.provider.itemcmdletprovider#methods).
+В этом примере мы реализуем четыре из этих методов.
+[System. Management. Automation. Provider. итемкмдлетпровидер. DataItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) получает элемент по указанному пути.
+[System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) задает значение указанного элемента.
+[System. Management. Automation. Provider. итемкмдлетпровидер. итемексистс *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) проверяет, существует ли элемент по указанному пути.
+[System. Management. Automation. Provider. итемкмдлетпровидер. исвалидпас *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) проверяет путь, сопоставляемый с расположением в хранилище данных.
 
 > [!NOTE]
 > В этом разделе содержатся сведения в [кратком руководстве поставщика Windows PowerShell](./windows-powershell-provider-quickstart.md). В этом разделе не рассматриваются основные сведения о настройке проекта поставщика или реализации методов, унаследованных от класса [System. Management. Automation. Provider. дривекмдлетпровидер](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) , который создает и удаляет диски.
@@ -80,7 +88,7 @@ protected override void GetItem(string path)
 
 Метод [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) вызывается обработчиком PowerShell, когда пользователь вызывает командлет [Microsoft. PowerShell. Commands. сетитемкомманд](/dotnet/api/Microsoft.PowerShell.Commands.setitemcommand) . Он задает значение элемента по указанному пути.
 
-В примере базы данных Access имеет смысл установить значение элемента только в том случае, если этот элемент является строкой, поэтому метод создает исключение [NotSupportedException](/dotnet/api/system.notsupportedexception?view=netframework-4.8) , если элемент не является строкой.
+В примере базы данных Access имеет смысл установить значение элемента только в том случае, если этот элемент является строкой, поэтому метод создает исключение [NotSupportedException](/dotnet/api/system.notsupportedexception) , если элемент не является строкой.
 
 ```csharp
 protected override void SetItem(string path, object values)

@@ -1,12 +1,14 @@
 ---
-title: Пример Host05 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 043d359fe6db6ebfa68d97002bdb8e5842e4aca5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Host05
+description: Пример Host05
+ms.openlocfilehash: 87769fc3b3c4991cd4f94e97415ac5ab0b81f6da
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783268"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355414"
 ---
 # <a name="host05-sample"></a>Пример Host05
 
@@ -27,20 +29,17 @@ ms.locfileid: "87783268"
 - Создание `$profile` переменной и загрузка следующих профилей.
 
   - текущий пользователь, текущий узел
-
   - текущий пользователь, все узлы
-
   - все пользователи, текущий узел
-
   - все пользователи, все узлы
 
 - Реализуйте интерфейс [System. Management. Automation. host. ихостуисуппортсмултиплечоицеселектион](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) .
 
 - Реализуйте интерфейс [System. Management. Automation. host. ихостсуппортсинтерактивесессион](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) для поддержки интерактивного удаленного взаимодействия с помощью командлетов [Enter-PSSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) и [Exit-PSSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) .
 
-## <a name="example"></a>Пример
+## <a name="example-1"></a>Пример 1
 
- Этот пример позволяет пользователю вводить команды в командной строке, обрабатывать эти команды, а затем выводит результаты.
+Этот пример позволяет пользователю вводить команды в командной строке, обрабатывать эти команды, а затем выводит результаты.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -394,9 +393,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-2"></a>Пример 2
 
- Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
+Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -627,9 +626,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-3"></a>Пример 3
 
- Следующий код является реализацией класса [System. Management. Automation. host. пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) , который используется этим ведущим приложением.
+Следующий код является реализацией класса [System. Management. Automation. host. пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) , который используется этим ведущим приложением.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1146,9 +1145,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-4"></a>Пример 4
 
- Следующий код является реализацией класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
+Следующий код является реализацией класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1358,7 +1357,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)
 

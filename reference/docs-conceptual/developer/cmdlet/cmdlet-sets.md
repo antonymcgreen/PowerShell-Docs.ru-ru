@@ -1,12 +1,14 @@
 ---
-title: Наборы командлетов | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 9595c9ca09148de05c69d60a2ede5688c3db61b0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Наборы командлетов
+description: Наборы командлетов
+ms.openlocfilehash: b4bcb6548f9d64a8cc5e3fc3a66c671a5566001d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774819"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668241"
 ---
 # <a name="cmdlet-sets"></a>Наборы командлетов
 
@@ -26,7 +28,7 @@ ms.locfileid: "87774819"
 
 ## <a name="example"></a>Пример
 
-В следующем примере показана реализация базового класса, который используется командлетом Get-proc и остановкой-proc, производным от того же базового класса.
+В следующем примере показана реализация базового класса, который используется Get-Proc и Stop-Proc командлета, производного от того же базового класса.
 
 ```csharp
 using System;

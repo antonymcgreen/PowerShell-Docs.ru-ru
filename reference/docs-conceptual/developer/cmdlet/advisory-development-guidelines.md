@@ -1,24 +1,26 @@
 ---
-title: Рекомендации по разработке консультационных услуг | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: dc8ef586954106f6d7fbce550dc22cd935018936
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Советы по разработке
+description: Советы по разработке
+ms.openlocfilehash: 1ac18925bbc2506e6a03810d24f58c2f3113fd55
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782435"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668326"
 ---
 # <a name="advisory-development-guidelines"></a>Советы по разработке
 
 В этом разделе описываются рекомендации, которые следует учитывать для обеспечения хорошей разработки и взаимодействия с пользователем. Иногда они могут применяться, и иногда они могут не быть.
 
-## <a name="design-guidelines"></a>Рекомендации по проектированию
+## <a name="design-guidelines"></a>Рекомендации по разработке
 
 При проектировании командлетов следует учитывать следующие рекомендации. Если вы нашли рекомендации по проектированию, применимые к вашей ситуации, ознакомьтесь с рекомендациями по написанию кода для аналогичных руководств.
 
 ### <a name="support-an-inputobject-parameter-ad01"></a>Поддержка параметра InputObject (AD01)
 
-Поскольку Windows PowerShell работает непосредственно с объектами Microsoft .NET Framework, часто бывает доступен объект .NET Framework, точно соответствующий типу, который пользователь должен выполнить для выполнения определенной операции. `InputObject`стандартное имя параметра, принимающего такой объект в качестве входных данных. Например, командлет «Sample **-proc** » в руководстве по [стоппрок](./stopproc-tutorial.md) определяет `InputObject` параметр типа Process, который поддерживает входные данные из конвейера. Пользователь может получить набор объектов процесса, управлять ими, чтобы выбрать точные объекты для их отмены, а затем передать их непосредственно командлету Process **-proc** .
+Поскольку Windows PowerShell работает непосредственно с объектами Microsoft .NET Framework, часто бывает доступен объект .NET Framework, точно соответствующий типу, который пользователь должен выполнить для выполнения определенной операции. `InputObject` стандартное имя параметра, принимающего такой объект в качестве входных данных. Например, командлет «Sample **-proc** » в руководстве по [стоппрок](./stopproc-tutorial.md) определяет `InputObject` параметр типа Process, который поддерживает входные данные из конвейера. Пользователь может получить набор объектов процесса, управлять ими, чтобы выбрать точные объекты для их отмены, а затем передать их непосредственно командлету Process **-proc** .
 
 ### <a name="support-the-force-parameter-ad02"></a>Поддержка параметра Force (AD02)
 
@@ -66,7 +68,7 @@ ms.locfileid: "87782435"
 
 Если командлет содержит объекты, которые не были удалены (записаны в конвейер) методом [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , для вашего командлета может потребоваться дополнительная реализация объекта. Например, если командлет открывает в методе [System. Management. Automation. командлет. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) маркер файла и сохраняет открытый для использования методом [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , этот маркер должен быть закрыт в конце обработки.
 
-Среда выполнения Windows PowerShell не всегда вызывает метод [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Например, метод [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) может не вызываться при отмене самого посредине командлета или при возникновении завершающей ошибки в любой части командлета. Таким образом, класс .NET Framework для командлета, требующего очистки объектов, должен реализовать полный шаблон интерфейса [System. IDisposable](/dotnet/api/System.IDisposable) , включая метод завершения, чтобы среда выполнения Windows PowerShell могла вызывать методы [System. Management. Automation. командлета. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) и [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) в конце обработки.
+Среда выполнения Windows PowerShell не всегда вызывает метод  [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Например, метод [System. Management. Automation. командлет. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) может не вызываться при отмене самого посредине командлета или при возникновении завершающей ошибки в любой части командлета. Таким образом, класс .NET Framework для командлета, требующего очистки объектов, должен реализовать полный шаблон интерфейса  [System. IDisposable](/dotnet/api/System.IDisposable) , включая метод завершения, чтобы среда выполнения Windows PowerShell могла вызывать методы [System. Management. Automation. командлета. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) и [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) в конце обработки.
 
 ### <a name="use-serialization-friendly-parameter-types-ac05"></a>Использование типов параметров, удобных для сериализации (AC05)
 
@@ -84,7 +86,7 @@ ms.locfileid: "87782435"
 
 - пспримитиведиктионари
 
-- SwitchParameter
+- Параметр-переключатель
 
 - пслистмодифиер
 

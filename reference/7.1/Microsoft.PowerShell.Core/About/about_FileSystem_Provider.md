@@ -2,16 +2,16 @@
 description: FileSystem
 keywords: powershell,командлет
 Locale: en-US
-ms.date: 06/18/2019
+ms.date: 11/13/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Поставщик FileSystem
-ms.openlocfilehash: fb4135663d368867661e87327aa52a9213757d08
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: a1ea71d8ce402c71ae872260e8a38b03de89cf1d
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94391482"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661415"
 ---
 # <a name="filesystem-provider"></a>Поставщик FileSystem
 
@@ -25,7 +25,7 @@ FileSystem
 
 ## <a name="capabilities"></a>Возможности
 
-**Filter** , **ShouldProcess**
+**Filter**, **ShouldProcess**
 
 ## <a name="short-description"></a>Краткое описание
 
@@ -35,12 +35,12 @@ FileSystem
 
 Поставщик **файловой** системы PowerShell позволяет получать, добавлять, изменять, очищать и удалять файлы и каталоги в PowerShell.
 
-Диски **файловой** системы — это иерархическое пространство имен, содержащее каталоги и файлы на компьютере. Диск **файловой** системы может быть логическим или физических диском, каталогом или сопоставленной сетевой папкой.
+Диски **файловой** системы — это иерархическое пространство имен, содержащее каталоги и файлы на компьютере. Диск **файловой** системы может быть логическим или физическим диском, каталогом или сопоставленным сетевым ресурсом.
 
 Диск с именем `TEMP:` будет сопоставлен с путем к временному каталогу пользователя.
 
 >[!NOTE]
-> Содержимое на диске TEMP: не удаляется автоматически с помощью PowerShell и не может управляться пользователем или операционной системой.
+> Содержимое на диске TEMP: не удаляется автоматически с помощью PowerShell и не может управляться пользователем или операционной системой. Эта функция была перемещена из экспериментальных функций в PowerShell версии 7,0.
 
 Поставщик **FileSystem** поддерживает следующие командлеты, описанные в этой статье.
 
@@ -65,11 +65,11 @@ FileSystem
 
 ## <a name="types-exposed-by-this-provider"></a>Типы, предоставляемые этим поставщиком
 
-Файлы являются экземплярами класса [System. IO. FileInfo](/dotnet/api/system.io.fileinfo) .  Каталоги являются экземплярами класса [System. IO. DirectoryInfo](/dotnet/api/system.io.directoryinfo) .
+Файлы являются экземплярами класса [System. IO. FileInfo](/dotnet/api/system.io.fileinfo) . Каталоги являются экземплярами класса [System. IO. DirectoryInfo](/dotnet/api/system.io.directoryinfo) .
 
 ## <a name="navigating-the-filesystem-drives"></a>Навигация по дискам файловой системы
 
-Поставщик **FileSystem** предоставляет свои хранилища данных путем сопоставления логических дисков на компьютере с дисками PowerShell. Для работы с диском **файловой** системы можно изменить расположение на диск, выдающие имя диска, за которым следует двоеточие ( `:` ).
+Поставщик **FileSystem** предоставляет свои хранилища данных путем сопоставления логических дисков на компьютере с дисками PowerShell. Для работы с диском **файловой** системы можно изменить расположение на диск, используя имя диска, за которым следует двоеточие ( `:` ).
 
 ```powershell
 Set-Location C:
@@ -340,18 +340,18 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 Указывает кодировку файла. Значение по умолчанию — ASCII.
 
-- **ASCII** : использует кодировку для набора символов ASCII (7-разрядных).
-- **BigEndianUnicode** : кодирует в формате UTF-16 с обратным порядком байтов.
-- **Строка** : использует тип кодировки для строки.
-- **Юникод** : кодирует в формате UTF-16 с прямым порядком байтов.
-- **UTF7** : кодирует в формате UTF-7.
-- **UTF8** : кодирует в формате UTF-8.
-- **UTF8BOM** : кодирует в формате UTF-8 с меткой порядка БАЙТОВ (BOM)
-- **UF8NOBOM** : кодирует в формате UTF-8 без метки порядка БАЙТОВ (BOM)
-- **UTF32** : кодирует в формате UTF-32.
-- **По умолчанию** : кодируется на странице установленного по умолчанию кода.
-- **OEM** : использует кодировку по умолчанию для программ MS-DOS и консолей.
-- **Неизвестно** : неизвестный или недопустимый тип кодировки. Данные можно обрабатывать как двоичные.
+- **ASCII**: использует кодировку для набора символов ASCII (7-разрядных).
+- **BigEndianUnicode**: кодирует в формате UTF-16 с обратным порядком байтов.
+- **Строка**: использует тип кодировки для строки.
+- **Юникод**: кодирует в формате UTF-16 с прямым порядком байтов.
+- **UTF7**: кодирует в формате UTF-7.
+- **UTF8**: кодирует в формате UTF-8.
+- **UTF8BOM**: кодирует в формате UTF-8 с меткой порядка БАЙТОВ (BOM)
+- **UF8NOBOM**: кодирует в формате UTF-8 без метки порядка БАЙТОВ (BOM)
+- **UTF32**: кодирует в формате UTF-32.
+- **По умолчанию**: кодируется на странице установленного по умолчанию кода.
+- **OEM**: использует кодировку по умолчанию для программ MS-DOS и консолей.
+- **Неизвестно**: неизвестный или недопустимый тип кодировки. Данные можно обрабатывать как двоичные.
 
 #### <a name="cmdlets-supported"></a>Поддерживаемые командлеты
 
@@ -373,7 +373,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 > [!NOTE]
 > В настоящее время, если значение `-Delimiter` параметра является пустой строкой, командлет [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) не возвращает ничего.
-> Это известная проблема Чтобы принудительно применить командлет [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) для возврата всего файла в виде единой неразделенной строки, введите значение, которое не существует в файле.
+> Это известная проблема. Чтобы принудительно применить командлет [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) для возврата всего файла в виде единой неразделенной строки, введите значение, которое не существует в файле.
 
 #### <a name="cmdlets-supported"></a>Поддерживаемые командлеты
 
@@ -400,16 +400,16 @@ Get-ChildItem -Attributes Compressed,Encrypted
 - **Архив**
 - **Compressed**
 - **Устройство**
-- **Каталоги**
+- **Каталог**
 - **Зашифрована**
 - **Скрыта**
 - **Обычный**
 - **нотконтентиндексед**
-- **Работа**
+- **Автономная миграция**
 - **ReadOnly**
 - **репарсепоинт**
 - **спарсефиле**
-- **Системные функции**
+- **Система**
 - **Временные процедуры**
 
 Описание этих атрибутов см. в описании перечисления [FileAttributes](/dotnet/api/system.io.fileattributes) .
@@ -488,7 +488,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 ### <a name="newerthan-systemdatetime"></a>NewerThan \<System.DateTime\>
 
-Возвращает `$True` , если `LastWriteTime` значение файла больше указанной даты. В противном случае она возвращает `$False`.
+Возвращает `$True` , если `LastWriteTime` значение файла больше указанной даты. В противном случае возвращается значение `$False`.
 
 Введите объект [DateTime](/dotnet/api/system.datetime) , например, возвращаемый командлетом [Get-Date](xref:Microsoft.PowerShell.Utility.Get-Date) , или строку, которую можно преобразовать в объект [DateTime](/dotnet/api/system.datetime) , например `"August 10, 2011 2:00 PM"` .
 
@@ -498,7 +498,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 ### <a name="olderthan-systemdatetime"></a>OlderThan \<System.DateTime\>
 
-Возвращает `$True` , если `LastWriteTime` значение файла меньше указанной даты. В противном случае она возвращает `$False`.
+Возвращает `$True` , если `LastWriteTime` значение файла меньше указанной даты. В противном случае возвращается значение `$False`.
 
 Введите объект [DateTime](/dotnet/api/system.datetime) , например, возвращаемый командлетом [Get-Date](xref:Microsoft.PowerShell.Utility.Get-Date) , или строку, которую можно преобразовать в объект [DateTime](/dotnet/api/system.datetime) , например `"August 10, 2011 2:00 PM"` .
 
@@ -564,6 +564,6 @@ Get-Help Get-ChildItem
 Get-Help Get-ChildItem -Path c:
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [about_Providers](../About/about_Providers.md)

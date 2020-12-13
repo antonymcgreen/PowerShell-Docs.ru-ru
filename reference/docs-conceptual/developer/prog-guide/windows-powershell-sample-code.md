@@ -1,16 +1,18 @@
 ---
-title: Пример кода Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 8dcbe6d8760d77666a8191ca78416ef63dfebdeb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример кода Windows PowerShell
+description: Пример кода Windows PowerShell
+ms.openlocfilehash: da916fa3557f44ecc9126ecef38235109aa391ec
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786940"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390139"
 ---
 # <a name="windows-powershell-sample-code"></a>Пример кода Windows PowerShell
 
-Примеры® Windows PowerShell доступны в Windows SDK. В этом разделе содержится пример кода, который содержится в примерах Windows SDK.
+Примеры Windows PowerShell &reg; доступны в Windows SDK. В этом разделе содержится пример кода, который содержится в примерах Windows SDK.
 
 > [!NOTE]
 > При установке Windows SDK создается каталог **Samples** , в котором все примеры Windows PowerShell становятся доступными. Типичный каталог установки — **C:\Program Files\Microsoft SDKs\Windows\v6.0**. Запустите Windows PowerShell и введите **"CD самплес\сисмгмт\повершелл"** , чтобы перейти к каталогу примеров Windows PowerShell. В этом документе каталог примеров Windows PowerShell называется **\<PowerShell Samples>** .
@@ -26,7 +28,7 @@ ms.locfileid: "87786940"
 | [Пример кода AccessDbProviderSample05](./accessdbprovidersample05-code-sample.md) | Это поставщик, описанный в разделе [Создание поставщика навигации Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md).                                                                                                                                                  |
 | [Пример кода AccessDbProviderSample06](./accessdbprovidersample06-code-sample.md) | Это поставщик, описанный в разделе [Создание поставщика содержимого Windows PowerShell](./creating-a-windows-powershell-content-provider.md).                                                                                                                                                        |
 | [Примеры кода GetProc01](./getproc01-code-samples.md)                             | Это базовый `Get-Process` Пример командлета, описанный в разделе [Создание первого командлета](../cmdlet/creating-a-cmdlet-without-parameters.md).                                                                                                                                                     |
-| [Примеры кода GetProc02](./getproc02-code-samples.md)                             | Это `Get-Process` Пример командлета, описанный в разделе [Добавление параметров, обрабатывающих входные данные командной строки](../cmdlet/adding-parameters-that-process-command-line-input.md).                                                                                                                       |
+| [Примеры кода GetProc02](./getproc02-code-samples.md)                             | Это `Get-Process` Пример командлета, описанный в разделе [Добавление параметров, которые обрабатывают Command-Line входе](../cmdlet/adding-parameters-that-process-command-line-input.md).                                                                                                                       |
 | [Примеры кода GetProc03](./getproc03-code-samples.md)                             | Это `Get-Process` Пример командлета, описанный в разделе [Добавление параметров, обрабатывающих входные данные конвейера](../cmdlet/adding-parameters-that-process-pipeline-input.md).                                                                                                                               |
 | [Примеры кода GetProc04](./getproc04-code-samples.md)                             | Это `Get-Process` Пример командлета, описанный в статье Добавление незавершенных [отчетов об ошибках в командлет](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md).                                                                                                                |
 | [Примеры кода GetProc05](./getproc05-code-samples.md)                             | Этот `Get-Process` командлет аналогичен командлету, описанному в статье Добавление незавершенных [отчетов об ошибках в командлет](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md).                                                                                                     |
@@ -36,14 +38,14 @@ ms.locfileid: "87786940"
 | [Примеры кода Runspace02](./runspace02-code-samples.md)                           | В этом примере используется класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) для `Get-Process` синхронного выполнения командлета.                                                                                                            |
 | [Примеры кода RunSpace03](./runspace03-code-samples.md)                           | Ниже приведены примеры кода для пространства выполнения, описанного в разделе "Создание консольного приложения, запускающего указанный скрипт".                                                                                                                                                                         |
 | [Примеры кода RunSpace04](./runspace04-code-samples.md)                           | Это пример кода для пространства выполнения, в котором используется класс [System. Management. Automation. рунспацеинвоке](/dotnet/api/System.Management.Automation.RunspaceInvoke) для выполнения скрипта, который создает завершающую ошибку.                                                                         |
-| [Примеры кода RunSpace05](./runspace05-code-sample.md)                             | Это исходный код для примера Runspace05, описанный в разделе [Настройка пространства выполнения с помощью рунспацеконфигуратион](https://msdn.microsoft.com/42681d19-2d05-4975-befd-afb1990e79b2).                                                                                                           |
-| [Примеры кода RunSpace06](./runspace06-code-sample.md)                             | Это исходный код для примера Runspace06, описанный в разделе [Настройка пространства выполнения с помощью оснастки Windows PowerShell](https://msdn.microsoft.com/a7289ee8-9732-49ee-91c7-d533e9538b83).                                                                                                    |
-| [Примеры кода RunSpace07](./runspace07-code-sample.md)                             | Это исходный код для образца Runspace07, описанный в разделе [Создание консольного приложения, добавляющего команды в конвейер](https://msdn.microsoft.com/01eb7808-e97b-4905-80be-9e2fa38c262e).                                                                                              |
-| [Примеры кода RunSpace08](./runspace08-code-sample.md)                             | Это исходный код для образца Runspace08, описанный в разделе [Создание консольного приложения, добавляющего параметры в команду](https://msdn.microsoft.com/848b2b46-60f1-4a86-b448-cfc7c0cccfba).                                                                                             |
-| [Примеры кода RunSpace09](./runspace09-code-sample.md)                             | Это исходный код для образца Runspace09, описанный в разделе [Создание консольного приложения, которое вызывает конвейер асинхронно](https://msdn.microsoft.com/198c1c94-2a06-457e-93ce-c0d910618e47).                                                                                        |
+| [Примеры кода RunSpace05](./runspace05-code-sample.md)                             |                                                                                                            |
+| [Примеры кода RunSpace06](./runspace06-code-sample.md)                             |                                                                                                     |
+| [Примеры кода RunSpace07](./runspace07-code-sample.md)                             |                                                                                               |
+| [Примеры кода RunSpace08](./runspace08-code-sample.md)                             |                                                                                              |
+| [Примеры кода RunSpace09](./runspace09-code-sample.md)                             |                                                                                       |
 | [Примеры кода RunSpace10](./runspace10-code-sample.md)                             | Это исходный код для образца Runspace10, который добавляет командлет в [System. Management. Automation. пространства. рунспацеконфигуратион](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) , а затем использует измененные сведения о конфигурации для создания пространства выполнения. |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Руководство программиста по Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

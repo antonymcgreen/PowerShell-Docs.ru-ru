@@ -6,12 +6,12 @@ ms.date: 09/09/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Language_Modes
-ms.openlocfilehash: 0b94125574bc65359b264225bb6c64231c1052d7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 63b0edcb9465d10474a60c0d2a66c145baacc93f
+ms.sourcegitcommit: fb1a4bc4b249afd3513663de2e1ba3025d63467e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93230885"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94625675"
 ---
 # <a name="about-language-modes"></a>Сведения о языковых режимах
 
@@ -128,7 +128,7 @@ PowerShell поддерживает следующие языковые режи
 - byte
 - char
 - кмдлетбиндингаттрибуте
-- Дата и время
+- Дата/время
 - Decimal
 - DirectoryEntry
 - DirectorySearcher
@@ -200,15 +200,7 @@ ConstrainedLanguage
 
 - Скриптсноталловед: синтаксис не поддерживается этим пространством выполнения. Это может быть вызвано тем, что он находится в неязыковом режиме.
 
-## <a name="keywords"></a>СЛОВАМИ
-
-- about_ConstrainedLanguage
-- about_FullLanguage
-- about_NoLanguage
-- about_RestrictedLanguage
-
 ## <a name="see-also"></a>СМ. ТАКЖЕ
 
 - [about_Session_Configuration_Files](about_Session_Configuration_Files.md)
 - [about_Session_Configurations](about_Session_Configurations.md)
-

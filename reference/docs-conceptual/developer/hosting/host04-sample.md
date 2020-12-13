@@ -1,12 +1,14 @@
 ---
-title: Пример Host04 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: a34c8424fd661b9c41e6233c4d8d48177a9cfb4e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Host04
+description: Пример Host04
+ms.openlocfilehash: a768258d58d39d0067c5a2a9c40d74e32bf64943
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783285"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355431"
 ---
 # <a name="host04-sample"></a>Пример Host04
 
@@ -14,29 +16,26 @@ ms.locfileid: "87783285"
 
 ## <a name="requirements"></a>Требования
 
- Для работы с этим образцом требуется Windows PowerShell 2,0.
+Для работы с этим образцом требуется Windows PowerShell 2,0.
 
 ## <a name="demonstrates"></a>Что демонстрирует
 
-- Создание пользовательского узла, классы которого являются производными от класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , класса [System. Management. Automation. host. Пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) и класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
+- Создание пользовательского узла, классы которого являются производными от класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , класса [System. Management. Automation. host. Пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) и класса [System. Management. Automation. host. PSHostRawUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
 
 - Создание консольного приложения, использующего эти классы узлов для создания интерактивной оболочки Windows PowerShell.
 
 - Создание `$profile` переменной и загрузка следующих профилей.
 
   - текущий пользователь, текущий узел
-
   - текущий пользователь, все узлы
-
   - все пользователи, текущий узел
-
   - все пользователи, все узлы
 
 - Реализуйте интерфейс [System. Management. Automation. host. ихостуисуппортсмултиплечоицеселектион](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) .
 
-## <a name="example"></a>Пример
+## <a name="example-1"></a>Пример 1
 
- Этот пример позволяет пользователю вводить команды в командной строке, обрабатывать эти команды, а затем выводит результаты.
+Этот пример позволяет пользователю вводить команды в командной строке, обрабатывать эти команды, а затем выводит результаты.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -373,9 +372,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-2"></a>Пример 2
 
- Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
+Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -555,9 +554,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-3"></a>Пример 3
 
- Следующий код является реализацией класса [System. Management. Automation. host. пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) , который используется этим ведущим приложением.
+Следующий код является реализацией класса [System. Management. Automation. host. пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) , который используется этим ведущим приложением.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1073,9 +1072,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-4"></a>Пример 4
 
- Следующий код является реализацией класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
+Следующий код является реализацией класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1285,7 +1284,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)
 

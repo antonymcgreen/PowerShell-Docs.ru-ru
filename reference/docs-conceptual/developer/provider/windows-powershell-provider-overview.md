@@ -1,12 +1,14 @@
 ---
-title: Общие сведения о поставщике Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: c248f1c337e96a1b83cbeb5fb486147504777eb1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Общие сведения о поставщиках Windows PowerShell
+description: Общие сведения о поставщиках Windows PowerShell
+ms.openlocfilehash: 2f1c5f5991a64fb2b85ece7feba915164ebd34ee
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778223"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355516"
 ---
 # <a name="windows-powershell-provider-overview"></a>Общие сведения о поставщиках Windows PowerShell
 
@@ -20,7 +22,8 @@ ms.locfileid: "87778223"
 
 ## <a name="type-of-providers"></a>Тип поставщиков
 
-Существует несколько типов поставщиков, каждый из которых предоставляет разные уровни функциональности. Поставщик реализуется как класс, производный от одного из потомков класса [System. Management. Automation. сессионстатекатегори](/dotnet/api/system.management.automation.sessionstatecategory?view=pscore-6.2.0) **кмдлетпровидер** . Сведения о различных типах поставщиков см. в разделе [типы поставщиков](./provider-types.md).
+Существует несколько типов поставщиков, каждый из которых предоставляет разные уровни функциональности. Поставщик реализуется как класс, производный от одного из потомков класса [System. Management. Automation. сессионстатекатегори](/dotnet/api/system.management.automation.sessionstatecategory) 
+ **кмдлетпровидер** . Сведения о различных типах поставщиков см. в разделе [типы поставщиков](./provider-types.md).
 
 ## <a name="provider-cmdlets"></a>Командлеты поставщика
 
@@ -32,7 +35,7 @@ ms.locfileid: "87778223"
 
 ### <a name="drive-qualified-paths"></a>Пути с указанием диска
 
-Путь к диску — это сочетание имени элемента, контейнера и вложенных элементов, в котором находится элемент, и диска Windows PowerShell, через который осуществляется доступ к элементу. (Диски определяются поставщиком, который используется для доступа к хранилищу данных. Этот путь начинается с имени диска, за которым следует двоеточие (:). Пример: `get-childitem C:`
+Путь к диску — это сочетание имени элемента, контейнера и вложенных элементов, в котором находится элемент, и диска Windows PowerShell, через который осуществляется доступ к элементу. (Диски определяются поставщиком, который используется для доступа к хранилищу данных. Этот путь начинается с имени диска, за которым следует двоеточие (:). Например: `get-childitem C:`
 
 ### <a name="provider-qualified-paths"></a>Пути, уточненные поставщиком
 
@@ -56,7 +59,9 @@ ms.locfileid: "87778223"
 
 ## <a name="provider-capabilities"></a>Возможности поставщика
 
-Перечисление [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) определяет ряд возможностей, поддерживаемых поставщиками. К ним относятся возможность использовать подстановочные знаки, элементы фильтра и транзакции поддержки. Чтобы указать возможности для поставщика, добавьте список значений перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) в сочетании с логической `OR` операцией в качестве свойства System. Management [. Automation. Provider. кмдлетпровидераттрибуте. провидеркапабилитиес *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) (второй параметр атрибута) атрибута [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) для класса поставщика. Например, следующий атрибут указывает, что поставщик поддерживает возможности **транзакций** [System. Management. Automation. Provider. Провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess** и [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) .
+Перечисление [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) определяет ряд возможностей, поддерживаемых поставщиками. К ним относятся возможность использовать подстановочные знаки, элементы фильтра и транзакции поддержки. Чтобы указать возможности для поставщика, добавьте список значений перечисления [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) в сочетании с логической `OR` операцией в качестве свойства System. Management [. Automation. Provider. кмдлетпровидераттрибуте. провидеркапабилитиес *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) (второй параметр атрибута) атрибута [System. Management. Automation. Provider. кмдлетпровидераттрибуте](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) для класса поставщика. Например, следующий атрибут указывает, что поставщик поддерживает возможности транзакций [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 
+ **ShouldProcess** и [System. Management. Automation. Provider. провидеркапабилитиес](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 
+  .
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]
@@ -65,9 +70,11 @@ ms.locfileid: "87778223"
 
 ## <a name="provider-cmdlet-help"></a>Справка по командлетам поставщика
 
-При написании поставщика можно реализовать собственную справку для поддерживаемых командлетов поставщика. Сюда входит отдельный раздел справки для каждого командлета поставщика или несколько версий раздела справки для случаев, когда командлет поставщика работает по-разному в зависимости от использования динамических параметров. Для поддержки справки, относящейся к командлету поставщика, поставщик должен реализовать интерфейс [System. Management. Automation. Provider. икмдлетпровидерсуппортшелп](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp) .
+При написании поставщика можно реализовать собственную справку для поддерживаемых командлетов поставщика.
+Сюда входит отдельный раздел справки для каждого командлета поставщика или несколько версий раздела справки для случаев, когда командлет поставщика работает по-разному в зависимости от использования динамических параметров. Для поддержки справки, относящейся к командлету поставщика, поставщик должен реализовать интерфейс [System. Management. Automation. Provider. икмдлетпровидерсуппортшелп](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp) .
 
-Обработчик Windows PowerShell вызывает метод [System. Management. Automation. Provider. икмдлетпровидерсуппортшелп. жеселпмамл *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) для вывода раздела справки для командлетов поставщика. Подсистема предоставляет имя командлета, который пользователь указал при выполнении `Get-Help` командлета, и текущий путь пользователя. Текущий путь необходим, если поставщик реализует разные версии одного командлета поставщика для разных дисков. Метод должен возвращать строку, содержащую XML для справки по командлету.
+Обработчик Windows PowerShell вызывает метод [System. Management. Automation. Provider. икмдлетпровидерсуппортшелп. жеселпмамл *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) для вывода раздела справки для командлетов поставщика. Подсистема предоставляет имя командлета, который пользователь указал при выполнении `Get-Help` командлета, и текущий путь пользователя.
+Текущий путь необходим, если поставщик реализует разные версии одного командлета поставщика для разных дисков. Метод должен возвращать строку, содержащую XML для справки по командлету.
 
 Содержимое файла справки записывается с помощью ПСМАМЛ XML. Это та же схема XML, которая используется для записи содержимого справки для отдельных командлетов. Добавьте содержимое для пользовательского командлета в файл справки для поставщика в `CmdletHelpPaths` элементе. В следующем примере показан `command` элемент для одного командлета поставщика, который показывает, как указать имя командлета поставщика. принтер
 

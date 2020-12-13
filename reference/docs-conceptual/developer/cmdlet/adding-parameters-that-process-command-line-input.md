@@ -1,19 +1,14 @@
 ---
-title: Добавление параметров, обрабатывающих входные данные командной строки | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmer's Guide], parameters
-- Get-Proc cmdlet [PowerShell Programmer's Guide]
-- cmdlets [PowerShell Programmer's Guide], command line input
-- command line input [PowerShell Programmer's Guide]
-- parameters [PowerShell Programmer's Guide]
-- cmdlets [PowerShell Programmer's Guide], creating
-ms.openlocfilehash: 6ccc873d9c6b93546b3dae8c0d2e406763fdfb8a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Добавление параметров для обработки входных данных команды
+description: Добавление параметров для обработки входных данных команды
+ms.openlocfilehash: f20469d366330aa787fbc16e4f0a76e67fc7c6db
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784577"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93354615"
 ---
 # <a name="adding-parameters-that-process-command-line-input"></a>Добавление параметров для обработки входных данных команды
 
@@ -40,7 +35,7 @@ Public Class GetProcCommand
 
 Параметр командлета позволяет пользователю предоставлять входные данные для командлета. В следующем примере и — `Get-Proc` это `Get-Member` имена командлетов конвейера, а `MemberType` — это параметр для `Get-Member` командлета. Параметр имеет аргумент "свойство".
 
-**PS> Get-proc; `get-member`-MemberType, свойство**
+**PS> Get-proc; `get-member` -MemberType, свойство**
 
 Чтобы объявить параметры для командлета, необходимо сначала определить свойства, представляющие параметры. В `Get-Proc` командлете единственным параметром является `Name` , который в данном случае представляет имя объекта .NET Framework процесса для извлечения. Поэтому класс командлета определяет свойство типа String, которое принимает массив имен.
 
@@ -89,7 +84,7 @@ End Property
 
 - Windows PowerShell резервирует несколько имен параметров для обеспечения единообразного взаимодействия с пользователем. Не используйте следующие имена параметров: `WhatIf` , `Confirm` , `Verbose` , `Debug` , `Warn` , `ErrorAction` , `ErrorVariable` , `OutVariable` и `OutBuffer` . Кроме того, следующие псевдонимы для этих имен параметров зарезервированы: `vb` , `db` , `ea` ,, `ev` `ov` и `ob` .
 
-- `Name`— Это простое и общее имя параметра, рекомендуемое для использования в командлетах. Лучше выбрать имя параметра, которое отличается от сложного имени, уникального для конкретного командлета, и трудно запомнить.
+- `Name` — Это простое и общее имя параметра, рекомендуемое для использования в командлетах. Лучше выбрать имя параметра, которое отличается от сложного имени, уникального для конкретного командлета, и трудно запомнить.
 
 - В Windows PowerShell параметры не учитывают регистр, хотя по умолчанию оболочка сохраняет регистр. Чувствительность к регистру аргументов зависит от операции командлета. Аргументы передаются в параметр, как указано в командной строке.
 
@@ -97,7 +92,7 @@ End Property
 
 ## <a name="declaring-parameters-as-positional-or-named"></a>Объявление параметров как позиционированного или именованного
 
-Командлет должен задавать каждый параметр как либо Позиционированный, либо именованный параметр. Оба типа параметров принимают одиночные аргументы, несколько аргументов, разделенных запятыми, и логические параметры. Логический параметр, также называемый *параметром, обрабатывает*только логические параметры. Параметр используется для определения наличия параметра. Рекомендуемое значение по умолчанию — `false` .
+Командлет должен задавать каждый параметр как либо Позиционированный, либо именованный параметр. Оба типа параметров принимают одиночные аргументы, несколько аргументов, разделенных запятыми, и логические параметры. Логический параметр, также называемый *параметром, обрабатывает* только логические параметры. Параметр используется для определения наличия параметра. Рекомендуемое значение по умолчанию — `false` .
 
 Образец `Get-Proc` командлета определяет `Name` параметр как параметр с положением
 0. Это означает, что первый аргумент, вводимый пользователем в командной строке, автоматически вставляется для этого параметра. Если необходимо определить именованный параметр, для которого пользователь должен указать имя параметра из командной строки, оставьте `Position` ключевое слово за пределами объявления атрибута.
@@ -123,7 +118,7 @@ public string[] Name
 
 Если командлет обрабатывает входные данные командной строки, он должен переопределять соответствующие методы обработки входных данных. Основные методы обработки ввода представлены при [создании первого командлета](./creating-a-cmdlet-without-parameters.md).
 
-`Get-Proc`Командлет переопределяет метод [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) для управления `Name` входными параметрами, предоставленными пользователем или сценарием. Этот метод получает процессы для каждого запрошенного имени процесса или все для процессов, если имя не указано. Обратите внимание, что в [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)вызов [System. Management. Automation. командлет. WriteObject% 28System. Object% 2CSystem. Boolean %29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) является механизмом вывода для отправки выходных объектов в конвейер. Вторым параметром этого вызова `enumerateCollection` является значение, чтобы `true` информировать среду выполнения Windows PowerShell о перечислении выходного массива объектов процессов и записи одного процесса в командную строку.
+`Get-Proc`Командлет переопределяет метод [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) для управления `Name` входными параметрами, предоставленными пользователем или сценарием. Этот метод получает процессы для каждого запрошенного имени процесса или все для процессов, если имя не указано. Обратите внимание, что в [System. Management. Automation. командлет. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)вызов [System. Management. Automation. командлет. WriteObject% 28System. Object% 2CSystem. Boolean %29](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) является механизмом вывода для отправки выходных объектов в конвейер. Вторым параметром этого вызова `enumerateCollection` является значение, чтобы `true` информировать среду выполнения Windows PowerShell о перечислении выходного массива объектов процессов и записи одного процесса в командную строку.
 
 ```csharp
 protected override void ProcessRecord()

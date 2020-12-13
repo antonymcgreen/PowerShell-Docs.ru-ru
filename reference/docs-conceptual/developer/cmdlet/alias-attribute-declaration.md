@@ -1,16 +1,14 @@
 ---
-title: Объявление атрибута Alias | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Alias attribute
-- attributes, Alias
-- Alias attribute, described
-ms.openlocfilehash: 4c1ff34a244611173ca919a44d6598189b19dc98
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Объявление атрибута псевдонима
+description: Объявление атрибута псевдонима
+ms.openlocfilehash: f2fe49578da2c795643b1f80fa44deefe1dbff09
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782418"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668309"
 ---
 # <a name="alias-attribute-declaration"></a>Объявление атрибута псевдонима
 
@@ -24,9 +22,9 @@ ms.locfileid: "87782418"
 
 #### <a name="parameters"></a>Параметры
 
-`aliasName`(String []) Обязательно. Задает набор разделенных запятыми имен псевдонимов для параметра командлета.
+`aliasName` (String []) Обязательно. Задает набор разделенных запятыми имен псевдонимов для параметра командлета.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 - Атрибут Alias используется с атрибутом Parameter при указании параметра командлета. Дополнительные сведения об объявлении этих атрибутов см. в разделе [как объявлять параметры командлета](./how-to-declare-cmdlet-parameters.md).
 
@@ -36,7 +34,7 @@ ms.locfileid: "87782418"
 
 - Атрибут Alias определяется классом [System. Management. Automation. алиасаттрибуте](/dotnet/api/System.Management.Automation.AliasAttribute) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Псевдонимы параметров](./parameter-aliases.md)
 

@@ -1,12 +1,14 @@
 ---
-title: Пример Host06 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 5dfcdb2b8a968d91e938c27c6e1e6a8503c90aba
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Host06
+description: Пример Host06
+ms.openlocfilehash: 8e94a8cf61e746adcdd22869ec853c0f2a27be91
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783251"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355397"
 ---
 # <a name="host06-sample"></a>Пример Host06
 
@@ -15,7 +17,6 @@ ms.locfileid: "87783251"
 ## <a name="requirements"></a>Требования
 
 - Для работы с этим образцом требуется Windows PowerShell 2,0.
-
 - Это приложение должно быть запущено в режиме с повышенными правами (Запуск от имени администратора).
 
 ## <a name="demonstrates"></a>Что демонстрирует
@@ -27,11 +28,8 @@ ms.locfileid: "87783251"
 - Создание `$profile` переменной и загрузка следующих профилей.
 
   - текущий пользователь, текущий узел
-
   - текущий пользователь, все узлы
-
   - все пользователи, текущий узел
-
   - все пользователи, все узлы
 
 - Реализуйте интерфейс [System. Management. Automation. host. ихостуисуппортсмултиплечоицеселектион](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) .
@@ -40,9 +38,9 @@ ms.locfileid: "87783251"
 
 - Используйте API-интерфейс маркеров, чтобы выровнять командную строку по мере ее ввода.
 
-## <a name="example"></a>Пример
+## <a name="example-1"></a>Пример 1
 
- Этот пример позволяет пользователю вводить команды в командной строке, обрабатывать эти команды, а затем выводит результаты.
+Этот пример позволяет пользователю вводить команды в командной строке, обрабатывать эти команды, а затем выводит результаты.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -403,9 +401,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-2"></a>Пример 2
 
- Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
+Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -627,9 +625,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-3"></a>Пример 3
 
- Следующий код является реализацией класса [System. Management. Automation. host. пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) , который используется этим ведущим приложением.
+Следующий код является реализацией класса [System. Management. Automation. host. пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) , который используется этим ведущим приложением.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1145,9 +1143,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-4"></a>Пример 4
 
- Следующий код является реализацией класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
+Следующий код является реализацией класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1357,9 +1355,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-5"></a>Пример 5
 
- Следующий код считывает командную строку и цвета текста в том виде, в каком он указан. Токены определяются с помощью метода [System. Management. Automation. пспарсер. маркированных *](/dotnet/api/System.Management.Automation.PSParser.Tokenize) .
+Следующий код считывает командную строку и цвета текста в том виде, в каком он указан. Токены определяются с помощью метода [System. Management. Automation. пспарсер. маркированных *](/dotnet/api/System.Management.Automation.PSParser.Tokenize) .
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1838,7 +1836,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)
 

@@ -1,22 +1,24 @@
 ---
-title: Пример Host01 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: a2ef53d36697d5637dff3de8a286902984f3c5a1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Host01
+description: Пример Host01
+ms.openlocfilehash: b4f1a81044a51855ad7decc25e1f5b1215ab0d62
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772258"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355482"
 ---
 # <a name="host01-sample"></a>Пример Host01
 
 В этом примере показано, как реализовать ведущее приложение, использующее пользовательский узел. В этом примере создается пространство выполнения, которое использует пользовательский узел, а затем API [System. Management. Automation. PowerShell](/dotnet/api/System.Management.Automation.PowerShell) используется для выполнения сценария, вызывающего "Exit". Затем ведущее приложение анализирует выходные данные скрипта и выводит на экран результаты.
 
- В этом примере используются функции пользовательского интерфейса по умолчанию, предоставляемые Windows PowerShell. Дополнительные сведения о реализации функций пользовательского интерфейса пользовательского узла см. в разделе [Host02 Sample](./host02-sample.md).
+В этом примере используются функции пользовательского интерфейса по умолчанию, предоставляемые Windows PowerShell. Дополнительные сведения о реализации функций пользовательского интерфейса пользовательского узла см. в разделе [Host02 Sample](./host02-sample.md).
 
 ## <a name="requirements"></a>Требования
 
- Для работы с этим образцом требуется Windows PowerShell 2,0.
+Для работы с этим образцом требуется Windows PowerShell 2,0.
 
 ## <a name="demonstrates"></a>Что демонстрирует
 
@@ -28,9 +30,9 @@ ms.locfileid: "87772258"
 
 - Проверка того, что в процессе выхода использовался правильный код выхода.
 
-## <a name="example"></a>Пример
+## <a name="example-1"></a>Пример 1
 
- В следующем коде показана реализация ведущего приложения, использующего простой пользовательский интерфейс узла.
+В следующем коде показана реализация ведущего приложения, использующего простой пользовательский интерфейс узла.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -130,9 +132,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-2"></a>Пример 2
 
- Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
+Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением. Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

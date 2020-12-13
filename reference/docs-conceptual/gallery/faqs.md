@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: Часто задаваемые вопросы по коллекции PowerShell
 description: Часто задаваемые вопросы о коллекции PowerShell
-ms.openlocfilehash: 045db04d49e0c65f807fef254a17bf20bb877ff6
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 52c89d570041e1fce3466f574af7de25f05ec4c5
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92654162"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389901"
 ---
 # <a name="frequently-asked-questions-about-the-powershell-gallery"></a>Часто задаваемые вопросы о коллекции PowerShell
 
@@ -17,14 +17,14 @@ ms.locfileid: "92654162"
 
 ## <a name="what-is-a-powershell-script"></a>Что такое сценарий PowerShell?
 
-Сценарий PowerShell представляет собой ряд команд, сохраненных в PS1-файле для многократного и совместного использования. Рабочие процессы PowerShell тоже являются сценариями PowerShell, которые прописывают набор задач и управляют последовательностью выполнения этих задач. Дополнительные сведения см. в руководстве по [началу работы с рабочими процессами PowerShell](https://technet.microsoft.com/library/jj134242.aspx).
+Сценарий PowerShell представляет собой ряд команд, сохраненных в PS1-файле для многократного и совместного использования. Рабочие процессы PowerShell тоже являются сценариями PowerShell, которые прописывают набор задач и управляют последовательностью выполнения этих задач. Дополнительные сведения см. в руководстве по [началу работы с рабочими процессами PowerShell](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134242(v=ws.11)).
 
 ## <a name="how-are-powershell-scripts-different-from-powershell-modules"></a>В чем различия сценариев PowerShell и модулей PowerShell?
 
 Модули обычно лучше подходят для совместного использования, но мы поощряем совместное использование сценариев и обмен ими, чтобы облегчить вам создание рабочих процессов и сценариев для сообщества. Дополнительные сведения см. в следующих блогах.
 
-- [Не создавайте сценарии, создавайте модули PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2011/06/27/dont-write-scripts-write-powershell-modules/)
-- [Основные сведения о модулях PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/07/10/understanding-powershell-modules/)
+- [Не создавайте сценарии, создавайте модули PowerShell](https://devblogs.microsoft.com/scripting/dont-write-scripts-write-powershell-modules/)
+- [Основные сведения о модулях PowerShell](https://devblogs.microsoft.com/scripting/understanding-powershell-modules/)
 
 ## <a name="how-can-i-publish-to-the-powershell-gallery"></a>Как осуществляется публикация в коллекции PowerShell?
 
@@ -64,7 +64,7 @@ ms.locfileid: "92654162"
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>Как создать правильно сформированный манифест модуля?
 
-Самый простой способ создать манифест модуля — выполнить командлет [New-ModuleManifest][]. В PowerShell 5.0 или более поздней версии командлет New-ModuleManifest создает правильно сформированный манифест модуля с пустыми полями для нужных метаданных, такими как **ProjectUri** , **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный манифест в качестве примера правильного формата.
+Самый простой способ создать манифест модуля — выполнить командлет [New-ModuleManifest][]. В PowerShell 5.0 или более поздней версии командлет New-ModuleManifest создает правильно сформированный манифест модуля с пустыми полями для нужных метаданных, такими как **ProjectUri**, **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный манифест в качестве примера правильного формата.
 
 Чтобы убедиться, что все необходимые поля метаданных заполнены правильно, используйте командлет [Test-ModuleManifest][].
 
@@ -93,7 +93,7 @@ ms.locfileid: "92654162"
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>Как создать правильно сформированный файл сценария?
 
-Самый простой способ создать правильно сформированный файл сценария — выполнить командлет [New-ScriptFileInfo][]. В PowerShell 5.0 командлет New-ScriptFileInfo создает правильно сформированный файл сценария с пустыми полями для нужных метаданных, такими как **ProjectUri** , **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный файл сценария в качестве примера правильного формата.
+Самый простой способ создать правильно сформированный файл сценария — выполнить командлет [New-ScriptFileInfo][]. В PowerShell 5.0 командлет New-ScriptFileInfo создает правильно сформированный файл сценария с пустыми полями для нужных метаданных, такими как **ProjectUri**, **LicenseUri** и **Tags**. Просто заполните эти пустые поля или используйте этот созданный файл сценария в качестве примера правильного формата.
 
 Чтобы убедиться, что все необходимые поля метаданных заполнены правильно, используйте командлет [Test-ScriptFileInfo][].
 
@@ -156,7 +156,7 @@ PowerShellGet можно использовать с любым допустим
 - Windows Server 2012 R2
 - Windows Server 2008 R2 с пакетом обновления 1 (SP1)
 
-Для **PowerShellGet** также требуется .NET Framework 4.5 или более поздней версии. Установить .NET Framework 4.5 или более поздней версии можно [отсюда](https://msdn.microsoft.com/library/5a4x27ek.aspx).
+Для **PowerShellGet** также требуется .NET Framework 4.5 или более поздней версии. См. дополнительные сведения об [установке .NET Framework для разработчиков](/dotnet/framework/install/guide-for-developers).
 
 ## <a name="is-it-possible-to-reserve-names-for-packages-that-will-be-published-in-future"></a>Можно ли зарезервировать имена для пакетов, которые будут опубликованы в будущем?
 

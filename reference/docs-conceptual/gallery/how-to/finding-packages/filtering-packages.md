@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: Фильтрация результатов поиска
 description: В этой статье описывается интерфейс пользователя, используемый для фильтрации содержимого в коллекции PowerShell.
-ms.openlocfilehash: cc375f3ddb35c95ed134776500bd326bc3db6b1a
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: a769daae903e614b96be1056e3ff14eca41970bd
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661398"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389833"
 ---
 # <a name="filtering-search-results"></a>Фильтрация результатов поиска
 
@@ -22,7 +22,7 @@ ms.locfileid: "92661398"
 - "Включить предварительные выпуски";
 - "Только стабильные".
 
-Сведения о параметрах "Предварительный выпуск" и "Стабильный" см. в статье о [добавленной функции управления предварительными выпусками в PowerShellGet и коллекции PowerShell](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) в блоге команды PowerShell.
+Сведения о параметрах "Предварительный выпуск" и "Стабильный" см. в статье о [добавленной функции управления предварительными выпусками в PowerShellGet и коллекции PowerShell](https://devblogs.microsoft.com/powershell/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) в блоге команды PowerShell.
 
 Установив флажки в раскрывающемся списке, можно отфильтровать результаты по:
 

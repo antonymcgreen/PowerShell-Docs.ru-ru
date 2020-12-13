@@ -4,10 +4,10 @@ ms.topic: reference
 title: Утвержденные команды для PowerShell
 description: Утвержденные команды для PowerShell
 ms.openlocfilehash: fc1ff989ae86862e0f9cc24d8bcba2ff02ef68cc
-ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "93355108"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Утвержденные команды для PowerShell

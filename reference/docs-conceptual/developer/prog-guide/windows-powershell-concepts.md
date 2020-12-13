@@ -1,12 +1,14 @@
 ---
-title: Основные понятия Windows PowerShell | Документация Майкрософт
-ms.date: 6/12/2019
-ms.openlocfilehash: a31c1df784b7b5f872c4647aece8fafa535db66b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.date: 06/12/2019
+ms.topic: reference
+title: Основные понятия Windows PowerShell
+description: Основные понятия Windows PowerShell
+ms.openlocfilehash: a9b88a2e575b7ff7c036ce0fcbc035f0b55d0f5f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786957"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355364"
 ---
 # <a name="windows-powershell-concepts"></a>Основные понятия Windows PowerShell
 
@@ -22,13 +24,13 @@ ms.locfileid: "87786957"
 |[Класс Рунтимедефинедпараметер](/dotnet/api/system.management.automation.runtimedefinedparameter)|Объявления параметров среды выполнения.|
 |[Пространство имен System. Management. Automation](/dotnet/api/System.Management.Automation)|Общие сведения о пространствах имен API PowerShell.|
 |[Общие сведения о поставщиках Windows PowerShell](../provider/windows-powershell-provider-overview.md)|Общие сведения о поставщиках PowerShell, которые используются для доступа к хранилищам данных.|
-|[Написание справки по командлетам PowerShell](../help/writing-help-for-windows-powershell-cmdlets.md)|Написание справки по командлетам PowerShell.|
+|[Написание справки для командлетов PowerShell](../help/writing-help-for-windows-powershell-cmdlets.md)|Написание справки по командлетам PowerShell.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс PowerShell](/dotnet/api/system.management.automation.powershell)
 
-[Справочник по API PowerShell Core](/dotnet/api/?view=pscore-6.2.0)
+[Справочник по API PowerShell Core](/dotnet/api/?view=pscore-6.2.0&preserve-view=true)
 
 [Руководство программиста по Windows PowerShell](windows-powershell-programmer-s-guide.md)
 
@@ -36,6 +38,6 @@ ms.locfileid: "87786957"
 
 [Написание поставщика Windows PowerShell](../provider/writing-a-windows-powershell-provider.md)
 
-[Справочник по API Windows PowerShell](/dotnet/api/?view=powershellsdk-1.1.0)
+[Справочник по API Windows PowerShell](/dotnet/api/?view=powershellsdk-1.1.0&preserve-view=true)
 
 [Справочник по Windows PowerShell](../windows-powershell-reference.md)

@@ -1,12 +1,14 @@
 ---
-title: Как добавить типы входных данных в раздел справки для командлета
 ms.date: 09/12/2016
-ms.openlocfilehash: d41c49ff48cf361c2ba694d11576e84a9367eef5
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Как добавить типы входных данных в раздел справки для командлета
+description: Как добавить типы входных данных в раздел справки для командлета
+ms.openlocfilehash: f2ad87c54230bcdd7e0ea708e9a1869daef7495f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893430"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94391108"
 ---
 # <a name="how-to-add-input-types-to-a-cmdlet-help-topic"></a>Как добавить типы входных данных в раздел справки для командлета
 
@@ -43,8 +45,8 @@ ms.locfileid: "86893430"
 <command:inputTypes>
   <command:inputType>
     <dev:type>
-      <maml:name> System.DateTime </maml:name>
-      <maml:uri>  https://msdn.microsoft.com/library/system.datetime.aspx </maml:uri>
+      <maml:name>System.DateTime</maml:name>
+      <maml:uri>https://docs.microsoft.com/dotnet/api/system.datetime</maml:uri>
       <maml:description/>
     </dev:type>
     <maml:description>
