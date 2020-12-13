@@ -1,48 +1,46 @@
 ---
-title: Пример Host06 | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 5dfcdb2b8a968d91e938c27c6e1e6a8503c90aba
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Пример Host06
+description: Пример Host06
+ms.openlocfilehash: 8e94a8cf61e746adcdd22869ec853c0f2a27be91
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783251"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355397"
 ---
-# <a name="host06-sample"></a><span data-ttu-id="059df-102">Пример Host06</span><span class="sxs-lookup"><span data-stu-id="059df-102">Host06 Sample</span></span>
+# <a name="host06-sample"></a><span data-ttu-id="07662-103">Пример Host06</span><span class="sxs-lookup"><span data-stu-id="07662-103">Host06 Sample</span></span>
 
-<span data-ttu-id="059df-103">В этом примере показано, как создать консольное приложение на основе консоли, которое считывает команды из командной строки, выполняет команды и выводит результаты на консоль.</span><span class="sxs-lookup"><span data-stu-id="059df-103">This sample shows how to build an interactive console-based host application that reads commands from the command line, executes the commands, and then displays the results to the console.</span></span> <span data-ttu-id="059df-104">Кроме того, в этом примере используются интерфейсы API создателя токенов для указания цвета текста, вводимого пользователем.</span><span class="sxs-lookup"><span data-stu-id="059df-104">In addition, this sample uses the Tokenizer APIs to specify the color of the text that is entered by the user.</span></span>
+<span data-ttu-id="07662-104">В этом примере показано, как создать консольное приложение на основе консоли, которое считывает команды из командной строки, выполняет команды и выводит результаты на консоль.</span><span class="sxs-lookup"><span data-stu-id="07662-104">This sample shows how to build an interactive console-based host application that reads commands from the command line, executes the commands, and then displays the results to the console.</span></span> <span data-ttu-id="07662-105">Кроме того, в этом примере используются интерфейсы API создателя токенов для указания цвета текста, вводимого пользователем.</span><span class="sxs-lookup"><span data-stu-id="07662-105">In addition, this sample uses the Tokenizer APIs to specify the color of the text that is entered by the user.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="059df-105">Требования</span><span class="sxs-lookup"><span data-stu-id="059df-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="07662-106">Требования</span><span class="sxs-lookup"><span data-stu-id="07662-106">Requirements</span></span>
 
-- <span data-ttu-id="059df-106">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="059df-106">This sample requires Windows PowerShell 2.0.</span></span>
+- <span data-ttu-id="07662-107">Для работы с этим образцом требуется Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="07662-107">This sample requires Windows PowerShell 2.0.</span></span>
+- <span data-ttu-id="07662-108">Это приложение должно быть запущено в режиме с повышенными правами (Запуск от имени администратора).</span><span class="sxs-lookup"><span data-stu-id="07662-108">This application must be run in elevated mode (Run as administrator).</span></span>
 
-- <span data-ttu-id="059df-107">Это приложение должно быть запущено в режиме с повышенными правами (Запуск от имени администратора).</span><span class="sxs-lookup"><span data-stu-id="059df-107">This application must be run in elevated mode (Run as administrator).</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="07662-109">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="07662-109">Demonstrates</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="059df-108">Что демонстрирует</span><span class="sxs-lookup"><span data-stu-id="059df-108">Demonstrates</span></span>
+- <span data-ttu-id="07662-110">Создание пользовательского узла, классы которого являются производными от класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , класса [System. Management. Automation. host. Пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) и класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .</span><span class="sxs-lookup"><span data-stu-id="07662-110">Creating a custom host whose classes derive from the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class, the [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) class, and the [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) class.</span></span>
 
-- <span data-ttu-id="059df-109">Создание пользовательского узла, классы которого являются производными от класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , класса [System. Management. Automation. host. Пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) и класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .</span><span class="sxs-lookup"><span data-stu-id="059df-109">Creating a custom host whose classes derive from the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class, the [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) class, and the [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) class.</span></span>
+- <span data-ttu-id="07662-111">Создание консольного приложения, использующего эти классы узлов для создания интерактивной оболочки Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="07662-111">Building a console application that uses these host classes to build an interactive Windows PowerShell shell.</span></span>
 
-- <span data-ttu-id="059df-110">Создание консольного приложения, использующего эти классы узлов для создания интерактивной оболочки Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="059df-110">Building a console application that uses these host classes to build an interactive Windows PowerShell shell.</span></span>
+- <span data-ttu-id="07662-112">Создание `$profile` переменной и загрузка следующих профилей.</span><span class="sxs-lookup"><span data-stu-id="07662-112">Creating a `$profile` variable and loading the following profiles.</span></span>
 
-- <span data-ttu-id="059df-111">Создание `$profile` переменной и загрузка следующих профилей.</span><span class="sxs-lookup"><span data-stu-id="059df-111">Creating a `$profile` variable and loading the following profiles.</span></span>
+  - <span data-ttu-id="07662-113">текущий пользователь, текущий узел</span><span class="sxs-lookup"><span data-stu-id="07662-113">current user, current host</span></span>
+  - <span data-ttu-id="07662-114">текущий пользователь, все узлы</span><span class="sxs-lookup"><span data-stu-id="07662-114">current user, all hosts</span></span>
+  - <span data-ttu-id="07662-115">все пользователи, текущий узел</span><span class="sxs-lookup"><span data-stu-id="07662-115">all users, current host</span></span>
+  - <span data-ttu-id="07662-116">все пользователи, все узлы</span><span class="sxs-lookup"><span data-stu-id="07662-116">all users, all hosts</span></span>
 
-  - <span data-ttu-id="059df-112">текущий пользователь, текущий узел</span><span class="sxs-lookup"><span data-stu-id="059df-112">current user, current host</span></span>
+- <span data-ttu-id="07662-117">Реализуйте интерфейс [System. Management. Automation. host. ихостуисуппортсмултиплечоицеселектион](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) .</span><span class="sxs-lookup"><span data-stu-id="07662-117">Implement the [System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) interface.</span></span>
 
-  - <span data-ttu-id="059df-113">текущий пользователь, все узлы</span><span class="sxs-lookup"><span data-stu-id="059df-113">current user, all hosts</span></span>
+- <span data-ttu-id="07662-118">Реализуйте интерфейс [System. Management. Automation. host. ихостсуппортсинтерактивесессион](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) для поддержки интерактивного удаленного взаимодействия с помощью командлетов [Enter-PSSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) и [Exit-PSSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) .</span><span class="sxs-lookup"><span data-stu-id="07662-118">Implement the [System.Management.Automation.Host.IHostSupportsInteractiveSession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) interface to support interactive remoting by using the [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) and [Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlets.</span></span>
 
-  - <span data-ttu-id="059df-114">все пользователи, текущий узел</span><span class="sxs-lookup"><span data-stu-id="059df-114">all users, current host</span></span>
+- <span data-ttu-id="07662-119">Используйте API-интерфейс маркеров, чтобы выровнять командную строку по мере ее ввода.</span><span class="sxs-lookup"><span data-stu-id="07662-119">Use the Tokenize API to colorize the command line as it is typed.</span></span>
 
-  - <span data-ttu-id="059df-115">все пользователи, все узлы</span><span class="sxs-lookup"><span data-stu-id="059df-115">all users, all hosts</span></span>
+## <a name="example-1"></a><span data-ttu-id="07662-120">Пример 1</span><span class="sxs-lookup"><span data-stu-id="07662-120">Example 1</span></span>
 
-- <span data-ttu-id="059df-116">Реализуйте интерфейс [System. Management. Automation. host. ихостуисуппортсмултиплечоицеселектион](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) .</span><span class="sxs-lookup"><span data-stu-id="059df-116">Implement the [System.Management.Automation.Host.Ihostuisupportsmultiplechoiceselection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) interface.</span></span>
-
-- <span data-ttu-id="059df-117">Реализуйте интерфейс [System. Management. Automation. host. ихостсуппортсинтерактивесессион](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) для поддержки интерактивного удаленного взаимодействия с помощью командлетов [Enter-PSSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) и [Exit-PSSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) .</span><span class="sxs-lookup"><span data-stu-id="059df-117">Implement the [System.Management.Automation.Host.Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) interface to support interactive remoting by using the [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) and [Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlets.</span></span>
-
-- <span data-ttu-id="059df-118">Используйте API-интерфейс маркеров, чтобы выровнять командную строку по мере ее ввода.</span><span class="sxs-lookup"><span data-stu-id="059df-118">Use the Tokenize API to colorize the command line as it is typed.</span></span>
-
-## <a name="example"></a><span data-ttu-id="059df-119">Пример</span><span class="sxs-lookup"><span data-stu-id="059df-119">Example</span></span>
-
- <span data-ttu-id="059df-120">Этот пример позволяет пользователю вводить команды в командной строке, обрабатывать эти команды, а затем выводит результаты.</span><span class="sxs-lookup"><span data-stu-id="059df-120">This example allows the user to enter commands at a command line, processes those commands, and then prints out the results.</span></span>
+<span data-ttu-id="07662-121">Этот пример позволяет пользователю вводить команды в командной строке, обрабатывать эти команды, а затем выводит результаты.</span><span class="sxs-lookup"><span data-stu-id="07662-121">This example allows the user to enter commands at a command line, processes those commands, and then prints out the results.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -403,9 +401,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="059df-121">Пример</span><span class="sxs-lookup"><span data-stu-id="059df-121">Example</span></span>
+## <a name="example-2"></a><span data-ttu-id="07662-122">Пример 2</span><span class="sxs-lookup"><span data-stu-id="07662-122">Example 2</span></span>
 
- <span data-ttu-id="059df-122">Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением.</span><span class="sxs-lookup"><span data-stu-id="059df-122">The following code is the implementation of the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class that is used by this host application.</span></span> <span data-ttu-id="059df-123">Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.</span><span class="sxs-lookup"><span data-stu-id="059df-123">Those elements that are not implemented throw an exception or return nothing.</span></span>
+<span data-ttu-id="07662-123">Следующий код является реализацией класса [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , который используется этим ведущим приложением.</span><span class="sxs-lookup"><span data-stu-id="07662-123">The following code is the implementation of the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class that is used by this host application.</span></span> <span data-ttu-id="07662-124">Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.</span><span class="sxs-lookup"><span data-stu-id="07662-124">Those elements that are not implemented throw an exception or return nothing.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -627,9 +625,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="059df-124">Пример</span><span class="sxs-lookup"><span data-stu-id="059df-124">Example</span></span>
+## <a name="example-3"></a><span data-ttu-id="07662-125">Пример 3</span><span class="sxs-lookup"><span data-stu-id="07662-125">Example 3</span></span>
 
- <span data-ttu-id="059df-125">Следующий код является реализацией класса [System. Management. Automation. host. пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) , который используется этим ведущим приложением.</span><span class="sxs-lookup"><span data-stu-id="059df-125">The following code is the implementation of the [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) class that is used by this host application.</span></span>
+<span data-ttu-id="07662-126">Следующий код является реализацией класса [System. Management. Automation. host. пшостусеринтерфаце](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) , который используется этим ведущим приложением.</span><span class="sxs-lookup"><span data-stu-id="07662-126">The following code is the implementation of the [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) class that is used by this host application.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1145,9 +1143,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="059df-126">Пример</span><span class="sxs-lookup"><span data-stu-id="059df-126">Example</span></span>
+## <a name="example-4"></a><span data-ttu-id="07662-127">Пример 4</span><span class="sxs-lookup"><span data-stu-id="07662-127">Example 4</span></span>
 
- <span data-ttu-id="059df-127">Следующий код является реализацией класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) , который используется этим ведущим приложением.</span><span class="sxs-lookup"><span data-stu-id="059df-127">The following code is the implementation of the [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) class that is used by this host application.</span></span> <span data-ttu-id="059df-128">Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.</span><span class="sxs-lookup"><span data-stu-id="059df-128">Those elements that are not implemented throw an exception or return nothing.</span></span>
+<span data-ttu-id="07662-128">Следующий код является реализацией класса [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) , который используется этим ведущим приложением.</span><span class="sxs-lookup"><span data-stu-id="07662-128">The following code is the implementation of the [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) class that is used by this host application.</span></span> <span data-ttu-id="07662-129">Эти элементы, которые не реализуются, вызывают исключение или не возвращают ничего.</span><span class="sxs-lookup"><span data-stu-id="07662-129">Those elements that are not implemented throw an exception or return nothing.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1357,9 +1355,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="059df-129">Пример</span><span class="sxs-lookup"><span data-stu-id="059df-129">Example</span></span>
+## <a name="example-5"></a><span data-ttu-id="07662-130">Пример 5</span><span class="sxs-lookup"><span data-stu-id="07662-130">Example 5</span></span>
 
- <span data-ttu-id="059df-130">Следующий код считывает командную строку и цвета текста в том виде, в каком он указан.</span><span class="sxs-lookup"><span data-stu-id="059df-130">The following code reads the command line and colors the text as it is entered.</span></span> <span data-ttu-id="059df-131">Токены определяются с помощью метода [System. Management. Automation. пспарсер. маркированных \*](/dotnet/api/System.Management.Automation.PSParser.Tokenize) .</span><span class="sxs-lookup"><span data-stu-id="059df-131">Tokens are determined by using the [System.Management.Automation.Psparser.Tokenize\*](/dotnet/api/System.Management.Automation.PSParser.Tokenize) method.</span></span>
+<span data-ttu-id="07662-131">Следующий код считывает командную строку и цвета текста в том виде, в каком он указан.</span><span class="sxs-lookup"><span data-stu-id="07662-131">The following code reads the command line and colors the text as it is entered.</span></span> <span data-ttu-id="07662-132">Токены определяются с помощью метода [System. Management. Automation. пспарсер. маркированных \*](/dotnet/api/System.Management.Automation.PSParser.Tokenize) .</span><span class="sxs-lookup"><span data-stu-id="07662-132">Tokens are determined by using the [System.Management.Automation.Psparser.Tokenize\*](/dotnet/api/System.Management.Automation.PSParser.Tokenize) method.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1838,10 +1836,10 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="059df-132">См. также</span><span class="sxs-lookup"><span data-stu-id="059df-132">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07662-133">См. также:</span><span class="sxs-lookup"><span data-stu-id="07662-133">See Also</span></span>
 
- [<span data-ttu-id="059df-133">System. Management. Automation. host. PSHost</span><span class="sxs-lookup"><span data-stu-id="059df-133">System.Management.Automation.Host.PSHost</span></span>](/dotnet/api/System.Management.Automation.Host.PSHost)
+ [<span data-ttu-id="07662-134">System. Management. Automation. host. PSHost</span><span class="sxs-lookup"><span data-stu-id="07662-134">System.Management.Automation.Host.PSHost</span></span>](/dotnet/api/System.Management.Automation.Host.PSHost)
 
- [<span data-ttu-id="059df-134">System. Management. Automation. host. Пшостусеринтерфаце</span><span class="sxs-lookup"><span data-stu-id="059df-134">System.Management.Automation.Host.Pshostuserinterface</span></span>](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)
+ [<span data-ttu-id="07662-135">System. Management. Automation. host. Пшостусеринтерфаце</span><span class="sxs-lookup"><span data-stu-id="07662-135">System.Management.Automation.Host.Pshostuserinterface</span></span>](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)
 
- [<span data-ttu-id="059df-135">System. Management. Automation. host. Pshostrawuserinterface</span><span class="sxs-lookup"><span data-stu-id="059df-135">System.Management.Automation.Host.Pshostrawuserinterface</span></span>](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)
+ [<span data-ttu-id="07662-136">System. Management. Automation. host. Pshostrawuserinterface</span><span class="sxs-lookup"><span data-stu-id="07662-136">System.Management.Automation.Host.Pshostrawuserinterface</span></span>](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)

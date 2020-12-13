@@ -7,22 +7,22 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ChildItem
-ms.openlocfilehash: c29a938fc73b8b69ea1bbf96f12f5d42d16f79bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0bcd46e49559ad625621a7ff81162af695f6f93c
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93229494"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661330"
 ---
-# <span data-ttu-id="7e16b-103">Get-ChildItem</span><span class="sxs-lookup"><span data-stu-id="7e16b-103">Get-ChildItem</span></span>
+# <span data-ttu-id="00058-103">Get-ChildItem</span><span class="sxs-lookup"><span data-stu-id="00058-103">Get-ChildItem</span></span>
 
-## <span data-ttu-id="7e16b-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="7e16b-104">SYNOPSIS</span></span>
+## <span data-ttu-id="00058-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="00058-104">SYNOPSIS</span></span>
 
-<span data-ttu-id="7e16b-105">Получает элементы и дочерние элементы в одном или нескольких указанных расположениях</span><span class="sxs-lookup"><span data-stu-id="7e16b-105">Gets the items and child items in one or more specified locations.</span></span>
+<span data-ttu-id="00058-105">Получает элементы и дочерние элементы в одном или нескольких указанных расположениях</span><span class="sxs-lookup"><span data-stu-id="00058-105">Gets the items and child items in one or more specified locations.</span></span>
 
-## <span data-ttu-id="7e16b-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="7e16b-106">SYNTAX</span></span>
+## <span data-ttu-id="00058-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="00058-106">SYNTAX</span></span>
 
-### <span data-ttu-id="7e16b-107">Элементы (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="7e16b-107">Items (Default)</span></span>
+### <span data-ttu-id="00058-107">Элементы (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="00058-107">Items (Default)</span></span>
 
 ```
 Get-ChildItem [[-Path] <string[]>] [[-Filter] <string>] [-Include <string[]>] [-Exclude <string[]>]
@@ -30,7 +30,7 @@ Get-ChildItem [[-Path] <string[]>] [[-Filter] <string>] [-Include <string[]>] [-
  [-FollowSymlink] [-Directory] [-File] [-Hidden] [-ReadOnly] [-System] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="7e16b-108">литералитемс</span><span class="sxs-lookup"><span data-stu-id="7e16b-108">LiteralItems</span></span>
+### <span data-ttu-id="00058-108">литералитемс</span><span class="sxs-lookup"><span data-stu-id="00058-108">LiteralItems</span></span>
 
 ```
 Get-ChildItem [[-Filter] <string>] -LiteralPath <string[]> [-Include <string[]>]
@@ -39,22 +39,22 @@ Get-ChildItem [[-Filter] <string>] -LiteralPath <string[]> [-Include <string[]>]
  [-ReadOnly] [-System] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="7e16b-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="7e16b-109">DESCRIPTION</span></span>
+## <span data-ttu-id="00058-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="00058-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="7e16b-110">`Get-ChildItem`Командлет возвращает элементы в одном или нескольких указанных расположениях.</span><span class="sxs-lookup"><span data-stu-id="7e16b-110">The `Get-ChildItem` cmdlet gets the items in one or more specified locations.</span></span> <span data-ttu-id="7e16b-111">Если элемент является контейнером, командлет получает элементы внутри контейнера, называемые дочерними элементами.</span><span class="sxs-lookup"><span data-stu-id="7e16b-111">If the item is a container, it gets the items inside the container, known as child items.</span></span> <span data-ttu-id="7e16b-112">Можно использовать параметр **рекурсии** для получения элементов во всех дочерних контейнерах и использовать параметр **Depth** , чтобы ограничить число уровней для рекурсии.</span><span class="sxs-lookup"><span data-stu-id="7e16b-112">You can use the **Recurse** parameter to get items in all child containers and use the **Depth** parameter to limit the number of levels to recurse.</span></span>
+<span data-ttu-id="00058-110">`Get-ChildItem`Командлет возвращает элементы в одном или нескольких указанных расположениях.</span><span class="sxs-lookup"><span data-stu-id="00058-110">The `Get-ChildItem` cmdlet gets the items in one or more specified locations.</span></span> <span data-ttu-id="00058-111">Если элемент является контейнером, командлет получает элементы внутри контейнера, называемые дочерними элементами.</span><span class="sxs-lookup"><span data-stu-id="00058-111">If the item is a container, it gets the items inside the container, known as child items.</span></span> <span data-ttu-id="00058-112">Можно использовать параметр **рекурсии** для получения элементов во всех дочерних контейнерах и использовать параметр **Depth** , чтобы ограничить число уровней для рекурсии.</span><span class="sxs-lookup"><span data-stu-id="00058-112">You can use the **Recurse** parameter to get items in all child containers and use the **Depth** parameter to limit the number of levels to recurse.</span></span>
 
-<span data-ttu-id="7e16b-113">`Get-ChildItem` не отображает пустые каталоги.</span><span class="sxs-lookup"><span data-stu-id="7e16b-113">`Get-ChildItem` doesn't display empty directories.</span></span> <span data-ttu-id="7e16b-114">Если `Get-ChildItem` команда содержит **глубину** или **Рекурсивные** параметры, в выходные данные не включаются пустые каталоги.</span><span class="sxs-lookup"><span data-stu-id="7e16b-114">When a `Get-ChildItem` command includes the **Depth** or **Recurse** parameters, empty directories aren't included in the output.</span></span>
+<span data-ttu-id="00058-113">`Get-ChildItem` не отображает пустые каталоги.</span><span class="sxs-lookup"><span data-stu-id="00058-113">`Get-ChildItem` doesn't display empty directories.</span></span> <span data-ttu-id="00058-114">Если `Get-ChildItem` команда содержит **глубину** или **Рекурсивные** параметры, в выходные данные не включаются пустые каталоги.</span><span class="sxs-lookup"><span data-stu-id="00058-114">When a `Get-ChildItem` command includes the **Depth** or **Recurse** parameters, empty directories aren't included in the output.</span></span>
 
-<span data-ttu-id="7e16b-115">Расположения предоставляются `Get-ChildItem` поставщиками PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7e16b-115">Locations are exposed to `Get-ChildItem` by PowerShell providers.</span></span> <span data-ttu-id="7e16b-116">Расположением может быть каталог файловой системы, куст реестра или хранилище сертификатов.</span><span class="sxs-lookup"><span data-stu-id="7e16b-116">A location can be a file system directory, registry hive, or a certificate store.</span></span> <span data-ttu-id="7e16b-117">Дополнительные сведения см. в разделе [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span><span class="sxs-lookup"><span data-stu-id="7e16b-117">For more information, see [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span></span>
+<span data-ttu-id="00058-115">Расположения предоставляются `Get-ChildItem` поставщиками PowerShell.</span><span class="sxs-lookup"><span data-stu-id="00058-115">Locations are exposed to `Get-ChildItem` by PowerShell providers.</span></span> <span data-ttu-id="00058-116">Расположением может быть каталог файловой системы, куст реестра или хранилище сертификатов.</span><span class="sxs-lookup"><span data-stu-id="00058-116">A location can be a file system directory, registry hive, or a certificate store.</span></span> <span data-ttu-id="00058-117">Дополнительные сведения см. в разделе [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span><span class="sxs-lookup"><span data-stu-id="00058-117">For more information, see [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span></span>
 
-## <span data-ttu-id="7e16b-118">Примеры</span><span class="sxs-lookup"><span data-stu-id="7e16b-118">EXAMPLES</span></span>
+## <span data-ttu-id="00058-118">Примеры</span><span class="sxs-lookup"><span data-stu-id="00058-118">EXAMPLES</span></span>
 
-### <span data-ttu-id="7e16b-119">Пример 1. Получение дочерних элементов из каталога файловой системы</span><span class="sxs-lookup"><span data-stu-id="7e16b-119">Example 1: Get child items from a file system directory</span></span>
+### <span data-ttu-id="00058-119">Пример 1. Получение дочерних элементов из каталога файловой системы</span><span class="sxs-lookup"><span data-stu-id="00058-119">Example 1: Get child items from a file system directory</span></span>
 
-<span data-ttu-id="7e16b-120">Этот пример получает дочерние элементы из каталога файловой системы.</span><span class="sxs-lookup"><span data-stu-id="7e16b-120">This example gets the child items from a file system directory.</span></span> <span data-ttu-id="7e16b-121">Отобразятся имена файлов и подкаталогов.</span><span class="sxs-lookup"><span data-stu-id="7e16b-121">The filenames and subdirectory names are displayed.</span></span> <span data-ttu-id="7e16b-122">Для пустых расположений команда не возвращает никаких выходных данных и возвращается в командную строку PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7e16b-122">For empty locations, the command doesn't return any output and returns to the PowerShell prompt.</span></span>
+<span data-ttu-id="00058-120">Этот пример получает дочерние элементы из каталога файловой системы.</span><span class="sxs-lookup"><span data-stu-id="00058-120">This example gets the child items from a file system directory.</span></span> <span data-ttu-id="00058-121">Отобразятся имена файлов и подкаталогов.</span><span class="sxs-lookup"><span data-stu-id="00058-121">The filenames and subdirectory names are displayed.</span></span> <span data-ttu-id="00058-122">Для пустых расположений команда не возвращает никаких выходных данных и возвращается в командную строку PowerShell.</span><span class="sxs-lookup"><span data-stu-id="00058-122">For empty locations, the command doesn't return any output and returns to the PowerShell prompt.</span></span>
 
-<span data-ttu-id="7e16b-123">`Get-ChildItem`Командлет использует параметр **path** для указания каталога `C:\Test` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-123">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the directory `C:\Test`.</span></span>
-<span data-ttu-id="7e16b-124">`Get-ChildItem` Отображает файлы и каталоги в консоли PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7e16b-124">`Get-ChildItem` displays the files and directories in the PowerShell console.</span></span>
+<span data-ttu-id="00058-123">`Get-ChildItem`Командлет использует параметр **path** для указания каталога `C:\Test` .</span><span class="sxs-lookup"><span data-stu-id="00058-123">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the directory `C:\Test`.</span></span>
+<span data-ttu-id="00058-124">`Get-ChildItem` Отображает файлы и каталоги в консоли PowerShell.</span><span class="sxs-lookup"><span data-stu-id="00058-124">`Get-ChildItem` displays the files and directories in the PowerShell console.</span></span>
 
 ```powershell
 Get-ChildItem -Path C:\Test
@@ -72,22 +72,22 @@ d-----        2/15/2019     08:29                Logs
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-<span data-ttu-id="7e16b-125">По умолчанию `Get-ChildItem` перечисляет режим ( **атрибуты** ), **LastWriteTime** , размер файла ( **Длина** ) и **имя** элемента.</span><span class="sxs-lookup"><span data-stu-id="7e16b-125">By default `Get-ChildItem` lists the mode ( **Attributes** ), **LastWriteTime** , file size ( **Length** ), and the **Name** of the item.</span></span> <span data-ttu-id="7e16b-126">Буквы в свойстве **mode** можно интерпретировать следующим образом:</span><span class="sxs-lookup"><span data-stu-id="7e16b-126">The letters in the **Mode** property can be interpreted as follows:</span></span>
+<span data-ttu-id="00058-125">По умолчанию `Get-ChildItem` перечисляет режим (**атрибуты**), **LastWriteTime**, размер файла (**Длина**) и **имя** элемента.</span><span class="sxs-lookup"><span data-stu-id="00058-125">By default `Get-ChildItem` lists the mode (**Attributes**), **LastWriteTime**, file size (**Length**), and the **Name** of the item.</span></span> <span data-ttu-id="00058-126">Буквы в свойстве **mode** можно интерпретировать следующим образом:</span><span class="sxs-lookup"><span data-stu-id="00058-126">The letters in the **Mode** property can be interpreted as follows:</span></span>
 
-- <span data-ttu-id="7e16b-127">`l` ссылку</span><span class="sxs-lookup"><span data-stu-id="7e16b-127">`l` (link)</span></span>
-- <span data-ttu-id="7e16b-128">`d` каталоги</span><span class="sxs-lookup"><span data-stu-id="7e16b-128">`d` (directory)</span></span>
-- <span data-ttu-id="7e16b-129">`a` упражнени</span><span class="sxs-lookup"><span data-stu-id="7e16b-129">`a` (archive)</span></span>
-- <span data-ttu-id="7e16b-130">`r` (только для чтения)</span><span class="sxs-lookup"><span data-stu-id="7e16b-130">`r` (read-only)</span></span>
-- <span data-ttu-id="7e16b-131">`h` служеб</span><span class="sxs-lookup"><span data-stu-id="7e16b-131">`h` (hidden)</span></span>
-- <span data-ttu-id="7e16b-132">`s` (система).</span><span class="sxs-lookup"><span data-stu-id="7e16b-132">`s` (system).</span></span>
+- <span data-ttu-id="00058-127">`l` ссылку</span><span class="sxs-lookup"><span data-stu-id="00058-127">`l` (link)</span></span>
+- <span data-ttu-id="00058-128">`d` каталоги</span><span class="sxs-lookup"><span data-stu-id="00058-128">`d` (directory)</span></span>
+- <span data-ttu-id="00058-129">`a` упражнени</span><span class="sxs-lookup"><span data-stu-id="00058-129">`a` (archive)</span></span>
+- <span data-ttu-id="00058-130">`r` (только для чтения)</span><span class="sxs-lookup"><span data-stu-id="00058-130">`r` (read-only)</span></span>
+- <span data-ttu-id="00058-131">`h` служеб</span><span class="sxs-lookup"><span data-stu-id="00058-131">`h` (hidden)</span></span>
+- <span data-ttu-id="00058-132">`s` (система).</span><span class="sxs-lookup"><span data-stu-id="00058-132">`s` (system).</span></span>
 
-<span data-ttu-id="7e16b-133">Дополнительные сведения о флагах режима см. в разделе [about_Filesystem_Provider](../microsoft.powershell.core/about/about_filesystem_provider.md#attributes-flagsexpression).</span><span class="sxs-lookup"><span data-stu-id="7e16b-133">For more information about the mode flags, see [about_Filesystem_Provider](../microsoft.powershell.core/about/about_filesystem_provider.md#attributes-flagsexpression).</span></span>
+<span data-ttu-id="00058-133">Дополнительные сведения о флагах режима см. в разделе [about_Filesystem_Provider](../microsoft.powershell.core/about/about_filesystem_provider.md#attributes-flagsexpression).</span><span class="sxs-lookup"><span data-stu-id="00058-133">For more information about the mode flags, see [about_Filesystem_Provider](../microsoft.powershell.core/about/about_filesystem_provider.md#attributes-flagsexpression).</span></span>
 
-### <span data-ttu-id="7e16b-134">Пример 2. Получение имен дочерних элементов в каталоге</span><span class="sxs-lookup"><span data-stu-id="7e16b-134">Example 2: Get child item names in a directory</span></span>
+### <span data-ttu-id="00058-134">Пример 2. Получение имен дочерних элементов в каталоге</span><span class="sxs-lookup"><span data-stu-id="00058-134">Example 2: Get child item names in a directory</span></span>
 
-<span data-ttu-id="7e16b-135">В этом примере выводятся только имена элементов в каталоге.</span><span class="sxs-lookup"><span data-stu-id="7e16b-135">This example lists only the names of items in a directory.</span></span>
+<span data-ttu-id="00058-135">В этом примере выводятся только имена элементов в каталоге.</span><span class="sxs-lookup"><span data-stu-id="00058-135">This example lists only the names of items in a directory.</span></span>
 
-<span data-ttu-id="7e16b-136">`Get-ChildItem`Командлет использует параметр **path** для указания каталога `C:\Test` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-136">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the directory `C:\Test`.</span></span> <span data-ttu-id="7e16b-137">Параметр **Name** возвращает только имена файлов или каталогов из указанного пути.</span><span class="sxs-lookup"><span data-stu-id="7e16b-137">The **Name** parameter returns only the file or directory names from the specified path.</span></span>
+<span data-ttu-id="00058-136">`Get-ChildItem`Командлет использует параметр **path** для указания каталога `C:\Test` .</span><span class="sxs-lookup"><span data-stu-id="00058-136">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the directory `C:\Test`.</span></span> <span data-ttu-id="00058-137">Параметр **Name** возвращает только имена файлов или каталогов из указанного пути.</span><span class="sxs-lookup"><span data-stu-id="00058-137">The **Name** parameter returns only the file or directory names from the specified path.</span></span>
 
 ```powershell
 Get-ChildItem -Path C:\Test -Name
@@ -101,9 +101,9 @@ CreateTestFile.ps1
 ReadOnlyFile.txt
 ```
 
-### <span data-ttu-id="7e16b-138">Пример 3. Получение дочерних элементов в текущем каталоге и подкаталогах</span><span class="sxs-lookup"><span data-stu-id="7e16b-138">Example 3: Get child items in the current directory and subdirectories</span></span>
+### <span data-ttu-id="00058-138">Пример 3. Получение дочерних элементов в текущем каталоге и подкаталогах</span><span class="sxs-lookup"><span data-stu-id="00058-138">Example 3: Get child items in the current directory and subdirectories</span></span>
 
-<span data-ttu-id="7e16b-139">В этом примере отображаются **txt** файлы, расположенные в текущем каталоге и его подкаталогах.</span><span class="sxs-lookup"><span data-stu-id="7e16b-139">This example displays **.txt** files that are located in the current directory and its subdirectories.</span></span>
+<span data-ttu-id="00058-139">В этом примере отображаются **txt** файлы, расположенные в текущем каталоге и его подкаталогах.</span><span class="sxs-lookup"><span data-stu-id="00058-139">This example displays **.txt** files that are located in the current directory and its subdirectories.</span></span>
 
 ```powershell
 Get-ChildItem -Path C:\Test\*.txt -Recurse -Force
@@ -143,11 +143,11 @@ Mode                LastWriteTime         Length Name
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-<span data-ttu-id="7e16b-140">`Get-ChildItem`Командлет использует параметр **path** для указания `C:\Test\*.txt` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-140">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify `C:\Test\*.txt`.</span></span> <span data-ttu-id="7e16b-141">В **пути** используется `*` подстановочный знак звездочки () для указания всех файлов с расширением имени файла `.txt` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-141">**Path** uses the asterisk (`*`) wildcard to specify all files with the filename extension `.txt`.</span></span> <span data-ttu-id="7e16b-142">Параметр **рекурсии** выполняет поиск в каталоге **пути к** подкаталогам, как показано в **каталоге:** заголовки.</span><span class="sxs-lookup"><span data-stu-id="7e16b-142">The **Recurse** parameter searches the **Path** directory its subdirectories, as shown in the **Directory:** headings.</span></span> <span data-ttu-id="7e16b-143">Параметр **Force** отображает скрытые файлы `hiddenfile.txt` , например, с режимом **h** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-143">The **Force** parameter displays hidden files such as `hiddenfile.txt` that have a mode of **h** .</span></span>
+<span data-ttu-id="00058-140">`Get-ChildItem`Командлет использует параметр **path** для указания `C:\Test\*.txt` .</span><span class="sxs-lookup"><span data-stu-id="00058-140">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify `C:\Test\*.txt`.</span></span> <span data-ttu-id="00058-141">В **пути** используется `*` подстановочный знак звездочки () для указания всех файлов с расширением имени файла `.txt` .</span><span class="sxs-lookup"><span data-stu-id="00058-141">**Path** uses the asterisk (`*`) wildcard to specify all files with the filename extension `.txt`.</span></span> <span data-ttu-id="00058-142">Параметр **рекурсии** выполняет поиск в каталоге **пути к** подкаталогам, как показано в **каталоге:** заголовки.</span><span class="sxs-lookup"><span data-stu-id="00058-142">The **Recurse** parameter searches the **Path** directory its subdirectories, as shown in the **Directory:** headings.</span></span> <span data-ttu-id="00058-143">Параметр **Force** отображает скрытые файлы `hiddenfile.txt` , например, с режимом **h**.</span><span class="sxs-lookup"><span data-stu-id="00058-143">The **Force** parameter displays hidden files such as `hiddenfile.txt` that have a mode of **h**.</span></span>
 
-### <span data-ttu-id="7e16b-144">Пример 4. Получение дочерних элементов с помощью параметра Include</span><span class="sxs-lookup"><span data-stu-id="7e16b-144">Example 4: Get child items using the Include parameter</span></span>
+### <span data-ttu-id="00058-144">Пример 4. Получение дочерних элементов с помощью параметра Include</span><span class="sxs-lookup"><span data-stu-id="00058-144">Example 4: Get child items using the Include parameter</span></span>
 
-<span data-ttu-id="7e16b-145">В этом примере `Get-ChildItem` параметр **include** используется для поиска определенных элементов из каталога, указанного параметром **path** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-145">In this example `Get-ChildItem` uses the **Include** parameter to find specific items from the directory specified by the **Path** parameter.</span></span>
+<span data-ttu-id="00058-145">В этом примере `Get-ChildItem` параметр **include** используется для поиска определенных элементов из каталога, указанного параметром **path** .</span><span class="sxs-lookup"><span data-stu-id="00058-145">In this example `Get-ChildItem` uses the **Include** parameter to find specific items from the directory specified by the **Path** parameter.</span></span>
 
 ```powershell
 # When using the -Include parameter, if you don't include an asterisk in the path
@@ -173,17 +173,17 @@ Mode                LastWriteTime         Length Name
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-<span data-ttu-id="7e16b-146">`Get-ChildItem`Командлет использует параметр **path** для указания каталога **C:\test** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-146">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the directory **C:\Test** .</span></span> <span data-ttu-id="7e16b-147">Параметр **path** включает в себя `*` подстановочный знак звездочки () для указания содержимого каталога.</span><span class="sxs-lookup"><span data-stu-id="7e16b-147">The **Path** parameter includes a trailing asterisk (`*`) wildcard to specify the directory's contents.</span></span>
-<span data-ttu-id="7e16b-148">Параметр **include** использует `*` подстановочный знак звездочки (), чтобы указать все файлы с расширением **txt** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-148">The **Include** parameter uses an asterisk (`*`) wildcard to specify all files with the file name extension **.txt** .</span></span>
+<span data-ttu-id="00058-146">`Get-ChildItem`Командлет использует параметр **path** для указания каталога **C:\test**.</span><span class="sxs-lookup"><span data-stu-id="00058-146">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the directory **C:\Test**.</span></span> <span data-ttu-id="00058-147">Параметр **path** включает в себя `*` подстановочный знак звездочки () для указания содержимого каталога.</span><span class="sxs-lookup"><span data-stu-id="00058-147">The **Path** parameter includes a trailing asterisk (`*`) wildcard to specify the directory's contents.</span></span>
+<span data-ttu-id="00058-148">Параметр **include** использует `*` подстановочный знак звездочки (), чтобы указать все файлы с расширением **txt**.</span><span class="sxs-lookup"><span data-stu-id="00058-148">The **Include** parameter uses an asterisk (`*`) wildcard to specify all files with the file name extension **.txt**.</span></span>
 
-<span data-ttu-id="7e16b-149">Если используется параметр **include** , для указания содержимого каталога параметру **path** требуется символ-шаблон звездочки ( `*` ).</span><span class="sxs-lookup"><span data-stu-id="7e16b-149">When the **Include** parameter is used, the **Path** parameter needs a trailing asterisk (`*`) wildcard to specify the directory's contents.</span></span> <span data-ttu-id="7e16b-150">Например, `-Path C:\Test\*`.</span><span class="sxs-lookup"><span data-stu-id="7e16b-150">For example, `-Path C:\Test\*`.</span></span>
+<span data-ttu-id="00058-149">Если используется параметр **include** , для указания содержимого каталога параметру **path** требуется символ-шаблон звездочки ( `*` ).</span><span class="sxs-lookup"><span data-stu-id="00058-149">When the **Include** parameter is used, the **Path** parameter needs a trailing asterisk (`*`) wildcard to specify the directory's contents.</span></span> <span data-ttu-id="00058-150">Например, `-Path C:\Test\*`.</span><span class="sxs-lookup"><span data-stu-id="00058-150">For example, `-Path C:\Test\*`.</span></span>
 
-- <span data-ttu-id="7e16b-151">Если в команду добавляется **рекурсивный** параметр, то символ звездочки ( `*` ) в параметре **path** является необязательным.</span><span class="sxs-lookup"><span data-stu-id="7e16b-151">If the **Recurse** parameter is added to the command, the trailing asterisk (`*`) in the **Path** parameter is optional.</span></span> <span data-ttu-id="7e16b-152">Параметр **рекурсии** возвращает элементы из каталога **пути** и его подкаталогов.</span><span class="sxs-lookup"><span data-stu-id="7e16b-152">The **Recurse** parameter gets items from the **Path** directory and its subdirectories.</span></span> <span data-ttu-id="7e16b-153">Например `-Path C:\Test\ -Recurse -Include *.txt`.</span><span class="sxs-lookup"><span data-stu-id="7e16b-153">For example, `-Path C:\Test\ -Recurse -Include *.txt`</span></span>
-- <span data-ttu-id="7e16b-154">Если конечная звездочка ( `*` ) не включена в параметр **path** , команда не возвращает никаких выходных данных и возвращается в командную строку PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7e16b-154">If a trailing asterisk (`*`) isn't included in the **Path** parameter, the command doesn't return any output and returns to the PowerShell prompt.</span></span> <span data-ttu-id="7e16b-155">Например, `-Path C:\Test\`.</span><span class="sxs-lookup"><span data-stu-id="7e16b-155">For example, `-Path C:\Test\`.</span></span>
+- <span data-ttu-id="00058-151">Если в команду добавляется **рекурсивный** параметр, то символ звездочки ( `*` ) в параметре **path** является необязательным.</span><span class="sxs-lookup"><span data-stu-id="00058-151">If the **Recurse** parameter is added to the command, the trailing asterisk (`*`) in the **Path** parameter is optional.</span></span> <span data-ttu-id="00058-152">Параметр **рекурсии** возвращает элементы из каталога **пути** и его подкаталогов.</span><span class="sxs-lookup"><span data-stu-id="00058-152">The **Recurse** parameter gets items from the **Path** directory and its subdirectories.</span></span> <span data-ttu-id="00058-153">Например `-Path C:\Test\ -Recurse -Include *.txt`.</span><span class="sxs-lookup"><span data-stu-id="00058-153">For example, `-Path C:\Test\ -Recurse -Include *.txt`</span></span>
+- <span data-ttu-id="00058-154">Если конечная звездочка ( `*` ) не включена в параметр **path** , команда не возвращает никаких выходных данных и возвращается в командную строку PowerShell.</span><span class="sxs-lookup"><span data-stu-id="00058-154">If a trailing asterisk (`*`) isn't included in the **Path** parameter, the command doesn't return any output and returns to the PowerShell prompt.</span></span> <span data-ttu-id="00058-155">Например, `-Path C:\Test\`.</span><span class="sxs-lookup"><span data-stu-id="00058-155">For example, `-Path C:\Test\`.</span></span>
 
-### <span data-ttu-id="7e16b-156">Пример 5. Получение дочерних элементов с помощью параметра Exclude</span><span class="sxs-lookup"><span data-stu-id="7e16b-156">Example 5: Get child items using the Exclude parameter</span></span>
+### <span data-ttu-id="00058-156">Пример 5. Получение дочерних элементов с помощью параметра Exclude</span><span class="sxs-lookup"><span data-stu-id="00058-156">Example 5: Get child items using the Exclude parameter</span></span>
 
-<span data-ttu-id="7e16b-157">В выходных данных примера показано содержимое каталога **к:\тест\логс** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-157">The example's output shows the contents of the directory **C:\Test\Logs** .</span></span> <span data-ttu-id="7e16b-158">Выходные данные представляют собой ссылку на другие команды, в которых используются параметры **Exclude** и **recurse** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-158">The output is a reference for the other commands that use the **Exclude** and **Recurse** parameters.</span></span>
+<span data-ttu-id="00058-157">В выходных данных примера показано содержимое каталога **к:\тест\логс**.</span><span class="sxs-lookup"><span data-stu-id="00058-157">The example's output shows the contents of the directory **C:\Test\Logs**.</span></span> <span data-ttu-id="00058-158">Выходные данные представляют собой ссылку на другие команды, в которых используются параметры **Exclude** и **recurse** .</span><span class="sxs-lookup"><span data-stu-id="00058-158">The output is a reference for the other commands that use the **Exclude** and **Recurse** parameters.</span></span>
 
 ```powershell
 Get-ChildItem -Path C:\Test\Logs
@@ -216,22 +216,22 @@ d-----        2/15/2019     13:21                Backup
 -a----        2/12/2019     16:24             23 systemlog1.log
 ```
 
-<span data-ttu-id="7e16b-159">`Get-ChildItem`Командлет использует параметр **path** для указания каталога `C:\Test\Logs` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-159">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the directory `C:\Test\Logs`.</span></span>
-<span data-ttu-id="7e16b-160">Параметр **Exclude** использует `*` подстановочный знак звездочки (), чтобы указать файлы или каталоги, которые **A** начинаются с **a** или, исключаются из выходных данных.</span><span class="sxs-lookup"><span data-stu-id="7e16b-160">The **Exclude** parameter uses the asterisk (`*`) wildcard to specify any files or directories that begin with **A** or **a** are excluded from the output.</span></span>
+<span data-ttu-id="00058-159">`Get-ChildItem`Командлет использует параметр **path** для указания каталога `C:\Test\Logs` .</span><span class="sxs-lookup"><span data-stu-id="00058-159">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the directory `C:\Test\Logs`.</span></span>
+<span data-ttu-id="00058-160">Параметр **Exclude** использует `*` подстановочный знак звездочки (), чтобы указать файлы или каталоги, которые  начинаются с  или, исключаются из выходных данных.</span><span class="sxs-lookup"><span data-stu-id="00058-160">The **Exclude** parameter uses the asterisk (`*`) wildcard to specify any files or directories that begin with **A** or **a** are excluded from the output.</span></span>
 
-<span data-ttu-id="7e16b-161">При использовании параметра **Exclude** символ звездочки ( `*` ) в параметре **path** является необязательным.</span><span class="sxs-lookup"><span data-stu-id="7e16b-161">When the **Exclude** parameter is used, a trailing asterisk (`*`) in the **Path** parameter is optional.</span></span> <span data-ttu-id="7e16b-162">Например, `-Path C:\Test\Logs` или `-Path C:\Test\Logs\*`.</span><span class="sxs-lookup"><span data-stu-id="7e16b-162">For example, `-Path C:\Test\Logs` or `-Path C:\Test\Logs\*`.</span></span>
+<span data-ttu-id="00058-161">При использовании параметра **Exclude** символ звездочки ( `*` ) в параметре **path** является необязательным.</span><span class="sxs-lookup"><span data-stu-id="00058-161">When the **Exclude** parameter is used, a trailing asterisk (`*`) in the **Path** parameter is optional.</span></span> <span data-ttu-id="00058-162">Например, `-Path C:\Test\Logs` или `-Path C:\Test\Logs\*`.</span><span class="sxs-lookup"><span data-stu-id="00058-162">For example, `-Path C:\Test\Logs` or `-Path C:\Test\Logs\*`.</span></span>
 
-- <span data-ttu-id="7e16b-163">Если конечная звездочка ( `*` ) не включена в параметр **path** , отображается содержимое параметра **path** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-163">If a trailing asterisk (`*`) isn't included in the **Path** parameter, the contents of the **Path** parameter are displayed.</span></span> <span data-ttu-id="7e16b-164">Исключениями являются имена файлов или подкаталогов, соответствующие значению параметра **Exclude** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-164">The exceptions are filenames or subdirectory names that match the **Exclude** parameter's value.</span></span>
-- <span data-ttu-id="7e16b-165">Если в параметр пути включена конечная звездочка ( `*` ) **Path** , команда выполняет рекурсивный путь к подкаталогам параметра **path** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-165">If a trailing asterisk (`*`) is included in the **Path** parameter, the command recurses into the **Path** parameter's subdirectories.</span></span> <span data-ttu-id="7e16b-166">Исключениями являются имена файлов или подкаталогов, соответствующие значению параметра **Exclude** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-166">The exceptions are filenames or subdirectory names that match the **Exclude** parameter's value.</span></span>
-- <span data-ttu-id="7e16b-167">Если в команду добавляется **рекурсивный** параметр, то выходные данные рекурсии одинаковы, независимо от того, содержит ли параметр **пути** конечную звездочку ( `*` ).</span><span class="sxs-lookup"><span data-stu-id="7e16b-167">If the **Recurse** parameter is added to the command, the recursion output is the same whether or not the **Path** parameter includes a trailing asterisk (`*`).</span></span>
+- <span data-ttu-id="00058-163">Если конечная звездочка ( `*` ) не включена в параметр **path** , отображается содержимое параметра **path** .</span><span class="sxs-lookup"><span data-stu-id="00058-163">If a trailing asterisk (`*`) isn't included in the **Path** parameter, the contents of the **Path** parameter are displayed.</span></span> <span data-ttu-id="00058-164">Исключениями являются имена файлов или подкаталогов, соответствующие значению параметра **Exclude** .</span><span class="sxs-lookup"><span data-stu-id="00058-164">The exceptions are filenames or subdirectory names that match the **Exclude** parameter's value.</span></span>
+- <span data-ttu-id="00058-165">Если в параметр пути включена конечная звездочка ( `*` )  , команда выполняет рекурсивный путь к подкаталогам параметра **path** .</span><span class="sxs-lookup"><span data-stu-id="00058-165">If a trailing asterisk (`*`) is included in the **Path** parameter, the command recurses into the **Path** parameter's subdirectories.</span></span> <span data-ttu-id="00058-166">Исключениями являются имена файлов или подкаталогов, соответствующие значению параметра **Exclude** .</span><span class="sxs-lookup"><span data-stu-id="00058-166">The exceptions are filenames or subdirectory names that match the **Exclude** parameter's value.</span></span>
+- <span data-ttu-id="00058-167">Если в команду добавляется **рекурсивный** параметр, то выходные данные рекурсии одинаковы, независимо от того, содержит ли параметр **пути** конечную звездочку ( `*` ).</span><span class="sxs-lookup"><span data-stu-id="00058-167">If the **Recurse** parameter is added to the command, the recursion output is the same whether or not the **Path** parameter includes a trailing asterisk (`*`).</span></span>
 
-### <span data-ttu-id="7e16b-168">Пример 6. получение разделов реестра из куста реестра</span><span class="sxs-lookup"><span data-stu-id="7e16b-168">Example 6: Get the registry keys from a registry hive</span></span>
+### <span data-ttu-id="00058-168">Пример 6. получение разделов реестра из куста реестра</span><span class="sxs-lookup"><span data-stu-id="00058-168">Example 6: Get the registry keys from a registry hive</span></span>
 
-<span data-ttu-id="7e16b-169">Этот пример получает все разделы реестра из `HKEY_LOCAL_MACHINE\HARDWARE` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-169">This example gets all the registry keys from `HKEY_LOCAL_MACHINE\HARDWARE`.</span></span>
+<span data-ttu-id="00058-169">Этот пример получает все разделы реестра из `HKEY_LOCAL_MACHINE\HARDWARE` .</span><span class="sxs-lookup"><span data-stu-id="00058-169">This example gets all the registry keys from `HKEY_LOCAL_MACHINE\HARDWARE`.</span></span>
 
-<span data-ttu-id="7e16b-170">`Get-ChildItem` использует параметр **path** для указания раздела реестра `HKLM:\HARDWARE` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-170">`Get-ChildItem` uses the **Path** parameter to specify the registry key `HKLM:\HARDWARE`.</span></span> <span data-ttu-id="7e16b-171">Путь к кусту и его верхний уровень разделов реестра отображаются в консоли PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7e16b-171">The hive's path and top level of registry keys are displayed in the PowerShell console.</span></span>
+<span data-ttu-id="00058-170">`Get-ChildItem` использует параметр **path** для указания раздела реестра `HKLM:\HARDWARE` .</span><span class="sxs-lookup"><span data-stu-id="00058-170">`Get-ChildItem` uses the **Path** parameter to specify the registry key `HKLM:\HARDWARE`.</span></span> <span data-ttu-id="00058-171">Путь к кусту и его верхний уровень разделов реестра отображаются в консоли PowerShell.</span><span class="sxs-lookup"><span data-stu-id="00058-171">The hive's path and top level of registry keys are displayed in the PowerShell console.</span></span>
 
-<span data-ttu-id="7e16b-172">Дополнительные сведения см. в разделе [about_Registry_Provider](../Microsoft.PowerShell.Core/About/about_Registry_Provider.md).</span><span class="sxs-lookup"><span data-stu-id="7e16b-172">For more information, see [about_Registry_Provider](../Microsoft.PowerShell.Core/About/about_Registry_Provider.md).</span></span>
+<span data-ttu-id="00058-172">Дополнительные сведения см. в разделе [about_Registry_Provider](../Microsoft.PowerShell.Core/About/about_Registry_Provider.md).</span><span class="sxs-lookup"><span data-stu-id="00058-172">For more information, see [about_Registry_Provider](../Microsoft.PowerShell.Core/About/about_Registry_Provider.md).</span></span>
 
 ```powershell
 Get-ChildItem -Path HKLM:\HARDWARE
@@ -262,23 +262,23 @@ ACPI
 RESOURCEMAP
 ```
 
-<span data-ttu-id="7e16b-173">Первая команда отображает содержимое `HKLM:\HARDWARE` раздела реестра.</span><span class="sxs-lookup"><span data-stu-id="7e16b-173">The first command shows the contents of the `HKLM:\HARDWARE` registry key.</span></span> <span data-ttu-id="7e16b-174">Параметр **Exclude** `Get-ChildItem` не возвращает никаких подразделов, начинающихся с `D*` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-174">The **Exclude** parameter tells `Get-ChildItem` not to return any subkeys that start with `D*`.</span></span> <span data-ttu-id="7e16b-175">В настоящее время параметр **Exclude** работает только для подразделов, а не для свойств элемента.</span><span class="sxs-lookup"><span data-stu-id="7e16b-175">Currently, the **Exclude** parameter only works on subkeys, not item properties.</span></span>
+<span data-ttu-id="00058-173">Первая команда отображает содержимое `HKLM:\HARDWARE` раздела реестра.</span><span class="sxs-lookup"><span data-stu-id="00058-173">The first command shows the contents of the `HKLM:\HARDWARE` registry key.</span></span> <span data-ttu-id="00058-174">Параметр **Exclude** `Get-ChildItem` не возвращает никаких подразделов, начинающихся с `D*` .</span><span class="sxs-lookup"><span data-stu-id="00058-174">The **Exclude** parameter tells `Get-ChildItem` not to return any subkeys that start with `D*`.</span></span> <span data-ttu-id="00058-175">В настоящее время параметр **Exclude** работает только для подразделов, а не для свойств элемента.</span><span class="sxs-lookup"><span data-stu-id="00058-175">Currently, the **Exclude** parameter only works on subkeys, not item properties.</span></span>
 
-### <span data-ttu-id="7e16b-176">Пример 7. получение всех сертификатов с помощью центра подписывания кода</span><span class="sxs-lookup"><span data-stu-id="7e16b-176">Example 7: Get all certificates with code-signing authority</span></span>
+### <span data-ttu-id="00058-176">Пример 7. получение всех сертификатов с помощью центра подписывания кода</span><span class="sxs-lookup"><span data-stu-id="00058-176">Example 7: Get all certificates with code-signing authority</span></span>
 
-<span data-ttu-id="7e16b-177">В этом примере каждый сертификат создается на диске **сертификата PowerShell:** с центром подписывания кода.</span><span class="sxs-lookup"><span data-stu-id="7e16b-177">This example gets each certificate in the PowerShell **Cert:** drive that has code-signing authority.</span></span>
+<span data-ttu-id="00058-177">В этом примере каждый сертификат создается на диске **сертификата PowerShell:** с центром подписывания кода.</span><span class="sxs-lookup"><span data-stu-id="00058-177">This example gets each certificate in the PowerShell **Cert:** drive that has code-signing authority.</span></span>
 
-<span data-ttu-id="7e16b-178">`Get-ChildItem`Командлет использует параметр **path** для указания **CERT:** provider.</span><span class="sxs-lookup"><span data-stu-id="7e16b-178">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the **Cert:** provider.</span></span> <span data-ttu-id="7e16b-179">Параметр **рекурсии** выполняет поиск в каталоге, указанном по **пути** и его подкаталогам.</span><span class="sxs-lookup"><span data-stu-id="7e16b-179">The **Recurse** parameter searches the directory specified by **Path** and its subdirectories.</span></span> <span data-ttu-id="7e16b-180">Параметр **CodeSigningCert** возвращает только сертификаты, имеющие центр подписывания кода.</span><span class="sxs-lookup"><span data-stu-id="7e16b-180">The **CodeSigningCert** parameter gets only certificates that have code-signing authority.</span></span>
+<span data-ttu-id="00058-178">`Get-ChildItem`Командлет использует параметр **path** для указания **CERT:** provider.</span><span class="sxs-lookup"><span data-stu-id="00058-178">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify the **Cert:** provider.</span></span> <span data-ttu-id="00058-179">Параметр **рекурсии** выполняет поиск в каталоге, указанном по **пути** и его подкаталогам.</span><span class="sxs-lookup"><span data-stu-id="00058-179">The **Recurse** parameter searches the directory specified by **Path** and its subdirectories.</span></span> <span data-ttu-id="00058-180">Параметр **CodeSigningCert** возвращает только сертификаты, имеющие центр подписывания кода.</span><span class="sxs-lookup"><span data-stu-id="00058-180">The **CodeSigningCert** parameter gets only certificates that have code-signing authority.</span></span>
 
 ```powershell
 Get-ChildItem -Path Cert:\* -Recurse -CodeSigningCert
 ```
 
-<span data-ttu-id="7e16b-181">Дополнительные сведения о поставщике сертификатов и диске CERT: см. в разделе [about_Certificate_Provider](../Microsoft.PowerShell.Security/About/about_Certificate_Provider.md).</span><span class="sxs-lookup"><span data-stu-id="7e16b-181">For more information about the Certificate provider and the Cert: drive, see [about_Certificate_Provider](../Microsoft.PowerShell.Security/About/about_Certificate_Provider.md).</span></span>
+<span data-ttu-id="00058-181">Дополнительные сведения о поставщике сертификатов и диске CERT: см. в разделе [about_Certificate_Provider](../Microsoft.PowerShell.Security/About/about_Certificate_Provider.md).</span><span class="sxs-lookup"><span data-stu-id="00058-181">For more information about the Certificate provider and the Cert: drive, see [about_Certificate_Provider](../Microsoft.PowerShell.Security/About/about_Certificate_Provider.md).</span></span>
 
-### <span data-ttu-id="7e16b-182">Пример 8. Получение элементов с помощью параметра Depth</span><span class="sxs-lookup"><span data-stu-id="7e16b-182">Example 8: Get items using the Depth parameter</span></span>
+### <span data-ttu-id="00058-182">Пример 8. Получение элементов с помощью параметра Depth</span><span class="sxs-lookup"><span data-stu-id="00058-182">Example 8: Get items using the Depth parameter</span></span>
 
-<span data-ttu-id="7e16b-183">В этом примере отображаются элементы в каталоге и его подкаталогах.</span><span class="sxs-lookup"><span data-stu-id="7e16b-183">This example displays the items in a directory and its subdirectories.</span></span> <span data-ttu-id="7e16b-184">Параметр **Depth** определяет число уровней подкаталогов, включаемых в рекурсию.</span><span class="sxs-lookup"><span data-stu-id="7e16b-184">The **Depth** parameter determines the number of subdirectory levels to include in the recursion.</span></span> <span data-ttu-id="7e16b-185">Пустые каталоги исключаются из выходных данных.</span><span class="sxs-lookup"><span data-stu-id="7e16b-185">Empty directories are excluded from the output.</span></span>
+<span data-ttu-id="00058-183">В этом примере отображаются элементы в каталоге и его подкаталогах.</span><span class="sxs-lookup"><span data-stu-id="00058-183">This example displays the items in a directory and its subdirectories.</span></span> <span data-ttu-id="00058-184">Параметр **Depth** определяет число уровней подкаталогов, включаемых в рекурсию.</span><span class="sxs-lookup"><span data-stu-id="00058-184">The **Depth** parameter determines the number of subdirectory levels to include in the recursion.</span></span> <span data-ttu-id="00058-185">Пустые каталоги исключаются из выходных данных.</span><span class="sxs-lookup"><span data-stu-id="00058-185">Empty directories are excluded from the output.</span></span>
 
 ```powershell
 Get-ChildItem -Path C:\Parent -Depth 2
@@ -307,19 +307,19 @@ d-----        2/14/2019     10:22                SubDir_Level3
 -a----        2/13/2019     08:55             26 file.txt
 ```
 
-<span data-ttu-id="7e16b-186">`Get-ChildItem`Командлет использует параметр **path** для указания **к:\парент** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-186">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify **C:\Parent** .</span></span> <span data-ttu-id="7e16b-187">Параметр **Depth** указывает два уровня рекурсии.</span><span class="sxs-lookup"><span data-stu-id="7e16b-187">The **Depth** parameter specifies two levels of recursion.</span></span> <span data-ttu-id="7e16b-188">`Get-ChildItem` Отображает содержимое каталога, указанного параметром **path** , и двух уровней вложенных каталогов.</span><span class="sxs-lookup"><span data-stu-id="7e16b-188">`Get-ChildItem` displays the contents of the directory specified by the **Path** parameter and the two levels of subdirectories.</span></span>
+<span data-ttu-id="00058-186">`Get-ChildItem`Командлет использует параметр **path** для указания **к:\парент**.</span><span class="sxs-lookup"><span data-stu-id="00058-186">The `Get-ChildItem` cmdlet uses the **Path** parameter to specify **C:\Parent**.</span></span> <span data-ttu-id="00058-187">Параметр **Depth** указывает два уровня рекурсии.</span><span class="sxs-lookup"><span data-stu-id="00058-187">The **Depth** parameter specifies two levels of recursion.</span></span> <span data-ttu-id="00058-188">`Get-ChildItem` Отображает содержимое каталога, указанного параметром **path** , и двух уровней вложенных каталогов.</span><span class="sxs-lookup"><span data-stu-id="00058-188">`Get-ChildItem` displays the contents of the directory specified by the **Path** parameter and the two levels of subdirectories.</span></span>
 
-### <span data-ttu-id="7e16b-189">Пример 9. Получение сведений о жесткой связи</span><span class="sxs-lookup"><span data-stu-id="7e16b-189">Example 9: Getting hard link information</span></span>
+### <span data-ttu-id="00058-189">Пример 9. Получение сведений о жесткой связи</span><span class="sxs-lookup"><span data-stu-id="00058-189">Example 9: Getting hard link information</span></span>
 
-<span data-ttu-id="7e16b-190">В PowerShell 6,2 для получения сведений о жесткой связи было добавлено альтернативное представление.</span><span class="sxs-lookup"><span data-stu-id="7e16b-190">In PowerShell 6.2, an alternate view was added to get hard link information.</span></span>
+<span data-ttu-id="00058-190">В PowerShell 6,2 для получения сведений о жесткой связи было добавлено альтернативное представление.</span><span class="sxs-lookup"><span data-stu-id="00058-190">In PowerShell 6.2, an alternate view was added to get hard link information.</span></span>
 
 ```powershell
 Get-ChildItem -Path C:\PathContainingHardLink | Format-Table -View childrenWithHardLink
 ```
 
-### <span data-ttu-id="7e16b-191">Пример 9. выходные данные для экспериментальной Псуниксфилестат функции</span><span class="sxs-lookup"><span data-stu-id="7e16b-191">Example 9: Output for experimental feature PSUnixFileStat</span></span>
+### <span data-ttu-id="00058-191">Пример 9. выходные данные для операционных систем, отличных от Windows</span><span class="sxs-lookup"><span data-stu-id="00058-191">Example 9: Output for Non-Windows Operating Systems</span></span>
 
-<span data-ttu-id="7e16b-192">В PowerShell 7 в системах UNIX экспериментальная функция **псуниксфилестат** предоставляет выходные данные, подобные UNIX:</span><span class="sxs-lookup"><span data-stu-id="7e16b-192">In PowerShell 7 on Unix systems, the experimental feature **PSUnixFileStat** provides Unix-like output:</span></span>
+<span data-ttu-id="00058-192">В PowerShell 7,1 в системах UNIX `Get-ChildItem` обеспечивается вывод, аналогичный UNIX:</span><span class="sxs-lookup"><span data-stu-id="00058-192">In PowerShell 7.1 on Unix systems, the `Get-ChildItem` provides Unix-like output:</span></span>
 
 ```powershell
 PS> Get-ChildItem /etc/r*
@@ -342,60 +342,63 @@ lrwxr-xr-x root wheel  11/8/2019 15:35   22 resolv.conf -> /private/var/run/reso
 -rw-r--r-- root wheel  8/24/2017 21:54  891 rtadvd.conf~previous
 ```
 
-<span data-ttu-id="7e16b-193">Новые свойства, которые теперь являются частью выходных данных:</span><span class="sxs-lookup"><span data-stu-id="7e16b-193">The new properties that are now part of the output are:</span></span>
+<span data-ttu-id="00058-193">Новые свойства, которые теперь являются частью выходных данных:</span><span class="sxs-lookup"><span data-stu-id="00058-193">The new properties that are now part of the output are:</span></span>
 
-- <span data-ttu-id="7e16b-194">**Униксмоде** — это разрешения файла, представленные в системе UNIX.</span><span class="sxs-lookup"><span data-stu-id="7e16b-194">**UnixMode** is the file permissions as represented on a Unix system</span></span>
-- <span data-ttu-id="7e16b-195">**Пользователь** является владельцем файла</span><span class="sxs-lookup"><span data-stu-id="7e16b-195">**User** is the file owner</span></span>
-- <span data-ttu-id="7e16b-196">**Группа** является владельцем группы</span><span class="sxs-lookup"><span data-stu-id="7e16b-196">**Group** is the group owner</span></span>
-- <span data-ttu-id="7e16b-197">**Размер** — это размер файла или каталога, представленный в системе UNIX.</span><span class="sxs-lookup"><span data-stu-id="7e16b-197">**Size** is the size of the file or directory as represented on a Unix system</span></span>
+- <span data-ttu-id="00058-194">**Униксмоде** — это разрешения файла, представленные в системе UNIX.</span><span class="sxs-lookup"><span data-stu-id="00058-194">**UnixMode** is the file permissions as represented on a Unix system</span></span>
+- <span data-ttu-id="00058-195">**Пользователь** является владельцем файла</span><span class="sxs-lookup"><span data-stu-id="00058-195">**User** is the file owner</span></span>
+- <span data-ttu-id="00058-196">**Группа** является владельцем группы</span><span class="sxs-lookup"><span data-stu-id="00058-196">**Group** is the group owner</span></span>
+- <span data-ttu-id="00058-197">**Размер** — это размер файла или каталога, представленный в системе UNIX.</span><span class="sxs-lookup"><span data-stu-id="00058-197">**Size** is the size of the file or directory as represented on a Unix system</span></span>
 
-## <span data-ttu-id="7e16b-198">Параметры</span><span class="sxs-lookup"><span data-stu-id="7e16b-198">Parameters</span></span>
+> [!NOTE]
+> <span data-ttu-id="00058-198">Этот компонент был перемещен из экспериментального в основной в PowerShell 7,1.</span><span class="sxs-lookup"><span data-stu-id="00058-198">This feature was moved from experimental to mainstream in PowerShell 7.1.</span></span>
 
-### <span data-ttu-id="7e16b-199">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="7e16b-199">-Attributes</span></span>
+## <span data-ttu-id="00058-199">Параметры</span><span class="sxs-lookup"><span data-stu-id="00058-199">Parameters</span></span>
 
-<span data-ttu-id="7e16b-200">Извлекает файлы и папки с указанными атрибутами.</span><span class="sxs-lookup"><span data-stu-id="7e16b-200">Gets files and folders with the specified attributes.</span></span> <span data-ttu-id="7e16b-201">Этот параметр поддерживает все атрибуты и позволяет указывать сложные сочетания атрибутов.</span><span class="sxs-lookup"><span data-stu-id="7e16b-201">This parameter supports all attributes and lets you specify complex combinations of attributes.</span></span>
+### <span data-ttu-id="00058-200">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="00058-200">-Attributes</span></span>
 
-<span data-ttu-id="7e16b-202">Например, чтобы извлечь зашифрованные или сжатые файлы, не являющиеся системными (которые не являются каталогами), введите следующее:</span><span class="sxs-lookup"><span data-stu-id="7e16b-202">For example, to get non-system files (not directories) that are encrypted or compressed, type:</span></span>
+<span data-ttu-id="00058-201">Извлекает файлы и папки с указанными атрибутами.</span><span class="sxs-lookup"><span data-stu-id="00058-201">Gets files and folders with the specified attributes.</span></span> <span data-ttu-id="00058-202">Этот параметр поддерживает все атрибуты и позволяет указывать сложные сочетания атрибутов.</span><span class="sxs-lookup"><span data-stu-id="00058-202">This parameter supports all attributes and lets you specify complex combinations of attributes.</span></span>
+
+<span data-ttu-id="00058-203">Например, чтобы извлечь зашифрованные или сжатые файлы, не являющиеся системными (которые не являются каталогами), введите следующее:</span><span class="sxs-lookup"><span data-stu-id="00058-203">For example, to get non-system files (not directories) that are encrypted or compressed, type:</span></span>
 
 `Get-ChildItem -Attributes !Directory+!System+Encrypted, !Directory+!System+Compressed`
 
-<span data-ttu-id="7e16b-203">Чтобы найти файлы и папки с часто используемыми атрибутами, используйте параметр **Attributes** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-203">To find files and folders with commonly used attributes, use the **Attributes** parameter.</span></span> <span data-ttu-id="7e16b-204">Или — **Каталог** параметров, **файл** , **скрытый** , **только для чтения** и **System** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-204">Or, the parameters **Directory** , **File** , **Hidden** , **ReadOnly** , and **System** .</span></span>
+<span data-ttu-id="00058-204">Чтобы найти файлы и папки с часто используемыми атрибутами, используйте параметр **Attributes** .</span><span class="sxs-lookup"><span data-stu-id="00058-204">To find files and folders with commonly used attributes, use the **Attributes** parameter.</span></span> <span data-ttu-id="00058-205">Или — **Каталог** параметров, **файл**, **скрытый**, **только для чтения** и **System**.</span><span class="sxs-lookup"><span data-stu-id="00058-205">Or, the parameters **Directory**, **File**, **Hidden**, **ReadOnly**, and **System**.</span></span>
 
-<span data-ttu-id="7e16b-205">Параметр **Attributes** поддерживает следующие свойства:</span><span class="sxs-lookup"><span data-stu-id="7e16b-205">The **Attributes** parameter supports the following properties:</span></span>
+<span data-ttu-id="00058-206">Параметр **Attributes** поддерживает следующие свойства:</span><span class="sxs-lookup"><span data-stu-id="00058-206">The **Attributes** parameter supports the following properties:</span></span>
 
-- <span data-ttu-id="7e16b-206">**Архив**</span><span class="sxs-lookup"><span data-stu-id="7e16b-206">**Archive**</span></span>
-- <span data-ttu-id="7e16b-207">**Compressed**</span><span class="sxs-lookup"><span data-stu-id="7e16b-207">**Compressed**</span></span>
-- <span data-ttu-id="7e16b-208">**Устройство**</span><span class="sxs-lookup"><span data-stu-id="7e16b-208">**Device**</span></span>
-- <span data-ttu-id="7e16b-209">**Каталог**</span><span class="sxs-lookup"><span data-stu-id="7e16b-209">**Directory**</span></span>
-- <span data-ttu-id="7e16b-210">**Зашифрована**</span><span class="sxs-lookup"><span data-stu-id="7e16b-210">**Encrypted**</span></span>
-- <span data-ttu-id="7e16b-211">**Скрыта**</span><span class="sxs-lookup"><span data-stu-id="7e16b-211">**Hidden**</span></span>
-- <span data-ttu-id="7e16b-212">**интегритистреам**</span><span class="sxs-lookup"><span data-stu-id="7e16b-212">**IntegrityStream**</span></span>
-- <span data-ttu-id="7e16b-213">**Обычный**</span><span class="sxs-lookup"><span data-stu-id="7e16b-213">**Normal**</span></span>
-- <span data-ttu-id="7e16b-214">**носкрубдата**</span><span class="sxs-lookup"><span data-stu-id="7e16b-214">**NoScrubData**</span></span>
-- <span data-ttu-id="7e16b-215">**нотконтентиндексед**</span><span class="sxs-lookup"><span data-stu-id="7e16b-215">**NotContentIndexed**</span></span>
-- <span data-ttu-id="7e16b-216">**Работа**</span><span class="sxs-lookup"><span data-stu-id="7e16b-216">**Offline**</span></span>
-- <span data-ttu-id="7e16b-217">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="7e16b-217">**ReadOnly**</span></span>
-- <span data-ttu-id="7e16b-218">**репарсепоинт**</span><span class="sxs-lookup"><span data-stu-id="7e16b-218">**ReparsePoint**</span></span>
-- <span data-ttu-id="7e16b-219">**спарсефиле**</span><span class="sxs-lookup"><span data-stu-id="7e16b-219">**SparseFile**</span></span>
-- <span data-ttu-id="7e16b-220">**Системные функции**</span><span class="sxs-lookup"><span data-stu-id="7e16b-220">**System**</span></span>
-- <span data-ttu-id="7e16b-221">**Временные процедуры**</span><span class="sxs-lookup"><span data-stu-id="7e16b-221">**Temporary**</span></span>
+- <span data-ttu-id="00058-207">**Архив**</span><span class="sxs-lookup"><span data-stu-id="00058-207">**Archive**</span></span>
+- <span data-ttu-id="00058-208">**Compressed**</span><span class="sxs-lookup"><span data-stu-id="00058-208">**Compressed**</span></span>
+- <span data-ttu-id="00058-209">**Устройство**</span><span class="sxs-lookup"><span data-stu-id="00058-209">**Device**</span></span>
+- <span data-ttu-id="00058-210">**Каталог**</span><span class="sxs-lookup"><span data-stu-id="00058-210">**Directory**</span></span>
+- <span data-ttu-id="00058-211">**Зашифрована**</span><span class="sxs-lookup"><span data-stu-id="00058-211">**Encrypted**</span></span>
+- <span data-ttu-id="00058-212">**Скрыта**</span><span class="sxs-lookup"><span data-stu-id="00058-212">**Hidden**</span></span>
+- <span data-ttu-id="00058-213">**интегритистреам**</span><span class="sxs-lookup"><span data-stu-id="00058-213">**IntegrityStream**</span></span>
+- <span data-ttu-id="00058-214">**Обычный**</span><span class="sxs-lookup"><span data-stu-id="00058-214">**Normal**</span></span>
+- <span data-ttu-id="00058-215">**носкрубдата**</span><span class="sxs-lookup"><span data-stu-id="00058-215">**NoScrubData**</span></span>
+- <span data-ttu-id="00058-216">**нотконтентиндексед**</span><span class="sxs-lookup"><span data-stu-id="00058-216">**NotContentIndexed**</span></span>
+- <span data-ttu-id="00058-217">**Автономная миграция**</span><span class="sxs-lookup"><span data-stu-id="00058-217">**Offline**</span></span>
+- <span data-ttu-id="00058-218">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="00058-218">**ReadOnly**</span></span>
+- <span data-ttu-id="00058-219">**репарсепоинт**</span><span class="sxs-lookup"><span data-stu-id="00058-219">**ReparsePoint**</span></span>
+- <span data-ttu-id="00058-220">**спарсефиле**</span><span class="sxs-lookup"><span data-stu-id="00058-220">**SparseFile**</span></span>
+- <span data-ttu-id="00058-221">**Система**</span><span class="sxs-lookup"><span data-stu-id="00058-221">**System**</span></span>
+- <span data-ttu-id="00058-222">**Временные процедуры**</span><span class="sxs-lookup"><span data-stu-id="00058-222">**Temporary**</span></span>
 
-<span data-ttu-id="7e16b-222">Описание этих атрибутов см. в описании [перечисления FileAttributes](/dotnet/api/system.io.fileattributes).</span><span class="sxs-lookup"><span data-stu-id="7e16b-222">For a description of these attributes, see the [FileAttributes Enumeration](/dotnet/api/system.io.fileattributes).</span></span>
+<span data-ttu-id="00058-223">Описание этих атрибутов см. в описании [перечисления FileAttributes](/dotnet/api/system.io.fileattributes).</span><span class="sxs-lookup"><span data-stu-id="00058-223">For a description of these attributes, see the [FileAttributes Enumeration](/dotnet/api/system.io.fileattributes).</span></span>
 
-<span data-ttu-id="7e16b-223">Чтобы объединить атрибуты, используйте следующие операторы:</span><span class="sxs-lookup"><span data-stu-id="7e16b-223">To combine attributes, use the following operators:</span></span>
+<span data-ttu-id="00058-224">Чтобы объединить атрибуты, используйте следующие операторы:</span><span class="sxs-lookup"><span data-stu-id="00058-224">To combine attributes, use the following operators:</span></span>
 
-- <span data-ttu-id="7e16b-224">`!` НЕДОСТАТОЧНО</span><span class="sxs-lookup"><span data-stu-id="7e16b-224">`!` (NOT)</span></span>
-- <span data-ttu-id="7e16b-225">`+` ПЕРЕТАСКИВАНИ</span><span class="sxs-lookup"><span data-stu-id="7e16b-225">`+` (AND)</span></span>
-- <span data-ttu-id="7e16b-226">`,` НИ</span><span class="sxs-lookup"><span data-stu-id="7e16b-226">`,` (OR)</span></span>
+- <span data-ttu-id="00058-225">`!` НЕДОСТАТОЧНО</span><span class="sxs-lookup"><span data-stu-id="00058-225">`!` (NOT)</span></span>
+- <span data-ttu-id="00058-226">`+` ПЕРЕТАСКИВАНИ</span><span class="sxs-lookup"><span data-stu-id="00058-226">`+` (AND)</span></span>
+- <span data-ttu-id="00058-227">`,` НИ</span><span class="sxs-lookup"><span data-stu-id="00058-227">`,` (OR)</span></span>
 
-<span data-ttu-id="7e16b-227">Не используйте пробелы между оператором и его атрибутом.</span><span class="sxs-lookup"><span data-stu-id="7e16b-227">Don't use spaces between an operator and its attribute.</span></span> <span data-ttu-id="7e16b-228">Пробелы принимаются после запятых.</span><span class="sxs-lookup"><span data-stu-id="7e16b-228">Spaces are accepted after commas.</span></span>
+<span data-ttu-id="00058-228">Не используйте пробелы между оператором и его атрибутом.</span><span class="sxs-lookup"><span data-stu-id="00058-228">Don't use spaces between an operator and its attribute.</span></span> <span data-ttu-id="00058-229">Пробелы принимаются после запятых.</span><span class="sxs-lookup"><span data-stu-id="00058-229">Spaces are accepted after commas.</span></span>
 
-<span data-ttu-id="7e16b-229">Для общих атрибутов используйте следующие сокращения:</span><span class="sxs-lookup"><span data-stu-id="7e16b-229">For common attributes, use the following abbreviations:</span></span>
+<span data-ttu-id="00058-230">Для общих атрибутов используйте следующие сокращения:</span><span class="sxs-lookup"><span data-stu-id="00058-230">For common attributes, use the following abbreviations:</span></span>
 
-- <span data-ttu-id="7e16b-230">`D` Каталоги</span><span class="sxs-lookup"><span data-stu-id="7e16b-230">`D` (Directory)</span></span>
-- <span data-ttu-id="7e16b-231">`H` Служеб</span><span class="sxs-lookup"><span data-stu-id="7e16b-231">`H` (Hidden)</span></span>
-- <span data-ttu-id="7e16b-232">`R` (Только для чтения)</span><span class="sxs-lookup"><span data-stu-id="7e16b-232">`R` (Read-only)</span></span>
-- <span data-ttu-id="7e16b-233">`S` Системой</span><span class="sxs-lookup"><span data-stu-id="7e16b-233">`S` (System)</span></span>
+- <span data-ttu-id="00058-231">`D` Каталоги</span><span class="sxs-lookup"><span data-stu-id="00058-231">`D` (Directory)</span></span>
+- <span data-ttu-id="00058-232">`H` Служеб</span><span class="sxs-lookup"><span data-stu-id="00058-232">`H` (Hidden)</span></span>
+- <span data-ttu-id="00058-233">`R` (Только для чтения)</span><span class="sxs-lookup"><span data-stu-id="00058-233">`R` (Read-only)</span></span>
+- <span data-ttu-id="00058-234">`S` Системой</span><span class="sxs-lookup"><span data-stu-id="00058-234">`S` (System)</span></span>
 
 ```yaml
 Type: System.Management.Automation.FlagsExpression`1[System.IO.FileAttributes]
@@ -410,14 +413,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-234">-Depth</span><span class="sxs-lookup"><span data-stu-id="7e16b-234">-Depth</span></span>
+### <span data-ttu-id="00058-235">-Depth</span><span class="sxs-lookup"><span data-stu-id="00058-235">-Depth</span></span>
 
-<span data-ttu-id="7e16b-235">Этот параметр был добавлен в PowerShell 5,0 и позволяет управлять глубиной рекурсии.</span><span class="sxs-lookup"><span data-stu-id="7e16b-235">This parameter was added in PowerShell 5.0 and enables you to control the depth of recursion.</span></span> <span data-ttu-id="7e16b-236">По умолчанию `Get-ChildItem` отображает содержимое родительского каталога.</span><span class="sxs-lookup"><span data-stu-id="7e16b-236">By default, `Get-ChildItem` displays the contents of the parent directory.</span></span> <span data-ttu-id="7e16b-237">Параметр **Depth** определяет количество уровней подкаталогов, включаемых в рекурсию, и отображает содержимое.</span><span class="sxs-lookup"><span data-stu-id="7e16b-237">The **Depth** parameter determines the number of subdirectory levels that are included in the recursion and displays the contents.</span></span>
+<span data-ttu-id="00058-236">Этот параметр был добавлен в PowerShell 5,0 и позволяет управлять глубиной рекурсии.</span><span class="sxs-lookup"><span data-stu-id="00058-236">This parameter was added in PowerShell 5.0 and enables you to control the depth of recursion.</span></span> <span data-ttu-id="00058-237">По умолчанию `Get-ChildItem` отображает содержимое родительского каталога.</span><span class="sxs-lookup"><span data-stu-id="00058-237">By default, `Get-ChildItem` displays the contents of the parent directory.</span></span> <span data-ttu-id="00058-238">Параметр **Depth** определяет количество уровней подкаталогов, включаемых в рекурсию, и отображает содержимое.</span><span class="sxs-lookup"><span data-stu-id="00058-238">The **Depth** parameter determines the number of subdirectory levels that are included in the recursion and displays the contents.</span></span>
 
-<span data-ttu-id="7e16b-238">Например, `Depth 2` включает каталог параметра **path** , первый уровень подкаталогов и второй уровень вложенных каталогов.</span><span class="sxs-lookup"><span data-stu-id="7e16b-238">For example, `Depth 2` includes the **Path** parameter's directory, first level of subdirectories, and second level of subdirectories.</span></span> <span data-ttu-id="7e16b-239">По умолчанию в выходные данные включаются имена каталогов и имен файлов.</span><span class="sxs-lookup"><span data-stu-id="7e16b-239">By default directory names and filenames are included in the output.</span></span>
+<span data-ttu-id="00058-239">Например, `Depth 2` включает каталог параметра **path** , первый уровень подкаталогов и второй уровень вложенных каталогов.</span><span class="sxs-lookup"><span data-stu-id="00058-239">For example, `Depth 2` includes the **Path** parameter's directory, first level of subdirectories, and second level of subdirectories.</span></span> <span data-ttu-id="00058-240">По умолчанию в выходные данные включаются имена каталогов и имен файлов.</span><span class="sxs-lookup"><span data-stu-id="00058-240">By default directory names and filenames are included in the output.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="7e16b-240">На компьютере Windows из PowerShell или **cmd.exe** можно отобразить графическое представление структуры каталогов с помощью команды **Tree.com** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-240">On a Windows computer from PowerShell or **cmd.exe** , you can display a graphical view of a directory structure with the **tree.com** command.</span></span>
+> <span data-ttu-id="00058-241">На компьютере Windows из PowerShell или **cmd.exe** можно отобразить графическое представление структуры каталогов с помощью команды **Tree.com** .</span><span class="sxs-lookup"><span data-stu-id="00058-241">On a Windows computer from PowerShell or **cmd.exe**, you can display a graphical view of a directory structure with the **tree.com** command.</span></span>
 
 ```yaml
 Type: System.UInt32
@@ -431,9 +434,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-241">-Directory</span><span class="sxs-lookup"><span data-stu-id="7e16b-241">-Directory</span></span>
+### <span data-ttu-id="00058-242">-Directory</span><span class="sxs-lookup"><span data-stu-id="00058-242">-Directory</span></span>
 
-<span data-ttu-id="7e16b-242">Чтобы получить список каталогов, используйте параметр **Directory** или параметр **Attributes** со свойством **Directory** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-242">To get a list of directories, use the **Directory** parameter or the **Attributes** parameter with the **Directory** property.</span></span> <span data-ttu-id="7e16b-243">Можно использовать параметр **рекурсии** с **каталогом** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-243">You can use the **Recurse** parameter with **Directory** .</span></span>
+<span data-ttu-id="00058-243">Чтобы получить список каталогов, используйте параметр **Directory** или параметр **Attributes** со свойством **Directory** .</span><span class="sxs-lookup"><span data-stu-id="00058-243">To get a list of directories, use the **Directory** parameter or the **Attributes** parameter with the **Directory** property.</span></span> <span data-ttu-id="00058-244">Можно использовать параметр **рекурсии** с **каталогом**.</span><span class="sxs-lookup"><span data-stu-id="00058-244">You can use the **Recurse** parameter with **Directory**.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -447,12 +450,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-244">-Exclude</span><span class="sxs-lookup"><span data-stu-id="7e16b-244">-Exclude</span></span>
+### <span data-ttu-id="00058-245">-Exclude</span><span class="sxs-lookup"><span data-stu-id="00058-245">-Exclude</span></span>
 
-<span data-ttu-id="7e16b-245">Указывает свойство или свойства, исключаемые этим командлетом из операции, в виде массива строк.</span><span class="sxs-lookup"><span data-stu-id="7e16b-245">Specifies, as a string array, a property or property that this cmdlet excludes from the operation.</span></span>
-<span data-ttu-id="7e16b-246">Значение этого параметра определяет параметр **Path** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-246">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="7e16b-247">Введите элемент пути или шаблон, например `*.txt` или `A*` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-247">Enter a path element or pattern, such as `*.txt` or `A*`.</span></span> <span data-ttu-id="7e16b-248">Принимаются символы-шаблоны.</span><span class="sxs-lookup"><span data-stu-id="7e16b-248">Wildcard characters are accepted.</span></span>
+<span data-ttu-id="00058-246">Указывает свойство или свойства, исключаемые этим командлетом из операции, в виде массива строк.</span><span class="sxs-lookup"><span data-stu-id="00058-246">Specifies, as a string array, a property or property that this cmdlet excludes from the operation.</span></span>
+<span data-ttu-id="00058-247">Значение этого параметра определяет параметр **Path**.</span><span class="sxs-lookup"><span data-stu-id="00058-247">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="00058-248">Введите элемент пути или шаблон, например `*.txt` или `A*` .</span><span class="sxs-lookup"><span data-stu-id="00058-248">Enter a path element or pattern, such as `*.txt` or `A*`.</span></span> <span data-ttu-id="00058-249">Принимаются символы-шаблоны.</span><span class="sxs-lookup"><span data-stu-id="00058-249">Wildcard characters are accepted.</span></span>
 
-<span data-ttu-id="7e16b-249">Конечная звездочка ( `*` ) в параметре **path** является необязательной.</span><span class="sxs-lookup"><span data-stu-id="7e16b-249">A trailing asterisk (`*`) in the **Path** parameter is optional.</span></span> <span data-ttu-id="7e16b-250">Например, `-Path C:\Test\Logs` или `-Path C:\Test\Logs\*`.</span><span class="sxs-lookup"><span data-stu-id="7e16b-250">For example, `-Path C:\Test\Logs` or `-Path C:\Test\Logs\*`.</span></span> <span data-ttu-id="7e16b-251">Если включена конечная звездочка ( `*` ), команда выполняет рекурсивный путь к подкаталогам параметра **path** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-251">If a trailing asterisk (`*`) is included, the command recurses into the **Path** parameter's subdirectories.</span></span> <span data-ttu-id="7e16b-252">Без звездочки ( `*` ) отображается содержимое параметра **path** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-252">Without the asterisk (`*`), the contents of the **Path** parameter are displayed.</span></span> <span data-ttu-id="7e16b-253">Дополнительные сведения см. в примере 5 и в разделе "Примечания".</span><span class="sxs-lookup"><span data-stu-id="7e16b-253">More details are included in Example 5 and the Notes section.</span></span>
+<span data-ttu-id="00058-250">Конечная звездочка ( `*` ) в параметре **path** является необязательной.</span><span class="sxs-lookup"><span data-stu-id="00058-250">A trailing asterisk (`*`) in the **Path** parameter is optional.</span></span> <span data-ttu-id="00058-251">Например, `-Path C:\Test\Logs` или `-Path C:\Test\Logs\*`.</span><span class="sxs-lookup"><span data-stu-id="00058-251">For example, `-Path C:\Test\Logs` or `-Path C:\Test\Logs\*`.</span></span> <span data-ttu-id="00058-252">Если включена конечная звездочка ( `*` ), команда выполняет рекурсивный путь к подкаталогам параметра **path** .</span><span class="sxs-lookup"><span data-stu-id="00058-252">If a trailing asterisk (`*`) is included, the command recurses into the **Path** parameter's subdirectories.</span></span> <span data-ttu-id="00058-253">Без звездочки ( `*` ) отображается содержимое параметра **path** .</span><span class="sxs-lookup"><span data-stu-id="00058-253">Without the asterisk (`*`), the contents of the **Path** parameter are displayed.</span></span> <span data-ttu-id="00058-254">Дополнительные сведения см. в примере 5 и в разделе "Примечания".</span><span class="sxs-lookup"><span data-stu-id="00058-254">More details are included in Example 5 and the Notes section.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -466,9 +469,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="7e16b-254">-File</span><span class="sxs-lookup"><span data-stu-id="7e16b-254">-File</span></span>
+### <span data-ttu-id="00058-255">-File</span><span class="sxs-lookup"><span data-stu-id="00058-255">-File</span></span>
 
-<span data-ttu-id="7e16b-255">Чтобы получить список файлов, используйте параметр **File** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-255">To get a list of files, use the **File** parameter.</span></span> <span data-ttu-id="7e16b-256">Параметр **рекурсии** можно использовать с **File** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-256">You can use the **Recurse** parameter with **File** .</span></span>
+<span data-ttu-id="00058-256">Чтобы получить список файлов, используйте параметр **File** .</span><span class="sxs-lookup"><span data-stu-id="00058-256">To get a list of files, use the **File** parameter.</span></span> <span data-ttu-id="00058-257">Параметр **рекурсии** можно использовать с **File**.</span><span class="sxs-lookup"><span data-stu-id="00058-257">You can use the **Recurse** parameter with **File**.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -482,9 +485,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-257">-Filter</span><span class="sxs-lookup"><span data-stu-id="7e16b-257">-Filter</span></span>
+### <span data-ttu-id="00058-258">-Filter</span><span class="sxs-lookup"><span data-stu-id="00058-258">-Filter</span></span>
 
-<span data-ttu-id="7e16b-258">Задает фильтр для уточнения параметра **пути** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-258">Specifies a filter to qualify the **Path** parameter.</span></span> <span data-ttu-id="7e16b-259">Поставщик [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) является единственным установленным поставщиком PowerShell, поддерживающим фильтры.</span><span class="sxs-lookup"><span data-stu-id="7e16b-259">The [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) provider is the only installed PowerShell provider that supports filters.</span></span> <span data-ttu-id="7e16b-260">Фильтры более эффективны, чем другие параметры.</span><span class="sxs-lookup"><span data-stu-id="7e16b-260">Filters are more efficient than other parameters.</span></span> <span data-ttu-id="7e16b-261">Поставщик применяет фильтр, когда командлет получает объекты, вместо того, чтобы PowerShell отфильтровывает объекты после их извлечения.</span><span class="sxs-lookup"><span data-stu-id="7e16b-261">The provider applies filter when the cmdlet gets the objects rather than having PowerShell filter the objects after they're retrieved.</span></span> <span data-ttu-id="7e16b-262">Строка фильтра передается в API .NET для перечисления файлов.</span><span class="sxs-lookup"><span data-stu-id="7e16b-262">The filter string is passed to the .NET API to enumerate files.</span></span> <span data-ttu-id="7e16b-263">API поддерживает только `*` `?` подстановочные знаки и.</span><span class="sxs-lookup"><span data-stu-id="7e16b-263">The API only supports `*` and `?` wildcards.</span></span>
+<span data-ttu-id="00058-259">Задает фильтр для уточнения параметра **пути** .</span><span class="sxs-lookup"><span data-stu-id="00058-259">Specifies a filter to qualify the **Path** parameter.</span></span> <span data-ttu-id="00058-260">Поставщик [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) является единственным установленным поставщиком PowerShell, поддерживающим фильтры.</span><span class="sxs-lookup"><span data-stu-id="00058-260">The [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) provider is the only installed PowerShell provider that supports filters.</span></span> <span data-ttu-id="00058-261">Фильтры более эффективны, чем другие параметры.</span><span class="sxs-lookup"><span data-stu-id="00058-261">Filters are more efficient than other parameters.</span></span> <span data-ttu-id="00058-262">Поставщик применяет фильтр, когда командлет получает объекты, вместо того, чтобы PowerShell отфильтровывает объекты после их извлечения.</span><span class="sxs-lookup"><span data-stu-id="00058-262">The provider applies filter when the cmdlet gets the objects rather than having PowerShell filter the objects after they're retrieved.</span></span> <span data-ttu-id="00058-263">Строка фильтра передается в API .NET для перечисления файлов.</span><span class="sxs-lookup"><span data-stu-id="00058-263">The filter string is passed to the .NET API to enumerate files.</span></span> <span data-ttu-id="00058-264">API поддерживает только `*` `?` подстановочные знаки и.</span><span class="sxs-lookup"><span data-stu-id="00058-264">The API only supports `*` and `?` wildcards.</span></span>
 
 ```yaml
 Type: System.String
@@ -498,11 +501,11 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="7e16b-264">-Фолловсимлинк</span><span class="sxs-lookup"><span data-stu-id="7e16b-264">-FollowSymlink</span></span>
+### <span data-ttu-id="00058-265">-Фолловсимлинк</span><span class="sxs-lookup"><span data-stu-id="00058-265">-FollowSymlink</span></span>
 
-<span data-ttu-id="7e16b-265">По умолчанию `Get-ChildItem` командлет отображает символические ссылки на каталоги, найденные во время рекурсии, но не выполняет их рекурсивный переход.</span><span class="sxs-lookup"><span data-stu-id="7e16b-265">By default, the `Get-ChildItem` cmdlet displays symbolic links to directories found during recursion, but doesn't recurse into them.</span></span> <span data-ttu-id="7e16b-266">Используйте параметр **фолловсимлинк** для поиска в каталогах, предназначенных для этих символьных ссылок.</span><span class="sxs-lookup"><span data-stu-id="7e16b-266">Use the **FollowSymlink** parameter to search the directories that target those symbolic links.</span></span> <span data-ttu-id="7e16b-267">**Фолловсимлинк** является динамическим параметром и поддерживается только в поставщике **FileSystem** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-267">The **FollowSymlink** is a dynamic parameter and is supported only in the **FileSystem** provider.</span></span>
+<span data-ttu-id="00058-266">По умолчанию `Get-ChildItem` командлет отображает символические ссылки на каталоги, найденные во время рекурсии, но не выполняет их рекурсивный переход.</span><span class="sxs-lookup"><span data-stu-id="00058-266">By default, the `Get-ChildItem` cmdlet displays symbolic links to directories found during recursion, but doesn't recurse into them.</span></span> <span data-ttu-id="00058-267">Используйте параметр **фолловсимлинк** для поиска в каталогах, предназначенных для этих символьных ссылок.</span><span class="sxs-lookup"><span data-stu-id="00058-267">Use the **FollowSymlink** parameter to search the directories that target those symbolic links.</span></span> <span data-ttu-id="00058-268">**Фолловсимлинк** является динамическим параметром и поддерживается только в поставщике **FileSystem** .</span><span class="sxs-lookup"><span data-stu-id="00058-268">The **FollowSymlink** is a dynamic parameter and is supported only in the **FileSystem** provider.</span></span>
 
-<span data-ttu-id="7e16b-268">Этот параметр появился в PowerShell 6,0.</span><span class="sxs-lookup"><span data-stu-id="7e16b-268">This parameter was introduced in PowerShell 6.0.</span></span>
+<span data-ttu-id="00058-269">Этот параметр появился в PowerShell 6,0.</span><span class="sxs-lookup"><span data-stu-id="00058-269">This parameter was introduced in PowerShell 6.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -516,9 +519,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-269">-Force</span><span class="sxs-lookup"><span data-stu-id="7e16b-269">-Force</span></span>
+### <span data-ttu-id="00058-270">-Force</span><span class="sxs-lookup"><span data-stu-id="00058-270">-Force</span></span>
 
-<span data-ttu-id="7e16b-270">Позволяет командлету получать элементы, к которым не может получить доступ пользователь, например скрытый или системный файл.</span><span class="sxs-lookup"><span data-stu-id="7e16b-270">Allows the cmdlet to get items that otherwise can't be accessed by the user, such as hidden or system files.</span></span> <span data-ttu-id="7e16b-271">Параметр **Force** не переопределяет ограничения безопасности.</span><span class="sxs-lookup"><span data-stu-id="7e16b-271">The **Force** parameter doesn't override security restrictions.</span></span> <span data-ttu-id="7e16b-272">Реализация зависит от поставщика.</span><span class="sxs-lookup"><span data-stu-id="7e16b-272">Implementation varies among providers.</span></span> <span data-ttu-id="7e16b-273">Дополнительные сведения см. в разделе [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span><span class="sxs-lookup"><span data-stu-id="7e16b-273">For more information, see [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span></span>
+<span data-ttu-id="00058-271">Позволяет командлету получать элементы, к которым не может получить доступ пользователь, например скрытый или системный файл.</span><span class="sxs-lookup"><span data-stu-id="00058-271">Allows the cmdlet to get items that otherwise can't be accessed by the user, such as hidden or system files.</span></span> <span data-ttu-id="00058-272">Параметр **Force** не переопределяет ограничения безопасности.</span><span class="sxs-lookup"><span data-stu-id="00058-272">The **Force** parameter doesn't override security restrictions.</span></span> <span data-ttu-id="00058-273">Реализация зависит от поставщика.</span><span class="sxs-lookup"><span data-stu-id="00058-273">Implementation varies among providers.</span></span> <span data-ttu-id="00058-274">Дополнительные сведения см. в разделе [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span><span class="sxs-lookup"><span data-stu-id="00058-274">For more information, see [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -532,9 +535,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-274">-Hidden</span><span class="sxs-lookup"><span data-stu-id="7e16b-274">-Hidden</span></span>
+### <span data-ttu-id="00058-275">-Hidden</span><span class="sxs-lookup"><span data-stu-id="00058-275">-Hidden</span></span>
 
-<span data-ttu-id="7e16b-275">Чтобы получить только скрытые элементы, используйте параметр **Hidden** или **Attributes** со свойством **Hidden** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-275">To get only hidden items, use the **Hidden** parameter or the **Attributes** parameter with the **Hidden** property.</span></span> <span data-ttu-id="7e16b-276">По умолчанию `Get-ChildItem` скрытые элементы не отображаются.</span><span class="sxs-lookup"><span data-stu-id="7e16b-276">By default, `Get-ChildItem` doesn't display hidden items.</span></span> <span data-ttu-id="7e16b-277">Для получения скрытых элементов используйте параметр **Force** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-277">Use the **Force** parameter to get hidden items.</span></span>
+<span data-ttu-id="00058-276">Чтобы получить только скрытые элементы, используйте параметр **Hidden** или **Attributes** со свойством **Hidden** .</span><span class="sxs-lookup"><span data-stu-id="00058-276">To get only hidden items, use the **Hidden** parameter or the **Attributes** parameter with the **Hidden** property.</span></span> <span data-ttu-id="00058-277">По умолчанию `Get-ChildItem` скрытые элементы не отображаются.</span><span class="sxs-lookup"><span data-stu-id="00058-277">By default, `Get-ChildItem` doesn't display hidden items.</span></span> <span data-ttu-id="00058-278">Для получения скрытых элементов используйте параметр **Force** .</span><span class="sxs-lookup"><span data-stu-id="00058-278">Use the **Force** parameter to get hidden items.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -548,9 +551,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-278">-Include</span><span class="sxs-lookup"><span data-stu-id="7e16b-278">-Include</span></span>
+### <span data-ttu-id="00058-279">-Include</span><span class="sxs-lookup"><span data-stu-id="00058-279">-Include</span></span>
 
-<span data-ttu-id="7e16b-279">Указывает в виде массива строк элемент или элементы, которые этот командлет включает в операцию.</span><span class="sxs-lookup"><span data-stu-id="7e16b-279">Specifies, as a string array, an item or items that this cmdlet includes in the operation.</span></span> <span data-ttu-id="7e16b-280">Значение этого параметра определяет параметр **Path** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-280">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="7e16b-281">Введите элемент пути или шаблон, например `"*.txt"` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-281">Enter a path element or pattern, such as `"*.txt"`.</span></span> <span data-ttu-id="7e16b-282">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="7e16b-282">Wildcard characters are permitted.</span></span> <span data-ttu-id="7e16b-283">Параметр **include** действует только в том случае, если команда включает содержимое элемента, например `C:\Windows\*` , где подстановочный знак указывает содержимое `C:\Windows` каталога.</span><span class="sxs-lookup"><span data-stu-id="7e16b-283">The **Include** parameter is effective only when the command includes the contents of an item, such as `C:\Windows\*`, where the wildcard character specifies the contents of the `C:\Windows` directory.</span></span>
+<span data-ttu-id="00058-280">Указывает в виде массива строк элемент или элементы, которые этот командлет включает в операцию.</span><span class="sxs-lookup"><span data-stu-id="00058-280">Specifies, as a string array, an item or items that this cmdlet includes in the operation.</span></span> <span data-ttu-id="00058-281">Значение этого параметра определяет параметр **Path**.</span><span class="sxs-lookup"><span data-stu-id="00058-281">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="00058-282">Введите элемент пути или шаблон, например `"*.txt"` .</span><span class="sxs-lookup"><span data-stu-id="00058-282">Enter a path element or pattern, such as `"*.txt"`.</span></span> <span data-ttu-id="00058-283">Можно использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="00058-283">Wildcard characters are permitted.</span></span> <span data-ttu-id="00058-284">Параметр **include** действует только в том случае, если команда включает содержимое элемента, например `C:\Windows\*` , где подстановочный знак указывает содержимое `C:\Windows` каталога.</span><span class="sxs-lookup"><span data-stu-id="00058-284">The **Include** parameter is effective only when the command includes the contents of an item, such as `C:\Windows\*`, where the wildcard character specifies the contents of the `C:\Windows` directory.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -564,11 +567,11 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="7e16b-284">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="7e16b-284">-LiteralPath</span></span>
+### <span data-ttu-id="00058-285">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="00058-285">-LiteralPath</span></span>
 
-<span data-ttu-id="7e16b-285">Указывает путь к одному или нескольким расположениям.</span><span class="sxs-lookup"><span data-stu-id="7e16b-285">Specifies a path to one or more locations.</span></span> <span data-ttu-id="7e16b-286">Значение **LiteralPath** используется точно так же, как типизировано.</span><span class="sxs-lookup"><span data-stu-id="7e16b-286">The value of **LiteralPath** is used exactly as it's typed.</span></span> <span data-ttu-id="7e16b-287">Никакие символы не интерпретируются как знаки подстановки.</span><span class="sxs-lookup"><span data-stu-id="7e16b-287">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="7e16b-288">Если путь содержит escape-символы, заключите его в одинарные кавычки.</span><span class="sxs-lookup"><span data-stu-id="7e16b-288">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="7e16b-289">Одинарные кавычки указывают PowerShell не интерпретировать символы как escape-последовательности.</span><span class="sxs-lookup"><span data-stu-id="7e16b-289">Single quotation marks tell PowerShell to not interpret any characters as escape sequences.</span></span>
+<span data-ttu-id="00058-286">Указывает путь к одному или нескольким расположениям.</span><span class="sxs-lookup"><span data-stu-id="00058-286">Specifies a path to one or more locations.</span></span> <span data-ttu-id="00058-287">Значение **LiteralPath** используется точно так же, как типизировано.</span><span class="sxs-lookup"><span data-stu-id="00058-287">The value of **LiteralPath** is used exactly as it's typed.</span></span> <span data-ttu-id="00058-288">Никакие символы не интерпретируются как знаки подстановки.</span><span class="sxs-lookup"><span data-stu-id="00058-288">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="00058-289">Если путь содержит escape-символы, заключите его в одинарные кавычки.</span><span class="sxs-lookup"><span data-stu-id="00058-289">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="00058-290">Одинарные кавычки указывают PowerShell не интерпретировать символы как escape-последовательности.</span><span class="sxs-lookup"><span data-stu-id="00058-290">Single quotation marks tell PowerShell to not interpret any characters as escape sequences.</span></span>
 
-<span data-ttu-id="7e16b-290">Дополнительные сведения см. в разделе [about_Quoting_Rules](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md).</span><span class="sxs-lookup"><span data-stu-id="7e16b-290">For more information, see [about_Quoting_Rules](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md).</span></span>
+<span data-ttu-id="00058-291">Дополнительные сведения см. в разделе [about_Quoting_Rules](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md).</span><span class="sxs-lookup"><span data-stu-id="00058-291">For more information, see [about_Quoting_Rules](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md).</span></span>
 
 ```yaml
 Type: System.String[]
@@ -582,9 +585,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-291">-Name</span><span class="sxs-lookup"><span data-stu-id="7e16b-291">-Name</span></span>
+### <span data-ttu-id="00058-292">-Name</span><span class="sxs-lookup"><span data-stu-id="00058-292">-Name</span></span>
 
-<span data-ttu-id="7e16b-292">Возвращает только имена элементов в расположении.</span><span class="sxs-lookup"><span data-stu-id="7e16b-292">Gets only the names of the items in the location.</span></span> <span data-ttu-id="7e16b-293">Выходные данные представляют собой строковый объект, который может быть отправлен по конвейеру другим командам.</span><span class="sxs-lookup"><span data-stu-id="7e16b-293">The output is a string object that can be sent down the pipeline to other commands.</span></span> <span data-ttu-id="7e16b-294">Разрешено использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="7e16b-294">Wildcards are permitted.</span></span>
+<span data-ttu-id="00058-293">Возвращает только имена элементов в расположении.</span><span class="sxs-lookup"><span data-stu-id="00058-293">Gets only the names of the items in the location.</span></span> <span data-ttu-id="00058-294">Выходные данные представляют собой строковый объект, который может быть отправлен по конвейеру другим командам.</span><span class="sxs-lookup"><span data-stu-id="00058-294">The output is a string object that can be sent down the pipeline to other commands.</span></span> <span data-ttu-id="00058-295">Разрешено использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="00058-295">Wildcards are permitted.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -598,9 +601,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="7e16b-295">-Path</span><span class="sxs-lookup"><span data-stu-id="7e16b-295">-Path</span></span>
+### <span data-ttu-id="00058-296">-Path</span><span class="sxs-lookup"><span data-stu-id="00058-296">-Path</span></span>
 
-<span data-ttu-id="7e16b-296">Указывает путь к одному или нескольким расположениям.</span><span class="sxs-lookup"><span data-stu-id="7e16b-296">Specifies a path to one or more locations.</span></span> <span data-ttu-id="7e16b-297">Подстановочные знаки принимаются.</span><span class="sxs-lookup"><span data-stu-id="7e16b-297">Wildcards are accepted.</span></span> <span data-ttu-id="7e16b-298">Расположение по умолчанию — текущий каталог ( `.` ).</span><span class="sxs-lookup"><span data-stu-id="7e16b-298">The default location is the current directory (`.`).</span></span>
+<span data-ttu-id="00058-297">Указывает путь к одному или нескольким расположениям.</span><span class="sxs-lookup"><span data-stu-id="00058-297">Specifies a path to one or more locations.</span></span> <span data-ttu-id="00058-298">Подстановочные знаки принимаются.</span><span class="sxs-lookup"><span data-stu-id="00058-298">Wildcards are accepted.</span></span> <span data-ttu-id="00058-299">Расположение по умолчанию — текущий каталог ( `.` ).</span><span class="sxs-lookup"><span data-stu-id="00058-299">The default location is the current directory (`.`).</span></span>
 
 ```yaml
 Type: System.String[]
@@ -614,9 +617,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="7e16b-299">-ReadOnly</span><span class="sxs-lookup"><span data-stu-id="7e16b-299">-ReadOnly</span></span>
+### <span data-ttu-id="00058-300">-ReadOnly</span><span class="sxs-lookup"><span data-stu-id="00058-300">-ReadOnly</span></span>
 
-<span data-ttu-id="7e16b-300">Чтобы получить только элементы, доступные только для чтения, используйте параметр **ReadOnly** или свойство **Attributes** **ReadOnly** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-300">To get only read-only items, use the **ReadOnly** parameter or the **Attributes** parameter **ReadOnly** property.</span></span>
+<span data-ttu-id="00058-301">Чтобы получить только элементы, доступные только для чтения, используйте параметр **ReadOnly** или свойство **Attributes** **ReadOnly** .</span><span class="sxs-lookup"><span data-stu-id="00058-301">To get only read-only items, use the **ReadOnly** parameter or the **Attributes** parameter **ReadOnly** property.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -630,9 +633,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-301">-Recurse</span><span class="sxs-lookup"><span data-stu-id="7e16b-301">-Recurse</span></span>
+### <span data-ttu-id="00058-302">-Recurse</span><span class="sxs-lookup"><span data-stu-id="00058-302">-Recurse</span></span>
 
-<span data-ttu-id="7e16b-302">Получает элементы в указанных расположениях и всех дочерних элементах расположений.</span><span class="sxs-lookup"><span data-stu-id="7e16b-302">Gets the items in the specified locations and in all child items of the locations.</span></span>
+<span data-ttu-id="00058-303">Получает элементы в указанных расположениях и всех дочерних элементах расположений.</span><span class="sxs-lookup"><span data-stu-id="00058-303">Gets the items in the specified locations and in all child items of the locations.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -646,9 +649,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-303">-System</span><span class="sxs-lookup"><span data-stu-id="7e16b-303">-System</span></span>
+### <span data-ttu-id="00058-304">-System</span><span class="sxs-lookup"><span data-stu-id="00058-304">-System</span></span>
 
-<span data-ttu-id="7e16b-304">Возвращает только системные файлы и каталоги.</span><span class="sxs-lookup"><span data-stu-id="7e16b-304">Gets only system files and directories.</span></span> <span data-ttu-id="7e16b-305">Чтобы получить только системные файлы и папки, используйте свойство **System системного параметра или** параметра **System** **Attributes** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-305">To get only system files and folders, use the **System** parameter or **Attributes** parameter **System** property.</span></span>
+<span data-ttu-id="00058-305">Возвращает только системные файлы и каталоги.</span><span class="sxs-lookup"><span data-stu-id="00058-305">Gets only system files and directories.</span></span> <span data-ttu-id="00058-306">Чтобы получить только системные файлы и папки, используйте свойство **System системного параметра или** параметра  **Attributes** .</span><span class="sxs-lookup"><span data-stu-id="00058-306">To get only system files and folders, use the **System** parameter or **Attributes** parameter **System** property.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -662,54 +665,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7e16b-306">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="7e16b-306">CommonParameters</span></span>
+### <span data-ttu-id="00058-307">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="00058-307">CommonParameters</span></span>
 
-<span data-ttu-id="7e16b-307">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7e16b-307">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7e16b-308">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="7e16b-308">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="00058-308">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="00058-308">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="00058-309">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="00058-309">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="7e16b-309">Входные данные</span><span class="sxs-lookup"><span data-stu-id="7e16b-309">INPUTS</span></span>
+## <span data-ttu-id="00058-310">Входные данные</span><span class="sxs-lookup"><span data-stu-id="00058-310">INPUTS</span></span>
 
-### <span data-ttu-id="7e16b-310">System.String</span><span class="sxs-lookup"><span data-stu-id="7e16b-310">System.String</span></span>
+### <span data-ttu-id="00058-311">System.String</span><span class="sxs-lookup"><span data-stu-id="00058-311">System.String</span></span>
 
-<span data-ttu-id="7e16b-311">Можно передать строку, содержащую путь, в `Get-ChildItem` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-311">You can pipe a string that contains a path to `Get-ChildItem`.</span></span>
+<span data-ttu-id="00058-312">Можно передать строку, содержащую путь, в `Get-ChildItem` .</span><span class="sxs-lookup"><span data-stu-id="00058-312">You can pipe a string that contains a path to `Get-ChildItem`.</span></span>
 
-## <span data-ttu-id="7e16b-312">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="7e16b-312">OUTPUTS</span></span>
+## <span data-ttu-id="00058-313">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="00058-313">OUTPUTS</span></span>
 
-### <span data-ttu-id="7e16b-313">System.Object</span><span class="sxs-lookup"><span data-stu-id="7e16b-313">System.Object</span></span>
+### <span data-ttu-id="00058-314">System.Object</span><span class="sxs-lookup"><span data-stu-id="00058-314">System.Object</span></span>
 
-<span data-ttu-id="7e16b-314">Тип `Get-ChildItem` возвращаемого объекта определяется объектами в пути к диску поставщика.</span><span class="sxs-lookup"><span data-stu-id="7e16b-314">The type of object that `Get-ChildItem` returns is determined by the objects in the provider drive path.</span></span>
+<span data-ttu-id="00058-315">Тип `Get-ChildItem` возвращаемого объекта определяется объектами в пути к диску поставщика.</span><span class="sxs-lookup"><span data-stu-id="00058-315">The type of object that `Get-ChildItem` returns is determined by the objects in the provider drive path.</span></span>
 
-### <span data-ttu-id="7e16b-315">System.String</span><span class="sxs-lookup"><span data-stu-id="7e16b-315">System.String</span></span>
+### <span data-ttu-id="00058-316">System.String</span><span class="sxs-lookup"><span data-stu-id="00058-316">System.String</span></span>
 
-<span data-ttu-id="7e16b-316">При использовании параметра **Name** `Get-ChildItem` возвращает имена объектов в виде строк.</span><span class="sxs-lookup"><span data-stu-id="7e16b-316">If you use the **Name** parameter, `Get-ChildItem` returns the object names as strings.</span></span>
+<span data-ttu-id="00058-317">При использовании параметра **Name** `Get-ChildItem` возвращает имена объектов в виде строк.</span><span class="sxs-lookup"><span data-stu-id="00058-317">If you use the **Name** parameter, `Get-ChildItem` returns the object names as strings.</span></span>
 
-## <span data-ttu-id="7e16b-317">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="7e16b-317">NOTES</span></span>
+## <span data-ttu-id="00058-318">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="00058-318">NOTES</span></span>
 
-- <span data-ttu-id="7e16b-318">`Get-ChildItem` может выполняться с помощью любого встроенного псевдонима,, `ls` `dir` и `gci` .</span><span class="sxs-lookup"><span data-stu-id="7e16b-318">`Get-ChildItem` can be run using any of the built-in aliases, `ls`, `dir`, and `gci`.</span></span> <span data-ttu-id="7e16b-319">Дополнительные сведения см. в разделе [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).</span><span class="sxs-lookup"><span data-stu-id="7e16b-319">For more information, see [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).</span></span>
-- <span data-ttu-id="7e16b-320">`Get-ChildItem` не получает скрытые элементы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7e16b-320">`Get-ChildItem` doesn't get hidden items by default.</span></span> <span data-ttu-id="7e16b-321">Чтобы получить скрытые элементы, используйте параметр **Force** .</span><span class="sxs-lookup"><span data-stu-id="7e16b-321">To get hidden items, use the **Force** parameter.</span></span>
-- <span data-ttu-id="7e16b-322">`Get-ChildItem`Командлет предназначен для работы с данными, предоставляемыми любым поставщиком.</span><span class="sxs-lookup"><span data-stu-id="7e16b-322">The `Get-ChildItem` cmdlet is designed to work with the data exposed by any provider.</span></span> <span data-ttu-id="7e16b-323">Чтобы вывести список поставщиков, доступных в данном сеансе, введите командлет `Get-PSProvider`.</span><span class="sxs-lookup"><span data-stu-id="7e16b-323">To list the providers available in your session, type `Get-PSProvider`.</span></span>
-  <span data-ttu-id="7e16b-324">Дополнительные сведения см. в разделе [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span><span class="sxs-lookup"><span data-stu-id="7e16b-324">For more information, see [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span></span>
+- <span data-ttu-id="00058-319">`Get-ChildItem` может выполняться с помощью любого встроенного псевдонима,, `ls` `dir` и `gci` .</span><span class="sxs-lookup"><span data-stu-id="00058-319">`Get-ChildItem` can be run using any of the built-in aliases, `ls`, `dir`, and `gci`.</span></span> <span data-ttu-id="00058-320">Дополнительные сведения см. в разделе [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).</span><span class="sxs-lookup"><span data-stu-id="00058-320">For more information, see [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).</span></span>
+- <span data-ttu-id="00058-321">`Get-ChildItem` не получает скрытые элементы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="00058-321">`Get-ChildItem` doesn't get hidden items by default.</span></span> <span data-ttu-id="00058-322">Чтобы получить скрытые элементы, используйте параметр **Force**.</span><span class="sxs-lookup"><span data-stu-id="00058-322">To get hidden items, use the **Force** parameter.</span></span>
+- <span data-ttu-id="00058-323">`Get-ChildItem`Командлет предназначен для работы с данными, предоставляемыми любым поставщиком.</span><span class="sxs-lookup"><span data-stu-id="00058-323">The `Get-ChildItem` cmdlet is designed to work with the data exposed by any provider.</span></span> <span data-ttu-id="00058-324">Чтобы вывести список поставщиков, доступных в данном сеансе, введите командлет `Get-PSProvider`.</span><span class="sxs-lookup"><span data-stu-id="00058-324">To list the providers available in your session, type `Get-PSProvider`.</span></span>
+  <span data-ttu-id="00058-325">Дополнительные сведения см. в разделе [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span><span class="sxs-lookup"><span data-stu-id="00058-325">For more information, see [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span></span>
 
-## <span data-ttu-id="7e16b-325">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="7e16b-325">RELATED LINKS</span></span>
+## <span data-ttu-id="00058-326">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="00058-326">RELATED LINKS</span></span>
 
-[<span data-ttu-id="7e16b-326">about_Certificate_Provider</span><span class="sxs-lookup"><span data-stu-id="7e16b-326">about_Certificate_Provider</span></span>](../Microsoft.PowerShell.Security/About/about_Certificate_Provider.md)
+[<span data-ttu-id="00058-327">about_Certificate_Provider</span><span class="sxs-lookup"><span data-stu-id="00058-327">about_Certificate_Provider</span></span>](../Microsoft.PowerShell.Security/About/about_Certificate_Provider.md)
 
-[<span data-ttu-id="7e16b-327">about_Providers</span><span class="sxs-lookup"><span data-stu-id="7e16b-327">about_Providers</span></span>](../Microsoft.PowerShell.Core/About/about_Providers.md)
+[<span data-ttu-id="00058-328">about_Providers</span><span class="sxs-lookup"><span data-stu-id="00058-328">about_Providers</span></span>](../Microsoft.PowerShell.Core/About/about_Providers.md)
 
-[<span data-ttu-id="7e16b-328">about_Quoting_Rules</span><span class="sxs-lookup"><span data-stu-id="7e16b-328">about_Quoting_Rules</span></span>](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md)
+[<span data-ttu-id="00058-329">about_Quoting_Rules</span><span class="sxs-lookup"><span data-stu-id="00058-329">about_Quoting_Rules</span></span>](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md)
 
-[<span data-ttu-id="7e16b-329">about_Registry_Provider</span><span class="sxs-lookup"><span data-stu-id="7e16b-329">about_Registry_Provider</span></span>](../Microsoft.PowerShell.Core/About/about_Registry_Provider.md)
+[<span data-ttu-id="00058-330">about_Registry_Provider</span><span class="sxs-lookup"><span data-stu-id="00058-330">about_Registry_Provider</span></span>](../Microsoft.PowerShell.Core/About/about_Registry_Provider.md)
 
-[<span data-ttu-id="7e16b-330">ForEach-Object</span><span class="sxs-lookup"><span data-stu-id="7e16b-330">ForEach-Object</span></span>](../Microsoft.PowerShell.Core/ForEach-Object.md)
+[<span data-ttu-id="00058-331">ForEach-Object</span><span class="sxs-lookup"><span data-stu-id="00058-331">ForEach-Object</span></span>](../Microsoft.PowerShell.Core/ForEach-Object.md)
 
-[<span data-ttu-id="7e16b-331">Get-Alias</span><span class="sxs-lookup"><span data-stu-id="7e16b-331">Get-Alias</span></span>](../Microsoft.PowerShell.Utility/Get-Alias.md)
+[<span data-ttu-id="00058-332">Get-Alias</span><span class="sxs-lookup"><span data-stu-id="00058-332">Get-Alias</span></span>](../Microsoft.PowerShell.Utility/Get-Alias.md)
 
-[<span data-ttu-id="7e16b-332">Get-Item</span><span class="sxs-lookup"><span data-stu-id="7e16b-332">Get-Item</span></span>](Get-Item.md)
+[<span data-ttu-id="00058-333">Get-Item</span><span class="sxs-lookup"><span data-stu-id="00058-333">Get-Item</span></span>](Get-Item.md)
 
-[<span data-ttu-id="7e16b-333">Get-Location</span><span class="sxs-lookup"><span data-stu-id="7e16b-333">Get-Location</span></span>](Get-Location.md)
+[<span data-ttu-id="00058-334">Get-Location</span><span class="sxs-lookup"><span data-stu-id="00058-334">Get-Location</span></span>](Get-Location.md)
 
-[<span data-ttu-id="7e16b-334">Get-Process</span><span class="sxs-lookup"><span data-stu-id="7e16b-334">Get-Process</span></span>](Get-Process.md)
+[<span data-ttu-id="00058-335">Get-Process</span><span class="sxs-lookup"><span data-stu-id="00058-335">Get-Process</span></span>](Get-Process.md)
 
-[<span data-ttu-id="7e16b-335">Get-PSProvider</span><span class="sxs-lookup"><span data-stu-id="7e16b-335">Get-PSProvider</span></span>](Get-PSProvider.md)
+[<span data-ttu-id="00058-336">Get-PSProvider</span><span class="sxs-lookup"><span data-stu-id="00058-336">Get-PSProvider</span></span>](Get-PSProvider.md)
 
-[<span data-ttu-id="7e16b-336">Split-Path</span><span class="sxs-lookup"><span data-stu-id="7e16b-336">Split-Path</span></span>](Split-Path.md)
+[<span data-ttu-id="00058-337">Split-Path</span><span class="sxs-lookup"><span data-stu-id="00058-337">Split-Path</span></span>](Split-Path.md)
 
