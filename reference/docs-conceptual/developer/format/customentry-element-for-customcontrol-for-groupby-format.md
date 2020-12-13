@@ -1,20 +1,22 @@
 ---
-title: Элемент Кустоментри для ошибка customcontrol для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 4df8e5b96868b3814c6d84fa329950bb5345ef6e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)
+description: Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)
+ms.openlocfilehash: 0df2ff9c15308939e6d2552f51e2961bdabc59fb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785920"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646065"
 ---
-# <a name="customentry-element-for-customcontrol-for-groupby-format"></a><span data-ttu-id="0c66c-102">Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="0c66c-102">CustomEntry Element for CustomControl for GroupBy (Format)</span></span>
+# <a name="customentry-element-for-customcontrol-for-groupby-format"></a><span data-ttu-id="b26ae-103">Элемент CustomEntry для элемента CustomControl для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="b26ae-103">CustomEntry Element for CustomControl for GroupBy (Format)</span></span>
 
-<span data-ttu-id="0c66c-103">Предоставляет определение элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0c66c-103">Provides a definition of the control.</span></span> <span data-ttu-id="0c66c-104">Этот элемент используется при определении того, как отображается новая группа объектов.</span><span class="sxs-lookup"><span data-stu-id="0c66c-104">This element is used when defining how a new group of objects is displayed.</span></span>
+<span data-ttu-id="b26ae-104">Предоставляет определение элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b26ae-104">Provides a definition of the control.</span></span> <span data-ttu-id="b26ae-105">Этот элемент используется при определении того, как отображается новая группа объектов.</span><span class="sxs-lookup"><span data-stu-id="b26ae-105">This element is used when defining how a new group of objects is displayed.</span></span>
 
-<span data-ttu-id="0c66c-105">Элемент конфигурации (Format) Виевдефинитионс элемент (Format) элемент представления (формат) элемент GroupBy для элемента Ошибка customcontrol представления (Format) для элемента Кустоментриес для GroupBy (Format) Кустоментри для ошибка customcontrol для ошибка customcontrol для GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="0c66c-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) GroupBy Element for View (Format) CustomControl Element for GroupBy (Format) CustomEntries Element for CustomControl for GroupBy (Format) CustomEntry Element for CustomControl for GroupBy (Format)</span></span>
+<span data-ttu-id="b26ae-106">Элемент конфигурации (Format) Виевдефинитионс элемент (Format) элемент представления (формат) элемент GroupBy для элемента Ошибка customcontrol представления (Format) для элемента Кустоментриес для GroupBy (Format) Кустоментри для ошибка customcontrol для ошибка customcontrol для GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="b26ae-106">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) GroupBy Element for View (Format) CustomControl Element for GroupBy (Format) CustomEntries Element for CustomControl for GroupBy (Format) CustomEntry Element for CustomControl for GroupBy (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="0c66c-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0c66c-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b26ae-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b26ae-107">Syntax</span></span>
 
 ```xml
 <CustomEntry>
@@ -23,35 +25,35 @@ ms.locfileid: "87785920"
 </CustomEntry>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="0c66c-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="0c66c-107">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="b26ae-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="b26ae-108">Attributes and Elements</span></span>
 
-<span data-ttu-id="0c66c-108">В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы `CustomEntry` элемента.</span><span class="sxs-lookup"><span data-stu-id="0c66c-108">The following sections describe attributes, child elements, and the parent elements of the `CustomEntry` element.</span></span>
+<span data-ttu-id="b26ae-109">В следующих разделах описываются атрибуты, дочерние элементы и родительские элементы `CustomEntry` элемента.</span><span class="sxs-lookup"><span data-stu-id="b26ae-109">The following sections describe attributes, child elements, and the parent elements of the `CustomEntry` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="0c66c-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="0c66c-109">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="b26ae-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b26ae-110">Attributes</span></span>
 
-<span data-ttu-id="0c66c-110">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="0c66c-110">None.</span></span>
+<span data-ttu-id="b26ae-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="b26ae-111">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="0c66c-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="0c66c-111">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="b26ae-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b26ae-112">Child Elements</span></span>
 
-|<span data-ttu-id="0c66c-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="0c66c-112">Element</span></span>|<span data-ttu-id="0c66c-113">Описание</span><span class="sxs-lookup"><span data-stu-id="0c66c-113">Description</span></span>|
+|<span data-ttu-id="b26ae-113">Элемент</span><span class="sxs-lookup"><span data-stu-id="b26ae-113">Element</span></span>|<span data-ttu-id="b26ae-114">Описание</span><span class="sxs-lookup"><span data-stu-id="b26ae-114">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="0c66c-114">Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="0c66c-114">EntrySelectedBy Element for CustomEntry for GroupBy (Format)</span></span>](./entryselectedby-element-for-customentry-for-groupby-format.md)|<span data-ttu-id="0c66c-115">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="0c66c-115">Optional element.</span></span><br /><br /> <span data-ttu-id="0c66c-116">Определяет типы .NET, которые используют это определение элемента управления или условие, которое должно существовать, чтобы использовать это определение.</span><span class="sxs-lookup"><span data-stu-id="0c66c-116">Defines the .NET types that use this control definition or the condition that must exist for this definition to be used.</span></span>|
-|[<span data-ttu-id="0c66c-117">Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="0c66c-117">CustomItem Element for CustomEntry for GroupBy (Format)</span></span>](./customitem-element-for-customentry-for-groupby-format.md)|<span data-ttu-id="0c66c-118">Обязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="0c66c-118">Required element.</span></span><br /><br /> <span data-ttu-id="0c66c-119">Определяет, как элемент управления отображает данные.</span><span class="sxs-lookup"><span data-stu-id="0c66c-119">Defines how the control displays the data.</span></span>|
+|[<span data-ttu-id="b26ae-115">Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="b26ae-115">EntrySelectedBy Element for CustomEntry for GroupBy (Format)</span></span>](./entryselectedby-element-for-customentry-for-groupby-format.md)|<span data-ttu-id="b26ae-116">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="b26ae-116">Optional element.</span></span><br /><br /> <span data-ttu-id="b26ae-117">Определяет типы .NET, которые используют это определение элемента управления или условие, которое должно существовать, чтобы использовать это определение.</span><span class="sxs-lookup"><span data-stu-id="b26ae-117">Defines the .NET types that use this control definition or the condition that must exist for this definition to be used.</span></span>|
+|[<span data-ttu-id="b26ae-118">Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="b26ae-118">CustomItem Element for CustomEntry for GroupBy (Format)</span></span>](./customitem-element-for-customentry-for-groupby-format.md)|<span data-ttu-id="b26ae-119">Обязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="b26ae-119">Required element.</span></span><br /><br /> <span data-ttu-id="b26ae-120">Определяет, как элемент управления отображает данные.</span><span class="sxs-lookup"><span data-stu-id="b26ae-120">Defines how the control displays the data.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="0c66c-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="0c66c-120">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="b26ae-121">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="b26ae-121">Parent Elements</span></span>
 
-|<span data-ttu-id="0c66c-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="0c66c-121">Element</span></span>|<span data-ttu-id="0c66c-122">Описание</span><span class="sxs-lookup"><span data-stu-id="0c66c-122">Description</span></span>|
+|<span data-ttu-id="b26ae-122">Элемент</span><span class="sxs-lookup"><span data-stu-id="b26ae-122">Element</span></span>|<span data-ttu-id="b26ae-123">Описание</span><span class="sxs-lookup"><span data-stu-id="b26ae-123">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="0c66c-123">Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="0c66c-123">CustomEntries Element for CustomControl for GroupBy (Format)</span></span>](./customentries-element-for-customcontrol-for-groupby-format.md)|<span data-ttu-id="0c66c-124">Предоставляет определения для элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0c66c-124">Provides the definitions for the control.</span></span>|
+|[<span data-ttu-id="b26ae-124">Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="b26ae-124">CustomEntries Element for CustomControl for GroupBy (Format)</span></span>](./customentries-element-for-customcontrol-for-groupby-format.md)|<span data-ttu-id="b26ae-125">Предоставляет определения для элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b26ae-125">Provides the definitions for the control.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="0c66c-125">Примечания</span><span class="sxs-lookup"><span data-stu-id="0c66c-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b26ae-126">Комментарии</span><span class="sxs-lookup"><span data-stu-id="b26ae-126">Remarks</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0c66c-126">См. также</span><span class="sxs-lookup"><span data-stu-id="0c66c-126">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b26ae-127">См. также:</span><span class="sxs-lookup"><span data-stu-id="b26ae-127">See Also</span></span>
 
-[<span data-ttu-id="0c66c-127">Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="0c66c-127">EntrySelectedBy Element for CustomEntry for GroupBy (Format)</span></span>](./entryselectedby-element-for-customentry-for-groupby-format.md)
+[<span data-ttu-id="b26ae-128">Элемент EntrySelectedBy для элемента CustomEntry для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="b26ae-128">EntrySelectedBy Element for CustomEntry for GroupBy (Format)</span></span>](./entryselectedby-element-for-customentry-for-groupby-format.md)
 
-[<span data-ttu-id="0c66c-128">Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="0c66c-128">CustomItem Element for CustomEntry for GroupBy (Format)</span></span>](./customitem-element-for-customentry-for-groupby-format.md)
+[<span data-ttu-id="b26ae-129">Элемент CustomItem для элемента CustomEntry для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="b26ae-129">CustomItem Element for CustomEntry for GroupBy (Format)</span></span>](./customitem-element-for-customentry-for-groupby-format.md)
 
-[<span data-ttu-id="0c66c-129">Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="0c66c-129">CustomEntries Element for CustomControl for GroupBy (Format)</span></span>](./customentries-element-for-customcontrol-for-groupby-format.md)
+[<span data-ttu-id="b26ae-130">Элемент CustomEntries для элемента CustomControl для элемента GroupBy (формат)</span><span class="sxs-lookup"><span data-stu-id="b26ae-130">CustomEntries Element for CustomControl for GroupBy (Format)</span></span>](./customentries-element-for-customcontrol-for-groupby-format.md)
 
-[<span data-ttu-id="0c66c-130">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="0c66c-130">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="b26ae-131">Написание файла форматирования PowerShell</span><span class="sxs-lookup"><span data-stu-id="b26ae-131">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
