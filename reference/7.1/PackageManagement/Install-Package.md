@@ -7,21 +7,21 @@ ms.date: 05/23/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/install-package?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Package
-ms.openlocfilehash: 7a99c4c00f809c2ec418618b2c1322d2552d1120
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 32d3f86a78001fce896f8cf282eb6854f31a54ab
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228558"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891393"
 ---
-# <span data-ttu-id="32849-103">Install-Package</span><span class="sxs-lookup"><span data-stu-id="32849-103">Install-Package</span></span>
+# <span data-ttu-id="4bc36-103">Install-Package</span><span class="sxs-lookup"><span data-stu-id="4bc36-103">Install-Package</span></span>
 
-## <span data-ttu-id="32849-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="32849-104">SYNOPSIS</span></span>
-<span data-ttu-id="32849-105">Устанавливает один или несколько пакетов программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="32849-105">Installs one or more software packages.</span></span>
+## <span data-ttu-id="4bc36-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="4bc36-104">SYNOPSIS</span></span>
+<span data-ttu-id="4bc36-105">Устанавливает один или несколько пакетов программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="4bc36-105">Installs one or more software packages.</span></span>
 
-## <span data-ttu-id="32849-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="32849-106">SYNTAX</span></span>
+## <span data-ttu-id="4bc36-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="4bc36-106">SYNTAX</span></span>
 
-### <span data-ttu-id="32849-107">Паккажебисеарч (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="32849-107">PackageBySearch (Default)</span></span>
+### <span data-ttu-id="4bc36-107">Паккажебисеарч (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="4bc36-107">PackageBySearch (Default)</span></span>
 
 ```
 Install-Package [-Name] <String[]> [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -30,7 +30,7 @@ Install-Package [-Name] <String[]> [-RequiredVersion <String>] [-MinimumVersion 
  [-ProviderName <String[]>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="32849-108">паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="32849-108">PackageByInputObject</span></span>
+### <span data-ttu-id="4bc36-108">паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="4bc36-108">PackageByInputObject</span></span>
 
 ```
 Install-Package [-InputObject] <SoftwareIdentity[]> [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -38,7 +38,7 @@ Install-Package [-InputObject] <SoftwareIdentity[]> [-Credential <PSCredential>]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="32849-109">NuGet: Паккажебисеарч</span><span class="sxs-lookup"><span data-stu-id="32849-109">NuGet:PackageBySearch</span></span>
+### <span data-ttu-id="4bc36-109">NuGet: Паккажебисеарч</span><span class="sxs-lookup"><span data-stu-id="4bc36-109">NuGet:PackageBySearch</span></span>
 
 ```
 Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
@@ -48,7 +48,7 @@ Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <P
  [-SkipDependencies] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="32849-110">NuGet: Паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="32849-110">NuGet:PackageByInputObject</span></span>
+### <span data-ttu-id="4bc36-110">NuGet: Паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="4bc36-110">NuGet:PackageByInputObject</span></span>
 
 ```
 Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
@@ -58,7 +58,7 @@ Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <P
  [-SkipDependencies] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="32849-111">PowerShellGet: Паккажебисеарч</span><span class="sxs-lookup"><span data-stu-id="32849-111">PowerShellGet:PackageBySearch</span></span>
+### <span data-ttu-id="4bc36-111">PowerShellGet: Паккажебисеарч</span><span class="sxs-lookup"><span data-stu-id="4bc36-111">PowerShellGet:PackageBySearch</span></span>
 
 ```
 Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
@@ -70,7 +70,7 @@ Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <P
  [-SkipPublisherCheck] [-InstallUpdate] [-NoPathUpdate] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="32849-112">PowerShellGet: Паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="32849-112">PowerShellGet:PackageByInputObject</span></span>
+### <span data-ttu-id="4bc36-112">PowerShellGet: Паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="4bc36-112">PowerShellGet:PackageByInputObject</span></span>
 
 ```
 Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
@@ -82,63 +82,47 @@ Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <P
  [-SkipPublisherCheck] [-InstallUpdate] [-NoPathUpdate] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="32849-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="32849-113">DESCRIPTION</span></span>
+## <span data-ttu-id="4bc36-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="4bc36-113">DESCRIPTION</span></span>
 
-<span data-ttu-id="32849-114">`Install-Package`Командлет устанавливает один или несколько пакетов программного обеспечения на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="32849-114">The `Install-Package` cmdlet installs one or more software packages on the local computer.</span></span> <span data-ttu-id="32849-115">При наличии нескольких источников программного обеспечения используйте `Get-PackageProvider` и `Get-PackageSource` для просмотра сведений о поставщиках.</span><span class="sxs-lookup"><span data-stu-id="32849-115">If you have multiple software sources, use `Get-PackageProvider` and `Get-PackageSource` to display details about your providers.</span></span>
+<span data-ttu-id="4bc36-114">`Install-Package`Командлет устанавливает один или несколько пакетов программного обеспечения на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="4bc36-114">The `Install-Package` cmdlet installs one or more software packages on the local computer.</span></span> <span data-ttu-id="4bc36-115">При наличии нескольких источников программного обеспечения используйте `Get-PackageProvider` и `Get-PackageSource` для просмотра сведений о поставщиках.</span><span class="sxs-lookup"><span data-stu-id="4bc36-115">If you have multiple software sources, use `Get-PackageProvider` and `Get-PackageSource` to display details about your providers.</span></span>
 
-## <span data-ttu-id="32849-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="32849-116">EXAMPLES</span></span>
+## <span data-ttu-id="4bc36-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="4bc36-116">EXAMPLES</span></span>
 
-### <span data-ttu-id="32849-117">Пример 1. Установка пакета по имени пакета</span><span class="sxs-lookup"><span data-stu-id="32849-117">Example 1: Install a package by package name</span></span>
+### <span data-ttu-id="4bc36-117">Пример 1. Установка пакета по имени пакета</span><span class="sxs-lookup"><span data-stu-id="4bc36-117">Example 1: Install a package by package name</span></span>
 
-<span data-ttu-id="32849-118">`Install-Package`Командлет устанавливает пакет программного обеспечения и его зависимости.</span><span class="sxs-lookup"><span data-stu-id="32849-118">The `Install-Package` cmdlet installs a software package and its dependencies.</span></span>
+<span data-ttu-id="4bc36-118">`Install-Package`Командлет устанавливает пакет программного обеспечения и его зависимости.</span><span class="sxs-lookup"><span data-stu-id="4bc36-118">The `Install-Package` cmdlet installs a software package and its dependencies.</span></span>
 
 ```
 PS> Install-Package -Name NuGet.Core -Source MyNuGet -Credential Contoso\TestUser
 ```
 
-<span data-ttu-id="32849-119">`Install-Package` использует параметры для указания **имени** и **источника** пакетов.</span><span class="sxs-lookup"><span data-stu-id="32849-119">`Install-Package` uses parameters to specify the packages **Name** and **Source** .</span></span> <span data-ttu-id="32849-120">Параметр **Credential** использует учетную запись пользователя домена с разрешениями на установку пакетов.</span><span class="sxs-lookup"><span data-stu-id="32849-120">The **Credential** parameter uses a domain user account with permissions to install packages.</span></span> <span data-ttu-id="32849-121">Команда запрашивает пароль учетной записи пользователя.</span><span class="sxs-lookup"><span data-stu-id="32849-121">The command prompts you for the user account password.</span></span>
+<span data-ttu-id="4bc36-119">`Install-Package` использует параметры для указания **имени** и **источника** пакетов.</span><span class="sxs-lookup"><span data-stu-id="4bc36-119">`Install-Package` uses parameters to specify the packages **Name** and **Source**.</span></span> <span data-ttu-id="4bc36-120">Параметр **Credential** использует учетную запись пользователя домена с разрешениями на установку пакетов.</span><span class="sxs-lookup"><span data-stu-id="4bc36-120">The **Credential** parameter uses a domain user account with permissions to install packages.</span></span> <span data-ttu-id="4bc36-121">Команда запрашивает пароль учетной записи пользователя.</span><span class="sxs-lookup"><span data-stu-id="4bc36-121">The command prompts you for the user account password.</span></span>
 
-### <span data-ttu-id="32849-122">Пример 2. Использование Find-Package для установки пакета</span><span class="sxs-lookup"><span data-stu-id="32849-122">Example 2: Use Find-Package to install a package</span></span>
+### <span data-ttu-id="4bc36-122">Пример 2. Использование Find-Package для установки пакета</span><span class="sxs-lookup"><span data-stu-id="4bc36-122">Example 2: Use Find-Package to install a package</span></span>
 
-<span data-ttu-id="32849-123">В этом примере объект, возвращенный, `Find-Package` отправляется по конвейеру и устанавливается `Install-Package` .</span><span class="sxs-lookup"><span data-stu-id="32849-123">In this example, the object returned by `Find-Package` is sent down the pipeline and installed by `Install-Package`.</span></span>
+<span data-ttu-id="4bc36-123">В этом примере объект, возвращенный, `Find-Package` отправляется по конвейеру и устанавливается `Install-Package` .</span><span class="sxs-lookup"><span data-stu-id="4bc36-123">In this example, the object returned by `Find-Package` is sent down the pipeline and installed by `Install-Package`.</span></span>
 
 ```
 PS> Find-Package -Name NuGet.Core -Source MyNuGet | Install-Package
 ```
 
-<span data-ttu-id="32849-124">`Find-Package` использует параметры **Name** и **Source** для нахождение пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-124">`Find-Package` uses the **Name** and **Source** parameters to locate a package.</span></span> <span data-ttu-id="32849-125">Объект отправляется по конвейеру и `Install-Package` устанавливает пакет на локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="32849-125">The object is sent down the pipeline and `Install-Package` installs the package on the local computer.</span></span>
+<span data-ttu-id="4bc36-124">`Find-Package` использует параметры **Name** и **Source** для нахождение пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-124">`Find-Package` uses the **Name** and **Source** parameters to locate a package.</span></span> <span data-ttu-id="4bc36-125">Объект отправляется по конвейеру и `Install-Package` устанавливает пакет на локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="4bc36-125">The object is sent down the pipeline and `Install-Package` installs the package on the local computer.</span></span>
 
-### <span data-ttu-id="32849-126">Пример 3. Установка пакетов путем указания диапазона версий</span><span class="sxs-lookup"><span data-stu-id="32849-126">Example 3: Install packages by specifying a range of versions</span></span>
+### <span data-ttu-id="4bc36-126">Пример 3. Установка пакетов путем указания диапазона версий</span><span class="sxs-lookup"><span data-stu-id="4bc36-126">Example 3: Install packages by specifying a range of versions</span></span>
 
-<span data-ttu-id="32849-127">`Install-Package` использует параметры **MinimumVersion** и **MaximumVersion** для указания диапазона версий программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="32849-127">`Install-Package` uses the **MinimumVersion** and **MaximumVersion** parameters to specify a range of software versions.</span></span>
+<span data-ttu-id="4bc36-127">`Install-Package` использует параметры **MinimumVersion** и **MaximumVersion** для указания диапазона версий программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="4bc36-127">`Install-Package` uses the **MinimumVersion** and **MaximumVersion** parameters to specify a range of software versions.</span></span>
 
 ```
 PS> Install-Package -Name NuGet.Core -Source MyNuGet -MinimumVersion 2.8.0 -MaximumVersion 2.9.0
 ```
 
-<span data-ttu-id="32849-128">`Install-Package` использует параметры **Name** и **Source** для поиска пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-128">`Install-Package` uses the **Name** and **Source** parameters to find a package.</span></span> <span data-ttu-id="32849-129">Параметры **MinimumVersion** и **MaximumVersion** задают диапазон версий программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="32849-129">The **MinimumVersion** and **MaximumVersion** parameters specify a range of software versions.</span></span> <span data-ttu-id="32849-130">Устанавливается самая высокая версия в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="32849-130">The highest version in the range is installed.</span></span>
+<span data-ttu-id="4bc36-128">`Install-Package` использует параметры **Name** и **Source** для поиска пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-128">`Install-Package` uses the **Name** and **Source** parameters to find a package.</span></span> <span data-ttu-id="4bc36-129">Параметры **MinimumVersion** и **MaximumVersion** задают диапазон версий программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="4bc36-129">The **MinimumVersion** and **MaximumVersion** parameters specify a range of software versions.</span></span> <span data-ttu-id="4bc36-130">Устанавливается самая высокая версия в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="4bc36-130">The highest version in the range is installed.</span></span>
 
-## <span data-ttu-id="32849-131">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="32849-131">PARAMETERS</span></span>
+## <span data-ttu-id="4bc36-131">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="4bc36-131">PARAMETERS</span></span>
 
-### <span data-ttu-id="32849-132">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="32849-132">-AcceptLicense</span></span>
+### <span data-ttu-id="4bc36-132">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="4bc36-132">-AcceptLicense</span></span>
 
- <span data-ttu-id="32849-133">**AcceptLicense** автоматически принимает лицензионное соглашение во время установки.</span><span class="sxs-lookup"><span data-stu-id="32849-133">**AcceptLicense** automatically accepts the license agreement during installation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: PowerShellGet:PackageBySearch, PowerShellGet:PackageByInputObject
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="32849-134">-AllowClobber</span><span class="sxs-lookup"><span data-stu-id="32849-134">-AllowClobber</span></span>
-
-<span data-ttu-id="32849-135">Переопределяет предупреждающие сообщения о конфликтах с существующими командами.</span><span class="sxs-lookup"><span data-stu-id="32849-135">Overrides warning messages about conflicts with existing commands.</span></span> <span data-ttu-id="32849-136">Перезаписывает существующие команды, имена которых совпадают с именами устанавливаемых команд.</span><span class="sxs-lookup"><span data-stu-id="32849-136">Overwrites existing commands that have the same name as commands being installed.</span></span>
+ <span data-ttu-id="4bc36-133">**AcceptLicense** автоматически принимает лицензионное соглашение во время установки.</span><span class="sxs-lookup"><span data-stu-id="4bc36-133">**AcceptLicense** automatically accepts the license agreement during installation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -152,9 +136,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-137">-Алловпререлеасеверсионс</span><span class="sxs-lookup"><span data-stu-id="32849-137">-AllowPrereleaseVersions</span></span>
+### <span data-ttu-id="4bc36-134">-AllowClobber</span><span class="sxs-lookup"><span data-stu-id="4bc36-134">-AllowClobber</span></span>
 
-<span data-ttu-id="32849-138">Разрешает установку пакетов, помеченных как предварительные.</span><span class="sxs-lookup"><span data-stu-id="32849-138">Allows the installation of packages marked as prerelease.</span></span>
+<span data-ttu-id="4bc36-135">Переопределяет предупреждающие сообщения о конфликтах с существующими командами.</span><span class="sxs-lookup"><span data-stu-id="4bc36-135">Overrides warning messages about conflicts with existing commands.</span></span> <span data-ttu-id="4bc36-136">Перезаписывает существующие команды, имена которых совпадают с именами устанавливаемых команд.</span><span class="sxs-lookup"><span data-stu-id="4bc36-136">Overwrites existing commands that have the same name as commands being installed.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PowerShellGet:PackageBySearch, PowerShellGet:PackageByInputObject
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bc36-137">-Алловпререлеасеверсионс</span><span class="sxs-lookup"><span data-stu-id="4bc36-137">-AllowPrereleaseVersions</span></span>
+
+<span data-ttu-id="4bc36-138">Разрешает установку пакетов, помеченных как предварительные.</span><span class="sxs-lookup"><span data-stu-id="4bc36-138">Allows the installation of packages marked as prerelease.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -168,9 +168,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-139">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="32849-139">-AllVersions</span></span>
+### <span data-ttu-id="4bc36-139">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="4bc36-139">-AllVersions</span></span>
 
-<span data-ttu-id="32849-140">`Install-Package` устанавливает все доступные версии пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-140">`Install-Package` installs all available versions of the package.</span></span> <span data-ttu-id="32849-141">По умолчанию установлена только последняя версия.</span><span class="sxs-lookup"><span data-stu-id="32849-141">By default, only the newest version is installed.</span></span>
+<span data-ttu-id="4bc36-140">`Install-Package` устанавливает все доступные версии пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-140">`Install-Package` installs all available versions of the package.</span></span> <span data-ttu-id="4bc36-141">По умолчанию установлена только последняя версия.</span><span class="sxs-lookup"><span data-stu-id="4bc36-141">By default, only the newest version is installed.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -184,9 +184,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-142">-Command</span><span class="sxs-lookup"><span data-stu-id="32849-142">-Command</span></span>
+### <span data-ttu-id="4bc36-142">-Command</span><span class="sxs-lookup"><span data-stu-id="4bc36-142">-Command</span></span>
 
-<span data-ttu-id="32849-143">Указывает одну или несколько команд, выполняющих `Install-Package` Поиск.</span><span class="sxs-lookup"><span data-stu-id="32849-143">Specifies one or more commands that `Install-Package` searches.</span></span>
+<span data-ttu-id="4bc36-143">Указывает одну или несколько команд, выполняющих `Install-Package` Поиск.</span><span class="sxs-lookup"><span data-stu-id="4bc36-143">Specifies one or more commands that `Install-Package` searches.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -200,25 +200,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-144">-ConfigFile</span><span class="sxs-lookup"><span data-stu-id="32849-144">-ConfigFile</span></span>
+### <span data-ttu-id="4bc36-144">-ConfigFile</span><span class="sxs-lookup"><span data-stu-id="4bc36-144">-ConfigFile</span></span>
 
-<span data-ttu-id="32849-145">Указывает путь, который содержит файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="32849-145">Specifies a path that contains a configuration file.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: NuGet:PackageBySearch, NuGet:PackageByInputObject
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="32849-146">— Содержит</span><span class="sxs-lookup"><span data-stu-id="32849-146">-Contains</span></span>
-
-<span data-ttu-id="32849-147">`Install-Package` Возвращает объекты, если параметр **содержит** указывает значение, совпадающее с любым из значений свойств объекта.</span><span class="sxs-lookup"><span data-stu-id="32849-147">`Install-Package` gets objects if the **Contains** parameter specifies a value that matches any of the object's property values.</span></span>
+<span data-ttu-id="4bc36-145">Указывает путь, который содержит файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="4bc36-145">Specifies a path that contains a configuration file.</span></span>
 
 ```yaml
 Type: System.String
@@ -232,11 +216,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-148">-Credential</span><span class="sxs-lookup"><span data-stu-id="32849-148">-Credential</span></span>
+### <span data-ttu-id="4bc36-146">— Содержит</span><span class="sxs-lookup"><span data-stu-id="4bc36-146">-Contains</span></span>
 
-<span data-ttu-id="32849-149">Указывает учетную запись пользователя, имеющую разрешение на доступ к компьютеру и выполнение команд.</span><span class="sxs-lookup"><span data-stu-id="32849-149">Specifies a user account that has permission to access the computer and run commands.</span></span> <span data-ttu-id="32849-150">Введите имя пользователя, например **User01** , **Domain01\User01** , или введите объект **PSCredential** , созданный `Get-Credential` командлетом.</span><span class="sxs-lookup"><span data-stu-id="32849-150">Type a user name, such as **User01** , **Domain01\User01** , or enter a **PSCredential** object, generated by the `Get-Credential` cmdlet.</span></span> <span data-ttu-id="32849-151">Если ввести имя пользователя, будет предложено ввести пароль.</span><span class="sxs-lookup"><span data-stu-id="32849-151">If you type a user name, you're prompted for a password.</span></span>
+<span data-ttu-id="4bc36-147">`Install-Package` Возвращает объекты, если параметр **содержит** указывает значение, совпадающее с любым из значений свойств объекта.</span><span class="sxs-lookup"><span data-stu-id="4bc36-147">`Install-Package` gets objects if the **Contains** parameter specifies a value that matches any of the object's property values.</span></span>
 
-<span data-ttu-id="32849-152">Если параметр **Credential** не указан, `Install-Package` использует текущего пользователя.</span><span class="sxs-lookup"><span data-stu-id="32849-152">When the **Credential** parameter isn't specified, `Install-Package` uses the current user.</span></span>
+```yaml
+Type: System.String
+Parameter Sets: NuGet:PackageBySearch, NuGet:PackageByInputObject
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bc36-148">-Credential</span><span class="sxs-lookup"><span data-stu-id="4bc36-148">-Credential</span></span>
+
+<span data-ttu-id="4bc36-149">Указывает учетную запись пользователя, имеющую разрешение на доступ к компьютеру и выполнение команд.</span><span class="sxs-lookup"><span data-stu-id="4bc36-149">Specifies a user account that has permission to access the computer and run commands.</span></span> <span data-ttu-id="4bc36-150">Введите имя пользователя, например **User01**, **Domain01\User01**, или введите объект **PSCredential** , созданный `Get-Credential` командлетом.</span><span class="sxs-lookup"><span data-stu-id="4bc36-150">Type a user name, such as **User01**, **Domain01\User01**, or enter a **PSCredential** object, generated by the `Get-Credential` cmdlet.</span></span> <span data-ttu-id="4bc36-151">Если ввести имя пользователя, будет предложено ввести пароль.</span><span class="sxs-lookup"><span data-stu-id="4bc36-151">If you type a user name, you're prompted for a password.</span></span>
+
+<span data-ttu-id="4bc36-152">Если параметр **Credential** не указан, `Install-Package` использует текущего пользователя.</span><span class="sxs-lookup"><span data-stu-id="4bc36-152">When the **Credential** parameter isn't specified, `Install-Package` uses the current user.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -250,9 +250,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-153">-Destination</span><span class="sxs-lookup"><span data-stu-id="32849-153">-Destination</span></span>
+### <span data-ttu-id="4bc36-153">-Destination</span><span class="sxs-lookup"><span data-stu-id="4bc36-153">-Destination</span></span>
 
-<span data-ttu-id="32849-154">Задает путь к входному объекту.</span><span class="sxs-lookup"><span data-stu-id="32849-154">Specifies a path to an input object.</span></span>
+<span data-ttu-id="4bc36-154">Задает путь к входному объекту.</span><span class="sxs-lookup"><span data-stu-id="4bc36-154">Specifies a path to an input object.</span></span>
 
 ```yaml
 Type: System.String
@@ -266,9 +266,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-155">-DscResource</span><span class="sxs-lookup"><span data-stu-id="32849-155">-DscResource</span></span>
+### <span data-ttu-id="4bc36-155">-DscResource</span><span class="sxs-lookup"><span data-stu-id="4bc36-155">-DscResource</span></span>
 
-<span data-ttu-id="32849-156">Указывает один или несколько ресурсов DSC, поиск которых выполняется `Install-Package` .</span><span class="sxs-lookup"><span data-stu-id="32849-156">Specifies one or more Desired State Configuration (DSC) resources that are searched by `Install-Package`.</span></span> <span data-ttu-id="32849-157">Используйте `Find-DscResource` командлет для поиска ресурсов DSC.</span><span class="sxs-lookup"><span data-stu-id="32849-157">Use the `Find-DscResource` cmdlet to find DSC resources.</span></span>
+<span data-ttu-id="4bc36-156">Указывает один или несколько ресурсов DSC, поиск которых выполняется `Install-Package` .</span><span class="sxs-lookup"><span data-stu-id="4bc36-156">Specifies one or more Desired State Configuration (DSC) resources that are searched by `Install-Package`.</span></span> <span data-ttu-id="4bc36-157">Используйте `Find-DscResource` командлет для поиска ресурсов DSC.</span><span class="sxs-lookup"><span data-stu-id="4bc36-157">Use the `Find-DscResource` cmdlet to find DSC resources.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -282,9 +282,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-158">-Ексклудеверсион</span><span class="sxs-lookup"><span data-stu-id="32849-158">-ExcludeVersion</span></span>
+### <span data-ttu-id="4bc36-158">-Ексклудеверсион</span><span class="sxs-lookup"><span data-stu-id="4bc36-158">-ExcludeVersion</span></span>
 
-<span data-ttu-id="32849-159">Переключитесь, чтобы исключить номер версии из пути к папке.</span><span class="sxs-lookup"><span data-stu-id="32849-159">Switch to exclude the version number in the folder path.</span></span>
+<span data-ttu-id="4bc36-159">Переключитесь, чтобы исключить номер версии из пути к папке.</span><span class="sxs-lookup"><span data-stu-id="4bc36-159">Switch to exclude the version number in the folder path.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -298,9 +298,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-160">-Filter</span><span class="sxs-lookup"><span data-stu-id="32849-160">-Filter</span></span>
+### <span data-ttu-id="4bc36-160">-Filter</span><span class="sxs-lookup"><span data-stu-id="4bc36-160">-Filter</span></span>
 
-<span data-ttu-id="32849-161">Задает термины для поиска в свойствах **имя** и **Описание** .</span><span class="sxs-lookup"><span data-stu-id="32849-161">Specifies terms to search for within the **Name** and **Description** properties.</span></span>
+<span data-ttu-id="4bc36-161">Задает термины для поиска в свойствах **имя** и **Описание** .</span><span class="sxs-lookup"><span data-stu-id="4bc36-161">Specifies terms to search for within the **Name** and **Description** properties.</span></span>
 
 ```yaml
 Type: System.String
@@ -314,57 +314,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-162">-Филтеронтаг</span><span class="sxs-lookup"><span data-stu-id="32849-162">-FilterOnTag</span></span>
+### <span data-ttu-id="4bc36-162">-Филтеронтаг</span><span class="sxs-lookup"><span data-stu-id="4bc36-162">-FilterOnTag</span></span>
 
-<span data-ttu-id="32849-163">Указывает тег, фильтрующий результаты и исключающий результаты, которые не содержат указанный тег.</span><span class="sxs-lookup"><span data-stu-id="32849-163">Specifies a tag that filters results and excludes results that don't contain the specified tag.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: NuGet:PackageBySearch, NuGet:PackageByInputObject
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="32849-164">-Force</span><span class="sxs-lookup"><span data-stu-id="32849-164">-Force</span></span>
-
-<span data-ttu-id="32849-165">Принудительное выполнение команды без запроса на подтверждение пользователем.</span><span class="sxs-lookup"><span data-stu-id="32849-165">Forces the command to run without asking for user confirmation.</span></span> <span data-ttu-id="32849-166">Переопределяет ограничения, которые препятствуют `Install-Package` выполнению, за исключением безопасности.</span><span class="sxs-lookup"><span data-stu-id="32849-166">Overrides restrictions that prevent `Install-Package` from succeeding, with the exception of security.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="32849-167">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="32849-167">-ForceBootstrap</span></span>
-
-<span data-ttu-id="32849-168">Заставляет службу **PackageManagement** автоматически устанавливать поставщик пакетов для указанного пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-168">Forces **PackageManagement** to automatically install the package provider for the specified package.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="32849-169">-Заголовки</span><span class="sxs-lookup"><span data-stu-id="32849-169">-Headers</span></span>
-
-<span data-ttu-id="32849-170">Указывает заголовки пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-170">Specifies the package headers.</span></span>
+<span data-ttu-id="4bc36-163">Указывает тег, фильтрующий результаты и исключающий результаты, которые не содержат указанный тег.</span><span class="sxs-lookup"><span data-stu-id="4bc36-163">Specifies a tag that filters results and excludes results that don't contain the specified tag.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -378,15 +330,63 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-171">— Включает</span><span class="sxs-lookup"><span data-stu-id="32849-171">-Includes</span></span>
+### <span data-ttu-id="4bc36-164">-Force</span><span class="sxs-lookup"><span data-stu-id="4bc36-164">-Force</span></span>
 
-<span data-ttu-id="32849-172">Указывает `Install-Package` , следует ли найти все типы пакетов.</span><span class="sxs-lookup"><span data-stu-id="32849-172">Specifies whether `Install-Package` should find all package types.</span></span> <span data-ttu-id="32849-173">Для этого параметра допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="32849-173">The acceptable values for this parameter are as follows:</span></span>
+<span data-ttu-id="4bc36-165">Принудительное выполнение команды без запроса на подтверждение пользователем.</span><span class="sxs-lookup"><span data-stu-id="4bc36-165">Forces the command to run without asking for user confirmation.</span></span> <span data-ttu-id="4bc36-166">Переопределяет ограничения, которые препятствуют `Install-Package` выполнению, за исключением безопасности.</span><span class="sxs-lookup"><span data-stu-id="4bc36-166">Overrides restrictions that prevent `Install-Package` from succeeding, with the exception of security.</span></span>
 
-- <span data-ttu-id="32849-174">Командлет</span><span class="sxs-lookup"><span data-stu-id="32849-174">Cmdlet</span></span>
-- <span data-ttu-id="32849-175">DscResource</span><span class="sxs-lookup"><span data-stu-id="32849-175">DscResource</span></span>
-- <span data-ttu-id="32849-176">Компонент</span><span class="sxs-lookup"><span data-stu-id="32849-176">Function</span></span>
-- <span data-ttu-id="32849-177">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="32849-177">RoleCapability</span></span>
-- <span data-ttu-id="32849-178">Рабочий процесс</span><span class="sxs-lookup"><span data-stu-id="32849-178">Workflow</span></span>
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bc36-167">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="4bc36-167">-ForceBootstrap</span></span>
+
+<span data-ttu-id="4bc36-168">Заставляет службу **PackageManagement** автоматически устанавливать поставщик пакетов для указанного пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-168">Forces **PackageManagement** to automatically install the package provider for the specified package.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bc36-169">-Заголовки</span><span class="sxs-lookup"><span data-stu-id="4bc36-169">-Headers</span></span>
+
+<span data-ttu-id="4bc36-170">Указывает заголовки пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-170">Specifies the package headers.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: NuGet:PackageBySearch, NuGet:PackageByInputObject
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bc36-171">— Включает</span><span class="sxs-lookup"><span data-stu-id="4bc36-171">-Includes</span></span>
+
+<span data-ttu-id="4bc36-172">Указывает `Install-Package` , следует ли найти все типы пакетов.</span><span class="sxs-lookup"><span data-stu-id="4bc36-172">Specifies whether `Install-Package` should find all package types.</span></span> <span data-ttu-id="4bc36-173">Для этого параметра допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="4bc36-173">The acceptable values for this parameter are as follows:</span></span>
+
+- <span data-ttu-id="4bc36-174">Командлет</span><span class="sxs-lookup"><span data-stu-id="4bc36-174">Cmdlet</span></span>
+- <span data-ttu-id="4bc36-175">DscResource</span><span class="sxs-lookup"><span data-stu-id="4bc36-175">DscResource</span></span>
+- <span data-ttu-id="4bc36-176">Функция</span><span class="sxs-lookup"><span data-stu-id="4bc36-176">Function</span></span>
+- <span data-ttu-id="4bc36-177">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="4bc36-177">RoleCapability</span></span>
+- <span data-ttu-id="4bc36-178">Рабочий процесс</span><span class="sxs-lookup"><span data-stu-id="4bc36-178">Workflow</span></span>
 
 ```yaml
 Type: System.String[]
@@ -401,10 +401,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-179">-InputObject</span><span class="sxs-lookup"><span data-stu-id="32849-179">-InputObject</span></span>
+### <span data-ttu-id="4bc36-179">-InputObject</span><span class="sxs-lookup"><span data-stu-id="4bc36-179">-InputObject</span></span>
 
-<span data-ttu-id="32849-180">Принимает входные данные конвейера.</span><span class="sxs-lookup"><span data-stu-id="32849-180">Accepts pipeline input.</span></span> <span data-ttu-id="32849-181">Указывает пакет с помощью типа **софтвареидентити** пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-181">Specifies a package by using the package's **SoftwareIdentity** type.</span></span>
-<span data-ttu-id="32849-182">`Find-Package` выводит объект **софтвареидентити** .</span><span class="sxs-lookup"><span data-stu-id="32849-182">`Find-Package` outputs a **SoftwareIdentity** object.</span></span>
+<span data-ttu-id="4bc36-180">Принимает входные данные конвейера.</span><span class="sxs-lookup"><span data-stu-id="4bc36-180">Accepts pipeline input.</span></span> <span data-ttu-id="4bc36-181">Указывает пакет с помощью типа **софтвареидентити** пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-181">Specifies a package by using the package's **SoftwareIdentity** type.</span></span>
+<span data-ttu-id="4bc36-182">`Find-Package` выводит объект **софтвареидентити** .</span><span class="sxs-lookup"><span data-stu-id="4bc36-182">`Find-Package` outputs a **SoftwareIdentity** object.</span></span>
 
 ```yaml
 Type: Microsoft.PackageManagement.Packaging.SoftwareIdentity[]
@@ -418,9 +418,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-183">-Инсталлупдате</span><span class="sxs-lookup"><span data-stu-id="32849-183">-InstallUpdate</span></span>
+### <span data-ttu-id="4bc36-183">-Инсталлупдате</span><span class="sxs-lookup"><span data-stu-id="4bc36-183">-InstallUpdate</span></span>
 
-<span data-ttu-id="32849-184">Указывает, что `Install-Package` устанавливает обновления.</span><span class="sxs-lookup"><span data-stu-id="32849-184">Indicates that `Install-Package` installs updates.</span></span>
+<span data-ttu-id="4bc36-184">Указывает, что `Install-Package` устанавливает обновления.</span><span class="sxs-lookup"><span data-stu-id="4bc36-184">Indicates that `Install-Package` installs updates.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -434,25 +434,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-185">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="32849-185">-MaximumVersion</span></span>
+### <span data-ttu-id="4bc36-185">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="4bc36-185">-MaximumVersion</span></span>
 
-<span data-ttu-id="32849-186">Указывает максимально допустимую версию пакета, которую вы хотите установить.</span><span class="sxs-lookup"><span data-stu-id="32849-186">Specifies the maximum allowed package version that you want to install.</span></span> <span data-ttu-id="32849-187">Если этот параметр не указан, `Install-Package` устанавливает последнюю версию пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-187">If you don't specify this parameter, `Install-Package` installs the package's newest version.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PackageBySearch
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="32849-188">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="32849-188">-MinimumVersion</span></span>
-
-<span data-ttu-id="32849-189">Указывает минимальную допустимую версию пакета, которую вы хотите установить.</span><span class="sxs-lookup"><span data-stu-id="32849-189">Specifies the minimum allowed package version that you want to install.</span></span> <span data-ttu-id="32849-190">Если вы не добавите этот параметр, `Install-Package` устанавливает последнюю версию пакета, соответствующую любой версии, указанной параметром **MaximumVersion** .</span><span class="sxs-lookup"><span data-stu-id="32849-190">If you don't add this parameter, `Install-Package` installs the package's newest version that satisfies any version specified by the **MaximumVersion** parameter.</span></span>
+<span data-ttu-id="4bc36-186">Указывает максимально допустимую версию пакета, которую вы хотите установить.</span><span class="sxs-lookup"><span data-stu-id="4bc36-186">Specifies the maximum allowed package version that you want to install.</span></span> <span data-ttu-id="4bc36-187">Если этот параметр не указан, `Install-Package` устанавливает последнюю версию пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-187">If you don't specify this parameter, `Install-Package` installs the package's newest version.</span></span>
 
 ```yaml
 Type: System.String
@@ -466,9 +450,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-191">-Name</span><span class="sxs-lookup"><span data-stu-id="32849-191">-Name</span></span>
+### <span data-ttu-id="4bc36-188">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="4bc36-188">-MinimumVersion</span></span>
 
-<span data-ttu-id="32849-192">Указывает одно или несколько имен пакетов.</span><span class="sxs-lookup"><span data-stu-id="32849-192">Specifies one or more package names.</span></span> <span data-ttu-id="32849-193">Несколько имен пакетов должны быть разделены запятыми.</span><span class="sxs-lookup"><span data-stu-id="32849-193">Multiple package names must be separated by commas.</span></span>
+<span data-ttu-id="4bc36-189">Указывает минимальную допустимую версию пакета, которую вы хотите установить.</span><span class="sxs-lookup"><span data-stu-id="4bc36-189">Specifies the minimum allowed package version that you want to install.</span></span> <span data-ttu-id="4bc36-190">Если вы не добавите этот параметр, `Install-Package` устанавливает последнюю версию пакета, соответствующую любой версии, указанной параметром **MaximumVersion** .</span><span class="sxs-lookup"><span data-stu-id="4bc36-190">If you don't add this parameter, `Install-Package` installs the package's newest version that satisfies any version specified by the **MaximumVersion** parameter.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bc36-191">-Name</span><span class="sxs-lookup"><span data-stu-id="4bc36-191">-Name</span></span>
+
+<span data-ttu-id="4bc36-192">Указывает одно или несколько имен пакетов.</span><span class="sxs-lookup"><span data-stu-id="4bc36-192">Specifies one or more package names.</span></span> <span data-ttu-id="4bc36-193">Несколько имен пакетов должны быть разделены запятыми.</span><span class="sxs-lookup"><span data-stu-id="4bc36-193">Multiple package names must be separated by commas.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -482,9 +482,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-194">-NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="32849-194">-NoPathUpdate</span></span>
+### <span data-ttu-id="4bc36-194">-NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="4bc36-194">-NoPathUpdate</span></span>
 
-<span data-ttu-id="32849-195">**NoPathUpdate** применяется только к `Install-Script` командлету.</span><span class="sxs-lookup"><span data-stu-id="32849-195">**NoPathUpdate** only applies to the `Install-Script` cmdlet.</span></span> <span data-ttu-id="32849-196">**NoPathUpdate** — это динамический параметр, добавленный поставщиком и не поддерживаемый `Install-Package` .</span><span class="sxs-lookup"><span data-stu-id="32849-196">**NoPathUpdate** is a dynamic parameter added by the provider and isn't supported by `Install-Package`.</span></span>
+<span data-ttu-id="4bc36-195">**NoPathUpdate** применяется только к `Install-Script` командлету.</span><span class="sxs-lookup"><span data-stu-id="4bc36-195">**NoPathUpdate** only applies to the `Install-Script` cmdlet.</span></span> <span data-ttu-id="4bc36-196">**NoPathUpdate** — это динамический параметр, добавленный поставщиком и не поддерживаемый `Install-Package` .</span><span class="sxs-lookup"><span data-stu-id="4bc36-196">**NoPathUpdate** is a dynamic parameter added by the provider and isn't supported by `Install-Package`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -498,9 +498,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-197">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="32849-197">-PackageManagementProvider</span></span>
+### <span data-ttu-id="4bc36-197">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="4bc36-197">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="32849-198">Указывает имя поставщика **PackageManagement** .</span><span class="sxs-lookup"><span data-stu-id="32849-198">Specifies the name of the **PackageManagement** provider.</span></span>
+<span data-ttu-id="4bc36-198">Указывает имя поставщика **PackageManagement** .</span><span class="sxs-lookup"><span data-stu-id="4bc36-198">Specifies the name of the **PackageManagement** provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -514,9 +514,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-199">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="32849-199">-ProviderName</span></span>
+### <span data-ttu-id="4bc36-199">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="4bc36-199">-ProviderName</span></span>
 
-<span data-ttu-id="32849-200">Указывает одно или несколько имен поставщиков пакетов, к которым будет отделана область поиска пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-200">Specifies one or more package provider names to which to scope your package search.</span></span> <span data-ttu-id="32849-201">Чтобы получить имена поставщиков пакетов, выполните командлет `Get-PackageProvider`.</span><span class="sxs-lookup"><span data-stu-id="32849-201">You can get package provider names by running the `Get-PackageProvider` cmdlet.</span></span>
+<span data-ttu-id="4bc36-200">Указывает одно или несколько имен поставщиков пакетов, к которым будет отделана область поиска пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-200">Specifies one or more package provider names to which to scope your package search.</span></span> <span data-ttu-id="4bc36-201">Чтобы получить имена поставщиков пакетов, выполните командлет `Get-PackageProvider`.</span><span class="sxs-lookup"><span data-stu-id="4bc36-201">You can get package provider names by running the `Get-PackageProvider` cmdlet.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -531,9 +531,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-202">Прокси-сервер</span><span class="sxs-lookup"><span data-stu-id="32849-202">-Proxy</span></span>
+### <span data-ttu-id="4bc36-202">Прокси-сервер</span><span class="sxs-lookup"><span data-stu-id="4bc36-202">-Proxy</span></span>
 
-<span data-ttu-id="32849-203">Указывает прокси-сервер для запроса, а не напрямуюе подключение к Интернет-ресурсу.</span><span class="sxs-lookup"><span data-stu-id="32849-203">Specifies a proxy server for the request, rather than connecting directly to an internet resource.</span></span>
+<span data-ttu-id="4bc36-203">Указывает прокси-сервер для запроса, а не напрямуюе подключение к Интернет-ресурсу.</span><span class="sxs-lookup"><span data-stu-id="4bc36-203">Specifies a proxy server for the request, rather than connecting directly to an internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -547,9 +547,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-204">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="32849-204">-ProxyCredential</span></span>
+### <span data-ttu-id="4bc36-204">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="4bc36-204">-ProxyCredential</span></span>
 
-<span data-ttu-id="32849-205">Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, указанного параметром **прокси** .</span><span class="sxs-lookup"><span data-stu-id="32849-205">Specifies a user account that has permission to use the proxy server specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="4bc36-205">Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, указанного параметром **прокси** .</span><span class="sxs-lookup"><span data-stu-id="4bc36-205">Specifies a user account that has permission to use the proxy server specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -563,9 +563,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-206">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="32849-206">-PublishLocation</span></span>
+### <span data-ttu-id="4bc36-206">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="4bc36-206">-PublishLocation</span></span>
 
-<span data-ttu-id="32849-207">Указывает путь к опубликованному расположению пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-207">Specifies the path to a package's published location.</span></span>
+<span data-ttu-id="4bc36-207">Указывает путь к опубликованному расположению пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-207">Specifies the path to a package's published location.</span></span>
 
 ```yaml
 Type: System.String
@@ -579,9 +579,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-208">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="32849-208">-RequiredVersion</span></span>
+### <span data-ttu-id="4bc36-208">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="4bc36-208">-RequiredVersion</span></span>
 
-<span data-ttu-id="32849-209">Указывает точную допустимую версию пакета, который требуется установить.</span><span class="sxs-lookup"><span data-stu-id="32849-209">Specifies the exact allowed version of the package that you want to install.</span></span> <span data-ttu-id="32849-210">Если вы не добавите этот параметр, `Install-Package` устанавливает последнюю версию пакета, соответствующую любой версии, указанной параметром **MaximumVersion** .</span><span class="sxs-lookup"><span data-stu-id="32849-210">If you don't add this parameter, `Install-Package` installs the package's newest version that satisfies any version specified by the **MaximumVersion** parameter.</span></span>
+<span data-ttu-id="4bc36-209">Указывает точную допустимую версию пакета, который требуется установить.</span><span class="sxs-lookup"><span data-stu-id="4bc36-209">Specifies the exact allowed version of the package that you want to install.</span></span> <span data-ttu-id="4bc36-210">Если вы не добавите этот параметр, `Install-Package` устанавливает последнюю версию пакета, соответствующую любой версии, указанной параметром **MaximumVersion** .</span><span class="sxs-lookup"><span data-stu-id="4bc36-210">If you don't add this parameter, `Install-Package` installs the package's newest version that satisfies any version specified by the **MaximumVersion** parameter.</span></span>
 
 ```yaml
 Type: System.String
@@ -595,9 +595,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-211">-RoleCapability</span><span class="sxs-lookup"><span data-stu-id="32849-211">-RoleCapability</span></span>
+### <span data-ttu-id="4bc36-211">-RoleCapability</span><span class="sxs-lookup"><span data-stu-id="4bc36-211">-RoleCapability</span></span>
 
-<span data-ttu-id="32849-212">Указывает массив возможностей роли.</span><span class="sxs-lookup"><span data-stu-id="32849-212">Specifies an array of role capabilities.</span></span>
+<span data-ttu-id="4bc36-212">Указывает массив возможностей роли.</span><span class="sxs-lookup"><span data-stu-id="4bc36-212">Specifies an array of role capabilities.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -611,12 +611,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-213">-Scope</span><span class="sxs-lookup"><span data-stu-id="32849-213">-Scope</span></span>
+### <span data-ttu-id="4bc36-213">-Scope</span><span class="sxs-lookup"><span data-stu-id="4bc36-213">-Scope</span></span>
 
-<span data-ttu-id="32849-214">Задает область, для которой необходимо установить пакет.</span><span class="sxs-lookup"><span data-stu-id="32849-214">Specifies the scope for which to install the package.</span></span> <span data-ttu-id="32849-215">Для этого параметра допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="32849-215">The acceptable values for this parameter are as follows:</span></span>
+<span data-ttu-id="4bc36-214">Задает область, для которой необходимо установить пакет.</span><span class="sxs-lookup"><span data-stu-id="4bc36-214">Specifies the scope for which to install the package.</span></span> <span data-ttu-id="4bc36-215">Для этого параметра допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="4bc36-215">The acceptable values for this parameter are as follows:</span></span>
 
-- <span data-ttu-id="32849-216">CurrentUser</span><span class="sxs-lookup"><span data-stu-id="32849-216">CurrentUser</span></span>
-- <span data-ttu-id="32849-217">AllUsers</span><span class="sxs-lookup"><span data-stu-id="32849-217">AllUsers</span></span>
+- <span data-ttu-id="4bc36-216">CurrentUser</span><span class="sxs-lookup"><span data-stu-id="4bc36-216">CurrentUser</span></span>
+- <span data-ttu-id="4bc36-217">AllUsers</span><span class="sxs-lookup"><span data-stu-id="4bc36-217">AllUsers</span></span>
 
 ```yaml
 Type: System.String
@@ -631,25 +631,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-218">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="32849-218">-ScriptPublishLocation</span></span>
+### <span data-ttu-id="4bc36-218">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="4bc36-218">-ScriptPublishLocation</span></span>
 
-<span data-ttu-id="32849-219">Указывает путь к опубликованному расположению скрипта.</span><span class="sxs-lookup"><span data-stu-id="32849-219">Specifies the path to a script's published location.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PowerShellGet:PackageBySearch, PowerShellGet:PackageByInputObject
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="32849-220">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="32849-220">-ScriptSourceLocation</span></span>
-
-<span data-ttu-id="32849-221">Указывает расположение источника скрипта.</span><span class="sxs-lookup"><span data-stu-id="32849-221">Specifies the script source location.</span></span>
+<span data-ttu-id="4bc36-219">Указывает путь к опубликованному расположению скрипта.</span><span class="sxs-lookup"><span data-stu-id="4bc36-219">Specifies the path to a script's published location.</span></span>
 
 ```yaml
 Type: System.String
@@ -663,9 +647,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-222">-СкипдепенденЦиес</span><span class="sxs-lookup"><span data-stu-id="32849-222">-SkipDependencies</span></span>
+### <span data-ttu-id="4bc36-220">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="4bc36-220">-ScriptSourceLocation</span></span>
 
-<span data-ttu-id="32849-223">Пропускает установку зависимостей программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="32849-223">Skips the installation of software dependencies.</span></span>
+<span data-ttu-id="4bc36-221">Указывает расположение источника скрипта.</span><span class="sxs-lookup"><span data-stu-id="4bc36-221">Specifies the script source location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet:PackageBySearch, PowerShellGet:PackageByInputObject
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bc36-222">-СкипдепенденЦиес</span><span class="sxs-lookup"><span data-stu-id="4bc36-222">-SkipDependencies</span></span>
+
+<span data-ttu-id="4bc36-223">Пропускает установку зависимостей программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="4bc36-223">Skips the installation of software dependencies.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -679,9 +679,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-224">-Скиппублишерчекк</span><span class="sxs-lookup"><span data-stu-id="32849-224">-SkipPublisherCheck</span></span>
+### <span data-ttu-id="4bc36-224">-Скиппублишерчекк</span><span class="sxs-lookup"><span data-stu-id="4bc36-224">-SkipPublisherCheck</span></span>
 
-<span data-ttu-id="32849-225">Позволяет получить версию пакета, более новую по сравнению с установленной версией.</span><span class="sxs-lookup"><span data-stu-id="32849-225">Allows you to get a package version that is newer than your installed version.</span></span> <span data-ttu-id="32849-226">Например, установленный пакет с цифровой подписью доверенного издателя, но новая версия не подписана цифровой подписью.</span><span class="sxs-lookup"><span data-stu-id="32849-226">For example, an installed package that is digitally signed by a trusted publisher but a new version isn't digitally signed.</span></span>
+<span data-ttu-id="4bc36-225">Позволяет получить версию пакета, более новую по сравнению с установленной версией.</span><span class="sxs-lookup"><span data-stu-id="4bc36-225">Allows you to get a package version that is newer than your installed version.</span></span> <span data-ttu-id="4bc36-226">Например, установленный пакет с цифровой подписью доверенного издателя, но новая версия не подписана цифровой подписью.</span><span class="sxs-lookup"><span data-stu-id="4bc36-226">For example, an installed package that is digitally signed by a trusted publisher but a new version isn't digitally signed.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -695,9 +695,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-227">-Скипвалидате</span><span class="sxs-lookup"><span data-stu-id="32849-227">-SkipValidate</span></span>
+### <span data-ttu-id="4bc36-227">-Скипвалидате</span><span class="sxs-lookup"><span data-stu-id="4bc36-227">-SkipValidate</span></span>
 
-<span data-ttu-id="32849-228">Параметр, который пропускает проверку учетных данных пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-228">Switch that skips validating the credentials of a package.</span></span>
+<span data-ttu-id="4bc36-228">Параметр, который пропускает проверку учетных данных пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-228">Switch that skips validating the credentials of a package.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -711,10 +711,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-229">-Source</span><span class="sxs-lookup"><span data-stu-id="32849-229">-Source</span></span>
+### <span data-ttu-id="4bc36-229">-Source</span><span class="sxs-lookup"><span data-stu-id="4bc36-229">-Source</span></span>
 
-<span data-ttu-id="32849-230">Указывает один или несколько источников пакетов.</span><span class="sxs-lookup"><span data-stu-id="32849-230">Specifies one or more package sources.</span></span> <span data-ttu-id="32849-231">Несколько имен источников пакетов должны быть разделены запятыми.</span><span class="sxs-lookup"><span data-stu-id="32849-231">Multiple package source names must be separated by commas.</span></span>
-<span data-ttu-id="32849-232">Вы можете получить имена источников пакетов, выполнив `Get-PackageSource` командлет.</span><span class="sxs-lookup"><span data-stu-id="32849-232">You can get package source names by running the `Get-PackageSource` cmdlet.</span></span>
+<span data-ttu-id="4bc36-230">Указывает один или несколько источников пакетов.</span><span class="sxs-lookup"><span data-stu-id="4bc36-230">Specifies one or more package sources.</span></span> <span data-ttu-id="4bc36-231">Несколько имен источников пакетов должны быть разделены запятыми.</span><span class="sxs-lookup"><span data-stu-id="4bc36-231">Multiple package source names must be separated by commas.</span></span>
+<span data-ttu-id="4bc36-232">Вы можете получить имена источников пакетов, выполнив `Get-PackageSource` командлет.</span><span class="sxs-lookup"><span data-stu-id="4bc36-232">You can get package source names by running the `Get-PackageSource` cmdlet.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -728,9 +728,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-233">-Tag</span><span class="sxs-lookup"><span data-stu-id="32849-233">-Tag</span></span>
+### <span data-ttu-id="4bc36-233">-Tag</span><span class="sxs-lookup"><span data-stu-id="4bc36-233">-Tag</span></span>
 
-<span data-ttu-id="32849-234">Указывает одну или несколько строк для поиска в метаданных пакета.</span><span class="sxs-lookup"><span data-stu-id="32849-234">Specifies one or more strings to search for in the package metadata.</span></span>
+<span data-ttu-id="4bc36-234">Указывает одну или несколько строк для поиска в метаданных пакета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-234">Specifies one or more strings to search for in the package metadata.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -744,13 +744,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-235">-Type</span><span class="sxs-lookup"><span data-stu-id="32849-235">-Type</span></span>
+### <span data-ttu-id="4bc36-235">-Type</span><span class="sxs-lookup"><span data-stu-id="4bc36-235">-Type</span></span>
 
-<span data-ttu-id="32849-236">Указывает, следует ли выполнять поиск пакетов с помощью модуля, скрипта или и того, и другого.</span><span class="sxs-lookup"><span data-stu-id="32849-236">Specifies whether to search for packages with a module, a script, or both.</span></span> <span data-ttu-id="32849-237">Для этого параметра допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="32849-237">The acceptable values for this parameter are as follows:</span></span>
+<span data-ttu-id="4bc36-236">Указывает, следует ли выполнять поиск пакетов с помощью модуля, скрипта или и того, и другого.</span><span class="sxs-lookup"><span data-stu-id="4bc36-236">Specifies whether to search for packages with a module, a script, or both.</span></span> <span data-ttu-id="4bc36-237">Для этого параметра допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="4bc36-237">The acceptable values for this parameter are as follows:</span></span>
 
-- <span data-ttu-id="32849-238">Модуль</span><span class="sxs-lookup"><span data-stu-id="32849-238">Module</span></span>
-- <span data-ttu-id="32849-239">Скрипт</span><span class="sxs-lookup"><span data-stu-id="32849-239">Script</span></span>
-- <span data-ttu-id="32849-240">Все</span><span class="sxs-lookup"><span data-stu-id="32849-240">All</span></span>
+- <span data-ttu-id="4bc36-238">Модуль</span><span class="sxs-lookup"><span data-stu-id="4bc36-238">Module</span></span>
+- <span data-ttu-id="4bc36-239">Скрипт</span><span class="sxs-lookup"><span data-stu-id="4bc36-239">Script</span></span>
+- <span data-ttu-id="4bc36-240">Все</span><span class="sxs-lookup"><span data-stu-id="4bc36-240">All</span></span>
 
 ```yaml
 Type: System.String
@@ -765,9 +765,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-241">-Confirm</span><span class="sxs-lookup"><span data-stu-id="32849-241">-Confirm</span></span>
+### <span data-ttu-id="4bc36-241">-Confirm</span><span class="sxs-lookup"><span data-stu-id="4bc36-241">-Confirm</span></span>
 
-<span data-ttu-id="32849-242">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="32849-242">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="4bc36-242">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-242">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -781,9 +781,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-243">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="32849-243">-WhatIf</span></span>
+### <span data-ttu-id="4bc36-243">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="4bc36-243">-WhatIf</span></span>
 
-<span data-ttu-id="32849-244">Показывает, что произойдет при `Install-Package` запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="32849-244">Shows what would happen if `Install-Package` cmdlet is run.</span></span> <span data-ttu-id="32849-245">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="32849-245">The cmdlet is not run.</span></span>
+<span data-ttu-id="4bc36-244">Показывает, что произойдет при `Install-Package` запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-244">Shows what would happen if `Install-Package` cmdlet is run.</span></span> <span data-ttu-id="4bc36-245">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="4bc36-245">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -797,38 +797,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="32849-246">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="32849-246">CommonParameters</span></span>
+### <span data-ttu-id="4bc36-246">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="4bc36-246">CommonParameters</span></span>
 
-<span data-ttu-id="32849-247">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="32849-247">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="32849-248">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="32849-248">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="4bc36-247">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="4bc36-247">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="4bc36-248">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="4bc36-248">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="32849-249">Входные данные</span><span class="sxs-lookup"><span data-stu-id="32849-249">INPUTS</span></span>
+## <span data-ttu-id="4bc36-249">Входные данные</span><span class="sxs-lookup"><span data-stu-id="4bc36-249">INPUTS</span></span>
 
-### <span data-ttu-id="32849-250">`Install-Package` принимает входные данные из конвейера.</span><span class="sxs-lookup"><span data-stu-id="32849-250">`Install-Package` accepts input from the pipeline.</span></span>
+### <span data-ttu-id="4bc36-250">`Install-Package` принимает входные данные из конвейера.</span><span class="sxs-lookup"><span data-stu-id="4bc36-250">`Install-Package` accepts input from the pipeline.</span></span>
 
-## <span data-ttu-id="32849-251">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="32849-251">OUTPUTS</span></span>
+## <span data-ttu-id="4bc36-251">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="4bc36-251">OUTPUTS</span></span>
 
-### <span data-ttu-id="32849-252">Софтвареидентити []</span><span class="sxs-lookup"><span data-stu-id="32849-252">SoftwareIdentity[]</span></span>
+### <span data-ttu-id="4bc36-252">Софтвареидентити []</span><span class="sxs-lookup"><span data-stu-id="4bc36-252">SoftwareIdentity[]</span></span>
 
-## <span data-ttu-id="32849-253">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="32849-253">NOTES</span></span>
+## <span data-ttu-id="4bc36-253">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="4bc36-253">NOTES</span></span>
 
-<span data-ttu-id="32849-254">Включение поставщика пакетов в команду может сделать динамические параметры доступными для командлета.</span><span class="sxs-lookup"><span data-stu-id="32849-254">Including a package provider in a command can make dynamic parameters available to a cmdlet.</span></span> <span data-ttu-id="32849-255">Динамические параметры относятся к поставщику пакетов.</span><span class="sxs-lookup"><span data-stu-id="32849-255">Dynamic parameters are specific to a package provider.</span></span> <span data-ttu-id="32849-256">`Get-Help`Командлет перечисляет наборы параметров командлета и включает набор параметров поставщика.</span><span class="sxs-lookup"><span data-stu-id="32849-256">The `Get-Help` cmdlet lists a cmdlet's parameter sets and includes the provider's parameter set.</span></span> <span data-ttu-id="32849-257">Например, `Install-Package` имеет набор параметров **PowerShellGet** , включающий `-NoPathUpdate` , `AllowClobber` и `SkipPublisherCheck` .</span><span class="sxs-lookup"><span data-stu-id="32849-257">For example, `Install-Package` has the **PowerShellGet** parameter set that includes `-NoPathUpdate`, `AllowClobber`, and `SkipPublisherCheck`.</span></span>
+<span data-ttu-id="4bc36-254">Включение поставщика пакетов в команду может сделать динамические параметры доступными для командлета.</span><span class="sxs-lookup"><span data-stu-id="4bc36-254">Including a package provider in a command can make dynamic parameters available to a cmdlet.</span></span> <span data-ttu-id="4bc36-255">Динамические параметры относятся к поставщику пакетов.</span><span class="sxs-lookup"><span data-stu-id="4bc36-255">Dynamic parameters are specific to a package provider.</span></span> <span data-ttu-id="4bc36-256">`Get-Help`Командлет перечисляет наборы параметров командлета и включает набор параметров поставщика.</span><span class="sxs-lookup"><span data-stu-id="4bc36-256">The `Get-Help` cmdlet lists a cmdlet's parameter sets and includes the provider's parameter set.</span></span> <span data-ttu-id="4bc36-257">Например, `Install-Package` имеет набор параметров **PowerShellGet** , включающий `-NoPathUpdate` , `AllowClobber` и `SkipPublisherCheck` .</span><span class="sxs-lookup"><span data-stu-id="4bc36-257">For example, `Install-Package` has the **PowerShellGet** parameter set that includes `-NoPathUpdate`, `AllowClobber`, and `SkipPublisherCheck`.</span></span>
 
-## <span data-ttu-id="32849-258">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="32849-258">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="4bc36-258">По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1.</span><span class="sxs-lookup"><span data-stu-id="4bc36-258">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="4bc36-259">Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="4bc36-259">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="4bc36-260">Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:</span><span class="sxs-lookup"><span data-stu-id="4bc36-260">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="4bc36-261">Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.</span><span class="sxs-lookup"><span data-stu-id="4bc36-261">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="32849-259">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="32849-259">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="4bc36-262">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="4bc36-262">RELATED LINKS</span></span>
 
-[<span data-ttu-id="32849-260">Find-DscResource</span><span class="sxs-lookup"><span data-stu-id="32849-260">Find-DscResource</span></span>](../PowershellGet/Find-DscResource.md)
+[<span data-ttu-id="4bc36-263">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="4bc36-263">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="32849-261">Get-Help</span><span class="sxs-lookup"><span data-stu-id="32849-261">Get-Help</span></span>](../Microsoft.PowerShell.Core/Get-Help.md)
+[<span data-ttu-id="4bc36-264">Find-DscResource</span><span class="sxs-lookup"><span data-stu-id="4bc36-264">Find-DscResource</span></span>](../PowershellGet/Find-DscResource.md)
 
-[<span data-ttu-id="32849-262">Get-Package</span><span class="sxs-lookup"><span data-stu-id="32849-262">Get-Package</span></span>](Get-Package.md)
+[<span data-ttu-id="4bc36-265">Get-Help</span><span class="sxs-lookup"><span data-stu-id="4bc36-265">Get-Help</span></span>](../Microsoft.PowerShell.Core/Get-Help.md)
 
-[<span data-ttu-id="32849-263">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="32849-263">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+[<span data-ttu-id="4bc36-266">Get-Package</span><span class="sxs-lookup"><span data-stu-id="4bc36-266">Get-Package</span></span>](Get-Package.md)
 
-[<span data-ttu-id="32849-264">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="32849-264">Get-PackageSource</span></span>](Get-PackageSource.md)
+[<span data-ttu-id="4bc36-267">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="4bc36-267">Get-PackageProvider</span></span>](Get-PackageProvider.md)
 
-[<span data-ttu-id="32849-265">Find-Package</span><span class="sxs-lookup"><span data-stu-id="32849-265">Find-Package</span></span>](Find-Package.md)
+[<span data-ttu-id="4bc36-268">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="4bc36-268">Get-PackageSource</span></span>](Get-PackageSource.md)
 
-[<span data-ttu-id="32849-266">Save-Package</span><span class="sxs-lookup"><span data-stu-id="32849-266">Save-Package</span></span>](Save-Package.md)
+[<span data-ttu-id="4bc36-269">Find-Package</span><span class="sxs-lookup"><span data-stu-id="4bc36-269">Find-Package</span></span>](Find-Package.md)
 
-[<span data-ttu-id="32849-267">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="32849-267">Uninstall-Package</span></span>](Uninstall-Package.md)
+[<span data-ttu-id="4bc36-270">Save-Package</span><span class="sxs-lookup"><span data-stu-id="4bc36-270">Save-Package</span></span>](Save-Package.md)
+
+[<span data-ttu-id="4bc36-271">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="4bc36-271">Uninstall-Package</span></span>](Uninstall-Package.md)

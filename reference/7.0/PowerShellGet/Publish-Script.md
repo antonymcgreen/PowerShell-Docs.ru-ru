@@ -7,43 +7,43 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/powershellget/publish-script?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Publish-Script
-ms.openlocfilehash: a67610fdbee8a138eb0f4e37016cdf142248e3c3
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 26fc71546c03fbb49bf8824f6779e6b6371daa0e
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226209"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891147"
 ---
-# <span data-ttu-id="7d41c-103">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="7d41c-103">Publish-Script</span></span>
+# <span data-ttu-id="77429-103">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="77429-103">Publish-Script</span></span>
 
-## <span data-ttu-id="7d41c-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="7d41c-104">SYNOPSIS</span></span>
-<span data-ttu-id="7d41c-105">Публикует скрипт.</span><span class="sxs-lookup"><span data-stu-id="7d41c-105">Publishes a script.</span></span>
+## <span data-ttu-id="77429-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="77429-104">SYNOPSIS</span></span>
+<span data-ttu-id="77429-105">Публикует скрипт.</span><span class="sxs-lookup"><span data-stu-id="77429-105">Publishes a script.</span></span>
 
-## <span data-ttu-id="7d41c-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="7d41c-106">SYNTAX</span></span>
+## <span data-ttu-id="77429-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="77429-106">SYNTAX</span></span>
 
-### <span data-ttu-id="7d41c-107">Паспараметерсет (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="7d41c-107">PathParameterSet (Default)</span></span>
+### <span data-ttu-id="77429-107">Паспараметерсет (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="77429-107">PathParameterSet (Default)</span></span>
 
 ```
 Publish-Script -Path <String> [-NuGetApiKey <String>] [-Repository <String>]
  [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="7d41c-108">литералпаспараметерсет</span><span class="sxs-lookup"><span data-stu-id="7d41c-108">LiteralPathParameterSet</span></span>
+### <span data-ttu-id="77429-108">литералпаспараметерсет</span><span class="sxs-lookup"><span data-stu-id="77429-108">LiteralPathParameterSet</span></span>
 
 ```
 Publish-Script -LiteralPath <String> [-NuGetApiKey <String>] [-Repository <String>]
  [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="7d41c-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="7d41c-109">DESCRIPTION</span></span>
+## <span data-ttu-id="77429-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="77429-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="7d41c-110">`Publish-Script`Командлет публикует указанный скрипт в веб-коллекции.</span><span class="sxs-lookup"><span data-stu-id="7d41c-110">The `Publish-Script` cmdlet publishes the specified script to the online gallery.</span></span>
+<span data-ttu-id="77429-110">`Publish-Script`Командлет публикует указанный скрипт в веб-коллекции.</span><span class="sxs-lookup"><span data-stu-id="77429-110">The `Publish-Script` cmdlet publishes the specified script to the online gallery.</span></span>
 
-## <span data-ttu-id="7d41c-111">Примеры</span><span class="sxs-lookup"><span data-stu-id="7d41c-111">EXAMPLES</span></span>
+## <span data-ttu-id="77429-111">Примеры</span><span class="sxs-lookup"><span data-stu-id="77429-111">EXAMPLES</span></span>
 
-### <span data-ttu-id="7d41c-112">Пример 1. Создание файла скрипта, добавление в него содержимого и его публикация</span><span class="sxs-lookup"><span data-stu-id="7d41c-112">Example 1: Create a script file, add content to it, and publish it</span></span>
+### <span data-ttu-id="77429-112">Пример 1. Создание файла скрипта, добавление в него содержимого и его публикация</span><span class="sxs-lookup"><span data-stu-id="77429-112">Example 1: Create a script file, add content to it, and publish it</span></span>
 
-<span data-ttu-id="7d41c-113">`New-ScriptFileInfo`Командлет создает файл скрипта с именем `Demo-Script.ps1` .</span><span class="sxs-lookup"><span data-stu-id="7d41c-113">The `New-ScriptFileInfo` cmdlet creates a script file named `Demo-Script.ps1`.</span></span> <span data-ttu-id="7d41c-114">`Get-Content` Отображает содержимое `Demo-Script.ps1` .</span><span class="sxs-lookup"><span data-stu-id="7d41c-114">`Get-Content` displays the content of `Demo-Script.ps1`.</span></span> <span data-ttu-id="7d41c-115">`Add-Content`Командлет добавляет функцию и рабочий процесс в `Demo-Script.ps1` .</span><span class="sxs-lookup"><span data-stu-id="7d41c-115">The `Add-Content` cmdlet adds a function and a workflow to `Demo-Script.ps1`.</span></span>
+<span data-ttu-id="77429-113">`New-ScriptFileInfo`Командлет создает файл скрипта с именем `Demo-Script.ps1` .</span><span class="sxs-lookup"><span data-stu-id="77429-113">The `New-ScriptFileInfo` cmdlet creates a script file named `Demo-Script.ps1`.</span></span> <span data-ttu-id="77429-114">`Get-Content` Отображает содержимое `Demo-Script.ps1` .</span><span class="sxs-lookup"><span data-stu-id="77429-114">`Get-Content` displays the content of `Demo-Script.ps1`.</span></span> <span data-ttu-id="77429-115">`Add-Content`Командлет добавляет функцию и рабочий процесс в `Demo-Script.ps1` .</span><span class="sxs-lookup"><span data-stu-id="77429-115">The `Add-Content` cmdlet adds a function and a workflow to `Demo-Script.ps1`.</span></span>
 
 ```powershell
 $newScriptInfo = @{
@@ -121,13 +121,13 @@ Version    Name                 Type       Repository    Description
 1.0        Demo-Script          Script     LocalRepo1    my test script file description goes here
 ```
 
-<span data-ttu-id="7d41c-116">`Test-ScriptFileInfo`Командлет проверяет `Demo-Script.ps1` .</span><span class="sxs-lookup"><span data-stu-id="7d41c-116">The `Test-ScriptFileInfo` cmdlet validates `Demo-Script.ps1`.</span></span> <span data-ttu-id="7d41c-117">`Publish-Script`Командлет публикует скрипт в репозитории **LocalRepo1** .</span><span class="sxs-lookup"><span data-stu-id="7d41c-117">The `Publish-Script` cmdlet publishes the script to the **LocalRepo1** repository.</span></span> <span data-ttu-id="7d41c-118">И наконец.</span><span class="sxs-lookup"><span data-stu-id="7d41c-118">Finally.</span></span> <span data-ttu-id="7d41c-119">`Find-Script` используется для поиска `Demo-Script.ps1` в репозитории **LocalRepo1** .</span><span class="sxs-lookup"><span data-stu-id="7d41c-119">`Find-Script` is used to search for `Demo-Script.ps1` in the **LocalRepo1** repository.</span></span>
+<span data-ttu-id="77429-116">`Test-ScriptFileInfo`Командлет проверяет `Demo-Script.ps1` .</span><span class="sxs-lookup"><span data-stu-id="77429-116">The `Test-ScriptFileInfo` cmdlet validates `Demo-Script.ps1`.</span></span> <span data-ttu-id="77429-117">`Publish-Script`Командлет публикует скрипт в репозитории **LocalRepo1** .</span><span class="sxs-lookup"><span data-stu-id="77429-117">The `Publish-Script` cmdlet publishes the script to the **LocalRepo1** repository.</span></span> <span data-ttu-id="77429-118">И наконец.</span><span class="sxs-lookup"><span data-stu-id="77429-118">Finally.</span></span> <span data-ttu-id="77429-119">`Find-Script` используется для поиска `Demo-Script.ps1` в репозитории **LocalRepo1** .</span><span class="sxs-lookup"><span data-stu-id="77429-119">`Find-Script` is used to search for `Demo-Script.ps1` in the **LocalRepo1** repository.</span></span>
 
-## <span data-ttu-id="7d41c-120">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="7d41c-120">PARAMETERS</span></span>
+## <span data-ttu-id="77429-120">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="77429-120">PARAMETERS</span></span>
 
-### <span data-ttu-id="7d41c-121">-Confirm</span><span class="sxs-lookup"><span data-stu-id="7d41c-121">-Confirm</span></span>
+### <span data-ttu-id="77429-121">-Confirm</span><span class="sxs-lookup"><span data-stu-id="77429-121">-Confirm</span></span>
 
-<span data-ttu-id="7d41c-122">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="7d41c-122">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="77429-122">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="77429-122">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,7 +141,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7d41c-123">-Credential</span><span class="sxs-lookup"><span data-stu-id="7d41c-123">-Credential</span></span>
+### <span data-ttu-id="77429-123">-Credential</span><span class="sxs-lookup"><span data-stu-id="77429-123">-Credential</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -155,9 +155,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7d41c-124">-Force</span><span class="sxs-lookup"><span data-stu-id="7d41c-124">-Force</span></span>
+### <span data-ttu-id="77429-124">-Force</span><span class="sxs-lookup"><span data-stu-id="77429-124">-Force</span></span>
 
-<span data-ttu-id="7d41c-125">Принудительное выполнение команды без запроса на подтверждение пользователем.</span><span class="sxs-lookup"><span data-stu-id="7d41c-125">Forces the command to run without asking for user confirmation.</span></span>
+<span data-ttu-id="77429-125">Принудительное выполнение команды без запроса на подтверждение пользователем.</span><span class="sxs-lookup"><span data-stu-id="77429-125">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -171,9 +171,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7d41c-126">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="7d41c-126">-LiteralPath</span></span>
+### <span data-ttu-id="77429-126">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="77429-126">-LiteralPath</span></span>
 
-<span data-ttu-id="7d41c-127">Указывает путь к одному или нескольким расположениям.</span><span class="sxs-lookup"><span data-stu-id="7d41c-127">Specifies a path to one or more locations.</span></span> <span data-ttu-id="7d41c-128">В отличие от параметра **path** , значение параметра **LiteralPath** используется в точности так, как указано.</span><span class="sxs-lookup"><span data-stu-id="7d41c-128">Unlike the **Path** parameter, the value of the **LiteralPath** parameter is used exactly as entered.</span></span> <span data-ttu-id="7d41c-129">Никакие символы не интерпретируются как знаки подстановки.</span><span class="sxs-lookup"><span data-stu-id="7d41c-129">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="7d41c-130">Если путь содержит escape-символы, заключите их в одинарные кавычки.</span><span class="sxs-lookup"><span data-stu-id="7d41c-130">If the path includes escape characters, enclose them in single quotation marks.</span></span> <span data-ttu-id="7d41c-131">Это позволит Windows PowerShell не интерпретировать какие-либо символы как символы Escape-последовательности.</span><span class="sxs-lookup"><span data-stu-id="7d41c-131">Single quotation marks tell Windows PowerShell not to interpret any characters as escape sequences.</span></span>
+<span data-ttu-id="77429-127">Указывает путь к одному или нескольким расположениям.</span><span class="sxs-lookup"><span data-stu-id="77429-127">Specifies a path to one or more locations.</span></span> <span data-ttu-id="77429-128">В отличие от параметра **path** , значение параметра **LiteralPath** используется в точности так, как указано.</span><span class="sxs-lookup"><span data-stu-id="77429-128">Unlike the **Path** parameter, the value of the **LiteralPath** parameter is used exactly as entered.</span></span> <span data-ttu-id="77429-129">Никакие символы не интерпретируются как знаки подстановки.</span><span class="sxs-lookup"><span data-stu-id="77429-129">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="77429-130">Если путь содержит escape-символы, заключите их в одинарные кавычки.</span><span class="sxs-lookup"><span data-stu-id="77429-130">If the path includes escape characters, enclose them in single quotation marks.</span></span> <span data-ttu-id="77429-131">Это позволит Windows PowerShell не интерпретировать какие-либо символы как символы Escape-последовательности.</span><span class="sxs-lookup"><span data-stu-id="77429-131">Single quotation marks tell Windows PowerShell not to interpret any characters as escape sequences.</span></span>
 
 ```yaml
 Type: System.String
@@ -187,9 +187,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7d41c-132">-NuGetApiKey</span><span class="sxs-lookup"><span data-stu-id="7d41c-132">-NuGetApiKey</span></span>
+### <span data-ttu-id="77429-132">-NuGetApiKey</span><span class="sxs-lookup"><span data-stu-id="77429-132">-NuGetApiKey</span></span>
 
-<span data-ttu-id="7d41c-133">Указывает ключ API, который будет использоваться для публикации скрипта в интерактивной коллекции.</span><span class="sxs-lookup"><span data-stu-id="7d41c-133">Specifies the API key that you want to use to publish a script to the online gallery.</span></span> <span data-ttu-id="7d41c-134">Ключ API является частью вашего профиля в интерактивной коллекции.</span><span class="sxs-lookup"><span data-stu-id="7d41c-134">The API key is part of your profile in the online gallery.</span></span> <span data-ttu-id="7d41c-135">Дополнительные сведения см. в статье [Управление ключами API](/powershell/scripting/gallery/how-to/managing-profile/creating-apikeys).</span><span class="sxs-lookup"><span data-stu-id="7d41c-135">For more information see [Managing API keys](/powershell/scripting/gallery/how-to/managing-profile/creating-apikeys).</span></span>
+<span data-ttu-id="77429-133">Указывает ключ API, который будет использоваться для публикации скрипта в интерактивной коллекции.</span><span class="sxs-lookup"><span data-stu-id="77429-133">Specifies the API key that you want to use to publish a script to the online gallery.</span></span> <span data-ttu-id="77429-134">Ключ API является частью вашего профиля в интерактивной коллекции.</span><span class="sxs-lookup"><span data-stu-id="77429-134">The API key is part of your profile in the online gallery.</span></span> <span data-ttu-id="77429-135">Дополнительные сведения см. в статье [Управление ключами API](/powershell/scripting/gallery/how-to/managing-profile/creating-apikeys).</span><span class="sxs-lookup"><span data-stu-id="77429-135">For more information see [Managing API keys](/powershell/scripting/gallery/how-to/managing-profile/creating-apikeys).</span></span>
 
 ```yaml
 Type: System.String
@@ -203,9 +203,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7d41c-136">-Path</span><span class="sxs-lookup"><span data-stu-id="7d41c-136">-Path</span></span>
+### <span data-ttu-id="77429-136">-Path</span><span class="sxs-lookup"><span data-stu-id="77429-136">-Path</span></span>
 
-<span data-ttu-id="7d41c-137">Указывает путь к одному или нескольким расположениям.</span><span class="sxs-lookup"><span data-stu-id="7d41c-137">Specifies a path to one or more locations.</span></span> <span data-ttu-id="7d41c-138">Разрешено использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="7d41c-138">Wildcards are permitted.</span></span> <span data-ttu-id="7d41c-139">Местоположением по умолчанию является текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="7d41c-139">The default location is the current directory.</span></span>
+<span data-ttu-id="77429-137">Указывает путь к одному или нескольким расположениям.</span><span class="sxs-lookup"><span data-stu-id="77429-137">Specifies a path to one or more locations.</span></span> <span data-ttu-id="77429-138">Разрешено использовать подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="77429-138">Wildcards are permitted.</span></span> <span data-ttu-id="77429-139">Местоположением по умолчанию является текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="77429-139">The default location is the current directory.</span></span>
 
 ```yaml
 Type: System.String
@@ -219,9 +219,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="7d41c-140">— Репозиторий;</span><span class="sxs-lookup"><span data-stu-id="7d41c-140">-Repository</span></span>
+### <span data-ttu-id="77429-140">— Репозиторий;</span><span class="sxs-lookup"><span data-stu-id="77429-140">-Repository</span></span>
 
-<span data-ttu-id="7d41c-141">Указывает понятное имя репозитория, зарегистрированного при выполнении `Register-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="7d41c-141">Specifies the friendly name of a repository that has been registered by running `Register-PSRepository`.</span></span>
+<span data-ttu-id="77429-141">Указывает понятное имя репозитория, зарегистрированного при выполнении `Register-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="77429-141">Specifies the friendly name of a repository that has been registered by running `Register-PSRepository`.</span></span>
 
 ```yaml
 Type: System.String
@@ -235,9 +235,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7d41c-142">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="7d41c-142">-WhatIf</span></span>
+### <span data-ttu-id="77429-142">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="77429-142">-WhatIf</span></span>
 
-<span data-ttu-id="7d41c-143">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="7d41c-143">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="7d41c-144">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="7d41c-144">The cmdlet is not run.</span></span>
+<span data-ttu-id="77429-143">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="77429-143">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="77429-144">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="77429-144">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -251,30 +251,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7d41c-145">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="7d41c-145">CommonParameters</span></span>
+### <span data-ttu-id="77429-145">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="77429-145">CommonParameters</span></span>
 
-<span data-ttu-id="7d41c-146">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7d41c-146">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7d41c-147">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="7d41c-147">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="77429-146">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="77429-146">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="77429-147">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="77429-147">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="7d41c-148">Входные данные</span><span class="sxs-lookup"><span data-stu-id="7d41c-148">INPUTS</span></span>
+## <span data-ttu-id="77429-148">Входные данные</span><span class="sxs-lookup"><span data-stu-id="77429-148">INPUTS</span></span>
 
-### <span data-ttu-id="7d41c-149">System.String</span><span class="sxs-lookup"><span data-stu-id="7d41c-149">System.String</span></span>
+### <span data-ttu-id="77429-149">System.String</span><span class="sxs-lookup"><span data-stu-id="77429-149">System.String</span></span>
 
-### <span data-ttu-id="7d41c-150">System.Management.Automation.PSCredential</span><span class="sxs-lookup"><span data-stu-id="7d41c-150">System.Management.Automation.PSCredential</span></span>
+### <span data-ttu-id="77429-150">System.Management.Automation.PSCredential</span><span class="sxs-lookup"><span data-stu-id="77429-150">System.Management.Automation.PSCredential</span></span>
 
-## <span data-ttu-id="7d41c-151">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="7d41c-151">OUTPUTS</span></span>
+## <span data-ttu-id="77429-151">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="77429-151">OUTPUTS</span></span>
 
-### <span data-ttu-id="7d41c-152">System.Object</span><span class="sxs-lookup"><span data-stu-id="7d41c-152">System.Object</span></span>
+### <span data-ttu-id="77429-152">System.Object</span><span class="sxs-lookup"><span data-stu-id="77429-152">System.Object</span></span>
 
-## <span data-ttu-id="7d41c-153">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="7d41c-153">NOTES</span></span>
+## <span data-ttu-id="77429-153">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="77429-153">NOTES</span></span>
 
-## <span data-ttu-id="7d41c-154">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="7d41c-154">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="77429-154">По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1.</span><span class="sxs-lookup"><span data-stu-id="77429-154">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="77429-155">Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="77429-155">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="77429-156">Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:</span><span class="sxs-lookup"><span data-stu-id="77429-156">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="77429-157">Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.</span><span class="sxs-lookup"><span data-stu-id="77429-157">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="7d41c-155">Find-Script</span><span class="sxs-lookup"><span data-stu-id="7d41c-155">Find-Script</span></span>](Find-Script.md)
+## <span data-ttu-id="77429-158">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="77429-158">RELATED LINKS</span></span>
 
-[<span data-ttu-id="7d41c-156">Install-Script</span><span class="sxs-lookup"><span data-stu-id="7d41c-156">Install-Script</span></span>](Install-Script.md)
+[<span data-ttu-id="77429-159">Find-Script</span><span class="sxs-lookup"><span data-stu-id="77429-159">Find-Script</span></span>](Find-Script.md)
 
-[<span data-ttu-id="7d41c-157">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="7d41c-157">Publish-Script</span></span>](Publish-Script.md)
+[<span data-ttu-id="77429-160">Install-Script</span><span class="sxs-lookup"><span data-stu-id="77429-160">Install-Script</span></span>](Install-Script.md)
 
-[<span data-ttu-id="7d41c-158">Save-Script</span><span class="sxs-lookup"><span data-stu-id="7d41c-158">Save-Script</span></span>](Save-Script.md)
+[<span data-ttu-id="77429-161">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="77429-161">Publish-Script</span></span>](Publish-Script.md)
 
-[<span data-ttu-id="7d41c-159">Update-Script</span><span class="sxs-lookup"><span data-stu-id="7d41c-159">Update-Script</span></span>](Update-Script.md)
+[<span data-ttu-id="77429-162">Save-Script</span><span class="sxs-lookup"><span data-stu-id="77429-162">Save-Script</span></span>](Save-Script.md)
+
+[<span data-ttu-id="77429-163">Update-Script</span><span class="sxs-lookup"><span data-stu-id="77429-163">Update-Script</span></span>](Update-Script.md)

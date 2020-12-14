@@ -1,64 +1,82 @@
 ---
 description: Позволяет указать, какие пространства имен используются в сеансе.
-keywords: powershell,командлет
 Locale: en-US
-ms.date: 01/29/2020
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: eaf983ad03676b4ac57a3b35bc44f72036da55b4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: bbea815f93ba503fcce550dec28736630fec5a51
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231829"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890769"
 ---
-# <a name="about-using"></a><span data-ttu-id="1c60b-104">Об использовании</span><span class="sxs-lookup"><span data-stu-id="1c60b-104">About Using</span></span>
+# <a name="about-using"></a><span data-ttu-id="dd3a4-103">Об использовании</span><span class="sxs-lookup"><span data-stu-id="dd3a4-103">About Using</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="1c60b-105">КРАТКОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="1c60b-105">SHORT DESCRIPTION</span></span>
-<span data-ttu-id="1c60b-106">Позволяет указать, какие пространства имен используются в сеансе.</span><span class="sxs-lookup"><span data-stu-id="1c60b-106">Allows you to indicate which namespaces are used in the session.</span></span>
+## <a name="short-description"></a><span data-ttu-id="dd3a4-104">КРАТКОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="dd3a4-104">SHORT DESCRIPTION</span></span>
+<span data-ttu-id="dd3a4-105">Позволяет указать, какие пространства имен используются в сеансе.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-105">Allows you to indicate which namespaces are used in the session.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="1c60b-107">ПОДРОБНОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="1c60b-107">LONG DESCRIPTION</span></span>
+## <a name="long-description"></a><span data-ttu-id="dd3a4-106">ПОДРОБНОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="dd3a4-106">LONG DESCRIPTION</span></span>
 
-<span data-ttu-id="1c60b-108">`using`Инструкция позволяет указать, какие пространства имен используются в сеансе.</span><span class="sxs-lookup"><span data-stu-id="1c60b-108">The `using` statement allows you to specify which namespaces are used in the session.</span></span> <span data-ttu-id="1c60b-109">Добавление пространств имен упрощает использование классов и членов .NET и позволяет импортировать классы из модулей скриптов и сборок.</span><span class="sxs-lookup"><span data-stu-id="1c60b-109">Adding namespaces simplifies usage of .NET classes and member and allows you to import classes from script modules and assemblies.</span></span>
+<span data-ttu-id="dd3a4-107">`using`Инструкция позволяет указать, какие пространства имен используются в сеансе.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-107">The `using` statement allows you to specify which namespaces are used in the session.</span></span> <span data-ttu-id="dd3a4-108">Добавление пространств имен упрощает использование классов и членов .NET и позволяет импортировать классы из модулей скриптов и сборок.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-108">Adding namespaces simplifies usage of .NET classes and member and allows you to import classes from script modules and assemblies.</span></span>
 
-<span data-ttu-id="1c60b-110">`using`Операторы должны располагаться перед любыми другими инструкциями в скрипте.</span><span class="sxs-lookup"><span data-stu-id="1c60b-110">The `using` statements must come before any other statements in a script.</span></span>
+<span data-ttu-id="dd3a4-109">`using`Операторы должны располагаться перед любыми другими инструкциями в скрипте.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-109">The `using` statements must come before any other statements in a script.</span></span>
 
-<span data-ttu-id="1c60b-111">`using`Оператор не следует путать с `using:` модификатором области для переменных.</span><span class="sxs-lookup"><span data-stu-id="1c60b-111">The `using` statement should not be confused with the `using:` scope modifier for variables.</span></span> <span data-ttu-id="1c60b-112">Дополнительные сведения см. в разделе [about_Remote_Variables](about_Remote_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="1c60b-112">For more information, see [about_Remote_Variables](about_Remote_Variables.md).</span></span>
+<span data-ttu-id="dd3a4-110">`using`Оператор не следует путать с `using:` модификатором области для переменных.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-110">The `using` statement should not be confused with the `using:` scope modifier for variables.</span></span> <span data-ttu-id="dd3a4-111">Дополнительные сведения см. в разделе [about_Remote_Variables](about_Remote_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="dd3a4-111">For more information, see [about_Remote_Variables](about_Remote_Variables.md).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="1c60b-113">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1c60b-113">Syntax</span></span>
+## <a name="namespace-syntax"></a><span data-ttu-id="dd3a4-112">Синтаксис пространства имен</span><span class="sxs-lookup"><span data-stu-id="dd3a4-112">Namespace syntax</span></span>
 
-<span data-ttu-id="1c60b-114">Чтобы указать пространства имен .NET, из которых следует разрешить типы:</span><span class="sxs-lookup"><span data-stu-id="1c60b-114">To specify .NET namespaces from which to resolve types:</span></span>
+<span data-ttu-id="dd3a4-113">Чтобы указать пространства имен .NET, из которых следует разрешить типы:</span><span class="sxs-lookup"><span data-stu-id="dd3a4-113">To specify .NET namespaces from which to resolve types:</span></span>
 
 ```
 using namespace <.NET-namespace>
 ```
 
-<span data-ttu-id="1c60b-115">Чтобы загрузить классы из модуля PowerShell, сделайте следующее:</span><span class="sxs-lookup"><span data-stu-id="1c60b-115">To load classes from a PowerShell module:</span></span>
+<span data-ttu-id="dd3a4-114">Указание пространства имен упрощает ссылки на типы по их коротким именам.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-114">Specifying a namespace makes it easier to reference types by their short names.</span></span>
+
+## <a name="module-syntax"></a><span data-ttu-id="dd3a4-115">Синтаксис модуля</span><span class="sxs-lookup"><span data-stu-id="dd3a4-115">Module syntax</span></span>
+
+<span data-ttu-id="dd3a4-116">Чтобы загрузить классы из модуля PowerShell, сделайте следующее:</span><span class="sxs-lookup"><span data-stu-id="dd3a4-116">To load classes from a PowerShell module:</span></span>
 
 ```
 using module <module-name>
 ```
 
-<span data-ttu-id="1c60b-116">Предварительная загрузка типов из сборки .NET:</span><span class="sxs-lookup"><span data-stu-id="1c60b-116">To preload types from a .NET assembly:</span></span>
+<span data-ttu-id="dd3a4-117">Значением `<module-name>` может быть имя модуля, полная спецификация модуля или путь к файлу модуля.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-117">The value of `<module-name>` can be a module name, a full module specification, or a path to a module file.</span></span>
+
+<span data-ttu-id="dd3a4-118">Если `<module-name>` является путем, путь может быть полным или относительным.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-118">When `<module-name>` is a path, the path can be fully qualified or relative.</span></span> <span data-ttu-id="dd3a4-119">Относительный путь разрешается относительно скрипта, содержащего инструкцию using.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-119">A relative path is resolved relative to the script that contains the using statement.</span></span>
+
+<span data-ttu-id="dd3a4-120">Если `<module-name>` является спецификацией имени или модуля, PowerShell выполняет поиск в **PSModulePath** для указанного модуля.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-120">When `<module-name>` is a name or module specification, PowerShell searches the **PSModulePath** for the specified module.</span></span>
+
+<span data-ttu-id="dd3a4-121">Спецификация модуля — это хэш-таблица, которая содержит следующие ключи.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-121">A module specification is a hash table that has the following keys.</span></span>
+
+- <span data-ttu-id="dd3a4-122">`ModuleName` - **Обязательное требование** Указывает имя модуля.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-122">`ModuleName` - **Required** Specifies the module name.</span></span>
+- <span data-ttu-id="dd3a4-123">`GUID` - **Необязательно** Указывает идентификатор GUID модуля.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-123">`GUID` - **Optional** Specifies the GUID of the module.</span></span>
+- <span data-ttu-id="dd3a4-124">**Также необходимо** указать один из трех указанных ниже ключей.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-124">It's also **Required** to specify one of the three below keys.</span></span> <span data-ttu-id="dd3a4-125">Эти ключи нельзя использовать совместно.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-125">These keys can't be used together.</span></span>
+  - <span data-ttu-id="dd3a4-126">`ModuleVersion` — Указывает минимальную допустимую версию модуля.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-126">`ModuleVersion` - Specifies a minimum acceptable version of the module.</span></span>
+  - <span data-ttu-id="dd3a4-127">`RequiredVersion` — Указывает точную, требуемую версию модуля.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-127">`RequiredVersion` - Specifies an exact, required version of the module.</span></span>
+  - <span data-ttu-id="dd3a4-128">`MaximumVersion` — Указывает максимально допустимую версию модуля.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-128">`MaximumVersion` - Specifies the maximum acceptable version of the module.</span></span>
+
+## <a name="assembly-syntax"></a><span data-ttu-id="dd3a4-129">Синтаксис сборки</span><span class="sxs-lookup"><span data-stu-id="dd3a4-129">Assembly syntax</span></span>
+
+<span data-ttu-id="dd3a4-130">Предварительная загрузка типов из сборки .NET:</span><span class="sxs-lookup"><span data-stu-id="dd3a4-130">To preload types from a .NET assembly:</span></span>
 
 ```
 using assembly <.NET-assembly-path>
 ```
 
-<span data-ttu-id="1c60b-117">Указание пространства имен упрощает ссылки на типы по их коротким именам.</span><span class="sxs-lookup"><span data-stu-id="1c60b-117">Specifying a namespace makes it easier to reference types by their short names.</span></span>
+<span data-ttu-id="dd3a4-131">При загрузке сборки выгружаются типы .NET из этой сборки в скрипт во время синтаксического анализа.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-131">Loading an assembly preloads .NET types from that assembly into a script at parse time.</span></span> <span data-ttu-id="dd3a4-132">Это позволяет создавать новые классы PowerShell, использующие типы из предварительно загруженной сборки.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-132">This allows you to create new PowerShell classes that use types from the preloaded assembly.</span></span>
 
-<span data-ttu-id="1c60b-118">При загрузке сборки выгружаются типы .NET из этой сборки в скрипт во время синтаксического анализа.</span><span class="sxs-lookup"><span data-stu-id="1c60b-118">Loading an assembly preloads .NET types from that assembly into a script at parse time.</span></span> <span data-ttu-id="1c60b-119">Это позволяет создавать новые классы PowerShell, использующие типы из предварительно загруженной сборки.</span><span class="sxs-lookup"><span data-stu-id="1c60b-119">This allows you to create new PowerShell classes that use types from the preloaded assembly.</span></span>
+<span data-ttu-id="dd3a4-133">Если вы не создаете новые классы PowerShell, используйте `Add-Type` вместо этого командлет.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-133">If you are not creating new PowerShell classes, use the `Add-Type` cmdlet instead.</span></span> <span data-ttu-id="dd3a4-134">Дополнительные сведения см. в разделе [Add-Type](xref:Microsoft.PowerShell.Utility.Add-Type).</span><span class="sxs-lookup"><span data-stu-id="dd3a4-134">For more information, see [Add-Type](xref:Microsoft.PowerShell.Utility.Add-Type).</span></span>
 
-<span data-ttu-id="1c60b-120">Если вы не создаете новые классы PowerShell, используйте `Add-Type` вместо этого командлет.</span><span class="sxs-lookup"><span data-stu-id="1c60b-120">If you are not creating new PowerShell classes, use the `Add-Type` cmdlet instead.</span></span> <span data-ttu-id="1c60b-121">Дополнительные сведения см. в разделе [Add-Type](xref:Microsoft.PowerShell.Utility.Add-Type).</span><span class="sxs-lookup"><span data-stu-id="1c60b-121">For more information, see [Add-Type](xref:Microsoft.PowerShell.Utility.Add-Type).</span></span>
+## <a name="examples"></a><span data-ttu-id="dd3a4-135">Примеры</span><span class="sxs-lookup"><span data-stu-id="dd3a4-135">Examples</span></span>
 
-## <a name="examples"></a><span data-ttu-id="1c60b-122">Примеры</span><span class="sxs-lookup"><span data-stu-id="1c60b-122">Examples</span></span>
+### <a name="example-1---add-namespaces-for-typename-resolution"></a><span data-ttu-id="dd3a4-136">Пример 1. Добавление пространств имен для разрешения имени TypeName</span><span class="sxs-lookup"><span data-stu-id="dd3a4-136">Example 1 - Add namespaces for typename resolution</span></span>
 
-### <a name="example-1---add-namespaces-for-typename-resolution"></a><span data-ttu-id="1c60b-123">Пример 1. Добавление пространств имен для разрешения имени TypeName</span><span class="sxs-lookup"><span data-stu-id="1c60b-123">Example 1 - Add namespaces for typename resolution</span></span>
+<span data-ttu-id="dd3a4-137">Следующий скрипт получает криптографический хэш для строки "Hello World".</span><span class="sxs-lookup"><span data-stu-id="dd3a4-137">The following script gets the cryptographic hash for the "Hello World" string.</span></span>
 
-<span data-ttu-id="1c60b-124">Следующий скрипт получает криптографический хэш для строки "Hello World".</span><span class="sxs-lookup"><span data-stu-id="1c60b-124">The following script gets the cryptographic hash for the "Hello World" string.</span></span>
-
-<span data-ttu-id="1c60b-125">Обратите внимание, что `using namespace System.Text` и `using namespace System.IO` упрощает ссылки на `[UnicodeEncoding]` в и и в `System.Text` `[Stream]` `[MemoryStream]` `System.IO` .</span><span class="sxs-lookup"><span data-stu-id="1c60b-125">Note how the `using namespace System.Text` and `using namespace System.IO` simplify the references to `[UnicodeEncoding]` in `System.Text` and `[Stream]` and to `[MemoryStream]` in `System.IO`.</span></span>
+<span data-ttu-id="dd3a4-138">Обратите внимание, что `using namespace System.Text` и `using namespace System.IO` упрощает ссылки на `[UnicodeEncoding]` в и и в `System.Text` `[Stream]` `[MemoryStream]` `System.IO` .</span><span class="sxs-lookup"><span data-stu-id="dd3a4-138">Note how the `using namespace System.Text` and `using namespace System.IO` simplify the references to `[UnicodeEncoding]` in `System.Text` and `[Stream]` and to `[MemoryStream]` in `System.IO`.</span></span>
 
 ```powershell
 using namespace System.Text
@@ -76,14 +94,14 @@ $hashfromstream = Get-FileHash -InputStream $memorystream `
 $hashfromstream.Hash.ToString()
 ```
 
-### <a name="example-2---load-classes-from-a-script-module"></a><span data-ttu-id="1c60b-126">Пример 2. Загрузка классов из модуля скрипта</span><span class="sxs-lookup"><span data-stu-id="1c60b-126">Example 2 - Load classes from a script module</span></span>
+### <a name="example-2---load-classes-from-a-script-module"></a><span data-ttu-id="dd3a4-139">Пример 2. Загрузка классов из модуля скрипта</span><span class="sxs-lookup"><span data-stu-id="dd3a4-139">Example 2 - Load classes from a script module</span></span>
 
-<span data-ttu-id="1c60b-127">В этом примере у нас есть модуль скрипта PowerShell с именем **кардгамес** , который определяет следующие классы:</span><span class="sxs-lookup"><span data-stu-id="1c60b-127">In this example, we have a PowerShell script module named **CardGames** that defines the following classes:</span></span>
+<span data-ttu-id="dd3a4-140">В этом примере у нас есть модуль скрипта PowerShell с именем **кардгамес** , который определяет следующие классы:</span><span class="sxs-lookup"><span data-stu-id="dd3a4-140">In this example, we have a PowerShell script module named **CardGames** that defines the following classes:</span></span>
 
-- <span data-ttu-id="1c60b-128">**Кардгамес. колода**</span><span class="sxs-lookup"><span data-stu-id="1c60b-128">**CardGames.Deck**</span></span>
-- <span data-ttu-id="1c60b-129">**Кардгамес. Card**</span><span class="sxs-lookup"><span data-stu-id="1c60b-129">**CardGames.Card**</span></span>
+- <span data-ttu-id="dd3a4-141">**Кардгамес. колода**</span><span class="sxs-lookup"><span data-stu-id="dd3a4-141">**CardGames.Deck**</span></span>
+- <span data-ttu-id="dd3a4-142">**Кардгамес. Card**</span><span class="sxs-lookup"><span data-stu-id="dd3a4-142">**CardGames.Card**</span></span>
 
-<span data-ttu-id="1c60b-130">`Import-Module` и `#requires` инструкция импортирует только функции, псевдонимы и переменные модуля, как определено модулем.</span><span class="sxs-lookup"><span data-stu-id="1c60b-130">`Import-Module` and the `#requires` statement only import the module functions, aliases, and variables, as defined by the module.</span></span> <span data-ttu-id="1c60b-131">Классы не импортируются.</span><span class="sxs-lookup"><span data-stu-id="1c60b-131">Classes are not imported.</span></span> <span data-ttu-id="1c60b-132">`using module`Команда импортирует модуль, а также загружает определения классов.</span><span class="sxs-lookup"><span data-stu-id="1c60b-132">The `using module` command imports the module and also loads the class definitions.</span></span>
+<span data-ttu-id="dd3a4-143">`Import-Module` и `#requires` инструкция импортирует только функции, псевдонимы и переменные модуля, как определено модулем.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-143">`Import-Module` and the `#requires` statement only import the module functions, aliases, and variables, as defined by the module.</span></span> <span data-ttu-id="dd3a4-144">Классы не импортируются.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-144">Classes are not imported.</span></span> <span data-ttu-id="dd3a4-145">`using module`Команда импортирует модуль, а также загружает определения классов.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-145">The `using module` command imports the module and also loads the class definitions.</span></span>
 
 ```powershell
 using module CardGames
@@ -96,9 +114,9 @@ $deck.Shuffle()
 [Card[]]$hand3 = $deck.Deal(5)
 ```
 
-### <a name="example-3---load-classes-from-an-assembly"></a><span data-ttu-id="1c60b-133">Пример 3. Загрузка классов из сборки</span><span class="sxs-lookup"><span data-stu-id="1c60b-133">Example 3 - Load classes from an assembly</span></span>
+### <a name="example-3---load-classes-from-an-assembly"></a><span data-ttu-id="dd3a4-146">Пример 3. Загрузка классов из сборки</span><span class="sxs-lookup"><span data-stu-id="dd3a4-146">Example 3 - Load classes from an assembly</span></span>
 
-<span data-ttu-id="1c60b-134">В этом примере загружается сборка, чтобы ее классы можно было использовать для создания новых классов PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1c60b-134">This example loads an assembly so that its classes can be used to create new PowerShell classes.</span></span> <span data-ttu-id="1c60b-135">Следующий скрипт создает новый класс PowerShell, производный от класса **директориконтекст** .</span><span class="sxs-lookup"><span data-stu-id="1c60b-135">The following script creates a new PowerShell class that is derived from **DirectoryContext** class.</span></span>
+<span data-ttu-id="dd3a4-147">В этом примере загружается сборка, чтобы ее классы можно было использовать для создания новых классов PowerShell.</span><span class="sxs-lookup"><span data-stu-id="dd3a4-147">This example loads an assembly so that its classes can be used to create new PowerShell classes.</span></span> <span data-ttu-id="dd3a4-148">Следующий скрипт создает новый класс PowerShell, производный от класса **директориконтекст** .</span><span class="sxs-lookup"><span data-stu-id="dd3a4-148">The following script creates a new PowerShell class that is derived from **DirectoryContext** class.</span></span>
 
 ```powershell
 using assembly 'C:\Program Files\PowerShell\7\System.DirectoryServices.dll'
@@ -125,4 +143,3 @@ domain                                                    Name UserName ContextT
 ------                                                    ---- -------- -----------
 System.DirectoryServices.ActiveDirectory.DirectoryContext                    Domain
 ```
-
