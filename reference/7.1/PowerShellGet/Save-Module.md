@@ -7,12 +7,12 @@ ms.date: 11/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/save-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Module
-ms.openlocfilehash: 88ce556a366e67a911bf32eb5c13161a543f103f
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 9aff0ff794bea42da7690a77357c1d76f747a004
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228485"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892175"
 ---
 # Save-Module
 
@@ -82,11 +82,11 @@ d-----         7/1/2019     13:31                PackageManagement
 d-----         7/1/2019     13:31                PowerShellGet
 ```
 
-`Save-Module` использует параметр **Name** для указания модуля **PowerShellGet** . Параметр **path** указывает место хранения скачанного модуля. Параметр **репозитория** указывает зарегистрированный репозиторий **PSGallery** . По завершении загрузки `Get-ChildItem` отображает содержимое **папки** , в которой хранятся файлы.
+`Save-Module` использует параметр **Name** для указания модуля **PowerShellGet**. Параметр **path** указывает место хранения скачанного модуля. Параметр **репозитория** указывает зарегистрированный репозиторий **PSGallery**. По завершении загрузки `Get-ChildItem` отображает содержимое **папки** , в которой хранятся файлы.
 
 ### Пример 2. сохранение определенной версии модуля
 
-В этом примере показано, как использовать параметр, например **MaximumVersion** , или **RequiredVersion** , чтобы указать версию модуля.
+В этом примере показано, как использовать параметр, например **MaximumVersion**, или **RequiredVersion** , чтобы указать версию модуля.
 
 ```powershell
 Save-Module -Name PowerShellGet -Path C:\Test\Modules -Repository PSGallery -MaximumVersion 2.1.0
@@ -101,7 +101,7 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     13:40                2.1.0
 ```
 
-`Save-Module` использует параметр **Name** для указания модуля **PowerShellGet** . Параметр **path** указывает место хранения скачанного модуля. Параметр **репозитория** указывает зарегистрированный репозиторий **PSGallery** . **MaximumVersion** указывает, что версия **2.1.0** скачана и сохранена. По завершении загрузки `Get-ChildItem` отображает содержимое **папки** , в которой хранятся файлы.
+`Save-Module` использует параметр **Name** для указания модуля **PowerShellGet**. Параметр **path** указывает место хранения скачанного модуля. Параметр **репозитория** указывает зарегистрированный репозиторий **PSGallery**. **MaximumVersion** указывает, что версия **2.1.0** скачана и сохранена. По завершении загрузки `Get-ChildItem` отображает содержимое **папки** , в которой хранятся файлы.
 
 ### Пример 3. Поиск и сохранение определенной версии модуля
 
@@ -121,7 +121,7 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     14:04                1.6.5
 ```
 
-`Find-Module` использует параметр **Name** для указания модуля **PowerShellGet** . Параметр **репозитория** указывает зарегистрированный репозиторий **PSGallery** . **RequiredVersion** указывает версию **1.6.5** .
+`Find-Module` использует параметр **Name** для указания модуля **PowerShellGet**. Параметр **репозитория** указывает зарегистрированный репозиторий **PSGallery**. **RequiredVersion** указывает версию **1.6.5**.
 
 Объект отправляется по конвейеру в `Save-Module` . Параметр **path** указывает место хранения скачанного модуля. По завершении загрузки `Get-ChildItem` отображает содержимое **папки** , в которой хранятся файлы.
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy** .
+Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -405,5 +405,11 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-## Связанные ссылки
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
+## Связанные ссылки

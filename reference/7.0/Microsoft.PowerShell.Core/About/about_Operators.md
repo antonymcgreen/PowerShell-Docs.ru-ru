@@ -6,12 +6,12 @@ ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: 736ca53ff4992ea430ec89ad1795dcf278b0da41
-ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
+ms.openlocfilehash: 88369b1ccf3157e56dd5266784d8ca16e55b1f8f
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94483134"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892527"
 ---
 # <a name="about-operators"></a>Об операторах
 
@@ -85,7 +85,7 @@ PowerShell поддерживает несколько типов операто
 
 #### <a name="grouping-operator--"></a>Оператор группирования `( )`
 
-Как и в других языках, `(...)` служит для переопределения приоритета операторов в выражениях. Пример: `(1 + 2) / 3`
+Как и в других языках, `(...)` служит для переопределения приоритета операторов в выражениях. Например: `(1 + 2) / 3`
 
 Однако в PowerShell существуют дополнительные поведения.
 
@@ -542,7 +542,7 @@ ${a}?[0]
 > [!NOTE]
 > Так как в PowerShell символ `?` может быть частью имени переменной, для использования этих операторов требуется формальное указание имени переменной. Поэтому имена переменных необходимо заключать в фигурные скобки `{}`, например `${a}`, в том числе если имена содержат символ `?`: `${a?}`.
 >
-> Синтаксис имени переменной `${<name>}` не должен путать с `$()` оператором части выражения. Дополнительные сведения см. в разделе Имя переменной в [about_Variables](about_Variables.md#Variable-names-that-include-special-characters).
+> Синтаксис имени переменной `${<name>}` не должен путать с `$()` оператором части выражения. Дополнительные сведения см. в разделе Имя переменной в [about_Variables](about_Variables.md#variable-names-that-include-special-characters).
 
 ## <a name="see-also"></a>См. также раздел
 

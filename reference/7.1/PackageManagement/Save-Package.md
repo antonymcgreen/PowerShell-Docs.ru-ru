@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/save-package?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Package
-ms.openlocfilehash: c381de5b3c3d9aab701ed1ff9a78b3c9e0f65b3b
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f756c294c9a40170a94f9a35b8909cf164616bea
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228553"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891740"
 ---
 # Save-Package
 
@@ -81,7 +81,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
 ## DESCRIPTION
 
 `Save-Package`Командлет сохраняет пакеты на локальном компьютере, но не устанавливает пакеты.
-Этот командлет сохраняет последнюю версию пакета, если не указано значение **рекуиредверион** . Параметры **path** и **LiteralPath** являются взаимоисключающими и не могут быть добавлены к одной и той же команде.
+Этот командлет сохраняет последнюю версию пакета, если не указано значение **рекуиредверион**. Параметры **path** и **LiteralPath** являются взаимоисключающими и не могут быть добавлены к одной и той же команде.
 
 ## Примеры
 
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy** .
+Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -720,6 +720,13 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
+
 ## Связанные ссылки
 
 [about_PackageManagement](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
@@ -731,4 +738,3 @@ Accept wildcard characters: False
 [Save-Package](Save-Package.md)
 
 [Uninstall-Package](Uninstall-Package.md)
-

@@ -7,12 +7,12 @@ ms.date: 06/03/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-command?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Command
-ms.openlocfilehash: 1cd86a1c9abe6c8a4af9f68ed17ea1876ff1bd20
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 7bcf9073b31da8470fe2b542f90ae35c20dba36d
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228545"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892476"
 ---
 # Find-Command
 
@@ -66,7 +66,7 @@ Connect-AzureRmAccount              5.8.3      AzureRM.profile     PSGallery
 
 ### Пример 2. Поиск команды по имени
 
-`Find-Command` может использовать имя команды для нахождение модуля в репозитории. Возможно, имя команды существует в нескольких **модуленамес** .
+`Find-Command` может использовать имя команды для нахождение модуля в репозитории. Возможно, имя команды существует в нескольких **модуленамес**.
 
 ```powershell
 Find-Command -Repository PSGallery -Name Get-TargetResource
@@ -80,7 +80,7 @@ Get-TargetResource    1.0.0      xInternetExplorerHomePage       PSGallery
 Get-TargetResource    1.2.0.0    SystemLocaleDsc                 PSGallery
 ```
 
-`Find-Command` использует параметр **репозитория** для поиска в **PSGallery** . Параметр **Name** указывает команду **Get-TargetResource** .
+`Find-Command` использует параметр **репозитория** для поиска в **PSGallery**. Параметр **Name** указывает команду **Get-TargetResource**.
 
 ### Пример 3. Поиск команд по имени и установка модуля
 
@@ -98,7 +98,7 @@ Version   Name               Repository   Description
 1.2.0.0   SystemLocaleDsc    PSGallery    This DSC Resource allows configuration of the Windows...
 ```
 
-`Find-Command` использует параметр **Name** для указания команды **Get-TargetResource** . Параметр **репозитория** выполняет поиск в **PSGallery** . Параметр **ModuleName** указывает модуль, который необходимо установить, **системлокаледск** . Объект отправляется по конвейеру в `Install-Module` и устанавливается модуль. После завершения установки можно использовать `Get-InstalledModule` для вывода результатов.
+`Find-Command` использует параметр **Name** для указания команды **Get-TargetResource**. Параметр **репозитория** выполняет поиск в **PSGallery**. Параметр **ModuleName** указывает модуль, который необходимо установить, **системлокаледск**. Объект отправляется по конвейеру в `Install-Module` и устанавливается модуль. После завершения установки можно использовать `Get-InstalledModule` для вывода результатов.
 
 ### Пример 4. Поиск команды и сохранение ее модуля
 
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy** .
+Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -321,6 +321,13 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
+
 ## Связанные ссылки
 
 [Get-InstalledModule](Get-InstalledModule.md)
@@ -331,5 +338,5 @@ Accept wildcard characters: False
 
 [Select-Object](../Microsoft.PowerShell.Utility/Select-Object.md)
 
-[Uninstall-Module](Uninstall-Module.md)
+[Uninstall — Module](Uninstall-Module.md)
 

@@ -1,18 +1,18 @@
 ---
-title: about_Character_Encoding
 description: Описывает, как PowerShell использует кодировку символов для ввода и вывода строковых данных.
-ms.date: 10/21/2020
 Locale: en-US
+ms.date: 10/21/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_character_encoding?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
-ms.openlocfilehash: 3067a97a00da6f6f759ad874f98c06fe7ad6d923
-ms.sourcegitcommit: df80c558e9a4b89c9798f084bd04012ece15155c
+title: О кодировке символов
+ms.openlocfilehash: 48a33903bd44db68a3c581183f83ec23ea97161a
+ms.sourcegitcommit: cc72c40315fd2981d3009b335accbfa52d57640c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "93233237"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96349812"
 ---
-# <a name="about_character_encoding"></a>about_Character_Encoding
+# <a name="about_character_encoding"></a>О кодировке символов
 
 ## <a name="short-description"></a>Краткое описание
 Описывает, как PowerShell использует кодировку символов для ввода и вывода строковых данных.
@@ -43,7 +43,7 @@ Windows поддерживает Юникод и традиционные наб
 
 ## <a name="the-byte-order-mark"></a>Пометка порядка байтов
 
-Символ-пометка (BOM) — это _сигнатура в Юникоде_ в первых нескольких байтах файла или текстового потока, указывающих, какая кодировка Юникода используется для данных. Дополнительные сведения см. в статье [метка порядка байтов](https://wikipedia.org/wiki/Byte_order_mark) в Википедии.
+Символ-пометка (BOM) — это _сигнатура в Юникоде_ в первых нескольких байтах файла или текстового потока, указывающих, какая кодировка Юникода используется для данных. Дополнительные сведения см. в документации по [метке порядка байтов](/globalization/encoding/byte-order-mark) .
 
 В Windows PowerShell любая Кодировка Юникода, за исключением `UTF7` , всегда создает спецификацию. По умолчанию PowerShell Core имеет значение `utf8NoBOM` для всех текстовых выходных данных.
 

@@ -7,12 +7,12 @@ ms.date: 06/04/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-dscresource?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-DscResource
-ms.openlocfilehash: 170be8eb8e5f9f158b69c5505505e587e10c7e78
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 4312ac522bf0b04a9a95414774bad9624737ce45
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225729"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892677"
 ---
 # Find-DscResource
 
@@ -93,7 +93,7 @@ xWebSiteDefaults   2.6.0.0    xWebAdministration    PSGallery
 Find-DscResource -Name xWebsite | Install-Module
 ```
 
-`Find-DscResource` использует параметр **Name** для поиска ресурса с именем **ксвебсите** . Объект отправляется по конвейеру в `Install-Module` командлет. `Install-Module` устанавливает модуль **xWebAdministration** для ресурса.
+`Find-DscResource` использует параметр **Name** для поиска ресурса с именем **ксвебсите**. Объект отправляется по конвейеру в `Install-Module` командлет. `Install-Module` устанавливает модуль **xWebAdministration** для ресурса.
 
 ### Пример 4. Поиск всех ресурсов DSC в модуле
 
@@ -116,7 +116,7 @@ xIisLogging                         2.6.0.0    xWebAdministration      PSGallery
 
 ### Пример 5. поиск ресурса DSC по тегу и требуемой версии
 
-Ресурсы DSC можно найти с помощью **тега** параметров и **RequiredVersion** . **Тег** отображает текущую версию каждого ресурса, содержащего указанный тег в репозитории.
+Ресурсы DSC можно найти с помощью **тега** параметров и **RequiredVersion**. **Тег** отображает текущую версию каждого ресурса, содержащего указанный тег в репозитории.
 **RequiredVersion** требуется параметр **ModuleName** , а параметр **Name** — необязательный. Параметры **Name** и **ModuleName** ограничивают выходные данные. Используйте параметр **AllVersions** для вывода доступных версий ресурса DSC.
 
 ```powershell
@@ -134,7 +134,7 @@ xIisMimeTypeMapping     1.20.0.0   xWebAdministration     PSGallery
 
 ### Пример 6. поиск ресурса с помощью фильтра
 
-`Find-DscResource` находит все ресурсы и использует параметр **Filter** для указания результатов по **домену** . Параметр **Filter** находит значение фильтра в описании объекта или имени модуля. Используйте `Select-Object` командлет для просмотра свойств объекта.
+`Find-DscResource` находит все ресурсы и использует параметр **Filter** для указания результатов по **домену**. Параметр **Filter** находит значение фильтра в описании объекта или имени модуля. Используйте `Select-Object` командлет для просмотра свойств объекта.
 
 ```powershell
 Find-DscResource -Filter Domain
@@ -158,7 +158,7 @@ dmAwsTagInstance        1.0.1      domainAwsDSCResources      PSGallery
 Включает ресурсы, помеченные как предварительные версии в результатах.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -AllVersions
 
-Параметр **AllVersions** отображает все доступные версии ресурса DSC. Параметр **AllVersions** нельзя использовать с параметрами **MinimumVersion** , **MaximumVersion** или **RequiredVersion** .
+Параметр **AllVersions** отображает все доступные версии ресурса DSC. Параметр **AllVersions** нельзя использовать с параметрами **MinimumVersion**, **MaximumVersion** или **RequiredVersion** .
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -359,6 +359,13 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
+
 ## Связанные ссылки
 
 [Get-InstalledModule](Get-InstalledModule.md)
@@ -369,4 +376,4 @@ Accept wildcard characters: False
 
 [Select-Object](../Microsoft.PowerShell.Utility/Select-Object.md)
 
-[Uninstall-Module](Uninstall-Module.md)
+[Uninstall — Module](Uninstall-Module.md)

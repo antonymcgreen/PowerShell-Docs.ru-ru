@@ -7,12 +7,12 @@ ms.date: 06/05/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-rolecapability?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-RoleCapability
-ms.openlocfilehash: ca6a3845920793e7825727bef455c1001c13f0f0
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: ad3262cbe6e77ffbd638fd8ef77efeece63c3295
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228521"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892442"
 ---
 # Find-RoleCapability
 
@@ -332,6 +332,13 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
+
 ## Связанные ссылки
 
 [Get-ChildItem](../Microsoft.PowerShell.Management/Get-ChildItem.md)
@@ -343,4 +350,3 @@ Accept wildcard characters: False
 [New-PSRoleCapabilityFile](../Microsoft.PowerShell.Core/New-PSRoleCapabilityFile.md)
 
 [Save-Module](Save-Module.md)
-

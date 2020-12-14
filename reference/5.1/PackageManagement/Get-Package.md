@@ -7,17 +7,17 @@ ms.date: 05/22/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Package
-ms.openlocfilehash: aad8b6f033674c65b4cc56708e09e5320bb046dd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bc6ba83a6f0d585e166b1bdc419c8b9c7148e47c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227337"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892888"
 ---
 # Get-Package
 
 ## Краткий обзор
-Возвращает список всех пакетов программного обеспечения, установленных с помощью **PackageManagement** .
+Возвращает список всех пакетов программного обеспечения, установленных с помощью **PackageManagement**.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [-AdditionalArguments <String[]>] [<CommonParameters>]
 ```
 
-### Программы
+### Programs
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -58,7 +58,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
 
 ## DESCRIPTION
 
-`Get-Package`Командлет возвращает список всех пакетов программного обеспечения на локальном компьютере, которые были установлены с помощью **PackageManagement** . Можно запустить `Get-Package` на удаленных компьютерах, запустив его как часть `Invoke-Command` `Enter-PSSession` команды или скрипта.
+`Get-Package`Командлет возвращает список всех пакетов программного обеспечения на локальном компьютере, которые были установлены с помощью **PackageManagement**. Можно запустить `Get-Package` на удаленных компьютерах, запустив его как часть `Invoke-Command` `Enter-PSSession` команды или скрипта.
 
 ## Примеры
 
@@ -84,7 +84,7 @@ posh-git       0.7.3        https://www.powershellgallery.com/api/v2   PowerShel
 PS> Invoke-Command -ComputerName Server01 -Credential CONTOSO\TestUser -ScriptBlock {Get-Package}
 ```
 
-`Invoke-Command` использует параметр **ComputerName** для указания удаленного компьютера **Server01** . Параметр **Credential** указывает домен и имя пользователя с разрешениями на выполнение команд на компьютере. Параметр **ScriptBlock** запускает `Get-Package` командлет на удаленном компьютере.
+`Invoke-Command` использует параметр **ComputerName** для указания удаленного компьютера **Server01**. Параметр **Credential** указывает домен и имя пользователя с разрешениями на выполнение команд на компьютере. Параметр **ScriptBlock** запускает `Get-Package` командлет на удаленном компьютере.
 
 ### Пример 3. получение пакетов для указанного поставщика
 
@@ -103,7 +103,7 @@ posh-git              0.7.3        https://www.powershellgallery.com/api/v2   Po
 PowerShellGet         2.0.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-`Get-Package` использует параметр **providerName** для указания конкретного поставщика, **PowerShellGet** .
+`Get-Package` использует параметр **providerName** для указания конкретного поставщика, **PowerShellGet**.
 Параметр **все-Versions** отображает каждую установленную версию.
 
 ### Пример 4. получение точной версии конкретного пакета
@@ -120,7 +120,7 @@ Name                  Version      Source                                     Pr
 PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-`Get-Package` использует параметр **Name** для указания имени пакета, **PackageManagement** . Параметр **providerName** указывает поставщика, **PowerShellGet** . Параметр **требуемой версии** указывает установленную версию.
+`Get-Package` использует параметр **Name** для указания имени пакета, **PackageManagement**. Параметр **providerName** указывает поставщика, **PowerShellGet**. Параметр **требуемой версии** указывает установленную версию.
 
 ### Пример 5. Удаление пакета
 
@@ -130,7 +130,7 @@ PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   Po
 Get-Package -Name posh-git -RequiredVersion 0.7.3 | Uninstall-Package
 ```
 
-`Get-Package` использует параметр **Name** для указания имени пакета **Posh-Git** . Параметр **RequiredVersion** — это конкретная версия пакета. Объект отправляется по конвейеру в `Uninstall-Package` командлет. `Uninstall-Package` Удаляет пакет.
+`Get-Package` использует параметр **Name** для указания имени пакета **Posh-Git**. Параметр **RequiredVersion** — это конкретная версия пакета. Объект отправляется по конвейеру в `Uninstall-Package` командлет. `Uninstall-Package` Удаляет пакет.
 
 ## PARAMETERS
 
@@ -503,6 +503,13 @@ Accept wildcard characters: False
 ## ПРИМЕЧАНИЯ
 
 Включение поставщика пакетов в команду может сделать динамические параметры доступными для командлета. Динамические параметры относятся к поставщику пакетов. `Get-Help`Командлет перечисляет наборы параметров командлета и включает набор параметров поставщика. Например, `Get-Package` имеет набор параметров **PowerShellGet** , включающий `-NoPathUpdate` , `AllowClobber` и `SkipPublisherCheck` .
+
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки
 

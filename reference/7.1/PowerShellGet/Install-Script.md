@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-script?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Script
-ms.openlocfilehash: 2be7545829ddbbb7ddad798acb82f83c0feb3db1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: a5fa4388f149c2c1017454a6384d63807fccfc8a
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228510"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892408"
 ---
 # Install-Script
 
@@ -42,7 +42,7 @@ Install-Script [-InputObject] <PSObject[]> [-Scope <String>] [-NoPathUpdate] [-P
 
 `Install-Script`Командлет получает полезные данные скрипта из репозитория, проверяет, является ли полезная нагрузка допустимым сценарием PowerShell, и копирует файл скрипта в указанное расположение установки.
 
-Репозитории по умолчанию `Install-Script` можно настроить с помощью `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` командлетов,, и `Get-PSRepository` . При работе с несколькими репозиториями `Install-Script` устанавливает первый скрипт, соответствующий указанным условиям поиска ( **имя** , **MinimumVersion** или **MaximumVersion** ), из первого репозитория без каких-либо ошибок.
+Репозитории по умолчанию `Install-Script` можно настроить с помощью `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` командлетов,, и `Get-PSRepository` . При работе с несколькими репозиториями `Install-Script` устанавливает первый скрипт, соответствующий указанным условиям поиска (**имя**, **MinimumVersion** или **MaximumVersion**), из первого репозитория без каких-либо ошибок.
 
 ## Примеры
 
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy** .
+Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -500,6 +500,13 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
+
 ## Связанные ссылки
 
 [Find-Script](Find-Script.md)
@@ -511,4 +518,3 @@ Accept wildcard characters: False
 [Uninstall-Script](Uninstall-Script.md)
 
 [Update-Script](Update-Script.md)
-

@@ -3,12 +3,12 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,resource,gallery,setup
 title: Добавление параметров в конфигурацию
 description: Конфигурации могут быть параметризованы. Так они становятся более динамичными на основе данных, вводимых пользователем.
-ms.openlocfilehash: aea230d34994a7b20076559c44990abe554d5395
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 72f3cf9efb5d99170e71992bed86a20a57132250
+ms.sourcegitcommit: 62282bb9c36fea3b4290b9263c1cd8e9ac216e29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92656809"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96470338"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Добавление параметров в конфигурацию
 
@@ -179,7 +179,7 @@ $ServiceName
 $ServiceName
 ```
 
-Для параметра `$State` мы бы хотели запретить пользователю указывать значения за пределами предопределенного набора (например, Running, Stopped). Атрибут `ValidationSet*` будет запрещать пользователю указывать значения за пределами определенного набора (например, Running, Stopped). В следующем примере добавляется атрибут `ValidationSet` для параметра `$State`. Так как мы не хотим изменять параметр `$State` на **обязательный** , нам нужно будет добавить для него значение по умолчанию.
+Для параметра `$State` мы бы хотели запретить пользователю указывать значения за пределами предопределенного набора (например, Running, Stopped). Атрибут `ValidationSet*` будет запрещать пользователю указывать значения за пределами определенного набора (например, Running, Stopped). В следующем примере добавляется атрибут `ValidationSet` для параметра `$State`. Так как мы не хотим изменять параметр `$State` на **обязательный**, нам нужно будет добавить для него значение по умолчанию.
 
 ```powershell
 [ValidateSet("Running", "Stopped")]
@@ -210,7 +210,7 @@ Configuration TestConfig
         $State="Running",
 
         [String]
-        $ComputerName="localhost",
+        $ComputerName="localhost"
     )
 
     # It is best practice to explicitly import any required resources or modules.
