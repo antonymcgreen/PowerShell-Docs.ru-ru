@@ -3,12 +3,12 @@ title: Разрешение конфликтов зависимостей сбо
 description: При написании двоичного модуля PowerShell в C# можно использовать зависимости от других пакетов или библиотек для дополнительных функциональных возможностей.
 ms.date: 06/25/2020
 ms.custom: rjmholt
-ms.openlocfilehash: 536bcfd1ced536faccde0d6c5bc483cdaf31ce68
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: 93bb39bdd440c7f97c27aa81e68f68331569b69e
+ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87775191"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810408"
 ---
 # <a name="resolving-powershell-module-assembly-dependency-conflicts"></a>Разрешение конфликтов зависимостей сборок для модулей PowerShell
 
@@ -500,7 +500,7 @@ namespace AlcModule.Cmdlets
 
         public AlcModuleAssemblyLoadContext(string dependencyDirPath)
         {
-            _depdendencyDirPath = dependencyDirPath;
+            _dependencyDirPath = dependencyDirPath;
         }
 
         protected override Assembly Load(AssemblyName assemblyName)
@@ -509,7 +509,7 @@ namespace AlcModule.Cmdlets
             // looking for an assembly of the given name
             // in the configured dependency directory
             string assemblyPath = Path.Combine(
-                s_dependencyDirPath,
+                _dependencyDirPath,
                 $"{assemblyName.Name}.dll");
 
             // The ALC must use inherited methods to load assemblies
