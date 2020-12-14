@@ -7,12 +7,12 @@ ms.date: 07/16/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-module?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-Module
-ms.openlocfilehash: 29ba3907a349257f63e127739786ab6e210c0f82
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: dee60b0beae3f39642cbc1c388ffb79e687626b8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225769"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891130"
 ---
 # Update-Module
 
@@ -57,7 +57,7 @@ Update-Module
 Update-Module -Name SpeculationControl
 ```
 
-`Update-Module` использует параметр **Name** для обновления конкретного модуля **спекулатионконтрол** .
+`Update-Module` использует параметр **Name** для обновления конкретного модуля **спекулатионконтрол**.
 
 ### Пример 3. Просмотр Update-Module запусков
 
@@ -84,7 +84,7 @@ What if: Performing the operation "Update-Module" on target "Version '1.0.10' of
 Update-Module -Name SpeculationControl -RequiredVersion 1.0.14
 ```
 
-`Update-Module` использует параметр **Name** для указания модуля **спекулатионконтрол** . Параметр **RequiredVersion** указывает версию **1.0.14** .
+`Update-Module` использует параметр **Name** для указания модуля **спекулатионконтрол**. Параметр **RequiredVersion** указывает версию **1.0.14**.
 
 ### Пример 5. обновление модуля без подтверждения
 
@@ -94,7 +94,7 @@ Update-Module -Name SpeculationControl -RequiredVersion 1.0.14
 Update-Module -Name SpeculationControl -Force
 ```
 
-`Update-Module` использует параметр **Name** для указания модуля **спекулатионконтрол** . Параметр **Force** обновляет модуль без запроса подтверждения пользователя.
+`Update-Module` использует параметр **Name** для указания модуля **спекулатионконтрол**. Параметр **Force** обновляет модуль без запроса подтверждения пользователя.
 
 ## PARAMETERS
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 
 ### -RequiredVersion
 
-Указывает точную версию, до которой будет обновлен существующий установленный модуль. Версия, указанная в параметре **RequiredVersion** , должна существовать в интерактивной коллекции, иначе отображается ошибка. Если в одной команде обновляется несколько модулей, нельзя использовать **RequiredVersion** .
+Указывает точную версию, до которой будет обновлен существующий установленный модуль. Версия, указанная в параметре **RequiredVersion** , должна существовать в интерактивной коллекции, иначе отображается ошибка. Если в одной команде обновляется несколько модулей, нельзя использовать **RequiredVersion**.
 
 ```yaml
 Type: System.String
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 
 ### -Scope
 
-Задает область установки модуля. Допустимые значения для этого параметра: **ALLUSERS** и **CurrentUser** . Если **область** не указана, обновление устанавливается в области **CurrentUser** .
+Задает область установки модуля. Допустимые значения для этого параметра: **ALLUSERS** и **CurrentUser**. Если **область** не указана, обновление устанавливается в области **CurrentUser** .
 
 Область **ALLUSERS** требует повышенных разрешений и устанавливает модули в расположение, доступное всем пользователям компьютера:
 
@@ -290,8 +290,8 @@ Accept wildcard characters: False
 
 Если **область** не определена, значение по умолчанию задается на основе версии PowerShellGet.
 
-- В PowerShellGet версий 2.1.0 и выше значение по умолчанию — **CurrentUser** , что не требует повышения прав для установки.
-- В PowerShellGet версии 1. x-2.0. x параметр **Scope** недоступен, а значение по умолчанию — **ALLUSERS** , что требует повышения прав для установки.
+- В PowerShellGet версий 2.1.0 и выше значение по умолчанию — **CurrentUser**, что не требует повышения прав для установки.
+- В PowerShellGet версии 1. x-2.0. x параметр **Scope** недоступен, а значение по умолчанию — **ALLUSERS**, что требует повышения прав для установки.
 
 ```yaml
 Type: System.String
@@ -342,8 +342,15 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-Для PowerShell версии 6,0 и более поздней областью установки по умолчанию всегда является **CurrentUser** .
-Обновления модулей для **CurrentUser** , `$home\Documents\PowerShell\Modules` не требуют повышенных разрешений. Обновления модулей для **ALLUSERS** , `$env:ProgramFiles\PowerShell\Modules` требуют повышенных разрешений.
+Для PowerShell версии 6,0 и более поздней областью установки по умолчанию всегда является **CurrentUser**.
+Обновления модулей для **CurrentUser**, `$home\Documents\PowerShell\Modules` не требуют повышенных разрешений. Обновления модулей для **ALLUSERS**, `$env:ProgramFiles\PowerShell\Modules` требуют повышенных разрешений.
+
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 `Update-Module` работает в PowerShell 3,0 или более поздних версиях PowerShell, в Windows 7 или Windows 2008 R2 и более поздних версиях Windows.
 
@@ -363,4 +370,4 @@ Accept wildcard characters: False
 
 [Publish-Module](Publish-Module.md)
 
-[Uninstall-Module](Uninstall-Module.md)
+[Uninstall — Module](Uninstall-Module.md)

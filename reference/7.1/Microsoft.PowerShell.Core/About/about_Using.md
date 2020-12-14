@@ -1,17 +1,16 @@
 ---
 description: Позволяет указать, какие пространства имен используются в сеансе.
-keywords: powershell,командлет
 Locale: en-US
-ms.date: 01/29/2020
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: eaf983ad03676b4ac57a3b35bc44f72036da55b4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: bbea815f93ba503fcce550dec28736630fec5a51
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231829"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890769"
 ---
 # <a name="about-using"></a>Об использовании
 
@@ -26,7 +25,7 @@ ms.locfileid: "93231829"
 
 `using`Оператор не следует путать с `using:` модификатором области для переменных. Дополнительные сведения см. в разделе [about_Remote_Variables](about_Remote_Variables.md).
 
-## <a name="syntax"></a>Синтаксис
+## <a name="namespace-syntax"></a>Синтаксис пространства имен
 
 Чтобы указать пространства имен .NET, из которых следует разрешить типы:
 
@@ -34,19 +33,38 @@ ms.locfileid: "93231829"
 using namespace <.NET-namespace>
 ```
 
+Указание пространства имен упрощает ссылки на типы по их коротким именам.
+
+## <a name="module-syntax"></a>Синтаксис модуля
+
 Чтобы загрузить классы из модуля PowerShell, сделайте следующее:
 
 ```
 using module <module-name>
 ```
 
+Значением `<module-name>` может быть имя модуля, полная спецификация модуля или путь к файлу модуля.
+
+Если `<module-name>` является путем, путь может быть полным или относительным. Относительный путь разрешается относительно скрипта, содержащего инструкцию using.
+
+Если `<module-name>` является спецификацией имени или модуля, PowerShell выполняет поиск в **PSModulePath** для указанного модуля.
+
+Спецификация модуля — это хэш-таблица, которая содержит следующие ключи.
+
+- `ModuleName` - **Обязательное требование** Указывает имя модуля.
+- `GUID` - **Необязательно** Указывает идентификатор GUID модуля.
+- **Также необходимо** указать один из трех указанных ниже ключей. Эти ключи нельзя использовать совместно.
+  - `ModuleVersion` — Указывает минимальную допустимую версию модуля.
+  - `RequiredVersion` — Указывает точную, требуемую версию модуля.
+  - `MaximumVersion` — Указывает максимально допустимую версию модуля.
+
+## <a name="assembly-syntax"></a>Синтаксис сборки
+
 Предварительная загрузка типов из сборки .NET:
 
 ```
 using assembly <.NET-assembly-path>
 ```
-
-Указание пространства имен упрощает ссылки на типы по их коротким именам.
 
 При загрузке сборки выгружаются типы .NET из этой сборки в скрипт во время синтаксического анализа. Это позволяет создавать новые классы PowerShell, использующие типы из предварительно загруженной сборки.
 
@@ -125,4 +143,3 @@ domain                                                    Name UserName ContextT
 ------                                                    ---- -------- -----------
 System.DirectoryServices.ActiveDirectory.DirectoryContext                    Domain
 ```
-

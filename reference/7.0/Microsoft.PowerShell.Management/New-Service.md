@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 10/25/2019
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 0963e90f1f994a9bd6f3f61e80bf56eebff09384
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 7ba9bf66295bcbc2d8f7b7f94007b3fb673882fb
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94343119"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890980"
 ---
 # New-Service
 
@@ -38,7 +37,7 @@ New-Service [-Name] <String> [-BinaryPathName] <String> [-DisplayName <String>] 
 ### Пример 1. Создание службы
 
 ```powershell
-New-Service -Name "TestService" -BinaryPathName "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+New-Service -Name "TestService" -BinaryPathName '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
 ```
 
 Эта команда создает службу с именем TestService.
@@ -48,7 +47,7 @@ New-Service -Name "TestService" -BinaryPathName "C:\WINDOWS\System32\svchost.exe
 ```powershell
 $params = @{
   Name = "TestService"
-  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  BinaryPathName = '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
   DependsOn = "NetLogon"
   DisplayName = "Test Service"
   StartupType = "Manual"
@@ -83,7 +82,7 @@ Status    : OK
 ```powershell
 $SDDL = "D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;SU)"
 $params = @{
-  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  BinaryPathName = '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
   DependsOn = "NetLogon"
   DisplayName "Test Service"
   StartupType = "Manual"
@@ -101,6 +100,12 @@ New-Service @params
 
 Указывает путь к исполняемому файлу службы. Этот параметр обязателен.
 
+Полный путь к двоичному файлу службы. Если путь содержит пробел, он должен быть заключен в кавычки, чтобы правильно интерпретировать его. Например, `d:\my share\myservice.exe` необходимо указать как `'"d:\my share\myservice.exe"'` .
+
+Путь также может включать аргументы для автоматической запуска службы. Например, `'"d:\myshare\myservice.exe arg1 arg2"'`. Эти аргументы передаются в точку входа службы.
+
+Дополнительные сведения см. в описании параметра **лпбинарипаснаме** API [креатесервицев](/windows/win32/api/winsvc/nf-winsvc-createservicew) .
+
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -117,7 +122,7 @@ Accept wildcard characters: False
 
 Указывает учетную запись, используемую службой в качестве [учетной записи входа службы](/windows/desktop/ad/about-service-logon-accounts).
 
-Введите имя пользователя, например **User01** или **Domain01\User01** , либо введите объект **PSCredential** , например, созданный `Get-Credential` командлетом. При вводе имени пользователя этот командлет запрашивает пароль.
+Введите имя пользователя, например **User01** или **Domain01\User01**, либо введите объект **PSCredential** , например, созданный `Get-Credential` командлетом. При вводе имени пользователя этот командлет запрашивает пароль.
 
 Учетные данные хранятся в объекте [PSCredential](/dotnet/api/system.management.automation.pscredential) , а пароль хранится в качестве [SecureString](/dotnet/api/system.security.securestring).
 

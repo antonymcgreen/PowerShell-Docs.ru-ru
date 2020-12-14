@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/register-psrepository?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-PSRepository
-ms.openlocfilehash: be7ffa38a0409fa7ef0d01649b863a32732e34de
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: f0ec2f4bc0ce598b046c1159619aed5555b1bc79
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226206"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890221"
 ---
 # Register-PSRepository
 
@@ -269,6 +269,13 @@ Accept wildcard characters: False
 ### System.Object
 
 ## ПРИМЕЧАНИЯ
+
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки
 

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-packageprovider?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-PackageProvider
-ms.openlocfilehash: 96e8829b6939c40c85fb924ae65d73f48d2e475b
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: ac6acb8017ca992f10f377cf921f59c7b99bea4a
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225902"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890616"
 ---
 # Find-PackageProvider
 
@@ -278,6 +278,13 @@ Accept wildcard characters: False
 Объект **софтвареидентити** можно передать в командлет **Install-PackageProvider** , чтобы установить результаты командлета **Find-PackageProvider**.
 
 ## ПРИМЕЧАНИЯ
+
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки
 

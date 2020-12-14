@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-package?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Package
-ms.openlocfilehash: 9bbcda92b98410835a2380296a06fd053c01b52c
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 83336a97f13dc100943c3d0008ee97d28873adfb
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226122"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890306"
 ---
 # Find-Package
 
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 
 - Командлет
 - DscResource
-- Компонент
+- Функция
 - RoleCapability
 - Рабочий процесс
 
@@ -687,6 +687,13 @@ Accept wildcard characters: False
 `Find-Package` выводит объект **софтвареидентити** .
 
 ## ПРИМЕЧАНИЯ
+
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки
 

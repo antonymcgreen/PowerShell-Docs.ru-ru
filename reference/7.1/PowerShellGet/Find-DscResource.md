@@ -7,12 +7,12 @@ ms.date: 06/04/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-dscresource?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-DscResource
-ms.openlocfilehash: 9953a7912d29517249fa215b154c1dfae46585d1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2596bf1789f4eb8c7c3983bf64f99ff0c1132b67
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228525"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890051"
 ---
 # Find-DscResource
 
@@ -93,7 +93,7 @@ xWebSiteDefaults   2.6.0.0    xWebAdministration    PSGallery
 Find-DscResource -Name xWebsite | Install-Module
 ```
 
-`Find-DscResource` использует параметр **Name** для поиска ресурса с именем **ксвебсите** . Объект отправляется по конвейеру в `Install-Module` командлет. `Install-Module` устанавливает модуль **xWebAdministration** для ресурса.
+`Find-DscResource` использует параметр **Name** для поиска ресурса с именем **ксвебсите**. Объект отправляется по конвейеру в `Install-Module` командлет. `Install-Module` устанавливает модуль **xWebAdministration** для ресурса.
 
 ### Пример 4. Поиск всех ресурсов DSC в модуле
 
@@ -116,7 +116,7 @@ xIisLogging                         2.6.0.0    xWebAdministration      PSGallery
 
 ### Пример 5. поиск ресурса DSC по тегу и требуемой версии
 
-Ресурсы DSC можно найти с помощью **тега** параметров и **RequiredVersion** . **Тег** отображает текущую версию каждого ресурса, содержащего указанный тег в репозитории.
+Ресурсы DSC можно найти с помощью **тега** параметров и **RequiredVersion**. **Тег** отображает текущую версию каждого ресурса, содержащего указанный тег в репозитории.
 **RequiredVersion** требуется параметр **ModuleName** , а параметр **Name** — необязательный. Параметры **Name** и **ModuleName** ограничивают выходные данные. Используйте параметр **AllVersions** для вывода доступных версий ресурса DSC.
 
 ```powershell
@@ -134,7 +134,7 @@ xIisMimeTypeMapping     1.20.0.0   xWebAdministration     PSGallery
 
 ### Пример 6. поиск ресурса с помощью фильтра
 
-`Find-DscResource` находит все ресурсы и использует параметр **Filter** для указания результатов по **домену** . Параметр **Filter** находит значение фильтра в описании объекта или имени модуля. Используйте `Select-Object` командлет для просмотра свойств объекта.
+`Find-DscResource` находит все ресурсы и использует параметр **Filter** для указания результатов по **домену**. Параметр **Filter** находит значение фильтра в описании объекта или имени модуля. Используйте `Select-Object` командлет для просмотра свойств объекта.
 
 ```powershell
 Find-DscResource -Filter Domain
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -AllVersions
 
-Параметр **AllVersions** отображает все доступные версии ресурса DSC. Параметр **AllVersions** нельзя использовать с параметрами **MinimumVersion** , **MaximumVersion** или **RequiredVersion** .
+Параметр **AllVersions** отображает все доступные версии ресурса DSC. Параметр **AllVersions** нельзя использовать с параметрами **MinimumVersion**, **MaximumVersion** или **RequiredVersion** .
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -359,6 +359,13 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
+
 ## Связанные ссылки
 
 [Get-InstalledModule](Get-InstalledModule.md)
@@ -369,5 +376,4 @@ Accept wildcard characters: False
 
 [Select-Object](../Microsoft.PowerShell.Utility/Select-Object.md)
 
-[Uninstall-Module](Uninstall-Module.md)
-
+[Uninstall — Module](Uninstall-Module.md)

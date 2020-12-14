@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-script?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Script
-ms.openlocfilehash: dd4e8169310f23182697ba6bf4263d916f747b84
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: c8191f8b5bbf6337fdc11dc3d15774991029151b
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226214"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891198"
 ---
 # Install-Script
 
@@ -42,7 +42,7 @@ Install-Script [-InputObject] <PSObject[]> [-Scope <String>] [-NoPathUpdate] [-P
 
 `Install-Script`Командлет получает полезные данные скрипта из репозитория, проверяет, является ли полезная нагрузка допустимым сценарием PowerShell, и копирует файл скрипта в указанное расположение установки.
 
-Репозитории по умолчанию `Install-Script` можно настроить с помощью `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` командлетов,, и `Get-PSRepository` . При работе с несколькими репозиториями `Install-Script` устанавливает первый скрипт, соответствующий указанным условиям поиска ( **имя** , **MinimumVersion** или **MaximumVersion** ), из первого репозитория без каких-либо ошибок.
+Репозитории по умолчанию `Install-Script` можно настроить с помощью `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` командлетов,, и `Get-PSRepository` . При работе с несколькими репозиториями `Install-Script` устанавливает первый скрипт, соответствующий указанным условиям поиска (**имя**, **MinimumVersion** или **MaximumVersion**), из первого репозитория без каких-либо ошибок.
 
 ## Примеры
 
@@ -499,6 +499,13 @@ Accept wildcard characters: False
 ### System.Object
 
 ## ПРИМЕЧАНИЯ
+
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки
 

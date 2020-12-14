@@ -7,12 +7,12 @@ ms.date: 11/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/save-module?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Module
-ms.openlocfilehash: 1a41cc743bfb2572e1ab99bf161c2f13174bd163
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: fe737a8e248c95a39a430f59ae76d7981aa9c33a
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226201"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890439"
 ---
 # Save-Module
 
@@ -86,7 +86,7 @@ d-----         7/1/2019     13:31                PowerShellGet
 
 ### Пример 2. сохранение определенной версии модуля
 
-В этом примере показано, как использовать параметр, например **MaximumVersion** , или **RequiredVersion** , чтобы указать версию модуля.
+В этом примере показано, как использовать параметр, например **MaximumVersion**, или **RequiredVersion** , чтобы указать версию модуля.
 
 ```powershell
 Save-Module -Name PowerShellGet -Path C:\Test\Modules -Repository PSGallery -MaximumVersion 2.1.0
@@ -404,5 +404,12 @@ Accept wildcard characters: False
 ### System.Object
 
 ## ПРИМЕЧАНИЯ
+
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки

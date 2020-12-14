@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Package
-ms.openlocfilehash: 71266e097524847502e9ce2e4e59c4908352c859
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 79a57cdbfda4287ced131e230e88423757617b12
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227341"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890752"
 ---
 # Find-Package
 
@@ -85,7 +85,7 @@ Name         Version   Source    Summary
 NuGet.Core   2.14.0    MyNuGet   NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` использует параметр **Name** для указания имени пакета **NuGet. Core** . Параметр **Source** определяет поиск пакета в **минужет** .
+`Find-Package` использует параметр **Name** для указания имени пакета **NuGet. Core**. Параметр **Source** определяет поиск пакета в **минужет**.
 
 ### Пример 3. Поиск всех версий пакета
 
@@ -106,7 +106,7 @@ NuGet.Core    1.1.229.159      MyNuGet      NuGet.Core is the core framework ass
 Nuget.Core    1.0.1120.104     MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` использует параметр **Name** для указания пакета **NuGet. Core** . Параметр **providerName** определяет поиск пакета в **минужет** . **AllVersions** указывает, что возвращаются все доступные версии.
+`Find-Package` использует параметр **Name** для указания пакета **NuGet. Core**. Параметр **providerName** определяет поиск пакета в **минужет**. **AllVersions** указывает, что возвращаются все доступные версии.
 
 ### Пример 4. Поиск пакета с указанным именем и версией
 
@@ -122,7 +122,7 @@ Name          Version          Source       Summary
 NuGet.Core    2.9.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` использует параметр **Name** для указания имени пакета **NuGet. Core** . Параметр **providerName** определяет поиск пакета в **NuGet** . **RequiredVersion** указывает, что возвращается только версия **2.9.0** .
+`Find-Package` использует параметр **Name** для указания имени пакета **NuGet. Core**. Параметр **providerName** определяет поиск пакета в **NuGet**. **RequiredVersion** указывает, что возвращается только версия **2.9.0** .
 
 ### Пример 5. Поиск пакетов в диапазоне версий
 
@@ -141,13 +141,13 @@ NuGet.Core    2.8.0            MyNuGet      NuGet.Core is the core framework ass
 NuGet.Core    2.7.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` использует параметр **Name** для указания имени пакета **NuGet. Core** . Параметр **providerName** определяет поиск пакета в **NuGet** . **MinimumVersion** указывает самую раннюю версию **2.7.0** . **MaximumVersion** указывает самую старшую версию **2.9.0** .
+`Find-Package` использует параметр **Name** для указания имени пакета **NuGet. Core**. Параметр **providerName** определяет поиск пакета в **NuGet**. **MinimumVersion** указывает самую раннюю версию **2.7.0**. **MaximumVersion** указывает самую старшую версию **2.9.0**.
 **AllVersions** определяет, что диапазон возвращается в соответствии с минимальным и максимальным значением.
 
 ### Пример 6. Поиск пакета из файловой системы
 
 Эта команда находит пакеты с расширением файла `.nupkg` , которые хранятся на локальном компьютере.
-Файлы — это пакеты, загружаемые из коллекции, например **NuGet** .
+Файлы — это пакеты, загружаемые из коллекции, например **NuGet**.
 
 ```
 PS> Find-Package -Source C:\LocalPkg
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 
 - Командлет
 - DscResource
-- Компонент
+- Функция
 - RoleCapability
 - Рабочий процесс
 
@@ -511,7 +511,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy** .
+Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -687,6 +687,13 @@ Accept wildcard characters: False
 `Find-Package` выводит объект **софтвареидентити** .
 
 ## ПРИМЕЧАНИЯ
+
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки
 

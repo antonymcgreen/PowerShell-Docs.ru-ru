@@ -7,12 +7,12 @@ ms.date: 03/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Module
-ms.openlocfilehash: 22ac0b5651ffa9f055a5c436f56711dc33f95f6e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e499d1d2a32ed3f3cb9d583a1b2d728d15e8df8d
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228522"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891376"
 ---
 # Find-Module
 
@@ -39,7 +39,7 @@ Find-Module [[-Name] <string[]>] [-MinimumVersion <string>] [-MaximumVersion <st
 В первый раз `Find-Module` при попытке использовать репозиторий может быть предложено установить обновления.
 Если источник репозитория не зарегистрирован с помощью `Register-PSRepository` командлета, возвращается ошибка.
 
-`Find-Module` Возвращает последнюю версию модуля, если не используются параметры, ограничивающие версию. Чтобы получить список версий модуля для репозитория, используйте параметр **AllVersions** .
+`Find-Module` Возвращает последнюю версию модуля, если не используются параметры, ограничивающие версию. Чтобы получить список версий модуля для репозитория, используйте параметр **AllVersions**.
 
 Если указан параметр **MinimumVersion** , `Find-Module` возвращает версию модуля, которая больше или равна минимальному значению. Если в репозитории доступна более новая версия, возвращается более новая версия.
 
@@ -85,7 +85,7 @@ Version   Name                            Repository    Description
 4.0       PowerShellISEModule             PSGallery     a module that adds capability to the ISE
 ```
 
-`Find-Module` **Name** `*` Для поиска всех модулей, содержащих **PowerShell** , командлет использует параметр Name с подстановочным знаком звездочки ().
+`Find-Module`  `*` Для поиска всех модулей, содержащих **PowerShell**, командлет использует параметр Name с подстановочным знаком звездочки ().
 
 ### Пример 3. Поиск модуля по минимальной версии
 
@@ -101,7 +101,7 @@ Version   Name             Repository     Description
 2.1.0     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-`Find-Module`Командлет использует параметр **Name** для указания модуля **PowerShellGet** . Параметр **MinimumVersion** указывает версию **1.6.5** . `Find-Module` Возвращает PowerShellGet версии **2.1.0** , так как она превышает минимальную версию и является самой последней версией.
+`Find-Module`Командлет использует параметр **Name** для указания модуля **PowerShellGet** . Параметр **MinimumVersion** указывает версию **1.6.5**. `Find-Module` Возвращает PowerShellGet версии **2.1.0** , так как она превышает минимальную версию и является самой последней версией.
 
 ### Пример 4. Поиск модуля по определенной версии
 
@@ -117,7 +117,7 @@ Version   Name             Repository     Description
 1.6.5     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-`Find-Module`Командлет использует параметр **Name** для указания модуля **PowerShellGet** . Параметр **RequiredVersion** указывает версию **1.6.5** .
+`Find-Module`Командлет использует параметр **Name** для указания модуля **PowerShellGet** . Параметр **RequiredVersion** указывает версию **1.6.5**.
 
 ### Пример 5. Поиск модуля в определенном репозитории
 
@@ -151,9 +151,9 @@ PSGallery     2.0.0.0   ContosoServer    Cmdlets and DSC resources for managing 
 MySource      1.2.0.0   ContosoClient    Cmdlets and DSC resources for managing Contoso Client...
 ```
 
-`Register-PSRepository`Командлет регистрирует новый репозиторий. Параметр **Name** назначает имя **mysource** . Параметр **SourceLocation** указывает адрес репозитория.
+`Register-PSRepository`Командлет регистрирует новый репозиторий. Параметр **Name** назначает имя **mysource**. Параметр **SourceLocation** указывает адрес репозитория.
 
-`Find-Module`Командлет использует параметр **Name** с подстановочным знаком звездочки ( `*` ) для указания модуля **contoso** . Параметр **репозитория** определяет Поиск двух репозиториев, **PSGallery** и **mysource** .
+`Find-Module`Командлет использует параметр **Name** с подстановочным знаком звездочки ( `*` ) для указания модуля **contoso** . Параметр **репозитория** определяет Поиск двух репозиториев, **PSGallery** и **mysource**.
 
 ### Пример 7. Поиск модуля, содержащего ресурс DSC
 
@@ -174,8 +174,8 @@ Version     Name                            Repository    Description
 3.1.0.0     xPowerShellExecutionPolicy      PSGallery     This DSC resource can change the user...
 ```
 
-`Find-Module`Командлет использует параметр **репозитория** для поиска в репозитории, **PSGallery** .
-Параметр **содержит** указывает **DscResource** , которая является функцией, которую параметр может искать в репозитории.
+`Find-Module`Командлет использует параметр **репозитория** для поиска в репозитории, **PSGallery**.
+Параметр **содержит** указывает **DscResource**, которая является функцией, которую параметр может искать в репозитории.
 
 ### Пример 8. Поиск модуля с фильтром
 
@@ -194,7 +194,7 @@ Version    Name              Repository           Description
 1.1.0    ClassExplorer       PSGallery            Quickly search the AppDomain for classes...
 ```
 
-`Find-Module`Командлет использует параметр **Filter** для поиска в репозитории для **AppDomain** .
+`Find-Module`Командлет использует параметр **Filter** для поиска в репозитории для **AppDomain**.
 
 ## PARAMETERS
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -AllVersions
 
-Указывает, что в результаты включаются все версии модуля. Параметр **AllVersions** нельзя использовать с параметрами **MinimumVersion** , **MaximumVersion** или **RequiredVersion** .
+Указывает, что в результаты включаются все версии модуля. Параметр **AllVersions** нельзя использовать с параметрами **MinimumVersion**, **MaximumVersion** или **RequiredVersion** .
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -312,11 +312,11 @@ Accept wildcard characters: False
 
 ### — Включает
 
-Возвращает только те модули, которые включают в себя определенные виды функций PowerShell. Например, может потребоваться найти только модули, включающие **DSCResource** . Для этого параметра допустимы следующие значения:
+Возвращает только те модули, которые включают в себя определенные виды функций PowerShell. Например, может потребоваться найти только модули, включающие **DSCResource**. Для этого параметра допустимы следующие значения:
 
 - Командлет
 - DscResource
-- Компонент
+- Функция
 - RoleCapability
 
 ```yaml
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy** .
+Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 
 ### -RequiredVersion
 
-Указывает точный номер версии модуля, который должен быть включен в результаты. Параметр **RequiredVersion** нельзя использовать в той же команде, что и **MinimumVersion** или **MaximumVersion** .
+Указывает точный номер версии модуля, который должен быть включен в результаты. Параметр **RequiredVersion** нельзя использовать в той же команде, что и **MinimumVersion** или **MaximumVersion**.
 
 ```yaml
 Type: System.String
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 
 ### -Tag
 
-Задает массив тегов. Примеры тегов: **десиредстатеконфигуратион** , **DSC** , **дскресаурцекит** или **PSModule** .
+Задает массив тегов. Примеры тегов: **десиредстатеконфигуратион**, **DSC**, **дскресаурцекит** или **PSModule**.
 
 ```yaml
 Type: System.String[]
@@ -499,7 +499,12 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-Этот командлет выполняется в PowerShell 5,0 или более поздних версиях PowerShell, в Windows 7 или Windows 2008 R2 и более поздних версиях Windows.
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки
 
@@ -516,4 +521,3 @@ Accept wildcard characters: False
 [Update-Module](Update-Module.md)
 
 [Register-PSRepository](Register-PSRepository.md)
-

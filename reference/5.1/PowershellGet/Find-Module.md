@@ -7,12 +7,12 @@ ms.date: 03/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Module
-ms.openlocfilehash: 8b17019932df5b2cad68a9ea382387451d1b22e1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: b30e233eb9c4f4f9191ac6470f2821536dda6dc3
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227269"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889833"
 ---
 # Find-Module
 
@@ -85,7 +85,7 @@ Version   Name                            Repository    Description
 4.0       PowerShellISEModule             PSGallery     a module that adds capability to the ISE
 ```
 
-`Find-Module` **Name** `*` Для поиска всех модулей, содержащих **PowerShell** , командлет использует параметр Name с подстановочным знаком звездочки ().
+`Find-Module`  `*` Для поиска всех модулей, содержащих **PowerShell**, командлет использует параметр Name с подстановочным знаком звездочки ().
 
 ### Пример 3. Поиск модуля по минимальной версии
 
@@ -175,7 +175,7 @@ Version     Name                            Repository    Description
 ```
 
 `Find-Module`Командлет использует параметр **репозитория** для поиска в репозитории, **PSGallery**.
-Параметр **содержит** указывает **DscResource** , которая является функцией, которую параметр может искать в репозитории.
+Параметр **содержит** указывает **DscResource**, которая является функцией, которую параметр может искать в репозитории.
 
 ### Пример 8. Поиск модуля с фильтром
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -AllVersions
 
-Указывает, что в результаты включаются все версии модуля. Параметр **AllVersions** нельзя использовать с параметрами **MinimumVersion** , **MaximumVersion** или **RequiredVersion** .
+Указывает, что в результаты включаются все версии модуля. Параметр **AllVersions** нельзя использовать с параметрами **MinimumVersion**, **MaximumVersion** или **RequiredVersion** .
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 
 - Командлет
 - DscResource
-- Компонент
+- Функция
 - RoleCapability
 
 ```yaml
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 
 ### -Tag
 
-Задает массив тегов. Примеры тегов: **десиредстатеконфигуратион** , **DSC** , **дскресаурцекит** или **PSModule**.
+Задает массив тегов. Примеры тегов: **десиредстатеконфигуратион**, **DSC**, **дскресаурцекит** или **PSModule**.
 
 ```yaml
 Type: System.String[]
@@ -491,7 +491,12 @@ Accept wildcard characters: False
 
 ## ПРИМЕЧАНИЯ
 
-Этот командлет выполняется в PowerShell 5,0 или более поздних версиях Windows PowerShell, Windows 7 или Windows 2008 R2 и более поздних версиях Windows.
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки
 

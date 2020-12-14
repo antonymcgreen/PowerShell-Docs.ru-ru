@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/save-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Package
-ms.openlocfilehash: c8d6015edebdc649b80e7a48080aa8b96d97fd8d
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 1b780ad8c28c6c7095012fd75ed4dfa31d761b08
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227302"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890000"
 ---
 # Save-Package
 
@@ -719,6 +719,13 @@ Accept wildcard characters: False
 ### Этот командлет не формирует никаких выходных данных.
 
 ## ПРИМЕЧАНИЯ
+
+> [!IMPORTANT]
+> По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1. Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка. Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.
 
 ## Связанные ссылки
 
