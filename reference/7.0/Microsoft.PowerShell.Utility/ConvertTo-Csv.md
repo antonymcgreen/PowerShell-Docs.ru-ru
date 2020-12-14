@@ -1,53 +1,52 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 1/7/2019
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: 858ae1098d271d28fd9b758855f0952a6307eb95
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9638577ef63a6f5d81fa1f84aee355c080ab6538
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226198"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913382"
 ---
-# <span data-ttu-id="dc1cd-103">ConvertTo-Csv</span><span class="sxs-lookup"><span data-stu-id="dc1cd-103">ConvertTo-Csv</span></span>
+# <span data-ttu-id="dc00f-102">ConvertTo-Csv</span><span class="sxs-lookup"><span data-stu-id="dc00f-102">ConvertTo-Csv</span></span>
 
-## <span data-ttu-id="dc1cd-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="dc1cd-104">SYNOPSIS</span></span>
-<span data-ttu-id="dc1cd-105">Преобразует объекты .NET в последовательность строк значений, разделенных символами (CSV).</span><span class="sxs-lookup"><span data-stu-id="dc1cd-105">Converts .NET objects into a series of character-separated value (CSV) strings.</span></span>
+## <span data-ttu-id="dc00f-103">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="dc00f-103">SYNOPSIS</span></span>
+<span data-ttu-id="dc00f-104">Преобразует объекты .NET в последовательность строк значений, разделенных символами (CSV).</span><span class="sxs-lookup"><span data-stu-id="dc00f-104">Converts .NET objects into a series of character-separated value (CSV) strings.</span></span>
 
-## <span data-ttu-id="dc1cd-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="dc1cd-106">SYNTAX</span></span>
+## <span data-ttu-id="dc00f-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="dc00f-105">SYNTAX</span></span>
 
-### <span data-ttu-id="dc1cd-107">Delimiter (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="dc1cd-107">Delimiter (Default)</span></span>
+### <span data-ttu-id="dc00f-106">Delimiter (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="dc00f-106">Delimiter (Default)</span></span>
 
 ```
 ConvertTo-Csv [-InputObject] <PSObject> [[-Delimiter] <Char>] [-IncludeTypeInformation]
  [-NoTypeInformation] [-QuoteFields <String[]>] [-UseQuotes <QuoteKind>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="dc1cd-108">UseCulture</span><span class="sxs-lookup"><span data-stu-id="dc1cd-108">UseCulture</span></span>
+### <span data-ttu-id="dc00f-107">UseCulture</span><span class="sxs-lookup"><span data-stu-id="dc00f-107">UseCulture</span></span>
 
 ```
 ConvertTo-Csv [-InputObject] <PSObject> [-UseCulture] [-IncludeTypeInformation] [-NoTypeInformation]
  [-QuoteFields <String[]>] [-UseQuotes <QuoteKind>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="dc1cd-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="dc1cd-109">DESCRIPTION</span></span>
+## <span data-ttu-id="dc00f-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="dc00f-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="dc1cd-110">`ConvertTo-CSV`Командлет возвращает ряд строк с разделителями-запятыми (CSV), представляющих отправляемые объекты.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-110">The `ConvertTo-CSV` cmdlet returns a series of comma-separated value (CSV) strings that represent the objects that you submit.</span></span> <span data-ttu-id="dc1cd-111">Затем можно использовать `ConvertFrom-Csv` командлет для повторного создания объектов из строк CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-111">You can then use the `ConvertFrom-Csv` cmdlet to recreate objects from the CSV strings.</span></span> <span data-ttu-id="dc1cd-112">Объекты, преобразованные из CSV, являются строковыми значениями исходных объектов, которые содержат значения свойств и не имеют методов.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-112">The objects converted from CSV are string values of the original objects that contain property values and no methods.</span></span>
+<span data-ttu-id="dc00f-109">`ConvertTo-CSV`Командлет возвращает ряд строк с разделителями-запятыми (CSV), представляющих отправляемые объекты.</span><span class="sxs-lookup"><span data-stu-id="dc00f-109">The `ConvertTo-CSV` cmdlet returns a series of comma-separated value (CSV) strings that represent the objects that you submit.</span></span> <span data-ttu-id="dc00f-110">Затем можно использовать `ConvertFrom-Csv` командлет для повторного создания объектов из строк CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-110">You can then use the `ConvertFrom-Csv` cmdlet to recreate objects from the CSV strings.</span></span> <span data-ttu-id="dc00f-111">Объекты, преобразованные из CSV, являются строковыми значениями исходных объектов, которые содержат значения свойств и не имеют методов.</span><span class="sxs-lookup"><span data-stu-id="dc00f-111">The objects converted from CSV are string values of the original objects that contain property values and no methods.</span></span>
 
-<span data-ttu-id="dc1cd-113">`Export-Csv`Для преобразования объектов в строки CSV можно использовать командлет.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-113">You can use the `Export-Csv` cmdlet to convert objects to CSV strings.</span></span> <span data-ttu-id="dc1cd-114">`Export-CSV` аналогичен `ConvertTo-CSV` , за исключением того, что строки CSV сохраняются в файл.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-114">`Export-CSV` is similar to `ConvertTo-CSV`, except that it saves the CSV strings to a file.</span></span>
+<span data-ttu-id="dc00f-112">`Export-Csv`Для преобразования объектов в строки CSV можно использовать командлет.</span><span class="sxs-lookup"><span data-stu-id="dc00f-112">You can use the `Export-Csv` cmdlet to convert objects to CSV strings.</span></span> <span data-ttu-id="dc00f-113">`Export-CSV` аналогичен `ConvertTo-CSV` , за исключением того, что строки CSV сохраняются в файл.</span><span class="sxs-lookup"><span data-stu-id="dc00f-113">`Export-CSV` is similar to `ConvertTo-CSV`, except that it saves the CSV strings to a file.</span></span>
 
-<span data-ttu-id="dc1cd-115">`ConvertTo-CSV`Командлет имеет параметры для указания разделителя, отличного от запятой, или использовать текущий язык и региональные параметры в качестве разделителя.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-115">The `ConvertTo-CSV` cmdlet has parameters to specify a delimiter other than a comma or use the current culture as the delimiter.</span></span>
+<span data-ttu-id="dc00f-114">`ConvertTo-CSV`Командлет имеет параметры для указания разделителя, отличного от запятой, или использовать текущий язык и региональные параметры в качестве разделителя.</span><span class="sxs-lookup"><span data-stu-id="dc00f-114">The `ConvertTo-CSV` cmdlet has parameters to specify a delimiter other than a comma or use the current culture as the delimiter.</span></span>
 
-## <span data-ttu-id="dc1cd-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="dc1cd-116">EXAMPLES</span></span>
+## <span data-ttu-id="dc00f-115">Примеры</span><span class="sxs-lookup"><span data-stu-id="dc00f-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="dc1cd-117">Пример 1. преобразование объекта в CSV-файл</span><span class="sxs-lookup"><span data-stu-id="dc1cd-117">Example 1: Convert an object to CSV</span></span>
+### <span data-ttu-id="dc00f-116">Пример 1. преобразование объекта в CSV-файл</span><span class="sxs-lookup"><span data-stu-id="dc00f-116">Example 1: Convert an object to CSV</span></span>
 
-<span data-ttu-id="dc1cd-118">В этом примере объект **процесса** преобразуется в строку CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-118">This example converts a **Process** object to a CSV string.</span></span>
+<span data-ttu-id="dc00f-117">В этом примере объект **процесса** преобразуется в строку CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-117">This example converts a **Process** object to a CSV string.</span></span>
 
 ```powershell
 Get-Process -Name pwsh | ConvertTo-Csv -NoTypeInformation
@@ -58,11 +57,11 @@ Get-Process -Name pwsh | ConvertTo-Csv -NoTypeInformation
 "pwsh","8","950","2204001161216","100925440","59686912","67104", ...
 ```
 
-<span data-ttu-id="dc1cd-119">`Get-Process`Командлет получает объект **процесса** и использует параметр **Name** для указания процесса PowerShell.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-119">The `Get-Process` cmdlet gets the **Process** object and uses the **Name** parameter to specify the PowerShell process.</span></span> <span data-ttu-id="dc1cd-120">Объект процесса отправляется в командлет по конвейеру `ConvertTo-CSV` .</span><span class="sxs-lookup"><span data-stu-id="dc1cd-120">The process object is sent down the pipeline to the `ConvertTo-CSV` cmdlet.</span></span> <span data-ttu-id="dc1cd-121">`ConvertTo-CSV`Командлет преобразует объект в строки CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-121">The `ConvertTo-CSV` cmdlet converts the object to CSV strings.</span></span> <span data-ttu-id="dc1cd-122">Параметр **NoTypeInformation** удаляет заголовок данных **#TYPE** из выходных данных CSV и не является обязательным в PowerShell 6.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-122">The **NoTypeInformation** parameter removes the **#TYPE** information header from the CSV output and is not required in PowerShell 6.</span></span>
+<span data-ttu-id="dc00f-118">`Get-Process`Командлет получает объект **процесса** и использует параметр **Name** для указания процесса PowerShell.</span><span class="sxs-lookup"><span data-stu-id="dc00f-118">The `Get-Process` cmdlet gets the **Process** object and uses the **Name** parameter to specify the PowerShell process.</span></span> <span data-ttu-id="dc00f-119">Объект процесса отправляется в командлет по конвейеру `ConvertTo-CSV` .</span><span class="sxs-lookup"><span data-stu-id="dc00f-119">The process object is sent down the pipeline to the `ConvertTo-CSV` cmdlet.</span></span> <span data-ttu-id="dc00f-120">`ConvertTo-CSV`Командлет преобразует объект в строки CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-120">The `ConvertTo-CSV` cmdlet converts the object to CSV strings.</span></span> <span data-ttu-id="dc00f-121">Параметр **NoTypeInformation** удаляет заголовок данных **#TYPE** из выходных данных CSV и не является обязательным в PowerShell 6.</span><span class="sxs-lookup"><span data-stu-id="dc00f-121">The **NoTypeInformation** parameter removes the **#TYPE** information header from the CSV output and is not required in PowerShell 6.</span></span>
 
-### <span data-ttu-id="dc1cd-123">Пример 2. преобразование объекта DateTime в CSV-файл</span><span class="sxs-lookup"><span data-stu-id="dc1cd-123">Example 2: Convert a DateTime object to CSV</span></span>
+### <span data-ttu-id="dc00f-122">Пример 2. преобразование объекта DateTime в CSV-файл</span><span class="sxs-lookup"><span data-stu-id="dc00f-122">Example 2: Convert a DateTime object to CSV</span></span>
 
-<span data-ttu-id="dc1cd-124">В этом примере объект **DateTime** преобразуется в строку CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-124">This example converts a **DateTime** object to a CSV string.</span></span>
+<span data-ttu-id="dc00f-123">В этом примере объект **DateTime** преобразуется в строку CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-123">This example converts a **DateTime** object to a CSV string.</span></span>
 
 ```powershell
 $Date = Get-Date
@@ -74,11 +73,11 @@ ConvertTo-Csv -InputObject $Date -Delimiter ';' -NoTypeInformation
 "DateTime";"Friday, January 4, 2019 14:40:51";"1/4/2019 00:00:00";"4";"Friday";"4";"14";"Local";"711";"40";"1";"51";"636822096517114991";"14:40:51.7114991";"2019"
 ```
 
-<span data-ttu-id="dc1cd-125">`Get-Date`Командлет возвращает объект **DateTime** и сохраняет его в `$Date` переменной.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-125">The `Get-Date` cmdlet gets the **DateTime** object and saves it in the `$Date` variable.</span></span> <span data-ttu-id="dc1cd-126">`ConvertTo-Csv`Командлет преобразует объект **DateTime** в строки.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-126">The `ConvertTo-Csv` cmdlet converts the **DateTime** object to strings.</span></span> <span data-ttu-id="dc1cd-127">Параметр **InputObject** использует объект **DateTime** , хранящийся в `$Date` переменной.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-127">The **InputObject** parameter uses the **DateTime** object stored in the `$Date` variable.</span></span> <span data-ttu-id="dc1cd-128">Параметр- **Разделитель** задает точку с запятой для разделения строковых значений.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-128">The **Delimiter** parameter specifies a semicolon to separate the string values.</span></span> <span data-ttu-id="dc1cd-129">Параметр **NoTypeInformation** удаляет заголовок данных **#TYPE** из выходных данных CSV и не является обязательным в PowerShell 6.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-129">The **NoTypeInformation** parameter removes the **#TYPE** information header from the CSV output and is not required in PowerShell 6.</span></span>
+<span data-ttu-id="dc00f-124">`Get-Date`Командлет возвращает объект **DateTime** и сохраняет его в `$Date` переменной.</span><span class="sxs-lookup"><span data-stu-id="dc00f-124">The `Get-Date` cmdlet gets the **DateTime** object and saves it in the `$Date` variable.</span></span> <span data-ttu-id="dc00f-125">`ConvertTo-Csv`Командлет преобразует объект **DateTime** в строки.</span><span class="sxs-lookup"><span data-stu-id="dc00f-125">The `ConvertTo-Csv` cmdlet converts the **DateTime** object to strings.</span></span> <span data-ttu-id="dc00f-126">Параметр **InputObject** использует объект **DateTime** , хранящийся в `$Date` переменной.</span><span class="sxs-lookup"><span data-stu-id="dc00f-126">The **InputObject** parameter uses the **DateTime** object stored in the `$Date` variable.</span></span> <span data-ttu-id="dc00f-127">Параметр- **Разделитель** задает точку с запятой для разделения строковых значений.</span><span class="sxs-lookup"><span data-stu-id="dc00f-127">The **Delimiter** parameter specifies a semicolon to separate the string values.</span></span> <span data-ttu-id="dc00f-128">Параметр **NoTypeInformation** удаляет заголовок данных **#TYPE** из выходных данных CSV и не является обязательным в PowerShell 6.</span><span class="sxs-lookup"><span data-stu-id="dc00f-128">The **NoTypeInformation** parameter removes the **#TYPE** information header from the CSV output and is not required in PowerShell 6.</span></span>
 
-### <span data-ttu-id="dc1cd-130">Пример 3. преобразование журнала событий PowerShell в CSV-файл</span><span class="sxs-lookup"><span data-stu-id="dc1cd-130">Example 3: Convert the PowerShell event log to CSV</span></span>
+### <span data-ttu-id="dc00f-129">Пример 3. преобразование журнала событий PowerShell в CSV-файл</span><span class="sxs-lookup"><span data-stu-id="dc00f-129">Example 3: Convert the PowerShell event log to CSV</span></span>
 
-<span data-ttu-id="dc1cd-131">В этом примере журнал событий Windows для PowerShell преобразуется в последовательность строк CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-131">This example converts the Windows event log for PowerShell to a series of CSV strings.</span></span>
+<span data-ttu-id="dc00f-130">В этом примере журнал событий Windows для PowerShell преобразуется в последовательность строк CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-130">This example converts the Windows event log for PowerShell to a series of CSV strings.</span></span>
 
 ```powershell
 (Get-Culture).TextInfo.ListSeparator
@@ -91,11 +90,11 @@ Get-WinEvent -LogName 'PowerShellCore/Operational' | ConvertTo-Csv -UseCulture -
 "Error Message = System error""4100","1",,"3","106","19","0","31716","PowerShellCore", ...
 ```
 
-<span data-ttu-id="dc1cd-132">`Get-Culture`Командлет использует вложенные свойства **TextInfo** и **ListSeparator** и отображает текущий разделитель списка по умолчанию для текущего языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-132">The `Get-Culture` cmdlet uses the nested properties **TextInfo** and **ListSeparator** and displays the current culture's default list separator.</span></span> <span data-ttu-id="dc1cd-133">`Get-WinEvent`Командлет получает объекты журнала событий и использует параметр " **/l** " для указания имени файла журнала.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-133">The `Get-WinEvent` cmdlet gets the event log objects and uses the **LogName** parameter to specify the log file name.</span></span> <span data-ttu-id="dc1cd-134">Объекты журнала событий отправляются по конвейеру в `ConvertTo-Csv` командлет.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-134">The event log objects are sent down the pipeline to the `ConvertTo-Csv` cmdlet.</span></span> <span data-ttu-id="dc1cd-135">`ConvertTo-Csv`Командлет преобразует объекты журнала событий в последовательность строк CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-135">The `ConvertTo-Csv` cmdlet converts the event log objects to a series of CSV strings.</span></span> <span data-ttu-id="dc1cd-136">Параметр **UseCulture** использует разделитель списка по умолчанию текущего языка и региональных параметров в качестве разделителя.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-136">The **UseCulture** parameter uses the current culture's default list separator as the delimiter.</span></span> <span data-ttu-id="dc1cd-137">Параметр **NoTypeInformation** удаляет заголовок данных **#TYPE** из выходных данных CSV и не является обязательным в PowerShell 6.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-137">The **NoTypeInformation** parameter removes the **#TYPE** information header from the CSV output and is not required in PowerShell 6.</span></span>
+<span data-ttu-id="dc00f-131">`Get-Culture`Командлет использует вложенные свойства **TextInfo** и **ListSeparator** и отображает текущий разделитель списка по умолчанию для текущего языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="dc00f-131">The `Get-Culture` cmdlet uses the nested properties **TextInfo** and **ListSeparator** and displays the current culture's default list separator.</span></span> <span data-ttu-id="dc00f-132">`Get-WinEvent`Командлет получает объекты журнала событий и использует параметр " **/l** " для указания имени файла журнала.</span><span class="sxs-lookup"><span data-stu-id="dc00f-132">The `Get-WinEvent` cmdlet gets the event log objects and uses the **LogName** parameter to specify the log file name.</span></span> <span data-ttu-id="dc00f-133">Объекты журнала событий отправляются по конвейеру в `ConvertTo-Csv` командлет.</span><span class="sxs-lookup"><span data-stu-id="dc00f-133">The event log objects are sent down the pipeline to the `ConvertTo-Csv` cmdlet.</span></span> <span data-ttu-id="dc00f-134">`ConvertTo-Csv`Командлет преобразует объекты журнала событий в последовательность строк CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-134">The `ConvertTo-Csv` cmdlet converts the event log objects to a series of CSV strings.</span></span> <span data-ttu-id="dc00f-135">Параметр **UseCulture** использует разделитель списка по умолчанию текущего языка и региональных параметров в качестве разделителя.</span><span class="sxs-lookup"><span data-stu-id="dc00f-135">The **UseCulture** parameter uses the current culture's default list separator as the delimiter.</span></span> <span data-ttu-id="dc00f-136">Параметр **NoTypeInformation** удаляет заголовок данных **#TYPE** из выходных данных CSV и не является обязательным в PowerShell 6.</span><span class="sxs-lookup"><span data-stu-id="dc00f-136">The **NoTypeInformation** parameter removes the **#TYPE** information header from the CSV output and is not required in PowerShell 6.</span></span>
 
-### <span data-ttu-id="dc1cd-138">Пример 4. преобразование в CSV с кавычками вокруг двух столбцов</span><span class="sxs-lookup"><span data-stu-id="dc1cd-138">Example 4: Convert to CSV with quotes around two columns</span></span>
+### <span data-ttu-id="dc00f-137">Пример 4. преобразование в CSV с кавычками вокруг двух столбцов</span><span class="sxs-lookup"><span data-stu-id="dc00f-137">Example 4: Convert to CSV with quotes around two columns</span></span>
 
-<span data-ttu-id="dc1cd-139">В этом примере объект **DateTime** преобразуется в строку CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-139">This example converts a **DateTime** object to a CSV string.</span></span>
+<span data-ttu-id="dc00f-138">В этом примере объект **DateTime** преобразуется в строку CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-138">This example converts a **DateTime** object to a CSV string.</span></span>
 
 ```powershell
 Get-Date | ConvertTo-Csv -QuoteFields "DateTime","Date"
@@ -106,9 +105,9 @@ DisplayHint,"DateTime","Date",Day,DayOfWeek,DayOfYear,Hour,Kind,Millisecond,Minu
 DateTime,"Thursday, August 22, 2019 11:27:34 AM","8/22/2019 12:00:00 AM",22,Thursday,234,11,Local,569,27,8,34,637020700545699784,11:27:34.5699784,2019
 ```
 
-### <span data-ttu-id="dc1cd-140">Пример 4. преобразование в CSV с кавычками только при необходимости</span><span class="sxs-lookup"><span data-stu-id="dc1cd-140">Example 4: Convert to CSV with quotes only when needed</span></span>
+### <span data-ttu-id="dc00f-139">Пример 4. преобразование в CSV с кавычками только при необходимости</span><span class="sxs-lookup"><span data-stu-id="dc00f-139">Example 4: Convert to CSV with quotes only when needed</span></span>
 
-<span data-ttu-id="dc1cd-141">В этом примере объект **DateTime** преобразуется в строку CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-141">This example converts a **DateTime** object to a CSV string.</span></span>
+<span data-ttu-id="dc00f-140">В этом примере объект **DateTime** преобразуется в строку CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-140">This example converts a **DateTime** object to a CSV string.</span></span>
 
 ```powershell
 Get-Date | ConvertTo-Csv -UseQuotes AsNeeded
@@ -119,11 +118,11 @@ DisplayHint,DateTime,Date,Day,DayOfWeek,DayOfYear,Hour,Kind,Millisecond,Minute,M
 DateTime,"Thursday, August 22, 2019 11:31:00 AM",8/22/2019 12:00:00 AM,22,Thursday,234,11,Local,713,31,8,0,637020702607132640,11:31:00.7132640,2019
 ```
 
-## <span data-ttu-id="dc1cd-142">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="dc1cd-142">PARAMETERS</span></span>
+## <span data-ttu-id="dc00f-141">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="dc00f-141">PARAMETERS</span></span>
 
-### <span data-ttu-id="dc1cd-143">-Delimiter</span><span class="sxs-lookup"><span data-stu-id="dc1cd-143">-Delimiter</span></span>
+### <span data-ttu-id="dc00f-142">-Delimiter</span><span class="sxs-lookup"><span data-stu-id="dc00f-142">-Delimiter</span></span>
 
-<span data-ttu-id="dc1cd-144">Задает разделитель значений свойств в строках CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-144">Specifies the delimiter to separate the property values in CSV strings.</span></span> <span data-ttu-id="dc1cd-145">Значение по умолчанию — запятая ( `,` ).</span><span class="sxs-lookup"><span data-stu-id="dc1cd-145">The default is a comma (`,`).</span></span> <span data-ttu-id="dc1cd-146">Введите символ, например двоеточие ( `:` ).</span><span class="sxs-lookup"><span data-stu-id="dc1cd-146">Enter a character, such as a colon (`:`).</span></span> <span data-ttu-id="dc1cd-147">Чтобы указать точку с запятой ( `;` ), заключите ее в одинарные кавычки.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-147">To specify a semicolon (`;`) enclose it in single quotation marks.</span></span>
+<span data-ttu-id="dc00f-143">Задает разделитель значений свойств в строках CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-143">Specifies the delimiter to separate the property values in CSV strings.</span></span> <span data-ttu-id="dc00f-144">Значение по умолчанию — запятая ( `,` ).</span><span class="sxs-lookup"><span data-stu-id="dc00f-144">The default is a comma (`,`).</span></span> <span data-ttu-id="dc00f-145">Введите символ, например двоеточие ( `:` ).</span><span class="sxs-lookup"><span data-stu-id="dc00f-145">Enter a character, such as a colon (`:`).</span></span> <span data-ttu-id="dc00f-146">Чтобы указать точку с запятой ( `;` ), заключите ее в одинарные кавычки.</span><span class="sxs-lookup"><span data-stu-id="dc00f-146">To specify a semicolon (`;`) enclose it in single quotation marks.</span></span>
 
 ```yaml
 Type: System.Char
@@ -137,11 +136,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="dc1cd-148">-Инклудетипеинформатион</span><span class="sxs-lookup"><span data-stu-id="dc1cd-148">-IncludeTypeInformation</span></span>
+### <span data-ttu-id="dc00f-147">-Инклудетипеинформатион</span><span class="sxs-lookup"><span data-stu-id="dc00f-147">-IncludeTypeInformation</span></span>
 
-<span data-ttu-id="dc1cd-149">При использовании этого параметра первая строка выходных данных содержит **#TYPE** , за которыми следует полное имя типа объекта.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-149">When this parameter is used the first line of the output contains **#TYPE** followed by the fully qualified name of the object type.</span></span> <span data-ttu-id="dc1cd-150">Например, **#TYPE System. Diagnostics. Process**.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-150">For example, **#TYPE System.Diagnostics.Process**.</span></span>
+<span data-ttu-id="dc00f-148">При использовании этого параметра первая строка выходных данных содержит **#TYPE** , за которыми следует полное имя типа объекта.</span><span class="sxs-lookup"><span data-stu-id="dc00f-148">When this parameter is used the first line of the output contains **#TYPE** followed by the fully qualified name of the object type.</span></span> <span data-ttu-id="dc00f-149">Например, **#TYPE System. Diagnostics. Process**.</span><span class="sxs-lookup"><span data-stu-id="dc00f-149">For example, **#TYPE System.Diagnostics.Process**.</span></span>
 
-<span data-ttu-id="dc1cd-151">Этот параметр появился в PowerShell 6,0.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-151">This parameter was introduced in PowerShell 6.0.</span></span>
+<span data-ttu-id="dc00f-150">Этот параметр появился в PowerShell 6,0.</span><span class="sxs-lookup"><span data-stu-id="dc00f-150">This parameter was introduced in PowerShell 6.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -155,9 +154,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="dc1cd-152">-InputObject</span><span class="sxs-lookup"><span data-stu-id="dc1cd-152">-InputObject</span></span>
+### <span data-ttu-id="dc00f-151">-InputObject</span><span class="sxs-lookup"><span data-stu-id="dc00f-151">-InputObject</span></span>
 
-<span data-ttu-id="dc1cd-153">Указывает объекты, которые преобразуются в строки CSV.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-153">Specifies the objects that are converted to CSV strings.</span></span> <span data-ttu-id="dc1cd-154">Введите переменную, которая содержит объекты, или команду или выражение, которое возвращает объекты.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-154">Enter a variable that contains the objects or type a command or expression that gets the objects.</span></span> <span data-ttu-id="dc1cd-155">Также можно передать объекты в `ConvertTo-CSV` .</span><span class="sxs-lookup"><span data-stu-id="dc1cd-155">You can also pipe objects to `ConvertTo-CSV`.</span></span>
+<span data-ttu-id="dc00f-152">Указывает объекты, которые преобразуются в строки CSV.</span><span class="sxs-lookup"><span data-stu-id="dc00f-152">Specifies the objects that are converted to CSV strings.</span></span> <span data-ttu-id="dc00f-153">Введите переменную, которая содержит объекты, или команду или выражение, которое возвращает объекты.</span><span class="sxs-lookup"><span data-stu-id="dc00f-153">Enter a variable that contains the objects or type a command or expression that gets the objects.</span></span> <span data-ttu-id="dc00f-154">Также можно передать объекты в `ConvertTo-CSV` .</span><span class="sxs-lookup"><span data-stu-id="dc00f-154">You can also pipe objects to `ConvertTo-CSV`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -171,9 +170,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="dc1cd-156">-NoTypeInformation</span><span class="sxs-lookup"><span data-stu-id="dc1cd-156">-NoTypeInformation</span></span>
+### <span data-ttu-id="dc00f-155">-NoTypeInformation</span><span class="sxs-lookup"><span data-stu-id="dc00f-155">-NoTypeInformation</span></span>
 
-<span data-ttu-id="dc1cd-157">Удаляет заголовок сведений о **#TYPE** из выходных данных.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-157">Removes the **#TYPE** information header from the output.</span></span> <span data-ttu-id="dc1cd-158">Этот параметр стал значением по умолчанию в PowerShell 6,0 и включен для обеспечения обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-158">This parameter became the default in PowerShell 6.0 and is included for backwards compatibility.</span></span>
+<span data-ttu-id="dc00f-156">Удаляет заголовок сведений о **#TYPE** из выходных данных.</span><span class="sxs-lookup"><span data-stu-id="dc00f-156">Removes the **#TYPE** information header from the output.</span></span> <span data-ttu-id="dc00f-157">Этот параметр стал значением по умолчанию в PowerShell 6,0 и включен для обеспечения обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="dc00f-157">This parameter became the default in PowerShell 6.0 and is included for backwards compatibility.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -187,9 +186,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="dc1cd-159">-UseCulture</span><span class="sxs-lookup"><span data-stu-id="dc1cd-159">-UseCulture</span></span>
+### <span data-ttu-id="dc00f-158">-UseCulture</span><span class="sxs-lookup"><span data-stu-id="dc00f-158">-UseCulture</span></span>
 
-<span data-ttu-id="dc1cd-160">Использует разделитель списка для текущего языка и региональных параметров в качестве разделителя элементов.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-160">Uses the list separator for the current culture as the item delimiter.</span></span> <span data-ttu-id="dc1cd-161">Чтобы найти разделитель списка для языка и региональных параметров, используйте следующую команду: `(Get-Culture).TextInfo.ListSeparator` .</span><span class="sxs-lookup"><span data-stu-id="dc1cd-161">To find the list separator for a culture, use the following command: `(Get-Culture).TextInfo.ListSeparator`.</span></span>
+<span data-ttu-id="dc00f-159">Использует разделитель списка для текущего языка и региональных параметров в качестве разделителя элементов.</span><span class="sxs-lookup"><span data-stu-id="dc00f-159">Uses the list separator for the current culture as the item delimiter.</span></span> <span data-ttu-id="dc00f-160">Чтобы найти разделитель списка для языка и региональных параметров, используйте следующую команду: `(Get-Culture).TextInfo.ListSeparator` .</span><span class="sxs-lookup"><span data-stu-id="dc00f-160">To find the list separator for a culture, use the following command: `(Get-Culture).TextInfo.ListSeparator`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -203,9 +202,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="dc1cd-162">-Куотефиелдс</span><span class="sxs-lookup"><span data-stu-id="dc1cd-162">-QuoteFields</span></span>
+### <span data-ttu-id="dc00f-161">-Куотефиелдс</span><span class="sxs-lookup"><span data-stu-id="dc00f-161">-QuoteFields</span></span>
 
-<span data-ttu-id="dc1cd-163">Задает имена столбцов, которые должны быть заключены в кавычки.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-163">Specifies the names of the columns that should be quoted.</span></span> <span data-ttu-id="dc1cd-164">При использовании этого параметра только указанные столбцы заключаются в кавычки.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-164">When this parameter is used only the specified columns are quoted.</span></span>
+<span data-ttu-id="dc00f-162">Задает имена столбцов, которые должны быть заключены в кавычки.</span><span class="sxs-lookup"><span data-stu-id="dc00f-162">Specifies the names of the columns that should be quoted.</span></span> <span data-ttu-id="dc00f-163">При использовании этого параметра только указанные столбцы заключаются в кавычки.</span><span class="sxs-lookup"><span data-stu-id="dc00f-163">When this parameter is used only the specified columns are quoted.</span></span> <span data-ttu-id="dc00f-164">Этот параметр был добавлен в PowerShell 7,0.</span><span class="sxs-lookup"><span data-stu-id="dc00f-164">This parameter was added in PowerShell 7.0.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -219,13 +218,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="dc1cd-165">-Усекуотес</span><span class="sxs-lookup"><span data-stu-id="dc1cd-165">-UseQuotes</span></span>
+### <span data-ttu-id="dc00f-165">-Усекуотес</span><span class="sxs-lookup"><span data-stu-id="dc00f-165">-UseQuotes</span></span>
 
-<span data-ttu-id="dc1cd-166">Указывает, когда в CSV-файлах используются кавычки.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-166">Specifies when quotes are used in the CSV files.</span></span> <span data-ttu-id="dc1cd-167">Возможны следующие значения:</span><span class="sxs-lookup"><span data-stu-id="dc1cd-167">Possible values are:</span></span>
+<span data-ttu-id="dc00f-166">Указывает, когда в CSV-файлах используются кавычки.</span><span class="sxs-lookup"><span data-stu-id="dc00f-166">Specifies when quotes are used in the CSV files.</span></span> <span data-ttu-id="dc00f-167">Возможны следующие значения:</span><span class="sxs-lookup"><span data-stu-id="dc00f-167">Possible values are:</span></span>
 
-- <span data-ttu-id="dc1cd-168">Никогда — не заключать никаких кавычек</span><span class="sxs-lookup"><span data-stu-id="dc1cd-168">Never - don't quote anything</span></span>
-- <span data-ttu-id="dc1cd-169">Всегда-цитировать все (поведение по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="dc1cd-169">Always - quote everything (default behavior)</span></span>
-- <span data-ttu-id="dc1cd-170">AsNeeded — поля кавычек, содержащие символ-разделитель</span><span class="sxs-lookup"><span data-stu-id="dc1cd-170">AsNeeded - only quote fields that contain a delimiter character</span></span>
+- <span data-ttu-id="dc00f-168">Никогда — не заключать никаких кавычек</span><span class="sxs-lookup"><span data-stu-id="dc00f-168">Never - don't quote anything</span></span>
+- <span data-ttu-id="dc00f-169">Всегда-цитировать все (поведение по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="dc00f-169">Always - quote everything (default behavior)</span></span>
+- <span data-ttu-id="dc00f-170">AsNeeded — поля кавычек, содержащие символ-разделитель</span><span class="sxs-lookup"><span data-stu-id="dc00f-170">AsNeeded - only quote fields that contain a delimiter character</span></span>
+
+<span data-ttu-id="dc00f-171">Этот параметр был добавлен в PowerShell 7,0.</span><span class="sxs-lookup"><span data-stu-id="dc00f-171">This parameter was added in PowerShell 7.0.</span></span>
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -239,40 +240,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="dc1cd-171">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="dc1cd-171">CommonParameters</span></span>
+### <span data-ttu-id="dc00f-172">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="dc00f-172">CommonParameters</span></span>
 
-<span data-ttu-id="dc1cd-172">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-172">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="dc1cd-173">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="dc1cd-173">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="dc00f-173">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="dc00f-173">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="dc00f-174">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="dc00f-174">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="dc1cd-174">Входные данные</span><span class="sxs-lookup"><span data-stu-id="dc1cd-174">INPUTS</span></span>
+## <span data-ttu-id="dc00f-175">Входные данные</span><span class="sxs-lookup"><span data-stu-id="dc00f-175">INPUTS</span></span>
 
-### <span data-ttu-id="dc1cd-175">System.Management.Automation.PSObject</span><span class="sxs-lookup"><span data-stu-id="dc1cd-175">System.Management.Automation.PSObject</span></span>
+### <span data-ttu-id="dc00f-176">System.Management.Automation.PSObject</span><span class="sxs-lookup"><span data-stu-id="dc00f-176">System.Management.Automation.PSObject</span></span>
 
-<span data-ttu-id="dc1cd-176">Любой объект, имеющий адаптер расширенной системы типов (ETS), можно передать в `ConvertTo-CSV` .</span><span class="sxs-lookup"><span data-stu-id="dc1cd-176">You can pipe any object that has an Extended Type System (ETS) adapter to `ConvertTo-CSV`.</span></span>
+<span data-ttu-id="dc00f-177">Любой объект, имеющий адаптер расширенной системы типов (ETS), можно передать в `ConvertTo-CSV` .</span><span class="sxs-lookup"><span data-stu-id="dc00f-177">You can pipe any object that has an Extended Type System (ETS) adapter to `ConvertTo-CSV`.</span></span>
 
-## <span data-ttu-id="dc1cd-177">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="dc1cd-177">OUTPUTS</span></span>
+## <span data-ttu-id="dc00f-178">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="dc00f-178">OUTPUTS</span></span>
 
-### <span data-ttu-id="dc1cd-178">System.String</span><span class="sxs-lookup"><span data-stu-id="dc1cd-178">System.String</span></span>
+### <span data-ttu-id="dc00f-179">System.String</span><span class="sxs-lookup"><span data-stu-id="dc00f-179">System.String</span></span>
 
-<span data-ttu-id="dc1cd-179">Выходные данные в формате CSV возвращаются в виде коллекции строк.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-179">The CSV output is returned as a collection of strings.</span></span>
+<span data-ttu-id="dc00f-180">Выходные данные в формате CSV возвращаются в виде коллекции строк.</span><span class="sxs-lookup"><span data-stu-id="dc00f-180">The CSV output is returned as a collection of strings.</span></span>
 
-## <span data-ttu-id="dc1cd-180">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="dc1cd-180">NOTES</span></span>
+## <span data-ttu-id="dc00f-181">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="dc00f-181">NOTES</span></span>
 
-<span data-ttu-id="dc1cd-181">В формате CSV каждый объект представлен как разделенный запятыми список значений свойств.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-181">In CSV format, each object is represented by a comma-separated list of its property value.</span></span> <span data-ttu-id="dc1cd-182">Значения свойств преобразуются в строки с помощью метода **ToString ()** объекта.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-182">The property values are converted to strings using the object's **ToString()** method.</span></span> <span data-ttu-id="dc1cd-183">Строки представлены именем значения свойства.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-183">The strings are represented by the property value name.</span></span> <span data-ttu-id="dc1cd-184">`ConvertTo-CSV` не экспортирует методы объекта.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-184">`ConvertTo-CSV` does not export the object's methods.</span></span>
+<span data-ttu-id="dc00f-182">В формате CSV каждый объект представлен как разделенный запятыми список значений свойств.</span><span class="sxs-lookup"><span data-stu-id="dc00f-182">In CSV format, each object is represented by a comma-separated list of its property value.</span></span> <span data-ttu-id="dc00f-183">Значения свойств преобразуются в строки с помощью метода **ToString ()** объекта.</span><span class="sxs-lookup"><span data-stu-id="dc00f-183">The property values are converted to strings using the object's **ToString()** method.</span></span> <span data-ttu-id="dc00f-184">Строки представлены именем значения свойства.</span><span class="sxs-lookup"><span data-stu-id="dc00f-184">The strings are represented by the property value name.</span></span> <span data-ttu-id="dc00f-185">`ConvertTo-CSV` не экспортирует методы объекта.</span><span class="sxs-lookup"><span data-stu-id="dc00f-185">`ConvertTo-CSV` does not export the object's methods.</span></span>
 
-<span data-ttu-id="dc1cd-185">Строки CSV выводятся следующим образом:</span><span class="sxs-lookup"><span data-stu-id="dc1cd-185">The CSV strings are output as follows:</span></span>
+<span data-ttu-id="dc00f-186">Строки CSV выводятся следующим образом:</span><span class="sxs-lookup"><span data-stu-id="dc00f-186">The CSV strings are output as follows:</span></span>
 
-- <span data-ttu-id="dc1cd-186">Если используется **инклудетипеинформатион** , первая строка состоит из **#TYPE** , за которой следует полное имя типа объекта.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-186">If **IncludeTypeInformation** is used, the first string consists of **#TYPE** followed by the object type's fully qualified name.</span></span> <span data-ttu-id="dc1cd-187">Например, **#TYPE System. Diagnostics. Process**.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-187">For example, **#TYPE System.Diagnostics.Process**.</span></span>
-- <span data-ttu-id="dc1cd-188">Если **инклудетипеинформатион** не используется, первая строка включает заголовки столбцов.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-188">If **IncludeTypeInformation** is not used the first string includes the column headers.</span></span> <span data-ttu-id="dc1cd-189">Заголовки содержат имена свойств первого объекта в виде списка с разделителями-запятыми.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-189">The headers contain the first object's property names as a comma-separated list.</span></span>
-- <span data-ttu-id="dc1cd-190">Остальные строки содержат разделенные запятыми списки значений свойств каждого объекта.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-190">The remaining strings contain comma-separated lists of each object's property values.</span></span>
+- <span data-ttu-id="dc00f-187">Если используется **инклудетипеинформатион** , первая строка состоит из **#TYPE** , за которой следует полное имя типа объекта.</span><span class="sxs-lookup"><span data-stu-id="dc00f-187">If **IncludeTypeInformation** is used, the first string consists of **#TYPE** followed by the object type's fully qualified name.</span></span> <span data-ttu-id="dc00f-188">Например, **#TYPE System. Diagnostics. Process**.</span><span class="sxs-lookup"><span data-stu-id="dc00f-188">For example, **#TYPE System.Diagnostics.Process**.</span></span>
+- <span data-ttu-id="dc00f-189">Если **инклудетипеинформатион** не используется, первая строка включает заголовки столбцов.</span><span class="sxs-lookup"><span data-stu-id="dc00f-189">If **IncludeTypeInformation** is not used the first string includes the column headers.</span></span> <span data-ttu-id="dc00f-190">Заголовки содержат имена свойств первого объекта в виде списка с разделителями-запятыми.</span><span class="sxs-lookup"><span data-stu-id="dc00f-190">The headers contain the first object's property names as a comma-separated list.</span></span>
+- <span data-ttu-id="dc00f-191">Остальные строки содержат разделенные запятыми списки значений свойств каждого объекта.</span><span class="sxs-lookup"><span data-stu-id="dc00f-191">The remaining strings contain comma-separated lists of each object's property values.</span></span>
 
-<span data-ttu-id="dc1cd-191">Начиная с PowerShell 6,0 поведение по умолчанию `ConvertTo-CSV` — не включать сведения о **#TYPE** в CSV-файл, а **NoTypeInformation** является подразумеваемым.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-191">Beginning with PowerShell 6.0 the default behavior of `ConvertTo-CSV` is to not include the **#TYPE** information in the CSV and **NoTypeInformation** is implied.</span></span> <span data-ttu-id="dc1cd-192">**Инклудетипеинформатион** можно использовать для включения сведений о **#TYPE** и эмуляции поведения по умолчанию `ConvertTo-CSV` до PowerShell 6,0.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-192">**IncludeTypeInformation** can be used to include the **#TYPE** information and emulate the default behavior of `ConvertTo-CSV` prior to PowerShell 6.0.</span></span>
+<span data-ttu-id="dc00f-192">Начиная с PowerShell 6,0 поведение по умолчанию `ConvertTo-CSV` — не включать сведения о **#TYPE** в CSV-файл, а **NoTypeInformation** является подразумеваемым.</span><span class="sxs-lookup"><span data-stu-id="dc00f-192">Beginning with PowerShell 6.0 the default behavior of `ConvertTo-CSV` is to not include the **#TYPE** information in the CSV and **NoTypeInformation** is implied.</span></span> <span data-ttu-id="dc00f-193">**Инклудетипеинформатион** можно использовать для включения сведений о **#TYPE** и эмуляции поведения по умолчанию `ConvertTo-CSV` до PowerShell 6,0.</span><span class="sxs-lookup"><span data-stu-id="dc00f-193">**IncludeTypeInformation** can be used to include the **#TYPE** information and emulate the default behavior of `ConvertTo-CSV` prior to PowerShell 6.0.</span></span>
 
-<span data-ttu-id="dc1cd-193">При отправке нескольких объектов в `ConvertTo-CSV` `ConvertTo-CSV` упорядочивает строки на основе свойств первого отправленного объекта.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-193">When you submit multiple objects to `ConvertTo-CSV`, `ConvertTo-CSV` orders the strings based on the properties of the first object that you submit.</span></span> <span data-ttu-id="dc1cd-194">Если остальные объекты не имеют одного из указанных свойств, значение свойства этого объекта равно null, как представлено двумя последовательными запятыми.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-194">If the remaining objects do not have one of the specified properties, the property value of that object is Null, as represented by two consecutive commas.</span></span> <span data-ttu-id="dc1cd-195">Если у остальных объектов есть дополнительные свойства, их значения игнорируются.</span><span class="sxs-lookup"><span data-stu-id="dc1cd-195">If the remaining objects have additional properties, those property values are ignored.</span></span>
+<span data-ttu-id="dc00f-194">При отправке нескольких объектов в `ConvertTo-CSV` `ConvertTo-CSV` упорядочивает строки на основе свойств первого отправленного объекта.</span><span class="sxs-lookup"><span data-stu-id="dc00f-194">When you submit multiple objects to `ConvertTo-CSV`, `ConvertTo-CSV` orders the strings based on the properties of the first object that you submit.</span></span> <span data-ttu-id="dc00f-195">Если остальные объекты не имеют одного из указанных свойств, значение свойства этого объекта равно null, как представлено двумя последовательными запятыми.</span><span class="sxs-lookup"><span data-stu-id="dc00f-195">If the remaining objects do not have one of the specified properties, the property value of that object is Null, as represented by two consecutive commas.</span></span> <span data-ttu-id="dc00f-196">Если у остальных объектов есть дополнительные свойства, их значения игнорируются.</span><span class="sxs-lookup"><span data-stu-id="dc00f-196">If the remaining objects have additional properties, those property values are ignored.</span></span>
 
-## <span data-ttu-id="dc1cd-196">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="dc1cd-196">RELATED LINKS</span></span>
+## <span data-ttu-id="dc00f-197">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="dc00f-197">RELATED LINKS</span></span>
 
-[<span data-ttu-id="dc1cd-197">ConvertFrom-Csv</span><span class="sxs-lookup"><span data-stu-id="dc1cd-197">ConvertFrom-Csv</span></span>](ConvertFrom-Csv.md)
+[<span data-ttu-id="dc00f-198">ConvertFrom-Csv</span><span class="sxs-lookup"><span data-stu-id="dc00f-198">ConvertFrom-Csv</span></span>](ConvertFrom-Csv.md)
 
-[<span data-ttu-id="dc1cd-198">Export-Csv</span><span class="sxs-lookup"><span data-stu-id="dc1cd-198">Export-Csv</span></span>](Export-Csv.md)
+[<span data-ttu-id="dc00f-199">Export-CSV</span><span class="sxs-lookup"><span data-stu-id="dc00f-199">Export-Csv</span></span>](Export-Csv.md)
 
-[<span data-ttu-id="dc1cd-199">Import-Csv</span><span class="sxs-lookup"><span data-stu-id="dc1cd-199">Import-Csv</span></span>](Import-Csv.md)
+[<span data-ttu-id="dc00f-200">Import-Csv</span><span class="sxs-lookup"><span data-stu-id="dc00f-200">Import-Csv</span></span>](Import-Csv.md)
