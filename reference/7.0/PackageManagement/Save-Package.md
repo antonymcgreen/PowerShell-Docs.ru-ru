@@ -7,21 +7,21 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/save-package?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Package
-ms.openlocfilehash: 97ba55f4185d784e4b32bbe669296d44989f72d2
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: b46bf983120a71a530fdc9715b68eff0b1ce3af6
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225877"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892728"
 ---
-# <span data-ttu-id="c7a2a-103">Save-Package</span><span class="sxs-lookup"><span data-stu-id="c7a2a-103">Save-Package</span></span>
+# <span data-ttu-id="bb8be-103">Save-Package</span><span class="sxs-lookup"><span data-stu-id="bb8be-103">Save-Package</span></span>
 
-## <span data-ttu-id="c7a2a-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="c7a2a-104">SYNOPSIS</span></span>
-<span data-ttu-id="c7a2a-105">Сохраняет пакеты на локальном компьютере, не устанавливая их.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-105">Saves packages to the local computer without installing them.</span></span>
+## <span data-ttu-id="bb8be-104">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="bb8be-104">SYNOPSIS</span></span>
+<span data-ttu-id="bb8be-105">Сохраняет пакеты на локальном компьютере, не устанавливая их.</span><span class="sxs-lookup"><span data-stu-id="bb8be-105">Saves packages to the local computer without installing them.</span></span>
 
-## <span data-ttu-id="c7a2a-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="c7a2a-106">SYNTAX</span></span>
+## <span data-ttu-id="bb8be-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="bb8be-106">SYNTAX</span></span>
 
-### <span data-ttu-id="c7a2a-107">паккажебисеарч</span><span class="sxs-lookup"><span data-stu-id="c7a2a-107">PackageBySearch</span></span>
+### <span data-ttu-id="bb8be-107">паккажебисеарч</span><span class="sxs-lookup"><span data-stu-id="bb8be-107">PackageBySearch</span></span>
 
 ```
 Save-Package [-Name] <String[]> [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -30,7 +30,7 @@ Save-Package [-Name] <String[]> [-RequiredVersion <String>] [-MinimumVersion <St
  [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm] [-ProviderName <String[]>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c7a2a-108">паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="c7a2a-108">PackageByInputObject</span></span>
+### <span data-ttu-id="bb8be-108">паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="bb8be-108">PackageByInputObject</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] -InputObject <SoftwareIdentity>
@@ -38,7 +38,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] -InputObject <SoftwareIden
  [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c7a2a-109">NuGet: Паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="c7a2a-109">NuGet:PackageByInputObject</span></span>
+### <span data-ttu-id="bb8be-109">NuGet: Паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="bb8be-109">NuGet:PackageByInputObject</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -47,7 +47,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-Contains <String>] [-AllowPrereleaseVersions] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c7a2a-110">NuGet</span><span class="sxs-lookup"><span data-stu-id="c7a2a-110">NuGet</span></span>
+### <span data-ttu-id="bb8be-110">NuGet</span><span class="sxs-lookup"><span data-stu-id="bb8be-110">NuGet</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -56,7 +56,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-Contains <String>] [-AllowPrereleaseVersions] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c7a2a-111">PowerShellGet: Паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="c7a2a-111">PowerShellGet:PackageByInputObject</span></span>
+### <span data-ttu-id="bb8be-111">PowerShellGet: Паккажебинпутобжект</span><span class="sxs-lookup"><span data-stu-id="bb8be-111">PowerShellGet:PackageByInputObject</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -67,7 +67,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-RoleCapability <String[]>] [-Command <String[]>] [-AcceptLicense] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c7a2a-112">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="c7a2a-112">PowerShellGet</span></span>
+### <span data-ttu-id="bb8be-112">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="bb8be-112">PowerShellGet</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -78,16 +78,16 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-RoleCapability <String[]>] [-Command <String[]>] [-AcceptLicense] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="c7a2a-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="c7a2a-113">DESCRIPTION</span></span>
+## <span data-ttu-id="bb8be-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="bb8be-113">DESCRIPTION</span></span>
 
-<span data-ttu-id="c7a2a-114">`Save-Package`Командлет сохраняет пакеты на локальном компьютере, но не устанавливает пакеты.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-114">The `Save-Package` cmdlet saves packages to the local computer but doesn't install the packages.</span></span>
-<span data-ttu-id="c7a2a-115">Этот командлет сохраняет последнюю версию пакета, если не указано значение **рекуиредверион**.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-115">This cmdlet saves the newest version of a package unless you specify a **RequiredVerion**.</span></span> <span data-ttu-id="c7a2a-116">Параметры **path** и **LiteralPath** являются взаимоисключающими и не могут быть добавлены к одной и той же команде.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-116">The **Path** and **LiteralPath** parameters are mutually exclusive, and cannot be added to the same command.</span></span>
+<span data-ttu-id="bb8be-114">`Save-Package`Командлет сохраняет пакеты на локальном компьютере, но не устанавливает пакеты.</span><span class="sxs-lookup"><span data-stu-id="bb8be-114">The `Save-Package` cmdlet saves packages to the local computer but doesn't install the packages.</span></span>
+<span data-ttu-id="bb8be-115">Этот командлет сохраняет последнюю версию пакета, если не указано значение **рекуиредверион**.</span><span class="sxs-lookup"><span data-stu-id="bb8be-115">This cmdlet saves the newest version of a package unless you specify a **RequiredVerion**.</span></span> <span data-ttu-id="bb8be-116">Параметры **path** и **LiteralPath** являются взаимоисключающими и не могут быть добавлены к одной и той же команде.</span><span class="sxs-lookup"><span data-stu-id="bb8be-116">The **Path** and **LiteralPath** parameters are mutually exclusive, and cannot be added to the same command.</span></span>
 
-## <span data-ttu-id="c7a2a-117">Примеры</span><span class="sxs-lookup"><span data-stu-id="c7a2a-117">EXAMPLES</span></span>
+## <span data-ttu-id="bb8be-117">Примеры</span><span class="sxs-lookup"><span data-stu-id="bb8be-117">EXAMPLES</span></span>
 
-### <span data-ttu-id="c7a2a-118">Пример 1. Сохранение пакета на локальном компьютере</span><span class="sxs-lookup"><span data-stu-id="c7a2a-118">Example 1: Save a package to the local computer</span></span>
+### <span data-ttu-id="bb8be-118">Пример 1. Сохранение пакета на локальном компьютере</span><span class="sxs-lookup"><span data-stu-id="bb8be-118">Example 1: Save a package to the local computer</span></span>
 
-<span data-ttu-id="c7a2a-119">В этом примере сохраняется последняя версия пакета в каталоге на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-119">This example saves the newest version of the package to a directory on the local computer.</span></span> <span data-ttu-id="c7a2a-120">Зависимости пакета загружаются вместе с пакетом.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-120">The package's dependencies are download with the package.</span></span>
+<span data-ttu-id="bb8be-119">В этом примере сохраняется последняя версия пакета в каталоге на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="bb8be-119">This example saves the newest version of the package to a directory on the local computer.</span></span> <span data-ttu-id="bb8be-120">Зависимости пакета загружаются вместе с пакетом.</span><span class="sxs-lookup"><span data-stu-id="bb8be-120">The package's dependencies are download with the package.</span></span>
 
 ```
 PS> Save-Package -Name NuGet.Core -ProviderName NuGet -Path C:\LocalPkg
@@ -100,11 +100,11 @@ Microsoft.Web.Xdt       3.0.0      Nuget     Microsoft Xml Document Transformati
 NuGet.Core              2.14.0     Nuget     NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="c7a2a-121">`Save-Package` использует параметр **Name** для указания пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-121">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="c7a2a-122">Пакет загружается из репозитория, указанного параметром **providerName** .</span><span class="sxs-lookup"><span data-stu-id="c7a2a-122">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="c7a2a-123">Параметр **path** определяет место сохранения пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-123">The **Path** parameter determines where the package is saved.</span></span>
+<span data-ttu-id="bb8be-121">`Save-Package` использует параметр **Name** для указания пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-121">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="bb8be-122">Пакет загружается из репозитория, указанного параметром **providerName** .</span><span class="sxs-lookup"><span data-stu-id="bb8be-122">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="bb8be-123">Параметр **path** определяет место сохранения пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-123">The **Path** parameter determines where the package is saved.</span></span>
 
-### <span data-ttu-id="c7a2a-124">Пример 2. сохранение определенной версии пакета</span><span class="sxs-lookup"><span data-stu-id="c7a2a-124">Example 2: Save a specific package version</span></span>
+### <span data-ttu-id="bb8be-124">Пример 2. сохранение определенной версии пакета</span><span class="sxs-lookup"><span data-stu-id="bb8be-124">Example 2: Save a specific package version</span></span>
 
-<span data-ttu-id="c7a2a-125">В этом примере указывается версия пакета и сохраняется в каталоге на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-125">This example specifies the package version and saves it to a directory on the local computer.</span></span>
+<span data-ttu-id="bb8be-125">В этом примере указывается версия пакета и сохраняется в каталоге на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="bb8be-125">This example specifies the package version and saves it to a directory on the local computer.</span></span>
 
 ```
 PS> Save-Package -Name NuGet.Core -RequiredVersion 2.9.0 -ProviderName NuGet -Path C:\LocalPkg
@@ -117,35 +117,35 @@ Microsoft.Web.Xdt       3.0.0      Nuget     Microsoft Xml Document Transformati
 NuGet.Core              2.9.0      Nuget     NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="c7a2a-126">`Save-Package` использует параметр **Name** для указания пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-126">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="c7a2a-127">**RequiredVersion** обозначает конкретную версию пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-127">**RequiredVersion** indicates a specific package version.</span></span> <span data-ttu-id="c7a2a-128">Пакет загружается из репозитория, указанного параметром **providerName** .</span><span class="sxs-lookup"><span data-stu-id="c7a2a-128">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="c7a2a-129">Параметр **path** определяет место сохранения пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-129">The **Path** parameter determines where the package is saved.</span></span>
+<span data-ttu-id="bb8be-126">`Save-Package` использует параметр **Name** для указания пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-126">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="bb8be-127">**RequiredVersion** обозначает конкретную версию пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-127">**RequiredVersion** indicates a specific package version.</span></span> <span data-ttu-id="bb8be-128">Пакет загружается из репозитория, указанного параметром **providerName** .</span><span class="sxs-lookup"><span data-stu-id="bb8be-128">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="bb8be-129">Параметр **path** определяет место сохранения пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-129">The **Path** parameter determines where the package is saved.</span></span>
 
-### <span data-ttu-id="c7a2a-130">Пример 3. Использование Find-Package для сохранения пакета</span><span class="sxs-lookup"><span data-stu-id="c7a2a-130">Example 3: Use Find-Package to save a package</span></span>
+### <span data-ttu-id="bb8be-130">Пример 3. Использование Find-Package для сохранения пакета</span><span class="sxs-lookup"><span data-stu-id="bb8be-130">Example 3: Use Find-Package to save a package</span></span>
 
-<span data-ttu-id="c7a2a-131">Эта команда использует `Find-Package` для размещения последней версии пакета и отправляет объект в `Save-Package` .</span><span class="sxs-lookup"><span data-stu-id="c7a2a-131">This command uses `Find-Package` to locate the newest version of the package and sends the object to `Save-Package`.</span></span>
+<span data-ttu-id="bb8be-131">Эта команда использует `Find-Package` для размещения последней версии пакета и отправляет объект в `Save-Package` .</span><span class="sxs-lookup"><span data-stu-id="bb8be-131">This command uses `Find-Package` to locate the newest version of the package and sends the object to `Save-Package`.</span></span>
 
 ```
 PS> Find-Package -Name NuGet.Core -ProviderName NuGet | Save-Package -Path C:\LocalPkg
 ```
 
-<span data-ttu-id="c7a2a-132">`Find-Package` использует параметр **Name** для указания пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-132">`Find-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="c7a2a-133">Пакет загружается из репозитория, указанного параметром **providerName** .</span><span class="sxs-lookup"><span data-stu-id="c7a2a-133">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="c7a2a-134">Объект отправляется по конвейеру в `Save-Package` .</span><span class="sxs-lookup"><span data-stu-id="c7a2a-134">The object is sent down the pipeline to `Save-Package`.</span></span> <span data-ttu-id="c7a2a-135">Параметр **path** определяет место сохранения пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-135">The **Path** parameter determines where the package is saved.</span></span>
+<span data-ttu-id="bb8be-132">`Find-Package` использует параметр **Name** для указания пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-132">`Find-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="bb8be-133">Пакет загружается из репозитория, указанного параметром **providerName** .</span><span class="sxs-lookup"><span data-stu-id="bb8be-133">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="bb8be-134">Объект отправляется по конвейеру в `Save-Package` .</span><span class="sxs-lookup"><span data-stu-id="bb8be-134">The object is sent down the pipeline to `Save-Package`.</span></span> <span data-ttu-id="bb8be-135">Параметр **path** определяет место сохранения пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-135">The **Path** parameter determines where the package is saved.</span></span>
 
-### <span data-ttu-id="c7a2a-136">Пример 4. сохранение и установка пакета</span><span class="sxs-lookup"><span data-stu-id="c7a2a-136">Example 4: Save and install the package</span></span>
+### <span data-ttu-id="bb8be-136">Пример 4. сохранение и установка пакета</span><span class="sxs-lookup"><span data-stu-id="bb8be-136">Example 4: Save and install the package</span></span>
 
-<span data-ttu-id="c7a2a-137">Последняя версия пакета и его зависимости загружаются и устанавливаются на локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-137">The newest version of the package and its dependencies are downloaded and installed on the local computer.</span></span>
+<span data-ttu-id="bb8be-137">Последняя версия пакета и его зависимости загружаются и устанавливаются на локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="bb8be-137">The newest version of the package and its dependencies are downloaded and installed on the local computer.</span></span>
 
 ```
 PS> Save-Package -Name NuGet.Core -ProviderName NuGet -Path C:\LocalPkg
 PS> Install-Package C:\LocalPkg\NuGet.Core.2.14.0.nupkg
 ```
 
-<span data-ttu-id="c7a2a-138">`Save-Package` загружает файл пакета и его зависимости на локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-138">`Save-Package` downloads the package file and its dependencies to the local computer.</span></span>
-<span data-ttu-id="c7a2a-139">`Install-Package` устанавливает пакет и зависимости из указанного каталога.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-139">`Install-Package` installs the package and dependencies from the specified directory.</span></span>
+<span data-ttu-id="bb8be-138">`Save-Package` загружает файл пакета и его зависимости на локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="bb8be-138">`Save-Package` downloads the package file and its dependencies to the local computer.</span></span>
+<span data-ttu-id="bb8be-139">`Install-Package` устанавливает пакет и зависимости из указанного каталога.</span><span class="sxs-lookup"><span data-stu-id="bb8be-139">`Install-Package` installs the package and dependencies from the specified directory.</span></span>
 
-## <span data-ttu-id="c7a2a-140">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="c7a2a-140">PARAMETERS</span></span>
+## <span data-ttu-id="bb8be-140">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="bb8be-140">PARAMETERS</span></span>
 
-### <span data-ttu-id="c7a2a-141">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="c7a2a-141">-AcceptLicense</span></span>
+### <span data-ttu-id="bb8be-141">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="bb8be-141">-AcceptLicense</span></span>
 
-<span data-ttu-id="c7a2a-142">Автоматически принимать лицензионное соглашение во время установки, если оно требуется для пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-142">Automatically accept the license agreement during installation if the package requires it.</span></span>
+<span data-ttu-id="bb8be-142">Автоматически принимать лицензионное соглашение во время установки, если оно требуется для пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-142">Automatically accept the license agreement during installation if the package requires it.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -159,9 +159,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-143">-Алловпререлеасеверсионс</span><span class="sxs-lookup"><span data-stu-id="c7a2a-143">-AllowPrereleaseVersions</span></span>
+### <span data-ttu-id="bb8be-143">-Алловпререлеасеверсионс</span><span class="sxs-lookup"><span data-stu-id="bb8be-143">-AllowPrereleaseVersions</span></span>
 
-<span data-ttu-id="c7a2a-144">Разрешает сохранение пакетов, помеченных как предварительные.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-144">Allows packages marked as Prerelease to be saved.</span></span>
+<span data-ttu-id="bb8be-144">Разрешает сохранение пакетов, помеченных как предварительные.</span><span class="sxs-lookup"><span data-stu-id="bb8be-144">Allows packages marked as Prerelease to be saved.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -175,9 +175,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-145">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="c7a2a-145">-AllVersions</span></span>
+### <span data-ttu-id="bb8be-145">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="bb8be-145">-AllVersions</span></span>
 
-<span data-ttu-id="c7a2a-146">Указывает, что этот командлет сохраняет все доступные версии пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-146">Indicates that this cmdlet saves all available versions of the package.</span></span>
+<span data-ttu-id="bb8be-146">Указывает, что этот командлет сохраняет все доступные версии пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-146">Indicates that this cmdlet saves all available versions of the package.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -191,9 +191,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-147">-Command</span><span class="sxs-lookup"><span data-stu-id="c7a2a-147">-Command</span></span>
+### <span data-ttu-id="bb8be-147">-Command</span><span class="sxs-lookup"><span data-stu-id="bb8be-147">-Command</span></span>
 
-<span data-ttu-id="c7a2a-148">Указывает одну или несколько команд, входящих в пакет.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-148">Specifies one or more commands included in the package.</span></span>
+<span data-ttu-id="bb8be-148">Указывает одну или несколько команд, входящих в пакет.</span><span class="sxs-lookup"><span data-stu-id="bb8be-148">Specifies one or more commands included in the package.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -207,25 +207,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-149">-ConfigFile</span><span class="sxs-lookup"><span data-stu-id="c7a2a-149">-ConfigFile</span></span>
+### <span data-ttu-id="bb8be-149">-ConfigFile</span><span class="sxs-lookup"><span data-stu-id="bb8be-149">-ConfigFile</span></span>
 
-<span data-ttu-id="c7a2a-150">Указывает файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-150">Specifies a configuration File.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: NuGet:PackageByInputObject, NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="c7a2a-151">— Содержит</span><span class="sxs-lookup"><span data-stu-id="c7a2a-151">-Contains</span></span>
-
-<span data-ttu-id="c7a2a-152">`Save-Package` Возвращает объекты, если любой элемент в значениях свойств объекта является точным соответствием для указанного значения.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-152">`Save-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+<span data-ttu-id="bb8be-150">Указывает файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="bb8be-150">Specifies a configuration File.</span></span>
 
 ```yaml
 Type: System.String
@@ -239,9 +223,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-153">-Credential</span><span class="sxs-lookup"><span data-stu-id="c7a2a-153">-Credential</span></span>
+### <span data-ttu-id="bb8be-151">— Содержит</span><span class="sxs-lookup"><span data-stu-id="bb8be-151">-Contains</span></span>
 
-<span data-ttu-id="c7a2a-154">Указывает учетную запись пользователя, имеющую разрешение на сохранение пакета из указанного поставщика пакетов или источника.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-154">Specifies a user account that has permission to save a package from a specified package provider or source.</span></span>
+<span data-ttu-id="bb8be-152">`Save-Package` Возвращает объекты, если любой элемент в значениях свойств объекта является точным соответствием для указанного значения.</span><span class="sxs-lookup"><span data-stu-id="bb8be-152">`Save-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NuGet:PackageByInputObject, NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bb8be-153">-Credential</span><span class="sxs-lookup"><span data-stu-id="bb8be-153">-Credential</span></span>
+
+<span data-ttu-id="bb8be-154">Указывает учетную запись пользователя, имеющую разрешение на сохранение пакета из указанного поставщика пакетов или источника.</span><span class="sxs-lookup"><span data-stu-id="bb8be-154">Specifies a user account that has permission to save a package from a specified package provider or source.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -255,9 +255,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-155">-DscResource</span><span class="sxs-lookup"><span data-stu-id="c7a2a-155">-DscResource</span></span>
+### <span data-ttu-id="bb8be-155">-DscResource</span><span class="sxs-lookup"><span data-stu-id="bb8be-155">-DscResource</span></span>
 
-<span data-ttu-id="c7a2a-156">Указывает один или несколько ресурсов DSC для пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-156">Specifies one or more Desired State Configuration (DSC) resources for the package.</span></span>
+<span data-ttu-id="bb8be-156">Указывает один или несколько ресурсов DSC для пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-156">Specifies one or more Desired State Configuration (DSC) resources for the package.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -271,9 +271,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-157">-Filter</span><span class="sxs-lookup"><span data-stu-id="c7a2a-157">-Filter</span></span>
+### <span data-ttu-id="bb8be-157">-Filter</span><span class="sxs-lookup"><span data-stu-id="bb8be-157">-Filter</span></span>
 
-<span data-ttu-id="c7a2a-158">Задает фильтр для пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-158">Specifies a filter for the package.</span></span>
+<span data-ttu-id="bb8be-158">Задает фильтр для пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-158">Specifies a filter for the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -287,57 +287,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-159">-Филтеронтаг</span><span class="sxs-lookup"><span data-stu-id="c7a2a-159">-FilterOnTag</span></span>
+### <span data-ttu-id="bb8be-159">-Филтеронтаг</span><span class="sxs-lookup"><span data-stu-id="bb8be-159">-FilterOnTag</span></span>
 
-<span data-ttu-id="c7a2a-160">Указывает тег, фильтрующий результаты.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-160">Specifies the tag that filters the results.</span></span> <span data-ttu-id="c7a2a-161">Исключаются результаты, не содержащие указанный тег.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-161">Results that don't contain the specified tag are excluded.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: NuGet:PackageByInputObject, NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="c7a2a-162">-Force</span><span class="sxs-lookup"><span data-stu-id="c7a2a-162">-Force</span></span>
-
-<span data-ttu-id="c7a2a-163">Принудительное выполнение команды без запроса на подтверждение пользователем.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-163">Forces the command to run without asking for user confirmation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="c7a2a-164">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="c7a2a-164">-ForceBootstrap</span></span>
-
-<span data-ttu-id="c7a2a-165">Указывает, что `Save-Package` заставляет **PackageManagement** автоматически устанавливать поставщик пакетов для указанного пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-165">Indicates that `Save-Package` forces **PackageManagement** to automatically install the package provider for the specified package.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="c7a2a-166">-Заголовки</span><span class="sxs-lookup"><span data-stu-id="c7a2a-166">-Headers</span></span>
-
-<span data-ttu-id="c7a2a-167">Указывает заголовки для пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-167">Specifies the headers for the package.</span></span>
+<span data-ttu-id="bb8be-160">Указывает тег, фильтрующий результаты.</span><span class="sxs-lookup"><span data-stu-id="bb8be-160">Specifies the tag that filters the results.</span></span> <span data-ttu-id="bb8be-161">Исключаются результаты, не содержащие указанный тег.</span><span class="sxs-lookup"><span data-stu-id="bb8be-161">Results that don't contain the specified tag are excluded.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -351,9 +303,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-168">— Включает</span><span class="sxs-lookup"><span data-stu-id="c7a2a-168">-Includes</span></span>
+### <span data-ttu-id="bb8be-162">-Force</span><span class="sxs-lookup"><span data-stu-id="bb8be-162">-Force</span></span>
 
-<span data-ttu-id="c7a2a-169">Указывает ресурсы, которые включает пакет.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-169">Indicates the resources that the package includes.</span></span>
+<span data-ttu-id="bb8be-163">Принудительное выполнение команды без запроса на подтверждение пользователем.</span><span class="sxs-lookup"><span data-stu-id="bb8be-163">Forces the command to run without asking for user confirmation.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bb8be-164">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="bb8be-164">-ForceBootstrap</span></span>
+
+<span data-ttu-id="bb8be-165">Указывает, что `Save-Package` заставляет **PackageManagement** автоматически устанавливать поставщик пакетов для указанного пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-165">Indicates that `Save-Package` forces **PackageManagement** to automatically install the package provider for the specified package.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bb8be-166">-Заголовки</span><span class="sxs-lookup"><span data-stu-id="bb8be-166">-Headers</span></span>
+
+<span data-ttu-id="bb8be-167">Указывает заголовки для пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-167">Specifies the headers for the package.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: NuGet:PackageByInputObject, NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bb8be-168">— Включает</span><span class="sxs-lookup"><span data-stu-id="bb8be-168">-Includes</span></span>
+
+<span data-ttu-id="bb8be-169">Указывает ресурсы, которые включает пакет.</span><span class="sxs-lookup"><span data-stu-id="bb8be-169">Indicates the resources that the package includes.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -368,9 +368,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-170">-InputObject</span><span class="sxs-lookup"><span data-stu-id="c7a2a-170">-InputObject</span></span>
+### <span data-ttu-id="bb8be-170">-InputObject</span><span class="sxs-lookup"><span data-stu-id="bb8be-170">-InputObject</span></span>
 
-<span data-ttu-id="c7a2a-171">Объект идентификатора программного обеспечения, представляющий пакет, который необходимо сохранить.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-171">A software ID object that represents the package that you want to save.</span></span> <span data-ttu-id="c7a2a-172">Идентификаторы программного обеспечения являются частью результатов `Find-Package` командлета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-172">Software IDs are part of the results of the `Find-Package` cmdlet.</span></span>
+<span data-ttu-id="bb8be-171">Объект идентификатора программного обеспечения, представляющий пакет, который необходимо сохранить.</span><span class="sxs-lookup"><span data-stu-id="bb8be-171">A software ID object that represents the package that you want to save.</span></span> <span data-ttu-id="bb8be-172">Идентификаторы программного обеспечения являются частью результатов `Find-Package` командлета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-172">Software IDs are part of the results of the `Find-Package` cmdlet.</span></span>
 
 ```yaml
 Type: Microsoft.PackageManagement.Packaging.SoftwareIdentity
@@ -384,9 +384,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-173">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="c7a2a-173">-LiteralPath</span></span>
+### <span data-ttu-id="bb8be-173">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="bb8be-173">-LiteralPath</span></span>
 
-<span data-ttu-id="c7a2a-174">Указывает литеральный путь, в который необходимо сохранить пакет.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-174">Specifies the literal path to which you want to save the package.</span></span> <span data-ttu-id="c7a2a-175">Нельзя добавить оба параметра и параметр **path** в одну и ту же команду.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-175">You cannot add both this parameter and the **Path** parameter to the same command.</span></span>
+<span data-ttu-id="bb8be-174">Указывает литеральный путь, в который необходимо сохранить пакет.</span><span class="sxs-lookup"><span data-stu-id="bb8be-174">Specifies the literal path to which you want to save the package.</span></span> <span data-ttu-id="bb8be-175">Нельзя добавить оба параметра и параметр **path** в одну и ту же команду.</span><span class="sxs-lookup"><span data-stu-id="bb8be-175">You cannot add both this parameter and the **Path** parameter to the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -400,25 +400,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-176">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="c7a2a-176">-MaximumVersion</span></span>
+### <span data-ttu-id="bb8be-176">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="bb8be-176">-MaximumVersion</span></span>
 
-<span data-ttu-id="c7a2a-177">Указывает максимальную версию пакета, который необходимо сохранить.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-177">Specifies the maximum version of the package that you want to save.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PackageBySearch
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="c7a2a-178">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="c7a2a-178">-MinimumVersion</span></span>
-
-<span data-ttu-id="c7a2a-179">Указывает минимальную версию пакета, которую необходимо найти.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-179">Specifies the minimum version of the package that you want to find.</span></span>
+<span data-ttu-id="bb8be-177">Указывает максимальную версию пакета, который необходимо сохранить.</span><span class="sxs-lookup"><span data-stu-id="bb8be-177">Specifies the maximum version of the package that you want to save.</span></span>
 
 ```yaml
 Type: System.String
@@ -432,9 +416,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-180">-Name</span><span class="sxs-lookup"><span data-stu-id="c7a2a-180">-Name</span></span>
+### <span data-ttu-id="bb8be-178">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="bb8be-178">-MinimumVersion</span></span>
 
-<span data-ttu-id="c7a2a-181">Указывает одно или несколько имен пакетов.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-181">Specifies one or more package names.</span></span>
+<span data-ttu-id="bb8be-179">Указывает минимальную версию пакета, которую необходимо найти.</span><span class="sxs-lookup"><span data-stu-id="bb8be-179">Specifies the minimum version of the package that you want to find.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bb8be-180">-Name</span><span class="sxs-lookup"><span data-stu-id="bb8be-180">-Name</span></span>
+
+<span data-ttu-id="bb8be-181">Указывает одно или несколько имен пакетов.</span><span class="sxs-lookup"><span data-stu-id="bb8be-181">Specifies one or more package names.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -448,9 +448,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-182">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="c7a2a-182">-PackageManagementProvider</span></span>
+### <span data-ttu-id="bb8be-182">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="bb8be-182">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="c7a2a-183">Указывает поставщика управления пакетами.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-183">Specifies a package management provider.</span></span>
+<span data-ttu-id="bb8be-183">Указывает поставщика управления пакетами.</span><span class="sxs-lookup"><span data-stu-id="bb8be-183">Specifies a package management provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -464,9 +464,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-184">-Path</span><span class="sxs-lookup"><span data-stu-id="c7a2a-184">-Path</span></span>
+### <span data-ttu-id="bb8be-184">-Path</span><span class="sxs-lookup"><span data-stu-id="bb8be-184">-Path</span></span>
 
-<span data-ttu-id="c7a2a-185">Указывает расположение на локальном компьютере для хранения пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-185">Specifies the location on the local computer to store the package.</span></span>
+<span data-ttu-id="bb8be-185">Указывает расположение на локальном компьютере для хранения пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-185">Specifies the location on the local computer to store the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -480,9 +480,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-186">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="c7a2a-186">-ProviderName</span></span>
+### <span data-ttu-id="bb8be-186">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="bb8be-186">-ProviderName</span></span>
 
-<span data-ttu-id="c7a2a-187">Указывает одно или несколько имен поставщиков.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-187">Specifies one or more provider names.</span></span>
+<span data-ttu-id="bb8be-187">Указывает одно или несколько имен поставщиков.</span><span class="sxs-lookup"><span data-stu-id="bb8be-187">Specifies one or more provider names.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -497,9 +497,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-188">Прокси-сервер</span><span class="sxs-lookup"><span data-stu-id="c7a2a-188">-Proxy</span></span>
+### <span data-ttu-id="bb8be-188">Прокси-сервер</span><span class="sxs-lookup"><span data-stu-id="bb8be-188">-Proxy</span></span>
 
-<span data-ttu-id="c7a2a-189">Указывает прокси-сервер для запроса, а не прямое подключение к Интернету.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-189">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
+<span data-ttu-id="bb8be-189">Указывает прокси-сервер для запроса, а не прямое подключение к Интернету.</span><span class="sxs-lookup"><span data-stu-id="bb8be-189">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -513,9 +513,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-190">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="c7a2a-190">-ProxyCredential</span></span>
+### <span data-ttu-id="bb8be-190">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="bb8be-190">-ProxyCredential</span></span>
 
-<span data-ttu-id="c7a2a-191">Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy**.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-191">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="bb8be-191">Указывает учетную запись пользователя, имеющую разрешение на использование прокси-сервера, который задается параметром **Proxy**.</span><span class="sxs-lookup"><span data-stu-id="bb8be-191">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -529,9 +529,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-192">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="c7a2a-192">-PublishLocation</span></span>
+### <span data-ttu-id="bb8be-192">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="bb8be-192">-PublishLocation</span></span>
 
-<span data-ttu-id="c7a2a-193">Указывает расположение публикации.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-193">Specifies the publish location.</span></span>
+<span data-ttu-id="bb8be-193">Указывает расположение публикации.</span><span class="sxs-lookup"><span data-stu-id="bb8be-193">Specifies the publish location.</span></span>
 
 ```yaml
 Type: System.String
@@ -545,9 +545,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-194">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="c7a2a-194">-RequiredVersion</span></span>
+### <span data-ttu-id="bb8be-194">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="bb8be-194">-RequiredVersion</span></span>
 
-<span data-ttu-id="c7a2a-195">Указывает точную версию пакета для сохранения.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-195">Specifies the exact version of the package to save.</span></span>
+<span data-ttu-id="bb8be-195">Указывает точную версию пакета для сохранения.</span><span class="sxs-lookup"><span data-stu-id="bb8be-195">Specifies the exact version of the package to save.</span></span>
 
 ```yaml
 Type: System.String
@@ -561,9 +561,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-196">-RoleCapability</span><span class="sxs-lookup"><span data-stu-id="c7a2a-196">-RoleCapability</span></span>
+### <span data-ttu-id="bb8be-196">-RoleCapability</span><span class="sxs-lookup"><span data-stu-id="bb8be-196">-RoleCapability</span></span>
 
-<span data-ttu-id="c7a2a-197">Указывает массив возможностей роли.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-197">Specifies an array of role capabilities.</span></span>
+<span data-ttu-id="bb8be-197">Указывает массив возможностей роли.</span><span class="sxs-lookup"><span data-stu-id="bb8be-197">Specifies an array of role capabilities.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -577,25 +577,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-198">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="c7a2a-198">-ScriptPublishLocation</span></span>
+### <span data-ttu-id="bb8be-198">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="bb8be-198">-ScriptPublishLocation</span></span>
 
-<span data-ttu-id="c7a2a-199">Указывает расположение публикации скрипта.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-199">Specifies the script publish location.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="c7a2a-200">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="c7a2a-200">-ScriptSourceLocation</span></span>
-
-<span data-ttu-id="c7a2a-201">Указывает расположение источника скрипта.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-201">Specifies the script source location.</span></span>
+<span data-ttu-id="bb8be-199">Указывает расположение публикации скрипта.</span><span class="sxs-lookup"><span data-stu-id="bb8be-199">Specifies the script publish location.</span></span>
 
 ```yaml
 Type: System.String
@@ -609,9 +593,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-202">-Скипвалидате</span><span class="sxs-lookup"><span data-stu-id="c7a2a-202">-SkipValidate</span></span>
+### <span data-ttu-id="bb8be-200">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="bb8be-200">-ScriptSourceLocation</span></span>
 
-<span data-ttu-id="c7a2a-203">Параметр, который пропускает проверку учетных данных пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-203">Switch that skips validating the credentials of a package.</span></span>
+<span data-ttu-id="bb8be-201">Указывает расположение источника скрипта.</span><span class="sxs-lookup"><span data-stu-id="bb8be-201">Specifies the script source location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bb8be-202">-Скипвалидате</span><span class="sxs-lookup"><span data-stu-id="bb8be-202">-SkipValidate</span></span>
+
+<span data-ttu-id="bb8be-203">Параметр, который пропускает проверку учетных данных пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-203">Switch that skips validating the credentials of a package.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -625,9 +625,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-204">-Source</span><span class="sxs-lookup"><span data-stu-id="c7a2a-204">-Source</span></span>
+### <span data-ttu-id="bb8be-204">-Source</span><span class="sxs-lookup"><span data-stu-id="bb8be-204">-Source</span></span>
 
-<span data-ttu-id="c7a2a-205">Указывает один или несколько источников пакетов.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-205">Specifies one or more package sources.</span></span>
+<span data-ttu-id="bb8be-205">Указывает один или несколько источников пакетов.</span><span class="sxs-lookup"><span data-stu-id="bb8be-205">Specifies one or more package sources.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -641,9 +641,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-206">-Tag</span><span class="sxs-lookup"><span data-stu-id="c7a2a-206">-Tag</span></span>
+### <span data-ttu-id="bb8be-206">-Tag</span><span class="sxs-lookup"><span data-stu-id="bb8be-206">-Tag</span></span>
 
-<span data-ttu-id="c7a2a-207">Указывает тег для поиска в метаданных пакета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-207">Specifies a tag to search for within the package metadata.</span></span>
+<span data-ttu-id="bb8be-207">Указывает тег для поиска в метаданных пакета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-207">Specifies a tag to search for within the package metadata.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -657,9 +657,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-208">-Type</span><span class="sxs-lookup"><span data-stu-id="c7a2a-208">-Type</span></span>
+### <span data-ttu-id="bb8be-208">-Type</span><span class="sxs-lookup"><span data-stu-id="bb8be-208">-Type</span></span>
 
-<span data-ttu-id="c7a2a-209">Указывает, следует ли выполнять поиск пакетов с помощью модуля, скрипта или либо.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-209">Specifies whether to search for packages with a module, a script, or either.</span></span>
+<span data-ttu-id="bb8be-209">Указывает, следует ли выполнять поиск пакетов с помощью модуля, скрипта или либо.</span><span class="sxs-lookup"><span data-stu-id="bb8be-209">Specifies whether to search for packages with a module, a script, or either.</span></span>
 
 ```yaml
 Type: System.String
@@ -674,9 +674,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-210">-Confirm</span><span class="sxs-lookup"><span data-stu-id="c7a2a-210">-Confirm</span></span>
+### <span data-ttu-id="bb8be-210">-Confirm</span><span class="sxs-lookup"><span data-stu-id="bb8be-210">-Confirm</span></span>
 
-<span data-ttu-id="c7a2a-211">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-211">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="bb8be-211">Запрос подтверждения перед выполнением командлета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-211">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -690,9 +690,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-212">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="c7a2a-212">-WhatIf</span></span>
+### <span data-ttu-id="bb8be-212">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="bb8be-212">-WhatIf</span></span>
 
-<span data-ttu-id="c7a2a-213">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-213">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="c7a2a-214">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-214">The cmdlet is not run.</span></span>
+<span data-ttu-id="bb8be-213">Показывает, что произойдет при запуске командлета.</span><span class="sxs-lookup"><span data-stu-id="bb8be-213">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="bb8be-214">Командлет не выполняется.</span><span class="sxs-lookup"><span data-stu-id="bb8be-214">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -706,28 +706,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c7a2a-215">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="c7a2a-215">CommonParameters</span></span>
+### <span data-ttu-id="bb8be-215">Общие параметры</span><span class="sxs-lookup"><span data-stu-id="bb8be-215">CommonParameters</span></span>
 
-<span data-ttu-id="c7a2a-216">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-216">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c7a2a-217">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="c7a2a-217">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="bb8be-216">Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="bb8be-216">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="bb8be-217">См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="bb8be-217">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="c7a2a-218">Входные данные</span><span class="sxs-lookup"><span data-stu-id="c7a2a-218">INPUTS</span></span>
+## <span data-ttu-id="bb8be-218">Входные данные</span><span class="sxs-lookup"><span data-stu-id="bb8be-218">INPUTS</span></span>
 
-### <span data-ttu-id="c7a2a-219">`Save-Package` принимает объекты из конвейера.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-219">`Save-Package` accepts objects from the pipeline.</span></span>
+### <span data-ttu-id="bb8be-219">`Save-Package` принимает объекты из конвейера.</span><span class="sxs-lookup"><span data-stu-id="bb8be-219">`Save-Package` accepts objects from the pipeline.</span></span>
 
-## <span data-ttu-id="c7a2a-220">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="c7a2a-220">OUTPUTS</span></span>
+## <span data-ttu-id="bb8be-220">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="bb8be-220">OUTPUTS</span></span>
 
-### <span data-ttu-id="c7a2a-221">Этот командлет не формирует никаких выходных данных.</span><span class="sxs-lookup"><span data-stu-id="c7a2a-221">This cmdlet does not generate any output.</span></span>
+### <span data-ttu-id="bb8be-221">Этот командлет не формирует никаких выходных данных.</span><span class="sxs-lookup"><span data-stu-id="bb8be-221">This cmdlet does not generate any output.</span></span>
 
-## <span data-ttu-id="c7a2a-222">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="c7a2a-222">NOTES</span></span>
+## <span data-ttu-id="bb8be-222">ПРИМЕЧАНИЯ</span><span class="sxs-lookup"><span data-stu-id="bb8be-222">NOTES</span></span>
 
-## <span data-ttu-id="c7a2a-223">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="c7a2a-223">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="bb8be-223">По состоянию на апрель 2020 коллекция PowerShell больше не поддерживает TLS-версии 1,0 и 1,1.</span><span class="sxs-lookup"><span data-stu-id="bb8be-223">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="bb8be-224">Если вы не используете TLS 1,2 или более поздней версии, при попытке доступа к коллекция PowerShell возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="bb8be-224">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="bb8be-225">Используйте следующую команду, чтобы убедиться, что используется TLS 1,2:</span><span class="sxs-lookup"><span data-stu-id="bb8be-225">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="bb8be-226">Дополнительные сведения см. в [объявлении](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) в блоге PowerShell.</span><span class="sxs-lookup"><span data-stu-id="bb8be-226">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="c7a2a-224">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="c7a2a-224">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="bb8be-227">Связанные ссылки</span><span class="sxs-lookup"><span data-stu-id="bb8be-227">RELATED LINKS</span></span>
 
-[<span data-ttu-id="c7a2a-225">Get-Package</span><span class="sxs-lookup"><span data-stu-id="c7a2a-225">Get-Package</span></span>](Get-Package.md)
+[<span data-ttu-id="bb8be-228">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="bb8be-228">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="c7a2a-226">Install-Package</span><span class="sxs-lookup"><span data-stu-id="c7a2a-226">Install-Package</span></span>](Install-Package.md)
+[<span data-ttu-id="bb8be-229">Get-Package</span><span class="sxs-lookup"><span data-stu-id="bb8be-229">Get-Package</span></span>](Get-Package.md)
 
-[<span data-ttu-id="c7a2a-227">Save-Package</span><span class="sxs-lookup"><span data-stu-id="c7a2a-227">Save-Package</span></span>](Save-Package.md)
+[<span data-ttu-id="bb8be-230">Install-Package</span><span class="sxs-lookup"><span data-stu-id="bb8be-230">Install-Package</span></span>](Install-Package.md)
 
-[<span data-ttu-id="c7a2a-228">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="c7a2a-228">Uninstall-Package</span></span>](Uninstall-Package.md)
+[<span data-ttu-id="bb8be-231">Save-Package</span><span class="sxs-lookup"><span data-stu-id="bb8be-231">Save-Package</span></span>](Save-Package.md)
+
+[<span data-ttu-id="bb8be-232">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="bb8be-232">Uninstall-Package</span></span>](Uninstall-Package.md)
