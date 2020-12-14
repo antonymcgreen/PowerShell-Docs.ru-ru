@@ -1,15 +1,14 @@
 ---
-title: Создание поставщика элементов Windows PowerShell | Документация Майкрософт
 ms.date: 09/13/2016
-helpviewer_keywords:
-- item providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], item provider
-ms.openlocfilehash: b00af7d6fbb75b08027dc18ee6647472d23b83b7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание поставщика элементов Windows PowerShell
+description: Создание поставщика элементов Windows PowerShell
+ms.openlocfilehash: f98ea90bf9ce7222076a91fb26dc42977c70bff2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779052"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645191"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Создание поставщика элементов Windows PowerShell
 
@@ -99,7 +98,7 @@ ms.locfileid: "87779052"
 
 Чтобы задать элемент, поставщик элементов Windows PowerShell должен переопределить метод [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) для поддержки вызовов из `Set-Item` командлета. Этот метод задает значение элемента по указанному пути.
 
-Этот поставщик не предоставляет переопределение для метода [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) . Однако ниже приведена реализация этого метода по умолчанию.
+Этот поставщик не предоставляет переопределение для метода  [System. Management. Automation. Provider. итемкмдлетпровидер. сетитем *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) . Однако ниже приведена реализация этого метода по умолчанию.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidersetitem](Msh_samplestestcmdlets#testprovidersetitem)]  -->
 
@@ -227,7 +226,7 @@ ms.locfileid: "87779052"
 
 Если этот поставщик элементов Windows PowerShell зарегистрирован в Windows PowerShell, можно протестировать только основные функциональные возможности и функции поставщика. Чтобы протестировать манипуляцию с элементами, необходимо также реализовать функциональные возможности контейнера, описанные в разделе [Реализация контейнера Windows PowerShell Provider](./creating-a-windows-powershell-container-provider.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пакет SDK для Windows PowerShell](../windows-powershell-reference.md)
 

@@ -2,26 +2,26 @@
 description: PSReadLine предоставляет улучшенные возможности редактирования командной строки в консоли PowerShell.
 keywords: powershell
 Locale: en-US
-ms.date: 02/10/2020
+ms.date: 11/16/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: О PSReadLine
-ms.openlocfilehash: ad6e85a30f866cb332c89a4c36f42231f511f5ae
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 25fc3a9a814728057b1ebc7e721d3fba84ae72c2
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93233125"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692315"
 ---
 # <a name="psreadline"></a>PSReadLine
 
 ## <a name="about_psreadline"></a>about_PSReadLine
 
-## <a name="short-description"></a>КРАТКОЕ ОПИСАНИЕ
+## <a name="short-description"></a>Краткое описание
 
 PSReadLine предоставляет улучшенные возможности редактирования командной строки в консоли PowerShell.
 
-## <a name="long-description"></a>ПОДРОБНОЕ ОПИСАНИЕ
+## <a name="long-description"></a>Полное описание
 
 PSReadLine 2,0 предоставляет широкие возможности редактирования командной строки для консоли PowerShell. Консоль предоставляет следующие возможности:
 
@@ -34,6 +34,8 @@ PSReadLine 2,0 предоставляет широкие возможности 
 - Завершение стиля bash (необязательно в режиме cmd, по умолчанию в режиме Emacs)
 - Emacs: Янк/Kill-Ring
 - Перемещение и уничтожение токена PowerShell на основе маркеров "Word"
+
+Для PSReadLine требуется PowerShell 3,0, более поздней версии и узел консоли. Он не работает в интегрированной среде сценариев PowerShell. Она работает в консоли Visual Studio Code.
 
 В классе **[Microsoft. PowerShell. псконсолереадлине]** доступны следующие функции.
 
@@ -1284,22 +1286,18 @@ bool TryGetArgAsInt(System.Object arg, [ref] int numericArg,
   [ref]$numericArg, 1)
 ```
 
-## <a name="note"></a>ПРИМЕЧАНИЕ
+## <a name="note"></a>Примечание
 
-### <a name="powershell-compatibility"></a>СОВМЕСТИМОСТЬ С POWERSHELL
-
-Для PSReadLine требуется PowerShell 3,0, более поздней версии и узел консоли. Он не работает в интегрированной среде сценариев PowerShell. Она работает в консоли Visual Studio Code.
-
-### <a name="command-history"></a>ЖУРНАЛ КОМАНД
+### <a name="command-history"></a>Журнал команд
 
 PSReadLine поддерживает файл журнала, содержащий все команды и данные, введенные из командной строки. Это может быть конфиденциальные данные, включая пароли. Например, при использовании `ConvertTo-SecureString` командлета пароль заносится в файл журнала в виде обычного текста. Файлы журнала — это файл с именем `$($host.Name)_history.txt` . В системах Windows файл журнала хранится в файле `$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine` .
 
-### <a name="feedback--contributing-to-psreadline"></a>ОБРАТная связь & участие в PSReadLine
+### <a name="feedback--contributing-to-psreadline"></a>Обратная связь & участие в PSReadLine
 
 [PSReadLine на GitHub](https://github.com/PowerShell/PSReadLine)
 
 Вы можете отправить запрос на вытягивание или отправить отзыв на страницу GitHub.
 
-## <a name="see-also"></a>СМ. ТАКЖЕ
+## <a name="see-also"></a>См. также:
 
 На PSReadLine сильно влияют библиотеки GNU [ReadLine](https://tiswww.case.edu/php/chet/readline/rltop.html) .

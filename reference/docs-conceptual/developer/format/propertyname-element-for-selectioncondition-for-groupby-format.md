@@ -1,12 +1,14 @@
 ---
-title: Элемент PropertyName для Селектионкондитион для GroupBy (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: 8ada9a8ca7fbfdba5b2fea1881b2670c56a71d4f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент PropertyName для элемента SelectionCondition для элемента GroupBy (формат)
+description: Элемент PropertyName для элемента SelectionCondition для элемента GroupBy (формат)
+ms.openlocfilehash: b89fead6185c88ca03956dc265135833696b91d7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773085"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665674"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-groupby-format"></a>Элемент PropertyName для элемента SelectionCondition для элемента GroupBy (формат)
 
@@ -42,11 +44,11 @@ ms.locfileid: "87773085"
 
 Укажите имя свойства .NET.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Условие выбора должно указывать по крайней мере одно имя свойства или скрипт, но не может указывать и то, и другое. Дополнительные сведения о том, как можно использовать условия выбора, см. в разделе [Определение условий для отображения данных](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Элемент SelectionCondition для элемента EntrySelectedBy для элемента GroupBy (формат)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)
 

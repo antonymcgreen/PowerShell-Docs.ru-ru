@@ -1,12 +1,14 @@
 ---
-title: Элемент PropertyName для Таблеколумнитем для Таблеконтрол (Format) | Документация Майкрософт
 ms.date: 09/13/2016
-ms.openlocfilehash: bf267eeb83aef59abea2d945af12e849252309c8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Элемент PropertyName для элемента TableColumnItem для элемента TableControl (формат)
+description: Элемент PropertyName для элемента TableColumnItem для элемента TableControl (формат)
+ms.openlocfilehash: e83bbdb96d2755013cb9fe065cb98731ba44917f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772983"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665589"
 ---
 # <a name="propertyname-element-for-tablecolumnitem-for-tablecontrol-format"></a>Элемент PropertyName для элемента TableColumnItem для элемента TableControl (формат)
 
@@ -42,7 +44,7 @@ ms.locfileid: "87772983"
 
 Укажите имя свойства, значение которого отображается.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Дополнительные сведения о компонентах табличного представления см. в разделе [Создание табличного представления](./creating-a-table-view.md).
 
@@ -58,7 +60,7 @@ ms.locfileid: "87772983"
 
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание представления таблицы](./creating-a-table-view.md)
 

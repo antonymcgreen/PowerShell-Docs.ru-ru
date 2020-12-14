@@ -1,18 +1,20 @@
 ---
-title: Размещение справки на основе комментариев в сценариях
 ms.date: 09/12/2016
-ms.openlocfilehash: a3ade6c3138826b924939056b9d1ffb233006d44
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Размещение справки на основе комментариев в сценариях
+description: Размещение справки на основе комментариев в сценариях
+ms.openlocfilehash: b0d32b7ab063269085899a643b0c3a17da2073fc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893192"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645435"
 ---
 # <a name="placing-comment-based-help-in-scripts"></a>Размещение справки на основе комментариев в сценариях
 
 В этом разделе объясняется, куда поместить справку на основе комментариев для сценария, чтобы `Get-Help` командлет привязывает раздел справки на основе комментариев с скриптами, а не с функциями, которые могут быть в скрипте.
 
-## <a name="where-to-place-comment-based-help-for-a-script"></a>Размещение справки на основе комментариев для сценария
+## <a name="where-to-place-comment-based-help-for-a-script"></a>Размещение Comment-Based справки по сценарию
 
 - В начале файла скрипта.
 

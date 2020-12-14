@@ -1,12 +1,14 @@
 ---
-title: Создание поставщика контейнеров Windows PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: a5bcba425909eb98c010a1ea010cb02b995771f3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Создание поставщика контейнеров Windows PowerShell
+description: Создание поставщика контейнеров Windows PowerShell
+ms.openlocfilehash: 999bd69e3c16bfc0a74519986654ec15bbc0da6d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787212"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645352"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Создание поставщика контейнеров Windows PowerShell
 
@@ -197,7 +199,7 @@ protected override void GetChildNames(string path,
 
 - Реализация [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилднамес *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) отвечает за предотвращение бесконечной рекурсии при наличии циклических ссылок и подобной. Для отражения такого условия должно быть создано соответствующее завершающее исключение.
 
-## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet-name"></a>Присоединение динамических параметров к командлету Get-ChildItem (имя)
+## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet-name"></a>Присоединение динамических параметров к командлету Get-ChildItem (Name)
 
 Иногда `Get-ChildItem` командлету (с `Name` параметром) требуются дополнительные параметры, заданные динамически во время выполнения. Чтобы предоставить эти динамические параметры, поставщик контейнера Windows PowerShell должен реализовать метод [System. Management. Automation. Provider. контаинеркмдлетпровидер. жетчилднамесдинамикпараметерс *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) . Этот метод получает динамические параметры для элемента по указанному пути и возвращает объект со свойствами и полями с атрибутами синтаксического анализа, похожими на класс командлета или объект [System. Management. Automation. рунтимедефинедпараметердиктионари](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) . Среда выполнения Windows PowerShell использует возвращенный объект для добавления параметров в `Get-ChildItem` командлет.
 
@@ -477,7 +479,7 @@ protected override bool HasChildItems( string path )
    Country   : USA
    ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание поставщиков Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
