@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Csv
-ms.openlocfilehash: 5a76f8ec454ad8144f193d8927f913b89a429fec
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 17c3ef3046ba8f0cca9a85cf41aaf683212a58e9
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93227685"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913348"
 ---
 # Export-Csv
 
@@ -313,7 +312,7 @@ Accept wildcard characters: False
 
 ### -Encoding
 
-Указывает тип кодировки для целевого файла. Значение по умолчанию — `ASCII`.
+Указывает тип кодировки для целевого файла. Значение по умолчанию — `ASCII`.
 
 Для этого параметра допустимы следующие значения:
 
@@ -375,7 +374,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 
-Указывает путь к выходному CSV-файлу. В отличие от параметра **Path** , значение параметра **LiteralPath** используется в точности так, как вводится. Никакие символы не интерпретируются как знаки подстановки. Если путь содержит escape-символы, используйте одинарные кавычки. Одинарные кавычки указывают PowerShell не интерпретировать какие-либо символы как escape-последовательности.
+Указывает путь к выходному CSV-файлу. В отличие от параметра **Path**, значение параметра **LiteralPath** используется в точности так, как вводится. Никакие символы не интерпретируются как знаки подстановки. Если путь содержит escape-символы, используйте одинарные кавычки. Одинарные кавычки указывают PowerShell не интерпретировать какие-либо символы как escape-последовательности.
 
 ```yaml
 Type: System.String

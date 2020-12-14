@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 1/7/2019
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: 858ae1098d271d28fd9b758855f0952a6307eb95
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9638577ef63a6f5d81fa1f84aee355c080ab6538
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226198"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913382"
 ---
 # ConvertTo-Csv
 
@@ -205,7 +204,7 @@ Accept wildcard characters: False
 
 ### -Куотефиелдс
 
-Задает имена столбцов, которые должны быть заключены в кавычки. При использовании этого параметра только указанные столбцы заключаются в кавычки.
+Задает имена столбцов, которые должны быть заключены в кавычки. При использовании этого параметра только указанные столбцы заключаются в кавычки. Этот параметр был добавлен в PowerShell 7,0.
 
 ```yaml
 Type: System.String[]
@@ -226,6 +225,8 @@ Accept wildcard characters: False
 - Никогда — не заключать никаких кавычек
 - Всегда-цитировать все (поведение по умолчанию)
 - AsNeeded — поля кавычек, содержащие символ-разделитель
+
+Этот параметр был добавлен в PowerShell 7,0.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -273,6 +274,6 @@ Accept wildcard characters: False
 
 [ConvertFrom-Csv](ConvertFrom-Csv.md)
 
-[Export-Csv](Export-Csv.md)
+[Export-CSV](Export-Csv.md)
 
 [Import-Csv](Import-Csv.md)

@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 1/7/2019
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: e4cc40e7a9a5fdcd12b6a787607e4979ddbb3273
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 7ad8dc837bd843c2df48587ad809d9f65a4cf8a7
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93228617"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913225"
 ---
 # ConvertTo-Csv
 
@@ -21,7 +20,7 @@ ms.locfileid: "93228617"
 
 ## SYNTAX
 
-### Разделитель
+### Delimiter (по умолчанию)
 
 ```
 ConvertTo-Csv [-InputObject] <PSObject> [[-Delimiter] <Char>] [-IncludeTypeInformation]
@@ -139,7 +138,7 @@ Accept wildcard characters: False
 
 ### -Инклудетипеинформатион
 
-При использовании этого параметра первая строка выходных данных содержит **#TYPE** , за которыми следует полное имя типа объекта. Например, **#TYPE System. Diagnostics. Process** .
+При использовании этого параметра первая строка выходных данных содержит **#TYPE** , за которыми следует полное имя типа объекта. Например, **#TYPE System. Diagnostics. Process**.
 
 Этот параметр появился в PowerShell 6,0.
 
@@ -205,7 +204,7 @@ Accept wildcard characters: False
 
 ### -Куотефиелдс
 
-Задает имена столбцов, которые должны быть заключены в кавычки. При использовании этого параметра только указанные столбцы заключаются в кавычки.
+Задает имена столбцов, которые должны быть заключены в кавычки. При использовании этого параметра только указанные столбцы заключаются в кавычки. Этот параметр был добавлен в PowerShell 7,0.
 
 ```yaml
 Type: System.String[]
@@ -226,6 +225,8 @@ Accept wildcard characters: False
 - Никогда — не заключать никаких кавычек
 - Всегда-цитировать все (поведение по умолчанию)
 - AsNeeded — поля кавычек, содержащие символ-разделитель
+
+Этот параметр был добавлен в PowerShell 7,0.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -261,7 +262,7 @@ Accept wildcard characters: False
 
 Строки CSV выводятся следующим образом:
 
-- Если используется **инклудетипеинформатион** , первая строка состоит из **#TYPE** , за которой следует полное имя типа объекта. Например, **#TYPE System. Diagnostics. Process** .
+- Если используется **инклудетипеинформатион** , первая строка состоит из **#TYPE** , за которой следует полное имя типа объекта. Например, **#TYPE System. Diagnostics. Process**.
 - Если **инклудетипеинформатион** не используется, первая строка включает заголовки столбцов. Заголовки содержат имена свойств первого объекта в виде списка с разделителями-запятыми.
 - Остальные строки содержат разделенные запятыми списки значений свойств каждого объекта.
 
@@ -273,7 +274,6 @@ Accept wildcard characters: False
 
 [ConvertFrom-Csv](ConvertFrom-Csv.md)
 
-[Export-Csv](Export-Csv.md)
+[Export-CSV](Export-Csv.md)
 
 [Import-Csv](Import-Csv.md)
-
