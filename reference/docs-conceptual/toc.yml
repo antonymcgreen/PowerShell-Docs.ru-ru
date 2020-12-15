@@ -126,7 +126,7 @@
           href: whats-new/what-s-new-in-powershell-71.md
         - name: "Новые возможности PowerShell\_7.0"
           href: whats-new/what-s-new-in-powershell-70.md
-    - name: "Новые возможности в PowerShell Core\_6.x"
+    - name: Заметки о выпуске PowerShell Core 6.x
       items:
         - name: Новые возможности PowerShell Core 6.2
           href: whats-new/what-s-new-in-powershell-core-62.md
@@ -590,8 +590,6 @@
           href: community/contributing/pull-requests.md
         - name: "Руководство по стилю для документации\_PowerShell"
           href: community/contributing/powershell-style-guide.md
-        - name: Редактирование справки по командлетам
-          href: community/contributing/editing-cmdlet-ref.md
         - name: Дополнительные ресурсы
           items:
             - name: Контрольный список редактора
