@@ -1,14 +1,14 @@
 ---
-ms.date: 06/12/2017
+ms.date: 11/20/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Начало работы с настройкой требуемого состояния (DSC) для Linux
 description: В этом разделе объясняется, как приступить к работе с настройкой требуемого состояния PowerShell (DSC) для Linux.
-ms.openlocfilehash: 826707654a297306c39d4dfcfd3941f56b7cf91d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: df9cab07284a7d6fa199f5524a8719ea490192d0
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92651113"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95515006"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Начало работы с настройкой требуемого состояния (DSC) для Linux
 
@@ -24,7 +24,7 @@ DSC для Linux поддерживает следующие версии опе
 - Oracle Linux 5, 6 и 7 (x86 и x64)
 - Red Hat Enterprise Linux Server 5, 6 и 7 (x86/x64)
 - SUSE Linux Enterprise Server 10, 11 и 12 (x86 и x64)
-- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS (x86/x64)
+- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS, 18.04 (x86/x64)
 
 ## <a name="installing-dsc-for-linux"></a>Установка DSC для Linux
 
@@ -45,7 +45,7 @@ DSC для Linux поддерживает следующие версии опе
 
 ### <a name="installing-dsc"></a>Установка DSC
 
-DSC для Linux можно скачать из репозитория [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294).
+DSC для Linux можно скачать из репозитория [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-926).
 
 Чтобы установить DSC, установите пакет, соответствующий вашей системе Linux (RPM или DEB), а также версии OpenSSL (ssl_098 или ssl_100) и архитектуре (x64 или x86). Пакеты RPM подходят для CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server и Oracle Linux. Пакеты DEB подходят для Debian GNU/Linux и Ubuntu Server. Пакеты ssl_098 подходят для компьютеров с установленным OpenSSL 0.9.8, а пакеты ssl_100 — для компьютеров с установленным OpenSSL 1.0.
 

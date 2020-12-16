@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,командлет
 title: Списки с множественным выбором
 description: В этой статье описывается, как создать элемент управления "Список с множественным выбором" с помощью функций создания форм .NET Framework в Windows PowerShell.
-ms.openlocfilehash: e11d1f545f748e0503b92c02bc7a101d8014bd96
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 2724188695f054d1115b385987cda8a578c102de
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500289"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391533"
 ---
 # <a name="multiple-selection-list-boxes"></a>Списки с множественным выбором
 
@@ -74,7 +74,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-Сценарий начинается с загрузки двух классов .NET Framework: **System.Drawing** и **System.Windows.Forms** . Затем вы запускаете новый экземпляр класса .NET Framework **System.Windows.Forms.Form** , предоставляющий пустую форму или окно, в которые можно добавить элементы управления.
+Сценарий начинается с загрузки двух классов .NET Framework: **System.Drawing** и **System.Windows.Forms**. Затем вы запускаете новый экземпляр класса .NET Framework **System.Windows.Forms.Form**, предоставляющий пустую форму или окно, в которые можно добавить элементы управления.
 
 ```powershell
 $form = New-Object System.Windows.Forms.Form
@@ -86,7 +86,8 @@ $form = New-Object System.Windows.Forms.Form
 
 - **Size.** Это размер формы в пикселях. Предыдущий сценарий создает форму шириной 300 пикселей и высотой 200 пикселей.
 
-- **StartingPosition.** Для этого дополнительного свойства задается значение **CenterScreen** в предыдущем сценарии. Если это свойство не добавлено, Windows выберет расположение после открытия формы. Если для **StartingPosition** задать значение **CenterScreen** , форма будет автоматически отображаться в центре экрана при загрузке.
+- **StartingPosition.** Для этого дополнительного свойства задается значение **CenterScreen** в предыдущем сценарии.
+  Если это свойство не добавлено, Windows выберет расположение после открытия формы. Если для **StartingPosition** задать значение **CenterScreen**, форма будет автоматически отображаться в центре экрана при загрузке.
 
 ```powershell
 $form.Text = 'Data Entry Form'
@@ -94,7 +95,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = 'CenterScreen'
 ```
 
-Далее создайте кнопку **OК** для формы. Укажите размер и поведение кнопки **ОК** . В этом примере кнопка расположена на 120 пикселей ниже верхней границы формы и на 75 пикселей правее левой границы. Высота кнопки — 23 пикселя, а длина — 75 пикселей. Сценарий использует предопределенные типы Windows Forms для определения поведения кнопок.
+Далее создайте кнопку **OК** для формы. Укажите размер и поведение кнопки **ОК**. В этом примере кнопка расположена на 120 пикселей ниже верхней границы формы и на 75 пикселей правее левой границы. Высота кнопки — 23 пикселя, а длина — 75 пикселей. Сценарий использует предопределенные типы Windows Forms для определения поведения кнопок.
 
 ```powershell
 $OKButton = New-Object System.Windows.Forms.Button
@@ -106,7 +107,7 @@ $form.AcceptButton = $OKButton
 $form.Controls.Add($OKButton)
 ```
 
-Аналогичным образом создайте кнопку **Отмена** . Кнопка **Отмена** расположена на 120 пикселей ниже верхней границы и на 150 пикселей правее левой границы окна.
+Аналогичным образом создайте кнопку **Отмена**. Кнопка **Отмена** расположена на 120 пикселей ниже верхней границы и на 150 пикселей правее левой границы окна.
 
 ```powershell
 $CancelButton = New-Object System.Windows.Forms.Button
@@ -128,7 +129,7 @@ $label.Text = 'Please make a selection from the list below:'
 $form.Controls.Add($label)
 ```
 
-Добавьте элемент управления (в данном случае список), который позволит пользователям указать сведения, описанные в тексте метки. Помимо текстового поля существует много других элементов управления, которые можно применить. Их описание см. в статье [Пространство имен System.Windows.Forms](https://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) на сайте MSDN.
+Добавьте элемент управления (в данном случае список), который позволит пользователям указать сведения, описанные в тексте метки. Помимо текстового поля существует много других элементов управления, которые можно применить. Их описание см. в статье [Пространство имен System.Windows.Forms](/dotnet/api/system.windows.forms).
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.Listbox
@@ -171,7 +172,7 @@ $form.Topmost = $true
 $result = $form.ShowDialog()
 ```
 
-Наконец, код внутри блока **If** указывает Windows, что следует делать с формой после того, как пользователь выберет параметр из списка и нажмет кнопку **ОК** или клавишу **ВВОД** .
+Наконец, код внутри блока **If** указывает Windows, что следует делать с формой после того, как пользователь выберет параметр из списка и нажмет кнопку **ОК** или клавишу **ВВОД**.
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
@@ -183,6 +184,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>См. также:
 
-- [Weekend Scripter:  примеры исправления графического пользовательского интерфейса PowerShell](https://go.microsoft.com/fwlink/?LinkId=506644)
+- [Weekend Scripter: примеры исправления графического пользовательского интерфейса PowerShell](https://devblogs.microsoft.com/scripting/weekend-scripter-fixing-powershell-gui-examples/)
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates (WinFormsExampleUpdates от Дэйва Уайята)](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week: Multi-Select List Boxes – And More! (Совет недели по Windows PowerShell: списки с множественным выбором и многое другое)](https://technet.microsoft.com/library/ff730950.aspx)
+- [Windows PowerShell Tip of the Week: Multi-Select List Boxes – And More!](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730950(v=technet.10)) (Совет недели по Windows PowerShell: списки с множественным выбором и многое другое)

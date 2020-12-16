@@ -3,12 +3,12 @@ title: Все, что вы хотели знать о ShouldProcess
 description: ShouldProcess — важный компонент, который часто упускают из виду. Параметры WhatIf и Confirm упрощают добавление в функции.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 6bd4dbd5255203f2daf804163aa2a84d992d6697
-ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
+ms.openlocfilehash: 4f11ad84f5c89423fe56cfe438ed3cb1587ce59e
+ms.sourcegitcommit: be1df0bf757d734975a9aa021727608a396059ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86469741"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616052"
 ---
 # <a name="everything-you-wanted-to-know-about-shouldprocess"></a>Все, что вы хотели знать о ShouldProcess
 
@@ -128,7 +128,7 @@ What if: Performing the operation "Remove File" on target "C:\Temp\myfile1.txt".
 function Test-ShouldProcess {
     [CmdletBinding(SupportsShouldProcess)]
     param()
-    Remove-Item .\myfile1.txt -WhatIf:$WhatIf
+    Remove-Item .\myfile1.txt -WhatIf:$WhatIfPreference
 }
 ```
 
@@ -228,7 +228,7 @@ What if: MESSAGE
 
 ### <a name="shouldprocessreason"></a>ShouldProcessReason
 
-Существует также четвертая перегрузка. Она сложнее, чем друге, и позволяет получить причину выполнения `ShouldProcess`. Я добавляю ее здесь для полноты картины, так как вместо этого можно просто проверить, действительно ли значение `$WhatIf` равно `$true`.
+Существует также четвертая перегрузка. Она сложнее, чем друге, и позволяет получить причину выполнения `ShouldProcess`. Я добавляю ее здесь для полноты картины, так как вместо этого можно просто проверить, действительно ли значение `$WhatIfPreference` равно `$true`.
 
 ```powershell
 $reason = ''
@@ -428,7 +428,7 @@ Error: Test-ShouldProcess: A parameter cannot be found that matches parameter na
 Test-ShouldProcess -Confirm:$false
 ```
 
-Не все понимают, что это действительно необходимо сделать и что `-Confirm:$false` не подавляет `ShouldContinue`.
+Не все понимают, что это действительно необходимо сделать и что `-Force` не подавляет `ShouldContinue`.
 Поэтому для нормальной работы пользователей мы должны реализовать `-Force`. Взгляните на этот полный пример.
 
 ```powershell
@@ -441,7 +441,7 @@ function Test-ShouldProcess {
         [Switch]$Force
     )
 
-    if ($Force -and -not $Confirm){
+    if ($Force){
         $ConfirmPreference = 'None'
     }
 
@@ -451,7 +451,7 @@ function Test-ShouldProcess {
 }
 ```
 
-Мы добавим собственный ключ `-Force` в качестве параметра и используем автоматический параметр `$Confirm`, доступный при добавлении `SupportsShouldProcess` в `CmdletBinding`.
+Мы добавим собственный переключатель `-Force` в качестве параметра. Параметр `-Confirm` автоматически добавляется при использовании `SupportsShouldProcess` в `CmdletBinding`.
 
 ```powershell
 [CmdletBinding(
@@ -466,15 +466,15 @@ param(
 Здесь основное внимание следует уделить логике `-Force`.
 
 ```powershell
-if ($Force -and -not $Confirm){
+if ($Force){
     $ConfirmPreference = 'None'
 }
 ```
 
-Если пользователь задает `-Force`, необходимо отключить запрос на подтверждение, если не указан параметр `-Confirm`. Это позволит пользователю принудительно вносить изменения, но ему по-прежнему придется их подтверждать. Затем мы зададим переменную `$ConfirmPreference` в локальной области, где наш вызов `ShouldProcess` ее обнаружит.
+Если пользователь задает `-Force`, необходимо отключить запрос на подтверждение, если не указан параметр `-Confirm`. Это позволит пользователю принудительно вносить изменения, но ему по-прежнему придется их подтверждать. Затем мы зададим `$ConfirmPreference` в локальной области. Теперь с помощью параметра `-Force` можно временно присвоить `$ConfirmPreference` значение none, отключив запрос на подтверждение.
 
 ```powershell
-if ($PSCmdlet.ShouldProcess('TARGET')){
+if ($Force -or $PSCmdlet.ShouldProcess('TARGET')){
         Write-Output "Some Action"
     }
 ```

@@ -1,14 +1,14 @@
 ---
-ms.date: 06/12/2017
+ms.date: 11/09/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Настройка виртуальных машин при начальной загрузке с помощью DSC
 description: В этой статье описывается, как настроить виртуальную машину при начальной загрузке с помощью DSC.
-ms.openlocfilehash: 9fa8c4a21486aaef87e1c0a3097e5983a378d98d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 09449053ff085209dec6ccbfa800e5d112d1c769
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92656208"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390003"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Настройка виртуальных машин при начальной загрузке с помощью DSC
 
@@ -18,11 +18,11 @@ ms.locfileid: "92656208"
 ## <a name="requirements"></a>Требования
 
 > [!NOTE]
-> Раздел реестра **DSCAutomationHostEnabled** , описанный в этом разделе, недоступен в PowerShell 4.0. Сведения о настройке новых виртуальных машин при начальной загрузке в PowerShell 4.0 см. в разделе [Требуется автоматически настроить машины с помощью DSC при начальной загрузке?](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/).
+> Раздел реестра **DSCAutomationHostEnabled**, описанный в этом разделе, недоступен в PowerShell 4.0. Сведения о настройке новых виртуальных машин при начальной загрузке в PowerShell 4.0 см. в разделе [Требуется автоматически настроить машины с помощью DSC при начальной загрузке?](https://devblogs.microsoft.com/powershell/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/).
 
 Для выполнения этих примеров требуется следующее.
 
-- Загрузочный VHD. ISO-файл с пробной версией Windows Server 2016 можно скачать в центре [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
+- Загрузочный VHD. ISO-файл с пробной версией Windows Server 2016 можно скачать в [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
   Инструкции по созданию VHD из ISO-образа см. в разделе [Создание загрузочных виртуальных жестких дисков](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10)).
 - Компьютер с включенным Hyper-V. Дополнительные сведения см. в статье [Обзор Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
 
@@ -69,7 +69,7 @@ Configuration SampleIISInstall
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
    ```
 
-1. На компьютере с PowerShell 5.0 или более поздней версией сохраните указанную выше конфигурацию ( **SampleIISInstall** ) как файл сценария PowerShell (.ps1).
+1. На компьютере с PowerShell 5.0 или более поздней версией сохраните указанную выше конфигурацию (**SampleIISInstall**) как файл сценария PowerShell (.ps1).
 
 1. В консоли PowerShell перейдите в папку, где был сохранен PS1-файл.
 
@@ -101,7 +101,7 @@ Configuration SampleIISInstall
 
 Также можно настроить на компьютере извлечение конфигурации при начальной загрузке, добавив метаконфигурацию (см. раздел [Настройка локального диспетчера конфигурации [LCM]](../managing-nodes/metaConfig.md)) в VHD в качестве его файла `MetaConfig.mof`. Если раздел реестра **DSCAutomationHostEnabled** имеет значение 2 (значение по умолчанию), DSC применяет к локальному диспетчеру конфигурации метаконфигурацию, определенную в `MetaConfig.mof` при первой загрузке компьютера. Если в метаконфигурации указано, что локальный диспетчер конфигурации должен извлекать конфигурации с опрашивающего сервера, компьютер попытается извлечь конфигурации с этого сервера при начальной загрузке. Сведения о настройке опрашивающего сервера DSC см. в разделе [Настройка опрашивающего веб-сервера DSC](../pull-server/pullServer.md).
 
-В этом примере используется конфигурация, описанная в предыдущем разделе ( **SampleIISInstall** ), и следующая метаконфигурация.
+В этом примере используется конфигурация, описанная в предыдущем разделе (**SampleIISInstall**), и следующая метаконфигурация.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -135,7 +135,7 @@ configuration PullClientBootstrap
 
 1. [Настройте опрашиваемый веб-сервер DSC](../pull-server/pullServer.md) и сохраните конфигурацию **SampleIISInistall** в соответствующую папку.
 
-1. На компьютере с PowerShell 5.0 или более поздней версией сохраните указанную выше метаконфигурацию ( **PullClientBootstrap** ) как файл сценария PowerShell (.ps1).
+1. На компьютере с PowerShell 5.0 или более поздней версией сохраните указанную выше метаконфигурацию (**PullClientBootstrap**) как файл сценария PowerShell (.ps1).
 
 1. В консоли PowerShell перейдите в папку, где был сохранен PS1-файл.
 
@@ -177,25 +177,18 @@ configuration PullClientBootstrap
 1. Загрузите подраздел реестра `HKLM\Software` с VHD, вызвав `reg load`.
 
    ```powershell
-   reg load HKLM\Vhd E:\Windows\System32\Config\Software`
+   reg load HKLM\Vhd E:\Windows\System32\Config\Software
    ```
 
-1. Перейдите в раздел `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System` с помощью поставщика реестра PowerShell.
+1. В загруженном кусте замените значение `DSCAutomationHostEnabled` на 0.
 
    ```powershell
-   Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System`
+   reg add "HKLM\Vhd\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DSCAutomationHostEnabled /t REG_DWORD /d 0 /f
    ```
 
-1. Измените значение `DSCAutomationHostEnabled` на 0.
+1. Выгрузите реестр, выполнив следующие команды.
 
    ```powershell
-   Set-ItemProperty -Path . -Name DSCAutomationHostEnabled -Value 0
-   ```
-
-5. Выгрузите реестр, выполнив следующие команды.
-
-   ```powershell
-   [gc]::Collect()
    reg unload HKLM\Vhd
    ```
 

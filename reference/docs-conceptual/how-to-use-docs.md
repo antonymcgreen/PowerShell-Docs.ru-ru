@@ -3,19 +3,20 @@ ms.date: 07/29/2020
 keywords: powershell,командлет
 title: Использование документации по PowerShell
 description: В этой статье описывается, как использовать функции данного сайта, включая фильтрацию при поиске и выбор версий.
-ms.openlocfilehash: 32f0c613e10329cc4830386b744e766eeeab0187
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: b7e036fce0abb12f6c1ab4c0092784321a41a916
+ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501122"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810306"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>Использование документации по PowerShell
 
 Добро пожаловать в интерактивную документацию по PowerShell. Этот сайт содержит справочник по командлетам для следующих версий PowerShell:
 
-- PowerShell 7
-- PowerShell 6
+- PowerShell 7.2 (предварительный выпуск)
+- PowerShell 7.1 (текущая версия)
+- PowerShell 7.0 (LTS)
 - PowerShell 5.1
 
 ## <a name="finding-articles-and-selecting-a-version"></a>Поиск статей и выбор версии
@@ -51,5 +52,6 @@ Major  Minor  Build  Revision
 - PowerShell 3.0
 - PowerShell 4.0
 - PowerShell 5.0
+- PowerShell 6
 - Рабочие процессы PowerShell
 - PowerShell Web Access

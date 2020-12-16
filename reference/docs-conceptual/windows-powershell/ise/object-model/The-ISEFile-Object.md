@@ -2,16 +2,16 @@
 ms.date: 12/31/2019
 title: Объект ISEFile
 description: Объект ISEFile представляет файл в Windows PowerShell ISE.
-ms.openlocfilehash: 0de19c45bde7e5629d5721635150d3b0915aaa7d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: b5ea70219787f254fe85d728518cbc4746c00250
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92662126"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391499"
 ---
 # <a name="the-isefile-object"></a>Объект ISEFile
 
-Объект **ISEFile** представляет файл в интегрированной среде скриптов (ISE) Windows PowerShell&reg;. Он является экземпляром класса **Microsoft.PowerShell.Host.ISE.ISEFile**. В этом разделе перечислены его члены (методы и свойства). Объект `$psISE.CurrentFile` и все файлы в коллекции "Файлы" на вкладке PowerShell являются экземплярами класса \*\***Microsoft.PowerShell.Host.ISE.ISEFile**.
+Объект **ISEFile** представляет файл в интегрированной среде скриптов (ISE) Windows PowerShell. Он является экземпляром класса **Microsoft.PowerShell.Host.ISE.ISEFile**. В этом разделе перечислены его члены (методы и свойства). Объект `$psISE.CurrentFile` и все файлы в коллекции "Файлы" на вкладке PowerShell являются экземплярами класса \*\***Microsoft.PowerShell.Host.ISE.ISEFile**.
 
 ## <a name="methods"></a>Методы
 
@@ -21,11 +21,11 @@ ms.locfileid: "92662126"
 
 Сохраняет файл на диске.
 
-**\[saveEncoding\]**  — необязательный параметр кодировки символов [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла. Значение по умолчанию — **UTF8**.
+`[saveEncoding]` — необязательный параметр кодировки символов [System.Text.Encoding](/dotnet/api/system.text.encoding), используемый для сохраненного файла. Значение по умолчанию — **UTF8**.
 
 ### <a name="exceptions"></a>Исключения
 
-- **System.IO.IOException** : не удалось сохранить файл.
+- **System.IO.IOException**: не удалось сохранить файл.
 
 ```powershell
 # Save the file using the default encoding (UTF8)
@@ -47,13 +47,13 @@ $myfile.Encoding
 
 **filename** — строка. Имя, используемое для сохранения файла.
 
-**\[saveEncoding\]**  — необязательный параметр кодировки символов [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx), используемый для сохраненного файла. Значение по умолчанию — **UTF8**.
+`[saveEncoding]` — необязательный параметр кодировки символов [System.Text.Encoding](/dotnet/api/system.text.encoding), используемый для сохраненного файла. Значение по умолчанию — **UTF8**.
 
 ### <a name="exceptions"></a>Исключения
 
-- **System.ArgumentNullException** : параметр **filename** имеет значение NULL.
-- **System.ArgumentException** : параметр **filename** пуст.
-- **System.IO.IOException** : не удалось сохранить файл.
+- **System.ArgumentNullException**: параметр **filename** имеет значение NULL.
+- **System.ArgumentException**: параметр **filename** пуст.
+- **System.IO.IOException**: не удалось сохранить файл.
 
 ```powershell
 # Save the file with a full path and name.

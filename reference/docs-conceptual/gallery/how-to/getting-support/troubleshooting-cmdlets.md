@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 12/01/2020
 title: Командлеты для устранения неполадок
 description: В этой статье приведены сведения и шаги по устранению ошибок с помощью коллекции PowerShell.
-ms.openlocfilehash: db9e58c185c6f3bca26ff3639af85fa2dba48909
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 980da8ea7b8a09513f33a9939d512c437b755d8d
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661057"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913324"
 ---
 # <a name="troubleshooting-cmdlets"></a>Командлеты для устранения неполадок
 
@@ -21,12 +21,15 @@ Launch new PowerShell Console
 Update-Module Azure -Verbose
 ```
 
-### <a name="required-network-endpoints"></a>Требуемые сетевые конечные точки
+## <a name="required-network-endpoints"></a>Требуемые сетевые конечные точки
 
 Для командлетов Install и Update требуется доступ к Интернету для подключения к конечным точкам сети, используемым коллекцией PowerShell. Убедитесь, что политики сетевого доступа позволяют подключаться к приведенным ниже конечным точкам.
 
-- oneget.org
-- сайт go.microsoft.com;
-- az818661.vo.msecnd.net
-- www.powershellgallery.com
-- devopsgallerystorage.blob.core.windows.net
+- `psg-prod-eastus.azureedge.net` — имя узла CDN;
+- `az818661.vo.msecnd.net` — имя узла CDN;
+- `devopsgallerystorage.blob.core.windows.net` — имя узла учетной записи хранения;
+- `*.powershellgallery.com` — веб-сайт;
+- `go.microsoft.com` — служба перенаправления.
+
+> [!NOTE]
+> Если возникнет сбой служб коллекции PowerShell, командлеты, которые взаимодействуют с коллекцией PowerShell, могут привести к сбою с непредвиденными ошибками. Сведения о текущем состоянии коллекции PowerShell см. на странице [Состояние коллекции PowerShell](https://github.com/PowerShell/PowerShellGallery/blob/master/psgallery_status.md) на сайте GitHub.

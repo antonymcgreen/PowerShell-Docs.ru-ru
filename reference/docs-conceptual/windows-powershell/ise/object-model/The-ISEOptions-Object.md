@@ -2,16 +2,16 @@
 ms.date: 12/31/2019
 title: Объект ISEOptions
 description: Объект ISEOptions представляет различные параметры для интегрированной среды сценариев Windows PowerShell.
-ms.openlocfilehash: 4f790550796f40c7a2d4882cc0444fa7a55eeee9
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 9823a4a0ea32420d830735a0a61a6c03a6458fb7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661034"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391516"
 ---
 # <a name="the-iseoptions-object"></a>Объект ISEOptions
 
-Объект **ISEOptions** представляет различные параметры для интегрированной среды сценариев Windows PowerShell. Он является экземпляром класса **Microsoft.PowerShell.Host.ISE.ISEOptions** .
+Объект **ISEOptions** представляет различные параметры для интегрированной среды сценариев Windows PowerShell. Он является экземпляром класса **Microsoft.PowerShell.Host.ISE.ISEOptions**.
 
 Объект **ISEOptions** предоставляет следующие методы и свойства.
 
@@ -82,7 +82,7 @@ $psISE.Options.AutoSaveMinuteInterval = 3
 
 Этот компонент присутствует в интегрированной среде сценариев Windows PowerShell 2.0, но был удален или переименован в более поздних версиях интегрированной среды сценариев. Сведения для более поздних версий см. в разделе [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
 
-Задает цвет фона для области команд. Это экземпляр класса **System.Windows.Media.Color** .
+Задает цвет фона для области команд. Это экземпляр класса **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color of the Command pane to orange.
@@ -104,7 +104,7 @@ $psISE.Options.CommandPaneUp  = $true
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
-Задает цвет фона для области консоли. Это экземпляр класса **System.Windows.Media.Color** .
+Задает цвет фона для области консоли. Это экземпляр класса **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color of the Console pane to red.
@@ -152,7 +152,7 @@ $psISE.Options.ConsoleTokenColors["Keyword"] = 'magenta'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Задает цвет фона для сообщений отладки, отображаемых в области консоли. Это экземпляр класса **System.Windows.Media.Color** .
+Задает цвет фона для сообщений отладки, отображаемых в области консоли. Это экземпляр класса **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color for the debug text that appears in the Console pane to blue.
@@ -163,7 +163,7 @@ $psISE.Options.DebugBackgroundColor = '#0000FF'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Задает цвет переднего плана для сообщений отладки, отображаемых в области консоли. Это экземпляр класса **System.Windows.Media.Color** .
+Задает цвет переднего плана для сообщений отладки, отображаемых в области консоли. Это экземпляр класса **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the foreground color for the debug text that appears in the Console pane to yellow.
@@ -223,7 +223,7 @@ IntellisenseTimeoutInSeconds              : 3
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Задает цвет фона для сообщений об ошибках, отображаемых в области консоли. Это экземпляр класса **System.Windows.Media.Color** .
+Задает цвет фона для сообщений об ошибках, отображаемых в области консоли. Это экземпляр класса **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color for the error text that appears in the Console pane to black.
@@ -234,7 +234,7 @@ $psISE.Options.ErrorBackgroundColor = 'black'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Задает цвет переднего плана для сообщений об ошибках, отображаемых в области консоли. Это экземпляр класса **System.Windows.Media.Color** .
+Задает цвет переднего плана для сообщений об ошибках, отображаемых в области консоли. Это экземпляр класса **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the foreground color for the error text that appears in the console pane to green.
@@ -279,7 +279,7 @@ $psISE.Options.IntellisenseTimeoutInSeconds = 5
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
-Задает число недавно открывавшихся файлов, которые интегрированная среда сценариев Windows PowerShell отслеживает и отображает в нижней части меню **Открытие файла** . Значение по умолчанию — 10. Значение представлено целым числом.
+Задает число недавно открывавшихся файлов, которые интегрированная среда сценариев Windows PowerShell отслеживает и отображает в нижней части меню **Открытие файла**. Значение по умолчанию — 10. Значение представлено целым числом.
 
 ```powershell
 # Changes the number of recently used files that appear at the bottom of the File Open menu to 5.
@@ -290,7 +290,7 @@ $psISE.Options.MruCount = 5
 
 Этот компонент присутствует в интегрированной среде сценариев Windows PowerShell 2.0, но был удален или переименован в более поздних версиях интегрированной среды сценариев. Сведения для более поздних версий см. в разделе [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
 
-Свойство для чтения и записи, которое получает или задает цвет фона самой области вывода. Это экземпляр класса **System.Windows.Media.Color** .
+Свойство для чтения и записи, которое получает или задает цвет фона самой области вывода. Это экземпляр класса **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color of the Output pane to gold.
@@ -323,7 +323,7 @@ $psISE.Options.OutputPaneTextBackgroundColor = 'pink'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Свойство для чтения и записи, которое получает или задает цвет фона для файлов. Это экземпляр класса **System.Windows.Media.Color** .
+Свойство для чтения и записи, которое получает или задает цвет фона для файлов. Это экземпляр класса **System.Windows.Media.Color**.
 
 ```powershell
 # Sets the color of the script pane background to yellow.
@@ -492,7 +492,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense = $true
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 3.0 и более поздних версия и отсутствует в более ранних версиях.
 
-Указывает, выводится ли на экран локальная справка или справка библиотеки TechNet в Интернете при нажатии клавиши <kbd>F1</kbd>, когда курсор находится в ключевом слове. Если задано значение `$true`, во всплывающем окне отображается содержимое локальной справки. Можно установить файлы справки, выполнив команду `Update-Help`. Если задано значение `$false`, в браузере открывается страница библиотеки TechNet.
+Указывает, выводится ли на экран локальная справка или справка в Интернете при нажатии клавиши <kbd>F1</kbd>, когда курсор находится в ключевом слове. Если задано значение `$true`, во всплывающем окне отображается содержимое локальной справки. Можно установить файлы справки, выполнив команду `Update-Help`. Если задано значение `$false`, в браузере открывается страница сайта docs.microsoft.com.
 
 ```powershell
 # Sets the option for the online help to be displayed.
@@ -505,7 +505,7 @@ $psISE.Options.UseLocalHelp = $true
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Задает цвет фона для подробных сообщений, отображаемых в области консоли. Это объект **System.Windows.Media.Color** .
+Задает цвет фона для подробных сообщений, отображаемых в области консоли. Это объект **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color for verbose text to blue.
@@ -516,7 +516,7 @@ $psISE.Options.VerboseBackgroundColor ='#0000FF'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Задает цвет переднего плана для подробных сообщений, отображаемых в области консоли. Это объект **System.Windows.Media.Color** .
+Задает цвет переднего плана для подробных сообщений, отображаемых в области консоли. Это объект **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the foreground color for verbose text to yellow.
@@ -527,7 +527,7 @@ $psISE.Options.VerboseForegroundColor = 'yellow'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Задает цвет фона для текста предупреждений, отображаемых в области консоли. Это объект **System.Windows.Media.Color** .
+Задает цвет фона для текста предупреждений, отображаемых в области консоли. Это объект **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color for warning text to blue.
@@ -538,7 +538,7 @@ $psISE.Options.WarningBackgroundColor = '#0000FF'
 
 Поддерживается в интегрированной среде сценариев Windows PowerShell 2.0 и более поздних версий.
 
-Задает цвет переднего плана для текста предупреждений, отображаемых в области вывода. Это объект **System.Windows.Media.Color** .
+Задает цвет переднего плана для текста предупреждений, отображаемых в области вывода. Это объект **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the foreground color for warning text to yellow.

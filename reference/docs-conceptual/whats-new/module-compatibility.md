@@ -2,12 +2,12 @@
 title: Совместимость модулей PowerShell 7
 ms.date: 02/03/2020
 description: В этой статье приведены сведения о состоянии PowerShell 7 с модулями PowerShell, опубликованными для других продуктов Майкрософт.
-ms.openlocfilehash: f845b33881c93fa076d97adf101f4f3e006df73b
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 718ba0f502a23bc2c2a9268d65d3b8129de0af49
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501632"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661381"
 ---
 # <a name="powershell-7-module-compatibility"></a>Совместимость модулей PowerShell 7
 
@@ -25,7 +25,7 @@ ms.locfileid: "92501632"
 Install-WindowsFeature -Name ActiveDirectory
 ```
 
-В Windows 10 модули управления Windows доступны в виде **дополнительных компонентов Windows** или **возможностей Windows** . Приведенные ниже команды должны выполняться с повышенными привилегиями с помощью команды **Запуск от имени администратора** .
+В Windows 10 модули управления Windows доступны в виде **дополнительных компонентов Windows** или **возможностей Windows**. Приведенные ниже команды должны выполняться с повышенными привилегиями с помощью команды **Запуск от имени администратора**.
 
 - Дополнительные компоненты Windows
 
@@ -75,7 +75,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | AppBackgroundTask                  | Встроенная совместимость                  | Windows 10 1903 или более поздней версии                   |
 | AppLocker                          | Проверка уровня совместимости не проводилась    |                                    |
 | AppvClient                         | Проверка уровня совместимости не проводилась    |                                    |
-| Appx                               | Встроенная совместимость                  | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии |
+| Appx                               | Встроенная совместимость**                | Windows Server 1809 или более поздней версии<br>Windows 10 1809 или более поздней версии<br>** Требуется использовать уровень совместимости с PowerShell 7.1 |
 | AssignedAccess                     | Встроенная совместимость                  | Windows 10 1809 или более поздней версии                   |
 | BestPractices                      | Не поддерживается уровнем совместимости |                                    |
 | BitLocker                          | Встроенная совместимость                  | Windows Server 1809 или более поздней версии с BitLocker<br>Windows 10 1809 или более поздней версии |

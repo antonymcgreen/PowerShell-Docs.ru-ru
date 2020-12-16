@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: Приступая к работе с коллекцией PowerShell
 description: В этой статье рассказывается, как начать работу с использованием коллекции PowerShell и командлетов PowerShellGet.
-ms.openlocfilehash: 02d84c64e39245b2a16c03029982796a74301bd6
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: a5045e4ecee2eb8bc9aa373a6b8ec3a940b4de33
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661418"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913295"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Начало работы с коллекцией PowerShell
 
@@ -69,7 +69,7 @@ PowerShell Gallery — это репозиторий пакета, которы
 
 ### <a name="deploy"></a>Развертывание
 
-Чтобы развернуть пакет из коллекции PowerShell в службе автоматизации Azure, щелкните **Служба автоматизации Azure** , а затем **Deploy to Azure Automation** (Развернуть в службе автоматизации Azure) на странице сведений о пакете. После этого вы будете перенаправлены на портал управления Azure, на который нужно войти с использованием учетных данных учетной записи Azure. Обратите внимание, что развертывание пакетов с зависимостями приводит к развертыванию всех зависимостей в службе автоматизации Azure. Кнопку "Развернуть в службе автоматизации Azure" можно отключить, добавив тег **AzureAutomationNotSupported** в метаданные пакета.
+Чтобы развернуть пакет из коллекции PowerShell в службе автоматизации Azure, щелкните **Служба автоматизации Azure**, а затем **Deploy to Azure Automation** (Развернуть в службе автоматизации Azure) на странице сведений о пакете. После этого вы будете перенаправлены на портал управления Azure, на который нужно войти с использованием учетных данных учетной записи Azure. Обратите внимание, что развертывание пакетов с зависимостями приводит к развертыванию всех зависимостей в службе автоматизации Azure. Кнопку "Развернуть в службе автоматизации Azure" можно отключить, добавив тег **AzureAutomationNotSupported** в метаданные пакета.
 
 Дополнительные сведения о службе автоматизации Azure см. в [соответствующей](/azure/automation) документации.
 
@@ -90,10 +90,14 @@ PowerShell Gallery — это репозиторий пакета, которы
 В коллекции PowerShell используются следующие имена узлов:
 
 - `psg-prod-eastus.azureedge.net` — имя узла CDN;
-- `devopsgallerystorage.blob.core.windows.net` — имя узла учетной записи хранения;
-- `*.powershellgallery.com` — веб-сайт.
+- `az818661.vo.msecnd.net` — имя узла CDN;
+- `devopsgallerystorage.blob.core.windows.net` — имя узла учетной записи хранения;
+- `*.powershellgallery.com` — веб-сайт;
+- `go.microsoft.com` — служба перенаправления.
 
 Эти имена узлов должны быть добавлены в списки разрешений, управляющие доступом из сети.
+
+[!INCLUDE [TLS 1.2 Requirement](../../includes/tls-gallery.md)]
 
 [Find-DscResource]: /powershell/module/powershellget/Find-DscResource
 [Find-Module]: /powershell/module/powershellget/Find-Module
