@@ -4,10 +4,10 @@ description: Хэш-таблицы играют очень важную роль
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
-ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
+ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 12/17/2020
 ms.locfileid: "93354428"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Все, что вы хотели знать о хэш-таблицах
@@ -23,7 +23,7 @@ ms.locfileid: "93354428"
 
 ## <a name="what-is-an-array"></a>Что такое массив?
 
-Прежде чем перейти к определению **хэш-таблицы** , нужно сначала рассказать о [массивах][]. В рамках этого обсуждения массив понимается как список или коллекция значений или объектов.
+Прежде чем перейти к определению **хэш-таблицы**, нужно сначала рассказать о [массивах][]. В рамках этого обсуждения массив понимается как список или коллекция значений или объектов.
 
 ```powershell
 $array = @(1,2,3,5,7,11)
@@ -684,7 +684,7 @@ $people = Get-Content -Path $path -Raw | ConvertFrom-JSON
 }
 ```
 
-Используйте параметр **Depth** , чтобы обеспечить развертывание всех вложенных хэш-таблиц.
+Используйте параметр **Depth**, чтобы обеспечить развертывание всех вложенных хэш-таблиц.
 
 ```powershell
 @{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json -Depth 3
@@ -722,7 +722,7 @@ Name      Value
 a         b
 ```
 
-В PowerShell 6.2 добавлен параметр **Depth** для `ConvertFrom-Json`. Значение по умолчанию для параметра **Depth**  — 1024.
+В PowerShell 6.2 добавлен параметр **Depth** для `ConvertFrom-Json`. Значение по умолчанию для параметра **Depth** — 1024.
 
 ### <a name="reading-directly-from-a-file"></a>Чтение непосредственно из файла
 
