@@ -1,150 +1,150 @@
 ---
 description: Описывает правила использования одинарных и двойных кавычек в PowerShell.
-keywords: powershell,командлет
 Locale: en-US
-ms.date: 10/05/2020
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_quoting_rules?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Quoting_Rules
-ms.openlocfilehash: 8e30640c74976ac79634f5f7f648aafc16977f31
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 27d5909c1381c0d221690b353a308680643ecad5
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232198"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490760"
 ---
-# <a name="about-quoting-rules"></a><span data-ttu-id="849bb-104">О правилах заключения в кавычки</span><span class="sxs-lookup"><span data-stu-id="849bb-104">About Quoting Rules</span></span>
+# <a name="about-quoting-rules"></a><span data-ttu-id="0f95b-103">О правилах заключения в кавычки</span><span class="sxs-lookup"><span data-stu-id="0f95b-103">About Quoting Rules</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="849bb-105">КРАТКОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="849bb-105">SHORT DESCRIPTION</span></span>
-<span data-ttu-id="849bb-106">Описывает правила использования одинарных и двойных кавычек в PowerShell.</span><span class="sxs-lookup"><span data-stu-id="849bb-106">Describes rules for using single and double quotation marks in PowerShell.</span></span>
+## <a name="short-description"></a><span data-ttu-id="0f95b-104">Краткое описание</span><span class="sxs-lookup"><span data-stu-id="0f95b-104">Short description</span></span>
+<span data-ttu-id="0f95b-105">Описывает правила использования одинарных и двойных кавычек в PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0f95b-105">Describes rules for using single and double quotation marks in PowerShell.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="849bb-107">ПОДРОБНОЕ ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="849bb-107">LONG DESCRIPTION</span></span>
+## <a name="long-description"></a><span data-ttu-id="0f95b-106">Подробное описание</span><span class="sxs-lookup"><span data-stu-id="0f95b-106">Long description</span></span>
 
-<span data-ttu-id="849bb-108">Кавычки используются для указания литеральной строки.</span><span class="sxs-lookup"><span data-stu-id="849bb-108">Quotation marks are used to specify a literal string.</span></span> <span data-ttu-id="849bb-109">Строку можно заключать в одинарные кавычки ( `'` ) или двойные кавычки ( `"` ).</span><span class="sxs-lookup"><span data-stu-id="849bb-109">You can enclose a string in single quotation marks (`'`) or double quotation marks (`"`).</span></span>
+<span data-ttu-id="0f95b-107">Кавычки используются для указания литеральной строки.</span><span class="sxs-lookup"><span data-stu-id="0f95b-107">Quotation marks are used to specify a literal string.</span></span> <span data-ttu-id="0f95b-108">Строку можно заключать в одинарные кавычки ( `'` ) или двойные кавычки ( `"` ).</span><span class="sxs-lookup"><span data-stu-id="0f95b-108">You can enclose a string in single quotation marks (`'`) or double quotation marks (`"`).</span></span>
 
-<span data-ttu-id="849bb-110">Кавычки также используются для создания строки String.</span><span class="sxs-lookup"><span data-stu-id="849bb-110">Quotation marks are also used to create a here-string.</span></span> <span data-ttu-id="849bb-111">Строка Here — это строка, заключенная в одинарные кавычки или двойные кавычки, в которой кавычки обрабатываются буквально.</span><span class="sxs-lookup"><span data-stu-id="849bb-111">A here-string is a single-quoted or double-quoted string in which quotation marks are interpreted literally.</span></span> <span data-ttu-id="849bb-112">Строка here может охватывать несколько строк.</span><span class="sxs-lookup"><span data-stu-id="849bb-112">A here-string can span multiple lines.</span></span> <span data-ttu-id="849bb-113">Все строки в этой строке считаются строками, даже если они не заключены в кавычки.</span><span class="sxs-lookup"><span data-stu-id="849bb-113">All the lines in a here-string are interpreted as strings, even though they are not enclosed in quotation marks.</span></span>
+<span data-ttu-id="0f95b-109">Кавычки также используются для создания _строки String_.</span><span class="sxs-lookup"><span data-stu-id="0f95b-109">Quotation marks are also used to create a _here-string_.</span></span> <span data-ttu-id="0f95b-110">Строка Here — это строка, заключенная в одинарные кавычки или двойные кавычки, в которой кавычки обрабатываются буквально.</span><span class="sxs-lookup"><span data-stu-id="0f95b-110">A here-string is a single-quoted or double-quoted string in which quotation marks are interpreted literally.</span></span> <span data-ttu-id="0f95b-111">Строка here может охватывать несколько строк.</span><span class="sxs-lookup"><span data-stu-id="0f95b-111">A here-string can span multiple lines.</span></span> <span data-ttu-id="0f95b-112">Все строки в этой строке считаются строками, даже если они не заключены в кавычки.</span><span class="sxs-lookup"><span data-stu-id="0f95b-112">All the lines in a here-string are interpreted as strings, even though they are not enclosed in quotation marks.</span></span>
 
-<span data-ttu-id="849bb-114">В командах к удаленным компьютерам кавычки определяют части команды, выполняемые на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="849bb-114">In commands to remote computers, quotation marks define the parts of the command that are run on the remote computer.</span></span> <span data-ttu-id="849bb-115">В удаленном сеансе кавычки также определяют, будут ли переменные в команде интерпретироваться первыми на локальном компьютере или на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="849bb-115">In a remote session, quotation marks also determine whether the variables in a command are interpreted first on the local computer or on the remote computer.</span></span>
+<span data-ttu-id="0f95b-113">В командах к удаленным компьютерам кавычки определяют части команды, выполняемые на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="0f95b-113">In commands to remote computers, quotation marks define the parts of the command that are run on the remote computer.</span></span> <span data-ttu-id="0f95b-114">В удаленном сеансе кавычки также определяют, будут ли переменные в команде интерпретироваться первыми на локальном компьютере или на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="0f95b-114">In a remote session, quotation marks also determine whether the variables in a command are interpreted first on the local computer or on the remote computer.</span></span>
 
-### <a name="single-and-double-quoted-strings"></a><span data-ttu-id="849bb-116">СТРОКИ С ОДИНАРНЫМИ И ДВОЙНЫМИ КАВЫЧКАМИ</span><span class="sxs-lookup"><span data-stu-id="849bb-116">SINGLE AND DOUBLE-QUOTED STRINGS</span></span>
+## <a name="single-and-double-quoted-strings"></a><span data-ttu-id="0f95b-115">Строки с одинарными и двойными кавычками</span><span class="sxs-lookup"><span data-stu-id="0f95b-115">Single and double-quoted strings</span></span>
 
-<span data-ttu-id="849bb-117">При заключении строки в двойные кавычки (строка, заключенная в двойные кавычки) имена переменных, которым предшествует знак доллара ( `$` ), заменяются значением переменной перед передачей строки в команду для обработки.</span><span class="sxs-lookup"><span data-stu-id="849bb-117">When you enclose a string in double quotation marks (a double-quoted string), variable names that are preceded by a dollar sign (`$`) are replaced with the variable's value before the string is passed to the command for processing.</span></span>
+<span data-ttu-id="0f95b-116">Строка, заключенная в двойные кавычки, является _расширяемой_ строкой.</span><span class="sxs-lookup"><span data-stu-id="0f95b-116">A string enclosed in double quotation marks is an _expandable_ string.</span></span> <span data-ttu-id="0f95b-117">Имена переменных, начинающиеся со знака доллара ( `$` ), заменяются значением переменной перед передачей строки в команду для обработки.</span><span class="sxs-lookup"><span data-stu-id="0f95b-117">Variable names preceded by a dollar sign (`$`) are replaced with the variable's value before the string is passed to the command for processing.</span></span>
 
-<span data-ttu-id="849bb-118">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-118">For example:</span></span>
+<span data-ttu-id="0f95b-118">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-118">For example:</span></span>
 
 ```powershell
 $i = 5
 "The value of $i is $i."
 ```
 
-<span data-ttu-id="849bb-119">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-119">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-119">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-119">The output of this command is:</span></span>
 
 ```Output
 The value of 5 is 5.
 ```
 
-<span data-ttu-id="849bb-120">Кроме того, в строке с двойными кавычками вычисляются выражения, а результат вставляется в строку.</span><span class="sxs-lookup"><span data-stu-id="849bb-120">Also, in a double-quoted string, expressions are evaluated, and the result is inserted in the string.</span></span> <span data-ttu-id="849bb-121">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-121">For example:</span></span>
+<span data-ttu-id="0f95b-120">Кроме того, в строке с двойными кавычками вычисляются выражения, а результат вставляется в строку.</span><span class="sxs-lookup"><span data-stu-id="0f95b-120">Also, in a double-quoted string, expressions are evaluated, and the result is inserted in the string.</span></span> <span data-ttu-id="0f95b-121">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-121">For example:</span></span>
 
 ```powershell
 "The value of $(2+3) is 5."
 ```
 
-<span data-ttu-id="849bb-122">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-122">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-122">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-122">The output of this command is:</span></span>
 
 ```Output
 The value of 5 is 5.
 ```
 
-<span data-ttu-id="849bb-123">При заключении строки в одинарные кавычки (строка, состоящих из одной кавычки) строка передается в команду точно так же, как при ее вводе.</span><span class="sxs-lookup"><span data-stu-id="849bb-123">When you enclose a string in single-quotation marks (a single-quoted string), the string is passed to the command exactly as you type it.</span></span> <span data-ttu-id="849bb-124">Подстановка не выполняется.</span><span class="sxs-lookup"><span data-stu-id="849bb-124">No substitution is performed.</span></span> <span data-ttu-id="849bb-125">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-125">For example:</span></span>
+<span data-ttu-id="0f95b-123">Строка, заключенная в одинарные кавычки, представляет собой _буквальную_ строку.</span><span class="sxs-lookup"><span data-stu-id="0f95b-123">A string enclosed in single-quotation marks is a _verbatim_ string.</span></span> <span data-ttu-id="0f95b-124">Строка передается в команду точно так же, как при ее вводе.</span><span class="sxs-lookup"><span data-stu-id="0f95b-124">The string is passed to the command exactly as you type it.</span></span> <span data-ttu-id="0f95b-125">Подстановка не выполняется.</span><span class="sxs-lookup"><span data-stu-id="0f95b-125">No substitution is performed.</span></span>
+<span data-ttu-id="0f95b-126">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-126">For example:</span></span>
 
 ```powershell
 $i = 5
 'The value of $i is $i.'
 ```
 
-<span data-ttu-id="849bb-126">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-126">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-127">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-127">The output of this command is:</span></span>
 
 ```Output
 The value $i is $i.
 ```
 
-<span data-ttu-id="849bb-127">Аналогичным образом выражения в строках с одинарными кавычками не оцениваются.</span><span class="sxs-lookup"><span data-stu-id="849bb-127">Similarly, expressions in single-quoted strings are not evaluated.</span></span> <span data-ttu-id="849bb-128">Они обрабатываются как литералы.</span><span class="sxs-lookup"><span data-stu-id="849bb-128">They are interpreted as literals.</span></span> <span data-ttu-id="849bb-129">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-129">For example:</span></span>
+<span data-ttu-id="0f95b-128">Аналогичным образом выражения в строках с одинарными кавычками не оцениваются.</span><span class="sxs-lookup"><span data-stu-id="0f95b-128">Similarly, expressions in single-quoted strings are not evaluated.</span></span> <span data-ttu-id="0f95b-129">Они обрабатываются как литералы.</span><span class="sxs-lookup"><span data-stu-id="0f95b-129">They are interpreted as literals.</span></span> <span data-ttu-id="0f95b-130">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-130">For example:</span></span>
 
 ```powershell
 'The value of $(2+3) is 5.'
 ```
 
-<span data-ttu-id="849bb-130">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-130">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-131">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-131">The output of this command is:</span></span>
 
 ```Output
 The value of $(2+3) is 5.
 ```
 
-<span data-ttu-id="849bb-131">Чтобы предотвратить замену значения переменной в строке двойных кавычек, используйте символ обратной кавычки ( `` ` `` ) (ASCII 96), который является escape-символом PowerShell.</span><span class="sxs-lookup"><span data-stu-id="849bb-131">To prevent the substitution of a variable value in a double-quoted string, use the backtick character (`` ` ``)(ASCII 96), which is the PowerShell escape character.</span></span>
+<span data-ttu-id="0f95b-132">Чтобы предотвратить замену значения переменной в строке двойных кавычек, используйте символ обратной кавычки ( `` ` `` ) (ASCII 96), который является escape-символом PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0f95b-132">To prevent the substitution of a variable value in a double-quoted string, use the backtick character (`` ` ``)(ASCII 96), which is the PowerShell escape character.</span></span>
 
-<span data-ttu-id="849bb-132">В следующем примере символ обратной кавычки, предшествующий первой переменной $i, не доставит PowerShell заменить имя переменной значением.</span><span class="sxs-lookup"><span data-stu-id="849bb-132">In the following example, the backtick character that precedes the first $i variable prevents PowerShell from replacing the variable name with its value.</span></span>
-<span data-ttu-id="849bb-133">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-133">For example:</span></span>
+<span data-ttu-id="0f95b-133">В следующем примере символ обратной кавычки, предшествующий первой переменной, `$i` не доставит PowerShell заменить имя переменной значением.</span><span class="sxs-lookup"><span data-stu-id="0f95b-133">In the following example, the backtick character that precedes the first `$i` variable prevents PowerShell from replacing the variable name with its value.</span></span>
+<span data-ttu-id="0f95b-134">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-134">For example:</span></span>
 
 ```powershell
 $i = 5
 "The value of `$i is $i."
 ```
 
-<span data-ttu-id="849bb-134">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-134">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-135">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-135">The output of this command is:</span></span>
 
 ```Output
 The value $i is 5.
 ```
 
-<span data-ttu-id="849bb-135">Чтобы в строке отображались двойные кавычки, заключите всю строку в одинарные кавычки.</span><span class="sxs-lookup"><span data-stu-id="849bb-135">To make double-quotation marks appear in a string, enclose the entire string in single quotation marks.</span></span> <span data-ttu-id="849bb-136">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-136">For example:</span></span>
+<span data-ttu-id="0f95b-136">Чтобы в строке отображались двойные кавычки, заключите всю строку в одинарные кавычки.</span><span class="sxs-lookup"><span data-stu-id="0f95b-136">To make double-quotation marks appear in a string, enclose the entire string in single quotation marks.</span></span> <span data-ttu-id="0f95b-137">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-137">For example:</span></span>
 
 ```powershell
 'As they say, "live and learn."'
 ```
 
-<span data-ttu-id="849bb-137">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-137">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-138">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-138">The output of this command is:</span></span>
 
 ```Output
 As they say, "live and learn."
 ```
 
-<span data-ttu-id="849bb-138">Можно также заключить строку, заключенную в одинарные кавычки, в строку в двойных кавычках.</span><span class="sxs-lookup"><span data-stu-id="849bb-138">You can also enclose a single-quoted string in a double-quoted string.</span></span> <span data-ttu-id="849bb-139">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-139">For example:</span></span>
+<span data-ttu-id="0f95b-139">Можно также заключить строку, заключенную в одинарные кавычки, в строку в двойных кавычках.</span><span class="sxs-lookup"><span data-stu-id="0f95b-139">You can also enclose a single-quoted string in a double-quoted string.</span></span> <span data-ttu-id="0f95b-140">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-140">For example:</span></span>
 
 ```powershell
 "As they say, 'live and learn.'"
 ```
 
-<span data-ttu-id="849bb-140">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-140">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-141">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-141">The output of this command is:</span></span>
 
 ```Output
 As they say, 'live and learn.'
 ```
 
-<span data-ttu-id="849bb-141">Или двойные кавычки вокруг двойных кавычек.</span><span class="sxs-lookup"><span data-stu-id="849bb-141">Or, double the quotation marks around a double-quoted phrase.</span></span> <span data-ttu-id="849bb-142">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-142">For example:</span></span>
+<span data-ttu-id="0f95b-142">Или двойные кавычки вокруг двойных кавычек.</span><span class="sxs-lookup"><span data-stu-id="0f95b-142">Or, double the quotation marks around a double-quoted phrase.</span></span> <span data-ttu-id="0f95b-143">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-143">For example:</span></span>
 
 ```powershell
 "As they say, ""live and learn."""
 ```
 
-<span data-ttu-id="849bb-143">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-143">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-144">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-144">The output of this command is:</span></span>
 
 ```Output
 As they say, "live and learn."
 ```
 
-<span data-ttu-id="849bb-144">Чтобы включить одинарную кавычку в строку с одинарной кавычкой, используйте вторую последовательную одинарную кавычку.</span><span class="sxs-lookup"><span data-stu-id="849bb-144">To include a single quotation mark in a single-quoted string, use a second consecutive single quote.</span></span> <span data-ttu-id="849bb-145">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-145">For example:</span></span>
+<span data-ttu-id="0f95b-145">Чтобы включить одинарную кавычку в строку с одинарной кавычкой, используйте вторую последовательную одинарную кавычку.</span><span class="sxs-lookup"><span data-stu-id="0f95b-145">To include a single quotation mark in a single-quoted string, use a second consecutive single quote.</span></span> <span data-ttu-id="0f95b-146">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-146">For example:</span></span>
 
 ```powershell
 'don''t'
 ```
 
-<span data-ttu-id="849bb-146">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-146">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-147">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-147">The output of this command is:</span></span>
 
 ```Output
 don't
 ```
 
-<span data-ttu-id="849bb-147">Чтобы заставить PowerShell интерпретировать двойные кавычки буквально, используйте символ обратной черты.</span><span class="sxs-lookup"><span data-stu-id="849bb-147">To force PowerShell to interpret a double quotation mark literally, use a backtick character.</span></span> <span data-ttu-id="849bb-148">Это предотвращает интерпретацию кавычек в PowerShell как строкового разделителя.</span><span class="sxs-lookup"><span data-stu-id="849bb-148">This prevents PowerShell from interpreting the quotation mark as a string delimiter.</span></span> <span data-ttu-id="849bb-149">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-149">For example:</span></span>
+<span data-ttu-id="0f95b-148">Чтобы заставить PowerShell интерпретировать двойные кавычки буквально, используйте символ обратной черты.</span><span class="sxs-lookup"><span data-stu-id="0f95b-148">To force PowerShell to interpret a double quotation mark literally, use a backtick character.</span></span> <span data-ttu-id="0f95b-149">Это предотвращает интерпретацию кавычек в PowerShell как строкового разделителя.</span><span class="sxs-lookup"><span data-stu-id="0f95b-149">This prevents PowerShell from interpreting the quotation mark as a string delimiter.</span></span> <span data-ttu-id="0f95b-150">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-150">For example:</span></span>
 
 ```powershell
 PS> "Use a quotation mark (`") to begin a string."
@@ -153,25 +153,25 @@ PS> 'Use a quotation mark (`") to begin a string.'
 Use a quotation mark (`") to begin a string.
 ```
 
-<span data-ttu-id="849bb-150">Поскольку содержимое строк с одинарной кавычкой интерпретируется буквально, то символ обратной косой черты рассматривается как литеральный символ и отображается в выходных данных.</span><span class="sxs-lookup"><span data-stu-id="849bb-150">Because the contents of single-quoted strings are interpreted literally, you the backtick character is treated as a literal character and displayed in the output.</span></span>
+<span data-ttu-id="0f95b-151">Поскольку содержимое строк с одинарной кавычкой интерпретируется буквально, то символ обратной косой черты рассматривается как литеральный символ и отображается в выходных данных.</span><span class="sxs-lookup"><span data-stu-id="0f95b-151">Because the contents of single-quoted strings are interpreted literally, you the backtick character is treated as a literal character and displayed in the output.</span></span>
 
-### <a name="here-strings"></a><span data-ttu-id="849bb-151">СТРОКИ</span><span class="sxs-lookup"><span data-stu-id="849bb-151">HERE-STRINGS</span></span>
+## <a name="here-strings"></a><span data-ttu-id="0f95b-152">Строки</span><span class="sxs-lookup"><span data-stu-id="0f95b-152">Here-strings</span></span>
 
-<span data-ttu-id="849bb-152">Правила предложения для этой строки немного отличаются.</span><span class="sxs-lookup"><span data-stu-id="849bb-152">The quotation rules for here-strings are slightly different.</span></span>
+<span data-ttu-id="0f95b-153">Правила предложения для этой строки немного отличаются.</span><span class="sxs-lookup"><span data-stu-id="0f95b-153">The quotation rules for here-strings are slightly different.</span></span>
 
-<span data-ttu-id="849bb-153">Строка Here — это строка, заключенная в одинарные кавычки или двойные кавычки, в которой кавычки обрабатываются буквально.</span><span class="sxs-lookup"><span data-stu-id="849bb-153">A here-string is a single-quoted or double-quoted string in which quotation marks are interpreted literally.</span></span> <span data-ttu-id="849bb-154">Строка here может охватывать несколько строк.</span><span class="sxs-lookup"><span data-stu-id="849bb-154">A here-string can span multiple lines.</span></span> <span data-ttu-id="849bb-155">Все строки в этой строке считаются строками, даже если они не заключены в кавычки.</span><span class="sxs-lookup"><span data-stu-id="849bb-155">All the lines in a here-string are interpreted as strings even though they are not enclosed in quotation marks.</span></span>
+<span data-ttu-id="0f95b-154">Строка Here — это строка, заключенная в одинарные кавычки или двойные кавычки, в которой кавычки обрабатываются буквально.</span><span class="sxs-lookup"><span data-stu-id="0f95b-154">A here-string is a single-quoted or double-quoted string in which quotation marks are interpreted literally.</span></span> <span data-ttu-id="0f95b-155">Строка here может охватывать несколько строк.</span><span class="sxs-lookup"><span data-stu-id="0f95b-155">A here-string can span multiple lines.</span></span> <span data-ttu-id="0f95b-156">Все строки в этой строке считаются строками, даже если они не заключены в кавычки.</span><span class="sxs-lookup"><span data-stu-id="0f95b-156">All the lines in a here-string are interpreted as strings even though they are not enclosed in quotation marks.</span></span>
 
-<span data-ttu-id="849bb-156">Как и обычные строки, переменные заменяются значениями в строках, заключенных в двойные кавычки.</span><span class="sxs-lookup"><span data-stu-id="849bb-156">Like regular strings, variables are replaced by their values in double-quoted here-strings.</span></span> <span data-ttu-id="849bb-157">В строках с одинарной кавычкой (String) переменные не заменяются значениями.</span><span class="sxs-lookup"><span data-stu-id="849bb-157">In single-quoted here-strings, variables are not replaced by their values.</span></span>
+<span data-ttu-id="0f95b-157">Как и обычные строки, переменные заменяются значениями в строках, заключенных в двойные кавычки.</span><span class="sxs-lookup"><span data-stu-id="0f95b-157">Like regular strings, variables are replaced by their values in double-quoted here-strings.</span></span> <span data-ttu-id="0f95b-158">В строках с одинарной кавычкой (String) переменные не заменяются значениями.</span><span class="sxs-lookup"><span data-stu-id="0f95b-158">In single-quoted here-strings, variables are not replaced by their values.</span></span>
 
-<span data-ttu-id="849bb-158">Здесь можно использовать текстовые строки для любого текста, но они особенно полезны для следующих типов текста:</span><span class="sxs-lookup"><span data-stu-id="849bb-158">You can use here-strings for any text, but they are particularly useful for the following kinds of text:</span></span>
+<span data-ttu-id="0f95b-159">Здесь можно использовать текстовые строки для любого текста, но они особенно полезны для следующих типов текста:</span><span class="sxs-lookup"><span data-stu-id="0f95b-159">You can use here-strings for any text, but they are particularly useful for the following kinds of text:</span></span>
 
-- <span data-ttu-id="849bb-159">Текст, содержащий литеральные кавычки</span><span class="sxs-lookup"><span data-stu-id="849bb-159">Text that contains literal quotation marks</span></span>
-- <span data-ttu-id="849bb-160">Несколько строк текста, например текст в HTML или XML</span><span class="sxs-lookup"><span data-stu-id="849bb-160">Multiple lines of text, such as the text in an HTML or XML</span></span>
-- <span data-ttu-id="849bb-161">Текст справки для скрипта или документа функции</span><span class="sxs-lookup"><span data-stu-id="849bb-161">The Help text for a script or function document</span></span>
+- <span data-ttu-id="0f95b-160">Текст, содержащий литеральные кавычки</span><span class="sxs-lookup"><span data-stu-id="0f95b-160">Text that contains literal quotation marks</span></span>
+- <span data-ttu-id="0f95b-161">Несколько строк текста, например текст в HTML или XML</span><span class="sxs-lookup"><span data-stu-id="0f95b-161">Multiple lines of text, such as the text in an HTML or XML</span></span>
+- <span data-ttu-id="0f95b-162">Текст справки для скрипта или документа функции</span><span class="sxs-lookup"><span data-stu-id="0f95b-162">The Help text for a script or function document</span></span>
 
-<span data-ttu-id="849bb-162">Строка в строке может иметь любой из следующих форматов, где `<Enter>` представляет скрытый символ перевода строки или перехода на новую строку, который добавляется при нажатии клавиши <kbd>Ввод</kbd> .</span><span class="sxs-lookup"><span data-stu-id="849bb-162">A here-string can have either of the following formats, where `<Enter>` represents the linefeed or newline hidden character that is added when you press the <kbd>ENTER</kbd> key.</span></span>
+<span data-ttu-id="0f95b-163">Строка в строке может иметь любой из следующих форматов, где `<Enter>` представляет скрытый символ перевода строки или перехода на новую строку, который добавляется при нажатии клавиши <kbd>Ввод</kbd> .</span><span class="sxs-lookup"><span data-stu-id="0f95b-163">A here-string can have either of the following formats, where `<Enter>` represents the linefeed or newline hidden character that is added when you press the <kbd>ENTER</kbd> key.</span></span>
 
-<span data-ttu-id="849bb-163">Двойные кавычки:</span><span class="sxs-lookup"><span data-stu-id="849bb-163">Double-quotes:</span></span>
+<span data-ttu-id="0f95b-164">Двойные кавычки:</span><span class="sxs-lookup"><span data-stu-id="0f95b-164">Double-quotes:</span></span>
 
 ```
 @"<Enter>
@@ -179,7 +179,7 @@ Use a quotation mark (`") to begin a string.
 "@
 ```
 
-<span data-ttu-id="849bb-164">Одинарные кавычки:</span><span class="sxs-lookup"><span data-stu-id="849bb-164">Single-quotes:</span></span>
+<span data-ttu-id="0f95b-165">Одинарные кавычки:</span><span class="sxs-lookup"><span data-stu-id="0f95b-165">Single-quotes:</span></span>
 
 ```
 @'<Enter>
@@ -187,9 +187,9 @@ Use a quotation mark (`") to begin a string.
 '@
 ```
 
-<span data-ttu-id="849bb-165">В любом формате закрывающие кавычки должны быть первыми символами в строке.</span><span class="sxs-lookup"><span data-stu-id="849bb-165">In either format, the closing quotation mark must be the first character in the line.</span></span>
+<span data-ttu-id="0f95b-166">В любом формате закрывающие кавычки должны быть первыми символами в строке.</span><span class="sxs-lookup"><span data-stu-id="0f95b-166">In either format, the closing quotation mark must be the first character in the line.</span></span>
 
-<span data-ttu-id="849bb-166">Строка here содержит весь текст между двумя скрытыми символами.</span><span class="sxs-lookup"><span data-stu-id="849bb-166">A here-string contains all the text between the two hidden characters.</span></span> <span data-ttu-id="849bb-167">В этой строке все кавычки обрабатываются буквально.</span><span class="sxs-lookup"><span data-stu-id="849bb-167">In the here-string, all quotation marks are interpreted literally.</span></span> <span data-ttu-id="849bb-168">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-168">For example:</span></span>
+<span data-ttu-id="0f95b-167">Строка here содержит весь текст между двумя скрытыми символами.</span><span class="sxs-lookup"><span data-stu-id="0f95b-167">A here-string contains all the text between the two hidden characters.</span></span> <span data-ttu-id="0f95b-168">В этой строке все кавычки обрабатываются буквально.</span><span class="sxs-lookup"><span data-stu-id="0f95b-168">In the here-string, all quotation marks are interpreted literally.</span></span> <span data-ttu-id="0f95b-169">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-169">For example:</span></span>
 
 ```powershell
 @"
@@ -197,13 +197,13 @@ For help, type "get-help"
 "@
 ```
 
-<span data-ttu-id="849bb-169">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-169">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-170">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-170">The output of this command is:</span></span>
 
 ```Output
 For help, type "get-help"
 ```
 
-<span data-ttu-id="849bb-170">Использование строки "строка" может упростить, используя строку в команде.</span><span class="sxs-lookup"><span data-stu-id="849bb-170">Using a here-string can simplify using a string in a command.</span></span> <span data-ttu-id="849bb-171">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-171">For example:</span></span>
+<span data-ttu-id="0f95b-171">Использование строки "строка" может упростить, используя строку в команде.</span><span class="sxs-lookup"><span data-stu-id="0f95b-171">Using a here-string can simplify using a string in a command.</span></span> <span data-ttu-id="0f95b-172">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-172">For example:</span></span>
 
 ```powershell
 @"
@@ -211,13 +211,13 @@ Use a quotation mark (') to begin a string.
 "@
 ```
 
-<span data-ttu-id="849bb-172">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-172">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-173">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-173">The output of this command is:</span></span>
 
 ```Output
 Use a quotation mark (') to begin a string.
 ```
 
-<span data-ttu-id="849bb-173">В строках с одинарными кавычками (строки) переменные обрабатываются буквально и воспроизводится точно.</span><span class="sxs-lookup"><span data-stu-id="849bb-173">In single-quoted here-strings, variables are interpreted literally and reproduced exactly.</span></span> <span data-ttu-id="849bb-174">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-174">For example:</span></span>
+<span data-ttu-id="0f95b-174">В строках с одинарными кавычками (строки) переменные обрабатываются буквально и воспроизводится точно.</span><span class="sxs-lookup"><span data-stu-id="0f95b-174">In single-quoted here-strings, variables are interpreted literally and reproduced exactly.</span></span> <span data-ttu-id="0f95b-175">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-175">For example:</span></span>
 
 ```powershell
 @'
@@ -226,14 +226,14 @@ of your PowerShell profile.
 '@
 ```
 
-<span data-ttu-id="849bb-175">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-175">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-176">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-176">The output of this command is:</span></span>
 
 ```Output
 The $profile variable contains the path
 of your PowerShell profile.
 ```
 
-<span data-ttu-id="849bb-176">В строках, заключенных в двойные кавычки, переменные заменяются значениями.</span><span class="sxs-lookup"><span data-stu-id="849bb-176">In double-quoted here-strings, variables are replaced by their values.</span></span> <span data-ttu-id="849bb-177">Пример:</span><span class="sxs-lookup"><span data-stu-id="849bb-177">For example:</span></span>
+<span data-ttu-id="0f95b-177">В строках, заключенных в двойные кавычки, переменные заменяются значениями.</span><span class="sxs-lookup"><span data-stu-id="0f95b-177">In double-quoted here-strings, variables are replaced by their values.</span></span> <span data-ttu-id="0f95b-178">Пример:</span><span class="sxs-lookup"><span data-stu-id="0f95b-178">For example:</span></span>
 
 ```powershell
 @"
@@ -243,7 +243,7 @@ $profile.
 "@
 ```
 
-<span data-ttu-id="849bb-178">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="849bb-178">The output of this command is:</span></span>
+<span data-ttu-id="0f95b-179">Выходные данные этой команды:</span><span class="sxs-lookup"><span data-stu-id="0f95b-179">The output of this command is:</span></span>
 
 ```Output
 Even if you have not created a profile,
@@ -251,7 +251,7 @@ the path of the profile file is:
 C:\Users\User1\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1.
 ```
 
-<span data-ttu-id="849bb-179">Здесь строки обычно используются для назначения нескольких строк переменной.</span><span class="sxs-lookup"><span data-stu-id="849bb-179">Here-strings are typically used to assign multiple lines to a variable.</span></span> <span data-ttu-id="849bb-180">Например, следующая строка here присваивает $page переменной страницу XML.</span><span class="sxs-lookup"><span data-stu-id="849bb-180">For example, the following here-string assigns a page of XML to the $page variable.</span></span>
+<span data-ttu-id="0f95b-180">Здесь строки обычно используются для назначения нескольких строк переменной.</span><span class="sxs-lookup"><span data-stu-id="0f95b-180">Here-strings are typically used to assign multiple lines to a variable.</span></span> <span data-ttu-id="0f95b-181">Например, следующая строка here присваивает $page переменной страницу XML.</span><span class="sxs-lookup"><span data-stu-id="0f95b-181">For example, the following here-string assigns a page of XML to the $page variable.</span></span>
 
 ```powershell
 $page = [XML] @"
@@ -274,11 +274,11 @@ xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
 "@
 ```
 
-<span data-ttu-id="849bb-181">Здесь также удобно использовать для ввода `ConvertFrom-StringData` командлет, который преобразует строки в хэш-таблицы в виде строк.</span><span class="sxs-lookup"><span data-stu-id="849bb-181">Here-strings are also a convenient format for input to the `ConvertFrom-StringData` cmdlet, which converts here-strings to hash tables.</span></span>
-<span data-ttu-id="849bb-182">Для получения дополнительной информации см. `ConvertFrom-StringData`.</span><span class="sxs-lookup"><span data-stu-id="849bb-182">For more information, see `ConvertFrom-StringData`.</span></span>
+<span data-ttu-id="0f95b-182">Здесь также удобно использовать для ввода `ConvertFrom-StringData` командлет, который преобразует строки в хэш-таблицы в виде строк.</span><span class="sxs-lookup"><span data-stu-id="0f95b-182">Here-strings are also a convenient format for input to the `ConvertFrom-StringData` cmdlet, which converts here-strings to hash tables.</span></span>
+<span data-ttu-id="0f95b-183">Для получения дополнительной информации см. `ConvertFrom-StringData`.</span><span class="sxs-lookup"><span data-stu-id="0f95b-183">For more information, see `ConvertFrom-StringData`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="849bb-183">СМ. ТАКЖЕ</span><span class="sxs-lookup"><span data-stu-id="849bb-183">SEE ALSO</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f95b-184">См. также</span><span class="sxs-lookup"><span data-stu-id="0f95b-184">See also</span></span>
 
-[<span data-ttu-id="849bb-184">about_Special_Characters</span><span class="sxs-lookup"><span data-stu-id="849bb-184">about_Special_Characters</span></span>](about_Special_Characters.md)
+[<span data-ttu-id="0f95b-185">about_Special_Characters</span><span class="sxs-lookup"><span data-stu-id="0f95b-185">about_Special_Characters</span></span>](about_Special_Characters.md)
 
-[<span data-ttu-id="849bb-185">ConvertFrom-StringData</span><span class="sxs-lookup"><span data-stu-id="849bb-185">ConvertFrom-StringData</span></span>](xref:Microsoft.PowerShell.Utility.ConvertFrom-StringData)
+[<span data-ttu-id="0f95b-186">ConvertFrom-StringData</span><span class="sxs-lookup"><span data-stu-id="0f95b-186">ConvertFrom-StringData</span></span>](xref:Microsoft.PowerShell.Utility.ConvertFrom-StringData)
