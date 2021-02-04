@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.ConsoleHost.dll-Help.xml
 keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Host
-ms.date: 06/09/2017
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.host/start-transcript?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Transcript
-ms.openlocfilehash: 395488731d2d30a16db986ccb91af3b1891daa24
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 32d8893190489be0a102b2db4dee3482133a4243
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93229301"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860847"
 ---
 # Start-Transcript
 
 ## Краткий обзор
 Создает запись для всего сеанса PowerShell или его части в текстовый файл.
 
-## SYNTAX
+## Синтаксис
 
 ### ByPath (по умолчанию)
 
@@ -42,13 +42,15 @@ Start-Transcript [[-OutputDirectory] <String>] [-Append] [-Force] [-NoClobber]
  [-IncludeInvocationHeader] [-UseMinimalHeader] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Описание
 
 `Start-Transcript`Командлет создает запись или часть сеанса PowerShell в текстовый файл. Запись включает в себя все команды, вводимые пользователем, и все выходные данные, выводимые в консоли.
 
 Начиная с Windows PowerShell 5,0, `Start-Transcript` содержит имя узла в созданном файле для всех записей. Это особенно полезно, если ведение журнала предприятия является централизованным.
 Файлы, создаваемые `Start-Transcript` командлетом, содержат случайные символы в именах, чтобы предотвратить возможную перезапись или дублирование при одновременном запуске двух или более записей.
 Это также предотвращает несанкционированный Поиск записей, хранящихся в централизованном файловом ресурсе.
+
+При использовании параметра **append** , если целевой файл не имеет метки порядка БАЙТОВ (BOM), `Start-Transcript` по умолчанию используется `ASCII` Кодировка в целевом файле. Такое поведение может привести к неправильному кодированию мулитбите символов в записи.
 
 ## Примеры
 
@@ -68,7 +70,7 @@ Start-Transcript -Path "C:\transcripts\transcript0.txt" -NoClobber
 
 Эта команда запускает запись в `Transcript0.txt` файле в `C:\transcripts` . Так как используется параметр **NoClobber** , команда предотвращает перезапись существующих файлов. Если `Transcript0.txt` файл уже существует, команда завершается ошибкой.
 
-## PARAMETERS
+## Параметры
 
 ### — Добавление
 
@@ -241,7 +243,7 @@ Accept wildcard characters: False
 
 ## Входные данные
 
-### Нет
+### None
 
 Нельзя передать объекты в этот командлет с помощью конвейера.
 
@@ -251,7 +253,7 @@ Accept wildcard characters: False
 
 Этот командлет возвращает строку, содержащую сообщение подтверждения и путь к выходному файлу.
 
-## ПРИМЕЧАНИЯ
+## Примечания
 
 Чтобы отключить запись разговора, используйте `Stop-Transcript` командлет.
 
@@ -260,4 +262,3 @@ Accept wildcard characters: False
 ## Связанные ссылки
 
 [Stop-Transcript](Stop-Transcript.md)
-

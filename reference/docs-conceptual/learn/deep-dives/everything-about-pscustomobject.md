@@ -3,12 +3,12 @@ title: Все, что вы хотели знать о PSCustomObject
 description: PSCustomObject — это простое средство для создания структурированных данных.
 ms.date: 10/05/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: ccbdcdae5ad38f555233dffbed7e8a6ec2b0726b
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 8086541bf93b4d3f878c9a3f7ca4300dc452a80b
+ms.sourcegitcommit: 08c63095f54916013634d6703f2523779815f4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "91772326"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99424473"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>Все, что вы хотели знать о PSCustomObject
 
@@ -74,7 +74,7 @@ $myObject = New-Object -TypeName PSObject -Property $myHashtable
 Самый лучший способ сохранить хэш-таблицу в файл — использовать формат JSON. Вы можете импортировать ее обратно в `[PSCustomObject]`.
 
 ```powershell
-$myObject | ConvertTo-Json -depth 1- | Set-Content -Path $Path
+$myObject | ConvertTo-Json -depth 1 | Set-Content -Path $Path
 $myObject = Get-Content -Path $Path | ConvertFrom-Json
 ```
 
@@ -87,7 +87,7 @@ $myObject = Get-Content -Path $Path | ConvertFrom-Json
 Вы по-прежнему можете добавлять новые свойства в объект `PSCustomObject` с помощью `Add-Member`.
 
 ```powershell
-$myObject | Add-Member -MemberType NoteProperty -Name `ID` -Value 'KevinMarquette'
+$myObject | Add-Member -MemberType NoteProperty -Name 'ID' -Value 'KevinMarquette'
 
 $myObject.ID
 ```

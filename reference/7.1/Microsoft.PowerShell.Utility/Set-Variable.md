@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-variable?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Variable
-ms.openlocfilehash: c175fce3df41a3860a54ccb13a280955dce4a55c
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: c90a2f49c95333e45893e186d6e1f1da4b3fe41a
+ms.sourcegitcommit: 0f003644684422e425a59b7361121e05ac772e15
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239895"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98771827"
 ---
 # Set-Variable
 
@@ -53,13 +53,13 @@ desc                           A description
 В этом примере создается глобальная переменная, доступная только для чтения, которая содержит все процессы в системе, а затем отображаются все свойства переменной.
 
 ```powershell
-Set-Variable -Name "processes" -Value (Get-Process) -Option constant -Scope global -Description "All processes" -PassThru |
+Set-Variable -Name "processes" -Value (Get-Process) -Option Constant -Scope global -Description "All processes" -PassThru |
     Format-List -Property *
 ```
 
-Команда использует `Set-Variable` командлет для создания переменной. Он использует параметр **PassThru** для создания объекта, представляющего новую переменную, и использует оператор конвейера ( `|` ) для передачи объекта в `Format-List` командлет. **Property** `Format-List` `*` Для вывода всех свойств только что созданной переменной в нем используется параметр Property со значением All ().
+Команда использует `Set-Variable` командлет для создания переменной. Он использует параметр **PassThru** для создания объекта, представляющего новую переменную, и использует оператор конвейера ( `|` ) для передачи объекта в `Format-List` командлет.  `Format-List` `*` Для вывода всех свойств только что созданной переменной в нем используется параметр Property со значением All ().
 
-Значение, `(Get-Process)` , заключено в круглые скобки, чтобы убедиться, что оно выполняется перед сохранением в переменной. В противном случае переменная содержит слова « **Get-Process** ».
+Значение, `(Get-Process)` , заключено в круглые скобки, чтобы убедиться, что оно выполняется перед сохранением в переменной. В противном случае переменная содержит слова «**Get-Process**».
 
 ### Пример 3. Знакомство с открытыми и частными переменными
 
@@ -231,8 +231,8 @@ Accept wildcard characters: False
 
 - Глобальный
 - Локальная
-- Сценарий
-- Private
+- Скрипт
+- Частные
 - Число относительно текущей области (от 0 до количества областей, где 0 — текущая область, а 1 — ее родитель).
 
 По умолчанию используется значение Local.

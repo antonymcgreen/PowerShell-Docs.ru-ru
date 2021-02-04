@@ -2,16 +2,16 @@
 description: Описывает параметры, которые можно использовать с любым командлетом.
 keywords: powershell,командлет
 Locale: en-US
-ms.date: 11/26/2019
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_CommonParameters
-ms.openlocfilehash: 949fabca6052a75d2cc4f8cf71e0a88b170a3b36
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 0b303590aab756aaa7dd55683e114a20c2b2a12c
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231825"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860816"
 ---
 # <a name="about-commonparameters"></a>О Общиепараметры
 
@@ -83,13 +83,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-По умолчанию сообщения отладки не отображаются, так как значение `$DebugPreference` переменной — **SilentlyContinue** .
+По умолчанию сообщения отладки не отображаются, так как значение `$DebugPreference` переменной — **SilentlyContinue**.
 
-В интерактивном режиме параметр **Debug** переопределяет значение `$DebugPreference` переменной для текущей команды, устанавливая для параметра значение "запрос" `$DebugPreference` . **Inquire**
+В интерактивном режиме параметр **Debug** переопределяет значение `$DebugPreference` переменной для текущей команды, устанавливая для параметра значение "запрос" `$DebugPreference` . 
 
-В неинтерактивном режиме параметр **Debug** переопределяет значение `$DebugPreference` переменной для текущей команды, устанавливая `$DebugPreference` для значение **Continue** .
+В неинтерактивном режиме параметр **Debug** переопределяет значение `$DebugPreference` переменной для текущей команды, устанавливая `$DebugPreference` для значение **Continue**.
 
-`-Debug:$true` имеет тот же результат, что и `-Debug` . Используйте, `-Debug:$false` чтобы подавлять отображение отладочных сообщений `$DebugPreference` , если не **SilentlyContinue** , что является значением по умолчанию.
+`-Debug:$true` имеет тот же результат, что и `-Debug` . Используйте, `-Debug:$false` чтобы подавлять отображение отладочных сообщений `$DebugPreference` , если не **SilentlyContinue**, что является значением по умолчанию.
 
 #### <a name="erroraction"></a>ErrorAction
 
@@ -108,13 +108,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-Параметр **ErrorAction** переопределяет значение `$ErrorActionPreference` переменной для текущей команды. Так как значение переменной по умолчанию `$ErrorActionPreference` **продолжится** , отображаются сообщения об ошибках и выполнение продолжается, если не используется параметр **ErrorAction** .
+Параметр **ErrorAction** переопределяет значение `$ErrorActionPreference` переменной для текущей команды. Так как значение переменной по умолчанию `$ErrorActionPreference` **продолжится**, отображаются сообщения об ошибках и выполнение продолжается, если не используется параметр **ErrorAction** .
 
 Параметр **ErrorAction** не влияет на завершающие ошибки (такие как отсутствующие данные, недопустимые параметры или недостаточные разрешения), препятствующие успешному выполнению команды.
 
 `-ErrorAction:Continue` Отобразите сообщение об ошибке и продолжит выполнение команды. Значение по умолчанию — `Continue`.
 
-`-ErrorAction:Ignore` Подавляет сообщение об ошибке и возобновляет выполнение команды. В отличие от **SilentlyContinue** , **Ignore** не добавляет сообщение об ошибке в `$Error` автоматическую переменную. Значение **Ignore** введено в PowerShell 3,0.
+`-ErrorAction:Ignore` Подавляет сообщение об ошибке и возобновляет выполнение команды. В отличие от **SilentlyContinue**, **Ignore** не добавляет сообщение об ошибке в `$Error` автоматическую переменную. Значение **Ignore** введено в PowerShell 3,0.
 
 `-ErrorAction:Inquire` Отображает сообщение об ошибке и запрашивает подтверждение перед продолжением выполнения. Это значение используется редко.
 
@@ -169,7 +169,7 @@ $a
 
 #### <a name="informationaction"></a>InformationAction
 
-Представлено в PowerShell 5,0. В команде или сценарии, в которой они используются, общий параметр **InformationAction** переопределяет значение `$InformationPreference` привилегированной переменной, которая по умолчанию имеет значение **SilentlyContinue** . При использовании `Write-Information` в скрипте с **InformationAction** `Write-Information` значения отображаются в зависимости от значения параметра **InformationAction** . Дополнительные сведения о `$InformationPreference` см. в разделе [about_Preference_Variables](./about_Preference_Variables.md).
+Представлено в PowerShell 5,0. В команде или сценарии, в которой они используются, общий параметр **InformationAction** переопределяет значение `$InformationPreference` привилегированной переменной, которая по умолчанию имеет значение **SilentlyContinue**. При использовании `Write-Information` в скрипте с **InformationAction** `Write-Information` значения отображаются в зависимости от значения параметра **InformationAction** . Дополнительные сведения о `$InformationPreference` см. в разделе [about_Preference_Variables](./about_Preference_Variables.md).
 
 ```yaml
 Type: ActionPreference
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 `-InformationAction:Stop` Останавливает команду или скрипт при возникновении `Write-Information` команды.
 
-`-InformationAction:Ignore` подавляет информационное сообщение и возобновляет выполнение команды. В отличие от **SilentlyContinue** , **Ignore** полностью забыл информационное сообщение. оно не добавляет информационное сообщение в информационный поток.
+`-InformationAction:Ignore` подавляет информационное сообщение и возобновляет выполнение команды. В отличие от **SilentlyContinue**, **Ignore** полностью забыл информационное сообщение. оно не добавляет информационное сообщение в информационный поток.
 
 `-InformationAction:Inquire` отображает информационное сообщение, указанное в `Write-Information` команде, а затем спрашивает, нужно ли продолжить.
 
@@ -295,6 +295,10 @@ $out
 
 **PipelineVariable** сохраняет значение текущего конвейера как переменную для любой именованной команды в том виде, в каком она проходит через конвейер.
 
+>[!NOTE]
+> Расширенные функции могут иметь до трех блоков Script: `begin` , `process` и `end` . При использовании параметра **PipelineVariable** с расширенными функциями только значения из первого определенного блока скрипта присваиваются переменной при выполнении функции. Дополнительные сведения см. в разделе [Расширенные функции](./about_functions_advanced.md).
+> PowerShell 7,2 исправляет это поведение.
+
 ```yaml
 Type: String
 Aliases: pv
@@ -308,11 +312,11 @@ Accept wildcard characters: False
 
 Допустимые значения — строки, такие же, как и для имен переменных.
 
-Ниже приведен пример того, как работает **PipelineVariable** . В этом примере параметр **PipelineVariable** добавляется в `Foreach-Object` команду для сохранения результатов выполнения команды в переменных. Диапазон чисел от 1 до 10 передается в первую `Foreach-Object` команду, результаты которых хранятся в переменной с именем **Left** .
+Ниже приведен пример того, как работает **PipelineVariable** . В этом примере параметр **PipelineVariable** добавляется в `Foreach-Object` команду для сохранения результатов выполнения команды в переменных. Диапазон чисел от 1 до 10 передается в первую `Foreach-Object` команду, результаты которых хранятся в переменной с именем **Left**.
 
-Результаты первой `Foreach-Object` команды передаются во вторую `Foreach-Object` команду, которая фильтрует объекты, возвращаемые первой `Foreach-Object` командой. Результаты второй команды хранятся в переменной с именем **right** .
+Результаты первой `Foreach-Object` команды передаются во вторую `Foreach-Object` команду, которая фильтрует объекты, возвращаемые первой `Foreach-Object` командой. Результаты второй команды хранятся в переменной с именем **right**.
 
-В третьей `Foreach-Object` команде результаты первых двух `Foreach-Object` команд, представленных переменными **слева** и **справа** , обрабатываются с помощью оператора умножения. Команда указывает, что необходимо умножить объекты, хранящиеся в **левой** и **правой** переменных, и указать, что результаты должны отображаться как «левый диапазон член * правый диапазон Member = продукт».
+В третьей `Foreach-Object` команде результаты первых двух `Foreach-Object` команд, представленных переменными **слева** и **справа**, обрабатываются с помощью оператора умножения. Команда указывает, что необходимо умножить объекты, хранящиеся в **левой** и **правой** переменных, и указать, что результаты должны отображаться как «левый диапазон член * правый диапазон Member = продукт».
 
 ```powershell
 1..10 | Foreach-Object -PipelineVariable Left -Process { $_ } |
@@ -344,7 +348,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-Параметр **verbose** переопределяет значение `$VerbosePreference` переменной для текущей команды. Так как значение переменной по умолчанию `$VerbosePreference` — **SilentlyContinue** , подробные сообщения не отображаются по умолчанию.
+Параметр **verbose** переопределяет значение `$VerbosePreference` переменной для текущей команды. Так как значение переменной по умолчанию `$VerbosePreference` — **SilentlyContinue**, подробные сообщения не отображаются по умолчанию.
 
 `-Verbose:$true` имеет тот же результат, что и `-Verbose`
 
@@ -366,7 +370,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-Параметр **WarningAction** переопределяет значение `$WarningPreference` переменной для текущей команды. Так как значение переменной по умолчанию `$WarningPreference` — **Continue** , отображаются предупреждения и выполнение продолжается, если не используется параметр **WarningAction** .
+Параметр **WarningAction** переопределяет значение `$WarningPreference` переменной для текущей команды. Так как значение переменной по умолчанию `$WarningPreference` — **Continue**, отображаются предупреждения и выполнение продолжается, если не используется параметр **WarningAction** .
 
 `-WarningAction:Continue` Отображает предупреждающие сообщения и возобновляет выполнение команды. Значение по умолчанию — `Continue`.
 
@@ -557,6 +561,6 @@ about_Common_Parameters
 
 [Write-Warning](xref:Microsoft.PowerShell.Utility.Write-Warning)
 
-[Ошибка записи](xref:Microsoft.PowerShell.Utility.Write-Error)
+[Write-Error](xref:Microsoft.PowerShell.Utility.Write-Error)
 
 [Write-Verbose](xref:Microsoft.PowerShell.Utility.Write-Verbose)

@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/29/2020
+ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-string?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-String
-ms.openlocfilehash: a64b11206a0755cedabad2894ecc330fac95a8d5
-ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
+ms.openlocfilehash: 719c65903592d7cec94621bbb293f09b82a0d934
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "93230733"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620203"
 ---
 # Out-String
 
 ## Краткий обзор
 Выводит входные объекты в виде строк.
 
-## SYNTAX
+## Синтаксис
 
 ### Ноневлинеформаттинг (по умолчанию)
 
@@ -33,7 +33,7 @@ Out-String [-Width <Int32>] [-NoNewline] [-InputObject <PSObject>] [<CommonParam
 Out-String [-Stream] [-Width <Int32>] [-InputObject <PSObject>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Описание:
 
 `Out-String`Командлет преобразует входные объекты в строки. По умолчанию `Out-String` накапливает строки и возвращает их в виде одной строки, но можно использовать параметр **Stream** , чтобы направить `Out-String` Возврат по одной строке за раз или создать массив строк. Этот командлет позволяет управлять строковым выводом и выполнять в нем поиск, как при работе с традиционными оболочками, если использовать объектов неудобно.
 
@@ -84,7 +84,7 @@ IsReadOnly                     : False
 
 ### Пример 2. Работа с объектами
 
-В этом примере показано различие между работой с объектами и работой со строками. Команда отображает псевдоним, который содержит текст **gcm** , псевдоним для `Get-Command` .
+В этом примере показано различие между работой с объектами и работой со строками. Команда отображает псевдоним, который содержит текст **gcm**, псевдоним для `Get-Command` .
 
 ```powershell
 Get-Alias | Out-String -Stream | Select-String -Pattern "gcm"
@@ -94,7 +94,7 @@ Get-Alias | Out-String -Stream | Select-String -Pattern "gcm"
 Alias           gcm -> Get-Command
 ```
 
-`Get-Alias` Возвращает объекты **System. Management. Automation. AliasInfo** , по одному для каждого псевдонима, и отправляет объекты по конвейеру. `Out-String` использует параметр **Stream** для преобразования каждого объекта в строку, вместо того чтобы объединить все объекты в одну строку. Объекты **System. String** отправляются в конвейер и `Select-String` используют параметр **pattern** для поиска совпадений для текста **gcm** .
+`Get-Alias` Возвращает объекты **System. Management. Automation. AliasInfo** , по одному для каждого псевдонима, и отправляет объекты по конвейеру. `Out-String` использует параметр **Stream** для преобразования каждого объекта в строку, вместо того чтобы объединить все объекты в одну строку. Объекты **System. String** отправляются в конвейер и `Select-String` используют параметр **pattern** для поиска совпадений для текста **gcm**.
 
 > [!NOTE]
 > Если опустить параметр **Stream** , команда выводит все псевдонимы, так как `Select-String` находит текст **gcm** в одной строке, которая `Out-String` возвращает.
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -Stream
 
-Указывает, что командлет отправляет отдельную строку для каждой строки входного объекта. По умолчанию строки для каждого объекта накапливаются и отправляются в виде одной строки.
+По умолчанию `Out-String` выводит одну строку, отформатированную как можно увидеть в консоли, включая любые пустые заголовки или завершающие строки. Параметр **Stream** позволяет `Out-String` выводить каждую строку по одному. Единственным исключением являются многострочные строки. В этом случае `Out-String` будет по-прежнему выводить строку в виде одной многострочной строки.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
