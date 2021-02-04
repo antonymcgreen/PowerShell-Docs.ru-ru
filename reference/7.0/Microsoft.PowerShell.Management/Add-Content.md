@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 5/14/2019
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/add-content?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Content
-ms.openlocfilehash: 86702f16683c6710b498a23c072ea9d862868694
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e31e792a60cd09d35ecc67263f107584857efe7d
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93226242"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97693037"
 ---
 # Add-Content
 
@@ -362,11 +361,14 @@ Accept wildcard characters: True
 
 ### -Stream
 
+> [!NOTE]
+> Этот параметр доступен только в Windows.
+
 Указывает альтернативный поток данных для содержимого. Если поток не существует, этот командлет создаст его. Подстановочные знаки не поддерживаются.
 
 **Stream** — это динамический параметр, к которому добавляется поставщик FileSystem `Add-Content` . Этот параметр работает только на дисках с файловой системой.
 
-`Add-Content`С помощью командлета можно изменить содержимое **зоны.** альтернативный поток данных идентификатора. Однако не рекомендуется использовать этот способ для устранения проверок безопасности, блокирующих файлы, загружаемые из Интернета. Если вы убедитесь, что скачанный файл является надежным, используйте `Unblock-File` командлет.
+`Add-Content`С помощью командлета можно изменить содержимое любого альтернативного потока данных, например `Zone.Identifier` . Однако не рекомендуется использовать этот способ для устранения проверок безопасности, блокирующих файлы, загружаемые из Интернета. Если вы убедитесь, что скачанный файл является надежным, используйте `Unblock-File` командлет.
 
 Этот параметр появился в PowerShell 3,0.
 
@@ -384,7 +386,7 @@ Accept wildcard characters: False
 
 ### -Value
 
-Задает добавляемое содержимое. Введите строку в кавычках, например **данные, предназначенные только для внутреннего использования** , или укажите объект, содержащий содержимое, например объект **DateTime** , который `Get-Date` создает.
+Задает добавляемое содержимое. Введите строку в кавычках, например **данные, предназначенные только для внутреннего использования**, или укажите объект, содержащий содержимое, например объект **DateTime** , который `Get-Date` создает.
 
 Нельзя указать содержимое файла, введя его путь, поскольку путь является просто строкой.
 `Get-Content`Для получения содержимого и передачи его в параметр **value** можно использовать команду.
@@ -435,7 +437,7 @@ Accept wildcard characters: False
 
 ### Общие параметры
 
-Этот командлет поддерживает общие параметры: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` и `-WarningVariable` . См. сведения в разделе [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable. См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## Входные данные
 

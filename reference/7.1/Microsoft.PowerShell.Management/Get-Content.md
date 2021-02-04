@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/19/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Content
-ms.openlocfilehash: 0140691bc0b01fff803f0efdf81980c621e1150d
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: b6a8d0f68717849711a794c9482e03d4ea081e1d
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93230497"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692648"
 ---
 # Get-Content
 
@@ -180,7 +179,7 @@ Added a stream named NewStream to Stream.txt
 ```
 
 Параметр **Stream** является динамическим параметром [поставщика FileSystem](../microsoft.powershell.core/about/about_filesystem_provider.md#stream-systemstring).
-По умолчанию `Get-Content` получает только данные из первичного или `$DATA` потока. **Потоки** можно использовать для хранения скрытых данных, таких как атрибуты, параметры безопасности или другие данные.
+По умолчанию `Get-Content` получает только данные из потока по умолчанию или `:$DATA` . **Потоки** можно использовать для хранения скрытых данных, таких как атрибуты, параметры безопасности или другие данные. Они также могут храниться в каталогах без дочерних элементов.
 
 ### Пример 6. получение необработанного содержимого
 
@@ -289,7 +288,7 @@ Accept wildcard characters: False
 
 Указывает число строк от начала файла или другого элемента. По умолчанию используется значение -1 (все строки).
 
-Можно использовать имя параметра **totalCount** или его псевдонимы, **First** или **head** .
+Можно использовать имя параметра **totalCount** или его псевдонимы, **First** или **head**.
 
 ```yaml
 Type: System.Int64
@@ -305,7 +304,7 @@ Accept wildcard characters: False
 
 ### — Хвост
 
-Указывает число строк из конца файла или другого элемента. Можно использовать имя параметра **tail** или его псевдонима **Last** . Этот параметр появился в PowerShell 3,0.
+Указывает число строк из конца файла или другого элемента. Можно использовать имя параметра **tail** или его псевдонима **Last**. Этот параметр появился в PowerShell 3,0.
 
 ```yaml
 Type: System.Int32
@@ -338,7 +337,7 @@ Accept wildcard characters: True
 
 ### -Include
 
-Указывает в виде массива строк элемент или элементы, которые этот командлет включает в операцию. Значение этого параметра определяет параметр **Path** . Введите элемент пути или шаблон, например `"*.txt"` . Можно использовать подстановочные знаки. Параметр **include** действует только в том случае, если команда включает содержимое элемента, например `C:\Windows\*` , где подстановочный знак указывает содержимое `C:\Windows` каталога.
+Указывает в виде массива строк элемент или элементы, которые этот командлет включает в операцию. Значение этого параметра определяет параметр **Path**. Введите элемент пути или шаблон, например `"*.txt"` . Можно использовать подстановочные знаки. Параметр **include** действует только в том случае, если команда включает содержимое элемента, например `C:\Windows\*` , где подстановочный знак указывает содержимое `C:\Windows` каталога.
 
 ```yaml
 Type: System.String[]
@@ -355,7 +354,7 @@ Accept wildcard characters: True
 ### -Exclude
 
 Указывает в виде массива строк элемент или элементы, которые этот командлет исключает в операции.
-Значение этого параметра определяет параметр **Path** .
+Значение этого параметра определяет параметр **Path**.
 
 Введите элемент пути или шаблон, например `*.txt` .
 Можно использовать подстановочные знаки.
@@ -433,9 +432,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Сохраняет файл открытым после вывода всех существующих строк. Во время ожидания `Get-Content` проверяет файл один раз в секунду и выводит новые строки, если они есть. Можно прервать **Ожидание** , нажав клавиши **CTRL + C** . Ожидание также завершается, если файл удаляется, в этом случае сообщается о неустранимой ошибке.
+Сохраняет файл открытым после вывода всех существующих строк. Во время ожидания `Get-Content` проверяет файл один раз в секунду и выводит новые строки, если они есть. Можно прервать **Ожидание** , нажав клавиши **CTRL + C**. Ожидание также завершается, если файл удаляется, в этом случае сообщается о неустранимой ошибке.
 
-**Wait** — это динамический параметр, который поставщик FileSystem добавляет в `Get-Content` командлет. Этот параметр работает только на дисках с файловой системой. **Wait** не может сочетаться с **RAW** .
+**Wait** — это динамический параметр, который поставщик FileSystem добавляет в `Get-Content` командлет. Этот параметр работает только на дисках с файловой системой. **Wait** не может сочетаться с **RAW**.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -492,7 +491,7 @@ Accept wildcard characters: False
 Начиная с PowerShell 6,2, параметр **кодировки** также разрешает числовые идентификаторы зарегистрированных кодовых страниц (например `-Encoding 1251` ,) или строковых имен зарегистрированных кодовых страниц (например `-Encoding "windows-1251"` ,). Дополнительные сведения см. в документации .NET по [кодированию. codepage](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2).
 
 > [!NOTE]
-> Больше не рекомендуется использовать **UTF-7** *. В PowerShell 7,1 при указании параметра Encoding записывается предупреждение `utf7` . **Encoding**
+> Больше не рекомендуется использовать **UTF-7** _. В PowerShell 7,1 записывается предупреждение, если указано `utf7` для параметра _ *Encoding**.
 
 ```yaml
 Type: System.Text.Encoding
@@ -508,6 +507,9 @@ Accept wildcard characters: False
 ```
 
 ### -Stream
+
+> [!NOTE]
+> Этот параметр доступен только в Windows.
 
 Возвращает содержимое указанного альтернативного файлового потока NTFS из файла. Введите имя потока.
 Подстановочные знаки не поддерживаются.
@@ -547,7 +549,7 @@ Accept wildcard characters: False
 
 ### Общие параметры
 
-Этот командлет поддерживает общие параметры: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` и `-WarningVariable` . См. сведения в разделе [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable. См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## Входные данные
 
@@ -580,4 +582,3 @@ Accept wildcard characters: False
 [Get-PSProvider](Get-PSProvider.md)
 
 [Set-Content](Set-Content.md)
-

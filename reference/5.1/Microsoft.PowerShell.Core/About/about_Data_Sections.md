@@ -6,12 +6,12 @@ ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_data_sections?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Data_Sections
-ms.openlocfilehash: d45339bae42b1131e1dfb9618413a34e250a578e
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 5f70f2cdcc96090317a604f82788d1095e0b3c4d
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232449"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879309"
 ---
 # <a name="about-data-sections"></a>Разделы данных
 
@@ -45,7 +45,7 @@ DATA [<variable-name>] [-supportedCommand <cmdlet-name>] {
 - `If``Else`операторы, и `ElseIf`
 - Следующие автоматические переменные: `$PsCulture` , `$PsUICulture` , `$True` , `$False` и `$Null`
 - Комментарии
-- Конвейеры
+- Pipelines
 - Операторы, разделенные точкой с запятой ( `;` )
 - Литералы, например следующие:
 
@@ -72,7 +72,7 @@ DATA [<variable-name>] [-supportedCommand <cmdlet-name>] {
 
 Значение `-SupportedCommand` представляет собой разделенный запятыми список из одного или нескольких имен командлетов или функций.
 
-Например, в следующем разделе данных содержится командлет, созданный пользователем, `Format-XML` который форматирует данные в XML-файле:
+Например, в следующем разделе данных содержится командлет, созданный пользователем, `Format-Xml` который форматирует данные в XML-файле:
 
 ```powershell
 DATA -supportedCommand Format-Xml

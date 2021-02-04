@@ -6,12 +6,12 @@ ms.date: 07/31/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Signing
-ms.openlocfilehash: 060a53d4d08700e541fb6bcd388ffb4167a271a3
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 147f591f48a63b538bb43f8cc05995240042a6af
+ms.sourcegitcommit: 021ea294327dec542ec040619dac0d2171397a90
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231837"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97804176"
 ---
 # <a name="about-signing"></a>О подписывании
 
@@ -38,7 +38,7 @@ ms.locfileid: "93231837"
 Get-ExecutionPolicy
 ```
 
-Чтобы запустить неподписанные скрипты, написанные на локальном компьютере и подписанные скрипты от других пользователей, запустите PowerShell с параметром Запуск от имени администратора, а затем используйте следующую команду, чтобы изменить политику выполнения на компьютере на **RemoteSigned** :
+Чтобы запустить неподписанные скрипты, написанные на локальном компьютере и подписанные скрипты от других пользователей, запустите PowerShell с параметром Запуск от имени администратора, а затем используйте следующую команду, чтобы изменить политику выполнения на компьютере на **RemoteSigned**:
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
@@ -48,7 +48,7 @@ Set-ExecutionPolicy RemoteSigned
 
 ## <a name="running-unsigned-scripts-using-the-remotesigned-execution-policy"></a>Выполнение неподписанных скриптов с помощью политики выполнения RemoteSigned
 
-Если политика выполнения PowerShell — **RemoteSigned** , PowerShell не будет запускать неподписанные сценарии, которые будут скачаны из Интернета, в том числе неподписанные сценарии, получаемые через электронную почту и программы обмена мгновенными сообщениями.
+Если политика выполнения PowerShell — **RemoteSigned**, PowerShell не будет запускать неподписанные сценарии, которые будут скачаны из Интернета, в том числе неподписанные сценарии, получаемые через электронную почту и программы обмена мгновенными сообщениями.
 
 При попытке запустить скачанный скрипт PowerShell выводит следующее сообщение об ошибке:
 
@@ -104,7 +104,7 @@ from trusted publishers.
 
 ## <a name="create-a-self-signed-certificate"></a>Создание самозаверяющего сертификата.
 
-Чтобы создать самозаверяющий сертификат в, используйте `New-SelfSignedCertificate` командлет в модуле PKI. Этот модуль появился в PowerShell 3,0 и входит в Windows 8 и Windows Server 2012. Дополнительные сведения см. в разделе справки по `New-SelfSignedCertificate` командлету.
+Чтобы создать самозаверяющий сертификат, используйте `New-SelfSignedCertificate` командлет в модуле PKI. Этот модуль появился в PowerShell 3,0 и входит в Windows 8 и Windows Server 2012. Дополнительные сведения см. в разделе справки по `New-SelfSignedCertificate` командлету.
 
 Чтобы создать самозаверяющий сертификат в более ранних версиях Windows, используйте средство создания сертификатов `MakeCert.exe` . Это средство входит в состав пакета SDK для Microsoft .NET (версии 1,1 и более поздних) и в Microsoft Windows SDK.
 

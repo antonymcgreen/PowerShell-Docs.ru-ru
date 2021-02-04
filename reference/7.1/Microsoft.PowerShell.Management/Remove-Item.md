@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 04/07/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Item
-ms.openlocfilehash: 3d33f0e3ab859d839b22a49a88860624ae06ddf2
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: c4a0243c528cbe1a28cad99cf6fa8d91018d9b3c
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93226441"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692689"
 ---
 # Remove-Item
 
@@ -85,7 +84,7 @@ Get-ChildItem * -Include *.csv -Recurse | Remove-Item
 
 ### Пример 5. рекурсивное удаление подразделов
 
-Эта команда удаляет раздел реестра "Олдапп" и все его подразделы и значения. Он использует `Remove-Item` для удаления ключа. Путь указан, но необязательное имя параметра ( **путь** ) пропущено.
+Эта команда удаляет раздел реестра "Олдапп" и все его подразделы и значения. Он использует `Remove-Item` для удаления ключа. Путь указан, но необязательное имя параметра (**путь**) пропущено.
 
 **Рекурсивный параметр удаляет** все содержимое ключа "олдапп" рекурсивно. Если ключ содержит подразделы и не указан параметр **рекурсии** , вам будет предложено подтвердить удаление содержимого ключа.
 
@@ -174,7 +173,7 @@ At line:1 char:1
 
 ```
 
-Параметр **Stream** `Get-Item` получает поток **. идентификатор файла Zone** . `Copy-Script.ps1` `Remove-Item` использует параметр **Stream** для удаления файла **Zone. identifier** . Наконец, `Get-Item` командлет показывает, что **зона. идентификатор** потока удалена.
+Параметр **Stream** `Get-Item` получает `Zone.Identifier` поток `Copy-Script.ps1` файла. `Remove-Item` использует параметр **Stream** для удаления `Zone.Identifier` потока файла. Наконец, `Get-Item` командлет показывает, что `Zone.Identifier` поток удален.
 
 ## PARAMETERS
 
@@ -214,8 +213,7 @@ Accept wildcard characters: True
 
 ### -Filter
 
-Задает фильтр для уточнения параметра **пути** . Поставщик [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) является единственным установленным поставщиком PowerShell, поддерживающим использование фильтров. Синтаксис для языка фильтра **файловой** системы можно найти в [about_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md).
-Фильтры более эффективны, чем другие параметры, так как поставщик применяет их, когда командлет получает объекты, а не использует фильтры PowerShell для объектов после их извлечения.
+Задает фильтр для уточнения параметра **пути** . Поставщик [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) является единственным установленным поставщиком PowerShell, поддерживающим использование фильтров. Синтаксис для языка фильтра **файловой** системы можно найти в [about_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md). Фильтры более эффективны, чем другие параметры, так как поставщик применяет их, когда командлет получает объекты, а не использует фильтры PowerShell для объектов после их извлечения.
 
 ```yaml
 Type: System.String
@@ -317,10 +315,14 @@ Accept wildcard characters: False
 
 ### -Stream
 
+> [!NOTE]
+> Этот параметр доступен только в Windows.
+
 Параметр **потока** — это динамический параметр, к которому добавляется поставщик FileSystem `Remove-Item` .
 Этот параметр работает только на дисках с файловой системой.
 
-Можно использовать `Remove-Item` для удаления альтернативного потока данных. Однако не рекомендуется отменять проверки безопасности, которые блокируют файлы, загруженные из Интернета. Если вы убедитесь, что скачанный файл является надежным, используйте `Unblock-File` командлет.
+Можно использовать `Remove-Item` для удаления альтернативного потока данных, например `Zone.Identifier` .
+Однако не рекомендуется отменять проверки безопасности, которые блокируют файлы, загруженные из Интернета. Если вы убедитесь, что скачанный файл является надежным, используйте `Unblock-File` командлет.
 
 Этот параметр впервые появился в Windows PowerShell 3.0.
 
@@ -373,7 +375,8 @@ Accept wildcard characters: False
 
 ### Общие параметры
 
-Этот командлет поддерживает общие параметры: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` и `-WarningVariable` . См. сведения в разделе [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Этот командлет поддерживает общие параметры: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction и -WarningVariable. См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## Входные данные
 
@@ -418,4 +421,3 @@ Accept wildcard characters: False
 [about_Preference_Variables](../microsoft.powershell.core/about/about_preference_variables.md#confirmpreference)
 
 [about_Functions_CmdletBindingAttribute](../microsoft.powershell.core/about/about_functions_cmdletbindingattribute.md?#confirmimpact)
-

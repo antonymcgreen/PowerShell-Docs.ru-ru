@@ -7,12 +7,12 @@ ms.date: 5/20/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/register-argumentcompleter?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-ArgumentCompleter
-ms.openlocfilehash: 0e0b5fcd99372d699bd6250383adc85b3a5f8847
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: c81c50152209a922c486005b5919ac4a1e7295a2
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225945"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490321"
 ---
 # Register-ArgumentCompleter
 
@@ -61,7 +61,7 @@ Register-ArgumentCompleter -CommandName Set-TimeZone -ParameterName Id -ScriptBl
 
 Первая команда создает блок скрипта, который принимает обязательные параметры, которые передаются при нажатии клавиши <kbd>Tab</kbd>пользователем. Дополнительные сведения см. в описании параметра **ScriptBlock** .
 
-В блоке скрипта доступные значения для **идентификатора** извлекаются с помощью `Get-TimeZone` командлета. Свойство **ID** для каждого часового пояса передается в `Where-Object` командлет. `Where-Object`Командлет фильтрует все идентификаторы, которые не начинаются со значения, предоставленного параметром `$wordToComplete` , который представляет текст, введенный пользователем до нажатия клавиши <kbd>Tab</kbd>. Отфильтрованные идентификаторы передаются в `For-EachObject` командлет, который заключает каждое значение в кавычки, если значение содержит пробелы.
+В блоке скрипта доступные значения для **идентификатора** извлекаются с помощью `Get-TimeZone` командлета. Свойство **ID** для каждого часового пояса передается в `Where-Object` командлет. `Where-Object`Командлет фильтрует все идентификаторы, которые не начинаются со значения, предоставленного параметром `$wordToComplete` , который представляет текст, введенный пользователем до нажатия клавиши <kbd>Tab</kbd>. Отфильтрованные идентификаторы передаются в `ForEach-Object` командлет, который заключает каждое значение в кавычки, если значение содержит пробелы.
 
 Вторая команда регистрирует завершенный аргумент, передавая ScriptBlock, **идентификатор** **ParameterName** и **CommandName** `Set-TimeZone` .
 
@@ -91,9 +91,9 @@ Register-ArgumentCompleter -CommandName Stop-Service -ParameterName Name -Script
 
 - **комплетионтекст** (строка) — текст, используемый в качестве результата автоматического завершения. Это значение, отправляемое команде.
 - **листитемтекст** (строка) — текст, отображаемый в списке, например, когда пользователь нажимает клавишу <kbd>CTRL</kbd> + <kbd>пробел</kbd>. Используется только для вывода и не передается команде, если она выбрана.
-- **resultType** ( [комплетионресулттипе](/dotnet/api/system.management.automation.completionresulttype)) — тип результата завершения.
+- **resultType** ([комплетионресулттипе](/dotnet/api/system.management.automation.completionresulttype)) — тип результата завершения.
 - **ToolTip** (строка) — текст подсказки с подробными сведениями о объекте.
-  Это видно, когда пользователь выбирает элемент после нажатия клавиши <kbd>CTRL</kbd> + <kbd>Space</kbd>.
+  Это видно, когда пользователь выбирает элемент после нажатия клавиши <kbd>CTRL</kbd> + <kbd></kbd>.
 
 Последняя команда показывает, что остановленные службы по-прежнему могут передаваться в `Stop-Service` командлет вручную. Заполнение нажатием клавиши Tab является единственным аспектом.
 

@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
 keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 03/27/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-item?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Item
-ms.openlocfilehash: 07f8da5e6101b1d9bb1971b3c77b9747c0080a23
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e848cc8c77e1d0dff6eb1f98d56c8ed37e44a653
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225905"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692808"
 ---
 # Get-Item
 
@@ -156,6 +156,9 @@ drwxr-xr-x  root  admin   12/20/2019 11:46   192   Users
 ## PARAMETERS
 
 ### -Stream
+
+> [!NOTE]
+> Этот параметр доступен только в Windows.
 
 Возвращает указанный альтернативный файловый поток NTFS из файла. Введите имя потока. Поддерживаются подстановочные знаки. Чтобы получить все потоки, используйте звездочку ( `*` ). Этот параметр не является допустимым для папок.
 
@@ -315,7 +318,7 @@ Accept wildcard characters: True
 Для рекурсивного получения содержимого элемента используйте `Get-ChildItem` .
 
 Для перемещения по реестру используйте этот командлет для получения разделов реестра и `Get-ItemProperty` для получения значений и данных реестра. Параметры реестра являются свойствами раздела реестра.
-  
+
 Этот командлет предназначен для работы с данными, предоставляемыми любым поставщиком. Чтобы вывести список поставщиков, доступных в данном сеансе, введите командлет `Get-PsProvider`. Дополнительные сведения см. в разделе [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).
 
 ## Связанные ссылки

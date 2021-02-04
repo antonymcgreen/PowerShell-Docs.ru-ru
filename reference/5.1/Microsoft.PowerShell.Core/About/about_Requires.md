@@ -1,17 +1,16 @@
 ---
 description: Предотвращает запуск скрипта без необходимых элементов.
-keywords: powershell,командлет
 Locale: en-US
-ms.date: 07/01/2019
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_requires?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Requires
-ms.openlocfilehash: d499499c58f22bff10d712d33fc3a021e4fa6bbb
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: f8ff922fcf8deb710008bbd9bab619f137d6c831
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231954"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490709"
 ---
 # <a name="about-requires"></a>О программе требуется
 
@@ -25,7 +24,6 @@ ms.locfileid: "93231954"
 ### <a name="syntax"></a>Синтаксис
 
 ```
-#Requires -Assembly { <Path to .dll> | <.NET assembly specification> }
 #Requires -Version <N>[.<n>]
 #Requires -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]
 #Requires -Modules { <Module-Name> | <Hashtable> }
@@ -45,7 +43,7 @@ ms.locfileid: "93231954"
 > [!WARNING]
 > Хотя `#Requires` инструкция может присутствовать в любой строке скрипта, ее расположение в скрипте не влияет на последовательность своего приложения. Глобальное состояние, `#Requires` перед выполнением скрипта должна быть удовлетворена инструкция.
 
-Пример
+Пример:
 
 ```powershell
 Get-Module AzureRM.Netcore | Remove-Module
@@ -57,6 +55,9 @@ Get-Module AzureRM.Netcore | Remove-Module
 ### <a name="parameters"></a>Параметры
 
 #### <a name="-assembly-assembly-path--net-assembly-specification"></a>-Assembly \<Assembly path> |\<.NET assembly specification>
+
+> [!IMPORTANT]
+> `-Assembly`Синтаксис является устаревшим. Она не обслуживает никаких функций. Синтаксис был добавлен в PowerShell 5,1, но вспомогательный код никогда не был реализован. Синтаксис по-прежнему принимается для обратной совместимости.
 
 Указывает путь к DLL-файлу сборки или имени сборки .NET. Параметр **Assembly** появился в PowerShell 5,0. Дополнительные сведения о сборках .NET см. в разделе [имена сборок](/dotnet/standard/assembly/names).
 
@@ -119,7 +120,7 @@ Get-Module AzureRM.Netcore | Remove-Module
 #Requires -Modules @{ ModuleName="Hyper-V"; ModuleVersion="1.1" }
 ```
 
-Требуется `Hyper-V` установить ( **только** версию `1.1` ).
+Требуется `Hyper-V` установить (**только** версию `1.1` ).
 
 ```powershell
 #Requires -Modules @{ ModuleName="Hyper-V"; RequiredVersion="1.1" }
@@ -149,7 +150,7 @@ ModuleType Version    Name     ExportedCommands
 Binary     2.0.0.0    hyper-v  {Add-VMAssignableDevice, ...}
 ```
 
-В следующем примере происходит сбой, так как **2.0.0** не соответствует значению **2.0.0.0** .
+В следующем примере происходит сбой, так как **2.0.0** не соответствует значению **2.0.0.0**.
 
 ```powershell
 #Requires -Modules @{ ModuleName="Hyper-V"; RequiredVersion="2.0.0" }

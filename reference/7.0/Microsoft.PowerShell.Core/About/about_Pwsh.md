@@ -1,16 +1,15 @@
 ---
 description: Объясняет, как использовать `pwsh` интерфейс командной строки. Отображает параметры командной строки и описание синтаксиса.
-keywords: powershell,командлет
 ms.date: 10/05/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pwsh
-ms.openlocfilehash: 2aa1c4ec033b8e7294c269b53c4fe20205a47d7f
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 25ccb20a4c19a9519bf9d2a518ef6187c2327323
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93232205"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692706"
 ---
 # <a name="about-pwsh"></a>О pwsh
 
@@ -69,7 +68,7 @@ pwsh[.exe] -h | -Help | -? | /?
 
 В отличие от этого, выполнение `pwsh -File .\test.ps1 -TestParam $env:windir` в `cmd.exe` дает скрипт, получающий литеральную строку, `$env:windir` так как он не имеет специального значения для текущей `cmd.exe` оболочки. `$env:windir`Стиль ссылки на переменную среды _можно_ использовать внутри параметра **команды** , так как он интерпретируется как код PowerShell.
 
-Аналогично, если вы хотите выполнить ту же команду из _пакетного скрипта_ , используйте `%~dp0` вместо `.\` или `$PSScriptRoot` для представления текущего каталога выполнения: `pwsh -File %~dp0test.ps1 -TestParam %windir%` . Если вместо этого используется `.\test.ps1` , PowerShell выдаст ошибку, так как не может найти литеральный путь. `.\test.ps1`
+Аналогично, если вы хотите выполнить ту же команду из _пакетного скрипта_, используйте `%~dp0` вместо `.\` или `$PSScriptRoot` для представления текущего каталога выполнения: `pwsh -File %~dp0test.ps1 -TestParam %windir%` . Если вместо этого используется `.\test.ps1` , PowerShell выдаст ошибку, так как не может найти литеральный путь. `.\test.ps1`
 
 Когда файл скрипта завершается `exit` командой, код завершения процесса задается в виде числового аргумента, используемого с `exit` командой. При нормальном завершении код выхода всегда имеет значение `0` .
 
@@ -128,7 +127,7 @@ out
 
 Указывает конечную точку конфигурации, в которой выполняется PowerShell. Это может быть любая конечная точка, зарегистрированная на локальном компьютере, включая конечные точки удаленного взаимодействия PowerShell по умолчанию или пользовательскую конечную точку с конкретными возможностями роли пользователя.
 
-Пример: `pwsh -ConfigurationName AdminRoles`
+Например, `pwsh -ConfigurationName AdminRoles`.
 
 ### <a name="-custompipename"></a>-Кустомпипенаме
 
@@ -147,7 +146,7 @@ Enter-PSHostProcess -CustomPipeName mydebugpipe
 
 ### <a name="-encodedcommand---e---ec"></a>-Енкодедкомманд | -e | -EC
 
-Принимает строковую версию команды в кодировке Base64. Используйте этот параметр, чтобы отправлять команды в PowerShell, требующие сложных вложенных заключения в кавычки. Представление в формате Base64 должно быть строкой в кодировке UTF-16.
+Принимает строковую версию команды в кодировке Base64. Используйте этот параметр, чтобы отправлять команды в PowerShell, требующие сложных вложенных заключения в кавычки. Представление в формате Base64 должно быть строкой в кодировке UTF-16LE.
 
 Пример:
 
@@ -204,7 +203,7 @@ pwsh -encodedcommand $encodedCommand
 
 Не завершает работу после выполнения команд запуска.
 
-Пример: `pwsh -NoExit -Command Get-Date`
+Например, `pwsh -NoExit -Command Get-Date`.
 
 ### <a name="-nologo---nol"></a>-Неэмблема | -Нол
 
@@ -222,7 +221,7 @@ pwsh -encodedcommand $encodedCommand
 
 Определяет формат выходных данных PowerShell. Допустимые значения: "Text" (текстовые строки) или "XML" (сериализованный формат CLIXML).
 
-Пример: `pwsh -o XML -c Get-Date`
+Например, `pwsh -o XML -c Get-Date`.
 
 При вызове с помощью сеанса PowerShell вы получаете десериализованные объекты как выходные данные, а не обычные строки. При вызове из других оболочек выходными данными являются строковые данные, отформатированные как текст CLIXML.
 
@@ -232,7 +231,7 @@ pwsh -encodedcommand $encodedCommand
 
 Обратите внимание, что эти параметры не используются конечной точкой, заданной `-ConfigurationName` аргументом.
 
-Пример: `pwsh -SettingsFile c:\myproject\powershell.config.json`
+Например, `pwsh -SettingsFile c:\myproject\powershell.config.json`.
 
 ### <a name="-sshservermode---sshs"></a>-Сшсервермоде | -сшс
 

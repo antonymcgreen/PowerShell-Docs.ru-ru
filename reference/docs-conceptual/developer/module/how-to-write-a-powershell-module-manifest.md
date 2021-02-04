@@ -1,14 +1,14 @@
 ---
-ms.date: 10/16/2019
+ms.date: 01/04/2021
 ms.topic: reference
 title: Как написать манифест модуля PowerShell
 description: Как написать манифест модуля PowerShell
-ms.openlocfilehash: 42db71968ccac1cc3c1c05c5be2e72327e5e28d9
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 8c644391008cb97c1206f985f0f5eca9d7dfcc9e
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92647693"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879377"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Написание манифеста модуля PowerShell
 
@@ -54,7 +54,7 @@ ms.locfileid: "92647693"
 
 В следующей таблице описаны элементы, которые можно включить в манифест модуля.
 
-|Элемент|Значение по умолчанию|Описание|
+|Элемент|По умолчанию|Описание|
 |-------------|-------------|-----------------|
 |**RootModule**<br /> Тип: `String`|`<empty string>`|Модуль скрипта или файл двоичного модуля, связанный с этим манифестом. Предыдущие версии PowerShell вызвали этот элемент **модулетопроцесс**.<br /> Возможные типы для корневого модуля могут быть пустыми, что создает модуль **манифеста** , имя модуля скрипта ( `.psm1` ) или имя двоичного модуля ( `.exe` или `.dll` ). При размещении имени манифеста модуля ( `.psd1` ) или файла скрипта ( `.ps1` ) в этом элементе возникает ошибка. <br /> Например, `RootModule = 'ScriptModule.psm1'`.|
 |**ModuleVersion**<br /> Тип: `Version`|`'0.0.1'`|Номер версии этого модуля. Если значение не задано, `New-ModuleManifest`   используется значение по умолчанию. Строка должна иметь возможность преобразования в тип, `Version` например `#.#.#.#.#` . `Import-Module` загружает первый найденный модуль в **$PSModulePath** , который соответствует имени, и имеет по крайней мере **высокое значение в** качестве параметра **MinimumVersion** . Чтобы импортировать определенную версию, используйте `Import-Module` параметр **RequiredVersion** командлета.<br /> Например, `ModuleVersion = '1.0'`.|
@@ -63,7 +63,7 @@ ms.locfileid: "92647693"
 |**CompanyName**<br /> Тип: `String`|`'Unknown'`|Компания или поставщик этого модуля. Если значение не задано, `New-ModuleManifest` используется значение по умолчанию.<br /> Например, `CompanyName = 'Fabrikam'`.|
 |**Авторские права**<br /> Тип: `String`|`'(c) <Author>. All rights reserved.'`| Заявление об авторских правах для этого модуля. Если значение не указано, `New-ModuleManifest` то использует значение по умолчанию с текущим пользователем в качестве `<Author>` . Чтобы указать автора, используйте параметр **Author** . <br /> Например, `Copyright = '2019 AuthorName. All rights reserved.'`.|
 |**Описание**<br /> Тип: `String`|`<empty string>`|Описание функциональных возможностей, предоставляемых этим модулем.<br /> Например, `Description = 'This is the module's description.'`.|
-|**PowerShellVersion**<br /> Тип: `Version`|`<empty string>`|Минимальная версия модуля PowerShell, необходимая для этого модуля. Допустимые значения: 1,0, 2,0, 3,0, 4,0, 5,0, 5,1, 6 и 7.<br /> Например, `PowerShellVersion = '5.0'`.|
+|**PowerShellVersion**<br /> Тип: `Version`|`<empty string>`|Минимальная версия модуля PowerShell, необходимая для этого модуля. Допустимые значения: 1,0, 2,0, 3,0, 4,0, 5,0, 5,1, 6,0, 6,1, 6,2, 7,0 и 7,1.<br /> Например, `PowerShellVersion = '5.0'`.|
 |**повершеллхостнаме**<br /> Тип: `String`|`<empty string>`|Имя узла PowerShell, необходимого для этого модуля. Это имя предоставляется в PowerShell. Чтобы найти имя основной программы, в программе введите: `$host.name` .<br /> Например, `PowerShellHostName = 'ConsoleHost'`.|
 |**повершеллхостверсион**<br /> Тип: `Version`|`<empty string>`|Минимальная версия узла PowerShell, необходимая для этого модуля.<br /> Например, `PowerShellHostVersion = '2.0'`.|
 |**дотнетфрамеворкверсион**<br /> Тип: `Version`|`<empty string>`|Минимальная версия платформы Microsoft .NET, необходимая для этого модуля. Этот предварительный компонент действителен только для выпуска PowerShell Desktop Edition, например PowerShell 5,1.<br /> Например, `DotNetFrameworkVersion = '3.5'`.|
@@ -232,7 +232,7 @@ PrivateData = @{
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [about_Comparison_Operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
 

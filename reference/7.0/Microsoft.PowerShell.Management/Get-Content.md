@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 5/14/2019
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Content
-ms.openlocfilehash: 1409522cffc2dde2cc5002049126bcfaa30ce846
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 48f15f9d7018c2e58584bff80f81132fe08fea1e
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93225849"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692732"
 ---
 # Get-Content
 
@@ -180,7 +179,7 @@ Added a stream named NewStream to Stream.txt
 ```
 
 Параметр **Stream** является динамическим параметром [поставщика FileSystem](../microsoft.powershell.core/about/about_filesystem_provider.md#stream-systemstring).
-По умолчанию `Get-Content` получает только данные из первичного или `$DATA` потока. **Потоки** можно использовать для хранения скрытых данных, таких как атрибуты, параметры безопасности или другие данные.
+По умолчанию `Get-Content` получает только данные из потока по умолчанию или `:$DATA` . **Потоки** можно использовать для хранения скрытых данных, таких как атрибуты, параметры безопасности или другие данные. Они также могут храниться в каталогах без дочерних элементов.
 
 ### Пример 6. получение необработанного содержимого
 
@@ -219,7 +218,7 @@ Get-Member -InputObject $bytearray
 ```
 
 ```Output
-TypeName: System.Byte[]
+   TypeName: System.Byte[]
 
 Name           MemberType            Definition
 ----           ----------            ----------
@@ -504,6 +503,9 @@ Accept wildcard characters: False
 ```
 
 ### -Stream
+
+> [!NOTE]
+> Этот параметр доступен только в Windows.
 
 Возвращает содержимое указанного альтернативного файлового потока NTFS из файла. Введите имя потока.
 Подстановочные знаки не поддерживаются.
