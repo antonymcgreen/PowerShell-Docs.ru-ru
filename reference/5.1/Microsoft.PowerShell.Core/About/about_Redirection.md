@@ -1,17 +1,16 @@
 ---
 description: Объясняется, как перенаправлять выходные данные из PowerShell в текстовые файлы.
-keywords: PowerShell, командлет
 Locale: en-US
 ms.date: 10/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Redirection
-ms.openlocfilehash: 59151c31857f12e3a78fd6d292a6a952c312c850
-ms.sourcegitcommit: 16883bb67e34b3915798070f60f974bf85160bd3
+ms.openlocfilehash: 2f2081bbfcc2cfc97eaa5a3c2c527cdd9cd61d2c
+ms.sourcegitcommit: b9826dcf402db8a2b6d3eab37edb82c6af113343
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "93232822"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040886"
 ---
 # <a name="about-redirection"></a>О перенаправлении
 
@@ -92,7 +91,7 @@ dir 'C:\', 'fakepath' 2>&1 > .\dir.log
    Write-Warning "hello"
    Write-Error "hello"
    Write-Output "hi"
-} 3>&1 2>&1 > P:\Temp\redirection.log
+} 3>&1 2>&1 > C:\Temp\redirection.log
 ```
 
 - `3>&1` перенаправляет поток **предупреждений** в поток **успешного выполнения** .
@@ -196,7 +195,7 @@ Inquire
 
 ### <a name="potential-confusion-with-comparison-operators"></a>Потенциальная путаница с операторами сравнения
 
-`>`Оператор не следует путать с оператором сравнения " [больше](about_Comparison_Operators.md#-gt) " (часто обозначается как `>` в других языках программирования).
+`>`Оператор не следует путать с оператором сравнения " [больше](about_Comparison_Operators.md#-gt--ge--lt-and--le) " (часто обозначается как `>` в других языках программирования).
 
 В зависимости от сравниваемых объектов выходные данные `>` могут выглядеть правильными (поскольку 36 не превышает 42).
 
@@ -226,25 +225,25 @@ At line:1 char:8
 + if (36 < 42) { "true" } else { "false" }
 +        ~
 The '<' operator is reserved for future use.
-+ CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
-+ FullyQualifiedErrorId : RedirectionNotSupported
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
 ```
 
-Значение, если числовое сравнение является обязательной операцией `-lt` и `-gt` должно использоваться. См. раздел [ `-gt` оператор сравнения](about_Comparison_Operators.md#-gt) .
+Значение, если числовое сравнение является обязательной операцией `-lt` и `-gt` должно использоваться. Дополнительные сведения см. в описании `-gt` оператора в [about_Comparison_Operators](about_Comparison_Operators.md#-gt--ge--lt-and--le).
 
 ## <a name="see-also"></a>См. также статью
 
 - [Out-File](xref:Microsoft.PowerShell.Utility.Out-File)
 - [Tee-Object](xref:Microsoft.PowerShell.Utility.Tee-Object)
 - [Write-Debug](xref:Microsoft.PowerShell.Utility.Write-Debug)
-- [Ошибка записи](xref:Microsoft.PowerShell.Utility.Write-Error)
+- [Write-Error](xref:Microsoft.PowerShell.Utility.Write-Error)
 - [Write-Host](xref:Microsoft.PowerShell.Utility.Write-Host)
 - [Write-Information](xref:Microsoft.PowerShell.Utility.Write-Information)
 - [Write-Output](xref:Microsoft.PowerShell.Utility.Write-Output)
 - [Write-Progress](xref:Microsoft.PowerShell.Utility.Write-Progress)
 - [Write-Verbose](xref:Microsoft.PowerShell.Utility.Write-Verbose)
 - [Write-Warning](xref:Microsoft.PowerShell.Utility.Write-Warning)
-- [about_Output_Streams](about_Output_Streams.md)
+- [О потоках вывода](about_Output_Streams.md)
 - [about_Operators](about_Operators.md)
 - [about_Command_Syntax](about_Command_Syntax.md)
 - [about_Path_Syntax](about_Path_Syntax.md)

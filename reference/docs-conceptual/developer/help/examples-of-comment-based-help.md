@@ -1,14 +1,14 @@
 ---
-ms.date: 09/12/2016
+ms.date: 01/11/2021
 ms.topic: reference
 title: Примеры справки на основе комментариев
 description: Примеры справки на основе комментариев
-ms.openlocfilehash: 35fe9103a261483c56af629f620dbd6b3c642e68
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 237e65c59cc3b35f48b6d667c8fb297994b03638
+ms.sourcegitcommit: 4879b9cdfa3f03b04a07b84442dc1ca9ae0f6b46
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92667646"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98105168"
 ---
 # <a name="examples-of-comment-based-help"></a>Примеры справки на основе комментариев
 
@@ -46,15 +46,15 @@ function Add-Extension
         System.String. Add-Extension returns a string with the extension or file name.
 
         .EXAMPLE
-        C:\PS> extension -name "File"
+        PS> extension -name "File"
         File.txt
 
         .EXAMPLE
-        C:\PS> extension -name "File" -extension "doc"
+        PS> extension -name "File" -extension "doc"
         File.doc
 
         .EXAMPLE
-        C:\PS> extension "File" "doc"
+        PS> extension "File" "doc"
         File.doc
 
         .LINK
@@ -69,7 +69,7 @@ function Add-Extension
 В следующем выводе показаны результаты `Get-Help` команды, которая отображает справку для `Add-Extension` функции.
 
 ```powershell
-C:\PS> get-help add-extension -full
+PS> Get-Help Add-Extension -full
 ```
 
 ```Output
@@ -118,17 +118,17 @@ C:\PS> get-help add-extension -full
 
             -------------------------- EXAMPLE 1 --------------------------
 
-            C:\PS> extension -name "File"
+            PS> extension -name "File"
             File.txt
 
             -------------------------- EXAMPLE 2 --------------------------
 
-            C:\PS> extension -name "File" -extension "doc"
+            PS> extension -name "File" -extension "doc"
             File.doc
 
             -------------------------- EXAMPLE 3 --------------------------
 
-            C:\PS> extension "File" "doc"
+            PS> extension "File" "doc"
             File.doc
 
         RELATED LINKS
@@ -166,13 +166,13 @@ C:\PS> get-help add-extension -full
   None. Update-Month.ps1 does not generate any output.
 
   .EXAMPLE
-  C:\PS> .\Update-Month.ps1
+  PS> .\Update-Month.ps1
 
   .EXAMPLE
-  C:\PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv
+  PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv
 
   .EXAMPLE
-  C:\PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv -outputPath C:\Reports\2009\January.csv
+  PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv -outputPath C:\Reports\2009\January.csv
 #>
 
 param ([string]$InputPath, [string]$OutPutPath)
@@ -183,7 +183,7 @@ function Get-Data { }
 Следующая команда получает справку по скрипту. Так как скрипт не находится в каталоге, указанном в переменной среды PATH, `Get-Help` команда, которая получает справку по скрипту, должна указывать путь к скрипту.
 
 ```powershell
-C:\PS> get-help c:\ps-test\update-month.ps1 -full
+PS> Get-Help c:\ps-test\update-month.ps1 -full
 ```
 
 ```Output
@@ -236,15 +236,15 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
 
             -------------------------- EXAMPLE 1 --------------------------
 
-            C:\PS> .\Update-Month.ps1
+            PS> .\Update-Month.ps1
 
             -------------------------- EXAMPLE 2 --------------------------
 
-            C:\PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv
+            PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv
 
             -------------------------- EXAMPLE 3 --------------------------
 
-            C:\PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv -outputPath
+            PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv -outputPath
             C:\Reports\2009\January.csv
 
             RELATED LINKS
@@ -327,7 +327,7 @@ function help
 Эта функция используется в следующей команде. Когда пользователь вводит `Get-Help` команду для `Help` функции, `Get-Help` выводит раздел справки для `Get-Help` командлета.
 
 ```powershell
-C:\PS> get-help help
+PS> get-help help
 ```
 
 ```Output

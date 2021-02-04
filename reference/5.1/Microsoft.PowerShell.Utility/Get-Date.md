@@ -7,12 +7,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: cbf87c2a2d6ab0f08e514ba971a622ea9f1904aa
-ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
+ms.openlocfilehash: bb7f169e0c01c73bb4e834375f341bf795e37ce7
+ms.sourcegitcommit: f5986121386c81acddcf324eb0526d7d092bcc8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95514941"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98584661"
 ---
 # Get-Date
 
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 | `%H` | Час в 24-часовом формате                                                  | 17                       |
 | `%h` | То же, что "b"                                                             |                          |
 | `%I` | Час в 12-часовом формате                                                  | 05                       |
-| `%j` | День года                                                         | 1-366                    |
+| `%j` | День года (не включает в себя начальные `0` исправления в PowerShell 6 +) | 1-366                    |
 | `%k` | То же, что "H"                                                             |                          |
 | `%l` | То же, что "I" (верхний регистр I)                                              | 05                       |
 | `%M` | Минуты                                                                 | 35                       |

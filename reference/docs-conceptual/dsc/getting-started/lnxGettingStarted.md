@@ -1,14 +1,14 @@
 ---
-ms.date: 11/20/2020
+ms.date: 01/07/2021
 keywords: dsc,powershell,конфигурация,установка
 title: Начало работы с настройкой требуемого состояния (DSC) для Linux
 description: В этом разделе объясняется, как приступить к работе с настройкой требуемого состояния PowerShell (DSC) для Linux.
-ms.openlocfilehash: df9cab07284a7d6fa199f5524a8719ea490192d0
-ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
+ms.openlocfilehash: 6f0dea956b16c0828964a10b43abbbc65879ea33
+ms.sourcegitcommit: b9826dcf402db8a2b6d3eab37edb82c6af113343
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95515006"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040928"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Начало работы с настройкой требуемого состояния (DSC) для Linux
 
@@ -109,15 +109,25 @@ $Node = "ostc-dsc-01"
 $Credential = Get-Credential -UserName "root" -Message "Enter Password:"
 
 #Ignore SSL certificate validation
-#$opt = New-CimSessionOption -UseSsl $true -SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true
+# $opt = New-CimSessionOption -UseSsl -SkipCACheck -SkipCNCheck -SkipRevocationCheck
 
 #Options for a trusted SSL certificate
-$opt = New-CimSessionOption -UseSsl $true
-$Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Authentication basic -SessionOption $opt -OperationTimeoutSec 90
+$opt = New-CimSessionOption -UseSsl
+
+$sessParams = @{
+    Credential = $credential
+    ComputerName = $Node
+    Port = 5986
+    Authentication = 'basic'
+    SessionOption = $opt
+    OperationTimeoutSec = 90
+}
+
+$Sess = New-CimSession @sessParams
 ```
 
 > [!NOTE]
-> В режиме принудительной передачи необходимо указывать учетные данные привилегированного пользователя на компьютере Linux. DSC для Linux поддерживает только SSL/TLS-подключения, поэтому необходимо использовать командлет `New-CimSession` с параметром –UseSSL, имеющим значение $true. SSL-сертификат, используемый OMI (DSC), указан в файле `/etc/opt/omi/conf/omiserver.conf` со свойствами pemfile и keyfile. Если компьютер Windows, на котором выполняется командлет [New-CimSession](/powershell/module/CimCmdlets/New-CimSession), не признает этот сертификат как надежный, проверку сертификата можно пропустить, используя параметры CIMSession: `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
+> В режиме принудительной передачи необходимо указывать учетные данные привилегированного пользователя на компьютере Linux. DSC для Linux поддерживает только SSL/TLS-подключения, поэтому необходимо использовать командлет `New-CimSession` с параметром –UseSSL, имеющим значение $true. SSL-сертификат, используемый OMI (DSC), указан в файле `/etc/opt/omi/conf/omiserver.conf` со свойствами pemfile и keyfile. Если компьютер Windows, на котором выполняется командлет [New-CimSession](/powershell/module/CimCmdlets/New-CimSession), не признает этот сертификат как надежный, проверку сертификата можно пропустить, используя параметры CIMSession: `-SkipCACheck -SkipCNCheck -SkipRevocationCheck`
 
 Для принудительной отправки конфигурации DSC на узел Linux используйте следующую команду:
 
@@ -147,7 +157,7 @@ DSC для Linux включает сценарии работы с конфиг�
 
   Устанавливает пользовательский модуль ресурсов DSC. Необходим путь к ZIP-файлу, содержащему библиотеку общих объектов модуля и MOF-файлы схемы.
 
- `# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
+  `# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
 
 - RemoveModule.py
 
