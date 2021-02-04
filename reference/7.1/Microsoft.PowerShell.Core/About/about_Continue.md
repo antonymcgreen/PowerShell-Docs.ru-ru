@@ -5,12 +5,12 @@ ms.date: 06/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_continue?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Continue
-ms.openlocfilehash: 5a33451da91fa0d837b51ded6bae51ce66eb07e4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 2b299726b3fe75e5d13e91bbde7564705d3e2112
+ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93231729"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97614121"
 ---
 # <a name="about-continue"></a>Сведения о продолжении
 
@@ -105,9 +105,9 @@ switch (1,2,3) {
 
 Если `continue` используется вне конструкции, которая напрямую поддерживает эту функцию (циклы, `switch` , `trap` ), PowerShell ищет _Стек вызовов_ для включающей конструкции. Если не удается найти включающую конструкцию, текущее пространство выполнения беззвучно завершается.
 
-Это означает, что функции и скрипты, которые непреднамеренно используют `continue` вне окружающей конструкции, поддерживающей эту функцию, могут случайно завершить свои _вызывающие объекты_ .
+Это означает, что функции и скрипты, которые непреднамеренно используют `continue` вне окружающей конструкции, поддерживающей эту функцию, могут случайно завершить свои _вызывающие объекты_.
 
-Использование `continue` внутри конвейера, такого как `ForEach-Object` блок скрипта, не только завершает работу конвейера, TT потенциально завершает все пространство выполнения.
+Использование `continue` внутри конвейера, такого как `ForEach-Object` блок скрипта, не только завершает работу конвейера, но и может привести к завершению всего пространства выполнения.
 
 ## <a name="see-also"></a>См. также статью
 
