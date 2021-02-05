@@ -3,12 +3,12 @@ ms.date: 07/23/2020
 keywords: dsc,powershell,конфигурация,установка
 title: Ресурсы DSC
 description: Ресурсы DSC предоставляют шаблоны для настройки DSC. В ресурсе представлены свойства, которые можно настроить (схема), и функции скриптов PowerShell, которые использует локальный диспетчер конфигураций (LCM) для применения конфигурации.
-ms.openlocfilehash: 1634db84deff8de3b33c941ad738dc21cf3017ac
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 33268c68638bb581e0b2235a53aee9d186dff6be
+ms.sourcegitcommit: 0f003644684422e425a59b7361121e05ac772e15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92658444"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98771790"
 ---
 # <a name="dsc-resources"></a>Ресурсы DSC
 
@@ -58,7 +58,7 @@ Service [String] #ResourceName
 > [!NOTE]
 > В версиях PowerShell до 7.0 `Get-DscResource` не находит ресурсы DSC на основе класса.
 
-Блок ресурсов **Служба** внутри конфигурации может выглядеть следующим образом. Это необходимо, чтобы **убедиться** , что служба подсистемы печати работает.
+Блок ресурсов **Служба** внутри конфигурации может выглядеть следующим образом. Это необходимо, чтобы **убедиться**, что служба подсистемы печати работает.
 
 > [!NOTE]
 > Перед использованием ресурса в конфигурации его необходимо импортировать с помощью командлета [Import-DSCResource](../configurations/import-dscresource.md).

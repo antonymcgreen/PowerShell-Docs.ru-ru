@@ -1,13 +1,13 @@
 ---
-ms.date: 12/01/2020
+ms.date: 01/25/2021
 title: Командлеты для устранения неполадок
 description: В этой статье приведены сведения и шаги по устранению ошибок с помощью коллекции PowerShell.
-ms.openlocfilehash: 980da8ea7b8a09513f33a9939d512c437b755d8d
-ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
+ms.openlocfilehash: 8139147683b655b5f8532c3068387db6df12a98f
+ms.sourcegitcommit: 0f003644684422e425a59b7361121e05ac772e15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913324"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98771820"
 ---
 # <a name="troubleshooting-cmdlets"></a>Командлеты для устранения неполадок
 
@@ -30,6 +30,7 @@ Update-Module Azure -Verbose
 - `devopsgallerystorage.blob.core.windows.net` — имя узла учетной записи хранения;
 - `*.powershellgallery.com` — веб-сайт;
 - `go.microsoft.com` — служба перенаправления.
+- `onegetcdn.azureedge.net` — начальная загрузка поставщика NuGet в `PowerShellGet/PackageManagement`.
 
 > [!NOTE]
 > Если возникнет сбой служб коллекции PowerShell, командлеты, которые взаимодействуют с коллекцией PowerShell, могут привести к сбою с непредвиденными ошибками. Сведения о текущем состоянии коллекции PowerShell см. на странице [Состояние коллекции PowerShell](https://github.com/PowerShell/PowerShellGallery/blob/master/psgallery_status.md) на сайте GitHub.

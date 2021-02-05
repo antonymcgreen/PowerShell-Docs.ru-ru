@@ -1,13 +1,13 @@
 ---
 title: Установка PowerShell в Windows
 description: Сведения об установке PowerShell в Windows
-ms.date: 11/11/2020
-ms.openlocfilehash: 039db904a315bd3ad3f4e1358d414c98c3a84be5
-ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
+ms.date: 02/02/2021
+ms.openlocfilehash: befc5ff156cb7c3843d89e394e903778682ba28e
+ms.sourcegitcommit: 40b6d8e9b6d791ac69e2ff85224e900b21552bc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94661432"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536496"
 ---
 # <a name="installing-powershell-on-windows"></a>Установка PowerShell в Windows
 
@@ -24,14 +24,14 @@ ms.locfileid: "94661432"
 
 ## <a name="download-the-installer-package"></a>Скачивание скрипта установщика
 
-Чтобы установить PowerShell в Windows скачайте [актуальный][] пакет установки с GitHub. Также доступна актуальная предварительная версия на странице [выпуски][]. Прокрутите страницу вниз до раздела **ресурсов**. Раздел **ресурсов** может быть свернут. В таком случае щелкните его, чтобы развернуть.
+Чтобы установить PowerShell в Windows скачайте [актуальный][] пакет установки с GitHub. Также доступна актуальная [предварительная версия][]. Прокрутите страницу вниз до раздела **ресурсов**. Раздел **ресурсов** может быть свернут. В таком случае щелкните его, чтобы развернуть.
 
 ## <a name="installing-the-msi-package"></a><a id="msi" />Установка пакета MSI
 
 MSI-файл выглядит примерно так: `PowerShell-<version>-win-<os-arch>.msi`. Пример:
 
-- `PowerShell-7.1.0-win-x64.msi`
-- `PowerShell-7.1.0-win-x86.msi`
+- `PowerShell-7.1.1-win-x64.msi`
+- `PowerShell-7.1.1-win-x86.msi`
 
 После скачивания дважды щелкните установщик и следуйте инструкциям на экране.
 
@@ -55,13 +55,14 @@ MSI-файл выглядит примерно так: `PowerShell-<version>-win
 MSI-пакеты можно устанавливать из командной строки, что позволяет администраторам развертывать их без взаимодействия с пользователем. MSI-пакет включает в себя следующие свойства для управления параметрами установки:
 
 - **ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL**. Это свойство позволяет добавлять пункт **Открыть PowerShell** в контекстное меню проводника.
+- **ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL**. Это свойство позволяет добавлять пункт **Выполнить с помощью PowerShell** в контекстное меню проводника Windows.
 - **ENABLE_PSREMOTING**. Это свойство позволяет включать удаленное взаимодействие PowerShell во время установки.
 - **REGISTER_MANIFEST**. Это свойство позволяет регистрировать манифест ведения журнала событий Windows.
 
 В следующих примерах показано, как выполнить автоматическую установку PowerShell со всеми включенными параметрами.
 
 ```powershell
-msiexec.exe /package PowerShell-7.1.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.1.1-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 ```
 
 Полный список параметров командной строки для `Msiexec.exe` см. [здесь](/windows/desktop/Msi/command-line-options).
@@ -81,12 +82,12 @@ msiexec.exe /package PowerShell-7.1.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_ME
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />Установка ZIP-пакета
 
-Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell. Скачайте один из следующих ZIP-архивов на странице [выпуски][выпуски].
+Для поддержки расширенных сценариев развертывания доступны ZIP-архивы двоичных файлов PowerShell. Скачайте один из следующих ZIP-архивов на странице с [выпусками][выпуски].
 
-- PowerShell-7.1.0-win-x64.zip;
-- PowerShell-7.1.0-win-x86.zip;
-- PowerShell-7.1.0-win-arm64.zip;
-- PowerShell-7.1.0-win-arm32.zip.
+- PowerShell-7.1.1-win-x64.zip
+- PowerShell-7.1.1-win-x86.zip
+- PowerShell-7.1.1-win-arm64.zip
+- PowerShell-7.1.1-win-arm32.zip
 
 В зависимости от способа загрузки файла может потребоваться разблокировать файл с помощью командлета `Unblock-File`. Распакуйте содержимое в выбранное расположение и запустите `pwsh.exe`. В отличие от установки пакетов MSI при установке ZIP-архива не выполняется проверка соответствия предварительным требованиям. Для правильного удаленного взаимодействия с помощью WSMan необходимо обеспечить соответствие [предварительным требованиям](#prerequisites).
 
@@ -225,8 +226,8 @@ dotnet tool install --global PowerShell
    ```Output
    Name               Id                           Version
    ---------------------------------------------------------------
-   PowerShell         Microsoft.PowerShell         7.1.0
-   PowerShell-Preview Microsoft.PowerShell-Preview 7.1.0-preview.5
+   PowerShell         Microsoft.PowerShell         7.1.1
+   PowerShell-Preview Microsoft.PowerShell-Preview 7.1.1-preview.5
    ```
 
 1. Установите версию PowerShell, используя параметр `--exact`.
@@ -259,7 +260,7 @@ dotnet tool install --global PowerShell
 > [!NOTE]
 > Предварительные сборки PowerShell включают пакет MSIX. Пакет MSIX не поддерживается официально. Этот пакет создан исключительно для тестовых целей и только на период действия предварительной версии.
 
-Чтобы вручную установить пакет MSIX на клиенте Windows 10, скачайте пакет MSIX на странице [выпуски][выпуски] в GitHub. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
+Чтобы вручную установить пакет MSIX на клиенте Windows 10, скачайте пакет MSIX на странице GitHub с [выпусками][выпуски]. Прокрутите вниз до раздела **Ресурсы** в выпуске, который вы хотите установить. Раздел "Ресурсы" может быть свернут. В таком случае щелкните его, чтобы развернуть.
 
 MSIX-файл выглядит примерно так: `PowerShell-<version>-win-<os-arch>.msix`
 
@@ -286,8 +287,8 @@ PowerShell поддерживает протокол удаленного вза
 
 <!-- link references -->
 
-[выпусками]: https://github.com/PowerShell/PowerShell/releases
-[Актуальная]: https://github.com/PowerShell/PowerShell/releases/latest
+[предварительная версия]: https://aka.ms/powershell-release?tag=preview
+[Актуальная]: https://aka.ms/powershell-release?tag=stable
 [ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
