@@ -570,14 +570,10 @@
       href: community/hall-of-fame.md
     - name: Новые возможности в Документации Майкрософт
       items:
-        - name: 2020-Q4
-          href: community/2020-Q4.md
-        - name: "Третий квартал 2020\_года"
-          href: community/2020-Q3.md
-        - name: Второй квартал 2020 года
-          href: community/2020-Q2.md
-        - name: Первый квартал 2020 года
-          href: community/2020-Q1.md
+        - name: "Обновления за 2021\_год"
+          href: community/2021-updates.md
+        - name: "Обновления за 2020\_год"
+          href: community/2020-updates.md
     - name: Руководство для соавторов
       items:
         - name: Обзор
@@ -775,7 +771,7 @@
         - name: Соответствие GDPR
           href: gallery/how-to/getting-support/gdpr-dsr-policy.md
     - name: Вопросы и ответы о коллекции
-      href: gallery/faqs.md
+      href: gallery/faqs.yml
 - name: Написание скриптов и разработка
   items:
     - name: Visual Studio Code
