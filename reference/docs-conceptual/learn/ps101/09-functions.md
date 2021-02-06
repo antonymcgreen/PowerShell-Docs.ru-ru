@@ -2,15 +2,14 @@
 title: Функции
 description: С помощью функций PowerShell можно создавать средства для многократного использования в сценариях.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 9554c0b4d3932b7371201f7b08c8b9d26a567f5e
-ms.sourcegitcommit: e85e56d6614cbd30e01965a5cf03fb3f5ca78103
-ms.translationtype: HT
+ms.openlocfilehash: e4734b556a78f67c54152dad93eada536dd1c928
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94589143"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99600871"
 ---
 # <a name="chapter-9---functions"></a>Глава 9. Функции
 
@@ -285,6 +284,8 @@ Machine                     0
 ```
 
 Кроме того, имена параметров рекомендуется указывать в том же регистре, что и имена командлетов по умолчанию. Используйте `ComputerName`, а не `computername`. В этом случае функции выглядят и работают как командлеты по умолчанию. Это очень удобно для пользователей, уже знакомых с PowerShell.
+
+`param`Оператор позволяет определить один или несколько параметров. Определения параметров разделяются запятой ( `,` ). Дополнительные сведения см. в разделе [about_Functions_Advanced_Parameters][].
 
 ## <a name="advanced-functions"></a>Расширенные функции
 
