@@ -3,12 +3,12 @@ ms.date: 08/21/2020
 keywords: powershell,командлет
 title: Выполнение удаленных команд
 description: Описываются способы выполнения команд в удаленных системах с помощью PowerShell.
-ms.openlocfilehash: e9e07fec96cbd93d3bf06be2a1f98ec7aa7d8f19
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.openlocfilehash: cff18a4f51c3ed8e3ed2c1f35862a88911e7ceb5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501360"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94391414"
 ---
 # <a name="running-remote-commands"></a>Выполнение удаленных команд
 
@@ -130,29 +130,29 @@ Invoke-Command -Session $s {$h | where {$_.InstalledBy -ne "NTAUTHORITY\SYSTEM"}
 
 Windows PowerShell включает поставщик WSMan. Поставщик создает диск `WSMAN:`, который позволяет перемещаться по иерархии параметров конфигурации на локальном и удаленном компьютерах.
 
-См. дополнительные сведения о [поставщике WSMan](https://technet.microsoft.com/library/dd819476.aspx) и [командлетах WS-Management](/powershell/module/microsoft.wsman.management/about/about_ws-management_cmdlets) или введите команду `Get-Help wsman` в консоли Windows PowerShell.
+См. дополнительные сведения о [поставщике WSMan](/powershell/module/microsoft.wsman.management/about/about_wsman_provider) и [командлетах WS-Management](/powershell/module/microsoft.wsman.management/about/about_ws-management_cmdlets) или введите команду `Get-Help wsman` в консоли Windows PowerShell.
 
 Дополнительные сведения можно найти в разделе
 
-- [Часто задаваемые вопросы об удаленном взаимодействии](https://technet.microsoft.com/library/dd315359.aspx)
-- [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
-- [Import-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
+- [Часто задаваемые вопросы об удаленном взаимодействии](/powershell/module/microsoft.powershell.core/about/about_remote_faq)
+- [Register-PSSessionConfiguration](xref:Microsoft.PowerShell.Core.Register-PSSessionConfiguration)
+- [Import-PSSession](xref:Microsoft.PowerShell.Utility.Import-PSSession)
 
-Справку по ошибкам службы удаленного взаимодействия см. в разделе [about_Remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx).
+Справку по ошибкам службы удаленного взаимодействия см. в разделе [about_Remote_Troubleshooting](/powershell/module/microsoft.powershell.core/about/about_Remote_Troubleshooting).
 
 ## <a name="see-also"></a>См. также:
 
-- [about_Remote](https://technet.microsoft.com/library/9b4a5c87-9162-4adf-bdfe-fbc80b9b8970)
-- [about_Remote_FAQ](https://technet.microsoft.com/library/e23702fd-9415-4a98-9975-390a4d3adc42)
-- [about_Remote_Requirements](https://technet.microsoft.com/library/da213949-134c-4741-b307-81f4492ba1bd)
-- [about_Remote_Troubleshooting](https://technet.microsoft.com/library/2f890148-8578-49ed-85ea-79a489dd6317)
-- [about_PSSessions](https://technet.microsoft.com/library/7a9b4e0e-fa1b-47b0-92f6-6e2995d70acb)
-- [about_WS-Management_Cmdlets](https://technet.microsoft.com/library/6ed3370a-ea10-45a5-9493-696aeace27ed)
-- [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command)
-- [Import-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
-- [New-PSSession](https://go.microsoft.com/fwlink/?LinkId=821498)
-- [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
-- [Поставщик WSMan](https://technet.microsoft.com/library/66fe1241-e08f-49ca-832f-a84c33ca8735)
+- [about_Remote](/powershell/module/microsoft.powershell.core/about/about_remote_faq)
+- [about_Remote_FAQ](/powershell/module/microsoft.powershell.core/about/about_remote_faq)
+- [about_Remote_Requirements](/powershell/module/microsoft.powershell.core/about/about_remote_requirements)
+- [about_Remote_Troubleshooting](/powershell/module/microsoft.powershell.core/about/about_Remote_Troubleshooting)
+- [about_PSSessions](/powershell/module/microsoft.powershell.core/about/about_PSSessions)
+- [about_WS-Management_Cmdlets](/powershell/module/microsoft.wsman.management/about/about_ws-management_cmdlets)
+- [Invoke-Command](xref:Microsoft.PowerShell.Core.Invoke-Command)
+- [Import-PSSession](xref:Microsoft.PowerShell.Utility.Import-PSSession)
+- [New-PSSession](xref:Microsoft.PowerShell.Core.New-PSSession)
+- [Register-PSSessionConfiguration](xref:Microsoft.PowerShell.Core.Register-PSSessionConfiguration)
+- [Поставщик WSMan](/powershell/module/microsoft.wsman.management/about/about_wsman_provider)
 
 [wsman-remoting]: WSMan-Remoting-in-PowerShell-Core.md
 [ssh-remoting]: SSH-Remoting-in-PowerShell-Core.md
