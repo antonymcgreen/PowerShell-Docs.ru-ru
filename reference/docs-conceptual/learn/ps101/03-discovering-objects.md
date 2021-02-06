@@ -2,15 +2,14 @@
 title: Обнаружение объектов, свойств и методов
 description: Чтобы понимать и использовать объекты, свойства и методы, не нужно быть разработчиком.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 5ab972755afeba0d94bf6c2debaf84ec84cd9244
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
-ms.translationtype: HT
+ms.openlocfilehash: f226221da7dd3b663f54cf23439dd7f945ed3a2a
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438075"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99599978"
 ---
 # <a name="chapter-3---discovering-objects-properties-and-methods"></a>Глава 3. Обнаружение объектов, свойств и методов
 
@@ -698,7 +697,7 @@ UserPrincipalName      : miker@mikefrobbins.com
 - [about_Objects][]
 - [about_Properties][]
 - [about_Methods][]
-- [No PowerShell Cmdlet to Start or Stop Something? Don’t Forget to Check for Methods on the Get Cmdlets][use-methods] (Нет командлета для запуска или остановки службы? Вспомните о методах для командлетов Get)
+- [Нет командлета PowerShell для запуска или отмены чего-либо? Не забудьте проверить методы командлета Get.][use-methods]
 
 <!-- link references -->
 [RSAT для Windows]: https://support.microsoft.com/help/2693643
