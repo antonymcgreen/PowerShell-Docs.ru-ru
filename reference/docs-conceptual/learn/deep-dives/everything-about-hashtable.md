@@ -3,12 +3,12 @@ title: Все, что вы хотели знать о хэш-таблицах
 description: Хэш-таблицы играют очень важную роль в PowerShell, поэтому будет полезно получить о них полное представление.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
-ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
+ms.openlocfilehash: e386e2aa2f7b85bee4bf622fd9251ef7642cf16a
+ms.sourcegitcommit: 57e577097085dc621bd797ef4a7e2854ea7d4e29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "93354428"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "97980507"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Все, что вы хотели знать о хэш-таблицах
 
@@ -925,8 +925,7 @@ Orig: [copy]
 
 ### <a name="deep-copies"></a>Полные копии
 
-На момент написания этой статьи мне неизвестно о каких-либо эффективных способах создания полной копии хэш-таблицы (и сохранения ее в виде хэш-таблицы). Это как раз та вещь, о которой кому-нибудь стоит написать.
-Вот как это можно быстро сделать.
+Есть несколько способов создать полную копию хэш-таблицы (оставив ее хэш-таблицей). Следующая функция использует PowerShell для рекурсивного создания полной копии:
 
 ```powershell
 function Get-DeepClone
@@ -952,6 +951,21 @@ function Get-DeepClone
 ```
 
 При этом не обрабатываются любые другие ссылочные типы или массивы, но это хорошая отправная точка.
+
+Другой способ — использовать .NET для десериализации таблицы с помощью **CliXml**, как в следующей функции:
+
+```powershell
+function Get-DeepClone
+{
+    param(
+        $InputObject
+    )
+    $TempCliXmlString = [System.Management.Automation.PSSerializer]::Serialize($obj, [int32]::MaxValue)
+    return [System.Management.Automation.PSSerializer]::Deserialize($TempCliXmlString)
+}
+```
+
+В случае с очень большими хэш-таблицами функция десериализации выполняется быстрее, так как она масштабируется. Однако при использовании этого метода следует учесть несколько моментов. Из-за использования **CliXml** потребляется много памяти, что при клонировании огромных хэш-таблиц может вызвать проблемы. Еще один недостаток **CliXml** в том, что максимальная глубина вложения ограничена 48 уровнями. Это значит, что если у вас есть хэш-таблица с 48 уровнями вложенных хэш-таблиц, клонирование завершится сбоем и в результате вы ничего не получите.
 
 ## <a name="anything-else"></a>Что-нибудь еще?
 
