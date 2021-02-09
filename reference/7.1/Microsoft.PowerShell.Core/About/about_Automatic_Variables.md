@@ -5,12 +5,12 @@ ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: 60ad0e40f7e392bf240ee76a5902123c45a282fd
-ms.sourcegitcommit: 1628fd2a1f50aec2f31ffb1c451a3ce77c08983c
+ms.openlocfilehash: 8a2410dd2adcc1679ab203293b4c4e712b960278
+ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577248"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99975147"
 ---
 # <a name="about-automatic-variables"></a>Сведения об автоматических переменных
 
@@ -67,7 +67,7 @@ $? # $true
 
 Содержит массив значений для необъявленных параметров, которые передаются в функцию, скрипт или блок скрипта. При создании функции можно объявить параметры с помощью `param` ключевого слова или путем добавления разделенного запятыми списка параметров в круглые скобки после имени функции.
 
-В действии события `$Args` переменная содержит объекты, представляющие аргументы события обрабатываемого события. Эта переменная заполняется только в `Action` блоке команды регистрации события.
+В действии события `$args` переменная содержит объекты, представляющие аргументы события обрабатываемого события. Эта переменная заполняется только в `Action` блоке команды регистрации события.
 Значение этой переменной также можно найти в свойстве **саурцеаргс** объекта **PSEventArgs** , который `Get-Event` возвращает.
 
 ### <a name="consolefilename"></a>$ConsoleFileName
@@ -729,7 +729,7 @@ Default (Current): Start
 Default (Current): End
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [about_Functions](about_Functions.md)
 

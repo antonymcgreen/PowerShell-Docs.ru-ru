@@ -6,12 +6,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: 8c0a1b7a14f5dfa071a85808f5d7dfba4d06048e
-ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
+ms.openlocfilehash: 6f5c76faafa2c68a6d9dfc604238c514489aa717
+ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "99599390"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99975062"
 ---
 # Get-Date
 
@@ -215,7 +215,7 @@ d-----         6/27/2019    07:59                2019-06-27T07.59.24.4603750-07.
 
 ### Пример 9. Преобразование метки времени Unix
 
-Этот пример преобразует время UNIX (представленное числом секунд с 1970-01-01 0:00:00) в DateTime.
+В этом примере время в формате Unix (представленное количеством секунд с 0:00:00 01.01.1970) преобразуется в тип DateTime.
 
 ```powershell
 Get-Date -UnixTimeSeconds 1577836800
@@ -513,7 +513,7 @@ Accept wildcard characters: False
 
 ### Входные данные конвейера
 
-`Get-Date` принимает входные данные конвейера. Пример: `Get-ChildItem | Get-Date`.
+`Get-Date` принимает входные данные конвейера. Например, `Get-ChildItem | Get-Date`.
 
 ## Выходные данные
 
@@ -526,7 +526,7 @@ Accept wildcard characters: False
 Метод `(Get-Date).ToString()` преобразует объект **DateTime** в объект **String** .
 
 Чтобы отобразить свойства и методы объекта, отправьте объект по конвейеру в `Get-Member` .
-Пример: `Get-Date | Get-Member`.
+Например, `Get-Date | Get-Member`.
 
 ## ПРИМЕЧАНИЯ
 
@@ -565,9 +565,9 @@ Accept wildcard characters: False
 | `%t` | Символ горизонтальной табуляции                                                |                          |
 | `%T` | Время в 24-часовом формате                                                  | 17:45:52                 |
 | `%U` | То же, что "W"                                                             |                          |
-| `%u` | День недели — номер                                                | Воскресенье = 0               |
+| `%u` | Числовой день недели (1-7)                                           | Понедельник = 1, воскресенье = 7   |
 | `%V` | Неделя года                                                        | 01-53                    |
-| `%w` | То же, что и "u"                                                             |                          |
+| `%w` | Числовой день недели (0-6)                                           | Воскресенье = 0, суббота = 6 |
 | `%W` | Неделя года                                                        | 00-52                    |
 | `%X` | То же, что 'T»                                                             |                          |
 | `%x` | Дата в стандартном формате для языкового стандарта                                      | 06/27/19 для английского языка США  |
