@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,командлет
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 02/08/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/exit-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Exit-PSSession;
-ms.openlocfilehash: fb6c0f930536e7a32d83c9f390a0e351a6952550
-ms.sourcegitcommit: 2e497178126b2b33a169ff04c31e251e0b59e89b
+ms.openlocfilehash: 7947855afa08bc3301d02e64fcb2ad8bb6b59db7
+ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "93209241"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99975130"
 ---
 # Exit-PSSession;
 
@@ -25,19 +25,18 @@ ms.locfileid: "93209241"
 Exit-PSSession [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Описание
 
-Командлет **Exit-PSSession** завершает интерактивные сеансы, запущенные с помощью командлета Enter-PSSession.
+`Exit-PSSession`Командлет завершает интерактивные сеансы, запущенные с помощью `Enter-PSSession` командлета.
 
-Можно также использовать ключевое слово **Exit** для завершения интерактивного сеанса.
-Результат такой же, как и при использовании **Exit-PSSession** .
+Можно также использовать `exit` ключевое слово для завершения интерактивного сеанса. Результат такой же, как и при использовании `Exit-PSSession` .
 
 ## Примеры
 
 ### Пример 1. Запуск и завершение интерактивного сеанса
 
-```
-PS> Enter-PSSession -computername Server01
+```powershell
+PS> Enter-PSSession -ComputerName Server01
 Server01\PS> Exit-PSSession
 PS>
 ```
@@ -46,7 +45,7 @@ PS>
 
 ### Пример 2. Запуск и завершение интерактивного сеанса с помощью объекта PSSession
 
-```
+```powershell
 PS> $s = New-PSSession -ComputerName Server01
 PS> Enter-PSSession -Session $s
 Server01\PS> Exit-PSSession
@@ -56,33 +55,29 @@ Id Name            ComputerName    State    ConfigurationName
 1  Session1        Server01        Opened   Microsoft.PowerShell
 ```
 
-Эти команды запускают и останавливают интерактивный сеанс с компьютером Server01, использующим сеанс PowerShell ( **PSSession** ).
+Эти команды запускают и останавливают интерактивный сеанс с компьютером Server01, использующим сеанс PowerShell (**PSSession**).
 
-Поскольку интерактивный сеанс запущен с помощью сеанса PowerShell, сеанс **PSSession** по-прежнему доступен по окончании интерактивного сеанса.
-Если используется параметр *ComputerName* , команда **Enter-PSSession** создает временный сеанс, который закрывается по завершении интерактивного сеанса.
+Поскольку интерактивный сеанс запущен с помощью сеанса PowerShell, сеанс **PSSession** по-прежнему доступен по окончании интерактивного сеанса. Если используется параметр _ComputerName_ , `Enter-PSSession` создает временный сеанс, который закрывается по окончании интерактивного сеанса.
 
-Первая команда использует командлет New-PSSession для создания **сеанса PSSession** на компьютере Server01.
-Команда сохраняет **PSSession** в переменной $s.
+Первая команда использует `New-PSSession` командлет для создания **сеанса PSSession** на компьютере Server01. Команда сохраняет **PSSession** в `$s` переменной.
 
-Вторая команда использует **Enter-PSSession** для запуска интерактивного сеанса с использованием сеанса **PSSession** в $s.
+Вторая команда использует `Enter-PSSession` для запуска интерактивного сеанса с использованием **PSSession** в `$s` .
 
-Третья команда использует **Exit-PSSession** для прекращения интерактивного сеанса.
+Третья команда использует `Exit-PSSession` для завершения интерактивного сеанса.
 
-Последняя команда отображает **PSSession** в переменной $s.
-Свойство **State** показывает, что **сеанс PSSession** по-прежнему открыт и доступен для использования.
+Последняя команда отображает **PSSession** в `$s` переменной. Свойство **State** показывает, что **сеанс PSSession** по-прежнему открыт и доступен для использования.
 
 ### Пример 3. Использование ключевого слова Exit для завершения сеанса
 
-```
-PS> Enter-PSSession -computername Server01
+```powershell
+PS> Enter-PSSession -ComputerName Server01
 Server01\PS> exit
 PS>
 ```
 
-В этом примере используется ключевое слово **Exit** для завершения интерактивного сеанса, запущенного с помощью команды **Enter-PSSession** .
-Ключевое слово **Exit** имеет тот же результат, что и при использовании **Exit-PSSession** .
+В этом примере используется `exit` ключевое слово для завершения интерактивного сеанса, запущенного с помощью `Enter-PSSession` . `exit`Ключевое слово имеет тот же результат, что и при использовании `Exit-PSSession` .
 
-## PARAMETERS
+## Параметры
 
 ### Общие параметры
 
@@ -90,21 +85,19 @@ PS>
 
 ## Входные данные
 
-### Нет
+### None
 
 Нельзя передать объекты в этот командлет с помощью конвейера.
 
 ## Выходные данные
 
-### Нет
+### Отсутствуют
 
 Этот командлет не возвращает никакие выходные данные.
 
-## ПРИМЕЧАНИЯ
+## Примечания
 
-* Этот командлет принимает только общие параметры.
-
-*
+Этот командлет принимает только общие параметры.
 
 ## Связанные ссылки
 
