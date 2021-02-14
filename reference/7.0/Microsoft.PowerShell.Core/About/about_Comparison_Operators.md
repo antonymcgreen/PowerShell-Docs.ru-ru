@@ -5,12 +5,12 @@ ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: a89ab612a7f0fe518f97a4d037956df14546740d
-ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
+ms.openlocfilehash: 179798b490855cd463e2348acaf1292f042ba173
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98620121"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500165"
 ---
 # <a name="about-comparison-operators"></a>Сведения об операторах сравнения
 
@@ -39,7 +39,7 @@ ms.locfileid: "98620121"
 |             | -notcontains | Коллекция не содержит значение       |
 |             | -in          | значение находится в коллекции                  |
 |             | -notin       | значение не находится в коллекции              |
-| Тип        | — имеет          | Оба объекта имеют одинаковый тип            |
+| Type        | — имеет          | Оба объекта имеют одинаковый тип            |
 |             | -IsNot       | объекты имеют разные типы         |
 
 ## <a name="common-features"></a>Общие возможности
@@ -414,7 +414,7 @@ book
 В следующем примере `-replace` оператор принимает имя пользователя в формате `DomainName\Username` и преобразует его в `Username@DomainName` Формат:
 
 ```powershell
-$SearchExp = '^(?<Username>[\w-.]+)\\(?<DomainName>[\w-.]+)$'
+$SearchExp = '^(?<DomainName>[\w-.]+)\\(?<Username>[\w-.]+)$'
 $ReplaceExp = '${Username}@${DomainName}'
 
 'Contoso.local\John.Doe' -replace $SearchExp,$ReplaceExp
@@ -429,7 +429,7 @@ John.Doe@Contoso.local
 >
 > - В PowerShell между двойными кавычками они обозначают переменные и действуют как операторы части выражения.
 > - В строках поиска регулярных выражений это означает конец строки.
-> - В строках подстановки регулярных выражений он указывает захваченные группы, поэтому необходимо либо поместить регулярные выражения в одинарные кавычки, либо вставить `` ` `` символ обратной черты () перед ними.
+> - В строках подстановки Regex он означает захваченные группы. Не забудьте поместить регулярные выражения в одинарные кавычки или вставить `` ` `` символ обратной черты () перед ними.
 
 Пример:
 

@@ -3,12 +3,12 @@ ms.date: 09/13/2016
 ms.topic: reference
 title: Объявление атрибута параметра
 description: Объявление атрибута параметра
-ms.openlocfilehash: bab48a94cb4b1e8501fb79c2f3ef71393fa2ee68
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 24a49406b1493a7f8c23bca798ddb3e73a901111
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92650347"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500235"
 ---
 # <a name="parameter-attribute-declaration"></a>Объявление атрибута параметра
 
@@ -41,7 +41,7 @@ ms.locfileid: "92650347"
 
 `HelpMessageResourceId` Необязательный именованный параметр. Указывает идентификатор ресурса для сообщения справки.
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
 - Дополнительные сведения об объявлении этого атрибута см. в разделе [как объявлять параметры командлета](./how-to-declare-cmdlet-parameters.md).
 
@@ -59,7 +59,7 @@ ms.locfileid: "92650347"
 
   - Ни один из наборов параметров не должен содержать более одного позиционированного параметра с одинаковой позицией.
 
-  - Только один параметр в наборе параметров должен объявлять `ValueFromPipeline = true` . Может быть определено несколько параметров `ValueFromPipelineByPropertyName = true` .
+  - Только один параметр в наборе параметров должен объявлять `ValueFromPipeline = true` .
 
   - Может быть определено несколько параметров `ValueFromPipelineByPropertyName = true` .
 
