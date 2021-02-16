@@ -7,12 +7,12 @@ ms.date: 08/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Html
-ms.openlocfilehash: 27a1d2994dee46b9e5bfd54132ff4a665330c2b4
-ms.sourcegitcommit: 9a6b6714ded4edb5119f1b82a253608018ea6b98
+ms.openlocfilehash: 1eade078765f93713da1f665e3ad6f062a1826d9
+ms.sourcegitcommit: 9777152e026c47ba8d319593051416054cb62246
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "93230373"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100529946"
 ---
 # ConvertTo-Html
 
@@ -69,7 +69,7 @@ Invoke-Item aliases.htm
 ### Пример 3. Создание веб-страницы для вывода событий PowerShell
 
 ```powershell
-`Get-EventLog` -LogName "Windows PowerShell" | ConvertTo-Html | Out-File pslog.htm
+Get-EventLog -LogName "Windows PowerShell" | ConvertTo-Html | Out-File pslog.htm
 ```
 
 Эта команда создает HTML-страницу `pslog.htm` с именем, которая отображает события в журнале событий Windows PowerShell на локальном компьютере.
@@ -153,7 +153,7 @@ Get-EventLog -Log "Windows PowerShell" | ConvertTo-Html -Property id, level, tas
 
 Он использует оператор конвейера ( `|` ) для отправки событий в `ConvertTo-Html` командлет, который преобразует события в формат HTML.
 
-`ConvertTo-Html`Команда использует параметр **Property** для выбора только свойств **ID** , **Level** и **Task** события.
+`ConvertTo-Html`Команда использует параметр **Property** для выбора только свойств **ID**, **Level** и **Task** события.
 
 ### Пример 9. Создание веб-страницы для показа указанных служб
 
@@ -170,7 +170,7 @@ Get-Service A* |
 Invoke-Item Services.htm
 ```
 
-Эта команда создает и открывает веб-страницу, в которой отображаются службы на компьютере, начинающиеся с. Для настройки выходных данных в нем используются параметры **Title** , **Body** , for **Content** и My **Content** `ConvertTo-Html` .
+Эта команда создает и открывает веб-страницу, в которой отображаются службы на компьютере, начинающиеся с. Для настройки выходных данных в нем используются параметры **Title**, **Body**, for **Content** и My **Content** `ConvertTo-Html` .
 
 Первая часть команды использует `Get-Service` командлет для получения служб на компьютере, который начинается с. Команда использует оператор конвейера ( `|` ) для отправки результатов в `ConvertTo-Html` командлет. Команда также использует `Out-File` командлет для отправки выходных данных в файл Services.htm.
 
@@ -201,7 +201,7 @@ Get-Service | ConvertTo-HTML -Transitional
 
 ### — Как
 
-Определяет, форматируется ли объект как таблица или список. Допустимые значения: **Table** и **List** . Значение по умолчанию — **Table** .
+Определяет, форматируется ли объект как таблица или список. Допустимые значения: **Table** и **List**. Значение по умолчанию — **Table**.
 
 **Табличное** значение создает таблицу HTML, похожую на формат таблицы PowerShell. В строке заголовка отображаются имена свойств. Каждая строка таблицы представляет объект и отображает значения объекта для каждого свойства.
 
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 
 ### — Переход
 
-Изменяет тип **DOCTYPE** на **XHTML transitioned DTD** , по умолчанию **DOCTYPE** — **XHTML** .
+Изменяет тип **DOCTYPE** на **XHTML transitioned DTD**, по умолчанию **DOCTYPE** — **XHTML**.
 
 Этот параметр появился в PowerShell 6,0.
 

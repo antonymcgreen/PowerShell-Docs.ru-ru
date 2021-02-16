@@ -1,16 +1,16 @@
 ---
 description: Описывает использование подстановочных знаков в PowerShell.
 Locale: en-US
-ms.date: 03/28/2019
+ms.date: 02/13/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_wildcards?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Wildcards
-ms.openlocfilehash: b5f13fdbfbc24e19e5ad0b1cd6ecc1b99f68914f
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 40620e54bb889d683192b346f3ba1c139895e4d0
+ms.sourcegitcommit: 9777152e026c47ba8d319593051416054cb62246
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99600893"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100529980"
 ---
 # <a name="about-wildcards"></a>О подстановочных знаках
 
@@ -20,13 +20,17 @@ ms.locfileid: "99600893"
 
 ## <a name="long-description"></a>ПОДРОБНОЕ ОПИСАНИЕ
 
-Символы-шаблоны представляют один или несколько символов. Их можно использовать для создания шаблонов Word в командах. Например, чтобы получить все файлы в `C:\Techdocs` каталоге с `.ppt` расширением имени файла, введите:
+Символы-шаблоны представляют один или несколько символов. Их можно использовать для создания шаблонов Word в командах. Выражения с подстановочными знаками используются с `-like` оператором или с любым параметром, который принимает подстановочные знаки.
+
+Например, чтобы сопоставить все файлы в `C:\Techdocs` каталоге с `.ppt` расширением имени файла, введите:
 
 ```powershell
 Get-ChildItem C:\Techdocs\*.ppt
 ```
 
 В этом случае `*` подстановочный знак звездочки () представляет все символы, которые отображаются перед `.ppt` расширением имени файла.
+
+Выражения с подстановочными знаками проще регулярных выражений. Дополнительные сведения см. в разделе [about_Regular_Expressions](./about_Regular_Expressions.md).
 
 PowerShell поддерживает следующие подстановочные знаки:
 
