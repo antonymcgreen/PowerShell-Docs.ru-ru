@@ -2,12 +2,12 @@
 title: Установка PowerShell в Linux
 description: Сведения об установке PowerShell в различных дистрибутивах Linux
 ms.date: 02/02/2021
-ms.openlocfilehash: d02fa6e3828d539cf70d7bbcdb8ee7bd8ab35c1d
-ms.sourcegitcommit: 40b6d8e9b6d791ac69e2ff85224e900b21552bc1
+ms.openlocfilehash: 1e7fabdc94ba70a91eb5c6425893bc5af640e584
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99536513"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563303"
 ---
 # <a name="installing-powershell-on-linux"></a>Установка PowerShell в Linux
 
@@ -95,12 +95,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Установка с помощью прямого скачивания — Ubuntu 16.04
 
-Скачайте пакет Debian `powershell_7.1.1-1.ubuntu.16.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
+Скачайте пакет Debian `powershell_7.1.2-1.ubuntu.16.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo dpkg -i powershell_7.1.1-1.ubuntu.16.04_amd64.deb
+sudo dpkg -i powershell_7.1.2-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -144,12 +144,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>Установка с помощью прямого скачивания — Ubuntu 18.04
 
-Скачайте пакет Debian `powershell_7.1.1-1.ubuntu.18.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
+Скачайте пакет Debian `powershell_7.1.2-1.ubuntu.18.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo dpkg -i powershell_7.1.1-1.ubuntu.18.04_amd64.deb
+sudo dpkg -i powershell_7.1.2-1.ubuntu.18.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -193,12 +193,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-2004"></a>Установка с помощью прямого скачивания — Ubuntu 20.04
 
-Скачайте пакет Debian `powershell_7.1.1-1.ubuntu.20.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
+Скачайте пакет Debian `powershell_7.1.2-1.ubuntu.20.04_amd64.deb` со страницы [выпусками][] на компьютер с Ubuntu.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo dpkg -i powershell_7.1.1-1.ubuntu.20.04_amd64.deb
+sudo dpkg -i powershell_7.1.2-1.ubuntu.20.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -289,12 +289,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-9"></a>Установка с помощью прямого скачивания — Debian 9
 
-Скачайте пакет Debian `powershell_7.1.1-1.debian.9_amd64.deb` со страницы [выпусками][] на компьютер с Debian.
+Скачайте пакет Debian `powershell_7.1.2-1.debian.9_amd64.deb` со страницы [выпусками][] на компьютер с Debian.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo dpkg -i powershell_7.1.1-1.debian.9_amd64.deb
+sudo dpkg -i powershell_7.1.2-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -334,7 +334,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-10"></a>Установка с помощью прямого скачивания — Debian 10
 
-Скачайте пакет tar.gz `powershell-7.1.1-linux-x64.tar.gz` на странице с [выпусками][] на компьютер с Debian.
+Скачайте пакет tar.gz `powershell-7.1.2-linux-x64.tar.gz` на странице с [выпусками][] на компьютер с Debian.
 
 Затем выполните в терминале следующие команды:
 
@@ -356,7 +356,7 @@ sudo apt-get install -y \
         curl
 
 # Download the powershell '.tar.gz' archive
-curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -381,7 +381,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>Установка с помощью прямого скачивания — Alpine 3.9 и 3.10
 
-Скачайте пакет tar.gz `powershell-7.1.1-linux-alpine-x64.tar.gz` на странице с [выпусками][] на компьютер с Alpine.
+Скачайте пакет tar.gz `powershell-7.1.2-linux-alpine-x64.tar.gz` на странице с [выпусками][] на компьютер с Alpine.
 
 Затем выполните в терминале следующие команды:
 
@@ -406,7 +406,7 @@ sudo apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache \
     lttng-ust
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -448,18 +448,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---centos-7"></a>Установка с помощью прямого скачивания — CentOS 7
 
-Используя [CentOS 7][], скачайте пакет RPM `powershell-7.1.1-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с CentOS.
+Используя [CentOS 7][], скачайте пакет RPM `powershell-7.1.2-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с CentOS.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo yum install powershell-7.1.1-1.rhel.7.x86_64.rpm
+sudo yum install powershell-7.1.2-1.rhel.7.x86_64.rpm
 ```
 
 RPM можно установить без промежуточного скачивания:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---centos-7"></a>Удаление — CentOS 7
@@ -491,18 +491,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>Установка с помощью прямого скачивания — Red Hat Enterprise Linux (RHEL) 7
 
-Скачайте пакет RPM `powershell-7.1.1-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с Red Hat Enterprise Linux.
+Скачайте пакет RPM `powershell-7.1.2-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с Red Hat Enterprise Linux.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
-sudo yum install powershell-7.1.1-1.rhel.7.x86_64.rpm
+sudo yum install powershell-7.1.2-1.rhel.7.x86_64.rpm
 ```
 
 RPM можно установить без промежуточного скачивания:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a>Удаление — Red Hat Enterprise Linux (RHEL) 7
@@ -520,7 +520,7 @@ sudo yum remove powershell
 zypper update && zypper --non-interactive install curl tar libicu52_1
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -545,7 +545,7 @@ pwsh
 zypper update && zypper --non-interactive install curl tar gzip libopenssl1_0_0 libicu60_2
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -603,20 +603,20 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-28-29-and-30"></a>Установка с помощью прямого скачивания — Fedora 28, 29 и 30
 
-Скачайте пакет RPM `powershell-7.1.1-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с Fedora.
+Скачайте пакет RPM `powershell-7.1.2-1.rhel.7.x86_64.rpm` со страницы [выпусками][] на компьютер с Fedora.
 
 Затем выполните в терминале следующие команды:
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install powershell-7.1.1-1.rhel.7.x86_64.rpm
+sudo dnf install powershell-7.1.2-1.rhel.7.x86_64.rpm
 ```
 
 RPM можно установить без промежуточного скачивания:
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-1.rhel.7.x86_64.rpm
+sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---fedora-28-29-and-30"></a>Удаление — Fedora 28, 29 и 30
@@ -739,13 +739,13 @@ sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
 # Download and extract PowerShell
 
 # Grab the latest tar.gz
-wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-linux-arm32.tar.gz
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-linux-arm32.tar.gz
 
 # Make folder to put powershell
 mkdir ~/powershell
 
 # Unpack the tar.gz file
-tar -xvf ./powershell-7.1.1-linux-arm32.tar.gz -C ~/powershell
+tar -xvf ./powershell-7.1.2-linux-arm32.tar.gz -C ~/powershell
 
 # Start PowerShell
 ~/powershell/pwsh
@@ -825,7 +825,7 @@ PowerShell создает переносимые двоичные файлы д�
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-linux-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-linux-x64.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7

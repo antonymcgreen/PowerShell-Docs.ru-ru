@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.PSReadLine2.dll-Help.xml
 keywords: powershell,командлет
 Locale: en-US
 Module Name: PSReadLine
-ms.date: 12/07/2018
+ms.date: 02/16/2021
 online version: https://docs.microsoft.com/powershell/module/psreadline/set-psreadlinekeyhandler?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PSReadLineKeyHandler
-ms.openlocfilehash: 97d342d9f5d7227fb831794055c2cfa75b8cf765
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: a6b3d437917e26909f5dd116f3d0afa944f4138d
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93233166"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563331"
 ---
 # Set-PSReadLineKeyHandler
 
@@ -85,6 +85,9 @@ Accept wildcard characters: False
 
 `Ctrl+X,Ctrl+L`
 
+> [!NOTE]
+> Начиная с PSReadLine 2.0.0, параметр **аккорд** **учитывает регистр**. Это означает, что `Ctrl+X` и `Ctrl+x` создаст разные привязки.
+
 Этот параметр принимает массив строк. Каждая строка — это отдельная привязка, а не сочетание клавиш для одной привязки.
 
 ```yaml
@@ -153,7 +156,7 @@ Accept wildcard characters: False
 
 Допустимые значения:
 
-- Вставить
+- Атрибут Insert
 - Get-Help
 
 ```yaml
@@ -174,13 +177,13 @@ Accept wildcard characters: False
 
 ## Входные данные
 
-### Нет
+### None
 
 Нельзя передать объекты в этот командлет с помощью конвейера.
 
 ## Выходные данные
 
-### Нет
+### None
 
 Этот командлет не формирует никаких выходных данных.
 

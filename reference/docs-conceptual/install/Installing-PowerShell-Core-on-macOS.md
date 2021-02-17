@@ -2,12 +2,12 @@
 title: Установка PowerShell в macOS
 description: Сведения об установке PowerShell в macOS
 ms.date: 02/02/2021
-ms.openlocfilehash: 8132d88f4104696c5580a44b26247a24643f1b5b
-ms.sourcegitcommit: 40b6d8e9b6d791ac69e2ff85224e900b21552bc1
+ms.openlocfilehash: 3ae1fe0eb29b4d826221a2c11db19bc18c3efba7
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99536547"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563207"
 ---
 # <a name="installing-powershell-on-macos"></a>Установка PowerShell в macOS
 
@@ -112,12 +112,12 @@ brew upgrade powershell
 
 ## <a name="installation-via-direct-download"></a>Установка с помощью прямого скачивания
 
-Для компьютера с macOS пакет PKG `powershell-7.1.1-osx-x64.pkg` можно загрузить на странице [Выпуски][].
+Для компьютера с macOS пакет PKG `powershell-7.1.2-osx-x64.pkg` можно загрузить на странице [Выпуски][].
 
 Дважды щелкните файл и следуйте инструкциям на экране либо установите его из командной строки:
 
 ```sh
-sudo installer -pkg powershell-7.1.1-osx-x64.pkg -target /
+sudo installer -pkg powershell-7.1.2-osx-x64.pkg -target /
 ```
 
 Установите [OpenSSL](#installing-dependencies). OpenSSL требуется для удаленного взаимодействия PowerShell и операций CIM.
@@ -144,19 +144,19 @@ dotnet tool install --global PowerShell
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/7.1.1
+sudo mkdir -p /usr/local/microsoft/powershell/7.1.2
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.1.1
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.1.2
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/7.1.1/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/7.1.2/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/7.1.1/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/7.1.2/pwsh /usr/local/bin/pwsh
 ```
 
 ## <a name="installing-dependencies"></a>Установка зависимостей
@@ -204,7 +204,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 ## <a name="paths"></a>Пути
 
-- `$PSHOME` имеет значение `/usr/local/microsoft/powershell/7.1.1/`.
+- `$PSHOME` имеет значение `/usr/local/microsoft/powershell/7.1.2/`.
 - Профили пользователей будут считаны из `~/.config/powershell/profile.ps1`.
 - Профили по умолчанию будут считаны из `$PSHOME/profile.ps1`.
 - Модули пользователей будут считаны из `~/.local/share/powershell/Modules`.
@@ -216,7 +216,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 PowerShell отвечает требованиям [спецификации каталога размещения файлов, связанных со средой настольной графической среды (X-сервера), стандартизированного XDG (X Desktop Group)][xdg-bds] в macOS.
 
-Так как macOS является развитием BSD, необходимо использовать префикс `/usr/local` вместо `/opt`. Таким образом, `$PSHOME` имеет значение `/usr/local/microsoft/powershell/7.1.1/`, а символьная ссылка размещается в `/usr/local/bin/pwsh`.
+Так как macOS является развитием BSD, необходимо использовать префикс `/usr/local` вместо `/opt`. Таким образом, `$PSHOME` имеет значение `/usr/local/microsoft/powershell/7.1.2/`, а символьная ссылка размещается в `/usr/local/bin/pwsh`.
 
 ## <a name="installation-support"></a>Поддержка установки
 

@@ -2,16 +2,16 @@
 external help file: Microsoft.PowerShell.PSReadLine2.dll-Help.xml
 Locale: en-US
 Module Name: PSReadLine
-ms.date: 12/07/2018
+ms.date: 02/16/2021
 online version: https://docs.microsoft.com/powershell/module/psreadline/set-psreadlinekeyhandler?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PSReadLineKeyHandler
-ms.openlocfilehash: 0ec3466aaaf6ed1ac78b62d88a5a6cce99153673
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 86386cb8d97e16ebdd869e2ec554fc947d788f67
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99600681"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563277"
 ---
 # Set-PSReadLineKeyHandler
 
@@ -84,6 +84,9 @@ Accept wildcard characters: False
 
 `Ctrl+X,Ctrl+L`
 
+> [!NOTE]
+> Начиная с PSReadLine 2.0.0, параметр **аккорд** **учитывает регистр**. Это означает, что `Ctrl+X` и `Ctrl+x` создаст разные привязки.
+
 Этот параметр принимает массив строк. Каждая строка — это отдельная привязка, а не сочетание клавиш для одной привязки.
 
 ```yaml
@@ -152,7 +155,7 @@ Accept wildcard characters: False
 
 Допустимые значения:
 
-- Вставить
+- Атрибут Insert
 - Get-Help
 
 ```yaml
