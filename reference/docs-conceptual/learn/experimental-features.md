@@ -2,12 +2,12 @@
 ms.date: 12/14/2020
 title: Использование экспериментальных функций в PowerShell
 description: Список доступных в настоящее время экспериментальных функций и их использование.
-ms.openlocfilehash: be02829c27ff5d8babaf173d2ee7ebbfc7614773
-ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
+ms.openlocfilehash: 556ae8d877b670b119b7b5b958a52488aad16241
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97879360"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500129"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Использование экспериментальных функций в PowerShell
 
@@ -38,6 +38,7 @@ ms.locfileid: "97879360"
 | PSCultureInvariantReplaceOperator                          |         |         | &check; | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; | &check; |
 | PSSubsystemPluginModel                                     |         |         | &check; | &check; |
+| PSAnsiProgress                                             |         |         |         | &check; |
 | PSAnsiRendering                                            |         |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
@@ -116,6 +117,24 @@ Underline Off   Property   string UnderlinedOff {get;set;}
 - Метод `StringDecorated Substring(int contentLength)` возвращает подстроку, начинающуюся с индекса 0 вплоть до длины содержимого, которое не является частью escape-последовательностей ANSI. Это необходимо для усечения строк и сохранения escape-последовательностей ANSI, которые не занимают место печатаемых символов, при форматировании таблицы.
 - Метод `string ToString()` остается без изменений и возвращает версию строки в виде открытого текста.
 - Метод `string ToString(bool Ansi)` возвращает необработанную встроенную строку ANSI, если параметр `Ansi` имеет значение true. В противном случае возвращается версия с открытым текстом с удаленными escape-последовательностями ANSI.
+
+## <a name="psansiprogress"></a>PSAnsiProgress
+
+Эта экспериментальная функция добавлена в PowerShell 7.2. Эта функция добавляет элемент `$PSStyle.Progress` и позволяет управлять рендерингом панели просмотра хода выполнения.
+
+- `$PSStyle.Progress.Style` — строка ANSI, задающая стиль рендеринга.
+- `$PSStyle.Progress.MaxWidth` — задает максимальную ширину представления. Задайте для ширины консоли значение `0`.
+  Значение по умолчанию — `120`
+- `$PSStyle.Progress.View` — перечисление со значениями `Minimal` и `Classic`. `Classic` — существующий рендеринг без изменений. `Minimal` — минимальный рендеринг одной строки. Значение по умолчанию — `Minimal`.
+
+В следующем примере стиль рендеринга обновляется для отображения минимального индикатора хода выполнения.
+
+```powershell
+$PSStyle.Progress.View.Minimal
+```
+
+> [!NOTE]
+> Для использования этой функции необходимо включить экспериментальную функцию **PSAnsiRendering**.
 
 ## <a name="pscommandnotfoundsuggestion"></a>PSCommandNotFoundSuggestion
 
