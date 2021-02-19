@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: 14d9c28093ec91351048819e719ab80d5dd9c501
-  ms.sourcegitcommit: a073c7db07d765ab45f52345ab98c7660582bc98
+  ms.openlocfilehash: f469ddb8179b1b2c937478e776fb0383c22357e1
+  ms.sourcegitcommit: 14f45157bb60db7ef4c321c1a525c836698cafa9
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/29/2020
-  ms.locfileid: "87377506"
+  ms.lasthandoff: 02/18/2021
+  ms.locfileid: "101101293"
 highlightedContent:
   items:
   - title: Обзор
@@ -139,18 +139,18 @@ additionalContent:
   - title: Команда разработчиков PowerShell
     summary: Общайтесь с командой разработчиков PowerShell.
     items:
-    - title: Официальный блог PowerShell
+    - title: Блог команды разработчиков PowerShell
       summary: Официальные новости и объявления.
       url: https://devblogs.microsoft.com/powershell/
+    - title: Ресурсы сообщества PowerShell
+      summary: Место для сообщества, где можно изучить PowerShell и поделиться ценными сведениями
+      url: https://devblogs.microsoft.com/powershell-community/
     - title: Команда PowerShell в Twitter
       summary: Новости о PowerShell длиной не более 280 знаков.
       url: https://twitter.com/PowerShell_Team
-    - title: PowerShell на портале UserVoice
-      summary: Узнавайте и сообщайте об ошибках в Windows PowerShell.
-      url: https://windowsserver.uservoice.com/forums/301869-powershell
     - title: Вопросы на GitHub
       summary: Узнавайте и сообщайте об ошибках в текущем выпуске.
       url: https://github.com/powershell/powershell/issues
-    - title: Приглашаем авторов скриптов! — Блог
-      summary: Узнавайте о возможностях PowerShell и делитесь своими историями успешной автоматизации.
-      url: https://devblogs.microsoft.com/scripting/
+    - title: PowerShell на портале UserVoice
+      summary: Узнавайте и сообщайте об ошибках в Windows PowerShell.
+      url: https://windowsserver.uservoice.com/forums/301869-powershell
